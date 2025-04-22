@@ -1,0 +1,11 @@
+<div #imageSelectContainer class="input-group domain-type-inputselect form-control" (keyup)="keyboardEventItem($event)" (click)="onButtonClick()">
+	<div class="input-group-content" tabindex="-1" data-domain="imageselect">
+		<i class="block-image {{ iconCSS }}"></i><span class="pane-r">{{ displayTitle }}</span>
+	</div>
+	<div class="input-group-btn">
+		<button #dropdownButtonTemplate type="button" class="btn btn-default">
+			<span class="caret"></span>
+		</button>
+	</div>
+</div>
+<ui-common-popup-container></ui-common-popup-container>

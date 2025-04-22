@@ -1,0 +1,23 @@
+<div class="popup-container" [uiCommonPopupResizable]="position.directions" (resizeEnd)="onResized($event)"
+     [style.position]="position.name"
+     [style.left]="pixel(position.left)"
+     [style.top]="pixel(position.top)"
+     [style.right]="pixel(position.right)"
+     [style.bottom]="pixel(position.bottom)"
+     [style.width]="pixel(size.width)"
+     [style.height]="pixel(size.height)"
+     [style.maxWidth]="pixel(size.maxWidth)"
+     [style.maxHeight]="pixel(size.maxHeight)"
+	 [style.zIndex]="zIndex">
+	<div class="popup-header">
+		<ng-content select="[header]"></ng-content>
+	</div>
+
+	<div class="popup-content">
+		<ng-content select="[content]"></ng-content>
+	</div>
+
+	<div class="popup-footer">
+		<ng-content select="[footer]"></ng-content>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="domain-type-color form-control input-group ">
+	<span *ngIf="controlContext.infoText" class="info-text form-icon-box tlb-icons ico-info left" [title]="controlContext.infoText"></span>
+	<div class="color-group">
+     <div class="color-picker">
+		 <svg class="overlay" *ngIf="!value">
+            <line x1="0" y1="100%" x2="100%" y2="0" style="stroke:var(--input-border-color);stroke-width:var(--border-width-default)"/>
+         </svg>
+        <input type="color" [disabled]="controlContext.readonly" [(ngModel)]="value" [readonly]="controlContext.readonly">
+     </div>
+     <!-- TODO: Below,the text box is not shown in the grid section (this text box conditionally handled by the ingrid attribute property) -->
+     <input type="text" class="input-group-content active" debounceChanged placeholder="#FFFFFF" style="text-transform: uppercase;" maxlength="7" [(ngModel)]="value" [readonly]="controlContext.readonly" >
+   </div>
+	<div class="input-group-btn" *ngIf="this.controlContext.showClearButton">
+		<button [disabled]="controlContext.readonly || !value" class="btn btn-default control-icons ico-input-delete" tabindex="1" (click)="clearColor()"></button>
+	</div>
+</div>
+
+

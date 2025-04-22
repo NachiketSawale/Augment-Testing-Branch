@@ -1,0 +1,13 @@
+<div class="flex-element flex-box flex-column">
+    <!--TODO: [entityRuntimeData]="formDataOptions.runtime"-->
+    <ui-common-form [formConfig]="formConfig" [entity]="entity"></ui-common-form>
+    <div class="checkbox ts-space-up" *ngIf="entity.hasContract">
+        <label>
+            <input type="checkbox" [(ngModel)]="entity.CreateSeparateContractForEachItem">
+            {{ 'procurement.ticketsystem.submitDialog.separateContract' | platformTranslate }}
+        </label>
+    </div>
+    <label class="ts-space-up cursor-pointer">
+        {{ 'procurement.ticketsystem.submitDialog.noteSeperateRequistionContract' | platformTranslate }}
+    </label>
+</div>

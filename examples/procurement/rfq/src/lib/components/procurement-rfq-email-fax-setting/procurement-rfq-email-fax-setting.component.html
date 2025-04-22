@@ -1,0 +1,138 @@
+<div class="platform-form-container">
+    <form class="platform-form platform-lg">
+        <!-- RFQ Report Template Section -->
+        <div class="platform-form-group">
+            <div class="platform-form-row form-group">
+                <label class="platform-form-label" style="min-width: 183px;">
+                    {{ 'procurement.rfq.reportTemplates.rfqReport'| platformTranslate}}
+                    <span class="required-cell"></span>
+                </label>
+                <div class="platform-form-col">
+                    <ui-common-lookup-input
+                        [dataService]="lookups.rfqReportTemplate"
+                        [options]="lookupOptions.rfqHeader"
+                        [(value)]="data.rfqReportTemplate"
+                        (valueChange)="valueChangeHandler($event, 'rfqReportTemplate')"
+                       >
+                    </ui-common-lookup-input>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Bill of Quantity Section -->
+        <fieldset style="padding:10px 25px 10px 5px; border:1px solid #dcdcdc; border-radius:3px;">
+            <legend style="margin-left:1px; width:auto; background-color:#fff; font-size:13px; font-weight: bold;">
+                {{ 'Bill of Quantity'}}
+            </legend>
+            <div class="platform-form-group">
+                <!-- Requisition BoQ Report Template -->
+                <div class="platform-form-row form-group">
+                    <label class="platform-form-label" style="min-width: 183px;">
+                        {{ 'procurement.rfq.reportTemplates.requisitionBoqReport'| platformTranslate }}
+                    </label>
+                    <div class="platform-form-col">
+                        <ui-common-lookup-input
+                            [dataService]="lookups.boqReportTemplate"
+                            [options]="lookupOptions.boqReportTemplate"
+                            [(value)]="data.boqReportTemplate"
+                            [readonly]="lookupOptions.boq.readonly"
+                            (valueChange)="valueChangeHandler($event, 'boqReportTemplate')">
+                        </ui-common-lookup-input>
+                    </div>
+                </div>
+ 
+                <!-- BoQ Format -->
+                <div class="platform-form-row form-group">
+                    <label class="platform-form-label" style="min-width: 183px;">
+                        {{ 'BoQ Format'| platformTranslate}}
+                    </label>
+                    <div class="platform-form-col">
+                        <ui-common-lookup-input
+                            [dataService]="lookups.boqReportFormat"
+                            [options]="lookupOptions.boqFormatType"
+                            [(value)]="data.boqFormatTypeId"
+                            [readonly]="lookupOptions.boq.readonly"
+                            (valueChange)="changeCreateType(); valueChangeHandler($event, 'boqFormatTypeId')">
+                        </ui-common-lookup-input>
+                    </div>
+                </div>
+
+                <!-- Gaeb Format GAEB Version-->
+                <div class="platform-form-row form-group">
+                    <label class="platform-form-label" style="min-width: 183px;">
+                        {{ 'boq.main.GaebFormat'| platformTranslate }}
+                    </label>
+                    <div class="platform-form-col">
+                        <ui-common-lookup-input
+                            [dataService] ="lookups.gaebExportFormat"
+                            [(value)]="data.gaebFormatId"
+                            [readonly]="lookupOptions.boqFormatType.readonly"
+                            [options] = "lookupOptions.boqFormatType"
+                            (valueChange)="valueChangeHandler($event, 'gaebFormatId')">
+                        </ui-common-lookup-input>
+                    </div>
+                </div>
+ 
+                <!-- Gaeb Type  Exchange Format -->
+                <div class="platform-form-row form-group">
+                    <label class="platform-form-label" style="min-width: 183px;">
+                        {{ 'boq.main.Gaebtype'| platformTranslate}}
+                    </label>
+                    <div class="platform-form-col">
+                        <ui-common-lookup-input
+                            [dataService] ="lookups.gaebExportType"
+                            [(value)]="data.gaebTypeId"
+                            [readonly]="lookupOptions.boqFormatType.readonly"
+                            [options] = "lookupOptions.boqFormatType"
+                            (valueChange)="valueChangeHandler($event, 'gaebTypeId')">
+                        </ui-common-lookup-input>
+                    </div>
+                </div>
+ 
+            </div>
+        </fieldset>
+ 
+        <div class="platform-form-group">
+            <div class="platform-form-row form-group">
+                <fieldset style="padding:10px 25px 10px 5px; border:1px solid #dcdcdc; border-radius:3px;">
+                    <legend
+                        style="margin-left:1px; width:auto; background-color:#fff; font-size:13px; font-weight: bold;">
+                        {{ 'Material Item'}}
+                    </legend>
+ 
+                    <div class="platform-form-group">
+                        <div class="platform-form-row form-group">
+                            <label class="platform-form-label" style="min-width: 183px;">
+                                {{ 'procurement.rfq.reportTemplates.requisitionItemReport'| platformTranslate}}
+                            </label>
+                            <div class="platform-form-col">                            
+                                <ui-common-lookup-input
+                                    [dataService]="lookups.itemReportTemplate"
+                                    [options]="lookupOptions.itemReportTemplate"
+                                    [(value)]="data.itemReportTemplate"
+                                    [readonly]="lookupOptions.item.readonly"
+                                    (valueChange)="valueChangeHandler($event, 'itemReportTemplate')">
+                                </ui-common-lookup-input>
+                            </div>
+                        </div>
+ 
+                        <div class="platform-form-row form-group">
+                            <label class="platform-form-label" style="min-width: 183px;">
+                                {{ 'procurement.rfq.reportTemplates.requisitionItemFormat'| platformTranslate}}
+                            </label>
+                            <div class="platform-form-col">
+                                <ui-common-lookup-input
+                                    [dataService]="lookups.itemReportFormat"
+                                    [options]="lookupOptions.item"
+                                    [(value)]="data.formatTypeId"
+                                    [readonly]="lookupOptions.item.readonly"
+                                    (valueChange)="valueChangeHandler($event, 'formatTypeId')">
+                                </ui-common-lookup-input>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+</div>

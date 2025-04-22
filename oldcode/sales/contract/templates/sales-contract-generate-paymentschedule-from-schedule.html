@@ -1,0 +1,24 @@
+<div class="modal-wrapper" data-ng-controller="generatePaymentScheduleFromScheduleController">
+
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body">
+		<div class="modal-wrapper">
+			<div ng-switch="selectStep.number">
+				<div ng-switch-when="1" class="modal-wrapper fullheight">
+					<ng-include src="'sales.contract/templates/sales-contract-generate-paymentschedule-from-schedule1.html'" class="modal-wrapper fullheight"></ng-include>
+				</div>
+				<div ng-switch-when="2" class="modal-wrapper fullheight">
+					<ng-include src="'sales.contract/templates/sales-contract-generate-paymentschedule-from-schedule2.html'" class="modal-wrapper fullheight"></ng-include>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.back()" data-ng-disabled="isBackDisabled()">{{::modalOptions.backText}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.next()" data-ng-disabled="isNextDisabled()">{{::modalOptions.nextStepText}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isOkDisabled()">{{::modalOptions.okText}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-disabled="isCancelDisabled()">{{::modalOptions.cancelText}}</button>
+	</footer>
+</div>

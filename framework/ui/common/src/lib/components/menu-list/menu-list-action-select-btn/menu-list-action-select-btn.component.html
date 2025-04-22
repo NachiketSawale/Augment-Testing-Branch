@@ -1,0 +1,9 @@
+<ui-common-popup-container></ui-common-popup-container>
+<div class="ui-element action-select-btn">
+    <button class="action" [ngClass]="selectedData.iconClass" [disabled]="selectedData.disabled"
+        [title]=" selectedData.caption">
+        <span *ngIf="showCaption" [innerHTML]="selectedData.caption"></span>
+    </button>
+    <button class="actions dropdown-toggle" (click)="toggleDropdown(menuItem)" [disabled]="selectedData.disabled">
+    </button>
+</div>

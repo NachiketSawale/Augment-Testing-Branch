@@ -1,0 +1,57 @@
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title active">
+				<a class="accordion-toggle" (click)="toggleOpen(0)">
+					<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'procurement.package.remarkContainerTitle' | platformTranslate }}</span>
+					<span class="platform-form-group-header ng-scope">
+                                     <div [class]="showRemarkGroup ? 'toggleImg control-icons ico-up' : 'toggleImg control-icons ico-down'"></div>
+                                  </span>
+				</a>
+			</h4>
+		</div>
+		<div class="panel-collapse" [hidden]="!showRemarkGroup">
+			<div class="panel-body">
+				<textarea class="full-size" [ngModel]="selected?accessor.getText(remarkName.Remark,selected):''" [readonly]="!selected" (ngModelChange)="handleChange($event,remarkName.Remark)"></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a class="accordion-toggle" (click)="toggleOpen(1)">
+					<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'procurement.package.remark2ContainerTitle' | platformTranslate }}</span>
+					<span class="platform-form-group-header ng-scope">
+                                     <div [class]="showRemark2Group ? 'toggleImg control-icons ico-up' : 'toggleImg control-icons ico-down'"></div>
+                                  </span>
+				</a>
+			</h4>
+		</div>
+		<div class="panel-collapse" [hidden]="!showRemark2Group">
+			<div class="panel-body">
+				<textarea class="full-size" [ngModel]="selected?accessor.getText(remarkName.Remark2,selected):''" [readonly]="!selected" (ngModelChange)="handleChange($event,remarkName.Remark2)"></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a class="accordion-toggle" (click)="toggleOpen(2)">
+					<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'procurement.package.remark3ContainerTitle' | platformTranslate }}</span>
+					<span class="platform-form-group-header ng-scope">
+                                     <div [class]="showRemark3Group ? 'toggleImg control-icons ico-up' : 'toggleImg control-icons ico-down'"></div>
+                                  </span>
+				</a>
+			</h4>
+		</div>
+		<div class="panel-collapse" [hidden]="!showRemark3Group">
+			<div class="panel-body">
+				<textarea class="full-size" [ngModel]="selected?accessor.getText(remarkName.Remark3,selected):''" [readonly]="!selected" (ngModelChange)="handleChange($event,remarkName.Remark3)"></textarea>
+			</div>
+		</div>
+	</div>
+</div>

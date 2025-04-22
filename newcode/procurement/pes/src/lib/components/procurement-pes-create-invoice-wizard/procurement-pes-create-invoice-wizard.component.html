@@ -1,0 +1,41 @@
+<div [ngSwitch]="currentPage">
+	<div *ngSwitchCase="InvoiceCreateWizardPage.options">
+		<div class="alert alert-warning" *ngIf="warningMessage">
+			<button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			{{ warningMessage }}
+		</div>
+		<!--TODO should reuse the ui-common-domain-control-host radio buttons. But currently it can disable the radio button on fly-->
+		<div class="platform-form-row form-group flex-box flex-align-center">
+			<input type="radio"
+			       name="method"
+			       [(ngModel)]="wizardData.createOption"
+			       [value]="PESCreateInvoiceOption.one2One">
+			<label>{{ 'procurement.pes.wizard.createInvoiceForOnePes' | platformTranslate }}</label>
+		</div>
+		<div class="platform-form-row form-group flex-box flex-align-center">
+			<input type="radio"
+			       name="method"
+			       [(ngModel)]="wizardData.createOption"
+			       [value]="PESCreateInvoiceOption.one2SameContract"
+			       [disabled]="one2SameContractOptionDisabled()">
+			<label>{{ 'procurement.pes.wizard.createInvoiceForSameContract' | platformTranslate }}</label>
+		</div>
+		<div class="platform-form-row form-group flex-box flex-align-center">
+			<input type="radio"
+			       name="method"
+			       [(ngModel)]="wizardData.createOption"
+			       [value]="PESCreateInvoiceOption.one2All"
+			       [disabled]="one2AllDisabled()">
+			<label>{{ 'procurement.pes.wizard.createInvoiceForAllPes' | platformTranslate }}</label>
+		</div>
+	</div>
+	<div *ngSwitchCase="InvoiceCreateWizardPage.invoiceConfigure">
+		<ui-common-form
+			[formConfig]="currentFormConfig"
+			[entity]="currentFormData"
+			[entityRuntimeData]="currentEntityRuntimeData">
+		</ui-common-form>
+	</div>
+</div>

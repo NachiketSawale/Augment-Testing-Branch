@@ -1,0 +1,26 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ProcurementTicketSystemCartItemListComponent } from './cart-item-list.component';
+
+describe('CartItemListComponent', () => {
+  // TODO: replace with actual test cases
+  it('is successful', () => {
+    expect(true).toBeTruthy();
+  });
+  /*let component: MaterialItemOperationComponent;
+  let fixture: ComponentFixture<MaterialItemOperationComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ MaterialItemOperationComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(MaterialItemOperationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });*/
+});

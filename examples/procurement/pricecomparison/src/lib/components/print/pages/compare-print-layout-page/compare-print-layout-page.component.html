@@ -1,0 +1,26 @@
+<div class="flex-element flex-box flex-column fullheight compare-print-layout">
+	<div class="platform-form-group margin-top-ld ">
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{ 'procurement.pricecomparison.printing.paperSize' | platformTranslate }}</label>
+			<div class="platform-form-col">
+				<ui-common-domain-control-host
+					[value]="paperSize"
+					[fieldType]="fieldType.Select"
+					[options]="paperSizeOptions"
+					(valueChange)="onPaperSizeOptionsChanged($event)"
+				></ui-common-domain-control-host>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{ 'procurement.pricecomparison.printing.pageOrientation' | platformTranslate }}</label>
+			<div class="platform-form-col">
+				<ui-common-domain-control-host
+					[fieldType]="fieldType.Radio"
+					[options]="orientationOptions"
+					[controlContext]="orientationContext"
+					(valueChange)="onOrientationChanged($event)"
+				></ui-common-domain-control-host>
+			</div>
+		</div>
+	</div>
+</div>

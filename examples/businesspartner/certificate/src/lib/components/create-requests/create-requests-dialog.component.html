@@ -1,0 +1,10 @@
+<div class="flex-box flex-column flex-element">
+	<ui-common-form [formConfig]="configuration" [entity]="options.createRequestsEntity"></ui-common-form>
+	<div *ngIf="model.IsSuccess" class="alert alert-success" role="alert">
+		<div *ngFor="let info of model.UpdateDetail">
+			<div>{{info}}</div>
+		</div>
+	</div>
+	<div *ngIf="model.HasError" class="alert alert-danger" role="alert">{{model.ErrorDetail}}</div>
+	<ui-common-loading [loading]="model.Loading"></ui-common-loading>
+</div>

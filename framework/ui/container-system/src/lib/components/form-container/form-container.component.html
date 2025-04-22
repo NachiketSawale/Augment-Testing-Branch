@@ -1,0 +1,10 @@
+<div style="font-size: 20pt; font-weight: bold;">SAMPLE CONTAINER! This container will not be included in the release. DO NOT USE in production code!</div>
+
+<ui-common-form [entity]="entity" [entityRuntimeData]="entityRuntimeInfo" [formConfig]="formConfig"></ui-common-form>
+
+<p></p>
+<button class="btn btn-default btn-color" style="background: #3498db;color: #fff;padding: 0.5rem 1rem;font-size: 1.25rem;line-height: 1.5; border-radius: 0.5rem;" (click)="nextEntity()">Next Entity</button>
+<button class="btn btn-default btn-color" style="background: #3498db;color: #fff;padding: 0.5rem 1rem;font-size: 1.25rem;line-height: 1.5; border-radius: 0.5rem;" (click)="toggleValidationError()">Toggle Validation Result</button>
+<button class="btn btn-default btn-color" style="background: #3498db;color: #fff;padding: 0.5rem 1rem;font-size: 1.25rem;line-height: 1.5; border-radius: 0.5rem;" (click)="toggleReadOnly()">Toggle Read-Only</button>
+<p></p>
+<label [textContent]="entityAsJson()"></label>

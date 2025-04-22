@@ -1,0 +1,32 @@
+/* Container for the complete tree frame with specific dimensions and overflow handling */
+.tree-frame-complete {
+    height: 340px;
+    width: 220px;
+    overflow: auto;
+    margin: 10px 0;
+}
+
+/* Container for the tree frame with specific height */
+.tree-frame {
+    height: 320px;
+}
+
+/* Main container for the generic grid lookup component with specific dimensions and margin */
+.generic-grid-lookup {
+    width: 620px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+/* Styling for the input group within the form control, adding bottom margin */
+.input-group .form-control {
+    margin-bottom: 20px; 
+}
+
+/* Styling for the toolbar, using flexbox to space items evenly and align them centrally */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

@@ -1,0 +1,9 @@
+<div [ngClass]="status.isOpen ? 'btn-group open' : 'btn-group'">
+	<button type="button" class="menu-button" [ngClass]="!dropDownButton.showSVGTag ? dropDownButton.cssClass + ' dropdown-toggle' : dropDownButton.cssClass" [disabled]="disabled" (click)="toggleDropDown($event)">
+		<svg *ngIf="dropDownButton.showSVGTag" [ngClass]="dropDownButton.svgCssClass">
+			<use [attr.xlink:href]="'assets/ui/common/images/' + dropDownButton.svgSprite + '.svg#' + dropDownButton.svgImage"></use>
+		</svg>
+	</button>
+
+	<div (change)="modal($event)" [isOpen]="status.isOpen" ui-common-menu-list-sidebar-dropdown [dropDownList]="dropDownButton.list"></div>
+</div>

@@ -1,0 +1,48 @@
+<div class="outerDiv" *ngIf="layoutId === 'layout0'">
+	<as-split direction="horizontal">
+		<as-split-area [size]="100" style="height: 600px;">
+			<ui-container-system-container-group
+				[containers]=" getContainersInfo(tabData[0].panel[0].content)"></ui-container-system-container-group>
+		</as-split-area>
+	</as-split>
+</div>
+
+
+<ng-container *ngIf="layoutId !== 'layout0'">
+	<ng-container *ngIf="layout">
+		<as-split [direction]="layout.selectorName" panel="dummy">
+
+			<as-split-area [size]="converter(data.size)" *ngFor="let data of layout.panes; let i=index">
+				<div [ngClass]="i===0 || i===1 ? 'dragLimit': 'nodrag'" style="width: 100%; height:100%">
+					<ng-container *ngIf="data.panes?.length === 0">
+						<ng-container *ngIf="tabData.length !== 0">
+							<ng-container *ngIf="tabData[i].panel.length===1">
+								<ng-container></ng-container>
+								<ui-container-system-container-group
+									[containers]=" getContainersInfo(tabData[i].panel[0].content)"></ui-container-system-container-group>
+							</ng-container>
+						</ng-container>
+					</ng-container>
+					<ng-container *ngIf="data.orientation">
+						<as-split [direction]="data.orientation" panel="{{i+1}}">
+							<ng-container *ngFor="let id of data.panes; let x=index">
+								<as-split-area [size]="converter(id.size)">
+									<ng-container>
+										<ng-container *ngIf="tabData.length !== 0">
+											<ng-container>
+												<ui-container-system-container-group
+													[containers]="getContainersInfo(tabData[i].panel[x].content)"></ui-container-system-container-group>
+											</ng-container>
+										</ng-container>
+
+									</ng-container>
+								</as-split-area>
+							</ng-container>
+						</as-split>
+					</ng-container>
+				</div>
+			</as-split-area>
+
+		</as-split>
+	</ng-container>
+</ng-container>

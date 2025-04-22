@@ -1,0 +1,20 @@
+{
+	"name": "platform-common",
+	"$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/platform/common/src",
+	"prefix": "platform-common",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/platform/common"],
+			"options": {
+				"jestConfig": "libs/platform/common/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

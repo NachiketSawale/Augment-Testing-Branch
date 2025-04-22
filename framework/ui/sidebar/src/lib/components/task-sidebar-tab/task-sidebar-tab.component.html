@@ -1,0 +1,23 @@
+<div class="content">
+	<div class="flex-element flex-basis-auto flex-box flex-column fullheight" *ngIf="!showTaskDetail">
+		<div>
+			<ui-sidebar-title [toolbarData]="toolbarItems"
+				[title]="('cloud.desktop.taskList.headerTask' | platformTranslate) +  prepareSidebarTitle()">
+			</ui-sidebar-title>
+		</div>
+		<div *ngIf="searchToggle" class="margin-top-ld margin-bottom-ld">
+			<input type="text" #input (input)="searchTasksInTaskList(input.value)" class="form-control" placeholder="{{ 'cloud.common.taskBarSearch' | platformTranslate }}"/>
+		</div>
+		<div *ngIf="groupingToggle">
+			<div class="flex-box flex-align-center border-none toolbar"
+				style="justify-content: space-between; font-size: 13pt">
+				{{'cloud.desktop.taskList.groupOrSortingSetting' | platformTranslate}}
+				<ui-common-menu-list [menu]="toolbarData"></ui-common-menu-list>
+			</div>
+			<ui-common-form [entity]="LookUpValueByService" [formConfig]="formConfig"></ui-common-form>
+		</div>
+		<ui-common-accordion [data]="accordionData" (selected)="onItemClick($event)"></ui-common-accordion>
+	</div>
+	<ui-sidebar-task-sidebar-detail *ngIf="showTaskDetail" [taskDetail]="taskContext"
+		(backButtonClick)="onBackButtonClick()"></ui-sidebar-task-sidebar-detail>
+</div>

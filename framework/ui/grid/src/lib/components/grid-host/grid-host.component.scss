@@ -1,0 +1,849 @@
+@import '../../../../../styles/cloud/variables';
+@import '../../../../../styles/cloud/mixins';
+
+/*-------------------------------------------------------------------------------
+	 Grid (_grid.scss)
+  -------------------------------------------------------------------------------*/
+
+
+.cell-left {
+	text-align: left;
+}
+
+.cell-right {
+	text-align: right;
+}
+
+.cell-center {
+	text-align: center;
+}
+
+.child-indent {
+	text-indent: 10px;
+}
+
+.child-indent-2 {
+	text-indent: 20px;
+}
+
+.child-indent-3 {
+	text-indent: 30px;
+}
+
+.platform-grid {
+	height: 100%;
+}
+
+.subview-container:has(.platform-grid) {
+	border: 0px;
+}
+
+.subview-content:has(.platform-grid) {
+	overflow-y: hidden;
+}
+
+.slick-pane-header { // header row with column names
+	.indicator {
+		&.filtered {
+			position: relative;
+
+			background-image: linear-gradient(to bottom right, var(--company-color) 0%, var(--company-color) 17%, $color-grid-header-background 17%, $color-grid-header-background 100%);
+			background-size: 24px;
+		}
+	}
+}
+
+.slick-headerrow-panel { // header row with column names
+	background-color: $color-grid-filter-row-background;
+	height: 0px;
+	//height: $size-grid-filter-row-height;
+	width: 100%;
+}
+
+.slick-headerrow { // Columnfilter Row
+	//container for search-columns
+	.slick-headerrow-columns {
+		background-color: $color-grid-filter-row-background;
+
+		&.slick-headerrow-columns-right {
+			height: $size-grid-filter-row-height;
+			border-left: none;
+		}
+
+		&.slick-headerrow-columns-left {
+			height: $size-grid-filter-row-height;
+			div {
+				&:last-child {
+					margin-right: 1px;
+				}
+			}
+		}
+
+		.slick-cell {
+			border-right: 0px;
+			height: $size-grid-filter-row-cell-height;
+			padding: 2px 3px 2px 3px;
+		}
+	}
+
+	input {
+		box-sizing: border-box;
+		border: 1px solid #fff;
+		top: 0;
+		left: 0;
+		height: $size-grid-filter-row-input-height;
+		padding: 3px 4px 3px 4px;
+		outline: none;
+		font-family: monospace;
+		letter-spacing: -.05em;
+	}
+
+	input:focus{
+		border-color: $color-rib;
+	}
+
+	.input-group {
+		background-color: white;
+		height: $size-grid-filter-row-input-height !important;
+		width: 97% !important;
+		font-family: monospace;
+		letter-spacing: -.05em;
+		top: 2px !important;
+		left: 3px !important;
+		bottom: 3px;
+		right: 3px;
+	}
+
+	.input-group-content {
+		padding: 3px 4px 3px 4px !important;
+		margin: 1px;
+		outline-style: solid;
+		outline-width: thin;
+		outline-color: #fff;
+		&:focus {
+			outline-color: $color-rib ;
+		}
+	}
+
+	.formatted-filter-input {
+		background-color: white;
+		box-sizing: border-box;
+		border: 1px solid #fff;
+		height: $size-grid-filter-row-input-height;
+		font-family: monospace;
+		padding: 3px 4px 3px 4px;
+		letter-spacing: -.05em;
+	}
+}
+
+.slick-headerrow-column {
+	background: #fafafa;
+	border-bottom: 0;
+	height: 100%;
+}
+
+/*header menu*/
+.slick-header-menu {
+	border: 1px solid $color-bar-border;
+	background: $color-body-background;
+	padding: 2px;
+	-moz-box-shadow: 2px 2px 2px silver;
+	-webkit-box-shadow: 2px 2px 2px silver;
+	min-width: 100px;
+	z-index: 20;
+}
+
+.slick-header-menubutton {
+	width: 18px;
+	height: 1.9em;
+	border-left: 1px solid $color-grid-border-cell-vertical;
+	background-color: $color-grid-background;
+	background-size: 16px;
+}
+
+.slick-header-menuitem {
+	padding: 2px $padding-small-horizontal;
+	border: 1px solid transparent;
+
+	&:hover {
+		border-color: $color-grid-selection;
+		background: $color-grid-selection;
+	}
+
+	.slick-header-menuitem-disabled {
+		border-color: transparent !important;
+		background: inherit !important;
+	}
+}
+
+/* footer row*/
+.slick-footer {
+	border-top: solid 1px $color-grid-cell-horizontal;
+	background-color: $color-grid-footer;
+	line-height: 2em;
+	padding: 2px $padding-small-horizontal;
+
+	span {
+		display:inline;
+	}
+}
+
+.grid-content {
+	min-height: var(--min-grid-height, 300px);
+	height: 100%;
+}
+
+.slick-row {
+	position: absolute;
+	background: $color-grid-even-background;
+	line-height: $size-grid-row-height;
+	border: 0;
+	border-left: $border-width-default solid $color-grid-border-cell-vertical;
+
+	&.selected {
+		z-index: 10;
+		/*background: #DFE8F6;*/
+		background: yellow; /*temporary*/
+	}
+
+	&.odd {
+		background: $color-grid-odd-background;
+	}
+
+	&.ui-state-active {
+		background: #F5F7D7;
+	}
+
+	&.loading {
+		opacity: 0.5;
+		filter: alpha(opacity = 50);
+	}
+
+	&.row-readonly-background {
+		.slick-cell {
+			color: $color-input-placeholder;
+		}
+	}
+
+	// tree icons should not be disabled
+	&.disabled > div:not(.ui-item-field-tree) {
+		opacity: 0.6;
+	}
+}
+
+.slick-cell {
+	padding-left: $padding-small-horizontal;
+	padding-right: $padding-small-horizontal;
+	padding-top: 2px;
+	//height: normal;
+	box-sizing: border-box;
+
+	&.no-padding, .no-padding {
+		padding: 0;
+	}
+
+	/*&.selected:not(.indicator) {
+		background-color: $color-grid-selection;
+	}*/
+
+	$size-grid-selected-border: 2px;
+	&.active:not(.indicator) {
+		border: $size-grid-selected-border solid; // $color-grid-cell-activ;
+		padding: 1px 2px;
+
+		&.editable {
+			padding: 0px;
+			background-color: $color-input-bg;
+		}
+	}
+
+	&.invalid {
+		border-color: $color-danger;
+		-moz-animation-duration: 0.2s;
+		-webkit-animation-duration: 0.2s;
+		-moz-animation-name: slickgrid-invalid-hilite;
+		-webkit-animation-name: slickgrid-invalid-hilite;
+	}
+
+	&.editable {
+		z-index:2;
+
+		&:not(.cell-readonly):not(.batch-none-allowed):before {
+			content: "";
+			height: 6px;
+			width: 6px;
+			position: absolute;
+			bottom: -5px;
+			right: -4px;
+			//background-color: #0067b1;
+			z-index: 1;
+			border: solid 1px #fff;
+		}
+	}
+
+	&:not(.editable ) {
+		.left-side {
+			margin-right: $padding-small-horizontal;
+			vertical-align: middle;
+		}
+	}
+
+	img {
+		@include square(16px);
+		background-size: 16px;
+		margin-bottom: $padding-small-vertical;
+	}
+
+	&.ui-item-field-tree {
+		> .spinner-sm {
+			float: none;
+			position: static;
+		}
+	}
+
+	.block-image {
+		margin-bottom: $padding-small-vertical;
+	}
+}
+
+.slick-group {
+	font-weight: bold;
+
+	&.slick-row {
+		border: 1px solid transparent;
+		border-bottom-color: #dcdcdc;
+		height: 23px !important;
+		background-color: $color-grid-even-background;
+
+		> .slick-cell.indicator {
+			border: 1px solid transparent;
+			border-right: 1px solid rgba(220, 220, 220, 0.42);
+			height: 23px;
+		}
+	}
+
+	.slick-cell {
+		cursor: pointer;
+		border: 1px solid transparent;
+	}
+}
+
+.slick-group-toggle {
+	width: 9px;
+	height: 9px;
+	margin-right: 5px;
+	background-size: 16px;
+
+	&.expanded {
+		background: url('data:image/gif;base64,R0lGODlhCQAJAPcAAAFGeoCAgNXz/+v5/+v6/+z5/+36//L7//X8//j9/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAACQAJAAAIMwADCBxIUIDBgwIEChgwwECBAgQUFjBAkaJCABgxGlB4AGHCAAIQiBypEEECkScJqgwQEAA7') /*../../images/collapse.gif*/ no-repeat center center;
+	}
+
+	&.collapsed {
+		background: url('data:image/gif;base64,R0lGODlhCQAJAPcAAAFGeoCAgNXz/+v5/+v6/+z5/+36//L7//X8//j9/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAACQAJAAAIOAADCBxIUIDBgwIEChgwAECBAgQUFjAAQIABAwoBaNSIMYCAAwIqGlSIAEHFkiQTIBCgkqDLAAEBADs=') /*../../images/expand.gif*/ no-repeat center center;
+	}
+}
+
+.slick-group-totals {
+	color: gray;
+	background: white;
+}
+
+.slick-group-header-columns {
+	position: relative;
+	white-space: nowrap;
+	cursor: default;
+	overflow: hidden;
+	border: 1px solid rgba(220,220,220,.42);
+	border-top: none;
+
+	.slick-header-column {
+		padding-left: 0px;
+		padding-right: 0px; }
+
+	.slick-column-name {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.slick-sortable-placeholder {
+	background: silver !important;
+}
+
+@-moz-keyframes slickgrid-invalid-hilite {
+	from {
+		box-shadow: 0 0 6px $color-danger;
+	}
+
+	to {
+		box-shadow: none;
+	}
+}
+
+@-webkit-keyframes slickgrid-invalid-hilite {
+	from {
+		box-shadow: 0 0 6px $color-danger;
+	}
+
+	to {
+		box-shadow: none;
+	}
+}
+
+%status-cell {
+	background-size: 16px;
+	padding: 2px 0 0 18px;
+	height: 100%;
+}
+
+.invalid-cell {
+	@extend %status-cell;
+	//@include background-svg("../../../cloud.style/content/images/control-icons.svg#ico-grid-validation");
+	background-size: $size-icon $size-icon;
+}
+
+.required-cell {
+	@extend %status-cell;
+	//we cant use mixin background-svg-box. If there is an error message, it will not appear on a line.
+	//@include background-svg("../../../cloud.style/content/images/control-icons.svg#ico-required");
+	width: $size-icon;
+	background-size: $size-icon $size-icon;
+}
+
+.slick-cell, .slick-headerrow-column, .slick-footer-column {
+	border: $border-width-default solid $color-grid-border;
+	border-left-width: 0;
+	border-right-color: $color-grid-border-cell-vertical;
+	border-top-color: transparent;
+}
+
+
+.slick-header {
+	height: 24px;
+}
+
+.slick-header-left {
+	.slick-header-column.ui-state-default {
+		border-bottom-color: $color-border2;
+	}
+}
+
+.slick-header-right {
+	.slick-header-column.ui-state-default {
+		border-bottom-color: $color-grid-cell-horizontal;
+	}
+}
+
+.slick-header-column {
+	border-right: 1px solid $color-grid-border-cell-vertical;
+
+	&.ui-state-default {
+		border-right: $border-width-default solid $color-grid-border-cell-vertical;
+		border-bottom: 3px solid;
+
+		input[type='checkbox'] {
+			//use in grid-layout
+			margin: 1px 0 0 0px;
+		}
+	}
+
+	&.indicator {
+		>.filter-info {
+			display: none;
+		}
+	}
+}
+
+// Grouping panel and Search Panel
+.slick-top-panel {
+	border-bottom: $border-width-default solid $color-border;
+
+	span {
+		line-height: 1.667em;
+	}
+}
+
+.grid-content {
+	font-size: 12px;
+	border-color: $color-grid-border !important;
+
+	.slick-container {
+		.grid-scroll {
+			position: absolute;
+			bottom: 0;
+			height: 20px;
+			width: 100%;
+			overflow-x: visible;
+			overflow-y: hidden;
+
+			div {
+				height: 20px;
+				width: 3200px;
+			}
+		}
+	}
+
+	.lookup-img-box {
+		padding-left: $padding-small-horizontal;
+	}
+
+	.lookup-input-image {
+		padding-left: $padding-small-horizontal + $size-icon + $padding-small-horizontal;
+	}
+
+	.tree-toggle {
+		@include square($size-icon);
+		background-size: 16px;
+		margin: 0 5px 0 -2px;
+		cursor: pointer;
+	}
+
+	.input-group {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		> input {
+			flex: 1;
+			padding-top: 1px;
+			padding-right: 4px;
+			padding-bottom: 2px;
+			line-height: $size-grid-row-height;
+			height: 100%;
+			width: 100%; // workaround for Chrome 49 bug
+		}
+
+		& + button {
+			margin-left: -1px;
+		}
+	}
+
+	.input-group-content {
+		@extend .ellipsis !optional;
+		flex: 1;
+		padding: 0 4px 0 2px;
+	}
+
+	.input-group-btn, .input-group-addon {
+		display: flex;
+		height: 100%;
+
+		.btn {
+			width: 16px;
+			height: 100%;
+			padding: 0;
+			//vertical-align: top;
+			margin-right: 0;
+			border-width: 0 0 0 1px;
+		}
+
+		.glyphicon {
+			font-size: 11px;
+			right: -1px;
+		}
+	}
+
+	.slick-viewport {
+		.indicator {
+			padding-left: 0;
+			padding-right: 0;
+			background-color: $color-grid-background;
+		}
+	}
+
+	// formatting editors in grid
+	.slick-viewport {
+		input {
+			box-sizing: border-box;
+			border: none;
+			top: 0;
+			left: 0;
+			//padding: 4px 3px 2px;
+			outline: none;
+
+			&[type="time"] {
+				padding: 0px;
+				line-height: 100%;
+			}
+
+			&[readonly] {
+				background-color: transparent;
+			}
+		}
+
+		input[type='checkbox'], input[type='radio'] {
+			position: relative;
+			margin: 0;
+			vertical-align: middle;
+		}
+
+		.color-picker {
+			@include square(16px);
+			padding: 0;
+			//margin: 2px;
+
+			> input {
+				@include square(16px);
+				padding-left: 0;
+				cursor: pointer;
+			}
+
+			> .overlay {
+				@include square(14px);
+			}
+		}
+
+		//style for chrome. input-type 'color'
+		.color-picker::-webkit-color-swatch-wrapper {
+			padding: 0;
+		}
+
+		.color-picker::-webkit-color-swatch {
+			border: solid 1px $color-input-border;
+		}
+	}
+
+	input[type=checkbox] {
+		&.grid-control {
+			outline: none !important;
+		}
+	}
+
+	select {
+		border: none;
+		height: 23px;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: inherit;
+	}
+
+	.filterPanel {
+		padding: 0 0 $padding-large-vertical 0;
+
+		input {
+			box-sizing: border-box;
+		}
+	}
+	// wait icon in cell
+	.spinner-sm {
+		top: 4px; left: 4px; bottom: 0; right: 0;
+		float: left;
+		position: relative;
+	}
+
+	// disable headerrow (probably you have to resize() the grid
+	&.no-header {
+		.slick-header-columns,
+		.slick-pane-header {
+			height: 0px !important;
+		}
+	}
+}
+
+// line for fixed columns
+.slick-fix-row {
+	.slick-cell.active:not(.indicator):last-child {
+		margin-right: 1px;
+	}
+}
+
+.gridcell-ico {
+	height: 100%;
+	width: 22px;
+	background-size: $size-icon $size-icon;
+	border-right: solid 1px $color-border;
+	background-color: $color-button-background;
+	vertical-align: middle;
+}
+
+.group-action-btn {
+	padding: 0;
+}
+
+/* Grid-Layout */
+.grid-layout-wrapper {
+	.middle-container {
+		@extend .vert-hori-center !optional;
+		width: 50px;
+
+		button {
+			@include square(30px);
+			margin: 10px 10px 0 10px;
+			background-size: 16px 16px;
+
+			&:nth-child(2) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	.left-container {
+		flex: 2;
+	}
+}
+
+input {
+	line-height: normal;
+	border: none;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+.grid-canvas-right .slick-row {
+	border-left: 0
+}
+
+.grid-content .input-group-btn .btn {
+	border-width: 0 0 0 1px;
+	height: 100%;
+	margin-right: 0;
+	padding: 0;
+	width: 16px
+}
+
+.slick-header-column, .slick-header-column.ui-state-default {
+	border-right: 1px solid hsla(0, 0%, 86%, .42);
+}
+
+.slick-header-columns {
+	height: 2em;
+}
+
+.slick-headerrow .slick-headerrow-columns .slick-cell {
+	border-right: 0;
+	height: 32px;
+	padding: 2px 3px;
+}
+.slick-headerrow .slick-headerrow-columns.slick-headerrow-columns-left div:last-child {
+	margin-right: 1px;
+}
+
+.block-image {
+	background-size: 16px;
+	display: inline-block;
+	height: 16px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+.slick-top-panel {
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.btn-colorpicker {
+	height: 6px;
+	width: 6px;
+}
+
+/* Slick Overlay when loading */
+.slick-overlay {
+	@include square(100%);
+
+	background-color: $overlay-background2-color;
+	transition: visibility 1s linear 0.3s, $transition-opacity-fade;
+	z-index: 1000;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: none;
+	opacity: 0.5;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transition-delay: 0.7s !important; // <-- this is the puffer befor it will be visible
+		transition: $transition-opacity-fade;
+	}
+}
+
+.spinner-lg {
+	border: 6px solid #d3d3d3;
+	border-radius: 100%;
+	border-top-color: #0067b1;
+	height: 30px;
+	width: 30px;
+}
+
+.spinner-lg, .spinner-sm {
+	animation: full-rotation .8s linear infinite;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+input[type=checkbox], input[type=radio] {
+	cursor: pointer;
+	height: 16px;
+	line-height: normal;
+	margin: 4px 0 0;
+	margin-top: 1px \9;
+	width: 16px;
+}
+
+input[type=checkbox], input[type=radio] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+button, input, label, optgroup, select, textarea {
+	border-radius: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+}
+
+ input{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+}
+
+.flex-element {
+	flex: 1;
+}
+
+.slick-search-panel-scroller .slick-search-panel {
+	width: 100% !important
+}
+
+.slick-pane-right {
+	border-left: none
+}
+
+.slick-cell.active:not(.indicator):last-child {
+	margin-right: 1px
+}
+
+.slick-pane-left .slick-row div:last-child {
+	margin-right: 1px
+}
+
+a {
+	color: #0067b1;
+	text-decoration: none;
+}
+a {
+	background: transparent;
+}
+
+button:not(.plain), input[type=button]:not(.plain) {
+	transition: background-color .2s ease-in, opacity .2s ease-in;
+}
+
+label {
+	border-radius: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+}

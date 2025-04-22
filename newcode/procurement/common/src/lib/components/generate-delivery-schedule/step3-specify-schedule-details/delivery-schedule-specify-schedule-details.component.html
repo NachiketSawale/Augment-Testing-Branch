@@ -1,0 +1,114 @@
+<section class="modal-body" style="margin-top: 1em">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label">
+				<h5>{{ 'procurement.common.wizard.generateDeliverySchedule.specifyItems' | platformTranslate }}</h5>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label" style="width: 14%">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.descriptionPrefix' | platformTranslate }}
+			</div>
+			<div class="platform-form-col" style="width: 36%">
+				<ui-common-domain-control-host [(value)]="optionItem.DescriptionPrefix" [fieldType]="FieldType.Description"></ui-common-domain-control-host>
+			</div>
+			<div class="platform-form-label" style="width: 14%; padding-left: 25px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.repeat' | platformTranslate }}
+			</div>
+			<div class="platform-form-col" style="width: 36%">
+				<ui-common-lookup-input [dataService]="repeatLookupService" (valueChange)="valueChangedRepeat($event)" [(value)]="optionItem.RepeatOptionId"></ui-common-lookup-input>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label" style="width: 14%">
+				{{ 'cloud.common.entityStartDate' | platformTranslate }}
+			</div>
+			<div class="platform-form-col" style="width: 36%">
+				<ui-common-domain-control-host [(value)]="optionItem.StartDate" [fieldType]="FieldType.Date" (valueChange)="valueChangedStartDate($event)" [readOnly]="!optionItem.StartDateAction"></ui-common-domain-control-host>
+			</div>
+			<div class="platform-form-label" style="width: 14%; padding-left: 25px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.occurence' | platformTranslate }}
+			</div>
+			<div class="platform-form-col" style="width: 36%">
+				<ui-common-domain-control-host [readOnly]="occurrenceReadOnly()" [(value)]="optionItem.Occurrence" [fieldType]="FieldType.Integer"></ui-common-domain-control-host>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label" style="width: 14%">
+				{{ 'cloud.common.entityEndDate' | platformTranslate }}
+			</div>
+			<div class="platform-form-col" style="width: 36%">
+				<ui-common-domain-control-host [(value)]="optionItem.EndDate" [fieldType]="FieldType.Date" (valueChange)="valueChangedEndDate($event)" [readOnly]="!optionItem.EndDateAction"></ui-common-domain-control-host>
+			</div>
+			<div class="platform-form-label" style="width: 14%; padding-left: 25px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.timeRequired' | platformTranslate }}
+			</div>
+			<div class="platform-form-col" style="width: 36%">
+				<!--TODO: time is not implemented yet in domain control-->
+				<ui-common-domain-control-host [(value)]="optionItem.TimeRequired" [fieldType]="FieldType.Time"></ui-common-domain-control-host>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label" style="width: 14%"></div>
+			<div class="platform-form-col" style="width: 36%">
+				<div class="invalid-cell invalid-form" *ngIf="hasError()" [innerText]="validationMessage"></div>
+			</div>
+			<div class="platform-form-label" style="width: 14%; padding-left: 25px"></div>
+			<div class="platform-form-col" style="width: 36%"></div>
+		</div>
+	</div>
+	<div *ngIf="multipleOptions" class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label" style="width: 24%">
+				<div class="checkbox spaceToUp lg-3 md-3">
+					<label>
+						<input type="checkbox" [(ngModel)]="optionItem.UseTempSafetyLeadTime" [disabled]="optionItem.UseTempSafetyLeadTimeAction" (ngModelChange)="safetyLeadTimeCheckboxChanged()"/>
+						{{ 'procurement.common.wizard.generateDeliverySchedule.useTempSafetyLeadTime' | platformTranslate }}
+					</label>
+				</div>
+			</div>
+			<div class="platform-form-col" style="width: 26%">
+				<div class="input-group form-control">
+					<input type="text" class="input-group-content" [(ngModel)]="optionItem.UseTempSafetyLeadTime" [disabled]="!optionItem.UseTempSafetyLeadTimeAction" (blur)="safetyLeadTimeOptionChanged()"/>
+				</div>
+			</div>
+			<div class="platform-form-label ng-binding" style="width: 14%"></div>
+			<div class="platform-form-col" style="width: 36%"></div>
+		</div>
+	</div>
+
+	<br/>
+	<div class="platform-form-group">
+		<div class="checkbox spaceToUp lg-3 md-3">
+			<label> <input type="checkbox" [(ngModel)]="optionItem.RoundUpQuantity"/>{{ 'procurement.common.wizard.generateDeliverySchedule.roundUpQuantity' | platformTranslate }} </label>
+		</div>
+	</div>
+	<br/>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div style="width: 100%">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.note' | platformTranslate }}
+			</div>
+			<div style="width: 100%; margin-left: 20px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.note1' | platformTranslate }}
+			</div>
+			<div *ngIf="multipleOptions" style="width: 100%; margin-left: 20px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.note2' | platformTranslate }}
+			</div>
+			<div *ngIf="multipleOptions" style="width: 100%; margin-left: 20px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.note3' | platformTranslate }}
+			</div>
+			<div *ngIf="multipleOptions" style="width: 100%; margin-left: 20px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.note4' | platformTranslate }}
+			</div>
+		</div>
+	</div>
+</section>

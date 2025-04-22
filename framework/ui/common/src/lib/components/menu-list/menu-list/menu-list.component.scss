@@ -1,0 +1,6 @@
+:host-context(.sublist) >ul {
+	display: flex;
+}
+:host-context(.popup-menu) >ul {
+	display: inherit;
+}

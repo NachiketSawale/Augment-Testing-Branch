@@ -1,0 +1,11 @@
+<div class="fullheight flex-box flex-column">
+	<mat-tab-group class="tabsWrapper" [selectedIndex]="selectedIndex" mat-stretch-tabs="false" mat-align-tabs="start" animationDuration="0ms">
+		<mat-tab *ngFor="let tab of tabs" [label]="tab.title | platformTranslate">
+			<ui-common-form 
+                [formConfig]="tab.formConfig" 
+                [entity]="tab.entity"
+                [entityRuntimeData]="tab.runTimeData"
+            > </ui-common-form>
+		</mat-tab>
+	</mat-tab-group>
+</div>

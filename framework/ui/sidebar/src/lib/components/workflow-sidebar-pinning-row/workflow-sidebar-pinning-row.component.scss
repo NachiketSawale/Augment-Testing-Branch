@@ -1,0 +1,26 @@
+.pinItem{
+	display: grid;
+}
+
+.pinId{
+	grid-column-start: 1;
+}
+
+.pinInput{
+	grid-column: 2;
+	border: solid var(--border-width-default) var(--input-border-color);
+	outline: none;
+}
+
+.pinDelete{
+	grid-column: 3;
+}
+
+.pinDeleteBtn{
+	width: 20px;
+	height: 20px;
+}
+
+.pinInput:focus {
+	border-color: #007BFF;
+}

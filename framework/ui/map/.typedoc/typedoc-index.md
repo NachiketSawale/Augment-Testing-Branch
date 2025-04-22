@@ -1,0 +1,1 @@
+This module contains types for displaying geographical maps in @@product.

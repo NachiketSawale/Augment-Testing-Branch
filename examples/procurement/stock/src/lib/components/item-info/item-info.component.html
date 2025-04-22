@@ -1,0 +1,32 @@
+<div class="platform-form-group">
+	<div class="platform-form-group">
+		<div class="platform-form-row form-group">
+			<div style="width: 350px; display: inline-block">
+				<label class="platform-form-label">
+					<input type="checkbox" [checked]="viewOptions.isOutStanding" [(ngModel)]="viewOptions.isOutStanding" />
+					{{ viewOptions.outStandingText }}
+				</label>
+			</div>
+			<div style="width: 300px; display: inline-block">
+				<label class="platform-form-label" style="width: 70px; text-align: right">{{ 'cloud.desktop.botChat.from' | platformTranslate }} : </label>
+				<div class="platform-form-col" style="width: 300px">
+					<ui-common-domain-control-host [fieldType]="FieldType.DateUtc" [value]="viewOptions.startDate" (valueChange)="onStartDateChange($event)"></ui-common-domain-control-host>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row form-group">
+		<div style="width: 350px; display: inline-block">
+			<label class="platform-form-label">
+				<input type="checkbox" [checked]="viewOptions.isDelivered" [(ngModel)]="viewOptions.isDelivered" />
+				{{ viewOptions.deliveredText }}
+			</label>
+		</div>
+		<div style="width: 300px; display: inline-block">
+			<label class="platform-form-label" style="width: 88px; text-align: right">{{ 'cloud.desktop.botChat.to' | platformTranslate }} : </label>
+			<div class="platform-form-col" style="width: 300px">
+				<ui-common-domain-control-host [fieldType]="FieldType.DateUtc" [value]="viewOptions.endDate" (valueChange)="onEndDateChange($event)"></ui-common-domain-control-host>
+			</div>
+		</div>
+	</div>
+</div>

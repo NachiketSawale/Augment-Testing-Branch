@@ -1,0 +1,5 @@
+<div *ngIf="NotificationData.message">
+	<div class="card-body">
+		<p class="notification-message" [ngStyle]="{ 'font-family': fontFamily, 'font-weight': fontWeight }" [ngClass]="NotificationData.notification_class === 'success' ? 'success' : 'error'">{{ NotificationData.message }}</p>
+	</div>
+</div>

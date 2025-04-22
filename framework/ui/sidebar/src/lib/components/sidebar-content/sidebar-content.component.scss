@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'mixins';
+
+.sidebar.pinned {
+	height: 100%;
+}
+
+$sidebar-toolbar-height: 34px;
+$sidebar-toolbar-button-size: 30px;
+$sidebar-width: 380px;
+$size-commandbar-width: 40px;
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: $size-commandbar-width;
+	height: 100%;
+	top: 0;
+	z-index: 900;
+
+	&.pinned {
+		position: static;
+		height: auto;
+	}
+
+	.panel-title {
+		color: $color-text-light;
+	}
+
+	.maximize {
+		width: 760px !important;
+	}
+
+	section {
+		@include content-container($height: 100%);
+		flex: 1;
+		background-color: $color-body-background;
+		border-color: $color-grey-dark;
+		border-left-style: solid;
+		border-left-width: $border-width-default;
+		display: none;
+		/* this is for the sliding effect to initially make the sidebar hidden */
+		width: $sidebar-width;
+		box-sizing: border-box;
+		position: relative;
+
+		&.selected {
+			display: block;
+			border-width: $border-width-default;
+		}
+
+		>div {
+			@include square(100%);
+			@include container-position();
+
+			::ng-deep {
+				@include content-container($height: 100%);
+
+				.toolbar {
+					box-sizing: content-box;
+
+					>.title {
+						font-weight: bold;
+						font-size: 12pt;
+						line-height: $sidebar-toolbar-height;
+						margin-left: 0;
+						flex: 1;
+					}
+				}
+			}
+		}
+	}
+}

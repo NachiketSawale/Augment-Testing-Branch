@@ -1,0 +1,5 @@
+<button type="button" [disabled]="isDisabled(menuItem)" [ngClass]="getCssClass(menuItem)" [title]="getTitle(menuItem)" (click)="toggleDropdown(menuItem)">
+	<svg *ngIf="menuItem.svgSprite && menuItem.svgImage" uiCommonSvgimage [attr.sprite]="menuItem.svgSprite" [svgImage]="menuItem.svgImage"></svg>
+	<span *ngIf="showTitles" [innerHTML]="getTitle(menuItem)"></span>
+	<i class="submenu-ico control-icons ico-tree-collapse"></i>
+</button>

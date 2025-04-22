@@ -1,0 +1,8 @@
+<div *ngIf="stepGrid.topButtons" class="top-description modal-footer">
+	<button class="btn btn-default ellipsis" title="{{btn.text | platformTranslate}}"
+			*ngFor="let btn of stepGrid.topButtons"
+			(click)="btn.fn(stepGrid)">{{btn.text | platformTranslate}}</button>
+</div>
+<div class="flex-element flex-box flex-column">
+	<ui-common-grid [configuration]="stepGrid.gridConfiguration" (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+</div>

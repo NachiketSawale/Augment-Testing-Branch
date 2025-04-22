@@ -1,0 +1,34 @@
+<section class="modal-body" style="margin-top: 1em">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label">
+				<h5>{{ 'procurement.common.wizard.generateDeliverySchedule.chooseItems' | platformTranslate }}</h5>
+			</div>
+		</div>
+	</div>
+	<div class="modal-wrapper subview-container grid-wrapper">
+		<ui-common-grid [configuration]="gridConfig" [items]="prcItems" class="lookup-grid flex-basis-auto"></ui-common-grid>
+	</div>
+	<div *ngIf="multipleOptions" class="platform-form-group" style="padding-left: 15px">
+		<div class="checkbox spaceToUp lg-3 md-3">
+			<label>
+				<input type="checkbox" [(ngModel)]="optionItem.LinkedEstLineItem" (ngModelChange)="linkedEstLineItemCheck()" [disabled]="optionItem.LinkedEstLineItemAction"/>
+				{{ 'procurement.common.wizard.generateDeliverySchedule.linkedEstLineItem' | platformTranslate }}
+			</label>
+		</div>
+		<div class="checkbox spaceToUp lg-3 md-3">
+			<label>
+				<input type="checkbox" [(ngModel)]="optionItem.LinkedActivity" (ngModelChange)="linkedActivityCheck()" [disabled]="optionItem.LinkedActivityAction"/>
+				{{ 'procurement.common.wizard.generateDeliverySchedule.linkedActivity' | platformTranslate }}
+			</label>
+		</div>
+	</div>
+	<br/>
+	<div *ngIf="multipleOptions" class="platform-form-group">
+		<div class="platform-form-row">
+			<div style="width: 100%">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.noteOption1' | platformTranslate }}
+			</div>
+		</div>
+	</div>
+</section>

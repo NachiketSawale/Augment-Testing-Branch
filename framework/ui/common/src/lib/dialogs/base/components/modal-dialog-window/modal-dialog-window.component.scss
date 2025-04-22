@@ -1,0 +1,171 @@
+@import 'variables';
+@import 'mixins';
+$modal-header-height: 43px;
+
+.cdk-overlay-pane {
+	@include flexbox-container($direction: column);
+	//overflow: hidden;
+	min-width: 600px;
+}
+.mat-mdc-dialog-container {
+	@include flexbox-container($direction: column, $flex: 1, $overflow: hidden, $alignItems: normal);
+	box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	max-height: fit-content;
+	max-width: 100%;
+}
+.mdc-dialog__container {
+	@include flexbox-container($direction: column, $flex: 1, $overflow: hidden);
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+	@include flexbox-container($direction: column, $flex: 1);
+	background-color: transparent;
+}
+ui-common-modal-dialog-window {
+	@include flexbox-container($direction: column, $flex: 1, $overflow: hidden);
+	padding: 0px 10px 12px 10px;
+}
+.modal-content {
+	@include flexbox-container($direction: column, $flex: 1, $overflow: hidden);
+	position: relative;
+	background-color: $color-body-background;
+	background-clip: padding-box;
+	// Remove focus outline from opened modal
+	outline: 0;
+}
+.main-color {
+	background-color: rgb(51,141, 206);
+	color: #fff;
+}
+.modal-header {
+	@extend .main-color;
+	min-height: $modal-header-height;
+	height: $modal-header-height;
+	padding-left: 10px;
+	display: flex;
+	.db {
+		background-size: 16px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.close {
+		@include square($modal-header-height);
+		@include status-styles($color-main-hover, lighten);
+		&.highlight {
+			@include status-styles($color-highlight-main-hover, lighten);
+			background-color: $color-highlight-main;
+		}
+	}
+	.close {
+		@include opacity(.4);
+		float: right;
+		background-image: none;
+		&:hover,
+		&:focus {
+			@include opacity(1);
+			//color: $close-color;
+			//text-decoration: none;
+			cursor: pointer;
+		}
+		.mat-icon {
+			@include square(16px);
+			font-size: 20px;
+		}
+	}
+	.modal-title {
+		font-size: 12pt;
+		flex: 1;
+		margin: 0;
+		line-height: $modal-header-height;
+		color: var(--company-font-color);
+	}
+	.modal-subtitle {
+		line-height: $modal-header-height;
+	}
+	.title-group {
+		display: flex;
+		flex: 1;
+		> * + *  {
+			margin-left:1rem;
+		}
+		.modal-title {
+			flex: initial;
+		}
+	}
+}
+.modal-body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	overflow-wrap: break-word;
+	position: relative;
+	flex: 1;
+	&:not(.template) {
+		padding: $padding-large-horizontal;
+		&.margin-large {
+			padding: $padding-xxlarge-horizontal;
+		}
+	}
+	&.template {
+		> .modal-body-template {
+			padding: $padding-large-horizontal;
+		}
+		&.margin-large {
+			> .modal-body-template {
+				padding: $padding-xxlarge-horizontal;
+			}
+		}
+	}
+	h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+		margin-bottom: 0.3em;
+	}
+	article + article {
+		margin-top: 5px;
+	}
+}
+.modal-footer {
+	@include clearfix(); // clear it in case folks use .pull-* classes on buttons
+	height: 62px;
+	min-height: 62px;
+	padding: $padding-xxlarge-vertical;
+	border-top: 1px solid $color-dropdown-divider;
+	display: flex;
+	justify-content: flex-end;
+	// Properly space out buttons
+	.btn + .btn {
+		margin-left: 5px;
+		margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+	}
+	// but override that for button groups
+	.btn-group .btn + .btn {
+		margin-left: -1px;
+	}
+	// and override it for block buttons as well
+	.btn-block + .btn-block {
+		margin-left: 0;
+	}
+	button {
+		//	@extend .ellipsis;
+		height: 30px;
+		padding: 0 10px;
+		max-width: 180px;
+		min-width: 100px;
+		width: auto;
+		font-size: inherit;
+		img {
+			vertical-align: middle;
+		}
+		&.navigator-button {
+			background-size: $size-icon $size-icon;
+		}
+	}
+	> .custom-btn-group {
+		display: inline-flex;
+		flex: 1;
+		margin-right: $padding-xlarge-horizontal;
+	}
+	> .custom-group {
+		@extend .custom-btn-group;
+		span {
+			align-self: center;
+		}
+	}
+}

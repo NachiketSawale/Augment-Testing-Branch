@@ -1,0 +1,14 @@
+<div class="platform-form-row">
+	<h3 class="margin-top-ld">{{ 'procurement.pes.createCOContractWizard.dialogInfo' | platformTranslate }}</h3>
+	<div class="platform-form-col">
+		<!-- TODO: need to show the grid tool bar.
+		<div class="toolbar">
+			<div data-platform-menu-list data-list="tools"></div>
+		</div>-->
+		<ui-common-grid [configuration]="gridConfig"></ui-common-grid>
+	</div>
+</div>
+
+<div class="platform-form-row">
+	<ui-common-form [formConfig]="formConfig" [entity]="wizardOption"></ui-common-form>
+</div>

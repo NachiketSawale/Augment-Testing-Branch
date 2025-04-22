@@ -1,0 +1,11 @@
+.border-radius{
+    border-radius: unset;
+}
+
+.text-overflow{
+    display: inline-block;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

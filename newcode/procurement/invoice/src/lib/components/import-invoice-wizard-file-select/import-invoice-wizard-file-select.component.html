@@ -1,0 +1,16 @@
+<ui-common-grid class="flex-element"  [configuration]="gridConfig"></ui-common-grid>
+
+<!--TODO: the style need to be adjusted for the multi-step dialog. -->
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ 'procurement.invoice.wizard.invoice.import.Filter' | platformTranslate }}</label>
+		<div class="platform-form-col">
+			<ui-common-lookup-input
+				[dataService]="importFilterOptionsService"
+				(valueChange)="filterOptionChanged($event)"
+				[(value)]="filterOption"></ui-common-lookup-input>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,11 @@
+<div cdkDropList (cdkDropListDropped)="processSortItems($event)">
+	<div *ngFor="let data of favoritesData">
+		<div cdkDrag class="d-flex flex-row">
+			<div cdkDragHandle class="dragIcon control-icons ico-grip area"></div>
+			<div class="accordion-element">
+				<ui-common-accordion [data]="[data]" (opened)="initializeFavoritesData()" (closed)="initializeFavoritesData()"></ui-common-accordion>
+			</div>
+			<button class="buttonCancel control-icons ico-input-delete area" (click)="onProjectDeleteClick(data.projectId)"></button>
+		</div>
+	</div>
+</div>

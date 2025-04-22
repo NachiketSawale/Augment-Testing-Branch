@@ -1,0 +1,14 @@
+<ui-sidebar-report-list 
+    *ngIf="showList" 
+    [reportAccordionData]="reportAccordionData" 
+    [reportLanguageToolbar]="reportLanguageToolbar" 
+    (selected)="showParametersOrExecute($event)">
+</ui-sidebar-report-list>
+
+<ui-sidebar-report-parameter 
+    *ngIf="!showList" 
+    [title]="infoHeader" 
+    [report]="report" 
+    (changeView)="toggleView()" 
+    (generate)="validateParametersAndExecute($event)">
+</ui-sidebar-report-parameter>

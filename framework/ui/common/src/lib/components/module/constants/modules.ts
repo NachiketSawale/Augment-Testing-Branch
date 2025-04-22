@@ -1,0 +1,125 @@
+/*
+ * $Id$
+ * Copyright(c) RIB Software GmbH
+ */
+
+export const modules = {
+	'cloud.uom': { ico: 'uom', name: 'CloudUoM' },
+	'basics.characteristic': { ico: 'characteristics', name: 'Characteristics' },
+	'basics.clerk': { ico: 'clerk', name: 'Clerk' },
+	'basics.company': { ico: 'company-structure', name: 'Company' },
+	'basics.costcodes': { ico: 'cost-code', name: 'CostCodes' },
+	'basics.unit': { ico: 'uom', name: 'Unit' },
+	'basics.material': { ico: 'materials', name: 'Material' },
+	'basics.materialcatalog': { ico: 'materials', name: 'MaterialCatalog' },
+	'basics.taxcode': { ico: 'tax-code', name: 'TaxCode' },
+	'basics.payment':{ico:'payment-term',name:'PaymentTerm'},
+	'basics.procurementstructure': {
+		ico: 'procurement-structure',
+		name: 'ProcurementStructure',
+	},
+	'basics.procurementconfiguration': {
+		ico: 'procurement-config',
+		name: 'ProcurementConfiguration',
+	},
+	'basics.priceCondition': { ico: 'price-condition', name: 'PriceCondition' },
+	'basics.assetmaster': { ico: 'asset-master', name: 'AssetMaster' },
+	'basics.billingschema': { ico: 'billing-schema', name: 'BillingSchema' },
+	'basics.site': { ico: 'site', name: 'Site' },
+	'boq.main': { ico: 'boq', name: 'BoqMain' },
+	'businesspartner.main': { ico: 'business-partner', name: 'BusinessPartner' },
+	'businesspartner.certificate': { ico: 'certificate', name: 'Certificate' },
+	'businesspartner.evaluationschema': {
+		ico: 'bp-evaluation',
+		name: 'EvaluationSchema',
+	},
+	'constructionsystem.main': {
+		ico: 'construction-system',
+		name: 'ConstructionSystemInstance',
+	},
+	'constructionsystem.master': {
+		ico: 'construction-system-master',
+		name: 'ConstructionSystemMaster',
+	},
+	'change.main': { ico: 'change', name: 'ChangeMain' },
+	'defect.main': { ico: 'defect-main', name: 'Defect' },
+	'hsqe.checklist': { ico: 'checklist', name: 'CheckList' },
+	'hsqe.checklisttemplate': {
+		ico: 'checklist-template',
+		name: 'CheckListTemplate',
+	},
+	'estimate.main': { ico: 'estimate', name: 'Estimate' },
+	'logistic.dispatching': { ico: 'dispatching', name: 'LogisticDispatching' },
+	'logistic.job': { ico: 'logistic-job', name: 'LogisticJob' },
+	'model.main': { ico: 'model', name: 'Model' },
+	'model.changeset': { ico: 'model', name: 'ModelChangeSet' },
+	'model.change': { ico: 'model', name: 'ModelChange' },
+	'resource.certificate': { ico: 'plant', name: 'PlantCertificate' },
+	'procurement.package': { ico: 'package', name: 'Package' },
+	'procurement.requisition': { ico: 'requisition', name: 'Requisition' },
+	'procurement.contract': { ico: 'contracts', name: 'Contract' },
+	'procurement.quote': { ico: 'quote', name: 'Quote' },
+	'procurement.rfq': { ico: 'rfq', name: 'RfQ' },
+	'procurement.pes': { ico: 'pes', name: 'PerformanceEntrySheet' },
+	'procurement.invoice': { ico: 'invoice', name: 'Invoice' },
+	'procurement.pricecomparison': {
+		ico: 'price-comparison',
+		name: 'PriceComparison',
+	},
+	'project.main': { ico: 'project', name: 'ProjectMain' },
+	'sales.bid': { ico: 'sales-bid', name: 'Bid' },
+	'sales.contract': { ico: 'sales-contract', name: 'SalesContract' },
+	'sales.wip': { ico: 'sales-wip', name: 'Wip' },
+	'sales.billing': { ico: 'sales-billing', name: 'Billing' },
+	'scheduling.main': { ico: 'scheduling', name: 'SchedulingMain' },
+	'scheduling.calendar': { ico: 'scheduling', name: 'Calendar' },
+	'qto.main': { ico: 'qto', name: 'QTO' },
+	'productionplanning.activity': {
+		ico: 'mounting-activity',
+		name: 'PpsActivity',
+	},
+	'productionplanning.engineering': {
+		ico: 'engineering-planning',
+		name: 'Engineering',
+	},
+	'productionplanning.drawing': {
+		ico: 'engineering-tasks',
+		name: 'EngineeringDrawing',
+	},
+	'productionplanning.item': { ico: 'production-planning', name: 'PPSItem' },
+	'productionplanning.mounting': { ico: 'mounting', name: 'PpsMounting' },
+	'productionplanning.productionset': {
+		ico: 'production-sets',
+		name: 'ProductionSet',
+	},
+	'productionplanning.report': { ico: 'mounting-report', name: 'PpsReport' },
+	'productionplanning.producttemplate': {
+		ico: 'engineering-product-template',
+		name: 'ProductTemplate',
+	},
+	'procurement.stock': { ico: 'stock', name: 'Stock' },
+	'resource.master': { ico: 'resource-master', name: 'ResourceMaster' },
+	'resource.requisition': {
+		ico: 'resource-requisition',
+		name: 'ResourceRequisition',
+	},
+	'resource.reservation': {
+		ico: 'resource-reservation',
+		name: 'ResourceReservation',
+	},
+	'timekeeping.paymentgroup': {
+		ico: 'payment-group',
+		name: 'TimekeepingPaymentGroup',
+	},
+	'transportplanning.bundle': { ico: 'product-bundles', name: 'Bundle' },
+	'transportplanning.package': { ico: 'transport-package', name: 'TrsPackage' },
+	'transportplanning.requisition': {
+		ico: 'transport-requisition',
+		name: 'TransportRequisition',
+	},
+	'transportplanning.transport': { ico: 'transport', name: 'Transport' },
+	'logistic.sundryservice': {
+		ico: 'logistic-sundryservice',
+		name: 'LogisticSundryservice',
+	},
+};

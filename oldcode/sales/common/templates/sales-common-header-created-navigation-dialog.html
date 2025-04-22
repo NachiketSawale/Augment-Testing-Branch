@@ -1,0 +1,13 @@
+<div class="modal-wrapper">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="icon-message ng-scope">
+			<div class="tlb-icons icon ico-info"></div>
+			<div class="message" data-ng-bind-html="modalOptions.bodyText"></div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="isOkDisabled" data-dismiss="modal" data-ng-click="modalOptions.navigate(modalOptions.navigator, modalOptions.newHeader)" data-ng-bind="modalOptions.okBtnText"></button>
+		<button type="button" class="btn btn-default" data-dismiss="modal" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+	</footer>
+</div>

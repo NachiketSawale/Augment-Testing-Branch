@@ -1,0 +1,27 @@
+<div class="flex-box flex-column subview-container fullwidth" style="margin: 5px;">
+    <div class="subview-header toolbar">
+        <h3 class="title font-bold" [innerText]="title | platformTranslate"></h3>
+    </div>
+
+    <div class="sortable-container flex-element overflow fullheight flex-box flex-column">
+        <div cdkDropList [id]="pane.name" [cdkDropListConnectedTo]="activePanes" (cdkDropListDropped)="drop($event)" class="subview-content fullheight drag-drop-list">
+            <div cdkDrag class="platform-form-group drag-drop-box" *ngFor="let item of pane.tabContainers || []" [cdkDragDisabled]="!item.uuid">
+                <div *cdkDragPlaceholder class="drag-drop-placeholder"></div>
+                <span class="flex-box flex-element platform-form-row">
+                   <span class="input-group-addon dragzone control-icons ico-grip"></span>
+                   <div class="input-group cursor-pointer">
+                       <ui-common-lookup-select
+                               [(value)]="item.uuid"
+                               (valueChange)="changeTabContainer(item)"
+                               [dataItems]="containers"
+                               [dataFilter]="containerFilter"
+                               valueMember="uuid"
+                               displayMember="title"
+                               class="flex-element">
+                       </ui-common-lookup-select>
+                   </div>
+               </span>
+            </div>
+        </div>
+    </div>
+</div>

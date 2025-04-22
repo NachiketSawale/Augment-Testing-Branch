@@ -1,0 +1,9 @@
+<div class="lg-4 md-4">
+	<ui-common-lookup-input [(value)]="value" [dataService]="dataService" [entityContext]="entityContext" [options]="options" [readonly]="readonly"
+                            (selectedItemChanged)="onSelectedItemChanged($event)" (inputGroupClick)="onInputGroupClick($event)" (popupOpened)="onPopupOpened($event)" (popupClosed)="onPopupClosed($event)">
+	</ui-common-lookup-input>
+</div>
+<!-- Change because of the Navigator button(layout bug). Add navigator-button to composite-last-item-container  -->
+<div class="lg-8 md-8 form-control composite-last-item">
+	<input class="input-group-content" [(ngModel)]="description" readonly />
+</div>

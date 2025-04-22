@@ -1,0 +1,1 @@
+This module contains UI components related to the platform infrastructure.

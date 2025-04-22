@@ -1,0 +1,32 @@
+<div class="platform-lg compare-setting-custom-section">
+	<div class="lg-4">
+		<label class="section-lbl">{{ 'procurement.pricecomparison.printing.leftSection'| platformTranslate }}</label>
+		<procurement-pricecomparison-compare-setting-rich-editor
+			#ctrlLeft
+			[content]="info.leftTemplate"
+			(focused)="onSectionFocusing(sectionNames.left)"
+			(changed)="onSectionChanged(sectionNames.left, $event)"
+		>
+		</procurement-pricecomparison-compare-setting-rich-editor>
+	</div>
+	<div class="lg-4">
+		<label class="section-lbl">{{ 'procurement.pricecomparison.printing.centerSection'| platformTranslate }}</label>
+		<procurement-pricecomparison-compare-setting-rich-editor
+			#ctrlMiddle
+			[content]="info.middleTemplate"
+			(focused)="onSectionFocusing(sectionNames.middle)"
+			(changed)="onSectionChanged(sectionNames.middle, $event)"
+		>
+		</procurement-pricecomparison-compare-setting-rich-editor>
+	</div>
+	<div class="lg-4">
+		<label class="section-lbl">{{ 'procurement.pricecomparison.printing.rightSection'| platformTranslate }}</label>
+		<procurement-pricecomparison-compare-setting-rich-editor
+			#ctrlRight
+			[content]="info.rightTemplate"
+			(focused)="onSectionFocusing(sectionNames.right)"
+			(changed)="onSectionChanged(sectionNames.right, $event)"
+		>
+		</procurement-pricecomparison-compare-setting-rich-editor>
+	</div>
+</div>

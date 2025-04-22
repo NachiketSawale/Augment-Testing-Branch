@@ -1,0 +1,43 @@
+{
+	"model": {
+	  "change": {
+		"modelChangeListTitle": "Differences",
+		"modelChangeDetailTitle": "Difference Details",
+		"changeType": "Difference Type",
+		"object1": "Object in Model 1",
+		"object2": "Object in Model 2",
+		"value1": "Property Value in Model 1",
+		"value2": "Property Value in Model 2",
+		"changeOrder": "Is Change Order",
+		"cpiid": "CpiId - Object in Model 1",
+		"cmpcpiid": "CpiId - Object in Model 2",
+		"entityPropertyKey": "Property Key",
+		"defectsWizard": {
+		  "title": "Generate Defects",
+		  "linkage": "Object Links",
+		  "grouping": "Grouping",
+		  "defect": "Defect Settings",
+		  "linkModel": "Link Objects",
+		  "linkAll": "All",
+		  "linkModel1": "From Model 1",
+		  "linkModel2": "From model 2",
+		  "groupByChangeType": "By Change Type",
+		  "groupByObject": "By Object",
+		  "groupByPropertyKey": "By Attribute",
+		  "objectSetNamePattern": "Selection Set Name Pattern",
+		  "objectSetRemarkPattern": "Selection Set Remark Pattern",
+		  "objectSetType": "Selection Set Type",
+		  "defectCodePattern": "Code Pattern",
+		  "defectDescriptionPattern":  "Description Pattern",
+		  "defectDetailPattern": "Detail Pattern",
+		  "defectType": "Type",
+		  "noChangeSetSel": "No model comparison has been selected.",
+		  "noChangesLoaded": "No model differences have been loaded.",
+		  "wizardUnavailable": "Wizard Unavailable",
+		  "completedTitle": "Operation Completed",
+		  "completedDesc": "{{defectCount}} defect(s) have been created in project {{projectName}} ({{projectCode}})."
+		  },
+		  "location": "Location"
+	  }
+	}
+  }

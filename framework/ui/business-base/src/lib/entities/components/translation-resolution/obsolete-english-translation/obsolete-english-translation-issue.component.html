@@ -1,0 +1,16 @@
+<div *ngIf="!resolutionDone" style="display: flex;flex-direction: column;height: 100%;">
+	<h3>{{issueTitle | platformTranslate}}</h3>
+	<div class="issue-description">{{issueDescription | platformTranslate}}</div>
+	<div class="field-values" style="margin-top: 1rem;">
+		<ui-common-grid  [configuration]="gridConfig"></ui-common-grid>
+	</div>
+	<div class="issue-options">
+		<h4>{{actionsTitle | platformTranslate}}</h4>
+		<ui-common-domain-control-host [fieldType]="fieldType" [controlContext]="controlContext" [options]="radioItemSource"></ui-common-domain-control-host>
+	</div>
+	<div style="margin-top: auto; text-align: right;"><button class="btn btn-default" [disabled]="isPerformBtnDisabled()" (click)="onResolveIssueClick()">{{buttonTextResolveIssue | platformTranslate}}</button></div>
+</div>
+
+<div *ngIf="resolutionDone">
+	{{feedbackMessageIssueResolved | platformTranslate}}
+</div>

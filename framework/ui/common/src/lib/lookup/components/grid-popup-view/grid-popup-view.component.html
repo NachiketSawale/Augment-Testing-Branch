@@ -1,0 +1,15 @@
+<ui-common-popup>
+    <div content class="flex-box flex-column flex-element" [ngClass]="'cid_' + uuid">
+        <ui-common-grid #grid [configuration]="gridConfig"></ui-common-grid>
+        <ui-common-loading [loading]="isLoading"></ui-common-loading>
+    </div>
+
+    <div footer class="popup-tlb">
+        <button class="control-icons ico-refresh" title="Refresh" (click)="refresh()" [disabled]="lookupFacade.loading"></button>
+        <span *ngIf="lookupFacade.paging.enabled">
+				<button class="control-icons ico-previous" title="Previous Page" [disabled]="!lookupFacade.paging.canPrev() || lookupFacade.loading" (click)="loadPreviousPage()"></button>
+				<span>{{lookupFacade.paging.getPageInfo()}}</span>
+				<button class="control-icons ico-next" title="Next Page" [disabled]="!lookupFacade.paging.canNext() || lookupFacade.loading" (click)="loadNextPage()"></button>
+			</span>
+    </div>
+</ui-common-popup>

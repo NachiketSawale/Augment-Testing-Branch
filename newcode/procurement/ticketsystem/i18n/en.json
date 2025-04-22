@@ -1,0 +1,97 @@
+{
+  "procurement": {
+	"ticketsystem": {
+	  "moduleName": "Ticket System",
+	  "tab": {
+		"search": "Search",
+		"cart": "Cart Item",
+		"order": "Order/Request"
+	  },
+	  "view": {
+		"commoditySearch": "Commodity Search",
+		"cartItem": "Cart Item",
+		"orderOrRequest": "Order Request",
+		"orderOrContract": "Order Contract"
+	  },
+	  "orderRequest": {
+		"HideDetails": "Hide Details",
+		"ShowDetails": "Show Details",
+		"quantity": "Quantity:",
+		"price": "Price:",
+		"clerk": "Clerk:",
+		"status": "Status:",
+		"supplier": "Supplier:"
+	  },
+	  "submitDialog": {
+		"create": "Create",
+		"DateRequire": "Required",
+		"structure": "Proc.Structure",
+		"owner": "Requisition Owner",
+		"Responsible":"Responsible",
+		"Remark": "Remark",
+		"Project": "Project",
+		"headerText": "Cart Items Submit",
+		"projectError": "Project is required !",
+		"reqCreateSuccess": "Order has been submitted to procurement department successfully.",
+		"submitError": "submit fail , Please try again",
+		"requisitionReference":"Requisition Reference",
+		"requisitionName":"Requisition Name",
+		"refreshDate":"Refresh Date",
+		"separateContract": "Create separate contract for each material",
+		"noteSeperateRequistionContract":"Note: Seperate requisition or contract will be created for each selected vendor cart",
+		"entityCtrlCode": "Controlling Unit"
+	  },
+	  "htmlTranslate": {
+		"attributes": "Attributes",
+		"documents":"Documents",
+		"back": "Back",
+		"information": "Information",
+		"empty": "Empty",
+		"merge": "Merge selected catalog",
+		"submit": "Submit",
+		"total": "Total",
+		"items": "items",
+		"addAll": "Add all to cart",
+		"costPrice":"Price",
+		"uomPrice":"UoM",
+		"quantity":"Quantity",
+		"deliveryOption":"Delivery Option",
+		"standardDeliveryDate":"Startdard Deliver Date",
+		"deliveryDate":" Deliver Date",
+		"subTotal":"Sub Total",
+		"vendor": "Vendor:",
+		"requiredDate": "Required Date:",
+		"submitButton": "Place Order",
+		"procurementType": "Procurement Type:",
+		"more":"More",
+		"collapse":"Collapse",
+		"configuration":"Configuration:"
+	  },
+	  "createReqSuccessTitle": "Requisition has been created successfully!",
+	  "createConSuccessTitle": "Contract has been created successfully!",
+	  "ignoreNProceed": "Ignore & proceed",
+	  "createContractBodyText": "Some materials have no supplier information, do you want to specify a business partner and create contract for them?",
+	  "placeOrderSuccess": "Place Order Successfully",
+	  "buttonText": {
+		"contract": "Contract",
+		"requisition": "Requisition"
+	  },
+	  "tooltip": {
+		"goToContract": "Go to Contract",
+		"goToRequisition": "Go to Requisition"
+	  },
+	  "placeOrderDialog": {
+		"title": "Create Requisition and/or Contract",
+		"loadControllingUnitByProject": "Loading Controlling Unit by Project"
+	  },
+	  "lackOfVendor": "Must specify vendor for contract",
+	  "file": {
+		"name": "File Name",
+		"type": "File Type",
+		"size": "File Size",
+		"date": "Date Modified",
+		"progress": "Progress"
+	  }
+	}
+  }
+}

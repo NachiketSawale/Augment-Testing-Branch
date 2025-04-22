@@ -1,0 +1,24 @@
+.popup-content {
+	padding: 0 6px;
+	width: 100%;
+	text-align: left;
+	height: 30px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	background-position: -9999px;
+	text-indent: 0em;
+}
+
+.popup-container-s {
+	box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+	margin-top: 2px;
+}
+
+.popup-container {
+	position: fixed;
+	background: #fff;
+	border: 1px solid #ababab;
+	z-index: 9999;
+	overflow: hidden;
+}

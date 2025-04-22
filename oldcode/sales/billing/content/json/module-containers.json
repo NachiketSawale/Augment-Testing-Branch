@@ -1,0 +1,592 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleBills",
+		"controller": "salesBillingBillsListController",
+		"uuid": "39608924dc884afea59fe04cb1434543"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleBillsForm",
+		"controller": "salesBillingBillsDetailController",
+		"uuid": "e66e01dcb9d94aa889f0a8de3a16a65a",
+		"permission": "39608924dc884afea59fe04cb1434543"
+	},
+	{
+		"id": "9",
+		"template": "sales.common/templates/sales-common-header-plaintext-html-container.html",
+		"title": "sales.common.headerPlainTextContainerTitle",
+		"controller": "salesBillingHeaderTextController",
+		"uuid": "e9e9197b7c1a4eeeb9a609c2b4b65994",
+		"permission": "39608924dc884afea59fe04cb1434543",
+		"textFormat": 2
+	},
+	{
+		"id": "12",
+		"template": "sales.common/templates/sales-common-header-formattedtext-html-container.html",
+		"title": "sales.common.headerFormattedTextContainerTitle",
+		"controller": "salesBillingHeaderFormattedTextController",
+		"uuid": "c98d0a11654046d3b67b7e427a2bbcc0",
+		"permission": "39608924dc884afea59fe04cb1434543",
+		"textFormat": 1
+	},
+
+	{
+		"id": "2",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "0c1c039b62e8439a8c82eb287bac3441"
+	},
+
+	{
+		"id": "8",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"commentQualifier": "sales.billing.bilcomment",
+		"parentService": "salesBillingService",
+		"uuid": "99e67d71f2a84cdf9d116a3348258a22"
+	},
+
+	{
+		"id": "sales.billing.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"controller": "",
+		"sectionId": 26,
+		"mainService": "salesBillingService",
+		"uuid": "1614ed65978741289965a4595a2becbd"
+	},
+
+	{
+		"id": "sales.billing.characteristic2",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"controller": "",
+		"sectionId": 68,
+		"mainService": "salesBillingService",
+		"uuid": "99e40e1bb7f047069b51797cdc824425"
+	},
+
+	{
+		"id": "sales.billing.generals.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.generals.titleList",
+		"controller": "salesBillingGeneralsListController",
+		"uuid": "024a6871ea284639b80307eef7af32be"
+	},
+	{
+		"id": "sales.billing.generals.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.generals.titleDetail",
+		"controller": "salesBillingGeneralsDetailController",
+		"uuid": "a24b8036afc1413fbdaa16e9edc73447",
+		"permission": "024a6871ea284639b80307eef7af32be"
+	},
+
+	{
+		"id": "10",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerBillingschema",
+		"controller": "salesBillingSchemaListController",
+		"uuid": "9715b5644bb84661985187e09ae646ac"
+	},
+	{
+		"id": "13",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitlePredecessors",
+		"controller": "salesBillingPreviousBillsListController",
+		"uuid": "f825fabe0d0949ea8ef3f6c6dbbdea60"
+	},
+	{
+		"id": "sales.billing.wip.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleWips",
+		"controller": "salesBillingWipListController",
+		"uuid": "35b66e9f68e04dd59337a45a2f936d25",
+		"permission": "39608924dc884afea59fe04cb1434543"
+	},
+	{
+		"id": "sales.billing.transaction.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleTransaction",
+		"controller": "salesBillingTransactionListController",
+		"uuid": "d45fb0e93b5a4101b875c66686887918"
+	},
+	{
+		"id": "sales.billing.transaction.container.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleTransactionDetail",
+		"controller": "salesBillingTransactionDetailController",
+		"uuid": "3fe17cc5f81847e99667f903642150d8",
+		"permission": "d45fb0e93b5a4101b875c66686887918"
+	},
+	{
+		"id": "sales.billing.validation.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleValidation",
+		"controller": "salesBillingValidationListController",
+		"uuid": "1247ef00dfce413793b328f685f7ca27"
+	},
+	{
+		"id": "sales.billing.validation.container.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleValidationDetail",
+		"controller": "salesBillingValidationDetailController",
+		"uuid": "381859cb3a9e46829179bfc91d11af89",
+		"permission": "1247ef00dfce413793b328f685f7ca27"
+	},
+	{
+		"id": "sales.billing.item.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleItems",
+		"controller": "salesBillingItemListController",
+		"uuid": "eb36fda6b4de4965b4e98ec012d0506b"
+	},
+	{
+		"id": "sales.billing.item.container.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleItemDetail",
+		"controller": "salesBillingItemDetailController",
+		"uuid": "a0ac5d8ad3824c08bcc23d887cb45077",
+		"permission": "eb36fda6b4de4965b4e98ec012d0506b"
+	},
+	{
+		"id": "sales.billing.payment.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitlePayments",
+		"controller": "salesBillingPaymentListController",
+		"uuid": "d9cb8c6e6cdb44daa4ef02f6f64fe750"
+	},
+	{
+		"id": "sales.billing.payment.container.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitlePaymentDetail",
+		"controller": "salesBillingPaymentDetailController",
+		"uuid": "da31be78e5cb416db8c44e2b41afa56e",
+		"permission": "d9cb8c6e6cdb44daa4ef02f6f64fe750"
+	},
+
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerBillingBoqsTitle",
+		"controller": "salesBillingBoqListController",
+		"uuid": "03e13f5f6c6e44a8ae8cd897814887ac"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqStructure",
+		"controller": "salesBillingBoqStructureController",
+		"uuid": "65294188ea2f4aeea7f1243ecf096434",
+		"mainService": "salesBillingService"
+	},
+	{
+		"id": "boq.main.pricecondition.container",
+		"template": "boq.main/templates/price-condition-edit-dialog.html",
+		"title": "boq.main.PriceCondition",
+		"controller": "boqMainPriceconditionListController",
+		"dataService": "salesBillingBoqStructurePriceconditionService",
+		"uuid": "9A9514E0540B425DA3936E3E795188C3",
+		"permission": "92C1E1E45F9A40728D886A2D33F6C554"
+	},
+	{
+		"id": "item.pricecondition.container",
+		"template": "basics.material/partials/price-condition-partial.html",
+		"title": "basics.material.record.priceConditionTitle",
+		"controller": "saleBillingItemPriceConditionController",
+		"dataService": "saleBillingItemPriceConditionService",
+		"uuid": "98355B3A7CE14DAAB7B780B0AE3390C6",
+		"permission": "eb36fda6b4de4965b4e98ec012d0506b"
+	},
+	{
+		"id": "11",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.boqDetails",
+		"controller": "salesBillingBoqDetailFormController",
+		"uuid": "5bcf0e65d7634d5ea66752571a53f4c0",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.boqdocument.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.documentTitle",
+		"controller": "salesBillingBoqDocumentController",
+		"uuid": "e0e5c1ba8c684598a5908e124caee9c9",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.crbvariable.container",
+		"template": "boq.main/templates/boq-main-crb-variable-container.html",
+		"title": "boq.main.crbVariableTitle",
+		"controller": "salesBillingCrbVariableController",
+		"uuid": "87ceec31c0f147d29809a2407ed9e38",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.crbboqitemscope.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.crbBoqItemScopeTitle",
+		"controller": "salesBillingCrbBoqItemScopeController",
+		"uuid": "ae107311695c45669b4c19db59e0adbf",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.crbpricecondition.container",
+		"template": "boq.main/templates/boq-main-crb-pricecondition-container.html",
+		"title": "boq.main.crbPriceconditionTitle",
+		"controller": "salesBillingCrbPriceconditionController",
+		"uuid": "dbf6b0e132fa4692b5562b74d4cc65ec",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.boqhtmlspecification.container",
+		"template": "boq.main/templates/boq-specification-html-container.html",
+		"title": "boq.main.boqSpecification",
+		"controller": "salesBillingBoqSpecificationController",
+		"uuid": "00cb5559833c4618b36590d71da02143",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.htmltextcomplement.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqMainHtmlTextComplement",
+		"controller": "salesBillingBoqHtmlTextComplementController",
+		"uuid": "0d6825535a70464caf5aa3604eb6bfc5",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.boqsurcharge.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqSurchargeOn",
+		"controller": "boqMainGenericSurchargeController",
+		"boqService": "salesBillingBoqStructureService",
+		"moduleName": "sales.billing",
+		"uuid": "9170662424c7407bae4d960cc8e2663f",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.splitquantity.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.SplitQuantity",
+		"controller": "boqMainGenericSplitQuantityController",
+		"boqService": "salesBillingBoqStructureService",
+		"moduleName": "sales.billing",
+		"uuid": "d5f64179c92a489d9df9adce90bc657e",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "boq.main.containerheader.boqCopy",
+		"template": "boq.main/templates/boq-copysource-container.html",
+		"title": "boq.main.boqLookup",
+		"controller": "",
+		"uuid": "7e709d727707409ea11592459000a289"
+	},
+	{
+		"id": "sales.billing.linkeddispatchnote.container",
+		"template": "sales.common/partials/sales-common-dispatch-note-gridview.html",
+		"title": "boq.main.linkedDispatchNoteTitle",
+		"controller": "salesBillingBoqLinkedDispatchNoteController",
+		"uuid": "078586c2846149808de5b23e557248a1",
+		"permission": "39608924dc884afea59fe04cb1434543"
+	},
+	{
+		"id": "sales.billing.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.userform.defaultContainerTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "2d5e03e10f484ba687aede096c618680",
+		"rubricId": 7,
+		"mainService": "salesBillingService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "sales.billing.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "sales.billing.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "sales.billing.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "sales.billing.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "project.main.documents.project.document.history.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProjectHistory",
+		"controller": "documentsProjectDocumentHistoryController",
+		"uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+	},
+	{
+		"id": "sales.billing.document.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.document.containerGridTitle",
+		"controller": "salesBillingDocumentListController",
+		"uuid": "c34718f7f1b446aba797b056a0b1dde0"
+	},
+	{
+		"id": "sales.billing.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.document.containerFormTitle",
+		"controller": "salesBillingDocumentDetailController",
+		"uuid": "0934ac0577174ad9b00a473235d02109",
+		"permission": "c34718f7f1b446aba797b056a0b1dde0"
+	},
+	{
+		"id": "sales.billing.wipdocument.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleWipDocumentGrid",
+		"controller": "salesBillingWipDocumentListController",
+		"uuid": "32240b2754254f6280bb2a9597c0d611",
+		"permission": "e741d2316c0245e1973a305b3f1c938b"
+	},
+	{
+		"id": "billing.price.condition.param",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.pricecondition.headerParamTitle",
+		"controller": "basicsPriceConditionParamController",
+		"uuid": "4e601157e0154a5790977f404c07f93f",
+		"paramTypeId": "10",
+		"mainService": "salesBillingService",
+		"permission": "7C1CC0299FCE4F388FAD53A9DACF3D0D"
+	},
+	{
+		"id": "controlling.structure.grpsetdlt.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.structure.grpsetdltGridTitle",
+		"controller": "controllingStructureGrpSetDTLListController",
+		"uuid": "39ACC9B16D284D3EB8373910C1FB5845",
+		"dataService": "salesBillingGrpSetDTLService"
+	},
+	{
+		"id": "controlling.structure.grpsetdlt.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "controlling.structure.grpsetdltFormTitle",
+		"controller": "controllingStructureGrpSetDTLDetailController",
+		"uuid": "20576700D70A4920941C3D7BEF0B6635",
+		"permission": "39ACC9B16D284D3EB8373910C1FB5845",
+		"dataService": "salesBillingGrpSetDTLService"
+	},
+	{
+		"id": "sales.bil.clerk.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.clerk.entityClerk",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "a150506f9acb4ffcbaee544f346dacbd",
+		"clerkQualifier": "sales.bil.clerk",
+		"parentService": "salesBillingService",
+		"permission": "39608924dc884afea59fe04cb1434543"
+	},
+	{
+		"id": "sales.bil.clerk.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.clerk.entityClerkForm",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "55864c62d8524096b5f7d48bd3641579",
+		"clerkQualifier": "sales.bil.clerk",
+		"parentService": "salesBillingService",
+		"permission": "39608924dc884afea59fe04cb1434543"
+	},
+	{
+		"id": "sales.billing.actualcertificatelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.actualCertificateListContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateListController",
+		"uuid": "e5e2070e943f494eb2304c8b4b6d2385",
+		"currentModule": "sales.billing",
+		"parentService": "salesBillingService",
+		"translationService": "salesBillingTranslationService"
+	},
+	{
+		"id": "sales.billing.actualcertificatedetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.actualCertificateDetailContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateDetailController",
+		"uuid": "5a90a2ef0f224565a03bc1569e5d9df4",
+		"permission": "e5e2070e943f494eb2304c8b4b6d2385",
+		"currentModule": "sales.billing",
+		"parentService": "salesBillingService",
+		"translationService": "salesBillingTranslationService"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "20ee0cb4411e4d159a030efd0c562fcb",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "documents.clerk.authorization.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkListController",
+		"clerkQualifier": "documents.project.clerk",
+		"uuid": "47620dd38c874f97b75ee3b6ce342666",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "documents.authorization.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7806e7a22b2142f8865ab189efe23c5a",
+		"permission": "47620dd38c874f97b75ee3b6ce342666",
+		"clerkQualifier": "documents.project.clerk",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "procurement.package.qtoDetail.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.detail.gridTitle",
+		"controller": "salesBillingQtoListController",
+		"uuid": "00E4E6156A144B649A4D639A63A4ED75"
+	},
+	{
+		"id": "basics.material.specification",
+		"template": "procurement.common/templates/prc-common-specification-html-container.html",
+		"title": "procurement.common.specificationFormatText",
+		"controller": "salesBillingMaterialSpecificationController",
+		"uuid": "e850ba1740c24c35907491f922a3716b"
+	},
+	{
+		"id": "procurement.package.specificationPlainText",
+		"template": "basics.material/partials/material-specificationPlainText-view.html",
+		"title": "procurement.common.specificationPlainText",
+		"controller": "salesBillingMaterialSpecificationPlainController",
+		"uuid": "2d8d9c5cfae946caa053c971dc2cc254",
+		"permission": "e850ba1740c24c35907491f922a3716b"
+	},
+	{
+		"id": "sales.billing.estimate.lineitem",
+		"template": "sales.billing/partials/sales-billing-estimate-line-item-gc.html",
+		"title": "sales.billing.estimateLineItemGridContainer",
+		"controller": "salesBillingLineItemToggleGcListController",
+		"uuid": "6c6c8e5198e543ff8ce022535b9939d4"
+	},
+	{
+		"id": "sales.billing.accrual.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleAccrual",
+		"controller": "salesBillingAccrualListController",
+		"uuid": "cbf9b7eea34d471884ddf50512193599",
+		"permission": "1bf50a240bd14d018fd2477237611197"
+	},
+	{
+		"id": "sales.billing.indirectsbalancing.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleIndirectsBalancing",
+		"controller": "salesBillingIndirectsBalancingDetailController",
+		"uuid": "64014298059f4aaaa1f0892cf486aea6",
+		"permission": "e05705f46fb248899eef16495cefaada"
+	},
+	{
+		"id": "sales.billing.oen.lvHeader",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.uicontainer.lvHeader.title",
+		"uuid": "527bc36df00e4ad59a8eaa9a8a6540f8",
+		"controller": "salesBillingOenLvHeaderController",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.akz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.akz.title",
+		"controller": "salesBillingOenAkzController",
+		"uuid": "5aaa7bacc1414e03a05bbd85218b6c9a",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.zz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zz.title",
+		"controller": "salesBillingOenZzController",
+		"uuid": "a577a824a7314c4fac7799a05b4c23eb",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.zzVariant",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zzVariant.title",
+		"controller": "salesBillingOenZzVariantController",
+		"uuid": "18adb8f16bd649f19d2b0d8b5b36dbb5",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.contact",
+		"template": "boq.main/templates/boq-main-oen-contact-container.html",
+		"title": "boq.main.oen.uicontainer.contact.title",
+		"controller": "salesBillingOenContactController",
+		"uuid": "d6768e9928bb480487a153f2a7a4178c",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.lbMetadata",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.LbMetadata",
+		"controller": "salesBillingOenLbMetadataController",
+		"uuid": "76b282c05fe44594b861aeb7dde32e16",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.graphic",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "boq.main.oen.graphicContainerTitle",
+		"controller": "salesBillingOenPictureController",
+		"uuid": "e13706c1995a49069fc547c300780088",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.boqitem",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oenExtension.detailContainerTitle",
+		"controller": "salesBillingOenBoqItemFormController",
+		"uuid": "9f3c6b0d90c54e56b02dc2f23698e0a3",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.oen.servicePart",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.servicePart.title",
+		"controller": "salesBillingOenServicePartController",
+		"uuid": "75d963567b894045a20881d04ac96e57",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	},
+	{
+		"id": "sales.billing.qtodetailCopy",
+		"template": "qto.main/templates/qto-main-detail-copysource-container.html",
+		"title": "qto.main.sourceQto",
+		"controller": "",
+		"uuid": "8586f59cf8f840468afa16a385bb610b",
+		"permission": "65294188ea2f4aeea7f1243ecf096434"
+	}
+]

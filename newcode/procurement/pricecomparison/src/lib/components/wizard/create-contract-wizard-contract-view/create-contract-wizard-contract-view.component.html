@@ -1,0 +1,23 @@
+<div class="platform-form-row">
+	<div class="modal-body flex-box">
+		<div class="icon-message">
+			<div class="icon tlb-icons ico-info"></div>
+			<div class="message">{{ context.hintInfo | platformTranslate }}</div>
+		</div>
+	</div>
+</div>
+
+<procurement-pricecomparison-compare-setting-base-grid
+	[config]="config"
+>
+</procurement-pricecomparison-compare-setting-base-grid>
+
+<procurement-pricecomparison-create-contract-evaluated-handle-mode
+	[(evaluatedItemHandleMode)]="context.evaluatedItemHandleMode"
+>
+</procurement-pricecomparison-create-contract-evaluated-handle-mode>
+
+<div *ngIf="context.hasContractItem" class="margin-top-ld">
+	<label>{{ 'procurement.common.wizard.IsContractNote' | platformTranslate }}</label>
+</div>
+<ui-common-loading *ngIf="loading" [loading]="loading" [attr.class]="'fullwidth flex-element flex-box flex-column'"></ui-common-loading>

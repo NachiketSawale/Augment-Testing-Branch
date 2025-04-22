@@ -1,0 +1,24 @@
+<div class="flex-box flex-column flex-element subview-content filler">
+    <div class="ticket-system-order-list-div">
+        <div class="ticket-system-order-request-pane">
+            <procurement-ticket-system-order-card [scope]="scope"
+                                                  [dataItem]="entity"
+                                                  *ngFor="let entity of scope.response.Result"
+                                                  class="ticket-system-order-list-cell"></procurement-ticket-system-order-card>
+        </div>
+    </div>
+    <div class="ticket-system-order-list-pagination-container">
+        <mat-paginator #paginator
+                       (page)="handlePageEvent($event)"
+                       [length]="scope.response.TotalItems"
+                       [pageIndex]="scope.request.CurrentPage - 1"
+                       [pageSize]="scope.request.ItemsPerPage"
+                       [showFirstLastButtons]="true"
+                       [pageSizeOptions]="[10, 20, 30, 40, 50]"
+        >
+        </mat-paginator>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,297 @@
+<div class="pane-l flex-element flex-box flex-column fullheight" id="ui-layout-l">
+	<div class="flex-box flex-column" style="margin-bottom: 0;overflow-y: auto;">
+		<div class="flex-element overflow" style="padding: 10px;">
+			<h4 class="panel-title">
+				<span>{{ "businesspartner.main.businessPartnerDialog.searchString"|platformTranslate }}</span>
+			</h4>
+			<div class="bp-sv-search-input">
+				<input [(ngModel)]="scope.setting.SearchText" class="bp-sv-search-button-text"
+				       data-autofocus="600" placeholder="Insert search term"
+				       style="border-radius: 0;" type="text"/>
+			</div>
+			<br/>
+			<h4 class="panel-title">
+				<span>{{ "businesspartner.main.businessPartnerDialog.advancedCriteria"|platformTranslate }}</span>
+			</h4>
+			<div>
+				<ng-container *ngTemplateOutlet="customTemplate; context: {
+                ngMode: 'PrcStructure',
+                checkboxName: 'prcStructureCheckBox',
+                title: 'businesspartner.main.procurementStructureContainerTitle',
+                subItemTemplate: prcStructureTemplate}">
+				</ng-container>
+
+				<ng-container *ngTemplateOutlet="customTemplate; context: {
+                ngMode: 'Location',
+                checkboxName: 'searchlocationCheckBox',
+                title: 'businesspartner.main.crefodlg.searchlocation',
+                subItemTemplate: searchlocationTemplate}">
+				</ng-container>
+
+				<ng-container *ngTemplateOutlet="customTemplate; context: {
+                ngMode:'Evaluation',
+                checkboxName: 'evaluationCheckBox',
+                title: 'businesspartner.main.entityEvaluationMark',
+                subItemTemplate: evaluationTemplate}">
+				</ng-container>
+
+				<ng-container *ngTemplateOutlet="customTemplate; context: {
+                ngMode:'Characteristic',
+                checkboxName: 'characteristicCheckBox',
+                title: 'businesspartner.main.entityCharacteristic',
+                subItemTemplate: characteristicTemplate}">
+				</ng-container>
+
+				<ng-container *ngTemplateOutlet="customTemplate; context: {
+                ngMode:'GrandTotal',
+                checkboxName: 'contractGrandTotalCheckBox',
+                title: 'businesspartner.main.findBidder.individualContractAmount',
+                subItemTemplate: grandTotalTemplate}">
+				</ng-container>
+
+				<ng-container *ngTemplateOutlet="customTemplate; context: {
+                ngMode:'DateOrdered',
+                checkboxName: 'contractDateOrderedCheckBox',
+                title: 'businesspartner.main.findBidder.contractedDateOrdered',
+                subItemTemplate: dateOrderedTemplate}">
+				</ng-container>
+
+				<div *ngIf="!scope.setting.Status.isApprovedBP; else approvedBPBlock">
+					<ng-container *ngTemplateOutlet="customTemplate; context: {
+                    ngMode:'Status',
+                    checkboxName: 'statusCheckBox',
+                    title: 'businesspartner.main.findBidder.businessPartnerStatus',
+                    subItemTemplate: statusTemplate}">
+					</ng-container>
+				</div>
+
+				<ng-container *ngTemplateOutlet="customTemplate; context: {
+                ngMode:'Status2',
+                checkboxName: 'status2CheckBox',
+                title: 'businesspartner.main.findBidder.businessPartnerStatus2',
+                subItemTemplate: status2Template}">
+				</ng-container>
+			</div>
+		</div>
+		<div class="input-group-btn margin-top-ld" style="align-self: flex-end;">
+			<button (click)="scope.search()" class="btn btn-default input-sm btn-search tlb-icons ico-search"
+			        style="width: 140px;" title="search"></button>
+		</div>
+	</div>
+</div>
+
+<!-- customTemplate -->
+<ng-template #customTemplate let-ngMode="ngMode" let-checkboxName="checkboxName" let-title="title"
+             let-subItemTemplate="subItemTemplate">
+	<ul class="list-group">
+		<li>
+			<div class="checkbox spaceToUp">
+				<label>
+					<input [name]="checkboxName" type="checkbox" (change)="ngModelChange($event,ngMode)"/>
+					{{ title|platformTranslate }}
+				</label>
+			</div>
+		</li>
+		<li>
+			<ul class="subgroup">
+				<ng-container *ngTemplateOutlet="subItemTemplate;"></ng-container>
+			</ul>
+		</li>
+	</ul>
+</ng-template>
+
+<!-- prcStructureTemplate -->
+<ng-template #prcStructureTemplate>
+	<li>
+		<ui-common-lookup-input [dataService]="procurementStructureLookupService"
+		                        [readonly]="!scope.setting.PrcStructure.IsActive"
+		                        [(value)]="scope.setting.PrcStructure.SelectedItemFk"
+		                        [options]="structureCustomOptions"></ui-common-lookup-input>
+	</li>
+</ng-template>
+<!-- searchlocationTemplate -->
+<ng-template #searchlocationTemplate>
+	<li *ngFor="let locationType of locationTypes">
+		<div class="radio spaceToUp">
+			<label class="flex-box flex-align-center">
+				<input name="locationRadio" type="radio" [(ngModel)]="selectedLocationType"
+				       [value]="locationType.value"
+				       [disabled]="!scope.setting.Location.IsActive"
+				       (change)="onSelectedLocationTypeChanged()">
+				{{ locationType.label|platformTranslate }}
+			</label>
+		</div>
+
+
+		<ul *ngIf="locationType.value === 'distance'">
+			<ui-common-lookup-input class="form-control" [dataService]="radiusLookupService"
+			                        [readonly]="!scope.setting.Location.IsActive || scope.setting.Location.IsRegionalActive"
+			                        [(value)]="scope.setting.Location.SelectedItemFk"></ui-common-lookup-input>
+		</ul>
+
+		<ul *ngIf="locationType.value === 'regional'">
+			<div class="flex-box">
+				<div class="lg-6 md-6 padding-right">
+					<ui-common-lookup-input class="form-control"
+					                        [dataService]="countryLookupService"
+					                        [readonly]="!scope.setting.Location.IsActive || !scope.setting.Location.IsRegionalActive"
+					                        [(value)]="scope.setting.Location.SelectedItemFk"></ui-common-lookup-input>
+				</div>
+				<div class="lg-6 md-6 form-control composite-last-item">
+					<input type="text" class="input-group-content"
+					       [disabled]="!scope.setting.Location.IsActive || !scope.setting.Location.IsRegionalActive"
+					       [(ngModel)]="scope.setting.Location.AddressElement">
+				</div>
+			</div>
+		</ul>
+	</li>
+</ng-template>
+<!-- evaluationTemplate -->
+<ng-template #evaluationTemplate>
+	<li>
+		<div class="flex-box">
+			<div class="lg-6 md-6 padding-right">
+				<ui-common-lookup-input [dataService]="evaluationSchemaLookupService"
+				                        [readonly]="!scope.setting.Evaluation.IsActive"
+				                        [(value)]="scope.setting.Evaluation.SelectedItemFk"></ui-common-lookup-input>
+			</div>
+
+			<div class="lg-2 md-2 text-center padding-right">
+				{{ "businesspartner.main.entityEvaluationOver"|platformTranslate }}
+			</div>
+
+			<!--     todo Regular expressions are not used yet-->
+			<!--     data-ng-pattern-restrict="^(([-+]?(\d{0,3})([.,]\d{3}){0,3}([.,]\d{0,3}))|([-+]?\d{0,12})([.,]\d{0,3})?)$"-->
+			<div class="lg-4 md-4 form-control composite-last-item">
+				<input type="text" class="input-group-content"
+				       [min]="0"
+				       [disabled]="!scope.setting.Evaluation.IsActive"
+				       [(ngModel)]="scope.setting.Evaluation.Point"/>
+			</div>
+		</div>
+	</li>
+</ng-template>
+<!-- characteristicTemplate -->
+<ng-template #characteristicTemplate>
+	<li>
+		<!--            todo This lookup is temporarily meaningless because the data returned does not contain a field similar to childItems-->
+		<ui-common-lookup-input [dataService]="characteristicCodeLookupService"
+		                        [readonly]="!scope.setting.Characteristic.IsActive"
+		                        [(value)]="scope.setting.Characteristic.SelectedItemFk"
+		                        [options]="characteristicCustomOptions"
+		                        (selectedItemChanged)="onSelectedItemCharacteristicChanged($event)"></ui-common-lookup-input>
+	</li>
+	<li>
+		<div class="flex-box">
+			<div class="lg-6 md-6 padding-right">
+				<ui-common-lookup-input *ngIf="!isCharTypeDate"
+				                        [dataService]="multipleTypesLookupService"
+				                        [readonly]="!scope.setting.Characteristic.IsActive||!scope.setting.Characteristic.SelectedItemFk"
+				                        [(value)]="scope.setting.Characteristic.SelectedOp"></ui-common-lookup-input>
+
+				<ui-common-lookup-input *ngIf="isCharTypeDate"
+				                        [dataService]="timeTypesLookupService"
+				                        [readonly]="!scope.setting.Characteristic.IsActive||!scope.setting.Characteristic.SelectedItemFk"
+				                        [(value)]="scope.setting.Characteristic.SelectedOp"></ui-common-lookup-input>
+
+			</div>
+			<input type="text" class="form-control lg-6 md-6"
+			       [disabled]="!scope.setting.Characteristic.IsActive">
+			<!--                               todo This functionality is related to the framework functionality -->
+			<!--                        <div class="lg-6 md-6 padding-none">-->
+			<!--                            <div class="control-directive" data-procurement-common-find-bidder-with-characteristic-select-control-->
+			<!--                                 data-ng-model="withCharacteristic.selectedItem"-->
+			<!--                                 data-options="withCharacteristic.lookupOptions"-->
+			<!--                                 data-entity="withCharacteristic.selectedItem"-->
+			<!--                                 data-config="withCharacteristic"></div>-->
+			<!--                            <div class="invalid-cell invalid-form" data-ng-if="withCharacteristic.rt$hasError()" data-ng-bind="withCharacteristic.rt$errorText()"></div>-->
+			<!--                        </div>-->
+		</div>
+	</li>
+</ng-template>
+<!-- grandTotalTemplate -->
+<ng-template #grandTotalTemplate>
+	<li>
+		<div class="flex-box">
+			<div class="lg-6 md-6 padding-right">
+				<ui-common-lookup-input [dataService]="comparisonLookupService"
+				                        [readonly]="!scope.setting.GrandTotal.IsActive"
+				                        [(value)]="scope.setting.GrandTotal.SelectedOp"></ui-common-lookup-input>
+
+			</div>
+			<!--     todo Regular expressions are not used yet-->
+			<!--     data-ng-pattern-restrict="^(([-+]?(\d{0,7})([.,]\d{3}){0,7}([.,]\d{0,7}))|([-+]?\d{0,12})([.,]\d{0,7})?)$"-->
+			<input type="text" class="form-control lg-6 md-6"
+			       [min]="0"
+			       [(ngModel)]="scope.setting.GrandTotal.Total"
+			       [disabled]="!scope.setting.GrandTotal.IsActive"/>
+		</div>
+	</li>
+	<li>
+		<input [(ngModel)]="scope.setting.GrandTotal.isFilterByStructure"
+		       [disabled]="!scope.setting.GrandTotal.IsActive"
+		       type="checkbox"/>
+		{{ "businesspartner.main.findBidder.considerProcurementStructure"|platformTranslate }}
+
+	</li>
+</ng-template>
+<!-- dateOrderedTemplate -->
+<ng-template #dateOrderedTemplate>
+	<li>
+		<div class="flex-box">
+			<div class="lg-6 md-6 padding-right">
+				<!-- TODO: readonly does work. DEV-18190 Wait for the framework to fix it. -->
+				<ui-common-domain-control-host [value]="scope.setting.DateOrdered.StartDate"
+				                               [fieldType]="FieldType.DateUtc"
+				                               [readOnly]="!scope.setting.DateOrdered.IsActive"
+				                               (valueChange)="onChangeStartDate($event)"></ui-common-domain-control-host>
+			</div>
+			<div class="lg-2 md-2 text-center padding-right">
+				{{ "businesspartner.main.findBidder.to"|platformTranslate }}
+			</div>
+			<div class="lg-4 md-4">
+				<!-- TODO: readonly does work. DEV-18190 Wait for the framework to fix it. -->
+				<ui-common-domain-control-host [value]="scope.setting.DateOrdered.EndDate"
+				                               [fieldType]="FieldType.DateUtc"
+				                               [readOnly]="!scope.setting.DateOrdered.IsActive"
+				                               (valueChange)="onChangeEndDate($event)"></ui-common-domain-control-host>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="flex-box">
+			<div class="invalid-cell invalid-form" *ngIf="hasError()"
+			     [innerText]="errorText"></div>
+		</div>
+	</li>
+</ng-template>
+<!-- statusTemplate -->
+<ng-template #statusTemplate>
+	<li>
+		<!--				todo Unable to multiple select-->
+		<ui-common-lookup-input [dataService]="businesspartnerSharedStatusLookupService"
+		                        [readonly]="!scope.setting.Status.IsActive"
+		                        [(value)]="scope.setting.Status.SelectedItemFk"></ui-common-lookup-input>
+	</li>
+</ng-template>
+<!-- status2Template -->
+<ng-template #status2Template>
+	<li>
+		<!--				todo Unable to multiple select-->
+		<ui-common-lookup-input [dataService]="businesspartnerSharedStatus2LookupService"
+		                        [readonly]="!scope.setting.Status2.IsActive"
+		                        [(value)]="scope.setting.Status2.SelectedItemFk"></ui-common-lookup-input>
+	</li>
+</ng-template>
+
+
+<!-- approvedBPBlock -->
+<ng-template #approvedBPBlock>
+	<ng-container *ngTemplateOutlet="customTemplate; context: {
+        ngMode:'isApprovedBP',
+        checkboxName: 'approvedBPCheckBox',
+        title: 'businesspartner.main.findBidder.businessPartnerStatus',
+        subItemTemplate: statusTemplate}">
+	</ng-container>
+</ng-template>
+

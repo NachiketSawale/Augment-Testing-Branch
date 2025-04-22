@@ -1,0 +1,7 @@
+<div class="evaluated-handle-mode margin-top-ld margin-bottom-ld" *ngIf="evaluatedItemHandleMode !== EvaluatedItemHandleMode.Ignore">
+	<ui-common-domain-control-host
+		[fieldType]="fieldType.Radio"
+		[options]="evaluatedHandleModeOptions"
+		[controlContext]="evaluatedHandleModeCtx"
+	></ui-common-domain-control-host>
+</div>

@@ -1,0 +1,1127 @@
+[
+    {
+        "Id": 1691842,
+        "IdInTemplate": 51052,
+        "WorkflowInstanceId": 1164696,
+        "Status": 2,
+        "PriorityId": 2,
+        "Started": "2021-08-11T03:12:58.757Z",
+        "Input": [
+            {
+                "id": 118698,
+                "key": "Config",
+                "value": "[{\"description\":\"label code\",\"type\":\"label\",\"context\":null,\"options\":{\"displayText\":\"Für den gewünschten Status ist die Eingabe der Crefo-Nummer verpflichtent\"}},{\"description\":\"CrefoNo\",\"type\":\"label\",\"context\":null,\"options\":{\"displayText\":\"CrefoNo\"}},{\"description\":\"description\",\"type\":\"description\",\"context\":\"Context.CrefoNo\"}]"
+            }
+        ],
+        "Output": [
+            {
+                "id": 124575,
+                "key": "CrefoNo",
+                "value": "CrefoNo"
+            }
+        ],
+        "Description": "Anwender Eingabe",
+        "Comment": "Bitte Crefo Nummer eingeben.",
+        "ActionId": "00000000000000000000000000000000",
+        "TemplateDescription": "Business Partner Status Wechsel",
+        "Transitions": "",
+        "Context": {},
+        "IsRunning": true,
+        "OwnerId": 2,
+        "ProgressById": null,
+        "Lifetime": 99999,
+        "Endtime": "2033-01-06T18:12:58.757Z",
+        "Clerk": "My Tasks",
+        "UserDefined1": "",
+        "UserDefined2": "",
+        "UserDefined3": "",
+        "UserDefined4": "",
+        "UserDefined5": "",
+        "OwnerName": null,
+        "OwnerDescription": null,
+        "EntityIdList": [
+            1000296
+        ],
+        "options": [],
+        "Action": {
+            "Id": "00000000000000000000000000000000",
+            "Input": [
+                "Config",
+                "IsPopUp",
+                "IsNotification",
+                "EscalationDisabled",
+                "StopVisible",
+                "CancelVisible",
+                "Context"
+            ],
+            "Output": [
+                "Context"
+            ],
+            "Description": "User Input",
+            "ActionType": 6,
+            "templateUrl": "basics.workflow/userInputAction.html",
+            "directive": "basicsWorkflowUserInputActionDirective",
+            "Namespace": "Basics.Workflow"
+        },
+        "StatusName": "Running",
+        "StartedFormated": "11/08/2021 08:42",
+        "PrioIcon": "./images/control-icons.svg#ico-prio02",
+        "Priority": {
+            "Id": 2,
+            "Code": "medium",
+            "Description": "medium",
+            "DescriptionTr": null,
+            "Icon": 2,
+            "IsDefault": true,
+            "Sorting": 0,
+            "InsertedAt": "2016-04-20T00:00:00Z",
+            "InsertedBy": 1,
+            "UpdatedAt": null,
+            "UpdatedBy": null,
+            "Version": 1
+        },
+        "lifeTimeIcon": "./images/control-icons.svg#ico-lifetime-75",
+        "lifeTimePercent": "50-75 %",
+        "EndDate": "06/01/2033",
+        "entityHeader": "Code Description",
+        "OwnerType": "user",
+        "OwnerIcon": "./images/control-icons.svg#ico-user",
+        "Readonly": false,
+        "ProcessingStatus": "running"
+    },
+    {
+        "Id": 1689951,
+        "IdInTemplate": 24585,
+        "WorkflowInstanceId": 1164227,
+        "Status": 2,
+        "PriorityId": 2,
+        "Started": "2021-07-19T12:56:01.190Z",
+        "Input": [
+            {
+                "id": 102984,
+                "key": "HTML",
+                "value": "<section class=\"modal-body\" ng-model-options=\"{ debounce: 0 }\">\n    <div class=\"flex-element two-side-row-1\">\n\n        <div class=\"left margin-full-md overflow\">\n            <h1>{{'basics.workflow.sendRfQDialog.currentConfiguartion' | platformTranslate}}</h1>\n            <!-- Bidders -->\n            <ul class=\"list-group margin-top-xld\">\n\n                <li class=\"list-group-item\">\n                    <h2>\n                        <a data-toggle=\"tab\" href=\"#rfqbiddertab0\">{{'basics.workflow.sendRfQDialog.selectedBidders'\n                            | platformTranslate}}</a>\n                        <span class=\"badge badge-rib-color margin-left-md\"\n                              data-ng-bind=\"info.selectedBidder.length\"></span>\n                    </h2>\n                </li>\n\n                <li class=\"list-group-item\" data-ng-repeat=\"bidder in info.selectedBidder\">\n                    <span data-ng-bind=\"bidder.CompanyName\"></span>\n                </li>\n            </ul>\n            <!-- Cover Letter -->\n            <ul class=\"list-group margin-top-xld\">\n                <li class=\"list-group-item\">\n                    <h2>\n                        <a data-toggle=\"tab\" href=\"#rfqbiddertab1\">{{'basics.workflow.sendRfQDialog.coverLetter'\n                            | platformTranslate}}</a>\n                    </h2>\n                </li>\n\n                <li class=\"list-group-item\">\n                    <span data-ng-bind=\"info.selectedCoverLetter.TemplateName\"></span>\n                </li>\n            </ul>\n            <!-- Dataformat -->\n            <ul data-ng-if=\"Context.CommunicationChannel == 2\" class=\"list-group margin-top-xld\">\n                <li class=\"list-group-item\">\n                    <h2>\n                        <a data-toggle=\"tab\" href=\"#rfqbiddertab2\">{{'basics.workflow.sendRfQDialog.dataFormat'\n                            | platformTranslate}}</a>\n                    </h2>\n                </li>\n\n                <li class=\"list-group-item\">\n                    <span data-ng-bind=\"info.selectedDataFormat.DataformatDescription\"></span>\n                </li>\n            </ul>\n            <!-- Reports -->\n            <ul data-ng-if=\"Context.CommunicationChannel == 2\" class=\"list-group margin-top-xld\">\n                <li class=\"list-group-item\">\n                    <h2>\n                        <a data-toggle=\"tab\" href=\"#rfqbiddertab3\">{{'basics.workflow.sendRfQDialog.Reports'\n                            | platformTranslate}}</a>\n                        <span class=\"badge badge-rib-color margin-left-md\"\n                              data-ng-bind=\"info.selectedReportsAll.length\"></span>\n                    </h2>\n                </li>\n\n                <li class=\"list-group-item\" style=\"padding-bottom: 0;\">\n                    {{'basics.workflow.sendRfQDialog.mandatoryReports' | platformTranslate}}\n                    <ul data-ng-repeat=\"mReport in Context.MandentoryReportList\">\n                        <li class=\"list-group-item\"><span data-ng-bind=\"mReport.TemplateName\"></span></li>\n                    </ul>\n                </li>\n                <li class=\"list-group-item\" style=\"padding-bottom: 0;\">\n                    {{'basics.workflow.sendRfQDialog.additionalSelectedReports' | platformTranslate}}\n\n                    <ul data-ng-repeat=\"report in info.selectedReports\">\n                        <li class=\"list-group-item\"><span data-ng-bind=\"report.TemplateName\"></span></li>\n                    </ul>\n\n                </li>\n            </ul>\n            <!-- Documents -->\n            <ul data-ng-if=\"Context.CommunicationChannel == 2\" class=\"list-group margin-top-xld\">\n                <li class=\"list-group-item\">\n                    <h2>\n                        <a data-toggle=\"tab\" href=\"#rfqbiddertab4\">{{'basics.workflow.sendRfQDialog.documents'\n                            | platformTranslate}}</a>\n                        <span class=\"badge badge-rib-color margin-left-md\"\n                              data-ng-bind=\"info.selectedDokuments.length\"></span>\n                    </h2>\n                </li>\n\n                <li class=\"list-group-item\" style=\"padding-bottom: 0;\">\n                    {{'basics.workflow.sendRfQDialog.projectDocuments' | platformTranslate}}\n                    <ul data-ng-repeat=\"doc in info.selectedProjectDocs\">\n                        <li class=\"list-group-item\"><span data-ng-bind=\"doc.OriginalFileName\"></span></li>\n                    </ul>\n                </li>\n                <li class=\"list-group-item\" style=\"padding-bottom: 0;\">\n                    {{'basics.workflow.sendRfQDialog.reQDocuments' | platformTranslate}}\n                    <ul data-ng-repeat=\"doc in info.selectedReQDocs\">\n                        <li class=\"list-group-item\"><span data-ng-bind=\"doc.OriginalFileName\"></span></li>\n                    </ul>\n                </li>\n                <li class=\"list-group-item\" style=\"padding-bottom: 0;\">\n                    {{'basics.workflow.sendRfQDialog.rfQDocuments' | platformTranslate}}\n                    <ul data-ng-repeat=\"doc in info.selectedRfQDocs\">\n                        <li class=\"list-group-item\"><span data-ng-bind=\"doc.OriginalFileName\"></span></li>\n                    </ul>\n                </li>\n                <li class=\"list-group-item\" style=\"padding-bottom: 0;\">\n                    {{'basics.workflow.sendRfQDialog.clerkDocuments' | platformTranslate}}\n                    <ul data-ng-repeat=\"doc in info.selectedClerkDocs\">\n                        <li class=\"list-group-item\"><span data-ng-bind=\"doc.OriginalFileName\"></span></li>\n                    </ul>\n                </li>\n            </ul>\n\n\n        </div>\n        <!--disabled=\"tab.disabled\"-->\n        <div class=\"right margin-full-md overflow\">\n\n            <div class=\"tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex\">\n\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a data-toggle=\"tab\" href=\"#rfqbiddertab0\">{{'basics.workflow.sendRfQBidderSelection.bidderSelection'\n                        | platformTranslate}}</a></li>\n                    <li><a data-toggle=\"tab\" href=\"#rfqbiddertab1\">{{'basics.workflow.sendRfQDialog.coverLetter' |\n                        translate}}</a></li>\n                    <li><a data-ng-show=\"Context.CommunicationChannel === 2\" data-toggle=\"tab\" href=\"#rfqbiddertab2\">{{'basics.workflow.sendRfQDataformat.dataFormats'\n                        | platformTranslate}}</a></li>\n                    <li><a data-ng-show=\"Context.CommunicationChannel === 2\" data-toggle=\"tab\" href=\"#rfqbiddertab3\">{{'basics.workflow.sendRfQDialog.Reports'\n                        | platformTranslate}}</a></li>\n                    <li><a data-ng-show=\"Context.CommunicationChannel === 2\" data-toggle=\"tab\" href=\"#rfqbiddertab4\">{{'basics.workflow.sendRfQDialog.documents'\n                        | platformTranslate}}</a></li>\n                    <li><a data-toggle=\"tab\" href=\"#rfqbiddertab5\" id=\"tabrfqbiddertab5\">{{'basics.workflow.sendRfQTransmission.transmissionProtocol'\n                        | platformTranslate}}</a></li>\n                </ul>\n\n                <div class=\"tab-content\">\n\n                    <!--Bidder selection-->\n                    <div id=\"rfqbiddertab0\" class=\"tab-pane fade in active\">\n                        <div>\n                            <h1>{{'basics.workflow.sendRfQBidderSelection.bidderSelection' | platformTranslate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.companyName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.status' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.contact' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.contactFirstName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.contactLastName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.contactEMail' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.cCSelect' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQBidderSelection.cCCompanyEMail' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n\n                                <tr data-ng-repeat=\"bidder in Context.BidderList\">\n                                    <td>\n                                        <div data-domain-control data-domain=\"boolean\" data-model=\"bidder.Selected\"\n                                             data-change=\"selectedBidderChanged()\"></div>\n                                    </td>\n                                    <td><span data-ng-bind=\"bidder.CompanyName\"></span></td>\n                                    <td><span data-ng-bind=\"bidder.Status\"></span></td>\n                                    <td> <span data-domain-control data-domain=\"select\"\n                                               data-model=\"bidder.ContactEmail\"\n                                               data-options=\"bidder.contactOptions\"\n                                               data-change=\"changeContact(bidder)\"></span></td>\n                                    <td><span data-ng-bind=\"bidder.ContactFirstName\"></span></td>\n                                    <td><span data-ng-bind=\"bidder.ContactLastName\"></span></td>\n                                    <td><span data-ng-bind=\"bidder.ContactEmail\"></span></td>\n                                    <td>\n                                        <div data-domain-control data-domain=\"boolean\"\n                                             data-model=\"bidder.CCSelected\"></div>\n                                    </td>\n                                    <td><span data-ng-bind=\"bidder.CompanyEmail\"></span></td>\n                                </tr>\n                                </tbody>\n                            </table>\n\n                            <h1>{{'basics.workflow.sendRfQBidderSelection.settings' | platformTranslate}}</h1>\n                            <div>\n\n                                <div data-domain-control data-domain=\"boolean\" data-model=\"Context.SendAsBCC\"\n                                     data-options=\"sendAsBccOptions\" data-change=\"bccChanged()\"></div>\n                            </div>\n                            <div>\n                                <div data-domain-control data-domain=\"boolean\" data-model=\"Context.SendFromMe\"\n                                     data-options=\"sendFromMeOptions\" data-change=\"sendMeChanged()\"></div>\n                            </div>\n                            <div data-ng-if=\"::Context.CommunicationChannel !== 5\">\n                                <div data-domain-control data-domain=\"boolean\" data-model=\"Context.GenerateSafeLink\"\n                                     data-options=\"generateSafeLinkOptions\" data-change=\"safeLinkChanged()\"></div>\n                            </div>\n                            <div data-ng-if=\"::Context.CommunicationChannel !== 5\">\n                                <div data-domain-control data-domain=\"boolean\" data-model=\"Context.DisableDataFormatExport\"\n                                     data-options=\"disableDataFormatExportOptions\" data-change=\"disableDataFormatExportChanged()\"></div>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Cover letter selection -->\n                    <div id=\"rfqbiddertab1\" class=\"tab-pane fade \">\n                        <div>\n                            <h1>{{'basics.workflow.sendRfQEmailBody.subject' | platformTranslate}}</h1>\n                            <div data-domain-control data-domain=\"description\" data-model=\"Context.Subject\"\n                                 placeholder=\"{{Context.Entity.Code + '  ' + Context.Entity.Description}}\"></div>\n\n                            <h1 class=\"margin-top-xxld\">{{'basics.workflow.sendRfQEmailBody.coverLetterEMailBody' |\n                                translate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQEmailBody.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQEmailBody.templateName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQEmailBody.description' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQEmailBody.preview' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"letter in Context.CoverLetterList\">\n                                    <td><input type=\"radio\" ng-model=\"Context.SelectedBodyLetter\"\n                                               value=\"{{letter.ReportID}}\"\n                                               ng-click=\"selectedBodyLetterChanged(letter.ReportID)\"></td>\n                                    <td><span data-ng-bind=\"letter.TemplateName\"></span></td>\n                                    <td><span data-ng-bind=\"letter.Description\"></span></td>\n                                    <td>\n                                        <button data-ng-click=\"openReport(letter.ReportID)\"\n                                                class=\"block-image control-icons fa fa-eye\"></button>\n                                    </td>\n                                </tr>\n                                </tbody>\n                            </table>\n\n                            <h1>{{'basics.workflow.sendRfQEmailBody.placeholder' | platformTranslate}}</h1>\n\n                            <div class=\"item-container\">\n                                <div data-ng-repeat=\"param in info.selectedPlaceholder\" class=\"item\">\n                                    <span data-ng-bind=\"param.ParameterName\"></span>\n                                    <div data-domain-control data-domain=\"comment\" data-model=\"param.ParamValue\"\n                                         class=\"size-400-120\"></div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--  Data format selection -->\n                    <div id=\"rfqbiddertab2\" class=\"tab-pane fade\">\n                        <div>\n                            <h1>{{'basics.workflow.sendRfQDataformat.dataFormats' | platformTranslate}}</h1>\n\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQDataformat.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDataformat.dataFormat' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"format in Context.DataFormatList\">\n                                    <td><input type=\"radio\" ng-model=\"Context.SelectedDataFormat\"\n                                               value=\"{{format.DataformatKey}}\"\n                                               data-ng-click=\"selectedDataFormatChanged\">\n                                    </td>\n                                    <td><span data-ng-bind=\"format.DataformatDescription\"></span></td>\n                                </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                    <!--  Report selection -->\n                    <div id=\"rfqbiddertab3\" class=\"tab-pane fade\">\n                        <div>\n                            <h1>{{'basics.workflow.sendRfQReports.mandatoryReports' | platformTranslate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQReports.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQReports.templateName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQReports.description' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQReports.preview' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"report in Context.MandentoryReportList\">\n                                    <td>\n                                        <div data-domain-control data-domain=\"boolean\" data-model=\"report.Selected\"\n                                             readonly=\"true\"></div>\n                                    </td>\n                                    <td><span data-ng-bind=\"report.TemplateName\"></span></td>\n                                    <td><span data-ng-bind=\"report.Description\"></span></td>\n                                    <td>\n                                        <button data-ng-click=\"openReport(report.ReportID)\"\n                                                class=\"block-image control-icons fa fa-eye\"></button>\n                                    </td>\n                                </tr>\n                                </tbody>\n                            </table>\n\n                            <h1>{{'basics.workflow.sendRfQReports.reportSelection' | platformTranslate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQReports.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQReports.templateName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQReports.description' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQReports.preview' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"report in Context.ReportList\">\n                                    <td>\n                                        <div data-domain-control data-domain=\"boolean\" data-model=\"report.Selected\"\n                                             data-change=\"selectedReportsChanged()\"></div>\n                                    </td>\n                                    <td><span data-ng-bind=\"report.TemplateName\"></span></td>\n                                    <td><span data-ng-bind=\"report.Description\"></span></td>\n                                    <td>\n                                        <button data-ng-click=\"openReport(report.ReportID)\"\n                                                class=\"block-image control-icons fa fa-eye\"></button>\n                                    </td>\n\n                                </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                    <!--  Dokuments selection -->\n                    <div id=\"rfqbiddertab4\" class=\"tab-pane fade\">\n                        <div>\n                            <h1>{{'basics.workflow.sendRfQDocuments.projectDocuments' | platformTranslate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQDocuments.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.type' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.status' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.description' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.originFileName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.preview' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"doc in Context.ProjectDocuments\">\n                                    <td>\n                                        <!--<div data-domain-control data-domain=\"boolean\" data-model=\"doc.Selected\" data-change=\"selectedDocumentsChanged()\" data-suppress-debounce=\"true\"></div>-->\n                                        <input type=\"checkbox\" data-ng-model=\"doc.Selected\"\n                                               data-suppress-debounce=\"true\">\n                                    </td>\n                                    <td data-ng-bind=\"doc.Type\"></td>\n                                    <td data-ng-bind=\"doc.Status\"></td>\n                                    <td data-ng-bind=\"doc.Description\"></td>\n                                    <td data-ng-bind=\"doc.OriginalFileName\"></td>\n                                    <td>\n                                        <button data-ng-click=\"openDocument(doc.DocId)\"\n                                                class=\"block-image control-icons fa fa-eye\"></button>\n                                    </td>\n                                </tr>\n                                </tbody>\n                            </table>\n\n                            <h1>{{'basics.workflow.sendRfQDocuments.rfQDocuments' | platformTranslate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQDocuments.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.type' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.status' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.description' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.originFileName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.preview' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"doc in Context.RfQDocuments\">\n                                    <td>\n                                        <!--<div data-domain-control data-domain=\"boolean\" data-model=\"doc.Selected\"-->\n                                        <!--data-change=\"selectedDocumentsChanged()\"></div>-->\n                                        <input type=\"checkbox\" data-ng-model=\"doc.Selected\"\n                                               data-suppress-debounce=\"true\">\n                                    </td>\n                                    <td data-ng-bind=\"doc.Type\"></td>\n                                    <td data-ng-bind=\"doc.Status\"></td>\n                                    <td data-ng-bind=\"doc.Description\"></td>\n                                    <td data-ng-bind=\"doc.OriginalFileName\"></td>\n                                    <td>\n                                        <button data-ng-click=\"openDocument(doc.DocId)\"\n                                                class=\"block-image control-icons fa fa-eye\">\n                                        </button>\n                                    </td>\n                                </tr>\n                                </tbody>\n                            </table>\n\n                            <h1>{{'basics.workflow.sendRfQDialog.clerkDocuments' | platformTranslate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQDocuments.select' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.type' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.status' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.description' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.originFileName' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQDocuments.preview' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"doc in Context.ClerkDocuments\">\n                                    <td>\n                                        <!--<div data-domain-control data-domain=\"boolean\" data-model=\"doc.Selected\" data-change=\"selectedDocumentsChanged()\" data-suppress-debounce=\"true\"></div>-->\n                                        <input type=\"checkbox\" data-ng-model=\"doc.Selected\"\n                                               data-change=\"selectedDocumentsChanged()\">\n                                    </td>\n                                    <td data-ng-bind=\"doc.Type\"></td>\n                                    <td data-ng-bind=\"doc.Status\"></td>\n                                    <td data-ng-bind=\"doc.Description\"></td>\n                                    <td data-ng-bind=\"doc.OriginalFileName\"></td>\n                                    <td>\n                                        <button data-ng-click=\"openDocument(doc.DocId)\"\n                                                class=\"block-image control-icons fa fa-eye\"></button>\n                                    </td>\n                                </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                    <!--  transmission -->\n                    <div id=\"rfqbiddertab5\" class=\"tab-pane fade\">\n                        <div>\n                            <h1>{{'basics.workflow.sendRfQTransmission.transmissionProtocol' | platformTranslate}}</h1>\n                            <table class=\"table\">\n                                <thead>\n                                <tr>\n                                    <th>{{'basics.workflow.sendRfQTransmission.bidder' | platformTranslate}}</th>\n                                    <th>{{'basics.workflow.sendRfQTransmission.status' | platformTranslate}}</th>\n                                </tr>\n                                </thead>\n                                <tbody>\n                                <tr data-ng-repeat=\"bidder in info.selectedBidder\">\n                                    <td data-ng-bind=\"bidder.CompanyName\"></td>\n                                    <td><i class=\"fa\"\n                                           data-ng-class=\" ( bidder.SendStatus == null? '' :  bidder.SendStatus === 2 ? 'fa-check' :bidder.SendStatus===1 ? 'fa-times' : bidder.SendStatus=== -1 ? 'fa-spinner fa-spin' : 'fa-times')  \"></i>\n                                </tr>\n                                </tbody>\n                            </table>\n                            <div data-ng-if=\"errorOccured == true\"\n                                 class=\"flex-box vert-hori-center margin-ld margin-full-lg font-bold\"\n                                 style=\"color: red;\" data-ng-bind-html=\"errorWhileSending\"></div>\n                            <div data-ng-if=\"safeLinkFailed == true\"\n                                 class=\"flex-box vert-hori-center margin-ld margin-full-lg font-bold\"\n                                 style=\"color: red;\" data-ng-bind-html=\"errorInConfiguration\"></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<footer data-ng-if=\"$parent.$parent.isModalDialog\" class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-default\" data-ng-disabled=\"button.disabled\" data-ng-click=\"send()\">\n        {{'basics.common.button.send' | platformTranslate}}\n    </button>\n    <button type=\"button\" class=\"btn btn-default\" data-ng-click=\"onOk()\">\n        {{'basics.common.button.close' | platformTranslate}}\n    </button>\n</footer>\n<footer class=\"sidebar-panel-footer flex-box\" data-ng-if=\"!$parent.$parent.isModalDialog\"\n        style=\"flex-direction: row-reverse; margin-top: 16px;\">\n    <button type=\"button\" class=\"btn btn-default\" data-ng-click=\"send()\">\n        {{'basics.common.button.send' | platformTranslate}}\n    </button>\n    <button type=\"button\" class=\"btn btn-default\" style=\"flex: 0.5\" data-ng-click=\"onOk()\">\n        {{'basics.common.button.close' | platformTranslate}}\n    </button>\n</footer>"
+            },
+            {
+                "id": 101952,
+                "key": "Script",
+                "value": "(function () {\n\t\t'use strict';\n\t\t//get external services\n\t\tvar eventUUID = 'B8164CA929A34E88BE5EC5B5DA75C13E';\n\t\tvar basicsWorkflowEventService = $injector.get('basicsWorkflowEventService');\n\t\tvar basicsWorkflowInstanceService = $injector.get('basicsWorkflowInstanceService');\n\t\tvar reportingPlatformService = $injector.get('reportingPlatformService');\n\t\tvar basicsCommonFileDownloadService = $injector.get('basicsCommonFileDownloadService');\n\t\tvar documentDownloadPreviewButtonService = $injector.get('documentDownloadPreviewButtonService');\n\n\n\t\tvar $timeout = $injector.get('$timeout');\n\t\tvar $translate = $injector.get('$translate');\n\t\tif (angular.isString($scope.Context)) {\n\t\t\t$scope.Context = angular.fromJson($scope.Context);\n\t\t}\n\t\t//init check boxes\n\t\t$scope.sendAsBccOptions = {\n\t\t\tctrlId: 'sendAsBccOptions',\n\t\t\tlabelText: $translate.instant('basics.workflow.sendRfQDialog.clerkEmailInBcc')\n\t\t};\n\t\t$scope.sendFromMeOptions = {\n\t\t\tctrlId: 'SendFromMeOptions',\n\t\t\tlabelText: $translate.instant('basics.workflow.sendRfQDialog.sendWithOwn')\n\t\t};\n\t\t$scope.generateSafeLinkOptions = {\n\t\t\tctrlId: 'generateSafeLinkOptions',\n\t\t\tlabelText: $translate.instant('basics.workflow.sendRfQDialog.generateSafeLink')\n\t\t};\n  \t\t$scope.disableDataFormatExportOptions = {\n\t\t\tctrlId: 'disableDataFormatExportOptions',\n\t\t\tlabelText: $translate.instant('basics.workflow.sendRfQDialog.disableDataFormatExport')\n\t\t};\n\t\t$scope.button = {};\n\t\tvar automaticPlaceholder = {\n\t\t\tCompanyID: 'Context.CompanyId',\n\t\t\tRfqHeaderID: 'Context.Entity.Id',\n\t\t\tRFQID: 'Context.Entity.Id',\n\t\t\tRfqID: 'Context.Entity.Id',\n\t\t\tLink: 'Context.Url',\n\t\t\tUserID: 'Context.UserId',\n\t\t\tPreviewUICulture: 'Context.Culture',\n\t\t\tReqID: '',\n\t\t\tBidderID: 'Context.Bidder.BidderId',\n\t\t\tUI_Language: 'Context.Culture',\n\t\t\tBusinessPartnerID: 'Context.Bidder.BidderId'\n\t\t};// init list functions\n\t\t$scope.info = {\n\t\t\tselectedBidder: [],\n\t\t\tselectedReportsAll: 0,\n\t\t\tselectedMandetoryReports: 0,\n\t\t\tselectedReports: 0,\n\t\t\tget selectedCoverLetter() {\n\t\t\t\tvar result = _.find($scope.Context.CoverLetterList, function (item) {\n\t\t\t\t\treturn item.ReportID == $scope.Context.SelectedBodyLetter;\n\t\t\t\t});\n\t\t\t\tif (!result) {\n\t\t\t\t\tresult = $scope.Context.CoverLetterList[0];\n\t\t\t\t}\n\t\t\t\treturn result;\n\t\t\t},\n\t\t\tget selectedDataFormat() {\n\t\t\t\treturn _.find($scope.Context.DataFormatList, function (item) {\n\t\t\t\t\treturn item.DataformatKey == $scope.Context.SelectedDataFormat;\n\t\t\t\t});\n\t\t\t},\n\t\t\tget selectedDokuments() {\n\t\t\t\treturn _.concat($scope.info.selectedProjectDocs, $scope.info.selectedReQDocs, $scope.info.selectedRfQDocs, $scope.info.selectedClerkDocs);\n\t\t\t},\n\t\t\tget selectedProjectDocs() {\n\t\t\t\treturn _.filter($scope.Context.ProjectDocuments, {Selected: true});\n\t\t\t},\n\t\t\tget selectedReQDocs() {\n\t\t\t\treturn _.filter($scope.Context.ReQDocuments, {Selected: true});\n\t\t\t},\n\t\t\tget selectedRfQDocs() {\n\t\t\t\treturn _.filter($scope.Context.RfQDocuments, {Selected: true});\n\t\t\t},\n\t\t\tget selectedClerkDocs() {\n\t\t\t\treturn _.filter($scope.Context.ClerkDocuments, {Selected: true});\n\t\t\t},\n\t\t\tselectedPlaceholder: []\n\t\t};// functions to prepare documents and reports\n\n\t\tfunction prepareDocList(list) {\n\t\t\tif (list) {\n\t\t\t\tfor (var index = 0; index < list.length; index++) {\n\t\t\t\t\tlist[index].Options = {\"displayText\": list[index].OriginFileName, \"documentId\": list[index].Id};\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tlist = [];\n\t\t\t}\n\t\t}\n\n\t\tfunction prepareReportList(list) {\n\t\t\tfor (var index = 0; index < list.length; index++) {\n\t\t\t\tlist[index].Options = {\n\t\t\t\t\t\"displayText\": '<i class=\"block-image control-icons ico-preview\"></i>',\n\t\t\t\t\t\"report\": {\n\t\t\t\t\t\t\"Id\": list[index].ReportID,\n\t\t\t\t\t\t\"Name\": list[index].Description,\n\t\t\t\t\t\t\"TemplateName\": list[index].TemplateName,\n\t\t\t\t\t\t\"Path\": list[index].TemplatePath\n\t\t\t\t\t},\n\t\t\t\t\t\"parameters\": list[index].Parameters\n\t\t\t\t};\n\t\t\t}\n\t\t}\n\n\t\tfunction prepareContacts(bidderList) {\n\t\t\tfor (var index = 0; index < bidderList.length; index++) {\n\t\t\t\tif (bidderList[index]) {\n\t\t\t\t\tbidderList[index].contactOptions = {items: [], displayMember: 'Role', valueMember: 'Email'};\n\t\t\t\t\tif (bidderList[index].ContactLookup) {\n\t\t\t\t\t\tbidderList[index].contactOptions.items = bidderList[index].ContactLookup;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n//prepare the lists\n\t\tprepareDocList($scope.Context.ProjectDocuments);\n\t\tprepareDocList($scope.Context.ReQDocuments);\n\t\tprepareDocList($scope.Context.RfQDocuments);\n\t\tprepareReportList($scope.Context.ReportList);\n\t\tprepareContacts($scope.Context.BidderList);\n\t\t$scope.changeContact = function (bidder) {\n\t\t\tvar contact = _.find(bidder.ContactLookup, {Email: bidder.ContactEmail});\n\t\t\tbidder.ContactFirstName = contact.FirstName;\n\t\t\tbidder.ContactLastName = contact.LastName;\n\t\t};\n\t\t$scope.openReport = function openReport(id) {\n\t\t\tvar report = _.find($scope.Context.ReportList, {ReportID: id});\n\t\t\tif (!report) {\n\t\t\t\treport = _.find($scope.Context.MandentoryReportList, {ReportID: id});\n\t\t\t\tif (!report) {\n\t\t\t\t\treport = _.find($scope.Context.CoverLetterList, {ReportID: id});\n\t\t\t\t}\n\t\t\t}\n\t\t\tif (report) {\n\t\t\t\tvar tempParameters = angular.copy(report.Parameter);\n\t\t\t\t_.forEach(tempParameters, function (param) {\n\t\t\t\t\tif (param.DataType === 'System.String') {\n\t\t\t\t\t\tif (!angular.isString(param.ParamValue) || (angular.isString(param.ParamValue) && !param.ParamValue.includes('\"'))) {\n\t\t\t\t\t\t\tparam.ParamValue = '\"' + param.ParamValue + '\"';\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t\tvar reportObj = {\n\t\t\t\t\t\"Id\": report.ReportID,\n\t\t\t\t\t\"Name\": report.Description,\n\t\t\t\t\t\"TemplateName\": report.FileName,\n\t\t\t\t\t\"Path\": report.TemplatePath\n\t\t\t\t};\n\t\t\t\t//replace parameter variables\n\t\t\t\treportingPlatformService.prepare(reportObj, tempParameters, 'pdf').then(function (response) {\n\t\t\t\t\treportingPlatformService.show(response);\n\t\t\t\t});\n\t\t\t}\n\t\t};\n\n\t\t//Updated on 18.03.2020 - Document would open in a new Window, instead of downloading.\n\t\t$scope.openDocument = function openDocument(docId) {\n\t\t\tdocumentDownloadPreviewButtonService.prepareDocPreviewById(docId);\n\t\t};\n\n\t\t//Send\n\t\t$scope.send = function () {\n\t\t\t$timeout(function () {\n\t\t\t\t$('#tabrfqbiddertab5').trigger('click');\n\t\t\t});\n\t\t\t$scope.button.disabled = true;\n\t\t\tvar paramsContext = {\n\t\t\t\t\"CommunicationChannel\": $scope.Context.CommunicationChannel,\n\t\t\t\t\"SelectedBodyLetter\": $scope.Context.SelectedBodyLetter,\n\t\t\t\t\"SelectedBodyLetterParameters\": $scope.info.selectedCoverLetter.Parameter,\n\t\t\t\t\"ReportList\": $scope.info.selectedReportsAll,\n\t\t\t\t\"DocumentList\": _.map($scope.info.selectedDokuments, function (item) {\n\t\t\t\t\treturn item.hasOwnProperty('Id') ? item.Id : item.DocId;\n\t\t\t\t}),\n\t\t\t\t\"StartingClerk\": $scope.Context.StartingClerk,\n\t\t\t\t\"Subject\": $scope.Context.Subject,\n\t\t\t\t\"SendAsBCC\": $scope.Context.SendAsBCC,\n\t\t\t\t\"SendFromMe\": $scope.Context.SendFromMe,\n\t\t\t\t\"GenerateSafeLink\": $scope.Context.GenerateSafeLink,\n                \"DisableDataFormatExport\": $scope.Context.DisableDataFormatExport,\n\t\t\t\t\"selectedDataFormat\": $scope.info.selectedDataFormat,\n\t\t\t\t\"Url\": window.location.href.substr(0, window.location.href.indexOf('/#'))\n\t\t\t};\n          \n           function setBidderInReport(context, bidder)\n          {\n              if(context.ReportList){\n                  _.each(context.ReportList, function (report) {\n                      _.each(report.Parameter, function (parameter) {\n                          if(parameter.ParameterName === 'BidderID'){\n                              parameter.ParamValue = bidder.BidderId;\n                          }\n                      });\n                  });\n              }\n          }\n          \n\t\t\t$scope.errorOccured = false;\n\t\t\t$scope.noValidConfiguration = false;\n\t\t\tvar generateSafeLink = paramsContext.GenerateSafeLink;\n\t\t\tvar isLetterForSafeLink = paramsContext.SelectedBodyLetterParameters.some(function (param) {\n\t\t\t\treturn param.ParameterName === \"Link\";\n\t\t\t});\n\t\t\t$scope.safeLinkFailed = generateSafeLink === true && isLetterForSafeLink === false || generateSafeLink === false && isLetterForSafeLink === true;\n\t\t\tif(!$scope.safeLinkFailed) {\n\t\t\t\t_.forEach($scope.info.selectedBidder, function (bidder) {\n\t\t\t\t\tbidder.SendStatus = -1;\n\t\t\t\t\tvar bidderContext = {\"Bidder\": bidder};\n              \t\tsetBidderInReport(paramsContext, bidder);\n\t\t\t\t\tvar jsonContext = angular.toJson(_.merge(paramsContext, bidderContext));\n\t\t\t\t\tbasicsWorkflowEventService.startWorkflow(eventUUID, $scope.Context.Entity.Id, jsonContext).then(function (response) {\n\t\t\t\t\t\tif (!_.isEmpty(response)) {\n\t\t\t\t\t\t\tvar status = response.Status;\n\t\t\t\t\t\t\tif (status && status === 5) {\n\t\t\t\t\t\t\t\t$scope.button.disabled = false;\n\t\t\t\t\t\t\t\t$scope.errorOccured = true;\n\t\t\t\t\t\t\t\t$scope.errorWhileSending = $translate.instant('basics.workflow.errorRfQ.errorWhileSendingEMail');\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\tbidder.SendStatus = status;\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t$scope.button.disabled = false;\n\t\t\t\t\t\t\tbidder.SendStatus = 1;\n\t\t\t\t\t\t}\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t} else {\n\t\t\t\t$scope.button.disabled = false;\n\t\t\t\t$scope.errorInConfiguration = $translate.instant('basics.workflow.errorRfQ.wrongReportSelectedError');\n\t\t\t}\n\t\t};\n\t\t$scope.selectedBodyLetterChanged = function () {\n\t\t\tif ($scope.info.selectedCoverLetter) {\n\t\t\t\t$scope.info.selectedPlaceholder = _.filter($scope.info.selectedCoverLetter.Parameter, function (item) {\n\t\t\t\t\treturn !automaticPlaceholder.hasOwnProperty(item.ParameterName);\n\t\t\t\t});\n\t\t\t}\n\t\t};\n\t\t$scope.selectedBidderChanged = function () {\n\t\t\t$scope.info.selectedBidder = _.filter($scope.Context.BidderList, {Selected: true});\n\t\t};\n\t\t$scope.selectedReportsChanged = function () {\n\t\t\t$scope.info.selectedReports = _.filter($scope.Context.ReportList, {Selected: true});\n\t\t\t$scope.info.selectedReportsAll = _.concat(_.filter($scope.Context.MandentoryReportList, {Selected: true}), _.filter($scope.Context.ReportList, {Selected: true}));\n\t\t};\n\t\t$scope.bccChanged = function () {\n\t\t\t$scope.Context.SendAsBCC != $scope.Context.SendAsBCC;\n\t\t};\n\t\t$scope.sendMeChanged = function () {\n\t\t\t$scope.Context.SendFromMe != $scope.Context.SendFromMe;\n\t\t};\n\t\t$scope.safeLinkChanged = function () {\n\t\t\t$scope.Context.GenerateSafeLink != $scope.Context.GenerateSafeLink;\n\t\t};\n  \t\t$scope.disableDataFormatExportChanged = function () {\n\t\t\t$scope.Context.DisableDataFormatExport != $scope.Context.DisableDataFormatExport;\n\t\t};\n\t\t$scope.Context.SendAsBCC = false;\n\t\t$scope.Context.SendFromMe = false;\n\t\t$scope.Context.GenerateSafeLink = false;\n  \t\t$scope.Context.DisableDataFormatExport = false;\n\t\t$scope.selectedBidderChanged();\n\t\t$scope.selectedReportsChanged();\n\t\t$scope.selectedBodyLetterChanged();\n\t}\n)();"
+            },
+            {
+                "id": 110401,
+                "key": "Context",
+                "value": "{\"currentModuleName\":\"basics.workflow\",\"ClientId\":1,\"PermissionClientId\":1,\"PermissionRoleId\":1,\"DataLanguageId\":1,\"Culture\":\"en\",\"UserId\":1,\"SignedInClientId\":1,\"startDate\":\"2021-07-19T12:55:40.952876Z\",\"CompanyId\":1,\"OwnerId\":null,\"KeyUserId\":null,\"TemplateId\":1414,\"VersionId\":1001623,\"InstanceId\":1164227,\"ParentInstanceId\":null,\"Entity\":{\"Id\":1000308,\"RfqStatusFk\":2,\"CompanyFk\":1,\"ProjectFk\":1005766,\"ClerkPrcFk\":2257,\"ClerkReqFk\":2257,\"CurrencyFk\":1,\"PaymentTermFiFk\":13,\"PaymentTermPaFk\":13,\"Code\":\"RFQ-2989\",\"Description\":\"Material\",\"SearchPattern\":\"RFQ-2989Material0711_08Contract Approval Project\",\"AwardReference\":null,\"DateRequested\":\"2020-09-24T00:00:00\",\"DateCanceled\":null,\"DateQuoteDeadline\":null,\"TimeQuoteDeadline\":null,\"LocaQuoteDeadline\":null,\"DateAwardDeadline\":null,\"RfqTypeFk\":1,\"PrcAwardMethodFk\":10,\"PrcContractTypeFk\":5,\"Remark\":null,\"UserDefined1\":null,\"UserDefined2\":null,\"UserDefined3\":null,\"UserDefined4\":null,\"UserDefined5\":null,\"PrcConfigurationFk\":4,\"PrcStrategyFk\":1},\"CommunicationChannel\":2,\"CoverLetterList\":[{\"TemplateName\":\"RfQs expected\",\"Description\":\"Overview per RfQ\",\"FileName\":\"Expected_Quotes.frx\",\"TemplatePath\":\"system\\\\Procurement\\\\RfQ\",\"ReportID\":402,\"Parameter\":[{\"ParameterName\":\"CompanyID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"CompanyID\",\"Id\":1455,\"Value \":1,\"ParamValue\":1,\"Name\":\"CompanyID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"UserID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"UserID\",\"Id\":1456,\"Value \":1,\"ParamValue\":1,\"Name\":\"UserID\",\"ParamValueType\":\"System.Int32\"}],\"IsDefault\":true}],\"ReportList\":[{\"TemplateName\":\"RfQ BOQ Material with BidderID\",\"Description\":\"Workflow-version of BoQ/Material report2\",\"FileName\":\"RfQ_BoQ_Material_with_BidderID.frx\",\"TemplatePath\":\"system\\\\Procurement\\\\RfQ\",\"ReportID\":1000117,\"Parameter\":[{\"ParameterName\":\"Module\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"Module\",\"Id\":1002297,\"Value \":\"3\",\"ParamValue\":\"3\",\"Name\":\"Module\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"PakID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"Paket/Package ID\",\"Id\":1002298,\"Name\":\"PakID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"ReqID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"BANF/Requisition ID\",\"Id\":1002299,\"Name\":\"ReqID\",\"ParamValueType\":\"System.Int32\",\"ParamValue\":1},{\"ParameterName\":\"RfqID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Anfrage/RfQ ID\",\"Id\":1002300,\"Value \":1000308,\"ParamValue\":1000308,\"Name\":\"RfqID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"QtnID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"Angebot/Quote ID\",\"Id\":1002301,\"Name\":\"QtnID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"ConID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"Vertrag/Contract ID\",\"Id\":1002302,\"Name\":\"ConID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"PESID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"Leistungsermittlung/PES ID\",\"Id\":1002303,\"Name\":\"PESID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"InvID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"Rechnung/Invoice ID\",\"Id\":1002304,\"Name\":\"InvID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"PrintBrief\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Outline Specification\",\"Id\":1002305,\"Value \":\"1\",\"ParamValue\":\"1\",\"Name\":\"PrintBrief\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"TextPrint\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Specification\",\"Id\":1002306,\"Value \":\"1\",\"ParamValue\":\"1\",\"Name\":\"TextPrint\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"PrintQnt\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print quantities\",\"Id\":1002307,\"Value \":\"1\",\"ParamValue\":\"1\",\"Name\":\"PrintQnt\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintUP\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print unit prices\",\"Id\":1002308,\"Value \":\"0\",\"ParamValue\":\"0\",\"Name\":\"PrintUP\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintTP\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print item totals\",\"Id\":1002309,\"Value \":\"0\",\"ParamValue\":\"0\",\"Name\":\"PrintTP\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"CompanyID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"CompanyID\",\"Id\":1002310,\"Value \":1,\"ParamValue\":1,\"Name\":\"CompanyID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"BoQLevel\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"BoQ Summary Level\",\"Id\":1002311,\"Value \":\"1\",\"ParamValue\":\"1\",\"Name\":\"BoQLevel\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"PrintSignature\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Signature area\",\"Id\":1002312,\"Value \":\"0\",\"ParamValue\":\"0\",\"Name\":\"PrintSignature\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"Break\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Page break\",\"Id\":1002313,\"Value \":\"1\",\"ParamValue\":\"1\",\"Name\":\"Break\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"IsDebug\",\"DataType\":\"System.Boolean\",\"IsVisible\":false,\"Description\":\"IsDebug\",\"Id\":1002314,\"Name\":\"IsDebug\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintLogo\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Company logo\",\"Id\":1002315,\"Value \":\"1\",\"ParamValue\":\"1\",\"Name\":\"PrintLogo\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"Print_TOC\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Table of content\",\"Id\":1002316,\"Value \":\"1\",\"ParamValue\":\"1\",\"Name\":\"Print_TOC\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintTotalSummary\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print Total Summary\",\"Id\":1002317,\"Value \":\"0\",\"ParamValue\":\"0\",\"Name\":\"PrintTotalSummary\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintMaterialSummary\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print Material Summary\",\"Id\":1002318,\"Value \":\"0\",\"ParamValue\":\"0\",\"Name\":\"PrintMaterialSummary\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"OrdID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"OrdID\",\"Id\":1002319,\"Name\":\"OrdID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"BidID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"BidID\",\"Id\":1002320,\"Name\":\"BidID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"BOQ_Select\",\"DataType\":\"System.String\",\"IsVisible\":true,\"Description\":\"BoQ Reference No.(Leave empty print all)\",\"Id\":1002321,\"Value \":null,\"ParamValue\":null,\"Name\":\"BOQ_Select\",\"ParamValueType\":\"System.String\"},{\"ParameterName\":\"Material_Select\",\"DataType\":\"System.String\",\"IsVisible\":true,\"Description\":\"Sub Package Description\",\"Id\":1002322,\"Value \":null,\"ParamValue\":null,\"Name\":\"Material_Select\",\"ParamValueType\":\"System.String\"},{\"ParameterName\":\"PrintRejections\",\"DataType\":\"System.Boolean\",\"IsVisible\":false,\"Description\":\"PrintRejections\",\"Id\":1002323,\"Name\":\"PrintRejections\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"WIPID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"WIPID\",\"Id\":1002324,\"Name\":\"WIPID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"BilID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"BilID\",\"Id\":1002325,\"Name\":\"BilID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"BidderID\",\"DataType\":\"System.Int32\",\"IsVisible\":false,\"Description\":\"BidderID\",\"Id\":1002326,\"Value \":\"6\",\"ParamValue\":1000327,\"Name\":\"BidderID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Print_History\",\"DataType\":\"System.Boolean\",\"IsVisible\":false,\"Description\":\"Print_History\",\"Id\":1002327,\"Name\":\"Print_History\",\"ParamValueType\":\"System.Boolean\"}],\"IsDefault\":false,\"IsMandatory\":false},{\"TemplateName\":\"RfQ BOQ Material with BidderID filtered\",\"Description\":\"Workflow-version of BoQ/Material filtered\",\"FileName\":\"RfQ_BOQ_Material_with_BidderID_BOQ_ID_List_Filter.frx\",\"TemplatePath\":\"system\\\\Procurement\\\\RfQ\",\"ReportID\":1000664,\"Parameter\":[{\"ParameterName\":\"Break\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"0 = No page break, 1 = Page break before Level2, 2 = Page break every group\",\"Id\":1003766,\"Name\":\"Break\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"PrintLogo\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print logo in page header\",\"Id\":1003767,\"Name\":\"PrintLogo\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintQnt\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print quantities\",\"Id\":1003768,\"Name\":\"PrintQnt\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintTP\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print total prices\",\"Id\":1003769,\"Name\":\"PrintTP\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintUP\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print unit prices\",\"Id\":1003770,\"Name\":\"PrintUP\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"Print_TOC\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"0 = No table of contents, 1 = Table of contents on top, 2 = Table of contents on bottom\",\"Id\":1003771,\"Name\":\"Print_TOC\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"PrintSignature\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print signature\",\"Id\":1003772,\"Name\":\"PrintSignature\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintSplQnt\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print split quantities\",\"Id\":1003773,\"Name\":\"PrintSplQnt\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintTotalSummary\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print total summaries\",\"Id\":1003774,\"Name\":\"PrintTotalSummary\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintBrief\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print brief\",\"Id\":1003775,\"Name\":\"PrintBrief\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"PrintMaterialSummary\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print material summaries\",\"Id\":1003776,\"Name\":\"PrintMaterialSummary\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"TextPrint\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"0 = Formatted Specification, 1 = Specification, 2 = No Specification\",\"Id\":1003777,\"Name\":\"TextPrint\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"1 = Paket, 2 = Requisition, 3 = Rfq, 4 = Quote, 5 = Contract, 6 = Pes, 7 = Invoice, 8 = Bid, 9 = Order, 10 = Wip, 11 = Bill, 12 = Project, 13 = Boq\",\"Id\":1003778,\"Name\":\"Module\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_PakID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Paket/Package ID\",\"Id\":1003779,\"Name\":\"Module_PakID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_ReqID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"BANF/Requisition ID\",\"Id\":1003780,\"Name\":\"Module_ReqID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_RfqID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Anfrage/RfQ ID\",\"Id\":1003781,\"Name\":\"Module_RfqID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_QtnID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Angebot/Quote ID\",\"Id\":1003782,\"Name\":\"Module_QtnID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_ConID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Vertrag/Contract ID\",\"Id\":1003783,\"Name\":\"Module_ConID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_PESID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Leistungsermittlung/PES ID\",\"Id\":1003784,\"Name\":\"Module_PESID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_InvID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Rechnung/Invoice ID\",\"Id\":1003785,\"Name\":\"Module_InvID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_BidID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Bid Id\",\"Id\":1003786,\"Name\":\"Module_BidID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_OrdID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Order Id\",\"Id\":1003787,\"Name\":\"Module_OrdID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_WIPID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Wip Id\",\"Id\":1003788,\"Name\":\"Module_WIPID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_BilID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Bil Id\",\"Id\":1003789,\"Name\":\"Module_BilID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_PrjID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Projekt/Project Id\",\"Id\":1003790,\"Name\":\"Module_PrjID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"Module_BoQItemID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Lv/Boq Id\",\"Id\":1003791,\"Name\":\"Module_BoQItemID\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"BoQLevel\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Level of summary content\",\"Id\":1003792,\"Name\":\"BoQLevel\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"CompanyID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"Company Id\",\"Id\":1003793,\"Name\":\"CompanyID\",\"ParamValueType\":\"System.Int32\",\"ParamValue\":1},{\"ParameterName\":\"From\",\"DataType\":\"System.String\",\"IsVisible\":true,\"Description\":\"Print Boq Item from\",\"Id\":1003794,\"Name\":\"From\",\"ParamValueType\":\"System.String\"},{\"ParameterName\":\"To\",\"DataType\":\"System.String\",\"IsVisible\":true,\"Description\":\"Print Boq item to\",\"Id\":1003795,\"Name\":\"To\",\"ParamValueType\":\"System.String\"},{\"ParameterName\":\"Replace_Ref\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Replace reference with specific user defined\",\"Id\":1003796,\"Name\":\"Replace_Ref\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"Userdefined_No\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"User defined number\",\"Id\":1003797,\"Name\":\"Userdefined_No\",\"ParamValueType\":\"System.Int32\"},{\"ParameterName\":\"BOQ_Select\",\"DataType\":\"System.String\",\"IsVisible\":true,\"Description\":\"Selection of boq's\",\"Id\":1003798,\"Name\":\"BOQ_Select\",\"ParamValueType\":\"System.String\"},{\"ParameterName\":\"Material_Select\",\"DataType\":\"System.String\",\"IsVisible\":true,\"Description\":\"Selection of material packages\",\"Id\":1003799,\"Name\":\"Material_Select\",\"ParamValueType\":\"System.String\"},{\"ParameterName\":\"Print_Related_WIPs\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print_Related_WIPs\",\"Id\":1003800,\"Name\":\"Print_Related_WIPs\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"Print_History\",\"DataType\":\"System.Boolean\",\"IsVisible\":true,\"Description\":\"Print_History\",\"Id\":1003801,\"Name\":\"Print_History\",\"ParamValueType\":\"System.Boolean\"},{\"ParameterName\":\"BidderID\",\"DataType\":\"System.Int32\",\"IsVisible\":true,\"Description\":\"BidderID\",\"Id\":1003802,\"Name\":\"BidderID\",\"ParamValueType\":\"System.Int32\",\"ParamValue\":1000327},{\"ParameterName\":\"BoQ_ID_List\",\"DataType\":\"System.String\",\"IsVisible\":true,\"Description\":\"BoQ_ID_List\",\"Id\":1003803,\"Name\":\"BoQ_ID_List\",\"ParamValueType\":\"System.String\"}],\"IsDefault\":true,\"IsMandatory\":false}],\"DataFormatList\":[{\"DataformatKey\":7,\"DataformatDescription\":\"GAEB DA94\"},{\"DataformatKey\":9,\"DataformatDescription\":\"Excel Material \"}],\"DocumentList\":[{\"DocumentId\":1000250,\"DocId\":1037563,\"Rubric\":23,\"StatusFk\":null,\"Status\":null,\"Description\":\"Package_Doc.pdf\",\"PrjDocType\":null,\"PrcDocType\":\"Current Package Only\",\"ClerkDocType\":null,\"OriginalFileName\":\"Package_Doc.pdf\",\"Type\":\"Current Package Only\"}],\"BidderList\":[{\"BidderId\":1000327,\"SubsidiaryId\":1000450,\"SupplierId\":null,\"CompanyName\":\"SaviGora Inc.\",\"CompanyEmail\":\"savic@rib.de\",\"Status\":\"Quoted\",\"ContactFirstName\":\"Goran\",\"ContactLastName\":\"Savic\",\"ContactEmail\":\"goran.savic@rib-software.com\",\"ContactLookup\":[{\"Role\":\"Sales\",\"FirstName\":\"Goran\",\"LastName\":\"Savic\",\"Email\":\"goran.savic@rib-software.com\"}],\"Selected\":true},{\"BidderId\":1000270,\"SubsidiaryId\":1000797,\"SupplierId\":null,\"CompanyName\":\"kdv gbr\",\"CompanyEmail\":\"jonas.ebert@rib-software.com\",\"Status\":\"Quoted\",\"ContactFirstName\":\"jonas\",\"ContactLastName\":\"ebert\",\"ContactEmail\":\"jonas.ebert@rib-software.com\",\"ContactLookup\":[{\"Role\":\"Sales\",\"FirstName\":\"jonas\",\"LastName\":\"ebert\",\"Email\":\"jonas.ebert@rib-software.com\"},{\"Role\":\"Site Manager\",\"FirstName\":\"balkanci\",\"LastName\":\"balkanci\",\"Email\":\"balkanci@rib.de\"}],\"Selected\":true},{\"BidderId\":1000038,\"SubsidiaryId\":1000047,\"SupplierId\":null,\"CompanyName\":\"Balkanci e.V.\",\"CompanyEmail\":\"Benjamin.Balkanci@rib-software.com\",\"Status\":\"Quoted\",\"ContactFirstName\":\"benjamin\",\"ContactLastName\":\"balkanci\",\"ContactEmail\":\"balkanci@rib.de\",\"ContactLookup\":[{\"Role\":\"Owner\",\"FirstName\":\"benjamin\",\"LastName\":\"balkanci\",\"Email\":\"balkanci@rib.de\"}],\"Selected\":true},{\"BidderId\":158,\"SubsidiaryId\":236,\"SupplierId\":30,\"CompanyName\":\"Gouverment Republique Francaise\",\"CompanyEmail\":null,\"Status\":\"Quoted\",\"ContactFirstName\":\"Napoleon \",\"ContactLastName\":\"Bonaparte \",\"ContactEmail\":\"revolution@fr.gov\",\"ContactLookup\":[{\"Role\":\"Procurement\",\"FirstName\":\"Napoleon \",\"LastName\":\"Bonaparte \",\"Email\":\"revolution@fr.gov\"}],\"Selected\":true}],\"Lang\":\"\\\"en\\\"\",\"Url\":{},\"Exception\":null,\"DiagConfig\":{\"height\":\"90%\",\"minWidth\":\"90%\"},\"MandentoryReportList\":[],\"SelectedBodyLetter\":402,\"SelectedDataFormat\":7,\"ReqList\":[{\"ReqId\":1001121}],\"RfQDocuments\":[{\"DocumentId\":1000250,\"DocId\":1037563,\"Rubric\":23,\"StatusFk\":null,\"Status\":null,\"Description\":\"Package_Doc.pdf\",\"PrjDocType\":null,\"PrcDocType\":\"Current Package Only\",\"ClerkDocType\":null,\"OriginalFileName\":\"Package_Doc.pdf\",\"Type\":\"Current Package Only\"}],\"ProjectDocuments\":[],\"ClerkDocuments\":[],\"Subject\":\"RFQ-2989  Material\"}"
+            },
+            {
+                "id": 68802,
+                "key": "IsPopUp",
+                "value": "true"
+            },
+            {
+                "id": 86616,
+                "key": "Title",
+                "value": "Rfq Bidder Wizard"
+            },
+            {
+                "id": 70305,
+                "key": "Subtitle",
+                "value": ""
+            },
+            {
+                "id": 107576,
+                "key": "DialogConfig",
+                "value": "{\"height\":\"90%\",\"minWidth\":\"90%\"}"
+            }
+        ],
+        "Output": [
+            {
+                "id": 109427,
+                "key": "Context",
+                "value": ""
+            }
+        ],
+        "Description": "Rfq Bidder Wizard",
+        "Comment": "",
+        "ActionId": "000019b479164ad1adeb7631d3fd6161",
+        "TemplateDescription": "RFQ Bidder Wizard Workflow",
+        "Transitions": "",
+        "Context": {
+            "currentModuleName": "basics.workflow",
+            "ClientId": 1,
+            "PermissionClientId": 1,
+            "PermissionRoleId": 1,
+            "DataLanguageId": 1,
+            "Culture": "en",
+            "UserId": 1,
+            "SignedInClientId": 1,
+            "startDate": "2021-07-19T12:55:40.952876Z",
+            "CompanyId": 1,
+            "OwnerId": null,
+            "KeyUserId": null,
+            "TemplateId": 1414,
+            "VersionId": 1001623,
+            "InstanceId": 1164227,
+            "ParentInstanceId": null,
+            "Entity": {
+                "Id": 1000308,
+                "RfqStatusFk": 2,
+                "CompanyFk": 1,
+                "ProjectFk": 1005766,
+                "ClerkPrcFk": 2257,
+                "ClerkReqFk": 2257,
+                "CurrencyFk": 1,
+                "PaymentTermFiFk": 13,
+                "PaymentTermPaFk": 13,
+                "Code": "RFQ-2989",
+                "Description": "Material",
+                "SearchPattern": "RFQ-2989Material0711_08Contract Approval Project",
+                "AwardReference": null,
+                "DateRequested": "2020-09-24T00:00:00",
+                "DateCanceled": null,
+                "DateQuoteDeadline": null,
+                "TimeQuoteDeadline": null,
+                "LocaQuoteDeadline": null,
+                "DateAwardDeadline": null,
+                "RfqTypeFk": 1,
+                "PrcAwardMethodFk": 10,
+                "PrcContractTypeFk": 5,
+                "Remark": null,
+                "UserDefined1": null,
+                "UserDefined2": null,
+                "UserDefined3": null,
+                "UserDefined4": null,
+                "UserDefined5": null,
+                "PrcConfigurationFk": 4,
+                "PrcStrategyFk": 1
+            },
+            "CommunicationChannel": 2,
+            "CoverLetterList": [
+                {
+                    "TemplateName": "RfQs expected",
+                    "Description": "Overview per RfQ",
+                    "FileName": "Expected_Quotes.frx",
+                    "TemplatePath": "system\\Procurement\\RfQ",
+                    "ReportID": 402,
+                    "Parameter": [
+                        {
+                            "ParameterName": "CompanyID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "CompanyID",
+                            "Id": 1455,
+                            "Value ": 1,
+                            "ParamValue": 1,
+                            "Name": "CompanyID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "UserID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "UserID",
+                            "Id": 1456,
+                            "Value ": 1,
+                            "ParamValue": 1,
+                            "Name": "UserID",
+                            "ParamValueType": "System.Int32"
+                        }
+                    ],
+                    "IsDefault": true
+                }
+            ],
+            "ReportList": [
+                {
+                    "TemplateName": "RfQ BOQ Material with BidderID",
+                    "Description": "Workflow-version of BoQ/Material report2",
+                    "FileName": "RfQ_BoQ_Material_with_BidderID.frx",
+                    "TemplatePath": "system\\Procurement\\RfQ",
+                    "ReportID": 1000117,
+                    "Parameter": [
+                        {
+                            "ParameterName": "Module",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "Module",
+                            "Id": 1002297,
+                            "Value ": "3",
+                            "ParamValue": "3",
+                            "Name": "Module",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "PakID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "Paket/Package ID",
+                            "Id": 1002298,
+                            "Name": "PakID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "ReqID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "BANF/Requisition ID",
+                            "Id": 1002299,
+                            "Name": "ReqID",
+                            "ParamValueType": "System.Int32",
+                            "ParamValue": 1
+                        },
+                        {
+                            "ParameterName": "RfqID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Anfrage/RfQ ID",
+                            "Id": 1002300,
+                            "Value ": 1000308,
+                            "ParamValue": 1000308,
+                            "Name": "RfqID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "QtnID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "Angebot/Quote ID",
+                            "Id": 1002301,
+                            "Name": "QtnID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "ConID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "Vertrag/Contract ID",
+                            "Id": 1002302,
+                            "Name": "ConID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "PESID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "Leistungsermittlung/PES ID",
+                            "Id": 1002303,
+                            "Name": "PESID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "InvID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "Rechnung/Invoice ID",
+                            "Id": 1002304,
+                            "Name": "InvID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "PrintBrief",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Outline Specification",
+                            "Id": 1002305,
+                            "Value ": "1",
+                            "ParamValue": "1",
+                            "Name": "PrintBrief",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "TextPrint",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Specification",
+                            "Id": 1002306,
+                            "Value ": "1",
+                            "ParamValue": "1",
+                            "Name": "TextPrint",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "PrintQnt",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print quantities",
+                            "Id": 1002307,
+                            "Value ": "1",
+                            "ParamValue": "1",
+                            "Name": "PrintQnt",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintUP",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print unit prices",
+                            "Id": 1002308,
+                            "Value ": "0",
+                            "ParamValue": "0",
+                            "Name": "PrintUP",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintTP",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print item totals",
+                            "Id": 1002309,
+                            "Value ": "0",
+                            "ParamValue": "0",
+                            "Name": "PrintTP",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "CompanyID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "CompanyID",
+                            "Id": 1002310,
+                            "Value ": 1,
+                            "ParamValue": 1,
+                            "Name": "CompanyID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "BoQLevel",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "BoQ Summary Level",
+                            "Id": 1002311,
+                            "Value ": "1",
+                            "ParamValue": "1",
+                            "Name": "BoQLevel",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "PrintSignature",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Signature area",
+                            "Id": 1002312,
+                            "Value ": "0",
+                            "ParamValue": "0",
+                            "Name": "PrintSignature",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "Break",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Page break",
+                            "Id": 1002313,
+                            "Value ": "1",
+                            "ParamValue": "1",
+                            "Name": "Break",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "IsDebug",
+                            "DataType": "System.Boolean",
+                            "IsVisible": false,
+                            "Description": "IsDebug",
+                            "Id": 1002314,
+                            "Name": "IsDebug",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintLogo",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Company logo",
+                            "Id": 1002315,
+                            "Value ": "1",
+                            "ParamValue": "1",
+                            "Name": "PrintLogo",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "Print_TOC",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Table of content",
+                            "Id": 1002316,
+                            "Value ": "1",
+                            "ParamValue": "1",
+                            "Name": "Print_TOC",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintTotalSummary",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print Total Summary",
+                            "Id": 1002317,
+                            "Value ": "0",
+                            "ParamValue": "0",
+                            "Name": "PrintTotalSummary",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintMaterialSummary",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print Material Summary",
+                            "Id": 1002318,
+                            "Value ": "0",
+                            "ParamValue": "0",
+                            "Name": "PrintMaterialSummary",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "OrdID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "OrdID",
+                            "Id": 1002319,
+                            "Name": "OrdID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "BidID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "BidID",
+                            "Id": 1002320,
+                            "Name": "BidID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "BOQ_Select",
+                            "DataType": "System.String",
+                            "IsVisible": true,
+                            "Description": "BoQ Reference No.(Leave empty print all)",
+                            "Id": 1002321,
+                            "Value ": null,
+                            "ParamValue": null,
+                            "Name": "BOQ_Select",
+                            "ParamValueType": "System.String"
+                        },
+                        {
+                            "ParameterName": "Material_Select",
+                            "DataType": "System.String",
+                            "IsVisible": true,
+                            "Description": "Sub Package Description",
+                            "Id": 1002322,
+                            "Value ": null,
+                            "ParamValue": null,
+                            "Name": "Material_Select",
+                            "ParamValueType": "System.String"
+                        },
+                        {
+                            "ParameterName": "PrintRejections",
+                            "DataType": "System.Boolean",
+                            "IsVisible": false,
+                            "Description": "PrintRejections",
+                            "Id": 1002323,
+                            "Name": "PrintRejections",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "WIPID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "WIPID",
+                            "Id": 1002324,
+                            "Name": "WIPID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "BilID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "BilID",
+                            "Id": 1002325,
+                            "Name": "BilID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "BidderID",
+                            "DataType": "System.Int32",
+                            "IsVisible": false,
+                            "Description": "BidderID",
+                            "Id": 1002326,
+                            "Value ": "6",
+                            "ParamValue": 1000327,
+                            "Name": "BidderID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Print_History",
+                            "DataType": "System.Boolean",
+                            "IsVisible": false,
+                            "Description": "Print_History",
+                            "Id": 1002327,
+                            "Name": "Print_History",
+                            "ParamValueType": "System.Boolean"
+                        }
+                    ],
+                    "IsDefault": false,
+                    "IsMandatory": false
+                },
+                {
+                    "TemplateName": "RfQ BOQ Material with BidderID filtered",
+                    "Description": "Workflow-version of BoQ/Material filtered",
+                    "FileName": "RfQ_BOQ_Material_with_BidderID_BOQ_ID_List_Filter.frx",
+                    "TemplatePath": "system\\Procurement\\RfQ",
+                    "ReportID": 1000664,
+                    "Parameter": [
+                        {
+                            "ParameterName": "Break",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "0 = No page break, 1 = Page break before Level2, 2 = Page break every group",
+                            "Id": 1003766,
+                            "Name": "Break",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "PrintLogo",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print logo in page header",
+                            "Id": 1003767,
+                            "Name": "PrintLogo",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintQnt",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print quantities",
+                            "Id": 1003768,
+                            "Name": "PrintQnt",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintTP",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print total prices",
+                            "Id": 1003769,
+                            "Name": "PrintTP",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintUP",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print unit prices",
+                            "Id": 1003770,
+                            "Name": "PrintUP",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "Print_TOC",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "0 = No table of contents, 1 = Table of contents on top, 2 = Table of contents on bottom",
+                            "Id": 1003771,
+                            "Name": "Print_TOC",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "PrintSignature",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print signature",
+                            "Id": 1003772,
+                            "Name": "PrintSignature",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintSplQnt",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print split quantities",
+                            "Id": 1003773,
+                            "Name": "PrintSplQnt",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintTotalSummary",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print total summaries",
+                            "Id": 1003774,
+                            "Name": "PrintTotalSummary",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintBrief",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print brief",
+                            "Id": 1003775,
+                            "Name": "PrintBrief",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "PrintMaterialSummary",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print material summaries",
+                            "Id": 1003776,
+                            "Name": "PrintMaterialSummary",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "TextPrint",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "0 = Formatted Specification, 1 = Specification, 2 = No Specification",
+                            "Id": 1003777,
+                            "Name": "TextPrint",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "1 = Paket, 2 = Requisition, 3 = Rfq, 4 = Quote, 5 = Contract, 6 = Pes, 7 = Invoice, 8 = Bid, 9 = Order, 10 = Wip, 11 = Bill, 12 = Project, 13 = Boq",
+                            "Id": 1003778,
+                            "Name": "Module",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_PakID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Paket/Package ID",
+                            "Id": 1003779,
+                            "Name": "Module_PakID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_ReqID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "BANF/Requisition ID",
+                            "Id": 1003780,
+                            "Name": "Module_ReqID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_RfqID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Anfrage/RfQ ID",
+                            "Id": 1003781,
+                            "Name": "Module_RfqID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_QtnID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Angebot/Quote ID",
+                            "Id": 1003782,
+                            "Name": "Module_QtnID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_ConID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Vertrag/Contract ID",
+                            "Id": 1003783,
+                            "Name": "Module_ConID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_PESID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Leistungsermittlung/PES ID",
+                            "Id": 1003784,
+                            "Name": "Module_PESID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_InvID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Rechnung/Invoice ID",
+                            "Id": 1003785,
+                            "Name": "Module_InvID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_BidID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Bid Id",
+                            "Id": 1003786,
+                            "Name": "Module_BidID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_OrdID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Order Id",
+                            "Id": 1003787,
+                            "Name": "Module_OrdID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_WIPID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Wip Id",
+                            "Id": 1003788,
+                            "Name": "Module_WIPID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_BilID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Bil Id",
+                            "Id": 1003789,
+                            "Name": "Module_BilID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_PrjID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Projekt/Project Id",
+                            "Id": 1003790,
+                            "Name": "Module_PrjID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "Module_BoQItemID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Lv/Boq Id",
+                            "Id": 1003791,
+                            "Name": "Module_BoQItemID",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "BoQLevel",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Level of summary content",
+                            "Id": 1003792,
+                            "Name": "BoQLevel",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "CompanyID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "Company Id",
+                            "Id": 1003793,
+                            "Name": "CompanyID",
+                            "ParamValueType": "System.Int32",
+                            "ParamValue": 1
+                        },
+                        {
+                            "ParameterName": "From",
+                            "DataType": "System.String",
+                            "IsVisible": true,
+                            "Description": "Print Boq Item from",
+                            "Id": 1003794,
+                            "Name": "From",
+                            "ParamValueType": "System.String"
+                        },
+                        {
+                            "ParameterName": "To",
+                            "DataType": "System.String",
+                            "IsVisible": true,
+                            "Description": "Print Boq item to",
+                            "Id": 1003795,
+                            "Name": "To",
+                            "ParamValueType": "System.String"
+                        },
+                        {
+                            "ParameterName": "Replace_Ref",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Replace reference with specific user defined",
+                            "Id": 1003796,
+                            "Name": "Replace_Ref",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "Userdefined_No",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "User defined number",
+                            "Id": 1003797,
+                            "Name": "Userdefined_No",
+                            "ParamValueType": "System.Int32"
+                        },
+                        {
+                            "ParameterName": "BOQ_Select",
+                            "DataType": "System.String",
+                            "IsVisible": true,
+                            "Description": "Selection of boq's",
+                            "Id": 1003798,
+                            "Name": "BOQ_Select",
+                            "ParamValueType": "System.String"
+                        },
+                        {
+                            "ParameterName": "Material_Select",
+                            "DataType": "System.String",
+                            "IsVisible": true,
+                            "Description": "Selection of material packages",
+                            "Id": 1003799,
+                            "Name": "Material_Select",
+                            "ParamValueType": "System.String"
+                        },
+                        {
+                            "ParameterName": "Print_Related_WIPs",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print_Related_WIPs",
+                            "Id": 1003800,
+                            "Name": "Print_Related_WIPs",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "Print_History",
+                            "DataType": "System.Boolean",
+                            "IsVisible": true,
+                            "Description": "Print_History",
+                            "Id": 1003801,
+                            "Name": "Print_History",
+                            "ParamValueType": "System.Boolean"
+                        },
+                        {
+                            "ParameterName": "BidderID",
+                            "DataType": "System.Int32",
+                            "IsVisible": true,
+                            "Description": "BidderID",
+                            "Id": 1003802,
+                            "Name": "BidderID",
+                            "ParamValueType": "System.Int32",
+                            "ParamValue": 1000327
+                        },
+                        {
+                            "ParameterName": "BoQ_ID_List",
+                            "DataType": "System.String",
+                            "IsVisible": true,
+                            "Description": "BoQ_ID_List",
+                            "Id": 1003803,
+                            "Name": "BoQ_ID_List",
+                            "ParamValueType": "System.String"
+                        }
+                    ],
+                    "IsDefault": true,
+                    "IsMandatory": false
+                }
+            ],
+            "DataFormatList": [
+                {
+                    "DataformatKey": 7,
+                    "DataformatDescription": "GAEB DA94"
+                },
+                {
+                    "DataformatKey": 9,
+                    "DataformatDescription": "Excel Material "
+                }
+            ],
+            "DocumentList": [
+                {
+                    "DocumentId": 1000250,
+                    "DocId": 1037563,
+                    "Rubric": 23,
+                    "StatusFk": null,
+                    "Status": null,
+                    "Description": "Package_Doc.pdf",
+                    "PrjDocType": null,
+                    "PrcDocType": "Current Package Only",
+                    "ClerkDocType": null,
+                    "OriginalFileName": "Package_Doc.pdf",
+                    "Type": "Current Package Only"
+                }
+            ],
+            "BidderList": [
+                {
+                    "BidderId": 1000327,
+                    "SubsidiaryId": 1000450,
+                    "SupplierId": null,
+                    "CompanyName": "SaviGora Inc.",
+                    "CompanyEmail": "savic@rib.de",
+                    "Status": "Quoted",
+                    "ContactFirstName": "Goran",
+                    "ContactLastName": "Savic",
+                    "ContactEmail": "goran.savic@rib-software.com",
+                    "ContactLookup": [
+                        {
+                            "Role": "Sales",
+                            "FirstName": "Goran",
+                            "LastName": "Savic",
+                            "Email": "goran.savic@rib-software.com"
+                        }
+                    ],
+                    "Selected": true
+                },
+                {
+                    "BidderId": 1000270,
+                    "SubsidiaryId": 1000797,
+                    "SupplierId": null,
+                    "CompanyName": "kdv gbr",
+                    "CompanyEmail": "jonas.ebert@rib-software.com",
+                    "Status": "Quoted",
+                    "ContactFirstName": "jonas",
+                    "ContactLastName": "ebert",
+                    "ContactEmail": "jonas.ebert@rib-software.com",
+                    "ContactLookup": [
+                        {
+                            "Role": "Sales",
+                            "FirstName": "jonas",
+                            "LastName": "ebert",
+                            "Email": "jonas.ebert@rib-software.com"
+                        },
+                        {
+                            "Role": "Site Manager",
+                            "FirstName": "balkanci",
+                            "LastName": "balkanci",
+                            "Email": "balkanci@rib.de"
+                        }
+                    ],
+                    "Selected": true
+                },
+                {
+                    "BidderId": 1000038,
+                    "SubsidiaryId": 1000047,
+                    "SupplierId": null,
+                    "CompanyName": "Balkanci e.V.",
+                    "CompanyEmail": "Benjamin.Balkanci@rib-software.com",
+                    "Status": "Quoted",
+                    "ContactFirstName": "benjamin",
+                    "ContactLastName": "balkanci",
+                    "ContactEmail": "balkanci@rib.de",
+                    "ContactLookup": [
+                        {
+                            "Role": "Owner",
+                            "FirstName": "benjamin",
+                            "LastName": "balkanci",
+                            "Email": "balkanci@rib.de"
+                        }
+                    ],
+                    "Selected": true
+                },
+                {
+                    "BidderId": 158,
+                    "SubsidiaryId": 236,
+                    "SupplierId": 30,
+                    "CompanyName": "Gouverment Republique Francaise",
+                    "CompanyEmail": null,
+                    "Status": "Quoted",
+                    "ContactFirstName": "Napoleon ",
+                    "ContactLastName": "Bonaparte ",
+                    "ContactEmail": "revolution@fr.gov",
+                    "ContactLookup": [
+                        {
+                            "Role": "Procurement",
+                            "FirstName": "Napoleon ",
+                            "LastName": "Bonaparte ",
+                            "Email": "revolution@fr.gov"
+                        }
+                    ],
+                    "Selected": true
+                }
+            ],
+            "Lang": "\"en\"",
+            "Url": {},
+            "Exception": null,
+            "DiagConfig": {
+                "height": "90%",
+                "minWidth": "90%"
+            },
+            "MandentoryReportList": [],
+            "SelectedBodyLetter": 402,
+            "SelectedDataFormat": 7,
+            "ReqList": [
+                {
+                    "ReqId": 1001121
+                }
+            ],
+            "RfQDocuments": [
+                {
+                    "DocumentId": 1000250,
+                    "DocId": 1037563,
+                    "Rubric": 23,
+                    "StatusFk": null,
+                    "Status": null,
+                    "Description": "Package_Doc.pdf",
+                    "PrjDocType": null,
+                    "PrcDocType": "Current Package Only",
+                    "ClerkDocType": null,
+                    "OriginalFileName": "Package_Doc.pdf",
+                    "Type": "Current Package Only"
+                }
+            ],
+            "ProjectDocuments": [],
+            "ClerkDocuments": [],
+            "Subject": "RFQ-2989  Material"
+        },
+        "IsRunning": true,
+        "OwnerId": 2,
+        "ProgressById": null,
+        "Lifetime": 0,
+        "Endtime": null,
+        "Clerk": "My Tasks",
+        "UserDefined1": "",
+        "UserDefined2": "",
+        "UserDefined3": "",
+        "UserDefined4": "",
+        "UserDefined5": "",
+        "OwnerName": null,
+        "OwnerDescription": null,
+        "EntityIdList": [
+            1000308
+        ],
+        "options": [],
+        "Action": {
+            "Id": "000019b479164ad1adeb7631d3fd6161",
+            "Input": [
+                "HTML",
+                "Script",
+                "Context",
+                "IsPopUp",
+                "Title",
+                "Subtitle",
+                "DialogConfig"
+            ],
+            "Output": [
+                "Context"
+            ],
+            "Description": "Extended User Action",
+            "ActionType": 6,
+            "HideFooter": true,
+            "templateUrl": "",
+            "directive": "basicsWorkflowExtendedUserTaskActionDirective",
+            "Namespace": "Basics.Workflow"
+        },
+        "StatusName": "Running",
+        "StartedFormated": "19/07/2021 18:26",
+        "PrioIcon": "./images/control-icons.svg#ico-prio02",
+        "Priority": {
+            "Id": 2,
+            "Code": "medium",
+            "Description": "medium",
+            "DescriptionTr": null,
+            "Icon": 2,
+            "IsDefault": true,
+            "Sorting": 0,
+            "InsertedAt": "2016-04-20T00:00:00Z",
+            "InsertedBy": 1,
+            "UpdatedAt": null,
+            "UpdatedBy": null,
+            "Version": 1
+        },
+        "lifeTimeIcon": "./images/control-icons.svg#ico-lifetime-100",
+        "lifeTimePercent": "100 %",
+        "EndDate": "No End Date",
+        "entityHeader": "Code Description",
+        "OwnerType": "user",
+        "OwnerIcon": "./images/control-icons.svg#ico-user",
+        "Readonly": false,
+        "ProcessingStatus": "running"
+    }
+]

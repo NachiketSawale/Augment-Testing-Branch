@@ -1,0 +1,9 @@
+<div class="toolbar justify-content-between">
+	<h5 class="title fix ellipsis font-bold">{{editorViewConfig.label | platformTranslate}}</h5>
+
+	<ui-common-menu-list [menu]="toolbarData!"></ui-common-menu-list>
+</div>
+
+<div class="flex-element flex-box flex-column overflow-auto fullheight" *ngIf="editorViewConfig.gridProperties.gridConfiguration !== undefined">
+	<ui-common-grid class="flex-element" [configuration]="editorViewConfig.gridProperties.gridConfiguration" (selectionChanged)="selectionChanged($event)" (valueChanged)="valueChanged($event)"></ui-common-grid>
+</div>

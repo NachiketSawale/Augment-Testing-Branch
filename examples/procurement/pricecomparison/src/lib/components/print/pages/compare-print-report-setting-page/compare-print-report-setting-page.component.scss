@@ -1,0 +1,25 @@
+.compare-print-report .inline-block {
+	display: inline-block;
+}
+
+.compare-print-report .platform-lg input[type="number"] {
+	width: 40px;
+	text-align: center;
+}
+
+.compare-print-report .margin-l-r-4 {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.compare-print-report fieldset {
+	border: 1px solid #ccc;
+	padding: 8px;
+}
+
+.compare-print-report fieldset legend {
+	font-size: 13px;
+	width: auto;
+	padding: 0 8px;
+	font-weight: bold;
+}

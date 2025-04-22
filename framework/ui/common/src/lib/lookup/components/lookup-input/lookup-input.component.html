@@ -1,0 +1,36 @@
+<div *ngIf="config.showDescription && !usedAsGridEditor; then composite else lookup"></div>
+
+<ng-template #lookup>
+	<div #container class="input-group lookup-container form-control" (click)="onInputGroupClick($event)">
+		<div *ngIf="config.showCustomInputContent; then customBlock else defaultBlock"></div>
+		<ui-common-lookup-button #buttons [readonly]="readonly" [config]="config" [context]='context' (delete)="clear()" (edit)="openLookup()"></ui-common-lookup-button>
+	</div>
+</ng-template>
+
+<ng-template #customBlock>
+	<div #input class="input-group-content" tabindex="-1" [innerHTML]="selectedItem | uiCommonLookupContent: context" (keydown)='onKeyDown($event)'></div>
+</ng-template>
+
+<ng-template #defaultBlock>
+	<input #input type="text"  class="input-group-content"
+	       [ngModel]="inputValue"
+	       (ngModelChange)="onInputChange($event)"
+	       (blur)="onInputBlur($event)"
+	       (keydown)='onKeyDown($event)'
+	       [readonly]="!!readonly || !!config.disableInput"
+	       [disabled]="!!readonly || !!config.disableInput || !!config.disabled"
+	       [uiCommonInputConfig]="config.inputConfig"
+	/>
+</ng-template>
+
+<ng-template #composite>
+	<diV class="flex-box">
+		<div class="lg-4 md-4 padding-right">
+			<div *ngTemplateOutlet="lookup"></div>
+		</div>
+
+		<div *ngFor="let descriptionMember of descriptionMembers" class="lg-8 md-8 form-control composite-last-item">
+			<input type="text" class="input-group-content" [value]="getDescription(descriptionMember)" readonly />
+		</div>
+	</diV>
+</ng-template>

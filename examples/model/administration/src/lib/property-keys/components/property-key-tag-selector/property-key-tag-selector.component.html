@@ -1,0 +1,6 @@
+<div class="input-group lookup-container form-control">
+	<input [value]="displayText | async" [title]="displayText | async" readonly="readonly" class="input-group-content" [placeholder]="'model.administration.propertyKeys.selectTags' | platformTranslate" />
+	<span class="input-group-btn" *ngIf="!readOnly">
+		<button (click)="selectTags()" class="btn btn-default control-icons ico-menu" [title]="'model.administration.propertyKeys.selectTagsHint' | platformTranslate">...</button>
+	</span>
+</div>

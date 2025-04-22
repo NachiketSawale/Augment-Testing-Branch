@@ -1,0 +1,33 @@
+<div class="ms-commodity-row-operation">
+    <div>
+        <p class="ms-commodity-row-price"><label
+                class="ms-row-label">{{'procurement.ticketsystem.htmlTranslate.costPrice' | platformTranslate}}
+            :</label> {{dataItem.ShowCost}}[{{listPriceInfo()}}] {{dataItem.Currency}} </p>
+        <p class="ms-commodity-row-unituom"><label
+                class="ms-row-label">{{'procurement.ticketsystem.htmlTranslate.uomPrice' | platformTranslate}}
+            :</label>/{{uom()}}</p>
+    </div>
+    <div class="ms-commodity-row-cart-delete">
+        <a (click)="delete()">
+            <i class="block-image control-wh-icons ico-cart-item-delete"></i>
+        </a>
+    </div>
+    <div class="ms-commodity-row-quantity">
+        <label class="ms-row-label">{{'procurement.ticketsystem.htmlTranslate.quantity' | platformTranslate}}:</label>
+        <div *ngIf="itemOptions && itemOptions.itemQuantityComponent">
+            <div *ngComponentOutlet="itemOptions.itemQuantityComponent;injector:dataInjector;"></div>
+        </div>
+    </div>
+    <div class="ms-commodity-row-delivery ts-cart-item-delivery" *ngIf="deliveryOptionShow()">
+        <label class="ms-row-label">{{'procurement.ticketsystem.htmlTranslate.deliveryOption' | platformTranslate}}
+            :</label>
+        {{getDeliveryByPriceCondition()}} {{dataItem.Currency}}
+    </div>
+    <div class="ts-cart-item-subtotal">
+        <label class="ts-row-label">{{'procurement.ticketsystem.htmlTranslate.subTotal'| platformTranslate}}:</label>
+        <label>
+            <span>{{subTotal()}}</span>
+            {{dataItem.Currency}}
+        </label>
+    </div>
+</div>

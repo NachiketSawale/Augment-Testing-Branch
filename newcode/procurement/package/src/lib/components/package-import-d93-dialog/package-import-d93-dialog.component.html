@@ -1,0 +1,5 @@
+<div class="flex-box flex-column flex-element">
+	<div *ngIf="modalOptions.isError" class="alert alert-danger" role="alert">{{modalOptions.errorDetail}}</div>
+	<ui-common-form [formConfig]="configuration" [entity]="formEntity"></ui-common-form>
+	<ui-common-loading [loading]="modalOptions.dialogLoading"></ui-common-loading>
+</div>

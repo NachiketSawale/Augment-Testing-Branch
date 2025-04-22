@@ -1,0 +1,50 @@
+<div class="modal-wrapper">
+    <header class="modal-header"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="platform-form-group">
+
+            <div class="platform-form-row">
+                <label class="platform-form-label" style="min-width: 112px;">
+                    {{'sales.contract.generateBillFromPSSelectedPaymentSchedule'| translate}}
+                </label>
+            </div>
+
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div data-platform-Grid data="gridData" style="max-height: 80px;"></div>
+                </div>
+            </div>
+
+            <div class="platform-form-row">
+                <label for="generateLumpSumBased" class="platform-form-label" style="min-width: 112px;" >
+                    <input type="radio" id="generateLumpSumBased" name="radioSelect" data-ng-model="entity.RadioType"
+                           style="vertical-align:text-bottom;margin: 2px 0;"
+                           data-ng-change="radioOptionChanged()"
+                           data-ng-disabled="!modalOptions.hasBoqs"
+                           value="0"/>
+                    &nbsp;{{'sales.contract.generateBillFromPSLumpsumFromContract'| translate}}
+                </label>
+            </div>
+            <div class="platform-form-row">
+                <label for="generateQuantityBased" class="platform-form-label" style="min-width: 112px;">
+                    <input type="radio"  id="generateQuantityBased" name="radioSelect" data-ng-model="entity.RadioType"
+                           style="vertical-align:text-bottom;margin: 2px 0;"
+                           data-ng-change="radioOptionChanged()"
+                           value="1"/>
+                    &nbsp;{{'sales.contract.generateBillFromPSQtyBaseFromWIP'| translate}}
+                </label>
+            </div>
+        </div>
+
+        <div class="modal-wrapper">
+            <div data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+        </div>
+
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="isOkDisabled" data-ng-click="modalOptions.ok()" data-ng-bind="'basics.common.button.ok' | translate"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+    </footer>
+</div>
+<div cloud-common-overlay data-loading="loading.show" data-info2="loading.text"></div>

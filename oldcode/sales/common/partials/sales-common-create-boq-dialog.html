@@ -1,0 +1,136 @@
+<div>
+	<div>
+		<section class="modal-body">
+			<div class="filler">
+				<div class="fullheight">
+					<div class="platform-form-container">
+						<form class="platform-form platform-lg">
+							<div class="platform-form-group">
+								<div class="platform-form-row form-group">
+									<label class="platform-form-label">{{'cloud.common.entityProject' | translate}}</label>
+									<div class="platform-form-col">
+										<div class="control-directive" basics-lookupdata-lookup-composite
+										     data-options="dialog.modalOptions.lookupOptions.Project"
+										     data-ng-model="dialog.modalOptions.dataItem.ProjectFk"
+										></div>
+									</div>
+								</div>
+								<div class="platform-form-row form-group" data-ng-show="dialog.modalOptions.ctrlStates.showBaseBoq">
+									<label class="platform-form-label">{{'procurement.common.boq.baseBoq' | translate}}</label>
+									<div class="platform-form-col">
+										<div class="control-directive" basics-lookupdata-lookup-composite
+										     data-options="dialog.modalOptions.lookupOptions.baseBoq"
+										     data-entity="dialog.modalOptions.dataItem"
+										     data-model="dialog.modalOptions.dataItem.BaseBoqReference"
+										     data-ng-model="dialog.modalOptions.dataItem.BaseBoqReference"
+										     data-ng-change="dialog.modalOptions.baseBoq.onChange()"
+										     data-disabled="dialog.modalOptions.ctrlStates.disabledUseBaseBoq"
+										     data-dirty="true"></div>
+									</div>
+								</div>
+
+								<div class="platform-form-row form-group">
+									<label class="platform-form-label">{{'sales.common.createBoqDialog.useBaseBoq' | translate}}</label>
+									<div class="platform-form-col">
+										<input data-ng-model="dialog.modalOptions.itemValue.creationType" type="radio"
+										       data-ng-value="1"
+											   data-ng-change = "dialog.modalOptions.onChangeBaseBoq.onBaseBoqChange()"
+										       data-ng-disabled="dialog.modalOptions.ctrlStates.disabledBaseBoqRadio"/>
+									</div>
+								</div>
+
+								<div class="platform-form-row form-group">
+									<label class="platform-form-label">{{'procurement.common.boq.useExistWicBoq' | translate}}</label>
+									<div class="platform-form-col">
+										<div class="platform-form-group domain-type-composite form-control">
+											<input type="radio" data-ng-value="2"
+											       name="e892e80b01614345bfb7c4974e62a90e"
+											       data-ng-model="dialog.modalOptions.itemValue.creationType"
+											       data-ng-disabled="dialog.modalOptions.ctrlStates.disabledUseWicGroup">
+										</div>
+										<div class="platform-form-group">
+											<div class="platform-form-row form-group">
+												<label class="platform-form-label">{{'sales.contract.frameworkWicCatalog.wicGroup' | translate}}</label>
+												<div class="platform-form-col">
+													<div class="control-directive" basics-lookupdata-lookup-composite
+													     data-options="dialog.modalOptions.lookupOptions.wicGroup"
+													     data-entity="dialog.modalOptions.itemValue"
+													     data-model="dialog.modalOptions.itemValue.WicGroupId"
+													     data-ng-model="dialog.modalOptions.itemValue.WicGroupId"
+													     data-dirty="true"
+													     data-disabled="dialog.modalOptions.ctrlStates.disabledWicGroup"></div>
+												</div>
+											</div>
+											<div class="platform-form-row form-group">
+												<label class="platform-form-label">{{'procurement.common.boq.wicBoq' | translate}}</label>
+												<div class="platform-form-col">
+													<div class="control-directive" basics-lookupdata-lookup-composite
+													     data-options="dialog.modalOptions.lookupOptions.wicBoq"
+													     data-entity="dialog.modalOptions.itemValue"
+													     data-model="dialog.modalOptions.itemValue.WicBoqId"
+													     data-ng-model="dialog.modalOptions.itemValue.WicBoqId"
+													     data-dirty="true"
+													     data-disabled="dialog.modalOptions.ctrlStates.disabledWicBoq"></div>
+												</div>
+											</div>
+											<div class="platform-form-row form-group">
+												<label class="platform-form-label">{{'procurement.common.boq.takeOverEntireBoq' | translate}}</label>
+												<div class="platform-form-col domain-type-composite form-control">
+													<input type="radio" name="e892e80b01614345bfb7c4974e61a90d"
+													       data-ng-model="dialog.modalOptions.itemValue.takeOverOption"
+													       data-ng-disabled="dialog.modalOptions.ctrlStates.disabledUseWicGroup"
+													       data-ng-value="1">
+												</div>
+											</div>
+											<div class="platform-form-row form-group">
+												<label class="platform-form-label">{{'procurement.common.boq.takeOverBoqHeaderOnly' | translate}}</label>
+												<div class="platform-form-col domain-type-composite form-control">
+													<input type="radio" name="e892e80b01614345bfb7c4974e61a90d"
+													       data-ng-model="dialog.modalOptions.itemValue.takeOverOption"
+													       data-ng-disabled="dialog.modalOptions.ctrlStates.disabledUseWicGroup"
+													       data-ng-value="2">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-row form-group">
+									<label class="platform-form-label">{{'procurement.common.boq.createNewBoq' | translate}}</label>
+									<div class="platform-form-col">
+										<div class="platform-form-group domain-type-composite form-control">
+											<input type="radio" data-ng-value="3"
+											       name="e892e80b01614345bfb7c4974e62a90e"
+											       data-ng-model="dialog.modalOptions.itemValue.creationType"
+												   data-ng-change = "dialog.modalOptions.onChangeCreateNewBoq.onCreateNewBoqChange()"
+											       data-ng-disabled="dialog.modalOptions.ctrlStates.disabledCreateNewBoq">
+										</div>
+										<div class="platform-form-group">
+											<div class="platform-form-row form-group">
+												<span class="platform-form-label">{{'boq.main.Reference' | translate}}</span>
+												<div class="platform-form-col">
+													<input type="text"
+													       data-ng-model="dialog.modalOptions.dataItem.Reference"
+													       class="form-control"
+													       data-ng-disabled="dialog.modalOptions.ctrlStates.reference.disabled()">
+												</div>
+											</div>
+											<div class="platform-form-row form-group">
+												<span class="platform-form-label">{{'boq.main.BriefInfo' | translate}}</span>
+												<div class="platform-form-col">
+													<input type="text"
+													       data-ng-model="dialog.modalOptions.dataItem.BriefInfo.Translated"
+													       class="form-control"
+													       data-ng-disabled="dialog.modalOptions.ctrlStates.briefInfo.disabled()">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>

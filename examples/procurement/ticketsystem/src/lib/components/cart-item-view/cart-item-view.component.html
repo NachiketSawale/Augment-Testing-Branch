@@ -1,0 +1,4 @@
+<procurement-ticket-system-cart-list *ngIf="!scope.showDetail" [scope]="scope"
+                                     class="ts-cart-item-panel ts-cart-item-list-panel flex-element"></procurement-ticket-system-cart-list>
+<procurement-ticket-system-cart-item-detail *ngIf="scope.showDetail"
+                                            [scope]="scope"></procurement-ticket-system-cart-item-detail>

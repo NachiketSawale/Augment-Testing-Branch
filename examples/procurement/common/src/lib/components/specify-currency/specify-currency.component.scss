@@ -1,0 +1,18 @@
+#main-box {
+	align-items: flex-start;
+}
+
+.icon {
+	width: 40px;
+	height: 40px;
+	margin: 0 16px 0 0;
+	padding: 0;
+}
+
+.currencyRadio {
+	display: inline-block;
+}
+
+#radioRow .currencyRadio:nth-child(2) {
+	margin-left: calc(50% - 113px)
+}

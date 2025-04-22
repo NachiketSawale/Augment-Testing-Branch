@@ -1,0 +1,14 @@
+<div (wheel)="onScroll($event)">
+	<div class="tiles-wrapper">
+		<div *ngFor="let group of tilegroups" [style]="set_width(group)" (window:resize)="moveTiles($event, group)">
+			<ui-desktop-tile-group [groups]="group"></ui-desktop-tile-group>
+		</div>
+	</div>
+</div>
+
+<div class="desktop-pager-wrapper">
+	<div class="company-logo-2"></div>
+	<div class="desktop-pager">
+		<ui-desktop-pager *ngIf="currentSettings?.desktopPagesStructure" [pageInformation]="currentSettings.desktopPagesStructure"> </ui-desktop-pager>
+	</div>
+</div>

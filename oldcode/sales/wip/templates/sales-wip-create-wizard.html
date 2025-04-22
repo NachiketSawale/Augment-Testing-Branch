@@ -1,0 +1,26 @@
+<div class="modal-wrapper">
+    <header class="modal-header"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+       <div class="platform-form-group ng-scope">
+          <div class="platform-form-row form-group">
+             <label class="platform-form-label" style="min-width: 134px;">{{'sales.wip.wizardCWGenerateType' | translate}}</label>
+             <div class="platform-form-col">
+                <div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty">
+                   <input type="radio" name="CreateType" id="CreateType1" data-ng-model="generateType" value="create" ng-click="onGenerateTypeChange('create')" />
+                   <label for="CreateType1" style="vertical-align: 3px;" class="ng-binding ng-scope">{{'sales.wip.wizardCWCreate' | translate}}</label>&nbsp;&nbsp;
+                   <input type="radio" name="CreateType" id="CreateType2" data-ng-model="generateType" value="update" ng-click="onGenerateTypeChange('update')">
+                   <label for="CreateType2" style="vertical-align: 3px;" class="ng-binding ng-scope">{{'sales.wip.wizardCWUpdate' | translate}}</label>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="isOkDisabled" data-ng-click="modalOptions.ok()" data-ng-bind="'basics.common.button.ok' | translate"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+    </footer>
+</div>
+<div cloud-common-overlay data-loading="loading.show" data-info2="loading.text"></div>

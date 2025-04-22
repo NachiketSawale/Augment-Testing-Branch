@@ -1,0 +1,22 @@
+<div *ngIf="isAlert" class="alert alert-warning">
+	<button type="button" class="close sm plain" (click)="closeAlert()" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	{{ createMessage }}
+</div>
+<div class="platform-form-row form-group" *ngIf="isMultiItem">
+	<input type="radio" name="method" [(ngModel)]="createMehtod" (change)="clickMehtod()" value="1" style="vertical-align: text-bottom; margin: 2px 0" />
+	{{ createByBasicData }}
+</div>
+<div class="platform-form-row form-group" *ngIf="isMultiItem">
+	<input type="radio" name="method" [(ngModel)]="createMehtod" (change)="clickMehtod()" value="2" style="vertical-align: text-bottom; margin: 2px 0" />
+	{{ createByBusinessPartner }}
+</div>
+<div class="platform-form-row form-group">
+	<div class="checkbox spaceToUp lg-3 md-3">
+		<label>
+			<input type="checkbox" [(ngModel)]="isDeleteItem" />
+			{{ deleteMessage }}
+		</label>
+	</div>
+</div>

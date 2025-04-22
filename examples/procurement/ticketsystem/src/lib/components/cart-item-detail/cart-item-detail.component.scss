@@ -1,0 +1,34 @@
+.subview-content {
+  padding: 8px;
+}
+
+.ms-sv-commodity-preview-back {
+  background-color: #e6e6e6 !important;
+  border-radius: 5px !important;
+  color: #333;
+  font-size: 16px;
+  height: 30px;
+  padding: 0 10px 0 0;
+  width: auto;
+}
+
+.ms-sv-container-title {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+}
+
+.ms-sv-container-title > span {
+  color: #0067b1;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ms-sv-border-bottom {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.ms-sv-container-documents .ms-sv-commodity-preview-document-title {
+  color: #0067b1;
+  font-size: 13px;
+  text-decoration: underline;
+}

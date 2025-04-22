@@ -1,0 +1,12 @@
+<div class="ms-commodity-row-delivery">
+    <span [innerText]="standardDeliveryDate"></span>
+    <div class="ms-commodity-row-delivery-title">
+        {{this.translations.deliveryOption | platformTranslate}}
+    </div>
+    <div class="ms-commodity-row-delivery-content">
+        <div *ngFor="let priceCondition of item.PriceConditions">
+            <input type="checkbox" [(ngModel)]="priceCondition.IsActivated"/>
+            {{priceConditionInfo(priceCondition)}}
+        </div>
+    </div>
+</div>

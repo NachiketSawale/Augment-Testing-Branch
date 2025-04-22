@@ -1,0 +1,12 @@
+.toolbar{
+    .tool-space {
+        flex: 1;
+        min-width: 2px;
+        order: 1;
+    }
+
+    .tool-pos {
+        display: flex;
+        order: 2;
+    }
+} 

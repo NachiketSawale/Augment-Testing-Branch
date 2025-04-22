@@ -1,0 +1,20 @@
+{
+	"name": "platform-data-access",
+	"$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/platform/data-access/src",
+	"prefix": "platform-data-access",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/platform/data-access"],
+			"options": {
+				"jestConfig": "libs/platform/data-access/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

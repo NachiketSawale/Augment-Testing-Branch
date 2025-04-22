@@ -1,0 +1,10 @@
+<procurement-pricecomparison-compare-setting-base-grid [menu]="menu" [config]="config">
+	<div class="flex-box flex-row">
+		<div class="checkbox">
+			<label class="platform-form-label">{{ 'procurement.pricecomparison.takeFinalInBillingSchema' | platformTranslate }}
+				<input data-ng-change="onVerticalCompareRowsChanged()" type="checkbox" data-ng-model="service.isVerticalCompareRows"/>
+				<ui-common-domain-control-host [value]="settings.isFinalShowInTotal" [fieldType]="fieldType.Boolean" (valueChange)="isFinalShowInTotalChanged($event)"></ui-common-domain-control-host>
+			</label>
+		</div>
+	</div>
+</procurement-pricecomparison-compare-setting-base-grid>

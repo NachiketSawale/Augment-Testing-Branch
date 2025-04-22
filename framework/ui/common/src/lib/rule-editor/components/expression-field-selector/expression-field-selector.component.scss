@@ -1,0 +1,15 @@
+.expression-column{
+	display: flex;
+}
+
+.expression-column-title{
+	flex: 1;
+	background-color: rgba(#000000, .05);
+	padding: 1rem;
+}
+
+.expression-column-actions button{
+	padding: 1rem;
+	margin-left: .5rem;
+	border: 1px solid rgba(#000000, .2);
+}

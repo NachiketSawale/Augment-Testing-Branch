@@ -1,0 +1,9 @@
+<ui-common-domain-control-host
+	[fieldType]="fieldType.Radio"
+	[options]="createOptions"
+	[controlContext]="createContext"
+></ui-common-domain-control-host>
+<div class="margin-top-ld">
+	<span>{{ 'procurement.pricecomparison.wizard.createOneContractNote' | platformTranslate }}</span>
+</div>
+<ui-common-loading *ngIf="loading" [loading]="loading" [attr.class]="'fullwidth flex-element flex-box flex-column'"></ui-common-loading>

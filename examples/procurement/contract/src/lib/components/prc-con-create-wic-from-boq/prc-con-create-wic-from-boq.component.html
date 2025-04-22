@@ -1,0 +1,65 @@
+<div class="filler modal-wrapper">
+	<div class="platform-form-group">
+		<div class="platform-form-row platform-lg">
+			<div class="platform-form-label">
+				<div style="margin-top: 15px;">
+					{{ 'boq.main.boqLookup' | platformTranslate }} <!--Source BoQ-->
+				</div>
+			</div>
+			<div class="platform-form-col">
+				<ui-common-lookup-input style="display: inline-block;position: relative;width: calc(100% - 145px);left: 23px;" [(value)]="BoqItemFk" [dataService]="sourceBoqLookupService" (valueChange)="sourceBoqChange()"></ui-common-lookup-input>
+			</div>
+		</div>
+		<div class="platform-form-row platform-lg">
+			<div class="platform-form-label">
+				<div style="margin-top: 15px;">
+					{{ 'procurement.common.targetWICGroup' | platformTranslate }}<!--Target WIC Group-->
+				</div>
+			</div>
+			<div class="platform-form-col">
+				<!--todo - select a value ,assign entity success ,but input is missing,its framework not support-->
+				<ui-common-lookup-input style="display: inline-block;position: relative;width: calc(100% - 145px);left: 23px;" [(value)]="WicGroupFk" [dataService]="assembliesWicGroupLookupService"
+				                        (valueChange)="wicGroupChange()"></ui-common-lookup-input>
+			</div>
+		</div>
+	</div>
+	<div class="flex-box flex-column fullheight" style="margin-top: 10px;">
+		<ui-common-grid [configuration]="gridConfig" [items]="selectItems"
+		                class="lookup-grid flex-basis-auto"></ui-common-grid>
+
+	</div>
+	<div class="platform-form-group">
+		<div class="platform-form-row platform-lg">
+			<div class="platform-form-label">
+				<div style="margin-top: 20px;">
+					{{ 'boq.main.Reference' | platformTranslate }}<!--Reference-->
+				</div>
+			</div>
+			<div class="platform-form-col">
+				<div class="input-group form-control">
+					<input type="text"
+					       inputmode="string"
+					       class="text-right input-group-content"
+					       [(ngModel)]="ReferenceNo"/>
+				</div>
+			</div>
+		</div>
+		<!--boq.main.BriefInfo-->
+		<div class="platform-form-row platform-lg">
+			<div class="platform-form-label">
+				<div style="margin-top: 20px;">
+					{{ 'boq.main.BriefInfo' | platformTranslate }}<!--BriefInfo-->
+				</div>
+			</div>
+			<div class="platform-form-col">
+				<div class="input-group form-control">
+					<input type="text"
+					       inputmode="string"
+					       class="text-right input-group-content"
+					       [(ngModel)]="OutlineSpec"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

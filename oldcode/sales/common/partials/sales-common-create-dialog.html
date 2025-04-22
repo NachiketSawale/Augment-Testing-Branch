@@ -1,0 +1,22 @@
+<!-- TODO: dialog/modaldialog-header-template.html-->
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<!-- TODO: <section class="modal-body" data-ng-controller="salesCommonCreateDialogController">-->
+<section class="modal-body">
+	<tabset class="tabsWrapper scroll">
+		<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled"
+		     ng-click="onTabSelect(tab)">
+			<div data-ng-include="tab.content"></div>
+		</tab>
+	</tabset>
+</section>
+
+<!-- TODO: <footer class="modal-header" data-ng-include="'dialog/modaldialog-footer-template.html'"></footer>-->
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disableOk()" data-ng-click="modalOptions.ok()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>

@@ -1,0 +1,12 @@
+<div class="flex-box">
+	<div class="composite-item flex-element flex-box flex-align-center" *ngFor="let controlInfo of getControlsData()">
+		<div *ngIf="controlInfo.controlField.label" class="form-column1-label">{{ controlInfo.controlField.label | platformTranslate }}</div>
+		<svg *ngIf="controlInfo.controlField.required" class="form-column1-required">
+			<use href="images/control-icons.svg#ico-required"></use>
+		</svg>
+		<div class="flex-element">
+			<ng-container #fieldCtl></ng-container>
+			<ng-container *ngIf="controlInfo.hasValidationErrors"><div class="invalid-cell invalid-form" [innerText]="controlInfo.validationMessage"></div></ng-container>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<ul [ngClass]="menu ? getItemClass(menu) : ''" [hidden]="menu ? getVisibility(menu) : ''">
+	<li [ngSwitch]="item.type" *ngFor="let item of menu?.items ?? []"
+		[style.display]="isItemHidden(item) ? 'none' : 'block'" [ngClass]="getClass(item)">
+		<ui-common-menu-list-btn *ngSwitchCase="ItemType.Item" [menuItem]="item" [showTitles]="menu.showTitles!"
+			[context]="context"></ui-common-menu-list-btn>
+
+		<ui-common-menu-list-check *ngSwitchCase="ItemType.Check" [menuItem]="item" [showTitles]="menu.showTitles!"
+			[context]="context"></ui-common-menu-list-check>
+
+		<ui-common-menu-list-dropdown *ngSwitchCase="ItemType.DropdownBtn" [menuItem]="item"
+			[showTitles]="menu.showTitles!" [context]="context"></ui-common-menu-list-dropdown>
+
+		<ui-common-menu-list *ngIf="item.type === ItemType.Sublist && item.list !== undefined" [menu]="item.list"
+			[sublist]="true" [context]="context"></ui-common-menu-list>
+
+		<ui-common-menu-list-radio *ngSwitchCase="ItemType.Radio" [menuItem]="item" [activeValue]="menu.activeValue"
+			[showTitles]="menu.showTitles!" [context]="context"></ui-common-menu-list-radio>
+
+		<ui-common-menu-list-overflow *ngSwitchCase="ItemType.OverflowBtn" [menuItem]="item"
+			[context]="context"></ui-common-menu-list-overflow>
+
+		<ui-common-menu-list-file-select *ngSwitchCase="ItemType.FileSelect"
+			[menuItem]="item"></ui-common-menu-list-file-select>
+
+		<ui-common-menu-list-action-select-btn *ngSwitchCase="ItemType.ActionSelectBtn" [menuItem]="item"
+			[context]="context"></ui-common-menu-list-action-select-btn>
+	</li>
+</ul>

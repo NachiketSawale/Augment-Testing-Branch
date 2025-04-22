@@ -1,0 +1,18 @@
+<div data-platform-alert data-error="error"></div>
+<div class="flex-box flex-column flex-element filler">
+	<div data-platform-kendo-splitter-adjust class="flex-element"
+	     option="{panes: [ { collapsible: true, size: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}">
+
+		<div id="ui-layout-west" class="flex-box flex-column">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+		<div id="ui-layout-east">
+			<basics-common-text-area-toolbar-directive></basics-common-text-area-toolbar-directive>
+			<textarea id="headerTextArea" name="headerTextArea" class="k-content-frame" data-ng-model="currentItem.PlainText"
+			          data-ng-change="onChange()"
+			          data-ng-click="commitEdit()"
+			          data-ng-readonly="rt$readonly">
+            </textarea>
+		</div>
+	</div>
+</div>

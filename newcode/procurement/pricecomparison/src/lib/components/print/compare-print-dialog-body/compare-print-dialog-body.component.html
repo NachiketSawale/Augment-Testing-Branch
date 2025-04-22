@@ -1,0 +1,39 @@
+<div class="flex-element flex-box flex-column fullwidth overflow-hidden">
+	<div class="flex-element flex-box flex-column fullwidth overflow-hidden">
+		<mat-tab-group
+			*ngIf="initialized"
+			mat-stretch-tabs="false"
+			mat-align-tabs="start"
+			animationDuration="0ms"
+			dynamicHeight="true"
+			preserveContent="true"
+		>
+			<mat-tab *ngFor="let page of pages" [label]="page.section.title | platformTranslate">
+				<div *ngComponentOutlet="page.section.component;injector:page.injector;"></div>
+			</mat-tab>
+		</mat-tab-group>
+	</div>
+	<div class="flex-box flex-column">
+		<!--<div class="tabsWrapper" >
+			<div class="alert alert-warning" style="margin-bottom: 0;">
+				<button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close" data-target="#warning-{{$index}}"></button>
+				{{warning.message}}
+			</div>
+		</div>-->
+	</div>
+	<div class="flex-box flex-column">
+		<procurement-pricecomparison-compare-print-profile-switcher
+			*ngIf="!loading"
+			[loadModeValue]="settings.loadModeValue"
+			[genericSelectedValue]="settings.genericProfileSelectedValue"
+			[rfqSelectedValue]="settings.rfqProfileSelectedValue"
+			[genericProfiles]="settings.genericProfiles"
+			[rfqProfiles]="settings.rfqProfiles"
+			(loadModeChanged)="onLoadOptionChanged($event)"
+			(genericProfileChanged)="onGenericProfileChanged($event)"
+			(rfqProfileChanged)="onRfqProfileChanged($event)"
+		>
+		</procurement-pricecomparison-compare-print-profile-switcher>
+	</div>
+</div>
+<ui-common-loading *ngIf="loading" [loading]="loading" [attr.class]="'margin-top-ld margin-bottom-ld'"></ui-common-loading>

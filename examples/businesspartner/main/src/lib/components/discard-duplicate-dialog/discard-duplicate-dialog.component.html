@@ -1,0 +1,31 @@
+<div class="pane-t h2">
+	<label>{{htmlTranslate.description}}</label>
+</div>
+<div class="fullheight" style="overflow-y: auto">
+    <ui-common-grid #gridHost
+                    [configuration]="configuration"
+                    (selectionChanged)="onSelectionChanged($event)">
+    </ui-common-grid>
+</div>
+<div class="statusbar" *ngIf="canShowPage()">
+    <div class="right-side flex-element flex-box flex-align-center">
+        <!-- go to first page -->
+        <button class="btn tlb-icons ico-rec-first item block-image" (click)="getFirstPage()"
+                [disabled]="isLoading||!canFirstOrPrevPage()"></button>
+
+        <!-- go to previous page -->
+        <button class="btn control-icons ico-previous item block-image" (click)="getPrevPage()"
+                [disabled]="isLoading||!canFirstOrPrevPage()"></button>
+
+        <span class="item ellipsis">
+            {{getPageText()}}
+        </span>
+        <!-- go to next page -->
+        <button class="btn control-icons ico-next item block-image" (click)="getNextPage()"
+                [disabled]="isLoading||!canLastOrNextPage()"></button>
+
+        <!-- go to last page -->
+        <button class="btn tlb-icons ico-rec-last item block-image" (click)="getLastPage()"
+                [disabled]="isLoading||!canLastOrNextPage()"></button>
+    </div>
+</div>

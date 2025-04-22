@@ -1,0 +1,26 @@
+<div class="modal-wrapper">
+    <header class="modal-header"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="platform-form-group">
+
+            <div class="platform-form-row">
+                <label class="platform-form-label" style="min-width: 112px;">
+                    {{'sales.billing.assignBillToPaymentSchedule.assignSelectDescription' | translate}}
+                </label>
+            </div>
+
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div data-platform-Grid data="gridData" style="min-height: 300px; max-height: 300px; height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="isOkDisabled" data-ng-click="modalOptions.ok()" data-ng-bind="'sales.billing.assignBillToPaymentSchedule.assignButton' | translate"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+    </footer>
+</div>
+<div cloud-common-overlay data-loading="loading.show" data-info2="loading.text"></div>

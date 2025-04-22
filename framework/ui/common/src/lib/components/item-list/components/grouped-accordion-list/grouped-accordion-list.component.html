@@ -1,0 +1,15 @@
+<div *ngFor="let item of groupedList; let id = index">
+  <li class="panel panel-primary">
+    <button class="panel-heading" (click)="invert(id)" title="{{ item.name }}">
+      <span class="{{ item.groupIconClass }}"></span>
+      <h4 class="panel-title">{{ item.name }}</h4>
+      <div class="panel-toggle-img control-icons {{ item.toggleClass }}"></div>
+    </button>
+    <div *ngIf="item.visible">
+      <ul class="panel-body" *ngFor="let list of item.reports">
+        ##items##
+        <!-- <li platform-accordion-list-directive [list]="list"></li> -->
+      </ul>
+    </div>
+  </li>
+</div>

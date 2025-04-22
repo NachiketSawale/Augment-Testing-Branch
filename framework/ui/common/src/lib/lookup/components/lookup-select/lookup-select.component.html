@@ -1,0 +1,19 @@
+<div #container class="input-group lookup-container form-control">
+    <div class="input-group-content" tabindex="-1" [innerText]="display(this.selectedItem) | platformTranslate" (click)="toggleSelection(selection)"></div>
+    <span class="input-group-btn">
+		<button class="btn btn-default" (click)="toggleSelection(selection)"><span class="caret"></span></button>
+		<button class="btn btn-default control-icons ico-input-delete" (click)="clear()" *ngIf="value"></button>
+    </span>
+</div>
+
+<ng-template #selection>
+    <ui-common-popup #popup>
+            <input header type="text" placeholder="insert your filter" class="form-control filter-input" [(ngModel)]="inputValue" />
+
+            <ul content class="flex-element select-popup overflow">
+                <li *ngFor="let item of visibleItems">
+                    <button [innerText]="display(item) | platformTranslate" (click)="popup.close({apply: true, result: item})"></button>
+                </li>
+            </ul>
+    </ui-common-popup>
+</ng-template>

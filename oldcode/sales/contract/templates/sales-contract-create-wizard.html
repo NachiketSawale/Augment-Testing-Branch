@@ -1,0 +1,15 @@
+<div class="modal-wrapper">
+    <header class="modal-header"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="modal-wrapper">
+            <div data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+        </div>
+
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="isOkDisabled" data-ng-click="modalOptions.ok()" data-ng-bind="'basics.common.button.ok' | translate"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+    </footer>
+</div>
+<div cloud-common-overlay data-loading="loading.show" data-info2="loading.text"></div>

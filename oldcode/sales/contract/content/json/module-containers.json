@@ -1,0 +1,584 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.containerTitleContracts",
+		"controller": "salesContractContractsListController",
+		"uuid": "34d0a7ece4f34f2091f7ba6c622ff04d"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.contract.containerTitleContractsForm",
+		"controller": "salesContractContractsDetailController",
+		"uuid": "ac528547872e450584f6e1dd43922c64",
+		"permission": "34d0a7ece4f34f2091f7ba6c622ff04d"
+	},
+	{
+		"id": "9",
+		"template": "sales.common/templates/sales-common-header-plaintext-html-container.html",
+		"title": "sales.common.headerPlainTextContainerTitle",
+		"controller": "salesContractHeaderTextController",
+		"uuid": "5bdd2357a22c45a18b9171f8b8782252",
+		"permission": "34d0a7ece4f34f2091f7ba6c622ff04d",
+		"textFormat": 2
+	},
+	{
+		"id": "12",
+		"template": "sales.common/templates/sales-common-header-formattedtext-html-container.html",
+		"title": "sales.common.headerFormattedTextContainerTitle",
+		"controller": "salesContractHeaderFormattedTextController",
+		"uuid": "189729fbbfde4c2ab385324814d4a46e",
+		"permission": "34d0a7ece4f34f2091f7ba6c622ff04d",
+		"textFormat": 1
+	},
+
+	{
+		"id": "2",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "382b89267ebe4aec801a257618a2d012"
+	},
+
+	{
+		"id": "8",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "1f5fb2343b174db184b980d13161ab98",
+		"commentQualifier": "sales.contract.contractcomment",
+		"parentService": "salesContractService"
+	},
+
+	{
+		"id": "sales.contract.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "b66b7f483a5f443ea622b272d438a77c",
+		"controller": "",
+		"sectionId": 24,
+		"mainService": "salesContractService"
+	},
+	{
+		"id": "sales.contract.characteristic2",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"controller": "",
+		"sectionId": 66,
+		"mainService": "salesContractService",
+		"uuid": "b6a617147d114c85aa7a1bbc03035968"
+	},
+	{
+		"id": "sales.contract.generals.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.generals.titleList",
+		"controller": "salesContractGeneralsListController",
+		"uuid": "b85fea01f0a4414594542caf845b3b95"
+	},
+	{
+		"id": "sales.contract.generals.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.generals.titleDetail",
+		"controller": "salesContractGeneralsDetailController",
+		"uuid": "61113429868d4e59b85751d84972ad54",
+		"permission": "b85fea01f0a4414594542caf845b3b95"
+	},
+	{
+		"id": "10",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.containerBillingschema",
+		"controller": "salesContractBillingSchemaListController",
+		"uuid": "e303c8ae08b246348e6686882e17dfae"
+	},
+
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.containerContractBoqsTitle",
+		"controller": "salesContractBoqListController",
+		"uuid": "ad818cba8fbb4ef1880027482ffaea1a"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqStructure",
+		"controller": "salesContractBoqStructureController",
+		"uuid": "8d52d213015f4df6b3fb07d6fd81cb42",
+		"mainService": "salesContractService"
+	},
+	{
+		"id": "boq.main.pricecondition.container",
+		"template": "boq.main/templates/price-condition-edit-dialog.html",
+		"title": "boq.main.PriceCondition",
+		"controller": "boqMainPriceconditionListController",
+		"dataService": "salesContractBoqStructurePriceconditionService",
+		"uuid": "BF7F76E4B70F462D9926A3ED5EA3C8CD",
+		"permission": "928B6BABE3594A228B0022D3E163E9B0"
+	},
+	{
+		"id": "11",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.boqDetails",
+		"controller": "salesContractBoqDetailFormController",
+		"uuid": "98b1cc738c1242d283ca49c82ece0295",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.boqdocument.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.documentTitle",
+		"controller": "salesContractBoqDocumentController",
+		"uuid": "1de0114889a94ba78971d62f58e59b03",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.crbvariable.container",
+		"template": "boq.main/templates/boq-main-crb-variable-container.html",
+		"title": "boq.main.crbVariableTitle",
+		"controller": "salesContractCrbVariableController",
+		"uuid": "e34c12899ede43bfb071c842e75cea1b",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.crbboqitemscope.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.crbBoqItemScopeTitle",
+		"controller": "salesContractCrbBoqItemScopeController",
+		"uuid": "54742f67b66c43e1966b3c0115507765",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.crbpricecondition.container",
+		"template": "boq.main/templates/boq-main-crb-pricecondition-container.html",
+		"title": "boq.main.crbPriceconditionTitle",
+		"controller": "salesContractCrbPriceconditionController",
+		"uuid": "071dfc65920f46b79a11483c72c18b17",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.boqhtmlspecification.container",
+		"template": "boq.main/templates/boq-specification-html-container.html",
+		"title": "boq.main.boqSpecification",
+		"controller": "salesContractBoqSpecificationController",
+		"uuid": "6fee5ef522bd4eaa81661fc1288b7931",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.htmltextcomplement.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqMainHtmlTextComplement",
+		"controller": "salesContractBoqHtmlTextComplementController",
+		"uuid": "4b568634091d443f960c3349102d846c",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.boqsurcharge.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqSurchargeOn",
+		"controller": "boqMainGenericSurchargeController",
+		"boqService": "salesContractBoqStructureService",
+		"moduleName": "sales.contract",
+		"uuid": "4cd2adfba78c4a7c92450371f9b9678e",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.splitquantity.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.SplitQuantity",
+		"controller": "boqMainGenericSplitQuantityController",
+		"boqService": "salesContractBoqStructureService",
+		"moduleName": "sales.contract",
+		"uuid": "024492dad0a7493abf07220a9d2b6f84",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "boq.main.containerheader.boqCopy",
+		"template": "boq.main/templates/boq-copysource-container.html",
+		"title": "boq.main.boqLookup",
+		"controller": "",
+		"uuid": "f02a7d91fd0a410fac8a0fcb0c59e7d5"
+	},
+
+	{
+		"id": "sales.contract.header.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.common.header.listTitle",
+		"controller": "productionplanningCommonHeaderListController",
+		"currentModule": "productionplanning.common.contract.header",
+		"parentService": "salesContractService",
+		"foreignKey": "OrdHeaderFk",
+		"uuid": "99ce1ede67e44133a760b20adcd4a9aa",
+		"permission": "99ce1ede67e44133a760b20adcd4a9aa"
+	},
+	{
+		"id": "sales.contract.header.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.common.header.detailTitle",
+		"controller": "productionplanningCommonHeaderDetailController",
+		"currentModule": "productionplanning.common.contract.header",
+		"parentService": "salesContractService",
+		"foreignKey": "OrdHeaderFk",
+		"uuid": "955aa9d777044174b55834db1f7670a6",
+		"permission": "99ce1ede67e44133a760b20adcd4a9aa"
+	},
+	{
+		"id": "sales.contract.header.event",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.common.event.headerEventTitle",
+		"controller": "productionplanningCommonEventListController",
+		"currentModule": "productionplanning.common.contract.header.event",
+		"parentService": "salesContractService",
+		"foreignKey": "HeaderFk",
+		"parentServiceFactory": "productionplanningCommonHeaderMainServiceFactory",
+		"parentCurrentModule": "productionplanning.common.contract.header",
+		"parentForeignKey": "OrdHeaderFk",
+		"uuid": "9fe62b05c136465a9b29bdb00ae4c6b8",
+		"permission": "9fe62b05c136465a9b29bdb00ae4c6b8"
+	},
+	{
+		"id": "sales.contract.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.userform.defaultContainerTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "1428e0585b854403acabefe8acf7c2ee",
+		"rubricId": 5,
+		"mainService": "salesContractService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "sales.contract.document.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.document.containerGridTitle",
+		"controller": "salesContractDocumentListController",
+		"uuid": "ef3fc9fd941340a6bd61cda5683c2398"
+	},
+	{
+		"id": "sales.contract.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.document.containerFormTitle",
+		"controller": "salesContractDocumentDetailController",
+		"uuid": "ff6a0d7a144e441e87fe63855418619b",
+		"permission": "ef3fc9fd941340a6bd61cda5683c2398"
+	},
+	{
+		"id": "order.price.condition.param",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.pricecondition.headerParamTitle",
+		"controller": "basicsPriceConditionParamController",
+		"uuid": "67f5acfb98264b0083ae6bc0459aef7c",
+		"paramTypeId": "8",
+		"mainService": "salesContractService",
+		"permission": "4C0DC79C017643F8B44063193FFE33D0"
+	},
+	{
+		"id": "sales.contract.clerk.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.clerk.entityClerk",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "b648fe0b290548d8b4c1787c9c497c35",
+		"clerkQualifier": "sales.contract.clerk",
+		"parentService": "salesContractService",
+		"permission": "34d0a7ece4f34f2091f7ba6c622ff04d"
+	},
+	{
+		"id": "sales.contract.clerk.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.contract.clerk.entityClerkForm",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "5d1ef566843840adbe9d9b6cbf331986",
+		"clerkQualifier": "sales.contract.clerk",
+		"parentService": "salesContractService",
+		"permission": "34d0a7ece4f34f2091f7ba6c622ff04d"
+	},
+	{
+		"id": "sales.contract.change.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.changeOrderTitle",
+		"controller": "salesContractChangeController",
+		"uuid": "b941ffdf8c954f5abc7fdfbbdc12d64f",
+		"clerkQualifier": "sales.contract.clerk",
+		"parentService": "salesContractService"
+	},
+	{
+		"id": "sales.contract.certificate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.certificateContainerListTitle",
+		"controller": "salesContractCertificateListController",
+		"uuid": "468925bdac6a4e47b6c6719a8686f95a"
+	},
+	{
+		"id": "sales.contract.certificate.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.certificateContainerDetailTitle",
+		"controller": "salesContractCertificateDetailController",
+		"uuid": "80a057f19ea94187acdbbbdf17d124fb",
+		"permission": "468925bdac6a4e47b6c6719a8686f95a"
+	},
+	{
+		"id": "sales.contract.paymentSchedule.list",
+		"template": "sales.contract/partials/sales-contract-payment-schedule-grid-partial.html",
+		"title": "sales.common.paymentSchedule.titleList",
+		"controller": "salesContractPaymentScheduleListController",
+		"uuid": "a958c52e47c349eca3e930ec279545ce"
+	},
+	{
+		"id": "sales.contract.paymentSchedule.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.paymentSchedule.titleDetail",
+		"controller": "salesContractPaymentScheduleDetailController",
+		"uuid": "780a0f1ba7a942c2a3fd885caacd826a",
+		"permission": "a958c52e47c349eca3e930ec279545ce"
+	},
+	{
+
+		"id": "sales.contract.actualcertificatelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.actualCertificateListContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateListController",
+		"uuid": "0e42b1ce237a47c484bd22de041a2dd1",
+		"currentModule": "sales.contract",
+		"parentService": "salesContractService",
+		"translationService": "salesContractTranslationService"
+	},
+	{
+		"id": "sales.contract.actualcertificatedetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.actualCertificateDetailContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateDetailController",
+		"uuid": "2b35d9e968344e8399568713e239c6a4",
+		"permission": "0e42b1ce237a47c484bd22de041a2dd1",
+		"currentModule": "sales.contract",
+		"parentService": "salesContractService",
+		"translationService": "salesContractTranslationService"
+	},
+	{
+		"id": "sales.contract.transaction.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.transaction.title",
+		"controller": "salesContractTransactionGridController",
+		"uuid": "903f9f1aa40f49fa8c1e5cf2ff3ec003"
+	},
+	{
+		"id": "sales.contract.transaction.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.transaction.detailTitle",
+		"controller": "salesContractTransactionFormController",
+		"uuid": "cf96dfc3307941d2a4d7224911f33538",
+		"permission": "903f9f1aa40f49fa8c1e5cf2ff3ec003"
+	},
+	{
+		"id": "sales.contract.advance.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.advanceGridTitle",
+		"controller": "salesContractAdvanceGridController",
+		"uuid": "0a06e01363ec4fe1866ab408501e9dfd"
+	},
+	{
+		"id": "sales.contract.advance.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.advanceFormTitle",
+		"controller": "salesContractAdvanceFormController",
+		"uuid": "9b5d79172acb48ada68bda1dc08bde61",
+		"permission": "0a06e01363ec4fe1866ab408501e9dfd"
+	},
+	{
+		"id": "sales.contract.warranty.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.warranty.warrantyContainerGridTitle",
+		"controller": "salesContractWarrantyGridController",
+		"uuid": "fea263be52ed4f2098f70ff5290dc910"
+	},
+	{
+		"id": "sales.contract.warranty.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.warranty.warrantyContainerDetailTitle",
+		"controller": "salesContractWarrantyFormController",
+		"uuid": "f3c2bfb95684489bb83cc50eeddc1017",
+		"permission": "fea263be52ed4f2098f70ff5290dc910"
+	},
+	{
+		"id": "sales.contract.MandatoryDeadline.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.listMandatoryDeadlineTitle",
+		"controller": "ordMandatoryDeadlineGridController",
+		"uuid": "a3447994949644c5be260efdeeb1412d"
+	},
+	{
+		"id": "sales.contract.MandatoryDeadline.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.detailMandatoryDeadlineTitle",
+		"controller": "ordMandatoryDeadlineFormController",
+		"uuid": "39b8a1bb45dc4c0e9fd568b86d223ba9",
+		"permission": "a3447994949644c5be260efdeeb1412d"
+	},
+	{
+		"id": "sales.contract.milestones.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.milestone.milestoneContainerGridTitle",
+		"controller": "salesContractMilestoneGridController",
+		"uuid": "2ad62fb20c0641f2a5051616bcdd0593"
+	},
+	{
+		"id": "sales.contract.milestones.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.milestone.milestoneContainerFormTitle",
+		"controller": "salesContractMilestoneFormController",
+		"uuid": "9488e003bb3942ff886b9514abb71534",
+		"permission": "2ad62fb20c0641f2a5051616bcdd0593"
+	},
+	{
+		"id": "sales.contract.wip.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.relatedWips",
+		"controller": "salesContractWipListController",
+		"uuid": "e439572b3a4b4bf68315b02e4cba3d32"
+	},
+	{
+		"id": "sales.contract.bill.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.relatedBills",
+		"controller": "salesContractBillingListController",
+		"uuid": "d9e8ac9295a148a0910a185c71d87661"
+	},
+	{
+		"id": "sales.contract.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "sales.contract.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "sales.contract.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "sales.contract.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "sales.contract.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.contract.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "sales.contract.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.contract.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "148b84b6c3c0465bb28f4a027ff71599",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "sales.contract.validation.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleValidation",
+		"controller": "salesContractValidationListController",
+		"uuid": "45ca4b671da64de799cb3a5532015ffa"
+	},
+	{
+		"id": "sales.contract.validation.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleValidationDetail",
+		"controller": "salesContractValidationDetailController",
+		"uuid": "557dd24f1cf045d89d500771789872cc",
+		"permission": "45ca4b671da64de799cb3a5532015ffa"
+	},
+	{
+		"id": "sales.contract.totals.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.containerTitleTotals",
+		"controller": "salesContractTotalsListController",
+		"uuid": "2047403a70504a17b4d3ea23c3fae14c",
+		"permission": "34d0a7ece4f34f2091f7ba6c622ff04d"
+	},
+	{
+		"id": "sales.contract.oen.contact",
+		"template": "boq.main/templates/boq-main-oen-contact-container.html",
+		"title": "boq.main.oen.uicontainer.contact.title",
+		"controller": "salesContractOenContactController",
+		"uuid": "c36c23d57c68458ab4460dc5e2d13b44",
+		"permission": "ce8cd4ae57f34df0b5e2ea3e60acb28e"
+	},
+	{
+		"id": "sales.contract.oen.lbMetadata",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.LbMetadata",
+		"controller": "salesContractOenLbMetadataController",
+		"uuid": "4ce89020596f4c90b30216a3142010de",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.oen.graphic",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "boq.main.oen.graphicContainerTitle",
+		"controller": "salesContractOenPictureController",
+		"uuid": "bf2fe8e7e69e4103ae45803279b20c95",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.oen.lvHeader",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.uicontainer.lvHeader.title",
+		"uuid": "296cd02f1f034f04b3a6d13b5a4ee8c9",
+		"controller": "salesContractOenLvHeaderController",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.oen.akz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.akz.title",
+		"controller": "salesContractOenAkzController",
+		"uuid": "4861bb4137b3401fbbf332c7ae79fcc5",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.oen.servicePart",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.servicePart.title",
+		"controller": "salesContractOenServicePartController",
+		"uuid": "5f6ea21a999a4cf9aa432a0a5b8302b5",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.oen.zz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zz.title",
+		"controller": "salesContractOenZzController",
+		"uuid": "12ec46d7c3e7446ba3fda710d04fd459",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.oen.zzVariant",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zzVariant.title",
+		"controller": "salesContractOenZzVariantController",
+		"uuid": "0957b382fca54bfebbd40078b33c1541",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	},
+	{
+		"id": "sales.contract.oen.boqitem",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oenExtension.detailContainerTitle",
+		"controller": "salesContractOenBoqItemFormController",
+		"uuid": "8d57520da7ac43cdb003ada9d0a42dba",
+		"permission": "8d52d213015f4df6b3fb07d6fd81cb42"
+	}
+]
+
+

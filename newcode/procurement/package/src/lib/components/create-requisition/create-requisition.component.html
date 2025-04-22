@@ -1,0 +1,99 @@
+<div id="requisitionDIV">
+	<section class="modal-body" style="padding: 20px 40px 20px 16px;">
+		<div class="icon-message ng-scope">
+			<div *ngIf="error.showReq" class="icon tlb-icons ico-info"></div>
+			<div *ngIf="error.show" [innerHTML]="error.message"></div>
+		</div>
+		<div [ngSwitch]="modalOptions.step" class="fullheight">
+			<div class="filler" *ngSwitchCase="'step2'">
+				<div *ngIf="modalOptions.changeOrder.isChangeItem===1">
+					<div class="flex-box flex-column flex-element" style="height: 275px"
+					     *ngIf="modalOptions.changeOrder.isChangeItem===1">
+						<h3>{{ modalOptions.createRequisitionTitle }}</h3>
+						<ui-common-grid style="border: 1px solid #eee;" [configuration]="requisitionGridConfig"></ui-common-grid>
+					</div>
+				</div>
+				<div *ngIf="modalOptions.changeOrder.isChangeItem===2">
+					<div class="flex-box flex-column flex-element" style="height: 275px"
+					     *ngIf='modalOptions.changeOrder.isChangeItem===2'>
+						<h3>{{ modalOptions.basedOnExistedRequisitionTitle }}</h3>
+						<ui-common-grid style="border: 1px solid #eee;" [configuration]="requisitionChangedItemGridConfig"></ui-common-grid>
+					</div>
+				</div>
+				<div *ngIf="modalOptions.changeOrder.isChangeItem===3">
+					<div class="flex-box flex-column flex-element" style="height: 275px"
+					     *ngIf='modalOptions.changeOrder.isChangeItem===3'>
+						<h3>{{ modalOptions.basedOnExistedContractTitle }}</h3>
+						<ui-common-grid style="border: 1px solid #eee; " [configuration]="contractChangedItemGridConfig"></ui-common-grid>
+					</div>
+				</div>
+				<!-- note -->
+				<div *ngIf="hasContractMessage">
+					<label>{{ 'procurement.common.wizard.IsContractNote' | platformTranslate }}</label>
+				</div>
+				<div *ngIf="modalOptions.changeOrder.overwriteDisabled" style="margin-top:20px;">
+					<h3>{{ 'procurement.package.wizard.createRequisition.chooseDealType'| platformTranslate }}</h3>
+					<div style="margin-bottom: 20px;">
+						<div class="radio spaceToUp">
+							<label>
+								<input type="radio" name="supplierSelect" [(ngModel)]="modalOptions.reqType"
+								       [disabled]="modalOptions.reqType !== RequisitionType.overwriteReq"
+								       [value]="RequisitionType.overwriteReq"/>
+								{{ 'procurement.package.wizard.createRequisition.overwriteReq'| platformTranslate }}
+							</label>
+						</div>
+
+						<div class="radio spaceToUp">
+							<label>
+								<input type="radio" name="supplierSelect" [(ngModel)]="modalOptions.reqType"
+								       [disabled]="modalOptions.reqType === RequisitionType.overwriteReq"
+								       [value]="RequisitionType.createNewBase">{{ 'procurement.package.wizard.createRequisition.createNewReq'| platformTranslate }}
+							</label>
+						</div>
+
+						<div class="radio spaceToUp">
+							<label>
+								<input type="radio" name="supplierSelect" [(ngModel)]="modalOptions.reqType"
+								       [disabled]="modalOptions.reqType === RequisitionType.overwriteReq" [value]="RequisitionType.createChangeOrder"/>
+								{{ 'procurement.package.wizard.createRequisition.createChangeReq'| platformTranslate }}
+							</label>
+						</div>
+						<div class="platform-form-group platform-lg">
+							<div class="platform-form-row">
+								<label class="platform-form-label">{{ modalOptions.changeRequestText }}</label>
+
+								<!-- todo young
+									<div class="platform-form-col">
+										<div class="lg-4 md-4" project-change-dialog
+										     [(ngModel)]="projectChange.Id"
+										     data-readonly="$parent.modalOptions.reqType != 'createChangeOrder'" data-config="true"
+										     data-options="lookupOptions" data-entity="projectChange"></div>
+										<input class="form-control lg-8 md-8 " [(ngModel)]="projectChange.Description"
+										       readonly/>
+									</div>-->
+							</div>
+						</div>
+
+						<div class="flex-box flex-column flex-element" style="height: 180px; margin-top: 10px;">
+							<h3>{{ 'procurement.package.wizard.createRequisition.existedBaseReq'| platformTranslate }}</h3>
+							<ui-common-grid style="border: 1px solid #eee;" [configuration]="existedValidBaseRequisitionGridConfig"  (cellChanged)="onCellChanged($event)"></ui-common-grid>
+						</div>
+
+						<div class="checkbox spaceToUp">
+							<label>
+								<input type="checkbox" name="headertext"
+								       [disabled]="modalOptions.reqType === RequisitionType.createNewBase"
+								       [(ngModel)]="modalOptions.doesCopyHeaderTextFromPackage"/>
+								{{ 'procurement.package.wizard.contract.copyHeaderTextFromPackage' | platformTranslate }}
+							</label>
+						</div>
+
+					</div>
+
+					<label>{{ 'procurement.package.wizard.createRequisition.createReqNote'| platformTranslate }}</label>
+				</div>
+			</div>
+		</div>
+	</section>
+	<ui-common-loading [loading]="modalOptions.dialogLoading"></ui-common-loading>
+</div>

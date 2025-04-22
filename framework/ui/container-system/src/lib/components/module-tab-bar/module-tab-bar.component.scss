@@ -1,0 +1,25 @@
+.module-tab-style {
+	width: 100%;
+	padding-top: 1%;
+	margin: 2px 7px;
+}
+
+.boq-style {
+	width: 45px;
+	padding-left: 10%;
+	padding-top: 4%;
+}
+
+.custom-main-tabs {
+	background-color: gainsboro;
+}
+
+.subview-tab-overflow{
+	background-position: -9999px;
+	height: 30px;
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}

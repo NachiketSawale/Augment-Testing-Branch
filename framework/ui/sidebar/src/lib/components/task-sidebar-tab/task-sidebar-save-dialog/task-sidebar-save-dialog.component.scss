@@ -1,0 +1,15 @@
+.dialog-container {
+	margin-top: 5px;
+	display: flex;
+	align-items: center;
+}
+
+label {
+	margin-right: 10px;
+	flex: 0 0 13%;
+}
+
+.input-type {
+	padding: 3px;
+	flex: 1;
+}

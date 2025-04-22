@@ -1,0 +1,35 @@
+<section *ngIf="!isSuccess" class="modal-body" style="margin-top: 1em">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label">
+				<h5>{{ 'procurement.common.wizard.generateDeliverySchedule.warningsItems' | platformTranslate }}</h5>
+			</div>
+		</div>
+	</div>
+	<div class="modal-wrapper subview-container grid-wrapper">
+		<ui-common-grid [configuration]="warnGridConfig" [items]="warningItems" class="lookup-grid flex-basis-auto"></ui-common-grid>
+	</div>
+
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div style="width: 100%">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.note' | platformTranslate }}
+			</div>
+			<div style="width: 100%; margin-left: 20px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.warningsNote1' | platformTranslate }}
+			</div>
+			<div style="width: 100%; margin-left: 20px">
+				{{ 'procurement.common.wizard.generateDeliverySchedule.warningsNote2' | platformTranslate }}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section *ngIf="isSuccess" class="modal-body" style="margin-top: 1em">
+	<div class="platform-form-group">
+		<div class="platform-form-group-header-text" style="font-weight: bold;">
+			{{ 'procurement.common.wizard.generateDeliverySchedule.message' | platformTranslate }}
+		</div>
+	</div>
+</section>
+

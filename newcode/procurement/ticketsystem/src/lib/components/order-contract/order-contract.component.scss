@@ -1,0 +1,24 @@
+.ticket-system-order-list-div {
+	height: 100%;
+}
+
+.ticket-system-order-request-pane {
+	width: 100%;
+	overflow: hidden;
+}
+
+.ticket-system-order-list-cell {
+	display: block;
+	border: 1px solid #DCDCDC;
+	margin: 8px;
+	width: auto;
+	overflow: hidden;
+}
+
+.ticket-system-order-list-pagination-container {
+	margin: 0px 5px;
+	float: right;
+	text-align: right;
+	position: relative;
+}
+

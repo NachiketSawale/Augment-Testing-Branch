@@ -1,0 +1,11 @@
+.pes-row {
+	margin: 5px 0;
+}
+
+.pes-row label {
+	line-height: 28px;
+}
+
+.pes-row .invalid-cell {
+	height: 20px;
+}

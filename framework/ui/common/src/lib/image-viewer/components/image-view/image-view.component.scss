@@ -1,0 +1,120 @@
+.carousel-container{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    border-radius: 15px;
+
+  
+  }
+  
+  .carousel-container img.bulkimage{
+    
+  
+    border-radius: 15px;
+  }
+  
+  .carousel-container img.image-active{
+  
+  width: 100%;
+  height: 300px;
+  animation-name: fade;
+animation-duration: 1s;
+  
+  }
+  
+  /*dots - indicator */
+  
+  .carousel-dot-container{
+    position:absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .dot{
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.6s ease;
+    opacity: 0.5;
+  }
+  
+  .active,.dot:hover{
+    opacity: 1;
+  }
+  
+  .fade{
+    animation-name: fade;
+    /* animation-duration: 1.5s; */
+  }
+  
+  @keyframes fade {
+    from{
+      opacity: 0.4;
+      
+    }
+    to{
+      opacity: 1;
+      
+    }
+    
+  }
+  
+  .btn-carousel{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background-color: #0000 ;
+    border: 0;
+    /* cursor: pointer; */
+  }
+  
+  .ico-rec-next {
+    cursor: pointer;
+      background-image: url(/assets/ui/common/images/tlb-wh-icons.svg#ico-rec-next);
+  }
+  .ico-rec-previous {
+    cursor: pointer;
+      background-image: url(/assets/ui/common/images/tlb-wh-icons.svg#ico-rec-previous);
+  }
+  
+  .icon-carousel{
+    color: #FFF;
+    font-size: 35px;
+    opacity: 0.5;
+    transition: all 0.15s ease;
+  }
+  .icon-carousel:hover{
+    opacity: 0.9;
+  }
+  .icon-carousel:active{
+    opacity: 0.5;
+  }
+  
+  .btn-next{
+  
+    right: 0;
+  }
+  .carousel-count{
+    position: absolute;
+    
+    bottom: 1rem;
+    padding: 1%;
+    color: white;
+  }

@@ -1,0 +1,19 @@
+<div class="platform-form-group">
+	<div class="platform-form-row form-group">
+		<label class="platform-form-label" style="padding-left:0">{{ 'procurement.common.wizard.createVersion'| platformTranslate }}:</label>
+		<div class="platform-form-col">
+			<div class="input-group">
+				<input type="text" style="width:100%;margin-right:10px;text-indent:6px;" placeholder="{{'procurement.common.wizard.fillInVersionText'| platformTranslate}}" (change)="inputVersionText()" [(ngModel)]="newVersionText">
+				<button type="button" class="btn btn-default" (click)="create()" [disabled]="disableCreate">
+					{{ 'cloud.common.buttonCreate'| platformTranslate }}
+				</button>
+			</div>
+			<div style="position:absolute;height:20px;" class="invalid-cell invalid-form" *ngIf="showUniqueVersionMessage">{{ uniqueValueErrorMessage }}</div>
+		</div>
+	</div>
+</div>
+<div style="height: 100%;border: 1px solid #ccc;margin-top:20px;">
+	<ui-common-grid [configuration]="paymentScheduleVersionGridConfig" [items]="paymentScheduleVersions" (selectionChanged)="onSelectedRowsChanged($event)"
+	                class="lookup-grid flex-basis-auto"></ui-common-grid>
+
+</div>

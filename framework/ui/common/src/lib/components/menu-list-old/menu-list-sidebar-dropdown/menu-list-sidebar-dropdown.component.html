@@ -1,0 +1,21 @@
+<ng-template #template>
+	<ul class="list-items-4a3ef5cc8e612901c647040464fc1259" [ngClass]="isOpen ? classList + ' dropdown-menu-open' : classList">
+		<li *ngFor="let item of dropDownList.items" [hidden]="item.isDisplayed" [ngClass]="item.type === 'divider' ? 'collapsable divider' : 'collapsable '">
+			<button
+				*ngIf="item.type === 'item'"
+				type="button"
+				[disabled]="item.disabled"
+				[ngClass]="item.id === lastButton ? 'selected ' + item.cssClass : item.cssClass"
+				title="{{ item.captionString | platformTranslate }}"
+				(click)="showModal(item.id)"
+				(click)="onCallback(item)"
+			>
+				<span>{{ item.captionString | platformTranslate }}</span>
+				<svg *ngIf="item.showSVGTag">
+					<use [attr.xlink:href]="'images/' + item.svgSprite + '.svg#' + item.svgImage"></use>
+				</svg>
+			</button>
+		</li>
+	</ul>
+</ng-template>
+<ng-container #container></ng-container>

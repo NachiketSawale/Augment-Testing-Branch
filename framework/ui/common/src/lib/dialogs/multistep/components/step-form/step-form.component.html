@@ -1,0 +1,9 @@
+<div *ngIf="stepForm.topButtons" class="top-description modal-footer">
+	<button class="btn btn-default ellipsis" title="{{btn.text | platformTranslate}}"
+	        *ngFor="let btn of stepForm.topButtons"
+	        (click)="btn.fn(stepForm)">{{ btn.text | platformTranslate }}
+	</button>
+</div>
+<div class="flex-element flex-box flex-column">
+	<ui-common-form [formConfig]="stepForm.formConfiguration" [entity]="stepForm.model"></ui-common-form>
+</div>

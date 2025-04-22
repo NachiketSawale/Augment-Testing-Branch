@@ -1,0 +1,33 @@
+<div>
+	<div class="col-lg-6 col-md-6 col-sm-6 padding-none">
+		<ui-common-lookup-input
+			[readonly]="readonly"
+			[(value)]="sourceId"
+			[dataService]="totalSourceLookupService"
+			[entityContext]="context"
+			(valueChange)="validateSourceId($event)">
+		</ui-common-lookup-input>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 p-lg-5 input-box">
+		<div [ngSwitch]="isOverGross">
+			<div *ngSwitchCase="false"
+			     class="input-group domain-type-decimal form-control">
+				<input type="text"
+				       inputmode="decimal"
+				       class="text-right input-group-content"
+				       [disabled] = readonly
+				       [(ngModel)]="sourceNetOc"
+				       (blur)="validateTotalSourceNetOc()" />
+			</div>
+			<div *ngSwitchCase="true"
+			     class="input-group domain-type-decimal form-control">
+				<input type="text"
+				       inputmode="decimal"
+				       class="text-right input-group-content"
+				       [disabled] = readonly
+				       [(ngModel)]="sourceGrossOc"
+				       (blur)="validateTotalSourceGrossOc()" />
+			</div>
+		</div>
+	</div>
+</div>

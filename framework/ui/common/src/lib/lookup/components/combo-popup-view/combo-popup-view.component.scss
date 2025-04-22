@@ -1,0 +1,18 @@
+.combo-viewport {
+	margin: 2px;
+}
+
+.combo-lookup-item {
+	cursor: default;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	width: 100%
+}
+
+.combo-lookup-item span {
+	overflow: hidden;
+	padding: 0 2px;
+	white-space: nowrap
+}

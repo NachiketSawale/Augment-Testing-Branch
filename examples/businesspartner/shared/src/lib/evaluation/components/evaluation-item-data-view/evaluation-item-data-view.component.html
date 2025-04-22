@@ -1,0 +1,19 @@
+<div #itemDataViewDiv class="modal-wrapper subview-container">
+	<div class="toolbar"  style="display: flex; justify-content: flex-end">
+		<ul class="showimages tools">
+			<li>
+				<button type="button" class="tlb-icons ico-settings"
+				        title="Settings">
+					<span>Settings</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+
+	<div [ngClass]="'cid_' + gridConfig.uuid" class="filler flex-box flex-column flex-element subview-container">
+		<ui-common-grid [configuration]="gridConfig"
+		                (selectionChanged)="onSelectionChanged($event)"
+		                (valueChanged)="onValueChanged($event)"
+		></ui-common-grid>
+	</div>
+</div>

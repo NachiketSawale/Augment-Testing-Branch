@@ -1,0 +1,10 @@
+<div class="grid-container-wrapper">
+	@if (itemsTools) {
+		<div class="toolbar left">
+			<ui-common-menu-list [menu]="itemsTools"></ui-common-menu-list>
+		</div>
+	}
+	<div [style.height]="this.height + 'px'">
+		<ui-common-grid #GridElement [configuration]="controlContext.configuration" [items]="items" (valueChanged)="valueChanged($event)"></ui-common-grid>
+	</div>
+</div>

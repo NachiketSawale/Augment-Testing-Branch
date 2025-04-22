@@ -1,0 +1,72 @@
+<div class="flex-box">
+    <div [ngSwitch]="showTotalSettingSection">
+        <div *ngSwitchCase="true" class="flex-box">
+            <div id="payment-schedule-header-setting">
+                <div class="flex-box platform-form-row form-group setting-row">
+                    <label class="platform-form-label">{{ totalSourceTextTr | platformTranslate }}</label>
+	                <input type="number"
+	                       inputmode="decimal"
+	                       class="text-right input-group-content"
+	                       [(ngModel)]="settingInfo.TotalNetOc"
+	                       (change)="onTotalSourceChanges($event)"
+	                       />
+                </div>
+
+                <div class="flex-box platform-form-row form-group setting-row">
+                    <label class="platform-form-label">{{ paymentScheduleTargetTextTr | platformTranslate }}</label>
+                    <div [ngSwitch]="isOverGross">
+                        <div *ngSwitchCase="false">
+                            <div class="input-group domain-type-decimal form-control">
+                                <input type="text"
+                                       inputmode="decimal"
+                                       class="text-right input-group-content"
+                                       [(ngModel)]="settingInfo.PaymentScheduleNetOc"
+                                       readonly />
+                            </div>
+                        </div>
+                        <div *ngSwitchCase="true">
+                            <div class="input-group domain-type-decimal form-control">
+                                <input type="text"
+                                       inputmode="decimal"
+                                       class="text-right input-group-content"
+                                       [(ngModel)]="settingInfo.PaymentScheduleGrossOc"
+                                       readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-box platform-form-row form-group setting-row">
+                    <label class="platform-form-label">{{ 'procurement.common.paymentSchedule.varianceSourceTargetText' | platformTranslate }}</label>
+                    <div [ngSwitch]="isOverGross">
+                        <div *ngSwitchCase="false">
+                            <div class="input-group domain-type-decimal form-control">
+                                <input type="text"
+                                       inputmode="decimal"
+                                       class="text-right input-group-content"
+                                       [(ngModel)]="settingInfo.VarianceNetOc"
+                                       readonly />
+                            </div>
+                        </div>
+                        <div *ngSwitchCase="true">
+                            <div class="input-group domain-type-decimal form-control">
+                                <input type="text"
+                                       inputmode="decimal"
+                                       class="text-right input-group-content"
+                                       [(ngModel)]="settingInfo.VarianceGrossOc"
+                                       readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="payment-schedule-update-btn"
+                    class="btn btn-default margin-left-ld"
+                    (click)="updatePaymentScheduleTarget()"
+                    [disabled]="disableUpdateTarget()">{{ 'procurement.common.paymentSchedule.setPaymentScheduleTotal' | platformTranslate }}</button>
+        </div>
+        <!--		TODO: procurement.common.paymentSchedule.itemsFromMainContract is hardcode here.-->
+        <div *ngSwitchCase="false" id="payment-schedule-header-notice">{{ 'procurement.common.paymentSchedule.itemsFromMainContract' | platformTranslate }}</div>
+    </div>
+</div>

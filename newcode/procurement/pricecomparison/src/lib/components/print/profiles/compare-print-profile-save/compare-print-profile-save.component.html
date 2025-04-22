@@ -1,0 +1,33 @@
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ 'procurement.pricecomparison.printing.saveLocation' | platformTranslate }}</label>
+		<div class="platform-form-col">
+			<ui-common-domain-control-host
+				[fieldType]="fieldType.Select"
+				[options]="locationOptions"
+				[controlContext]="locationContext"
+			></ui-common-domain-control-host>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">{{ 'procurement.pricecomparison.printing.availableProfiles' | platformTranslate }}</label>
+		<div class="platform-form-col">
+			<ui-common-domain-control-host
+				[fieldType]="fieldType.Select"
+				[options]="profileOptions"
+				[controlContext]="profileContext"
+			></ui-common-domain-control-host>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">{{ 'procurement.pricecomparison.printing.saveProfileName' | platformTranslate }}</label>
+
+		<div class="platform-form-col">
+			<ui-common-domain-control-host
+				[(value)]="profileName"
+				[fieldType]="fieldType.Description"
+			></ui-common-domain-control-host>
+		</div>
+	</div>
+</div>
+<ui-common-loading *ngIf="loading" [loading]="loading" [attr.class]="'margin-top-ld margin-bottom-ld'"></ui-common-loading>

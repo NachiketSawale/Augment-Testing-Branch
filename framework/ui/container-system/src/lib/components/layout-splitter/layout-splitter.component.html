@@ -1,0 +1,13 @@
+<as-split #splitter *ngIf="data && data.orientation && data.panes" [direction]="data.orientation" unit="percent" (onSplitterChangeSize)="handleLayoutChange(splitter, data.selectorName)">
+    <as-split-area [uiCommonResizeObserver]="observeSizeOptions[i]" *ngFor="let pane of data.panes; index as i;"
+        [size]="toSplitterSize(pane.size)" [sizeBeforeCollapse]="toSplitterSize(pane.sizeBeforeCollapse)">
+        <ui-container-system-container-group *ngIf="!pane.orientation || !pane.panes" [paneName]="pane.name"
+            [containers]="pane.containers" [resizeMessenger]="toResizeMessenger(i)"
+            [activeContainerIndex]="pane.activeTab || 0"
+            (activeContainerIndexChange)="handleActiveTabChange(pane, $event)"
+            (fullSizePane)="handleFullSizePanel($event)" [data]="data"></ui-container-system-container-group>
+        <ui-container-system-layout-splitter *ngIf="pane.orientation && pane.panes" [data]="pane"
+            (layoutChanged)="handleSubLayoutChange($event)" (panelSizeChanged)="handleFullSizePanel($event)"
+            (activeTabChanged)="handleSubActiveTabChange($event)"></ui-container-system-layout-splitter>
+    </as-split-area>
+</as-split>

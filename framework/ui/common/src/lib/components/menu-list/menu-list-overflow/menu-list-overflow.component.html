@@ -1,0 +1,3 @@
+<button type="button" [ngClass]="getCssClass(menuItem)" [title]="getTitle(menuItem)" (click)="toggleDropdown(menuItem)" [disabled]="isDisabled(menuItem)">
+	<svg *ngIf="menuItem.svgSprite && menuItem.svgImage" uiCommonSvgimage [attr.sprite]="menuItem.svgSprite" [svgImage]="menuItem.svgImage"></svg>
+</button>

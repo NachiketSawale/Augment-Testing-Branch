@@ -1,0 +1,19 @@
+<div class='platform-form-group'>
+	<div class='checkbox spaceToUp col-lg-offset-0'>
+		<label>
+			<input type='checkbox' name='userContact'
+						 [(ngModel)]='checkUserContact'>{{'businesspartner.main.synContact.toUserContact' | platformTranslate}}
+		</label>
+	</div>
+</div>
+
+<h3 class='pane-t pane-b'>{{'businesspartner.main.synContact.businessPartners' | platformTranslate}} </h3>
+<div style='height: 340px;' class='flex-box flex-column'>
+	<ui-common-grid [configuration]='bpGridCfg' (selectionChanged)='onBpSelectionChanged($event)'
+									(cellChanged)='cellChanged($event)'></ui-common-grid>
+</div>
+
+<h3 class='margin-top-ld'>{{'businesspartner.main.synContact.contacts' | platformTranslate}}</h3>
+<div class='flex-box flex-column' style='height: 150px;'>
+	<ui-common-grid [configuration]='contactGridCfg'></ui-common-grid>
+</div>

@@ -1,0 +1,57 @@
+<div>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div style="width:100%;margin: 8px 0;">
+				{{ 'procurement.contract.wizard.unfinishedContract'|platformTranslate }} {{ selectedContractCode() }}
+			</div>
+		</div>
+	</div>
+	<div id="gridBox">
+		<!--TODO: DEV-20666, currently can't find a solution to define the height of the grid. In AngularJs the height is 185px-->
+		<ui-common-grid [configuration]="terminateItemsGridConfig"></ui-common-grid>
+	</div>
+
+	<div id="totalValueBox" class="flex-box">
+		<div class="flex-box">
+			<span>{{ 'procurement.contract.contractTermination.TotalGross' | platformTranslate }}</span>
+			<span>{{ 'procurement.contract.contractTermination.TotalNet'|platformTranslate }}</span>
+		</div>
+		<div class="flex-box">
+			<!--TODO DEV-20629 seems need to find a way to show the decimal according to the language setting.-->
+			<span>{{ options.TotalGross | number: '1.2-2' }}</span>
+			<span>{{ options.TotalNet | number: '1.2-2' }}</span>
+		</div>
+		<div class="flex-box">
+			<span>{{ 'procurement.contract.contractTermination.DeliveredTotalGross'|platformTranslate }}</span>
+			<span>{{ 'procurement.contract.contractTermination.DeliveredTotalNet'|platformTranslate }}</span>
+		</div>
+		<div class="flex-box">
+			<span>{{ options.TotalDeliveredGross| number: '1.2-2' }}</span>
+			<span>{{ options.TotalDeliveredNet | number: '1.2-2' }}</span>
+		</div>
+	</div>
+	<div style="width:100%;margin: 12px 0 10px 0;">
+		{{ 'procurement.contract.wizard.transferUnFinishedPartTo'|platformTranslate }}
+	</div>
+	<div style="height: auto;">
+		<ui-common-domain-control-host [fieldType]="FieldType.Radio" [(value)]="createAsType" [options]="createAsTypeOptions" (change)="onCreateTerminateContractTypeChange()"></ui-common-domain-control-host>
+	</div>
+	<section class="modal-body" style="padding-left: 5px;" disabled="true">
+		<ui-common-form [formConfig]="bpFormConfig" [entity]="bpLookupData" [entityRuntimeData]="bpFormEntityRuntimeData"></ui-common-form>
+	</section>
+	<section class="modal-body" style="padding-left: 0; padding-top: 0">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div style="width:100%;margin: 12px 0 10px 0;">
+					{{ 'procurement.contract.wizard.changeOrderGeneratedUnfinishedPart'|platformTranslate }}
+				</div>
+				<div>
+					<span style="display: inline-block;">{{ 'procurement.contract.wizard.specifyProjectChange'|platformTranslate }}</span>
+					<ui-common-lookup-input style="display: inline-block;position: relative;width: calc(100% - 145px);left: 23px;"
+					                        [(value)]="prjChangeFk" [dataService]="prjChangeLookupService" [options]="prjChangeLookupOption"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<ui-common-loading [loading]="isCreating"><span style="padding-left:2px">{{ 'procurement.common.createStatusTest'|platformTranslate }}</span></ui-common-loading>

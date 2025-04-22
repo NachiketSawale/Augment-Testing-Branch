@@ -1,0 +1,51 @@
+@mixin status-styles($basecolor: $color-hover, $lightness: darken   ) {
+	@if $basecolor == none {
+		transition: none;
+
+		// selected
+		&.active,
+		&.selected {
+			background-color: initial;
+		}
+
+		// hover
+		&:not(:disabled):hover {
+			background-color:  initial;
+		}
+	} @else {
+		transition: background-color .2s ease-in, opacity .2s ease-in;
+
+		// selected
+		&.active,
+		&.selected {
+			@if $lightness == darken {
+				background-color: darken($basecolor, 4%);
+			} @else {
+				background-color: lighten($basecolor, 4%);
+			}
+		}
+
+		// hover
+		&:not(:disabled):hover {
+			background-color:  $basecolor;
+		}
+
+		//// clicked
+		//&:not(:disabled):active {
+		//	transition-duration: 0ms;
+		//
+		//	@if $lightness == darken {
+		//		background-color: darken($basecolor, 10%);
+		//	} @else {
+		//		background-color: lighten($basecolor, 10%);
+		//	}
+		//}
+
+		// disabled
+		&:disabled
+		{
+			opacity: .3;
+			cursor: default;
+		}
+	}
+}

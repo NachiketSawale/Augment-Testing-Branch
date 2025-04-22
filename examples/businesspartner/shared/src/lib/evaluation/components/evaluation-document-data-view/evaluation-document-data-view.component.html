@@ -1,0 +1,24 @@
+<div #docDataViewDiv class="modal-wrapper subview-container">
+	<div class="toolbar" style="display: flex; justify-content: flex-end">
+		<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+	</div>
+
+	<div style="height:20px">
+		<span id="docsaveerror" hidden
+		      style="color: red; text-align: left; float: left;">{{'basics.common.fileUpload.extractZipFileTip' | platformTranslate}}
+			</span>
+		<label style="text-align: right;margin-right: 10px;float: right;">
+			<input type="checkbox" style="vertical-align:middle;margin-top:0;margin-right: 2px;margin-bottom: 5px"
+			       [(ngModel)]="extractZipOrNot"
+			       (change)="onExtractZipChange()"
+			       ng-disabled="!canEdit()">{{'documents.project.FileUpload.extractZipFileTip' | platformTranslate}}
+		</label>
+	</div>
+
+	<div [ngClass]="'cid_' + gridConfig.uuid" class="filler flex-box flex-column flex-element subview-container">
+		<ui-common-grid [configuration]="gridConfig" (cellChanged)="onCellModified($event)"
+		                (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+	</div>
+</div>
+
+<ui-common-loading [loading]="isLoading"></ui-common-loading>

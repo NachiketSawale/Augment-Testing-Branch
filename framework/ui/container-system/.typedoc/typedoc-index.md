@@ -1,0 +1,1 @@
+This module contains the basic definitions and components for the @@product container-based user interface.

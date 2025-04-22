@@ -1,0 +1,27 @@
+<div class="ms-commodity-row-add-delete position-relative">
+	<div class="ms-commodity-row-add-button">
+		<a (click)="increaseQty()">
+			<i class="block-image control-icons ico-plus"></i>
+		</a>
+	</div>
+	<div class="ms-commodity-row-input">
+		<input type="text"
+			   class="quantity-input"
+			   #quantityInput
+			   (keydown)="onKeydown($event, quantityInput)"
+			   (change)="onChanged()"
+			   (keyup)="onKeyup()"
+			   (blur)="onBlur()"
+			   [(ngModel)]="quantity"
+			   [title]="titleMsg"/>
+	</div>
+	<div class="ms-commodity-row-delete-button">
+		<a (click)="decreaseQty()">
+			<i class="block-image control-icons ico-minus"></i>
+		</a>
+	</div>
+	<span *ngIf="showQuantityTip"
+		  class="ms-commodity-row-quantity-tip">
+		{{titleMsg}}
+	</span>
+</div>

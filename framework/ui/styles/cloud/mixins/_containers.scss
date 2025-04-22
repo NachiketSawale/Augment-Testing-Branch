@@ -1,0 +1,77 @@
+@import 'variables';
+//css like a tollbar
+@mixin container-bar-variant($color) {
+	background-color: $color;
+	display: flex;
+	justify-content: center;
+	border-bottom: $border-width-default solid  $color-border;
+	height: $toolbar-height;
+	button {
+		height: $toolbar-height;
+		width: $tabbar-button-width;
+		background-size: $size-icon $size-icon;
+		&.border-right {
+			border-right: $border-width-default solid $color-body-background;
+		}
+		&.border-left {
+			border-left: $border-width-default solid $color-body-background;
+		}
+		&:last-child {
+			border-right: none;
+		}
+		&.wrapper {
+			width: inherit;
+			padding: 0 $padding-large-horizontal;
+		}
+	}
+}
+
+@mixin img-overlay($top, $right, $bottom, $left) {
+	@include container-position($top, $right, $bottom, $left);
+	pointer-events: none;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px white, 1px -1px 1px white, -1px 1px 1px white, -1px -1px 1px white;
+}
+
+@mixin container-position($position: absolute, $top: null, $right: null, $bottom: null, $left: null) {
+	position: $position;
+	@if $top { top: $top; }
+	@if $right { right: $right; }
+	@if $bottom { bottom: $bottom; }
+	@if $left { left: $left; }
+}
+
+@mixin flexbox-container($display: flex,
+  $direction: row, $flex: null, $justifyContent: null,
+  $alignItems: null, $height: null, $overflow: null, $basis: null) {
+	display: $display;
+	flex-direction: $direction;
+	@if $flex { flex: $flex; }
+	@if $alignItems { align-items: $alignItems; }
+	@if $justifyContent { justify-content: $justifyContent; }
+	@if $height { height: $height; }
+	@if $basis { flex-basis: $basis; }
+	@if $overflow { overflow: $overflow; }
+}
+
+@mixin content-container($height: null, $margin: 0 0 4px, $padding: 0 8px, $toolbarHeight: 34px) {
+	.content {
+		@include flexbox-container($direction: column);
+		@if $height { height: $height; }
+		@if $margin { margin: $margin; }
+		@if $padding { padding: $padding; }
+		.toolbar {
+			@include flexbox-container($alignItems: center);
+			background: none;
+			overflow: hidden;
+			@if $toolbarHeight {
+				height: $toolbarHeight;
+				min-height: $toolbarHeight;
+			}
+		}
+		.content-inner {
+			@include flexbox-container($direction: column, $flex: 1 auto, $overflow: hidden auto);
+			position: relative;
+		}
+	}
+}

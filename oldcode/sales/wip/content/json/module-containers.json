@@ -1,0 +1,484 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.containerTitleWips",
+		"controller": "salesWipWipsListController",
+		"uuid": "689e0886de554af89aadd7e7c3b46f25"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.wip.containerTitleWipsForm",
+		"controller": "salesWipWipsDetailController",
+		"uuid": "d7bfa7174fc14ab49acef0c6f6b6678b",
+		"permission": "689e0886de554af89aadd7e7c3b46f25"
+	},
+
+	{
+		"id": "2",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "1f821207112b4cbeb037d941b18b7338"
+	},
+
+	{
+		"id": "8",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "d668042b28334763a0d7f001cc6bd45d",
+		"commentQualifier": "sales.wip.wipcomment",
+		"parentService": "salesWipService"
+	},
+
+	{
+		"id": "sales.wip.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "79db0ff7fcda4e0c944fcde734878044",
+		"controller": "",
+		"sectionId": 25,
+		"mainService": "salesWipService"
+	},
+
+	{
+		"id": "sales.wip.characteristic2",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"controller": "",
+		"sectionId": 67,
+		"mainService": "salesWipService",
+		"uuid": "032228067a6b4413b6de2d938a16f315"
+	},
+
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.containerWipBoqsTitle",
+		"controller": "salesWipBoqListController",
+		"uuid": "27cbdfed58e44dbd8d3b3c07b54bbc1f"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqStructure",
+		"controller": "salesWipBoqStructureController",
+		"uuid": "6e5b061fc7014aec91717edbb576312c",
+		"mainService": "salesWipService"
+	},
+	{
+		"id": "sales.wip.boqs.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.boqDetails",
+		"controller": "salesWipBoqDetailFormController",
+		"uuid": "c9a82535b2a94de5957ad68162b91a3a",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.boqdocument.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.documentTitle",
+		"controller": "salesWipBoqDocumentController",
+		"uuid": "5db3134e864944c4b0d63669765cd1d0",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.crbvariable.container",
+		"template": "boq.main/templates/boq-main-crb-variable-container.html",
+		"title": "boq.main.crbVariableTitle",
+		"controller": "salesWipCrbVariableController",
+		"uuid": "e7e0a0da0ddd406d8724d707e913e232",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.crbboqitemscope.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.crbBoqItemScopeTitle",
+		"controller": "salesWipCrbBoqItemScopeController",
+		"uuid": "763b0e0db57b4583af917349f02bd7f2",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.crbpricecondition.container",
+		"template": "boq.main/templates/boq-main-crb-pricecondition-container.html",
+		"title": "boq.main.crbPriceconditionTitle",
+		"controller": "salesWipCrbPriceconditionController",
+		"uuid": "700577bd52a940ebb71af1fd562d45a1",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.boqhtmlspecification.container",
+		"template": "boq.main/templates/boq-specification-html-container.html",
+		"title": "boq.main.boqSpecification",
+		"controller": "salesWipBoqSpecificationController",
+		"uuid": "de68a62cfbb54345b39e11e163774878",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.htmltextcomplement.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqMainHtmlTextComplement",
+		"controller": "salesWipBoqHtmlTextComplementController",
+		"uuid": "25aa99f15e6c4ba18d48fb1c917bc7b3",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.boqsurcharge.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqSurchargeOn",
+		"controller": "boqMainGenericSurchargeController",
+		"boqService": "salesWipBoqStructureService",
+		"moduleName": "sales.wip",
+		"uuid": "27e4d18013114329bd2b57cc2e07708a",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "boq.main.pricecondition.container",
+		"template": "boq.main/templates/price-condition-edit-dialog.html",
+		"title": "boq.main.PriceCondition",
+		"controller": "boqMainPriceconditionListController",
+		"dataService": "salesWipBoqStructurePriceconditionService",
+		"uuid": "C0D4AC896FF44A359888FDEC239E2B2E",
+		"permission": "01442D22FDFD41B3A1187824558FDEFA"
+	},
+	{
+		"id": "sales.contract.splitquantity.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.SplitQuantity",
+		"controller": "boqMainGenericSplitQuantityController",
+		"boqService": "salesWipBoqStructureService",
+		"moduleName": "sales.wip",
+		"uuid": "bd6d68861c554585b3d065ffd07c3449",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "boq.main.containerheader.boqCopy",
+		"template": "boq.main/templates/boq-copysource-container.html",
+		"title": "boq.main.boqLookup",
+		"controller": "",
+		"uuid": "dfdfdc6f81054522998c9ceb6eb3b24f"
+	},
+	{
+		"id": "sales.wip.linkeddispatchnote.container",
+		"template": "sales.common/partials/sales-common-dispatch-note-gridview.html",
+		"title": "boq.main.linkedDispatchNoteTitle",
+		"controller": "salesWipBoqLinkedDispatchNoteController",
+		"uuid": "0fe1e1b7e0fa462480cfa057b50232dd",
+		"permission": "689e0886de554af89aadd7e7c3b46f25"
+	},
+	{
+		"id": "sales.wip.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.userform.defaultContainerTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "da8b5f2c30ae4e6dafffdb3db1e17699",
+		"rubricId": 17,
+		"mainService": "salesWipService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "sales.wip.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "sales.wip.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "sales.wip.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "sales.wip.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "project.main.documents.project.document.history.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProjectHistory",
+		"controller": "documentsProjectDocumentHistoryController",
+		"uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+	},
+	{
+		"id": "sales.wip.document.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.document.containerGridTitle",
+		"controller": "salesWipDocumentListController",
+		"uuid": "e741d2316c0245e1973a305b3f1c938b"
+	},
+	{
+		"id": "sales.wip.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.document.containerFormTitle",
+		"controller": "salesWipDocumentDetailController",
+		"uuid": "0988f39b5d8342f0ad6211c9fa2d434a",
+		"permission": "e741d2316c0245e1973a305b3f1c938b"
+	},
+	{
+		"id": "wip.price.condition.param",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.pricecondition.headerParamTitle",
+		"controller": "basicsPriceConditionParamController",
+		"uuid": "7962674ba2e94eae92a037e00fa8835d",
+		"paramTypeId": "9",
+		"mainService": "salesWipService",
+		"permission": "4699F53AA0F1400C97E053B49315E036"
+	},
+	{
+		"id": "sales.wip.billingschema.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.containerBillingschema",
+		"controller": "salesWipBillingSchemaListController",
+		"uuid": "c8faaacfa60c4790845e06aafd370ec5"
+	},
+	{
+		"id": "sales.wip.generals.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.generals.titleList",
+		"controller": "salesWipGeneralsListController",
+		"uuid": "f8369ae69d7448e1930524b7bc2744eb",
+		"permission": "52039f6993b045cd988dd73b2cc2301c"
+	},
+	{
+		"id": "sales.wip.generals.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.generals.titleDetail",
+		"controller": "salesWipGeneralsDetailController",
+		"uuid": "3db9a366d24243b1824dbdee456e1744",
+		"permission": "52039f6993b045cd988dd73b2cc2301c"
+	},
+	{
+		"id": "sales.wip.clerk.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.clerk.entityClerk",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "4f128b28d5164036bf7f29adcb08dd90",
+		"clerkQualifier": "sales.wip.clerk",
+		"parentService": "salesWipService",
+		"permission": "689e0886de554af89aadd7e7c3b46f25"
+	},
+	{
+		"id": "sales.wip.clerk.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.wip.clerk.entityClerkForm",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "a92e365456954db0a4d7cf20d566bed2",
+		"clerkQualifier": "sales.wip.clerk",
+		"parentService": "salesWipService",
+		"permission": "689e0886de554af89aadd7e7c3b46f25"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "defa5e1daa2041ceb1f5807ef9b8a935",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "documents.clerk.authorization.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkListController",
+		"clerkQualifier": "documents.project.clerk",
+		"uuid": "47620dd38c874f97b75ee3b6ce342666",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "documents.authorization.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7806e7a22b2142f8865ab189efe23c5a",
+		"permission": "47620dd38c874f97b75ee3b6ce342666",
+		"clerkQualifier": "documents.project.clerk",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "sales.wip.transaction.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.common.transaction.title",
+		"controller": "salesWipTransactionGridController",
+		"uuid": "ad89ba879ca34b058522486db2cd35aa"
+	},
+	{
+		"id": "sales.wip.transaction.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.common.transaction.detailTitle",
+		"controller": "salesWipTransactionFormController",
+		"uuid": "b80e1b103b79400997a02cef1dda2e1d",
+		"permission": "ad89ba879ca34b058522486db2cd35aa"
+	},
+	{
+		"id": "sales.wip.accrual.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.containerTitleAccrual",
+		"controller": "salesWipAccrualListController",
+		"uuid": "6580513f3b564a5088c75b67232d8f47",
+		"permission": "970510ed79f444d5a1ab579c4da4871d"
+	},
+	{
+		"id": "sales.wip.validation.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleValidation",
+		"controller": "salesWipValidationListController",
+		"uuid": "67a37d7e33e92a21961b51848a378c5f"
+	},
+	{
+		"id": "sales.wip.validation.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleValidationDetail",
+		"controller": "salesWipValidationDetailController",
+		"uuid": "8878767fced80b69f7e83d6224196a3a",
+		"permission": "67a37d7e33e92a21961b51848a378c5f"
+	},
+	{
+		"id": "sales.wip.billing.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.relatedBills",
+		"controller": "salesWipBillingListController",
+		"uuid": "4a7b645797f34ac3ac21e4410b2635a8",
+		"permission": "39608924dc884afea59fe04cb1434543"
+	},
+	{
+		"id": "sales.wip.contract.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.containerTitleContracts",
+		"controller": "salesWipContractListController",
+		"uuid": "7231283a45584ee0bd48b7343c42dae0",
+		"permission": "34d0a7ece4f34f2091f7ba6c622ff04d"
+	},
+	{
+		"id": "sales.wip.estimate.lineitem",
+		"template": "sales.wip/partials/sales-wip-estimate-line-item-gc.html",
+		"title": "sales.wip.estimateLineItemGridContainer",
+		"controller": "salesWipLineItemToggleGcListController",
+		"uuid": "cded11c87949495981aa62795c2c4011"
+	},
+	{
+		"id": "procurement.package.qtoDetail.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.detail.gridTitle",
+		"controller": "salesWipQtoListController",
+		"uuid": "7684328425B8474BB496A2917A80F84B"
+	},
+	{
+		"id": "sales.wip.oen.lvHeader",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.uicontainer.lvHeader.title",
+		"controller": "salesWipOenLVHeaderController",
+		"uuid": "5a989be121ef477b9f84984c0afd0253",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.akz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.akz.title",
+		"controller": "salesWipOenAkzController",
+		"uuid": "c4d1695d93da4779bced33ff0b27cc55",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.zz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zz.title",
+		"controller": "salesWipOenZzController",
+		"uuid": "e898732ddad14a318da32d1e86663bbe",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.zzVariant",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zzVariant.title",
+		"controller": "salesWipOenZzVariantController",
+		"uuid": "4eb3dff43fb84949937c1afe0537ecfb",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.contact",
+		"template": "boq.main/templates/boq-main-oen-contact-container.html",
+		"title": "boq.main.oen.uicontainer.contact.title",
+		"controller": "salesWipOenContactController",
+		"uuid": "97e3c5e0235f42d5bd833887ce70f25e",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.lbMetadata",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.LbMetadata",
+		"controller": "salesWipOenLbMetadataController",
+		"uuid": "0c5dafc7cccd4607ac530c2ba2ffd0e4",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.graphic",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "boq.main.oen.graphicContainerTitle",
+		"controller": "salesWipOenPictureController",
+		"uuid": "0566f74ccbe24858b128470a3441012c",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.boqitem",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oenExtension.detailContainerTitle",
+		"controller": "salesWipOenBoqItemFormController",
+		"uuid": "aea2ec3ef18a4aa8b14a892f2015c56c",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "sales.wip.oen.servicePart",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.servicePart.title",
+		"controller": "salesWipOenServicePartController",
+		"uuid": "8a5ff30b42ee410b89bab0a7d5990755",
+		"permission": "6e5b061fc7014aec91717edbb576312c"
+	},
+	{
+		"id": "11",
+		"template": "sales.common/templates/sales-common-header-plaintext-html-container.html",
+		"title": "sales.common.headerPlainTextContainerTitle",
+		"controller": "salesWipHeaderTextController",
+		"uuid": "173343c2fdf04186b32bb4b9526aff4f",
+		"permission": "7001204d7fb04cf48d8771c8971cc1e5",
+		"textFormat": 2
+	},
+	{
+		"id": "12",
+		"template": "sales.common/templates/sales-common-header-formattedtext-html-container.html",
+		"title": "sales.common.headerFormattedTextContainerTitle",
+		"controller": "salesWipHeaderFormattedTextController",
+		"uuid": "6f184332b0b2496f8d6ab3201e8e1bde",
+		"permission": "7001204d7fb04cf48d8771c8971cc1e5",
+		"textFormat": 1
+	},
+	{
+		"id": "sales.wip.qtodetailCopy",
+		"template": "qto.main/templates/qto-main-detail-copysource-container.html",
+		"title": "qto.main.sourceQto",
+		"controller": "",
+		"uuid": "2cae9b214fd548658b5d13af0146c768",
+		"permission": "7001204d7fb04cf48d8771c8971cc1e5"
+	}
+]

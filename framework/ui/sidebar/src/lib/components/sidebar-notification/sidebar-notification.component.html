@@ -1,0 +1,29 @@
+<div class="content">
+	<div class="flex-element flex-basis-auto flex-box flex-column fullheight">
+		<!--Toolbar section-->
+		<div>
+			<ui-sidebar-title [toolbarData]="toolbarItems"
+				[title]="'cloud.desktop.notification.header' | platformTranslate "></ui-sidebar-title>
+		</div>
+
+		<div *ngIf="isSettingBtnClicked">
+			<div class="toolbar notification-setting flex-box">
+				{{'cloud.desktop.taskList.groupOrSortingSetting' | platformTranslate}}
+			</div>
+			<div class="lookups">
+				<ui-common-lookup-input [(value)]="groupSetting" [dataService]="groupSettingService"
+					(valueChange)="groupSettingChanged()"></ui-common-lookup-input>
+			</div>
+			<div class="lookups">
+				<ui-common-lookup-input [(value)]="sortSetting" [dataService]="sortSettingService"
+					(valueChange)="sortSettingChanged()"></ui-common-lookup-input>
+			</div>
+		</div>
+
+		<div class="content-inner">
+			<ui-common-menu-tab [menuTabs]="notificationTabs" (tabSelected)="getActiveTab($event)"></ui-common-menu-tab>
+			<ui-common-accordion [data]="notificationList"></ui-common-accordion>
+		</div>
+
+	</div>
+</div>

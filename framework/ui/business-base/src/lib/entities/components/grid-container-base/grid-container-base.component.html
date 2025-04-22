@@ -1,0 +1,3 @@
+<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + config.uuid"  [style.--min-grid-height]="'0'">
+	<ui-common-grid #gridHost uiCommonDragDropTarget [configuration]="config" (selectionChanged)="onSelectionChanged($event)" (valueChanged)="onValueChanged($event)"></ui-common-grid>
+</div>

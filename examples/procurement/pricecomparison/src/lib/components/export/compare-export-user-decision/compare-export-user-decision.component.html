@@ -1,0 +1,14 @@
+<section class="modal-body">
+	<div class="checkbox spaceToUp margin-top-ld margin-bottom-ld" style="display: inline;">
+		<label>
+			<ui-common-domain-control-host
+				[value]="dlgWrapper.value"
+				[fieldType]="fieldType.Boolean"
+				(valueChange)="onOptionChanged($event)"
+			></ui-common-domain-control-host>
+			{{ 'procurement.pricecomparison.wizard.exportWithFormulas' | platformTranslate }}
+		</label>
+	</div>
+	<div class="flex-element" style="line-height: 30px;"><span id="expert-excel-lbl">{{ message }}</span></div>
+</section>
+<ui-common-loading [loading]="loading"></ui-common-loading>

@@ -1,0 +1,4 @@
+<span class="modal-title font-bold">{{ title | platformTranslate }}</span>
+<button *ngIf="showCloseButton" class="db close" (click)="data.dialog.cancel($event)">
+	<mat-icon>close</mat-icon>
+</button>

@@ -1,0 +1,7 @@
+/* Here we have to overide the predefine dropdown-toggle css so ng-deep is used in front of css class  */
+::ng-deep .dropdown-toggle:empty::after {
+	display: none;
+}
+.btn-group {
+	float: left;
+}

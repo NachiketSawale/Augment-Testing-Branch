@@ -1,0 +1,12 @@
+.map-content {
+    height: 600px;
+    width: 800px;
+}
+
+.toolbar{
+    flex-direction: row-reverse;
+}
+.leaflet-container {
+    /* cursor: -webkit-grab; */
+    cursor:auto;
+}

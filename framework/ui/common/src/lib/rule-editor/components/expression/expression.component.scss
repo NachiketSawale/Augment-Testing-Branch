@@ -1,0 +1,30 @@
+.expression {
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+
+.expression-column{
+	display: flex;
+}
+
+.expression-operators {
+	display: flex;
+}
+
+/*.expression-operators select {
+	flex: 1;
+	padding: 1rem;
+}*/
+
+.expression-column-title{
+	flex: 1;
+	background-color: rgba(#000000, .05);
+	padding: 1rem;
+}
+
+/*
+button{
+	padding: 1rem;
+	margin-left: .5rem;
+	border: 1px solid rgba(#000000, .2);
+}*/

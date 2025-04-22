@@ -1,0 +1,79 @@
+<div class="flex-element flex-box flex-column fullheight compare-print-abc">
+	<div class="margin-top-ld margin-bottom-ld">
+		<label class="font-bold title">{{ 'procurement.pricecomparison.printing.baseTotal'| platformTranslate }}</label>
+		<span class="inline-block min-w-200">
+			<ui-common-lookup-input
+				[(value)]="settings.boq.analysis.filterBasis.selectedValue"
+				[dataService]="baseTotalLookupSvc"
+			>
+			</ui-common-lookup-input>
+		</span>
+	</div>
+	<div class="platform-lg margin-top-ld">
+		<div class="lg-12 margin-top-ld">
+			<label class="font-bold title">{{ 'procurement.pricecomparison.printing.printCriteria'| platformTranslate }}</label>
+		</div>
+		<div class="lg-12 margin-top-ld">
+			<ui-common-domain-control-host
+				[value]="settings.boq.analysis.criteria.selectedValue"
+				[fieldType]="fieldType.Radio"
+				[options]="allOptions"
+				(valueChange)="onRadioCheckChanged($event)"
+			></ui-common-domain-control-host>
+		</div>
+		<div class="lg-12 margin-top-ld">
+			<div class="lg-4">
+				<ui-common-domain-control-host
+					[value]="settings.boq.analysis.criteria.selectedValue"
+					[fieldType]="fieldType.Radio"
+					[options]="untilOptions"
+					(valueChange)="onRadioCheckChanged($event)"
+				></ui-common-domain-control-host>
+			</div>
+			<div class="lg-8">
+				<ui-common-domain-control-host
+					[attr.class]="'inline-block margin-l-r-4'"
+					[value]="settings.boq.analysis.criteria.totalPercent"
+					[fieldType]="fieldType.Percent"
+				></ui-common-domain-control-host>
+				<span class="margin-left-md">{{ 'procurement.pricecomparison.printing.totalBoq'| platformTranslate }}</span>
+			</div>
+		</div>
+		<div class="lg-12 margin-top-ld">
+			<div class="lg-4">
+				<ui-common-domain-control-host
+					[value]="settings.boq.analysis.criteria.selectedValue"
+					[fieldType]="fieldType.Radio"
+					[options]="atLeastOptions"
+					(valueChange)="onRadioCheckChanged($event)"
+				></ui-common-domain-control-host>
+			</div>
+			<div class="lg-8">
+				<ui-common-domain-control-host
+					[attr.class]="'inline-block margin-l-r-4'"
+					[value]="settings.boq.analysis.criteria.singlePercent"
+					[fieldType]="fieldType.Percent"
+				></ui-common-domain-control-host>
+				<span class="margin-left-md">{{ 'procurement.pricecomparison.printing.totalBoq'| platformTranslate }}</span>
+			</div>
+		</div>
+		<div class="lg-12 margin-top-ld">
+			<div class="lg-4">
+				<ui-common-domain-control-host
+					[value]="settings.boq.analysis.criteria.selectedValue"
+					[fieldType]="fieldType.Radio"
+					[options]="atLeastAmountOptions"
+					(valueChange)="onRadioCheckChanged($event)"
+				></ui-common-domain-control-host>
+			</div>
+			<div class="lg-8" style="margin-top: 4px;">
+				<ui-common-domain-control-host
+					[attr.class]="'inline-block margin-l-r-4'"
+					[value]="settings.boq.analysis.criteria.amount"
+					[fieldType]="fieldType.Percent"
+				></ui-common-domain-control-host>
+				<span class="margin-left-md">{{ 'procurement.pricecomparison.printing.amount'| platformTranslate }}</span>
+			</div>
+		</div>
+	</div>
+</div>

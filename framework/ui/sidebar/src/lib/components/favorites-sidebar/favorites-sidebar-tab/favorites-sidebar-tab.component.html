@@ -1,0 +1,21 @@
+<div class="content">
+	<div>
+		<ui-sidebar-title [toolbarData]="toolbarData"
+			[title]="'cloud.desktop.sdMainFavoritesTitle' | platformTranslate "></ui-sidebar-title>
+	</div>
+	<div class="content-inner">
+		<!--Below Spinner will be replaced with overlay component-->
+		<div *ngIf="refreshPending" class="wait-overlay">
+			<div class="box">
+				<div class="spinner-lg"></div>
+			</div>
+		</div>
+
+		<ui-sidebar-favorites-sidebar-main *ngIf="!isSortable" [favoriteAccordionData]="favoriteAccordionData"
+			(opened)="onPanelOpen($event)" (closed)="onPanelClose($event)"
+			(selected)="onPanelSelected($event)"></ui-sidebar-favorites-sidebar-main>
+
+		<ui-sidebar-favorites-sidebar-edit *ngIf="isSortable" [favoriteAccordionData]="favoriteAccordionData"
+			(deleted)="onProjectDeleteClick($event)"></ui-sidebar-favorites-sidebar-edit>
+	</div>
+</div>

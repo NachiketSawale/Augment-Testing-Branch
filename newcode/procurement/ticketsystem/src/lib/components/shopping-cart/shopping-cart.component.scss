@@ -1,0 +1,33 @@
+$ms-background-color: rgb(230, 230, 230);
+$ms-background-color-174195212: rgb(174, 195, 212);
+
+$ms-border-radius: 5px;
+$ms-border-color: #DCDCDC;
+$ms-title-background-color: rgb(240, 240, 240);
+$ms-btn-background-color: rgb(75, 137, 220);
+$ms-title-color: rgb(0, 103, 177);
+$ms-label-color: rgb(51, 51, 51);
+$ms-background-color-selected: #AEC3D4;
+
+$ms-font-size-16: 16px;
+$ms-font-size-13: 13px;
+$ms-font-weight: bold;
+
+$ms-sv-search-ctrl-height: 30px;
+
+.ms-sv-cart-item-count {
+  width: 70px;
+  background-color: $ms-background-color;
+  border-radius: $ms-border-radius;
+  height: $ms-sv-search-ctrl-height;
+  text-align: center;
+  display: block;
+  padding-top: 4px;
+  margin-left: 3px;
+
+  > span {
+    font-size: $ms-font-size-16;
+    color: $ms-title-color;
+    font-weight: $ms-font-weight;
+  }
+}

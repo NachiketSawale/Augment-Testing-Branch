@@ -1,0 +1,37 @@
+<div class="flex-box flex-column">
+	<ui-sidebar-sidebar-content-navbar></ui-sidebar-sidebar-content-navbar>
+
+	<div class="input-group form-control">
+		<input #searchInput id="GoogleSearchInput" type="text" class="input-group-content" [(ngModel)]="searchOptions.filterRequest.pattern" [placeholder]="placeholder" />
+
+		<span class="input-group-btn">
+			<button class="btn btn-default control-icons ico-input-delete" [disabled]="searchOptions.filterRequest.pattern.length === 0" [ngClass]="{ btndeactive: searchOptions.filterRequest.pattern.length === 0 }" (click)="onClearSearch()"></button>
+
+			<button class="btn btn-default tlb-icons ico-search" [disabled]="searchOptions.filterInfo.isPending" [ngClass]="{ btndeactive: searchOptions.filterInfo.isPending }" (click)="onNewSearch()"></button>
+		</span>
+	</div>
+
+	<div *ngIf="searchOptions.showRecordsInfo">
+		<div class="input-group recordInfoText">
+			<div class="form-control flex-align-center">
+				<div class="input-group-content">
+					{{ searchOptions.filterInfo.recordInfoText }}
+				</div>
+			</div>
+
+			<span class="input-group-btn">
+				<button class="btn btn-default" [disabled]="!searchOptions.filterInfo.backwardEnabled" (click)="onPageFirst()"><span class="tlb-icons ico-rec-first"></span></button>
+
+				<button class="btn btn-default" [ngClass]="{ btndeactive: !searchOptions.filterInfo.backwardEnabled }" [disabled]="!searchOptions.filterInfo.backwardEnabled" (click)="onPageBackward()">
+					<span class="control-icons ico-previous"></span>
+				</button>
+
+				<button class="btn btn-default" [ngClass]="{ btndeactive: !searchOptions.filterInfo.forwardEnabled }" [disabled]="!searchOptions.filterInfo.forwardEnabled" (click)="onPageForward()">
+					<span class="control-icons ico-next"></span>
+				</button>
+
+				<button class="btn btn-default" (click)="onPageLast()" [disabled]="!searchOptions.filterInfo.forwardEnabled"><span class="tlb-icons ico-rec-last"></span></button>
+			</span>
+		</div>
+	</div>
+</div>

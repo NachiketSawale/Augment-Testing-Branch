@@ -1,0 +1,32 @@
+//
+// ***** Do not touch this file, if you are not the responsible screen designer
+// ***** You can add global styles to this file, and also import other style files
+//
+//-------------------------------------------------------------------------------
+//	 Core
+//-------------------------------------------------------------------------------
+// only for testing. please do not activate this ... @import '../styles/cloud/icons'
+
+@import 'cloud/custom-properties';
+@import 'cloud/variables'; // old variable file. This will be replaced with variables-new
+@import 'cloud/functions';
+@import 'cloud/templates';
+//@import "cloud/normalize";
+//@import "cloud/reset";
+@import 'cloud/mixins';
+//just to test
+
+//-------------------------------------------------------------------------------
+//	 Generals
+//-------------------------------------------------------------------------------
+@import 'cloud/general';
+@import 'cloud/html';
+
+//html,
+//body {
+//	height: 100%;
+//}
+//body {
+//	margin: 0;
+//	font-family: Roboto, 'Helvetica Neue', sans-serif;
+//}

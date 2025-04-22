@@ -1,0 +1,29 @@
+{
+    "ui":{
+        "map":{
+            "entityWaypoint": "Waypoint",
+            "entityPlannedTime": "Planned Time",
+            "entityAddress": "Address",
+            "entityCommentText": "Comment Text",
+            "addressNotFound": "Notice: Address not found on the map",
+            "iconExpandMap": "Expand Map",
+            "iconPickLocation": "Pick Location",
+            "mapProvider": "Map Provider",
+            "mapSettings": "Map Settings",
+            "showDefault": "Show Map By Default",
+            "plannedtime": "Planned Time",
+            "plannedTime": "Planned Time",
+            "waypointInfo": "Waypoint Info",
+            "message": {
+                "addressNotFound": "Address not found!",
+                "loadingMap": "Loading map...",
+                "mapLoaded": "Map loaded.",
+                "mapLoadFailed": "Map load failed!",
+                "searchCompleted": "Address found!",
+                "searchError": "Search failed due to map error or connection issue! Please show map and try it again.",
+                "searching": "Searching address..."
+            }
+
+        }
+    }
+}

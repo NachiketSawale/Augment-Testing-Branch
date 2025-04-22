@@ -1,0 +1,14 @@
+<ui-common-popup>
+    <ul content class="showimages popup-menu">
+        <div *ngFor="let item of items; trackBy: trackById;" >
+            <li *ngIf="!item.divider" (mouseenter)="openSubMenu(item, $event)">
+                <button class="relative-container" [ngClass]="resolveIcon(item)" (click)="execute(item)" [disabled]="item.disabled">
+                    <span [innerText]="item.description | platformTranslate"></span>
+                    <i *ngIf="hasSubMenu(item)" class="submenu-ico control-icons ico-tree-collapse"></i>
+                </button>
+            </li>
+
+            <li *ngIf="item.divider" class="divider"></li>
+        </div>
+    </ul>
+</ui-common-popup>

@@ -1,0 +1,22 @@
+<div class="scroll-tabs-container">
+	<div class="tab-container">
+		<button [disabled]="!canScrollLeft" class="arrow-btn" (click)="scrollLeft()">
+			<mat-icon>keyboard_arrow_left</mat-icon>
+		</button>
+
+		<div class="tabs-wrapper" #tabsWrapper>
+			<div class="tab" *ngFor="let tab of tabs; let i = index" [class.active]="i === selectedTabIndex"
+				(click)="onTabClick(i)">
+				{{tab.tabName | platformTranslate}}
+			</div>
+		</div>
+
+		<button [disabled]="!canScrollRight" class="arrow-btn" (click)="scrollRight()">
+			<mat-icon>keyboard_arrow_right</mat-icon>
+		</button>
+	</div>
+
+	<div class="scroll-tabs-content">
+		<ng-content select="[tabContent]"></ng-content>
+	</div>
+</div>

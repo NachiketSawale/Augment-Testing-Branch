@@ -1,0 +1,48 @@
+<div class="modal-wrapper subview-content">
+	<div class="platform-form-group ">
+		<div class="platform-form-row">
+			<label class="col-sm-2" style="padding:5px 0px 0px;">{{ 'procurement.common.wizard.replaceNeutralMaterial.scope'|platformTranslate }}:</label>
+			<div class="col-sm-10">
+				<div *ngFor="let scopeOption of scopeOptions">
+					<input type="radio"
+					       name="scopeName"
+					       [(ngModel)]="optionItem.scopeSetting"
+					       [value]="scopeOption.value"
+					       [disabled]="!scopeOption.isActive"
+					/>
+					<label>{{ scopeOption.label }}</label>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="platform-form-row">
+			<label class="col-sm-2" style="padding:5px 0px 0px;">{{ 'procurement.common.wizard.replaceNeutralMaterial.replaceFrom'|platformTranslate }}:</label>
+			<div class="col-sm-10">
+				<ul>
+					<li>
+						<input type="radio" name="from" [value]="allCatalog" [(ngModel)]="optionItem.fromCatalog"><label>
+						{{ 'procurement.common.wizard.replaceNeutralMaterial.allCatalog'|platformTranslate }}</label></li>
+					<li style="height:40px;">
+                    <span style="float:left;">
+                <input type="radio" name="from" [value]="specificCatalog" [(ngModel)]="optionItem.fromCatalog"><label>
+	                    {{ 'procurement.common.wizard.replaceNeutralMaterial.SpecificCatalog'| platformTranslate }}</label>
+                    </span>
+						<div *ngIf="optionItem.fromCatalog===specificCatalog" style="display: inline-block;">
+							<ui-common-lookup-input [dataService]="materialCatalogLookup" [(value)]="optionItem.specificCatalogFk"></ui-common-lookup-input>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br/>
+		<div class="platform-form-row">
+			<label class="col-sm-2" style="padding:5px 0px 0px;">{{ 'procurement.common.wizard.replaceNeutralMaterial.tip1'|platformTranslate }}:</label>
+			<div class="col-sm-6">
+				<div class="toolbar" style="display: flex; justify-content: flex-end">
+					<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+				</div>
+				<ui-common-grid [configuration]="replaceCriteriaConfig" class="lookup-grid flex-basis-auto"></ui-common-grid>
+			</div>
+		</div>
+	</div>
+</div>

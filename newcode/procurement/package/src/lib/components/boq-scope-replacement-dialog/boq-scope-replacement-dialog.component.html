@@ -1,0 +1,33 @@
+<div class="modal-wrapper">
+    <div class="platform-form-group platform-lg">
+        <div class="platform-form-row">
+            <div class="lg-3 md-3">
+                <label class="platform-form-label h3">{{'procurement.package.boqScopeReplacement.targetBoq' | platformTranslate}}</label>
+            </div>
+            <div class="lg-9 md-9">
+                  <span>
+                     <label>
+                        <input type="checkbox" data-ng-model="isDisableTargetBoqAfterReplacement" style="vertical-align: middle;margin-top:0;margin-right: 2px;margin-bottom: 5px"/>
+                     </label>
+                      {{'procurement.package.boqScopeReplacement.optionDisable' | platformTranslate}}
+                  </span>
+            </div>
+        </div>
+<!--        style="height:180px;"-->
+        <ui-common-grid [configuration]="targetTreeConfiguration"></ui-common-grid>
+        <div class="platform-form-row" style="margin-top:15px">
+            <label class="platform-form-label h3">{{'procurement.package.boqScopeReplacement.selectReplacementBoq' | platformTranslate}}</label>
+        </div>
+        <div class="platform-form-row">
+            <div class="modal-wrapper">
+                <div class="toolbar">
+                    <h3 class="title font-bold">{{'boq.main.boqStructure' | platformTranslate}}</h3>
+                    <ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+                </div>
+                <div class="flex-element flex-box flex-column" style="min-height: 100px;">
+                    <ui-common-grid [configuration]="sourceSelectionConfiguration"></ui-common-grid>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

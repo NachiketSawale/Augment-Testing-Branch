@@ -1,0 +1,37 @@
+<section class="ng-scope">
+	<div class="toolbar subview-header">
+		<div data-platform-menu-list></div>
+		<ul class="showimages tools">
+			<li class="collapsable">
+				<button type="button" class="tlb-icons ico-settings"
+				        title="Settings">
+					<span class="ng-binding">Settings</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="modal-body flex-element ng-scope">
+	<div class="flex-box flex-column flex-element">
+		<as-split #split direction="vertical" unit="percent">
+			<as-split-area [size]="areaSizes[0]">
+				<div>
+					<ui-common-form [formConfig]="configuration" [entity]="evaluationEntity"></ui-common-form>
+				</div>
+			</as-split-area>
+
+			<as-split-area [size]="areaSizes[1]">
+				<businesspartner-shared-evaluation-clerk-view [toolbarList]="toolbarList"></businesspartner-shared-evaluation-clerk-view>
+			</as-split-area>
+		</as-split>
+
+		<!--	<div *ngIf="completeCreateRequestsEntity.IsSucceed" class="alert alert-success" role="alert">-->
+		<!--		<div *ngFor="let info of completeCreateRequestsEntity.UpdateDetail">-->
+		<!--			<div>{{info}}</div>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--	<ui-common-loading [loading]="completeCreateRequestsEntity.Loading"></ui-common-loading>-->
+		<!--	<div *ngIf="completeCreateRequestsEntity.IsError" class="alert alert-danger" role="alert">{{completeCreateRequestsEntity.ErrorDetail}}</div>-->
+	</div>
+</section>

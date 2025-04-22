@@ -1,0 +1,21 @@
+<mat-table [dataSource]="transmissionBidders" class="table">
+	<ng-container matColumnDef="bidder">
+		<mat-header-cell *matHeaderCellDef>{{ 'basics.workflow.sendRfQTransmission.bidder'| platformTranslate}}</mat-header-cell>
+		<mat-cell *matCellDef="let bidder">{{ bidder['lookup']['BusinessPartnerName1'] }}</mat-cell>
+	</ng-container>
+	<ng-container matColumnDef="status">
+		<mat-header-cell *matHeaderCellDef>{{ 'basics.workflow.sendRfQTransmission.status'| platformTranslate}}</mat-header-cell>
+		<mat-cell *matCellDef="let element">
+			<mat-icon [class]="getTransmissionStatusIcon(element['sendStatus'])"></mat-icon>
+			@if(element['sendStatus'] === BidderSendStatus.Error) {
+				@for(error of element['errorList']; track error) {
+					<div class="alert-danger">
+						<div class="tlb-icons ico-error validation-errors">{{error.displayValue | platformTranslate}}</div>
+					</div>
+				}
+			}
+		</mat-cell>
+	</ng-container>
+	<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+	<mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

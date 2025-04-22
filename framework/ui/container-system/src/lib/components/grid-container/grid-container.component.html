@@ -1,0 +1,5 @@
+<div style="font-size: 20pt; font-weight: bold;">SAMPLE CONTAINER! This container will not be included in the release. DO NOT USE in production code!</div>
+
+<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + config.uuid">
+	<ui-common-grid class="flex-element" [configuration]="config" (selectionChanged)="onSelectionChanged($event)" (valueChanged)="valueChanged($event)"></ui-common-grid>
+</div>

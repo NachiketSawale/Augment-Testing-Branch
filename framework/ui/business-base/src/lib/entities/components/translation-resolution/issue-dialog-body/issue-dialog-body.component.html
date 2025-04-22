@@ -1,0 +1,7 @@
+<div *ngIf="hasIssue && issueComponent">
+	<ng-container *ngComponentOutlet="issueComponent"></ng-container>
+</div>
+
+<div *ngIf="!hasIssue">
+	{{noIssueDescription | platformTranslate}}
+</div>

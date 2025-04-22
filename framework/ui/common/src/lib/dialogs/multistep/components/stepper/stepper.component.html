@@ -1,0 +1,6 @@
+<section>
+    <div [style.display]="selected ? 'block' : 'none'">
+        <!-- Content from the CdkStep is projected here -->
+        <ng-container [ngTemplateOutlet]="selected!.content"></ng-container>
+    </div>
+</section>

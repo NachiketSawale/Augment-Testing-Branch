@@ -1,0 +1,49 @@
+<div id="main-tabs">
+	<div id="tabbar" class="flex-element">
+		<ul #tabsUI class="tabs">
+			<li #tabUI *ngFor="let tab of tabs; trackBy: trackById" class="tab" [ngClass]="{'active': activeTabId === tab.Id }"
+			    id="tab_{{tab.Id}}" [ngStyle]="{'display': tab.hidden ? 'none': 'block'}">
+				<div class="tab-wrapper" (click)="changeTab(tab.Id)">
+					<span>{{ getTitle(tab) | platformTranslate}}</span>
+					<div class="divider"></div>
+					<div class="btn-group toolbar-icons">
+						<button class="button tab-dropdown tlb-icons ico-menu" data-bs-toggle="dropdown"
+						        aria-expanded="false"></button>
+						<ul class="dropdown-menu">
+							<li *ngFor="let fn of defaultFunctions">
+								<button *ngIf="fn.enabled" (click)="fn.execute()" [ngClass]="fn.css"><i
+									class="test">{{fn.description | platformTranslate}}</i></button>
+							</li>
+							<li *ngFor="let views of tab.grouped; let type = index">
+								<ul *ngIf="userViewsVisible(views)">
+									<li>
+										<button class="title" disabled>{{getHeader(type) | platformTranslate}}</button>
+									</li>
+									<li class="flex-box" *ngFor="let view of views" [ngClass]="isViewSelected(view.Id)">
+										<button *ngIf="!view.hidden" [ngClass]="isViewSelected(view.Id)"
+										        (click)="changeView(view.Id)">{{ view.Description }}</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="tabbar-buttons">
+		<button id="anchor" class="overflow-anchor menu-button tlb-icons ico-menu fullheight" title=""
+		        data-bs-toggle="dropdown" aria-expanded="false"
+		        [ngStyle]="{'display': overflowAnchorHidden ? 'none': 'block'}"></button>
+		<ul class="dropdown-menu"
+		    style="min-width: 0; height: initial; top: 86px; right: 68px; max-width: 562px; max-height: 697px;">
+			<li *ngFor="let tab of hiddenTab; trackBy: trackById" class="subview-tab-overflow">
+				<button (click)="changeTab(tab.Id)">{{ getTitle(tab) | platformTranslate}}</button>
+			</li>
+		</ul>
+		<button class="control-icons ico-close fullheight" style="width: 28px" (click)="closeTab()"></button>
+	</div>
+</div>
+
+<input #fileUpload type="file" class="fileUpload" (change)="importFile($event)" style="display:none"
+       accept=".lsv">

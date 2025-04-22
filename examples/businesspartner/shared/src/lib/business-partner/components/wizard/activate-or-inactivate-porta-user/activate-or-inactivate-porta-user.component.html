@@ -1,0 +1,34 @@
+<div>
+    <section class="modal-body">
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div class="radio spaceToUp pull-left">
+                        <label>
+                            <input type="radio" [(ngModel)]="executeType" [value]="'1'" />
+                            {{ executeTypeTexts.reactivate }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div class="radio spaceToUp pull-left">
+                        <label>
+                            <input type="radio" [(ngModel)]="executeType" [value]="'2'" />
+                            {{ executeTypeTexts.inactivate }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div class="flex-column">
+                        <ui-common-grid [configuration]="gridConfig">
+                        </ui-common-grid>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

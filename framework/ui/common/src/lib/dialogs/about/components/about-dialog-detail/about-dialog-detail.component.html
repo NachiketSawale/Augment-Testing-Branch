@@ -1,0 +1,100 @@
+<div class="scrollable-container modal-body-template about-dialog flex-element flex-box app-font">
+  <div class="flex-element">
+    <div> <img alt="Rib Logo" src="assets/ui/common/images/app-icons.svg#ico-rib-40" class="logo cursor-pointer rib-logo"></div>
+    <div *ngIf = "systemInfo">
+      <article class="margin-top-ld">
+        <div class="font-bold">{{systemInfo.productVersion}}</div>
+        <div class="font-bold">
+          <b style="color: #de3163;">{{additionalInfo}}</b>
+        </div>
+        <div>{{systemInfo.buildVersion}}</div>
+        <div>Version Date:{{ systemInfo.productDate}}</div>
+        <div>Installation Date: {{ systemInfo.installationDate}}</div>
+        <div>{{ systemInfo.languageInfo }}</div>
+      </article>
+      <article class="margin-top-ld">
+        <div>
+          <table class="table table-default margin-none" style="border-bottom: 0;">
+            <tbody>
+              <tr>
+                <th colspan="2" class="font-bold">Web/Database Server Info</th>
+              </tr>
+              <tr>
+                <td>WebServername:</td>
+                <td>{{ systemInfo.nodeMachineName }}</td>
+              </tr>
+              <tr>
+                <td>Servername:</td>
+                <td>{{ systemInfo.databaseServerName }}</td>
+              </tr>
+              <tr>
+                <td>Addition Info:</td>
+                <td>{{ systemInfo.databaseServerVersion }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="margin-top-ld">
+        <div>
+          <table class="table table-default margin-none" style="border-bottom: 0;">
+            <tbody>
+              <tr>
+                <th colspan="7" class="font-bold">Installed Version Info</th>
+              </tr>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">BuildNr</th>
+                <th scope="col">Module</th>
+                <th scope="col">BuildOrder</th>
+                <th scope="col">Inserted</th>
+                <th scope="col">Version</th>
+                <th scope="col">Who</th>
+              </tr>
+              <tr *ngFor="let row of systemInfo.buildRecords">
+                <td>{{ row.id }}</td>
+                <td>{{ row.buildNr }}</td>
+                <td>{{ row.module }}</td>
+                <td>{{ row.buildOrder }}</td>
+                <td>{{ row.inserted}}</td>
+                <td>{{ row.version }}</td>
+                <td>{{ row.whoIsr }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="margin-top-ld">
+        <div>
+          <table class="table table-default margin-none" style="border-bottom: 0;">
+            <tbody>
+              <tr>
+                <th colspan="7" class="font-bold">Additional Components</th>
+              </tr>
+              <tr>
+                <th scope="col">Components</th>
+                <th scope="col">BuildNr</th>
+                <th scope="col">BuildDate</th>
+                <th scope="col">Info</th>
+              </tr>
+              <tr *ngFor="let row of systemInfo?.otherComponentsRecords">
+                <td>{{ row.componentName }}</td>
+                <td>{{ row.buildNr }}</td>
+                <td>{{ row.buildDate}}</td>
+                <td>{{ row.additionalInfo }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+      <article class="margin-top-ld">
+        <div>
+          <ui-common-qr-code-detail [systemInfo]="systemInfo" ></ui-common-qr-code-detail>
+        </div>
+      </article>
+    </div>
+    <article class="margin-top-ld">
+      <a href="https://www.rib-software.com" target="_blank">© 2023 RIB Software GmbH</a>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'mixins';
+
+$commandbar-button-height: 40px;
+
+.menu-list {
+	@include flexbox-container($flex: 1);
+
+	ul {
+		flex: 1;
+	}
+}
+
+#commandBar {
+	@include flexbox-container($direction: column-reverse, $height: 100%);
+	width: $size-commandbar-width;
+	z-index: 10;
+
+	li {
+		border: 0 none;
+		height: $commandbar-button-height;
+		box-sizing: content-box;
+	}
+
+	button {
+		@include square($commandbar-button-height);
+		@include hide-text();
+		text-align: center;
+		text-indent: -9999em;
+		background-size: 24px 24px; // for the case when button displays an img
+
+		&.indicator {
+			text-indent: inherit;
+			color: var(--company-font-color);
+		}
+
+		&.pin {
+			&.selected svg {
+				transform:  rotate( -180deg );
+				transition: transform 200ms ease;
+			}
+		}
+
+		svg {
+			@include square(24px);
+			background-size: 24px 24px;
+		}
+
+		.search-indicator {
+			width: 4px;
+			height: 4px;
+			background: var(--icon-main-color);
+			position: absolute;
+			margin-top: 23px;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+<!--<section class="modal-body">-->
+<div class="filler">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label" style="min-width: 112px;">
+				<input type="radio" name="radioSelect" [(ngModel)]="currentItem.RadioType"
+				       class="radio-input"
+				       (change)="radioOptionChanged()"
+				       value="0" title="Radio Option 0"/>
+				&nbsp;{{ 'procurement.common.wizard.generatePaymentSchedule.sCurve'| platformTranslate }}
+			</label>
+			<div class="platform-form-col">
+				<ui-common-lookup-input [dataService]="SCurveLookupProvider"
+				                        [(value)]="currentItem.ScurveFk"></ui-common-lookup-input>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label" style="min-width: 112px;">
+				<input type="radio" name="radioSelect" [(ngModel)]="currentItem.RadioType"
+				       class="radio-input"
+				       (change)="radioOptionChanged()"
+				       value="1" title="Radio Option 1"/>
+				&nbsp;{{ 'procurement.common.wizard.generatePaymentSchedule.userFrequence'| platformTranslate }}
+			</label>
+			<div class="platform-form-col" style="width: 85%">
+				<select class="form-control"
+				        [(ngModel)]="currentItem.Repeat"
+				        [disabled]="readOnly"
+				        (change)="repeatOptionChanged()"
+				        title="Repeat Option">
+					<option *ngFor="let opt of repeatOption" value="{{opt.id}}">{{ opt.value| platformTranslate }}
+					</option>
+				</select>
+			</div>
+			<label class="platform-form-label" style="padding-left: 25px; min-width: 97px;">
+				{{ 'procurement.common.wizard.generatePaymentSchedule.occurence'| platformTranslate }}
+			</label>
+			<div class="platform-form-col">
+				<div class="input-group form-control">
+					<ui-common-domain-control-host (change)="occurenceChanged()"
+					                               [fieldType]="FieldType.Integer"
+					                               [value]="currentItem.Occurence"
+					                               [readOnly]="readOnly"
+					                               [controlContext]="occurenceContext"
+					></ui-common-domain-control-host>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ui-common-form [entity]="currentItem" [formConfig]="formConfig" [entityRuntimeData]="entityRuntimeData">
+	</ui-common-form>
+	<!--				<div data-platform-form-container data-form-container-options="formContainerOptions"-->
+	<!--				     entity="currentItem" class="fullheight" data-ng-readonly="false"></div>-->
+	<div class="platform-form-group">
+		<div class="platform-form-row form-group">
+			<label class="platform-form-label" style="min-width: 112px;">
+				{{ 'procurement.common.wizard.generatePaymentSchedule.isdelay'| platformTranslate }}
+			</label>
+			<div class="platform-form-col">
+				<input type="checkbox" [(ngModel)]="currentItem.IsDelay" [disabled]="readOnly" title="Is Delay Checkbox">
+			</div>
+		</div>
+	</div>
+</div>
+<!--</section>-->
+<ui-common-loading [loading]="isLoading"></ui-common-loading>

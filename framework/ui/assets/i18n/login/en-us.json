@@ -1,0 +1,22 @@
+﻿{
+  "platform": {
+    "loginLanguageEnglish": "English",
+    "loginViaGoogle": "Sign in with Google",
+    "wysiwygEditor": {
+      "fontColor": "Font Color",
+      "highlightColor": "Highlight Color"
+    },
+    "bulkEditor": {
+      "Colour": "Color"
+    },
+    "groupedItems": {
+      "color": "Color"
+    },
+    "planningboard": {
+      "color": "Color"
+    },
+    "aggregations": {
+      "avg": "AVG"
+    }
+  }
+}

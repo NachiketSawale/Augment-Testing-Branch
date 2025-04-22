@@ -1,0 +1,20 @@
+{
+	"name": "ui-gantt",
+	"$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/ui/gantt/src",
+	"prefix": "ui-gantt",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/ui/gantt"],
+			"options": {
+				"jestConfig": "libs/ui/gantt/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

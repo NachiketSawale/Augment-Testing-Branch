@@ -1,0 +1,26 @@
+<div style="display: ruby">
+	<div style="width: 100%;">
+		<div style="width: 40%;float: left;line-height: 2;">
+			{{ 'procurement.common.deliveryScheduleOpenQuantity'| platformTranslate }}
+		</div>
+		<div style="width: 40%;float: left;">
+			<input type="text" [value]="openQuantity" class="form-control" disabled/>
+		</div>
+	</div>
+	<div style="width: 100%;">
+		<div style="width: 40%;float: left;line-height: 2;">
+			{{ 'procurement.common.deliveryScheduleQuantityScheduled'| platformTranslate }}
+		</div>
+		<div style="width: 40%;float: left;">
+			<input type="text" [value]="quantityScheduled" class="form-control" disabled/>
+		</div>
+	</div>
+	<div style="width: 100%;">
+		<div style="width: 40%;float: left;line-height: 2;">
+			{{ 'procurement.common.deliveryScheduleTotalQuantity'| platformTranslate }}
+		</div>
+		<div style="width: 40%;float: left;">
+			<input type="text" [value]="totalQuantity" class="form-control" disabled/>
+		</div>
+	</div>
+</div>

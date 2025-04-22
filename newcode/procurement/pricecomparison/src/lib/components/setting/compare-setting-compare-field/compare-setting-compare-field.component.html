@@ -1,0 +1,18 @@
+<procurement-pricecomparison-compare-setting-base-grid [menu]="menu" [config]="config">
+	<div class="flex-box flex-row">
+		<div>
+			<div class="checkbox">
+				<label class="platform-form-label">{{ 'procurement.pricecomparison.horizontalCompare' | platformTranslate }}
+					<ui-common-domain-control-host [value]="settings.isVerticalCompareRows" [fieldType]="fieldType.Boolean" (valueChange)="isVerticalCompareRowsChanged($event)"></ui-common-domain-control-host>
+				</label>
+			</div>
+		</div>
+		<div>
+			<div class="checkbox margin-left-ld">
+				<label class="platform-form-label">{{ 'procurement.pricecomparison.lineValueColumnVisible' | platformTranslate }}
+					<ui-common-domain-control-host [value]="settings.isShowLineValueColumn" [fieldType]="fieldType.Boolean" [readOnly]="!settings.isVerticalCompareRows" (valueChange)="isLineValueColumnChanged($event)"></ui-common-domain-control-host>
+				</label>
+			</div>
+		</div>
+	</div>
+</procurement-pricecomparison-compare-setting-base-grid>

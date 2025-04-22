@@ -1,0 +1,15 @@
+
+
+select {
+	width: 100%;
+	padding: 1rem;
+}
+
+.bounds {
+	display: flex;
+}
+
+.bounds input {
+	flex: 1;
+	padding: 1rem;
+}

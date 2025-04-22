@@ -1,0 +1,102 @@
+{
+	"model": {
+		"map": {
+			"isdefault": "Is Default",
+			"list": "Model Maps",
+			"detail": "Model Map Details",
+			"populateMapsFromLocationTreeWizard": {
+				"title": "Populate Maps from Location Tree",
+				"projectLocation": "Root Location",
+				"createAreasFromDepth": "Create Areas from Depth",
+				"createLevelsFromDepth": "Create Levels from Depth",
+				"descriptionPatternForAreas": "Description Pattern for Areas",
+				"descriptionPatternForLevels": "Description Pattern for Levels",
+				"noModelMapSelected": "No target map has been selected.",
+				"entityType": "Type",
+				"location": "Location",
+				"results": "Results",
+				"resultsSummary": "The following map areas and levels have been created:",
+				"defaultAreaDescPattern": "Area {locDesc}",
+				"defaultLevelDescPattern": "Level {locDesc}",
+				"entityTypeMap": "Map",
+				"entityTypeArea": "Area",
+				"entityTypeLevel": "Level"
+			},
+			"area": {
+				"list": "Model Map Areas",
+				"detail": "Model Map Area Details"
+			},
+			"level": {
+				"list": "Model Map Levels",
+				"detail": "Model Map Level Details",
+				"spacedWizard": {
+					"generateSpacedLevels": "Generate Spaced Levels",
+					"default": "Default",
+					"namingGroup": "Naming Group",
+					"numberOfLevels": "Number of Levels",
+					"levelHeight": "Level Height",
+					"spacing": "Spacing",
+					"zCoordinate": "zCoordinate of First Level",
+					"downward": "Downward",
+					"firstLevelNumber": "First Level Number",
+					"descriptionPattern": "Description Pattern",
+					"messageBoxes": {
+						"noMapAreaSelected": "No Map Area Selected , please select and try again.",
+						"spacedLevelsCreated": "{{count}} Automated Spaced Map Levels Created."
+					}
+				}
+			},
+			"polygon": {
+				"list": "Model Map Polygons",
+				"detail": "Model Map Polygon Details",
+				"alignment": "Model Map Polygon Alignment",
+				"undoDrawPolygon": "Undo Drawing Polygon"
+			},
+			"message": {
+				"areaNotSelected": "Map Area is not Selected",
+				"levelNotSelected": "Map Level is not Selected",
+				"documentNotLoaded": "Document is not loaded into selected Map Level"
+			},
+			"locationfk": "Location",
+			"modelfk": "Model",
+			"zmin": "Minimal Height",
+			"zmax": "Maximal Height",
+			"orientationangle": "Orientation Angle",
+			"translationx": "Translation X",
+			"translationy": "Translation Y",
+			"scale": "Scale",
+			"zlevel": "Z Level",
+			"viewingdistance": "Viewing Distance",
+			"isup": "Is Up",
+			"alignment": "Model Map Alignment",
+			"alignmentEditor": {
+				"levelMode": "Edit Levels",
+				"alignMode": "Edit Map Graphic Alignment",
+				"cutMode": "Cutting Mode",
+				"cutModeNone": "Disabled",
+				"cutModeLevel": "Entire Level",
+				"cutModeMapSlice": "Map Slice",
+				"refPoint1Label": "A",
+				"refPoint2Label": "B"
+			},
+			"floorPlanGeneration": {
+				"title": "Extract Floor Plans from 3D",
+				"welcomeTitle": "Floor Plan Extraction from 3D",
+				"welcomeDesc": "This wizard will automatically generate floor plans based on the 3D model. It will use the settings from the map levels listed below.",
+				"overwrite": "Overwrite Existing Graphics",
+				"processingTitle": "Generating Floor Plans",
+				"processingDesc": "Floor plans are being generated. This may take a little while, also depending on the number of map levels and the complexity of the models involved.",
+				"summaryTitle": "Floor Plan Generation Finished",
+				"summaryDesc": "Floor plan generation has concluded. The following table provides an overview of the generated floor plans.",
+				"created": "New Plan Created",
+				"replaced": "Existing Plan Replaced",
+				"entityType": "Type",
+				"entityTypeMap": "Map",
+				"entityTypeArea": "Area",
+				"entityTypeLevel": "Level",
+				"hasPlan": "Has Plan",
+				"remarks": "Remarks"
+			}
+		}
+	}
+}

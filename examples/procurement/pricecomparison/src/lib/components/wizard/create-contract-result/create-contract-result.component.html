@@ -1,0 +1,10 @@
+<div class="margin-top-ld">
+	<span *ngIf="contracts.length > 0">
+		{{ 'procurement.pricecomparison.wizard.create.contract.successfully' | platformTranslate }}
+		<br>
+		{{ getNewCodeDisplayText() }}
+	</span>
+	<span class="margin-top-ld margin-bottom-ld" *ngIf="contracts.length === 0">
+		{{ 'procurement.pricecomparison.wizard.create.contract.noDataForContractToCreate' | platformTranslate }}
+	</span>
+</div>

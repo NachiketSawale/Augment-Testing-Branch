@@ -1,0 +1,48 @@
+{
+  "businesspartner": {
+    "evaluationschema": {
+      "title": {
+        "groups": "Groups",
+        "groupDetail": "Group Detail",
+        "groupIcons": "Group Icons",
+        "groupIconDetail": "Group Icon Detail",
+        "items": "Items",
+        "itemDetail": "Item Detail",
+        "subgroups": "Subgroups",
+        "subgroupDetail": "Subgroup Detail"
+      },
+      "tabMain": "Main",
+      "headerGridContainerTitle": "Schemas",
+      "headerFormContainerTitle": "Schema Detail",
+      "iconGridContainerTitle": "Schema Icons",
+      "iconFormContainerTitle": "Schema Icon Detail",
+      "entitySorting": "Sort Order ",
+      "entityIsDefault": "Is Default",
+      "entityWeighting": "Weighting",
+      "entityPointsFrom": "From Points",
+      "entityPointsTo": "To Points",
+      "entityIcon": "Icon",
+      "entityIconCommentText":"Comment Text",
+      "entityPoints": "Points",
+      "entityRemark": "Remark",
+      "entityPointsPossible": "Possible Points",
+      "entityIsOptional": "Optional",
+      "entityIsEditable": "Editable",
+      "entityIsMultiSelect": "Multi Select",
+      "entityCommentText": "Comment Text",
+      "PointsMinimum": "Possible Minimum",
+      "basicsCalculation": "Basic Calculation",
+      "formulaFieldRules": "Formula Field Rules",
+      "formulaSQL": "Formula SQL",
+      "sampleText": "Sample",
+      "resultText": "Result",
+      "resultNote": "The SQL must return a Number",
+      "parameter": "Parameter",
+      "parameterNote": "some placeholders can be used in the SQL",
+      "groupOrder": "GroupOrder",
+      "iconCommentText": "Icon Comment Text",
+      "formulaValidate": "The Formula(GroupOrder: {{p0}}, Formula: {{p1}}) String is invalidate",
+      "formulaGroupOrder": "Some field values, GroupOrder: {{p0}} in Formula are after the entity(GroupOrder: {{p1}}, Formula: {{p2}})"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<nav id="commandBar" class="main-color">
+	<button (click)="pinSidebar()" [ngClass]="{ selected: sidebarOptions.isPinned }" type="check" class="pinButton js-pin indicator pin">
+		<svg itwo40Svgimage [attr.sprite]="'sidebar-icons'" [attr.image]="'ico-pin'"></svg>
+	</button>
+
+	<ui-common-menu-list [menu]="menuOptions" class="menu-list"></ui-common-menu-list>
+</nav>

@@ -1,0 +1,21 @@
+<div class="ms-commodity-row row">
+    <div class="col-md-8 col-sm-7 col-xs-6">
+        <basics-shared-material-item-description
+                [dataItem]="dataItem"
+                [showDetail]="scope.showDetail"
+                [showDelivery]="showDelivery"
+                [itemOptions]="scope.searchOptions ? scope.searchOptions : undefined"
+                (goToDetail)="goToDetail()"
+        >
+        </basics-shared-material-item-description>
+    </div>
+    <div class="col-md-4 col-sm-5 col-xs-6">
+        <procurement-ticket-system-cart-item-operation
+                [scope]="scope"
+                [dataItem]="dataItem"
+                [itemOptions]="scope.searchOptions ? scope.searchOptions : undefined"
+                (deleteCartItemEvent)="deleteCartItem()"
+        >
+        </procurement-ticket-system-cart-item-operation>
+    </div>
+</div>

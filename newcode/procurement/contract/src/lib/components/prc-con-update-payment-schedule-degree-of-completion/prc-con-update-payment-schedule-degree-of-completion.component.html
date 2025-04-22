@@ -1,0 +1,12 @@
+<div style="height: auto;">
+	<div class="radio">
+		<label>
+			<input type="radio" [disabled]="isUpdateTypeReadonly" [(ngModel)]="updateType" [value]="UpdatePaymentScheduleDocType.Current">{{ 'procurement.common.wizard.updatePaymetScheduleDOC.selectCurrentItem'|platformTranslate }}
+		</label>
+	</div>
+	<div class="radio" style="margin-top: 10px;">
+		<label style="display: inline-block; margin-right: 10px;">
+			<input type="radio" [(ngModel)]="updateType" [value]="UpdatePaymentScheduleDocType.ListAll">{{ 'procurement.common.wizard.updatePaymetScheduleDOC.selectAllItems'|platformTranslate }}
+		</label>
+	</div>
+</div>

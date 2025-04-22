@@ -1,0 +1,98 @@
+<div class="compare-print-report flex-element flex-box flex-column fullheight">
+	<div class="platform-lg margin-top-ld">
+		<div class="lg-6">
+			<div class="checkbox spaceToUp">
+				<label>
+					<ui-common-domain-control-host
+						[value]="settings.report.coverSheetCheck"
+						[fieldType]="fieldType.Boolean"
+						(valueChange)="onCoverSheetChanged($event)"
+					></ui-common-domain-control-host>
+					{{ 'procurement.pricecomparison.printing.coverSheet' | platformTranslate }}
+				</label>
+			</div>
+		</div>
+		<div class="lg-6">
+			<div class="checkbox spaceToUp">
+				<label>
+					<ui-common-domain-control-host
+						[value]="settings.report.bidderNameCheck"
+						[fieldType]="fieldType.Boolean"
+						(valueChange)="onNameAnonymousChanged($event)"
+					></ui-common-domain-control-host>
+					{{ 'procurement.pricecomparison.printing.bidderNameAnonymous' | platformTranslate }}
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="platform-lg margin-top-ld">
+		<div class="lg-6">
+			<div class="checkbox spaceToUp">
+				<label>
+					<ui-common-domain-control-host
+						[value]="settings.report.bidderPageSizeCheck"
+						[fieldType]="fieldType.Boolean"
+						(valueChange)="onMaxBidderChanged($event)"
+					></ui-common-domain-control-host>
+					{{ 'procurement.pricecomparison.printing.maxiNumBidders' | platformTranslate }}
+				</label>
+				<ui-common-domain-control-host
+					[attr.class]="'inline-block margin-l-r-4'"
+					[value]="settings.report.bidderPageSize"
+					[fieldType]="fieldType.Integer"
+					[options]="pageSizeOptions"
+					(valueChange)="onPageSizeChanged($event)"
+				></ui-common-domain-control-host>
+				{{ 'procurement.pricecomparison.printing.includingTarget'| platformTranslate }}
+			</div>
+		</div>
+		<div class="lg-6">
+			<div class="checkbox spaceToUp">
+				<label>
+					<ui-common-domain-control-host
+						[value]="settings.report.shortenOutlineSpecCheck"
+						[fieldType]="fieldType.Boolean"
+						(valueChange)="onSpecLengthCheckChanged($event)"
+					></ui-common-domain-control-host>
+					{{ 'procurement.pricecomparison.printing.shortenOutlineSpec'|platformTranslate }}
+				</label>
+				<ui-common-domain-control-host
+					[attr.class]="'inline-block margin-l-r-4'"
+					[value]="settings.report.shortenOutlineSpecValue"
+					[fieldType]="fieldType.Integer"
+					[options]="specLengthOptions"
+					(valueChange)="onSpecLengthChanged($event)"
+				></ui-common-domain-control-host>
+			</div>
+		</div>
+	</div>
+	<div class="margin-top-ld">
+		<div class="margin-top-ld">
+			<procurement-pricecomparison-compare-setting-command-bar
+				[context]="commandBarContext"
+				(executed)="onCommandBarExecuted($event)"
+			>
+			</procurement-pricecomparison-compare-setting-command-bar>
+		</div>
+	</div>
+	<fieldset class="margin-top-ld">
+		<legend>{{ 'procurement.pricecomparison.printing.header'| platformTranslate }}</legend>
+		<div class="platform-form-group">
+			<procurement-pricecomparison-compare-setting-custom-section
+				#ctrlHeader
+				[info]="settings.report.header"
+				(sectionFocus)="onHeaderSectionFocus($event)"
+			></procurement-pricecomparison-compare-setting-custom-section>
+		</div>
+	</fieldset>
+	<fieldset class="margin-top-ld">
+		<legend>{{ 'procurement.pricecomparison.printing.footer'| platformTranslate }}</legend>
+		<div class="platform-form-group">
+			<procurement-pricecomparison-compare-setting-custom-section
+				#ctrlFooter
+				[info]="settings.report.footer"
+				(sectionFocus)="onFooterSectionFocus($event)"
+			></procurement-pricecomparison-compare-setting-custom-section>
+		</div>
+	</fieldset>
+</div>

@@ -1,0 +1,19 @@
+<div class="form-section">
+  <ng-container *ngFor="let rowInfo of getFormRows(); trackBy: trackByRow">
+    <div class="form-column1 ui-form-row" *ngIf="rowInfo.row.label" [ngClass]="rowInfo.uiIdentifierClass">
+      <label class="form-column1-label ui-label" [ngClass]="{'narrow':displayMode === FormDisplayMode.Narrow}">{{rowInfo.row.label | platformTranslate}}</label>
+      <svg *ngIf="rowInfo.row.required" class="form-column1-required ui-required-field-marker">
+        <use href="assets/ui/common/images/control-icons.svg#ico-required"></use>
+      </svg>
+    </div>
+    <div class="form-column2" [ngClass]="rowInfo.getColumn2Classes(displayMode)">
+	    <div class="ui-control">
+	       <svg *ngIf="!rowInfo.row.label && rowInfo.row.required" class="form-column1-required ui-required-field-marker">
+		       <use href="assets/ui/common/images/control-icons.svg#ico-required"></use>
+	       </svg>
+	    </div>
+       <ng-container #formCtl></ng-container>
+       <ng-container *ngIf="rowInfo.hasValidationErrors"><div class="invalid-cell invalid-form ui-invalid-marker" [innerText]="rowInfo.validationMessage"></div></ng-container>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,58 @@
+<div class="flex-element flex-box flex-row platform-lg platform-form-group compare-print-profile">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div class="lg-12">
+				<div class="radio spaceToUp lg-10 md-10">
+					<label class="platform-form-label">
+						<ui-common-domain-control-host
+							[fieldType]="fieldType.Radio"
+							[options]="loadDefaultOptions"
+							[controlContext]="loadModelContext"
+						></ui-common-domain-control-host>
+					</label>
+				</div>
+				<div class="radio spaceToUp lg-10 md-10">
+					<label class="platform-form-label">
+						<ui-common-domain-control-host
+							[fieldType]="fieldType.Radio"
+							[options]="loadCurrentOptions"
+							[controlContext]="loadModelContext"
+						></ui-common-domain-control-host>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row fullwidth margin-top-ld">
+		<div class="platform-form-col">
+			<div class="lg-12 platform-form-group">
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label">{{ 'procurement.pricecomparison.printing.generalProfile' | platformTranslate }}</label>
+					<div class="platform-form-col">
+						<div class="lg-12">
+							<ui-common-lookup-input
+								[value]="genericSelectedValue"
+								[dataService]="genericSvc"
+								(selectedItemChanged)="onGenericProfileChanged($event)"
+							>
+							</ui-common-lookup-input>
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label">{{ 'procurement.pricecomparison.printing.rfqProfile' | platformTranslate }}</label>
+					<div class="platform-form-col">
+						<div class="lg-12">
+							<ui-common-lookup-input
+								[value]="rfqSelectedValue"
+								[dataService]="rfqSvc"
+								(selectedItemChanged)="onRfqProfileChanged($event)"
+							>
+							</ui-common-lookup-input>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

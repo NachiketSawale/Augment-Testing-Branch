@@ -1,0 +1,7 @@
+<div *ngFor="let operand of operands; let operandIndex = index">
+
+	<ui-common-expression-operand *ngIf="operandIndex === 0 || !hideSecondOperator" class="expression-operand" ($operandTypeSelected)="operandTypeChanged($event)" [inputOperand]="operand" [operandIndex]="operandIndex" [operator]="operator"></ui-common-expression-operand>
+
+</div>
+
+<ui-common-variable-time-period [data]="variablePeriodData" *ngIf="showVariableTimePeriod"></ui-common-variable-time-period>

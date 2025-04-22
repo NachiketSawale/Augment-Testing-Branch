@@ -1,0 +1,5 @@
+<div>
+	<button (click)="setPage(getPrevPage(pager.currentPage - 1))" class="block-image control-icons ico-ar1-left1"></button>
+	<label>{{ pager.currentPage + 1 }} / {{ pager.totalPages }}</label>
+	<button (click)="setPage(getNextPage(pager.currentPage + 1))" class="block-image control-icons ico-ar1-right1"></button>
+</div>

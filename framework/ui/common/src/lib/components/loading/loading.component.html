@@ -1,0 +1,7 @@
+<div class="wait-overlay" *ngIf="loading" [ngClass]="{backdrop: backdrop}" [attr.class]="cssClass">
+	<div class="box">
+		<div class="spinner-lg"></div>
+		<span *ngIf="info">{{info | platformTranslate}}</span>
+		<ng-content></ng-content>
+	</div>
+</div>

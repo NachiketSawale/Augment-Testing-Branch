@@ -1,0 +1,13 @@
+<section class="modal-body" style="margin-top: 1em">
+	<div class="platform-form-label">
+		<h5>{{ 'procurement.common.wizard.generateDeliverySchedule.chooseItemScope' | platformTranslate }}</h5>
+	</div>
+	<div class="margin-left-ld">
+		<div *ngFor="let scopeOption of scopeOptions" class="radio spaceToUp">
+			<label class="margin-left-md">
+				<input type="radio" name="scopeRadio" [(ngModel)]="optionItem.BasicOption" [value]="scopeOption.value" [disabled]="!scopeOption.isActive" />
+				{{ scopeOption.label | platformTranslate }}
+			</label>
+		</div>
+	</div>
+</section>

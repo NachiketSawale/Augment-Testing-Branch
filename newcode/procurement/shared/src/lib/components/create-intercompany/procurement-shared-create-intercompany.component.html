@@ -1,0 +1,16 @@
+<div>
+	<div class="row pes-row">
+		<div class="col-md-12">
+			<ui-common-form [formConfig]="formConfig" [entity]="initData.uiEntity"></ui-common-form>
+		</div>
+	</div>
+	<div class="row pes-row">
+		<div class="col-md-12">
+			<ui-common-grid [configuration]="gridConfig" [items]="initData.uiEntity.SelectIcCompanyItems"></ui-common-grid>
+		</div>
+	</div>
+	<div class="custom-group pes-row">
+		<label style="font-weight: bold;color:red" *ngIf="!initData.uiEntity.HasIcCompanyItems"> {{ commonTranslate + 'notRecharged' | platformTranslate }}</label>
+	</div>
+</div>
+

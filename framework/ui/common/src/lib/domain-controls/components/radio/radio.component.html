@@ -1,0 +1,7 @@
+<div *ngFor="let item of radioItemInfo" class="radio spaceToUp">
+    <label class="flex-box flex-align-center">
+        <input type="radio" [value]='item.id'  [attr.checked]='item.id===controlContext.value' [name]="controlContext.fieldId" [(ngModel)]="controlContext.value">
+        <i [class]="item.iconCSS" title=""></i>
+        {{item.displayName | platformTranslate}}
+    </label>
+</div>

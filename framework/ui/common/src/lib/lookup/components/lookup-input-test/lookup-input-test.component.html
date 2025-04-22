@@ -1,0 +1,170 @@
+<ui-common-popup-container></ui-common-popup-container>
+
+<div class="container mt-2">
+	<div class="row g-5">
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Lookup Input</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+<!--					<p class="card-text"></p>-->
+<!--					<a class="btn btn-primary" href="#">Go Somewhere</a>-->
+					<ui-common-lookup-input [(value)]="value" [dataService]="dataService" [readonly]="readonly"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Lookup Input with custom content</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="dataService" [readonly]="readonly" [options]="customInputOptions"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Multiple selection lookup input</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-multiple-input [(value)]="values" [dataService]="dataService" [readonly]="readonly"></ui-common-lookup-multiple-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Text Edit with popup window</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-input-select [(value)]="text" [dataService]="dataService" [readonly]="readonly"></ui-common-lookup-input-select>
+				</div>
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Lookup Composite</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-composite [(value)]="value" [dataService]="dataService" [readonly]="readonly" [descriptionMember]="'desc'"></ui-common-lookup-composite>
+				</div>
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Lookup Composite 2</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="dataService" [readonly]="readonly" [options]="lookupCompositeOptions"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Paging</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="testService" [readonly]="readonly"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Server side search</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="prcStructureService" [readonly]="readonly"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Fast Input</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="dataService" [readonly]="readonly" [options]="fastInputOptions"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Update Data</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Description</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="dataService" [readonly]="readonly" [options]="customButtonOptions"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Country Lookup</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Load country data from server side</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="countryLookupS" [readonly]="readonly"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">State Lookup</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Load state data from server side</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="stateLookupS" [readonly]="readonly"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Composite key</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Edit identification data</h6>
+					<ui-common-lookup-input [(compositeValue)]="compositeValue" [readonly]="readonly" [options]="compositeOptions"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">dialog</h5>
+					<h6 class="card-subtitle mb-2 text-muted">open supplier dialog</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="supplierService" [readonly]="readonly"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Simple Lookup</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Master data context</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="masterDataContextService" [readonly]="readonly"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Web Api Endpoint Lookup</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Project address</h6>
+					<ui-common-lookup-input [(value)]="value" [dataService]="projectAddressDescService" [readonly]="readonly" [options]="projectAddressDescConfig"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Lookup view service</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Open lookup dialog with service</h6>
+					<button class='btn btn-default' (click)='showLookupDialog()'>show lookup dialog</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Lookup view service</h5>
+					<h6 class="card-subtitle mb-2 text-muted">Open lookup popup with service</h6>
+					<button #owner class='btn btn-default' (click)='showLookupPopup()'>show lookup popup</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<as-split #split [direction]="splitter.direction" unit="percent" (onSplitterChangeSize)="onSplitterChangeSize(split)">
+	<as-split-area [size]="splitter.areaSizes[0]">
+		<div class="full-size" style="overflow: auto;padding: 4px;">
+			<div style="margin-bottom: 10px;">
+				<div style="background-color: whitesmoke;padding: 5px 10px;border: solid 1px gainsboro;">
+					{{ 'procurement.pricecomparison.compareQuotationColumns' | platformTranslate }}
+				</div>
+				<div style="padding: 5px 10px;">
+					<div *ngFor="let item of data.entities">
+						<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [value]="item.IsSelected" (valueChange)="onQuoteEntitesChange($event, item)"></ui-common-domain-control-host>
+						{{item.Name}}
+					</div>
+
+				</div>
+			</div>
+			<div style="margin-bottom: 10px;">
+				<div style="background-color: whitesmoke;padding: 5px 10px;border: solid 1px gainsboro;">
+					{{ 'procurement.pricecomparison.compareQuotationCompareFieldsTitle' | platformTranslate}}
+				</div>
+				<div style="padding: 5px 10px;">
+					<div *ngFor="let item of data.quotes">
+						<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [value]="item.IsSelected" (valueChange)="onQuoteChange($event, item)"></ui-common-domain-control-host>
+						{{item.Name}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</as-split-area>
+
+	<as-split-area [size]="splitter.areaSizes[1]">
+		<div class="filler flex-box flex-column flex-element subview-container">
+			<div style="text-align:center;padding:20px 20px 0 20px;" [innerHTML]="chartTitle"></div>
+			<ui-common-chart-eval style="height:100%"
+														[chartType]="chartDataScope.chartType"
+														[chartDataSource]="chartDataScope.chartDataSource"
+														[chartOption]="chartDataScope.chartOption"
+														[legendColors]="chartDataScope.legendColors"
+			></ui-common-chart-eval>
+		</div>
+	</as-split-area>
+</as-split>

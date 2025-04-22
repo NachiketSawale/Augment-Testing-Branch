@@ -1,0 +1,31 @@
+<div>
+	<button
+		*ngIf="tile.btngrp != 'begin' && tile.btngrp != 'end'"
+		[ngClass]="tile.disabled ? 'deactive' : tile.tileSize === 1 ? 'tile-l' : tile.tileSize === 0 ? 'tile-m' : ''"
+		class="tile plain"
+		[style]="getStyle(tile)"
+		[disabled]="tile.disabled"
+		(click)="getTiles(tile)"
+		[innerHtml]="tile.type !== 0 ? getIconTemplate(tile) : getSvgTemplate('app-icons', tile.iconClass, getColor(tile.iconColor, tile.tileOpacity), 1, tile)"
+	></button>
+</div>
+<div>
+	<button
+		*ngIf="tile.btngrp === 'begin' && group.tiles[i + 1]"
+		[ngClass]="tile.disabled ? 'deactive' : tile.tileSize === 1 ? 'tile-l' : tile.tileSize === 0 ? 'tile-m' : ''"
+		class="tile plain"
+		(click)="getTiles(tile)"
+		[style]="getStyle(tile)"
+		[disabled]="tile.disabled"
+		[innerHtml]="tile.type !== 0 ? getIconTemplate(tile) : getSvgTemplate('app-icons', tile.iconClass, getColor(tile.iconColor, tile.tileOpacity), 1, tile)"
+	></button>
+	<button
+		*ngIf="tile.btngrp === 'begin'"
+		[ngClass]="group.tiles[i + 1].disabled ? 'deactive' : group.tiles[i + 1].tileSize === 1 ? 'tile-l' : group.tiles[i + 1].tileSize === 0 ? 'tile-m' : ''"
+		class="tile plain"
+		(click)="getTiles(group.tiles[i + 1])"
+		[style]="getStyle(group.tiles[i + 1])"
+		[disabled]="group.tiles[i + 1].disabled"
+		[innerHtml]="group.tiles[i + 1].type !== 0 ? getIconTemplate(group.tiles[i + 1]) : getSvgTemplate('app-icons', group.tiles[i + 1].iconClass, getColor(group.tiles[i + 1].iconColor, group.tiles[i + 1].tileOpacity), 1, group.tiles[i + 1])"
+	></button>
+</div>

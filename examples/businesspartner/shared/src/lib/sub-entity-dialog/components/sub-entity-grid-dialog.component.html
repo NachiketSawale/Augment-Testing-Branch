@@ -1,0 +1,14 @@
+<div class="flex-element flex-box">
+    <div class="grid-container-wrapper">
+        <div *ngIf="tools" class="toolbar">
+            <ui-common-menu-list [menu]="tools" [context]="context"></ui-common-menu-list>
+        </div>
+        <div class="grid-content-wrapper">
+            <div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + config.uuid">
+                <ui-common-grid [configuration]="config"
+                                (selectionChanged)="onSelectionChanged($event)"
+                                (cellChanged)="onCellChanged($event)" ></ui-common-grid>
+            </div>
+        </div>
+    </div>
+</div>

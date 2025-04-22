@@ -1,0 +1,19 @@
+<p>script-editor-test works!</p>
+
+<button class="btn btn-primary" (click)="test()">test</button>
+
+<button class="btn btn-primary" (click)="e.undo()">undo</button>
+
+<button class="btn btn-primary" (click)="e.redo()">redo</button>
+
+<button class="btn btn-primary" (click)="e.indent()">indent</button>
+
+<button class="btn btn-primary" (click)="e.toggleComment()">comment</button>
+
+<button class="btn btn-primary" (click)="e.openSearchPanel()">search</button>
+
+<button class="btn btn-primary" (click)="e.gotoLine()">goto</button>
+
+<button class="btn btn-primary" (click)="readonly=!readonly">readonly</button>
+
+<ui-common-script-editor #e [(value)]="doc" [options]="config" [readonly]="readonly" style="width: 600px;height: 400px;" class="flex-box overflow"></ui-common-script-editor>

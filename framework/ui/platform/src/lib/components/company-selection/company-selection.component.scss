@@ -1,0 +1,123 @@
+.center-form {
+	display: flex;
+	flex: auto;
+	//min-width: 700px;
+	/*max-width: 700px; */
+	height: 100%;
+	width: 100%;
+	flex-wrap: nowrap;
+	align-content: stretch;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 100px;
+}
+
+.company-bg-color {
+	background-color: var(--company-color);
+}
+
+.info-bar {
+	display: flex;
+	margin-top: 2em;
+	align-items: center;
+
+	.info {
+		flex: 1;
+	}
+
+	.btn {
+		width: 30px;
+		height: 30px;
+		background-size: 16px;
+	}
+
+	.button-row {
+		.btn + .btn {
+			margin-left: 5px;
+		}
+	}
+}
+
+.btn.disabled, .btn:disabled, fieldset:disabled {
+	color: #333;
+}
+
+
+
+.mat-card-header{
+	margin-left: 0;
+}
+
+.mat-form-field {
+	margin-right: 5px;
+	height: 24px;
+}
+
+.mat-tree-node {
+	min-height: 24px;
+}
+
+.mat-label {
+	line-height: 24px;
+	font-weight: bolder;
+}
+
+.more-space {
+	line-height: 36px;
+}
+
+.mat-icon-button {
+	padding: 0;
+	min-width: 0;
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	line-height: 24px;
+	//	border-radius: 50%;
+}
+
+.example-form {
+	min-height: 600px;
+	min-width: 700px;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.example-full-width {
+	width: 100%;
+}
+
+.mat-button-selected {
+	background-color: lightsteelblue;
+}
+
+.tree-frame-complete {
+	height: 250px;
+	width: 100%;
+}
+
+.tree-frame {
+	height: 230px;
+	overflow: auto;
+	border: solid 1px;
+	border-color: #0068b3;
+	margin: 5px 0;
+}
+
+
+.tree-toolbar-right {
+	//line-height: 15px;
+	margin: 0 0 -3px 0;
+	font-size: smaller;
+	margin-bottom: 3px;
+	display: flex;
+	justify-content: flex-end;
+	/* position: absolute; */
+	/* right: 0;*/
+}
+
+.button-group-right {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}

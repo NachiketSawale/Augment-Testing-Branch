@@ -1,0 +1,13 @@
+<div #container class="input-group lookup-container form-control" style="height: initial;">
+	<div class="flex-box flex-element overflow-hidden" tabindex="-1" style="outline: none;">
+			<div class="flex-element multiple-container">
+				<span *ngFor="let item of selectedItems" class="multiple-item">
+	            <span class="multiple-label" [innerHTML]="item | uiCommonLookupContent: context"></span>
+	            <button  class="btn control-icons ico-input-delete" (click)="deleteItem(item)"></button>
+            </span>
+				<input #input class="border-none search-box" [ngModel]="inputValue" (ngModelChange)="onInputChange($event)" (keydown)='onKeyDown($event)'/>
+			</div>
+	</div>
+
+	<ui-common-lookup-button #buttons [readonly]="readonly" [config]="config" [context]='context' (delete)="clear()" (edit)="openLookup()"></ui-common-lookup-button>
+</div>

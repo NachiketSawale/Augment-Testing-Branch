@@ -1,0 +1,89 @@
+<div>
+	<ui-common-loading [loading]="componentConfig.isLoading"></ui-common-loading>
+	<div class="platform-form-group">
+		<div class="flex-box flex-column flex-element" style="height: 220px; margin-top: 10px;">
+			<h3 class="platform-form-label">{{ componentConfig.changesFoundText }}</h3>
+			<ui-common-grid style="height:  220px; overflow: auto; border: thin solid slategray" [configuration]="changeFoundGridConfig"></ui-common-grid>
+		</div>
+	</div>
+
+
+	<div class="platform-form-group">
+		<div *ngIf="initCreateContractData.hasContractItem">
+			<label>{{ componentConfig.isContractNoteText }}</label>
+		</div>
+		<h3 class="platform-form-label">{{ componentConfig.chooseToDealWithChangesText }}</h3>
+		<div style="height: auto;">
+			<ui-common-domain-control-host [fieldType]="FieldType.Radio" [(value)]="changeOrderMode" [options]="changeActionOptions" (change)="onChangeActionChange()"></ui-common-domain-control-host>
+		</div>
+	</div>
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="accordion-toggle" (click)="showProjectPanel()">
+						<span class="platform-form-group-header-text">{{ paneProjectChangeConfig.projectText }}</span>
+						<span class="platform-form-group-header">
+						<div class="toggleImg control-icons" [class]="paneProjectChangeConfig.isShowPane ? 'ico-up' : 'ico-down'"></div>
+					</span>
+					</a>
+				</h4>
+			</div>
+			<div [hidden]="!paneProjectChangeConfig.isShowPane">
+				<div class="panel-body">
+					<div class="platform-form-group platform-lg">
+						<ui-common-form [formConfig]="projectChangeConfig" [entity]="projectChangedEntity"></ui-common-form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="accordion-toggle" (click)="showExistedContractPanel()">
+						<span class="platform-form-group-header-text">{{ paneBaseContractConfig.existedContractText }}</span>
+						<span class="platform-form-group-header">
+						<div class="toggleImg control-icons" [class]="paneBaseContractConfig.isShow ? 'ico-up' : 'ico-down'"></div>
+					</span>
+					</a>
+				</h4>
+			</div>
+			<div [hidden]="!paneBaseContractConfig.isShow">
+				<div class="panel-body">
+						<ui-common-grid style="height: 200px; overflow: auto;" [configuration]="baseContractGridConfig"></ui-common-grid>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="accordion-toggle" (click)="showCreateContractPanel()">
+						<span class="platform-form-group-header-text">{{ paneCrateContractConfig.text }}</span>
+						<span class="platform-form-group-header">
+						<div class="toggleImg control-icons" [class]="paneCrateContractConfig.isShowPane ? 'ico-up' : 'ico-down'"></div>
+					</span>
+					</a>
+				</h4>
+			</div>
+			<div [hidden]="!paneCrateContractConfig.isShowPane">
+				<div class="panel-body">
+					<div class="platform-form-group platform-lg">
+						<ui-common-form [formConfig]="createContractFormConfiguration" [entity]="createContractWizardForm"></ui-common-form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group" style="margin-top: 10px;">
+		<div class="checkbox spaceToUp">
+			<label>
+				<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [(value)]="copyHeaderTextFromPackage"></ui-common-domain-control-host>
+				{{ copyHeaderSelectText }}
+			</label>
+		</div>
+	</div>
+</div>

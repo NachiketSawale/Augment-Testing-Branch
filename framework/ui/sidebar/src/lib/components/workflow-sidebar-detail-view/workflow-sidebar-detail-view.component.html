@@ -1,0 +1,51 @@
+<div class="content" *ngIf="workflowSidebarService">
+	<ui-common-loading [backdrop]="true" [loading]="loadingScreen" [info]="loadingText"></ui-common-loading>
+	<div class="flex-element flex-basis-auto flex-box flex-column fullheight">
+		<div class="toolbar justify-content-between">
+			<ul>
+				<li>
+					<button class="tlb-icons ico-rec-previous" type="button"
+					        title="{{'cloud.desktop.taskList.back' | platformTranslate}}" (click)="workflowSidebarService.setCaseForView(workflowSidebarSwitch.DefaultView)"></button>
+				</li>
+			</ul>
+			<ul class="showimages tools flex-end fullwidth">
+				<li>
+					<button class="tlb-icons ico-tree-collapse rotate-270" type="button"
+					        title="{{'cloud.desktop.botChat.previous' | platformTranslate}}" (click)="loadPreviousWorkflow()"></button>
+				</li>
+				<li class="task-detail-accordion">
+					{{ 'cloud.desktop.taskDetail.allTasks' | platformTranslate }} {{ getSelectedWorkflowListPosition() }}/{{ this.workflowItemCount }}
+				</li>
+				<li>
+					<button class="tlb-icons ico-tree-collapse rotate-90" type="button"
+					        title="{{'cloud.desktop.taskList.next' | platformTranslate}}" (click)="loadNextWorkflow()"></button>
+				</li>
+			</ul>
+		</div>
+		<div class="detailViewTitle sidebar-panel-heading">
+			<h2 class="title">{{ item.title ?? '' }}</h2>
+		</div>
+		<div class="workflowInfo" *ngFor="let item of workflowStatus">
+			<div *ngIf="item.iconCss" class="workflowDetail icon-size-sm {{item.iconCss}}"></div>
+			<label [textContent]="item.text | platformTranslate"></label>
+		</div>
+		<ul>
+			<li class="btnListItem">
+				<button class="btn btn-default fullwidth" type="button" [textContent]="'cloud.desktop.taskList.startWorkflow' | platformTranslate"
+				        title="{{'cloud.desktop.taskList.startWorkflow' | platformTranslate}}" (click)="startWorkflow()"></button>
+			</li>
+			<li class="btnListItem">
+				<button class="btn btn-default fullwidth" type="button" [textContent]="'cloud.desktop.taskList.startWorkflowEveryEntity' | platformTranslate"
+				        title="{{'cloud.desktop.taskList.startWorkflowEveryEntity' | platformTranslate}}" (click)="startWorkflowForEveryEntity()"
+				        [disabled]="this.workflowSidebarService.getAllEntityIds().length === 0">
+				</button>
+			</li>
+			<li>
+				<button class="btn btn-default fullwidth" type="button" [textContent]="'cloud.desktop.taskList.startWorkflowSelectedEntities' | platformTranslate"
+				        title="{{'cloud.desktop.taskList.startWorkflowSelectedEntities' | platformTranslate}}" (click)="startWorkflowAllSelectedEntities()"
+				        [disabled]="this.workflowSidebarService.getSelectedEntityIds().length === 0">
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>

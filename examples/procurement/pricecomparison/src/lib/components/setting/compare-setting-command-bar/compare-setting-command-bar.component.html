@@ -1,0 +1,59 @@
+<div class="compare-report-commands text-center">
+	<span class="inline-block margin-right-ld">{{ 'procurement.pricecomparison.printing.insertHeaderFooterPlaceholder' | platformTranslate }} :</span>
+	<span class="inline-block">
+		<div class="toolbar">
+			<ui-common-menu-list [menu]="contextCommands"></ui-common-menu-list>
+		</div>
+	</span>
+	<span class="inline-block cmd-group">
+      <span class="input-group-btn">
+			<button
+				type="button"
+				unselectable="on"
+				class="btn btn-default print-format-btn control-icons ico-sheet"
+				title="{{'procurement.pricecomparison.printing.pageNumberTitle'|platformTranslate}}"
+				(click)="execCmd(commandBarTypes.pageNumber)"
+			></button>
+      </span>
+		<span class="input-group-btn">
+			<button
+				type="button"
+				unselectable="on"
+				class="btn btn-default print-format-btn control-icons ico-sheets"
+				title="{{'procurement.pricecomparison.printing.numberPagesTitle'|platformTranslate}}"
+				(click)="execCmd(commandBarTypes.totalPageNumber)"
+			></button>
+      </span>
+	</span>
+	<span class="inline-block cmd-group">
+		<span class="input-group-btn">
+			<button
+				type="button"
+				unselectable="on"
+				class="btn btn-default print-format-btn navigator-button control-icons ico-domain-date"
+				title="{{'procurement.pricecomparison.printing.insertDateTitle'|platformTranslate}}"
+				(click)="execCmd(commandBarTypes.insertDate)"
+			></button>
+		</span>
+		<span class="input-group-btn">
+			<button
+				type="button"
+				unselectable="on"
+				class="btn btn-default print-format-btn navigator-button control-icons ico-schedule"
+				title="{{'procurement.pricecomparison.printing.insertTimeTitle'|platformTranslate}}"
+				(click)="execCmd(commandBarTypes.insertTime)"
+			></button>
+		</span>
+	</span>
+	<span class="inline-block cmd-group">
+		<span class="input-group-btn">
+			<button
+				type="button"
+				unselectable="on"
+				class="btn btn-default print-format-btn control-icons ico-domain-image"
+				title="{{'procurement.pricecomparison.printing.insertPictureTitle'|platformTranslate}}"
+				(click)="execCmd(commandBarTypes.insertPicture)"
+			></button>
+      </span>
+	</span>
+</div>

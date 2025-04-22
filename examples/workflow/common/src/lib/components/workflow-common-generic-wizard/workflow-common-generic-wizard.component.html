@@ -1,0 +1,34 @@
+<div class="generic-wizard-popup">
+	<div class="infobar">
+		<workflow-common-generic-wizard-info-bar [genericWizardSteps]="genericWizardSteps"
+			(itemClicked)="itemClicked($event)"></workflow-common-generic-wizard-info-bar>
+	</div>
+	<div class="containers">
+		<workflow-common-scroll-tabs [tabs]="tabs" (tabClick)="onTabSelected($event)"
+			[selectedTabIndex]="selectedTabIndex()">
+			@if(haveDataServicesLoaded) {
+				<ui-common-stepper #cdkStepper tabContent>
+					@for(step of genericWizardSteps; track step; let stepIdx = $index) {
+					<ui-common-step>
+						@if(stepIdx === selectedTabIndex()) {
+							@for(error of validationErrors; track error) {
+								<div class="alert-danger">
+									<div class="tlb-icons ico-error validation-errors">{{error | platformTranslate}}</div>
+								</div>
+							}
+							@for(containerConfig of step.containerConfig; track containerConfig; let idx = $index) {
+								<div class="generic-wizard-container" [ngClass]="idx !== 0 ? 'pt': ''">
+									<h1>{{containerConfig.containerTitle | platformTranslate}}</h1>
+									<ui-container-system-container-group class="generic-wizard-container-group"
+										[containers]="containerConfig.container"></ui-container-system-container-group>
+	
+								</div>
+							}
+						}
+					</ui-common-step>
+					}
+				</ui-common-stepper>
+			}
+		</workflow-common-scroll-tabs>
+	</div>
+</div>

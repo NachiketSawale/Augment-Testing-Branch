@@ -1,0 +1,62 @@
+<div class="modal-wrapper master-detail-dialog">
+	<as-split direction="horizontal">
+		<as-split-area [size]="25">
+			<div class="master-list flex-box flex-column flex-element overflow" style="height: 450px">
+
+				<div class="toolbar">
+					<h3 class="font-bold title flex-element">Table Selection</h3>
+					<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+				</div>
+
+				<ui-common-grid
+					*ngIf="dataLoaded"
+					[configuration]="tableSelectionGridConfig"
+					(initialized)="onTableSelectionGridInitialized($event)"
+					(selectionChanged)="onTableSelectionChanged($event)"
+					(treeNodeChanging)="onTableSelectionExpansionChanging($event)" #tableSelectionGrid>
+				</ui-common-grid>
+
+<!--				<mat-tree *ngIf="dataLoaded" [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">-->
+<!--					&lt;!&ndash; This is the tree node template for leaf nodes &ndash;&gt;-->
+<!--					&lt;!&ndash; There is inline padding applied to this node using styles.-->
+<!--					  This padding value depends on the mat-icon-button width. &ndash;&gt;-->
+<!--					<mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle (click)="selectNode($event, node)" [class.selected]="node === selectedNode">-->
+<!--						{{node.name}}-->
+<!--					</mat-tree-node>-->
+<!--					&lt;!&ndash; This is the tree node template for expandable nodes &ndash;&gt;-->
+<!--					<mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild" (click)="selectNode($event, node)" >-->
+<!--						<div class="mat-tree-node" [class.selected]="node === selectedNode">-->
+<!--							<button mat-icon-button matTreeNodeToggle-->
+<!--							        [attr.aria-label]="'Toggle ' + node.name">-->
+<!--								&lt;!&ndash;				<mat-icon class="mat-icon-rtl-mirror">&ndash;&gt;-->
+<!--								&lt;!&ndash;					{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}&ndash;&gt;-->
+<!--								&lt;!&ndash;				</mat-icon>&ndash;&gt;-->
+<!--								<span class="mat-icon-rtl-mirror">{{treeControl.isExpanded(node) ? '-' : '+'}}</span>-->
+<!--							</button>-->
+<!--							{{node.name}}-->
+<!--						</div>-->
+<!--						&lt;!&ndash; There is inline padding applied to this div using styles.-->
+<!--							 This padding value depends on the mat-icon-button width.  &ndash;&gt;-->
+<!--						<div [class.example-tree-invisible]="!treeControl.isExpanded(node)"-->
+<!--						     role="group">-->
+<!--							<ng-container matTreeNodeOutlet></ng-container>-->
+<!--						</div>-->
+<!--					</mat-nested-tree-node>-->
+<!--				</mat-tree>-->
+			</div>
+		</as-split-area>
+		<as-split-area [size]="75" class="overflow">
+			<div style="width: 100%; height: 450px;">
+				<h4>Column Filter</h4>
+
+				<ui-common-grid
+					[configuration]="visibleFieldsGridConfig"
+					(selectionChanged)="onVisibleFieldSelectionChanged($event)">
+				</ui-common-grid>
+
+			</div>
+		</as-split-area>
+	</as-split>
+</div>
+
+

@@ -1,0 +1,8 @@
+<div class="flex-box platform-form-row form-group setting-row">
+	<label class="platform-form-label">{{ totalSourceTextTr | platformTranslate }}</label>
+	<procurement-common-payment-schedule-total-source
+		[readonly]="false"
+		[contextEntity]="contextEntity"
+		(sourceChanged)="onTotalSourceChanged($event)">
+	</procurement-common-payment-schedule-total-source>
+</div>

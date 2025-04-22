@@ -1,0 +1,15 @@
+<ui-common-popup>
+  <div content class="flex-element flex-box generic-popup overflow-hidden flex-column select-handler-wrapper">
+    <ul class="flex-element select-popup overflow " >
+      <ng-container *ngFor="let item of items">
+        <li (mouseenter) ="onItemHover(item) "    [ngClass]="item.isSelected === true ? 'selected' : ''">
+          <button (click)="onItemSelect(item)">{{item.displayName}}</button>
+        </li>
+      </ng-container> 
+
+      <li id="combobox0" *ngIf="items.length===0"  >
+        <button >No Data Availabe</button>
+      </li>
+    </ul>
+  </div>
+</ui-common-popup>

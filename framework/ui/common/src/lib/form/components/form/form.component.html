@@ -1,0 +1,12 @@
+<div #outer class="form-container" [ngClass]="displayModeClass">
+	<ng-container *ngIf="isGrouped; then groupedForm else plainForm">
+	</ng-container>
+</div>
+
+<ng-template #groupedForm>
+	<ui-common-accordion [data]="groups" (opened)="groupExpanded($event)" (closed)="groupCollapsed($event)"></ui-common-accordion>
+</ng-template>
+
+<ng-template #plainForm>
+	<ng-container *ngComponentOutlet="plainFormType; injector: plainFormInjector"></ng-container>
+</ng-template>

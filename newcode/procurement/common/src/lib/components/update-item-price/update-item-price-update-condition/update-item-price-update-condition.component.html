@@ -1,0 +1,108 @@
+<section class="filler flex-box flex-column">
+	<div class="platform-lg platform-form-group" style="margin: 5px 10px 15px 10px;">
+		<div class="platform-form-row">
+			<div style="width: 6%; float: left;">
+				<div class="platform-form-label">
+					{{ 'procurement.common.wizard.updateItemPrice.from' | platformTranslate }}
+				</div>
+			</div>
+			<div class="lg-3">
+				<div class="checkbox spaceToUp">
+					<label>
+						<input type="checkbox"
+						       name="materialCatalog"
+						       [(ngModel)]="currentItem.isCheckMaterialCatalog" (change)='materialCatalogChange()'>
+						{{ 'procurement.common.wizard.updateItemPrice.catalogPriceVersion' | platformTranslate }}
+					</label>
+				</div>
+			</div>
+			<div class="lg-6">
+				<div class="lg-6" style="padding-left: 8.33333%; padding-right: 0;">
+					<ui-common-lookup-input [dataService]="priceConditionLookup"
+					                        [readonly]="!currentItem.isCheckMaterialCatalog"
+					                        [(value)]="currentItem.priceConditionFk" [entityContext]="priceConditionContext"></ui-common-lookup-input>
+
+				</div>
+				<div class="lg-6" style="padding-left: 8.33333%; padding-right: 0;">
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="checkbox"
+							       name="neutralMaterial" [disabled]="!currentItem.isCheckMaterialCatalog"
+							       [(ngModel)]="currentItem.isCheckNeutralMaterial">
+							{{ 'procurement.common.wizard.updateItemPrice.neutralMaterial' | platformTranslate }}
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="lg-3" style="margin-left: 6%;">
+
+				<div class="lg-6">
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="checkbox"
+							       name="quotation"
+							       [(ngModel)]="currentItem.isCheckQuote">
+							{{ 'procurement.common.wizard.updateItemPrice.quotation' | platformTranslate }}
+						</label>
+					</div>
+				</div>
+
+				<div class="lg-6">
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="checkbox"
+							       name="contract"
+							       [(ngModel)]="currentItem.isCheckContract">
+							{{ 'procurement.common.wizard.updateItemPrice.contract' | platformTranslate }}
+						</label>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="lg-6">
+				<div class="lg-6" style="padding-right: 0;">
+					<div class="lg-2" style="padding-right: 0;">
+						<div class="platform-form-label">
+							{{ 'basics.common.changeStatus.from' | platformTranslate }}
+						</div>
+					</div>
+					<div class="lg-10" style="padding-right: 0;">
+						<ui-common-domain-control-host [fieldType]="FieldType.DateUtc"
+						                               [(value)]="currentItem.startDate"></ui-common-domain-control-host>
+					</div>
+				</div>
+
+				<div class="lg-6" style="padding-right: 0;">
+					<div class="lg-1 col-lg-offset-1">
+						<div class="platform-form-label">
+							{{ 'basics.common.changeStatus.to' | platformTranslate }}
+						</div>
+					</div>
+					<div class="lg-10" style="float: right; padding-right: 0;">
+						<ui-common-domain-control-host [fieldType]="FieldType.DateUtc"
+						                               [(value)]="currentItem.endDate"></ui-common-domain-control-host>
+					</div>
+				</div>
+				<div class="col-lg-offset-1" [ngClass]="dateHasError() ? 'invalid-cell invalid-form' : ''"
+				     [innerText]="dateErrorText()" style="padding-top: 5px;"></div>
+			</div>
+
+			<div class="lg-2 form-group platform-form-row composite-last-item">
+				<div class="lg-9 text-right form-group platform-form-row composite-last-item" style="float: right;">
+					<button [disabled]="(!currentItem.isCheckMaterialCatalog && !currentItem.isCheckQuote && !currentItem.isCheckContract)"
+					        (click)="search()" type="button" style="width:100%;"
+					        class="btn btn-default">{{ 'cloud.common.searchButton' | platformTranslate }}
+					</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="flex-box flex-column flex-element">
+		<ui-common-grid [configuration]="gridConfig" [items]="priceResultSet"
+		                class="lookup-grid flex-basis-auto"></ui-common-grid>
+	</div>
+</section>

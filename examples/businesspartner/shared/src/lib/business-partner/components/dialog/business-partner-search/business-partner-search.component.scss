@@ -1,0 +1,129 @@
+$ms-sv-search-ctrl-height: 30px;
+$ms-border-radius: 5px;
+$ms-font-size-16: 16px;
+$ms-label-color: rgb(51, 51, 51);
+$ms-background-color: rgb(230, 230, 230);
+$ms-background-color-174195212: rgb(174, 195, 212);
+$ms-border-color: #DCDCDC;
+$ms-title-background-color: rgb(240, 240, 240);
+$ms-btn-background-color: rgb(75, 137, 220);
+$ms-title-color: rgb(0, 103, 177);
+$ms-background-color-selected: #AEC3D4;
+$ms-font-size-13: 13px;
+$ms-font-weight: bold;
+$padding-small-horizontal: 4px;
+$padding-medium-vertical: 6px;
+$padding-large-vertical: 8px;
+$padding-xLarge-vertical: 10px;
+$color-input-border: #ccc;
+$color-input-bg-disabled: #eee;
+$input-text-padding: 0 $padding-small-horizontal;
+
+.bp-sv-search-input {
+  height: $ms-sv-search-ctrl-height;
+  display: flex;
+}
+
+.bp-sv-search-button-text {
+  border: 1px solid $ms-border-color;
+  border-radius: $ms-border-radius 0 0 $ms-border-radius;
+  width: 100%;
+  height: $ms-sv-search-ctrl-height;
+  padding: 0 0 0 8px;
+  font-size: $ms-font-size-16;
+  color: $ms-label-color;
+}
+
+.subgroup {
+  margin-left: 20px;
+  overflow: hidden;
+
+  li {
+    margin-top: 5px;
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+
+      li:first-child {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.platform-form-row {
+  display: table-row;
+
+  .platform-form-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+    padding-top: $padding-medium-vertical;
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .platform-form-col {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    user-select: text;
+
+    span.text {
+      display: inline-block;
+      padding-top: $padding-medium-vertical;
+    }
+
+    .image-viewer-content img {
+      max-height: 180px;
+    }
+
+    .border-container {
+      border: 1px solid $color-input-border;
+      padding: $padding-xLarge-vertical;
+    }
+
+    .text-container {
+      background-color: $color-input-bg-disabled;
+      padding: $padding-large-vertical;
+    }
+
+    .input-group {
+      width: 100%;
+
+      &.info {
+        position: relative;
+
+        .input-group-content {
+          padding-left: 24px;
+        }
+      }
+
+      .form-control {
+        display: flex;
+        text-overflow: ellipsis;
+      }
+
+      .value-input {
+        padding: $input-text-padding;
+      }
+    }
+  }
+
+  &.drag-right {
+    .platform-form-label {
+      padding-left: 25px;
+    }
+  }
+}
+
+.padding-right {
+  padding-right: 10px;
+}
+
+.text-center {
+  padding-top: 6px;
+  text-align: center !important;
+}

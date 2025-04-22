@@ -1,0 +1,78 @@
+<div [ngSwitch]="modalOptions.step" class="modal-wrapper">
+	<section *ngSwitchCase="'step1'" class="modal-body">
+		<div class="platform-form-row">
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<label class="platform-form-label">{{modalOptions.selectQuotes}}</label>
+					</h4>
+				</div>
+				<div class="flex-box flex-column subview-container">
+					<ui-common-grid [configuration]="gridConfig" [items]="quotes" class="lookup-grid flex-basis-auto"></ui-common-grid>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="panel panel-default ">
+				<h4 class="panel-title">
+					<label class="platform-form-label">{{modalOptions.targetItem}}</label>
+				</h4>
+				<div class="flex-box flex-column subview-container">
+					<div class="checkbox spaceToUp">
+						<label class="ellipsis">
+							<ui-common-domain-control-host [fieldType]="fieldType.Boolean" [value]="modalOptions.notSubmitted!" (valueChange)="notSubmittedChange($event)">
+							</ui-common-domain-control-host>
+							{{ 'procurement.pricecomparison.itemEvaluation.targetItemOption1New' | platformTranslate }}
+						</label>
+					</div>
+					<div class="checkbox spaceToUp">
+						<label class="ellipsis">
+							<ui-common-domain-control-host [fieldType]="fieldType.Boolean" [value]="modalOptions.isEvaluated!" (valueChange)="isEvaluatedChange($event)">
+							</ui-common-domain-control-host>
+							{{ 'procurement.pricecomparison.itemEvaluation.targetItemOption2New' | platformTranslate }}
+						</label>
+					</div>
+				</div>
+
+				<h4 class="panel-title">
+					<label class="platform-form-label">{{modalOptions.itemEvaluation}}</label>
+				</h4>
+				<div class="flex-box flex-column subview-container">
+					<ui-common-lookup-input [dataService]="itemEvaluationLookupService" (valueChange)="onSelectedChange($event)"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{modalOptions.noteTitle}}</label><br/>
+			{{modalOptions.noteText1}}<br/>
+			{{modalOptions.noteText2}}
+		</div>
+	</section>
+	<section *ngSwitchCase="'step2'" class="modal-body">
+		<div class="platform-form-row">
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<label class="platform-form-label">{{modalOptions.selectTargetItems}}</label>
+					</h4>
+				</div>
+				<div class="flex-box flex-column subview-container">
+					<ui-common-grid [configuration]="prcItemGridConfig" [items]="prcItems" class="lookup-grid flex-basis-auto"></ui-common-grid>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<label class="platform-form-label">{{modalOptions.selectTargetItems}}</label>
+					</h4>
+				</div>
+				<div class="flex-box flex-column subview-container">
+					<ui-common-grid [configuration]="boqItemGridConfig" [items]="boqItems" class="lookup-grid flex-basis-auto"></ui-common-grid>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

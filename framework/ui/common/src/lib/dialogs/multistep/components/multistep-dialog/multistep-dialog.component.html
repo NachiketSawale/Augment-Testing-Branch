@@ -1,0 +1,63 @@
+<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogData.sectionTop}"></ng-container>
+		<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogData.sectionLeft}"></ng-container>
+
+		<div class="wizard-dialog" style="position: relative" [style.width.%]="dialogData.mainContentWidthPercent??100">
+			<div class="modal-wrapper">
+				<ui-common-tabs *ngIf='showTabs' [items]="wizardStepsDesc" [selectedIndex]="dialogData.stepIndex" (selectedItemChanged)="GoToIndex($event)"></ui-common-tabs>
+			</div>
+			<ui-common-stepper #cdkStepper (selectionChange)="onStepChange($event)" class="flex-element flex-box flex-column" >
+				<ui-common-step *ngFor="let step of wizardSteps; let i = index;"class="flex-element">
+						<div *ngIf="step.topDescription"
+								class="top-description">{{ step.topDescription | platformTranslate }}
+						</div>
+						<div *ngIf="step.stepType === stepType.Custom">
+							<ng-container *ngComponentOutlet="castToStepCustom(step).bodyComponent; inputs:castToStepCustom(step).model"></ng-container>
+						</div>
+						<div *ngIf="step.stepType === stepType.Form">
+							<ui-common-step-form [stepForm]="castToStepForm(step)"></ui-common-step-form>
+						</div>
+						<div *ngIf="step.stepType === stepType.Grid">
+							<ui-common-step-grid [stepGrid]="castToStepGrid(step)" [items]="castToStepGrid(step).model" (selectionChanged)="onSelectionChanged($event)"></ui-common-step-grid>
+						</div>
+						<div *ngIf="step.stepType === stepType.Message" class="icon-message" style="min-height: 150px">
+							<div *ngIf="castToStepMessage(step).iconClass" style="align-self: center" class="icon tlb-icons {{ castToStepMessage(step).iconClass }}"></div>
+							<div class="message flex-element">{{ castToStepMessage(step).bodyText ?? '' | platformTranslate }}</div>
+						</div>
+						<div *ngIf="step.bottomDescription"
+							class="bottom-description">{{ step.bottomDescription | platformTranslate }}
+						</div>
+						<ui-common-loading [loading]="!!step.loadingMessage"></ui-common-loading>
+				</ui-common-step>
+			</ui-common-stepper>
+			<div class="modal-wrapper">
+				<div class='steps modal-wrapper'></div>
+				<div class="status-indicator margin-top-ld">
+					<div class="nextStep" *ngIf='!hideDisplayOfNextStep'>{{ wzStrings.nextStep | platformTranslate }} {{
+							wizardSteps.length !== cdkStepper.selectedIndex + 1
+								? (wizardSteps[cdkStepper.selectedIndex + 1].title | platformTranslate)
+								: wzStrings.stepFinish | platformTranslate
+						}}
+					</div>
+					<ul class='steps-indicator' *ngIf='!hideIndicators'>
+						<li *ngFor="let step2 of wizardSteps; let k = index;"
+							[ngClass]="{
+					default: !step2.completed && !(cdkStepper.selectedIndex === k),
+					current: (cdkStepper.selectedIndex === k) && !!step2,
+					done: !!step2.completed,
+					editing: (cdkStepper.selectedIndex === k) && !step2.completed}">
+							<a (click)="GoToIndex(k)" title="{{wizardSteps[k].title | platformTranslate}}"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogData.sectionRight}"></ng-container>
+	<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogData.sectionBottom}"></ng-container>
+
+<ng-template #customSection let-section>
+	<ng-container *ngIf="section">
+		<div class="flex-element flex-box flex-column" [ngStyle]="{'hidden': !section.visible}">
+			<ng-container *ngComponentOutlet="section.component;"></ng-container>
+		</div>
+	</ng-container>
+</ng-template>

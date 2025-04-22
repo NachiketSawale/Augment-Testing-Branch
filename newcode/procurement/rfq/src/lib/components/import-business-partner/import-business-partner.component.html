@@ -1,0 +1,31 @@
+<div>
+	<section class="modal-body">
+		<div class="platform-form-row">
+			<div class="panel-group">
+				<div class="panel panel-default ">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<label class="platform-form-label ng-binding">{{modalOptions.rfqLabelText}}</label>
+						</h4>
+					</div>
+						<ui-common-lookup-input [(value)]="selectedValue" [dataService]="rfqLookupService" (valueChange)="onSelectedValueChange($event)"></ui-common-lookup-input>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<label class="platform-form-label ng-binding">{{modalOptions.rfqBodyLabelText}}</label>
+					</h4>
+				</div>
+				<div class="flex-box flex-column subview-container">
+					<ui-common-grid [configuration]="gridConfig" [items]="rfqBusinessPartnerItems"
+													class="lookup-grid flex-basis-auto"></ui-common-grid>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</div>

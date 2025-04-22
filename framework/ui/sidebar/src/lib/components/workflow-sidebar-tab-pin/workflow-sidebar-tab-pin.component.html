@@ -1,0 +1,14 @@
+<div>
+	<div class="toolbar justify-content-between">
+		<ui-common-menu-list [menu]="itemsList!"></ui-common-menu-list>
+		<button class="control-icons ico-pin3" [disabled]="isDisabled()" (click)="createPin()"></button>
+	</div>
+</div>
+
+<div class="lookups margin-top-ld" *ngIf="sidebarPinService">
+	<ui-common-lookup-input [options]="lookupOptions" [(value)]="selectedItem" [dataService]="entityFacadeService" (selectionchange)="processData()" (selectedItemChanged)="processData()" ></ui-common-lookup-input>
+</div>
+
+<div>
+	<ui-common-accordion style="overflow-y: auto;" [data]="processData()"></ui-common-accordion>
+</div>

@@ -1,0 +1,36 @@
+<div>
+		<h3 *ngIf="status.isInit">{{ options.body.bodyToScheduling }}</h3>
+		<div class="platform-form-group" *ngIf="status.isInit">
+			<div class="radio spaceToUp">
+				<label>
+					<input type="radio" name="packageSelect" [value]="radioSelect.CurrentPackage"
+					       [(ngModel)]="options.body.radioSelect"/>{{ options.body.currentPackage }}
+				</label>
+			</div>
+			<div class="radio spaceToUp">
+				<label>
+					<input type="radio" name="projectSelect" [value]="radioSelect.CurrentProject"
+					       [(ngModel)]="options.body.radioSelect"/>{{ options.body.currentProject }}
+				</label>
+			</div>
+			<br/>
+
+			<h3>{{ options.body.bodyFromScheduling }}</h3>
+			<div class="radio spaceToUp">
+				<label>
+					<input type="radio" name="schedulingSelect" [value]="radioSelect.CurrentScheduling" title="{{options.disabledMsg}}"
+					       [disabled]="!options.hasActivity" [(ngModel)]="options.body.radioSelect"/>{{ options.body.currentScheduling }}
+				</label>
+			</div>
+		</div>
+
+		<div class="modal-body flex-box" *ngIf="!status.isInit">
+			<div class="message" *ngIf="status.isExecuting">{{ options.executingMessage }}</div>
+			<div class="message" *ngIf="status.isSucceed">{{ options.executeSuccessedMessage }}</div>
+			<div class="errors message" *ngIf="status.isFailed">
+				<h3 class="errors">{{ options.executeFailedMessage }}</h3>
+				<div class="alert alert-danger" role="alert">{{ wizardError }}</div>
+			</div>
+		</div>
+		<ui-common-loading [loading]="dialogLoading"></ui-common-loading>
+</div>

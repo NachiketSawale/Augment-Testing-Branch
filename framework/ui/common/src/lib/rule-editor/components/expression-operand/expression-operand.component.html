@@ -1,0 +1,32 @@
+<div class="rule-operand input-group">
+<!--	<select (change)="selectOperandType(operandTypeSelect.value)" #operandTypeSelect>-->
+<!--		<option *ngFor="let operandType of getOperandTypes()" value="{{operandType.stringId}}">{{operandType.displayName}}</option>-->
+<!--	</select>-->
+
+	<span class="input-group-btn">
+<!--		<button-->
+<!--			class="btn btn-default control-icons ico-input-mode"-->
+<!--			title="Select Input Mode">-->
+<!--			<span class=""></span>-->
+<!--		</button>-->
+
+		<div ui-common-dropdown-button [data-dropdown-button]="getOperandTypeMenu()"></div>
+
+	</span>
+
+	<div class="value-operand input-group-content" *ngIf="isShowingValueOperand()">
+<!--		todo: placeholder for control-->
+		<ui-common-domain-control-host aria-placeholder="test" (change)="onValueChange()" [value]="inputOperand.value" [options]="getDomainOptions()" [fieldType]="getDomainType()" #domainControlHostComponent></ui-common-domain-control-host>
+	</div>
+
+	<div class="field-operand input-group-content" *ngIf="isShowingFieldOperand()">
+		<ui-common-expression-field-selector [ddStateConfig]="ddStateConfig" ($onSelectedNode)="onSelectColumn($event)"></ui-common-expression-field-selector>
+	</div>
+
+	<div class="preset-operand input-group-content" *ngIf="isShowingEnvironmentExpressions()">
+		<ui-common-environment-expression [operandType]="selectedOperandType"></ui-common-environment-expression>
+	</div>
+<!--	<div *ngIf="initialized && selectedOperandType && selectedOperandType.component">-->
+<!--		<ui-common-rule-operand-host [component]="selectedOperandType.component" [properties]="selectedOperandType.properties" [callbacks]="selectedOperandType.callbacks"></ui-common-rule-operand-host>-->
+<!--	</div>-->
+</div>

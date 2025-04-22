@@ -1,0 +1,37 @@
+<ng-container *ngIf="data">
+	<div class="expression-group">
+
+		<div class="toolbar flex-basis-auto fullwidth">
+			<div class="lookup-wrapper title">
+				<select class="form-control" (change)="selectGroupOperatorOption(groupSelect.value)" #groupSelect>
+					<option *ngFor="let operator of groupOperatorsListSelectOptions.itemsSource.items" [value]="operator.id">{{ operator.displayName }}</option>
+				</select>
+<!--				<ui-common-domain-control-host-->
+<!--					[fieldType]="FieldType.Select"-->
+<!--					[options]="groupOperatorsListSelectOptions"-->
+<!--					(valueChange)="selectGroupOperatorOption($event)"-->
+<!--				></ui-common-domain-control-host>-->
+			</div>
+			<ul class="tools flex-element flex-end">
+				<li><button  (click)="createNewGroup()" class="control-icons ico-criteria-new2 block-image ng-scope" title="Create New Rule Set"></button></li>
+				<li><button class="control-icons ico-criterion-new" (click)="createNewExpression()" title="Create New Rule"></button></li>
+				<li><button class="tlb-icons ico-rec-delete" (click)="onRemoveSelfClicked()" title="Delete Rule Set"></button></li>
+			</ul>
+		</div>
+
+		<ng-container *ngFor="let item of data.getItems()">
+			<ui-common-expression-group
+				*ngIf="isExpressionGroup(item)"
+				[data]="tryCastToExpressionGroup(item)"
+				($expressionGroupRemoved)="childRemoved($event)"
+				[configuration]="configuration"></ui-common-expression-group>
+
+			<ui-common-expression
+				*ngIf="!isExpressionGroup(item)"
+				[expressionData]="tryCastToExpression(item)"
+				[parentExpressionGroup]="data"
+				($expressionRemoved)="childRemoved($event)"
+				[configuration]="configuration"></ui-common-expression>
+		</ng-container>
+	</div>
+</ng-container>

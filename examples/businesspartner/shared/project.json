@@ -1,0 +1,20 @@
+{
+	"name": "modules-businesspartner-shared",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/businesspartner/shared/src",
+	"prefix": "businesspartner-shared",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/businesspartner/shared"],
+			"options": {
+				"jestConfig": "libs/modules/businesspartner/shared/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"]
+		}
+	},
+	"tags": []
+}

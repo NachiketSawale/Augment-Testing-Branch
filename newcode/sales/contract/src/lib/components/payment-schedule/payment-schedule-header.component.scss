@@ -1,0 +1,28 @@
+#payment-schedule-header-setting {
+  width: 550px;
+}
+
+#payment-schedule-header-notice {
+  height: 40px;
+  line-height: 40px;
+  text-indent: 4px;
+}
+
+#payment-schedule-update-btn {
+  width: auto;
+  height: 30px;
+  align-self: end;
+  margin-bottom: 4px;
+  line-height: 22px;
+}
+
+.setting-row {
+  position: relative;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+
+  .platform-form-label {
+    position: absolute;
+    left: 0;
+  }
+}

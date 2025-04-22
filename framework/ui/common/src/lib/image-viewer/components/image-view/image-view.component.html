@@ -1,0 +1,47 @@
+
+<div class="flex-box flex-element image-viewer-content">
+ 
+<div *ngIf="itemSrc;else multipleImage">
+    <div class="carousel-container">
+            
+            <img uiCommonImageSize [src]="toImage(itemSrc)" alt="" class="image-active">
+          
+        </div> 
+        
+</div>
+<ng-template #multipleImage>
+    
+    <div *ngIf="items && items.length>0" class="carousel-container"  >
+      <ng-container  *ngFor="let image of items;let i=index">
+        
+      <img
+        [src]="toImage(items[i])" 
+        [hidden]="selectedIndex!==i"
+        
+        uiCommonImageSize
+        [ngClass]="selectedIndex===i?'image-active':'bulkimage'"
+         alt="">
+        
+      </ng-container>  
+        <div *ngIf="showIndicators" class="carousel-dot-container">
+            <span class="carousel-count">{{selectedIndex+1}}/{{items.length}}</span>
+            <ng-container *ngFor="let dot of items;let i=index">
+                
+            <span class="dot" 
+            
+            [ngClass]="{'active':selectedIndex===i}"
+            (click)="selectImage(i)"
+            >
+            
+            </span>
+        </ng-container>
+        </div>
+        <div *ngIf="showNavigationButtons" class="btn-carousel btn-prev">
+          <i  class="ico-rec-previous navbar-btn icon-carousel" title="Go to Previous" (click)="onPrevious()"></i>
+        </div>
+        <div *ngIf="showNavigationButtons" class="btn-carousel btn-next">
+          <i  class="ico-rec-next navbar-btn icon-carousel"  title="Go to Next" (click)="onNext()"></i>
+        </div>
+      </div>
+</ng-template>
+</div>

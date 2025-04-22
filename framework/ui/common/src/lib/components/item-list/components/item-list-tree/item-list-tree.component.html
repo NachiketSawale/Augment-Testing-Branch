@@ -1,0 +1,6 @@
+<div *ngFor="let treeitem of treeitems" class="treelist tree-accordion">
+	<div *ngIf="!treeitem.disabled">
+		<div ui-common-item-list-tree-accordion-header [treeitems]="treeitems" [treeitem]="treeitem" [options]="options"></div>
+		<div *ngIf="treeitem.tabs" ui-common-item-list-tree-accordion-content [treeitem]="treeitem" [childs]="treeitem.tabs" [options]="options" class="margin-left-ld"></div>
+	</div>
+</div>

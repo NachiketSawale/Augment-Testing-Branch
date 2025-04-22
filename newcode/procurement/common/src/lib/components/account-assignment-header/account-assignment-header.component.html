@@ -1,0 +1,89 @@
+<div class="platform-form-group" style="margin: 0px 20px">
+	<!-- Header Template Outlet -->
+	<div class="platform-form-group">
+		<ng-container *ngTemplateOutlet="headerTemplate; context: { titles: headerLabels }"></ng-container>
+		<!-- Loop through multiple row templates (currencyRows, totalNetRows, verificationBreakdownAmountRows) -->
+		<ng-container *ngFor="let row of [currencyRows, totalNetRows, verificationBreakdownAmountRows]">
+			<ng-container
+				*ngTemplateOutlet="
+					rowTemplate;
+					context: {
+						title: row.headerLabel,
+						useInputControl: row.useInputControl,
+						fields: row.fields
+					}
+				"
+			>
+			</ng-container>
+		</ng-container>
+	</div>
+	<div class="platform-form-group">
+		<!-- Sum Template Outlet -->
+		<ng-container
+			*ngTemplateOutlet="
+				sumTemplate;
+				context: {
+					title: verificationBreakdownInRows.headerLabel,
+					fields: verificationBreakdownInRows.fields
+				}
+			"
+		>
+		</ng-container>
+	</div>
+</div>
+
+<!-- Header Template -->
+<ng-template #headerTemplate let-titles="titles">
+	<div class="platform-form-row">
+		<div class="platform-form-col" style="width: 10%">
+			<label style="width: 100%; text-align: center"></label>
+		</div>
+		<div class="platform-form-col" *ngFor="let title of titles" style="width: 15%">
+			<label style="width: 100%; text-align: center">{{ title | platformTranslate }}</label>
+		</div>
+		<div class="platform-form-col" [style.width.%]="calculateRemainingWidth(titles.length)">
+			<!-- Empty column -->
+		</div>
+	</div>
+</ng-template>
+
+<!-- Row Template -->
+<ng-template #rowTemplate let-title="title" let-fields="fields" let-useInputControl="useInputControl">
+	<div class="platform-form-row">
+		<div class="platform-form-col" style="width: 10%">
+			<label class="platform-form-label" style="min-width: 176px">{{ title | platformTranslate }}</label>
+		</div>
+		<div class="platform-form-col" *ngFor="let field of fields" style="width: 15%">
+			<ng-container *ngIf="useInputControl; else domainControl">
+				<input type="text" class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty" [value]="this.getTotalInfo()![field]" [readOnly]="true" style="width: 100%" />
+			</ng-container>
+			<ng-template #domainControl>
+				<ui-common-domain-control-host
+					class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+					style="width: 100%"
+					[fieldType]="fieldType.Money"
+					[value]="this.getTotalInfo()![field]"
+					[readOnly]="true"
+				></ui-common-domain-control-host>
+			</ng-template>
+		</div>
+		<div class="platform-form-col" [style.width.%]="calculateRemainingWidth(fields.length)">
+			<!-- Empty column -->
+		</div>
+	</div>
+</ng-template>
+
+<!-- Sum Template -->
+<ng-template #sumTemplate let-title="title" let-fields="fields">
+	<div class="platform-form-row">
+		<div class="platform-form-col" style="width: 10%">
+			<label class="platform-form-label" style="min-width: 176px">{{ title | platformTranslate }}</label>
+		</div>
+		<div class="platform-form-col" *ngFor="let field of fields" style="width: 30%">
+			<input type="text" class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty" [value]="this.getFieldValue(field) | number: '1.2-2'" [readOnly]="true" style="width: 100%" />
+		</div>
+		<div class="platform-form-col" [style.width.%]="calculateRemainingWidth(fields.length, 30)">
+			<!-- Empty column -->
+		</div>
+	</div>
+</ng-template>

@@ -1,0 +1,25 @@
+<div class="info-bar">
+	<h2 class="title">{{'Info' | platformTranslate}}</h2>
+	<div class="tree-view-structure" *ngFor="let info of entityInfos">
+		<div class="structure-heading">
+			<button class="structure-title" (click)="headerClick(info, InfoBarLevel.First)">{{info.description}}</button>
+			<span class="badge badge-rib-color margin-left-md">{{getItemCount(info)}}</span>
+		</div>
+
+		<div *ngIf="info.subEntity" >
+			<div class="tree-view-item" *ngFor="let subInfo of info.subEntity">
+				<div class="item-heading">
+					<button class="item-title" (click)="subClick(subInfo, InfoBarLevel.Second)">{{subInfo.description}}</button>
+				</div>
+
+				<div *ngIf="subInfo.subEntity" >
+					<div class="tree-view-branch" *ngFor="let subOfSubInfo of subInfo.subEntity">
+						<div class="branch-heading">
+							<button class="branch-title" (click)="subClick(subOfSubInfo , InfoBarLevel.Third)">{{subOfSubInfo.description}}</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

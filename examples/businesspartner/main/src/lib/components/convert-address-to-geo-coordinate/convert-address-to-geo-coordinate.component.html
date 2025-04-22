@@ -1,0 +1,26 @@
+<div>
+	<section class="modal-body fullheight">
+		<div class="address-body flex-box ">
+			<div class="fullheight address-input flex-element">
+				<div class="checkbox spaceToUp" style="margin-bottom:4px;">
+					<label>
+						<input type="checkbox" [checked]="currentItem.convertOnlyEmpty">
+						{{ 'basics.common.geographicLocationInfo.convertOnlyEmpty' | platformTranslate }}
+					</label>
+				</div>
+				<div class="flex-box flex-column flex-element fullheight">
+					<ui-common-grid  [configuration]="gridConfig"
+													 class="lookup-grid flex-basis-auto"></ui-common-grid>
+				</div>
+			</div>
+			<div style='width: 400px;' [style.display]="showMap">
+				<ui-map
+					[entity]='mapEntity'
+					[showRoutes]="false"
+					[canCalculateDist]="false"
+					[editable]="false"
+				></ui-map>
+			</div>
+		</div>
+	</section>
+</div>

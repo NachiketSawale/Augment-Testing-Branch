@@ -1,0 +1,25 @@
+<as-split #split [direction]="splitter.direction" unit="percent" (onSplitterChangeSize)="onSplitterChangeSize(split)">
+	<as-split-area [size]="splitter.areaSizes[0]">
+		<div class="filler flex-box flex-column flex-element subview-container"
+		     [ngClass]="'cid_' + parentGridConfig.uuid">
+			<ui-common-grid #parentGridHost [configuration]="parentGridConfig"
+			                (itemsChanged)="onItemsChanged($event)"
+			                (cellChanged)="onCellChanged($event)"
+			                (selectionChanged)="onSelectionChanged($event)"
+			                (doubleClick)="onGridDblClick($event)"
+			></ui-common-grid>
+		</div>
+	</as-split-area>
+
+	<as-split-area [size]="splitter.areaSizes[1]">
+		<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + config.uuid">
+			<div style="text-align:center;padding:20px 20px 0 20px;" [innerHTML]="chartTitle"></div>
+			<ui-common-chart-eval style="height:100%"
+			                      [chartType]="chartDataScope.chartType"
+			                      [chartDataSource]="chartDataScope.chartDataSource"
+			                      [chartOption]="chartDataScope.chartOption"
+			                      [legendColors]="chartDataScope.legendColors"
+			></ui-common-chart-eval>
+		</div>
+	</as-split-area>
+</as-split>

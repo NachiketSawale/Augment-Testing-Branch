@@ -1,0 +1,12 @@
+<div #container class="input-group lookup-container form-control">
+	<input #input [type]="config.freeInputType"  class="input-group-content"
+	       [ngModel]="value"
+	       (ngModelChange)="onModelChange($event)"
+	       (keydown)='onKeyDown($event)'
+	       [readonly]="!!readonly || !!config.disableInput"
+	       [disabled]="!!readonly || !!config.disableInput || !!config.disabled"
+	       [uiCommonInputConfig]="config.inputConfig"
+	/>
+
+	<ui-common-lookup-button #buttons [readonly]="readonly" [config]="config" [context]='context' (delete)="clear()" (edit)="openLookup()"></ui-common-lookup-button>
+</div>

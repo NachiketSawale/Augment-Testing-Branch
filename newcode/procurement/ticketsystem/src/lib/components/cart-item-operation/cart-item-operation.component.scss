@@ -1,0 +1,87 @@
+$ts-label-total-color: #853131;
+$ts-label-color: #515151;
+$ts-font-size-13: 13px;
+$ts-font-size-16: 16px;
+$ts-font-weight: bold;
+$ts-border-radius: 5px;
+$ts-background-color-selected: #AEC3D4;
+$ts-btn-background-color: rgb(75, 137, 220);
+@mixin ts-font-setting($fontSize: $ts-font-size-13, $color: $ts-label-color, $bold: normal) {
+  font-size: $fontSize;
+  color: $color;
+  font-weight: $bold;
+}
+
+.ms-commodity-row-operation {
+  flex: 2;
+  max-width: 500px;
+  min-width: 228px;
+}
+
+.ms-commodity-row-operation > div {
+  text-align: right;
+}
+
+.ms-commodity-row-operation .ms-commodity-row-price {
+  font-size: 16px;
+  color: #333333;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.ms-commodity-row-operation .ms-commodity-row-unituom {
+  font-size: 13px;
+  color: #333333;
+  font-weight: normal;
+  margin: 0px;
+}
+
+.ms-commodity-row-operation .ts-row-label {
+  left: 0;
+  position: absolute;
+}
+
+.ms-commodity-row-operation .ms-commodity-row-quantity {
+  margin-right: 30px;
+}
+
+.ms-commodity-row-operation .ms-commodity-row-quantity .ms-row-label {
+  line-height: 30px;
+}
+
+.ms-commodity-row-operation .ms-row-label {
+  position: absolute;
+  left: 0px;
+}
+
+.ms-commodity-row-operation .ts-cart-item-delivery {
+  margin-top: 5px;
+}
+
+.ts-cart-item-subtotal {
+  margin: 6px 0 0 0;
+  float: right;
+  width: 100%;
+  text-align: right;
+  border-top: 1px dotted #626262;
+
+  > label {
+    @include ts-font-setting($ts-font-size-16, $ts-label-total-color, $ts-font-weight);
+  }
+}
+
+.ms-commodity-row-cart-delete {
+  background-color: #4b89dc;
+  padding: 7px;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  margin-top: 6px;
+  margin-left: 2px;
+  float: right;
+}
+
+.ms-commodity-row-cart-delete a:hover {
+  cursor: pointer;
+}
+

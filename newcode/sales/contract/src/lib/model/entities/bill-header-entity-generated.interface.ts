@@ -1,0 +1,94 @@
+/*
+ * $Id$
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { IDescriptionInfo, IEntityBase } from '@libs/platform/common';
+
+export interface IBillHeaderEntityGenerated extends IEntityBase {
+	Id: number;
+	TypeFk: number;
+	ConfigurationFk: number;
+	RubricCategoryFk: number;
+	CompanyFk: number;
+	CompanyResponsibleFk: number;
+	ProjectFk: number;
+	LanguageFk: number;
+	BilStatusFk: number;
+	BillDate: number;
+	VoucherTypeFk: number;
+	InvoiceTypeFk: number;
+	DescriptionInfo?: IDescriptionInfo | null;
+	CurrencyFk: number;
+	ExchangeRate: number;
+	ClerkFk: number;
+	BusinesspartnerFk: number;
+	SubsidiaryFk: number;
+	CustomerFk: number;
+	BankFk: number;
+	ConsecutiveBillNo: string;
+	BillNo: string;
+	PaymentTermFiFk: number;
+	PaymentTermPaFk: number;
+	BillingSchemaFk: number;
+	PaymentTermFk: number;
+	AmountNet: number;
+	AmountNetOc: number;
+	AmountGross: number;
+	AmountGrossOc: number;
+	VatGroupFk: number;
+	TaxCodeFk: number;
+	OrdConditionFk: number;
+	ContractTypeFk: number;
+	PerformedFrom: string;
+	PerformedTo: string;
+	SearchPattern: string;
+	BlobsSalutationFk: number;
+	BlobsHeaderFk: number;
+	BlobsFooterFk: number;
+	BlobsSubjectFk: number;
+	BlobsReferenceFk: number;
+	BlobsBillToPartyFk: number;
+	UserDefined1: string;
+	ClobsSalutationFk: number;
+	ClobsHeaderFk: number;
+	ClobsFooterFk: number;
+	ClobsSubjectFk: number;
+	ClobsReferenceFk: number;
+	ClobsBillToPartyFk: number;
+	UserDefined2: string;
+	UserDefined3: string;
+	UserDefined4: string;
+	UserDefinedDate01: string;
+	UserDefinedDate02: string;
+	UserDefinedDate03 : string;
+	UserDefinedDate04: string;
+	UserDefinedDate05: string;
+	UserDefined5: string;
+	IsCanceled: boolean;
+	CancellationNo: string;
+	CancellationReason: string;
+	CancellationDate: string;
+	BookingText: string;
+	PrjChangeFk: number;
+	RelatedBillHeaderFk: number;
+	OrdHeaderFk: number;
+	ObjUnitFk: number;
+	Remark: string;
+	CommentText: string;
+	PrcStructureFk: number;
+	ControllingUnitFk: number;
+	BankTypeFk: number;
+	DateEffective: string;
+	ReferenceStructured: string;
+	DatePosted: string;
+	DateNetpayable: string;
+	DateDiscount: string;
+	ContactFk: number;
+	BusinesspartnerBilltoFk: number;
+	ContactBilltoFk: number;
+	SubsidiaryBilltoFk: number;
+	CustomerBilltoFk: number;
+	BasSalesTaxMethodFk: number;
+	IsNotAccrual: boolean;
+}

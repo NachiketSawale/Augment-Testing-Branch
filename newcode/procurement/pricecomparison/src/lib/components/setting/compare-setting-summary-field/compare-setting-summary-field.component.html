@@ -1,0 +1,43 @@
+<div class="flex-element flex-box flex-column">
+	<div class="flex-element flex-box flex-row margin-bottom-ld">
+		<div>
+			<div class="checkbox">
+				<label class="platform-form-label">{{ 'procurement.pricecomparison.hideZeroValueLines' | platformTranslate }}
+					<ui-common-domain-control-host [value]="settings.isHideZeroValueLines" [fieldType]="fieldType.Boolean" (valueChange)="isHideZeroValueLinesChanged($event)"></ui-common-domain-control-host>
+				</label>
+			</div>
+		</div>
+		<div>
+			<div class="checkbox margin-left-ld">
+				<label class="platform-form-label">{{ 'procurement.pricecomparison.percentageLevels' | platformTranslate }}
+					<ui-common-domain-control-host [value]="settings.isPercentageLevels" [fieldType]="fieldType.Boolean" (valueChange)="isPercentageLevelsChanged($event)"></ui-common-domain-control-host>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="platform-lg margin-top-ld">
+		<div class="lg-4">
+			<procurement-pricecomparison-compare-setting-base-grid
+				[title]="structureTitle"
+				[config]="structureConfig"
+			>
+			</procurement-pricecomparison-compare-setting-base-grid>
+		</div>
+
+		<div class="lg-4">
+			<procurement-pricecomparison-compare-setting-base-grid
+				[title]="boqItemTypeTitle"
+				[config]="boqItemTypeConfig"
+			>
+			</procurement-pricecomparison-compare-setting-base-grid>
+		</div>
+
+		<div class="lg-4 padding-r-0">
+			<procurement-pricecomparison-compare-setting-base-grid
+				[title]="boqItemType2Title"
+				[config]="boqItemType2Config"
+			>
+			</procurement-pricecomparison-compare-setting-base-grid>
+		</div>
+	</div>
+</div>

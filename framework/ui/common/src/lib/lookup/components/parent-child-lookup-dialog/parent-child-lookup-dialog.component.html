@@ -1,0 +1,54 @@
+<!-- Input group for search functionality -->
+<div class="input-group form-control">
+    <!-- Search input field with autofocus -->
+    <input #searchInput type="text" class="form-control" [(ngModel)]="searchData" autofocus>
+    <span class="input-group-btn">
+        <!-- Search button with icon -->
+        <button class="btn btn-default input-sm btn-search tlb-icons ico-search" (click)="onSearch()"></button>
+    </span>
+</div>
+
+<!-- Main container for the generic grid lookup component -->
+<div class="generic-grid-lookup">
+    <div class="filler modal-wrapper">
+        <!-- Splitter component to divide the view into two areas -->
+        <as-split [direction]="splitter.direction" unit="percent">
+            <!-- First split area for the parent grid -->
+            <as-split-area [size]="splitter.areaSizes[0]">
+                <!-- Conditionally display content when parentGridStructure is defined -->
+                <ng-container *ngIf="parentGridStructure">
+                    <div class="filler flex-box flex-column flex-element subview-container"
+                        [ngClass]="'cid_' + parentGridStructure.uuid">
+                        <!-- Parent grid component with configuration and event binding -->
+                        <ui-common-grid [configuration]="parentGridStructure"
+                            (selectionChanged)="onParentSwitched($event)"></ui-common-grid>
+                    </div>
+                </ng-container>
+            </as-split-area>
+            <!-- Second split area for the child grid -->
+            <as-split-area [size]="splitter.areaSizes[1]">
+                <!-- Conditionally display content when childGridStructure is defined -->
+                <ng-container *ngIf="childGridStructure">
+                    <div class="filler flex-box flex-column flex-element subview-container"
+                        [ngClass]="'cid_' + childGridStructure.uuid">
+                        <!-- Toolbar section with title and menu items -->
+                        <div class="toolbar d-flex justify-content-between">
+                            <h4 class="subtitlepad title fix">{{searchResult}}</h4>
+                            <div class="toolbar-items">
+                                <!-- Menu list component with toolbar data -->
+                                <ui-common-menu-list [menu]="toolbarData!"></ui-common-menu-list>
+                            </div>
+                        </div>
+                        <!-- Child grid component with configuration and event binding -->
+                        <ui-common-grid [configuration]="childGridStructure"
+                            (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+                    </div>
+                </ng-container>
+            </as-split-area>
+        </as-split>
+        <!-- Loading indicator component -->
+        <div class="loading-container">
+            <ui-common-loading [loading]="isLoading"></ui-common-loading>
+        </div>
+    </div>
+</div>

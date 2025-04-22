@@ -1,0 +1,30 @@
+export const MODULE_INFO_PROCUREMENT = {
+	ProcurementPackageModuleName: 'procurement.package',
+	ProcurementCommonModuleName: 'procurement.common',
+	CloudCommonModuleName: 'cloud.common',
+	BasicsCustomizeModuleName: 'basics.customize',
+	BasicsCommonModuleName: 'basics.common',
+	ProcurementPackagePascalCasedModuleName: 'Procurement.Package',
+	ProcurementRequisitionPascalCasedModuleName: 'Procurement.Requisition',
+	ProcurementCommonPascalCasedModuleName: 'Procurement.Common',
+	BoqMainModuleName: 'boq.main',
+	BoqMainPascalCasedModuleName: 'Boq.Main',
+	EstimateMainModuleName: 'estimate.main',
+	ProcurementRequisitionModuleName: 'procurement.requisition',
+	ProcurementRfqModuleName: 'procurement.rfq',
+	ProcurementQuoteModuleName: 'procurement.quote',
+	ProcurementContractModuleName: 'procurement.contract',
+	ProcurementPesModuleName: 'procurement.pes',
+};
+
+export const WIZARD_NAME = {
+	splitAllOverDiscount: 'splitAllOverDiscount',
+	bidderSearch: 'bidderSearch',
+	selectPrcItemGroups: 'selectPrcItemGroups',
+	generateDiliverySchedule: 'generateDiliverySchedule',
+	updateItemPrice: 'updateItemPrice',
+	changeProcurementDocumentStatus: 'changeProcurementDocumentStatus',
+	replaceNeutralMaterial:'replaceNeutralMaterial',
+	enhanceBidderSearch: 'enhanceBidderSearch',
+	importBusinessPartner: 'importBusinessPartner',
+};

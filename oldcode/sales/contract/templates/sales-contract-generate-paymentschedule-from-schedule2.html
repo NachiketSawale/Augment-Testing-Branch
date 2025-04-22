@@ -1,0 +1,64 @@
+<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+<div>
+	<span id="generateOptionLabel" style="height: 38px;line-height: 38px;margin-left: 2px;">{{::'sales.contract.generatePaymentScheduleFromSchedule.generateOptions' | translate}}</span>
+	<input type="radio" id="generateOption1" name="generateOption" value="1" data-ng-model="currentGenerateOption" data-ng-click="selectGenerateOption(1)" style="top: 3px;position: relative;margin: 0 2px 0 16px;">
+	<label for="generateOption1" data-ng-click="selectGenerateOption(1)">{{::'sales.contract.generatePaymentScheduleFromSchedule.fromActivityOnly' | translate}}</label>
+	<input type="radio" id="generateOption2" name="generateOption" value="2" data-ng-model="currentGenerateOption" data-ng-click="selectGenerateOption(2)" style="top: 3px;position: relative;margin: 0 2px 0 16px;">
+	<label for="generateOption2" data-ng-click="selectGenerateOption(2)">{{::'sales.contract.generatePaymentScheduleFromSchedule.fromSummaryOnly' | translate}}</label>
+	<input type="radio" id="generateOption3" name="generateOption" value="3" data-ng-model="currentGenerateOption" data-ng-click="selectGenerateOption(3)" style="top: 3px;position: relative;margin: 0 2px 0 16px;">
+	<label for="generateOption3" data-ng-click="selectGenerateOption(3)">{{::'sales.contract.generatePaymentScheduleFromSchedule.fromSummary&Activity' | translate}}</label>
+</div>
+<div class="flex-element flex-box flex-column subview-container" style="min-height: 100px;">
+	<platform-Grid data="activityGrid"></platform-Grid>
+</div>
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<label class="platform-form-label" style="min-width: 30px;">{{::'sales.contract.generatePaymentScheduleFromSchedule.daysOffset' | translate}}</label>
+		<div class="platform-form-col" style="width:60px;padding-right: 10px;display: inline-block;">
+			<div class="input-group domain-type-integer form-control">
+				<input type="text" class="input-group-content text-right active" data-platform-select-on-focus="" data-platform-numeric-converter="" data-ng-model="entity.DaysOffset" data-platform-control-validation="" data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 2000, blur: 0} }" data-ng-pattern-restrict="^[+]?\d*$" data-enterstop="true" data-tabstop="true" data-domain="integer" data-entity="entity"/>
+			</div>
+		</div>
+		<label class="platform-form-label" style="min-width: 30px;">{{::'sales.contract.generatePaymentScheduleFromSchedule.days' | translate}}</label>
+		<div class="platform-form-col">
+			<div style="width: 120px;display: inline-block;">
+				<div class="input-group domain-type-select form-control">
+					<div class="input-group-content ng-pristine ng-valid ng-not-empty ng-valid-platform ng-touched" data-domain="select"
+					     data-ng-model="entity.AfterOrBefore" data-platform-select-converter="" data-platform-select-handler="" tabindex="-1"
+					     data-platform-control-validation="" data-enterstop="true"
+					     data-tabstop="true" data-options="afterBeforeOptions" data-config="afterBeforeOptions" data-entity="entity">
+					</div>
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-default dropdown-toggle" data-ng-disabled="false">
+							<span class="caret"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div style="width: 160px;display: inline-block;">
+				<div class="input-group domain-type-select form-control">
+					<div class="input-group-content ng-pristine ng-valid ng-not-empty ng-valid-platform ng-touched" data-domain="select"
+					     data-ng-model="entity.DayType" data-platform-select-converter="" data-platform-select-handler="" tabindex="-1"
+					     data-platform-control-validation="" data-enterstop="true"
+					     data-tabstop="true" data-options="dayTypeOptions" data-config="dayTypeOptions" data-entity="entity">
+					</div>
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-default dropdown-toggle" data-ng-disabled="false">
+							<span class="caret"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+<div style="display: flex;flex-direction: row;">
+	<div style="padding-right: 10px;">{{::modalOptions.notes}}</div>
+	<ul>
+		<li>1. {{::modalOptions.note1}}</li>
+		<li>2. {{::modalOptions.note2}}</li>
+		<li>3. {{::modalOptions.note3}}</li>
+		<li>4. {{::modalOptions.note4}}</li>
+	</ul>
+</div>

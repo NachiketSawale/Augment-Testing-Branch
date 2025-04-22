@@ -1,0 +1,24 @@
+
+<div id="resizableWrapper"  style="right: 118px;">
+    <div class="control-container">
+        <div class="control-icons ico-resize block-image resize-icon">
+        </div>
+        <button (click)="collapseDiv()" class="collapse-button control-icons ico-arrow-down block-image " [ngClass]= "collapsed ? 'collapsed' : '' "></button>
+    </div>
+
+    <div #resizeDiv class="resizable" 
+    [ngClass]= "collapsed ? 'collapse hide' : 'collapse show' "> 
+        <ng-container *ngComponentOutlet="activeContainer"> 
+        </ng-container> 
+    
+        <div class="resizers" #resizeWrapper>    
+            <div class="resizer top-left" *ngIf="resizableOverlayDir.resizingPoints['topLeft']" (mousedown)="startResize($event)"></div>
+
+            <div class="resizer top-right" *ngIf="resizableOverlayDir.resizingPoints['topRight']" (mousedown)="startResize($event)"></div>  
+
+            <div class="resizer bottom-left " *ngIf="resizableOverlayDir.resizingPoints['bottomLeft']" (mousedown)="startResize($event)"></div> 
+               
+            <div class="resizer bottom-right" *ngIf="resizableOverlayDir.resizingPoints['bottomRight']" (mousedown)="startResize($event)"></div>  
+        </div>
+    </div>
+</div>

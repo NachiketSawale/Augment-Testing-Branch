@@ -1,0 +1,23 @@
+<div class="content">
+	<div class="flex-element flex-basis-auto flex-box flex-column fullheight">
+		<div>
+			<ui-sidebar-title [toolbarData]="toolbarData"
+				[title]="'cloud.desktop.sdWizardTitle' | platformTranslate "></ui-sidebar-title>
+		</div>
+		<!-- Overlay is mocked will be replaced by overlay component -->
+		<div *ngIf="asyncInProgress" class="wait-overlay">
+			<div class="box">
+				<div class="spinner-lg"></div>
+			</div>
+		</div>
+
+		<div class="content-inner">
+			<div class="margin-top-ld margin-bottom-ld">
+				<input type="text" [(ngModel)]="searchString" #input (input)="search(input.value)" id="searchmodule"
+					class="form-control" placeholder="{{ 'cloud.common.taskBarSearch' | platformTranslate }}" />
+			</div>
+			<ui-common-accordion #accordion [data]="accordionData"
+				(selected)="onSelected($event)"></ui-common-accordion>
+		</div>
+	</div>
+</div>

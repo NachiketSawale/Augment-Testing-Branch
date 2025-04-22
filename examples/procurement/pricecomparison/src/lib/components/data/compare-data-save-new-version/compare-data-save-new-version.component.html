@@ -1,0 +1,20 @@
+<div class="flex-element flex-box flex-row fullwidth fullheight overflow-hidden">
+	<div class="platform-form-group">
+		<div class="platform-form-row icon-message ">
+			<label class="platform-form-label ico-question icon tlb-icons"></label>
+			<div class="platform-form-col">
+				<div class="margin-bottom-ld">
+					<h4>
+						{{ 'procurement.pricecomparison.saveNewVersionInfo' | platformTranslate }}
+					</h4>
+				</div>
+				<ui-common-domain-control-host
+					[value]="selectedValue"
+					[fieldType]="fieldType.Radio"
+					[options]="options"
+					(valueChange)="onOptionChanged($event)"
+				></ui-common-domain-control-host>
+			</div>
+		</div>
+	</div>
+</div>

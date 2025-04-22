@@ -1,0 +1,5 @@
+<div *ngIf="show" class="alarm-overlay" [ngClass]="cssClass">
+	<div class="alert" role="alert">
+		{{ message | platformTranslate }}
+	</div>
+</div>

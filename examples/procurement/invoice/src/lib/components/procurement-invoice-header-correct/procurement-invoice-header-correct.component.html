@@ -1,0 +1,13 @@
+<div>
+	<div class="row" *ngIf="showCodeInput">
+		<div class="col-md-12">
+			<ui-common-form [formConfig]="formConfig" [entity]="currentItem"></ui-common-form>
+		</div>
+	</div>
+	<div class="row" *ngIf="!showCodeInput">
+		<div class="col-md-12">
+			<div class="col-md-12">{{ messageText }}</div>
+		</div>
+	</div>
+	<ui-common-loading [loading]="isLoading"></ui-common-loading>
+</div>

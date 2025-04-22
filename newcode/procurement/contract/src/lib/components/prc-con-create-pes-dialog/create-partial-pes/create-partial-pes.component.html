@@ -1,0 +1,49 @@
+<section class="modal-body" style="padding: 20px; overflow:hidden ">
+	<div class="platform-form-row">
+		<span>{{'procurement.contract.wizard.newContractItemsFound' | platformTranslate}}</span>
+		<div class="panel panel-default" style="margin-top: 8px;">
+			<div class="flex-box flex-column">
+				<ui-common-grid [configuration]="itemGridCfg" style="height:170px;"></ui-common-grid>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<span>{{'procurement.contract.wizard.createPesOptions' | platformTranslate}}</span>
+		<div class="flex-box flex-row" style="padding:0 0 6px 30px;">
+			<div class="checkbox spaceToUp">
+				<label class="platform-form-label" style="min-width: 87px; position: relative;"> {{'procurement.contract.wizard.createPesOptionsNew'| platformTranslate}}
+					<input type="radio" name="grp-create-options"
+					       [(ngModel)]="createOptions.value"
+					       (change)="onCreateOptionChange()"
+					       [value]="createOptionsValue.createPesOptionsNew" style="top:0;"></label>
+				<label class="platform-form-label" style="min-width: 87px; position: relative; margin-left: 6px;"> {{'procurement.contract.wizard.createFromVariance' | platformTranslate}}
+					<input type="radio" name="grp-create-source"
+					       [(ngModel)]="createOptions.source"
+					       (change)="onCreateSourceChange()"
+					       [value]="createOptionsSource.createFromVariance" style="top:0;">
+				</label>
+				<label class="platform-form-label" style="min-width: 87px; position: relative; margin-left: 6px;"> {{'procurement.contract.wizard.createFromConsolidatedContract' | platformTranslate}}
+					<input type="radio" name="grp-create-source"
+					       [(ngModel)]="createOptions.source"
+					       (change)="onCreateSourceChange()"
+					       [value]="createOptionsSource.createFromConsolidatedContract" style="top:0;"
+					       [disabled]="isDisableFromConsolidatedContract">
+				</label>
+			</div>
+		</div>
+		<div class="flex-box flex-row" style="padding:0 0 6px 30px;">
+			<div class="checkbox spaceToUp">
+				<label class="platform-form-label" style="min-width: 87px;"> {{'procurement.contract.wizard.createPesOptionsUpdate'| platformTranslate}}
+					<input type="radio" name="grp-create-options"
+					       [(ngModel)]="createOptions.value"
+					       (change)="onCreateOptionChange()"
+					       [value]="createOptionsValue.createPesOptionsUpdate"></label>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="flex-box flex-column">
+				<ui-common-grid [configuration]="pesGridCfg" style="height:140px;"></ui-common-grid>
+			</div>
+		</div>
+	</div>
+</section>

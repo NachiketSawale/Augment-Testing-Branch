@@ -1,0 +1,203 @@
+@import 'variables';
+@import 'mixins';
+@import 'general';
+
+// The height for toolbars in our application
+$toolbar-height: 30px;
+
+.outerDiv {
+	height: 100%;
+}
+
+.containerLayout {
+	@include flexbox-container($direction: column, $height: 100%);
+	border: 1px solid $color-border;
+
+	.toolbar {
+		justify-content: space-between;
+
+		.title {
+			overflow: visible;
+			margin-right: $padding-medium-horizontal;
+
+			&.ellipsis {
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+.toolbar {
+	@include flexbox-container($height: $toolbar-height);
+	flex-flow: row nowrap;
+	background-color: $color-bar3;
+	border-bottom: $border-width-default solid  $color-border;
+	min-height: $toolbar-height;
+	box-sizing: border-box;
+
+	> .title {
+		@extend .ellipsis;
+		cursor: default;
+		max-width: 350px; //set highter because a russion text in BP does not fit
+		padding-left: $padding-medium-horizontal;
+		line-height: $toolbar-height;
+
+		&[class*="ico-"] {
+			@include icon-placeholder-left($padding-left: $padding-medium-horizontal);
+		}
+	}
+
+	> [data-platform-menu-list] {
+		min-width: 2px;
+		flex: 1;
+		order: 1;
+	}
+
+	//> .tools { //the html-structure for actionlist is not the same like menulist-directive
+	.tools {
+		display: flex;
+		order: 2;
+
+		&.left {
+			order: 0;
+		}
+
+		&.center {
+			flex: 2;
+		}
+
+		> .divider {
+			border-left: $border-width-default solid $color-body-background;
+		}
+	}
+
+	button {
+		@extend %toolbar-button;
+
+		&.dropdown-caret {
+			@extend %caret-element;
+			width: $tabbar-button-width + 7px;
+			background-position: 7px;
+		}
+	}
+
+	.dropdown-menu {
+		button {
+			text-indent: 0;
+		}
+	}
+
+	li + .sublist {
+		border-left: $border-width-default solid $color-body-background;
+	}
+
+	.sublist + li {
+		border-left: $border-width-default solid $color-body-background;
+	}
+
+	.sublist {
+		> ul {
+			display: flex;
+		}
+	}
+
+	/* a lookup in toolbar.
+		exist for example in Activity Location Matrix. Dialog 'Matrix Display Settings'
+	 */
+	.lookup-wrapper {
+		padding-left: $padding-small-horizontal;
+		max-width: 180px;
+
+		button {
+			text-indent: 0px;
+			background-color: $color-bar3;
+
+			&:not(.plain):not(:disabled):hover {
+				background-color: transparent;
+				border: none;
+				box-shadow: none;
+			}
+		}
+
+		.form-control {
+			font-weight: bold;
+
+			.input-group-content[disabled] {
+				background-color: $color-bar3;
+				padding-top: $padding-base-vertical;
+			}
+
+			.input-group-btn {
+				padding-top: 1px;
+			}
+		}
+
+		.form-control, input, button {
+			background-color: $color-bar3;
+			border: none;
+		}
+	}
+
+	&.plain {
+		background-color: transparent;
+	}
+
+	&.left {
+		flex-direction: row-reverse;
+	}
+
+	.item-list-content {
+		display: flex;
+		flex: 1;
+
+		button {
+			width: 30px;
+			padding: 0;
+		}
+	}
+}
+
+%toolbar-button {
+	box-sizing: content-box;
+	vertical-align: middle;
+	height: $toolbar-height;
+	width: $tabbar-button-width;
+	text-indent: -9999em;
+	background-size: $size-icon $size-icon;
+}
+
+.subview-content {
+	@include flexbox-container($direction: column, $flex: 1, $height: 100%);
+	padding: 5px;
+	text-align: justify;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	> * {
+		flex: 1;
+	}
+
+	ui-business-base-form-container {
+		overflow: auto;
+	}
+}
+
+.subview-footer {
+	max-height: 30px;
+	height: 30px;
+	background-color: $color-bar3;
+	padding-left: 6px;
+
+	> input {
+		height: 26px;
+		padding: 5px;
+		white-space: nowrap;
+		overflow: hidden;
+		max-width: 200px;
+		text-overflow: ellipsis;
+
+		&.tabbgcolor {
+			background-color: #fff;
+		}
+	}
+}

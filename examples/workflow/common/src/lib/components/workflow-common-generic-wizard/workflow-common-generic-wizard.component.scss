@@ -1,0 +1,53 @@
+.alert-danger {
+	.tlb-icons {
+		&.ico-error {
+			&.validation-errors {
+				padding: 2px 0px 0px 18px;
+				background-position: 3px center;
+				background-size: 10px;
+			}
+		}
+	}
+}
+
+.generic-wizard-popup {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+	.infobar {
+		width: 30%;
+	}
+
+	.containers {
+		width: 70%;
+
+		.generic-wizard-container {
+			.generic-wizard-container-group {
+				.outerDiv {
+					.containerLayout {
+						.subview-content {
+							padding: 0px;
+
+							ui-business-base-grid-container {
+								.subview-container {
+									ui-common-grid{
+										--min-grid-height: 300px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.pt {
+				padding-top: 20px;
+			}
+
+			h1 {
+				color: #999;
+			}
+		}
+	}
+}

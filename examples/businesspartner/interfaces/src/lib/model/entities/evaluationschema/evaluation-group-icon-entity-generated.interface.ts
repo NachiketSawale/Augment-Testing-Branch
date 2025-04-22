@@ -1,0 +1,38 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { IEntityBase } from '@libs/platform/common';
+
+export interface IEvaluationGroupIconEntityGenerated extends IEntityBase {
+
+  /**
+   * CommentText
+   */
+  CommentText?: string | null;
+
+  /**
+   * EvaluationGroupFk
+   */
+  EvaluationGroupFk: number;
+
+  /**
+   * Icon
+   */
+  Icon?: number | null;
+
+  /**
+   * Id
+   */
+  Id: number;
+
+  /**
+   * PointsFrom
+   */
+  PointsFrom: number;
+
+  /**
+   * PointsTo
+   */
+  PointsTo: number;
+}

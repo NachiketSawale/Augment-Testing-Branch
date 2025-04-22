@@ -1,0 +1,206 @@
+@import 'variables';
+@import 'mixins';
+@import 'general.scss';
+
+:host {
+	@include flexbox-container($direction: column, $flex: 1, $height: 100%, $overflow: auto hidden);
+	position: relative;
+	background-image: url(/assets/ui/common/images/background/worker.png), url(/assets/ui/common/images/background/desk1-1.jpg);
+	background-position: 100% 100%, bottom;
+	background-repeat: no-repeat;
+	background-size: contain, cover;
+
+	[data-basics-common-insert-background-image] {
+		@include flexbox-container($flex: 1);
+	}
+
+	> div:first-child {
+		@include flexbox-container($flex: 1, $height: 100%);
+		flex-basis: auto;
+
+		.tiles-wrapper {
+			@include flexbox-container($height: 100%);
+
+			::ng-deep {
+				.tilegroups-wrapper {
+					@include flexbox-container($direction: column);
+
+					h1 {
+						@include flexbox-container($alignItems: center, $height: 30px);
+						font-size: 14pt;
+						padding-left: 10px;
+						min-height: 30px;
+						background: rgba(255, 255, 255, 0.5);
+						margin: 10px 10px 0 20px;
+						color: #333;
+					}
+
+					.tileGroup {
+						@include size(260px, auto);
+						display: flex;
+						flex-flow: column wrap;
+						min-width: 260px;
+						margin: 0px 10px;
+
+						.tile-l {
+							@include flexbox-container($alignItems: center);
+							width: 250px;
+							text-align: left;
+						}
+
+						.tile-m {
+							width: 120px;
+							padding: 0 10px;
+						}
+
+						.tile {
+							margin-top: 10px;
+							margin-left: 10px;
+							background-color: $grey-5;
+							height: 120px;
+							float: left;
+							position: relative;
+							color: var(--company-font-color);
+
+							&:hover {
+								outline-style: solid;
+								outline-width: 3px;
+								outline-color: invert;
+							}
+
+							&:disabled
+							{
+								cursor: default;
+								opacity: .3;
+							}
+
+							svg {
+								@include square(40px);
+							}
+
+							img {
+								width: 40px;
+							}
+
+							span {
+								font-size: 9pt;
+							}
+
+							&.deactive {
+								cursor: default;
+								opacity: .5;
+							}
+
+							> div {
+								flex: 1;
+								overflow: hidden;
+
+								> span {
+									word-break: break-word;
+									display: block;
+									white-space: normal;
+									max-height: 5.1em;
+								}
+							}
+
+
+						}
+
+						.tile-m {
+							width: 120px;
+							padding: 0 10px;
+
+							> div {
+								margin-top: $padding-large-vertical;
+
+								> span {
+									display: none;
+								}
+							}
+						}
+
+						.tile-l {
+							@include flexbox-container($alignItems: center);
+							width: 250px;
+							text-align: left;
+
+							> div {
+								padding-right: $padding-base-horizontal;
+								margin-left: $padding-large-horizontal;
+
+								> h5 {
+									@extend .ellipsis;
+									line-height: normal;
+								}
+							}
+
+							> img,
+							> svg {
+								margin-left: $padding-large-horizontal;
+								float: left;
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+	.desktop-pager-wrapper {
+		position: fixed;
+		bottom: 24px;
+		height: 30px;
+		width: calc(100% - 40px);
+		padding: 0;
+		padding-left: 20px;
+
+		.company-logo-2 {
+			background-position: left;
+			height: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.desktop-pager {
+			text-align: center;
+			font-weight: bold;
+			position: fixed;
+			bottom: 20px;
+			left: calc(50% - 75px); //width / 2 = 75. need for position in center
+			margin-bottom: $padding-base-vertical;
+			flex: 1;
+
+			::ng-deep {
+				div {
+					@include size(150px, 30px);
+					background-color: white;
+					opacity: 0.85;
+					display: flex;
+					align-items: center;
+
+					button {
+						@include square(30px);
+						background-size: 20px;
+					}
+
+					label {
+						flex: 1;
+						text-align: center;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+// status styles for the tile buttons
+@include status-styles-tile(blue);
+@include status-styles-tile(teal);
+@include status-styles-tile(indigo);
+@include status-styles-tile(azure);
+@include status-styles-tile(green);
+@include status-styles-tile(lime);
+@include status-styles-tile(grey);
+@include status-styles-tile(orange)

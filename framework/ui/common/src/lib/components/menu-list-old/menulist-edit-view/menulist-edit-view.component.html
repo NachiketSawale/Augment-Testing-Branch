@@ -1,0 +1,29 @@
+<ng-template #template>
+	<ul class="showimages layout-bar ng-scope list-items-971fe7b8d302e86f7b0cb47eb393d437" [ngClass]="isOpen ? classList + ' dropdown-menu-open' : classList">
+		<li *ngFor="let item of dropDownList.items" [hidden]="!item.isDisplayed" [ngClass]="item.type === 'divider' ? 'collapsable divider' : 'collapsable sublist'" [ngStyle]="{ 'background-color': backgroundColor }">
+			<button
+				*ngIf="item.type === 'item'; else sublist"
+				type="button"
+				[disabled]="item.disabled"
+				[ngClass]="item.cssClass"
+				title="{{ item.captionString | platformTranslate }}"
+				(change)="showModal(item.id)"
+				[ngStyle]="{ 'background-color': backgroundColor }"
+			>
+				<span [ngStyle]="{ color: textColor, 'font-family': fontFamily, 'font-weight': fontWeight }">{{ item.captionString | platformTranslate }}</span>
+				<svg *ngIf="item.showSVGTag" itwo40Svgimage [attr.sprite]="item.svgSprite" [attr.image]="item.svgImage"></svg>
+			</button>
+		</li>
+	</ul>
+</ng-template>
+<ng-template #sublist>
+	<ul class="list-items-4a3ef5cc8e612901c647040464fc1259 radio-group" [ngClass]="'radio-group'">
+		<li *ngFor="let item of menulist.items" [ngClass]="item.type === 'divider' ? 'collapsable divider' : '  '" [ngStyle]="{ 'background-color': backgroundColor }">
+			<button *ngIf="item.type === 'radio'" type="button" [disabled]="item.disabled" [ngClass]="item.cssClass" title="{{ item.caption | platformTranslate }}" (click)="showModal(item.id)" [ngStyle]="{ 'background-color': backgroundColor }" [name]="item.id">
+				<span [ngStyle]="{ color: textColor, 'font-family': fontFamily, 'font-weight': fontWeight }">{{ item.caption | platformTranslate }}</span>
+				<svg *ngIf="item.showSVGTag" itwo40Svgimage [attr.sprite]="item.svgSprite" [attr.image]="item.svgImage"></svg>
+			</button>
+		</li>
+	</ul>
+</ng-template>
+<ng-container #container></ng-container>

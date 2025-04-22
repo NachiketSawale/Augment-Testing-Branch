@@ -1,0 +1,25 @@
+<div id="main-box" class="flex-box">
+	<div class="icon tlb-icons ico-question"></div>
+	<div>
+		<div>{{ 'procurement.common.changeCurrencyMessage' | platformTranslate }}</div>
+		<br/>
+		<div>{{ 'procurement.common.modifyExchangeRate.specifyUnchangedCurrency' | platformTranslate }}</div>
+		<div id="radioRow" class="platform-form-group">
+			<div class="radio spaceToUp currencyRadio">
+				<input type="radio"
+				       name="currency"
+				       [value]="this.homeCurrencyStr"
+				       [(ngModel)]="specifyCurrency"/>
+				<label>{{ 'procurement.common.modifyExchangeRate.homeCurrency' | platformTranslate }}</label>
+			</div>
+			<div class="radio spaceToUp currencyRadio">
+				<input type="radio"
+				       name="currency"
+				       [value]="this.foreignCurrencyStr"
+				       [(ngModel)]="specifyCurrency"/>
+				<label>{{ 'procurement.common.modifyExchangeRate.foreignCurrency'| platformTranslate }}</label>
+			</div>
+		</div>
+	</div>
+</div>
+<ui-common-loading [loading]="isLoading"></ui-common-loading>

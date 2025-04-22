@@ -1,0 +1,19 @@
+.rule-operand{
+	display: flex;
+
+
+}
+
+:host {
+	::ng-deep {
+		.operand-type-btn {
+			height: 28px;
+			width: 26px;
+		}
+	}
+}
+
+
+.field-operand, .value-operand, .preset-operand{
+	flex: 1;
+}

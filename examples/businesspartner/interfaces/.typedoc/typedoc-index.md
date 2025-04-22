@@ -1,0 +1,1 @@
+This module provides interfaces and lazy injection tokens for the `businesspartner` module.

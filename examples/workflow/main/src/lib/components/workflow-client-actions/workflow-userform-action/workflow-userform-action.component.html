@@ -1,0 +1,12 @@
+<ng-container *ngIf="!isHTMLContent; else dynamicHTML">
+	<h2>{{subtitle}}</h2>
+</ng-container>
+<ng-template #dynamicHTML>
+	<header>
+		<span [innerHTML]="subtitle"></span>
+	</header>
+</ng-template>
+
+<section class="modal-body">
+	<iframe id="wfUserForm" credentialless class="fullwidth fullheight  border-all margin-top-ld"></iframe>
+</section>

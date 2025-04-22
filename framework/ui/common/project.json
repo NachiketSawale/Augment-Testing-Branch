@@ -1,0 +1,79 @@
+{
+	"name": "ui-common",
+	"$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/ui/common/src",
+	"prefix": "ui-common",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": [
+				"{workspaceRoot}/coverage/libs/ui/common"
+			],
+			"options": {
+				"jestConfig": "libs/ui/common/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		},
+		"storybook": {
+			"executor": "@storybook/angular:start-storybook",
+			"options": {
+				"port": 4400,
+				"configDir": "libs/ui/common/.storybook",
+				"browserTarget": "ui-common:build-storybook",
+				"compodoc": false,
+				"stylePreprocessorOptions": {
+					"includePaths": [
+						"libs/ui/styles",
+						"libs/ui/styles/cloud"
+					]
+				},
+				"styles": [
+					"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+					"apps/itwo40/src/assets/css/bootstrap.css",
+					"node_modules/bootstrap/dist/css/bootstrap.min.css",
+					"apps/itwo40/src/assets/css/cloud.css",
+					"apps/itwo40/src/styles.scss",
+					"libs/ui/styles/styles.scss"
+				]
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		},
+		"build-storybook": {
+			"executor": "@storybook/angular:build-storybook",
+			"outputs": [
+				"{options.outputDir}"
+			],
+			"options": {
+				"outputDir": "dist/storybook/common",
+				"configDir": "libs/ui/common/.storybook",
+				"browserTarget": "ui-common:build-storybook",
+				"compodoc": false
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		},
+		"static-storybook": {
+			"executor": "@nx/web:file-server",
+			"options": {
+				"buildTarget": "ui-common:build-storybook",
+				"staticFilePath": "dist/storybook/ui-common"
+			},
+			"configurations": {
+				"ci": {
+					"buildTarget": "ui-common:build-storybook:ci"
+				}
+			}
+		}
+	},
+	"tags": []
+}

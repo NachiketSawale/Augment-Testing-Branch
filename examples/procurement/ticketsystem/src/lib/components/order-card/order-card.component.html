@@ -1,0 +1,51 @@
+<div class="ticket-system-order-list-header">
+	<span>{{dataItem.Code}} / {{dataItem.DateReceived ? (dataItem.DateReceived | date:'dd.MM.yyyy') : (dataItem.DateOrdered | date:'dd.MM.yyyy')}}</span>
+    <span class="pull-right">
+                         <span>{{totalInfo}}</span>
+                         <span> {{dataItem.BasCurrencyDescription}}</span>
+                     </span>
+</div>
+<div class="ticket-system-order-list-attribute">
+    <div class="ticket-system-order-list-attribute-clerk" *ngIf="dataItem.ClerkPrcDescription">
+        {{('procurement.ticketsystem.orderRequest.clerk' | platformTranslate) + ' ' + dataItem.ClerkPrcDescription}}
+    </div>
+    <div class="ticket-system-order-list-attribute-status">
+        {{('procurement.ticketsystem.orderRequest.status' | platformTranslate) + ' ' + (dataItem.ReqStatus?.DescriptionInfo?.Translated ?? dataItem.ConStatus?.DescriptionInfo?.Translated)}}
+    </div>
+</div>
+<div class="ticket-system-order-list-remark" *ngIf="dataItem.Remark" [innerText]="dataItem.Remark"></div>
+
+<div class="ticket-system-order-list-details" *ngIf="IsShowDetails&&dataItem.PrcItems&& dataItem.PrcItems.length>0">
+    <div *ngFor="let item of dataItem.PrcItems">
+        <div class="col-lg-4 col-xs-12 col-sm-6 col-md-4  ticket-system-order-list-detail">
+            <div class="ticket-system-order-list-detail-inner">
+                <div class="ticket-system-order-list-detail-inner-img" *ngIf="item.Image">
+                    <img [src]="item.Image" [alt]="item.Description1"/>
+                </div>
+                <div class="ticket-system-order-list-detail-inner-description">
+
+                    <p>{{item.Supplierreference + ' - ' + item.Description1}}</p>
+
+                    <p>{{('procurement.ticketsystem.orderRequest.quantity' | platformTranslate) + ' ' + item.Quantity}}</p>
+                    <p>
+                        <span>{{'procurement.ticketsystem.orderRequest.price' | platformTranslate}}</span>
+                        <span>{{item.BasMaterialPrice}}</span>
+                        <span>{{' ' + item.BasMaterialCurrencyDescription + ' /' + item.PriceUnit + ' ' + item.BasUom}}</span>
+                    </p>
+                    <p>{{'procurement.ticketsystem.htmlTranslate.subTotal' | platformTranslate}}
+                        : {{item.Total}} {{item.BasMaterialCurrencyDescription}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="ticket-system-order-list-showbtn">
+    <a (click)="orderDelete(dataItem)" class="pull-right show-detail-btn" *ngIf="showDeleteBtn">
+        <i class="block-image control-wh-icons ico-cart-item-delete"></i>
+    </a>
+    <a (click)="showDetails()"
+       class="show-detail-text">{{IsShowDetails ? ('procurement.ticketsystem.orderRequest.HideDetails'| platformTranslate) : ('procurement.ticketsystem.orderRequest.ShowDetails'| platformTranslate)}}</a>
+</div>
+

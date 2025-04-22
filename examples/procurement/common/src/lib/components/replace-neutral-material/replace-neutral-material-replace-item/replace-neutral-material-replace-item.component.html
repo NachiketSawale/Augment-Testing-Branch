@@ -1,0 +1,13 @@
+<div class="flex-element flex-box flex-column subview-container" style="min-height: 100px;">
+	<ui-common-grid [configuration]="simulationGridConfig" [items]="simulationItems" (selectionChanged)="onSelectedRowsChanged($event)"
+	                class="lookup-grid flex-basis-auto"></ui-common-grid>
+</div>
+<div style="height: 20px">
+</div>
+<div>
+	{{ 'procurement.common.wizard.replaceNeutralMaterial.matchingMaterial'| platformTranslate }}
+</div>
+<div class="flex-element flex-box flex-column subview-container" style="min-height: 100px;">
+	<ui-common-grid [configuration]="resultMaterialGridConfig" [items]="resultItems"
+	                class="lookup-grid flex-basis-auto"></ui-common-grid>
+</div>

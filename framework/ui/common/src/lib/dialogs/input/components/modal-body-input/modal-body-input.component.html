@@ -1,0 +1,11 @@
+<!-- TODO: support different types [type]="modalOptions.type" or defer to form dialog? -->
+<input
+	class="form-control"
+	[maxlength]="inputDialogOptions.maxLength ? inputDialogOptions.maxLength : ''"
+	[(ngModel)]="value"
+	name="inputText"
+	[pattern]="inputDialogOptions.pattern ? inputDialogOptions.pattern : ''"
+	autofocus
+	[placeholder]="inputDialogOptions.placeholder ?? ''"
+/>
+<span *ngIf="inputDialogValidation(value ?? '', inputDialogOptions.pattern)" class="text-danger"> The input value is invalid !</span>
