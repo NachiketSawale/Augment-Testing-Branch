@@ -1,0 +1,20 @@
+{
+	"name": "modules-productionplanning-preload",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/productionplanning/preload/src",
+	"prefix": "productionplanning-preload",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/productionplanning/preload"],
+			"options": {
+				"jestConfig": "libs/modules/productionplanning/preload/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

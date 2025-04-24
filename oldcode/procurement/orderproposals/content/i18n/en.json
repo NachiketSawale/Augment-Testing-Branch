@@ -1,0 +1,23 @@
+﻿{
+	"procurement": {
+		"orderproposals": {
+			"moduleName": "Order Proposals",
+			"title": {
+				"header": "Order Proposals",
+				"headerDetail": "Order Proposals Detail"
+			},
+			"header": {
+				"Configuration": "Configuration",
+				"ContractConfiguration": "Contract Configuration",
+				"ReqConfiguration": "Requisition Configuration",
+				"Contact": "Contact",
+				"IsLive": "IsLive",
+				"LeadTime": "LeadTime",
+				"Tolerance": "Tolerance",
+				"Log": "Log",
+				"DeliveryAddress": "Delivery Address",
+				"ProposedQuantity": "Proposed Quantity"
+			}
+		}
+	}
+}

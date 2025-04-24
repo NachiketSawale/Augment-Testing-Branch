@@ -1,0 +1,15 @@
+<style type="text/css">
+	.btn-marker {
+		width: 30px;
+		height: 30px;
+	}
+
+	.checked {
+		background-color: #bbcddb;
+	}
+</style>
+<div class="flex-box full-size" style="justify-content: center;">
+	<div style=" background-color: #e6e6e6;border-radius: 2px;">
+		<button data-ng-repeat="item in markers" class="{{ getMarkerCls(item) }}" title="{{ ::item.title }}" data-ng-click="clickMarker(item)"></button>
+	</div>
+</div>

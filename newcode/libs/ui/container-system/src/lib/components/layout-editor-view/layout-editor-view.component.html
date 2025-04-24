@@ -1,0 +1,6 @@
+<div class="flex-box flex-element" *ngIf="data && data.orientation && data.panes" [style.flex-direction]="data.orientation===Orientation.Horizontal?'row':'column'">
+    <div class="flex-box flex-element" *ngFor="let pane of data.panes" [style.flex]="pane.size">
+        <ui-container-system-layout-editor-tabs class="flex-box flex-element" *ngIf="!pane.orientation || !pane.panes" [context]="context" [pane]="pane"></ui-container-system-layout-editor-tabs>
+        <ui-container-system-layout-editor-view class="flex-box flex-element" *ngIf="pane.orientation && pane.panes" [data]="pane" [context]="context"></ui-container-system-layout-editor-view>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+import { inject, Injectable } from '@angular/core';
+import { BasicsSharedSimpleActionWizardService, ISimpleActionOptions } from '@libs/basics/shared';
+import { IResourceEquipmentPlantEntity } from '@libs/resource/interfaces';
+import { ResourceEquipmentPlantDataService } from '../data/resource-equipment-plant-data.service';
+
+
+@Injectable({
+	providedIn: 'root'
+})
+export class ResourceEquipmentDisableWizardService extends BasicsSharedSimpleActionWizardService<IResourceEquipmentPlantEntity> {
+
+	private readonly resourceEquipmentPlantDataService = inject(ResourceEquipmentPlantDataService);
+
+	public onStartDisableWizard(): void {
+		const doneMsg = 'resource.equipment.disableDone';
+		const nothingToDoMsg = 'resource.equipment.alreadyDisabled';
+		const questionMsg = 'cloud.common.questionDisableSelection';
+		const option: ISimpleActionOptions<IResourceEquipmentPlantEntity> = {
+			headerText: 'cloud.common.enableRecord',
+			codeField: 'Code',
+			doneMsg: doneMsg,
+			nothingToDoMsg: nothingToDoMsg,
+			questionMsg: questionMsg
+		};
+
+		this.startSimpleActionWizard(option);
+	}
+
+
+	public override getSelection(): IResourceEquipmentPlantEntity[]{
+		return this.resourceEquipmentPlantDataService.getSelection();
+	}
+
+	public override filterToActionNeeded(selected: IResourceEquipmentPlantEntity[]): IResourceEquipmentPlantEntity[]{
+		const filteredSelection: IResourceEquipmentPlantEntity[] = [];
+		// Filter out the selection needed
+		selected.forEach(item => {
+				if(item.IsLive){
+					filteredSelection.push(item);
+				}
+		});
+		return filteredSelection;
+	}
+
+
+	public override performAction(filtered: IResourceEquipmentPlantEntity[]): void{
+		filtered.forEach(item => {
+			item.IsLive = false;
+			this.resourceEquipmentPlantDataService.setModified(item);
+		});
+	}
+
+
+	public override postProcess(): void {
+		this.resourceEquipmentPlantDataService.refreshSelected().then(
+
+		);
+	}
+}

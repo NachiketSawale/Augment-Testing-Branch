@@ -1,0 +1,296 @@
+/*-------------------------------------------------------------------------------
+	 Layout System (_layout.scss)
+  -------------------------------------------------------------------------------*/
+#tabbar {
+	margin-top: 1px;
+}
+
+/* ALM#130718 */
+[sub-view-container] {
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+.subview-container {
+	border: 1px solid $color-border;
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+.splitview-container {
+	border: 1px solid $color-border;
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+.splitview-container.selected {
+	border: 1px solid  var(--company-color);
+}
+
+.splitview-content {
+	padding: $padding-large-vertical $padding-medium-horizontal;
+	max-height: 100%;
+}
+
+.selected .subview-container {
+	border: 1px solid  var(--company-color);
+}
+
+.subview-content {
+	padding: $padding-large-vertical $padding-medium-horizontal;
+	max-height: 100%;
+
+	&+.statusbar-wrapper {
+		padding: 0 $padding-medium-horizontal $padding-large-vertical;
+		font-size: 12px;
+	}
+
+	//used in estimate - Rule Exceution Output
+	.subview-info {
+		min-height: 50px;
+
+		.button-md {
+			width: 100px;
+		}
+	}
+}
+
+// Overlay for deactivated container
+.subview-content-overlay {
+	@extend .vert-hori-center;
+	background-color: $color-content-overlay;
+	height: 100%;
+}
+
+.pane-content {
+	.subview-content {
+		//for layout-templates. not for layout-manager modaldialog
+		overflow: hidden;
+		flex-shrink: 1;
+
+		/*
+			After latest Chrome update(76), it existing layout bugs in form-container. When scrolling, the elements are offset.
+			Analysis with Chrome Developer tool: Decision: All parent elements get a height of 100%.
+			So that all parent elements have the same height. That was not the case.
+		 */
+		[data-platform-form-container], .platform-form-container, .platform-form, [data-platform-form-layout], [data-platform-form-content] {
+			height: 100%;
+		}
+	}
+}
+
+.pane-l {
+	padding-right: $layout-panel-padding;
+}
+
+.pane-r {
+	padding-left: $layout-panel-padding;
+}
+
+.pane-b {
+	padding-top: $layout-panel-padding;
+}
+
+.pane-t {
+	padding-bottom: $layout-panel-padding;
+}
+
+.pane-c {
+	padding: 0 $layout-panel-padding 0 $layout-panel-padding;
+}
+
+.pane-rt {
+	padding: 0 0 $layout-panel-padding $layout-panel-padding;
+}
+
+.pane-lt {
+	padding: 0 $layout-panel-padding $layout-panel-padding 0;
+}
+
+.pane-rb {
+	padding: $layout-panel-padding 0 0 $layout-panel-padding;
+}
+
+.pane-lb {
+	padding: $layout-panel-padding $layout-panel-padding 0 0;
+}
+
+.pane-rc {
+	padding: $layout-panel-padding 0 $layout-panel-padding $layout-panel-padding;
+}
+
+.pane-lc {
+	padding: $layout-panel-padding $layout-panel-padding $layout-panel-padding 0;
+}
+
+.pane-cb1, .pane-cb2, .pane-cb {
+	padding: $layout-panel-padding $layout-panel-padding 0 $layout-panel-padding;
+}
+
+.pane-ct1, .pane-ct2, .pane-ct {
+	padding: 0 $layout-panel-padding $layout-panel-padding $layout-panel-padding;
+}
+
+.subview-footer {
+	max-height: 30px;
+	background-color: $color-bar3;
+}
+
+.overflow-anchor {
+	@include square(25px);
+	display: inline-block;
+	float: right;
+	background-size: $size-icon $size-icon;
+
+	&:hover {
+		background-color: #bbcddb;
+	}
+}
+
+.subview-tabs {
+	margin-top: -1px;
+	padding-left: $padding-base-horizontal;
+	float: left;
+
+	> .subview-tab {
+		display: inline-block;
+		height: 26px;
+		overflow: hidden;
+
+		&.active {
+			background-color: $color-body-background;
+			margin-top: -1px;
+		}
+
+		// Tab Button
+		> button {
+			padding: 5px;
+			margin-top: 1px;
+			white-space: nowrap;
+			overflow: hidden;
+			max-width: 200px;
+			text-overflow: ellipsis;
+		}
+
+		//Tab hover
+		&:hover:not(.active) > button {
+			background-color: $color-tab-selected;
+		}
+	}
+}
+
+//example: sidebar, information
+.informationWrapper {
+	.toolbar {
+		min-height: $toolbar-height;
+		height: $toolbar-height;
+		border-bottom: none;
+
+		.title {
+			line-height: inherit;
+			color: $color-logindialog-fade-background;
+			padding-top: $padding-medium-vertical;
+		}
+
+		button {
+			margin-top: $padding-small-vertical;
+		}
+	}
+
+	.header {
+		display: flex;
+		min-height: $toolbar-height;
+		border-bottom: none;
+		background: none;
+
+		div {
+			flex: 1;
+			color: $color-logindialog-fade-background;
+			padding-top: $padding-medium-vertical;
+			font-size: 12pt;
+			font-weight: bold;
+			cursor: default;
+		}
+
+		button {
+			@include square(30px);
+			margin-top: $padding-small-vertical;
+			vertical-align: middle;
+			background-size: 16px;
+		}
+	}
+
+	.informationInner {
+		display: flex;
+		padding: $padding-small-vertical 0;
+		border-bottom: solid $border-width-default $color-bar-border;
+		width: 100%;
+
+		.flex-element {
+			.marginBottom {
+				margin-bottom: $padding-large-vertical;
+
+				.flex-element {
+					line-height: 15px;
+
+					&.item {
+						padding-top: $padding-small-vertical;
+					}
+				}
+			}
+
+			div[class*='-icon'] {
+				background-position: left 1px;
+				//background-position-top: 1 --> height + 1
+				height: 17px;
+				width: $size-icon;
+				background-size: $size-icon $size-icon;
+				margin-right: $padding-large-horizontal;
+			}
+		}
+
+		.map {
+			position: relative;
+			height: 200px;
+			margin-bottom: 8px;
+
+			.Infobox {
+				//infolayer over 'current-position-icon'
+				display: none;
+			}
+		}
+
+		// sidebar information openstreetmap layer
+		.osmWrapper {
+			width: 100%;
+
+			.leaflet-container {
+				height: 200px;
+				margin-bottom: $padding-large-vertical;
+			}
+		}
+
+		.imageWrapper {
+			margin: 0 auto $padding-large-vertical auto;
+			overflow: hidden;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.circle {
+			@include circle;
+			margin-bottom: $padding-large-vertical;
+		}
+	}
+}
+
+
+
+
+

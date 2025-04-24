@@ -1,0 +1,53 @@
+<div class="modal-wrapper" ng-controller="ppsProductAssignContractToDispatchNoteController" xmlns="http://www.w3.org/1999/html">
+	<section class="modal-body">
+		<div data-trs-kendo-splitter class="filler flex-box border-none"
+		     option="{panes: [ { collapsible: true, size: '45%' },{ collapsible: true, size: '55%' }],orientation:'horizontal'}">
+
+			<div style="padding-right: 10px;" class="filler pane-content">
+				<div data-trs-kendo-splitter class="filler flex-box border-none"
+				     option="{panes: [ { collapsible: true, size: '40%' },{ collapsible: true, size: '60%' }],orientation:'vertical'}">
+
+					<div style="padding-bottom: 20px;" class="filler pane-content">
+						<div class="filler flex-element flex-box flex-column lookup-grid-container subview-container overflow-hidden">
+							<div class="subview-header toolbar">
+								<h3 class="font-bold title fix">{{'logistic.dispatching.dispatchingHeader' | translate}}</h3>
+								<div data-platform-menu-list data-list="gridOptions.dispatchHeaderGrid.tools"></div>
+							</div>
+							<div class="flex-box flex-column flex-element subview-content overflow-hidden">
+								<div class="flex-basis-auto" data-platform-grid data="gridOptions.dispatchHeaderGrid"></div>
+							</div>
+						</div>
+					</div>
+
+					<div style="padding-bottom: 10px;" class="filler pane-content">
+						<div style="height: 90%; width: 100%" class="flex-element flex-box flex-column lookup-grid-container subview-container overflow-hidden">
+							<div class="subview-header toolbar">
+								<h3 class="font-bold title fix">{{'logistic.dispatching.dispatchingRecord' | translate}}</h3>
+								<div data-platform-menu-list data-list="gridOptions.dispatchRecordGrid.tools"></div>
+							</div>
+							<div style="padding-bottom: 10px" class="flex-box flex-column flex-element subview-content overflow-hidden">
+								<div class="flex-basis-auto" data-platform-grid data="gridOptions.dispatchRecordGrid"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div style="padding-left: 10px; padding-bottom: 10px;" class="filler pane-content">
+				<div style="height: 100%; width: 96%" class="flex-box flex-column lookup-grid-container subview-container overflow-hidden">
+					<div class="subview-header toolbar">
+						<h3 class="font-bold title fix">{{'sales.contract.containerTitleContracts' | translate}}</h3>
+						<div data-platform-menu-list data-list="gridOptions.orderHeaderGrid.tools"></div>
+					</div>
+					<div class="flex-box flex-column flex-element subview-content overflow-hidden">
+						<div class="flex-basis-auto" data-platform-grid
+						     data="gridOptions.orderHeaderGrid">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>

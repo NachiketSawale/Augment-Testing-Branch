@@ -1,0 +1,67 @@
+<div class="content" data-ng-controller="basicsWorkflowSidebarController as sidebarCtrl">
+	<div class="toolbar">
+		<div class="title"><span data-ng-bind="sidebarCtrl.terms.headline"></span></div>
+		<ul class="tools">
+			<li class="sublist">
+				<ul class="radio-group">
+					<li>
+						<button class="tlb-icons ico-refresh"
+						        data-ng-click="sidebarCtrl.refresh()"
+						        title="{{ 'cloud.common.toolbarRefresh' | translate }}"
+						        type="button">
+						</button>
+					</li>
+
+					<li>
+						<button class="tlb-icons ico-search"
+						        data-ng-class="{active: sidebarCtrl.showFilter}"
+						        data-ng-click="sidebarCtrl.showFilter = !sidebarCtrl.showFilter"
+						        type="button">
+						</button>
+					</li>
+					<li>
+						<button class="tlb-icons ico-settings"
+						        data-ng-class="{active: sidebarCtrl.showSettings}"
+						        data-ng-click="sidebarCtrl.showSettings = !sidebarCtrl.showSettings"
+						        type="button">
+						</button>
+					</li>
+				</ul>
+		</ul>
+	</div>
+
+	<div class="content-inner">
+		<div class="input-group form-control showgroups" data-ng-if="sidebarCtrl.showFilter">
+			<input class="input-group-content" data-ng-model="sidebarCtrl.listConfig.filter.value" ng-keypress="($event.which === 13)?sidebarCtrl.refresh():0"
+			       placeholder="Filter" type="text">
+
+			<span class="input-group-btn">
+					<button class="btn btn-default control-icons ico-input-delete btndeactive"
+					        data-ng-click="sidebarCtrl.clearSearch()"></button>
+
+					<button class="btn btn-default tlb-icons ico-search" data-ng-click="sidebarCtrl.refresh()"></button>
+				</span>
+		</div>
+
+
+		<div class="showgroups" data-ng-if="sidebarCtrl.showSettings">
+			<div data-change="sidebarCtrl.refresh()" data-domain="select" data-domain-control
+			     data-model="sidebarCtrl.listConfig.grouping" data-options="sidebarCtrl.grouping.options"></div>
+
+			<div class="margin-top-ld">
+				<div data-change="sidebarCtrl.refresh()" data-domain="select" data-domain-control
+				     data-model="sidebarCtrl.listConfig.sort" data-options="sidebarCtrl.sorting.options"></div>
+			</div>
+		</div>
+		<ul class="scroll-padding flex-element overflow flex-basis-auto" data-click-fn="sidebarCtrl.detailFn.switchListDetail"
+		    data-item-template="sidebarCtrl.itemTemplate" data-list="sidebarCtrl.workflowList"
+		    data-ng-if="!sidebarCtrl.listConfig.isGrouped"
+		    data-platform-item-list-directive></ul>
+		<ul class="scroll-padding flex-element panel-group overflow flex-basis-auto" data-child-property="'childs'"
+		    data-click-fn="sidebarCtrl.detailFn.switchListDetail" data-group-template="sidebarCtrl.groupTemplate"
+		    data-grouped-list="sidebarCtrl.workflowList" data-item-template="sidebarCtrl.itemTemplate"
+		    data-ng-if="sidebarCtrl.listConfig.isGrouped"
+		    data-platform-grouped-item-list-directive></ul>
+
+	</div>
+</div>

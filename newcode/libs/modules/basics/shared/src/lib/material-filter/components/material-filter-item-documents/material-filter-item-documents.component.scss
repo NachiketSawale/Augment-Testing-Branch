@@ -1,0 +1,16 @@
+.material-filter-preview-documents-box {
+	min-height: 28px;
+	height: auto;
+	padding: 4px;
+}
+
+.material-filter-preview-document .hasFile {
+	font-size: 13px;
+	margin: 4px 0;
+
+	.hasFile {
+		color: #0067b1;
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}

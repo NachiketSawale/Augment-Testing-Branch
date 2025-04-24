@@ -1,0 +1,45 @@
+<div>
+	<ui-common-form [formConfig]="formConfig" [entity]="dataModel" [entityRuntimeData]="formRuntimeData"/>
+</div>
+
+<div style="padding-right: 5px; padding-left: 5px">
+	<div class="input-group form-control">
+		<input type="text" [(ngModel)]="dataModel.searchText" class="form-control" (keydown)="handleSearchInput($event)" [disabled]="!canSearch()"/>
+		<span class="input-group-btn" style="margin-left: -1px;">
+	       <button class="btn btn-default input-sm btn-search tlb-icons ico-search" (click)="search()" title="{{'project.inforequest.bim360RFIs.btnLoadRFIs'| platformTranslate }}" [disabled]="!canSearch()"></button>
+	    </span>
+	</div>
+	<div *ngIf="this.page.enabled">
+		<div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+			<div class="form-control flex-align-center" style="border: none;">
+				<div class="input-group-content" *ngIf='this.page.totalCount > 0' [innerText]="this.page.getPageInfo()"></div>
+			</div>
+			<span class="input-group-btn">
+		            <button class="btn btn-default" [disabled]="!this.page.canPrev()" (click)="loadPreviousPage()" style="border: none;">
+		                <span class="control-icons ico-previous"></span>
+		            </button>
+		            <button class="btn btn-default" [disabled]="!this.page.canNext()" (click)="loadNextPage()" style="border: none;">
+		                <span class="control-icons ico-next"></span>
+		            </button>
+		        </span>
+		</div>
+	</div>
+</div>
+<div class="subview-container flex-element flex-box flex-column overflow-hidden" style="height: 420px;">
+	<div class="subview-content relative-container flex-box flex-column flex-element overflow-hidden" [ngClass]="'cid_' + gridConfig.uuid">
+		<ui-common-grid style="border:1px solid #ccc;"
+		                [configuration]="gridConfig"
+		                (cellChanged)="onCellChanged($event)"></ui-common-grid>
+	</div>
+</div>
+
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<label class="platform-form-label" style="padding-top: 0">
+			<input type="checkbox" style="vertical-align: bottom; margin-right: 2px" [(ngModel)]="dataModel.importDocument">
+			{{ 'project.inforequest.bim360RFIs.importDocumentText'| platformTranslate }}
+		</label>
+	</div>
+</div>
+
+<ui-common-loading [loading]="isLoading"></ui-common-loading>

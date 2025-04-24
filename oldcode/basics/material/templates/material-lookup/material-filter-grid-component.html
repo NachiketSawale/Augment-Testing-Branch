@@ -1,0 +1,21 @@
+<style>
+	.material-filter-grid {
+		padding: 6px;
+	}
+</style>
+
+<div class="material-filter-grid">
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+
+	<div class="flex-box flex-column flex-element margin-top-ld subview-container">
+		<div class="subview-content" style="width: 420px;height: 500px;">
+			<platform-grid data="gridData"></platform-grid>
+		</div>
+	</div>
+
+	<div class="flex-box flex-align-center">
+		<button class="btn material-filter-btn-clear" data-ng-disabled="getSelectedCount()<=0" data-ng-click="clear()">{{ 'basics.material.lookup.clear' | translate }}</button>
+		<span class="flex-element text-center">{{ getSelectedCount() }} {{ 'basics.material.lookup.of' | translate }} {{ getTotalCount() }}</span>
+		<button class="btn material-filter-btn-apply" data-ng-disabled="getSelectedCount()<=0" data-ng-click="apply()">{{ 'basics.material.lookup.apply' | translate }}</button>
+	</div>
+</div>

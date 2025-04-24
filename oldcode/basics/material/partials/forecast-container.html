@@ -1,0 +1,31 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="forecastWizardController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(!!selectedStep.stepDefinition.disallowCancel)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{wizard.title + (wizard.title ? ' - ' : '') + getCurrentStepNumber() + ' / ' +
+            getTotalStepCount()}}</h2>
+    </header>
+    <section class="modal-body">
+        <div ng-switch="currentStep.number" class="modal-wrapper">
+            <div ng-show="getCurrentStepNumber() === 1">
+               <fieldset>
+                   <legend>Material up to</legend>
+                    <ng-include src="'Basics.Material/partials/forecast-level-selection.html'"></ng-include>
+               </fieldset>
+            </div>
+            <div ng-if="getCurrentStepNumber() === 2">
+                <ng-include src="'Basics.Material/partials/material-forecast-grid.html'"></ng-include>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div data-platform-wizard-dialog-body class="modal-wrapper"></div>
+    </section>
+    <div class="modal-footer">
+        <button data-ng-disabled="!canFinish" ng-show="isReset" type="button" class="btn btn-default" data-ng-click="wizardCommands.finish()" data-ng-bind="wzStrings.reset"></button>
+        <button data-ng-disabled="disallowNext || (getCurrentStepNumber() === getEnabledSteps().length)" type="button" class="btn btn-default" data-ng-click="nextStep()" data-ng-bind="wzStrings.next"></button>
+        <button data-ng-disabled="disallowCancel" type="button" data-ng-click="$close(false)" class="btn btn-default" data-ng-bind="wzStrings.cancel"></button>
+    </div>
+</div>

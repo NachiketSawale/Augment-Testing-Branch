@@ -1,0 +1,117 @@
+<div class="platform-form-group">
+	<div data-ng-if="dialog.modalOptions.typeCustom === 2" class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileUrl" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control flex-element" data-domain-control data-domain="url" data-model="dialog.modalOptions.value.url" ></div>
+				<div data-ng-if="!dialog.modalOptions.value.url"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row" data-ng-show="dialog.modalOptions.typeCustom === 3">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.typQuickstart" | translate }}</label>
+		<div class="platform-form-col">
+			<div cloud-desktop-module-tiles-list-accordion-container data-model="dialog.modalOptions.value"></div>
+		</div>
+	</div>
+	<div data-ng-if="dialog.modalOptions.customTile" class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileIcon" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="fileselect" data-options="{
+							fileFilter: 'image/*',
+							maxSize: '50KB',
+							retrieveDataUrl: true
+						}"
+				     data-model="dialog.modalOptions.value.icon"
+				     data-change="change"></div>
+			</div>
+		</div>
+	</div>
+	<div data-ng-if="dialog.modalOptions.customTile" class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileName" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control flex-element" data-domain-control data-domain="description" data-model="dialog.modalOptions.value.displayName"
+				     data-change="change"></div>
+
+				<div data-ng-if="!dialog.modalOptions.value.displayName"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div data-ng-if="dialog.modalOptions.customTile" class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileDescription" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="description" data-model="dialog.modalOptions.value.description"
+				     data-change="change"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.tileColor" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="flex-element">
+					<div data-domain-control data-domain="color" data-model="dialog.modalOptions.value.tileColor"
+				     data-change="change"></div>
+				</div>
+				<div data-ng-if="!dialog.modalOptions.value.tileColor"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.tileOpacity" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="decimal" data-options="{decimalPlaces: 1}" data-ng-model="dialog.modalOptions.value.tileOpacity"
+			     data-change="change"></div>
+
+				<div data-ng-if="!dialog.modalOptions.value.tileOpacity"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.textColor" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="flex-element">
+					<div class="form-control" data-domain-control data-domain="color" data-model="dialog.modalOptions.value.textColor"
+					     data-change="change"></div>
+				</div>
+
+				<div data-ng-if="!dialog.modalOptions.value.textColor"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row" data-ng-if="dialog.modalOptions.value.showIconColor">
+		<label class="platform-form-label">{{ "cloud.desktop.design.iconColor" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="flex-element">
+					<div class="form-control" data-domain-control data-domain="color" data-model="dialog.modalOptions.value.iconColor"
+					     data-change="change"></div>
+				</div>
+				<div data-ng-if="!dialog.modalOptions.value.iconColor"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.tileSize" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="select" data-ng-model="dialog.modalOptions.value.tileSize"
+			       data-change="change" data-options="dialog.modalOptions.sizeOptions"></div>
+
+				<div data-ng-if="dialog.modalOptions.value.tileSize === null"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+</div>

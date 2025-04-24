@@ -1,0 +1,47 @@
+<div>
+    <header class="modal-header main-color">
+        <span class="modal-title font-bold">{{ title | platformTranslate }}</span>
+        <button class="db close" (click)="cancel()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </header>
+    <main class="modal-body flex-box flex-column">
+        <div class="input-group form-control">
+            <input #searchInput type="text" class="form-control" (keydown.enter)="search(searchInput.value,$event)" autofocus>
+            <span class="input-group-btn">
+                <button class="btn btn-default input-sm btn-search tlb-icons icon-search" (click)="search(searchInput.value,$event)"></button>
+            </span>
+        </div>
+        <div class="lookup-grid-container">
+    <!--        <div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">-->
+    <!--            <h2 class="title fix">{{'cloud.common.searchResults'| platformTranslate}} </h2>-->
+    <!--            <div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>-->
+    <!--        </div>-->
+            <div class="flex-box flex-column flex-element subview-content">
+                <ui-common-grid
+                    [configuration]="configuration">
+                </ui-common-grid>
+            </div>
+        </div>
+    </main>
+    <footer class="modal-footer flex-box flex-row">
+        <div class="custom-group">
+            <span>
+                <label>{{ htmlTranslate.structureSelectCount | platformTranslate }}</label>
+            </span>
+        </div>
+        <div class="custom-btn-group">
+            <button
+                    type="button"
+                    *ngFor="let btn of buttons"
+                    class="{{ btn.id }} btn btn-overflow"
+                    (click)="btn.fn($event)"
+                    [disabled]="btn.isDisabled()"
+                    title="{{ btn.tooltip }}"
+                    [ngClass]="{ 'btn.cssClass': true }">
+                {{ btn.caption | platformTranslate }}
+            </button>
+        </div>
+    </footer>
+</div>
+<ui-common-loading [loading]="loading"></ui-common-loading>

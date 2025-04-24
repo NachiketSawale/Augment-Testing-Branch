@@ -1,0 +1,39 @@
+<div data-ng-controller="modelAnnotationBcfImportSaveSettingsController">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label">
+				<!-- {{'model.annotation.location' | translate }} -->
+				Location
+			</label>
+			<div class="platform-form-col">
+				<select class="form-control" data-ng-model="selections.selectedType"
+				        data-ng-options="type.name for type in viewTypes" data-ng-change="selectedTypeChanged()">
+				</select>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label">
+				<!-- {{'model.annotation.availableProfiles' | translate }} -->
+				Available Profiles
+			</label>
+			<div class="platform-form-col">
+				<div class="toolbar">
+					<button class="tlb-icons ico-delete2" title="Delete Profile" data-ng-click="deleteProfile()"></button>
+				</div>
+				<select class="form-control" size="5" data-ng-model="selections.selectedProfile"
+				        data-ng-options="profile.dialogName for profile in displayedProfiles" data-ng-change="selectedProfileChanged()">
+				</select>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label">
+				<!-- {{'model.annotation.profilName' | translate }} -->
+				Profil Name
+			</label>
+			<div class="platform-form-col">
+				<input type="text" class="form-control" data-ng-model="selections.inputView.DescriptionInfo.Description" data-ng-change="inputChanged()"/>
+			</div>
+		</div>
+	</div>
+</div>
+

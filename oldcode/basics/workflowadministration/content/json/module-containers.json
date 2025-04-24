@@ -1,0 +1,60 @@
+[
+	{
+		"id": "5",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.workflowAdministration.instance.containerHeader",
+		"controller": "basicsWorkflowAdministrationInstanceController",
+		"uuid": "3a38f0e839e811e5a151feff819cdc9f",
+		"permission": "3a38f0e839e811e5a151feff819cdc9f",
+		"containerType": "grid"
+	},
+	{
+		"id": "6",
+		"template": "basics.workflow/partials/context.html",
+		"title": "basics.workflowAdministration.context.containerHeader",
+		"controller": "basicsWorkflowInstanceContextController",
+		"uuid": "bb214b5c3a7d11e5a151feff819cdc9f",
+		"permission": "8041286797b04f35aa920b4f6442989c"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.workflowAdministration.action.containerHeader",
+		"controller": "basicsWorkflowAdministrationActionInstanceController",
+		"uuid": "59bfb75bb4624c40bd52dd8ce4e42c98",
+		"permission": "3a38f0e839e811e5a151feff819cdc9f"
+	},
+	{
+		"id": "8",
+		"template": "basics.workflow/partials/context.html",
+		"title": "basics.workflowAdministration.action.context.containerHeader",
+		"controller": "basicsWorkflowActionInstanceContextController",
+		"uuid": "612085cc72fb4a9ca3ec9dba7b97db36",
+		"permission": "bb214b5c3a7d11e5a151feff819cdc9f"
+	},
+	{
+		"id": "9",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.workflowAdministration.clientAction.containerHeader",
+		"controller": "basicsWorkflowClientActionInstanceController",
+		"uuid": "1973fe93e26245a39a048eacc630b81a",
+		"permission": "3a38f0e839e811e5a151feff819cdc9f"
+	},
+	{
+		"id": "10",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.workflowAdministration.approver.containerHeader",
+		"controller": "basicsWorkflowAdministrationApproverController",
+		"uuid": "d1a0148cf99b4402be51caad2f7e5681",
+		"permission": "d1a0148cf99b4402be51caad2f7e5681"
+	},
+	{
+		"id": "11",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.workflowAdministration.instance.containerHeaderTree",
+		"controller": "basicsWorkflowAdministrationInstanceController",
+		"uuid": "c6319bbe645c45c98d1d631693607575",
+		"permission": "3a38f0e839e811e5a151feff819cdc9f",
+		"containerType": "tree"
+	}
+]

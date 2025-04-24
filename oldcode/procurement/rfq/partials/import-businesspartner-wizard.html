@@ -1,0 +1,44 @@
+<div data-ng-controller="procurementRfqSelectImportBusinessPartnerController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="platform-form-row">
+			<div class="panel-group">
+				<div class="panel panel-default ">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<label class="platform-form-label ng-binding">{{modalOptions.rfqLabelText}}</label>
+						</h4>
+					</div>
+					<div class="control-directive platform-lg margin-full-md overflow-hidden" data-basics-lookupdata-lookup-composite
+					     data-options="rfq.lookup"
+					     data-entity="rfq"
+					     data-model="rfq.selectedValue"
+					     data-ng-model="rfq.selectedValue"
+					></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<div class="panel panel-default ">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<label class="platform-form-label ng-binding">{{modalOptions.rfqBodyLabelText}}</label>
+					</h4>
+				</div>
+				<div class="flex-box flex-column subview-container">
+					<platform-Grid data="gridData" style="height: 200px;"></platform-Grid>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onOK()">
+			{{modalOptions.OKButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()">
+			{{modalOptions.CancelButtonText}}
+		</button>
+	</footer>
+</div>

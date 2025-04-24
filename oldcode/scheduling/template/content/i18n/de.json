@@ -1,0 +1,43 @@
+{
+	"scheduling": {
+		"template": {
+			"activityTemplateGroup": "Vorgangsgruppe",
+			"activityTemplateGroupfk": "Eltern",
+			"activityTemplateGroupGridHeader": "Vorgangsgruppen",
+		  	"activityTemplateGroupEditGridHeader": "Vorgangsgruppen",
+		 	"activityTemplateGroupDetailHeader": "Vorgangsgruppe Details",
+		  	"activityTemplateGroupEditDetailHeader": "Vorgangsgruppe Details",
+		  	"activityTemplateGridHeader": "Vorgänge",
+		  	"activityTemplateDetailHeader": "Vorgang Details",
+		  	"performanceRuleGridHeader": "Leistungsregeln",
+		  	"performanceRuleDetailHeader": "Leistungsregel Details",
+		  	"performanceSheetGridHeader": "Leistungsblätter",
+		  	"performanceSheetDetailHeader": "Leistungsblatt Details",
+		  	"activityTemplate": "Vorgangsvorlage",
+			"allowModify":"Modifizieren",
+			"eventTemplateGridHeader": "Ereignisse",
+		  	"eventTemplateDetailHeader": "Ereignis Details",
+			"eventType": "Ereignistyp",
+		  	"performanceSheet":"Leistungsblatt",
+			"activityTmplGrp2CUGrpGridHeader":"Zuweisung der Kontrolleinheiten",
+			"activityTmplGrp2CUGrpDetailHeader":"Zuweisung der Kontrolleinheit Details",
+		  	"activityTmpl2CUGrpGridHeader":"Zuweisung der Kontrolleinheiten",
+		  	"activityTmpl2CUGrpDetailHeader":"Zuweisung der Kontrolleinheit Details",
+			"controllingGroupFk":"Kontrollgruppen",
+			"controllingGroupDetailFk":"Kontrollgruppe Details",
+		  	"inherited":"Geerbt",
+		  	"inheritedcontrollingGroupDetailFk":"Geerbte Kontrollgruppe Details ",
+		  	"infoHeader": "Information",
+		    "isCodeUnique": "Schlüssel ist nicht eindeutig!",
+		  	"translationDesc": "Übersetzung",
+		  	"translationDescActivities": "Vorgang",
+		  	"translationDescActivitiesGroupEdit": "Vorgangsgruppe",
+			"translationDescActivitiesGroup": "Vorgangsgruppe",
+		  	"translationDescEvents": "Ereignis",
+		  	"translationDescRules": "Leistungsregel",
+	        "controllingUnitTemplate": "Muster Steuerungseinheit",
+		    "exitConfirmHeader": "Verlassen bestätigen",
+		  	"exitConfirm": "Es wurden Änderungen festgestellt. Sollen diese vor dem Verlassen gespeichert werden?"
+		}
+	}
+}

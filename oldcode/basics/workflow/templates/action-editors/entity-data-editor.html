@@ -1,0 +1,71 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.entityDataAction.entityType' | translate }}','caption':'{{::'basics.workflow.action.customEditor.entityDataAction.entityTypeTooltipCaption' | translate }}', 'width':300}" class="platform-form-label">Entity Type</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-model="EntityIdentifier"
+					     data-options="workflowDataOptions" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.entityDataAction.entityDataType' | translate }}','caption':'{{::'basics.workflow.action.customEditor.entityDataAction.entityDataTypeTooltipCaption' | translate }}', 'width':300}" class="platform-form-label"> Entity Data Type</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-model="OperationType"
+					     data-options="dataTypeOptions" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+			<div data-ng-if="isUpdate() || isCreate()" class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.entityDataAction.entityObjectList' | translate }}','caption':'{{::'basics.workflow.action.customEditor.entityDataAction.entityObjectListTooltipCaption' | translate }}', 'width':300}" class="platform-form-label">Entity Object List</label>
+				<div class="platform-form-col">
+					<div data-ng-model="EntityInputList" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div data-ng-if="!isUpdate() && !isCreate()" class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.entityDataAction.entityIdentificationList' | translate }}','caption':'{{::'basics.workflow.action.customEditor.entityDataAction.entityIdentificationListTooltipCaption' | translate }}', 'width':300}" class="platform-form-label">Entity Identification List</label>
+				<div class="platform-form-col">
+					<div data-ng-model="EntityIdentificationList" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.outputSaveObject' | translate }}','caption':'{{::'basics.workflow.action.customEditor.entityDataAction.entityPropertyTooltipCaption' | translate }}', 'width':300}"
+					class="platform-form-label">{{'basics.workflow.action.customEditor.outputSaveObject' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="EntityOutputList" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.outputInfoMessage' | translate }}','caption':'{{::'basics.workflow.action.customEditor.entityDataAction.entityInforMessageTooltipCaption' | translate }}', 'width':300}"
+					class="platform-form-label">{{'basics.workflow.action.customEditor.outputInfoMessage' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="EntityOutputInfo" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

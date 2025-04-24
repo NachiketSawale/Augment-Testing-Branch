@@ -1,0 +1,16 @@
+{
+	"language": "en-us",
+	"culture": "en-us",
+
+	"translation": {
+		"en": "English",
+		"en-us": "English (US)",
+		"de": "German",
+		"fi": "Finnish",
+		"ru": "Russian",
+		"fr": "French",
+		"es": "Spanish",
+		"nl": "Dutch",
+		"zh": "Chinese"
+	}
+}

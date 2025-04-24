@@ -1,0 +1,20 @@
+{
+	"name": "modules-basics-shared",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/basics/shared/src",
+	"prefix": "basics-shared",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/basics/shared"],
+			"options": {
+				"jestConfig": "libs/modules/basics/shared/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

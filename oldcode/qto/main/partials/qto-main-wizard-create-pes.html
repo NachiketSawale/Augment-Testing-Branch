@@ -1,0 +1,55 @@
+<div data-ng-controller="qtoMainCreatePesWizardController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <div>
+        <section class="modal-body">
+            <div style="height: 100%;width:100%">
+                <div data-platform-alert data-error="error"></div>
+                <div data-platform-alert data-error="assignError"></div>
+                <div data-platform-alert data-error="qtoLineValidationError"></div>
+                <div class="platform-lg">
+                    <div class="ng-scope">
+                        <div class="platform-form-group ng-scope">
+
+                           <!-- <div class="platform-form-row form-group">
+                                <label class="platform-form-label">{{'qto.main.wizard.QtoScope' | translate}}</label>
+                                <div class="platform-form-col">
+                                    <ul>
+                                        <li><input type="radio" name="selectQtoScope" id="QtoScope_1"  value="1" data-ng-checked="QtoScope==1" data-ng-click="onQtoScopeChange(1)"> <label for="QtoScope_1">{{'qto.main.wizard.HighlightedQto' | translate}}</label> </li>
+                                        <li><input type="radio" name="selectQtoScope" id="QtoScope_2"  value="2" data-ng-checked="QtoScope==2" data-ng-click="onQtoScopeChange(2)"> <label for="QtoScope_2">{{'qto.main.wizard.ResultSet' | translate}}</label> </li>
+                                        <li><input type="radio" name="selectQtoScope" id="QtoScope_3"  value="3"  data-ng-checked="QtoScope==3" data-ng-click="onQtoScopeChange(3)"> <label for="QtoScope_3">{{'qto.main.wizard.EntireQto' | translate}}</label> </li>
+                                    </ul>
+                                </div>
+                            </div>-->
+
+                            <div class="platform-form-row form-group">
+                                <label class="platform-form-label" style="min-width: 124px;">{{'qto.main.wizard.create.pes.generteType' | translate}}</label>
+                                <div class="platform-form-col">
+                                    <div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty" >
+                                        <input type="radio" name="CreateType" id="CreateType1" value="1" ng-checked="true" ng-click="onSelectionChanged('1')" />
+                                        <label for="CreateType1" style="vertical-align: 3px;" class="ng-binding ng-scope"> {{'qto.main.wizard.create.pes.create' | translate}}</label>&nbsp;&nbsp;
+                                        <input type="radio" name="CreateType" id="CreateType2" value="2" ng-click="onSelectionChanged('2')" >
+                                        <label for="CreateType2" style="vertical-align: 3px;" class="ng-binding ng-scope"> {{'qto.main.wizard.create.pes.update' | translate}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-platform-form-container data-form-container-options="formContainerOptions"
+                     entity="currentItem" class="fullheight"></div>
+                <div cloud-common-overlay data-loading="isLoading"></div>
+
+                <div ng-bind="errorDetail" data-ng-show="isFailed" class="alert alert-danger"  role="alert"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-hide="isSuccessed||isFailed" data-ng-disabled="assignError.show">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

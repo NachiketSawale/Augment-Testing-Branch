@@ -1,0 +1,31 @@
+<div data-ng-controller="procurementCommonImportMaterialController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<div>
+		<section class="modal-body">
+			<div data-platform-alert data-error="error"></div>
+			<div data-ng-if="modalOptions.currentStepId==0">
+				<div style="height: 100%;width:100%">
+					<div data-platform-form-container data-form-container-options="formContainerOptions"
+						 entity="currentItem" class="fullheight"></div>
+				</div>
+			</div>
+			<div data-ng-if="modalOptions.currentStepId==1">
+				<div>
+					<div data-platform-grid class="subview-container" data="gridData"></div>
+				</div>
+			</div>
+
+		</section>
+	</div>
+	<footer class="modal-footer">
+		<button data-ng-disabled="modalOptions.OKBtnRequirement"  data-ng-hide="modalOptions.canShow" type="button" class="btn btn-default"
+				data-ng-click="modalOptions.ok()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading"
+		 data-info2="modalOptions.loadingInfo"></div>
+</div>

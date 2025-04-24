@@ -1,0 +1,9 @@
+<ng-container *ngIf="value">
+	<ui-common-expression-group
+		#rootExpressionGroup
+		[data]="value"
+		[configuration]="configuration"></ui-common-expression-group>
+
+	<button (click)="performSearch()">Export</button>
+
+</ng-container>

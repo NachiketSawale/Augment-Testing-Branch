@@ -1,0 +1,6 @@
+<div class="accordion-item" (click)="onItemClick($event)">
+	<ng-container  *ngComponentOutlet="contentComponent;injector:dataInjector;"></ng-container>
+	<div class="right {{config.actionButtonDirection}}" *ngIf="actionButtons.length">
+		<ui-common-accordion-item-actions [data]="data" [actionButtons]="actionButtons"></ui-common-accordion-item-actions>
+	</div>
+</div>

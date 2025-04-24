@@ -1,0 +1,96 @@
+{
+  "!name": "filterscript",
+  "string": {
+    "!type": "class",
+    "startWith": {
+      "!type": "fn(source: string, startString: string) -> bool",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.startWith"
+    },
+    "endWith": {
+      "!type": "fn(source: string, endString: string) -> bool",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.endWith"
+    },
+    "contains": {
+      "!type": "fn(source: string, containsString: string) -> bool",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.contains"
+    },
+    "trim": {
+      "!type": "fn() -> string",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.trim"
+    },
+    "trimLeft": {
+      "!type": "fn() -> string",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.trimLeft"
+    },
+    "trimRight": {
+      "!type": "fn() -> string",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.trimRight"
+    }
+  },
+  "startWith": {
+    "!type": "fn(source: string, startString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.startWith"
+  },
+  "endWith": {
+    "!type": "fn(source: string, endString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.endWith"
+  },
+  "contains": {
+    "!type": "fn(source: string, containsString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.contains"
+  },
+  "trim": {
+    "!type": "fn(source: string) -> string",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.trim"
+  },
+  "trimLeft": {
+    "!type": "fn(source: string) -> string",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.trimLeft"
+  },
+  "trimRight": {
+    "!type": "fn(source: string) -> string",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.trimRight"
+  },
+  "StartWith": {
+    "!type": "fn(source: string, startString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.startWith"
+  },
+  "EndWith": {
+    "!type": "fn(source: string, endString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.endWith"
+  },
+  "Contains": {
+    "!type": "fn(source: string, containsString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.contains"
+  },
+  "Trim": {
+    "!type": "fn(source: string) -> string",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.trim"
+  },
+  "TrimLeft": {
+    "!type": "fn(source: string) -> string",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.trimLeft"
+  },
+  "TrimRight": {
+    "!type": "fn(source: string) -> string",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.trimRight"
+  }
+}

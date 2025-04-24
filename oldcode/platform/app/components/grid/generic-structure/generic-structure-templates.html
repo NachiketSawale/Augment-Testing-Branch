@@ -1,0 +1,48 @@
+<script type="text/ng-template" id="platform/generic-structure.html">
+	<div class="generic-struct fullheight">
+		<div class="group-items slick-groupby">
+			<div class="group-placeholder"></div>
+			<!--<platform-popup-button options="$ctrl.grpColumns" on-action="$ctrl.onAction(idx)"></platform-popup-button>-->
+			<popup-button options="$ctrl.grpColumns" on-action="$ctrl.onAction(result)">></popup-button>
+		</div>
+		<platform-Grid data="$ctrl.options.gridData"></platform-Grid>
+		<div class="info-panel" data-ng-show="$ctrl.context" data-ng-class="{ 'info-panel-color': $ctrl.context }">
+			<div style="height: 25px; width: 25px" title="{{$ctrl.context}}" data-ng-class="{ 'control-icons ico-pin3': $ctrl.context }"></div>
+		</div>
+	</div>
+</script>
+<script type="text/ng-template" id="platform/generic-struct-groupitem.html">
+	<div class="grouped-item">
+		<div class="color-field"></div>
+		<span>{{::$ctrl.colinfo.name}}</span>
+		<!--<platform-popup-button options="$ctrl.ddItems" on-result="$ctrl.onResult(result)"></platform-popup-button>-->
+		<popup-button options="$ctrl.ddItems" on-action="$ctrl.onResult(result)"></popup-button>
+		<button class="btn control-icons ico-input-delete" data-ng-click="$ctrl.remove($event)"></button>
+	</div>
+</script>
+<script type="text/ng-template" id="platform/generic-popup-color.html">
+	<div class="flex-box vert-hori-center fullwidth margin-bottom-ld">
+		<input type="checkbox">
+		<label></label>
+		<div class="margin-left-ld flex-element overflow-hidden">
+			<div data-domain-control data-domain="color" data-ng-model="$ctrl.color"></div>
+		</div>
+	</div>
+</script>
+<script type="text/ng-template" id="platform/container-statusbar.html">
+	<div style="height: 25px; width: 100%; display: flex" data-ng-class="{ 'active-filter': $ctrl.filterActive, 'inactive-filter': !$ctrl.filterActive }">
+		<div class="info-panel" style="display: flex; justify-content: flex-start; width: 50%;">
+			<div data-ng-show="$ctrl.filterActive" class="tlb-icons ico-filter" style="width: 25px"></div>
+			<div class="field"></div>
+		</div>
+		<div style="display: flex; justify-content: flex-end; width: 50%" disabled="$ctrl.statusBarOptions">
+			<span style="display: flex; align-items: center;">{{$ctrl.pageText}}</span>
+			<button ng-show="$ctrl.options.firstPage" class="tlb-icons ico-rec-first" style=" width: 30px; height: 25px" data-ng-click="$ctrl.changePage('first')"></button>
+			<button ng-show="$ctrl.options.prevPage" class="tlb-icons ico-rec-previous" style=" width: 30px; height: 25px" data-ng-click="$ctrl.changePage('prev')"></button>
+			<button ng-show="$ctrl.options.nextPage" class="tlb-icons ico-rec-next" style=" width: 30px; height: 25px" data-ng-click="$ctrl.changePage('next')"></button>
+			<button ng-show="$ctrl.options.lastPage" class="tlb-icons ico-rec-last" style=" width: 30px; height: 25px" data-ng-click="$ctrl.changePage('last')"></button>
+		</div>
+	</div>
+</script>
+
+

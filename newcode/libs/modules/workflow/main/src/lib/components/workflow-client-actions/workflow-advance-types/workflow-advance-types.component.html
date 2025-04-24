@@ -1,0 +1,37 @@
+<ng-container [ngSwitch]="configInfo.type">
+	<div *ngSwitchCase="'link'">
+		<a [href]="dynamicElementData" target="_blank">{{ dynamicDisplayText }}</a>
+	</div>
+	<div *ngSwitchCase="'documentButton'">
+		<a (click)="onElementClick(this.configInfo.type)" class="cursor-pointer">{{ dynamicDisplayText }}</a>
+	</div>
+	<div *ngSwitchCase="'entityLink'">
+		<a (click)="onElementClick(this.configInfo.type)" class="cursor-pointer">{{ dynamicDisplayText }}</a>
+	</div>
+
+	<div *ngSwitchCase="'workflowButton'">
+		<button type="button" (click)="onElementClick(this.configInfo.type)" class="btn btn-default fullwidth">{{
+			dynamicDisplayText }}</button>
+	</div>
+
+	<div *ngSwitchCase="'wizardButton'">
+		<button type="button" (click)="onElementClick(this.configInfo.type)" class="btn btn-default fullwidth">{{
+			dynamicDisplayText }}</button>
+	</div>
+
+	<div *ngSwitchCase="'divider'">
+		<hr>
+	</div>
+	<div *ngSwitchCase="'space'">
+		<br>
+	</div>
+
+	<div *ngSwitchCase="'label'">
+		<div *ngIf="this.dynamicElementData; else renderHtml">
+			{{dynamicDisplayText}}
+		</div>
+		<ng-template #renderHtml>
+			<div [innerHTML]="labelHtml"></div>
+		</ng-template>
+	</div>
+</ng-container>

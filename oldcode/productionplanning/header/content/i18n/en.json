@@ -1,0 +1,86 @@
+{
+	"productionplanning": {
+		"header": {
+			"headerListTitle": "PPS Headers",
+			"headerDetailTitle": "PPS Header Details",
+			"header2bpListTitle": "PPS Header Partners",
+			"header2bpDetailTitle": "PPS Header Partner Detail",
+			"header2contactListTitle": "PPS Header Partner Contacts",
+			"header2contactDetailTitle": "PPS Header Partner Contact Details",
+			"header2clerkListTitle": "PPS Header Clerks",
+			"header2clerkDetailTitle": "PPS Header Clerk Details",
+			"entityHeader": "PPS Header",
+			"entityHeaderTypeFk": "Production Planning Type",
+			"entityProbability": "Probability",
+			"entityThreshold": "Threshold",
+			"entityHeader2Bp": "PPS Header Partner",
+			"entityHeader2Contact": "PPS Header Partner Contact",
+			"entityHeader2Clerk": "PPS Header Clerk",
+			"entityRoleFk": "Role",
+			"entitySubsidiaryFk": "Subsidiary",
+			"entityContactFk": "Contact",
+			"entityContactRoleTypeFk": "Contact Role Type",
+			"entityHeader2BpFk": "PPS Header Partner",
+			"documentListTitle": "Documents",
+			"headerJobSketch": "PPS Header Job Delivery Address Sketch",
+			"entityOrdHeaderFk": "Contract",
+			"headerFormDataLisTitle": "Form Data for Production Planning",
+			"errors": {
+				"uniqBusinessPartnerFk": "The Business Partner should be unique under the same Role and Subsidiary",
+				"uniqRoleFk": "The Role should be unique under the same Business Partner and Subsidiary",
+				"uniqSubsidiaryFk": "The Subsidiary should be unique under the same Business Partner and Role",
+				"uniqContactFk": "The Contact should be unique under the same Contact Role Type",
+				"uniqContactRoleTypeFk": "The Contact Role Type should be unique under the same Contact"
+			},
+			"prcPackage": {
+				"listTitle": "Procurement Packages"
+			},
+			"plannedQuantityListTitle": "PPS Header:Planned Quantity",
+			"plannedQuantityBoqReferenceTitle": "Planned Quantity: Boq Reference",
+			"parentPlannedQuantityListTitle": "PPS Header:Parent Planned Quantity",
+			"wizard": {
+				"importPQs": {
+					"title": "Import Planned Quantities",
+					"importType": "Type",
+					"files": "Files",
+					"dtaAndXmlRequirementErrorMsg": "A Dta file and a Xml file are required. Please re-select files.",
+					"compressing": "Compressing",
+					"importing": "Importing",
+					"uploading": "Uploading",
+					"successMsg": "Planned Quantities have been imported successfully.",
+					"missingWizParamError": "Wizard parameter CostCodeMappingConfig is missing. Please configure it."
+				},
+				"transferPreliminary": {
+					"title": "Transfer Preliminary Production Planning",
+					"signed": "Contract",
+					"discarded": "Discarded",
+					"noSelectedWarn": "Please select a Production Planning first",
+					"plsSelectWithPreliminary": "Please select a correct preliminary production planning to proceed!",
+					"plsSelectActive": "Please activate it first",
+					"failToFindType": "Fail to find a type to alter from preliminary"
+				},
+				"createPreliminaryItem": {
+					"title": "Create/Update Preliminary Items",
+					"previewTitle": "Preview Preliminary Items",
+					"preliminaryItems": "Preliminary Items",
+					"calculation": "Calculation",
+					"noSelection": "No ppsHeader selection.",
+					"siteThreshold": "Threshold of Site Capacity",
+					"probability": "Probability",
+					"noQualified": "Create Preliminary Planning units is not possible because PPS header is not qualified.",
+					"noPlanQuantity": "Create Preliminary Planning unit is not possible because no qualified Planned quantity.",
+					"noItemStatusForPreliminary": "Cannot find a Planing Unit Status that is for preliminary.",
+					"goToItem": "Go to PpsItem",
+					"maxDuration": "Max Product Duration(weeks)",
+					"earliestStart": "Earliest Production Date",
+					"latestEnd": "Latest Production Date",
+					"productionStart": "Production Start",
+					"productionFinish": "Production Finish",
+					"deliveryStart": "Delivery Start",
+					"deliveryFinish": "Delivery Finish",
+					"siteChangedError": "Site has been changed. Need Recalculation."
+				}
+			}
+		}
+	}
+}

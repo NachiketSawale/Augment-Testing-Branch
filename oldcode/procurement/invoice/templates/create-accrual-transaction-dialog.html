@@ -1,0 +1,103 @@
+<style type="text/css">
+	.pes-row{
+		margin: 5px 0;
+	}
+
+	.pes-row label{
+		line-height: 28px;
+	}
+
+	.pes-row .invalid-cell{
+		height: 20px;
+	}
+
+	.btn-goto {
+		background-position-x: 12px;
+	}
+</style>
+
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+	<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+
+	<div data-ng-show="!isSuccess">
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'procurement.common.wizard.createAccrualTransaction.transactionType' | translate }}</label>
+			<div class="col-md-9" data-basics-lookupdata-transaction-type-combobox data-ng-model="entity.TransactionTypeId" data-options="transactionTypeOptions"></div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'procurement.common.wizard.createAccrualTransaction.transactionMode' | translate }}</label>
+			<div class="col-md-9" procurement-invoice-accrual-mode-lookup data-ng-model="entity.AccrualModeId"></div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'procurement.common.wizard.createAccrualTransaction.entityCompanyYearServiceFk' | translate }}</label>
+			<div class="col-md-9" controlling-revenue-recognition-company-year-combobox data-ng-model="entity.CompanyYearId" data-options="companyYeaderOptions"></div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'procurement.common.wizard.createAccrualTransaction.entityCompanyPeriod' | translate }}</label>
+			<div class="col-md-9" controlling-revenue-recognition-company-period-combobox data-ng-model="entity.CompanyPeriodId" data-options="companyPeriodOptions"></div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'procurement.common.wizard.createAccrualTransaction.effectiveDate' | translate }}</label>
+			<div class="col-md-9">
+				<div data-domain-control data-ng-model="entity.EffectiveDate" data-domain="dateutc"  readonly="true"></div>
+			</div>
+		</div>
+
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'procurement.common.wizard.createAccrualTransaction.voucherNo' | translate }}</label>
+			<div class="col-md-9">
+				<div data-domain-control data-ng-model="entity.VoucherNo" data-domain="code" readonly="entity.UseCompanyNumber"></div>
+				<div class="invalid-cell" data-ng-if="!entity.VoucherNo" data-ng-bind="validation.voucherNoIsRequired"></div>
+			</div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'procurement.common.wizard.createAccrualTransaction.postingNarrative' | translate }}</label>
+			<div class="col-md-9">
+				<div data-domain-control data-ng-model="entity.PostingNarrative" data-domain="description"></div>
+			</div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'cloud.common.entityCommentText' | translate }}</label>
+			<div class="col-md-9">
+				<div data-domain-control data-ng-model="entity.Comment" data-domain="comment"></div>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-show="isSuccess">
+		<div data-ng-if="!!count" class="icon-message">
+			<div class="tlb-icons icon ico-info"></div>
+			<div class="message">
+				<div> {{count}} {{ 'procurement.common.wizard.createAccrualTransaction.companyTransactionCreated' | translate }}</div>
+			</div>
+		</div>
+		<div data-ng-if="!count" class="icon-message">
+			<div class="tlb-icons icon ico-warning" style="width: 40px;"></div>
+			<div class="message" data-ng-bind="'procurement.common.wizard.createAccrualTransaction.noCompanyTransactionCreated' | translate"></div>
+		</div>
+	</div>
+</section>
+<footer class="modal-footer">
+	<div data-ng-show="!isSuccess">
+		<button type="button" class="btn btn-default" data-ng-click="onOk()" data-ng-disabled="!canOk()"  style="display:inline-block;">
+			{{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="$close(false)"  style="display:inline-block;">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</div>
+
+	<div data-ng-show="isSuccess">
+		<button type="button" class="btn btn-default" data-ng-click="success()">
+			{{'cloud.common.ok' | translate}}
+		</button>
+	</div>
+</footer>

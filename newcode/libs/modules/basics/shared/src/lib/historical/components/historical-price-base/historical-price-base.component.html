@@ -1,0 +1,58 @@
+<div class="filler flex-box flex-column">
+	<div class="platform-lg platform-form-group" style="margin: 5px 10px 5px 10px;">
+		<div class="platform-form-row" data-ng-show="isFromPriceCom">
+			<div style="margin-bottom: 10px;">
+				<ng-content select="header"></ng-content>
+				<div class="lg-5 ellipsis">{{ 'basics.common.historicalPrice.priceRange' | platformTranslate }} : {{ setPriceRange() }}</div>
+			</div>
+		</div>
+		<div style="width: 6%;height: 50px;float: left; padding-top: 10px;" class="ellipsis">
+			{{ 'procurement.common.wizard.updateItemPrice.from' | platformTranslate }}
+		</div>
+		<div style="width: 94%;float: left;">
+			<ng-content select="content"></ng-content>
+			<div class="lg-12">
+				<div class="lg-4">
+					<div class="lg-6">
+						<div class="checkbox spaceToUp">
+							<label class="ellipsis">
+								<ui-common-domain-control-host [readOnly]="!currentItem.queryFromQuotation" [fieldType]="fieldType.Boolean" [value]="currentItem.queryNeutralMaterial!" (change)="neutralMatChange()">
+								</ui-common-domain-control-host>
+								{{ 'procurement.common.wizard.updateItemPrice.quotation' | platformTranslate }}
+							</label>
+						</div>
+					</div>
+
+					<div class="lg-6">
+						<div class="checkbox spaceToUp">
+							<label class="ellipsis">
+								<ui-common-domain-control-host [readOnly]="!currentItem.queryFromContract" [fieldType]="fieldType.Boolean" [value]="currentItem.queryNeutralMaterial!" (change)="neutralMatChange()">
+								</ui-common-domain-control-host>
+								{{ 'procurement.common.wizard.updateItemPrice.contract' | platformTranslate }}
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="lg-6">
+					<div class="lg-5" style="padding-right: 0;">
+						<ui-common-domain-control-host [value]="currentItem.startDate" [fieldType]="fieldType.Date"></ui-common-domain-control-host>
+					</div>
+					<div class="lg-5" style="padding-right: 0; margin-left: 10px;">
+						<ui-common-domain-control-host [value]="currentItem.endDate" [fieldType]="fieldType.Date"></ui-common-domain-control-host>
+					</div>
+				</div>
+
+				<div class="lg-2 form-group platform-form-row">
+					<div class="lg-9 text-right form-group platform-form-row composite-last-item" style="float: right;">
+						<button [disabled]="!currentItem.queryFromMaterialCatalog && !currentItem.queryFromQuotation && !currentItem.queryFromContract"
+						        (click)="search()" style="width:100%;"
+						        class="btn btn-default ellipsis">{{ 'cloud.common.searchButton' | platformTranslate }}
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

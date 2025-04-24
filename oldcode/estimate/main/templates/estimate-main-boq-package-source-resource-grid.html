@@ -1,0 +1,38 @@
+<div class="flex-box flex-element flex-column" data-ng-controller="estimateMainBoqPackageSourceResourceGridController">
+	<div style="padding-bottom: 5px">
+		<div estimate-main-create-package-wizard-selection-mode data-title-label="estimate.main.createBoqPackageWizard.sourceType.LineItems.title"
+		data-is-inclusive-mode-readonly="true"></div>
+	</div>
+    <div class="toolbar">
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div data-platform-alert data-error="error"></div>
+    <!-- <div class="flex-box flex-column flex-element" data-ng-show="message"><label data-ng-bind="message|translate"></label> </div> -->
+    <div class="flex-box flex-column flex-element grid-wrapper" style="border: 1px solid #ccc">
+        <div data-platform-grid data-data="gridData" ></div>
+
+    </div>
+    <div class="statusbar">
+        <div class="right-side flex-element flex-box flex-align-center">
+            <!-- go to first page -->
+            <button class="btn tlb-icons ico-rec-first item block-image" data-ng-click="getFirstPage()"
+                    data-ng-disabled="isLoading||!canFirstPage()"></button>
+
+            <!-- go to previous page -->
+            <button class="btn control-icons ico-previous item block-image" data-ng-click="getPrevPage()"
+                    data-ng-disabled="isLoading||!canPrevPage()"></button>
+
+            <span class="item ellipsis">
+										{{getPageText()}}
+									</span>
+            <!-- go to next page -->
+            <button class="btn control-icons ico-next item block-image" data-ng-click="getNextPage()"
+                    data-ng-disabled="isLoading||!canNextPage()"></button>
+
+            <!-- go to last page -->
+            <button class="btn tlb-icons ico-rec-last item block-image" data-ng-click="getLastPage()"
+                    data-ng-disabled="isLoading||!canLastPage()"></button>
+        </div>
+    </div>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

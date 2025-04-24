@@ -1,0 +1,77 @@
+﻿<div data-ng-controller="basicsCommonChangeStatusDialogController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body overflow" style="height:600px;">
+		<div class="modal-wrapper" data-ng-hide="showHistory || showNext">
+			<div data-ng-show="isChangingStatus" class="flex-element">
+				<div class="margin-full-md">
+					<h3>{{::modalOptions.runningMessage}}</h3>
+				</div>
+				<div data-ng-repeat="result in getChangeStatusResults()" class="flex-box information">
+					<ul class="flex-element">
+						<li>{{result.ErrorMsg}}</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-ng-show="!isChangingStatus" class="flex-element flex-basis-auto">
+				<div data-basics-commom-change-status-editor data-options="options"></div>
+			</div>
+			<!-- above line of code dipalying change status window -->
+
+			<div class="text-right spaceToUp" data-ng-if="!isChangingStatus">
+				<label style="vertical-align: middle;">
+					<input type="checkbox" name="showAvailableStatusFlg" data-ng-model="options.showAvailableStatusFlg"
+						data-ng-click="showAvailStatus()" style="vertical-align: middle;margin:0px;">
+					{{'basics.common.changeStatus.showAvailableStatus' | translate }}
+				</label>
+			</div>
+			<div data-ng-if="!options.isSimpleStatus && !isChangingStatus">
+				<h3>{{ 'basics.common.changeStatus.remark' | translate }}</h3>
+				<!--<span  class="form-control" data-domain-control data-domain="remark" data-model="statusRemark" data-options="commentOptions"  data-model-options="{ updateOn: 'blur', debounce: { default: 2000, blur: 0} }"></span>-->
+				<span class="form-control" data-domain-control data-domain="remark" data-model="data.remark"></span>
+			</div>
+		</div>
+		<div data-basics-commom-change-status-history data-options="options" data-ng-if="showHistory"
+			class="modal-wrapper" style="height: 350px;"></div>
+		<div data-basics-commom-change-status-next data-options="options" data-ng-if="showNext" class="modal-wrapper"
+			style="height: 350px;"></div>
+
+		<div data-ng-if="options.additionalMessage">
+			<br>
+			<h3 style="color: red">{{options.additionalMessage}}</h3>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="showHistory=!showHistory"
+			data-ng-show="!isSimpleStatus && !isChangingStatus && !isMultipleSelected && showButton">
+			{{showHistory ? modalOptions.backButtonText : modalOptions.historyButtonText}}
+		</button>
+
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+			data-ng-show="!isChangingStatus && showButton" data-ng-disabled="modalOptions.disableOk()">
+			{{modalOptions.actionButtonText}}
+		</button>
+
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()"
+			data-ng-disabled="isRunningWorkflow">
+			{{modalOptions.closeButtonText}}
+		</button>
+
+		<button type="button" class="btn btn-default" data-ng-click="showNextButtom()"
+			data-ng-show="ifReadOnlyTrue && showButton">
+			Next </button>
+
+		<button type="button" class="btn btn-default" data-ng-click="goToDefaultPage()" data-ng-show="showBackButton">
+			Back
+		</button>
+
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.makeReadonly()"
+			data-ng-show="showReadOnlyButton()" data-ng-disabled="makeReadonly()">
+			Read-Only
+		</button>
+
+
+	</footer>
+</div>

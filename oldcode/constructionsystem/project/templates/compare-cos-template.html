@@ -1,0 +1,34 @@
+<header class="modal-header main-color">
+    <button type="button"
+            class="close db"
+            data-dismiss="modal"
+            data-ng-click="$close(false)"
+            aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+    </button>
+    <h2 class="modal-title" data-ng-bind="currentStep.title | translate"></h2>
+</header>
+
+<section class="modal-body">
+    <div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+    <div ng-switch="currentStep.number" class="modal-wrapper">
+        <div ng-switch-when="0">
+            <ng-include src="'constructionsystem.project/templates/compare-cos-step0-template.html'"></ng-include>
+        </div>
+        <div ng-switch-when="1">
+            <ng-include src="'constructionsystem.project/templates/compare-cos-step1-template.html'"></ng-include>
+        </div>
+        <div ng-switch-when="2">
+            <ng-include src="'constructionsystem.project/templates/change-model-step-template.html'"></ng-include>
+        </div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default"
+            data-ng-repeat="button in currentStep.buttons"
+            data-ng-bind="button.label | translate"
+            data-ng-disabled="button.disable && button.disable()"
+            data-ng-click="button.action()">
+    </button>
+</footer>

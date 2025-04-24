@@ -1,0 +1,1 @@
+This module defines the general sidebar infrastructure.

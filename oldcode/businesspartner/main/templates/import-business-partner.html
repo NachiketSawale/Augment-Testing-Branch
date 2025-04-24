@@ -1,0 +1,19 @@
+<div data-ng-controller="businessPartnerImportPartnerController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div style="height: 100%;">
+			<div class="fullheight" style="overflow-y: auto">
+				<div data-platform-alert data-error="error"></div>
+				<div class="input-group form-control">
+					<input type="text" class="form-control" ng-model="import.fileName" readonly="readonly">
+					<span class="input-group-btn">
+                        <button id="importFileBtn" class="btn btn-default tlb-icons ico-upload" data-ng-disabled="import.isDisabled"></button>
+                    </span>
+				</div>
+				<div data-basics-common-upload-progress-bar data-options="progressBarOptions"></div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+	</footer>
+</div>

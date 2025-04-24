@@ -1,0 +1,1 @@
+This is the salesTaxcode area of the basics salesTaxcode module.

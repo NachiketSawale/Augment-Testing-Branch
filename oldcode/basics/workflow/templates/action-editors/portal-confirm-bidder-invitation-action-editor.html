@@ -1,0 +1,120 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.contactId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.contactId" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.portalAccessGroupId' |
+				translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.portalAccessGroupId" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.portalInvitationId' |
+				translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.portalInvitationId" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.portalBaseUrl' |
+				translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.portalBaseUrl" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.eMailSubject' |
+				translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.eMailSubject" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.eMailBody' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.eMailBody" data-options="codeMirrorOptionsMulti"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.eMailRecipients' |
+				translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.eMailRecipients" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.resultCode' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.resultCode" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.resultMessage' |
+				translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-domain="description" data-domain-control data-ng-model="output.resultMessage"
+					     data-options="codeMirrorOptionsMulti"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.confirmed' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.confirmed" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

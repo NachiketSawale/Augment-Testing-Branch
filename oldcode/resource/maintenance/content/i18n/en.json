@@ -1,0 +1,24 @@
+{
+	"resource": {
+		"maintenance": {
+			"schemaListTitle": "Maintenance Schemes",
+			"schemaDetailTitle": "Maintenance Scheme Details",
+			"schemaRecordListTitle": "Scheme Records",
+			"schemaRecordDetailTitle": "Scheme Record Details",
+			"fixedDays": "Fixed Days",
+			"daysAfter": "Days After",
+			"performanceBased": "Performance Based",
+			"entityUoM": "UoM",
+			"duration": "Duration",
+			"jobCardTemplate": "Job Card Template",
+			"entityMaintenanceScheme": "Maintenance Scheme",
+			"leadQuantity": "Lead Quantity",
+			"translationDescMaintenanceScheme": "Maintenance Schemes",
+			"translationDescMaintenanceSchemeRecord": "Scheme Records",
+			"maintenanceSchemaRecordEntity": "Scheme Record",
+			"leadDays": "Lead Days",
+			"entityIsRecalcDates": "Do Recalculate Dates",
+			"entityIsRecalcPerformance": "Do Recalculate Performance"
+		}
+	}
+}

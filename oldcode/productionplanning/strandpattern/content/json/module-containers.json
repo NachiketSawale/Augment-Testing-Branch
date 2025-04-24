@@ -1,0 +1,35 @@
+[
+	{
+		"id": "productionplanning.strandpattern.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.strandpattern.listTitle",
+		"controller": "productionplanningStrandpatternListController",
+		"uuid": "3efc0cfe89e54204b714580fc08b4ddf",
+		"permission": "8e390164f0d441fba5a8f7dc5c4da845"
+	},
+	{
+		"id": "productionplanning.strandpattern.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.strandpattern.detailTitle",
+		"controller": "productionplanningStrandpatternDetailController",
+		"uuid": "719b1749c8224e22b0594293681281f5",
+		"permission": "8e390164f0d441fba5a8f7dc5c4da845"
+	},
+	{
+		"id": "productionplanning.strandpattern.photo",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "productionplanning.strandpattern.photo",
+		"controller": "productionplanningStrandpatternPhotoController",
+		"uuid": "30cfb1e85e51424194c5bf1da1c5cdf3",
+		"permission": "8e390164f0d441fba5a8f7dc5c4da845",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "productionplanning.strandpattern2material.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.strandpattern.strandpattern2material.listTitle",
+		"controller": "productionplanningStrandpattern2materialListController",
+		"uuid": "3105a9e9ef8444c1bea3966fd6cb3052",
+		"permission": "8e390164f0d441fba5a8f7dc5c4da845"
+	}
+]

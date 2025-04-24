@@ -1,0 +1,33 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+export interface ISupplierOpenItemsEntity{
+	Id: number,
+	Vendor_No: string,
+	Vendor_Name: string,
+	Purchaser_Code: string,
+	Transaction_No: number,
+	Posting_Date: Date,
+	Due_Date: Date,
+	Pmt_Discount_Date: Date,
+	Document_Date: Date,
+	Document_Type: string,
+	Document_No: string,
+	Source_Code: string,
+	Reason_Code: string,
+	IC_Partner_Code: string,
+	Open: boolean,
+	Currency_Code: string,
+	Dimension_Set_ID: string,
+	Amount: number,
+	Debit_Amount: number,
+	Credit_Amount: number,
+	Remaining_Amount: number,
+	Amount_LCY: number,
+	Debit_Amount_LCY: number,
+	Credit_Amount_LCY: number,
+	Remaining_Amt_LCY: number,
+	Original_Amt_LCY: number,
+	AuxiliaryIndex1: string
+}

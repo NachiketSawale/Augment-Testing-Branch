@@ -1,0 +1,32 @@
+<div data-ng-controller="prcCommonModifyExchangeRateController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="icon-message ng-scope">
+			<div class="icon tlb-icons ico-question"></div>
+			<div class="message ng-binding">
+				<div>{{::options.body.bodyTextKey}}</div>
+				<br/>
+				<div>{{::options.body.specifyText}}</div>
+				<div class="platform-form-group">
+					<div class="radio spaceToUp" style="display: inline-block;">
+						<label>
+							<input type="radio" name="currency" value="HomeCurrency"
+								   data-ng-model="options.body.radioSelect"/>{{::options.body.homeCurrency}}
+						</label>
+					</div>
+					<div class="radio spaceToUp" style="display: inline-block; margin-left: calc(50% - 113px)">
+						<label>
+							<input type="radio" name="currency" value="ForeignCurrency"
+								   data-ng-model="options.body.radioSelect"/>{{::options.body.foreignCurrency}}
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="options.onYes()" data-ng-bind="options.yesText">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="options.onNo()" data-ng-bind="options.noText"></button>
+	</footer>
+</div>

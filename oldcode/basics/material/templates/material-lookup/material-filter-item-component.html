@@ -1,0 +1,7 @@
+<button class="material-filter" data-ng-class="'material-filter-' + definition.Id" data-ng-click="openFilter($event)" data-ng-disabled="definition.Readonly">
+	<span class="filter-column" data-ng-bind="definition | materialFilterItemTranslate"></span>
+	<span class="filter-condition" data-ng-bind="getCondition() | translate" data-ng-if="getCondition() !== '' && hasFactors()"></span>
+	<span class="filter-value" data-ng-bind="getValue()" title="{{ getValue() }}" data-ng-if="getValue() !== ''"></span>
+	<span class="filter-number" data-ng-bind="getNumber()" data-ng-if="getNumber()>1"></span>
+	<span class="btn filter-btn control-icons ico-close" data-ng-click="removeFilter($event)" data-ng-hide="definition.Readonly" data-ng-disabled="definition.HasReadonlyFactor"></span>
+</button>

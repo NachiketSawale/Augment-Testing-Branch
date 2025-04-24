@@ -1,0 +1,50 @@
+﻿<div data-ng-controller="modelMainObjectSidebarSearchGoogleController" data-cloud-Desktop-On-Key-Enter="searchOptions.onStartSearch">
+	<div data-ng-if="searchOptions.filterRequest.showProjectContextEnabled()">
+		<div class="input-group projectContextInfo">
+			<input class="form-control" type="text" data-ng-model="searchOptions.filterRequest.projectContextInfo"
+			       readonly>
+					<span class="input-group-btn">
+						<button class="btn btn-default control-icons ico-input-delete"
+						        data-ng-click="searchOptions.onClearProjectContext()"></button>
+					</span>
+		</div>
+	</div>
+	<div data-ng-show="isPinnedModelSelected">
+		<div class="projectContextInfo" data-ng-include="'sidebar-filter-pinned-container.html'"></div>
+	</div>
+
+	<div class="input-group form-control">
+		<input id="GoogleSearchInput" type="text" class="input-group-content"
+		       data-ng-model="filterRequest.pattern"
+		       placeholder="{{translate.cloud.desktop.sdGoogleSearchFilter}}">
+
+				<span class="input-group-btn">
+					<button class="btn btn-default control-icons ico-input-delete"
+					        data-ng-disabled="searchOptions.filterRequest.pattern.length===0"
+					        data-ng-class="{btndeactive: searchOptions.filterRequest.pattern.length===0}"
+					        data-ng-click="searchOptions.onClearSearch()"></button>
+
+					<button class="btn btn-default tlb-icons ico-search"
+					        data-ng-disabled="searchOptions.filterInfo.isPending"
+					        data-ng-class="{btndeactive: searchOptions.filterInfo.isPending}"
+					        data-ng-click="searchOptions.onStartSearch()"></button>
+				</span>
+	</div>
+
+	<div data-ng-if="searchOptions.filterRequest.showOptions" class="filteroptions platform-form-group">
+		<label class="subTitle" ng-bind="'cloud.desktop.sdSearchOptionLabel'|translate"></label>
+
+		<div data-ng-if="searchOptions.filterRequest.useCurrentClient!=null" class="margin-top-ld">
+
+			<div data-domain-control data-domain="boolean" data-model="searchOptions.filterRequest.useCurrentClient" data-options="searchOptions.useCurrentClientChk">
+			</div>
+
+		</div>
+		<div data-ng-if="searchOptions.filterRequest.includeNonActiveItems!=null">
+
+			<div data-domain-control data-domain="boolean" data-model="searchOptions.filterRequest.includeNonActiveItems" data-options="searchOptions.includeNonActiveItemsChk">
+			</div>
+
+		</div>
+	</div>
+</div>

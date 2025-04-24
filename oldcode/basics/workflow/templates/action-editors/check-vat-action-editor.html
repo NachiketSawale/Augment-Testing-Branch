@@ -1,0 +1,56 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="inputopen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!inputopen"></div>
+            </span>
+		</div>
+
+		<div class="platform-form-group">
+			<!--Block for VAT number-->
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.vatNo' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.vatNo" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label
+					class="platform-form-label">{{'basics.workflow.action.customEditor.outputCheckVatResponse' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.response" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputCheckVatValid' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.valid" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

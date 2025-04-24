@@ -1,0 +1,48 @@
+/*-------------------------------------------------------------------------------
+	 General (_general.scss)
+  -------------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'source_sans';
+	src: url('/assets/ui/common/fonts/sourcesanspro-bold-webfont.woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'source_sans';
+	src: url('/assets/ui/common/fonts/sourcesanspro-italic-webfont.woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'source_sans';
+	src: url('/assets/ui/common/fonts/sourcesanspro-regular-webfont.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// animated wait icons
+.spinner-sm {
+	@include spinner(10px, $color-rib);
+}
+
+.spinner-lg {
+	@include spinner(30px, $color-rib);
+}
+
+/* used in login-page */
+.hide-after-10sec {
+	@include hide-after(10s);
+}
+
+.hide-after-5sec {
+	@include hide-after(5s);
+}
+
+.ellipsis {
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

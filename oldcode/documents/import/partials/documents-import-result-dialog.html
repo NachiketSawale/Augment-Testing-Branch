@@ -1,0 +1,27 @@
+<div data-ng-controller="documentsWizardImportResultController">
+    <header class="modal-header">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true"></button>
+        <h2 class="modal-title">{{modalTitle | translate }} </h2>
+    </header>
+    <section class="modal-body">
+        <div data-platform-alert data-error="error"></div>
+        <div class="modal-body flex-box">
+            <div class="icon-message">
+            <div class="tlb-icons icon {{ modalOptions.iconClass }}"></div>
+            <div class="message" data-ng-bind-html="modalOptions.bodyText">
+            </div></div>
+        </div>
+        <div>
+            <div>
+                <div data-platform-grid style="border: 1px solid #ABABAB; min-height: 300px; " data="gridData"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div>
+            <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{modalOptions.cancelBtnText | translate}}</button>
+        </div>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading"
+         data-info2="modalOptions.loadingInfo"></div>
+</div>

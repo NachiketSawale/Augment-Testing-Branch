@@ -1,0 +1,12 @@
+<div id="appContainer">
+	<ui-main-frame-header></ui-main-frame-header>
+	<section id="mainContainer" class="mainContainer">
+		<div id="mainContent">
+			<router-outlet name="clientArea"></router-outlet>
+		</div>
+		<ui-sidebar-content></ui-sidebar-content>
+		<ui-sidebar></ui-sidebar>
+	</section>
+	<!--global popup container, place holder for all popup windows opened in the app-->
+	<ui-common-popup-container [primary]="true"></ui-common-popup-container>
+</div>

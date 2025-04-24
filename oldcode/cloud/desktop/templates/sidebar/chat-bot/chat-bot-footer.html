@@ -1,0 +1,13 @@
+<div class="grid">
+    <div class="row">
+        <div class="col">
+            <textarea class="textareaStyle" placeholder="{{::'cloud.desktop.botChat.saysome' | translate}}" data-ng-keydown="methods.onKeyDown($event)" autofocus="autofocus" data-ng-model="params.inputValue"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+<!--            <div class="help-btn" data-ng-click="methods.showHelp()"></div>-->
+            <div class="send-btn" data-ng-class="{'hastext':params.inputValue.length>0}" data-ng-click="methods.sendText()">{{::'cloud.desktop.botChat.send' | translate}}</div>
+        </div>
+    </div>
+</div>

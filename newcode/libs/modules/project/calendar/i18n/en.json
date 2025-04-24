@@ -1,0 +1,37 @@
+{
+	"project": {
+		"calendar": {
+			"backgroundColor": "Background Color",
+			"calendarEntityName": "Project Calendar",
+			"calendarListTitle": "Project Calendars",
+			"calendarDetailTitle": "Project Calendar Detail",
+			"calendarSourceFk": "Source Calendar",
+			"createProjectCalendar": "Create Project Calendar",
+			"asProject": "Calendar as Project",
+			"errorMsgCreateProjectCalendar": "Project calendar couldn't be created!",
+			"errorMsgPrjCalendarExist": "Project calendar already assigned",
+			"exceptDate": "Except Date",
+			"fontColor": "Font Color",
+			"isReleased": "Released",
+			"isShownInChart": "Shown In Chart",
+			"isWorkDay": "Work Day",
+			"wizardChangeCalendarType": "Change CalendarType",
+			"wizardErrMsgNoEnterpriseCal": "Can't change type, because it isn't a enterprise calendar",
+			"wizardUpdateProjectCalendar": "Update Project Calendar",
+			"wizardUpdateBase": "Update Calendar Attributes",
+			"wizardUpdateSubdata": "Update Works, Weekdays and Exceptions",
+			"wizardUpdateOverwrite": "Overwrite All",
+			"wizardUpdateNotAvailable": "Add Only New Changes",
+			"workEnd": "Work End",
+			"workOperationTypeFk": "Work Operation Type",
+			"workStart": "Work Start",
+			"errorMsgUpdateProjectCalendar": "Project calendar couldn't be updated!",
+			"errorMsgProjectCalendarIsEnterprise": "Project calendar couldn't be updated, because it is an enterprise calendar!",
+			"enableProjectCalendarTitle": "Enable Project Calendar",
+			"disableProjectCalendarTitle": "Disable Project Calendar",
+			"createProjectCalendarExceptionDays": "Create Exceptions Days for Project Calendar",
+			"errorMsgGeneralProjectCalendarIsEnterprise": "Project calendar couldn't be changed, because it is an enterprise calendar!",
+			"entityCalendarTypeFk":"Calendar Type"
+		}
+	}
+}

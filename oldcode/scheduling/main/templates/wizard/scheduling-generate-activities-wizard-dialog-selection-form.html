@@ -1,0 +1,68 @@
+<div data-ng-controller="schedulingGenerateActivitiesWizardSelectionFormController" class="modal-wrapper" >
+    <div class="'platform-form-group">
+        <h4 class="platform-form-group-header-text">{{'scheduling.main.generateActivitiesWizard.generationOptions' | translate}}</h4>
+        <div class="radiolist-container platform-form-row form-group" data-ng-disabled="entity.readonly">
+            <div class="domain-type-radio">
+                    <input type="radio" name='generateActivities' id='freeSchedule' data-ng-model="entity.isFreeOrEstimate" value="FreeSchedule" data-platform-control-validation data-entity="entity" data-config="config1" data-ng-disabled="entity.readonly">
+                    <label for='freeSchedule'>{{'scheduling.main.generateActivitiesWizard.freeSchedule' |translate}}</label>
+            </div>
+            <div class="domain-type-radio">
+                <input type="radio" name='generateActivities'  id='fromEstimate' data-ng-model="entity.isFreeOrEstimate" value="FromEstimate" data-platform-control-validation data-entity="entity" data-config="config1" data-ng-disabled="entity.readonly">
+                <label for='fromEstimate'>{{'scheduling.main.generateActivitiesWizard.fromEstimate' |translate}}</label>
+            </div>
+        </div>
+    </div>
+    <div class="platform-form-group">
+        <div class="platform-form-row form-group">
+            <div class="platform-form-col">
+                <div class="control-directive" data-basics-lookup-data-by-custom-data-service
+                     data-options="lookupOptions"
+                     data-entity="entity"
+                     data-ng-model="entity.estimateFk"
+                     data-model="entity.estimateFk"
+                     data-readonly="entity.isFreeOrEstimate !== 'FromEstimate' || entity.readonly"
+                     data-platform-control-validation data-config="config2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4 class="platform-form-group-header-text">{{'scheduling.main.generateActivitiesWizard.criteriaOptions' | translate}}</h4>
+    <div class="platform-form-group">
+        <div class="platform-form-row form-group">
+            <label class="platform-form-label">{{'scheduling.main.generateActivitiesWizard.criteria1' | translate }}</label>
+            <div class="platform-form-col">
+                <div data-domain-control data-domain="select" data-options="selectOptions1" data-model="entity.criteria1" data-entity="entity" data-ng-model="entity.criteria1"
+                     data-platform-control-validation data-config="config3" data-readonly="entity.readonly"></div>
+            </div>
+        </div>
+<!--    </div>-->
+<!--    <div class="platform-form-group">-->
+        <div class="platform-form-row form-group">
+            <label class="platform-form-label">{{'scheduling.main.generateActivitiesWizard.criteria2' | translate }}</label>
+            <div class="platform-form-col">
+                <div data-domain-control data-domain="select" data-options="selectOptions2" data-model="entity.criteria2" data-entity="entity" data-readonly="entity.readonly"></div>
+            </div>
+        </div>
+<!--    </div>-->
+<!--	<div class="'platform-form-group" data-ng-hide="entity.hideLevel">-->
+		<div class="platform-form-row form-group" data-ng-hide="entity.hideLevel">
+			<label class="platform-form-label">{{'scheduling.main.generateActivitiesWizard.boqLevel' | translate }}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="integer" data-model="entity.boqLevel" data-entity="entity" data-readonly="entity.readonly" data-change="changeLevel()"></div>
+			</div>
+		</div>
+	</div>
+	<div class="'platform-form-group" data-ng-hide="entity.hide">
+		<h4 class="platform-form-group-header-text">{{'scheduling.main.generateActivitiesWizard.updateOptions' | translate}}</h4>
+		<div class="radiolist-container platform-form-row form-group">
+			<div class="domain-type-radio">
+				<input type="radio" name='updateActivities' id='updateAndGenerate' data-ng-model="entity.updateOrGenerate" value="UpdateAndGenerate" data-platform-control-validation data-entity="entity" data-config="configOption">
+				<label for='updateAndGenerate'>{{'scheduling.main.generateActivitiesWizard.updateAndGenerate' |translate}}</label>
+			</div>
+			<div class="domain-type-radio">
+				<input type="radio" name='updateActivities'  id='updateOnly' data-ng-model="entity.updateOrGenerate" value="UpdateOnly" data-platform-control-validation data-entity="entity" data-config="configOption">
+				<label for='updateOnly'>{{'scheduling.main.generateActivitiesWizard.updateOnly' |translate}}</label>
+			</div>
+		</div>
+	</div>
+</div>

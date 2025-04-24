@@ -1,0 +1,20 @@
+<div data-ng-controller="procurementCommonConfirmCascadeDeleteController">
+    <header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+    <section class="modal-body">
+        <div class="icon-message ng-scope">
+            <div class="icon tlb-icons ico-warning"></div>
+            <div class="message ng-binding"> <p data-ng-bind-html="::options.bodyText"></p></div>
+        </div>
+        <div class="flex-element flex-box flex-column subview-content" data-ng-hide = "!isShowDependantData">
+            <platform-grid data="gridData"></platform-grid>
+            <div cloud-common-overlay data-loading="dialogLoading" data-info="options.loadingInfo"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="disableDependencyButton" data-ng-hide = "!options.showDependantDataButton" data-ng-click="options.onShowDependantData()" data-ng-bind="options.showDependantDataBtnText">
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="options.onOK()" data-ng-bind="options.yesBtnText">
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="modalOptions.noBtnText"></button>
+    </footer>
+</div>

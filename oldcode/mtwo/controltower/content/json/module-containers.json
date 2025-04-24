@@ -1,0 +1,70 @@
+[
+	{
+		"id": "mtwo.controltower.main.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.controltower.dashboards",
+		"controller": "mtwoControlTowerMainGridController",
+		"uuid": "deb5ba8604874271b6872fec9d01da68",
+		"permission": "deb5ba8604874271b6872fec9d01da68"
+	},
+	{
+		"id": "mtwo.controltower.datapine.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.controltower.datapine.dashboards",
+		"controller": "mtwoControlTowerDataPineDashboardsGridController",
+		"uuid": "4ba70327b7754c2f9d3a8c46e3e5a76f",
+		"permission": "4ba70327b7754c2f9d3a8c46e3e5a76f"
+	},
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.controltower.PowerBIAccount",
+		"controller": "mtwoControlTowerUserListController",
+		"uuid": "e06020acd9eb45569d4c8344d9b657bb",
+		"permission": "e06020acd9eb45569d4c8344d9b657bb"
+	},
+	{
+		"id": "mtwo.controltower.visualization.view",
+		"template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+		"title": "mtwo.controltower.visualizationView",
+		"controller": "mtwoControlTowerVisualizationViewController",
+		"uuid": "629080dac59942609d31e46c0e4eab15",
+		"permission": "629080dac59942609d31e46c0e4eab15"
+	},
+	{
+		"id": "mtwo.controltower.reports.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.controltower.reports",
+		"controller": "mtwoControlTowerReportGridController",
+		"uuid": "d682ce9579474b1097e1e04ba6e032de",
+		"permission": "d682ce9579474b1097e1e04ba6e032de"
+	},
+	{
+		"id": "mtwo.controltower.proReports.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.controltower.proReports",
+		"controller": "mtwoControlTowerProReportsListController",
+		"uuid": "0375f8eb73ab4de99ea00bb1afc2ba3a",
+		"permission": "d682ce9579474b1097e1e04ba6e032de"
+	},
+	{
+		"id": "mtwo.controltower.proDashboards.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.controltower.proDashboards",
+		"controller": "mtwoControlTowerProDashboardController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ac61",
+		"permission": "d682ce9579474b1097e1e04ba6e032de"
+	},
+	{
+		"id": "mtwo.controltower.datapine.viewer",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "mtwo.controltower.datapine.viewer.ContainerTitle",
+		"controller": "",
+		"uuid": "2ba099893ac6464bbaeb60979b519545",
+		"permission": "2ba099893ac6464bbaeb60979b519545",
+		"dashboard": {
+			"platform": "dashboard",
+			"service": "mtwoControlTowerDataPineDashboardsService"
+		}
+	}
+]

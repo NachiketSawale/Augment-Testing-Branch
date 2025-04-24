@@ -1,0 +1,25 @@
+﻿{
+	"logistic": {
+		"cardtemplate": {
+			"cardTemplateListTitle": "Card Templates",
+			"cardTemplateDetailTitle": "Card Template Details",
+			"cardTemplateActivityListTitle": "Activities",
+			"cardTemplateActivityDetailTitle": "Activity Details",
+			"cardTemplateRecordListTitle": "Records",
+			"cardTemplateRecordDetailTitle": "Record Details",
+			"cardRecord": "Article",
+			"workOperationTypeFk": "Work Operation Type",
+			"cardRecordDescription": "Article Description",
+		  	"entitiyResource": "Executing Resource",
+			"cardTemplateDocumentListTitle": "Card Template Documents",
+			"cardTemplateDocumentDetailTitle": "Card Document Template Details",
+			"jobCardDocumentTypeFk": "Job Card Document Type",
+			"documentTypeFk": "DocumentTypeFk",
+			"barcode": "Barcode",
+			"fileArchiveDocFk": "File Archive Document",
+			"originFileName": "Origin File Name",
+			"rubricCategory": "Rubric Category",
+			"Url": "Url"
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"language": "fi",
+	"culture": "fi-fi",
+	"base": "en",
+	"translation": {
+		"en": "Englanti",
+		"en-us": "Englanti (US)",
+		"de": "Saksa",
+		"fi": "Suomi",
+		"ru": "Venäjän",
+		"fr": "Ranska",
+		"es": "Espanja",
+		"nl": "Dutch",
+		"zh": "Kiina"
+	}
+}

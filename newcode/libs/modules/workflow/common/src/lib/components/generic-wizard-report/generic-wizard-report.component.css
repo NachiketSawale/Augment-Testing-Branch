@@ -1,0 +1,7 @@
+.report {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98%;
+    align-items: center;
+}

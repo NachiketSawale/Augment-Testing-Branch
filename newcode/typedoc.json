@@ -1,0 +1,33 @@
+{
+	"basePath": "./",
+	"entryPoints": [
+		"libs/modules/*/*",
+		"libs/platform/*",
+		"libs/ui/*"
+	],
+	"name": "RIB 4.0 Front-End",
+	"entryPointStrategy": "packages",
+	"includeVersion": true,
+	"out": "./dist/typedoc",
+	"exclude": "**/*+(index|.spec|.e2e).ts",
+	"excludePrivate": true,
+	"customCss": "libs/documentation/typedoc/theme/style.css",
+	"cacheBust": false,
+	"hideGenerator": true,
+	"media": "libs/documentation/assets/images",
+	"navigation": {
+		"includeCategories": true,
+		"includeGroups": true
+	},
+	"plugin": [
+		"typedoc-plugin-coverage",
+		"typedoc-plugin-replace-text",
+		"typedoc-plugin-extras"
+	],
+	"favicon": "libs/documentation/assets/images/favicon.ico",
+	"titleLink": "",
+	"navigationLinks": {
+		"RIB 4.0 Developer Center": "https://devcenter.itwo40.eu/index.html"
+	},
+	"readme": ".typedoc/typedoc-index.md"
+}

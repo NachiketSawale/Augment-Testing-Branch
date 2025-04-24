@@ -1,0 +1,204 @@
+{
+	"platform": {
+		"cancelBtn": "Annuler",
+		"containerContentNotShown": "En raison d'autorisations insuffisantes, le contenu du conteneur ne sera pas affiché.",
+		"deleteConfirm": "Voulez-vous effacer la sélection en cours ?",
+		"deleteConfirmHeader": "Supprimer la confirmation",
+		"error": {
+			"errormsgCode": "Coded'erreur : {{code}}",
+			"errormsgCodeMsg": "Code d'erreur : <{{code}}<br>Message: {{msg}}",
+			"errormsgCodeMsgDetail": "Code d'erreur : {{code}}<br>Message: {{msg}}<br>Détails: {{detail}}"
+		},
+		"exception": "Exception",
+		"formAbout": "A propos de '{{p1}}'",
+		"formConfigAllowEnterNavigation": "Autoriser Entrée Navigation",
+		"formConfigCancelBnt": "Annuler",
+		"formConfigCloseBnt": "Annuler",
+		"formConfigCustomerLabelName": "Personnalisation Nom Étiquette",
+		"formConfigDialogTitle": "Personnaliser Formulaire",
+		"formConfigLabelName": "Nom étiquette",
+		"formConfigMoveDownBnt": "Aller vers le bas",
+		"formConfigMoveUpBnt": "Aller vers le haut",
+		"formConfigOKBnt": "OK",
+		"formConfigRestoreBnt": "Restaurer",
+		"formConfigVisibility": "Visibilité",
+		"formSettings": "Paramètres",
+		"gridDropPanel": "Faire glisser l'en-tête de colonne ici pour regrouper dans la colonne.",
+		"gridMarkerHeader": "Filtre",
+		"gridTreeHeader": "Structure",
+		"ignoreBtn": "Ignorer",
+		"latestview": "Dernière vue",
+		"layoutsystem": {
+			"edit": "Modifier l'affichage",
+			"export": "Exporter les vues",
+			"import": "Importer les vues",
+			"roleviews": "Vues Rôle",
+			"save": "Sauvegarder l'affichage",
+			"systemviews": "Vues Système",
+			"userviews": "Vues des utilisateurs"
+		},
+		"loginBusyMessage": "Connexion en cours.... Veuillez patienter.",
+		"loginButton": "Connexion",
+		"loginEnterPassword": "Saisissez le mot de passe",
+		"loginEnterUsername": "Saisir le nom d'utilisateur",
+		"loginFailedMessage": "Echec de la connexion ! Veuillez réessayer ...",
+		"loginLanguage": "Langue",
+		"loginLanguageEnglish": "English",
+		"loginLanguageEnglishUS": "English (US)",
+		"loginLanguageGerman": "Deutsch",
+		"loginLanguageGermanDE": "Deutsch (DE)",
+		"loginLanguageSpanish": "Español",
+		"loginPassword": "Mot de passe",
+		"loginSuccessfulMessage": "Connexion réussie ! Chargement en cours, veuillez patienter…",
+		"loginUsername": "Nom de l'utilisateur",
+		"loginViaFacebook": "S'identifier avec Facebook",
+		"loginViaMicrosoftAccount": "S'identifier avec un compte Microsoft",
+		"loginViaTwitter": "Se connecter avec Twitter",
+		"longTextContainer": {
+			"container": "Conteneur",
+			"field": "Champ"
+		},
+		"navOptionsMenu": "Menu Options",
+		"newMessage": "Un nouveau message",
+		"noBtn": "Non",
+		"okBtn": "OK",
+		"overwriteInherited": "Ecraser la valeur héritée",
+		"refreshConfirm": "Des modifications ont été détectées. Voulez-vous enregistrer avant de recharger ?",
+		"refreshConfirmHeader": "Actualiser la confirmation",
+		"retryBtn": "Réessayer",
+		"searchPanelPlaceholder": "Rechecher une position",
+		"searchPanelString": "Rechecher une position",
+		"yesBtn": "Oui",
+		"dragdrop": {
+			"anyData": "Données",
+			"items": "{{count}} position(s)"
+		},
+		"inputControls": {
+			"boolean": "Booléen",
+			"code": "Code",
+			"comment": "Texte multi lignes (255)",
+			"dateutc": "Date (UTC)",
+			"description": "Texte de ligne unique",
+			"email": "E-mail",
+			"exchangerate": "Flottant (5 chiffres)",
+			"factor": "Flottant (6 chiffres)",
+			"inputselect": "Combobox",
+			"integer": "Nombre entier",
+			"money": "Argent",
+			"percent": "Pourcent",
+			"quantity": "Flottant (3 chiffres)",
+			"remark": "Texte multi lignes (2 000)",
+			"select": "Déroulant"
+		},
+		"loginViaGoogle": "Se connecter avec google",
+		"masterdetail": {
+			"add": "Ajouter une position",
+			"delete": "Supprimer la position",
+			"filter": "Filtrer les positions",
+			"filterTemplate": "Rechecher une position"
+		},
+		"wizard": {
+			"back": "retour",
+			"finish": "Fini",
+			"next": "Suivant",
+			"nextStep": "Etape suivante :",
+			"stepFinish": "Fini",
+			"isIncluded": "inclus",
+			"listFilter": "Saisir un texte pour filtrer la liste"
+		},
+		"generatingMatrix": "La matrice a été créée",
+		"hours": "Heures",
+		"loginWith": "Se connecter avec",
+		"minutes": "Minutes",
+		"niceNames": {
+			"codeDesc": "{{code}} ({{desc}})",
+			"id": "#{{id}}"
+		},
+		"processing": "Traitement en cours",
+		"removeTooltip": "Supprimer",
+		"subordinated": "Subordonnée",
+		"summary": "Résumé",
+		"todayTooltip": "Aujourd'hui",
+		"bulkEditor": {
+			"configName": "nouveau nom de configuration",
+			"run": "Démarrer",
+			"save": "Sauvegarder",
+			"saveAndRun": "Enregistrer & démarrer",
+			"changedRecords": "Enregistrements modifiés",
+			"changeReport": "Editeur d'ensemble - Modifier le rapport",
+			"details": "Informations",
+			"logs": "Log du rapport",
+			"msgChangeError": "Impossible de définir {{property}} sur {{value}}. Cause: {{validationErrorMsg}}",
+			"msgChangeSuccess": "Définir {{property}} à : {{value}}",
+			"msgNewOldValueAreTheSame": "La valeur de {{property}} est déjà : {{value}}",
+			"msgPropertyIsReadonly": "La valeur n'a pas pu être définie {{property}} est lecture seule",
+			"records": "Enregistrements",
+			"totalRecords": "Total enregistrements",
+			"unchangedRecords": "Enregistrements inchangés",
+			"Colour": "Couleur",
+			"compareEnd": "Valeur finale",
+			"Icon": "Icone"
+		},
+		"wysiwygEditor": {
+			"bold": "Gras",
+			"centerJustify": "Centre Justification",
+			"code": "Code",
+			"font": "Police",
+			"fontColor": "Couleur de la police",
+			"fontSize": "Taille de caractères",
+			"highlightColor": "Couleur de surbrillance",
+			"indent": "Retrait",
+			"insertImage": "Insérer une image",
+			"italic": "Italique",
+			"leftJustify": "Justifié à gauche",
+			"link": "Lien",
+			"orderedList": "Liste commandée",
+			"outdent": "Descente",
+			"paragraph": "Paragraphe",
+			"removeFormatting": "Supprimer le formatage",
+			"rightJustify": "Justifier à droite",
+			"strikeThrough": "Barrés",
+			"subscript": "Indice",
+			"superscript": "Exposant",
+			"underline": "Souligner",
+			"unlink": "Desactiver le lien",
+			"unorderedList": "Liste non ordonnée",
+			"uploadFile": "Télécharger le fichier"
+		},
+		"formContainer": {
+			"collapseall": "Tout Réduire",
+			"discard": "Abandonner",
+			"expandall": "Toutdévelopper",
+			"first": "Premier",
+			"last": "Dernier",
+			"next": "Suivant",
+			"previous": "Précédent",
+			"print": "Imprimer",
+			"refresh": "Rafraîchir",
+			"save": "Sauvegarder",
+			"search": "Recherche",
+			"settings": "Paramètres"
+		},
+		"gridContainer": {
+			"configDialogTitle": "Mise en page de la grille"
+		},
+		"grid": {
+			"availableColumns": "Colonnes disponibles",
+			"visibleColumns": "Colonnes visibles"
+		},
+		"formattedUnits": {
+			"cubicMeters": {
+				"short": "{{value}}m³"
+			},
+			"meters": {
+				"short": "{{value}}m"
+			},
+			"squareMeters": {
+				"short": "{{value}}m²"
+			}
+		},
+		"listselection": {
+			"selected": "Sélectionné"
+		}
+	}
+}

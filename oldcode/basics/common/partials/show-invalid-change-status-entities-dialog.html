@@ -1,0 +1,32 @@
+<div data-ng-controller="showInvalidChangeStatusEntitiesController" class="modal-wrapper">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-disable="isLoading" data-ng-click="$parent.$close(false)"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{'basics.common.changeStatus.notChangeStatusTitle' | translate }} </h2>
+	</header>
+	<section class="modal-body">
+		<div class="platform-form-group">
+			<div class="platform-form-row form-group">
+				<div class="platform-form-col">
+					<div style="position:absolute;height:20px;" class="invalid-cell invalid-form">
+						{{'basics.common.changeStatus.notChangeStatusMessage' | translate }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="height: 100%;border: 1px solid #ccc;margin-top:20px;">
+			<platform-Grid data="gridData" style="height: 200px;"></platform-Grid>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+			<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+				{{::modalOptions.okButtonText}}
+			</button>
+			<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+				{{::modalOptions.cancelButtonText}}
+			</button>
+	</footer>
+</div>

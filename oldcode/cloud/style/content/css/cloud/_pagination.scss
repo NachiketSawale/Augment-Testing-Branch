@@ -1,0 +1,89 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin-top: $padding-xlarge-vertical;
+  border-radius: $size-border-radius-base;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: $padding-base-vertical $padding-large-horizontal;
+      line-height: $size-line-height-base;
+
+
+      text-decoration: none;
+      color: $color-link;
+      background-color: $color-button-background;
+      border: 1px solid $color-border;
+      margin-left: -1px;
+
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        @include border-left-radius($size-border-radius-base);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-right-radius($size-border-radius-base);
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      background-color: $color-hover;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: $color-primary-fore;
+      background-color: $color-grid-cell-activ;
+      border-color: $color-grid-cell-activ;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: $color-input-bg-disabled;
+      background-color: $color-primary-fore;
+      border-color: $color-input-bg-disabled;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-lg {
+  @include pagination-size($padding-medium-vertical, $padding-large-horizontal, $size-font-base, $size-border-radius-large);
+}
+
+// Small
+.pagination-sm {
+  @include pagination-size($padding-small-vertical, $padding-small-horizontal, $size-font-base, $size-border-radius-small);
+}

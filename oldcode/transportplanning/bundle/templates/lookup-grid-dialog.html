@@ -1,0 +1,49 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section class="modal-body flex-box flex-column">
+    <div data-platform-form data-form-options="formOptions" data-entity="request"></div>
+    <div class="input-group">
+        <input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="onSearchInputKeydown($event, searchValue)" data-ng-change="onSearchInput($event, searchValue)"/>
+        <span class="input-group-btn" style="margin-left: -1px;">
+			    <button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="search(searchValue, true)" title="search"></button>
+		    </span>
+    </div>
+    <div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+        <div class="form-control flex-align-center" style="border: none;">
+            <div class="input-group-content" data-ng-bind="getPageText()"></div>
+        </div>
+
+        <span class="input-group-btn">
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageUp()}"
+                        data-ng-disabled="isLoading||!canPageUp()"
+                        data-ng-click="pageUp()" style="border: none;"><span class="control-icons ico-previous"></span></button>
+
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageDown()}"
+                        data-ng-disabled="isLoading||!canPageDown()"
+                        data-ng-click="pageDown()" style="border: none;"><span class="control-icons ico-next"></span></button>
+			</span>
+    </div>
+    <div class="filler flex-box flex-column subview-container lookup-grid-container">
+        <div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+            <h2 class="title fix {{getIconClass()}}" data-ng-bind="getTitle()" title="{{getTitle()}}"></h2>
+            <div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+        </div>
+        <div class="flex-element flex-box flex-column overflow-hidden">
+            <div class="lookup-grid flex-basis-auto" data-platform-grid data="grid"></div>
+            <div data-cloud-common-overlay data-loading="isLoading"></div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="refresh(true)">
+        {{'basics.common.button.refresh' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="disableOkButton" data-ng-click="close(true)">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="close(false)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

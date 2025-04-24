@@ -1,0 +1,17 @@
+
+<div *ngIf="isMapEditable" class="toolbar">
+	<div></div>
+	<ul class="showimages tools">
+		<li class="collapsable">
+			<button type="button" class="control-icons ico-location2" title="Pick Location" (click)="selectLocation()" [ngClass]="{'active':pickLocation}">
+			</button>
+		</li>
+	
+		<li class="collapsable">
+			<button type="button" class=" control-icons ico-map-new-tab " title="Expand Map" (click)="openMapInNewTab()">
+			</button>
+		</li>
+	</ul>
+</div>
+
+<div class="map-content flex-element" [ngClass]="{'cursorHair':pickLocation}"></div>

@@ -1,0 +1,53 @@
+.datavis .simulatedGantt .timeAxisArea .bg {
+	fill: #dcdcdc;
+}
+
+.datavis .simulatedGantt g.axis, .datavis .simulatedGantt g.tick {
+	stroke-width: 1px;
+	fill: none;
+	shape-rendering: crispEdges;
+	stroke: white;
+}
+
+.datavis .simulatedGantt g text {
+	fill: #333;
+	stroke: none;
+}
+
+.datavis .simulatedGantt .today {
+	stroke: red;
+	stroke-width: 1px;
+	shape-rendering: crispEdges;
+	pointer-events: none;
+}
+
+.datavis .simulatedGantt .current {
+	stroke: #41966a;
+	stroke-width: 1px;
+	shape-rendering: crispEdges;
+	pointer-events: none;
+}
+
+.datavis .simulatedGantt .chartArea .activity {
+	fill: #75bcff;
+}
+
+.datavis .simulatedGantt .chartArea .activity.highlighted, .datavis .simulatedGantt .labelArea .bgLayer rect.highlighted {
+	fill: #f4e57e !important;
+}
+
+.datavis .simulatedGantt .chartArea .activity.selected, .datavis .simulatedGantt .labelArea .bgLayer rect.selected {
+	fill: #ffc107 !important;
+}
+
+.datavis .simulatedGantt .labelArea .labelLayer {
+	pointer-events: none;
+}
+
+.datavis .simulatedGantt .labelArea .bgLayer rect {
+	fill: white;
+}
+
+.datavis .simulatedGantt .temporaryMeasurement {
+	fill: white;
+}

@@ -1,0 +1,52 @@
+<style>
+	.material-filter-list {
+		width: 260px;
+	}
+
+	.material-filter-list li {
+		margin: 4px 0;
+	}
+
+	.material-filter-list li input[type='checkbox'] {
+		margin: 0 8px 0 0;
+	}
+
+	.material-filter-list .list-container{
+		max-height: 420px;
+		overflow: auto;
+	}
+</style>
+
+<div class="material-filter-list">
+	<div class="input-group form-control" data-ng-if="definition.List.length>10">
+		<input type="text" class="input-group-content" placeholder="{{ 'basics.material.lookup.search' | translate }}" data-ng-model="userInput" data-ng-change="search(userInput)">
+	</div>
+
+	<div class="flex-element list-container">
+		<ul data-ng-if="definition.PredefinedList.length" class="material-filter-content-padding material-filter-divider-bottom">
+			<li data-ng-repeat="predefinedItem in definition.PredefinedList">
+				<div class="fullwidth flex-box">
+					<input type="checkbox" id="{{ ::predefinedItem.Id }}" ng-model="predefinedItem.IsSelected" data-ng-change="setPredefine(predefinedItem)">
+					<label for="{{ ::predefinedItem.Id }}">{{ ::predefinedItem.Description }}</label>
+				</div>
+			</li>
+		</ul>
+
+		<ul class="material-filter-content-padding">
+			<li data-ng-repeat="item in list">
+				<div class="fullwidth flex-box">
+					<input type="checkbox" id="{{ ::item.Id }}" ng-model="item.IsSelected" data-ng-change="resetPredefine(item)" data-ng-disabled="isDisabled(item)">
+					<label for="{{ ::item.Id }}">{{ ::item.Description }}</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="flex-box flex-align-center material-filter-divider-top">
+		<button class="btn material-filter-btn-clear" data-ng-disabled="getSelectedCount()<=0" data-ng-click="clear()">{{ 'basics.material.lookup.clear' | translate }}</button>
+		<span class="flex-element text-center">{{ getSelectedCount() }} {{ 'basics.material.lookup.of' | translate }} {{ getTotalCount() }}</span>
+		<button class="btn material-filter-btn-apply" data-ng-disabled="getSelectedCount()<=0" data-ng-click="apply()">{{ 'basics.material.lookup.apply' | translate }}</button>
+	</div>
+
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>

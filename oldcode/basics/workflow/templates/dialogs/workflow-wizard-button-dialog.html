@@ -1,0 +1,48 @@
+<div class="ng-scope" data-ng-controller="basicsWorkflowWizardButtonDialog" style="width: 100%;">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'basics.workflow.modalDialogs.linkName' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-ng-model="modalOptions.value.displayText" data-options="input.codeMirrorOptions"
+				     data-script-editor-directive>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'basics.workflow.action.customEditor.entityName' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-ng-model="modalOptions.value.entity" data-options="input.codeMirrorOptions"
+				     data-script-editor-directive>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+
+	</div>
+
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-col">
+				<div>{{'basics.workflow.modalDialogs.module' | translate}}</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-col">
+				<div data-change="moduleChanged(value)" data-domain="select" data-domain-control
+				     data-ng-model="modalOptions.value.module" data-options="selectOptionsModule"></div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-col">
+				<div>{{'basics.workflow.modalDialogs.wizard' | translate}}</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-col">
+				<div data-domain="select" data-domain-control data-ng-model="modalOptions.value.wizard"
+				     data-options="selectOptionsWizard"></div>
+			</div>
+		</div>
+	</div>
+</div>

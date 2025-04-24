@@ -1,0 +1,92 @@
+.notification-sidebar-container {
+	margin: 0px 5px 0 5px;
+	height: 100%;
+}
+
+.show {
+	display: block;
+}
+
+.notification-sidebar-container .notifications {
+	border-bottom: 1px solid #b4b1b1;
+}
+
+.notification-sidebar-container .notifications .row {
+	margin: auto;
+}
+
+.notification-sidebar-container .notifications .notification-container {
+	margin: 10px 0px 10px 0px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-status {
+	padding-left: 0px;
+}
+
+
+.notification-sidebar-container .notifications .notification-container .notification-status svg {
+	width: 15px;
+	height: 15px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .title {
+	font-size: 16px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .status {
+	font-size: 12px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .audit-details {
+	font-size: 12px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .show-report-btn {
+	margin-top: 10px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .additional-details-container {
+	margin-top: 10px;
+	padding:0px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .additional-details {
+	width: 100%;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .additional-detail-header {
+	font-size: 14px;
+	margin-top: 2px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-details .additional-detail-content {
+	font-size: 12px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-close {
+	padding: 0px;
+}
+
+.notification-sidebar-container .notifications .notification-container .notification-close .ico-close {
+	width: 15px;
+	height: 15px;
+}
+
+.nopadding {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.notification-alert {
+	--icon-main-color: red;
+}
+
+.notification-sidebar-container .notification-panel-body {
+	overflow-y: auto;
+	height: 450px;
+}
+
+.notification-sidebar-container .showgroups .heading {
+	font-size: 13px;
+	margin-bottom: 5px;
+}

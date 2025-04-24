@@ -1,0 +1,13 @@
+{
+	"controlling": {
+		"enterprise": {
+			"containerTitleDashboard": "Dashboard, (work in progress...)",
+			"syncUsers": "Controlling User Synchronisation",
+			"dashboard1": "Periodical Cost Analysis Dashboard",
+			"dashboard3": "Cost and Revenue Dashboard",
+			"dashboard2": "Change and Budget Dashboard",
+			"dashboard4": "Controlling Dashboard",
+			"dashboard5": "Project Key Figures Dashboard"
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<diV class="flex-box">
+	<div class="lg-4 md-4 padding-right">
+		<ui-common-lookup-input class="form-control" [dataService]="dataService" [entityContext]="context" [value]="lookupValue"
+		                        (selectedItemChanged)="selectedItemChanged($event)"></ui-common-lookup-input>
+	</div>
+	<div class="lg-8 md-8 form-control composite-last-item">
+		<input type="text" class="input-group-content" [value]="value" [readOnly]="readOnly"/>
+	</div>
+</diV>
+
+
+

@@ -1,0 +1,21 @@
+<div data-cloud-common-overlay data-loading="isLoading" data-info2="loadingMessage"></div>
+<section class="modal-body">
+    <div class="flex-box flex-column flex-element">
+        <div data-domain-control data-domain="select" data-model="selectedCategory"
+            data-options="materialOptionList" data-change="materialOptionChange()"></div>
+    </div>
+    <div class="flex-box flex-column flex-element margin-top-ld subview-container" style="height: 90%">
+        <div class="toolbar">
+            <div class="toolbar" style="justify-content: flex-end;">
+                <button data-ng-repeat="tool in tools.items" title="{{tool.caption | translate}}" data-ng-click="tool.fn()" data-ng-disabled="tool.disabled()" class="{{tool.iconClass}}"/>
+            </div>
+        </div>
+        <div class="subview-content">
+            <div data-ng-hide="showSearchSetting" data-domain-control data-domain="description" data-model="searchText"
+                   placeholder="{{::htmlTranslate.keyWord}}" data-change="searchTextChange()" ></div>
+            <platform-grid data="gridData"></platform-grid>
+        </div>
+    </div>
+</section>
+
+

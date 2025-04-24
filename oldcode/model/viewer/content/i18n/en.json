@@ -1,0 +1,461 @@
+{
+	"model": {
+		"viewer": {
+			"connectionSettings": "Connection",
+			"modelSettings": "Model-specific settings",
+			"modelSettingsTitle": "Model-Specific Settings",
+			"cameraSettings": "Camera",
+			"renderingSettings": "Rendering",
+			"inputSettings": "Input",
+			"cameraPos": "Camera position",
+			"defaultCamPos": "Default camera positions",
+			"camPosManager": "Camera position management",
+			"customCameraPos": "Custom camera positions",
+			"saveCustomCameraPos": "Save camera position",
+			"deleteCustomCameraPos": "Delete camera position",
+			"newCustomCameraPos": "New Camera Position",
+			"customCameraPosPos": "Camera position",
+			"customCameraPosTrg": "Camera target",
+			"customCameraPosDirection": "Viewing direction",
+			"customCameraPosNormalizedDirection": "Normalized viewing direction",
+			"customCameraPosList": "Saved Camera Positions",
+			"customCameraPosName": "Name",
+			"customCameraPosImportant": "Important",
+			"cameraIsoFrontRight": "Iso view (front)",
+			"cameraIsoBackLeft": "Iso view (back)",
+			"cameraBack": "View from behind",
+			"cameraFront": "View from front",
+			"cameraLeft": "View from left side",
+			"cameraRight": "View from right side",
+			"cameraTop": "View from above",
+			"cameraBottom": "View from below",
+			"defaultView": "Default (startup) view",
+			"cameraFit": "Fit to viewport",
+			"cameraReset": "Reset view",
+			"configTitle": "Viewer Configuration",
+			"config": "Viewer configuration",
+			"cfgGroup": "Configuration",
+			"permissionSummary": "Permission Summary",
+			"transitions": "Smooth camera transitions",
+			"bgColor": "Background color",
+			"bgColor2": "Fade to background color",
+			"gradientBG": "Gradient background",
+			"selColor": "Selection color",
+			"showInputInfo": "Show input options",
+			"operator": {
+				"pan": {
+					"name": "Pan"
+				},
+				"turntable": {
+					"name": "Turntable"
+				},
+				"orbit": {
+					"name": "Orbit"
+				},
+				"keyboardWalk": {
+					"name": "Walk"
+				},
+				"mouseWalk": {
+					"name": "Walk (mouse-enabled)"
+				},
+				"keyboardFly": {
+					"name": "Fly"
+				},
+				"mouseFly": {
+					"name": "Fly (mouse-enabled)"
+				},
+				"pointer": {
+					"name": "Selection"
+				},
+				"areaSelect": {
+					"name": "Area Selection"
+				},
+				"cut": {
+					"name": "Modify cutting planes",
+					"tools": {
+						"reset": "Reset",
+						"resetPlanePos": "Reset cutting plane position",
+						"resetAxisPos": "Reset rotation axis position",
+						"resetAngle": "Reset rotation",
+						"mode": "Mode",
+						"active": "Toggle cutting planes"
+					}
+				},
+				"drag": {
+					"name": "Drag selected objects to other containers",
+					"objectData": "{{count}} model object(s)"
+				},
+				"position": {
+					"name": "Select a position in 3D space",
+					"cancelOperator": "Cancel position selection",
+					"modes": {
+						"title": "Selection mode",
+						"anchor": "Position between anchor and camera",
+						"axisIntersection": "Position at intersection of axes",
+						"planeBeforeDistance": "Position between viewing plane and camera"
+					}
+				},
+				"subModelAlignment": {
+					"name": "Sub-Model Alignment",
+					"modes": {
+						"title": "Alignment Mode",
+						"xy": "X/Y Displacement",
+						"z": "Z Displacement",
+						"xyz": "XYZ Displacement",
+						"xRot": "Rotation Around X Axis",
+						"yRot": "Rotation Around Y Axis",
+						"zRot": "Rotation Around Z Axis"
+					},
+					"refPoints": {
+						"title": "Reference Points",
+						"source": "Source",
+						"destination": "Destination",
+						"rotAxis": "Rotation Axis"
+					},
+					"apply": "Apply Transformation",
+					"reset": "Reset Transformation of Sub-Model",
+					"fixedView": "Fixed View"
+				},
+				"measure": {
+					"name": "Measure Distances"
+				}
+			},
+			"operatorMenu": {
+				"camOperators": "Camera Operator",
+				"manipOperators": "Manipulation Operator"
+			},
+			"goToCustomCameraPos": "Show in Viewer",
+			"projection": "Projection",
+			"projectionOrthograph": "Orthographic",
+			"projectionPerspective": "Perspective",
+			"showModelSetting": "Show complete model",
+			"showModelSettingShow": "Always show model",
+			"showModelSettingHide": "Always hide model",
+			"noModelData": "No model data available.",
+			"noModelSelected": "(no model selected)",
+			"noModelListSelected": "No model selected. Use the list of models to show a model.",
+			"noModelPinned": "No model selected. Pin a model in the Project module first, please.",
+			"loadModelFailed": "The model data could not be loaded.",
+			"loadedModelNotImported": "Import of model data has not concluded yet.",
+			"loadedSubModelNotImported": "Data import of at least one sub-model has not concluded yet.",
+			"modelTimeout": "The connection to the server has timed out.",
+			"infoSettings": "Information",
+			"showModelName": "Show model name",
+			"preventTimeout": "Prevent timeouts",
+			"zoomIn": "Zoom in",
+			"zoomOut": "Zoom out",
+			"zoomFeatures": "Zoom commands",
+			"aa": "Anti-aliasing mode",
+			"aaNone": "Disabled",
+			"aaSMAA": "SMAA",
+			"chunkedUpdates": "Blockwise graphics update",
+			"unfilteredViewerWindow": "Show unfiltered 3D view in external browser window",
+			"mainEntityViewerWindow": "Show external browser window filtered by table contents",
+			"filterResultsViewerWindow": "Show external browser window for filter results",
+			"commands": "Other commands",
+			"selectionTitle": "Bulk selection",
+			"selectAll": "Select all",
+			"selectNone": "Clear selection",
+			"toggleSelection": "Toggle selection",
+			"showSelectionInfo": "Show selection/filtering info",
+			"selCount": "{{selected}} object(s) selected ({{selectedMeshes}} 3D mesh(es))",
+			"selCountAllShown": "(all included by filter)",
+			"selCountHidden": "({{hidden}} mesh(es) not included by filter)",
+			"blacklistTitle": "Blacklisting options",
+			"addToBlacklist": "Hide selected objects (put on blacklist)",
+			"addOpeningsToBlacklist": "Hide openings",
+			"addSpacesToBlacklist": "Hide interior spaces",
+			"isolate": "Isolate selected objects (put others on blacklist)",
+			"clearBlacklist": "Show everything (clear blacklist)",
+			"infoTitle": "Show information",
+			"infoModel": "Model information",
+			"modelInstanceUrl": "Instance Url",
+			"modelRelatedInfo": "Related information",
+			"modelSubmodelsInfo": "Submodels information",
+			"refresh": "Refresh View",
+			"hlSchemesBase": "Highlighting Schemes ({{scopeLevel}})",
+			"unnamedHlScheme": "(Unnamed Highlighting Scheme {{id}})",
+			"hoops": {
+				"title": "3D Viewer",
+				"numberedTitle": "3D Viewer #{{name}}",
+				"windowTitle": "3D Viewer",
+				"numberedWindowTitle": "3D Viewer #{{name}} (in external window)",
+				"numberedWindowFullTitle": "3D Viewer #{{name}} ({{filter}})",
+				"renderMode": "Rendering mode",
+				"renderModeServer": "Server-side",
+				"renderModeClient": "Client-side",
+				"streamingMode": "Streaming mode",
+				"streamingModeFull": "Load full model",
+				"streamingModeLazy": "Load model parts as required",
+				"draw": "Drawing mode",
+				"drawHidden": "Hidden lines",
+				"drawShaded": "Shaded model",
+				"drawWireframe": "Wireframe",
+				"drawWireframeOnShaded": "Shaded model and wireframe",
+				"scstitle": "3D Viewer Scs File"
+			},
+			"activeFilter": "Active Filter",
+			"filterSelector": "Filter Selector",
+			"filters": {
+				"objectSideBar": {
+					"command": "Sidebar Object Filter"
+				},
+				"disabled": {
+					"command": "Disable Filtering",
+					"state": "filtering disabled",
+					"stateDesc": "Filtering disabled."
+				},
+				"mainEntity": {
+					"command": "Filter by Main Entity",
+					"state": "filtered by main entity",
+					"stateDesc": "{{included}} 3D mesh(es) found."
+				},
+				"objectSearchSidebar": {
+					"command": "Sidebar Object Filter",
+					"state": "filtered by sidebar object filter",
+					"stateDesc": "{{included}} 3D mesh(es) found."
+				},
+				"simulation": {
+					"command": "Show Simulation Progress",
+					"state": "displaying simulation",
+					"stateDesc": "{{appearing}} 3D mesh(es) being added, {{disappearing}} 3D mesh(es) being removed, {{modified}} 3D mesh(es) being modified, {{temporary}} temporary 3D mesh(es)."
+				},
+				"ruleset": {
+					"command": "Filter by Rule Set",
+					"state": "filtered by rule set",
+					"stateDesc": "(see legend for details)"
+				},
+				"reportedProgress": {
+					"command": "Filter by Reported Progress",
+					"state": "filtered by reported progress",
+					"stateDesc": "{{notStarted}} 3D mesh(es) not yet started, {{partiallyCompleted}} partially completed, {{completed}} completed; no information on {{excluded}} 3D mesh(es)."
+				},
+				"completionDegree": {
+					"command": "Filter by Completion Degree",
+					"state": "filtered by completion degree",
+					"stateDesc": "Between {{reportingPeriodStart}} and {{reportingPeriodEnd}}: {{completedBeforeRP}} 3D mesh(es) completed before reported period, {{completedDuringRP}} completed during reported period, {{partiallyCompletedInRP}} partially completed, {{notStartedInRP}} not started, {{notScheduledForRP}} not scheduled, {{DelayedInRP}} delayed, no information on {{excluded}} 3D mesh(es)."
+				}
+			},
+			"inputHelp": {
+				"modifierPattern": "{{modifier}} + {{commandInput}}",
+				"alternativePattern": "{{list}}, {{alternative}}",
+				"inputRulePattern": "{{input}}: {{effect}}",
+				"ctrlKey": "ctrl",
+				"altKey": "alt",
+				"shiftKey": "shift",
+				"spaceKey": "space",
+				"pageUpDown": "page up/down",
+				"pageUpKey": "page up",
+				"pageDownKey": "page down",
+				"arrowKeys": "arrow keys",
+				"arrowKeysUpDown": "arrow up/down",
+				"arrowKeysLeftRight": "arrow left/right",
+				"arrowLeftKey": "arrow left",
+				"arrowRightKey": "arrow right",
+				"arrowUpKey": "arrow up",
+				"arrowDownKey": "arrow down",
+				"modifierActionPattern": "hold {{modifier}}",
+				"mouseButtonLeftClick": "left click",
+				"mouseButtonMiddleClick": "middle click",
+				"mouseButtonRightClick": "right click",
+				"mouseButtonLeftDrag": "drag with left button",
+				"mouseButtonMiddleDrag": "drag with middle button",
+				"mouseButtonRightDrag": "drag with right button",
+				"mouseButtonLeftDragH": "drag horizontally with left button",
+				"mouseButtonMiddleDragH": "drag horizontally with middle button",
+				"mouseButtonRightDragH": "drag horizontally with right button",
+				"mouseButtonLeftDragV": "drag vertically with left button",
+				"mouseButtonMiddleDragV": "drag vertically with middle button",
+				"mouseButtonRightDragV": "drag vertically with right button",
+				"mouseWheel": "mouse wheel",
+				"features": {
+					"horizontalForwardBackward": "walk forward/backward",
+					"flyForwardBackward": "fly forward/backward",
+					"turnLeftRight": "turn left/right",
+					"turnUpDown": "look up/down",
+					"moveSidewaysAllDirections": "move sideways/up/down",
+					"moveUpDown": "move up/down",
+					"turnGazeDirection": "turn gaze direction",
+					"pan": "pan viewport",
+					"accelerate": "accelerate movement",
+					"moveToLocation": "directly move to clicked location",
+					"zoom": "zoom",
+					"select": "select objects (hold shift for multi-selection)",
+					"rotateAround": "rotate around model",
+					"toggleCutting": "toggle cutting",
+					"selectCuttingPlane": "select cutting plane",
+					"moveCuttingPlane": "move plane",
+					"rotateCuttingPlane": "rotate plane",
+					"moveCuttingPlaneAxis": "move rotation axis",
+					"moveCuttingPlaneOrAxis": "move cutting plane/rotation axis",
+					"dragObjects": "drag selected objects to other containers"
+				}
+			},
+			"marker": "Marker",
+			"markerMenu": "Marker visibility",
+			"rfiMarkers": "Request for information Markers",
+			"defectMarkers": "Defect Markers",
+			"showInformation": "Model Information",
+			"zoomToViewer": "Zoom to Viewer",
+			"setMarker": "Set Marker",
+			"deleteMarker": "Delete Marker",
+			"selectionWz": {
+				"title": "Object Selection",
+				"selector": "Choose Objects to Select",
+				"selectorDesc": "Choose a pattern by which to select model objects from the following list. Only patterns that are applicable based on the current state of the application are shown.",
+				"selectorName": "Name",
+				"assemblingObjectsList": "Retrieve Set of Objects",
+				"assemblingObjectsListMessage": "Please wait while the set of objects is being prepared ...",
+				"noObjects": "No Objects Found",
+				"noObjectsMessage": "No objects were found with the present settings. Please cancel the wizard and start with different settings.",
+				"destination": "Objects Destination",
+				"destinationDesc": "{{objectCount}} object(s) (including {{meshCount}} 3D mesh(es)) were found matching your criteria. Please indicate what to do with these object(s).",
+				"destSelection": "Select the objects in the active 3D Viewer(s).",
+				"destNewObjectSet": "Add the objects to a new object set.",
+				"destObjectSet": "Add the objects to an existing object set.",
+				"selObjectSet": "Select Object Set",
+				"selObjectSetDesc": "Select the object set that the objects should be added to.",
+				"newObjectSet": "New Object Set",
+				"newObjectSetDesc": "Input settings for a new object set. The new object set will be created and the objects will be added to it.",
+				"newObjectSetName": "Object Set Name",
+				"completion": "Completion",
+				"completionMessageStandalone": "Upon clicking 'Finish', the configured actions will be performed.",
+				"completionMessageEmbedded": "A total of {{objectCount}} object(s) ({{meshCount}} mesh(es)) has been selected. Click 'Finish' to apply the selection.",
+				"restriction": "Restrict Objects",
+				"restrictionDesc": "Between {{minObjectCount}} and {{maxObjectCount}} object(s) (including {{meshCount}} 3D mesh(es)) were found matching your criteria. Please indicate which subset of these objects you would like to select.",
+				"treePart": "Subset of Found Object Trees",
+				"treePartMinimalCompositeAndLeaves": "Select composite roots and objects without any child objects that are not part of any composite objects.",
+				"treePartMinimalComposite": "Select composite roots that are not part of any composite objects.",
+				"treePartMinimal": "Select the minimum amount of parent objects.",
+				"treePartLeaves": "Select all objects without any child objects.",
+				"treePartMeshes": "Select all objects with 3D meshes.",
+				"treePartAll": "Select all objects in the hierarchy.",
+				"selMask": "Restrict by Selectability in Viewer",
+				"selMaskNone": "No Restriction",
+				"applyRestrictions": "Apply Restrictions",
+				"applyRestrictionsMessage": "Applying chosen restrictions ..."
+			},
+			"selectors": {
+				"simulationCategory": "Simulation",
+				"defaultCategory": "Others",
+				"remainingSimObjects": {
+					"name": "Unassigned Objects"
+				},
+				"filterState": {
+					"name": "By Filter State",
+					"selectFilter": "Select Filter",
+					"selectFilterDesc": "Select the filter from whose results objects are going to be selected.",
+					"filterStateWithCount": "{{state}} ({{count}} 3D mesh(es))",
+					"selectStates": "Select Filter States",
+					"selectStatesDesc": "Select all filter states from which to include objects."
+				},
+				"allObjects": {
+					"name": "All Objects"
+				},
+				"currentSelection": {
+					"name": "Current Selection"
+				},
+				"generalCategory": "General",
+				"blacklist": {
+					"name": "Blacklisted Objects",
+					"selectViewer": "Select Viewer",
+					"selectViewerDesc": "Select a 3D Viewer container to use the contents of its blacklist. Note that you can only select 3D viewers whose blacklist contains at least one element.",
+					"viewerNameWithCount": "{{name}} ({{meshCount}} 3D blacklisted mesh(es))"
+				}
+			},
+			"showBackfaces": "Show backfaces",
+			"loading": {
+				"model": "Loading model {{name}} ...",
+				"initViewer": "Establishing connection to rendering server ...",
+				"subModel": "Loading sub-model #{{index}}/{{totalCount}} - {{name}}",
+				"final": "Finalizing scene ...",
+				"ready": "Ready",
+				"loading": "Loading",
+				"disconnected": "Disconnected"
+			},
+			"filterSubModels": "Show/Hide Sub-Models",
+			"changeModelWz": {
+				"title": "Change Model",
+				"noCurrentSelection": "No COS Instance Headers selected. Nothing done",
+				"NoModelInSelection": "Cannot change model as no model assigned in the COS Instance header!",
+				"selector": "Select new model ",
+				"updateModel": "Update estimate for the new model ",
+				"updateInstance": "Update construction system instance ",
+				"labelName": "New Model ",
+				"loadingUpdateData": "loading Update estimate for the new model...",
+				"loadingSelectData": "loading Select construction system instance...",
+				"labelChangeModelKept": "Line items object assignment is kept",
+				"labelChangeModelChanged": "Line items object assignment is changed",
+				"labelChangeModelWithout": "Line items  without  model object assigned",
+				"automatically": "Update automatically",
+				"applyEstimate": "Apply estimate result automatically",
+				"updateOnly": "Update Only",
+				"updateCaculateCOS": "Update & Calculate COS"
+			},
+			"combinedFilter": {
+				"combinedFilterMenu": "Combined Filter",
+				"editCombinedFilter": "Edit Combined Filter...",
+				"dialogTitle": "Combined Filter",
+				"filtersGroup": "Filters",
+				"rulesetsGroup": "Rule Sets",
+				"stateDesc": "Combined filter is active.",
+				"simulationGroup": "Simulation Timelines",
+				"activateCombinedFilter": "You have modified the combined filter. Currently, another filter is active in this viewer. Would you like to activate the combined filter now?",
+				"activateCombinedFilterTitle": "Combined Filter not Active"
+			},
+			"areaSelectByDirection": "Switch Area Selection by Direction",
+			"insideOutsideFeatures": {
+				"inside": "Inside",
+				"outside": "Outside"
+			},
+			"reportProgress": "Progress Reporting",
+			"settingsHeader": "Settings",
+			"useSettings": "Activate Settings",
+			"fallbackInfo": "Fallback Info",
+			"activeFallback": "Active Fallback Configuration",
+			"zoomToSelection": "Zoom in on Selection",
+			"subModelAlignment": {
+				"mode": "Align in Combined Scene",
+				"refPtDlg": {
+					"command": "Move Reference Point by Coordinate Input",
+					"title": "Change Reference Point",
+					"refPt": "Reference Point",
+					"x": "X",
+					"y": "Y",
+					"z": "Z",
+					"unit": "Unit",
+					"absolute": "Absolute Position",
+					"unitCM": "Centimetres",
+					"unitM": "Metres",
+					"unitIN": "Inches",
+					"unitFT": "Feet"
+				}
+			},
+			"snapping": {
+				"scenePoints": "Snap to Scene Points",
+				"subModelBoundingBoxes": "Snap to Sub-Model Bounding Boxes",
+				"selectionBoundingBoxes": "Snap to Bounding Box of Selected Objects",
+				"selectionVertices": "Snap to Vertices of Selected Objects",
+				"nearestVertices": "Snap to Vertices of Objects"
+			},
+			"toolbarSettings": {
+				"title": "Toolbar",
+				"groupManipOps": "Group Manipulation Operators",
+				"groupCamOps": "Group Camera Operators",
+				"groupAnno": "Group Annotation Commands"
+			},
+			"modelAnnos": "Model Annotations",
+			"measurements": {
+				"lengthFormat": "{{meters}} m",
+				"areaFormat": "{{meters}} m2",
+				"volumeFormat": "{{meters}} m3"
+			},
+			"reportingPeriod": {
+				"editreportingPeriod": "Reporting Period..",
+				"reportingPeriodPopupTitle": "Reporting Period",
+				"startDate": "Start",
+				"finishDate": "Finish"
+			}
+		}
+	}
+}

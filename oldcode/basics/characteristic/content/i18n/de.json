@@ -1,0 +1,60 @@
+{
+	"basics": {
+		"characteristic": {
+			"entityCharacteristicTypeFk": "Typ",
+			"entityDefaultValue": "Standardwert",
+			"entitySelected": "Gewählt",
+			"entityGroup": "Merkmalgruppen",
+			"entitySection": "Rubrik",
+			"entityValueText": "Wert",
+			"entityCode": "Schlüssel",
+			"entityChecked": "Selektiert",
+			"entityGroupFk": "GruppenID",
+			"entityIsReadonly": "Nur lesbar",
+			"defaultContainerTitle": "Merkmal",
+			"successMessage": "Daten wurden erfolgreich angelegt/geändert ...",
+			"title": {
+				"characteristicGroups": "Merkmalgruppen",
+				"characteristicSections": "Rubriken",
+				"characteristics": "Merkmale",
+				"characteristicDetail": "Merkmale Detail",
+				"discreteValues": "Werte",
+				"remark": "Vermerk",
+				"usedInCompany": "Verwendet im Unternehmen",
+				"automaticAssignment": "Automatische Zuordnung",
+				"characteristicGroupDetail": "Merkmalgruppen Detail",
+				"discreteValueDetail": "Werte Detail",
+				"characteristicSectionDetail": "Rubriken Detail",
+				"bulkEditorPopup": "Merkmale setzen",
+				"chainCharacteristic": "Abhängige Merkmale"
+			},
+			"tab": {
+				"groups": "Merkmalgruppen",
+				"characteristics": "Merkmale"
+			},
+			"header": {
+				"codeLookup": "Schlüssel"
+			},
+			"section": {
+				"Project": "Projekt",
+				"BusinessPartner": "Geschäftspartner",
+				"Contact": "Kontakt",
+				"Clerk": "Sachbearbeiter",
+				"Certificate": "Bescheinigung",
+				"Requisition": "Bedarf",
+				"Quote": "Angebot",
+				"Contract": "Vertrag",
+				"ProcurementStructure": "Beschaffungsstruktur",
+				"CostCodes": "Kostenart",
+				"ControllingUnit": "Controlling Einheit",
+				"Scheduling": "Terminplanung",
+				"ActivityTemplate": "Vorgang Vorlagen",
+				"Company": "Mandant",
+				"MaterialCatalog": "Materialkatalog",
+				"Material": "Material",
+				"ProcurementPackage": "Vergabeeinheit",
+				"RfQ": "Anfrage"
+			}
+		}
+	}
+}

@@ -1,0 +1,244 @@
+/*-------------------------------------------------------------------------------
+	 Lookup (_lookup.scss)
+  -------------------------------------------------------------------------------*/
+.lookup-container {
+	//for example: status icon in form-container
+	img {
+		width: 16px;
+		height: 16px;
+	}
+
+	.value-input {
+		flex: 1;
+	}
+}
+
+.lookup-ico-dialog {
+	@include square(16px);
+	background-size: $size-icon $size-icon;
+	border: solid 1px transparent;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.lookup-selected {
+	background-color: #aec3d4;
+}
+
+// items within the lookup dropdown
+.lookup-item {
+	@extend .ellipsis;
+	cursor: default;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	font-size: 12px;
+
+	span {
+		white-space: nowrap;
+		overflow: hidden;
+		padding: 0 2px;
+	}
+
+	img {
+		@extend .icon-size-sm;
+	}
+}
+
+.popup-container {
+	position: fixed;
+	background: $color-body-background;
+	border: 1px solid $color-border;
+	z-index: $zindex-popup;
+	// overflow: hidden;
+}
+
+.popup-content {
+	overflow: auto;
+}
+
+.popup-footer {
+	padding: 2px 0;
+
+	.popup-tlb {
+		margin: 0 4px;
+		z-index: 100;
+	}
+
+	button {
+		@include square(16px);
+		background-size: 16px;
+		box-sizing: content-box;
+		background-color: transparent;
+		vertical-align: middle;
+
+		&.action-btn {
+			height: 20px;
+			max-width: 180px;
+			min-width: 50px;
+			padding: 0 $padding-large-horizontal;
+			margin: $padding-base-vertical 12px $padding-base-vertical 0;
+		}
+
+		img {
+			@include square(16px);
+			background-size: 16px;
+		}
+	}
+}
+
+.popup-container-s {
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	margin-top: 2px; // margin between edit box and popup window.
+}
+
+.popup-container-n {
+	box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
+	margin-bottom: 2px; // margin between edit box and popup window.
+}
+
+.popup-content-s {
+	border-bottom: 1px solid $color-border;
+}
+
+.popup-content-n {
+	border-top: 1px solid $color-border;
+}
+
+.lookup-grid-container {
+	margin-top: $padding-xlarge-vertical;
+	border: solid 1px $color-border;
+
+	.lookup-grid {
+		width: 576px;
+		height: 300px;
+		margin: -1px;
+	}
+}
+
+// unused
+.lookup-img-box {
+	display: flex;
+	z-index: 1;
+	height: 100%;
+	width: $size-icon;
+	justify-content: center;
+}
+
+.input-custom-box {
+	display: flex;
+	z-index: 1;
+	height: 100%;
+	padding-left: 4px;
+	background-color: white;
+}
+
+.ui-resizable-handle {
+	position: absolute;
+	font-size: .1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.ui-resizable-n {
+	cursor: n-resize;
+	width: 100%;
+	height: 7px;
+	left: 0;
+	top: -5px;
+}
+
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	height: 100%;
+	right: -5px;
+	top: 0;
+}
+
+.ui-resizable-s {
+	cursor: s-resize;
+	width: 100%;
+	height: 7px;
+	bottom: -5px;
+	left: 0;
+}
+
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	height: 100%;
+	left: -5px;
+	top: 0;
+}
+
+.ui-resizable-se {
+	cursor: se-resize;
+	right: 1px;
+	bottom: 1px;
+}
+
+.ui-resizable-sw {
+	transform: rotate(90deg);
+	cursor: sw-resize;
+	left: 1px;
+	bottom: 1px;
+}
+
+.ui-resizable-ne {
+	transform: rotate(270deg);
+	cursor: ne-resize;
+	right: 1px;
+	top: 1px;
+}
+
+.ui-resizable-nw {
+	transform: rotate(180deg);
+	cursor: nw-resize;
+	left: 1px;
+	top: 1px;
+}
+
+.ui-resizable-nw, .ui-resizable-ne, .ui-resizable-se, .ui-resizable-sw {
+	@include square(12px);
+	background-size: 12px;
+	background-image: url(../images/control-icons.svg#ico-resize);
+}
+
+.composite-lookup {
+	width: 50%;
+	float: left;
+}
+
+.composite-description {
+	width: 40%;
+	float: right;
+}
+
+/* Special case. lookup-icon class in div is a different style */
+.modal-dialog .modal-body div.lookup-ico-dialog {
+	margin-right: 0px;
+	background-size: 16px;
+	height: 100%;
+	width: 100%;
+}
+
+.flex-auto {
+	flex: auto;
+}
+
+.image-select-popup {
+	img {
+		@extend .icon-size-sm;
+	}
+
+}
+
+.lookup-alert {
+	padding: 4px;
+	margin-top: 8px;
+	border: 1px solid transparent;
+}

@@ -1,0 +1,122 @@
+@import 'variables';
+@import 'mixins';
+
+.popup-container {
+	@include flexbox-container($direction: column);
+	position: fixed;
+	background: #fff;
+	border: 1px solid #ababab;
+	overflow: hidden;
+}
+
+.popup-header {
+	@include flexbox-container();
+}
+
+.popup-content {
+	@include flexbox-container($overflow: auto, $basis: auto, $flex: 1); // important! content must be flex element so that it could have 100% of width and height of container except header and footer
+	@extend %dropdown;
+
+	.popup-menu {
+		font-size: $size-font-base;
+		line-height: normal;
+		min-width: 158px; //because icon-view has a width 158px. this 2px can be hovered by a li-element. Does'nt look good
+	}
+}
+
+.popup-footer {
+	@include flexbox-container();
+	padding: 2px 0;
+}
+
+// The standard dropdown menu (ul)
+.dropdown-menu {
+	@extend %dropdown;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	display: none; // none by default, but block on "open" of the menu
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: $zindex-dropdown;
+	border: 1px solid $color-bar-border;
+	border-radius: $size-border-radius-base;
+	float: left;
+	text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	cursor: initial;
+	background-color: $color-body-background;
+	background-clip: padding-box;
+
+	// Menu positioning
+	//
+	// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
+	// menu with the parent.
+	&.dropdown-menu-right {
+		left: auto; // Reset the default from `.dropdown-menu`
+		right: 0;
+	}
+
+	ul {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	&.max-sized {
+		max-height: 210px;
+		overflow: auto;
+	}
+}
+
+// Basis class for The standard dropdown menu (ul)
+%dropdown {
+	li {
+		@include status-styles($color-grid-selection, darken);
+		display: flex;
+		background-color: $color-body-background;
+		color: $color-text;
+
+		> * {
+			@include flexbox-container($flex: 1);
+		}
+
+		button {
+			@include flexbox-container($alignItems: center, $flex: 1, $basis: auto, $height: 30px, $overflow: hidden);
+			padding: 0 $padding-base-horizontal;
+			width: 100%;
+			text-align: left;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			background-position: -9999px;
+
+			&.title, &.dropdown-header {
+				border-bottom: $border-width-default solid #c2c2c2;
+				border-top: $border-width-default solid #c2c2c2;
+				background-color: $color-body-background;
+				opacity: inherit !important;
+			}
+
+			&[class*="ico-"] {
+				@include icon-placeholder-left($padding-left: $padding-base-horizontal);
+			}
+
+			svg {
+				@include square(16px);
+				background-size: 16px 16px;
+				margin-right: 4px;
+			}
+		}
+
+		> a {
+			text-decoration: none;
+			outline: 0;
+			cursor: pointer;
+			display: block;
+			padding: 3px 20px 3px $padding-base-horizontal;
+			clear: both;
+			color: $color-text;
+			white-space: nowrap; // prevent links from randomly breaking onto new lines
+		}
+	}
+}

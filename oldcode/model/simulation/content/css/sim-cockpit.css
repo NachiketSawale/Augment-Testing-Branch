@@ -1,0 +1,64 @@
+.sim-cockpit g.axis, .sim-cockpit g.tick {
+    stroke-width: 1px;
+    fill: none;
+    shape-rendering: crispEdges;
+}
+.sim-cockpit .detail g.axis, .sim-cockpit .detail g.tick {
+    stroke: #dcdcdc;
+}
+.sim-cockpit .master g.axis, .sim-cockpit .master g.tick {
+    stroke: white;
+}
+.sim-cockpit g text {
+    fill: #333;
+    stroke: none;
+}
+.sim-cockpit line.thumbLine {
+    stroke: rgb(65,150,106);
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+.sim-cockpit line.thumbLine.ghosted {
+    stroke-dasharray: 2, 2;
+}
+.sim-cockpit .pastArea {
+    fill: rgb(217,234,226);
+    stroke: none;
+}
+.sim-cockpit .todayLine {
+    stroke: red;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+.sim-cockpit .brush .extent {
+    fill: #aec3d4;
+}
+.sim-cockpit .master .today, .sim-cockpit .master .axis, .sim-cockpit .master .thumb {
+    pointer-events: none;
+}
+.sim-cockpit .timelines .timeline .bar {
+    pointer-events: none;
+}
+.sim-cockpit .timelines .timeline .bar .total {
+    fill: #dcdcdc;
+}
+.sim-cockpit .timelines .timeline .bar .life {
+    fill: #b8e6f2;
+}
+.sim-cockpit .timelines .timeline .bar .activity {
+    fill: #ffb47f;
+}
+.sim-cockpit .timelines .timeline .decoration .name {
+    dominant-baseline: central;
+    text-anchor: start;
+    pointer-events: none;
+}
+.sim-cockpit .timelines .timeline .decoration .d3-btn-icon {
+    pointer-events: none;
+}
+.sim-cockpit .timelines .timeline .decoration .d3-btn-bg {
+    fill: transparent;
+}
+.sim-cockpit .timelines .timeline .decoration .hovered .d3-btn-bg {
+    fill: rgba(255, 255, 0, 0.5);
+}

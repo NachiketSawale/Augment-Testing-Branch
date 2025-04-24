@@ -1,0 +1,49 @@
+<div class="platform-form-group ">
+	<div class="estimate-material-scope platform-form-row">
+		<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.selectMaterialAndCcScope' | platformTranslate }}</label>
+		<div class="platform-form-col">
+			<!--todo DEV-25789  FieldType.radio can't support disabled property now ,use below code implement first,The best way is to implement it in the form-->
+			<ul *ngFor="let scopeOptionItem of scopeOptions">
+				<li class="radio spaceToUp">
+					<input type="radio"
+					       name="selectMaterialScope"
+					       [(ngModel)]="optionItem.scopeOption"
+					       [value]="scopeOptionItem.value"
+					       [disabled]="!scopeOptionItem.isActive"
+					/>
+					<label>{{ scopeOptionItem.label }}</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<br/>
+	<div class="estimate-select-criteria platform-form-row">
+		<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.criteriaSectionToCreatePackage'| platformTranslate }}</label>
+		<div class="platform-form-col">
+			<ui-common-lookup-input [dataService]="selectionLookupService" [(value)]="optionItem.selectedItem"></ui-common-lookup-input>
+		</div>
+	</div>
+	<div class="estimate-select-criteria platform-form-row">
+		<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.dissolveReferenceLineItemLabel'| platformTranslate }}</label>
+		<div class="platform-form-col">
+			<ui-common-domain-control-host [(value)]="optionItem.isSelectedReferenceLineItem" [fieldType]="FieldType.Boolean"></ui-common-domain-control-host>
+			{{ 'estimate.main.createMaterialPackageWizard.dissolveReferenceNote' | platformTranslate }}
+		</div>
+	</div>
+	<div class="estimate-select-criteria platform-form-row">
+		<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.multiPackageAssignmentModelLabel'| platformTranslate }}</label>
+		<div class="platform-form-col">
+			<ui-common-domain-control-host [(value)]="optionItem.isSelectMultiPackageAssignmentModel" [fieldType]="FieldType.Boolean"></ui-common-domain-control-host>
+			{{ 'estimate.main.createMaterialPackageWizard.multiPackageAssignmentModelNote' | platformTranslate }}
+		</div>
+	</div>
+	<div class="estimate-select-criteria platform-form-row" *ngIf="optionItem.selectedItem===estimateMainCreateMaterialPackageSelectionOption.MaterialAndCostCode">
+		<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.skipSelectionPageLabel'| platformTranslate }}</label>
+		<div class="platform-form-col">
+			<ui-common-domain-control-host [(value)]="optionItem.isAllResultTobeChosen" [fieldType]="FieldType.Boolean" (valueChange)="onIsAllResultTobeChosen()"></ui-common-domain-control-host>
+			{{ 'estimate.main.createMaterialPackageWizard.skipSelectionPageNote' | platformTranslate }}
+		</div>
+	</div>
+</div>
+
+

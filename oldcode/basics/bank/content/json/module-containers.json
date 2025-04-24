@@ -1,0 +1,17 @@
+[
+  {
+	"id": "1",
+	"template": "app/components/base/grid-partial.html",
+	"title": "basics.bank.listBankTitle",
+	"controller": "basicsBankListController",
+	"uuid": "c33e512fee614bda84485f33093472f7"
+  },
+  {
+	"id": "2",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "basics.bank.detailBankTitle",
+	"controller": "basicsBankDetailController",
+	"uuid": "31d65ad2dc274a26ae91281b8d71a009",
+	"permission": "c33e512fee614bda84485f33093472f7"
+  }
+]

@@ -1,0 +1,19 @@
+﻿{
+	"project": {
+		"group": {
+			"entityCompany": "Company",
+			"entityProjectGroup": "Project Group",
+			"entityProjectGroupStatus": "Project Group Status",
+			"entityCode": "Code",
+			"entityDescriptionInfo": "Description",
+			"entityCommentText": "Comment",
+			"entityIsActive": "Is Active",
+			"projectGroupList": "Project Group",
+			"projectGroupDetail": "Project Group Details",
+			"uncPath": "UNC Path",
+			"isAutoIntegration": "Auto Integration",
+			"createAutoIntegratedGroup": "Create Root Project Group which sub groups are automatically integrated with iTWO Baseline",
+			"defaultTemplateProject": "Default Template Project"
+		}
+	}
+}

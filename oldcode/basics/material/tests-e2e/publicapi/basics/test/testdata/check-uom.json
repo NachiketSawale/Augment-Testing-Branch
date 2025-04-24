@@ -1,0 +1,77 @@
+{
+	"UoMList":
+	[
+		{
+			"UoM": "EUR"
+		}
+		,{
+			"UoM": "KM"
+		}
+		,{
+			"UoM": "KWH"
+		}
+		,{
+			"UoM": "M"
+		}
+		,{
+			"UoM": "M3"
+		}
+		,{
+			"UoM": "MM"
+		}
+		,{
+			"UoM": "ST"
+		}
+		,{
+			"UoM": "STCK"
+		}
+		,{
+			"UoM": "STD"
+		}
+		,{
+			"UoM": "T"
+		}
+		,{
+			"UoM": "DM"
+		}
+		,{
+			"UoM": "KG"
+		}
+		,{
+			"UoM": "CM"
+		}
+		,{
+			"UoM": "DM"
+		}
+		,{
+			"UoM": "MM"
+		}
+		,{
+			"UoM": "M"
+		}
+		,{
+			"UoM": "STD"
+		}
+		,{
+			"UoM": "DM2"
+		}
+		,{
+			"UoM": "CM3"
+		}
+		,{
+			"UoM": "DM3"
+		}
+		,{
+			"UoM": "M3"
+		}
+		,{
+			"UoM": "CM3"
+		}
+		,{
+			"UoM": "H"
+		}
+		,{
+			"UoM": "HRS"
+		}
+	]
+}

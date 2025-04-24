@@ -1,0 +1,32 @@
+<div data-ng-controller="estimateMainLineItemsCostGroupSelectLevelController">
+    <header class="modal-header">
+        <h2 class="modal-title" data-ng-bind="modalOptions.lineItemsCostGroupMapping"></h2>
+        <button class="db close" data-dismiss="modal" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)" data-ng-click="modalOptions.cancel()">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+
+    <section class="modal-body">
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="col-sm-5" style="padding:5px 0px 0px;">{{modalOptions.selectCostGroupLevelTitle}}</label>
+                <div class="col-sm-8" style="padding-top: 10px">
+                    <div class="radio spaceToUp">
+                        <label class="ng-binding"> <input type="radio" data-ng-model="modalOptions.levelSelect" name="assigmentLevelSelect" value="1" data-ng-checked="modalOptions.levelSelect==1"/> {{modalOptions.projectLevel}} </label>
+                    </div>
+                    <div class="radio spaceToUp">
+                        <label class="ng-binding"> <input type="radio" data-ng-model="modalOptions.levelSelect" name="assigmentLevelSelect" value="2" data-ng-checked="modalOptions.levelSelect==2"/> {{modalOptions.enterpriseLevel}} </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.onNext()">{{modalOptions.btnNextText}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.onCancel()">{{modalOptions.btnCancelText}}</button>
+    </footer>
+
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+
+</div>

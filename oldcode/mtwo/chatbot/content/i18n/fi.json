@@ -1,0 +1,13 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "Määritys",
+      "configurationTitle": "Määritys",
+      "entityChatbotConfigurationCode": "Koodi",
+      "entityChatbotConfigurationIslive": "On käytössä",
+      "entityChatbotConfigurationUpdatedAt": "Päivitetty",
+      "entityChatbotHeaderLanguageFK": "Kieli",
+      "headerTitle": "Ylätunniste"
+    }
+  }
+}

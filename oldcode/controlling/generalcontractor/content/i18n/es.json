@@ -1,0 +1,33 @@
+﻿{
+  "controlling": {
+    "generalcontractor": {
+      "ActualCost": "Costes reales",
+      "ActualsWithoutContract": "Costes reales sin contrato",
+      "Additional": "Gastos adicionales",
+      "BasicCost": "Coste básico",
+      "Budget": "Presupuesto",
+      "Code": "Código",
+      "Contract": "Contrato",
+      "CostControlTitle": "Control de coste",
+      "Forecast": "Pronóstico",
+      "Invoice": "Factura",
+      "InvoiceStatus": "Estado de la factura",
+      "Mutation": "Mutación",
+      "Result": "Resultado",
+      "Revenue": "Ingresos",
+      "baseSetting": "Configuración básica",
+      "Comment": "Comentario",
+      "ControllingUnitFk": "Unidad de control",
+      "Cost": "Coste",
+      "CostTotal": "Coste total",
+      "CreateUpdateCostControlStructureWizard": "Crear/ actualizar estructura de control de costes",
+      "IsTransferred": "Transferido",
+      "LineItemsListController": "Line Items",
+      "OrdHeaderFk": "Encabezado de peddido",
+      "OrdStatusFk": "Estado del contrato",
+      "PrjChangeFk": "Cambio del proyecto",
+      "SalesContractsContainer": "Contratos de ventas",
+      "Total": "Total final"
+    }
+  }
+}

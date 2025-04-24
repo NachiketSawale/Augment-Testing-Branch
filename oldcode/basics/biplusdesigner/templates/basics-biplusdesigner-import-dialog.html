@@ -1,0 +1,31 @@
+<div class="flex-element" data-ng-controller="basicsBiPlusDesignerImportDialogController">
+    <div data-cloud-common-overlay data-loading="loading" data-info2="message"></div>
+    <div data-ng-show="displayInfo">
+        {{instructionText}}
+    </div>
+
+    <div data-ng-show="displayInfo" style="margin-top: 10px; padding: 5px;" class="alert-info">
+        {{warningText}}
+    </div>
+
+    <div data-ng-hide="loading">
+        <h5>{{notificationText}}</h5>
+        <div class="flex-box flex-element">
+            <div class="flex-element platform-form-group" data-ng-repeat="stat in data">
+                <h4>{{stat.Description}}</h4>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">Inserted : {{stat.Inserted}}</div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">Updated : {{stat.Updated}}</div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">Deleted : {{stat.Deleted}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,92 @@
+<div class="content-inner flex-box flex-column">
+	<div class="toolbar">
+		<ul class=" showimages tools">
+			<li>
+				<button class="tlb-icons ico-rec-previous"
+				        data-ng-click="workflowSidebar.detailFn.switchListDetail()"
+				        title="{{ 'basics.common.button.back' | translate}}"
+				        type="button">
+				</button>
+			</li>
+			<li>
+				<button class="tlb-icons ico-refresh"
+				        data-ng-click="workflowSidebar.refreshSelected()"
+				        title="{{ 'cloud.common.toolbarRefresh' | translate }}"
+				        type="button">
+				</button>
+			</li>
+		</ul>
+		<ul class="showimages tools flex-end fullwidth">
+			<li>
+				<button class="tlb-icons ico-tree-collapse rotate-270"
+				        data-ng-click="workflowSidebar.detailFn.previousTask()"
+				        title="{{ 'cloud.common.previousStep' | translate}}"
+				        type="button">
+				</button>
+			</li>
+			<li style="color: #0067b1; font-size: 12pt;line-height: 36px;font-weight: bold; ">
+				{{workflowSidebar.taskList[workflowSidebar.selectedGroup].name ?
+				workflowSidebar.taskList[workflowSidebar.selectedGroup].name : 'basics.workflow.task.detail.noGroupHeader' |
+				translate}} {{workflowSidebar.detailConfig.selectedIndex + 1 }}/{{workflowSidebar.listConfig.isGrouped ?
+				workflowSidebar.workflowList[workflowSidebar.selectedGroup].childs.length : workflowSidebar.workflowList.length}}
+			</li>
+			<li>
+				<button class="tlb-icons ico-tree-collapse rotate-90"
+				        data-ng-click="workflowSidebar.detailFn.nextTask()"
+				        title="{{ 'cloud.common.nextStep' | translate}}"
+				        type="button">
+				</button>
+		</ul>
+	</div>
+
+	<div class="sidebar-panel">
+		<div class="sidebar-panel-heading">
+			<div class="rwd border-none">
+				<ul class="rwd-content">
+					<li class="title">{{workflowSidebar.selectedItem.Description}}</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="sidebar-panel-body">
+			<ul data-ng-if="workflowSidebar.lastWorkflow.name">
+				<li><b>{{'basics.workflow.sidebar.description' | translate}}:</b> {{workflowSidebar.lastWorkflow.name}}</li>
+				<li><b>{{'basics.workflow.sidebar.status' | translate}}:</b> {{workflowSidebar.lastWorkflow.status}}</li>
+				<li><b>{{'basics.workflow.sidebar.error' | translate}}:</b> {{workflowSidebar.lastWorkflow.error}}</li>
+				<li>
+					<hr>
+					<b>{{'basics.workflow.sidebar.history' | translate}}</b>
+					<ul>
+						<li data-ng-repeat="item in workflowSidebar.lastWorkflow.history">
+							<i class="control-icons ico-tick " data-ng-if="!item.IsRunning"
+							   style="height: 16px; width: 16px; display: inline-block; vertical-align: sub">
+							</i>
+							{{item.Description}}
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+		<div class="sidebar-panel-footer">
+			<div class="margin-top-ld">
+				<button class="btn btn-default fullwidth" data-ng-click="workflowSidebar.startWorkflow(workflowSidebar.selectedItem)" data-ng-disabled="!workflowSidebar.isItemSelected()"
+				        type="button">
+					{{'basics.workflow.sidebar.startWorkflow' | translate }}
+				</button>
+			</div>
+			<div class="margin-top-ld">
+				<button class="btn btn-default fullwidth" data-ng-click="workflowSidebar.startWorkflowForEveryEntity(workflowSidebar.selectedItem)" data-ng-disabled="!workflowSidebar.hasListItems()"
+				        type="button">
+					{{'basics.workflow.sidebar.startWorkflowForEveryEntity' | translate }}
+				</button>
+			</div>
+			<div class="margin-top-ld">
+				<button class="btn btn-default fullwidth" data-ng-click="workflowSidebar.startWorkflowForEverySelectedEntity(workflowSidebar.selectedItem)" data-ng-disabled="!workflowSidebar.hasListItems()"
+				        type="button">
+					{{'basics.workflow.sidebar.startWorkflowForEverySelectedEntity' | translate }}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,122 @@
+<style>
+    .modal-footer .btn + .btn {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .modal-footer button.sm,.modal-footer button.input-sm{
+	    min-width: initial;
+	    padding: 0;
+    }
+</style>
+
+<header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+<section class="modal-body">
+    <div class="flex-element flex-basis-auto">
+        <tabset class="tabsWrapper">
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" select="onTabSelect(tab)">
+                <div data-ng-include="tab.content"></div>
+            </tab>
+        </tabset>
+    </div>
+</section>
+<footer class="modal-footer" style="height: auto;">
+    <div class="platform-lg platform-form-group" style="border-spacing: 0;">
+        <div class="platform-form-row">
+            <div id="error-{{$index}}" class="tabsWrapper" ng-repeat="error in stateErrors track by $index">
+                <div class="alert alert-danger" style="margin-bottom: 0;">
+                    {{error.message}}
+                </div>
+            </div>
+            <div id="warning-{{$index}}" class="tabsWrapper"  ng-repeat="warning in stateWarnings track by $index">
+                <div class="alert alert-warning" style="margin-bottom: 0;">
+                    <button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close" data-target="#warning-{{$index}}"></button>
+                    {{warning.message}}
+                </div>
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <div class="platform-form-col">
+                <div class="lg-5">
+                    <div class="lg-12 platform-form-group">
+                        <div class="platform-form-row form-group">
+                            <label class="platform-form-label">{{modalOptions.genericProfileText}}</label>
+                            <div class="platform-form-col">
+                                <div class="lg-9">
+                                    <div class="control-directive" print-item-boq-setting-custom-dialog
+                                         data-entity="settings"
+                                         data-model="settings.genericProfile.selectedValue"
+                                         data-ng-model="settings.genericProfile.selectedValue"
+                                         data-options="settings.genericProfile.options"
+                                         data-ng-change="settings.genericProfile.options.change()"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platform-form-row form-group">
+                            <label class="platform-form-label">{{modalOptions.rfqProfileText}}</label>
+                            <div class="platform-form-col">
+                                <div class="lg-9">
+                                    <div class="control-directive" print-item-boq-setting-custom-dialog
+                                         data-entity="settings"
+                                         data-ng-model="settings.rfqProfile.selectedValue"
+                                         data-options="settings.rfqProfile.options"
+                                         data-ng-change="settings.rfqProfile.options.change()"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <div class="lg-4">
+
+                <div class="radio spaceToUp lg-10 md-10" style="margin-left: 15px;">
+                    <label class="platform-form-label">
+                        <input type="radio"
+                               name="quoteStatus"
+                               value="0"
+                               data-ng-model="settings.LoadValue"
+                               ng-click="settings.LoadDefaultProfile.change()"/>
+                        {{modalOptions.LoadDefaultProfileText}}
+                    </label>
+                </div>
+
+                <div class="radio spaceToUp lg-10 md-10" style="margin-left: 15px;">
+                    <label class="platform-form-label">
+                        <input type="radio"
+                               name="quoteStatus"
+                               value="1"
+                               data-ng-model="settings.LoadValue"
+                               ng-click="settings.LoadCurViewProfile.change()"/>
+                        {{modalOptions.LoadCurrentViewText}}
+                    </label>
+                </div>
+            </div>
+
+            <div class="lg-8 platform-form-group" style="padding-right:0;border-spacing:0;">
+                <div class="platform-form-row">
+                    <div class="platform-form-col" style="padding-top:34px; float: right;">
+                        <div class="lg-2 pull-right text-right form-group platform-form-row composite-last-item" style="margin-left: 10px;">
+                            <button class="btn btn-default" data-ng-disabled="hasErrors" data-ng-click="modalOptions.print()" style="width:110px;">{{modalOptions.btnPrintText}}</button>
+                        </div>
+                        <div class="lg-2 pull-right text-right form-group platform-form-row composite-last-item" style="margin-left: 10px;">
+                            <button class="btn btn-default" data-ng-disabled="hasErrors" data-ng-click="modalOptions.doPreview()" style="width:110px;">{{modalOptions.previewText}}</button>
+                        </div>
+                        <div class="lg-2 pull-right text-right form-group platform-form-row composite-last-item" style="margin-left: 10px;">
+                            <button class="btn btn-default" data-ng-disabled="hasErrors" data-ng-click="modalOptions.ok()" style="width:110px;">{{modalOptions.btnOkText}}</button>
+                        </div>
+                        <div class="lg-2 pull-right text-right form-group platform-form-row composite-last-item" style="margin-left: 10px;">
+                            <button class="btn btn-default" data-ng-click="modalOptions.saveAs()" style="width:110px;">{{modalOptions.saveAsText}}</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<div cloud-common-overlay data-loading="isLoading"></div>

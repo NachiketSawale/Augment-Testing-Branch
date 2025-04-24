@@ -1,0 +1,97 @@
+<div data-ng-controller="procurementContractContractTerminationController">
+  <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+  <section class="modal-body" style="height:auto;">
+    <div cloud-common-overlay data-loading="isLoading"></div>
+    <div data-ng-switch="step">
+      <div data-ng-switch-when="step1">
+        <div style="padding:0 10px;">
+          <div class="platform-form-group">
+            <div class="platform-form-row">
+              <div style="width:100%;margin: 8px 0;">
+                {{::unfinishedContractText}}
+              </div>
+            </div>
+          </div>
+          <div data-platform-grid style="border: 1px solid #ABABAB; height: 185px; "
+               data-data="gridData"></div>
+          <div style="text-align: right;margin-top: 5px;">
+            <span style="display: inline-block; width: 140px; text-align: left;"><span style ="display: inline-block; width: 70px;">{{::totalGross}}</span>{{modalOptions.data.TotalGross}}</span>
+            <span style="display: inline-block; width: 180px; text-align: left;"><span style ="display: inline-block; width: 122px;">{{::deliveredTotalGross}}</span>{{modalOptions.data.TotalDeliveredGross}}</span>
+          </div>
+          <div style="text-align: right;margin-top: 2px;">
+            <span style="display: inline-block; width: 140px; text-align: left;"><span style ="display: inline-block; width: 70px;">{{::totalNet}}</span>{{modalOptions.data.TotalNet}}</span>
+            <span style="display: inline-block; width: 180px; text-align: left;"><span style ="display: inline-block; width: 122px;">{{::deliveredTotalNet}}</span>{{modalOptions.data.TotalDeliveredNet}}</span>
+          </div>
+			<div style="width:100%;margin: 12px 0 10px 0;">
+			{{::transferUnfinishedPartTo}}
+			</div>
+			<div style="height: auto;">
+			<div class="radio">
+			<label>
+			 <input type="radio" name="partto" data-ng-model="entity.partTo" value="req">{{::newReq}}
+			</label>
+			</div>
+			<div class="radio" style="margin-top: 10px;">
+			<label style="display: inline-block; margin-right: 10px;">
+			 <input type="radio" name="partto" data-ng-model="entity.partTo" value="con">{{::newCon}}
+			</label>
+			</div>
+			<!-- <span style="display: inline-block;position: relative;left: 30px;">{{::specifyBp}}</span>
+			<diyle="width: calc(100% - 275px);position: relative;top: -24px;left: 280px;"
+				data-filter-business-partner-dialog-lookup="" data-ng-model="entity.BusinessPartnerFk" data-config="bpOptions"
+				class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-not-empty"></div>-->
+			</div>
+			<section class="modal-body" style="padding-left: 5px;">
+				<div data-platform-form-container data-form-container-options="formContainerOptions" entity="entity"></div>
+			</section>
+			<section class="modal-body" style="padding-left: 0; padding-top: 0">
+			<div class="platform-form-group">
+			  <div class="platform-form-row">
+			     <div style="width:100%;margin: 12px 0 10px 0;">
+			        {{::newChangeOrderAgainstOrginalContractWillBe}}
+			     </div>
+			     <div>
+			        <span style="display: inline-block;">{{::specifyProjectChange}}</span>
+			        <div style="display: inline-block;position: relative;width: calc(100% - 145px);left: 23px;" data-project-change-dialog="" data-ng-model="entity.projectChange" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty" data-entity="entity" data-options="projectChangeOptions">
+			        </div>
+			     </div>
+			  </div>
+			</div>
+			</section>
+        </div>
+      </div>
+
+      <div data-ng-switch-when="step2">
+	      <div class="icon-message ng-scope">
+		      <div class="icon tlb-icons ico-info"></div>
+		      <div ng-bind-html="infoAfterCreate"></div>
+	      </div>
+      </div>
+    </div>
+  </section>
+	<div data-ng-switch="step">
+		<footer class="modal-footer" data-ng-switch-when="step1">
+			<button type="button" data-ng-disabled="OKBtnDisabled()" class="btn btn-default" data-ng-click="ok()">
+				{{::actionButtonText}}
+			</button>
+			<button type="button" class="btn btn-default" data-ng-click="close()">
+				{{::cancelButtonText}}
+			</button>
+		</footer>
+
+		<footer class="modal-footer"  data-ng-switch-when="step2">
+<!--			<button type="button"-->
+<!--			        class="btn navigator-button tlb-icons ico-goto"-->
+<!--			        title="{{::navigateTitle}}"-->
+<!--			        ng-click="onNavigateReq()">-->
+<!--			</button>-->
+			<button type="button" class="btn btn-default" data-ng-click="onNavigate()" >
+				{{::navigateTitle}}
+			</button>
+			<button type="button" class="btn btn-default" data-ng-click="close()">
+				{{::closeButtonText}}
+			</button>
+		</footer>
+	</div>
+</div>

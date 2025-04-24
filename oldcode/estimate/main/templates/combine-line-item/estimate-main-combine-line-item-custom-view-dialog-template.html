@@ -1,0 +1,73 @@
+<div class="flex-element flex-basis-auto" data-ng-controller="estimateMainCombineLineItemCustomViewDialogController">
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <div class="platform-form-col">
+                <label class="platform-form-label">{{'estimate.main.baseCombinedView' | translate}}</label>
+                <div class="platform-form-col">
+                    <div class="radio spaceToUp pull-left">
+                        <label>
+                            <input type="radio" name="baseCombinedView" value="1"
+                                   data-ng-model="input.baseCombinedView" ng-click="onRadioGroupOptChanged('1')"/>{{modalOptions.baseViewStandardText}}
+                        </label>
+                    </div>
+                    <div class="radio spaceToUp pull-left margin-left-ld">
+                        <label>
+                            <input type="radio" name="baseCombinedView" value="2"
+                                   data-ng-model="input.baseCombinedView" ng-click="onRadioGroupOptChanged('2')"/>{{modalOptions.baseViewUnitCostText}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <div class="platform-form-col">
+                <div class="flex-element flex-box flex-basis-auto grid-layout-wrapper">
+                    <div class="flex-element flex-box flex-column subview-container">
+                        <div class="toolbar">
+                            <h3 class="title font-bold">{{'platform.grid.availableColumns' | translate}}</h3>
+                        </div>
+                        <div class="flex-element flex-box flex-column subview-content">
+                            <platform-Grid data="availableGridData" style="..."></platform-Grid>
+                        </div>
+                    </div>
+                    <div class="middle-container vert-hori-center flex-column">
+                        <button class="btn btn-default control-icons ico-ar1-right1" data-ng-click="fromStartToTarget('part', 'availableGridId', 'gridId', true)" data-ng-disabled="availableGridIdSelected"></button>
+                        <button class="btn btn-default control-icons ico-ar1-right2" data-ng-click="fromStartToTarget('total', 'availableGridId', 'gridId', true)"></button>
+                        <button class="btn btn-default control-icons ico-ar1-left1" data-ng-click="fromStartToTarget('part', 'gridId', 'availableGridId', false)" data-ng-disabled="gridIdSelected"></button>
+                        <button class="btn btn-default control-icons ico-ar1-left2" data-ng-click="fromStartToTarget('total', 'gridId', 'availableGridId', false)"></button>
+                    </div>
+                    <div class="left-container flex-box flex-column">
+                        <div class="flex-element flex-box flex-column subview-container">
+                            <div class="toolbar">
+                                <h3 class="title font-bold">{{modalOptions.combineColumnsText | translate}}</h3>
+                            </div>
+                            <div class="flex-element flex-box flex-column subview-content">
+                                <platform-Grid data="gridData"></platform-Grid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <div class="platform-form-col">
+                <label class="platform-form-label">{{modalOptions.customViewText}}</label>
+                <div class="platform-form-col">
+                    <span class="form-control"
+                          data-domain-control
+                          data-domain="select"
+                          data-model="settings.customView.selectedValue"
+                          data-options="settings.customView.options"
+                          data-change="settings.customView.options.change()">
+                    </span>
+                </div>
+                <div class="platform-form-col">
+                    <button class="btn btn-default margin-left-ld" data-ng-click="modalOptions.saveAsCustomView()">{{modalOptions.saveAsText}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div cloud-common-overlay data-loading="isLoading"></div>

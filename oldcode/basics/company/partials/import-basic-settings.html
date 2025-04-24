@@ -1,0 +1,38 @@
+<div data-ng-controller="basicsCompanyImportContentSettingsController">
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'basics.company.importContent.internalImport' | translate }}</label>
+            <div class="platform-form-col"><input type="checkbox" data-ng-model="data.internalImport" class="form-control"></div>
+        </div>
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'basics.company.importContent.contentServerURL' | translate }}</label>
+            <div class="platform-form-col">
+                <input type="text" data-ng-readonly="data.internalImport" data-ng-model="data.contentServerURL"
+                       class="form-control" placeholder="<enter content server URL>"
+                       autocomplete="off">
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'basics.company.importContent.userName' | translate }}</label>
+            <div class="platform-form-col">
+                <input type="text"  data-ng-readonly="data.internalImport" data-ng-model="data.userName"
+                       autocomplete="off" autocapitalize="off"
+                       class="form-control" placeholder="<enter user name>">
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'basics.company.importContent.password' | translate }}</label>
+            <div class="platform-form-col">
+                <input class="form-control" type="password" data-ng-readonly="data.internalImport"  data-ng-model="data.password"
+                       id="password" name="password" autocomplete="off"
+                       placeholder="<enter password>">
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <div class="platform-form-label">{{'cloud.desktop.settingsUserDataLang' | translate }}</div>
+            <div class="platform-form-col">
+                <div basics-company-import-content-language-lookup data-read-only="true" data-disabled="true" ng-model="data.language"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+:host {
+	display: flex;
+	flex: 1;
+	position: relative;
+}
+
+.message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #e6e6e6;
+}
+
+.markup-comment{
+	width: 250px;
+	height: 100%;
+	margin: 5px;
+	position: absolute;
+	opacity: 0.9;
+	top: 0;
+	right: 0;
+}

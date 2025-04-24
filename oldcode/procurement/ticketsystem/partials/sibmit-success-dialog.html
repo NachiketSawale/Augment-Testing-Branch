@@ -1,0 +1,16 @@
+<div data-ng-controller="procurementTicketSystemSubmitSuccessDialogController" class="flex-element flex-box flex-column fullheight">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body flex-element fullheight">
+        <div class="flex-box flex-column fullheight">
+            <h3>{{modalOptions.bodyText}}</h3>
+            <br />
+            <platform-grid data="gridData"></platform-grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div>
+            <button type="button" class="btn btn-default tlb-icons ico-goto" data-ng-click="goTo()"></button>
+            <button type="button" class="btn btn-default" data-ng-click="onOK()">{{'cloud.common.ok' | translate}}</button>
+        </div>
+    </footer>
+</div>

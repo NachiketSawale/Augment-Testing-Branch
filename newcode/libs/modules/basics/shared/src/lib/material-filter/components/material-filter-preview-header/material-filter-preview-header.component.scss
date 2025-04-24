@@ -1,0 +1,12 @@
+.material-filter-preview-title,
+.material-filter-preview-display-image {
+	margin-bottom: 8px
+}
+
+.material-filter-preview-display-image {
+	max-width: 80%;
+	max-height: 200px;
+	margin-top: 10px;
+	height: auto;
+	object-fit: cover;
+}

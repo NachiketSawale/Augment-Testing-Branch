@@ -1,0 +1,18 @@
+<div data-ng-controller="ControllingActualsGeneratePreliminaryActualsController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body" data-ng-switch="step">
+		<div class="row" data-ng-switch-when="0">
+			<div class="col-md-12" data-platform-form data-form-options="configureOptions" entity="currentItem"></div>
+		</div>
+
+		<div class="icon-message" data-ng-switch-when="1">
+			<div class="icon tlb-icons ico-question"></div>
+			<div class="message" data-ng-bind='"controlling.actuals.wizard.overridePreliminaryActualsQuestion" | translate'></div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="enableOK()" data-ng-click="onOk()" data-ng-bind="(step===0?'basics.common.button.ok':'platform.yesBtn') | translate"></button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()" data-ng-bind="step===0?'basics.common.button.cancel':'platform.noBtn' | translate"></button>
+	</footer>
+	<div cloud-common-overlay data-loading="isLoading"></div>
+</div>

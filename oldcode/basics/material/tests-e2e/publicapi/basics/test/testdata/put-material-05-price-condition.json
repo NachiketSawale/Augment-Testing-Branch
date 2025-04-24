@@ -1,0 +1,85 @@
+﻿{
+	"CompanyCode": "GUANGDONG2017001",
+	"MaterialCatalogCode": "广东二类地区材料信息价",
+	"Materials": [
+		{
+			"MaterialGroupCode": "2.3.7",
+			"Code": "0313191-3",
+			"MatchCode": "",
+			"DescriptionInfo1": {
+				"Description": "#3专用螺母垫圈Q235"
+			},
+			"DescriptionInfo2": {
+				"Description": ""
+			},
+			"Specification": "",
+			"MaterialAbcDescription": "",
+			"Currency": "",
+			"UoM": "块",
+			"RetailPrice": 0,
+			"ListPrice": 1.76,
+			"Discount": 0,
+			"Charges": 0,
+			"Cost": 0,
+			"EstimatePrice": 0,
+			"PriceUnit": 0,
+			"PriceUnitUoM": "",
+			"PriceUnitFactor": 0,
+			"SellUnit": 0,
+			"MaterialDiscountGroupCode": "",
+			"WeightType": "2",
+			"WeightNumber": "0",
+			"Weight": 0,
+			"ExternalCode": "",
+			"TaxCode": "",
+			"BlobsContent": "",
+			"PriceConditionDescription": "No Extras",
+			"MaterialPriceConditions": [
+				{
+					"priceConditionTypeDescription": "Copper Stock Market Price",
+					"description": "PriceCondition1",
+					"value": 10.0,
+					"total": 20.0,
+					"totalOc": 20.0
+				}
+			],
+			"MaterialCharacteristics": []
+		},
+		{
+			"MaterialGroupCode": "2.3.7",
+			"Code": "0313191-2",
+			"MatchCode": "",
+			"DescriptionInfo1": {
+				"Description": "#3专用螺母垫圈Q235"
+			},
+			"DescriptionInfo2": {
+				"Description": ""
+			},
+			"Specification": "",
+			"MaterialAbcDescription": "",
+			"Currency": "",
+			"UoM": "块",
+			"RetailPrice": 0,
+			"ListPrice": 1.76,
+			"Discount": 0,
+			"Charges": 0,
+			"Cost": 0,
+			"EstimatePrice": 0,
+			"PriceUnit": 0,
+			"PriceUnitUoM": "",
+			"PriceUnitFactor": 0,
+			"SellUnit": 0,
+			"MaterialDiscountGroupCode": "",
+			"WeightType": "2",
+			"WeightNumber": "0",
+			"Weight": 0,
+			"ExternalCode": "",
+			"TaxCode": "",
+			"BlobsContent": "",
+			"PriceConditionDescription": "No Extras",
+			"MaterialPriceConditions": [],
+			"MaterialCharacteristics": []
+		}
+	]
+}
+  

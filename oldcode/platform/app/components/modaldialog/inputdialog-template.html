@@ -1,0 +1,6 @@
+<div class="flex-element flex-box input-dialog" data-ng-controller="platformInputDialogController">
+	<label data-ng-if="::dialog.modalOptions.labelText" for="inputText" data-ng-bind="::dialog.modalOptions.labelText"></label>
+	<input class="form-control" data-platform-select-on-focus autofocus type="{{ ::dialog.modalOptions.type }}" id="inputText" data-ng-change="dialog.onInputChange()" maxlength="{{ ::dialog.modalOptions.maxLength }}" data-ng-model="dialog.modalOptions.value.text" name="inputText"
+	       placeholder="{{ ::dialog.modalOptions.bodyText }}">
+</div>
+<div class="invalid-cell invalid-form" data-ng-if="dialog.rt$hasError()" data-ng-bind="dialog.rt$errorText()"></div>

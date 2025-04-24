@@ -1,0 +1,13 @@
+<div style="padding:0px 10px">
+    <div class="row">
+        <div class="col-md-12">{{selectCriteriaName}}</div>
+    </div><br />
+    <platform-Grid data="selectItemForPackage" style="height:250px;"></platform-Grid>
+
+    <div style="padding-top:10px;margin-bottom:10px;">
+        <label style="float:left;width:40px;" ng-if="selectedItem!='Material & Cost Code'">{{'scheduling.main.requisitionResourceFilter'| translate}}:</label>
+        <ul style="margin-left:40px;">
+            <li ng-if="selectedItem!='Material & Cost Code'">{{'scheduling.main.requisitionResourceFilter'| translate}} </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="commonBackdrop">
+	<div id="initial-page" class="modal-dialog primary">
+		<div class="modal-content" data-platform-modaldialog-rescale>
+			<header class="modal-header">
+				<img src="{{::initOptions.productLogoPrimary}}" class="productLogo" alt="{{::initOptions.productName}}">
+				<div class="productTitle" ng-bind="::initOptions.productName"></div>
+			</header>
+
+			<section class="modal-body">
+				<div style="text-align: center;">
+					<div ng-bind="initOptions.headerText()"></div>
+					<div ng-bind="initOptions.subText()"></div>
+					<div class="spinner-lg" style="margin-top: 15px;"></div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>

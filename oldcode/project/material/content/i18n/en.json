@@ -1,0 +1,32 @@
+{
+  "project": {
+    "material": {
+      "prjEstimatePrice":"Estimate Price(Project)",
+      "prjRetailPrice":"Retail Price(Project)",
+      "prjListPrice":"List Price(Project)",
+      "prjCharges":"Charges(Project)",
+      "prjDiscount":"Discount(Project)",
+      "prjPriceUnit":"Price Unit(Project)",
+      "factorHour":"Factor Hour(Project)",
+      "prjPriceExtra":"Price Extra(Project)",
+      "prjCost":"Cost(Project)",
+      "prjFactorPriceUnit":"Factor Price Unit(Project)",
+      "prjBasUomPriceUnitFk":"Uom PriceUnit(Project)",
+      "prjPrcPriceConditionFk":"Prc Price Condition(Project)",
+      "prjMdcMaterialDiscountGroupFk":"Material Discount Group(Project)",
+      "prjMdcTaxCodeFk":"Tax Code(Project)",
+      "prjComment":"Comment(Project)",
+      "dayWorkRateBas": "DW/T+M Rate",
+		 "CostPerUnit": "CostPerUnit(project)",
+		 "IsEstimatePrice": "Is Estimate Price(Project)",
+		 "IsDayWorkRate":"Is Daywork Rate(Project)",
+		 "CostCode": "Cost Code",
+		 "Quantity": "Quantity",
+		 "PriceConditionFk":  "Price Condition",
+		 "MdcMaterialPortionTypeFk":"Material Portion Type(project)",
+      "doNotAskAgain": "DO NOT ASK AGAIN",
+      "updateRelatedAssemblies": "Update related Job in Assemblies?",
+      "updateRelatedAssemblyTitle": "Update related Job in Assemblies"
+	 }
+  }
+}

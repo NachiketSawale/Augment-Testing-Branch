@@ -1,0 +1,39 @@
+<div class="content sidebar-content typography sidebar-project-content" data-ng-controller="basicsCommonProjectNavigatorController">
+	<div class="toolbar">
+		<h1 class="flex-element">{{ 'cloud.desktop.sdCmdBarPrjNavi' | translate }}</h1>
+
+		<div class="ui-header-sidebar-navigator-menu">
+			<button type="button"
+			        data-ng-click="naviOpts.onRefresh($event)"
+			        ng-show="!!naviProject"
+			        title="{{'basics.common.button.refresh' | translate }}"
+			        style="margin-right:4px">
+				<svg data-cloud-desktop-svg-image data-sprite="control-icons" data-image="ico-refresh-project" data-replace></svg>
+			</button>
+
+			<button class="item"
+			        data-ng-click="naviOpts.onProjectListClick($event)"
+			        ng-show="!!naviProject"
+			        title="{{'basics.common.projectNavi.projectListPopup' | translate }}"
+			        style="margin-left:4px;margin-right:4px;">
+				<svg data-cloud-desktop-svg-image data-sprite="control-icons" data-image="ico-projectlist" data-replace></svg>
+			</button>
+			<button type="button"
+			        data-ng-click="naviOpts.onAddProject()"
+			        title="{{'basics.common.projectNavi.addProjectDlgTitle' | translate }}"
+			        style="margin-left:4px">
+				<svg data-cloud-desktop-svg-image data-sprite="control-icons" data-image="ico-projectadd" data-replace></svg>
+			</button>
+		</div>
+	</div>
+
+	<div class="content-inner sidebar-project-navigator">
+		<div class="content-title" data-show="naviProject">{{'basics.common.projectNavi.projectTitle' | translate }}</div>
+		<div data-cloud-Common-Overlay data-loading="naviOpts.refreshPending" data-info2="naviOpts.loadingMessage"></div>
+
+		<div data-basics-common-white-board data-show="!naviProject" data-info="::'basics.common.projectNavi.noProject' | translate "></div>
+
+		<div data-basics-common-project-navigator-tree data-project-navigator="naviProject"></div>
+	</div>
+</div>
+

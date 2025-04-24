@@ -1,0 +1,99 @@
+<section class="modal-body">
+	<div class="fullheight">
+		<div class="fullheight" style="overflow-y: auto">
+
+			<div data-accordion data-close-others="false">
+				<div data-accordion-group data-is-open="true">
+					<div data-accordion-heading>
+						<span class="platform-form-group-header-text">{{"platform.richTextEditor.tableProperties.dimensions" | translate}}</span>
+
+						<span class="platform-form-group-header">
+                            <div data-ng-show="true" class="toggleImg control-icons ico-up"></div>
+                            <div data-ng-show="false" class="toggleImg control-icons ico-down"></div>
+                        </span>
+					</div>
+					<div class="platform-form-group">
+						<div class="platform-form-row">
+							<label class="platform-form-label">{{"platform.richTextEditor.tableProperties.cellWidth" | translate}} ({{ dialog.modalOptions.value.unitLabel | translate }})</label>
+							<div class="platform-form-col">
+								<div class="flex-box">
+									<div class="flex-element">
+										<div data-domain-control data-domain="decimal" data-model="dialog.modalOptions.value.cellWidth" data-options="dialog.modalOptions.value.options"
+										     data-change="change"></div>
+									</div>
+									<div data-ng-if="!dialog.modalOptions.value.cellWidth"><div class="required-cell"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-accordion data-close-others="false">
+				<div data-accordion-group data-is-open="true">
+					<div data-accordion-heading>
+						<span class="platform-form-group-header-text">{{"platform.richTextEditor.tableProperties.style" | translate }}</span>
+
+						<span class="platform-form-group-header">
+                            <div data-ng-show="true" class="toggleImg control-icons ico-up"></div>
+                            <div data-ng-show="false" class="toggleImg control-icons ico-down"></div>
+                        </span>
+					</div>
+					<div class="platform-form-group">
+						<div class="platform-form-row">
+							<label class="platform-form-label">{{"platform.richTextEditor.tableProperties.borderWidth" | translate}}</label>
+							<div class="platform-form-col">
+								<div class="flex-box">
+									<div class="flex-element">
+										<div data-domain-control data-domain="integer" data-model="dialog.modalOptions.value.borderWidth"
+										     data-change="change"></div>
+									</div>
+									<div data-ng-if="!dialog.modalOptions.value.borderWidth"><div class="required-cell"></div></div>
+								</div>
+							</div>
+						</div>
+						<div class="platform-form-row">
+							<label class="platform-form-label">{{"platform.richTextEditor.tableProperties.borderColor" | translate}}</label>
+							<div class="platform-form-col">
+								<div class="flex-box">
+									<div class="flex-element">
+										<div data-domain-control data-domain="color" data-model="dialog.modalOptions.value.borderColor"
+										     data-change="change"></div>
+									</div>
+									<div data-ng-if="!dialog.modalOptions.value.borderColor"><div class="required-cell"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-accordion data-close-others="false">
+				<div data-accordion-group data-is-open="true">
+					<div data-accordion-heading>
+						<span class="platform-form-group-header-text">{{"platform.richTextEditor.tableProperties.cellAlignment" | translate}}</span>
+
+						<span class="platform-form-group-header">
+                             <div data-ng-show="true" class="toggleImg control-icons ico-up"></div>
+                            <div data-ng-show="false" class="toggleImg control-icons ico-down"></div>
+                        </span>
+					</div>
+					<div class="platform-form-group">
+						<div class="platform-form-row">
+							<label class="platform-form-label">{{"platform.richTextEditor.tableProperties.cellAlignmentHorizontal" | translate}}</label>
+							<div class="platform-form-col">
+								<div class="flex-box">
+									<div class="flex-element">
+										<div data-domain-control data-domain="select" data-model="dialog.modalOptions.value.horizontal"
+										     data-change="change" data-options="dialog.modalOptions.sizeOptions"></div>
+									</div>
+									<div data-ng-if="!dialog.modalOptions.value.horizontal"><div class="required-cell"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>

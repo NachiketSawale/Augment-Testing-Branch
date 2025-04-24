@@ -1,0 +1,36 @@
+[
+    {
+        "id": "procurement.ticketsystem.view.commoditySearch",
+        "template": "procurement.ticketsystem/partials/search-view.html",
+        "title": "procurement.ticketsystem.view.commoditySearch",
+        "controller": "procurementTicketsystemSearchController",
+	    "uuid": "FAC9EA817E6C49309DCCB99F105B180A"
+    },
+    {
+        "id": "procurement.ticketsystem.view.cartItem",
+        "template": "procurement.ticketsystem/partials/cart-view.html",
+        "title": "procurement.ticketsystem.view.cartItem",
+        "controller": "procurementTicketsystemCartController",
+	    "uuid": "180C90D476894349B6F9C326C0DFD06D",
+        "mode": "scs"
+    },
+    {
+        "id": "procurement.ticketsystem.view.orderOrRequest",
+        "template": "procurement.ticketsystem/partials/order-request-view.html",
+        "title": "procurement.ticketsystem.view.orderOrRequest",
+        "controller": "procurementTicketsystemOrderRequestListController",
+	    "uuid": "6352FD99D00D411AA82F213511935C58",
+        "entityType":"Requisition",
+        "orderListDataServiceName":"procurementTicketsystemOrderRequestListDataService"
+    },
+    {
+        "id": "procurement.ticketsystem.view.orderOrContract",
+        "template": "procurement.ticketsystem/partials/order-request-view.html",
+        "title": "procurement.ticketsystem.view.orderOrContract",
+        "controller": "procurementTicketsystemOrderRequestListController",
+        "uuid": "0c997bc34e2d42f59b93a51cbbe7f269",
+        "entityType":"Contract",
+        "orderListDataServiceName":"procurementTicketsystemOrderContractListDataService",
+        "permission": "4e0572d7dc684800b1e95abd90fbdd40"
+    }
+]

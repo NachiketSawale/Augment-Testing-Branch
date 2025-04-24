@@ -1,0 +1,17 @@
+{
+  "object": {
+    "project": {
+      "entityPriceList": "Price List",
+      "entityObjectType": "Object Type",
+      "entityRequestedInstallment": "Requested Installment",
+      "entityObjectProjectHeader": "Real Estate",
+      "listObjectProjectHeaderTitle": "Real Estates",
+      "detailObjectProjectHeaderTitle": "Real Estate Details",
+      "listObjectProjectLevelTitle": "Object Levels",
+      "detailObjectProjectLevelTitle": "Object Level Details",
+      "entityDocumentTypeFk": "Document Type",
+      "listObjectProjectHeaderDocumentTitle": "Real Estate Documents",
+      "detailObjectProjectHeaderDocumentTitle": "Real Estate Document Details"
+    }
+  }
+}

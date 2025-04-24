@@ -1,0 +1,21 @@
+﻿{
+	"productionplanning": {
+		"ppscostcodes": {
+			"costCodes": "Pps Cost Codes",
+			"listViewTitle": "Cost Codes",
+			"detailViewTitle": "Cost Codes Detail",
+			"ppsProperties": "PPS Properties",
+			"mdcCostCodeFk": "MDC Cost Code",
+			"tksTimeSymbolFk": "Time Symbol",
+			"useToCreateComponents": "Use To Create Components",
+			"useToUpdatePhaseReq": "Use To Update Phase Requirement",
+			"showAsSlotOnProduct": "Show As Slot On Product",
+			"userDefined1": "Pps Cost Code Text 1",
+			"userDefined2": "Pps Cost Code Text 2",
+			"userDefined3": "Pps Cost Code Text 3",
+			"userDefined4": "Pps Cost Code Text 4",
+			"userDefined5": "Pps Cost Code Text 5",
+			"isReadonly": "Readonly as Component"
+		}
+	}
+}

@@ -1,0 +1,50 @@
+{
+  "productionplanning": {
+    "producttemplate": {
+      "drawingComponentDetailTitle": "Product Template: Drawing Component Details",
+      "errors": {
+        "uniqVariableName": "Variable Name should be unique over all entries of the same product template",
+        "uniqProductDescriptionCode": "Code should be unique over all entries of the same engineering drawing"
+      },
+      "productDescParamDetailTitle": "Product Template Parameter Detail",
+      "productDescParamListTitle": "Product Template Parameters",
+      "productDescriptionDetailTitle": "Product Template Details",
+      "createPdtTransactionDialogTitle": "Transaction Parameters",
+      "entityTranslation": "Translations",
+      "stackCode": "Stack Code",
+      "level": "Level",
+      "sortCode": "Sort Codes",
+      "number4Plan": "Number in Plan",
+      "number4Stack": "Number in Stack",
+      "entityStack": "Stack",
+      "checkCreationTitle": "Check Creation",
+      "documentListTitle": "Documents",
+      "documentRevisionListTitle": "Document: Revisions",
+      "drawingComponentListTitle": "Product Temlate: Drawing Components",
+      "engDrawingDescription": "Drawing-Description",
+      "entityEngDrawingFk": "Drawing",
+      "entityMaterialFk": "Material",
+      "entityProductDescParam": "Parameter",
+      "entityProductDescription": "Product Template",
+      "entityVariableName": "VariableName",
+      "noDrawingPinned": "Please pin a Drawing at first.",
+      "productDescriptionDialogTitle": "Assign Product Template",
+      "productDescriptionListTitle": "Product Templates",
+      "productDetailTitle": "Products Details",
+      "productListTitle": "Products",
+      "GUID": "GUID",
+      "wizard": {
+        "disableProductDesc": "Disable Product Template",
+        "enableProductDesc": "Enable Product Template",
+        "enableDisableProductDescDone": "The field 'Active' of the Product Template {{code}} has been changed.",
+        "productDescAlreadyDisabled": "Product Template ({{code}}) is already disabled.",
+        "productDescAlreadyEnabled": "Product Template ({{code}}) is already enabled."
+      },
+      "userdefinedbymaterial1": "Text By Material 1",
+      "userdefinedbymaterial2": "Text by Material 2",
+      "userdefinedbymaterial3": "Text by Material 3",
+      "userdefinedbymaterial4": "Text by Material 4",
+      "userdefinedbymaterial5": "Text By Material 5"
+    }
+  }
+}

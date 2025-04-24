@@ -1,0 +1,10 @@
+.form-icon-box {
+	background-size: 16px;
+	width: 26px;
+	height: 26px;
+}
+
+.input-group {
+	flex-wrap: nowrap;
+	align-items: normal;
+}

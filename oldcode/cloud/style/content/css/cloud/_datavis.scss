@@ -1,0 +1,82 @@
+/*-------------------------------------------------------------------------------
+	 datavis (_datavis.scss)
+  -------------------------------------------------------------------------------*/
+
+.datavis {
+
+	.smallMultiples {
+		.keyLabel {
+			font-size: 17px;
+		}
+
+		.frame .border {
+			stroke-width: 1px;
+			stroke: #dcdcdc;
+			fill: none;
+		}
+	}
+
+	.orthoChart {
+		.axis {
+			.domain, .tick {
+				fill: none;
+				stroke: #333;
+				stroke-width: 1px;
+				shape-rendering: crispEdges;
+			}
+
+			.tick text {
+				stroke: none;
+				fill: #333;
+				font-weight: normal;
+			}
+		}
+
+		.bar {
+			stroke: none;
+			fill: red;
+		}
+
+		.line {
+			stroke: green;
+			stroke-width: 1.5px;
+			fill: none;
+		}
+
+		.marker {
+			stroke: blue;
+			stroke-width: 1.5px;
+			fill: none;
+		}
+
+		.chartLabel {
+			font-size: 75%;
+		}
+
+		.highlight line {
+			stroke: #555;
+			stroke-width: 1.5px;
+			stroke-dasharray: 2, 2;
+			fill: none;
+		}
+
+		.temporaryMeasurement {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}
+
+line.datavis-common {
+	&.today {
+		stroke: red;
+		stroke-width: 1px;
+		shape-rendering: crispEdges;
+	}
+
+	&.simulation-now {
+		stroke: rgb(65,150,106);
+		stroke-width: 1px;
+		shape-rendering: crispEdges;
+	}
+}

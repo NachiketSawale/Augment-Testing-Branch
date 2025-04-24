@@ -1,0 +1,15 @@
+{
+	"basics": {
+		"audittrail": {
+			"entityDbActionType": "Aktion",
+			"entityObjectFk": "Objekt ID",
+			"entityIdUpdated": "Entity ID",
+			"entityOldValue": "Alter Inhalt",
+			"entityNewValue": "Neuer Inhalt",
+			"entityUserName": "Geändert von (Name)",
+			"entityUiColumnName": "Spaltenname",
+			"entityUiTableName": "Tabellenname",
+			"title": "Änderungshistorie"
+		}
+	}
+}

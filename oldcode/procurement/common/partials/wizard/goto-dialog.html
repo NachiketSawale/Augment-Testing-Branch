@@ -1,0 +1,23 @@
+<div data-ng-controller="procurementCommonCreateBusinessPartnerController">
+    <header class="modal-header">
+        <h2 class="modal-title" data-ng-bind="modalOptions.headerText"></h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-disable="isLoading"
+                data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+        <div class="icon-message">
+        <div class="tlb-icons icon ico-info"></div>
+        <div class="message" >{{ modalOptions.bodyText }}</div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn navigator-button tlb-icons ico-goto" title="{{ modalOptions.title}}"
+                 ng-click="goTo()"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+                 data-ng-bind="modalOptions.okBtnText">
+        </button>
+    </footer>
+</div>

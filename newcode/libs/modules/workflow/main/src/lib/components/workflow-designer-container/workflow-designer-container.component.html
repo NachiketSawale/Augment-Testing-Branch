@@ -1,0 +1,56 @@
+<ngx-graph [view]="[1000,1000]" [links]="links" [nodes]="nodes" style="border: 1px solid;" [draggingEnabled]=false
+	[update$]="update$" [layout]="layout" [curve]="curve">
+	<ng-template #nodeTemplate let-node>
+		<svg:g *ngIf="node.attribute.shape">
+			<svg:g *ngIf="node.attribute.shape==='rect' " (click)="selectAction(node.data.action)" [attr.id]="node.id">
+				<rect [attr.width]="node.dimension.width" [attr.height]="node.dimension.height"
+					[attr.fill]="node.attribute.fill" [attr.stroke]="node.attribute.stroke" [attr.id]="node.id"
+					[attr.actionTypeId]="node.data.action.actionTypeId" workflowMainWorkflowDesignerEventListener>
+				</rect>
+				<text alignment-baseline="central" text-anchor="middle" workflowMainAlignText [nodeItem]="node"></text>
+				<line [attr.x1]="node.attribute.x0" [attr.x2]="node.attribute.x1" [attr.y1]="node.attribute.y0"
+					[attr.y2]="node.attribute.y1" [attr.stroke]="node.attribute.lineStroke"></line>
+				<line [attr.x1]="node.attribute.x1" [attr.x2]="node.attribute.x0" [attr.y1]="node.attribute.y0"
+					[attr.y2]="node.attribute.y1" [attr.stroke]="node.attribute.lineStroke"></line>
+				<image [attr.xlink:href]="node.attribute.actionIcon" [attr.width]="30" [attr.height]="30" [attr.x]="-15"
+					[attr.y]="-15"></image>
+				<image style="cursor: pointer;" [attr.xlink:href]="node.attribute.actionUpdateIcon?.iconClass"
+					[attr.width]="30" [attr.height]="30" [attr.x]="110" [attr.y]="-15"
+					(click)="onIconClick(node.data.action,node.attribute)">
+					<title>
+						{{node.attribute.actionUpdateIcon?.tooltip}}
+					</title>
+				</image>
+			</svg:g>
+
+			<svg:g *ngIf="node.attribute.shape==='ellipse'" (click)="selectAction(node.data.action)" [attr.id]="node.id">
+				<rect [attr.width]="node.dimension.width" [attr.height]="node.dimension.height" rx="40" ry="40"
+					[attr.fill]="node.attribute.fill" [attr.stroke]="node.attribute.stroke" [attr.id]="node.id"
+					[attr.actionTypeId]="node.data.action.actionTypeId" workflowMainWorkflowDesignerEventListener>
+				</rect>
+				<text alignment-baseline="central" text-anchor="middle" workflowMainAlignText [nodeItem]="node"></text>
+			</svg:g>
+
+			<svg:g *ngIf="node.attribute.shape==='polygon'" (click)="selectAction(node.data.action)" [attr.id]="node.id">
+				<svg:polygon [attr.points]="node.attribute.points" [attr.fill]="node.attribute.fill"
+					[attr.stroke]="node.attribute.stroke" [attr.x]="1000" [attr.id]="node.id"
+					[attr.actionTypeId]="node.data.action.actionTypeId" workflowMainWorkflowDesignerEventListener />
+				<text alignment-baseline="central" text-anchor="middle" workflowMainAlignText [nodeItem]="node"></text>
+			</svg:g>
+		</svg:g>
+	</ng-template>
+
+
+
+	<ng-template #linkTemplate let-link>
+		<svg:g class="edge">
+			<svg:path class="line" stroke-width="2" marker-end="url(#arrow)"></svg:path>
+		</svg:g>
+	</ng-template>
+
+	<ng-template #defsTemplate>
+		<svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="4" markerHeight="4" orient="auto">
+			<svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+		</svg:marker>
+	</ng-template>
+</ngx-graph>

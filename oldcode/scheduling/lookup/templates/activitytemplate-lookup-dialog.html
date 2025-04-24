@@ -1,0 +1,48 @@
+<!--
+<header class="modal-header main-color">
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close()"
+            aria-hidden="true">
+       <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+    </button>
+    <h2 class="modal-title">{{ modalOptions.headerText }}</h2>
+</header>
+-->
+<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body flex-box flex-column fullheight">
+   <div id="activitytemplateSplitter" class="modal-wrapper border-none" data-platform-kendo-splitter-adjust option="{panes: [{ collapsible: true, size: '30%' },{ collapsible: true, size: '70%' }],orientation:'horizontal'}">
+      <div data-ng-controller="schedulingLookupTemplateGroupController" class="modal-wrapper fullheight">
+         <div id="company-scroller" class="pane-l flex-box flex-column flex-element overflow-hidden fullheight" >
+            <div treecontrol class="tree-classic subview-container flex-element overflow fullheight" style="overflow-x: hidden;"
+                 data-tree-model="dataForTheTree"
+                 data-options="treeOptions"
+                 data-order-by="code"
+                 data-on-selection="onSelection(node)"
+                 data-on-node-dbl-click="onNodeDblClick(node)"
+                 data-selected-node="treeOptions.selectedNode"
+                 data-expanded-nodes="treeOptions.expandedNodes">
+               <span class="sm control-icons" data-ng_class="::classByType(node)"> </span>
+               <span data-ng_bind="getDisplaytext(node)"></span>
+            </div>
+         </div>
+      </div>
+      <div data-ng-controller="schedulingLookupActivityTemplateController" class="modal-wrapper">
+         <div class="pane-r modal-wrapper">
+            <div class="flex-element flex-box flex-column subview-container">
+               <platform-Grid data="gridData"></platform-Grid>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<footer class="modal-footer">
+ 	<button type="button" class="ok btn btn-return"
+	        data-ng-click="modalOptions.ok()"
+	        data-ng-disabled="modalOptions.disableOkButton" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+		{{modalOptions.okBtnText}}
+	</button>
+ 	<button type="button" class="cancel btn btn-default"
+	        data-ng-click="modalOptions.cancel()"
+	        data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+		{{modalOptions.cancelBtnText}}
+	</button>
+</footer>

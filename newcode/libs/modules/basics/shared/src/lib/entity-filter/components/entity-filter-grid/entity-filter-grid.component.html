@@ -1,0 +1,15 @@
+<ui-common-popup>
+	<div content class="entity-filter-popup entity-filter-grid">
+		<div class="flex-box flex-column flex-element margin-top-ld subview-container" [ngClass]="'cid_' + uuid">
+			<ui-common-grid #grid [configuration]="gridConfig"></ui-common-grid>
+		</div>
+
+		<div class="flex-box flex-align-center entity-filter-divider-top">
+			<button class="btn entity-filter-btn-clear" [disabled]="getSelectedCount() <= 0" (click)="clear()">{{ 'basics.material.lookup.clear' | platformTranslate }}</button>
+			<span class="flex-element text-center">{{ getSelectedCount() }} {{ 'basics.material.lookup.of' | platformTranslate }} {{ getTotalCount() }}</span>
+			<button class="btn entity-filter-btn-apply" [disabled]="getSelectedCount() <= 0" (click)="apply()">{{ 'basics.material.lookup.apply' | platformTranslate }}</button>
+		</div>
+
+		<ui-common-loading [loading]="isLoading"></ui-common-loading>
+	</div>
+</ui-common-popup>

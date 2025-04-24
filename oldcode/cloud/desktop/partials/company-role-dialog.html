@@ -1,0 +1,19 @@
+<div data-global class="flex-element flex-box flex-column overflow-hidden">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body margin-large">
+		<div data-ng-include="'cloud.desktop/partials/company-role-content.html'" class="flex-element flex-box flex-column overflow-hidden"></div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="ok btn btn-primary" data-ng-click="companyOptions.ok()" data-dismiss="modal"
+		        data-ng-disabled="!canExecuteOkButton()">
+			{{::companyOptions.actionBtnText}}
+		</button>
+
+		<button type="button" class="cancel btn btn-default" data-ng-click="modalOptions.cancel()" data-dismiss="modal">
+			{{::companyOptions.cancelBtnText}}
+		</button>
+	</footer>
+</div>

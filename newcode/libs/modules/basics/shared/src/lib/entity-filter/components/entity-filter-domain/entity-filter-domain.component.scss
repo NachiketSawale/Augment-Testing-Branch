@@ -1,0 +1,56 @@
+// Define SCSS variables
+$height: 32px;
+$margin-bottom: 8px;
+$margin-right: 8px;
+$margin-left: 22px;
+$width: 200px;
+$border-color: red;
+$validation-color: red;
+$validation-margin-top: -4px;
+
+.entity-filter-domain {
+	li {
+		div {
+			height: $height;
+			align-items: center;
+
+			&:nth-child(2) {
+				margin-bottom: $margin-bottom;
+			}
+
+			input[type='radio'] {
+				margin: 0 $margin-right 0 0;
+			}
+		}
+	}
+
+	.margin-horizontal {
+		margin: 0 0 $margin-bottom $margin-left;
+	}
+
+	.domain-control {
+		width: $width;
+
+		&.ng-invalid {
+			border: solid 1px $border-color;
+		}
+	}
+
+	.range {
+		display: block;
+
+		.domain-control {
+			display: inline-flex;
+			width: 100px;
+		}
+
+		.separator {
+			margin: 0 4px;
+		}
+
+		.validation {
+			color: $validation-color;
+			margin-top: $validation-margin-top;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+<div class="flex-element flex-box flex-column flex-basis-auto overflow-hidden">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+
+	<section class="modal-body">
+		<div class="modal-wrapper">
+			<div class="flex-box flex-column">
+				<div data-platform-form-container data-form-container-options="formContainerOptions" entity="dataItem"
+				     class="flex-element flex-basis-auto"></div>
+				<div class="flex-element flex-box flex-row" style="margin: 5px 5px 5px 20px;">
+					<div>
+						<ul class="col-sm-offset-1" style="padding-top: 5px;width: 80px;">
+							<li>
+								<span data-platform-checkbox class="ms-icon-img attribute-icon" data-ng-click="onWeekdayChanged()" data-ng-model="dataItem.weekDays.workOnMonday"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.common.serialProduction.weekDays.Monday" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox class="ms-icon-img attribute-icon" data-ng-click="onWeekdayChanged()" data-ng-model="dataItem.weekDays.workOnTuesday"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.common.serialProduction.weekDays.Tuesday" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox class="ms-icon-img attribute-icon" data-ng-click="onWeekdayChanged()" data-ng-model="dataItem.weekDays.workOnWednesday"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.common.serialProduction.weekDays.Wednesday" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox class="ms-icon-img attribute-icon" data-ng-click="onWeekdayChanged()" data-ng-model="dataItem.weekDays.workOnThursday"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.common.serialProduction.weekDays.Thursday" | translate }}</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="col-sm-offset-1" style="padding-top: 5px;width: 80px;">
+							<li>
+								<span data-platform-checkbox class="ms-icon-img attribute-icon" data-ng-click="onWeekdayChanged()" data-ng-model="dataItem.weekDays.workOnFriday"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.common.serialProduction.weekDays.Friday" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox class="ms-icon-img attribute-icon" data-ng-click="onWeekdayChanged()" data-ng-model="dataItem.weekDays.workOnSaturday"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.common.serialProduction.weekDays.Saturday" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox class="ms-icon-img attribute-icon" data-ng-click="onWeekdayChanged()" data-ng-model="dataItem.weekDays.workOnSunday"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.common.serialProduction.weekDays.Sunday" | translate }}</span>
+							</li>
+						</ul>
+					</div>
+					<div class="flex-box flex-column" style="padding-left: 150pt">
+						<label class="platform-form-label ng-binding">{{dataItem.validDates.title}}</label>
+						<div class="platform-form-col overflow" style="max-height: 65pt; width: 88pt">
+							<ul data-ng-repeat="data in dataItem.validDates.items" >
+								<li data-ng-bind="data">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-ng-show="warnings && warnings.length" style="color: orange;">
+				<div data-ng-repeat="warning in warnings">
+					<span data-ng-bind="warning.message"></span>
+				</div>
+			</div>
+			<div data-ng-show="alerts && alerts.length" style="color: red;">
+				<div data-ng-repeat="alert in alerts">
+					<span data-ng-bind="alert.title"></span>: <span data-ng-bind="alert.message"></span>
+				</div>
+			</div>
+			<div cloud-common-overlay data-loading="isBusy" data-info2="progressInfo"></div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" ng-if="customBtn1" data-ng-click="customBtn1.action()"
+		        data-ng-disabled="modalOptions.isDisabled('custom1')">
+			{{customBtn1.label}}
+		</button>
+		<button type="button" class="btn btn-default" ng-if="customBtn2" data-ng-click="customBtn2.action()"
+		        data-ng-disabled="modalOptions.isDisabled('custom2')">
+			{{customBtn2.label}}
+		</button>
+		<button type="button" class="btn btn-default ok" ng-if="showOkButton" data-ng-click="onOK()"
+		        data-ng-disabled="modalOptions.isDisabled('ok')"> {{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default cancel" ng-if="showCancelButton" data-ng-click="onCancel()"
+		        data-ng-disabled="modalOptions.isDisabled('cancel')"> {{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

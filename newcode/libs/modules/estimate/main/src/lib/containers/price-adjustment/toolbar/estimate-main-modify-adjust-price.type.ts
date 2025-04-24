@@ -1,0 +1,22 @@
+export type ModifyAdjustPriceType = {
+	boqHeaderId: number | null;
+	FromBoq: number | null;
+	ToBoq: number | null;
+	FromRefNo: number;
+	ToRefNo: number;
+	Prices: boolean;
+	Factor: number | string | null;
+	BaseUnitRateType: number;
+	TargetUnitRateType: number | string | null;
+	OverwriteExistPrices: boolean;
+	AddComment: boolean;
+	AqFromWqQuantity: boolean;
+	AqDivWq: number | string | null;
+	DelAdjustPrices: boolean;
+	DelTenderPrices: boolean;
+	DelFixedPriceFlag: boolean;
+	ResetAqToWqQuantity: boolean;
+	DelComment: boolean;
+	SelectAreaType: number;
+	ResetAqFromBoqAqQuantity: boolean;
+};

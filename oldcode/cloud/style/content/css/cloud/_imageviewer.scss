@@ -1,0 +1,42 @@
+/*-------------------------------------------------------------------------------
+	 Image Viewer (_imageviewer.scss)
+  -------------------------------------------------------------------------------*/
+.image-viewer {
+	display: flex;
+	flex: 1;
+}
+
+.image-viewer-carousel img {
+	margin: 0 auto;
+}
+
+.image-viewer-carousel .carousel-indicators li{
+	border-color: #0067b1;
+}
+
+.image-viewer-carousel .carousel-indicators .active{
+	background-color: #0067b1;
+}
+
+.image-viewer-edit-container {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.image-viewer-btn {
+	color: rgba(255, 255, 255, .44);
+	background: rgba(0, 0, 0, .36);
+	border: none;
+}
+
+.image-viewer-prev, .image-viewer-next {
+	position: absolute;
+	top: 30%;
+	left: 10px;
+	height: 40%;
+	width: 30px;
+	font-size: 40px;
+}
+
+

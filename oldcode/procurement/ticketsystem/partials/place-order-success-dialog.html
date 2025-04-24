@@ -1,0 +1,21 @@
+<style type="text/css">
+    .btn-goto {
+        background-position-x: 12px;
+    }
+</style>
+
+<div data-ng-controller="procurementTicketSystemSubmitSuccessDialogController" class="flex-element flex-box flex-column fullheight">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body flex-element fullheight">
+        <div class="flex-box flex-column fullheight">
+            <platform-grid data="gridData"></platform-grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+            <button style="width: 140px;" type="button" class="btn btn-default tlb-icons ico-goto btn-goto" data-ng-click="goToContract()" data-ng-show="modalOptions.params.hasContract"
+                    title="{{::'procurement.ticketsystem.tooltip.goToContract' | translate}}">{{::'procurement.ticketsystem.buttonText.contract' | translate}}</button>
+            <button style="width: 150px;" type="button" class="btn btn-default tlb-icons ico-goto btn-goto" data-ng-click="goToRequisition()" data-ng-show="modalOptions.params.hasRequisition"
+                    title="{{::'procurement.ticketsystem.tooltip.goToRequisition' | translate}}">{{::'procurement.ticketsystem.buttonText.requisition' | translate}}</button>
+            <button type="button" class="btn btn-default" data-ng-click="onOK()">{{::'cloud.common.ok' | translate}}</button>
+    </footer>
+</div>

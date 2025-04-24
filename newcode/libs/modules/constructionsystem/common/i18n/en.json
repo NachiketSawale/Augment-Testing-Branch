@@ -1,0 +1,81 @@
+{
+	"constructionsystem": {
+	  "common": {
+		"errorFormInputDialog": "Error Form Input",
+		"selectionStatementContainerTitle": "Selection Statement",
+		"noResultsFound": "No results found",
+		"caption":{
+		  "execute":"Execute Filter",
+		  "filterComposite":"Filter Composite",
+		  "revert": "Revert",
+		  "refresh": "Refresh",
+		  "simple":"Simple Filter",
+		  "property":"Property Filter",
+		  "enhanced":"Enhanced Filter",
+		  "expert":"Expert Filter",
+			  "showCalculationOutput": "Show Calculation Output"
+		},
+		"filterGrid":{
+		  "operator": "Operator"
+		},
+		"filterEditor": {
+		  "stringDescription": "String",
+		  "decimalDescription": "Decimal",
+		  "integerDescription": "Integer",
+		  "booleanDescription": "Boolean",
+		  "dateTimeDescription": "DateTime"
+		},
+		"methodDescription": {
+		  "startWith": "check a string is start with a substring.",
+		  "endWith": "check a string is end with a substring.",
+		  "contains": "check a string is contains a substring.",
+		  "trim": "trim space at start and end.",
+		  "trimLeft": "trim space at start.",
+		  "trimRight": "trim space at end."
+		},
+		"msgTemplate": {
+		  "propertyNameUndefined": "The {a} property is undefined.",
+		  "propertyNameError": "Missing {a} near {b}, eg: [propertyName].",
+		  "variableNameUndefined": "The {a} variable is undefined.",
+		  "variableNameError": "Missing {a} near variable {b}, eg: @[variableName].",
+		  "notSupport": "{a} is not supported. please use {b}",
+		  "missingError": "Missing {a} near {b}",
+		  "value": "value",
+		  "operator": "operator",
+		  "syntaxError": "Syntax error near {a}"
+		},
+		"operation": {
+			"isEqual": "IsEqual",
+			"notEqual": "NotEqual",
+			"isGreater": "IsGreater",
+			"isGreaterEqual": "IsGreaterEqual",
+			"isLess":"IsLess",
+			"isLessEqual": "IsLessEqual",
+			"contains": "Contains",
+			"startWith": "StartWith",
+			"endWith": "EndWith",
+			"notContains": "NotContains"
+		},
+		"stackTrace": "Stack Trace",
+		"printButton": "print"
+	  },
+	  "executionScriptOutput": {
+		"ruleScript": "Rule script",
+		"category": "Category",
+		"description": "Description",
+		"line": "Line",
+		"column": "Column",
+		"modelObject": "Model Object",
+		"callStack": "Call Stack",
+		"descriptionInfo": "Description Information",
+		"type": "Type",
+		"instance": "Instance"
+	  },
+	  "scriptToolBar": {
+		"error": "Error",
+		"warning": "Warning",
+		"info": "Information",
+		"filter": "Filter By COS Instance"
+	  }
+	}
+  }

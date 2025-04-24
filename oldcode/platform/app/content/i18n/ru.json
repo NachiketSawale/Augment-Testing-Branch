@@ -1,0 +1,204 @@
+{
+	"platform": {
+		"cancelBtn": "Отмена",
+		"containerContentNotShown": "Из-за отсутствия разрешений содержимое контейнера не будет отображаться!",
+		"deleteConfirm": "Вы хотите удалить текущий выбор?",
+		"deleteConfirmHeader": "Удалить подтверждение",
+		"error": {
+			"errormsgCode": "Код ошибки: {{code}}",
+			"errormsgCodeMsg": "Код ошибки: {{code}}<br>Message: {{msg}}",
+			"errormsgCodeMsgDetail": "Код ошибки {{code}}<br>Message: {{msg}}<br>Details: {{detail}}"
+		},
+		"exception": "Исключение",
+		"formAbout": "О '{{p1}}'",
+		"formConfigAllowEnterNavigation": "Разрешить Навигацию",
+		"formConfigCancelBnt": "Отмена",
+		"formConfigCloseBnt": "Отмена",
+		"formConfigCustomerLabelName": "Настройка наименования поля",
+		"formConfigDialogTitle": "Настроить форму",
+		"formConfigLabelName": "Наименование поля",
+		"formConfigMoveDownBnt": "Переместить вниз",
+		"formConfigMoveUpBnt": "Переместить вверх",
+		"formConfigOKBnt": "OK",
+		"formConfigRestoreBnt": "Восстановить",
+		"formConfigVisibility": "Видимость",
+		"formSettings": "Настройки",
+		"gridDropPanel": "Опустите заголовок столбца, чтобы сгруппировать по колонкам",
+		"gridMarkerHeader": "Фильтр",
+		"gridTreeHeader": "Структура",
+		"ignoreBtn": "Игнорировать",
+		"latestview": "Последний Обзор",
+		"layoutsystem": {
+			"edit": "Редактировать вид",
+			"export": "Экспортировать вид",
+			"import": "Импортировать вид",
+			"roleviews": "Обзоры Функций",
+			"save": "Сохранить вид",
+			"systemviews": "Системные",
+			"userviews": "Пользовательские"
+		},
+		"loginBusyMessage": "Идет процесс  авторизации... Пожалуйста, подождите!",
+		"loginButton": "Вход в систему",
+		"loginEnterPassword": "Введите пароль",
+		"loginEnterUsername": "Ввести имя пользователя",
+		"loginFailedMessage": "Вход не выполнен! Пожалуйста, попробуйте еще раз ...",
+		"loginLanguage": "Язык",
+		"loginLanguageEnglish": "English",
+		"loginLanguageEnglishUS": "English (US)",
+		"loginLanguageGerman": "Deutsch",
+		"loginLanguageGermanDE": "Deutsch (DE)",
+		"loginLanguageSpanish": "Español",
+		"loginPassword": "Пароль",
+		"loginSuccessfulMessage": "Успешный вход! Продолжить загрузку, пожалуйста, подождите",
+		"loginUsername": "Имя пользователя",
+		"loginViaFacebook": "Авторизоваться в Facebook",
+		"loginViaMicrosoftAccount": "Авторизоваться в учётной записи Майкрософт",
+		"loginViaTwitter": "Войти через Twitter",
+		"longTextContainer": {
+			"container": "Контейнер",
+			"field": "Поле"
+		},
+		"navOptionsMenu": "Меню Опций",
+		"newMessage": "Новое сообщение",
+		"noBtn": "Нет",
+		"okBtn": "OK",
+		"overwriteInherited": "Переписать наследуемое значение",
+		"refreshConfirm": "Были обнаружены изменения. Вы хотите их сохранить перед перезагрузкой?",
+		"refreshConfirmHeader": "Обновить подтверждение",
+		"retryBtn": "Повторить",
+		"searchPanelPlaceholder": "Условие поиска",
+		"searchPanelString": "Условие поиска",
+		"yesBtn": "Да",
+		"dragdrop": {
+			"anyData": "Данные",
+			"items": "{{count}} позиция (ии)"
+		},
+		"inputControls": {
+			"boolean": "Логический",
+			"code": "Код",
+			"comment": "Многострочный текст (255)",
+			"dateutc": "Дата (UTC)",
+			"description": "Текст одной строки",
+			"email": "Эл. почта",
+			"exchangerate": "с плавающей точкой (5 цифр)",
+			"factor": "с плавающей точкой (6 цифр)",
+			"inputselect": "Комбинированное поле",
+			"integer": "Целое число",
+			"money": "Деньги",
+			"percent": "Процент",
+			"quantity": "Поплавок (3 цифры)",
+			"remark": "Многострочный текст (2000)",
+			"select": "Выпадающий элемент"
+		},
+		"loginViaGoogle": "Войти через Google",
+		"masterdetail": {
+			"add": "Добавить элемент",
+			"delete": "Удалить элемент",
+			"filter": "Фильтрующие элементы",
+			"filterTemplate": "Условие поиска"
+		},
+		"wizard": {
+			"back": "Назад",
+			"finish": "Завершение",
+			"next": "Далее",
+			"nextStep": "Следующий шаг",
+			"stepFinish": "Завершение",
+			"isIncluded": "Включено",
+			"listFilter": "Введите текст, чтобы отфильтровать список"
+		},
+		"generatingMatrix": "Матрица создается",
+		"hours": "Часы",
+		"loginWith": "Войти в систему, используя",
+		"minutes": "Минуты",
+		"niceNames": {
+			"codeDesc": "{{code}} ({{desc}})",
+			"id": "#{{id}}"
+		},
+		"processing": "Обработка",
+		"removeTooltip": "Удалить",
+		"subordinated": "Подчиненные",
+		"summary": "Сводка",
+		"todayTooltip": "Cегодня",
+		"bulkEditor": {
+			"configName": "новое имя конфигурации",
+			"run": "Запуск",
+			"save": "Сохранить",
+			"saveAndRun": "Сохранить и запустить",
+			"changedRecords": "Измененные записи",
+			"changeReport": "Массовый редактор - Изменить отчет",
+			"details": "Детали",
+			"logs": "Журнал отчетов",
+			"msgChangeError": "Не удалось установить {{property}} на {{значение}}. Причина: {{validationErrorMsg}}",
+			"msgChangeSuccess": "Установите {{property}}: {{значение}}",
+			"msgNewOldValueAreTheSame": "Значение {{property}} уже: {{значение}}",
+			"msgPropertyIsReadonly": "Не удалось установить значение. {{property}} - только для чтения",
+			"records": "Записи",
+			"totalRecords": "Всего записей",
+			"unchangedRecords": "Без изменений",
+			"Colour": "Цвет",
+			"compareEnd": "Конечное значение",
+			"Icon": "Иконка"
+		},
+		"wysiwygEditor": {
+			"bold": "Жирный",
+			"centerJustify": "Центр обоснования",
+			"code": "Код",
+			"font": "Шрифт",
+			"fontColor": "Цвет шрифта",
+			"fontSize": "Размер шрифта",
+			"highlightColor": "Цвет выделения",
+			"indent": "Сместить вправо",
+			"insertImage": "Вставить изображение",
+			"italic": "Курсив",
+			"leftJustify": "Выравнивание по левому краю",
+			"link": "Ссылка",
+			"orderedList": "Упорядоченный список",
+			"outdent": "Сместить влево",
+			"paragraph": "Раздел",
+			"removeFormatting": "Удалить форматирование",
+			"rightJustify": "Выравнивание по правому краю",
+			"strikeThrough": "Зачеркнутый",
+			"subscript": "Подстрочный",
+			"superscript": "Надстрочный",
+			"underline": "Подчеркивание",
+			"unlink": "Разорвать связь",
+			"unorderedList": "Неупорядоченный список",
+			"uploadFile": "Загрузить файл"
+		},
+		"formContainer": {
+			"collapseall": "Свернуть все",
+			"discard": "Не учитывать",
+			"expandall": "Расширение",
+			"first": "Первый",
+			"last": "последнее",
+			"next": "Далее",
+			"previous": "Предыдущий",
+			"print": "Распечатать",
+			"refresh": "Обновить",
+			"save": "Сохранить",
+			"search": "Поиск",
+			"settings": "Настройки"
+		},
+		"gridContainer": {
+			"configDialogTitle": "Настройка таблицы"
+		},
+		"grid": {
+			"availableColumns": "Доступные колонки",
+			"visibleColumns": "Видимые колонки"
+		},
+		"formattedUnits": {
+			"cubicMeters": {
+				"short": "{{значение}} м ³"
+			},
+			"meters": {
+				"short": "{{Значение}} м"
+			},
+			"squareMeters": {
+				"short": "{{значение}} m²"
+			}
+		},
+		"listselection": {
+			"selected": "Выбрано"
+		}
+	}
+}

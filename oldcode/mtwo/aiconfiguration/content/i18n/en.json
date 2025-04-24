@@ -1,0 +1,34 @@
+﻿{
+	"mtwo": {
+		"aiconfiguration": {
+			"modelList": "Model Case",
+			"modelVersion": "Model Version",
+			"modelInput": "Model Input Parameter",
+			"modelOutput": "Model Output Parameter",
+			"modelInputMapping": "Model Input Parameter Mapping",
+			"modelType": "Model Type",
+			"valueType": "Value Type",
+			"rib": "RIB",
+			"predictSense": "Predict Sense",
+			"guid": "GUID",
+			"alias": "Alias",
+			"image": "Image",
+			"checkVersion": "Checking upload File...",
+			"uniqueValueErrorMessage": "Code must be unique!",
+			"wizard": {
+				"modelFile": "Model File",
+				"modelType": "Model Type",
+				"createModelVersion": "Create Model Version",
+				"upload": "Upload AI Model",
+				"versionFileNotFound": "No file named 'requirements.json' was found in the uploaded package.",
+				"requirementsNull": "The file named 'requirements.json' is no content.",
+				"noMatchImage": "The uploaded version of the model does not match any image.",
+				"uploadFailure": "Upload Failure",
+				"noInputParameterFile": "No file named 'InputParameter.json' was found in the uploaded package."
+			},
+			"import": {
+				"placeholder": "Please select the zip file"
+			}
+		}
+	}
+}

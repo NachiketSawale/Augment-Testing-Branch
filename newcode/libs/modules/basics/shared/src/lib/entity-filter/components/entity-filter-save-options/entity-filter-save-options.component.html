@@ -1,0 +1,9 @@
+<ui-common-popup>
+	<div content class="generic-popup">
+		<ul class="popup-list">
+			<li *ngFor="let option of saveOptions" (click)="select(option.id)">
+				{{ option.label | platformTranslate }}
+			</li>
+		</ul>
+	</div>
+</ui-common-popup>

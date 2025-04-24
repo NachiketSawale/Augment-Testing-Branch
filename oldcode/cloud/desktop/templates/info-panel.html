@@ -1,0 +1,21 @@
+<style>
+	.sidebar-navigator button {
+		width: 23px;
+		height: 28px;
+		border-color: #fff !important;
+		margin-right: 10px;
+	}
+</style>
+<div class="informationWrapper" data-ng-show="model">
+	<div class="header" ng-class="{'actionbar': toolbar && toolbar.length}">
+		<div>{{ header }}</div>
+		<ul class="tools flex-box" data-ng-show="toolbar && toolbar.length">
+			<li data-ng-repeat="icon in toolbar">
+				<button title="{{ icon.caption  | translate }}" class="control-icons {{ icon.iconClass }}"
+				        data-ng-click="icon.handler($event)" data-ng-disabled="icon.disabled($event)">
+				</button>
+			</li>
+		</ul>
+	</div>
+	<div class="informationInner" data-ng-transclude></div>
+</div>

@@ -1,0 +1,54 @@
+﻿[
+	{
+		"id": "timekeeping.paymentgroup.paymentGroupList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.paymentgroup.paymentGroupListTitle",
+		"controller": "timekeepingPaymentGroupListController",
+		"uuid": "efae4d9755834726b31ad7cbdf09d41f"
+	},
+	{
+		"id": "timekeeping.paymentgroup.paymentGroupDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.paymentgroup.paymentGroupDetailTitle",
+		"controller": "timekeepingPaymentGroupDetailController",
+		"uuid": "c800ef2747434e7199b5b59c5f0a5057",
+		"permission": "efae4d9755834726b31ad7cbdf09d41f"
+	},
+	{
+		"id": "timekeeping.paymentgroup.paymentGroupRateList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.paymentgroup.paymentGroupRateListTitle",
+		"controller": "timekeepingPaymentGroupRateListController",
+		"uuid": "faadbbc815c7406ca8c1032a1998b36a"
+	},
+	{
+		"id": "timekeeping.paymentgroup.paymentGroupRateDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.paymentgroup.paymentGroupRateDetailTitle",
+		"controller": "timekeepingPaymentGroupRateDetailController",
+		"uuid": "33b18a1eea52466d9bfb81c335671a6a",
+		"permission": "faadbbc815c7406ca8c1032a1998b36a"
+	},
+	{
+		"id": "timekeeping.paymentgroup.paymentGroupSurchargeList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.paymentgroup.paymentGroupSurchargeListTitle",
+		"controller": "timekeepingPaymentGroupSurchargeListController",
+		"uuid": "b02e6c0517ba4d548e8cadcf1e322353"
+	},
+	{
+		"id": "timekeeping.paymentgroup.paymentGroupSurchargeDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.paymentgroup.paymentGroupSurchargeDetailTitle",
+		"controller": "timekeepingPaymentGroupSurchargeDetailController",
+		"uuid": "6f04b27dea9244759d2bbbff88bd13a2",
+		"permission": "b02e6c0517ba4d548e8cadcf1e322353"
+	},
+	{
+		"id": "timekeeping.paymentgroup.translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "a43dcd5a3c8a4f0195aa42dbe132f587"
+	}
+]

@@ -1,0 +1,28 @@
+<div class="timekeeping-recording-form">
+    <div data-ng-repeat="employee in crew track by employee.Id" class="tk-sheet">
+        <div data-ng-bind="employee.Name"></div>
+        <div data-ng-repeat="group in currentLayout.groups track by group.def.Id">
+            <div data-ng-repeat="gInstance in group.instances track by gInstance.index" class="flex-box tk-sheet-row">
+                <div data-ng-repeat="phase in ::gInstance.phases track by phase.def.Id" class="tk-report">
+                    <div data-ng-repeat="pInstance in phase.instances track by pInstance.index">
+                        <div data-timekeeping-recording-phase-input data-phase="::phase.def" data-phase-instance="::pInstance" data-current-layout="::currentLayout" class="phase-instance"></div>
+                        <div data-ng-if="::phase.hasVariableCount">
+                            <input type="button" title="remove" value="" data-ng-click="pInstance.remove()" class=" tlb-icons ico-rec-delete btn btn-default tk-btn-minus" data-ng-disabled="!pInstance.canRemove()" />
+                        </div>
+                    </div>
+                    <div data-ng-if="::phase.hasVariableCount">
+                        <input type="button" title="add" value="" data-ng-click="phase.addInstance()" class="tlb-icons ico-rec-new btn btn-default tk-btn-plus" data-ng-disabled="!phase.canAddInstance()" />
+                    </div>
+                </div>
+                <div data-ng-if="::group.hasVariableCount">
+                    <input type="button" value="" title="remove" class=" tlb-icons ico-rec-delete btn btn-default tk-btn-minus" data-ng-click="gInstance.remove()" data-ng-disabled="!gInstance.canRemove()" />
+                </div>
+            </div>
+            <div class="tk-add-row" data-ng-if="::group.hasVariableCount">
+                <input type="button" value="" title="add" data-ng-click="group.addInstance()" class="tlb-icons ico-rec-new btn btn-default tk-btn-plus" data-ng-disabled="!group.canAddInstance()" />
+            </div>
+        </div>
+    </div>
+
+    <input type="button" value="Submit" class="btn btn-default tk-btn-submit" data-ng-click="submit()" />
+</div>

@@ -1,0 +1,31 @@
+{
+	"basics": {
+		"unit": {
+			"entityBasicData": "BasicData",
+			"entityDescription": "Description",
+			"entityRoundingPrecision": "Rounding Precision",
+			"entitySynonym": "Synonym",
+		  	"entityUomType": "Type",
+
+			"entityUnit": "Unit of Measurement",
+			"entityUnitDetails": "Unit of Measurement Details",
+			"entityUnitSynonymDetails": "Synonym Details",
+
+		  	"entityUnitTitle":"Units of Measurement",
+			"synonymsHeader": "Synonyms",
+			"entityQuantity": "Quantity",
+			"entityRemark":"Remark",
+
+			"entityTranslation":"Translation",
+			"entityAttention":"Attention",
+			"entityLengthDimension": "Length Dimension",
+			"entityTimeDimension": "Time Dimension",
+			"entityMassDimension": "Mass Dimension",
+			"isBase": "Is Base",
+			"convGroup": "Conversion",
+			"errorOnlyOneBaseUnitAllowed": "Only one base unit is allowed for a dimension combination",
+			"isoCode": "Iso Code",
+			"isoCodeMustBeUnique": "Iso code must be unique"
+		}
+	}
+}

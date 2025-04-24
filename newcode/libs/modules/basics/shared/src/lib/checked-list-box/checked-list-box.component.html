@@ -1,0 +1,5 @@
+<div class="form-col-checkbox-list">
+	<div *ngFor="let item of items">
+		<input id="{{item[id]}}" type="checkbox" [(ngModel)]="item[value]"/><label for="{{item[id]}}">{{ item[display]|platformTranslate }}</label>
+	</div>
+</div>

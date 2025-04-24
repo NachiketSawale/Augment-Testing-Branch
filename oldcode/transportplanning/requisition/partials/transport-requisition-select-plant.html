@@ -1,0 +1,53 @@
+<div data-ng-controller="transportplanningRequisitionSelectPlantController" ng-cloak class="filler">
+    <div>
+        <div style="margin-left: -10px" data-platform-form data-form-options="filterFormOptions"
+             data-entity="filterEntity"></div>
+        <div class="input-group">
+            <input type="text" data-ng-model="searchValue" data-ng-keydown="onSearchInputKeydown($event)"
+                   class="form-control" autofocus/>
+            <span class="input-group-btn" style="...">
+			    <button class="btn btn-default input-sm btn-search tlb-icons ico-search"
+                        data-ng-click="search()" title="search"></button>
+		    </span>
+        </div>
+    </div>
+    <div class="filler flex-box">
+        <div style="width:43%;float: left"
+             class="flex-box flex-column lookup-grid-container subview-container">
+            <div class="subview-header toolbar">
+                <h3 class="font-bold title fix">{{'transportplanning.transport.wizard.jobs' | translate}}</h3>
+                <div data-platform-menu-list data-list="gridOptions.jobGrid.tools"></div>
+            </div>
+            <div class="flex-element flex-box flex-column overflow-hidden">
+                <div style="height: 210px;" class="flex-basis-auto" data-platform-grid
+                     data="gridOptions.jobGrid"></div>
+            </div>
+        </div>
+        <div style="width:56%;float: left;margin-left: 1%" class="flex-box flex-column">
+            <div style="height: 56%;" class="flex-box flex-column lookup-grid-container subview-container">
+                <div class="subview-header toolbar">
+                    <h3 class="font-bold title fix">{{'Plants' | translate}}</h3>
+                    <div data-platform-menu-list data-list="gridOptions.plantGrid.tools"></div>
+                </div>
+                <div class="flex-element flex-box flex-column overflow-hidden">
+                    <div style="height: 210px;" class="flex-basis-auto" data-platform-grid
+                         data="gridOptions.plantGrid"></div>
+                </div>
+            </div>
+            <div style="height: 44%;" class="flex-box flex-column lookup-grid-container subview-container">
+                <div class="subview-header toolbar">
+                    <h3 class="font-bold title fix">{{'Plant Plan' |
+                        translate}}</h3>
+                    <div data-platform-menu-list data-list="gridOptions.planGrid.tools"></div>
+                </div>
+                <div class="flex-element flex-box flex-column overflow-hidden">
+                    <div style="height: 160px;" class="flex-basis-auto" data-platform-grid
+                         data="gridOptions.planGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+    <div ng-if="currentStep===1" transportplanning-transport-trigger-grid-div
+         grids="[gridOptions.jobGrid.state,gridOptions.plantGrid.state,gridOptions.planGrid.state]"></div>
+</div>

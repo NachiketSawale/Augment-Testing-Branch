@@ -1,0 +1,83 @@
+.media .media-body .message-body {
+	margin-left: 58px;
+}
+
+.media .media-body .message-body .block-image {
+	overflow: hidden;
+}
+
+.comment-list-pagination {
+	margin: 0px 5px;
+	float: right;
+	text-align: right;
+}
+
+
+@mixin form-control-focus($color: var(hsl(205, 100%, 35%))) {
+	&:not([readonly]):focus-within {
+		border-color: $color;
+		border: 1px solid $color;
+		outline: 0;
+	}
+}
+
+.comment-viewer {
+	position: relative;
+	overflow: auto;
+
+	.comment-view {
+		user-select: initial;
+		overflow: auto;
+	}
+
+	.comment-footer {
+		justify-content: center;
+		min-height: 44px;
+	}
+
+	.comment-editor {
+		position: relative;
+		height: 80px;
+
+		.comment-text-area {
+			@include form-control-focus();
+		}
+
+		.comment-toolbar {
+			width: 26px;
+			white-space: normal;
+		}
+
+		.comment-image {
+			height: 30px;
+		}
+	}
+
+	.comment-btn {
+		width: 60px;
+		margin: 10px;
+	}
+
+	.emotion-item {
+		padding: 5px 10px;
+	}
+
+	.emotion-item:hover {
+		background-color: #8daac2;
+	}
+
+	.emotion-item-space {
+		padding: 5px 10px;
+	}
+
+	.ng-invalid-comment {
+		.form-control {
+			border-color: rgba(255, 0, 0, 0.5);
+		}
+	}
+
+	.comment-error {
+		color: red;
+		padding: 2px;
+	}
+}

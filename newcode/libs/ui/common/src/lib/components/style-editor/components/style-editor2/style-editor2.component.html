@@ -1,0 +1,156 @@
+<div class="wysiwyg-editor filler">
+  <div class="wysiwyg-toolbar">
+    <div class="btn-group btn-group-sm">
+      <button id="wysiwyg-tb-bold" title="{{ 'platform.wysiwygEditor.bold' | platformTranslate }}" tabindex="-1" type="button"
+        unselectable="off" class="btn btn-default" (click)="format('bold')" [ngClass]="{ active: isBold }">
+        <i class="{{ boldIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-italic" title="{{ 'platform.wysiwygEditor.italic' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('italic')"
+        [ngClass]="{ active: isItalic }">
+        <i class="{{ italicIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-underline" title="{{ 'platform.wysiwygEditor.underline' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('underline')"
+        [ngClass]="{ active: isUnderlined }">
+        <i class="{{ underlineIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-strikethrough" title="{{ 'platform.wysiwygEditor.strikeThrough' | platformTranslate }}"
+        tabindex="-1" type="button" unselectable="on" class="btn btn-default" (click)="format('strikethrough')"
+        [ngClass]="{ active: isStrikethrough }">
+        <i class="{{ strikeThroughIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-subscript" title="{{ 'platform.wysiwygEditor.subscript' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('subscript')"
+        [ngClass]="{ active: isSubscript }">
+        <i class="{{ subscriptIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-superscript" title="{{ 'platform.wysiwygEditor.superscript' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('superscript')"
+        [ngClass]="{ active: isSuperscript }">
+        <i class="{{ superscriptIcon }}"></i>
+      </button>
+    </div>
+    <div class="btn-group btn-group-sm">
+      <select title="{{ 'platform.wysiwygEditor.font' | platformTranslate }}" tabindex="-1" unselectable="on"
+        class="wysiwyg-select" #fontvalue [(ngModel)]="selectedFontValue" (change)="setFont(fontvalue.value)">
+        <option [value]="f" *ngFor="let f of defaultFonts">{{ f }}</option>
+      </select>
+    </div>
+
+    <div class="btn-group btn-group-sm margin-left-ld">
+      <select id="wysiwyg-tb-fontsize" title="{{ 'platform.wysiwygEditor.fontSize' | platformTranslate }}" tabindex="-1"
+        unselectable="on" class="wysiwyg-select" #fontsize [(ngModel)]="selectedFontSize"
+        (change)="setFontSize(fontsize.value)">
+        <option [value]="f.size" *ngFor="let f of fontSizes">
+          {{ f.size }}
+        </option>
+      </select>
+    </div>
+
+    <div class="btn-group btn-group-sm btn-group-hover">
+      <div id="wysiwyg-tb-fontcolor" title="{{ 'platform.wysiwygEditor.fontColor' | platformTranslate }}">
+        <label class="wysiwyg-fontlabel">A</label>
+
+        <div
+          class="domain-type-color btn btn-default wysiwyg-colorpicker wysiwyg-fontcolor color-picker form-control input-group"
+          (change)="setFontColor()">
+          <input type="color" style="width: 200px" [(ngModel)]="fontColor" />
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-group btn-group-sm btn-group-hover">
+      <div id="wysiwyg-tb-highlightcolor" title="{{ 'platform.wysiwygEditor.highlightColor' | platformTranslate }}">
+        <label class="wysiwyg-fontlabel">H</label>
+        <div
+          class="domain-type-color btn btn-default wysiwyg-colorpicker wysiwyg-hiliteColor color-picker form-control input-group ng-scope"
+          (change)="setHiliteColor()">
+          <div class="color-group">
+            <input type="color" style="width: 200px" [(ngModel)]="hiliteColor" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-group btn-group-sm">
+      <button id="wysiwyg-tb-removeformatting" title="{{ 'platform.wysiwygEditor.removeFormatting' | platformTranslate }}"
+        tabindex="-1" type="button" unselectable="on" class="btn btn-default" (click)="format('removeFormat')">
+        <i class="{{ removeSettingsIcon }}"></i>
+      </button>
+    </div>
+    <div class="btn-group btn-group-sm">
+      <button id="wysiwyg-tb-orderedlist" title="{{ 'platform.wysiwygEditor.orderedList' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('insertorderedlist')"
+        [ngClass]="{ active: isOrderedList }">
+        <i class="{{ orderedListIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-unorderedlist" title="{{ 'platform.wysiwygEditor.unorderedList' | platformTranslate }}"
+        tabindex="-1" type="button" unselectable="on" class="btn btn-default" (click)="format('insertunorderedlist')"
+        [ngClass]="{ active: isUnorderedList }">
+        <i class="{{ unOrderedListIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-outdent" title="{{ 'platform.wysiwygEditor.outdent' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('outdent')">
+        <i class="{{ outdentIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-indent" title="{{ 'platform.wysiwygEditor.indent' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('indent')">
+        <i class="{{ indentIcon }}"></i>
+      </button>
+    </div>
+    <div class="btn-group btn-group-sm">
+      <button id="wysiwyg-tb-leftjustify" title="{{ 'platform.wysiwygEditor.leftJustify' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('justifyleft')"
+        [ngClass]="{ active: isLeftJustified }">
+        <i class="{{ leftJustifyIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-centerjustify" title="{{ 'platform.wysiwygEditor.centerJustify' | platformTranslate }}"
+        tabindex="-1" type="button" unselectable="on" class="btn btn-default" (click)="format('justifycenter')"
+        [ngClass]="{ active: isCenterJustified }">
+        <i class="{{ centerJustifyIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-rightjustify" title="{{ 'platform.wysiwygEditor.rightJustify' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('justifyright')"
+        [ngClass]="{ active: isRightJustified }">
+        <i class="{{ rightJustifyIcon }}"></i>
+      </button>
+    </div>
+
+    <div class="btn-group btn-group-sm">
+      <button id="wysiwyg-tb-code" title="{{ 'platform.wysiwygEditor.code' | platformTranslate }}" tabindex="-1" type="button"
+        unselectable="on" class="btn btn-default" (click)="format('formatblock', 'pre')" [ngClass]="{ active: isPre }">
+        <i class="{{ codeIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-blockqoute" title="{{ 'platform.wysiwygEditor.quote' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('formatblock', 'blockquote')"
+        [ngClass]="{ active: isBlockquote }">
+        <i class="{{ quoteIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-paragraph" title="{{ 'platform.wysiwygEditor.paragraph' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="format('insertParagraph')"
+        [ngClass]="{ active: isParagraph }">
+        P
+      </button>
+    </div>
+
+    <div class="btn-group btn-group-sm">
+      <button id="wysiwyg-tb-link" *ngIf="!isLink" tabindex="-1" title="{{ 'platform.wysiwygEditor.link' | platformTranslate }}"
+        type="button" unselectable="on" class="btn btn-default" (click)="getLink()">
+        <i class="{{ linkIcon }}"></i>
+      </button>
+      <button id="wysiwyg-tb-unlink" *ngIf="isLink" tabindex="-1"
+        title="{{ 'platform.wysiwygEditor.unlink' | platformTranslate }}" type="button" unselectable="on"
+        class="btn btn-default" (click)="format('unlink')">
+        <i class="{{ unlinkIcon }}"></i>
+      </button>
+
+      <button id="wysiwyg-tb-image" title="{{ 'platform.wysiwygEditor.insertImage' | platformTranslate }}" tabindex="-1"
+        type="button" unselectable="on" class="btn btn-default" (click)="insertImage()">
+        <i class="{{ insertImageIcon }}"></i>
+      </button>
+      <input id="editorImageUpload" type="file" input-file="" name="upload" (change)="uploadFile()"
+        style="display: none" />
+    </div>
+  </div>
+  <div id="wysiwyg-textarea" contentEditable="{{textareaEditable}}" class="{{ textareaClass }} wysiwyg-textarea"></div>
+</div>

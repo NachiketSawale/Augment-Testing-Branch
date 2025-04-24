@@ -1,0 +1,16 @@
+{
+  "basics": {
+    "regionCatalog": {
+      "regionTypeList": "Region Type",
+      "regionTypeDetail": "Region Type Detail",
+      "regionCatalogList": "Region Catalog",
+      "regionCatalogDetail": "Region Catalog Detail",
+      "entityTranslation": "Translation",
+      "entityRegionTypeFK": "Region Type",
+      "entityUomFK": "Uom",
+      "entityCommentTextInfo": "Comment Text",
+      "entityOrgCode": "Org Code",
+      "entityIsLive": "Is Live"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+﻿{
+  "basics": {
+    "materialcatalog": {
+      "moduleName": "材料目录",
+      "createDialogTitle":"创建材料目录",
+      "wizard": {
+        "updateDiscountWizard": "更新折扣向导",
+        "updateDiscount": "更新折扣"
+      },
+      "tab": {
+        "MaterialCatalog": "目录",
+        "MaterialGroup": "组",
+        "DiscountGroup": "折扣组",
+        "Attribute": "属性"
+      },
+      "view": {
+        "MaterialCatalog": "材料目录",
+        "MaterialGroup": "材料组",
+        "DiscountGroup": "折扣组",
+        "Attribute": "属性"
+      },
+      "lookup":{
+        "annualTurnover":"Annual Turnover",
+        "cashBack":"Cash Back"
+      },
+	  "isTicketSystem":"内部采购",
+      "IsInternetCatalog":"!Is Internet Catalog",
+      "property": "属性",
+      "hasFixedValues": "固定值",
+      "characteristic": "值",
+      "group": "目录",
+      "validFrom": "Valid From",
+      "validTo": "Valid To",
+      "dataDate": "Date Version",
+      "termsGroup": "Terms",
+      "paymentTerm": "Payment Term",
+      "paymentTermCode": "Payment Term Code",
+      "paymentTermDescription": "Payment Term Description",
+      "isNeutral": "中性材料",
+      "DiscountType": "折扣类型",
+      "baseRubricCategory": "!Rubric Category",
+      "termsAndConditions": "!Terms And Conditions",
+      "Discount": "折扣",
+      "Group": {
+        "gridViewTitle": "材料组"
+      },
+      "HeadTitle": {
+        "grid": "材料目录",
+        "form": "材料目录明细",
+        "discountGroup": "折扣组",
+        "discountGroupDetail": "折扣组明细",
+        "group": "材料组",
+        "groupDetail": "材料组明细",
+        "groupChar": "属性",
+        "groupCharDetail": "属性明细",
+        "groupCharval": "属性值",
+        "groupCharvalDetail": "属性值明细"
+      },
+      "Wizard": {
+        "Title": "更新折扣",
+        "Message": "{{p_0}} 材料折扣已更新",
+        "DeepCopyTitle" : "!Deep Copy",
+        "DeepCopyWarningMessage" : "!Please select a material catalog!",
+        "DeepCopyConfirmMessage" : "!Execute deep copy? "
+      },
+      "disableDone": "材料目录{{code}}已成功禁用",
+      "alreadyDisabled": " 材料目录{{code}}已经禁用",
+      "enableDone": "材料目录{{code}} 已成功启用",
+      "alreadyEnabled": "材料目录 {{code}}已经启用",
+      "url": "!Url",
+      "urlUser": "!Url User",
+      "urlPassword": "!Url Password",
+      "synccodes":"需要同步的材料目录"
+    }
+  }
+}

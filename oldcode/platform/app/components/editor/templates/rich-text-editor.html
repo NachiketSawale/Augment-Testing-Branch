@@ -1,0 +1,61 @@
+<!--<script>-->
+<!--// declare a module and load quillModule-->
+<!--var myAppModule = angular.module('quillTest', ['ngQuill']);-->
+<!--myAppModule.config(['ngQuillConfigProvider', function (ngQuillConfigProvider) {-->
+<!--ngQuillConfigProvider.set();-->
+<!--}]);-->
+<!--myAppModule.controller('AppCtrl', [-->
+<!--'$scope',-->
+<!--'$timeout',-->
+<!--function($scope, $timeout) {-->
+<!--$scope.title = '';-->
+<!--$scope.changeDetected = false;-->
+
+<!--$scope.editorCreated = function (editor) {-->
+<!--console.log(editor);-->
+<!--};-->
+<!--$scope.contentChanged = function (editor, html, text) {-->
+<!--$scope.changeDetected = true;-->
+<!--console.log('editor: ', editor, 'html: ', html, 'text:', text);-->
+<!--};-->
+<!--}-->
+<!--]);-->
+
+<!--</script>-->
+
+<!--<body ng-app="quillTest" ng-controller="AppCtrl">-->
+<!--<h3>Default editor + Callbacks/Outputs in JS console</h3>-->
+<!--{{changeDetected}}-->
+<!--<ng-quill-editor ng-model="title" on-editor-created="editorCreated(editor)" on-content-changed="contentChanged(editor, html, text)"></ng-quill-editor>-->
+<!--</body>-->
+
+
+<!--<style>
+    ng-quill-editor .ql-container {
+        height: 100%;
+    }
+
+    ng-quill-editor.ng-invalid .ql-container {
+        border: 1px dashed red;
+    }
+
+    .ql-snow .ql-picker.ql-size .ql-picker-item[data-value="14"]::before {
+        content: '14';
+    }
+
+    .ql-snow .ql-picker.ql-size .ql-picker-item[data-value="16"]::before {
+        content: '16';
+    }
+
+    .ql-snow .ql-picker.ql-size .ql-picker-item[data-value="18"]::before {
+        content: '18';
+    }
+</style>-->
+<!--<p>Hello World!</p>-->
+<!--<p>Some initial <strong>bold</strong> text</p>-->
+<!--<p><br></p>-->
+<platform-Rich-Text-Editor></platform-Rich-Text-Editor>
+
+<!--<script>-->
+<!--var quill = new Quill('#editor');-->
+<!--</script>-->

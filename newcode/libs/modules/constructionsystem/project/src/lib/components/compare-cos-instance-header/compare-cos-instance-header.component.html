@@ -1,0 +1,71 @@
+<section class='modal-body'>
+	<ui-common-loading [loading]='isLoading'></ui-common-loading>
+	<div [ngSwitch]='currentStep.num'>
+		<div *ngSwitchCase='0'>
+			<ui-common-form [formConfig]='formConfig' [entity]='formItem'></ui-common-form>
+		</div>
+		<div *ngSwitchCase='1'>
+			<div
+				class='alert alert-success alert-cos'>{{'constructionsystem.project.noteCopyIsDone' | platformTranslate}}</div>
+			<div class='alert alert-info alert-cos' [style.display]="currentStep.messages.length > 0 ? 'block': 'none'">
+				<ul>
+					<li *ngFor='let msg of currentStep.messages'>
+						{{msg}}
+					</li>
+				</ul>
+			</div>
+			<div class='flex-box flex-column subview-container grid-wrapper'>
+				<ui-common-grid [configuration]='step2GridConfig'></ui-common-grid>
+			</div>
+			<br>
+			<div class='checkbox spaceToUp lg-3 md-3'>
+
+				<div>
+					<label>
+						<input type='checkbox' [checked]='applySelectionStatement'
+									 (change)="onOptionChange('applySelectionStatement', applySelectionStatement)" />
+						{{'constructionsystem.project.execSelectionStatement' | platformTranslate}}
+					</label>
+				</div>
+				<div style='padding-left: 20px;color: red;'>
+					({{ 'constructionsystem.project.execSelectionStatementHint' | platformTranslate }})
+				</div>
+
+				<!--execute cos evaluation and calculation	-->
+				<p><label><input type='checkbox' [checked]='applyCalculation'
+												 (change)="onOptionChange('applyCalculation', applyCalculation);!applyCalculation?(applyEstimate=false):null;">{{'constructionsystem.project.execCalculation' | platformTranslate}}
+				</label></p>
+				<!--apply line item -->
+				<p><label><input type='checkbox' [checked]='applyEstimate'
+												 (change)="onOptionChange('applyEstimate', applyEstimate);applyEstimate?(applyCalculation=true):null;">{{'model.viewer.changeModelWz.applyEstimate' | platformTranslate}}
+				</label></p>
+				<!--keep deleted cos instances-->
+				<p><label><input type='checkbox' [checked]='keepCosInstance'
+												 (change)="onOptionChange('keepCosInstance', keepCosInstance);">{{'constructionsystem.project.keepDeletedInstances' | platformTranslate}}
+				</label></p>
+			</div>
+			<br>
+
+			<div cloud-common-overlay data-info2='loadingInfo'>
+				<ui-common-loading [loading]='isLoading'></ui-common-loading>
+			</div>
+		</div>
+		<div *ngSwitchCase='2'>
+			<h5>{{'constructionsystem.main.applyNote' | platformTranslate}}</h5>
+			<div class="platform-form-group">
+				<div class="radio spaceToUp col-lg-offset-2">
+					<label>
+						<input type="checkbox" [(ngModel)]='updateOnApply' (change)="onOptionChange('updateOnApply', updateOnApply);updateOnApply?(overrideOnApply=false):null;" /> {{'constructionsystem.main.update' | platformTranslate}}
+					</label>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="radio spaceToUp col-lg-offset-2">
+					<label>
+						<input type="checkbox" [(ngModel)]='overrideOnApply' (change)="onOptionChange('overrideOnApply', overrideOnApply);overrideOnApply?(updateOnApply=false):null;" />{{'constructionsystem.main.overwriteAll' | platformTranslate}}
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

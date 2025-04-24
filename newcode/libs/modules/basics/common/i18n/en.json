@@ -1,0 +1,738 @@
+﻿{
+	"basics": {
+		"common": {
+			"noteMsg": "Note：Please press Ctrl or Shift button to select multiple cost codes.",
+			"stockCode": "Stock Code",
+			"stockDescription": "Stock Description",
+			"projectNumber": "Project Number",
+			"projectName": "Project Name",
+			"fullScreen": "Full Screen",
+			"Quantity": "Quantity",
+			"entityAddress": "Address",
+			"commentContainerTitle": "Pin Board",
+			"privateCommentContainerTitle": "Private Comment",
+			"deleteDialogTitle": "Confirm delete",
+			"questionDeleteImageHeaderText": "Delete Picture",
+			"questionDeleteImageBodyText": "Do you want to delete this picture?",
+			"questionDeleteProfile": "Do you really want to delete Profile '{{p1}}'?",
+			"questionDialogDefaultTitle": "Question",
+			"remain": "Remain",
+			"cancel": "Cancel",
+			"continue": "Continue?",
+			"ok": "OK",
+			"recipient": "Recipients",
+			"sender": "Sender",
+			"termsOfUse": "Terms of use",
+			"legalNotice": "Legal notice",
+			"excelProfileDetails": "Excel Profile Details",
+			"passwordEnterTip": "Please Enter Password",
+			"characteristics": "Characteristics",
+			"email": {
+				"headerText": "Send E-mail",
+				"recipientText": "The selected recipient's E-mail address can't be empty",
+				"success": "Send e-mail successfully.",
+				"fail": "Send e-mail failed."
+			},
+			"fax": {
+				"headerText": "Send Fax",
+				"recipientText": "The selected recipient's Fax Number can't be empty.",
+				"success": "Send fax successfully.",
+				"fail": "Send fax failed."
+			},
+			"wizardDialog": {
+				"title": {
+					"businesspartnerPortal": "Business Partner Portal"
+				},
+				"gridEntity": {
+					"doesSend": "Does Send"
+				},
+				"headerText": "Materials Portal"
+			},
+			"validation": {
+				"correctValidationErrors": "Please correct the error(s):",
+				"validationWizard": "Validation Wizard",
+				"uniqueValueErrorMessage": "The {{object}} should be unique.",
+				"zeroIsInvalid": "Zero is not valid.",
+				"exceedMaxLength": "Value exceeds the max length, {{length}}"
+			},
+			"changeStatus": {
+				"headerText": "Change Status",
+				"workflowRunning": "Running status change workflow",
+				"workflowInfo": "Workflow: '{{p1}}'\nStatus: {{p2}}\n",
+				"workflowError": "Error: {{p1}}",
+				"from": "From",
+				"to": "To",
+				"remark": "Remark",
+				"showAvailableStatus": "Only show available status",
+				"changedAt": "Changed At",
+				"changedBy": "Changed By",
+				"Running": "Running",
+				"Finished": "Finished",
+				"Escalate": "Escalate",
+				"Waiting": "Waiting",
+				"Failed": "Failed",
+				"openFailedTitle": "Open change status wizard failed!",
+				"reportTitle": "Status Change Report",
+				"itemLabel": "Items",
+				"changeToLabel": "Change to",
+				"changedLabel": "Status changed for",
+				"notChangedLabel": "Status not changed for",
+				"notChangedReason": "Due to the status transition matrix, the status has not been changed for these items",
+				"project": "Project:",
+				"status": "Status:",
+				"result": "Result:",
+				"finished": "Finished",
+				"failed": "Failed",
+				"statusgrouping": "Status Grouping",
+				"description": "Description",
+				"notChangeStatusTitle": "Change Status Warning",
+				"notChangeStatusMessage": "Status of below entity cannot be changed and will be skipped:",
+				"code": "Code",
+				"abortToChangeByUserOrFailToUpdate": "Abort to change status by user or fail to update."
+			},
+			"poChange": {
+				"ChangeType": "Change Type",
+				"UpdateDate": "Update Date",
+				"itemsData": "Items Data",
+				"itemNo": "Item No",
+				"rollback": "Roll Back",
+				"rollbackResult": "Roll Back Result",
+				"rollbackSuccess": "Successful",
+				"rollbackFailed": "Failed",
+				"workflowRunning": "Running Purchase Order Change WorkFlow...",
+				"controller": {
+					"modalQuestion": {
+						"headerTextKey": "Yes/No",
+						"bodyTextKey": "Are you sure to change purchase order?"
+					},
+					"modalInfo": {
+						"headerTextKey": "Message",
+						"bodyTextKey": "Data Validate Failed Or No Data Change.",
+						"CancelPOMeg": "Purchase order have been cancelled, can not be changed!",
+						"DeliveryDateMeg": "New Delivery Date must later than Old Date!"
+					},
+					"modalOptions": {
+						"chkItems": {
+							"DecreaseQty": "Decrease Quantity",
+							"DeliveryDate": "Delivery Date",
+							"DeliveryAddress": "Delivery Address",
+							"CancelPO": "Cancel Purchase Order"
+						}
+					},
+					"dDformConfig": {
+						"groups": {
+							"dDChange": "Delivery Date",
+							"dAChange": "Delivery Address",
+							"cPOChange": "Decrease Quantity"
+						},
+						"rows": {
+							"TotalPrice": "Total Price",
+							"ExpressFree": "Express Free",
+							"PremiumFreight": "Premium Freight",
+							"OldDate": "Old Delivery Date",
+							"NewDate": "New Delivery Date",
+							"OldAddress": "Old Address",
+							"NewAddress": "New Address"
+						}
+					}
+				},
+				"services": {
+					"modalInfo": {
+						"headerText": "Message",
+						"bodyText": "This Status hasn't permission to open Wizard!",
+						"bodyTextRB": "Only contract's status is Change Rejected can be Roll Back!"
+					},
+					"modalQuestion": {
+						"bodyText": "Do you want to roll back purchase order change?"
+					},
+					"exeErrorMsg": "Running Purchase Order Change WorkFlow Failed!",
+					"exeRBErrorMsg": "Roll Back Purchase Order Change Failed!",
+					"errorHeaderText": "Error"
+				}
+			},
+			"updateCashFlowProjection": {
+				"headerText": "Update Cash Flow Projection",
+				"refreshBtnText": "Refresh",
+				"updateProjectionErrorMsg": "Update Cash Flow Projection Failed",
+				"updateFailedTitle": "Update Cash Flow Projection Failed",
+				"deleteAndRecreateText": "The change of S-curve, StartWork or EndWork will cause all the exist cash projection details delete and recreate,are you sure?",
+				"overValueErrorMessage": "The value cannot larger than total cost",
+				"sCurve": "S-Curve",
+				"totalCost": "Total Cost",
+				"startDate": "Start Date",
+				"endDate": "End Date",
+				"onlyLinearAdjustment": "Only Linear Adjustment"
+			},
+			"toolbarChangePicture": "Change Picture",
+			"toolbarDeletePicture": "Delete Picture",
+			"button": {
+				"send": "Send",
+				"close": "Close",
+				"ok": "OK",
+				"cancel": "Cancel",
+				"previousStep": "Previous",
+				"nextStep": "Next",
+				"save": "Save",
+				"saveAs": "Save As",
+				"simulate": "Simulate",
+				"history": "History",
+				"back": "Back",
+				"preview": "Preview",
+				"default": "Default",
+				"execute": "Execute",
+				"proceed": "Proceed",
+				"refresh": "Refresh",
+				"search": "Search",
+				"import": "Import",
+				"rename": "Rename"
+			},
+			"settings": "Settings",
+			"entitySended": "Sended",
+			"map": {
+				"addressNotFound": "Notice: Address not found on the map.",
+				"iconPickLocation": "Pick Location",
+				"iconExpandMap": "Expand Map",
+				"mapSettings": "Map Settings",
+				"showDefault": "Show Map By Default",
+				"mapProvider": "Map Provider",
+				"waypointInfo": "Waypoint Info",
+				"plannedTime": "Planned Time",
+				"message": {
+					"loadingMap": "Loading map...",
+					"mapLoaded": "Map loaded.",
+					"mapLoadFailed": "Map load failed!",
+					"searching": "Searching address...",
+					"searchCompleted": "Address found!",
+					"addressNotFound": "Address not found!",
+					"searchError": "Search failed due to map error or connection issue! please show map and try it again."
+				}
+			},
+			"dialog": {
+				"saveProfile": {
+					"labelAccessLevel": "Access level",
+					"labelProfileName": "Profilename",
+					"placeholderProfileName": "Please insert a new profile name",
+					"saveUniqueFields": "Save Aggregate Option",
+					"newProfileName": "New Profile",
+					"failToSaveTitle": "Fail to Save Profile",
+					"errorMsg": "The Profilename and Access level can not be empty."
+				},
+				"showContent": "Content",
+				"permissionSummary": {
+					"defaultTitle": "Permission Summary",
+					"errorNoKey": "No key found. Please provide a key to see the Permission Summary.",
+					"column": {
+						"permissionName": "Permission Name",
+						"permissionUUID": "Permission UUID",
+						"purpose": "Purpose",
+						"create": "Create",
+						"read": "Read",
+						"write": "Write",
+						"delete": "Delete",
+						"execute": "Execute"
+					}
+				}
+			},
+			"procurementDialog": {
+				"Title": "Validation Error Message",
+				"FactorZeroDescription": "Factor of item {{Itemno}}  is zero",
+				"PriceUnitZeroDescription": "Price Unit of item {{Itemno}}  is zero"
+			},
+			"upload": {
+				"errorHeaderText": {
+					"uploadFileError": "Uploading File Error"
+				},
+				"errorMessage": {
+					"fileSizeUndefined": "The file size is undefined.",
+					"fileSizeOverflow": "The file size ({{p1}}{{p2}}) is larger then the max size ({{p3}}{{p4}})."
+				},
+				"button": {
+					"downloadCaption": "Download",
+					"cancelUploadCaption": "Cancel Upload",
+					"uploadCaption": "Upload For Selected",
+					"uploadAndCreateDocument": "Upload & Create Document",
+					"downloadPdfCaption": "Download PDF"
+				},
+				"failToGetNewFileArchiveDocId": "Fail to get new file archive document Id.",
+				"continueUpload": "Continue",
+				"exceedTips": "The below document(s) cannot be uploaded as the file size exceed(s) system limit",
+				"copyToClipboard": "Copy To Clipboard"
+			},
+			"refreshRibArchive": "Refresh iTWOSite OriginFileName",
+			"preview": {
+				"button": {
+					"previewCaption": "Preview",
+					"option": "Document Option",
+					"previewBrowser": "Preview in Browser",
+					"autoPreviewBrowser": "Auto Preview in Same Tab",
+					"2DViewer": "Preview in 2D Viewer",
+					"pdfViewer": "Preview in PDF Viewer",
+					"3DViewer": "Preview in 3D Viewer",
+					"noRibArchivePdfPreview": "ribArchive document can't preview in PDF Viewer",
+					"noRibArchive2DPreview": "ribArchive document can't preview in 2D Viewer",
+					"noRibArchive3DPreview": "ribArchive document can't preview in 3D Viewer",
+					"zoomIn": "Zoom In",
+					"zoomOut": "Zoom Out",
+					"restView": "Rest View",
+					"rotateLeft": "Rotate Left",
+					"rotateRight": "Rotate Right"
+				},
+				"noFile": "No files were found in this document",
+				"noType": "This file type is not preview"
+			},
+			"previewProgram": {
+				"caption": "Default Preview Program",
+				"column": {
+					"fileType": "File Type",
+					"2dViewer": "By 2D Viewer",
+					"pdfViewer": "By PDF Viewer",
+					"systemDefault": "By System Defaule",
+					"typeList": "Type List"
+				}
+			},
+			"synchronize": {
+				"button": {
+					"synchronizeCaption": "Save document to iTWO4.0"
+				}
+			},
+			"Description": "Description",
+			"configLocation": {
+				"label": "Location",
+				"user": "User",
+				"role": "Role",
+				"system": "System",
+				"portal": "Portal"
+			},
+			"taskBar": {
+				"error": "Error",
+				"warning": "Warning",
+				"info": "Information",
+				"find": "Find",
+				"findNext": "Find Next",
+				"findPrev": "Find Previous",
+				"replace": "Replace",
+				"replaceAll": "Replace All",
+				"clearSearch": "Clear Search",
+				"jumpToLine": "Jump To Line",
+				"shortcuts": "Shortcuts",
+				"undo": "Undo",
+				"redo": "Redo",
+				"jumpToDef": "Jump To Definition",
+				"jumpBack": "Jump Back",
+				"renameVariable": "Rename Variable",
+				"showTypeDoc": "Show Document",
+				"codeFold": "Fold",
+				"codeUnfold": "Unfold",
+				"comment": "Toggle Comment",
+				"indent": "Indent",
+				"format": "Format",
+				"document": "Document",
+				"showHint": "Show Hint"
+			},
+			"percentOfTime": "Percent Of Time",
+			"percentOfCost": "Percent Of Cost",
+			"calcCumCost": "Calculated Cumulative Cost",
+			"calcPeriodCost": "Calculated Period Cost",
+			"calcCumCash": "Calculated Cumulative Cash",
+			"calcPeriodCash": "Calculated Period Cash",
+			"cumCost": "Cumulative Cost",
+			"periodCost": "Period Cost",
+			"cumCash": "Cumulative Cash",
+			"periodCash": "Period Cash",
+			"actPeriodCost": "Actual Period Cost",
+			"actPeriodCash": "Actual Period Cash",
+			"cashFlowForecastGridTitle": "Cash Flow Forecast",
+			"entityPrcStructureFk": "Procurement Structure",
+			"alert": {
+				"info": "Note",
+				"danger": "Error",
+				"success": "Success",
+				"warning": "Warning"
+			},
+			"edit": "Edit",
+			"link": "Link",
+			"image": "Image",
+			"emotion": "Emotion",
+			"title": {
+				"scriptDoc": "Script Document",
+				"scriptObject": "Object",
+				"scriptProperty": "Property"
+			},
+			"entityGlobal": "Global",
+			"entityClerkRole": "Clerk Role",
+			"entityClerk": "Clerk",
+			"entityValidFrom": "Valid From",
+			"entityValidTo": "Valid To",
+			"entityCommentText": "Comment Text",
+			"clerkRoleMustBeUnique": "Clerk role must be unique.",
+			"clerkMustBeUnique": "Clerk must be unique.",
+			"treeviewListDialog": {
+				"multipleSelection": "Multiple Selection",
+				"itemsSelected": "Items Selected"
+			},
+			"containerDialog": {
+				"itemsSelected": "{{item}} Selected",
+				"filterCheckboxTitle": "show all linked {{item}}"
+			},
+			"entityMaterialCode": "Material Code",
+			"entityMaterialDescription": "Material Description",
+			"entityOldEstimatePrice": "Old Estimate Price",
+			"entityNewEstimatePrice": "New Estimate Price",
+			"entityOldCost": "Old Cost",
+			"entityNewCost": "New Cost",
+			"status": "Status",
+			"enterLinkUrl": "Enter the Link URL",
+			"missingStatusError": "Current data item has no valid or default status!",
+			"obsoleteStatusError": "Current data item status had been modified, please refresh data!",
+			"entityCountryDescription": "Country Description",
+			"ruleEditor": {
+				"operandKind": "Select Input Mode",
+				"fieldReference": "Field",
+				"literal": "Value",
+				"addGroupToolTip": "Create New Rule Set",
+				"addRuleToolTip": "Create New Rule",
+				"delGroupToolTip": "Delete Rule Set",
+				"delRuleToolTip": "Delete Rule",
+				"dynamicValueLabel": "Variable Time Period"
+			},
+			"fieldSelector": {
+				"title": "Select Field",
+				"parent": "Parent Element",
+				"item": "Item",
+				"path": "Path",
+				"searchHint": "Enter a part of a field name to search for",
+				"startSearch": "Search for fields containing the entered text",
+				"searchResults": "Search Results",
+				"editorButtonHint": "Select Fields ...",
+				"loadingNode": "(loading)",
+				"levelSeparator": " ► ",
+				"ellipsis": "...",
+				"allFields": "All Fields",
+				"showInTree": "Select in Tree",
+				"simpleMode": "Simplified List",
+				"fullMode": "Full List",
+				"toolbar": "Table Selection",
+				"checkbox": {
+					"select": "Select"
+				},
+				"uniqueFields": {
+					"labelNote": "Note: As cost code is the essential cost element in estimate, please make sure all other resource type (material or plant) are assigned with cost code in order to capture their cost in target BoQ.",
+					"uniqueFieldsProfile": "Aggregate Option",
+					"uniqueFielsDialogTitle": "Choose Unique Line Item Fields",
+					"fields": "Description",
+					"shortKey": "Short Key",
+					"isAggregate": "Aggregate",
+					"costTransferOptprofile": "Cost Transfer Option",
+					"costTransferOptDialogTitle": "Resource Selection via Cost Code",
+					"selectCostType": "Select Cost Code",
+					"directCost": "Direct Cost",
+					"indirectCost": "Indirect Cost"
+				},
+				"subentity": {
+					"create": "Create subentity",
+					"delete": "Delete subentity",
+					"node": "Subentity Node",
+					"name": "Subentity Name",
+					"placeholder": "Enter a name for the subentity",
+					"title": "Create a new subentity",
+					"list": "Defined subentities"
+				},
+				"selectorEditor": "Selector",
+				"selectDynField": "Select Item ...",
+				"selectFieldParams": "Select Parameters ...",
+				"fieldParamTitle": "Field Parameters"
+			},
+			"pdfOverlay": {
+				"containerTitle": "PDF Marker"
+			},
+			"uniqueFields": {
+				"uniqueFieldsProfile": "Aggregate Option",
+				"uniqueFielsDialogTitle": "Choose Unique Line Item Fields",
+				"fields": "Description",
+				"shortKey": "Short Key",
+				"isAggregate": "Aggregate",
+				"costTransferOptprofile": "Resource Selection via Cost Code",
+				"costTransferOptDialogTitle": "Resource Selection via Cost Code",
+				"selectCostType": "Select Cost Code",
+				"directCost": "Direct Cost",
+				"indirectCost": "Indirect Cost",
+				"quantityTransferFromLabel": "Quantity Transfer From",
+				"considerBoqQtyRelation": "Consider BoQ Qty Relation",
+				"dynamicLicCostGroupFk": "Dynamic Cost Group {{num}}",
+				"dynamicPrjCostGroupFk": "Dynamic Project Cost Group {{num}}",
+				"uniqueFieldsDialogTitle": "Choose Aggregate Fields"
+			},
+			"previewEidtOfficeDocument": "Edit Office Document",
+			"error": {
+				"controllingUnitError": "The controlling unit must be an accounting(or inter company) element and status is open for posting!",
+				"invalidParam": "Invalid Parameter",
+				"invalidChar": "It can't contains: {{invalidChar}}",
+				"invalidCharNAllInvalidChars": "The character(s): {{invalidChar}} should not be included. All Invalid Chars: {{invalidChars}}",
+				"includeChineseChar": "It can't contains Chinese chars"
+			},
+			"evaluation": {
+				"businessPartnerEvaluationStructure": "BP Evaluation Structure",
+				"businessPartnerEvaluation": "BP Evaluation",
+				"quoteEvaluation": "Quote Evaluation"
+			},
+			"docPreview": "Document Preview",
+			"importXML": {
+				"header": "Import BaseLine {{header}}",
+				"importSuccessful": "Imported successfully!",
+				"importFailed": "Import Failed:{{Messages}}",
+				"message": "Message",
+				"status": "Import Status",
+				"costgroupsstyle": "Cost Groups",
+				"filename": "File Name"
+			},
+			"changeStatusResult": {
+				"code": "Code",
+				"status": "Status",
+				"message": "Message"
+			},
+			"dateEffective": "Date Effective",
+			"selected": "Selected",
+			"aiDialogTitle": "McTWO AI",
+			"aiNotConfiguredError": "Operation cannot be executed because McTWO AI is not configured correctly",
+			"aiNotEnabledError": "Operation cannot be executed because McTWO AI is disabled",
+			"aiNoPermissionError": "Operation cannot be executed due to lack of permission",
+			"quantityTransferForm": {
+				"lineItemAQ": "Line Item AQ",
+				"lineItemWQ": "Line Item WQ",
+				"lineItemQuantityTotal": "Line Item Quantity Total",
+				"boQWQAQ": "BoQ WQ/AQ"
+			},
+			"errornotsavefile": "Please save the header first!",
+			"notProcessed": "Not processed.",
+			"yes": "Yes",
+			"no": "No",
+			"reason": "Reasons",
+			"updateOption": {
+				"isMaterial": "Is Material",
+				"isService": "Is Service",
+				"isFromPrjBoq": "Is From Project BoQ",
+				"isFromWicBoq": "Is From WIC BoQ",
+				"isFromLineItem": "Is From Line Item",
+				"isFromLineItemAQ": "Is From Line Item AQ",
+				"isFromLineItemWQ": "Is From Line Item WQ",
+				"isFromBoqAQWQ": "Is From BoQ AQ/WQ",
+				"isConsideredQtyRel": "Is Considered QTY Rel",
+				"boqCriteria": "Boq Criteria",
+				"boqQtySource": "Boq Quantity Source"
+			},
+			"packageColumn": {
+				"prcConfigurationDescription": "Configuration",
+				"plannedStart": "Planned Start",
+				"plannedEnd": "Planned End",
+				"actualStart": "Act. Start",
+				"actualEnd": "Act. End"
+			},
+			"updatePackageBoq": {
+				"criteriaType": {
+					"selectCriteriaCreateBoq": "Select Criteria to Create BoQ",
+					"controllingUnitAsTitle": "Controlling Unit as BoQ Division",
+					"generateBoqSuccess": "Generate/Update BoQ Successfully."
+				},
+				"noResourceOrNoBoqItemFk": "This package has no resource or the estimate line item related to this package's resource do not have Boq Item, can't generate a BoQ.",
+				"boqStructureFkIsNotEqual": "The BoqStructureFk is not equal, can't update the BoQ Structure."
+			},
+			"exceedImagesMessage": "The size of image file(s): '{{p1}}' being uploaded exceed(s) the max size defined, do you want to upload with lower resolution by compression as per max size?",
+			"compressDialogTitle": "Compression via Resolution Reduction",
+			"variance": "Variance",
+			"importError": {
+				"importError4BigData": "The thread was aborted because the big data takes a long time to run."
+			},
+			"dependent": {
+				"dependantDataBtnText": "Show Dependant Data",
+				"title": "Title",
+				"count": "Count",
+				"title1": "Element Header Code",
+				"title2": "Element Code"
+			},
+			"characteristic2": {
+				"title": "Characteristics2",
+				"characteristics": "Characteristics"
+			},
+			"pleaseSelectImportedFile": "Please Select Imported File",
+			"systemContextItems": {
+				"contextNull": "Null",
+				"syscontextNull": "Null",
+				"syscontextCompany": "Company",
+				"syscontextProfitCenter": "Profit Center",
+				"syscontextProjekt": "Project",
+				"syscontextMainEntityId": "Main Entity Id",
+				"syscontextMainEntityIdArray": "Main Entity Id Array",
+				"syscontextUserId": "User Id",
+				"syscontextUserName": "User Name",
+				"syscontextUserDescription": "User Description",
+				"syscontextSelectedMainEntities": "Selected Main Entities",
+				"syscontextWatchList": "Watch List"
+			},
+			"visibility": {
+				"standardOnly": "Visible in Standard",
+				"portalOnly": "Visible in Portal",
+				"standardPortal": "Visible in Standard&Portal"
+			},
+			"historicalPrice": {
+				"historicalPriceForItemContainerTitle": "Historical Price for Item",
+				"historicalPriceForBoqContainerTitle": "Historical Price for BoQ",
+				"itemLabel": "Item",
+				"boqLabel": "Outline Specification",
+				"itemDescLabel": "Further Desc",
+				"sourceType": "Source Type",
+				"status": "Status",
+				"priceList": "Price List",
+				"price": "Price",
+				"uom": "UoM",
+				"date": "Date",
+				"searchFromLabel": "Search From",
+				"materialCatalog": "Material Catalog",
+				"quotation": "Quotation",
+				"contract": "Contract",
+				"searchBtnText": "Search",
+				"unitRate": "Unit Rate",
+				"correctedUnitRate": "Corrected Unit Rate",
+				"priceRange": "Price Range"
+			},
+			"uploadDocument": {
+				"duplicateTips": "Document(s) with exact name already existed. Do you still want to upload as new copy or ignore the document(s)?",
+				"uploadBtn": "Upload",
+				"IgnoreBtn": "Ignore"
+			},
+			"userDefinedColumn": {
+				"detailGroupName": "User-Defined Price",
+				"costUnitSuffix": "Cost/Unit",
+				"totalSuffix": "Total",
+				"projectSuffix": "Project"
+			},
+			"geographicLocationInfo": {
+				"title": "Convert Address To Geographic Coordinate",
+				"convertOnlyEmpty": "Only convert empty coordinate",
+				"convertComplete": "Convert Complete.",
+				"status": {
+					"waiting": "Waiting",
+					"success": "Success",
+					"error": "Error",
+					"notConvert": "NotConvert"
+				}
+			},
+			"fileUpload": {
+				"extractZipFileTip":"Extract zip file"
+			},
+			"entityStatusHistoryTitle": "Status History",
+			"timekeepingPeriod":{
+				"validationListTitle": "Validations",
+				"validationDetailTitle": "Validation Details"
+			},
+			"document": {
+				"isThisTab": "Preview in same tab"
+			},
+			"chartColorConfig":"Chart Color Config",
+			"reset": "Reset",
+			"chartSetting": "Chart Color Config",
+			"chartConfig": {
+				"windowTitle": "Chart Configuration",
+				"dataSeries": "Data Series",
+				"dataGroup": "Data Categories",
+				"chartType": "Chart Type",
+				"color": "Color",
+				"showTitle": "Show Title",
+				"title": "Title",
+				"legendAndData": "Legend and Data Labels",
+				"x_Aixs": "X-Aixs",
+				"y_Aixs": "Y-Aixs",
+				"chartTypeLookupTitle": "Chart Type For Y-Axis",
+				"threeD": "3D view",
+				"reverseOrder": "Reverse Order",
+				"hideZeroValue": "Do not show zero values",
+				"hideZeroValueX": "For Zero values, do not show x values",
+				"drillDownForData": "Drill down for data points",
+				"align": "Align",
+				"showLegend": "Show Legend",
+				"showDataLabels": "Show Data labels",
+				"labelText": "Label Text",
+				"showXAxis": "Show X-Axis",
+				"showYAxis": "Show Y-Axis",
+				"hideGridLine": "Hide Grid Line",
+				"top": "Top",
+				"bottom": "Bottom",
+				"left": "Left",
+				"right": "Right",
+				"filterBySelectStructure": "Filter data by the selected structure in the Dashboard"
+			},
+			"chartType": {
+				"barChart": "Bar Chart",
+				"lineChart": "Line Chart",
+				"radarChart": "Radar Chart",
+				"pieChart": "Pie Chart",
+				"bubbleChart": "Bubble Chart",
+				"doughnutChart": "Doughnut Chart",
+				"polarAreaChart": "PolarArea Chart",
+				"scatterChart": "Scatter Chart"
+			},
+			"previewSize": "File preview with a size of more then 20 MB is not provided for the time being.  File type: txt, xml, html, htm, png, bmp, jpg, jpeg, tif, gif",
+			"mapSnapshot": {
+				"Error_InvalidMapSnapshot": "Error! The snapshot couldn't be retrieved! Please, check if your map provider key is valid",
+				"mapSnapshotToolName": "Map Snapshot"
+			},
+			"preview3D": {
+				"title": "Preview 3D Viewer",
+				"waiting": "The document preview convert model is running",
+				"noPreview": "The document has not generated model",
+				"failedMsg": "The document conversion failed, Do you want to convert it again?",
+				"previewInfo": "Preview Info",
+				"previewNewTab": "This projectDocumentType is RibArchive and modelFk not found, it will preview in new tab"
+			},
+			"showLog": "Show Log ",
+			"changePrjDocRubricCategory": "Change Project Document Rubric Category",
+			"modelJobState": "Model State",
+			"modelState": {
+				"nopreview": "N/A (Not 3D)",
+				"inProgress": "In progress",
+				"failed": "Failed",
+				"ready": "Ready",
+				"loading": "Loading"
+			},
+			"assignedObjectCreateMsg": "Not found pin Model or select model, it will fail to save",
+			"entityApproval": "Approval",
+			"entityDueDate": "DueDate",
+			"entityIsApproved": "Approved",
+			"entityEvaluatedOn": "Evaluated on",
+			"entityEvaluationLevel": "Evaluation Level",
+			"listHeaderApprovalTitle": "Approvals",
+			"entityApprovalId": "Approval",
+			"detailHeaderApprovalTitle": "Approval Details",
+			"changePrcDocumentStatus": "Change Document Status",
+			"pinboardLog": {
+				"showLatest": "Show only the latest comments",
+				"viewAll": "View all {{count}} comments"
+			},
+			"sustainabilty": {
+				"entityCo2Source": "CO2/kg (Source)",
+				"entityBasCo2SourceFk": "CO2/kg (Source Name)",
+				"entityCo2Project": "CO2/kg (Project)",
+				"entityCo2SourceTotal": "CO2 (Source) Total",
+				"entityCo2ProjectTotal": "CO2 (Project) Total",
+				"entityCo2TotalVariance": "CO2 Total Variance"
+			},
+			"noProjectChangeAssigned": "There is no project change assigned, cannot change status!",
+			"noStatusOfChosenPrjChange": "There is no status found under the rubric category of the chosen project change!",
+			"advanceGridTitle": "Advances",
+			"advanceFormTitle": "Advance Detail",
+			"entityIncotermDescription": "Incoterm Description",
+			"stock": {
+				"description": "Stock-Description",
+				"companyCode": "Stock-Company Code",
+				"companyName": "Stock-Company Name",
+				"projectNo": "Stock-Project No.",
+				"projectName": "Stock-Project Name",
+				"type": "Stock Type",
+				"typeDescription": "Stock Type-Description",
+				"location": "Stock Location",
+				"locationDescription": "Stock Location-Description"
+			},
+			"entityAssetMaster": "Asset Master",
+			"entityAssetMasterDescription": "Asset Master Description"
+		}
+	}
+}

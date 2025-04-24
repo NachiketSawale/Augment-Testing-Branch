@@ -1,0 +1,43 @@
+.ige-print .align-button {
+	display: ruby-text;
+}
+
+.ige-print .align-button .btn {
+	margin-left: 5px;
+}
+
+.ige-print .row-section {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.ige-print .section-text-title {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.ige-print .section-text-area {
+	flex-grow: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	gap: 10px;
+	outline: none;
+	min-width: 200px;
+	min-height: 80px;
+}
+
+.ige-print .section-config-label {
+	display: inline-block;
+	width: 110px;
+}
+
+.ige-print .section-config-col {
+	display: inline-flex;
+	width: 30%;
+}
+
+.ige-print .section-btn-input {
+	width: 150px;
+	margin-left: 5px;
+}

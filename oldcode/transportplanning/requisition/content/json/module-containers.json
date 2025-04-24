@@ -1,0 +1,318 @@
+[
+  {
+    "id": "transportplanning.requisition.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.listRequisitionTitle",
+    "controller": "transportplanningRequisitionListController",
+    "uuid": "67f457b1928342c4a65cee89c48693d0",
+    "permission": "aaec6786820141e19c4b6febc691652b"
+  },
+  {
+    "id": "transportplanning.requisition.details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "transportplanning.requisition.detailsRequisitionTitle",
+    "controller": "transportplanningRequisitionDetailsController",
+    "uuid": "a613f788e4c146ae9b31e273d28ab86f",
+    "permission": "aaec6786820141e19c4b6febc691652b"
+  },
+  {
+    "id": "transportplanning.requisition.bundle.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.bundle.listTitle",
+    "controller": "transportplanningBundleSubviewController",
+    "uuid": "86d10992dc4e43fd8a3ccd1f395743bd",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de",
+    "containerType": "Reference"
+  },
+  {
+    "id": "transportplanning.requisition.bundle.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "transportplanning.requisition.bundle.detailsBundleTitle",
+    "controller": "transportplanningBundleSubviewController",
+    "containerType": "Detail",
+    "uuid": "b41a9a62c6a14d21bd9207a34cba1c29",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de"
+  },
+  {
+    "id": "transportplanning.requisition.unassignedBundle.grid",
+    "template": "transportplanning.bundle/partials/source-list.html",
+    "title": "transportplanning.requisition.unassignedBundle.listTitle",
+    "controller": "transportplanningBundleSubviewController",
+    "uuid": "b93c7cda7e5a4fb3b10fc25eef9679a2",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de",
+    "containerType": "Unassigned",
+    "filter": [
+      "projectId",
+      "siteId",
+      "jobId",
+      "drawingId",
+      "puId",
+      "notAssignedFlags",
+      "EarliestStart",
+      "LatestFinish"
+    ]
+  },
+	{
+		"id": "transportplanning.requisition.toBeAssigned.grid",
+		"template": "transportplanning.requisition/partials/source-list.html",
+		"title": "transportplanning.requisition.toBeAssigned.trsGoodTreeTitle",
+		"controller": "transportplanningRequisitionSubviewController",
+		"uuid": "821fc90538fc4272bc14708e852670a7",
+		"permission": "8ea8679532ee44869df8dd9e3ae629de",
+		"filter": [
+			"projectId",
+			"jobId",
+			"jobIdFromHistory",
+			"drawingId",
+			"puId",
+			"bundleBool",
+			"upstreamBool",
+			"productBool",
+			"hideDeliveredBool"
+		]
+	},
+  {
+    "id": "transportplanning.requisition.toBeAssigned.list.grid",
+    "template": "transportplanning.requisition/partials/source-list.html",
+    "title": "transportplanning.requisition.toBeAssigned.trsGoodListTitle",
+    "controller": "transportplanningRequisitionSubviewController",
+    "uuid": "bfa2d3cfb15845d4812a9a305f9da51f",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de",
+    "filter": [
+      "projectId",
+      "jobId",
+      "jobIdFromHistory",
+      "drawingId",
+      "puId",
+      "bundleBool",
+      "upstreamBool",
+      "productBool",
+      "hideDeliveredBool"
+    ]
+  },
+  {
+    "id": "transportplanning.requisition.resoureceRequisitionList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.resource.requisition.listTitle",
+    "controller": "transportplanningRequisitionResRequisitionListController",
+    "uuid": "a5b5c48b4a414325a8e0aba1f9ba3d47",
+    "permission": "291a21ca7ab94d549d2d0c541ec09f5d"
+  },
+  {
+    "id": "transportplanning.requisition.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "transportplanning.requisition.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "96f5cf010264456888ca1fcda1bca0bf",
+    "wizardDisabled": "true"
+  },
+  {
+    "id": "transportplanning.requisition.matrequisitionList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.matrequisition.listTitle",
+    "controller": "transportplanningRequisitionMatRequisitionListController",
+    "uuid": "318c8b9af84c4cb38086f897aa853d71",
+    "permission": "318c8b9af84c4cb38086f897aa853d71"
+  },
+  {
+    "id": "transportplanning.requisition.matrequisitionDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "transportplanning.requisition.matrequisition.detailsTitle",
+    "controller": "transportplanningRequisitionMatRequisitionDetailsController",
+    "uuid": "0d3a47d4ce5c45e3af881d47c95e0ef8",
+    "permission": "318c8b9af84c4cb38086f897aa853d71"
+  },
+  {
+    "id": "transportplanning.requisition.unassignedBundle.ppsdocument.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.unassignedBundle.ppsdocument.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "transportplanningRequisitionUnassignedBundleDataServicePpsDocumentDataService",
+    "parentService": "transportplanningRequisitionUnassignedBundleDataService",
+    "foreignKey": "UnassignedBundleFk",
+    "uuid": "2b17169ff51446baa50b495894e57144",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf",
+    "isReadonly": true
+  },
+  {
+    "id": "transportplanning.requisition.site.filter.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.transport.additionalFilter.siteFilterListTitle",
+    "controller": "transportplanningRequisitionSiteFilterListController",
+    "uuid": "147e90100cf34aa9b66490a3433179f8",
+    "permission": "668f9c9719f24c8d8184a1d324f70578"
+  },
+  {
+    "id": "transportplanning.requisition.bundle.document.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.bundle.document.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "transportplanningRequisitionBundleDataServicePpsDocumentDataService",
+    "parentService": "transportplanningRequisitionBundleDataService",
+    "foreignKey": "TrsProductBundleFk",
+    "uuid": "764f66b383ee4d28b5bde5994f35a446",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "platform.generic.structure",
+    "template": "app/components/grid/generic-structure/generic-container.html",
+    "title": "transportplanning.requisition.structure",
+    "controller": "platformGenericStructureController",
+    "mainService": "transportplanningRequisitionMainService",
+    "configurationService": "transportplanningRequisitionUIStandardService",
+    "uuid": "d4185f9578db424b904ad5172333cf36",
+    "permission": "aaec6786820141e19c4b6febc691652b"
+  },
+  {
+    "id": "transportplanning.requisition.eventsequenceloglist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.eventSeqLogListTitle",
+    "controller": "ppsCommonEventSequenceLogListController",
+    "uuid": "5a0ca19f532c47d58e603d0971db00ce",
+    "permission": "aaec6786820141e19c4b6febc691652b",
+    "controllerOptions": {
+      "parentService": "transportplanningRequisitionMainService",
+      "translationService": "transportplanningRequisitionTranslationService"
+    }
+  },
+  {
+    "id": "transportplanning.requisition.trsgoods.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.trsGoods.listTitle",
+    "controller": "transportplanningRequisitionTrsGoodsListController",
+    "uuid": "df5tg7b1928342c4a65cee89c4869tyg",
+    "permission": "aaec6786820141e19c4b6febc691652b"
+  },
+  {
+    "id": "transportplanning.requisition.trsgoods.details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "transportplanning.requisition.trsGoods.detailTitle",
+    "controller": "transportplanningRequisitionTrsGoodsDetailController",
+    "uuid": "ef5tg7b1928342c4a65cee89c4869tyg",
+    "permission": "aaec6786820141e19c4b6febc691652b"
+  },
+	{
+		"id": "transportplanning.requisition.trsreq2clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "transportplanning.requisition.req2clerk.trsreq2clerkListTitle",
+		"controller": "trsRequisitionClerkListController",
+		"uuid": "ef0bb1aed17343768e26c91df012ba62",
+		"permission": "aaec6786820141e19c4b6febc691652b"
+	},
+	{
+		"id": "transportplanning.requisition.Log.list",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "transportplanning.requisition.logListTitle",
+		"controller": "ppsCommonLogSourceWindowController",
+		"filter": [
+			"Date",
+			"ColumnName",
+			"PpsLogReasonFk"
+		],
+		"uuid": "5e4945a1e53b4b48847c90634e32320a",
+		"permission": "aaec6786820141e19c4b6febc691652b"
+	},
+	{
+		"id": "transportplanning.requisition.log.pinboard",
+		"template": "productionplanning.common/partials/pps-common-log-pinboard-view.html",
+		"title": "transportplanning.requisition.logPinboardTitle",
+		"controller": "ppsCommonLogPinboardViewController",
+		"uuid": "102d90b038b74ece9e1e668b6c50e0b3",
+		"permission": "aaec6786820141e19c4b6febc691652b",
+		"endRead": "logsForTrsReq?mainItemId=",
+		"commentQualifier": "transportplanning.requisition.manuallog",
+		"parentService": "transportplanningRequisitionMainService",
+		"configServiceName": "ppsCommonLogPinboardViewConfigService",
+		"translationService": "transportplanningRequisitionTranslationService",
+		"showLastComments": true
+	},
+	{
+		"id": "transportplanning.requisition.job.deliveryAddressRemark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "transportplanning.requisition.job.deliveryAddressRemark",
+		"uuid": "be46ed697fce4e0aa6c94c8f25f1ec49",
+		"permission": "aaec6786820141e19c4b6febc691652b",
+		"controller": "trsRequisitionJobDeliveryAddressRemarkController"
+	},
+	{
+		"id": "transportplanning.requistion.notification.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "transportplanning.requisition.notificationListTitle",
+		"controller": "ppsCommonNotificationListController",
+		"moduleName": "transportplanning.requisition",
+		"uuid": "72ba26576b6149a199fe9f6f1862b7c9",
+		"permission": "aaec6786820141e19c4b6febc691652b"
+	},
+	{
+		"id": "transportplanning.requistion.header.map",
+		"template": "basics.common/templates/multi-address-map.html",
+		"title": "productionplanning.common.map",
+		"uuid": "2cf517a9592d4b7d962b79fb6b44d6bc",
+		"controller": "ppsCommonMapController",
+		"permission": "aaec6786820141e19c4b6febc691652b",
+		"options": {
+			"parentService": "transportplanningRequisitionMainService",
+			"jobPropName": "LgmJobFk"
+		}
+	},
+	{
+		"id": "transportplanning.requisition.job.deliveryAddressBlob",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "transportplanning.requisition.requistionJobSketch",
+		"controller": "trsRequisitionJobAddressBlobController",
+		"uuid": "bcc7162f9bbe4ac68a7a1ef85f92eb10",
+		"permission": "aaec6786820141e19c4b6febc691652b"
+	},
+	{
+		"id": "transportplanning.requisition.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "b2872349fcef4f41bc7f1a7794923aae",
+		"controller": "",
+		"sectionId": "74",
+		"mainService": "transportplanningRequisitionMainService"
+	},
+	{
+		"id": "transportplanning.requisition.characteristic2.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"uuid": "97969014efb44df4a4fb3f93e87831ed",
+		"controller": "",
+		"sectionId": "75",
+		"mainService": "transportplanningRequisitionMainService"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "trsReqPDFViewerController",
+		"uuid": "1d3f391602704e709b0312c16e29e856",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document",
+		"annoExtensionService": "trsReqPDFViewerAnnotationExtension"
+	},
+    {
+      "id": "transportplanning.requisition.document.lookup.container",
+      "template": "transportplanning.requisition/partials/source-list.html",
+      "title": "transportplanning.requisition.documentLookupTitle",
+      "controller": "trsReqDocumentSourceWindowController",
+      "uuid": "885863e4717846bda0adb3291c874945",
+      "permission": "5640a72648e24f21bf3985624c4d0fdf",
+      "filter": [
+        "ProjectFk",
+        "LgmJobFk",
+        "EngDrawingFk",
+        "PpsItemFk"
+      ]
+    },
+    {
+      "id": "transportplanning.requisition.model.viewer.hoops",
+      "template": "model.viewer/partials/model-viewer-hoops-template.html",
+      "title": "model.viewer.hoops.title",
+      "controller": "modelViewerHoopsController",
+      "uuid": "dcde5090339141eb9a536fdc44c43133",
+      "defaultView": "Iso",
+      "permission": "7ac2a568c32e4a16a2b4106db572133d"
+    }
+]

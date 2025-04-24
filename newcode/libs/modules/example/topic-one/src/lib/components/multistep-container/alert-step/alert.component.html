@@ -1,0 +1,12 @@
+<div class="body" style="overflow-y: auto">
+	<span style="font-size: 16px"
+	>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aut magni aspernatur recusandae corporis beatae minima, est corrupti provident sed atque ullam voluptatem? Earum laborum neque, cum ducimus iste doloribus?Lorem ipsum dolor sit
+		amet consectetur adipisicing elit. Nemo, tempore corporis veritatis quibusdam dolor ipsa recusandae quasi sed nam, exercitationem et, illum saepe unde distinctio voluptatibus similique iste labore eaque.</span
+	>
+	<ul>
+		<li *ngFor="let step of showSteps; let i = index;">
+			<button class="btn btn-default ellipsis" [ngStyle]="{'border-bottom':multiStepDialogData.stepIndex===i?'2px solid #0067b1':'1px solid #bbcddb'}" (click)="multiStepDialogData.goToStep(i)">{{ step|platformTranslate }}</button>
+			<br>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,40 @@
+<div data-ng-controller="businessPartnerContactImportVCFController" class="modal-wrapper">
+<header class="modal-header main-color">
+	<h2 class="modal-title">{{'businesspartner.contact.wizard.importVCF' | translate}}</h2>
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="close(false)" aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+</header>
+
+<section class="modal-body">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{ 'cloud.common.businessPartner' | translate}}</label>
+			<div class="platform-form-col input-group" business-partner-main-optional-business-partner-dialog
+			     data-ng-model="currentItem.businessPartnerId"
+			     data-dirty="true">
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'businesspartner.contact.wizard.chooseFile' | translate}}</label>
+			<div class="platform-form-col input-group" >
+				<div class="input-group form-control">
+				<input type="text" class="input-group-content" readonly placeholder="{{'businesspartner.contact.wizard.chooseFile' | translate}}" data-ng-model="file.name" />
+				<span class="input-group-btn">
+                    <button class="btn btn-default" style="width: 50px;" title="choose file" data-ng-click="chooseFile()">...</button>
+                </span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="close(true)">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="close(false)">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>
+</div>

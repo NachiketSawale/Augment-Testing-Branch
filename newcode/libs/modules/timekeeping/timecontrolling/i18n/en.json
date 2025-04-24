@@ -1,0 +1,16 @@
+{
+	"timekeeping": {
+		"timecontrolling": {
+			"reportListTitle": "Employee Report Validations",
+			"reportDetailTitle": "Employee Report Validation Details",
+			"reportEntity": "Employee Report",
+			"wizardCalculateOvertime": "Calculate Overtime",
+			"wizardCalculateDerivations": "Calculate Derivations",
+			"entityBreak": "Report Break",
+			"entityReportVerification": "ReportVerification",
+			"newRecordGenerated": "new records were generated in report successfully!",
+			"noNewRecordGenerated": "No new records generated!",
+			"errorOccured": "An error occurred"
+		}
+	}
+}

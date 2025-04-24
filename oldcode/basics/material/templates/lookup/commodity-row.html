@@ -1,0 +1,58 @@
+<div class="ms-commodity-row row" data-ng-class="{'ms-commodity-row-material-selected': entity.selected}"
+     data-ng-click="rowClick(entity)" data-ng-dblclick="rowDoubleClick(entity)">
+    <div class="col-md-9 col-sm-7 col-xs-6">
+        <div data-ng-show="entity.Image"
+             class="ms-commodity-row-img visible-md visible-lg visible-sm col-sm-4 col-md-3 col-lg-3">
+            <img data-ng-src="{{entity.Image}}"/>
+        </div>
+        <div class="ms-commodity-row-description col-xs-12 col-sm-8 col-md-9 col-lg-9">
+            <div>
+                <a class="ms-commodity-row-item-title" href
+                   data-ng-click="goPreview(entity)">{{::entity.DescriptionInfo.Description}}</a>
+            </div>
+            <div class="ms-commodity-row-description-supplier">
+                <span>{{::supplierForUi}}</span>
+            </div>
+            <div class="ms-commodity-row-description-specification">
+                <span id="lblSpecification"></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-5 col-xs-6 ms-commodity-row-operation">
+        <div>
+            <p class="ms-commodity-row-price">{{::entity.PriceUom}}</p>
+
+            <p class="ms-commodity-row-price">[{{::entity.EstimatePrice+entity.Currency}}]</p>
+        </div>
+        <div class="ms-commodity-row-add-delete" data-ng-show="rowType.CommodityWithQuantity">
+            <div class="ms-commodity-row-add-button">
+                <a href data-ng-click="quantityCalculate(entity.Requirequantity,'add')">
+                    <i class="block-image control-icons ico-plus"></i>
+                </a>
+            </div>
+            <div class="ms-commodity-row-input" data-ng-click="onEdit()">
+                <input data-ng-show="!editing" value="{{entity.QuantityForUI + ' ' + entity.Uom}}"/>
+                <input data-ng-show="editing" class="quantity-input" type="text" data-ng-blur="onEndEdit()"
+
+                       autocomplete="false" data-ng-model="entity.Requirequantity"
+                       data-ng-pattern-restrict="{{quantityReg}}"/>
+            </div>
+
+            <div class="ms-commodity-row-delete-button">
+                <a href data-ng-click="quantityCalculate(entity.Requirequantity,'min')">
+                    <i class="block-image control-icons ico-minus"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ms-commodity-row-cart-empty" data-ng-show="rowType.commodityWithAdd || rowType.commodityWithDelete">
+            <a href data-ng-click="actionClick(entity)"
+               data-ng-show="rowType.commodityWithAdd">
+                <i class="block-image control-wh-icons ico-cart-empty"></i>
+            </a>
+            <a href data-ng-click="actionClick(entity)"
+               data-ng-show="rowType.commodityWithDelete">
+                <i class="block-image control-wh-icons ico-cart-item-delete"></i>
+            </a>
+        </div>
+    </div>
+</div>

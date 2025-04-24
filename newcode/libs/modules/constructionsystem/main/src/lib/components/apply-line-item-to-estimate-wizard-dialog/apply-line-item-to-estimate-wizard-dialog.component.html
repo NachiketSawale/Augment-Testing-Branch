@@ -1,0 +1,62 @@
+<section class="modal-body">
+    <div class="platform-form-group">
+        <div class="radio spaceToUp col-lg-offset-1">
+            <label>
+                <input type="radio" name="overwrite"   [(ngModel)]="isUpdateAll" [attr.checked]='lineItemToEstimateWizardModelOptions.isUpdate' [value]="lineItemToEstimateWizardModelOptions.isUpdate" (click)="update()"/>
+                 {{ 'constructionsystem.main.updateAll' | platformTranslate }}
+            </label>
+        </div>
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <div class="checkbox spaceToUp col-lg-offset-2">
+                    <label>
+                        <input type="checkbox" name="keepResourcePackageAssignment"  [(ngModel)]="lineItemToEstimateWizardModelOptions.keepResourcePackageAssignment"
+                              [disabled]="isDisableKeepResPkgAssignment()">
+                        {{ 'constructionsystem.main.keepAssignmentInEst' | platformTranslate }}
+                    </label>
+                </div>
+                <div class="checkbox spaceToUp col-lg-offset-2">
+                    <label>
+                        <input type="checkbox" name="doNotUpdateResIfCosResIsNull"  [(ngModel)]="lineItemToEstimateWizardModelOptions.doNotUpdateResIfCosResIsNull"
+                              [disabled]="isDisableDoNotUpdateResIfCosResIsNull()">
+                        {{ 'constructionsystem.main.keepEstResIfCosResIsNull' | platformTranslate }}
+                    </label>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <div class="checkbox spaceToUp col-lg-offset-1">
+                    <label>
+                        <input type="checkbox" name="updateQuantity" [(ngModel)]="lineItemToEstimateWizardModelOptions.updateQuantity"  [disabled]="isDisable()" (click)="updateQuantityOnly()">
+                        {{ 'constructionsystem.main.updateQuantityAndObjectAssignmentOnly' | platformTranslate }}
+                    </label>
+                </div>
+            </div>
+            <div class="platform-form-group">
+                <div class="checkbox spaceToUp col-lg-offset-1">
+                    <label>
+                        <input type="checkbox" name="updatePrice" [(ngModel)]="lineItemToEstimateWizardModelOptions.updatePrice" [disabled]="isDisable()" (click)="updatePriceOnly()">
+                        {{ 'constructionsystem.main.updatePriceOnly' | platformTranslate }}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <div class="radio spaceToUp col-lg-offset-1">
+            <label>
+                <input type="radio" name="overwrite"  [(ngModel)]="isUpdateAll" [value]="lineItemToEstimateWizardModelOptions.overwrite" (click)="overwrite()" />{{ 'constructionsystem.main.overwriteAll' | platformTranslate }}
+            </label>
+        </div>
+    </div>
+    <div class="platform-form-row" style="margin-top: 10px;">
+        <div style="width: 9%;float: left;vertical-align: top;"><h5>{{'constructionsystem.main.note' | platformTranslate}}</h5></div>
+        <div style="width: 91%;float: right;">
+            <h5 style="vertical-align: top;">
+                {{'constructionsystem.main.noteText1' | platformTranslate}}
+            </h5>
+            <h5 style="height: 30px;vertical-align: top;">
+                {{'constructionsystem.main.noteText2' | platformTranslate}}
+            </h5>
+        </div>
+    </div>
+</section>

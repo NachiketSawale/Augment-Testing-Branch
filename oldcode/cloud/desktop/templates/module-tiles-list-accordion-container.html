@@ -1,0 +1,26 @@
+<header class="modal-header main-color">
+	<span class="modal-title font-bold">{{'cloud.desktop.design.desktop.groupTiles' | translate}}</span>
+	<button data-ng-show="::modalOptions.showCloseButton" class="db close" data-dismiss="modal"
+	        data-ng-mousemove="dialog.btnMouseMoveHandler($event)" data-ng-click="cancel($event)">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+</header>
+
+<section class="modal-body">
+	<div cloud-desktop-module-tiles-list-accordion data-config="moduleTileConfig" class="flex-element"></div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="ok()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-click="cancel($event)">
+		{{'cloud.common.close' | translate}}
+	</button>
+</footer>
+
+
+
+
+
+

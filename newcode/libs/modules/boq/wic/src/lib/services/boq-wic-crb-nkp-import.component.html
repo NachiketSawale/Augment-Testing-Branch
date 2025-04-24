@@ -1,0 +1,18 @@
+<div class="flex-element flex-box flex-column overflow-auto fullheight">
+   <fieldset class="margin-top-ld">
+      <div>
+         <ui-common-form [formConfig]="comboboxConfig" [entity]="groupByCriterion"></ui-common-form>
+      </div>
+   </fieldset>
+   <fieldset class="margin-top-ld">
+      <div class="flex-element flex-box flex-basis-auto grid-layout-wrapper">
+         <div class="flex-element flex-box flex-column subview-container modal-wrapper">
+            <ui-common-grid [configuration]="chapterGridConfig" [items]='chapters' (selectionChanged)="chapterGridSelectionChanged($event)"></ui-common-grid>
+         </div>
+         <div class="flex-element flex-box flex-column subview-container modal-wrapper margin-left-ld">
+            <ui-common-grid [configuration]="versionGridConfig" [items]='versions' (selectionChanged)="versionGridSelectionChanged($event)"></ui-common-grid>
+         </div>
+      </div>
+   </fieldset>
+</div>
+

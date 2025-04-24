@@ -1,0 +1,46 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.wic.wicGroupListTitle",
+		"controller": "boqWicGroupNodeController",
+		"uuid": "8d40a6c7d21b49de9b80174a24588e34"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.wic.detailWicGroupContainerTitle",
+		"controller": "boqWicGroupDetailController",
+		"uuid": "34283f923ebc4d0e9cb3f33f6dafcad2",
+		"permission": "8d40a6c7d21b49de9b80174a24588e34"
+	},
+	{
+		"id": "3",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "183d9175d8bd4742808e750670e16bd5"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.wic.wicCatBoqListTitle",
+		"controller": "boqWicCatBoqListController",
+		"uuid": "5af92ad05fee4f02aaa80c67c1751380"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.wic.wicGroupClerkListTitle",
+		"controller": "boqWicGroupClerkListController",
+		"uuid": "39c2a486e4e84529b13d888e2c831feb"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.wic.wicGroupClerkDetailTitle",
+		"controller": "boqWicGroupClerkDetailController",
+		"uuid": "92a9d7422c8c4129b27b564079a2c9f0",
+		"permission": "39c2a486e4e84529b13d888e2c831feb"
+	}
+]

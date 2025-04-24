@@ -1,0 +1,25 @@
+<div class="modal-wrapper">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="platform-form-group platform-lg">
+			<div class="platform-form-row" style="padding-left: 5em;">
+				<label class="platform-form-label">
+					{{'hsqe.CheckList.header.PrjProject' | translate }}
+				</label>
+				<div class="platform-form-col" data-ng-init="porjectConfig ={lookupDirective:'basics-lookup-data-project-project-dialog',descriptionMember:'ProjectName'}">
+					<div data-ng-model="modalOptions.value.projectFk"
+					     data-options="porjectConfig" data-basics-lookupdata-lookup-composite class="control-directive">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+				  data-ng-disabled="!modalOptions.value.projectFk"> {{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

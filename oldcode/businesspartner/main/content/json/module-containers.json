@@ -1,0 +1,682 @@
+[
+	{
+		"id": "businesspartner.main.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.headerGridContainerTitle",
+		"controller": "businesspartnerMainHeaderGridController",
+		"uuid": "75dcd826c28746bf9b8bbbf80a1168e8"
+	},
+	{
+		"id": "businesspartner.main.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.headerFormContainerTitle",
+		"controller": "businesspartnerMainHeaderFormController",
+		"uuid": "411D27CFBB0B4643A368B19FA95D1B40",
+		"permission": "75dcd826c28746bf9b8bbbf80a1168e8"
+	},
+	{
+		"id": "businesspartner.main.subsidiary",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.subsidiaryGridContainerTitle",
+		"controller": "businesspartnerMainSubsidiaryListController",
+		"uuid": "E48C866C714440F08A1047977E84481F"
+	},
+	{
+		"id": "businesspartner.main.subsidiaryform",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.subsidiaryDetailContainerTitle",
+		"controller": "businesspartnerMainSubsidiaryDetailController",
+		"uuid": "79D7F116FE29482687375A6AFA9149FE",
+		"permission": "E48C866C714440F08A1047977E84481F"
+	},
+	{
+		"id": "businesspartner.main.customer",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.customerGridContainerTitle",
+		"controller": "businesspartnerMainCustomerListController",
+		"uuid": "53AA731B7DA144CDBFF201A7DF205016"
+	},
+	{
+		"id": "businesspartner.main.customersatisfaction",
+		"template": "businesspartner.main/partials/rating-view.html",
+		"title": "businesspartner.main.ratingViewContainerTitle",
+		"controller": "businesspartnerMainRatingViewController",
+		"uuid": "B3A462AFC69040048F267A15244AADB8"
+	},
+	{
+		"id": "businesspartner.main.objectsofcustomers",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.realEstateGridContainerTitle",
+		"controller": "businesspartnerMainRealestateListController",
+		"uuid": "72121AD6A4774CBEA673753606FB19D2"
+	},
+	{
+		"id": "businesspartner.main.objectsofcustomers.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.realEstateDetailContainerTitle",
+		"controller": "businesspartnerMainRealestateDetailController",
+		"uuid": "CDC1A6ECEE8946079C1CCCB1215B931B",
+		"permission": "72121AD6A4774CBEA673753606FB19D2"
+	},
+	{
+		"id": "businesspartner.main.supplier",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.supplierContainerTitle",
+		"controller": "businesspartnerMainSupplierListController",
+		"uuid": "7F5057A88B974ACD9FB5A00CEE60A33D"
+	},
+	{
+		"id": "businesspartner.main.supplierDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.supplierContainerDetail",
+		"controller": "businesspartnerMainSupplierDetailController",
+		"uuid": "23F48D0283624C7BB3D5B57339D5F038",
+		"permission": "7F5057A88B974ACD9FB5A00CEE60A33D"
+	},
+	{
+		"id": "businesspartner.main.bank",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.bankContainerTitle",
+		"controller": "businesspartnerMainBankListController",
+		"uuid": "44BD90285B354396A90EFB0F8466C0C9"
+	},
+	{
+		"id": "businesspartner.main.bank.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.bankContainerDetailTitle",
+		"controller": "businesspartnerMainBankDetailController",
+		"uuid": "A484373668E242CD8E6F220874C4F533",
+		"permission": "44BD90285B354396A90EFB0F8466C0C9"
+	},
+	{
+		"id": "businesspartner.main.contactgrid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.contactGridContainerTitle",
+		"controller": "businessPartnerMainContactListController",
+		"uuid": "72F38C9D2F4B429BAE5F70DA33068AE3",
+		"permission": "73b6280b180149a09f3a97f142bfc3dc"
+	},
+	{
+		"id": "businesspartner.main.contactform",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.contactFormContainerTitle",
+		"controller": "businesspartnerMainContactFormController",
+		"uuid": "2BEA71E2F2BF42EAA0EA2FC60F8F5615",
+		"permission": "73b6280b180149a09f3a97f142bfc3dc"
+	},
+	{
+		"id": "businesspartner.main.businessPartner2Company",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.businessPartner2CompanyContainerTitle",
+		"controller": "businessPartnerMainBP2CompanyListController",
+		"uuid": "1E2AC147D54F452ABC4FB6AD6BC62BED"
+	},
+	{
+		"id": "businesspartner.main.activities",
+		"template": "businesspartner.main/partials/activity-view.html",
+		"title": "businesspartner.main.activitiesContainerTitle",
+		"dataService": "businesspartnerMainActivityDataService",
+		"controller": "businesspartnerMainActivityListController",
+		"uuid": "C87F45D900E640768A08D471BD476B2C"
+	},
+	{
+		"id": "businesspartner.main.agreements",
+		"template": "businesspartner.main/partials/agreement-view.html",
+		"title": "businesspartner.main.agreementsContainerTitle",
+		"controller": "businesspartnerMainAgreementListController",
+		"uuid": "9c8641a6e04b406d8481fb404ee7d85e",
+		"permission": "9c8641a6e04b406d8481fb404ee7d85e"
+	},
+	{
+		"id": "businesspartner.main.remark-marketing",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "businesspartner.main.marketingContainerTitle",
+		"controller": "businesspartnerMainMarketingController",
+		"uuid": "D08CF732AD23451AAFED4078CA389619"
+	},
+	{
+		"id": "businesspartner.main.remark-remark1",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "businesspartner.main.remark1ContainerTitle",
+		"controller": "businesspartnerMainRemark1Controller",
+		"uuid": "39984583E79C449AA1D9C764222233A5"
+	},
+	{
+		"id": "businesspartner.main.remark-remark2",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "businesspartner.main.remark2ContainerTitle",
+		"controller": "businesspartnerMainRemark2Controller",
+		"uuid": "6C99DA89E843470C82BE35C7046A5E9A"
+	},
+	{
+		"id": "businesspartner.main.photo",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "businesspartner.main.photoContainerTitle",
+		"controller": "businesspartnerMainPhotoController",
+		"uuid": "C81D6B2B37D44EA1A328A9CA245B6A1C"
+	},
+	{
+		"id": "businesspartner.main.contactphoto",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "businesspartner.main.contactPhotoContainerTitle",
+		"controller": "businesspartnerMainContactPhotoController",
+		"uuid": "3d4ec8d837f049eda2e7d92e051d9351",
+		"permission": "3d4ec8d837f049eda2e7d92e051d9351"
+	},
+	{
+		"id": "businesspartner.main.comment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "0651027C87AC4B499DD09FCB14CF84F5",
+		"commentQualifier": "businesspartner.main.comment",
+		"parentService": "businesspartnerMainHeaderDataService",
+		"isPinBoardEditable": true,
+		"showLastComments": true,
+		"saveParentBefore": true
+	},
+	{
+		"id": "businesspartner.main.privatecomment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.privateCommentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "BAE2A04908044B118585A58AF96390D5",
+		"commentQualifier": "businesspartner.main.bpprivatecomment",
+		"parentService": "businesspartnerMainHeaderDataService",
+		"commentEntity": "BusinessPartnerPrivateCommentToSave",
+		"saveParentBefore": true
+	},
+	{
+		"id": "businesspartner.main.contactprivatecomment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "businesspartner.main.pinboard.contactPrivateCommentTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "9E634079A9E343E3B370B9383245CDD3",
+		"permission": "fb458f707ab341888cba09af594078d4",
+		"commentQualifier": "businesspartner.main.contactprivatecomment",
+		"parentService": "businesspartnerMainContactDataService",
+		"commentEntity": "ContactPrivateCommentToSave",
+		"saveParentBefore": true
+	},
+	{
+		"id": "businesspartner.main.procurementStructure",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.procurementStructureContainerTitle",
+		"controller": "businesspartnerMainProcurementStructureGridController",
+		"uuid": "77964D3AA8FB47A6AF4BBCB4E65CDAFB"
+	},
+	{
+		"id": "businesspartner.main.activityDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.activityFormContainerTitle",
+		"dataService": "businesspartnerMainActivityDataService",
+		"controller": "businesspartnerMainActivityFormController",
+		"uuid": "B47A6A7BB5C7964D3ACB4E6A8FF4DAFB",
+		"permission": "C87F45D900E640768A08D471BD476B2C"
+	},
+	{
+		"id": "businesspartner.main.agreementDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.agreementDetailContainerTitle",
+		"controller": "businesspartnerMainAgreementDetailController",
+		"uuid": "20616D61A4A048029721C68BEBD8F64C",
+		"permission": "9c8641a6e04b406d8481fb404ee7d85e"
+	},
+	{
+		"id": "businesspartner.main.customerDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.customerFormContainerTitle",
+		"controller": "businesspartnerMainCustomerFormController",
+		"uuid": "CB4E664D3A796AFA8FB47A5CD74BBAFB",
+		"permission": "53AA731B7DA144CDBFF201A7DF205016"
+	},
+	{
+		"id": "businesspartner.main.businessPartner2CompanyDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.businessPartner2CompanyFormContainerTitle",
+		"controller": "businesspartnerMainBusinessPartner2CompanyFormController",
+		"uuid": "F7A6A2B30BC776EA84B4964DFBE65CDA",
+		"permission": "1e2ac147d54f452abc4fb6ad6bc62bed"
+	},
+	{
+		"id": "businesspartner.main.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.formData",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "5E83DC4BE236407E94844A77DBD33010",
+		"rubricId": 1,
+		"mainService": "businesspartnerMainHeaderDataService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "businesspartner.main.contact.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.contactFormData",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "791481c3c29d4e7ca10030977895ff83",
+		"permission": "791481c3c29d4e7ca10030977895ff83",
+		"rubricId": 2,
+		"mainService": "businesspartnerMainContactDataService"
+	},
+	{
+		"id": "businesspartner.main.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "4f864faad8094b4c97b3e1edb28d21f8",
+		"controller": "",
+		"sectionId": "2",
+		"mainService": "businesspartnerMainHeaderDataService"
+	},
+	{
+		"id": "businesspartner.main.characteristic2",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"uuid": "f5e138f988314470a36fe801883b4d2d",
+		"controller": "",
+		"sectionId": "56",
+		"mainService": "businesspartnerMainHeaderDataService"
+	},
+	{
+		"id": "businesspartner.main.languagegrid",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.languageColHeader_ContainerTitle",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "CD1BB70740A442C0902A61E12007999D"
+	},
+	{
+		"id": "businesspartner.main.certificatelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.certificate.actualCertificateListContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateListController",
+		"uuid": "9299C9B28B41432DAC41FEE1D53EB868",
+		"permission": "2c39331cf48c4016af9d17a573388100",
+		"currentModule": "businesspartner.main",
+		"parentService": "businesspartnerMainHeaderDataService",
+		"translationService": "businesspartnerMainTranslationService"
+	},
+	{
+		"id": "businesspartner.main.certificatedetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.certificate.actualCertificateDetailContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateDetailController",
+		"uuid": "EB367EE13D5844D8B9092FEFC65E3B17",
+		"permission": "2c39331cf48c4016af9d17a573388100",
+		"currentModule": "businesspartner.main",
+		"parentService": "businesspartnerMainHeaderDataService",
+		"translationService": "businesspartnerMainTranslationService"
+	},
+	{
+		"id": "businesspartner.main.certificate.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "businesspartner.main.certificateCharacteristicContainerTitle",
+		"uuid": "5FB79D9928D244F7B012C3F92441DA95",
+		"controller": "",
+		"sectionId": "5",
+		"mainService": "businesspartnerMainCertificateDataService"
+	},
+	{
+		"id": "businesspartner.main.evaluatoin",
+		"template": "businesspartner.main/partials/evaluatoin-chart-grid.html",
+		"title": "businesspartner.main.evaluatoinContainerTitle",
+		"controller": "commonBusinessPartnerBusinessPartnerEvaluationNewController",
+		"uuid": "953895e120714ab4b6d7283c2fc50e14",
+		"configService": "businessPartnerEvaluationAdaptorService"
+	},
+	{
+		"id": "businesspartner.main.relation",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.bpRelation",
+		"controller": "businessPartnerRelationGridController",
+		"uuid": "12394ae7fb944ba1b1006bd13864149a"
+	},
+	{
+		"id": "businesspartner.main.relationDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.bpRelationDetail",
+		"controller": "businessPartnerRelationFormController",
+		"uuid": "A2V6EQ1F6DJ84FD8BR6J25E6C3A43VUG",
+		"permission": "12394ae7fb944ba1b1006bd13864149a"
+	},
+	{
+		"id": "businesspartner.main.relationChart",
+		"template": "businesspartner.main/partials/business-partner-relation-chart-view.html",
+		"title": "businesspartner.main.bpRelationChart",
+		"controller": "businessPartnerRelationChartController",
+		"uuid": "11DD248F6DB045029BA634BAA501FAAD",
+		"permission": "12394ae7fb944ba1b1006bd13864149a"
+	},
+	{
+		"id": "businesspartner.contact.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "businesspartner.main.contactCharacteristicContainerTitle",
+		"uuid": "a072433d39d6459f8ffae73e4ec7026f",
+		"controller": "",
+		"sectionId": "3",
+		"mainService": "businesspartnerMainContactDataService"
+	},
+	{
+		"id": "businesspartner.main.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "businesspartner.main.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "businesspartner.main.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "businesspartner.main.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "project.main.documents.project.document.history.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProjectHistory",
+		"controller": "documentsProjectDocumentHistoryController",
+		"uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+	},
+	{
+		"id": "businesspartner.main.certificates.actual.certificate.pinboard",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "businesspartner.main.pinboard.certificateCommentTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "dc43044581c047268996e6214ef5860e",
+		"commentQualifier": "businesspartner.certificate.certificates.comment",
+		"parentService": "businesspartnerMainCertificateDataService",
+		"permission": "b2167043a37a4512944edaa52986a6c3",
+		"saveParentBefore": true
+	},
+	{
+		"id": "businesspartner.main.clerk.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.businesspartner.entityClerk",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "1a3e4d47049242e58f149208e9732d8f",
+		"clerkQualifier": "businesspartner.main.clerk",
+		"parentService": "businesspartnerMainHeaderDataService"
+	},
+	{
+		"id": "businesspartner.main.clerk.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.businesspartner.entityClerkForm",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "24178473693143239dbbffe71d098496",
+		"clerkQualifier": "businesspartner.main.clerk",
+		"parentService": "businesspartnerMainHeaderDataService",
+		"permission": "1a3e4d47049242e58f149208e9732d8f"
+	},
+	{
+		"id": "businesspartner.main.contact.clerk.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.contact.entityClerk",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "cae393de7edc4d67b528e3ed8f5d90f3",
+		"clerkQualifier": "businesspartner.contact.clerk",
+		"parentService": "businesspartnerMainContactDataService",
+		"extendService": "businesspartnerMainContactClerkExtendDataService",
+		"permission": "75af61c378494d838df091d217d8eb30"
+	},
+	{
+		"id": "businesspartner.main.contact.clerk.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.contact.entityClerkForm",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "ac7e9c5ab92b46189fca366e4b818b88",
+		"clerkQualifier": "businesspartner.contact.clerk",
+		"parentService": "businesspartnerMainContactDataService",
+		"permission": "75af61c378494d838df091d217d8eb30"
+	},
+	{
+		"id": "businesspartner.main.guarantee.used.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.entityGuaranteeUsed",
+		"controller": "businessPartnerGuaranteeUsedGridController",
+		"uuid": "9ec56ec643d64e4782021a0204e92dd6",
+		"permission": "ddf49471e5944a5f8b8de31c9715375e"
+	},
+	{
+		"id": "businesspartner.main.guarantor.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.entityGuarantor",
+		"controller": "businessPartnerGuarantorGridController",
+		"uuid": "ddf49471e5944a5f8b8de31c9715375e",
+		"permission": "ddf49471e5944a5f8b8de31c9715375e"
+	},
+	{
+		"id": "businesspartner.main.guarantor.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.entityGuarantorDetail",
+		"controller": "businessPartnerGuarantorFormController",
+		"uuid": "81579d8e9d0648769a118c2840e1fe8a",
+		"permission": "ddf49471e5944a5f8b8de31c9715375e"
+	},
+	{
+		"id": "businesspartner.main.contact2exchange.container",
+		"template": "businesspartner.main/templates/synchronize-contact2exchange-container.html",
+		"title": "businesspartner.main.synContact.synCon2ExSer",
+		"controller": "",
+		"uuid": "ba8741962e974470a7c3e9d49b8a156d",
+		"permission": "eda4fc727cfd4d23a0c0118a01a57d83"
+	},
+	{
+		"id": "businesspartner.main.external.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.entityExternal",
+		"controller": "businessPartner2ExternalGridController",
+		"uuid": "72a2227e86964a35a4072dc3fda7b45a"
+	},
+	{
+		"id": "businesspartner.main.external.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.entityExternalDetail",
+		"controller": "businessPartner2ExternalDetailController",
+		"uuid": "489a6f1ecc1b406e842466e0a0fc9920",
+		"permission": "72a2227e86964a35a4072dc3fda7b45a"
+	},
+	{
+		"id": "businesspartner.main.clerkalt.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.businesspartner.entityClerkAlt",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "fbed0a3bb7c94d6a8301f99c8c9c86c7",
+		"clerkQualifier": "businesspartner.main.clerkalt",
+		"itemName": "ClerkAltData",
+		"parentService": "businesspartnerMainHeaderDataService",
+		"permission": "fbed0a3bb7c94d6a8301f99c8c9c86c7"
+	},
+	{
+		"id": "businesspartner.main.clerkalt.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.businesspartner.entityClerkAltDetail",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7eb431f3037440f2a5d0a7af9f70a380",
+		"permission": "fbed0a3bb7c94d6a8301f99c8c9c86c7",
+		"clerkQualifier": "businesspartner.main.clerkalt",
+		"parentService": "businesspartnerMainHeaderDataService"
+	},
+	{
+		"id": "businesspartner.main.general.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.general.grid",
+		"controller": "businessPartnerMainGeneralsGridController",
+		"uuid": "cef553146d2047759e0a10a9c51efbea"
+	},
+	{
+		"id": "businesspartner.main.general.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.general.Detail",
+		"controller": "businessPartnerMainGeneralsFormController",
+		"uuid": "dcce6b88c6634ab39703a2f1de0b2442",
+		"permission": "cef553146d2047759e0a10a9c51efbea"
+	},
+	{
+		"id": "businesspartner.main.controllingGroupAssignments.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.controllingGroupAssignments.grid",
+		"controller": "businessPartnerMainUnitgroupGridController",
+		"uuid": "e1d50a8873f44a86907a12f394be47e8"
+	},
+	{
+		"id": "businesspartner.main.controllingGroupAssignments.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.controllingGroupAssignments.Detail",
+		"controller": "businessPartnerMainUnitgroupFormController",
+		"uuid": "b6fed3ec7d914084905d88ef1e1da4c3",
+		"permission": "e1d50a8873f44a86907a12f394be47e8"
+	},
+	{
+		"id": "businesspartner.main.updaterequest",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.updateRequestTitle",
+		"controller": "businesspartnerMainUpdateRequestListController",
+		"uuid": "7C29553FDAE541DDA903D4707D0C8DF3"
+	},
+	{
+		"id": "businesspartner-powerbi-list-container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.powerBIElements",
+		"controller": "businesspartnerMainPowerBiListController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ac90",
+		"permission": "e1d50a8873f44a86907a12f394be47e8"
+	},
+	{
+		"id": "businesspartner-powerbi-view-container",
+		"template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+		"title": "businesspartner.main.powerbiView",
+		"controller": "businesspartnerMainPowerbiViewController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ac92",
+		"permission": "e1d50a8873f44a86907a12f394be47e8"
+	},
+	{
+		"id": "documents.clerk.authorization.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkListController",
+		"clerkQualifier": "documents.project.clerk",
+		"uuid": "47620dd38c874f97b75ee3b6ce342666",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "documents.authorization.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7806e7a22b2142f8865ab189efe23c5a",
+		"permission": "47620dd38c874f97b75ee3b6ce342666",
+		"clerkQualifier": "documents.project.clerk",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentAssignObject",
+		"controller": "documentsProjectModelObjectController",
+		"uuid": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentAssignObjectFormTitle",
+		"controller": "documentsProjectModelObjectDetailController",
+		"uuid": "ee68ae76fefe4b758c282594a1746480",
+		"permission": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "businesspartner.main.community.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.community.title",
+		"controller": "businessPartnerMainCommunityListController",
+		"uuid": "0e170479c9cd43dea593492d54ac46be"
+	},
+	{
+		"id": "businesspartner.main.community.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.community.detailTitle",
+		"controller": "businessPartnerMainCommunityDetailController",
+		"uuid": "8e943605da2b4c6eb25aacee00c06f47",
+		"permission": "0e170479c9cd43dea593492d54ac46be"
+	},
+	{
+		"id": "businesspartner.main.activities.specification",
+		"template": "businesspartner.main/partials/activities-specification-view.html",
+		"title": "businesspartner.main.activitiesSpecificationContainerTitle",
+		"controller": "businesspartnerMainActivitySpecificationController",
+		"uuid": "CBDE8B70095B4EEB91E4EB1432DC6D4F",
+		"permission": "C87F45D900E640768A08D471BD476B2C"
+	},
+	{
+		"id": "businesspartner.main.customer.openitem",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.customerOpenItemGridContainerTitle",
+		"controller": "businesspartnerMainCustomerOpenItemListController",
+		"uuid": "0A476775F47544F584C0C3DB15433B13",
+		"permission": "53AA731B7DA144CDBFF201A7DF205016"
+	},
+	{
+		"id": "businesspartner.main.supplier.openitem",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.supplierOpenItemGridContainerTitle",
+		"controller": "businesspartnerMainSupplierOpenItemListController",
+		"uuid": "EC88CB1B43EE45508E1DD867CB2953A7",
+		"permission": "7F5057A88B974ACD9FB5A00CEE60A33D"
+	},
+	{
+		"id": "businesspartner.main.externalrole",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.extRoleGridContainerTitle",
+		"controller": "businessPartnerMainExtRoleListController",
+		"uuid": "1414a9157fb94a6ca70ff26717b5a759"
+	},
+	{
+		"id": "businesspartner.main.externalrole.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.extRoleDetailContainerTitle",
+		"controller": "businessPartnerMainExtRoleDetailController",
+		"uuid": "11e2f705378446e79d5c3b03e9680906",
+		"permission": "1414a9157fb94a6ca70ff26717b5a759"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "5d1d427d80f548c28703ca11120bf279",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "businesspartner.main.region",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.regionGridContainerTitle",
+		"controller": "businessPartnerMainRegionListController",
+		"uuid": "ab732806d7ef4ffc92b6a4e60ff1fa67"
+	},
+	{
+		"id": "businesspartner.main.region.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.regionDetailContainerTitle",
+		"controller": "businessPartnerMainRegionDetailController",
+		"uuid": "1f3b4fb819584c0395af28c85bd8a648",
+		"permission": "ab732806d7ef4ffc92b6a4e60ff1fa67"
+	}
+]

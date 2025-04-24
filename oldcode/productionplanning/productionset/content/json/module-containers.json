@@ -1,0 +1,111 @@
+[
+  {
+    "id": "productionplanning.productionset.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.productionset.listProductionsetTitle",
+    "controller": "productionplanningProductionsetListController",
+    "uuid": "2581963f63944bdca59bec07f539cafb",
+    "permission": "2581963f63944bdca59bec07f539cafb"
+  },
+  {
+    "id": "productionplanning.productionset.details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.productionset.detailsProductionsetTitle",
+    "controller": "productionplanningProductionsetDetailsController",
+    "uuid": "9e6d0550dbc845abbba4c239fc4763e5",
+    "permission": "2581963f63944bdca59bec07f539cafb"
+  },
+  {
+    "id": "productionplanning.common.event.productionSetList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.productionSetEventTitle",
+    "controller": "productionplanningCommonEventListController",
+    "currentModule": "productionplanning.common.productionset.event",
+    "parentService": "productionplanningProductionsetMainService",
+    "foreignKey": "ProductionSetFk",
+    "uuid": "123e3750bcbf4d2580f02e3a34bb5yut",
+    "permission": "123e3750bcbf4d2580f02e3a34bb5yut"
+  },
+  {
+    "id": "productionplanning.common.productList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.product.productionSetProductTitle",
+    "controller": "productionplanningCommonProductProductionSetListController",
+    "uuid": "d8c96cdc54a840bfb7651c3228f19887",
+    "permission": "d8c96cdc54a840bfb7651c3228f19887"
+  },
+  {
+    "id": "productionplanning.common.productDetails",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.common.product.productionSetProductDetailTitle",
+    "controller": "productionplanningCommonProductProductionSetDetailController",
+    "uuid": "1d2b2bf19d0d44b88539ccu58db79d18",
+    "permission": "d8c96cdc54a840bfb7651c3228f19887"
+  },
+  {
+    "id": "productionplanning.common.event.productionSetProductList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.productionSetProductEventTitle",
+    "controller": "productionplanningCommonEventListController",
+    "currentModule": "productionplanning.common.productionset.product.event",
+    "parentService": "productionplanningCommonProductProductionSetDataService",
+    "foreignKey": "ProductFk",
+    "uuid": "caf2a35c626a4a46ac20651a09938bbf",
+    "permission": "caf2a35c626a4a46ac20651a09938bbf"
+  },
+  {
+    "id": "productionplanning.productionset.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "productionplanning.productionset.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "96f5cf010264456888ca1fcda1bca0bf",
+    "wizardDisabled": "true"
+  },
+	{
+		"id": "productionplanning.productionset.log.list",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "productionplanning.productionset.logListTitle",
+		"controller": "ppsCommonLogSourceWindowController",
+		"filter": [
+			"Date",
+			"ColumnName",
+			"PpsLogReasonFk"
+		],
+		"uuid": "1b729de461eb4d2cb806283f7d7c116d",
+		"permission": "2581963f63944bdca59bec07f539cafb"
+	},
+	{
+		"id": "productionplanning.productionset.log.pinboard",
+		"template": "productionplanning.common/partials/pps-common-log-pinboard-view.html",
+		"title": "productionplanning.productionset.logPinboardTitle",
+		"controller": "ppsCommonLogPinboardViewController",
+		"uuid": "19fee1b09b914b32b793d58a0a9a4674",
+		"permission": "2581963f63944bdca59bec07f539cafb",
+		"endRead": "logsForProdSet?mainItemId=",
+		"commentQualifier": "productionplanning.productionset.manuallog",
+		"parentService": "productionplanningProductionsetMainService",
+		"configServiceName": "ppsCommonLogPinboardViewConfigService",
+		"translationService": "productionplanningProductionsetTranslationService",
+		"showLastComments": true
+	},
+  {
+    "id": "productionplanning.productionset.eventsequenceloglist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.eventSeqLogListTitle",
+    "controller": "ppsCommonEventSequenceLogListController",
+    "uuid": "6599ed5c1c3b4cef9404d9c0ae2b7a82",
+    "permission": "2581963f63944bdca59bec07f539cafb",
+    "controllerOptions": {
+      "parentService": "productionplanningProductionsetMainService",
+      "translationService": "productionplanningProductionsetTranslationService"
+    }
+  },
+  {
+    "id": "productionplanning.productionset.subset.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.productionset.subset.listTitle",
+    "controller": "ppsProductionSubsetListController",
+    "uuid": "2acd719749264074a62fcd2c4a94482e",
+    "permission": "2581963f63944bdca59bec07f539cafb"
+  }
+]

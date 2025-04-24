@@ -1,0 +1,155 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<!-- for GetDetailedHttpErrorMessage -->
+		<div class="platform-form-row" data-ng-if="GetDetailedHttpErrorMessage !== undefined">
+			<div data-domain="boolean" data-domain-control data-ng-model="GetDetailedHttpErrorMessageCheckbox"
+			     data-options="GetDetailedHttpErrorMessageOptions" readonly="codeMirrorOptions.readOnly"
+			     data-change="changeCheckbox()"></div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label"
+				     custom-tooltip="{'title':'{{'basics.workflow.action.customEditor.url' | translate }}','caption':'{{'basics.workflow.action.customEditor.urlTooltipCaption' | translate }}', 'width':300}">
+					{{'basics.workflow.action.customEditor.url' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.script" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<!--internet or internal api-->
+		<div>
+			<div class="radiolist-container">
+				<div class="radio spaceToUp pull-left">
+					<label>
+						<input name="radioGroupC" ng-click="onRadioGroupOptChangedApiMode(1, 'apiMode')"
+						       ng-model="input.apiMode" ng-value="1"
+						       type="radio">
+						{{'basics.workflow.action.customEditor.externalAPI' | translate }}
+					</label>
+				</div>
+				<div class="radio spaceToUp pull-left margin-left-ld">
+					<label>
+						<input name="radioGroupC" ng-click="onRadioGroupOptChangedApiMode(2, 'apiMode')"
+						       ng-model="input.apiMode" ng-value="2"
+						       type="radio">
+						{{'basics.workflow.action.customEditor.selfAPI' | translate }}
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.apiMode !== 2">
+			<!-- for AccessToken -->
+			<div class="platform-form-row">
+				<div class="platform-form-label"
+				     custom-tooltip="{'title':'{{'basics.workflow.action.customEditor.accessToken' | translate }}','caption':'{{'basics.workflow.action.customEditor.accessTokenTooltipCaption' | translate }}', 'width':300}">
+					{{'basics.workflow.action.customEditor.accessToken' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.accessToken" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<!-- for AccessTokenType -->
+			<div class="platform-form-row">
+				<div class="platform-form-label"
+				     custom-tooltip="{'title':'{{'basics.workflow.action.customEditor.accessTokenType' | translate }}','caption':'{{'basics.workflow.action.customEditor.accessTokenTypeTooltipCaption' | translate }}', 'width':300}">
+					{{'basics.workflow.action.customEditor.accessTokenType' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.accessTokenType" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div data-ng-show="input.apiMode !== 2">
+			<div class="radiolist-container">
+				<div data-radiolistctrl displayMember="description" ng-model="input.editorMode"
+				     on-selection-changed="onRadioGroupOptChanged(value)" options="input.radioGroupOpt"
+				     valueMember="value"></div>
+			</div>
+
+			<div basics-workflow-resize-grid-directive data-ng-show="input.editorMode === 1">
+				<div data-ng-show="!input.editorDisplayError">
+					<div class="toolbar margin-top-ld">
+						<h2 class="title fix">{{'basics.workflow.action.customEditor.headers' | translate }}</h2>
+						<div data-list="tools" data-platform-menu-list data-platform-refresh-on="tools.version"
+						     ng-if="codeMirrorOptions.readOnly !== true"></div>
+					</div>
+					<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+						<platform-Grid data="gridData"></platform-Grid>
+					</div>
+				</div>
+				<div data-ng-show="input.editorDisplayError">
+					<h4 class="title fix" style="color: red">
+						{{'basics.workflow.action.customEditor.editorDisplayError' | translate }}</h4>
+				</div>
+			</div>
+
+			<div class="platform-form-group" data-ng-show="input.editorMode === 2">
+				<div class="platform-form-row">
+					<label class="platform-form-label"
+					       custom-tooltip="{'title':'{{'basics.workflow.action.customEditor.headers' | translate }}','caption':'{{'basics.workflow.action.customEditor.headersTooltipCaption' | translate }}', 'width':300}">
+						{{'basics.workflow.action.customEditor.headers' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<div data-ng-model="input.headers" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label"
+				       custom-tooltip="{'title':'{{'basics.workflow.action.customEditor.outputServerAction' | translate}}','caption':'{{'basics.workflow.action.customEditor.outputServerActionTooltipCaption' | translate}}', 'width':300}">
+					{{'basics.workflow.action.customEditor.outputServerAction' | translate}}
+				</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.getAction" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label"
+				       custom-tooltip="{'title':'{{'basics.workflow.action.customEditor.responseHeader' | translate }}','caption':'{{'basics.workflow.action.customEditor.responseHeaderTooltipCaption' | translate }}', 'width':300}">
+					{{'basics.workflow.action.customEditor.responseHeader' | translate }}
+				</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.getGetHeader" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

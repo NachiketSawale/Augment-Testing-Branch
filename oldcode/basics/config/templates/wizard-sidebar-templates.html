@@ -1,0 +1,26 @@
+<script type="text/ng-template" id="basics.config/sidebar-item.html">
+	<li data-ng-class="{{hide}} == true?'hide':'button-right-action reporting-items'">
+		<button data-ng-click="clickFn({{w2GId}},{{id}})" class="left rw {{wizardGuid}} {{cssClass}}" data-ng-hide="isHidden" data-ng-disabled="$parent.$parent.isDisabled">
+			<ul class="rw-content">
+				<li class="title">{{name}}</li>
+				<li>{{description}}</li>
+			</ul>
+		</button>
+		<div class="right">
+			<button type="button" data-ng-click="pinnedItem({{w2GId}})" data-ng-class="pinItemId.includes({{w2GId}}) || pinnedItemId.includes({{w2GId}}) ?'top fullheight btn control-icons ico-close':'top fullheight btn control-icons ico-pin'"></button>
+		</div>
+	</li>
+</script>
+
+<script type="text/ng-template" id="basics.config/sidebar-group.html">
+	<li class="panel panel-primary" data-ng-hide="{{hide}}">
+		<button class="panel-heading" data-ng-click="invert({{id}})">
+			<span class="{{icon}}"></span>
+			<h4 class="panel-title">{{name}}</h4>
+			<div class="panel-toggle-img control-icons {{iconClass}}"></div>
+		</button>
+		<ul class="panel-body">
+			##items##
+		</ul>
+	</li>
+</script>

@@ -1,0 +1,71 @@
+<div class="modal-body ige-print">
+	<div class="form-accordion" *ngFor="let sectionGroup of printConfig.sectionGroups">
+		<div class="panel-group">
+			<div class="panel-heading">
+				<h4 class="panel-title"><span>{{ sectionGroup.title | platformTranslate }}</span></h4>
+			</div>
+			<div class="panel-collapse">
+				<div class="panel-body">
+					<div class="platform-form-group">
+						<div class="platform-form-row form-group align-content-center align-button">
+							<button class="btn btn-default" *ngFor="let btn of sectionGroup.buttons" (click)="sectionBtnOnClick(btn, sectionGroup)" [title]="btn.title" [disabled]="btn.disable">
+								<span>{{ btn.description | platformTranslate }}</span>
+							</button>
+							<div class="input-group form-control section-btn-input">
+								<input type="text" class="input-group-content" [(ngModel)]="sectionGroup.inputValue" placeholder="{{ 'model.wdeviewer.print.input' | platformTranslate }}">
+								<button class="btn btn-default input-sm" (click)="inputBtnOnClick(sectionGroup)" title="{{ 'model.wdeviewer.print.input' | platformTranslate }}">
+									<div class="control-icons ico-input-lookup lookup-ico-dialog"></div>
+								</button>
+							</div>
+						</div>
+						<div class="platform-form-row form-group row-section">
+							<div *ngFor="let sectionItem of sectionGroup.sections">
+								<div class="platform-form-col section-text-title">
+									{{ sectionItem.title | platformTranslate }}
+								</div>
+							</div>
+						</div>
+						<div class="platform-form-row form-group row-section">
+							<div *ngFor="let sectionItem of sectionGroup.sections">
+								<div class="platform-form-col">
+									<div class="section-text-area input-group-content selectable" contenteditable="true" [ngModel]="sectionItem.content" (focus)="sectionOnFocus($event, sectionItem)" ></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="platform-form-group">
+		<div class="platform-form-row" *ngIf="printConfig.isShowLegend">
+			<label>
+				<span class="section-config-label">
+					{{ 'model.wdeviewer.print.showLegend' | platformTranslate }}
+				</span>
+				<input type="checkbox" [(ngModel)]="printConfig.showLegend"/>
+			</label>
+		</div>
+		<div class="platform-form-row">
+			<label>
+				<span class="section-config-label">
+					{{ 'model.wdeviewer.print.useVectorPublisher' | platformTranslate }}
+				</span>
+				<input type="checkbox" [(ngModel)]="printConfig.useVectorPublisher"/>
+			</label>
+		</div>
+		<div class="platform-form-row">
+			<span class="section-config-label">
+				{{ 'model.wdeviewer.print.pageOrientation' | platformTranslate }}
+			</span>
+			<ui-common-lookup-input class="flex-element form-control section-config-col" [(value)]="printConfig.pageOrientation" [dataService]="pageOrientationItems"></ui-common-lookup-input>
+		</div>
+		<div class="platform-form-row">
+			<span class="section-config-label">
+				{{ 'model.wdeviewer.print.pageSize' | platformTranslate }}
+			</span>
+			<ui-common-lookup-input class="flex-element form-control section-config-col" [(value)]="printConfig.pageSize" [dataService]="pageSizeItems"></ui-common-lookup-input>
+		</div>
+	</div>
+</div>

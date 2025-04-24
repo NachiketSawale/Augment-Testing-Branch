@@ -1,0 +1,32 @@
+.ms-commodity-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  .ms-checkbox-multi-select-container {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .ms-checkbox-multi-select,
+  .ms-checkbox-select-all {
+    text-align: left;
+    margin: 8px 15px 0 0;
+    display: inline-block;
+    input[type='checkbox'] {
+      margin: 0 2px 0 0;
+      vertical-align: text-top;
+    }
+  }
+
+  .ms-checkbox-select-all {
+    margin: 0;
+  }
+
+  .ms-checkbox-enable-select,
+  .ms-checkbox-max-select-note,
+  .ms-checkbox-check-all {
+    height: 24px;
+  }
+}

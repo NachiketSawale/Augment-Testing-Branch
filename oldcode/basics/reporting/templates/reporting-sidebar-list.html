@@ -1,0 +1,20 @@
+<div class="toolbar">
+	<div class="title" translate="basics.reporting.sidebarTitle"></div>
+	<div data-platform-expand-collapse-list-directive data-grouped-list="reportingSidebar.data.groups"></div>
+	<div basics-reporting-language-container ng-model="reportingSidebar.reportToolbar" class="flex-box flex-align-center"></div>
+</div>
+
+<div class="content-inner">
+	<div data-platform-search-item-list-directive data-grouped-list="reportingSidebar.data.groups" data-name="'reports'"></div>
+	<ul data-platform-grouped-item-list-directive
+	    data-grouped-list="reportingSidebar.data.groups"
+	    data-item-template="reportingSidebar.itemTemplate"
+	    data-group-template="reportingSidebar.groupTemplate"
+	    data-child-property="'reports'"
+	    data-key-property="'id'"
+	    data-click-fn="reportingSidebar.showParametersOrExecute"
+	    class="scroll-padding flex-element overflow panel-group reporting-items-wrapper"
+	    data-grouped-list-cfg="reportingSidebar.data"
+	    data-sidebar-id="'reports'"
+	    data-name="'reports'"></ul>
+</div>

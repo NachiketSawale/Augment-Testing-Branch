@@ -1,0 +1,18 @@
+[
+    {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.costcodes.costCodes",
+    "controller": "projectCostCodesListController",
+    "uuid": "99E75030E41F11E4B5710800200C9A66"
+    },
+
+    {
+    "id": "2",
+    "template": "project.costcodes/partials/prj-cost-codes-detail.html",
+    "title": "project.costcodes.costCodesDetails",
+    "controller": "projectCostCodesDetailController",
+    "uuid": "BAFA6A50E41F11E4B5710800200C9A66",
+    "permission": "99E75030E41F11E4B5710800200C9A66"
+    }
+]

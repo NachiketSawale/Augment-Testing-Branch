@@ -1,0 +1,19 @@
+<div class="progress upd-progress-bar">
+    <div class="progress-bar" role="progressbar" aria-valuemin=" 0" aria-valuemax="100" style="width:{{percentage}}%">
+        <span ng-bind="percentage + '%'"></span>
+    </div>
+</div>
+
+<div class="subview-info">
+    <div platform-action-item-list data-set-link="initActionItemsLink(link)" class="fullheight" style="overflow: auto"></div>
+</div>
+
+<div id="ruleScriptKendoSplit" data-platform-kendo-splitter-adjust class="flex-box filler" option="{panes: [ { collapsible: true, size: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}">
+    <div id="ui-layout-east" class="flex-element">
+        <div platform-action-item-list data-set-link="initActionItemsLinkMessages(link)" class="margin-full-md"></div>
+    </div>
+    <div id="ui-layout-west" class="flex-element">
+        <div cloud-common-overlay data-info2="loadingText" data-loading="service.isLoading"></div>
+        <platform-Grid data="gridData"></platform-Grid>
+    </div>
+</div>

@@ -1,0 +1,181 @@
+﻿{
+  "basics": {
+    "material": {
+      "moduleName": "Material",
+      "wizard":{
+        "importMaterialWizard":"Material Import Wizard",
+        "importMaterialRecord":"Material Import",
+        "import3dModel":"!Import 3D Model",
+        "chooseFile":"!Choose File"
+      },
+      "record": {
+        "catalogTitle": "Materialkatalog",
+        "groupTitle": "Materialgruppe",
+        "gridViewTitle": "Artikel",
+        "formViewTitle": "Artikel Detail",
+        "header": "Artikel",
+        "materialCatalog": "Materialkatalog Schlüssel",
+        "materialCatalogCode": "Materialkatalog Nr.",
+        "materialCatalogDescription": "Materialkatalog Bezeichnung",
+        "materialGroup": "Materialgruppe",
+        "materialGroupCode": "Materialgruppe Nr.",
+        "materialGroupDescription": "Materialgruppe Bezeichnung",
+        "matchCode": "Suchbegriff",
+        "furtherDescription": "Beschreibung 2",
+        "aBCGroup": "ABC Klassifizierung",
+        "retailPrice": "Preisempfehlung",
+        "listPrice": "Listenpreis",
+        "discount": "Rabatt %",
+        "charges": "Zuschläge",
+        "priceExtras": "Extras",
+        "costPrice": "Barpreis",
+        "estimatePrice": "Kalkulationspreis",
+        "sellUnit": "Verkaufseinheit",
+        "discountGroup": "Rabattgruppe",
+        "discountGroupCode": "Rabatt Nr.",
+        "discountGroupDescription": "Rabatt",
+        "weightType": "Gewichtsangabe",
+        "weightNumber": "Einheit",
+        "weight": "Gewicht",
+        "externalCode": "Externe Nr.",
+        "neutralMaterialCatalog": "Neutraler Artikelstamm",
+        "neutralMaterialCatalogCode": "Neutraler Artikelstamm",
+        "neutralMaterial": "Neutraler Artikel",
+        "neutralMaterialCode": "Neutraler Artikel Nr.",
+        "neutralMaterialDescription": "Neutraler Artikel",
+        "addError": "Es wurden bereits alle Typen verwendet. Ein weiterer Artikel kann nicht hinzugefügt werden.",
+        "duplicateError": "Dieser Typ existiert bereits und kann nicht nochmals verwendet werden.",
+        "priceConditionTitle": "Preiskondition",
+        "priceConditionTypeFormulaError": "!Price Condition Type: {{errorCode}} 's formula might be wrong",
+        "filter": "Filter",
+        "partnerAgreement": "!Partner Agreement",
+        "3DViewer": "!3D Viewer",
+        "minQuantity":"!Minimum Order Qty"
+      },
+      "error": {
+        "materialCodeUniqueError": "Die Material Nr. muss innerhalb des Materialkatalogs eindeutig sein.",
+        "materialGroupSelectError": "!Catalog cannot be selected as group."
+      },
+      "warning": {
+        "priceConditionTypeWarningMsg": "!All pre-defined price condition line types have been listed thus cannot add new record.",
+        "import3dModelWarningMsg": "!Please select a material.",
+        "delete3dModelWarningMsg": "!There is none 3D model of selected material",
+        "warningTitle": "!Warning"
+      },
+      "documents": {
+        "title": "Dokument",
+        "detailTitle": "Dokument Detail",
+        "materialDocumentToolbarLoadDocument": "Hochladen/Öffnen/Herunterladen Dokument",
+        "materialDocumentName": "Dokumentenname",
+        "materialDocumentEmptyFileErrorMessage": "！The document can not be empty. Please select a document to upload."
+      },
+      "characteristic": {
+        "noMaterialSelected": "Bitte wählen Sie zuerst einen Artikel.",
+        "noMaterialGroupSelected": "Bitte wählen Sie zuerst eine Materialgruppe.",
+        "property": "Attribut",
+        "char": "Wert",
+        "title": "Eigenschaften",
+        "detailTitle": "Eigenschaften Detail"
+      },
+      "specification": {
+        "title": "Spezifikation",
+        "formatText":"!Specification Formatted Text",
+        "plainText":"!Specification Plain Text"
+      },
+      "basSpecification":"!Detail Specification",
+      "preview": {
+        "title": "Vorschau"
+      },
+      "tab": {
+        "materialRecord": "Artikel",
+        "materialDetail": "Detail",
+        "materialAttribute": "Eigenschaft",
+        "materialDocument": "Dokument"
+      },
+      "view": {
+        "materialRecord": "Material",
+        "materialDetail": "Material Detail",
+        "materialAttribute": "Material Eigenschaft"
+      },
+      "lookup": {
+        "SupplierAscending": "Kreditor: aufsteigend",
+        "SupplierDescending": "Kreditor: absteigend",
+        "CodeAscending": "Artikel Nr: aufsteigend",
+        "CodeDescending": "Artikel Nr: absteigend",
+        "PriceDescending": "Preis: absteigend",
+        "PriceAscending": "Preis: aufsteigend",
+        "gross": "Brutto",
+        "net": "Netto",
+        "packaging": "Verpackung",
+        "kg": "kg",
+        "to": "to",
+        "g": "g"
+      },
+      "materialSearchLookup": {
+        "htmlTranslate": {
+          "attributes": "Eigenschaften",
+          "documents":"!Documents",
+          "minQuantity":"!Min Quantity",
+          "leadTimes":"!Lead Time(Days)",
+          "days":" !{{days}} Days",
+          "searchResults": "Suchergebnis",
+          "category": "Kategorie",
+          "back": "Zurück",
+          "information": "Informationen",
+          "keyWord": "Suchbegriff eingeben",
+          "supplier": "Lieferant",
+          "materialSearch":"Material suchen",
+          "all": "All",
+          "uom": "!Uom",
+          "price": "!Price"
+        },
+        "page": {
+          "firstText": "Erste Seite",
+          "previousText": "Vorherige Seite",
+          "nextText": "Nächste Seite",
+          "lastText": "Letzte Seite"
+        }
+      },
+      "import":{
+        "materialCode":"!Material Code",
+        "catalogCode" : "!Material Catalog",
+        "selectOneCatalog":"!Please Select One Material Catalog Record",
+        "keepOrNewMaterialGroup":"!Group Setting",
+        "attribute":"!Attribute Quantity",
+        "documents":"!Document Quantity",
+        "document":"!Document Files",
+        "3DView":"!3DModelFile",
+        "image":"!Image",
+        "priceConditionValue":"!Price Condition Value",
+        "priceConditionType":"!Price Condition Type",
+        "specification":"!Specification",
+        "group":"!Group Code of Level {{grade}}",
+        "groupDescription":"!Group Description of Level {{grade}}",
+        "property":"!Property {{prop}}",
+        "dynamicProperty":"!{{name}} {{prop}}",
+        "dynamicMaterialDocument":"!{{name}} {{prop}}",
+        "headName":"!Import Material",
+        "structure":"!Group of Level {{grade}} Structure",
+        "blobSpecification":"Blob Specification",
+        "placeholder" : "!Please select the zip  or excel file",
+        "importMaterial":"!Import Material",
+        "importPriceList":"!Import Price List",
+        "specifiedPriceVersion": "!Specified Price Version",
+        "importType": "!Import Type"
+      },
+      "priceList": {
+        "materialPriceVersion": "!Price Version",
+        "materialPriceVersionOption": "!Price Version Option",
+        "priceList": "!Price List",
+        "priceListTitle": "!Price Lists",
+        "priceListDetailTitle": "!Price List Detail",
+        "priceListPriceConditionTitle": "!Price List Condition",
+        "importPriceList":"!Import Price List"
+      },
+      "leadTimeExtra": "!Express Lead Time",
+      "totalCurrency": "!Total (Currency)",
+      "materialCatalog": "Material Catalog",
+      "procurementStructure": "Beschaffungsstruktur"
+    }
+  }
+}

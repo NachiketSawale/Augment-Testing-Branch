@@ -1,0 +1,50 @@
+[
+	{
+		"id": "productionplanning.formwork.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.formwork.listTitle",
+		"controller": "ppsFormworkListController",
+		"uuid": "941072920c3b42ec9f2e9f222d0432a8",
+		"permission": "941072920c3b42ec9f2e9f222d0432a8"
+	},
+	{
+		"id": "productionplanning.formwork.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.formwork.detailTitle",
+		"controller": "ppsFormworkDetailController",
+		"uuid": "76f48476ed6743f69a9fd0760cacd681",
+		"permission": "941072920c3b42ec9f2e9f222d0432a8"
+	},
+	{
+		"id": "productionplanning.formwork.phase.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.formwork.phaseListTitle",
+		"controller": "productionPlanningFormworkPhaseListController",
+		"uuid": "ef9a8258700f41ca8136d80e20d80847",
+		"permission": "71b79353b3084571b7b450a492a7fd56"
+	},
+	{
+		"id": "productionplanning.formwork.phase.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.formwork.phaseDetailTitle",
+		"controller": "productionPlanningFormworkPhaseDetailController",
+		"uuid": "4fa47b13715545fc93eb1d2ae183ad0b",
+		"permission": "71b79353b3084571b7b450a492a7fd56"
+	},
+	{
+		"id": "productionplanning.formwork.product.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.formwork.productListTitle",
+		"controller": "productionplanningCommonProductFormworkListController",
+		"uuid": "613ae4f808c64567ba86c7ea2aa85820",
+		"permission": "70210ee234ef44af8e7e0e91d45186b2"
+	},
+	{
+		"id": "productionplanning.formwork.product.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.formwork.productDetailTitle",
+		"controller": "productionplanningCommonProductFormworkDetailController",
+		"uuid": "8fdc1ece855a431285976fc707146465",
+		"permission": "70210ee234ef44af8e7e0e91d45186b2"
+	}
+]

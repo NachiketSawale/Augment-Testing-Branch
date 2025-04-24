@@ -1,0 +1,16 @@
+[
+	{
+		"id": "1",
+		"template": "basics.lookupdata/partials/table-list.html",
+		"title": "TableList",
+		"controller": "basicsLookupDataTableListController",
+		"uuid": "F01193DF20E34B8D417250AD17A433F1"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/grid-flat-partial.html",
+		"title": "TableView",
+		"controller": "basicsLookupDataGridController",
+		"uuid": "8B10861EA9774D60BA1A86BE7E7DA568"
+	}
+]

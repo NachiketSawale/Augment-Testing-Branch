@@ -1,0 +1,12 @@
+<div [hidden]="!configErr">
+   chart name: {{configErr}}
+</div>
+
+<div [hidden]="!!configErr" class="chart-container">
+	<basics-shared-chart-common-container
+		[series] = "series"
+		[chartConfigItem]="chartConfigItem"
+		[chartDataItems]="chartDataItems"
+		[containerGuid]="containerGuid"
+	></basics-shared-chart-common-container>
+</div>

@@ -1,0 +1,19 @@
+<header class="modal-header main-color">
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="$close()" aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+    </button>
+    <h2 class="modal-title">{{'cloud.common.errorMessage' | translate}}</h2>
+</header>
+
+<section class="modal-body">
+    <div data-ng-repeat="item in data"
+         data-ng-bind="item.ErrorContent"
+         class="{{ item.MessageType | basicsMaterialAlertLevelFilter }}">
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close()">
+        {{'cloud.common.ok' | translate}}
+    </button>
+</footer>

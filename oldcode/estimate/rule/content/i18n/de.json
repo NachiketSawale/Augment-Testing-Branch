@@ -1,0 +1,28 @@
+{
+  "estimate": {
+    "rule": {
+      "estimateRule":"Kalkulationsregeln",
+      "estimateRuleParameter": "Kalkulationsregeln Parameter",
+      "estimateRuleScript": "Kalkulationsregeln Script",
+      "estimateComboRule" : "Projekt-Kalkulationsregeln",
+      "evaluationSequence":"Auswertungssequenz",
+
+      "detailEstimateComboRule" : "Projekt-Kalkulationsregel Details",
+      "detailEstimateRule" : "Kalkulationsregel Details",
+      "detailEstimateRuleParameter" : "Kalkulationsregeln Parameter Details",
+      "detailEstimateRuleScript" : "Kalkulationsregeln Script Details",
+
+      "estParameterGroupFk" : "Kalkulationsregeln Parametergruppe",
+      "valueDetail": "Wert Detail",
+      "defaultValue": "Standardwert",
+
+      "ruleContainer": "Kalkulationsregeln",
+      "ruleParameterContainer":"Kalkulationsregeln Parameter",
+      "ruleScriptContainer":"Kalkulationsregeln Script",
+      "rules": "Regeln",
+
+      "scriptContainerTitle":"Kalkulationsregeln Script",
+      "testInputDetailTitle":"Script Test Input"
+    }
+  }
+}

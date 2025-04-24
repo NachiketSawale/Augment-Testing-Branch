@@ -1,0 +1,364 @@
+<div class="modal-wrapper overflow-hidden ng-scope">
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+    <form name="platform-form" class="platform-form ng-pristine ng-valid ng-isolate-scope">
+    <div  class="platform-lg">
+    <div class="ng-scope">
+        <div data-accordion="" data-close-others="false" class="ng-scope" data-ng-show="UpdateOptions.ShowPrcBoq">
+            <div class="panel-group">
+                <div class="panel panel-default ng-scope ng-isolate-scope">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" ng-click="toggleOpen(0)">
+                                <span class="platform-form-group-header-text ng-binding ng-scope">{{'procurement.common.wizard.updateEstimate.UpdateGroupTitle' | translate}}:</span>
+                                <span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showUpdateGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse in" style="height: auto;" collapse="!showUpdateGroup">
+                        <div class="panel-body">
+                            <div class="platform-form-group">
+
+	                            <div class="platform-form-row">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="margin-top:0px">
+				                            {{'procurement.common.wizard.updateEstimate.boqNoteText' | translate}}
+			                            </div>
+		                            </div>
+	                            </div>
+
+                                <div class="platform-form-row" data-ng-show="false">
+                                    <div class="platform-form-col">
+                                        <div class="domain-type-boolean form-control ng-scope" style="margin-top:0px">
+                                            <input type="checkbox" data-ng-model="UpdateOptions.Update" data-platform-control-validation=""
+                                                   data-domain="boolean" class="ng-pristine ng-valid ng-not-empty ng-touched" style="margin-top:0px"/>
+
+                                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.update' | translate}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+	                            <div class="platform-form-row" data-ng-show="UpdateOptions.ShowUpdateOption">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.LinkToPrcBoq" data-platform-control-validation=""
+				                                   data-ng-disabled="false"
+				                                   data-ng-change="onUpdateLinkToPrcBoq()"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px"/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.linkBoqItem' | translate}}</span>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row" data-ng-show="UpdateOptions.ShowUpdateOption">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="margin-left: 21px">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.UpdateBoqResouce2subitem" data-platform-control-validation=""
+				                                   data-ng-disabled="!UpdateOptions.LinkToPrcBoq"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px; margin-left: 21px"/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.createBoqResouce2subitem' | translate}}</span>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row" data-ng-show="UpdateOptions.ShowUpdateOption">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="padding-left: 42px">
+				                            <select ng-model="UpdateOptions.BoqUpdateType"  class="form-control" style="flex: 1 ;display:inline; border:1px solid #ccc"
+				                                    data-ng-disabled="!UpdateOptions.HasProject || !UpdateOptions.LinkToPrcBoq">
+					                            <option value="1">{{'procurement.common.wizard.updateEstimate.DeleteExisting' | translate}}</option>
+					                            <option value="2">{{'procurement.common.wizard.updateEstimate.DisableExisting' | translate}}</option>
+					                            <option value="3">{{'procurement.common.wizard.updateEstimate.InsertNew' | translate}}</option>
+					                            <option value="4">{{'procurement.common.wizard.updateEstimate.OverwriteExisting' | translate}}</option>
+					                            <option value="5">{{'procurement.common.wizard.updateEstimate.OverwriteExistingDisableNotMatch' | translate}}</option>
+				                            </select>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.CreateBoqLineItem" data-platform-control-validation=""
+				                                   data-ng-disabled="false"
+				                                   data-ng-change="onUpdateCreateBoqLineItem()"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px"/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.createLineItemForBoq' | translate}}</span>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="padding-left: 42px">
+				                            <label class="platform-form-label" style="width: 66px">{{'procurement.common.wizard.updateEstimate.createTo' | translate}} <span class="required-cell"></span></label>
+				                            <select ng-model="UpdateOptions.EstHeaderId"  data-ng-change="estHeaderChange()" class="form-control" style="flex: 1;display:inline; border:1px solid #ccc"
+				                                    data-ng-disabled="!UpdateOptions.HasProject || !UpdateOptions.CreateBoqLineItem"
+				                                    ng-options="item.Id as item.Code for item in estHeaderOptions.items">
+				                            </select>
+				                            <input type="text" ng-model="currEstHeaderDesc" class="form-control" style="flex: 4;display:inline;float:right; border:1px solid #ccc; height: 28px" readonly="true">
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div style="display:block; height:3px"></div>
+	                            <div class="platform-form-row">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="margin-left: 42px">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.CreateProjectBoq" data-platform-control-validation=""
+				                                   data-ng-disabled="!UpdateOptions.CreateBoqLineItem"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px; "/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.createNewPrjBoq' | translate}}</span>
+				                           </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="margin-left: 21px">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.TransferNewBoqBudget" data-platform-control-validation=""
+				                                   data-ng-disabled="!UpdateOptions.CreateBoqLineItem"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px; margin-left: 21px"/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.TransferNewBoqBudget' | translate}}</span>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row"  data-ng-show="UpdateOptions.ShowUpdateOption">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="margin-left: 42px">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.CreateBoqResouce2subitem" data-platform-control-validation=""
+				                                   data-ng-disabled="!UpdateOptions.CreateBoqLineItem"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px; "/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.createBoqResouce2subitem' | translate}}</span>
+			                            </div>
+		                            </div>
+	                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	    <div data-accordion="" data-close-others="false" class="ng-scope" data-ng-show="UpdateOptions.ShowPrcBoq">
+		    <div class="panel-group">
+			    <div class="panel panel-default ng-scope ng-isolate-scope">
+				    <div class="panel-heading">
+					    <h4 class="panel-title">
+						    <a class="accordion-toggle" ng-click="toggleOpen(2)">
+							    <span class="platform-form-group-header-text ng-binding ng-scope">{{'procurement.common.wizard.updateEstimate.costCodeMapping' | translate}}:</span>
+							    <span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showPrcStructure ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+						    </a>
+					    </h4>
+				    </div>
+				    <div class="panel-collapse collapse" style="height: 0;" collapse="!showPrcStructure">
+					    <div class="panel-body" style="padding:5px">
+						    {{'procurement.common.wizard.updateEstimate.costCodePickNoteText' | translate}}
+					    </div>
+					    <div class="panel-body" style="padding:0px">
+						    <div class="flex-element flex-box flex-column" style="height: 160px;" ng-controller="prcCommonUpdateEstPrcStructureController">
+							    <platform-Grid data="gridData"></platform-Grid>
+							    <div cloud-common-overlay data-loading="!isReady || isLoading"></div>
+						    </div>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+
+	    <div data-accordion="" data-close-others="false" class="ng-scope" data-ng-show="UpdateOptions.ShowPrcItem">
+            <div class="panel-group">
+                <div class="panel panel-default ng-scope ng-isolate-scope">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" ng-click="toggleOpen(1)">
+                                <span class="platform-form-group-header-text ng-binding ng-scope">{{'procurement.common.wizard.updateEstimate.CreateGroupTitle' | translate}}:</span>
+                                <span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showCreateGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse in" style="height: auto;" collapse="!showCreateGroup">
+                        <div class="panel-body">
+                            <div class="platform-form-group">
+
+	                            <div class="platform-form-row" >
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="margin-top:0px">
+				                            {{'procurement.common.wizard.updateEstimate.itemNoteText' | translate}}
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row" data-ng-show="UpdateOptions.ShowUpdateOption">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.LinkToPrcItem" data-platform-control-validation=""
+				                                   data-ng-disabled="false"
+				                                   data-ng-change="onUpdateLinkToPrcItem()"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px"/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.linkPrcItem' | translate}}</span>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row"  data-ng-show="UpdateOptions.ShowUpdateOption">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="padding-left: 42px">
+				                            <select ng-model="UpdateOptions.PrcItemUpdateType"  class="form-control" style="flex: 1;display:inline; border:1px solid #ccc"
+				                                    data-ng-disabled="!UpdateOptions.LinkToPrcItem">
+					                            <option value="1">{{'procurement.common.wizard.updateEstimate.DeleteExisting' | translate}}</option>
+					                            <option value="2">{{'procurement.common.wizard.updateEstimate.DisableExisting' | translate}}</option>
+					                            <option value="3">{{'procurement.common.wizard.updateEstimate.InsertNew' | translate}}</option>
+					                            <option value="4">{{'procurement.common.wizard.updateEstimate.OverwriteExisting' | translate}}</option>
+					                            <option value="5">{{'procurement.common.wizard.updateEstimate.OverwriteExistingDisableNotMatch' | translate}}</option>
+				                            </select>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope">
+				                            <input type="checkbox" data-ng-model="UpdateOptions.CreateItemLineItem" data-platform-control-validation=""
+				                                   data-ng-disabled="false"
+				                                   data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0px"/>
+				                            <span>&nbsp;&nbsp;{{'procurement.common.wizard.updateEstimate.createLIneItemForItem' | translate}}</span>
+			                            </div>
+		                            </div>
+	                            </div>
+
+	                            <div class="platform-form-row">
+                                    <div class="platform-form-col">
+                                        <div class="domain-type-boolean form-control ng-scope" style="padding-left: 42px">
+                                            <label class="platform-form-label" style="width: 66px">{{'procurement.common.wizard.updateEstimate.createTo' | translate}} <span class="required-cell"></span></label>
+                                            <select ng-model="UpdateOptions.EstHeaderId"  data-ng-change="estHeaderChange()" class="form-control" style="flex: 1;display:inline; border:1px solid #ccc"
+                                                    data-ng-disabled="!UpdateOptions.HasProject || !UpdateOptions.CreateItemLineItem"
+                                                    ng-options="item.Id as item.Code for item in estHeaderOptions.items">
+                                            </select>
+                                            <input type="text" ng-model="currEstHeaderDesc" class="form-control" style="flex: 4;display:inline;float:right; border:1px solid #ccc; height: 28px" readonly="true">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-accordion="" data-close-others="false" class="ng-scope">
+            <div class="panel-group">
+                <div class="panel panel-default ng-scope ng-isolate-scope">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" ng-click="toggleOpen(3)">
+                                <span class="platform-form-group-header-text ng-binding ng-scope">{{'procurement.common.wizard.updateEstimate.advancedOption' | translate}}:</span>
+                                <span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showAdvanceGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" style="height: 0;" collapse="!showAdvanceGroup">
+                        <div class="panel-body">
+                            <div class="platform-form-group">
+
+	                            <div class="platform-form-row">
+		                            <div class="platform-form-col">
+			                            <div class="domain-type-boolean form-control ng-scope" style="margin-top:0px">
+				                            {{'procurement.common.wizard.updateEstimate.optionNoteText' | translate}}
+			                            </div>
+		                            </div>
+
+	                            </div>
+                            </div>
+	                        <div class="platform-form-group">
+
+                                <div class="platform-form-row">
+                                    <label class="platform-form-label">{{'procurement.common.wizard.updateEstimate.factor' | translate}}</label>
+
+                                    <div class="platform-form-col">
+                                        <input class="text-right domain-type-factor form-control ng-valid ng-scope ng-valid-platform ng-not-empty ng-dirty ng-valid-parse ng-touched" data-ng-model="UpdateOptions.FactorUi"
+                                               data-platform-control-validation="" data-ng-pattern-restrict="(^[+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.]{0,1}\d+)*)([,\.][\d]{0,3})$)" ng-blur="factorChange()" />
+										<div class="invalid-cell invalid-form ng-binding ng-scope" ng-show="xFactorHasErr">{{'procurement.common.wizard.updateEstimate.factorFormatErr' | translate}}</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform-form-row">
+                                    <label class="platform-form-label">{{'procurement.common.wizard.updateEstimate.jobCodeTemplate' | translate}}</label>
+
+                                    <div class="platform-form-col">
+                                        <input class="form-control" data-ng-model="UpdateOptions.JobCodeTemplate"
+                                               ng-attr-title="{{'procurement.common.wizard.updateEstimate.codeTemplateTooltip' | translate}}"/>
+                                        <div class="invalid-cell invalid-form ng-binding ng-scope" style="display:{{CodeTemplateHasError| translate}}">{{CodeTemplateError | translate}}</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform-form-row">
+                                    <label class="platform-form-label">{{'procurement.common.wizard.updateEstimate.jobDescriptionTemplate' | translate}}</label>
+
+                                    <div class="platform-form-col">
+                                        <input class="form-control" data-ng-model="UpdateOptions.JobDescriptionTemplate"
+                                               ng-attr-title="{{'procurement.common.wizard.updateEstimate.codeTemplateTooltip' | translate}}"/>
+                                    </div>
+                                </div>
+
+                                <div class="platform-form-row">
+                                    <label class="platform-form-label">{{'procurement.common.wizard.updateEstimate.updateGeneratedJob' | translate}}</label>
+
+                                    <div class="platform-form-col">
+                                        <div class="form-control" data-domain-control data-domain="boolean"
+                                             data-model="UpdateOptions.UpdateGeneratedJob">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div >
+    </div>
+    </div>
+    </form>
+</section>
+
+<footer class="modal-footer">
+	<span class="package-option">
+			<div update-estime-common-option-profile-lookup data-ng-model="UpdateOptions.optionProfile" data-options="serviceoptions1" class="package-option-lookup"></div>
+	</span>
+	<button type="button" class="btn btn-default" data-ng-disabled="!showOkButtom()" data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>
+</div>
+<style>
+	.modal-footer .package-option{
+		flex:1;
+		text-align:left;
+	}
+	.modal-footer .package-option .package-option-lookup{
+		max-width: 300px;
+	}
+	.modal-footer .package-option button.btn{
+		margin:0px;
+		padding:0px;
+		min-width:auto;
+		display:inline-block;
+	}
+</style>

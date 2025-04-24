@@ -1,0 +1,50 @@
+[{
+  "id":"hsqe.checklisttemplate.groupGrid",
+  "template":"app/components/base/grid-partial.html",
+  "title":"hsqe.checklisttemplate.groupGridContainerTitle",
+  "controller":"hsqeCheckListGroupController",
+  "uuid":"2553abee981141278e32bd1f1f601478"
+  },
+  {
+    "id":"hsqe.checklisttemplate.groupForm",
+    "template":"app/components/base/form-detail-partial.html",
+    "title":"hsqe.checklisttemplate.groupFormContainerTitle",
+    "controller":"hsqeCheckListGroupDetailController",
+    "uuid":"80b2138b1b6444cd94940936388934bd",
+    "permission":"2553abee981141278e32bd1f1f601478"
+  },
+  {
+    "id": "hsqe.checklisttemplate.headerGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "hsqe.checklisttemplate.headerGridContainerTitle",
+    "controller": "hsqeCheckListTemplateHeaderGridController",
+    "uuid": "38c695e4561b426da29491a95c08f4b6"
+  },
+  {
+    "id": "hsqe.checklisttemplate.headerForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "hsqe.checklisttemplate.headerFormContainerTitle",
+    "controller": "hsqeCheckListTemplateHeaderDetailController",
+    "uuid": "50d972a001f94e1797737f3d4457f508",
+    "permission": "38c695e4561b426da29491a95c08f4b6"
+  },{
+  "id": "hsqe.checklisttemplate.template2FormGrid",
+  "template": "app/components/base/grid-partial.html",
+  "title": "hsqe.checklisttemplate.checkTemplate2FromGridContainerTitle",
+  "controller": "hsqeCheckListTemplate2FormGridController",
+  "uuid": "cc6d6d1dc805468491510463099d8809"
+},
+  {
+    "id": "hsqe.checklisttemplate.template2FormDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "hsqe.checklisttemplate.checkTemplate2FromContainerDetailTitle",
+    "controller": "hsqeCheckListTemplate2FormDetailController",
+    "uuid": "d67472a8fa5f4a8ebb0668dbc4d5386c",
+    "permission": "cc6d6d1dc805468491510463099d8809"
+  },{
+  "id": "hsqe.checklisttemplate.translation",
+  "template": "cloud.common/partials/languagegridView.html",
+  "title": "cloud.common.entityTranslation",
+  "controller": "cloudCommonLanguageGridController",
+  "uuid": "8366ED5D81084A079789A5987C2CE3C4"
+}]

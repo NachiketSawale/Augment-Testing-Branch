@@ -1,0 +1,12 @@
+<dl class="dl-horizontal" style="margin-bottom: 10px;">
+	<dt data-ng-bind="'basics.common.changeStatus.changeToLabel' | translate"></dt>
+	<dd data-ng-bind-html="formatStatus(newStatus)"></dd>
+	<dt data-ng-bind="'basics.common.changeStatus.changedLabel' | translate"></dt>
+	<dd>{{ currentStep.validItems.length + ' ' + ('basics.common.changeStatus.itemLabel' | translate) }}</dd>
+	<dt data-ng-bind="'basics.common.changeStatus.notChangedLabel' | translate"></dt>
+	<dd>{{ currentStep.invalidItems.length + ' ' + ('basics.common.changeStatus.itemLabel' | translate) }}</dd>
+</dl>
+<div data-ng-show="currentStep.invalidItems.length">
+	<p class="bg-info" style="padding: 10px;" data-ng-bind="'basics.common.changeStatus.notChangedReason' | translate"></p>
+	<platform-grid data="currentStep.gridData"></platform-grid>
+</div>

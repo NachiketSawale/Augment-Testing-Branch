@@ -1,0 +1,173 @@
+{
+	"CompanyCode": "GUANGDONG2017001",
+	"BoQs": [
+		{
+			"WICCatalogCode": "广东项目清单",
+			"Code": "03",
+			"DescriptionInfo": {
+				"Description": "通用安装工程"
+			},
+			"Type": "",
+			"Currency": "",
+			"GaebType": "",
+			"WICFramework": "",
+			"BoQStructure": {
+				"Standard": "Free",
+				"DescriptionInfo": {
+					"Description": ""
+				},
+				"Sorting": 0,
+				"IsDefault": false,
+				"EnforceStructure": false,
+				"PreDefinedStructure": false,
+				"LeadingZeros": false,
+				"DiscountAllowed": false,
+				"SectionAllowed": false,
+				"AutoAtCopy": false,
+				"DefaultSpecification": false,
+				"SpecificationLimit": 0,
+				"BoQMask": "",
+				"NameUrb1": "",
+				"NameUrb2": "",
+				"NameUrb3": "",
+				"NameUrb4": "",
+				"NameUrb5": "",
+				"NameUrb6": "",
+				"CalcFromUrb": false,
+				"TotalHour": false,
+				"NameUserdefined1": "",
+				"NameUserdefined2": "",
+				"NameUserdefined3": "",
+				"NameUserdefined4": "",
+				"NameUserdefined5": "",
+				"BoQStructureDetails": []
+			}
+		},
+		{
+			"WICCatalogCode": "广东项目清单",
+			"Code": "04",
+			"DescriptionInfo": {
+				"Description": "市政工程"
+			},
+			"Type": "",
+			"Currency": "",
+			"GaebType": "",
+			"WICFramework": "",
+			"BoQStructure": {
+				"Standard": "Free",
+				"DescriptionInfo": {
+					"Description": ""
+				},
+				"Sorting": 0,
+				"IsDefault": false,
+				"EnforceStructure": false,
+				"PreDefinedStructure": false,
+				"LeadingZeros": false,
+				"DiscountAllowed": false,
+				"SectionAllowed": false,
+				"AutoAtCopy": false,
+				"DefaultSpecification": false,
+				"SpecificationLimit": 0,
+				"BoQMask": "",
+				"NameUrb1": "",
+				"NameUrb2": "",
+				"NameUrb3": "",
+				"NameUrb4": "",
+				"NameUrb5": "",
+				"NameUrb6": "",
+				"CalcFromUrb": false,
+				"TotalHour": false,
+				"NameUserdefined1": "",
+				"NameUserdefined2": "",
+				"NameUserdefined3": "",
+				"NameUserdefined4": "",
+				"NameUserdefined5": "",
+				"BoQStructureDetails": []
+			}
+		},
+		{
+			"WICCatalogCode": "广东项目清单",
+			"Code": "05",
+			"DescriptionInfo": {
+				"Description": "园林绿化工程"
+			},
+			"Type": "",
+			"Currency": "",
+			"GaebType": "",
+			"WICFramework": "",
+			"BoQStructure": {
+				"Standard": "Free",
+				"DescriptionInfo": {
+					"Description": ""
+				},
+				"Sorting": 0,
+				"IsDefault": false,
+				"EnforceStructure": false,
+				"PreDefinedStructure": false,
+				"LeadingZeros": false,
+				"DiscountAllowed": false,
+				"SectionAllowed": false,
+				"AutoAtCopy": false,
+				"DefaultSpecification": false,
+				"SpecificationLimit": 0,
+				"BoQMask": "",
+				"NameUrb1": "",
+				"NameUrb2": "",
+				"NameUrb3": "",
+				"NameUrb4": "",
+				"NameUrb5": "",
+				"NameUrb6": "",
+				"CalcFromUrb": false,
+				"TotalHour": false,
+				"NameUserdefined1": "",
+				"NameUserdefined2": "",
+				"NameUserdefined3": "",
+				"NameUserdefined4": "",
+				"NameUserdefined5": "",
+				"BoQStructureDetails": []
+			}
+		},
+		{
+			"WICCatalogCode": "广东项目清单",
+			"Code": "01",
+			"DescriptionInfo": {
+				"Description": "房屋建筑与建筑工程"
+			},
+			"Type": "",
+			"Currency": "",
+			"GaebType": "",
+			"WICFramework": "",
+			"BoQStructure": {
+				"Standard": "Free",
+				"DescriptionInfo": {
+					"Description": ""
+				},
+				"Sorting": 0,
+				"IsDefault": false,
+				"EnforceStructure": false,
+				"PreDefinedStructure": false,
+				"LeadingZeros": false,
+				"DiscountAllowed": false,
+				"SectionAllowed": false,
+				"AutoAtCopy": false,
+				"DefaultSpecification": false,
+				"SpecificationLimit": 0,
+				"BoQMask": "",
+				"NameUrb1": "",
+				"NameUrb2": "",
+				"NameUrb3": "",
+				"NameUrb4": "",
+				"NameUrb5": "",
+				"NameUrb6": "",
+				"CalcFromUrb": false,
+				"TotalHour": false,
+				"NameUserdefined1": "",
+				"NameUserdefined2": "",
+				"NameUserdefined3": "",
+				"NameUserdefined4": "",
+				"NameUserdefined5": "",
+				"BoQStructureDetails": []
+			}
+		}
+	]
+}

@@ -1,0 +1,48 @@
+import { IDescriptionInfo } from '@libs/platform/common';
+
+export interface IResourceResponse {
+	DdTempIdsEntities: [];
+	Description: string;
+	ProcurementItemFk: number;
+	IsRateReadOnly: boolean;
+	CurrencyFk: number;
+	Rate: number;
+	IsHired: boolean;
+	RequiredSkillList: [];
+	ProvidedSkillList: [];
+	ProvidedResourceSkillList: [];
+	ResTypeParentList: [];
+	HeaderCode: string;
+	HeaderDescription: string;
+	Id: number;
+	SiteFk: number;
+	ResourceContextFk: number;
+	TypeFk: number;
+	KindFk: number;
+	GroupFk: number;
+	DispatcherGroupFk: number;
+	CompanyFk: number;
+	CalendarFk: number;
+	UomBasisFk: number;
+	UomTimeFk: number;
+	Code: string;
+	DescriptionInfo: IDescriptionInfo;
+	ExternalCode: string;
+	Capacity: number;
+	Validfrom: dateFns;
+	Validto: dateFns;
+	Remark: string;
+	Userdefined1: string;
+	Userdefined2: string;
+	Userdefined3: string;
+	Userdefined4: string;
+	Userdefined5: string;
+	IsLive: boolean;
+	SearchPattern: string;
+	SortCode: string;
+	ItemFk: number;
+	BusinessPartnerFk: number;
+	ClerkFk: number;
+	ResResprovskilldocEntities:[];
+	ResResource2etmPlantEntities:[];
+}

@@ -1,0 +1,19 @@
+<div data-ng-controller="procurementPackageChangeDateController">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{::modalOptions.header.title}}</h2>
+    </header>
+    <section class="modal-body">
+        <div data-ng-repeat="item in modalOptions.body.title">{{item}}
+            <p data-ng-if="$odd"></p>
+        </div>
+        <div><strong>{{modalOptions.body.tip}}</strong></div>
+    </section>
+    <footer class="modal-footer">
+            <button type="button" class="btn btn-default"
+                    data-ng-click="modalOptions.onAccept()"> {{modalOptions.footer.Accept}}
+            </button>
+            <button type="button" class="btn btn-default"
+                    data-ng-click="modalOptions.onReject()"> {{modalOptions.footer.Reject}}
+            </button>
+    </footer>
+</div>

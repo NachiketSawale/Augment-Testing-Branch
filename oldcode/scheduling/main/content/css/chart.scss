@@ -1,0 +1,253 @@
+$font-size-base: 13px;
+$font-size-axis: 10px;
+$thin-stroke: 1px;
+$medium-stroke: 2pt;
+$thick-stroke: 4pt;
+$rib-gray: gainsboro;
+
+svg.chart {
+  g.timeline, g.calendarline {
+    path.domain {
+      display: none;
+      visibility: hidden;
+    }
+    .tick line, .tick-wide line {
+      stroke: #777;
+      stroke-dasharray: 2, 2;
+      stroke-width: 1px;
+    }
+    .tick-wide line {
+      /*stroke: #ccc;*/
+      stroke: #e6e6e6;
+    }
+    line {
+      stroke-width: 2px;
+      stroke: #101080;
+    }
+
+    line.vertical, line.horizontal {
+      stroke: gainsboro;
+      stroke-width: 1px;
+      shape-rendering: crispEdges;
+    }
+  }
+
+  g.timeline {
+    pointer-events: none;
+  }
+
+  g.activities {
+    rect.background {
+      fill: rgba(220, 160, 140, 0);
+    }
+  }
+
+  g.barinformation {
+    pointer-events: none;
+  }
+
+  text.barinfo {
+    font-size: 12px;
+    pointer-events: none;
+  }
+
+  g rect {
+    shape-rendering: crispEdges;
+  }
+
+  g.holiday, g.weekend {
+    rect {
+      stroke-width: 0;
+      fill: #eee;
+    }
+  }
+
+  g.weekend, g.calendarline, g.holiday {
+    pointer-events: all;
+  }
+
+  g.handle, g.finishhandle, g.starthandle, g.relationshiphandle, g.milestonehandle {
+    path, circle, rect {
+      fill: steelblue;
+      stroke: white;
+      stroke-width: 1px;
+      pointer-events: all;
+    }
+  }
+
+  rect.targetindicator {
+    fill: steelblue;
+    stroke: white;
+    stroke-width: 1px
+  }
+
+  g.link {
+    path {
+      fill: none;
+      stroke: blue;
+      stroke-width: 1px;
+      shape-rendering: crispEdges
+    }
+
+    path.background {
+      stroke-width: 8px;
+      //pointer-events: all;
+      //visibility: hidden;
+      stroke: rgba(230, 230, 230, 0) // cannot use pointer-events:all/visibility:hidden because it keeps layer below rs from receiving mouse events
+    }
+
+    path.selectedrs {
+      stroke-width: 3px;
+    }
+
+    path.arrow {
+      fill: blue;
+      fill-rule: nonzero;
+      shape-rendering: auto;
+    }
+  }
+
+  g.headers rect.header {
+    pointer-events:all;
+    visibility:hidden
+  }
+
+  path.progressline {
+    stroke-width: 2px;
+    stroke: blue;
+    fill: none;
+  }
+
+  g.axis g path.domain {
+    transform: translateX(-1px);
+  }
+
+  g.activities.readonly {
+    pointer-events: none; // prevent readonly activities from interfering with editable activities
+  }
+
+  /*
+  path, rect {
+    stroke: $rib-gray;
+    stroke-width: $thin-stroke;
+  }*/
+
+  g.event path, g.event g.event path {
+    stroke: white;
+  }
+
+  rect.panel1, rect.panel2 {
+    stroke: $rib-gray;
+    stroke-width: $thin-stroke;
+    fill: none;
+    shape-rendering: crispEdges;
+  }
+
+  g.axis, g.timeaxis {
+    path, line {
+      fill: none;
+      shape-rendering: crispEdges;
+    }
+  }
+
+  g.lines line {
+    stroke: $rib-gray;
+  }
+
+  g.tick line, path.domain {
+    stroke: $rib-gray;
+  }
+
+  g.splits {
+	line.splits {
+		stroke: $rib-gray;
+		stroke-dasharray: 2, 2;
+		stroke-width: 1px;
+	}
+  }
+
+  g.activitygroup {
+    line {
+      stroke-width: $medium-stroke;
+      shape-rendering: auto;
+    }
+
+    path {
+      fill: none;
+      stroke-width: 2px;
+    }
+
+    line.critical {
+      stroke: red;
+    }
+
+    path.critical {
+      stroke: red;
+    }
+
+    line.selected {
+      stroke-width: $thick-stroke;
+      box-shadow: 1em 0.5em 0.5em gray;
+    }
+
+    text {
+      font-size: $font-size-base;
+    }
+
+    path.click {
+      pointer-events: all; /* respond to a click even when hidden */
+      stroke-width: 20px; /* make a fat click target */
+      visibility: hidden; /* make invisible but with dimension*/
+    }
+  }
+
+  g.activitylabels {
+    text {
+      font-size: $font-size-base;
+      font-weight: normal;
+    }
+  }
+
+  g.locationbar {
+    rect {
+      stroke-width: 0;
+    }
+    text {
+      font-size: $font-size-axis;
+      color: white;
+    }
+  }
+
+  path.domain {
+    stroke-width: $thin-stroke;
+    transform: translate(-2, 0);
+  }
+
+  g.timeaxis {
+    text {
+      font-size: $font-size-axis;
+    }
+  }
+
+  rect.holiday {
+    stroke-width: 0;
+    fill: #eee;
+  }
+}
+
+div#chart, div.mainpanel {
+  p {
+    padding: 1em;
+  }
+}
+
+div.chart-tooltip {
+  position: absolute;
+  text-align: left;
+  width: 210px;
+  padding: 8px;
+  font: 10px sans-serif;
+  background: lightyellow;
+  border: solid $thin-stroke #aaa;
+  pointer-events: none;
+}

@@ -1,0 +1,157 @@
+<div class="bodymain">
+    <div class="conversation" id="conversation">
+
+        <!-- 历史消息按钮 -->
+        <!-- <div data-ng-if="methods.getHistoryLength()>=1" class="get-history" data-ng-click="methods.getHistory()">
+            {{::'cloud.desktop.botChat.chatHistory' | translate}}
+        </div> -->
+
+        <div class="message-list" id="message-list">
+            <ng-template data-ng-repeat="item in params.conversationLists track by $index" data-ng-init="slideItemInd = $index">
+                <!-- bot messages templates -->
+                <div data-ng-if="item.type == 'message'" class="chat-bot-card showmsg bot-msg"
+                     text-left>
+                    <div class="chat-bot-card-content">{{item.text}}</div>
+                </div>
+                <!-- bot hint templates -->
+                <div data-ng-if="item.type == 'hint'" class="chat-bot-card showmsg bot-msg bot-hint"
+                     text-left>
+                    <span>{{item.text}}</span>
+                </div>
+
+                <!-- bot button templates -->
+                <div data-ng-if="item.type == 'button'" class="chat-bot-card showmsg bot-msg bot-button"
+                     text-left>
+                    <button type="button" class="btn btn-default flex-element"
+                            data-ng-disabled="item.data.Readonly"
+                            data-ng-click="sendButtonText($event,item.text)">{{item.text}}
+                    </button>
+                </div>
+                <!-- user message template -->
+                <div data-ng-if="item.type == 'user'" class="chat-bot-card showmsg user-msg" data-ng-class="{'editing':item.edit}"
+                     text-left>
+                    <ng-template data-ng-if="item.text">
+                        <div class="chat-bot-card-content hover" data-ng-hide="item.edit" data-ng-click="methods.tagMessage(item,$event)">
+                            {{item.text}}
+                            <span class="tap-text">{{::'cloud.desktop.botChat.tapToEdit' | translate}}</span>
+                        </div>
+                        <p padding data-ng-hide="!item.edit" contenteditable="true" data-ng-blur="methods.blurText(item,$event)" data-ng-keydown="methods.enterEdit($event)">{{item.text}}</p>
+                    </ng-template>
+                </div>
+
+                <!-- table card -->
+                <div class="table-card showmsg" data-ng-if="item.type === 'table'">
+                    <h4>{{item.data.tableTitle}}</h4>
+                    <div class="table-box" data-ng-init="methods.initTable()">
+                        <table>
+                            <tr class="table-head">
+                                <td class="th" data-ng-repeat="th in item.data.tableHead track by $index"><p title="{{th}}" data-ng-class="{'ellipsis':methods.getCharLength(th) > 24}">{{th}}</p></td>
+                            </tr>
+                            <tr data-ng-repeat="trs in item.data.tableBody track by $index" class="table-head">
+                                <td data-ng-repeat="td in trs.data track by $index">
+                                    <p title="{{td}}" ng-if= "item.addLink" data-ng-class="{'ellipsis':methods.getCharLength(td) > 24}">
+                                        <span class="nav-td" ng-if="$index == 0" ng-click="navitation(item.module,[trs.id])">{{td}}</span>
+                                        <span ng-if="$index > 0" >{{td}}</span>
+                                    </p>
+                                    <p title="{{td}}" ng-if= "!item.addLink" data-ng-class="{'ellipsis':methods.getCharLength(td) > 24}">{{td}}</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- table card -->
+                <div class="table-card showmsg" data-ng-if="item.type === 'card'">
+                    <h4>{{item.captain}}</h4>
+                    <!--grid -->
+                    <div class="table-box" data-ng-init="methods.initTable()" data-ng-if="item.mode === 'grid'">
+                        <table>
+                            <tr class="table-head">
+                                <td class="th" data-ng-repeat="th in item.header track by $index"><p title="{{th}}" data-ng-class="{'ellipsis':methods.getCharLength(th) > 24}">{{th}}</p></td>
+                            </tr>
+                            <tr data-ng-repeat="trs in item.content track by $index" class="table-head">
+                                <td data-ng-repeat="td in trs track by $index">
+                                    <p title="{{td}}" ng-if= "item.isNavigate" data-ng-class="{'ellipsis':methods.getCharLength(td) > 24}">
+                                        <span class="nav-td" ng-if="$index == 0 && trs[item.navigateField]" ng-click="navitation(item.module,[trs[item.navigateField]])">{{td}}</span>
+                                        <span ng-if="$index > 0 || ($index == 0 && !trs[item.navigateField])" >{{td}}</span>
+                                    </p>
+                                    <p title="{{td}}" ng-if= "!item.isNavigate" data-ng-class="{'ellipsis':methods.getCharLength(td) > 24}">{{td}}</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--list -->
+                    <div class="table-box chatbot-card-list" data-ng-init="methods.initTable()" data-ng-if="item.mode === 'list'">
+                        <div data-ng-repeat="trs in item.content " class="table-head">
+                            <div ng-class="$even? 'even':'odd'">
+                                <p data-ng-repeat="(x,y) in trs track by $index">
+                                    <span class="key">{{x}}:</span>
+                                    <span ng-if="item.isNavigate" data-ng-class="{'ellipsis':methods.getCharLength(td) > 24}">
+                                                <span class="nav-td" ng-if="$index == 0 && trs[item.navigateField]" ng-click="navitation(item.module,[trs[item.navigateField]])">{{y}}</span>
+                                                <span ng-if="$index > 0 || ($index == 0 && !trs[item.navigateField])" >{{y}}</span>
+                                            </span>
+                                    <span ng-if="!item.isNavigate">{{y}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-bot-slides showmsg" data-interval="0" data-ng-if="item.type === 'form'">
+                    <form class="formBox">
+                        <div class="chat-bot-list">
+                            <div class="title" class="chat-bot-label colorLower" stacked>{{item.data.formTitle}}</div>
+                            <div class="chat-bot-item" data-ng-repeat="input in item.data.inputs track by $index">
+                                <div class="chat-bot-label colorLower" stacked>{{input.description}}</div>
+                                <input chat-bot-input data-ng-model="input.value" class="formEmailInput" type="text" required="true">
+                            </div>
+                        </div>
+                        <button type="button" chat-bot-button data-ng-click="methods.formSubmit(item.data.inputs,slideItemInd)">Submit</button>
+                    </form>
+                </div>
+
+
+                <div class="sidebar-panel slide chat-bot-slides showmsg" data-ng-if="item.type === 'todoCard'">
+                    <div class="sidebar-panel-heading"
+                         ng-switch="item.data.OwnerType + '-' + item.data.ProcessingStatus">
+                        <div class="rwd border-none">
+                            <ul class="rwd-content">
+                                <li class="title">{{item.data.Description}}</li>
+                                <li data-ng-bind-html="item.data.Comment"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-ng-if="item.data.Action.HideFooter" data-basics-workflow-task-detail-directive
+                         data-ng-model="item.data"
+                         class="flex-box flex-row sidebar-panel-body flex-element"></div>
+
+                    <div data-ng-if="!item.data.Action.HideFooter" class="sidebar-panel-body flex-element">
+                        <div data-basics-workflow-task-detail-directive data-ng-model="item.data"
+                             class="flex-box flex-row"></div>
+                    </div>
+                    <div data-ng-if="!item.data.Action.HideFooter" class="sidebar-panel-footer">
+                        <div class="btn-group flex-box">
+                            <button type="button" class="btn btn-default flex-element"
+                                    data-ng-disabled="item.data.Readonly || item.data.EscalationDisabled"
+                                    data-ng-click="break()">
+                                {{"cloud.common.cancel" | translate}}
+                            </button>
+                            <button type="button" class="btn btn-default flex-element"
+                                    data-ng-disabled="item.data.Readonly"
+                                    data-ng-click="ok(item.data)">{{"cloud.common.ok" |
+                                translate}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </ng-template>
+
+            <!-- bot loading templates -->
+            <div data-ng-if="params.loading" class="chat-bot-card bot-msg" text-left>
+                <div class="chat-bot-card-content" style="font-size: 0!important"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            </div>
+        </div>
+    </div>
+</div>

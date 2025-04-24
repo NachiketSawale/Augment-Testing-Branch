@@ -1,0 +1,83 @@
+.generateItemOption {
+	padding-top: 20px;
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+
+	fieldset.mergeOption {
+		padding: 2px 10px;
+		border: 1px solid #dcdcdc;
+		border-radius: 3px;
+		flex: 1;
+		min-width: auto;
+
+		legend {
+			margin-left: 3px;
+			width: auto;
+			background-color: #fff;
+			font-size: 13px;
+			vertical-align: middle;
+		}
+
+		label {
+			vertical-align: middle;
+			margin-top: 0px;
+		}
+
+		.platform-form-group .col-sm-12, .col-sm-6 {
+			padding-top: 7px;
+			padding-left: 0px;
+			white-space: nowrap;
+		}
+
+		input {
+			margin-top: 0px;
+			vertical-align: middle;
+		}
+	}
+
+	label.platform-form-label {
+		vertical-align: middle;
+	}
+
+	.platform-form-group {
+		padding-left: 6px;
+		display: inline-block;
+	}
+
+	fieldset.newOption {
+		padding: 2px;
+		border: 1px solid #dcdcdc;
+		border-radius: 3px;
+		flex: 0.8;
+		margin-left: 20px;
+		min-width: 350px;
+
+		legend {
+			margin-left: 3px;
+			width: auto;
+			background-color: #fff;
+			font-size: 13px;
+			vertical-align: middle;
+		}
+
+		ul {
+			padding: 4px 10px 6px
+		}
+
+		.platform-form-group {
+			padding-left: 6px;
+			display: inline-block;
+		}
+	}
+}
+
+.aggregateOption{
+	display: inline-table;
+}
+
+.profileLookupCls {
+	width: 180px;
+	display: inline-block;
+	vertical-align: middle;
+}

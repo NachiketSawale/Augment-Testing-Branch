@@ -1,0 +1,100 @@
+[
+	{
+		"id": "controlling.projectcontrols.project",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.projectcontrols.containerTitleProjects",
+		"controller": "controllingProjectcontrolsProjectMainListController",
+		"uuid": "3ebe043f5030408da9d856aae1886c83",
+		"permission": "021C5211C099469BB35DCF68E6AEBEC7"
+	},
+	{
+		"id": "controlling.projectcontrols.controllingVersions",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.projectcontrols.containerTitleControllingVersion",
+		"controller": "controllingProjectcontrolsControllingVersionsListController",
+		"uuid": "493916e729b1456c84f3b1f3034c4426",
+		"permission": "E64B8002754046949C4C8F745A4FA836"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "controlling.projectcontrols/templates/dashboard/controlling-projectcontrols-dashboard-container.html",
+		"title": "controlling.projectcontrols.groupingContainer",
+		"uuid": "773618e488874716a5ed278aa3663865",
+		"controller": "controllingProjectcontrolsDashboardController",
+		"mainService": "controllingProjectcontrolsDashboardService",
+		"configurationService": "controllingProjectControlsUIConfigurationService"
+	},
+	{
+		"id": "platform.generic.versionComparison",
+		"template": "controlling.projectcontrols/templates/dashboard/controlling-projectcontrols-dashboard-container.html",
+		"title": "controlling.projectcontrols.versionComparison.title",
+		"uuid": "1861db1513a2494f8af91b462e4c8847",
+		"controller": "controllingProjectcontrolsVersionComparisonController",
+		"mainService": "controllingProjectcontrolsVersionComparisonService",
+		"configurationService": "controllingProjectControlsVersionComparisonUIConfigService"
+	},
+	{
+		"id": "controlling.projectcontrols.Chart1",
+		"template": "basics.common/templates/chart-container.html",
+		"title": "controlling.projectcontrols.chart1ContainerTitle",
+		"controller": "controllingProjectControlsChart1Controller",
+		"uuid": "ea28ff1df3e04a40a8f75ac60c94d54b",
+		"permission": "773618e488874716a5ed278aa3663865"
+	},
+	{
+		"id": "controlling.projectcontrols.Chart2",
+		"template": "basics.common/templates/chart-container.html",
+		"title": "controlling.projectcontrols.chart2ContainerTitle",
+		"controller": "controllingProjectControlsChart2Controller",
+		"uuid": "f59596eafa894af29a7de6c633c07965",
+		"permission": "773618e488874716a5ed278aa3663865"
+	},
+	{
+		"id": "controlling.projectcontrols.lineItem",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.projectcontrols.LineItemsListController",
+		"controller": "controllingProjectControlsLineItemListController",
+		"uuid": "dd3e613e6e0434987d7f117c3ed8541",
+		"permission": "773618e488874716a5ed278aa3663865"
+	},
+	{
+		"id": "controlling.projectcontrols.actual",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.projectcontrols.ControllingActualListController",
+		"controller": "controllingProjectControlsActualListController",
+		"uuid": "3eeaffada682464f9dd7c03de5642ebf",
+		"permission": "773618e488874716a5ed278aa3663865"
+	},
+	{
+		"id": "controlling.projectcontrols.pes",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.projectcontrols.ControllingPesListController",
+		"controller": "controllingProjectControlsPesTotalListController",
+		"uuid": "236982a585d4425ca48d3e15bc66bb95",
+		"permission": "773618e488874716a5ed278aa3663865"
+	},
+	{
+		"id": "controlling.projectcontrols.contract",
+		"template": "app/components/base/grid-partial.html",
+		"title":"controlling.projectcontrols.ControllingPrcContractController",
+		"controller": "controllingProjectControlsPrcContractListController",
+		"uuid": "03acca50bd964ae798dcebe7e803f3a1",
+		"permission": "773618e488874716a5ed278aa3663865"
+	},
+	{
+		"id": "controlling.projectcontrols.CostCodesList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.projectcontrols.ControllingCostCodes",
+		"controller": "controllingProjectControlsControllingCostCodesListController",
+		"uuid": "c3ff22726eda437b84bb9a124d8085c9",
+		"permission": "773618e488874716a5ed278aa3663865"
+	},
+	{
+		"id": "controlling.projectcontrols.package",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.projectcontrols.procurementoverview",
+		"controller": "controllingProjectControlsPackageListController",
+		"uuid": "f76c9a9c29a54210b7c1fa1a72895fb0",
+		"permission": "773618e488874716a5ed278aa3663865"
+	}
+]

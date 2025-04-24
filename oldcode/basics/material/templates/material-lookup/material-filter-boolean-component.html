@@ -1,0 +1,34 @@
+<style>
+	.material-filter-boolean li div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 32px;
+	}
+
+	.material-filter-boolean li input[type='radio'] {
+		margin: 0 8px 0 0;
+	}
+</style>
+
+<div class="material-filter-boolean">
+	<ul class="material-filter-content-padding">
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="yes" name="condition" value="1" ng-model="definition.Factors[0]">
+				<label for="yes">{{ 'basics.material.lookup.condition.yes' | translate }}</label>
+			</div>
+		</li>
+
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="no" name="condition" value="0" ng-model="definition.Factors[0]">
+				<label for="no">{{ 'basics.material.lookup.condition.no' | translate }}</label>
+			</div>
+		</li>
+	</ul>
+
+	<div class="material-filter-divider-top">
+		<button class="btn pull-right material-filter-btn-apply" data-ng-click="apply()" data-ng-disabled="definition.Factors[0] == null">{{ 'basics.material.lookup.apply' | translate }}</button>
+	</div>
+</div>

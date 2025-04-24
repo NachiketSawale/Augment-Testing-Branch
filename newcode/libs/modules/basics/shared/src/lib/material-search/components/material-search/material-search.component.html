@@ -1,0 +1,4 @@
+<div class="flex-box flex-column flex-element subview-content filler">
+    <basics-shared-material-search-view *ngIf="!scope.showDetail" [scope]="scope" class="flex-box flex-column flex-element subview-content filler relative-container"></basics-shared-material-search-view>
+    <basics-shared-material-search-detail *ngIf="scope.showDetail" [scope]="scope"></basics-shared-material-search-detail>
+</div>

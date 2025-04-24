@@ -1,0 +1,1339 @@
+/*-------------------------------------------------------------------------------
+	 Modal Popup (_modalpopup.scss
+  -------------------------------------------------------------------------------*/
+
+// dark background of the standard modal dialog
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal-background;
+	background-color: $modal-backdrop-bg;
+
+	// Fade for backdrop
+	&.fade {
+		@include opacity(0);
+	}
+
+	&.in {
+		@include opacity($modal-backdrop-opacity);
+	}
+}
+
+// Kill the scroll on the body
+.modal-open {
+	overflow: hidden;
+}
+
+// Container that the modal scrolls within
+// It contains the window-class (that is also in the "class"-attribute)
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal;
+	-webkit-overflow-scrolling: touch;
+
+	// Prevent Chrome on Windows from adding a focus outline. For details, see
+	// https://github.com/twbs/bootstrap/pull/10951.
+	outline: 0;
+
+	// When fading in the modal, animate it to slide down
+	&.fade .modal-dialog {
+		@include translate3d(0, -25%, 0);
+		@include transition-transform(0.3s ease-out);
+	}
+
+	&.in .modal-dialog {
+		@include translate3d(0, 0, 0)
+	}
+
+	/* modal-body has the css class 'flex-box' by using 'bodyTemplateUrl' in the configuration.
+		But for some dialogs the modal-body also needs the css-class 'flex-column'.
+		Example: 'Matrix Display Settings(Safari-Problem)*/
+	&.body-flex-column {
+		.modal-body {
+			flex-direction: column;
+		}
+	}
+
+	/* different btn-colors via status */
+	&.error {
+		.btn-primary {
+			@include status-styles(#E8382C, none, custom, #fff, #FF3E30);
+		}
+	}
+
+	&.success {
+		.btn-primary {
+			@include status-styles(darken(#309E4B, 10%), none, custom, #fff, #309E4B);
+		}
+	}
+
+	&.warning {
+		.btn-primary {
+			@include status-styles(darken(#E8A600, 10%), none, custom, #fff, #E8A600);
+		}
+	}
+
+	@include special-grid-styles();
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 10px;
+
+	&.move {
+		cursor: move;
+	}
+}
+
+.modal-header {
+	@extend .main-color;
+	min-height: $modal-header-height;
+	height: $modal-header-height;
+	padding-left: 10px;
+	display: flex;
+
+	.db {
+		background-size: 16px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.close {
+		@include square($modal-header-height);
+		@extend .btn-main;
+	}
+
+	.modal-title {
+		font-size: 12pt;
+		flex: 1;
+		margin: 0;
+		line-height: $modal-header-height;
+		color: var(--company-font-color);
+	}
+
+	.modal-subtitle {
+		line-height: $modal-header-height;
+	}
+
+	.title-group {
+		display: flex;
+		flex: 1;
+
+		> * + *  {
+			margin-left:1rem;
+		}
+
+		.modal-title {
+			flex: initial;
+		}
+	}
+}
+
+.modal-body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	flex: 1;
+	font-size: 14px;
+	overflow-wrap: break-word;
+    word-break: break-word;
+
+	&:not(.template) {
+		padding: $padding-large-horizontal;
+
+		&.margin-large {
+			padding: $padding-xxlarge-horizontal;
+		}
+	}
+
+	&.template {
+		> .modal-body-template {
+			padding: $padding-large-horizontal;
+		}
+
+		&.margin-large {
+			> .modal-body-template {
+				padding: $padding-xxlarge-horizontal;
+			}
+		}
+	}
+
+	h1, .h1 {
+		font-weight: 600;
+		margin-bottom: 0.5em;
+	}
+
+	h2, h3, h4, h5, .h2, .h3, .h4, .h5 {
+		margin-bottom: 0.3em;
+	}
+
+	article + article {
+		margin-top: 5px;
+	}
+
+	div.toggleImg {
+		@extend .toggleImg;
+		margin-right: 0;
+	}
+
+	.lookup-grid-container {
+		.lookup-grid {
+			width: 100%;
+		}
+	}
+
+	.grid-wrapper {
+		height: $size-height-dialog;
+	}
+
+	.platformgrid {
+		height: $size-height-dialog;
+		flex-basis: auto;
+
+		/* the border outside from grid is not visible */
+		&.grid-container {
+			width: auto;
+		}
+
+		.slick-search-panel-scroller {
+			.slick-search-panel {
+				/* in grid == fix-width: 10000px. Therefore exist a layout bug*/
+				width: 100% !important;
+			}
+		}
+
+	}
+
+	.auto-height {
+		min-height: $size-min-height-grid-dialog;
+		height: 100%;
+	}
+
+	//message, info container
+	.message-wrapper {
+		line-height: normal;
+		margin-top: 10px;
+		padding: 5px;
+		text-align: left;
+		min-height: 30px;
+		font-size: 16px;
+	}
+
+	/* an example in Module 'Plant Master' - Wizard: 'Generate Requisitions and Reservations' */
+	.grid-in-form {
+		.platform-form {
+			overflow: hidden;
+			.platform-form-group {
+				.platform-form-row {
+					overflow: hidden;
+					&:first-child {
+						flex: none;
+						margin-bottom: $padding-base-vertical;
+					}
+				}
+
+				.platformgrid {
+					height: 100%;
+				}
+			}
+
+			@extend .flex-in-form;
+		}
+	}
+
+	//make form-container in dialog flex. Used in BoQ-Wizard
+	.flex-in-form {
+		[data-platform-form-layout],
+		.platform-form,
+		[data-platform-form-content],
+		.platform-form-group .platform-form-row .platform-form-col,
+		.platform-form-row {
+			display: flex;
+			flex: 1;
+			height: 100%;
+		}
+
+		.platform-form-group {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.platform-form-group .control-directive {
+			display: flex;
+		}
+	}
+
+	.tabsWrapper-tabContent-none-flex {
+		padding: 0;
+
+		.tab-content {
+			.tab-pane {
+				flex: none;
+			}
+		}
+	}
+
+	.tabsWrapper-without-border {
+		padding: 0;
+
+		.nav-tabs {
+			border: none;
+
+			> li {
+				margin-right: 16px;
+
+				&.active {
+					> a {
+						border: none;
+						font-weight: bold;
+						border-bottom: solid 2px $color-rib;
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			padding-top: 25px;
+			border: none;
+		}
+	}
+}
+
+.modal-footer {
+	@include clearfix(); // clear it in case folks use .pull-* classes on buttons
+	height: 62px;
+	min-height: 62px;
+	padding: $padding-xxlarge-vertical;
+	border-top: 1px solid $color-dropdown-divider;
+	display: flex;
+	justify-content: flex-end;
+
+	// Properly space out buttons
+	.btn + .btn {
+		margin-left: 5px;
+		margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+	}
+
+	// but override that for button groups
+	.btn-group .btn + .btn {
+		margin-left: -1px;
+	}
+
+	// and override it for block buttons as well
+	.btn-block + .btn-block {
+		margin-left: 0;
+	}
+
+	button {
+		@extend .ellipsis;
+		height: 30px;
+		padding: 0 10px;
+		max-width: 180px;
+		min-width: 100px;
+		outline: none;
+
+		img {
+			vertical-align: middle;
+		}
+
+		&.navigator-button {
+			background-size: $size-icon $size-icon;
+		}
+
+		&.btn-primary {
+			@include status-styles(darken($color-rib, 10%), none, custom, #fff, $color-rib);
+			font-weight: 500;
+			text-decoration: none;
+		}
+
+		//btn-primary, btn-secondary und btn-tertiary
+		&.btn-return {
+			@extend .btn-primary;
+		}
+
+		&.btn-secondary {
+			@extend .btn-default;
+		}
+	}
+
+	> .custom-btn-group {
+		display: inline-flex;
+		flex: 1;
+		margin-right: $padding-xlarge-horizontal;
+	}
+
+	> .custom-group {
+		@extend .custom-btn-group;
+
+		span {
+			align-self: center;
+		}
+	}
+}
+
+.modal-footer-deactivate-option {
+	@include clearfix(); // clear it in case folks use .pull-* classes on buttons
+	height: 30px;
+	min-height: 30px;
+	//padding: $padding-small-vertical;
+	margin-bottom: $padding-large-horizontal;
+	margin-left: $padding-xlarge-horizontal;
+	display: flex;
+	justify-content: flex-start;
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+
+// Scale up the modal
+@media (min-width: 768px) {
+	// Automatically set modal's width for larger viewports
+	.modal-dialog {
+		width: $modal-md;
+		margin: 30px auto;
+	}
+	.modal-content {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	}
+
+	// Modal sizes
+	.modal-sm {
+		width: $modal-sm;
+	}
+}
+
+@media (min-width: 992px) {
+	.modal-lg {
+		width: $modal-lg;
+	}
+}
+
+%containerFooter {
+	padding: $padding-xlarge-vertical $padding-xlarge-horizontal;
+	height: 50px;
+	min-height: 50px;
+	align-items: center;
+	border-top: 1px solid $color-divider;
+	font-size: $size-font-dialog-footer;
+
+	.term-container {
+		flex: 1;
+		text-align: right;
+	}
+}
+
+// actual dialog
+.modal-content {
+	box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	position: relative;
+	background-color: $color-body-background;
+	background-clip: padding-box;
+	// Remove focus outline from opened modal
+	outline: 0;
+	flex-direction: column;
+	display: flex;
+
+	.toolbar {
+		min-height: 30px;
+	}
+
+	.container-footer {
+		@extend %containerFooter;
+	}
+
+	/* used in workflow-designer. Bidder Wizard-Dialog */
+	.workflow-task-detail-wrapper, .workflow-task-detail {
+		@extend .modal-wrapper;
+	}
+}
+
+// Common Backdrop - used in login and company
+.commonBackdrop {
+	// need new background-color definition
+	background-color: #e6e1de;
+	height: 100%;
+	font-size: 16px;
+	overflow: hidden;
+
+	&.fade {
+		transition: opacity 1s linear;
+		background-color: $color-logindialog-fade-background;
+		opacity: 1;
+	}
+}
+
+.modal-dialog {
+	// Primary = Login and Company dialog
+	&.primary {
+		max-height: 90%;
+		max-width: 90%;
+
+		.modal-header {
+			overflow: hidden;
+			height: 58px;
+			min-height: 58px;
+			color: white;
+			background-color: var(--company-rib-color);
+		}
+
+		.modal-body {
+			margin: 0 10px;
+		}
+
+		.productLogo {
+			@include riblogo();
+			flex: 1;
+			margin-top: 10px;
+			background-position: left;
+			background-size: auto;
+		}
+
+		.productTitle {
+			font-size: 31px;
+			font-weight: bold;
+			line-height: 58px;
+		}
+
+		.itwo40-logo {
+			height: 100%;
+			max-height: 60px;
+			max-width: 60px;
+			background-size: auto;
+			margin-top: 15px;
+			margin-right: 10px;
+			background-repeat: no-repeat;
+			background-position: right center;
+		}
+
+		.company-login-logo {
+			+ img {
+				align-self: center;
+				max-height: 38px;
+				margin: 10px;
+			}
+
+			&.hide {
+				display: none !important;
+			}
+
+		}
+
+		.platform-form-group {
+			border-spacing: 0 8px;
+
+			&+ h3 {
+				margin-top: $padding-xlarge-vertical;
+			}
+
+			.platform-form-row {
+				&.line {
+					.platform-form-label {
+						padding-top: 0;
+					}
+					.platform-form-col {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+
+		.section-header {
+			margin-bottom: 0;
+			padding-top: 5px;
+			margin-top: 10px;
+		}
+
+		.modal-footer {
+			//border: none;
+			height: auto;
+
+			.text-left {
+				line-height: 30px;
+				font-size: 12px;
+			}
+		}
+
+		hr {
+			border-top: 1px solid $color-divider;
+			margin: 0px 0;
+		}
+
+		.version {
+			font-size: 11px;
+			color: rgba($color-text, .5);
+			padding: 7px 0 0 7px;
+		}
+
+		.errorbox {
+			display: flex;
+			align-items: center;
+			padding: 0 5px;
+		}
+
+		.processingInfo {
+			line-height: 24px;
+			padding: 5px;
+			text-align: left;
+			margin: 5px 15px;
+		}
+
+		.social-icon {
+			height: 30px;
+			width: 30px;
+			margin: 0 8px;
+			background-size: 30px;
+		}
+	}
+
+	&.maximized {
+		max-height: inherit !important;
+		max-width: inherit !important;
+
+		.modal-body {
+			max-height: inherit !important;
+		}
+	}
+
+	.top-description {
+		margin: $padding-large-vertical 0 $padding-xxlarge-vertical 0;
+		//to make long texts more readable
+		max-width: 600px;
+	}
+
+	.bottom-description {
+		margin-top: $padding-large-horizontal;
+	}
+}
+
+%mboxIcon {
+	@include square($dialog-msg-icon-size);
+	min-width: $dialog-msg-icon-size; //with long message texts, the icon becomes smaller
+	background-size: $dialog-msg-icon-size $dialog-msg-icon-size;
+	overflow: hidden;
+	margin-right: $padding-xlarge-horizontal;
+}
+
+%iconMessage {
+	.icon {
+		@extend %mboxIcon;
+	}
+
+	.message {
+		align-self: center;
+		flex: 1;
+		flex-basis: auto; //IE BugFix
+	}
+}
+
+.icon-message {
+	@extend %iconMessage;
+	display: flex;
+	position: relative;
+}
+
+.ganttVersion {
+	.slick-pane-right {
+		border-left: none;
+	}
+}
+
+//resize function in modal-dialogs
+.modal-content.ui-resizable {
+	height: 100%;
+
+	.modal-wrapper {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		//flex-basis: auto; //because IE. since 4.1 not supported
+
+		/*
+			BugFix for the Dialog Assign Activity Template --> remove height: 100%
+		 */
+
+		&.grid-wrapper {
+			height: $size-height-dialog;
+		}
+	}
+
+	.modal-body,
+	div[data-ng-controller] { // that is to revise. It's bad practise
+		@extend .modal-wrapper;
+	}
+
+	//tabs in resize function
+	.tabsWrapper {
+		@extend .modal-wrapper;
+		height: 100%;
+
+		&.scroll {
+			.tab-content {
+				overflow-y: auto;
+			}
+		}
+
+		.tab-content {
+			@extend .modal-wrapper;
+			height: 100%;
+
+			.tab-pane {
+				&.active {
+					@extend .modal-wrapper;
+					height: 100%;
+				}
+
+				> :nth-child(1) {
+					@extend .modal-wrapper;
+					height: 100%;
+				}
+
+				.toolbar {
+					min-height: 30px;
+				}
+				.platformgrid {
+					flex-basis: auto;
+				}
+			}
+		}
+	}
+
+	&.resizeDialog {
+		.modal-body, .modal-wrapper {
+			//flex-basis: 0;
+		}
+
+		.tabsWrapper {
+			//During reisze there are problms with flex-basis: auto. In IE and FF.
+			//Therefore set 0 during resizing
+			flex-basis: 0;
+
+			.tab-content {
+				flex-basis: 0;
+				overflow: hidden;
+
+				.tab-pane {
+					flex-basis: 0;
+					display: none;
+
+					&.active {
+						display: flex;
+					}
+
+					> :nth-child(1) {
+						flex-basis: 0;
+					}
+
+					.platformgrid {
+						flex-basis: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------------------------------------------------------------------
+// special dialogs
+// --------------------------------------------------------------------------------------------------------
+
+// --- messagebox dialog ----------------
+.msgbox {
+	//@extend %iconMessage;
+
+	p {
+		margin: 0;
+	}
+
+	.modal-body {
+		padding: $padding-xxlarge-horizontal;
+	}
+}
+
+// --- detail messagebox dialog ----------------
+.detail-msgbox {
+	//get the same z-index as popup-container.
+	z-index: 9999 !important;
+
+	.modal-body-template {
+		// to get the scrollbar for detail block
+		overflow: hidden;
+	}
+
+	.modal-details {
+		word-break: break-word;
+		overflow-y: auto;
+		display:flex;
+		flex-direction: column;
+		flex:1;
+		position: relative;
+
+		ul, ol {
+			padding-left: 20px;
+			list-style: disc;
+
+			ul, ol {
+				padding-left: 17px;
+				list-style: circle;
+			}
+		}
+
+		// p margins disabled because we use a margin between detail parts
+		p {
+			margin: 0;
+		}
+
+		// between visible detail parts a margin is needed
+		> div:not(.ng-hide) + div:not(.ng-hide) {
+			margin-top: $padding-xxlarge-vertical;
+		}
+
+		&.longtext {
+			border-top: 1px solid $color-dropdown-divider;
+			padding: 20px 0 $padding-base-vertical ($mbox-icon-size + ($padding-xlarge-horizontal - $padding-xlarge-vertical));
+		}
+
+		&.grid {
+			flex: 1;
+			position: relative;
+		}
+	}
+
+	.modal-content:not(.expanded) {
+		.ui-resizable-handle {
+			display: none !important;
+		}
+	}
+}
+
+
+// --- special error dialog ----------------
+.error-dialog {
+	@extend .detail-msgbox;
+}
+
+// --- settings dialog --------------------
+.modal.app-settings {
+	i.ico-rib-logo {
+		background-size: 50px;
+	}
+}
+
+// --- dialog for the layout manager ----------------
+.layoutDialog {
+	.modal-dialog {
+		// unnecessary?
+		//display: flex;
+		//flex-direction: column;
+		height: 85%;
+
+		// unnecessary?
+		//.modal-content {
+		//	flex: 1;
+		//	display: flex;
+		//	flex-direction: column;
+		//}
+
+		//.modal-body {
+		//	flex: 1;
+		//	display: flex;
+		//}
+	}
+}
+
+.master-detail-dialog {
+	.master-list-contents {
+		border: $color-border $border-width-default solid;
+	}
+
+	.master-list {
+		li {
+			height: 33px;
+
+			> .master-item {
+				width: 100%;
+				display: block;
+				padding: $padding-large-vertical $padding-large-horizontal;
+
+				&.title {
+					@extend .h4;
+					color: $color-text-light;
+					opacity: 1;
+					padding-left: $padding-small-horizontal;
+				}
+
+				> span {
+					@extend .ellipsis;
+					vertical-align: middle;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+.about-dialog {
+	.modal-body {
+		.ico-rib-logo {
+			@include square(68px);
+			background-size: 68px;
+			margin-right: $padding-xlarge-horizontal;
+		}
+	}
+
+	.modal-body-template {
+		flex-basis: auto; //IE11 Bugfix
+	}
+}
+
+.company-dialog {
+	#company-scroller {
+		//overflow-y: auto;
+		//max-height: 400px;
+		min-height: 200px;
+	}
+}
+
+//wizard in angular components
+.wizard-wrapper {
+	.button-wrapper-div {
+		display: flex;
+		justify-content: flex-end;
+		height: 46px;
+		min-height: 46px;
+		border-top: 1px solid $color-dropdown-divider;
+		padding-top: $padding-xxlarge-vertical;
+
+		button {
+			align-self: flex-end;
+			width: 140px;
+			height: 30px;
+			padding: 0;
+			margin-left: $padding-small-horizontal;
+		}
+	}
+
+	//inner content
+	.steps {
+		.step {
+			//resize bugfix
+			#ui-layout-east, #ui-layout-west {
+				@extend .modal-wrapper;
+			}
+		}
+
+		.button-wrapper-div {
+			height: auto;
+			min-height: inherit;
+			border-top: none;
+			padding-top: 0;
+		}
+
+		.current-remove {
+			display: none;
+		}
+	}
+
+	.modal-body {
+		.infoIcon {
+			@include square(16px);
+			background-size: 16px;
+			margin-right: $padding-small-horizontal;
+			vertical-align: sub;
+			display: inline-block;
+		}
+	}
+
+	/** NavigatorButtons cannot be used in generic Wizard!
+	The DispatchCreateBackOrderWizard Dialog is an exception.
+	*/
+	.navigator-button, .ico-goto {
+		display: none !important;
+	}
+
+	.dispatch-create-backorder-wizard {
+		.navigator-button, .ico-goto {
+			display: unset !important;
+		}
+	}
+
+	.steps-indicator li.current a:before {
+		background-color: $color-rib;
+	}
+
+	.message-box {
+		margin-bottom: 10px;
+		padding: 5px;
+	}
+
+	.infoText {
+		@include square(16px);
+		margin-right: $padding-small-horizontal;
+	}
+}
+
+.wizard-dialog {
+	height: 100%;
+
+	.steps-indicator {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+
+		&:before {
+			border-top: 1px solid $color-dropdown-divider;
+			background-color: transparent;
+			left: 5%;
+			right: 5%;
+		}
+
+		li {
+			display: block;
+			list-style-type: none;
+			flex: 0 1 auto;
+			pointer-events: all;
+		}
+
+		li.current a:before {
+			background-color: $color-rib;
+		}
+	}
+
+	.modal-wrapper {
+		height: 100%;
+	}
+}
+
+/* css for generic-wizard */
+.genWiz {
+	.characteristics-container {
+		overflow-y: scroll;
+		padding:5px;
+
+		.form-control {
+			display: inline-block;
+
+			.input-group-btn .btn {
+				border-width: 0 0 1px 1px;
+			}
+		}
+	}
+
+	label {
+		margin-left: 2px;
+	}
+
+	.steps {
+		overflow-y: scroll;
+	}
+
+	.relationWest {
+		display: none !important;
+	}
+
+	img.bprating {
+		max-width: 20%;
+		min-width: 20%;
+	}
+}
+
+/* fix resize problem in wizard-dialog */
+.wizard-dialog-flex {
+	@extend .flex-box;
+	@extend .flex-column;
+	@extend .flex-element;
+}
+
+.wizard-dialog-1 {
+	@extend .wizard-dialog-flex;
+
+	.modal-body {
+		@extend .margin-large;
+		@extend .overflow-hidden;
+
+		.wizard-dialog-body, .steps-wrapper, .steps, .stepContainer, section, .step-form {
+			@extend .wizard-dialog-flex;
+			@extend .overflow-hidden;
+		}
+	}
+	form {
+		overflow: auto;
+	}
+}
+
+.form-without-label {
+
+	form, [data-platform-form-layout], [data-platform-form-content], .platform-form-group {
+		@extend .wizard-dialog-flex;
+		@extend .overflow-hidden;
+	}
+
+	.platform-form-group {
+		display: block;
+		.platform-form-row {
+			display: block;
+			margin-bottom: $padding-base-vertical;
+
+			&.form-grid-container {
+				@extend .wizard-dialog-flex;
+				@extend .overflow-hidden;
+
+				.platform-form-col {
+					@extend .wizard-dialog-flex;
+					@extend .overflow-hidden;
+					.control-directive {
+						@extend .wizard-dialog-flex;
+					}
+				}
+			}
+
+			.platform-form-col {
+				display: block;
+			}
+		}
+	}
+}
+
+.grid-dialog {
+	.grid-container-wrapper, .grid-content-wrapper {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+	}
+}
+
+// Input Box
+.modal.input-box {
+	label {
+		line-height: var(--form-control-height);
+		margin-right: $padding-base-horizontal;
+	}
+
+	input {
+		flex: 1;
+	}
+
+	.invalid-cell {
+		color: $color-red;
+	}
+}
+
+// Long Text Dialog
+.longtext-dialog .split {
+	overflow: hidden;
+}
+
+.longtext-dialog .split .longtext  {
+	overflow-y: auto;
+	padding: 10px;
+	border: 1px solid gainsboro;
+}
+
+.reportLanguageList {
+	width: 200px;
+}
+
+.form-options-dialog {
+	height: 100%;
+	flex-direction: column;
+
+
+	[data-platform-form-container], .platform-form-container, .platform-form, [data-platform-form-layout], [data-platform-form-content] {
+		height: 100%;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+
+		.platform-form-group {
+			height: 100%;
+
+			.platform-form-row {
+				height: var(--form-control-height);
+
+				&.flex-container {
+					height: auto;
+
+					.platform-form-col {
+						display: flex;
+						height: 100%;
+
+						.control-directive {
+							display: flex;
+							flex-direction: column;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.message-dialog {
+	.modal-content {
+		border-radius: 6px;
+
+		&.expanded {
+			.modal-footer {
+				border-top: 1px solid $color-dropdown-divider;
+			}
+		}
+
+		&.ui-resizable {
+			.modal-body {
+				.modal-details {
+					max-height: none;
+				}
+			}
+		}
+
+		header {
+			background: none;
+			justify-content: end;
+			min-height: 24px;
+			height: 24px;
+
+			//display: none;
+			.modal-title {
+				display: none;
+			}
+
+			button.close {
+				@include status-styles(none);
+				width: 48px;
+				height: 48px;
+				background: none;
+				z-index: 1;
+			}
+
+		}
+
+		.modal-body {
+			padding: 0;
+
+			.modal-body-template {
+				overflow: hidden;
+			}
+
+			.icon-message {
+				padding: 0 24px 16px 24px;
+			}
+
+			.modal-details {
+				padding: 12px 24px 16px 24px;
+				overflow: auto;
+				border-top: 1px solid $color-dropdown-divider;
+				max-height: 320px;
+				font-size: 12px;
+
+				p {
+					margin-bottom: 8px;
+				}
+			}
+
+			.input-dialog {
+				margin: 20px 24px;
+			}
+		}
+
+		.modal-footer {
+			min-height: 72px;
+			height: 72px;
+			padding: 16px 24px 24px;
+			border-top: none;
+
+			button {
+				outline: none;
+				height: 32px;
+				min-width: 80px;
+				padding: 8px 24px;
+				line-height: 100%;
+				border-radius: 4px;
+				box-shadow: none;
+				text-decoration: none;
+
+				&.btn-default {
+					@include status-styles(#ECF7FF, none, custom, inherit, #fff, inherit, #dcdcdc);
+				}
+			}
+
+			.custom-btn-group {
+				.btn-default {
+					@include status-styles(none);
+					@include list-of-icons(auto, 32px, 16px, iconHover);
+					display: flex;
+					align-items: center;
+					padding: 0;
+					border: none;
+					min-width: fit-content;
+
+					&:hover {
+						color: #005fa3 !important;
+					}
+
+					&:hover {
+						color: #005fa3 !important;
+					}
+
+					span, svg {
+						margin-right: 6px;
+					}
+				}
+			}
+
+			.btn + .btn {
+				margin-left: 16px;
+			}
+
+		}
+	}
+}
+
+.header-info-dialog {
+	table {
+		table-layout: fixed;
+
+		td {
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	ul, ol {
+		margin: 0 0 16px 20px;
+		li {
+			ul, ol {
+				margin: 8px 0 16px 20px;
+			}
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+}

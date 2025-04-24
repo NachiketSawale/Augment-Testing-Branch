@@ -1,0 +1,41 @@
+{
+	"CompanyCode": "GUANGDONG2017001",
+	"Assemblies": [
+		{
+			"AssemblyCatalogCode": "000250",
+			"AssemblyCode": "C1-1-1",
+			"WicItems": [
+				{
+					"WicCatalogCode": "GUANGDONG2017001",
+					"RootReference": "03",
+					"ParentReference": "030101",
+					"Reference": "030101001"
+				},
+				{
+					"WicCatalogCode": "GUANGDONG2017001",
+					"RootReference": "03",
+					"ParentReference": "030101",
+					"Reference": "030101002"
+				}
+			]
+		},
+		{
+			"AssemblyCatalogCode": "000250",
+			"AssemblyCode": "C1-1-2",
+			"WicItems": [
+				{
+					"WicCatalogCode": "GUANGDONG2017001",
+					"RootReference": "03",
+					"ParentReference": "030101",
+					"Reference": "030101003"
+				}
+			]
+		},
+		{
+			"AssemblyCatalogCode": "000250",
+			"AssemblyCode": "C1-1-3",
+			"WicItems": [
+			]
+		}
+	]
+}

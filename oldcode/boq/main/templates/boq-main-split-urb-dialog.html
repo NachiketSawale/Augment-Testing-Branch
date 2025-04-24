@@ -1,0 +1,13 @@
+<div data-ng-controller="boqMainSplitUrbController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body" >
+        <div cloud-common-overlay data-loading="isBusy" data-info="busyInfo"></div>
+        <div class="fullheight">
+            <div data-platform-form data-form-options="formOptions" entity="entity"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="okClicked()" data-ng-disabled="!canExecuteOkButton()">{{::'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

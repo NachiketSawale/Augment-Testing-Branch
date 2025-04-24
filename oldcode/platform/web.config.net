@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <system.webServer>
+	  <httpProtocol>
+		 <customHeaders>
+			<clear/>
+			<remove name="X-Powered-By"/>
+			<remove name="X-AspNetWebPages-Version"/>
+			<add name="X-Frame-Options" value="SAMEORIGIN"/>
+			<add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains"/>
+			<add name="X-Xss-Protection" value="1; mode=block"/>
+			<add name="X-Content-Type-Options" value="nosniff"/>
+			<add name="Referrer-Policy" value="strict-origin-when-cross-origin"/>
+			<add name="Permissions-Policy" value="sync-xhr=(), document-domain=()" />
+			<add name="Content-Security-Policy" value="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"/>
+			<!--
+			<add name="Cross-Origin-Resource-Policy" value="same-origin"/>
+			<add name="Cross-Origin-Opener-Policy" value="same-origin" />
+			<add name="Cross-Origin-Embedder-Policy" value="credentialless" />
+			-->
+		 </customHeaders>
+	  </httpProtocol>
+	  <rewrite>
+		 <outboundRules>
+			<rule name="Remove Server response header" stopProcessing="true">
+			   <match serverVariable="RESPONSE_SERVER" pattern=".*"/>
+			   <action type="Rewrite" value=""/>
+			</rule>
+		 </outboundRules>
+	  </rewrite>
+   </system.webServer>
+</configuration>

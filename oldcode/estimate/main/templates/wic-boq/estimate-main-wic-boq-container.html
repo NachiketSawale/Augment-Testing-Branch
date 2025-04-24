@@ -1,0 +1,30 @@
+<div class="flex-box flex-column flex-element filler" data-ng-controller="estimateMainWicBoqListController" >
+
+    <div data-platform-kendo-splitter-adjust id="wicGroupTreeModel" class="flex-element"
+         option="{panes: [ { collapsible: true, size: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}" >
+
+        <div id="ui-layout-east"  data-ng-controller="estimateWicGroupController">
+
+            <div id="company-scroller" class="overflow filler">
+                <div treecontrol class="tree-classic"
+                     data-tree-model="wicGroupTree"
+                     data-options="treeOptions"
+                     data-order-by="code"
+                     data-on-selection="onSelection(node)"
+                     data-on-node-dbl-click="onNodeDblClick(node)"
+                     data-selected-node="treeOptions.selectedNode"
+                     data-expanded-nodes="treeOptions.expandedNodes">
+                    <span style="" class="block-image control-icons" data-ng_class="::classByType(node)"> </span>
+                    <span data-ng_bind="getDisplaytext(node)"></span>
+                    <button type="button" class="btn" data-ng-if="node.Image" data-ng_class="node.Image" data-ng_click="removeFilter($event,node)"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="ui-layout-west">
+            <div class="flex-box flex-column filler">
+                <platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+            </div>
+        </div>
+    </div>
+</div>

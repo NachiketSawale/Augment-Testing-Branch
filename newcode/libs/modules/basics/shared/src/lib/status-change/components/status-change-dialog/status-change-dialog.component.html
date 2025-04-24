@@ -1,0 +1,21 @@
+<div class="dialogBody" [ngSwitch]="currentPage">
+	<div *ngSwitchCase="StatusPage.editor">
+		<basics-shared-status-change-editor *ngIf="editorConfig" [config]="editorConfig"
+		                                    (selectChanged)="onSelectStatusChanged($event)"
+		                                    (selectFinished)="onSelectStatusFinished($event)">
+
+		</basics-shared-status-change-editor>
+	</div>
+	<div *ngSwitchCase="StatusPage.history">
+		<basics-shared-status-change-history *ngIf="currentGroup.entityIds.length === 1"
+		                                     [conf]="modalOptions.statusChangeConf"
+		                                     [entityId]="currentGroup.entityIds[0]"/>
+	</div>
+	<div *ngSwitchCase="StatusPage.result">
+		<basics-shared-status-change-result [results]="results ?? []"/>
+	</div>
+</div>
+
+
+
+

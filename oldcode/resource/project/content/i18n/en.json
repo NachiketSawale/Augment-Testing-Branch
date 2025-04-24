@@ -1,0 +1,84 @@
+{
+  "resource": {
+    "project": {
+      "plantcostcodeTitle": "Plant Cost Code",
+      "plantcostcoderequisitionListTitle": "Plant Cost Code Requisitions",
+      "projectExecPlannerItemListTitle": "Execution Planner Item",
+      "projectExecPlannerItemDetailTitle": "Execution Planner Item Details",
+      "projectrequisitionListTitle": "Project Requisitions",
+      "entityCostCodeCode": "Cost Code",
+      "entityCostCodeDescInfo": "Cost Code Description Info",
+      "entityResourceDescInfo": "Resource Description Info",
+      "resourceProjectEntity": "Project",
+      "estimateHeaderEntity": "Estimates",
+      "plantCostCodeEntity": "Plant Cost Codes",
+      "createExecPlannerItemWizard": {
+        "updateexecutionplanneritem": "Update Execution Planner Item",
+        "wizardDialogTitle": "Create Execution Planner Item"
+      },
+      "projectWizard": {
+        "titel": "Create Reservation",
+        "creationErrorNoProjectSelectedTitle": "Error: No project selected",
+        "creationErrorNoProjectSelected": "No project selected!\rPlease select a project in Container \"Projects\" in order to execute the \"Create Reservation\" wizard."
+      },
+      "validOnCheckBox": "Use Resource valid on Due Date",
+      "validOnDueDate": "Due Date",
+      "genRequisitionWiz": {
+        "title": "Generate Resource Requisition from Estimate",
+        "proccessing": {
+          "title": "Generating Requisitions..."
+        },
+        "completition": {
+          "title": "Completition",
+          "message": "{0} Requisitions generated!",
+          "errorMessage": "Error!"
+        }
+      },
+      "entityDueDate": "Due Date",
+      "entityActionItemStatus": "Action Item Status",
+      "entityDocument": "Document",
+      "entityPlantCertificate": "Plant Certificate",
+      "entityContractHeader": "Contract Header",
+      "entityBusinessPartner": "Business Partner",
+      "entityTransportStart": "Transport Start",
+      "entityTransportEnd": "Transport End",
+      "entityDeliveryTimesFrom": "Delivery Time From",
+      "entityDeliveryTimeStill": "Delivery Time Still",
+      "entityClerk": "Clerk",
+      "entityClerkResponsible": "Clerk Responsible",
+      "entityIsAuthorized": "Permission",
+      "entityIsRequestDate": "Is Requested Date",
+      "entityIsRequestUrl": "Is Requested Url",
+      "entityIsRequestPrjDocument": "Is Requested Project Document",
+      "entityIsRequestPlantCertificate": "Is Requested Plant Certificate",
+      "entityIsRequestBizPartner": "Is Requested Business Partner",
+      "entityIsRequestPrcContract": "Is Requested Procurement Contract",
+      "entityIsRequestClerk": "Is Requested Clerk",
+      "requisitionTimeslot": "Requisition Timeslot",
+      "requisitionTimeslotListTitle": "Requisition Timeslots",
+      "requisitionTimeslotDetailTitle": "Requisition Timeslot Details",
+      "initialStartDate": "Initial Start Date",
+      "initialDuration": "Initial Duration",
+      "initialEndDate": "Initial End Date",
+      "actualStartDate": "Actual Start Date",
+      "actualDuration": "Actual Duration",
+      "actualEndDate": "Actual End Date",
+      "timeslotNumber": "Timeslot Number",
+      "assignTimeslotWizard": {
+        "description": "Assign timeslot to requisitions",
+        "title": "Assign Timeslot",
+        "errNoRequisition": "Please select one or more requisitions first"
+      },
+      "updateTimeslotRequisitionsWizard": {
+        "description": "Update Timeslot and Requisitions",
+        "title": "Update Timeslot Requisitions",
+        "errNoProject": "Please select a project first",
+        "errNoRequisitionAssigned": "There are no requisitions assigned to the selected timeslot",
+        "allTimeslots": "Update All Timeslots",
+        "newStartDate": "New Start Date"
+      },
+      "timeslot": "Timeslot"
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+<div class="platform-form-group" data-ng-controller="basicsWorkflowLabelFormatDialog">
+	<div class="platform-form-row">
+		<div class="platform-form-label">{{'basics.workflow.modalDialogs.labelText' | translate}}</div>
+		<div class="platform-form-col">
+			<input class="form-control" ng-model="modalOptions.value.displayText" type="text">
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<div class="platform-form-label">{{'basics.workflow.modalDialogs.labelFormat' | translate}}</div>
+		<div class="platform-form-col">
+
+			<div data-error="error" data-platform-alert></div>
+			<div class="layout1"
+			     data-custom-template='basics.workflow/templates/dialogs/workflow-text-style-editor.html'
+			     data-enable-bootstrap-title="true"
+			     data-ng-disable="true"
+			     data-ng-model="modalOptions.value.displayText"
+			     data-platform-style-editor-directive
+			     data-style-handle="styleHandle"
+			     data-textarea-class="cell-center"
+			     data-textarea-height="130px"
+			     data-textarea-id="itemTextHtmlEditor"
+			     data-textarea-name="textareaQuestion"
+			     id="textSampleArea"></div>
+		</div>
+	</div>
+</div>
+
+
+
+

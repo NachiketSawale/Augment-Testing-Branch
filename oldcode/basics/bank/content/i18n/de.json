@@ -1,0 +1,18 @@
+{
+	"basics": {
+		"bank": {
+			"tabHeader": "Tab",
+			"BasCountryFk": "Land",
+			"Sortcode": "Bankleitzahl",
+			"BankName": "Name",
+			"Street": "Straße",
+			"City": "Stadt",
+			"Bic": "BIC",
+			"Zipcode": "Postleitzahl",
+			"detailBankTitle": "Bank Details",
+			"listBankTitle": "Banken",
+			"entityBank": "Bank",
+			"bankDescription": "Die Bank ist ein Kreditinstitut"
+		}
+	}
+}

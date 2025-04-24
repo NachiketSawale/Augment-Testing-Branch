@@ -1,0 +1,19 @@
+{
+	"basics": {
+		"payment": {
+			"detailPaymentTitle": "Zahlungskondition Details",
+			"listPaymentTitle": "Zahlungskonditionen",
+
+			"netDays": "Tage nettofällig",
+			"DiscountPercent": "Skontoprozent",
+			"CalculationType": "Berechnungsart",
+			"DayOfMonth": "Tag des Monats",
+			"PrintDescriptionInfo": "Drucktext kurz",
+			"PrintTextDescriptionInfo": "Drucktext lang",
+			"DiscountDays": "Skonto Tage",
+
+			"payment": "Zahlungskondition",
+			"PaymentTranslation": "Übersetzung"
+		}
+	}
+}

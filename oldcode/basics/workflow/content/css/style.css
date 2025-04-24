@@ -1,0 +1,105 @@
+.message-warn{
+    margin: 5px 5px;
+    color: orange;
+}
+
+.re-assign-sidebar-container{
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.re-assign-sidebar-container .re-assign-sidebar-label{
+	font-size: 12pt;
+    padding-bottom: 5px;
+}
+
+.re-assign-sidebar-container .re-assign-sidebar-content{
+	display: flex;
+	flex-direction: row;
+}
+
+.re-assign-sidebar-container .re-assign-sidebar-content .re-assign{
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+}
+
+.re-assign-sidebar-container .re-assign-sidebar-content .re-assign .re-assign-label{
+	display: flex;
+	align-items: center;
+	margin-right:0px;
+	padding-right:10px;
+	padding: 0px;
+}
+
+.re-assign-sidebar-container .re-assign-sidebar-content .re-assign .clerk{
+	margin-right:5px;
+	width: 80%;
+}
+
+
+
+.re-assign-sidebar-container .re-assign-sidebar-content .re-assign button{
+	min-width: 26px;
+	margin-left: 0px
+}
+.re-assign .input-group-btn{
+	display: flex;
+	 justify-content: center;
+}
+
+.re-assign-sidebar-container .re-assign-sidebar-content .re-assign .btn + .btn {
+	margin-left: 0px;
+	 margin-bottom: 0;
+}
+
+.re-assign-sidebar-container .re-assign-sidebar-content .re-assign-btn{
+	width: 20%;
+}
+
+
+.re-assign-popup-container{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.re-assign-popup-container .re-assign{
+	display: flex;
+	justify-content: space-around;
+}
+
+.re-assign-popup-container .re-assign .re-assign-label{
+	display: flex;
+	align-items: center;
+	margin-right:10px;
+	padding: 0px;
+}
+
+.re-assign-popup-container .re-assign .clerk{
+	margin-right:10px;
+}
+
+
+
+.re-assign-popup-container .re-assign button{
+	min-width: 26px;
+	margin-left: 0px
+}
+.re-assign .input-group-btn{
+	display: flex;
+	 justify-content: center;
+}
+
+.re-assign-popup-container .re-assign .btn + .btn {
+	margin-left: 0px;
+	 margin-bottom: 0;
+}
+
+.re-assign-popup-container .re-assign-btn{
+	margin-right:10px;
+}
+
+.highlight-skipped-action-instance{
+	text-decoration: line-through;
+}

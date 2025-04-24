@@ -1,0 +1,39 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.country.listCountryTitle",
+		"controller": "basicsCountryListController",
+		"uuid": "84ac7a2a178e4ea6b6dba23ab5f04aa9"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.country.detailCountryTitle",
+		"controller": "basicsCountryDetailController",
+		"uuid": "cd1fc59aa30149c487bedcfc38704ab5",
+		"permission": "84ac7a2a178e4ea6b6dba23ab5f04aa9"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.country.listCountryStateTitle",
+		"controller": "basicsCountryStateListController",
+		"uuid": "8a1744845b1c4107b6a16559df69bdab"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.country.detailCountryStateTitle",
+		"controller": "basicsCountryStateDetailController",
+		"uuid": "5860289e7cd04a8ebddfadf892e11870",
+		"permission": "8a1744845b1c4107b6a16559df69bdab"
+	},
+	{
+		"id": "5",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "basics.country.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "e75d60f19d744348bb7e6d56002d83b9"
+	}
+]

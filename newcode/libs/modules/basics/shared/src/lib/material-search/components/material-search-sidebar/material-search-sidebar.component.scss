@@ -1,0 +1,49 @@
+.ms-commodity-checkbox-list  {
+  > li {
+    margin: 8px 0;
+    min-height: 16px;
+    display: flex;
+  }
+  > li > input[type='checkbox'] {
+    margin: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  > li > span.ms-commodity-attributes-checkbox-label {
+    margin-left: 2px;
+    flex-grow: 1;
+    word-break: break-word;
+  }
+}
+
+.alternative-source-label
+{
+  background-color: #e6e6e6;
+  padding: 6px 4px;
+  margin: 4px;
+  border-radius: 4px;
+  color: #333;
+  display: inline-block;
+}
+
+.catalog-icons-container {
+  width: 40px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  .catalog-price-version-container {
+    margin-left: 4px;
+    float: right;
+  }
+}
+
+.structure-item-label {
+  margin: 8px 0;
+  word-break: break-all;
+}
+
+.structure-item-label > a {
+  color: #333;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}

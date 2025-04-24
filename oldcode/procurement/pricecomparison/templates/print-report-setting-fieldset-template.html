@@ -1,0 +1,64 @@
+<div class="platform-form-row form-group" style="margin-bottom: 0;">
+	<div class="platform-form-group" style="border-spacing: 0;">
+		<div class="platform-form-row form-group">
+			<div class="platform-form-col" style="text-align: center;">
+				<span style="display: inline-block;height: 28px;line-height: 28px;padding-right: 4px;">{{'procurement.pricecomparison.printing.insertHeaderFooterPlaceholder' | translate}} :</span>
+				<div style="display: inline-block;width: 200px;">
+                <span class="form-control" data-domain-control data-domain="select" style="width: 50px;"
+							 data-model="settings.options.selected" data-options="settings.options"
+							 data-placeholder="Please Select Code" data-title=""
+							 data-change="settings.onChange(settings.options.selected)">
+                </span>
+				</div>
+				<div style="display: inline-block;position: relative;top:-2px;">
+                <span class="input-group-btn">
+                    <button data-ng-click="settings.modalOptions.pageNumber()" tabindex="-1"
+									 type="button" unselectable="on"
+									 class="btn btn-default print-format-btn control-icons ico-sheet"
+									 title={{'procurement.pricecomparison.printing.pageNumberTitle'|translate}}
+									 style="margin-left: 20px;"></button>
+                </span>
+					<span class="input-group-btn">
+                    <button data-ng-click="settings.modalOptions.totalPageNumber()"
+									 tabindex="-1" type="button" unselectable="on"
+									 class="btn btn-default print-format-btn control-icons ico-sheets"
+									 title={{'procurement.pricecomparison.printing.numberPagesTitle'|translate}}></button>
+                </span>
+					<span class="input-group-btn">
+                    <button data-ng-click="settings.modalOptions.insertData()" tabindex="-1"
+									 type="button" unselectable="on"
+									 class="btn btn-default print-format-btn navigator-button control-icons ico-domain-date"
+									 title={{'procurement.pricecomparison.printing.insertDateTitle'|translate}}
+									 style="margin-left: 20px;"></button>
+                </span>
+					<span class="input-group-btn">
+                    <button data-ng-click="settings.modalOptions.insertTime()" tabindex="-1"
+									 type="button" unselectable="on"
+									 class="btn btn-default print-format-btn navigator-button control-icons ico-schedule"
+									 title={{'procurement.pricecomparison.printing.insertTimeTitle'|translate}}></button>
+                </span>
+					<span class="input-group-btn">
+                    <button data-ng-click="settings.modalOptions.insertPicture()" tabindex="-1"
+									 type="button" unselectable="on"
+									 class="btn btn-default print-format-btn control-icons ico-domain-image"
+									 title={{'procurement.pricecomparison.printing.insertPictureTitle'|translate}}
+									 style="margin-left: 20px;">
+                    </button>
+                </span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group" style="border-spacing: 0;">
+		<div data-print-report-setting-fieldset-container-directive
+			  info-property="{{'procurement.pricecomparison.printing.header'| translate}}"
+			  info-part="header"
+			  settings="settings.header"
+			  ng-model="settings"></div>
+		<div data-print-report-setting-fieldset-container-directive
+			  info-property="{{'procurement.pricecomparison.printing.footer'| translate}}"
+			  info-part="footer"
+			  settings="settings.footer"
+			  ng-model="settings"></div>
+	</div>
+</div>

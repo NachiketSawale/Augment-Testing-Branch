@@ -1,0 +1,27 @@
+<header class="modal-header main-color">
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)"
+	        aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+	<h2 class="modal-title">{{ 'model.wdeviewer.calibration.recalibrate' | translate }}</h2>
+</header>
+
+<section class="modal-body">
+	<div class="icon-message">
+		<div class="icon tlb-icons ico-question"></div>
+		<div class="message selectable">
+			{{ forecast.AffectedObjectCount }} object(s) will be affected, it may take time to update object property, continue to recalibrate?
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="apply()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>
+
+<div data-cloud-common-overlay data-info2="loadingInfo" data-loading="isLoading"></div>

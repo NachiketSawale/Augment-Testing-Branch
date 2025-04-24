@@ -1,0 +1,54 @@
+[
+	{
+	  "id": "timekeeping.period.list",
+	  "template": "app/components/base/grid-partial.html",
+	  "title": "timekeeping.period.periodListTitle",
+	  "controller": "timekeepingPeriodListController",
+	  "uuid": "7d9965a4006c4a9fac97f8514baf6b4d"
+   },
+   {
+     "id": "timekeeping.period.detail",
+     "template": "app/components/base/form-detail-partial.html",
+     "title": "timekeeping.period.periodDetailTitle",
+     "controller": "timekeepingPeriodDetailController",
+     "uuid": "670b62e97f124e208db778cb7135220a",
+     "permission": "7d9965a4006c4a9fac97f8514baf6b4d"
+   },
+   {
+     "id": "timekeeping.period.translation",
+     "template": "cloud.common/partials/languagegridView.html",
+     "title": "cloud.common.entityTranslation",
+     "controller": "cloudCommonLanguageGridController",
+     "uuid": "31e3362580964f09a27a7e1bb35acfa6"
+   },
+	{
+		"id": "timekeeping.transaction.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.period.transactionListTitle",
+		"controller": "timekeepingPeriodTransactionListController",
+		"uuid": "940ef410ba484efb97058e0dd40486c1"
+	},
+	{
+		"id": "timekeeping.transaction.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.period.transactionDetailTitle",
+		"controller": "timekeepingPeriodTransactionDetailController",
+		"uuid": "5dbfeadb546b43bc96e46f11201fd918",
+		"permission": "940ef410ba484efb97058e0dd40486c1"
+	},
+	{
+		"id": "timekeeping.validation.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.period.validationListTitle",
+		"controller": "timekeepingPeriodValidationListController",
+		"uuid": "c1f889062e564495853240e4d8f8b5e2"
+	},
+	{
+		"id": "timekeeping.validation.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.period.validationDetailTitle",
+		"controller": "timekeepingPeriodValidationDetailController",
+		"uuid": "6ac2eb988f484ca4aa848f27064929c5",
+		"permission": "c1f889062e564495853240e4d8f8b5e2"
+	}
+]

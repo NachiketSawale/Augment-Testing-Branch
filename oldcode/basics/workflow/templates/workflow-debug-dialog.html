@@ -1,0 +1,27 @@
+<header class="modal-header main-color">
+	<h2 class="modal-title">{{'basics.workflow.debug.dialog.header' | translate}}</h2>
+	<button aria-hidden="true" class="close db" data-dismiss="modal" data-ng-click="onOk()"
+	        type="button">
+		<svg class="block-image" data-cloud-desktop-svg-image data-image="ico-close" data-sprite="control-wh-icons"></svg>
+	</button>
+</header>
+
+<div>
+	<section class="modal-body" style="height:100%; width: 100%;">
+		<div>
+			<span data-ng-bind="'basics.workflow.debug.dialog.context' | translate"></span>
+			<pre class="selectable" ng-bind="formatedContext" style="height: 65%;"> </pre>
+			<span data-ng-bind="'basics.workflow.debug.dialog.action' | translate"></span>
+			<pre class="selectable" ng-bind="formatedAction" style="height: 35%;"> </pre>
+		</div>
+	</section>
+</div>
+
+<footer class="modal-footer">
+	<button class="btn btn-default" data-ng-click="onCancel()" type="button">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+	<button class="btn btn-default" data-ng-click="onNext()" data-ng-disabled="nextDisabled" type="button">
+		{{'cloud.common.nextStep' | translate}}
+	</button>
+</footer>

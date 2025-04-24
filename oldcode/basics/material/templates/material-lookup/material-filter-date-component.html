@@ -1,0 +1,92 @@
+<style>
+	.material-filter-date li div {
+		height: 32px;
+		align-items: center;
+	}
+
+	.material-filter-date li div:nth-child(2) {
+		margin-bottom: 8px;
+	}
+
+	.material-filter-date li input[type='radio'] {
+		margin: 0 8px 0 0;
+	}
+
+	.material-filter-date .form-control {
+		margin: 0 0 8px 22px;
+		width: 200px;
+	}
+
+	.material-filter-date .form-control.ng-invalid {
+		border: solid 1px red;
+	}
+
+	.material-filter-date .range {
+		margin-left: 20px;
+	}
+
+	.material-filter-date .range .form-control {
+		display: inline-flex;
+		width: 100px;
+		margin-left: initial;
+	}
+
+	.material-filter-date .range .separator {
+		margin: 0 4px;
+	}
+
+	.material-filter-date .range .validation {
+		color: red;
+		margin-top: -4px;
+	}
+</style>
+
+<div class="material-filter-date">
+	<ul class="material-filter-content-padding">
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="equals" name="operator" value="{{ ::filterOperator.equals }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="equals">{{ 'basics.material.lookup.condition.on' | translate }}</label>
+			</div>
+			<div data-ng-if="definition.Operator===filterOperator.equals">
+				<div class="form-control" data-domain-control data-domain="dateutc" data-ng-model="definition.Factors[0]"></div>
+			</div>
+		</li>
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="rangesFrom" name="operator" value="{{ ::filterOperator.range }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="rangesFrom">{{ 'basics.material.lookup.condition.between' | translate }}</label>
+			</div>
+			<div class="range" data-ng-if="definition.Operator===filterOperator.range">
+				<div class="form-control" data-domain-control data-domain="dateutc" data-ng-model="definition.Factors[0]" name="min" material-filter-range-validation error="basics.material.lookup.filter.rangeDateValidation.min" identical-error="basics.material.lookup.filter.rangeDateValidation.identical"></div>
+				<span class="range-separator">-</span>
+				<div class="form-control" data-domain-control data-domain="dateutc" data-ng-model="definition.Factors[1]" name="max" material-filter-range-validation error="basics.material.lookup.filter.rangeDateValidation.max" identical-error="basics.material.lookup.filter.rangeDateValidation.identical"></div>
+				<div class="validation" ng-show="rangeError">
+					<span data-ng-bind="rangeError | translate"></span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="greaterThan" name="operator" value="{{ ::filterOperator.greaterThan }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="greaterThan">{{ 'basics.material.lookup.condition.startingFrom' | translate }}</label>
+			</div>
+			<div data-ng-if="definition.Operator===filterOperator.greaterThan">
+				<div class="form-control" data-domain-control data-domain="dateutc" data-ng-model="definition.Factors[0]"></div>
+			</div>
+		</li>
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="lessThan" name="operator" value="{{ ::filterOperator.lessThan }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="lessThan">{{ 'basics.material.lookup.condition.upTo' | translate }}</label>
+			</div>
+			<div data-ng-if="definition.Operator===filterOperator.lessThan">
+				<div class="form-control" data-domain-control data-domain="dateutc" data-ng-model="definition.Factors[0]"></div>
+			</div>
+		</li>
+	</ul>
+
+	<div class="material-filter-divider-top">
+		<button class="btn pull-right material-filter-btn-apply" data-ng-click="apply()" data-ng-disabled="!canApply()">{{ 'basics.material.lookup.apply' | translate }}</button>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+{
+  "usermanagement": {
+    "user": {
+      "moduleInfoNameUsermanagementUser":"User",
+      "entityGUID":"GUID",
+      "userName":"Name",
+      "userDescription":"Description",
+      "userLogonName":"Logon Name",
+      "userPasswordHash":"Password Hash",
+      "userPasswordSalt":"Password Salt",
+      "userDomainSID":"Domain SId",
+      "userSynchronizeDate":"Synchronize Date",
+      "userEmail":"Email",
+      "userIntegratedAccess":"Integrated Access",
+      "State":"State",
+      "userExplicitAccess":"Explicit Access",
+      "userIsExternal":"Is External",
+      "userPasswordExpiration":"Password Expiration",
+      "accessGroupFK":"Group",
+      "userContainerTitle":"Users",
+      "user2GroupContainerTitle":"User to Group",
+      "usermanagementUserDetailsContainerTitle":"User Details",
+      "userPassword":"Password",
+      "userConfirmPassword":"Confirm Password",
+      "stateEnabled":"Enabled",
+      "stateDisabled":"Disabled",
+      "stateMarkedForDeletion":"Marked for deletion",
+      "validateConfirmPassword":"Enter the same password",
+      "entityUser":"Users",
+      "enterPassword":"Enter password",
+      "enterPasswordConfirmation":"Enter password confirmation"
+    }
+  }
+}

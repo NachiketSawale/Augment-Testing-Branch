@@ -1,0 +1,51 @@
+﻿<div class="ticket-system-order-list-cell" data-ng-repeat="entity in orderList">
+    <div class="ticket-system-order-list-header">
+        <span>{{entity.Code}} / {{entity.DateReceived | date:'dd.MM.yyyy'}}</span>
+        <span class="pull-right">
+            <span data-ticket-system-show-price>{{entity.Total}}</span>
+            <span data-ng-bind="' ' + entity.BasCurrencyDescription"></span>
+        </span>
+    </div>
+    <div class="ticket-system-order-list-attribute">
+        <div class="ticket-system-order-list-attribute-clerk" data-ng-show="entity.IsClerkShow"
+             data-ng-bind="htmlTranslate.clerk + ' ' + entity.ClerkPrcDescription">
+        </div>
+        <div class="ticket-system-order-list-attribute-status"
+             data-ng-bind="htmlTranslate.status + ' ' + entity.ReqStatus.DescriptionInfo.Translated">
+        </div>
+    </div>
+    <div class="ticket-system-order-list-remark" data-ng-show="entity.IsRemarkShow" data-ng-bind="entity.Remark"></div>
+
+    <div data-ng-show="entity.IsShowDetails" class="ticket-system-order-list-details">
+        <div data-ng-repeat="item in entity.PrcItems">
+            <div class="col-lg-4 col-xs-12 col-sm-6 col-md-4  ticket-system-order-list-detail">
+                <div class="ticket-system-order-list-detail-inner row">
+                    <div class="ticket-system-order-list-detail-inner-img" data-ng-show="item.Image">
+                        <img data-ng-src="{{item.Image}}" alt="{{item.Description1}}"/>
+                    </div>
+                    <div class="ticket-system-order-list-detail-inner-description">
+
+                        <p>{{item.Supplierreference +' - '+ item.Description1}}</p>
+
+                        <p data-ng-bind="htmlTranslate.quantity + ' ' + item.Quantity"></p>
+                        <p>
+                            <span data-ng-bind="htmlTranslate.price+ ' '"></span>
+                            <span data-ticket-system-show-price>{{item.BasMaterialPrice}}</span>
+                            <span data-ng-bind="' ' + item.BasMaterialCurrencyDescription+ ' /' + item.PriceUnit + ' ' + item.BasUom"></span>
+                        </p>
+                        <p>{{htmlTranslate.subTotal}}: {{item.Total}} {{item.BasMaterialCurrencyDescription}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ticket-system-order-list-showbtn">
+        <a href data-ng-click="orderOption.orderDelete(entity)" class="pull-right" data-ng-show="entity.showDeleteBtn">
+            <i class="block-image control-wh-icons ico-cart-item-delete"></i>
+        </a>
+        <a data-ng-click="orderOption.showDetails(entity)" data-ng-bind="entity.ShowDetails"></a>
+    </div>
+</div>

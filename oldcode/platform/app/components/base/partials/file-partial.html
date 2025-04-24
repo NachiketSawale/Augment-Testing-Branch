@@ -1,0 +1,23 @@
+<style>
+	.dropZone {
+		border: 2px dashed #bbb;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		padding: 50px;
+		text-align: center;
+		font: 21pt bold arial;
+		color: #bbb;
+	}
+</style>
+<div data-platform-container-content class="flex-element flex-box flex-column filler dropZone" ngf-pattern="'.json,.resx,.zip'" ngf-multiple="false"
+     ngf-drop="uploadFiles($file)"
+     ngf-drag-over-class="'dragover'">
+	<div class="file-container">
+		<input data-platform-click-event name="fileInput" type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+		       class="hide" accept="*" ngf-max-size= "getMaxSize($file) ? getMaxSize($file) : '4MB'" >
+		</input>
+		<!--<span ng-show="file.src !== null" ng-bind="file.src" ng-style="{ 'max-width' : getCurrentDimensions().width, 'max-height' : getCurrentDimensions().height }"></span>-->
+		<span ng-bind="::dropFileText"></span>
+		<div data-cloud-common-overlay data-info2="info2" file="file" data-loading="viewContentLoading"></div>
+	</div>
+</div>

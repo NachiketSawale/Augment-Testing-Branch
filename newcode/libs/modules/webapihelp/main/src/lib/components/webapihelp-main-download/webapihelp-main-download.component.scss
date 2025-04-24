@@ -1,0 +1,90 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e2e0e0;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div.state {
+    position: absolute;
+    text-align: center;
+    width: 680px;
+    height: 80px;
+    left: 50%;
+    margin-left: -340px;
+    top: 50%;
+    margin-top: -40px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 20px #a7a7a7;
+    border-radius: 40px;
+    line-height: 80px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+div.state .bar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+
+    left: -100%;
+    transition: left 0.2s;
+}
+
+div.state .bar.processing {
+    background-color: #84b590;
+    box-shadow: 0 0 20px #de9663;
+    animation: blinking 1s linear infinite;
+}
+
+div.state .bar.failed {
+    background-color: #debf9b;
+}
+
+div.state .bar.complete {
+    background-color: #d0d0d0;
+}
+
+div.state span.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+@keyframes blinking {
+    from {
+        box-shadow: 0 0 20px #d0d0d0;
+    }
+
+    to {
+        box-shadow: 0 0 20px #a7a7a7;
+    }
+
+}
+
+.button {
+    display: block;
+    width: 70px;
+    height: 42px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: Normal;
+    line-height: 25px;
+    margin-top: 1%;
+    margin-left: 1%;
+    font-size: 18px;
+}

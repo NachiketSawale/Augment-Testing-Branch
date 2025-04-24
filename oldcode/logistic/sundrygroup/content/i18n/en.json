@@ -1,0 +1,42 @@
+{
+  "logistic": {
+    "sundrygroup": {
+      "listSundryServiceGroupTitle": "Sundry Service Groups",
+      "detailSundryServiceGroupTitle": "Sundry Service Group Details",
+      "sundryServiceGroupAlreadyDisabled": "Sundry Service Group is already disabled",
+      "disableSundryServiceGroupDone": "Sundry Service Group is disabled",
+      "sundryServiceGroupAlreadyEnabled": "Sundry Service Group is already enabled",
+      "enableSundryServiceGroupDone": "Sundry Service Group is enabled",
+      "disableSundryServiceGroup": "Disable Sundry Service Group",
+      "enableSundryServiceGroup": "Enable Sundry Service Group",
+      "listSundryServiceGroupAccountTitle": "Accounts",
+      "detailSundryServiceGroupAccountTitle": "Account Details",
+      "entityAccounts": "Accounts",
+      "entityAccount": "Account {{index}}",
+      "sundryServiceGroupEntity": "Sundry Service Group",
+      "logisticSundryServiceGroupAccountEntity": "Sundry Service Group Account",
+      "entityNominalDimension0101": "Nominal Dimension 01/01",
+      "entityNominalDimension0102": "Nominal Dimension 01/02",
+      "entityNominalDimension0103": "Nominal Dimension 01/03",
+      "entityNominalDimension0201": "Nominal Dimension 02/01",
+      "entityNominalDimension0202": "Nominal Dimension 02/02",
+      "entityNominalDimension0203": "Nominal Dimension 02/03",
+      "entityNominalDimension0301": "Nominal Dimension 03/01",
+      "entityNominalDimension0302": "Nominal Dimension 03/02",
+      "entityNominalDimension0303": "Nominal Dimension 03/03",
+      "entityNominalDimension0401": "Nominal Dimension 04/01",
+      "entityNominalDimension0402": "Nominal Dimension 04/02",
+      "entityNominalDimension0403": "Nominal Dimension 04/03",
+      "entityNominalDimension0501": "Nominal Dimension 05/01",
+      "entityNominalDimension0502": "Nominal Dimension 05/02",
+      "entityNominalDimension0503": "Nominal Dimension 05/03",
+      "entityNominalDimension0601": "Nominal Dimension 06/01",
+      "entityNominalDimension0602": "Nominal Dimension 06/02",
+      "entityNominalDimension0603": "Nominal Dimension 06/03",
+		 "taxCodeList": "Tax Code",
+		 "taxCodeDetail": "Tax Code Details",
+		 "entityTaxCode": "Tax Code",
+		 "ledgercontext": "Ledger Context"
+    }
+  }
+}

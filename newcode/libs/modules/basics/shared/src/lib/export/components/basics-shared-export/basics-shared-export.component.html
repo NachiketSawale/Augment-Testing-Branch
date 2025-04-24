@@ -1,0 +1,26 @@
+<div class="platform-form-group">
+	<div *ngIf="rows[0].visible" class="platform-form-row">
+		<div class="platform-form-label ng-binding" style="min-width: 80px;">{{ rows[0].label ?? "" | platformTranslate }}</div>
+		<div class="platform-form-col">
+			<ui-common-domain-control-host [fieldType]="FieldType.CustomComponent"
+			                               [value]="entity.subContainers"
+			                               [options]="options0"></ui-common-domain-control-host>
+		</div>
+	</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label" style="min-width: 80px;">{{ rows[1].label ?? "" | platformTranslate }}</div>
+			<div class="platform-form-col">
+				<ui-common-lookup-input  [options]="options1.lookupOptions.getTypedOptions()"
+				                         (valueChange)="excelProfileIdChange($event)"
+				                         [value]="entity.excelProfileId"></ui-common-lookup-input>
+			</div>
+		</div>
+		<div *ngIf="entity.justifyPropertyNamesVisible" class="platform-form-row">
+			<div class="platform-form-label" style="min-width: 80px;">{{ rows[2].label ?? "" | platformTranslate }}</div>
+			<div class="platform-form-col">
+				<ui-common-domain-control-host [fieldType]="FieldType.Boolean"
+				                               (valueChange)="justifyPropertyNamesChange($event)"
+				                               [value]="entity.justifyPropertyNames"></ui-common-domain-control-host>
+			</div>
+		</div>
+</div>

@@ -1,0 +1,14 @@
+<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+	<div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+    <div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem"></div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled" data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

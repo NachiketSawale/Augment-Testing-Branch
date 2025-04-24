@@ -1,0 +1,58 @@
+<div class="platform-form-group" data-ng-controller="cloudDesktopAddTileContainer">
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.type" | translate }}</label>
+		<div class="platform-form-col">
+			<div data-domain-control data-domain="select"
+			     data-options="selectTileTyp"
+			     data-model="dialog.modalOptions.value.type"></div>
+			</div>
+	</div>
+	<div class="platform-form-row" data-ng-show="dialog.modalOptions.value.type === 2">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileUrl" | translate }}<span class="required-cell"></span></label>
+		<div class="platform-form-col">
+
+			<div class="form-control" data-domain-control data-domain="url" data-model="urlConfig.model" data-entity="dialog.modalOptions"
+			     data-config="urlConfig" data-change="urlConfig.change()"></div>
+
+		</div>
+	</div>
+	<div class="platform-form-row" data-ng-show="dialog.modalOptions.value.type === 3">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.typQuickstart" | translate }}<span class="required-cell"></span></label>
+		<div class="platform-form-col">
+			<div cloud-desktop-module-tiles-list-accordion-container data-model="dialog.modalOptions.value"></div>
+		</div>
+	</div>
+
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileIcon" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="fileselect" data-options="{
+							fileFilter: 'image/*',
+							maxSize: '50KB',
+							retrieveDataUrl: true
+						}"
+				     data-model="dialog.modalOptions.value.icon"
+				     data-change="change"></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileName" | translate }}<span class="required-cell"></span></label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="description" data-model="dialog.modalOptions.value.displayName"
+				     data-change="change"></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "cloud.desktop.design.desktop.webTileDescription" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="description" data-model="dialog.modalOptions.value.description"
+				     data-change="change"></div>
+			</div>
+		</div>
+	</div>
+</div>

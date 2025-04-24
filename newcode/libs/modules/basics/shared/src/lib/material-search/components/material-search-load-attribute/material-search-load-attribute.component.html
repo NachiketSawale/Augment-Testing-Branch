@@ -1,0 +1,18 @@
+<basics-shared-material-search-collapse *ngFor="let node of nodes" [title]="node.property">
+	<div>
+		<ul class="ms-commodity-checkbox-list col-sm-offset-1">
+			<li *ngFor="let value of node.values">
+				<input type="checkbox" class="ms-icon-img attribute-icon" [(ngModel)]="value.checked" (ngModelChange)="onFilterChanged()"/>
+				<span class="ms-commodity-attributes-checkbox-label">{{value.value}}</span>
+			</li>
+		</ul>
+		<div class="ms-commodity-attributes-more-btn" style="">
+			<button (click)="loadMoreFn(node.property)" *ngIf="!node.finish">More</button>
+			<span *ngIf="node.finish">There is no more content</span>
+		</div>
+	</div>
+</basics-shared-material-search-collapse>
+<div class="ms-commodity-attributes-more-btn">
+	<button (click)="loadMoreFn()" *ngIf="!finish">More</button>
+	<span *ngIf="finish">There is no more content</span>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>RIB iTWO 4.0</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<noscript>Your browser does not support JavaScript!</noscript>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/ui/common/icons.css">
+		<script >
+			const index = window.location.pathname.lastIndexOf('/index.html');
+			const path = index !== -1 ? window.location.pathname.substring(0, index + 1) : window.location.pathname;
+			const base = '<base href="' + path + '"/>';
+			const icon = '<link rel="icon" type="image/vnd.microsoft.icon" href="' + path + 'images/app/rib-logo.ico"/>';
+			document.write(base);
+			document.write(icon);
+		</script>
+	</head>
+
+
+	<body>
+		<itwo40-root></itwo40-root>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-flat-partial.html",
+		"title": "",
+		"controller": "",
+		"uuid": "49742B0CD51440D3AEF02D2C3CEE9999"
+	},
+	{
+		"id": "2",
+		"template": "scheduling.schedule/partials/schedule-detail.html",
+		"title": "",
+		"controller": "",
+		"uuid": "DC94D9D034C8467C8ECBC19A212C9C1F",
+		"permission": "49742B0CD51440D3AEF02D2C3CEE9999"
+	}
+]

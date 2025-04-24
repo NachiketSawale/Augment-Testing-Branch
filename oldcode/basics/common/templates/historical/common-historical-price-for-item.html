@@ -1,0 +1,113 @@
+<div class="platform-lg platform-form-group" style="margin: 5px 10px 5px 10px;">
+	<div class="platform-form-row" ng-show="isFromPriceCom">
+		<div style="margin-bottom: 10px;">
+			<div class="lg-7 ellipsis">{{'basics.common.historicalPrice.itemLabel' | translate}} : {{ getMaterialCodeDesc() }}</div>
+			<div class="lg-5 ellipsis">{{'basics.common.historicalPrice.priceRange' | translate}} : {{ currentItem.priceRange }}</div>
+		</div>
+	</div>
+	<div style="width: 6%;height: 50px;float: left; padding-top: 10px;" class="ellipsis">
+		{{'procurement.common.wizard.updateItemPrice.from' | translate}}
+	</div>
+	<div style="width: 94%;float: left;">
+		<div class="lg-12" style="margin-bottom: 5px;margin-top: 5px;">
+			<div class="lg-4">
+				<div class="checkbox spaceToUp">
+					<label class="ellipsis">
+						<input type="checkbox"
+						       name="materialCatalog"
+						       data-ng-disabled="formDisabled"
+						       data-ng-model="currentItem.queryFromMaterialCatalog" data-ng-click="materialCatalogChange()">
+						{{'procurement.common.wizard.updateItemPrice.catalogPriceVersion' | translate}}
+					</label>
+				</div>
+			</div>
+			<div class="lg-8">
+				<div class="lg-6" price-condition-lookup
+				     data-readonly="!$parent.currentItem.queryFromMaterialCatalog || $parent.formDisabled" data-config="true"
+				     ng-model="currentItem.pricecondition">
+				</div>
+				<div class="lg-6">
+					<div class="checkbox spaceToUp">
+						<label class="ellipsis">
+							<input type="checkbox"
+							       data-ng-disabled="formDisabled"
+							       name="neutralMaterial" data-ng-disabled="!currentItem.queryFromMaterialCatalog"
+							       data-ng-model="currentItem.queryNeutralMaterial" data-ng-click="neutralMatChange()">
+							{{'procurement.common.wizard.updateItemPrice.neutralMaterial' | translate}}
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lg-12">
+			<div class="lg-4">
+
+				<div class="lg-6">
+					<div class="checkbox spaceToUp">
+						<label class="ellipsis">
+							<input type="checkbox"
+							       name="quotation"
+							       data-ng-disabled="formDisabled"
+							       data-ng-model="currentItem.queryFromQuotation">
+							{{'procurement.common.wizard.updateItemPrice.quotation' | translate}}
+						</label>
+					</div>
+				</div>
+
+				<div class="lg-6">
+					<div class="checkbox spaceToUp">
+						<label class="ellipsis">
+							<input type="checkbox"
+							       name="contract"
+							       data-ng-disabled="formDisabled"
+							       data-ng-model="currentItem.queryFromContract">
+							{{'procurement.common.wizard.updateItemPrice.contract' | translate}}
+						</label>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="lg-6">
+				<div class="lg-5" style="padding-right: 0;">
+					<div data-domain-control class="form-control"
+					     data-domain="date"
+					     data-readonly="formDisabled"
+					     data-entity="currentItem"
+					     data-model="currentItem.startDate"
+					     data-config="entityConfigs.startConfig"
+					     data-dirty="true"
+					     placeholder="{{'basics.common.changeStatus.from' | translate}}">
+					</div>
+				</div>
+
+				<div class="lg-5" style="padding-right: 0; margin-left: 10px;">
+					<div data-domain-control class="form-control"
+					     data-domain="date"
+					     data-readonly="formDisabled"
+					     data-entity="currentItem"
+					     data-model="currentItem.endDate"
+					     data-config="entityConfigs.endConfig"
+					     data-dirty="true"
+					     placeholder="{{'basics.common.changeStatus.to' | translate}}">
+					</div>
+				</div>
+
+				<div class="col-lg-offset-1" ng-class="currentItem.rt$hasError() ? 'invalid-cell invalid-form' : ''"
+				     data-ng-bind="currentItem.rt$errorText()" style="padding-top: 5px;"></div>
+			</div>
+
+			<div class="lg-2 form-group platform-form-row">
+				<div class="lg-9 text-right form-group platform-form-row composite-last-item" style="float: right;">
+					<button data-ng-disabled="(!currentItem.queryFromMaterialCatalog && !currentItem.queryFromQuotation && !currentItem.queryFromContract) || currentItem.rt$hasError() || formDisabled"
+					        data-ng-click="search()" type="button" style="width:100%;"
+					        class="btn btn-default ellipsis">{{'cloud.common.searchButton' | translate}}
+					</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+	<platform-grid data="gridData"></platform-grid>
+<div cloud-common-overlay data-loading="isLoading"></div>

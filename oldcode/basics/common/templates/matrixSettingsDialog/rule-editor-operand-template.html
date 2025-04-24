@@ -1,0 +1,109 @@
+<div class="flex-box rule-editor-operand-element">
+	<!-- value kind selector menu -->
+	<div data-basics-common-rule-value-kind-selector
+	     data-allow-field-ref="allowFieldRef()"
+	     data-allow-literal="allowLiteral()"
+	     data-allow-environment-expression="allowEnvironmentExpression()"
+		  data-allow-dynamic-range-expression="allowDynamicRangeExpression()"
+	     data-retrieve-environment-expressions="retrieveEnvironmentExpressions"
+	     data-retrieve-compatible-types="retrieveCompatibleTypes"
+	     data-domain-type="operand.DisplaydomainFk"
+	     data-ng-show="editable"
+	     data-model="valueKind"></div>
+
+	<!-- input controls -->
+	<div dynamic-domain-control data-domain="getUiType()"
+	     data-placeholder-text="operand.DescriptionInfo.Translated" class="dynamic-control flex-element"
+	     data-ng-if="isLiteralOperand()"
+	     data-entity="data"
+	     data-ng-model="getDataPathAccessor"
+	     data-ng-model-options="{getterSetter: true, updateOn:'blur'}"
+	     data-readonly="!editable"
+	     data-options="operand.options" data-downgrade-translation="true">
+	</div>
+
+	<!-- field reference -->
+	<div data-basics-common-field-selector-editor class="columns flex-element"
+	     data-ng-if="isFieldRefOperand()"
+	     data-entity="model"
+	     data-model="getDataPath()"
+	     data-readonly="!editable"
+	     data-graph-provider-fn="createSchemaGraphProvider">
+	</div>
+
+	<!-- for lookups -->
+	<div data-ng-if="isLookupOperand()"
+	     class="columns flex-element">
+		<div dynamic-lookup-control
+		     class="columns flex-element"
+		     data-entity="data"
+		     data-lookup-info="getLookupConfig()"
+		     data-ng-model="getDataPathAccessor" data-ng-model-options="{getterSetter: true}"
+		     data-readonly="{{(data.valid === false) || !editable}}"></div>
+	</div>
+
+	<!-- for lookups whose value list is managed by the rule editor manager -->
+	<div data-ng-if="isManagedLookupOperand()"
+	     class="columns flex-element">
+		<div data-domain-control
+		     data-domain="select"
+		     data-entity="model"
+		     data-model="{{'model.' + getDataPath()}}"
+		     data-readonly="{{!editable}}"
+		     data-options="getManagedLookupSelectorOptions()"></div>
+	</div>
+
+	<!-- for relation set lookups -->
+	<div basics-common-value-list
+	     data-ng-if="isLookupSetOperand()"
+	     data-operand="operand"
+	     data-rule-editor-manager="ruleEditorManager"
+	     class="columns flex-element"
+	     data-readonly="!editable"
+	     data-model="'Values'"
+	     data-value-model="getDataPath()"
+	     data-entity="model"></div>
+
+	<!-- for environment expressions -->
+	<div data-ng-if="isEnvironmentExpression()"
+	     class="columns flex-element environment-expression-title"
+	     data-ng-bind="getEnvironmentExpressionDisplayName()"></div>
+
+
+	<!-- for dynamic range expressions -->
+		<div data-ng-if="isDynamicRangeExpression()"
+	     class="columns flex-element environment-expression-title"
+		  data-entity="model"
+		  data-readonly="editable"
+		  data-ng-bind="getDynamicRangeExpressionDisplayName()">
+		</div>
+
+
+		<div data-ng-if="isDynamicRangeExpressionRangeUnits()" class="flex-element">
+			<div data-domain-control
+			     data-domain="select"
+			     data-model="entity.Operands[3].DynamicValue.Transformation"
+			     data-readonly="false"
+			     data-options="unitSelectorOptions()"
+			     data-change="transformationChanged(entity, model)"></div> <!-- "{{!editable}}" -->
+		</div>
+
+		<div data-ng-if="isDynamicRangeExpressionRanges()"
+		class="columns flex-element dynamic-range-past">
+			<div class="platform-form-col">
+				<div style="border-right: 1px solid rgb(204,204,204); width: 50%;" data-domain="integer" data-domain-control
+				readonly="isReadOnly" data-ng-model="entity.Operands[1].DynamicValue.Parameters[0].Literal.Integer"
+				data-change="onRangesChanged('p', entity, model)"></div>
+			</div>
+		</div>
+
+		<div data-ng-if="isDynamicRangeExpressionRanges()"
+		class="columns flex-element dynamic-range-future">
+			<div class="platform-form-col">
+				<div data-domain="integer" data-domain-control
+				readonly="isReadOnly" data-ng-model="entity.Operands[2].DynamicValue.Parameters[0].Literal.Integer"
+				data-change="onRangesChanged('f', entity, model)" style="width: 50%"></div>
+			</div>
+		</div>
+
+</div>

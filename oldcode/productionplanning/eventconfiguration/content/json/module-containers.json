@@ -1,0 +1,50 @@
+[
+  {
+    "id": "productionplanning.eventconfiguration.ruleset.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.eventconfiguration.eventSequence.listTitle",
+    "controller": "productionplanningEventconfigurationSequenceListController",
+    "uuid": "d92b42daf3f44472b6bce0b2d5369be9",
+    "permission": "d92b42daf3f44472b6bce0b2d5369be9"
+  },
+  {
+    "id": "productionplanning.eventconfiguration.ruleset.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.eventconfiguration.eventSequence.detailTitle",
+    "controller": "productionplanningEventconfigurationSequenceDetailController",
+    "uuid": "55bad685d9ea42e292d6b7521e3b4d3e",
+    "permission": "d92b42daf3f44472b6bce0b2d5369be9"
+  },
+  {
+    "id": "productionplanning.eventconfiguration.template.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.eventconfiguration.eventTemplate.listTitle",
+    "controller": "productionplanningEventconfigurationTemplateListController",
+    "uuid": "8c63d8f33a0b4e4bad6883ca6416dfae",
+    "permission": "8c63d8f33a0b4e4bad6883ca6416dfae"
+  },
+  {
+    "id": "productionplanning.eventconfiguration.template.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.eventconfiguration.eventTemplate.detailTitle",
+    "controller": "productionplanningEventconfigurationTemplateDetailController",
+    "uuid": "768ac08d96d54bc0aefa6c3ef999b2c1",
+    "permission": "8c63d8f33a0b4e4bad6883ca6416dfae"
+  },
+  {
+    "id": "productionplanning.eventconfiguration.site.filter.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.eventconfiguration.additionalFilter.siteFilterListTitle",
+    "controller": "productionplanningngEventconfigurationSiteFilterListController",
+    "uuid": "3364a77f3a7440b39b84dda55f51ebbb",
+    "permission": "668f9c9719f24c8d8184a1d324f70578"
+  },
+  {
+    "id": "productionplanning.eventconfiguration.material.filter.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.eventconfiguration.additionalFilter.materialGroupFilterListTitle",
+    "controller": "productionplanningEventconfigurationMaterialGroupFilterListController",
+    "uuid": "fa00aacf809f46e59a539e009a538e33",
+    "permission": "d92b42daf3f44472b6bce0b2d5369be9"
+  }
+]

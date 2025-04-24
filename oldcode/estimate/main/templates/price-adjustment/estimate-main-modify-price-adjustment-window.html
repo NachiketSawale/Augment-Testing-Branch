@@ -1,0 +1,394 @@
+<div class="modal-wrapper overflow-hidden ng-scope">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body">
+		<form name="platform-form" class="platform-form ng-pristine ng-valid ng-isolate-scope">
+			<div  class="platform-lg">
+				<div class="ng-scope">
+					<div data-accordion="" data-close-others="false" class="ng-scope">
+						<div class="panel-group">
+							<div class="panel panel-default ng-scope ng-isolate-scope">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="accordion-toggle" ng-click="toggleOpen(0)">
+											<span class="platform-form-group-header-text ng-binding ng-scope">{{'estimate.main.priceAdjust.area' | translate}}</span>
+											<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showAreaGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+										</a>
+									</h4>
+								</div>
+								<div class="panel-collapse collapse in" style="height: auto;" collapse="!showAreaGroup">
+									<div class="panel-body">
+										<table style="width:100%; border-style: none">
+											<tr style="border-style: none">
+												<td style="border-style: none">
+													<div class="platform-form-group">
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.fromBoq' | translate}} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+															<div class="platform-form-col">
+																<div class="control-directive" data-basics-lookupdata-lookup-composite
+																     ng-readonly="false"
+																     data-options="formConfiguration.FromRefNo.options"
+																     data-entity="modifyOption"
+																     data-config="formConfiguration.FromRefNo"
+																     data-model="modifyOption.FromRefNo"
+																     data-ng-model="modifyOption.FromRefNo"
+
+																     data-readonly="false"
+																     data-tabstop="true"
+																     data-enterstop="true" data-ng-keydown="stopEnter($event)"></div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.toBoq' | translate}} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+															<div class="platform-form-col">
+																<div class="control-directive" data-basics-lookupdata-lookup-composite
+																     ng-readonly="false"
+																     data-options="formConfiguration.ToRefNo.options"
+																     data-entity="modifyOption"
+																     data-config="formConfiguration.ToRefNo"
+																     data-model="modifyOption.ToRefNo"
+																     data-ng-model="modifyOption.ToRefNo"
+
+																     data-readonly="false"
+																     data-tabstop="true"
+																     data-enterstop="true" data-ng-keydown="stopEnter($event)"></div>
+															</div>
+														</div>
+
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div data-accordion="" data-close-others="false" class="ng-scope">
+						<div class="panel-group">
+							<div class="panel panel-default ng-scope ng-isolate-scope">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="accordion-toggle" ng-click="toggleOpen(1)">
+											<span class="platform-form-group-header-text ng-binding ng-scope">{{'estimate.main.priceAdjust.generate' | translate}}</span>
+											<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showGenerateGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+										</a>
+									</h4>
+								</div>
+								<div class="panel-collapse collapse in" style="height: auto;" collapse="!showGenerateGroup">
+									<div class="panel-body">
+										<table style="width:100%; border-style: none">
+											<tr style="border-style: none">
+												<td style="border-style: none; vertical-align: top">
+													<div class="platform-form-group">
+														<div class="platform-form-row">
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="radio" name="SelectedAreaType" ng-model="modifyOption.SelectAreaType" value="1" data-ng-keydown="stopEnter($event)">
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td style="border-style: none" colspan="3">
+													<div class="platform-form-group">
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.prices' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope">
+																	<input type="checkbox" data-ng-model="modifyOption.Prices" data-platform-control-validation="" data-ng-disabled="readOnlyOption.SelectAreaType(1)" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr style="border-style: none">
+												<td style="border-style: none;width: 10%;"></td>
+												<td style="border-style: none">
+													<div class="platform-form-group">
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.baseUnitRate' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.estimatePriceOnly' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="radio" name="BaseUnitRateType" ng-model="modifyOption.BaseUnitRateType" ng-value="1" data-ng-disabled="readOnlyOption.BaseUnitRateType()" data-ng-change="baseUnitRateTypeChange()" data-ng-keydown="stopEnter($event)">
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.adjustPriceOnly' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="radio" name="BaseUnitRateType" ng-model="modifyOption.BaseUnitRateType" ng-value="2" data-ng-disabled="readOnlyOption.BaseUnitRateType()" data-ng-change="baseUnitRateTypeChange()" data-ng-keydown="stopEnter($event)">
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.adjustOrEstPrice' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="radio" name="BaseUnitRateType" ng-model="modifyOption.BaseUnitRateType" ng-value="3" data-ng-disabled="readOnlyOption.BaseUnitRateType()" data-ng-change="baseUnitRateTypeChange()" data-ng-keydown="stopEnter($event)">
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.tenderPriceOnly' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="radio" name="BaseUnitRateType" ng-model="modifyOption.BaseUnitRateType" ng-value="4" data-ng-disabled="readOnlyOption.BaseUnitRateType()" data-ng-change="baseUnitRateTypeChange()" data-ng-keydown="stopEnter($event)">
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<div class="platform-form-col" style="height: 28px;"></div>
+														</div>
+
+													</div>
+												</td>
+												<td style="border-style: none;width: 20%;"></td>
+												<td style="border-style: none">
+													<div class="platform-form-group">
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.targetUnitRate' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.factor' | translate}}</label>
+															<div class="platform-form-col">
+																<input class="form-control text-right domain-type-factor form-control"
+																       data-ng-model="modifyOption.Factor" style="width: 150px; padding-right:3px"
+																       data-ng-pattern-restrict="(^[+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.]{0,1}\d+)*)([,\.][\d]{0,3})$)"
+																       data-ng-disabled="readOnlyOption.BaseUnitRateType()"
+																       ng-blur="factorChange('Factor')" data-ng-keydown="stopEnter($event)"/>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.adjustPrices' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="radio" name="TargetUnitRateType" ng-model="modifyOption.TargetUnitRateType" value="1" data-ng-disabled="readOnlyOption.priceAdjust()" data-ng-keydown="stopEnter($event)">
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.tenderPrices' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="radio" name="TargetUnitRateType" ng-model="modifyOption.TargetUnitRateType" value="2" data-ng-disabled="readOnlyOption.BaseUnitRateType()" data-ng-keydown="stopEnter($event)">
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.overwriteExistPrices' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.OverwriteExistPrices" data-platform-control-validation="" data-ng-disabled="readOnlyOption.BaseUnitRateType()" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.addComment' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.AddComment" data-platform-control-validation=""
+																	       data-ng-disabled="readOnlyOption.AddComment()" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</td>
+											</tr>
+											<tr style="border-style: none">
+												<td style="border-style: none"></td>
+												<td style="border-style: none" colspan="3">
+													<div class="platform-form-group">
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.aqFromWqQuantity' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.AqFromWqQuantity"
+																	       data-platform-control-validation=""
+																	       data-ng-keydown="stopEnter($event)"
+																	       data-ng-disabled="readOnlyOption.SelectAreaType(1)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.aqWq' | translate}} &nbsp;</label>
+															<div class="platform-form-col">
+																<input class="form-control text-right domain-type-factor form-control"
+																       data-ng-model="modifyOption.AqDivWq" style="padding-right: 3px"
+																       data-ng-pattern-restrict="(^[+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.]{0,1}\d+)*)([,\.][\d]{0,3})$)"
+																       data-ng-disabled="readOnlyOption.AqDivWq()"
+																       ng-blur="factorChange('AqDivWq')" data-ng-keydown="stopEnter($event)"/>
+															</div>
+														</div>
+
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div data-accordion="" data-close-others="false" class="ng-scope">
+						<div class="panel-group">
+							<div class="panel panel-default ng-scope ng-isolate-scope">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="accordion-toggle" ng-click="toggleOpen(2)">
+											<span class="platform-form-group-header-text ng-binding ng-scope">{{'estimate.main.priceAdjust.reset' | translate}}</span>
+											<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showResetGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+										</a>
+									</h4>
+								</div>
+								<div class="panel-collapse collapse in" style="height: auto;" collapse="!showResetGroup">
+									<div class="panel-body">
+										<table style="width:100%; border-style: none">
+											<tr style="border-style: none">
+												<td style="border-style: none; vertical-align: top;width: 10%;">
+													<div class="platform-form-group">
+														<div class="platform-form-row">
+															<div class="platform-form-col">
+																<input type="radio" name="SelectedAreaType" ng-model="modifyOption.SelectAreaType" value="2" data-ng-keydown="stopEnter($event)">
+															</div>
+														</div>
+													</div>
+												</td>
+												<td style="border-style: none">
+													<div class="platform-form-group">
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.delAdjustPrices' | translate}} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.DelAdjustPrices" data-platform-control-validation="" data-ng-disabled="readOnlyOption.SelectAreaType(2)" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.delTenderPrices' | translate}} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.DelTenderPrices" data-platform-control-validation="" data-ng-disabled="readOnlyOption.SelectAreaType(2)" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.delFixedPriceFlag' | translate}} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.DelFixedPriceFlag" data-platform-control-validation="" data-ng-disabled="readOnlyOption.SelectAreaType(2)" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.resetAqToWqQuantity' | translate}} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.ResetAqToWqQuantity" data-platform-control-validation=""
+																	       data-ng-disabled="readOnlyOption.ResetAqFromWq()" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.resetAqFromBoqWq' | translate}}</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.ResetAqFromBoqAqQuantity"
+																	       data-platform-control-validation=""
+																	       data-ng-keydown="stopEnter($event)"
+																	       data-ng-disabled="readOnlyOption.ResetAqFromBoqAq(2)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+																</div>
+															</div>
+														</div>
+
+														<div class="platform-form-row">
+															<label class="platform-form-label">{{'estimate.main.priceAdjust.delComment' | translate}} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+															<div class="platform-form-col">
+																<div class="domain-type-boolean form-control ng-scope" >
+																	<input type="checkbox" data-ng-model="modifyOption.DelComment" data-platform-control-validation="" data-ng-disabled="readOnlyOption.SelectAreaType(2)" data-ng-keydown="stopEnter($event)"
+																	       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" />
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</form>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

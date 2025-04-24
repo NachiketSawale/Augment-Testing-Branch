@@ -1,0 +1,59 @@
+:root {
+	--text-color-light: white;
+	--text-color-light-bold: white;
+	--text-color-dark: #333;
+	--text-color-dark-bold: #626262;
+
+	--company-color: #0067b1;
+	--company-font-color: var(--text-color-light);
+	--company-component-hover: #2e82be;
+	--company-component-selected: #338dce;
+	--company-icon-color: #fff;
+
+	--border-width-default: 1px;
+	--border-width-large: 4px;
+	--border-color-light: white;
+	--border-color-medium: #dcdcdc;
+	--border-color-dark: #ababab;
+
+
+	--icon-color-1: #616161;
+	--icon-color-2: #935baf;
+	--icon-color-3: #cc4c33;
+	--icon-color-4: #eab766;
+	--icon-color-5: #51b38a;
+	--icon-color-6: #3f7ab7;
+	--icon-color-7: #ffffff;
+	--icon-main-color: #ffffff;
+}
+
+.tsd-page-toolbar {
+	background-color: var(--company-color);
+	--color-text: var(--company-font-color);
+}
+
+a.title:before {
+	content: " ";
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../media/rib-logo-w.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 27px;
+	vertical-align: middle;
+	margin-bottom: 4px;
+	margin-right: 6px;
+}
+
+#tsd-sidebar-links::after {
+	content: '';
+	display: block;
+	height: 1px;
+	margin: 10px 0;
+	background-color: #ccc;
+}
+
+aside.tsd-sources {
+	color: var(--icon-color-3);
+}

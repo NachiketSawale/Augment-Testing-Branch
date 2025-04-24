@@ -1,0 +1,65 @@
+<section class="modal-body" data-platform-form-adjust-label>
+	<div class="platform-form-group">
+
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{'scheduling.main.printing.paperSize' | translate}}</label>
+
+			<div class="platform-form-col">
+			<span class="form-control" data-domain-control data-domain="select" data-model="settings.papersize"
+			      data-change="settings.changePapersizeOpt(value)" data-options="settings.papersizeOpt"></span>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{'scheduling.main.printing.pageOrientation' | translate}}</label>
+
+			<div class="platform-form-col">
+				<data-radiolistctrl ng-model="settings.orientation" options="settings.orientationOpt"
+				                    on-selection-changed="settings.changeOrientationOpt(value)" valueMember="value"
+				                    displayMember="description"></data-radiolistctrl>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{'scheduling.main.printing.pageSpanX' | translate}}</label>
+
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="integer" data-model="settings.spanX"
+				     data-change="settings.changeSpanX()"></div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{'scheduling.main.printing.reportRange' | translate}}</label>
+
+			<div class="platform-form-col">
+				<div class="flex-box">
+					<div data-domain-control class="flex-element" data-domain="dateutc" data-model="settings.reportRangeStart"
+					     data-change="settings.changeUseReportStart()"></div>
+					<div data-domain-control class="flex-element" data-domain="dateutc" data-model="settings.reportRangeEnd"
+					     data-change="settings.changeUseReportEnd()"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding"> </label>
+			<div class="platform-form-col">
+				<div class="flex-box">
+					<div data-domain-control class="flex-element" data-domain="boolean" data-model="settings.useReportRange"
+					     data-options="settings.useReportRangeOpt" data-change="settings.changeUseReportRange()"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{'scheduling.main.printing.showLegend' | translate}}</label>
+			<div class="platform-form-col">
+				<div class="flex-box">
+					<div data-domain-control class="flex-element" data-domain="boolean" data-model="settings.showLegend"
+					     data-options="settings.showLegendOpt" data-change="settings.changeShowLegend()"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

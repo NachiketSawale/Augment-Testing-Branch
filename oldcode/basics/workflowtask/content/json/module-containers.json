@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.workflowTask.taskList.header",
+    "controller": "basicsWorkflowTaskListController",
+    "uuid": "cc61d635dad841aa8ea3c8c01fa4b1ec",
+    "permission":"cb92e20ddca34eac90b42957eeba3771"
+  },
+  {
+    "id": "2",
+    "template": "basics.workflowTask/partials/detail.html",
+    "title": "basics.workflowTask.detail.header",
+    "controller": "basicsWorkflowTaskDetailController",
+    "uuid": "7ed6761e1202439994c93508580401d2",
+    "permission":"de3095bfba7c442f8bf77c91d2174c72"
+  }
+]

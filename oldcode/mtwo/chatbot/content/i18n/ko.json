@@ -1,0 +1,13 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "구성",
+      "configurationTitle": "구성",
+      "entityChatbotConfigurationDescription": "설명",
+      "entityChatbotConfigurationIslive": "라이브입니다.",
+      "entityChatbotConfigurationUpdatedAt": "업데이트 날짜",
+      "entityChatbotHeaderLanguageFK": "언어",
+      "headerTitle": "머리말"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.ts-cart-item-panel {
+  overflow: auto;
+  margin: 0 6px;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .cart-group {
+    article {
+      flex: 1;
+      background-color: #e6e6e6;
+      border-right: solid 1px #fff;
+
+      &:last-child {
+        flex: 3;
+        border-right: none;
+      }
+
+      input[type="checkbox"] {
+        margin: 7px 2px 0 0;
+      }
+    }
+
+    label {
+      padding-top: 7px;
+    }
+  }
+}
+
+.ts-cart-item-preview {
+  overflow-y: auto;
+}
+
+.ts-cart-item-total {
+	padding: 15px 0 0 20px;
+	width: 100%;
+	height: 85px;
+	text-align:right;
+	position: relative;
+
+	.ts-cart-item-total-panel{
+		border-top:1px solid #626262;
+		@include ts-font-setting($ts-font-size-16, $ts-label-total-color, $ts-font-weight);
+		padding:0px;
+		margin-bottom:10px;
+		position: absolute;
+		right: 0;
+		width: 100%;
+		max-width: 500px;
+		max-height: 45px;
+		overflow-y: hidden;
+		.ts-cart-item-total-left{
+			float: left;
+		}
+	}
+	> div {
+		> a {
+			margin: 0 5px !important;
+		}
+	}
+	> label {
+		@include ts-font-setting($ts-font-size-16, $ts-label-color, $ts-font-weight);
+	}
+
+	.ts-cart-foot-button-panel {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		max-width: 500px;
+		padding: 0;
+	}
+
+	.btn-success {
+		border-radius: $ts-border-radius;
+	}
+}
+
+.ts-cart-item-subtotal {
+	margin: 6px 0 0 0;
+	float: right;
+	width: 100%;
+	text-align: right;
+	border-top:1px dotted #626262;
+	> label {
+		@include ts-font-setting($ts-font-size-16, $ts-label-total-color, $ts-font-weight);
+
+	}
+}
+
+.ts-commodity-car-bnt {
+	background-color: $ts-btn-background-color;
+	height: 30px;
+	width: 30px;
+	border-radius: $ts-border-radius;
+}
+
+.ts-space-up{
+	margin-top:15px;padding-left:1px;
+}
+
+#cart-view-materials-header {
+	flex-wrap: wrap;
+	height: auto;
+	min-width: 270px;
+}
+
+#cart-view-materials-list,
+#cart-view-materials-list-2 {
+	min-width: 270px;
+	.ms-commodity-row {
+		display: flex;
+		flex-wrap: wrap;
+		> div:first-child {
+			min-width: 228px;
+			flex: 3;
+			> div:first-child:not(.ms-commodity-row-img) {
+				padding-left: 0 !important;
+			}
+		}
+		> div:nth-child(2) {
+			max-width: 500px;
+			min-width: 228px;
+			flex: 2;
+		}
+	}
+	.ms-commodity-row-img {
+		> img:first-child {
+			margin-left: 0px;
+		}
+	}
+}

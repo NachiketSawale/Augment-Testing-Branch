@@ -1,0 +1,41 @@
+/**
+ * Created by hni on 2015/8/18.
+ */
+module.exports={
+	QUANTITY_TAKEOFF_RUBRIC:{
+		RUBRIC_LOAD_DATA_CASE:{
+			TYPE:'vor Ort'
+		}
+	},
+	FORMULA:{
+		TEST_SAVE_SEARCH_CASE:{
+			CODE:'109',
+			DESCRIPTION:'AUTOTEST01',
+			OPERATOR1:'+-*/',
+			OPERATOR2:'+',
+			OPERATOR3:'/',
+			OPERATOR4:'/',
+			OPERATOR5:'=',
+			FORMULA_TYPE:'Script',
+			GONIMETER:'Gon'
+		}
+	},
+	UOM:{
+		FORMULA_CODE:'55',
+		TEST_SAVE_SEARCH_CASE:{
+			UOM:'BR',
+			OPERATOR1:'+',
+			OPERATOR2:'+=',
+			OPERATOR3:'+',
+			OPERATOR4:'+',
+			OPERATOR5:'='
+		}
+	},
+	COMMENT:{
+		FORMULA_CODE:'55',
+		TEST_SAVE_SEARCH_CASE:{
+			CODE:'401',
+			COMMENTS:'AUTOTEST01'
+		}
+	}
+};

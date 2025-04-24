@@ -1,0 +1,14 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "Configuratie",
+      "configurationTitle": "Configuratie",
+      "entityChatbotConfigurationCode": "Code",
+      "entityChatbotConfigurationDescription": "Omschrijving",
+      "entityChatbotConfigurationIslive": "Islive",
+      "entityChatbotConfigurationUpdatedAt": "Bijgewerkt op",
+      "entityChatbotHeaderLanguageFK": "Taal",
+      "headerTitle": "Kop"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { EntityInfo } from '@libs/ui/business-base';
+import {  ControllingVersionDataService } from '../services/controlling-versions-data.service';
+import {ControllingCommonVersionEntityInfoModel} from '@libs/controlling/common';
+
+export const CONTROLLING_VERSIONS_ENTITY_INFO: EntityInfo = ControllingCommonVersionEntityInfoModel.create({
+	permissionUuid: '493916e729b1456c84f3b1f3034c4426',
+	dataServiceToken: ControllingVersionDataService,
+});
+
+

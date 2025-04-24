@@ -1,0 +1,10 @@
+.entity-filter-boolean li div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 32px;
+}
+
+.entity-filter-boolean li input[type='radio'] {
+	margin: 0 8px 0 0;
+}

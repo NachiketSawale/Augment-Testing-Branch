@@ -1,0 +1,51 @@
+<header class="modal-header main-color">
+	<h2 class="modal-title" data-ng-bind="'basics.common.docPreview' | translate"></h2>
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="onClose()"
+	        aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+</header>
+
+<section class="modal-body flex-box flex-element flex-column">
+	<div model-wde-viewer-ige-viewer class="flex-box flex-element flex-column overflow-hidden" data-ng-model="docId" data-options="viewerOptions" style="outline: none" data-platform-dragdrop-component="ddTarget" ></div>
+
+	<div class="preview-statusbar" data-platform-status-bar data-set-link="previewStatusBarLink(link)"></div>
+	<div data-ng-show="viewerOptions.showCommentView">
+		<div class="allMarkup">
+			<input style="float: left;" type="checkbox" data-ng-model="isAllSelect" data-ng-click="showAllMarkup(isAllSelect)">
+			<span style="float: left;padding: 3px 4px;">Show all markup</span>
+			<button class="control-icons ico-close" data-ng-click="viewerOptions.onOffCommentView()" style="float: right;width: 25px;height: 25px;margin: -3px -8px;"></button>
+		</div>
+		<div id="markupComments" class="comment-view">
+			<div style="height: 100%;overflow: auto;" data-model-wde-viewer-comment-view data-items="commentItems"></div>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="onOk()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+</footer>
+
+<style type="text/css">
+	#markupComments {
+		position: absolute;
+		width: 240px;
+		top: 37px;
+		right: 10px;
+		bottom: 33px;
+		border: 1px solid darkgray;
+		background-color: #fff;
+	}
+	.allMarkup {
+		position: absolute;
+		width: 240px;
+		top: 10px;
+		height: 30px;
+		right: 10px;
+		border: 1px solid darkgray;
+		background-color: #fff;
+		padding: 4px 9px;
+	}
+</style>

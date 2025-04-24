@@ -1,0 +1,72 @@
+<div class="wizard-wrapper wizard-dialog">
+    <section  style="overflow-y:hidden;">
+        <div class="margin-bottom-ld fullheight" style="overflow-y:hidden;">
+            <div  class="fullheight">
+                <div class="platform-form-group">
+                    <div class="estimate-material-scope platform-form-row">
+                        <label class="platform-form-label">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.label' | translate}}</label>
+                        <div class="platform-form-col">
+                            <ul>
+                                <li><input type="radio" data-ng-model="estimateScope" name="estimateScope" id="RESULT_HIGHLIGHTED"  value="2" ng-disabled="noLineItemSelected" data-ng-checked="estimateScope==2" data-ng-click="onResult(2)">
+                                    <label for="RESULT_HIGHLIGHTED" style="padding-top:0px;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.Highlighted' | translate}}</label>
+                                </li>
+
+                                <li><input type="radio" data-ng-model="estimateScope" name="estimateScope" id="RESULT_SET"  value="1" data-ng-checked="estimateScope==1" data-ng-click="onResult(1)">
+                                    <label for="RESULT_SET" style="padding-top:0px;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.resultSet' | translate}}</label>
+                                </li>
+
+                                <li><input type="radio" data-ng-model="estimateScope" name="estimateScope" id="ALL_ESTIMATE"  value="0"  data-ng-checked="estimateScope==0" data-ng-click="onResult(0)">
+                                    <label for="ALL_ESTIMATE" style="padding-top:0px;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.allEstimate' | translate}}</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br/>
+
+
+                    <div class="estimate-select-criteria platform-form-row">
+                        <label class="platform-form-label" style="word-break: break-word;text-overflow: unset; white-space: unset; width: 30%;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.sourceGroupingStructureTypeLabel' | translate}}</label>
+                        <div class="platform-form-col cell ">
+                            <div data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+                        </div>
+                    </div>
+
+                    <div class="estimate-select-criteria platform-form-row"  data-ng-hide="entity.groupStructureSourceType !== 9">
+                        <label class="platform-form-label" style="word-break: break-word;text-overflow: unset; white-space: unset; width: 30%;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.chooseSelectionStructureTypeLabel' | translate}}</label>
+                        <div class="platform-form-col cell ">
+                            <div data-ng-hide="entity.groupStructureSourceType !== 9" data-platform-form data-form-options="ChooseSelectionStructureOption" data-entity="entity"></div>
+                        </div>
+                    </div>
+
+                    <div class="estimate-select-criteria platform-form-row">
+                        <label class="platform-form-label" style="word-break: break-word;text-overflow: unset; white-space: unset; width: 30%;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.dissolveSelectedReferenceLineItem' | translate}}</label>
+                        <div class="platform-form-col cell ">
+	                        <label>
+                              <input type="checkbox" data-ng-model="entity.isSelectedReferenceLineItem" name="isSelectedReferenceLineItem"  id="isSelectedReferenceLineItem"   data-ng-checked="entity.isSelectedReferenceLineItem">
+	                        </label>
+	                        <label style="padding: 0 0 0 15px;">
+	                           {{'estimate.main.createBoqPackageWizard.selectScopeSource.note' | translate}}
+	                        </label>
+                        </div>
+                    </div>
+
+	                <div class="estimate-select-criteria platform-form-row">
+		                <label class="platform-form-label" style="word-break: break-word;text-overflow: unset; white-space: unset; width: 30%;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.multiplePackageAssignmentMode' | translate}}</label>
+		                <div class="platform-form-col cell ">
+			                <label>
+				                <input type="checkbox" data-ng-model="entity.isSelectedMultiplePackageAssignmentMode" name="isSelectedMultiplePackageAssignmentMode"  id="isSelectedMultiplePackageAssignmentMode"   data-ng-checked="entity.isSelectedMultiplePackageAssignmentMode">
+			                </label>
+			                <label style="padding: 0 0 0 15px;">
+			                  {{'estimate.main.createBoqPackageWizard.selectScopeSource.multiplePackageAssignmentModeNote' | translate}}
+			                </label>
+		                </div>
+	                </div>
+                </div>
+            </div>
+
+<!--            <div style="padding-top:8px; margin-left:0px;">-->
+<!--                <label>{{'estimate.main.createBoqPackageWizard.selectScopeSource.note' | translate}} </label>-->
+<!--            </div>-->
+        </div>
+    </section>
+</div>

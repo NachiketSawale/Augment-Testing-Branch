@@ -1,0 +1,13 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "Configurazione",
+      "configurationTitle": "Configurazione",
+      "entityChatbotConfigurationDescription": "Descrizione",
+      "entityChatbotConfigurationIslive": "È live",
+      "entityChatbotConfigurationUpdatedAt": "Aggiornato a",
+      "entityChatbotHeaderLanguageFK": "Lingua",
+      "headerTitle": "Titolo"
+    }
+  }
+}

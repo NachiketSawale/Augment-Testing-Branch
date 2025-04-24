@@ -1,0 +1,5 @@
+<div class="checkbox-list" data-ng-class="{ 'flat': options.flatDesign }" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+    <div data-ng-repeat="item in items" class="checkbox spaceToUp">
+        <label for="{{name}}_checkbox_{{$index}}"><input id="{{name}}_checkbox_{{$index}}" data-ng-disabled="options.disabled" type="checkbox" data-ng-model="item.checked">{{item.text}}</label>
+    </div>
+</div>

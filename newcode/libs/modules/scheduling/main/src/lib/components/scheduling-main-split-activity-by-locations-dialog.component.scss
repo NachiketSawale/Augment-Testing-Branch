@@ -1,0 +1,23 @@
+.border-all {
+	border-color: #d0d0d0;
+}
+
+ul {
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+	background-color: #d0d0d0;
+}
+
+ul li {
+	list-style: none;
+	float: left;
+	padding: 8px;
+	cursor: pointer;
+	border-right: 1px solid #f0f0f0;
+}
+
+ul li.activated {
+	background-color: #fff;
+	border-right: none;
+}

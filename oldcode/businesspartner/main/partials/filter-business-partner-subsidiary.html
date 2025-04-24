@@ -1,0 +1,15 @@
+<div class="contact-box-margin-top">
+	<div class="subview-header toolbar" data-platform-collapsable-list
+	     data-ng-model="tools">
+		<h4 class="title fix" >{{modalOptions.subsidiaryGridTitle}} </h4>
+
+		<div data-platform-menu-list data-list="tools"
+		     data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+	</div>
+	<div class="flex-box flex-column flex-element subview-content overflow-hidden" style="height: calc(100% + 10px);position:relative;">
+		<div class="lookup-grid flex-basis-auto" data-platform-grid
+		     data="grid"></div>
+	</div>
+	<div data-cloud-common-overlay data-loading="modalOptions.subsidiary.isLoading"></div>
+</div>
+

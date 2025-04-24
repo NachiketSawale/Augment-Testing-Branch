@@ -1,0 +1,56 @@
+﻿<style data-cloud-desktop-custom-user-css></style>
+<script data-cloud-desktop-userlane></script>
+
+<header id="mainheader">
+	<div id="modalBackground" data-cloud-desktop-modal-background></div>
+
+	<div cloud-desktop-ticker-message data-ng-if="applicationAlert.display"></div>
+
+	<img ng-src="cloud.style/content/images/app-icons.svg#ico-rib-40"
+	     title="{{'cloud.desktop.desktopWorkspace' | translate}}"
+	     ng_click="home($event)"></img>
+
+	<div class="middle-container">
+		<div class="infoView">
+			<div class="title font-bold" data-ng-bind="headerInfo.title"></div>
+			<cloud-desktop-pinning-info></cloud-desktop-pinning-info>
+
+			<div data-cloud-desktop-header-breadcrumbs class="ui-breadcrumb"></div>
+
+			<h5 data-ng-if="watchesInfo.show">
+					<span data-cloud-Desktop-Ng-Stats data-watch-Count data-digest-Length style="font-size: 12px; color: #0073b7;">
+						Watchers: {{ngStats.watchCount}} digest(ms): {{ngStats.digestLength}} {{watchesInfo.watches()}}
+					</span>
+			</h5>
+		</div>
+
+		<div id="loginView">
+			<div data-cloud-desktop-certificate-info></div>
+			<div class="content flex-box">
+				<div data-cloud-desktop-header-menu></div>
+			</div>
+			<div class="company-logo" ng-show="mainLogo">
+				<img ng-src="{{mainLogo}}" />
+			</div>
+		</div>
+	</div>
+</header>
+
+<section id="mainContainer" class="" data-platform-dragdrop-manager>
+	<a id="downloadLink" href="" download="" target="_blank" style="visibility:hidden;"></a>
+
+	<div data-cloud-common-overlay data-loading="desktopLoading || viewContentLoading"></div>
+	<div id="mainContent" data-ui-view></div>
+	<div id="sidebar-wrapper" data-cloud-desktop-sidebar data-sidebar-Options="sidebarOptions"></div>
+</section>
+
+<div>
+	<div data-ng-include="'cloud.desktop/templates/sidebar/filterdef-templates.html'"></div>
+	<div data-ng-include="'basics.lookupdata/templates/lookup-templates.html'"></div>
+	<div data-ng-include="'cloud.desktop/templates/sidebar/watchlist/watchlist-templates.html'"></div>
+	<div data-ng-include="'cloud.desktop/templates/sidebar/project-navigator/sidebar-project-navigator-templates.html'"></div>
+	<div data-ng-include="'model.main/templates/object-sidebar/filterdef-templates.html'"></div>
+	<div data-ng-include="'constructionsystem.main/templates/parameter-value-templates.html'"></div>
+	<div data-ng-include="'cloud.desktop/templates/kendo-splitter-tpl.html'"></div>
+	<div data-ng-include="'procurement.common/templates/wizard/find-bidder-with-characteristic-select-control-template.html'"></div>
+</div>

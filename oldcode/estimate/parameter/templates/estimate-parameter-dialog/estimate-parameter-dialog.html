@@ -1,0 +1,11 @@
+<div class="modal-wrapper overflow-hidden"> <!--resize should use this class-->
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div data-platform-form-container data-form-container-options="formContainerOptions" entity="dataItem"></div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="hasErrors()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

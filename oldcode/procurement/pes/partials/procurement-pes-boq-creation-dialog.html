@@ -1,0 +1,258 @@
+<div>
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <div>
+        <section class="modal-body">
+            <div class="filler">
+                <div class="fullheight">
+                    <div class="platform-form-container">
+                        <form class="platform-form platform-lg">
+                            <div class="platform-form-group">
+
+                                <!-- Contract Lookup-->
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'procurement.pes.entityContractCode' | translate}}</label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" data-basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.contract"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.ConHeaderFk"
+                                             data-ng-model="currentItem.ConHeaderFk"
+                                             data-config="fieldConfig.contract"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Package Lookup -->
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'cloud.common.entityPackage' | translate}}</label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" data-basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.package"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.PackageFk"
+                                             data-ng-model="currentItem.PackageFk"
+                                             data-config="fieldConfig.package"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Use Contract Boq Radio -->
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'procurement.pes.boqCreationDialog.useContractBoq' | translate}}</label>
+                                    <div class="platform-form-col">
+                                        <input
+                                                type="radio"
+                                                data-ng-model="currentItem.BoqSource"
+                                                data-ng-disabled="fieldConfig.contractBoq.enableUseContractBoq.readonly()"
+                                                data-ng-change="fieldConfig.boqSource.rt$change()"
+                                                data-ng-value="1"/>
+                                    </div>
+                                </div>
+
+                                <!-- Use Package Boq Radio-->
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'procurement.common.boq.useExistPackageBoq' | translate}}</label>
+                                    <div class="platform-form-col">
+                                        <input
+                                                type="radio"
+                                                data-ng-model="currentItem.BoqSource"
+                                                data-ng-disabled="fieldConfig.packageBoq.enableUsePackageBoq.readonly()"
+                                                data-ng-change="fieldConfig.boqSource.rt$change()"
+                                                data-ng-value="2"/>
+                                    </div>
+                                </div>
+
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'procurement.common.boq.useExistWicBoq' | translate}}</label>
+                                    <div class="platform-form-col">
+
+                                        <!-- Use Wic Boq Radio-->
+                                        <div class="platform-form-group">
+                                            <div class="platform-form-row form-group">
+                                                <div class="platform-form-col">
+                                                    <input
+                                                            type="radio"
+                                                            data-ng-model="currentItem.BoqSource"
+                                                            data-ng-disabled="fieldConfig.wicBoq.enableUseWicBoq.readonly()"
+                                                            data-ng-change="fieldConfig.boqSource.rt$change()"
+                                                            data-ng-value="3"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="platform-form-group">
+
+                                            <!-- Sub Package Lookup -->
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.boq.visible()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.entityPackage2Header' | translate}}<span class="required-cell"></span></label>
+                                                <div class="platform-form-col">
+                                                    <div class="control-directive"  procurement-package-package2-header-combobox
+                                                         data-options="lookupOptions.subPackage"
+                                                         data-entity="currentItem"
+                                                         data-model="currentItem"
+                                                         data-ng-model="currentItem.SubPackageFk"
+                                                         data-config="fieldConfig.subPackage">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Wic Group Lookup -->
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.boq.visible()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.wicGroup' | translate}}<span class="required-cell"></span></label>
+                                                <div class="platform-form-col">
+                                                    <div class="control-directive"  data-basics-lookupdata-lookup-composite
+                                                         data-options="lookupOptions.wicGroup"
+                                                         data-entity="currentItem"
+                                                         data-model="currentItem"
+                                                         data-ng-model="currentItem.WicGroupFk"
+                                                         data-config="fieldConfig.wicGroup">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Contract Combine Boq -->
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.contractBoq.boq.visible()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.existBoq' | translate}}<span class="required-cell"></span></label>
+                                                <div class="platform-form-col">
+                                                    <div class="control-directive" procurement-common-merged-boq-lookup
+                                                         data-options="lookupOptions.contractBoq"
+                                                         data-entity="currentItem"
+                                                         data-model="currentItem.ContractBoqFk"
+                                                         data-ng-model="currentItem.ContractBoqFk"
+                                                         data-config="fieldConfig.contractBoq.boq">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Package Boq -->
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.packageBoq.boq.visible()">
+                                                <label class="platform-form-label">{{ 'procurement.common.boq.existBoq' | translate}}<span class="required-cell"></span></label>
+                                                <div class="platform-form-col">
+                                                    <div class="control-directive" data-basics-lookupdata-lookup-composite
+                                                         data-options="lookupOptions.packageBoq"
+                                                         data-entity="currentItem"
+                                                         data-model="currentItem.PackageBoqFk"
+                                                         data-ng-model="currentItem.PackageBoqFk"
+                                                         data-config="fieldConfig.packageBoq.boq"></div>
+                                                </div>
+                                            </div>
+                                            <!-- Wic Boq -->
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.boq.visible()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.existBoq' | translate}}<span class="required-cell"></span></label>
+                                                <div class="platform-form-col">
+                                                    <div class="control-directive" data-basics-lookupdata-lookup-composite
+                                                         data-options="lookupOptions.wicBoq"
+                                                         data-entity="currentItem"
+                                                         data-model="currentItem.WicBoqFk"
+                                                         data-ng-model="currentItem.WicBoqFk"
+                                                         data-config="fieldConfig.wicBoq.boq"></div>
+                                                </div>
+                                            </div>
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.boq.visible()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.wicBoqReference' | translate}}<span class="required-cell"></span></label>
+                                                <div class="platform-form-col">
+                                                    <input type="text" data-ng-model="currentItem.WicBoqReference" class="form-control"
+                                                           data-platform-select-on-focus
+                                                           data-platform-control-validation
+                                                           data-ng-pattern-restrict="^[\s\S]{0,16}$"
+                                                           data-entity="currentItem"
+                                                           data-config="fieldConfig.wicBoqReference"
+                                                           data-ng-disabled="fieldConfig.wicBoqReference.rt$readonly()"
+                                                           data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0} }" >
+                                                    <div class="invalid-cell invalid-form" data-ng-if="fieldConfig.wicBoqReference.rt$hasError()" data-ng-bind="fieldConfig.wicBoqReference.rt$errorText()"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Take over entire BoQ -->
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.takeOverOption.visible()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.takeOverEntireBoq' | translate}}</label>
+                                                <div class="platform-form-col">
+                                                    <input
+                                                            type="radio"
+                                                            data-ng-model="currentItem.TakeOverOption"
+                                                            data-ng-disabled="!fieldConfig.takeOverOption.enableTakeOverOption()"
+                                                            data-ng-value="1"/>
+                                                </div>
+                                            </div>
+
+                                            <!-- Include non contracted item in previous PES -->
+                                            <div class="platform-form-row" data-ng-show="fieldConfig.takeOverOption.visibleIncludeNonContractedItem()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.includeNonContractedItem' | translate}}</label>
+                                                <div class="platform-form-col">
+                                                    <input
+                                                            type="checkbox"
+                                                            data-ng-model="currentItem.IsIncludeNotContractedItem"
+                                                            data-ng-disabled="!fieldConfig.takeOverOption.enableIncludeNonContractedItem()" />
+                                                </div>
+                                            </div>
+
+                                            <!-- Take over BoQ Root Item only -->
+                                            <div class="platform-form-row form-group" data-ng-show="fieldConfig.takeOverOption.visible()">
+                                                <label class="platform-form-label">{{'procurement.common.boq.takeOverBoqHeaderOnly' | translate}}</label>
+                                                <div class="platform-form-col">
+                                                    <input
+                                                            type="radio"
+                                                            data-ng-model="currentItem.TakeOverOption"
+                                                            data-ng-disabled="!fieldConfig.takeOverOption.enableTakeOverOption()"
+                                                            data-ng-value="2"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Structure Code Lookup-->
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'cloud.common.entityStructureCode' | translate}}<span class="required-cell"></span></label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.prcStructure"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.PrcStructureFk"
+                                             data-ng-model="currentItem.PrcStructureFk"
+                                             data-config="fieldConfig.prcStructure"></div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Tax Code Lookup -->
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'cloud.common.entityTaxCode' | translate}}<span class="required-cell"></span></label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.taxCode"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.MdcTaxCodeFk"
+                                             data-ng-model="currentItem.MdcTaxCodeFk"
+                                             data-config="fieldConfig.taxCode"></div>
+                                    </div>
+                                </div>
+
+                                <!-- controlling unit Code Lookup -->
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label">{{'cloud.common.entityControllingUnitCode' | translate}}<span class="required-cell"></span></label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.controllingUnit"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.ControllingUnitFk"
+                                             data-ng-model="currentItem.ControllingUnitFk"
+                                             data-config="fieldConfig.controllingUnit"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="modalOptions.okBtnDisabled()">
+            {{'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+</div>

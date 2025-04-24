@@ -1,0 +1,6 @@
+<div class="input-group lookup-container form-control">
+    <input data-ng-value="displayValue" title="{{displayValue}}" readonly="readonly" class="input-group-content" placeholder="{{'model.administration.propertyKeys.selectTags' | translate}}" />
+    <span class="input-group-btn" data-ng-if="!readonly">
+		<button data-ng-click="clickFn()" class="btn btn-default control-icons ico-menu" title="{{'model.administration.propertyKeys.selectTagsHint' | translate}}" data-ng-disabled="isReadOnly()">...</button>
+	</span>
+</div>

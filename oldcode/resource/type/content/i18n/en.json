@@ -1,0 +1,42 @@
+{
+  "resource": {
+    "type": {
+      "typeListTitle": "Resource Types",
+      "typeDetailTitle": "Resource Type Details",
+      "entityResourceType": "Resource Type",
+      "IsCrane": "Is Crane",
+      "IsTruck": "Is Truck",
+      "IsDriver": "Is Driver",
+      "requiredSkillListTitle": "Required Skills",
+      "requiredSkillDetailTitle": "Required Skill Details",
+      "requestedSkillVListTitle": "Requested Skills from Requested Type",
+      "requestedSkillVDetailTitle": "Requested Skill from Requested Type Details",
+      "requestedTypeListTitle": "Requested Types as Secondary Requisition",
+      "requestedTypeDetailTitle": "Requested Types as Secondary Requisition Details",
+		 "alternativeResTypeListTitle": "Alternative Resource Types",
+		 "alternativeResTypeDetailTitle": "Alternative Resource Type Details",
+		 "alternativeResTypeEntity": "Alternative Resource Type",
+      "entityIsDetailer": "Is Detailer",
+      "entityIsStructuralEngineer": "Is Structural Engineer",
+      "entityIsPlant": "Is Plant",
+      "planningBoardFilterEntity": "Planning Board Filter",
+      "planningBoardFilterListTitle": "Planning Board Filters",
+      "planningBoardFilterDetailTitle": "Planning Board Filter Details",
+      "entityProcurementStructure" : "Procurement Structure",
+      "entityMaterial": "Material",
+      "entityIsSmallTools": "Is Small Tools",
+      "entityCreateTemporaryResource": "Create Temporary Resource",
+      "entityGroupFk": "Group",
+      "entityPlantGroupFk": "Plant Group",
+      "entityIsBulk": "Is Bulk",
+      "entityTypeRequested": "Type Requested",
+      "entityDuration": "Duration",
+      "entityIsRequestedEntirePeriod": "Is Requested Entire Period",
+      "entityNecessaryOperators": "Necessary Operators",
+      "entityHR": "HR",
+      "entityHas2ndDemand": "2nd Demand",
+      "entityIsTrailer": "Is Trailer",
+      "entityIsTransportPermission": "Is Transport Permission"
+    }
+  }
+}

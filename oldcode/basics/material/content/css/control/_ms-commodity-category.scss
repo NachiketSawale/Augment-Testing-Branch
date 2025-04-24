@@ -1,0 +1,23 @@
+//  *-------------------------------------------------------------------------------
+//	 search view - category tree
+//  -------------------------------------------------------------------------------*/
+
+.ms-sv-category-tree {
+  margin-top: 10px;
+  border-bottom: 1px solid $ms-background-color;
+  padding-bottom: 5px;
+  div > a {
+    @include ms-font-setting($ms-font-size-13, $ms-label-color, $ms-font-weight);
+  }
+  li {
+    margin: 8px 0;
+  }
+  li > a {
+    @include ms-font-setting($ms-font-size-13, $ms-label-color, normal);
+  }
+}
+
+.ms-sv-category-tree-back {
+  float: right;
+  color: $ms-label-color;
+}

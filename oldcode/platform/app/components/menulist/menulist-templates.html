@@ -1,0 +1,60 @@
+<script type="text/ng-template" id="menulist/ul-template.html">
+	<ul class="##cssClass##">##list##</ul>
+</script>
+
+<script type="text/ng-template" id="menulist/content-template.html">
+	<button type="button" ##disabled## class="##cssExtendClass## ##cssClass##" title="##tooltip##" data-ng-click="##fn##"
+	        ##currentButtonId## ##attr## ##model## ##autofocus##><span class="##indClass##">##title##</span>
+		##subico##
+	</button>
+</script>
+
+<script type="text/ng-template" id="menulist/change-content-template.html">
+	<button type="button" ##disabled## class="##cssExtendClass####cssClass##" title="##tooltip##" data-ng-change="##fn##" name="##itemId##"
+	        ##currentButtonId## ##attr## ##model##><span>##title##</span>
+		##subico##
+	</button>
+</script>
+
+<script type="text/ng-template" id="menulist/sub-ico.html">
+	<svg data-cloud-desktop-svg-image data-sprite="##svgSprite##" data-image="##svgImage##" class="##svgClass##" data-replace></svg>
+</script>
+
+<script type="text/ng-template" id="menulist/item-template.html">
+	<li ##hide## class="##cssClass##  ##listCssClass##">##content##</li>
+</script>
+
+<script type="text/ng-template" id="menulist/sublist-item-template.html">
+	<li ##hide## class="##cssClass## ##cssExtendClass##">##content##</li>
+</script>
+
+<script type="text/ng-template" id="menulist/action-select-btn-template.html">
+	<li ##hide## class="##cssClass##  ##listCssClass##">
+		<platform-action-select-btn data-options="##options##" ##model## class="action-btn"></platform-action-select-btn>
+	</li>
+</script>
+
+<script type="text/ng-template" id="menulist/dropdown-template.html">
+	<li ##hide## class="##cssClass##">
+		##content##
+	</li>
+</script>
+
+<script type="text/ng-template" id="menulist/overflow-template.html">
+	<li class="fix" data-ng-hide="##hideOverflow##">
+		<button type="button" class="dropdown-toggle tlb-icons menu-button ico-menu" title="##tooltip##" data-ng-click="##fn##"
+		        ##disabled## ##attr## ##model##></button>
+	</li>
+</script>
+
+<script type="text/ng-template" id="menulist/divider-template.html">
+	<li ##hide## class="##cssClass## divider"></li>
+</script>
+
+<script type="text/ng-template" id="menulist/dropdown-search-template.html">
+	<div class="popup-content dropdown-search" platform-navigate-list-items list-items-selector="'.popup-content'">
+		<div data-domain-control data-ng-model="searchlist" data-domain="description" class="height-m" autofocus data-model-options="{debounce: { default: 500, blur: 0}}"
+		     data-keyup="handleFilter($event, ##searchPath##)"  data-autocomplete="off"></div>
+		<div data-platform-menu-list data-list="##searchPath##"></div>
+	</div>
+</script>

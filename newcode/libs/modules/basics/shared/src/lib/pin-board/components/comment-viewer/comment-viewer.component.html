@@ -1,0 +1,36 @@
+<div class="subview-content">
+<div class="flex-box flex-element flex-column comment-viewer" style="-webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text;">
+	<div class="flex-element comment-view" (click)="preview($event)">
+		<div *ngFor="let item of commentItems;index as i">
+			<basics-shared-comment-item *ngIf="dataService.getIsVisible(item)" [comment]="item" [dataService]="dataService" (delete)="deleteComment($event)" (toggleAction)="setData($event)"></basics-shared-comment-item>
+		</div>
+
+		<div *ngIf="detailInfo !== ''" class="comment-interval cursor-pointer">
+			<a (click)="toggle()"> {{ detailInfo | platformTranslate }} </a>
+		</div>
+	</div>
+
+	<div class="margin-top-ld flex-box comment-footer" *ngIf="totalItems>pageSize">
+		<mat-paginator class="pagination" #paginator
+		               (page)="setData($event)"
+		               [length]="totalItems"
+		               [pageIndex]="pageNum"
+		               [pageSize]="pageSize"
+		               [showFirstLastButtons]="true"
+		               [hidePageSize]="true"
+		               [pageSizeOptions]="[10, 20, 30, 40, 50]">
+		</mat-paginator>
+	</div>
+
+	<div class="margin-top-ld" [hidden]="dataService.isReadOnly()">
+		<basics-shared-comment-editor [readonly]="dataService.isReadOnly()" [options]="editorOptions" (submitComment)="addComment($event)"></basics-shared-comment-editor>
+	</div>
+
+	<!--	TODO: data-basics-common-white-board is not ready. Wait the framework to implement it.-->
+	<!-- <div data-basics-common-white-board [hidden]="!disable()" data-info="{{'cloud.common.disableCommentInfo' | platformTranslate}}"></div>-->
+	<div [hidden]="!disable()">{{ 'cloud.common.disableCommentInfo' | platformTranslate }}</div>
+
+	<ui-common-loading [loading]="dataService.isLoading"></ui-common-loading>
+</div>
+
+</div>

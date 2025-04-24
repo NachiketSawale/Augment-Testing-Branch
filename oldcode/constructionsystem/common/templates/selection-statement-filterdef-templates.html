@@ -1,0 +1,73 @@
+<script type="text/ng-template" id="cos-common-object-filterdef-outer.html">
+	<div>
+		<div class="hierarchic-box">
+			<div data-cos-common-object-filter-criteria></div>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/ng-template" id="cos-common-object-filterdef-criteria-header.html">
+	<li class="head">
+		<div class="input-group">
+			<div data-cos-common-object-filter-criteria-ops-combobox class="flex-element" data-model="criteria.selectedOperatorId"></div>
+
+			<span class="input-group-btn">
+				<button class="btn btn-default control-icons ico-criteria-new" title="{{::'cloud.desktop.filterdefCriaNewToolTip'|translate}}" data-ng-click="onCriteriaNew()"></button>
+				<button class="btn btn-default control-icons ico-criterion-new" title="{{::'cloud.desktop.filterdefCrioNewToolTip'|translate}}" data-ng-click="onCriterionNew()"></button>
+				<button class="btn btn-default control-icons ico-criteria-delete" title="{{::'cloud.desktop.filterdefCriaDelToolTip'|translate}}" data-ng-click="onCriteriaDelete()"></button>
+			</span>
+		</div>
+	</li>
+</script>
+
+<script type="text/ng-template" id="cos-common-object-filterdef-criterion.html">
+	<div class="criterion">
+		<!--<div class="input-group">-->
+			<!--<div data-cos-common-object-filter-filter-property-lookup class="flex-element" data-entity="criterion" data-ng-model="criterion.selectedPropertyId"></div>-->
+			<!--<span class="input-group-btn">-->
+				<!--<button class="btn btn-default control-icons ico-close" title="{{::'cloud.desktop.filterdefCrioDelToolTip'|translate}}" data-ng-click="onCriterionDelete()"></button>-->
+			<!--</span>-->
+		<!--</div>-->
+
+		<div class="input-group">
+			<div data-basics-common-field-selector-editor data-graph-provider-fn="getGraphProvider" data-entity="criterion" data-model="'selectedPropertyId'" class="flex-element"></div>
+			<span class="input-group-btn">
+				<button class="btn btn-default control-icons ico-close" title="{{::'cloud.desktop.filterdefCrioDelToolTip'|translate}}" data-ng-click="onCriterionDelete()"></button>
+			</span>
+		</div>
+
+		<div data-cos-common-object-filter-criterion-ops-combobox data-model="criterion.selectedOperatorId" data-entity="criterion" data-disabled="criterion.operatorDisabled">
+		</div>
+
+		<div ng-if="criterion.visible">  <!-- see remark:  Criterion.helper in efilter-server -->
+			<div class="flex-box border-top" ng-if="(!criterion.value1Hidden) || (!criterion.value2Hidden)">
+				<div class="flex-element">
+					<div data-cos-common-object-filter-filter-value data-model="criterion.value1"></div>
+				</div>
+				<div class="flex-element" ng-if="!criterion.value2Hidden">
+					<div data-cos-common-object-filter-filter-value data-model="criterion.value2"></div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-if="!criterion.valuelistHidden">
+			<div class="valuelist" data-cos-common-object-filter-filter-value-list data-model="criterion.valuelist" data-placeholder="<select value from list>"></div>
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="cos-common-object-filterdef-propertytree.html">
+
+	<!-- !!! Remark: Do not use treecontrol directive within attribute, because css is using the treecontrol element for styling -->
+	<div treecontrol class="tree-classic" data-order-by="[uiSortId,name]"
+	     data-tree-model="dataForTheTree"
+	     data-options="treeOptions"
+	     data-on-selection="onSelection(node)"
+	     data-on-node-dbl-click="onNodeDblClick(node)"
+	     data-selected-node="treeOptions.selectedNode"
+	     data-expanded-nodes="treeOptions.expandedNodes">
+		<span style="vertical-align: middle; display: inline-block" class="sm control-icons" data-ng_class="::classByType(node)"></span>
+		<label data-ng_bind="::getDisplaytext(node)" title="{{::getTitletext(node)}}" ></label>
+	</div>
+</script>

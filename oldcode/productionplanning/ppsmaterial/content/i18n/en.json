@@ -1,0 +1,140 @@
+{
+	"productionplanning": {
+		"ppsmaterial": {
+			"record": {
+				"catalogTitle": "Material Catalog Filter",
+				"groupTitle": "Material Group Filter",
+				"listViewTitle": "Material Records",
+				"detailViewTitle": "Material Record Details",
+				"ppsProperties": "PPS Properties",
+				"isbundled": "Is Bundled",
+				"basClobsPqtyContent": "Planning Quantity Rule",
+				"basClobsBqtyContent": "Billing Quantity Rule",
+				"basUomPlanFk": "Planning UoM",
+				"basUomBillFk": "Billing UoM",
+				"matSiteGrpFk": "Material Site Group",
+				"puCreationGroup": "Planning Unit Creation",
+				"quantityFormula": "Quantity Formula",
+				"matGroupOvrFk": "Override Material Group",
+				"materialOvrFk": "New Material",
+				"isOverrideMaterial": "Override Material",
+				"isserialproduction": "Serial Production",
+				"entityMaterial": "Material Record",
+				"basUomOvrFk": "New UoM",
+				"ppsUserdefinedTexts": "PPS Userdefined Texts",
+				"userdefinedForProddesc1": "Text for Template 1",
+				"userdefinedForProddesc2": "Text for Template 2",
+				"userdefinedForProddesc3": "Text for Template 3",
+				"userdefinedForProddesc4": "Text for Template 4",
+				"userdefinedForProddesc5": "Text for Template 5",
+				"isforsettlement": "For Settlement",
+				"isReadonly": "Readonly as Component"
+			},
+			"productDescription": {
+				"entityMdcProductDescription": "Product Description",
+				"listViewTitle": "Product Descriptions",
+				"detailViewTitle": "Product Description Details",
+				"dimensions": "Dimensions",
+				"length": "Length",
+				"width": "Width",
+				"height": "Height",
+				"weight": "Weight",
+				"area": "Area",
+				"engDrawing": "Drawing",
+				"propertiesGroup": "Properties",
+				"isolationVolume": "Isolation Volume",
+				"concreteVolume": "Concrete Volume",
+				"concreteQuality": "Concrete Quality",
+				"processTemplateFk": "Process Template",
+				"errorCodeMustBeUnique": "Code should be unique in the same master data context!",
+				"ppsFormulaInstanceFk": "Formula Instance"
+			},
+			"productDescParameter": {
+				"entityProductDescParameter": "Product Description Parameter",
+				"listViewTitle": "Product Description Parameters",
+				"detailViewTitle": "Product Description Parameter Details",
+				"variablename": "Variable Name",
+				"errorVariableNameMustBeUnique": "Variable Name should be unique for all parameters of the same MDC Product Description!"
+			},
+			"materialEventType": {
+				"entityMaterialEventType": "Material Event Type",
+				"listViewTitle": "Material Event Types",
+				"detailViewTitle": "Material Event Type Details",
+				"ppsEventTypeFk": "Event Type",
+				"varduration": "Variable Duration",
+				"lagTime": "Lag Time",
+				"ppsEventTypeBaseFk": "Event Type Base",
+				"errorPpsEventTypeMustBeUnique": "Event Type should be unique for the same material!"
+			},
+			"ppsEventTypeRelation": {
+				"entityPpsEventTypeRelation": "Event Type Relation",
+				"listViewTitle": "Event Type Relations",
+				"detailViewTitle": "Event Type Relation Details",
+				"ppsEventTypeParentFk": "Parent Event Type",
+				"ppsEventTypeChildFk": "Child Event Type",
+				"fixLagTime": "Fix Lag Time",
+				"fixDuration": "Fix Duration",
+				"relationKindFk": "Relation Kind",
+				"errorParentEventTypeAndChildEventTypeNotBeSystemEventType": "Parent event type and child event type can not be System-Event-Type at the same time!"
+			},
+			"ppsCadToMaterial": {
+				"entityCad2Material": "CAD to Material",
+				"cadProductType": "CAD Product Type",
+				"cadAddSpecifier": "Additional Specifier",
+				"listViewTitle": "CAD to Material",
+				"detailViewTitle": "CAD to Material Details"
+			},
+			"ppsMaterialToMdlProductType": {
+				"entityPpsMaterial2MdlProductType": "5D Tracking Mapping Configuration",
+				"description": "3D Object Type",
+				"productCategory":"5D Tracking Criteria",
+				"productType": "Product Type",
+				"productionMode": "Auto/Manual Production",
+				"autoProduction": "AP",
+				"manualProduction": "MP",
+				"listViewTitle": "5D Tracking Mapping Configuration",
+				"detailViewTitle": "5D Tracking Mapping Configuration Details"
+			},
+			"mat2ProdMatGroup": {
+				"entityProdMatGroup": "Production Material Group"
+			},
+			"ppsMaterialComp": {
+				"entityPpsMaterialComp": "Material Producible On",
+				"ppsMaterialItemFk": "Material Planningunit",
+				"userFlag1": "User Flag 1",
+				"userFlag2": "User Flag 2",
+				"listViewTitle": "Material Producible On"
+			},
+			"summarized": {
+				"listViewTitle": "Summarized Materials",
+				"summarizedMode": "Summarized Mode",
+				"summarizedGroup": "Summarized Group",
+				"noSummarized": "No Summarized",
+				"merge": "Merge",
+				"group": "Group",
+				"mix": "Merge then Group",
+				"noGroups": "No Groups",
+				"location1": "Location (Exact)",
+				"location2": "Location (1st Level)",
+				"location3": "Location (2nd Level)",
+				"materialSumFk": "Summarized Material"
+			},
+			"mapping": {
+				"listViewTitle": "Material Mapping",
+				"mappingCode": "Code",
+				"ppsmaterialfk": "Pps Material",
+				"basexternalsourcetypefk": "External Source Type",
+				"basexternalsourcefk": "External Source"
+			},
+			"drawingComponent": {
+				"listViewTitle": "Drawing Components",
+				"entityDrawingComponent": "Drawing Components",
+				"Autogenerated": "Auto Generated"
+			},
+			"strandPatternListViewTitle": "Strand Pattern",
+			"preview": {
+				"title": "Preview"
+			}
+		}
+	}
+}

@@ -1,0 +1,168 @@
+<div id="controllingTransferReport" data-ng-controller="controllingStructureTransferToBisResultReportController" class="flex-element flex-box flex-column flex-basis-auto overflow-hidden">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{modalTitle | translate }} </h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+
+	<section class="modal-body">
+		<div class="fullheight">
+			<div class="fullheight" style="overflow-y: auto">
+
+				<div data-accordion data-close-others="false">
+					<div data-accordion-group data-is-open="inputOpen">
+						<div data-accordion-heading>
+							<span class="platform-form-group-header-text">{{'platform.bulkEditor.records' | translate}}</span>
+
+							<span class="platform-form-group-header">
+                                <div data-ng-show="inputOpen" class="toggleImg control-icons ico-up"></div>
+                                <div data-ng-show="!inputOpen" class="toggleImg control-icons ico-down"></div>
+                            </span>
+						</div>
+
+						<div class="platform-form-group">
+							<div class="platform-form-row">
+								<label class="platform-form-label">{{'controlling.structure.transferdatatobisExecutionReport.costDataRecord' | translate }}</label>
+								<div class="platform-form-col">
+									<input class="form-control lg-12 md-12 " data-ng-model="dataItem.totalRecords" readonly />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div data-accordion data-close-others="false">
+					<div data-accordion-group data-is-open="inputOpen">
+						<div data-accordion-heading>
+							<span class="platform-form-group-header-text">{{'platform.bulkEditor.details' | translate}}</span>
+
+							<span class="platform-form-group-header">
+                                <div data-ng-show="inputOpen" class="toggleImg control-icons ico-up"></div>
+                                <div data-ng-show="!inputOpen" class="toggleImg control-icons ico-down"></div>
+                            </span>
+						</div>
+
+						<div class="platform-form-group">
+
+							<div class="platform-form-row">
+								<label class="platform-form-label">{{'platform.bulkEditor.logs' | translate }}</label>
+								<div class="platform-form-col">
+									<div class="flex-box flex-column subview-container" style="height:auto;width : auto">
+										<div data-platform-Grid data="transferedRecordsGridData"></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div data-accordion data-close-others="false">
+					<div data-accordion-group data-is-open="inputOpen" data-ng-show="dataItem.showAssignmentCheckGrid">
+						<div data-accordion-heading>
+							<span class="platform-form-group-header-text">{{'controlling.structure.transferdatatobisExecutionReport.transferedAssignmentCheck' | translate}}</span>
+
+							<span class="platform-form-group-header">
+                                <div data-ng-show="dataItem.showAssignmentCheckGrid" class="toggleImg control-icons ico-up"></div>
+                                <div data-ng-show="!dataItem.showAssignmentCheckGrid" class="toggleImg control-icons ico-down"></div>
+                            </span>
+						</div>
+
+						<div class="platform-form-group">
+
+							<div class="platform-form-row">
+								<div class="platform-form-col">
+									<div class="flex-box flex-column subview-container" style="height:auto;width : auto">
+										<div data-platform-Grid data="transferWarningDetailsGridData"></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div data-accordion data-close-others="false">
+					<div data-accordion-group data-is-open="inputOpen" data-ng-show="dataItem.showQuantityCheckGrid">
+						<div data-accordion-heading>
+							<span class="platform-form-group-header-text">{{'controlling.structure.transferdatatobisExecutionReport.transferedQuantityCheck' | translate}}</span>
+
+							<span class="platform-form-group-header">
+                                <div data-ng-show="dataItem.showQuantityCheckGrid" class="toggleImg control-icons ico-up"></div>
+                                <div data-ng-show="!dataItem.showQuantityCheckGrid" class="toggleImg control-icons ico-down"></div>
+                            </span>
+						</div>
+
+						<div class="platform-form-group">
+
+							<div class="platform-form-row">
+								<div class="platform-form-col">
+									<div class="flex-box flex-column subview-container" style="height:auto;width : auto">
+										<div data-platform-Grid data="transferQuantityCheckGridData"></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div data-accordion data-close-others="false">
+					<div data-accordion-group data-is-open="inputOpen" data-ng-show="dataItem.transferTotalCompareGridId">
+						<div data-accordion-heading>
+							<span class="platform-form-group-header-text">{{'controlling.structure.transferdatatobisExecutionReport.transferedTotalComparison' | translate}}</span>
+
+							<span class="platform-form-group-header">
+                                <div data-ng-show="dataItem.transferTotalCompareGridId" class="toggleImg control-icons ico-up"></div>
+                                <div data-ng-show="!dataItem.transferTotalCompareGridId" class="toggleImg control-icons ico-down"></div>
+                            </span>
+						</div>
+
+						<div class="platform-form-group">
+
+							<div class="platform-form-row">
+								<div class="platform-form-col">
+									<div class="flex-box flex-column subview-container" style="height:auto;width : auto">
+										<div data-platform-Grid data="transferTotalCompareGridData"></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div data-accordion data-close-others="false" data-ng-show="dataItem.showTransferLogDetails">
+					<div data-accordion-group data-is-open="inputOpen">
+						<div data-accordion-heading>
+							<span class="platform-form-group-header-text">{{'controlling.structure.transferdatatobisExecutionReport.transferLog' | translate}}</span>
+
+							<span class="platform-form-group-header">
+                                <div data-ng-show="inputOpen" class="toggleImg control-icons ico-up"></div>
+                                <div data-ng-show="!inputOpen" class="toggleImg control-icons ico-down"></div>
+                            </span>
+						</div>
+
+						<div class="platform-form-group">
+							<div class="platform-form-row">
+								<div class="platform-form-col">
+										<textarea class="form-control lg-12 md-12 " data-ng-model="dataItem.transferLogDetails" readonly></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+	</footer>
+</div>
+<style>
+    #controllingTransferReport textarea{
+        height : 300px;
+    }
+</style>

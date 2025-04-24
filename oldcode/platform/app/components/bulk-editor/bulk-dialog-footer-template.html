@@ -1,0 +1,24 @@
+<button ng-if="modalOptions.isShown('run')" class="btn"
+        data-ng-class="(modalOptions.defaultButton === 'run') ? 'btn-return' : 'btn-default'"
+        data-ng-click="modalOptions.ok('run')"
+        data-ng-disabled="modalOptions.isDisabled('run')">
+	{{modalOptions.runText}}
+</button>
+<button ng-if="modalOptions.isShown('saveAndRun')" class="ok btn"
+        data-ng-class="(modalOptions.defaultButton === 'saveAndRun') ? 'btn-return' : 'btn-default'"
+        data-ng-click="modalOptions.ok('saveAndRun')"
+        data-ng-disabled="modalOptions.isDisabled('saveAndRun')">
+	{{modalOptions.saveAndRunText}}
+</button>
+<button ng-if="modalOptions.isShown('save')" class="btn"
+        data-ng-class="(modalOptions.defaultButton === 'save') ? 'btn-return' : 'btn-default'"
+        data-ng-click="modalOptions.ok('save')"
+        data-ng-disabled="modalOptions.isDisabled('save')">
+	{{modalOptions.saveText}}
+</button>
+<button ng-if="modalOptions.isShown('cancel')" class="cancel btn"
+        data-ng-class="(modalOptions.defaultButton === 'cancel') ? 'btn-return' : 'btn-default'"
+        data-ng-click="modalOptions.cancel()"
+        data-ng-disabled="modalOptions.isDisabled('cancel')">
+	{{modalOptions.cancelBtnText}}
+</button>

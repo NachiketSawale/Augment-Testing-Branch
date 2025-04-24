@@ -1,0 +1,48 @@
+{
+	"resource": {
+		"plantpricing": {
+
+			"pricelistTypeDetailTitle": "Plant Pricelist Type Details",
+			"pricelistTypeEntity": "Plant Pricelist Type",
+			"pricelistTypeListTitle": "Plant Pricelist Types",
+			"pricelistDetailTitle": "Plant Pricelist Details",
+			"pricelistEntity": "Plant Pricelist",
+			"pricelistListTitle": "Plant Pricelists",
+			"estPricelistDetailTitle": "Estimate Plant Pricelist Details",
+			"estPricelistEntity": "Estimate Plant Pricelist",
+			"estPricelistListTitle": "Estimate Plant Pricelists",
+			"IsDefault": "Is Default",
+			"Sorting": "Sorting",
+			"IsLive": "Active",
+			"equipmentContextFk": "Plant Context",
+			"pricelistTypeFk": "Price List Type",
+			"currencyFk": "Currency",
+			"percent": "Percentage",
+			"isManualEditPlantMaster": "Is Manual Edit Plant Master",
+			"isManualEditJob": "Is Manual Edit Job",
+			"isManualEditDispatching": "Is Manual Edit Dispatching",
+			"priceportion1Name": "Price Portion 1 Name",
+			"priceportion2Name": "Price Portion 2 Name",
+			"priceportion3Name": "Price Portion 3 Name",
+			"priceportion4Name": "Price Portion 4 Name",
+			"priceportion5Name": "Price Portion 5 Name",
+			"priceportion6Name": "Price Portion 6 Name",
+			"commentText": "Comments",
+			"validFrom": "Valid From",
+			"validTo": "Valid To",
+			"equipmentCalculationTypeFk": "Calculation Type",
+			"uomFk": "Uom Description",
+			"referenceYear": "Reference Year",
+			"equipmentCatalogFk": "Catalog-Currency",
+			"MasterDataLineItemContextFk": "Line Item Context",
+			"MasterDataContextFk": "Master Data Context",
+			"EquipmentDivisionFk": "Plant Division",
+			"EquipmentCalculationTypeFk": "Calculation Type"
+
+
+
+
+
+		}
+	}
+}

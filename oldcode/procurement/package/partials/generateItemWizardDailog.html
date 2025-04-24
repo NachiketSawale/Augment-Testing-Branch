@@ -1,0 +1,38 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="procurementWizardGenerateItemController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body" style="overflow-y:hidden;">
+        <div class="platform-form-group">
+            <label class="platform-form-label">{{'procurement.package.wizard.generateItems.optionNewItemTitle'| translate}}</label>
+        </div>
+        <div class="platform-form-group col-md-12" style="padding-left:20px;display: inline-block;">
+            <div class="col-sm-3">
+                <input type="checkbox" style="vertical-align: middle;"  data-ng-checked="aggregateProfileFlg" data-ng-model="aggregateProfileFlg" data-ng-click="onAggregateProfileFlg(this)"/>
+                <label class="platform-form-label" style="vertical-align: middle;" >{{'procurement.package.wizard.generateItems.aggregateProfileItemFlg'| translate}}</label>
+            </div>
+            <div class="col-sm-9" style="line-height: 28px;">
+                <label class="platform-form-label" style="vertical-align: middle;"> {{'procurement.package.wizard.generateItems.aggregateProfileItem'| translate}}</label>
+                <div class="platform-form-col" style="width:250px;display: inline-block;vertical-align: middle;">
+                    <div basics-common-unique-fields-profile-lookup data-ng-model="uniqueFieldsProfile" data-options="serviceoptions"></div>
+                </div>
+            </div>
+        </div>
+        <div class="platform-form-group" style="margin-left:60px;">
+            <label class="platform-form-label">{{'procurement.package.wizard.generateItems.sameItemTitle'| translate}}</label>
+        </div>
+        <div class="platform-form-group" style="margin-left:90px;">
+            <div>
+                <input type="radio"  name="mode" value="1" data-ng-checked="modeFlg==1" data-ng-click="onModeResult(1)"><label>{{'procurement.package.wizard.generateItems.mergeExisted'| translate}}</label>
+            </div>
+            <div>
+                <input type="radio"  name="mode" value="2" data-ng-checked="modeFlg==2" data-ng-click="onModeResult(2)"><label>{{'procurement.package.wizard.generateItems.createNewItem'| translate}}</label>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="generateItem()" style="margin-left:5px;">{{::'platform.okBtn' | translate}}</button>
+        <button type="button" data-ng-click="$close(false)" class="btn btn-default" >{{::'platform.cancelBtn' | translate}}</button>
+    </div>
+</div>
+

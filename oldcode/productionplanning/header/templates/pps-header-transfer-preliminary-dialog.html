@@ -1,0 +1,42 @@
+<header class="modal-header main-color" data-ng-include="'dialog/modaldialog-header-template.html'">
+</header>
+<section class="modal-body flex-box flex-column" ng-cloak>
+	<div data-entity="headerEntity" data-form-options="formOptions" data-platform-form style="margin-left: -10px"></div>
+	<div class="filter">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					<input data-ng-change="radioOptionChanged()" data-ng-disabled="isOKDisabled" data-ng-model="currentRadio.RadioType"
+					       name="radioSelect"
+					       style="vertical-align:text-bottom;margin: 2px 0;"
+					       type="radio"
+					       value="0"/>
+					&nbsp;{{'productionplanning.header.wizard.transferPreliminary.signed' | translate}}
+				</label>
+				<div class="platform-form-col">
+					<div data-entity="headerEntity" data-form-options="formOptionsForOrdHeader" data-platform-form></div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label" style="min-width: 112px;">
+					<input data-ng-change="radioOptionChanged()" data-ng-disabled="isOKDisabled" data-ng-model="currentRadio.RadioType"
+					       name="radioSelect"
+					       style="vertical-align:text-bottom;margin: 2px 0;"
+					       type="radio"
+					       value="1"/>
+					&nbsp;{{'productionplanning.header.wizard.transferPreliminary.discarded' | translate}}
+				</label>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="modal-footer">
+	<button class="btn btn-default" data-ng-click="handleOK()" data-ng-disabled="isOKDisabled" type="button">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button class="btn btn-default" data-ng-click="$close(false)" data-ng-disabled="requirement" type="button">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>

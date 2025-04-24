@@ -1,0 +1,47 @@
+<header class="modal-header main-color">
+	<button type="button"
+			class="close db"
+			data-dismiss="modal"
+			data-ng-click="deepcopyclose()"
+			aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+			 class="block-image"></svg>
+	</button>
+	<h2 class="modal-title">{{'constructionsystem.project.deepCopyCosInsHeader' | translate}}</h2>
+</header>
+
+<section class="modal-body">
+	<div class="alert alert-danger" data-ng-show="errors.length">
+		<ul>
+			<li data-ng-repeat="error in errors"
+				data-ng-bind="error"></li>
+		</ul>
+	</div>
+	<div class="alert alert-info" data-ng-show="infos.length">
+		<ul>
+			<li data-ng-repeat="info in infos"
+				data-ng-bind="info"></li>
+		</ul>
+	</div>
+	<div ng-switch="currentStep.number" class="modal-wrapper">
+		<div ng-switch-when="0">
+			<div data-platform-form-container data-form-container-options="formContainerOptions"
+				 entity="currentItem"></div>
+		</div>
+		<div ng-switch-when="1">
+			<ng-include src="'constructionsystem.project/templates/compare-cos-step1-template.html'"></ng-include>
+		</div>
+		<div ng-switch-when="2">
+			<ng-include src="'constructionsystem.project/templates/compare-cos-step2-template.html'"></ng-include>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default"
+			data-ng-repeat="button in currentStep.buttons"
+			data-ng-bind="button.label | translate"
+			data-ng-disabled="button.disable && button.disable()"
+			data-ng-click="button.action()">
+	</button>
+</footer>

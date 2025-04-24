@@ -1,0 +1,9 @@
+<div class="form-control">
+       <input type="text" debounceChanged
+       [attr.id]="controlContext.fieldId"
+       [attr.name]="controlContext.fieldId"
+       [attr.maxLength]="controlContext.maxLength"
+       [attr.placeholder]="controlContext.placeholder"
+       [(ngModel)]="controlContext.value"
+       [disabled]="controlContext.readonly"/>
+</div>

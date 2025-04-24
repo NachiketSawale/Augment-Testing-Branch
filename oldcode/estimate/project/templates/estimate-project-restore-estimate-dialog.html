@@ -1,0 +1,24 @@
+<div data-ng-controller="estPrjRestoreEstimateDialogController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<div>
+		<section class="modal-body">
+			<div style="height: 100%;width:100%">
+				<div data-platform-alert data-error="error"></div>
+				<div data-platform-form-container data-form-container-options="formContainerOptions"
+				     entity="currentItem" class="fullheight"></div>
+				<div cloud-common-overlay data-loading="isLoading"></div>
+
+				<div ng-bind="errorDetail" data-ng-show="isFailed" class="alert alert-danger"  role="alert"></div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isOkDisabled">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

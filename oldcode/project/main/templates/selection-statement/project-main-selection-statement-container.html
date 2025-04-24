@@ -1,0 +1,34 @@
+<div class="flex-box flex-column flex-element">
+
+    <div data-platform-kendo-splitter-adjust class="flex-element filler"
+         option="{panes: [ { collapsible: true, size: '80%' },{ collapsible: true, size: '20%' }],orientation:'horizontal'}">
+
+        <div id="ui-layout-west" class="filler" data-ng-controller="projectMainLineItemSelectionStatementListController">
+            <div class="flex-box filler">
+                <platform-Grid data="gridData"></platform-Grid>
+            </div>
+            <div cloud-common-overlay data-loading="isLoading" data-info2="isLoadingInfo"></div>
+        </div>
+
+        <div id="ui-layout-east" class="statementsContainer">
+            <div class="flex-element">
+                <select data-ng-model="selStatementType" style="width:100%">
+                    <option value="lineItems" selected>{{'estimate.main.lineItemSelStatement.selStatementScript' | translate}}</option>
+                    <option value="objects">{{'estimate.main.lineItemSelStatement.selStatementObjectScript' | translate}}</option>
+                </select>
+            </div>
+            <div class="flex-element" data-ng-if="selStatementType==='lineItems'" data-ng-controller="estimateMainLineItemSelectionStatementController" estimate-main-expert-filter-directive></div>
+            <div class="flex-element" data-ng-if="selStatementType==='objects'" data-ng-controller="estimateMainLineItemObjectSelectionStatementController" estimate-main-object-expert-filter-directive></div>
+
+            <textarea class="k-content-frame" data-ng-model="currentItem.PlainText"
+                      data-ng-change="onPropertyChanged()"
+                      data-ng-click="commitEdit()"
+                      data-ng-readonly="rt$readonly"
+                      style="height: 100%">
+            </textarea>
+        </div>
+    </div>
+</div>
+<style>
+    .statementsContainer .CodeMirror-hscrollbar{bottom: 21px !important;}
+</style>

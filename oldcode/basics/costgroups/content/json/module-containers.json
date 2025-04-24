@@ -1,0 +1,39 @@
+[
+    {
+        "id": "basics.costgroups.catalog",
+        "template": "app/components/base/grid-partial.html",
+        "title": "basics.costgroups.listCostGroupCatalogTitle",
+        "controller": "basicsCostGroupCatalogListController",
+        "uuid":"3FEF67F4C51DAF48775E7C16841CFCA2"
+    },
+    {
+        "id": "basics.costgroups.costgroupcatalog.detail",
+        "template": "app/components/base/form-detail-partial.html",
+        "title": "basics.costgroups.detailCostGroupCatalogTitle",
+        "controller": "basicsCostGroupCatalogDetailController",
+        "uuid": "950e80bb6ef44857bec647e238598c5e",
+        "permission": "3FEF67F4C51DAF48775E7C16841CFCA2"
+    },
+    {
+        "id": "basics.costgroups.costgroup.list",
+        "template": "app/components/base/grid-partial.html",
+        "title": "basics.costgroups.listCostGroupTitle",
+        "controller": "basicsCostGroupListController",
+        "uuid": "53BBF195FCA0C866020EB155E43DB648"
+    },
+    {
+        "id": "basics.costgroups.costgroup.detail",
+        "template": "app/components/base/form-detail-partial.html",
+        "title": "basics.costgroups.detailCostGroupTitle",
+        "controller": "basicsCostGroupDetailController",
+        "uuid": "ae907fe037404c529b869ac249530084",
+        "permission": "53BBF195FCA0C866020EB155E43DB648"
+    },
+    {
+        "id": "basics.costgroups.translation",
+        "template": "cloud.common/partials/languagegridView.html",
+        "title": "cloud.common.entityTranslation",
+        "controller": "cloudCommonLanguageGridController",
+        "uuid":"329649779916429F8C80FD9733309046"
+    }
+]

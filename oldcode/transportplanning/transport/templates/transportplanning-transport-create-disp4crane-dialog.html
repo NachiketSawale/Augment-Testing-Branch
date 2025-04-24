@@ -1,0 +1,70 @@
+<div class="filler flex-box flex-column">
+        <header class="modal-header main-color">
+            <button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)" aria-hidden="true">
+                <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+            </button>
+            <h2 class="modal-title">{{ title | translate }}</h2>
+        </header>
+        <section class="modal-body">
+            <style type="text/css">
+                div.likeFieldset {
+                    padding: 11px;
+                    border: 2px solid #dcdcdc;
+                    border-radius: 3px;
+                    position: relative;
+                    top: -12px;
+                    margin: 0 10px;
+                }
+    
+                div.likeLegend {
+                    font-weight: bold;
+                    color: #626262;
+                    width: fit-content;
+                    font-size: 16px;
+                    z-index: 1;
+                    position: relative;
+                    left: 16px;
+                    background-color: white;
+                }
+            </style>
+            <div data-trs-kendo-splitter class="filler" option="{panes: [ { collapsible: true, size: '40%' },{ collapsible: true, size: '60%' }],orientation:'vertical'}">
+                <div class="filler">
+                    <div class="likeLegend">
+                        {{'transportplanning.transport.wizard.dispatchConfigurations'| translate}}
+                    </div>
+                    <div class="likeFieldset flex-box flex-column" style="height: 100%">
+                        <div data-platform-form data-form-options="dispatchCfgFormOptions" data-entity="config.dispConfig"></div>
+                        <div class="flex-element flex-box flex-column subview-container" style="margin-left: 15px;height: 100%">
+                            <div class="subview-header toolbar">
+                                <label class="platform-form-label" style="line-height: 30px;">{{'basics.characteristic.title.characteristics'
+                                    | translate}}</label>
+                                <div data-platform-menu-list data-list="config.chartGrid.tools"></div>
+                            </div>
+                            <div class="flex-element flex-box flex-column subview-content relative-container">
+                                <div data-platform-grid data="config.chartGrid" class="flex-element"></div>
+                                <div cloud-common-overlay data-loading="isLoadingCharacteristics"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-ng-if="need2CreateCraneRsv" class="filler">
+                    <div class="likeLegend">
+                        {{'transportplanning.transport.wizard.craneReservation'| translate}}
+                    </div>
+                    <div class="likeFieldset flex-box flex-column" style="height: 100%">
+                        <div data-platform-form-container data-form-container-options="craneRsvFormContainerOptions" entity="config.newCraneRsv" class="flex-element flex-basis-auto"></div>
+                        <div cloud-common-overlay data-loading="isCreatingCraneRsv"></div>
+                    </div>
+                </div>
+            </div>
+            <div cloud-common-overlay data-loading="isWizardExecuting"></div>
+        </section>
+        <footer class="modal-footer">
+            <button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK(config)">
+                {{'cloud.common.ok' | translate}}
+            </button>
+            <button type="button" class="btn btn-default" data-ng-click="$close(false)">
+                {{'cloud.common.cancel' | translate}}
+            </button>
+        </footer>
+    </div>

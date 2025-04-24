@@ -1,0 +1,61 @@
+<div data-ng-controller="createInstanceWizardController" class="modal-wrapper">
+	<div>
+		<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+		<section class="modal-body">
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="radio" name="createinstance" value="createBySelectionStatement"
+							       data-ng-disabled="modalOptions.model.disableCreateBySelectionStatement"
+							       data-ng-model="modalOptions.model.createType">{{modalOptions.text.createBySelectionStatement}}
+						</label>
+
+						<div class="checkbox spaceToUp" style="margin-left:30px;">
+							<label>
+								<input data-ng-disabled="modalOptions.model.createType!=='createBySelectionStatement'" type="checkbox" data-ng-model="modalOptions.model.onlyCreateHaveAssignObject">{{modalOptions.text.onlyCreateHaveAssignObject}}
+							</label>
+						</div>
+					</div>
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="radio" name="createinstance" value="createByBindingObjects"
+							       data-ng-model="modalOptions.model.createType">{{modalOptions.text.createByBindingObjects}}
+						</label>
+					</div>
+				</div>
+				<div class="platform-form-row"></div>
+				<div class="platform-form-row">
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="checkbox" name="evaluateAndCalculate"
+							       data-ng-model="modalOptions.model.evaluateAndCalculate">{{modalOptions.text.evaluateAndCalculate}}
+						</label>
+					</div>
+					<div class="checkbox spaceToUp" style="margin-left:30px;">
+						<label>
+							<input type="checkbox" data-ng-model="modalOptions.model.applyEstimateResultAutomatically"
+							       data-ng-disabled="!modalOptions.model.evaluateAndCalculate">
+							{{modalOptions.text.applyEstimateResultAutomatically}}
+						</label>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div cloud-common-overlay data-info2="loadingText" data-loading="isLoading"></div>
+	<footer class="modal-footer">
+		<div class="custom-btn-group">
+			<button type="button" class="btn btn-default"
+			        data-ng-click="modifyGlobalParameter()">
+				{{modalOptions.text.modifyGlobalParameter}}
+			</button>
+		</div>
+		<button type="button" class="btn btn-default"
+		        data-ng-click="ok({ok:true, model: modalOptions.model})"
+		        translate="basics.common.button.ok"></button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"
+		        translate="basics.common.button.cancel"></button>
+	</footer>
+</div>
+</div>

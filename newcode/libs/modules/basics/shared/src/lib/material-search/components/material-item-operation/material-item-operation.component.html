@@ -1,0 +1,33 @@
+<div class="ms-commodity-row-operation">
+	<p class="ms-commodity-row-price">
+		<span title="{{'basics.material.record.cost'| platformTranslate}}" [innerText]="estimatePriceInfo"></span>
+		[<span title="{{'basics.material.record.estimatePrice'| platformTranslate}}" [innerText]="listPriceInfo"></span>
+		<span title="{{'basics.material.record.dayworkRate'| platformTranslate}}" *ngIf="isShowDayworkRate">/{{dayworkRate}}</span>]
+		{{dataItem.Currency}}
+	</p>
+	<p class="ms-commodity-row-price">/{{uom}}</p>
+	<div *ngIf="itemOptions && itemOptions.itemQuantityComponent">
+		<div *ngComponentOutlet="itemOptions.itemQuantityComponent;injector:dataInjector;"></div>
+	</div>
+	<div *ngIf="itemOptions && itemOptions.itemCartComponent">
+		<div *ngComponentOutlet="itemOptions.itemCartComponent;injector:dataInjector;"></div>
+	</div>
+	<div *ngIf="showIcons && dataItem.PriceLists && dataItem.PriceLists.length > 1"
+		 class="ms-commodity-row-item-icon"
+	     #priceListIconContainer
+		 title="{{listPriceInfo}}"
+		 (click)="openPriceListLookup()"
+		 (dblclick)="handleStopPropagation($event)">
+		<a #priceListIcon class="{{dataItem.MaterialPriceListFk ? 'ico-pricelist-select' : 'ico-pricelist'}} control-wh-icons block-image"></a>
+	</div>
+	<div *ngIf="showIcons && dataItem.IsFromFC"
+		 class="ms-commodity-row-item-icon"
+		 title="{{ 'basics.material.frameworkCatalog.from' | platformTranslate }}">
+		<a class="ico-framework-agreement control-wh-icons block-image"></a>
+	</div>
+	<div *ngIf="showIcons && dataItem.AlternativeList && dataItem.AlternativeList.length >= 1"
+		 class="ms-commodity-row-item-icon"
+		 (click)="openAlternativeList()">
+		<a class="ico-alternative control-wh-icons block-image"></a>
+	</div>
+</div>

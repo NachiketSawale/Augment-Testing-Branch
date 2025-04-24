@@ -1,0 +1,92 @@
+/*-------------------------------------------------------------------------------
+	 General (_general.scss)
+  -------------------------------------------------------------------------------*/
+/* source-sans-pro-regular - latin-ext_cyrillic-ext */
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+	url('../fonts/source-sans-pro-v21-latin-ext_cyrillic-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/source-sans-pro-v21-latin-ext_cyrillic-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* source-sans-pro-italic - latin-ext_cyrillic-ext */
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: italic;
+	font-weight: 400;
+	src: local(''),
+	url('../fonts/source-sans-pro-v21-latin-ext_cyrillic-ext-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/source-sans-pro-v21-latin-ext_cyrillic-ext-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* source-sans-pro-700 - latin-ext_cyrillic-ext */
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+	url('../fonts/source-sans-pro-v21-latin-ext_cyrillic-ext-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/source-sans-pro-v21-latin-ext_cyrillic-ext-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+// obsolete?
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+// animated wait icons
+.spinner-sm {
+	@include spinner(10px, $color-rib);
+}
+
+.spinner-lg {
+	@include spinner(30px, $color-rib);
+}
+
+@-webkit-keyframes full-rotation {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes full-rotation {
+	from {-moz-transform: rotate(0deg);}
+	to {-moz-transform: rotate(359deg);}
+}
+
+@-o-keyframes full-rotation {
+	from {-o-transform: rotate(0deg);}
+	to {-o-transform: rotate(359deg);}
+}
+
+@keyframes full-rotation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}
+
+/* used in login-page */
+
+.hide-after-10sec {
+	animation: cssAnimation 0s ease-in 10s forwards;
+	animation-fill-mode: forwards;
+}
+
+.hide-after-5sec {
+	animation: cssAnimation 0s ease-in 5s forwards;
+	animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+	to {
+		width: 0;
+		height: 0;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		visibility: hidden;
+		display: none;
+	}
+}

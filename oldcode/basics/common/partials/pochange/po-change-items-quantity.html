@@ -1,0 +1,22 @@
+<div class="ms-commodity-row-add-delete" style="margin-top: 0;width: 100%">
+	<div class="ms-commodity-row-add-button" style="height: auto;padding-top: 0;width: 10%">
+		<a href data-ng-click="increaseQty()">
+			<i class="block-image control-icons ico-plus"></i>
+		</a>
+	</div>
+	<div class="ms-commodity-row-input" style="width: 80%;padding-top: 0;height: auto">
+		<input class="quantity-input" style="height: 19px" type="text" title="{{titleMsg}}"
+		       autocomplete="false" data-ng-model="ngModel"
+		       data-new-quantity-converter
+		       data-ng-blur="onBlur()"
+		       data-cloud-desktop-on-key-enter="onEnterKeyDown()" data-ng-model-options="{debounce: 50}"
+		       data-ng-keydown="onKeyDown($event)"
+		       data-ng-keyup="onKeyUp($event)"/>
+	</div>
+
+	<div class="ms-commodity-row-delete-button" style="width: 10%;height: auto;padding-top: 0">
+		<a href data-ng-click="decreaseQty()">
+			<i class="block-image control-icons ico-minus"></i>
+		</a>
+	</div>
+</div>

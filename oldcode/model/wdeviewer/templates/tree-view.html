@@ -1,0 +1,67 @@
+<style type="text/css">
+	.tree-view .indent {
+		margin-left: 10px;
+		margin-right: 10px;
+		border-left: solid 1px gainsboro;
+	}
+
+	.tree-view .icon {
+		width: 12px;
+		height: 12px;
+		margin-right: 5px;
+	}
+
+	.tree-view .list-group-item {
+		cursor: pointer;
+	}
+
+	.tree-view .glyphicon {
+		position: relative;
+		top: 1px;
+		display: inline-block;
+		line-height: 1;
+	}
+
+	.tree-view .tree-node {
+		color: #428bca;
+		border: none;
+		padding: 6px 9px;
+	}
+
+	.tree-view .tree-node:hover {
+		background-color: #f5f5f5;
+	}
+
+	.tree-view .node-selected {
+		color: #ffffff;
+		background: #428bca !important;
+	}
+
+	.tree-view input[type="checkbox"] {
+		vertical-align: middle;
+		margin-top: initial;
+		margin-right: 4px;
+	}
+</style>
+
+<div class="tree-view">
+	<ul class="list-group">
+		<li class="list-group-item tree-node {{ viewItem.model.selected?'node-selected':'' }}" data-ng-repeat="viewItem in viewItems track by $index" data-ng-click="select(viewItem)">
+			<span data-ng-bind-html="viewItem.getIndentHtml()"></span>
+			<span class="icon glyphicon control-icons {{ viewItem.hasChildren?viewItem.model.expanded?'ico-tree-expand':'ico-tree-collapse':'' }}" data-ng-click="viewItem.toggle()"></span>
+			<span data-model-wde-viewer-compile-bind-html="viewItem.getTemplate()"></span>
+		</li>
+	</ul>
+</div>
+
+<script type="text/ng-template" id="tree-view-indent.html">
+	<span class="indent"></span>
+</script>
+
+<script type="text/ng-template" id="tree-view-icon.html">
+	<span class="icon"></span>
+</script>
+
+<script type="text/ng-template" id="default-item-template">
+	<span data-ng-bind="viewItem.getText()"></span>
+</script>

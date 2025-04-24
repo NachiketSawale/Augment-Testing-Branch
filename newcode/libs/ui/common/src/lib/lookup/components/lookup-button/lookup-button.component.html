@@ -1,0 +1,15 @@
+<span class="input-group-btn">
+		<button #clearBtn class="btn btn-default" [class]="config.clearButtonCss" [title]="translate(config.clearButtonCaption)"
+		        (click)="deleteValue($event)" [disabled]="config.disabled || config.disableButton" *ngIf="config.showClearButton && !readonly"></button>
+		<button #editBtn class="btn btn-default" [class]="config.editButtonCss" [title]="translate(config.editButtonCaption)"
+		        (click)="showEditView($event)" [disabled]="config.disabled || config.disableButton" *ngIf="config.showEditButton && !readonly"></button>
+		<button *ngFor="let btn of config.buttons || [] | uiCommonLookupButtonPipe : readonly" class="btn btn-default"
+		        [id]="btn.id"
+		        [title]="translate(btn.caption)"
+		        [class]="btn.css?.class"
+		        [style]="btn.css?.style"
+		        (click)="btn.execute(context)"
+		        [disabled]="btn.isDisabled(context)"
+		        [innerText]="translate(btn.content)">
+		</button>
+</span>

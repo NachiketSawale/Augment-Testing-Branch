@@ -1,0 +1,20 @@
+{
+	"name": "modules-basics-common",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/basics/common/src",
+	"prefix": "basics-common",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/basics/common"],
+			"options": {
+				"jestConfig": "libs/modules/basics/common/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

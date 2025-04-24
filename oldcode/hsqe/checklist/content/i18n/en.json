@@ -1,0 +1,131 @@
+{
+	"hsqe": {
+		"checklist": {
+			"moduleName": "Check List",
+			"title": {
+				"header": "Check List",
+				"headerDetail": "Check List Detail",
+				"mainContractStructure": "Check List Structure(Main/Sub)",
+				"checkListLookupDialog": "Check List Search Dialog"
+			},
+			"header": {
+				"Code": "Code",
+				"RubricCategory": "Rubric Category",
+				"HsqCheckListTemplate": "Check List Template",
+				"HsqChlStatus": "Status",
+				"HsqChkListType": "Check List Type",
+				"CompanyCode": "Company Code",
+				"PrjProject": "Project",
+				"PrjProjectNo": "Project No.",
+				"DateReceived": "Received Date",
+				"DateRequired": "Required Date",
+				"DatePerformed": "Performed Date",
+				"BasClerkHsq": "Responsible",
+				"BasClerkChk": "Checklist Owner",
+				"PrcStructure": "Procurement Structure",
+				"PrcStructureDes": "Procurement Structure-Description",
+				"PesHeader": "PES",
+				"UserDefined1": "UserDefined1",
+				"UserDefined2": "UserDefined2",
+				"UserDefined3": "UserDefined3",
+				"UserDefined4": "UserDefined4",
+				"UserDefined5": "UserDefined5",
+				"BasClerkChkDescription": "Owner Name",
+				"HsqCheckListFk":"Main Check List",
+				"checklistDescription":"Main Check List Description",
+				"deepCopyToSubTip": "Create Remedy Checklist via Deep Copy",
+				"contractFk": "Contract",
+				"entityConHeaderDescription": "Contract Description",
+				"entityCheckListGroup": "Template Group",
+				"entityCheckListGroupDesc": "Template Group Description",
+				"BpdBusinesspartnerFk": "Business Partner",
+				"BpdSubsidiaryFk": "Branch",
+				"BpdContactFk": "Contact"
+			},
+			"form": {
+				"title": "Form Data",
+				"detailTitle": "Form Data Detail",
+				"formData": "Form Data",
+				"userForm": "User Form",
+				"form": "Form Id",
+				"context": "Context Id"
+			},
+			"comment": {
+				"title": "Comment",
+				"detailTitle": "Comment Detail",
+				"comment": "Comment"
+			},
+			"location":{
+				"title": "Location",
+				"detailTitle": "Location Detail",
+				"entityLocation":"Location"
+			},
+			"activity":{
+				"title": "Activity",
+				"detailTitle": "Activity Detail",
+				"entitySchedule":"Schedule",
+				"entityActivity":"Activity",
+				"description":"Activity-Description",
+				"plannedStart":"Planned Start",
+				"plannedFinish":"Planned Finish",
+				"actualStart":"Actual Start",
+				"actualFinish":"Actual Finish"
+			},
+			"modelobject": {
+				"title": "Assigned Model Object",
+				"detailTitle": "Assigned Model Object Details",
+				"selectObjects": "Select Objects of select Items",
+				"entityId": "CheckList Id",
+				"model":"Model",
+				"modelObject":"Model Object",
+				"differentModelTip": "The current pinned model is different from the project bind to the checkList",
+				"createObjectSetTitle": "Create Object Set",
+				"objectErrorMessage": "Cannot set duplicate Model Object"
+			},
+			"createCheckList" : "Create Check List",
+			"wizard": {
+				"changeStatus": {
+					"title": "Change Status"
+				},
+				"readOnlyRecord": "This record is read-only!",
+		"createCheckList": {
+          "title": "Create Check List",
+          "noChecklistTemplateRecordSelected": "No Checklist Template Record Selected!",
+          "noChecklistTemplateRecordSelectedBody": "Please select one check list template first!",
+          "createFromCheckListTemplate": "Create Checklist from Highlighted Checklist Template",
+          "createFromActivityTemplate": "Create Checklist for Current Eligible Activity via Activity Template assigned in Checklist Template",
+          "createSuccessTip": "Checklist {{code}} created successfully!",
+          "getNoRecordFromChecklistTemplate": "No match activity record by current check list templates",
+          "createNewCheckListCreateOption": "Check List Create Option",
+          "createNewCheckListForActivityTip": "Check list with same activity already existed!",
+          "createNewCheckListForActivityTip2": "Please choose how to proceed:",
+          "createNewCheckListForNewActivityOnly": "Create check list with new activity only",
+          "createNewCheckListForAllActivities": "Create check list with all activities regardless existence",
+		  "distinctChecklist": "Create distinct checklist from each eligible activity"
+        },
+        "createDefect": {
+          "title": "Create Defect",
+          "noSelectedChecklistRecord": "Please select one checklist first!",
+          "noIsDefectCheckListStatus": "Checklist’s status at least one status is defect!",
+          "cannotCreateDefectByStatusTip": "Checklist's status does not allow  to create defect !",
+          "noHasFailureCheckPointTip":"Create defect even if there is no eligible checkpoint! ",
+          "createDefectSuccessTip": "Create defect  {{code}} successfully!",
+          "cannotCreateDefectTip": "Checklist's status does not allow  to create defect !",
+          "projectNotSame": "The currently selected project does not match the assigned schedule, and the schedule and activity will not be synchronized to the defect."
+        },
+        "noRecordSelectedBody": "Please select one check list first!",
+        "noRecordSelectedTitle": "No Record Selected!"
+      },
+     "groupTemplate": {
+				"title": "Check List Template",
+				"groupTitle": "Check List Group Template",
+				"createTitle": "Create Check List",
+				"createText": "Group data will not be created. Continue?"
+			},
+			"checklistLookupDialogTitle": "CheckList Search Dialog",
+			"documentGridTitle": "Document",
+			"groupingContainer": "Check List Structure"
+		}
+
+	}
+}

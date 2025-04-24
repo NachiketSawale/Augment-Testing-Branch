@@ -1,0 +1,14 @@
+<div class="flex-element flex-column flex-box">
+	<div class="flex-element flex-box" style="margin: 24px; justify-content: center">
+		<i class="block-image control-icons" style="background-size: 24px; height: 24px; width: 24px" data-ng-class="$ctrl.lockIcon()"></i>
+		<i class="block-image control-icons panel-toggle-img" style="cursor: pointer;" data-ng-class="$ctrl.toggleIcon()" data-ng-click="$ctrl.toggle()"></i>
+	</div>
+	<div class="flex-element" style="text-align: center; margin-bottom: 24px; margin-right: 24px; margin-left: 24px; min-height: 20%" data-ng-show="$ctrl.toggleState">
+		<h4 data-translate="platform.containerContentNotShown"></h4>
+		<br>
+		<br>
+		<h4 data-translate="platform.containerContentNotShownPermission"></h4>
+		<br>
+		<h4>{{$ctrl.permissionInfo}}</h4>
+	</div>
+</div>

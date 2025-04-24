@@ -1,0 +1,134 @@
+<div class="flex-element">
+    <!--TODO: Overlay is mocked will be replaced by overlay component -->
+    <div *ngIf="loading" class="wait-overlay">
+        <div class="box">
+            <div class="spinner-lg"></div>
+            <span *ngIf="message" [innerHTML]="message"></span>
+        </div>
+    </div>
+    <div class="flex-box flex-element">
+        <div class="flex-inline margin-top-xld" style="border-right: solid 1px #dcdcdc; padding-right: 10px">
+            <i class="block-image app-icons ico-translation btn-square-28" style="background-size: 56px;"></i>
+            <i class="block-image control-icons ico-arrow-right btn-square-28"></i>
+            <i class="block-image app-icons ico-tables btn-square-28" style="background-size: 56px;"></i>
+        </div>
+        <div class="flex-element margin-top-xld" style="padding-left: 10px;">
+            <div *ngIf="isButtonActive">
+                <div style="padding-bottom: 5px;">
+                    <h3 class="font-bold">{{ titleTextConfig }}</h3>
+                    <div class="platform-form-group margin-bottom-ld" style="border-spacing: 0px;">
+
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{untranslatedTitle }}</div>
+                            <div class="platform-form-col">
+                                <input type="checkbox" [(ngModel)]="isUntranslated">
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{newOrChangedTitle }}</div>
+                            <div class="platform-form-col">
+                                <input type="checkbox" [(ngModel)]="isExportChanged">
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{exportByCategoryTitle }}</div>
+                            <div class="platform-form-col">
+                                <div *ngFor="let category of checkBoxCategories">
+                                    <input type="checkbox" [(ngModel)]="category.isChecked"> {{ category.text }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-bottom: 5px;">
+                    <h3 class="margin-top-xld font-bold">{{ titleTextAdditionalColumns }}</h3>
+                    <div class="platform-form-group margin-bottom-ld" style="border-spacing: 0px;">
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{addResourceRemarkTitle }}</div>
+                            <div class="platform-form-col">
+                                <input type="checkbox" [(ngModel)]="isResourceRemarkAdded">
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{addPathTitle }}</div>
+                            <div class="platform-form-col">
+                                <input type="checkbox" [(ngModel)]="isPathAdded">
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{addParameterInfoTitle }}</div>
+                            <div class="platform-form-col">
+                                <input type="checkbox" [(ngModel)]="isParameterInfoAdded">
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{addTranslationRemarkTitle }}</div>
+                            <div class="platform-form-col">
+                                <input type="checkbox" [(ngModel)]="isTranslationRemarkAdded">
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">{{addCategoryTitle }}</div>
+                            <div class="platform-form-col">
+                                <input type="checkbox" [(ngModel)]="isCategoryAdded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-bottom: 5px;">
+                    <h3 class="margin-top-xld font-bold">{{ titleTextLanguages }}</h3>
+                    <div class="platform-form-group" style="border-spacing: 0px;">
+                        <div class="platform-form-row">
+                            <div class="checkbox spaceToUp">
+                                <label for="checkbox_default">
+                                    <input id="checkbox_default" type="checkbox" disabled checked>
+                                    ENGLISH ({{defaultLanguage }})
+                                </label>
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <!--TODO: data-cloud-translation-checkbox-grid is mocked will be replaced by platform-checkbox-list component -->
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                                <div *ngFor="let item of checkboxItems">
+                                    <input type="checkbox" [(ngModel)]="item.isChecked"> {{ item.text }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="linkActive">
+                <h3>{{successText }}</h3>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{ defaultLanguage }}</div>
+                        <div class="platform-form-col">
+                            <ul style="margin-top: 5px;">
+                                <li>ENGLISH</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{selectedLanguagesTitle }}</div>
+                        <div class="platform-form-col">
+                            <ul style="margin-top: 5px;">
+                                <li *ngFor="let language of selectedLanguages">{{ language.text }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{downloadFile }}</div>
+                        <div class="platform-form-col">
+                            <a [href]="linkData" target="_blank">{{ fileName }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="failed" class="flex-element">
+                <h3>{{failedText }}</h3>
+                <p>{{ error }}</p>
+            </div>
+        </div>
+    </div>
+</div>

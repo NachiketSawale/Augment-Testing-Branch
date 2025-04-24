@@ -1,0 +1,527 @@
+﻿// -------------------------------------------------------------------------------
+//	Platform Variables
+//  -------------------------------------------------------------------------------*/
+//  This scss file must be imported into any other scss file with "@import [path]/_variables.scss"
+//  Only scss files, which are imported in the cloud.scss, don't have to import this file.
+//
+// All of the scss variables are not used for theming. Only the new custom properties in variables-new.scss are able to be customized by the user.
+
+// Colors
+//------------------------------------------------------------------------------------------
+$color-purple-light: #e1bee7;
+$color-purple: #ba68c8;
+$color-indigo-light: #c5cae9;
+$color-indigo: #7986cb;
+$color-cyan-light: #b2ebf2;
+$color-cyan: #4dd0e1;
+$color-green-light: #c8e6c9;
+$color-green: #81c784;
+$color-orange-light: #ffe0b2;
+$color-orange: #ffb74d;
+$color-grey-light: #e0e0e0;
+$color-grey: #bdbdbd;
+$color-grey-dark: #626262;
+$color-icon-grey: #434343;
+$color-azure-light: #bfddf2;
+$color-azure: #7fb2d7;
+$color-red-light: #eab7ad;
+$color-red: #cc4c33;
+$color-blue-light: #b2c9e1;
+$color-blue: #3f7ab7;
+$color-blue-2: #0064c2;
+$color-yellow-light: #fff9c4;
+$color-yellow: #fff176;
+$color-rib: #0067b1;
+
+// Common Colors
+//------------------------------------------------------------------------------------------
+// Background Color for Mainframe
+$color-company: $color-rib;
+// Text color on Mainframe
+$color-primary-fore: #fff;
+// Background color for `<body>`
+$color-body-background: #fff;
+$color-content-background: #E6E6E6;
+$color-tooltip-background: #fff;
+$color-header: #fff;
+
+
+// Global text color on `<body>`
+$color-text: #333 !default;
+// 2nd Global text color, eg used for bold text
+$color-text-light: #626262;
+
+
+// Global textual link color
+$color-link: $color-rib;
+$color-link-hover: darken($color-link, 15%);
+$color-button-background: #fff;
+
+$color-success: $color-green;
+$color-info: $color-cyan;
+$color-warning: $color-orange;
+$color-danger: $color-red;
+
+$color-innershadow: rgba(0, 0, 0, 0.075);
+$color-logindialog-fade-background: #999;
+$modal-backdrop-bg: #000 !default; //** Modal backdrop background color
+$modal-backdrop-opacity: .5 !default; //** Modal backdrop opacity
+$alarm-overlay-text: #fff !default;
+$alarm-overlay-border: $color-grey-dark;
+$transition-opacity-fade: 0.6s ease-in-out opacity;
+$overlay-background-color: rgba(#000, 0.8) !default; //** Background color of overlays
+$overlay-background2-color: rgba(#fff, 0.5) !default; //** Background color of overlays, e.g. in grid
+$overlay-shadow-color: #bebebe;
+$overlay-shadow-size: 6px 6px 10px;
+$color-border: #dcdcdc;
+$color-border2: #ababab;
+$color-border3: #333;
+$color-bar-border: #bebebe;
+$color-bar1: #e6e6e6;
+$color-bar2: rgba($color-bar1, 0.55);
+$color-bar3: #dcdcdc;
+$color-menu-background: $color-body-background;
+$color-content-overlay: #fafafa;
+$color-dropdown-title: #c2c2c2;
+
+$color-hover: #bbcddb;
+$color-hover2: #ecf7ff;
+$color-active: #cde3f3;
+$color-selection: #aec3d4;
+$color-main-hover: #2E82BE;
+$color-highlight: #B9D7CA;
+$color-highlight-hover: #AED3C4;
+$color-highlight-main: #50B289;
+$color-highlight-main-hover: #61BA95;
+
+$color-divider: #e5e5e5;
+
+//Product Design Guidline colors
+$color-hover3: #005fa3;
+$color-selected: #004a7f;
+$color-focused: #333;
+$color-disabled: #bbb;
+
+//Divider color for between dropdown items.
+$color-dropdown-divider: $color-divider;
+
+//common <hr> divider
+$color-hr-divider: $color-divider;
+
+// Backcolor Desktop Tile
+$color-tile: #e6e6e6;
+
+$color-backdrop: #808080;
+
+
+// Loading Bar
+// -----------------------------------------------------------------------------------------
+$loadingBarColor1: rgb(51, 170, 255);
+$loadingBarColor2: rgb(153, 213, 255);
+$loadingBarHeight: 4px;
+
+// Splitter
+//------------------------------------------------------------------------------------------
+$color-splitbar-button: #bebebe;
+$color-splitbar-background: #efefef;
+
+// Grid
+$color-grid-border: $color-border;
+$color-grid-border-cell-vertical: rgba($color-border, 0.42);
+$color-grid-cell-horizontal: $color-border;
+$color-grid-header-background: white;
+$color-grid-background: white;
+$color-grid-footer: #fafafa;
+$color-grid-selection: $color-selection;
+$color-grid-even-background: #f5f5f5;
+$color-grid-odd-background: white;
+$color-grid-cell-activ: #0067b1;
+$size-grid-row-height: 21px;
+$color-grid-filter-row-background: rgb(220,220,220);
+$size-grid-filter-row-height: 33px;
+$size-grid-filter-row-cell-height: 32px;
+$size-grid-filter-row-input-height: 24px;
+
+// Dimensions
+//------------------------------------------------------------------------------------------
+$size-font-base: 13px;
+$size-font-small: 12px;
+$size-font-grid: $size-font-small;
+$size-font-dialog-footer: $size-font-small;
+$size-height-dialog: 300px; //grid need in modal-dialog a height value. otherwise is in rendering process the height 0px.
+$size-min-height-grid-dialog: 120px;
+
+// Unit-less `line-height` for use in components like buttons.
+$size-line-height-base: 1.428571429 !default;
+
+// ~19px; Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$size-line-height-computed: floor(($size-font-base * $size-line-height-base)) !default;
+
+$border-width-default: 1px !default;
+$border-width-large: 4px !default;
+
+$padding-small-vertical: 2px !default;
+$padding-base-vertical: 4px !default;
+$padding-medium-vertical: 6px !default;
+$padding-large-vertical: 8px !default;
+$padding-xlarge-vertical: 10px !default;
+$padding-xxlarge-vertical: 16px !default;
+
+$padding-small-horizontal: 4px !default;
+$padding-base-horizontal: 6px !default;
+$padding-medium-horizontal: 8px !default;
+$padding-large-horizontal: 10px !default;
+$padding-xlarge-horizontal: 16px !default;
+$padding-xxlarge-horizontal: 20px !default;
+
+$wysiwyg-toolbar-size: 30px !default;
+
+$statusbar-height: 22px;
+$size-height: 32px;
+
+$size-border-radius-base: 0 !default;
+$size-border-radius-large: 0 !default;
+$size-border-radius-small: 0 !default;
+
+$size-commandbar-width: 40px;
+
+$size-icon: 16px;
+$size-large-icon: 20px;
+$mbox-icon-size: 40px;
+$dialog-msg-icon-size: 48px;
+
+$modal-lg:                    900px !default;
+$modal-md:                    600px !default;
+$modal-sm:                    300px !default;
+$modal-header-height: 43px;
+$modal-primary-header-height: 70px;
+$layout-panel-padding: 5px;
+
+//== Panels
+//
+$panel-bg:                    #fff !default;
+$panel-body-padding:          15px !default;
+$panel-heading-padding:       5px 10px !default;
+$panel-footer-padding:        $panel-heading-padding !default;
+$panel-border-radius:         $size-border-radius-base !default;
+
+//** Border color for elements within panels
+$panel-inner-border:          #ddd !default;
+$panel-footer-bg:             #f5f5f5 !default;
+
+$panel-default-text:          $color-text;
+$panel-default-border:        #ddd !default;
+$panel-default-heading-bg:    #f5f5f5 !default;
+$panel-default-heading-height: 25px;
+
+$panel-primary-text:          #fff;
+$panel-primary-border:        var(--company-color);
+$panel-primary-heading-bg:    var(--company-color);
+$panel-primary-heading-height: 30px;
+
+$panel-success-text:          $color-text;
+$panel-success-border:        $color-text;
+$panel-success-heading-bg:    #fff;
+
+$panel-info-text:             $color-text;
+$panel-info-border:           $color-text;
+$panel-info-heading-bg:       #fff;
+
+$panel-warning-text:          $color-text;
+$panel-warning-border:        $color-text;
+$panel-warning-heading-bg:    #fff;
+
+$panel-danger-text:           $color-text;
+$panel-danger-border:         $color-text;
+$panel-danger-heading-bg:     #fff;
+
+// Tab-Bar
+//------------------------------------------------------------------------------------------
+$padding-tab-horizontal: 5px !default;
+$mainbar-height: 34px;
+$tab-height: 30px;
+$color-tab-activ: $color-body-background;
+$color-tab-selected: $color-grid-selection;
+$tabbar-button-height: 26px;
+$tabbar-button-width: 30px;
+
+// Forms
+//------------------------------------------------------------------------------------------
+$color-input-bg: #fff !default;
+$color-input-border: #ccc !default;
+$color-input-border-focus: #66afe9 !default;
+$color-input-bg-disabled: #eee !default;
+$color-input-placeholder: #777 !default;
+$form-offset-1: 30px;
+$input-text-padding: 0 $padding-small-horizontal;
+// Default `.form-control` height
+$size-input-height-base: ($size-line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+// Size for buttons
+//the standard width in lookup and select-controller are 26px. thats why I changed from 23 to 26
+
+$size-input-btn-width: 26px;
+$size-sm-width: $mbox-icon-size;
+// vertical margin between each input control
+$margin-input-vertical: 10px;
+//common checkbox and radio-button size
+$size-checkbox-radio-input: 16px;
+
+//e.g. img-width-size in sidebar-favoirites
+$size-img-width-20: 20px;
+
+//workflow designer
+$color-action-rect: #eee;
+$color-selected-fill: #ffbfff;
+$color-selected-stroke: #ff00ff;
+
+// Z-index master list
+//------------------------------------------------------------------------------------------
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+$zindex-navbar: 1000 !default;
+$zindex-dropdown: 1000 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+$zindex-navbar-fixed: 1030 !default;
+$zindex-modal-background: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popup: 9999 !default;
+
+// style-states-colors
+//------------------------------------------------------------------------------------------
+$saturation-subtrahend: 7;
+
+$blue-1: hsl(209, 100%, 31%);
+$blue-2: lighten($blue-1, $saturation-subtrahend);
+$blue-3: lighten($blue-2, $saturation-subtrahend);
+$blue-4: lighten($blue-3, $saturation-subtrahend);
+$blue-5: lighten($blue-4, $saturation-subtrahend);
+$blue-6: lighten($blue-5, $saturation-subtrahend);
+$blue-7: lighten($blue-6, $saturation-subtrahend);
+$blue-8: lighten($blue-7, $saturation-subtrahend);
+$blue-colors: ($blue-1, $blue-2, $blue-3, $blue-4, $blue-5, $blue-6, $blue-7, $blue-8);
+
+$teal-1: hsl(175, 41%, 23%);
+$teal-2: lighten($teal-1, $saturation-subtrahend);
+$teal-3: lighten($teal-2, $saturation-subtrahend);
+$teal-4: lighten($teal-3, $saturation-subtrahend);
+$teal-5: lighten($teal-4, $saturation-subtrahend);
+$teal-6: lighten($teal-5, $saturation-subtrahend);
+$teal-7: lighten($teal-6, $saturation-subtrahend);
+$teal-8: lighten($teal-7, $saturation-subtrahend);
+$teal-colors: ($teal-1, $teal-2, $teal-3, $teal-4, $teal-5, $teal-6, $teal-7, $teal-8);
+
+$indigo-1: hsl(232, 45%, 28%);
+$indigo-2: lighten($indigo-1, $saturation-subtrahend);
+$indigo-3: lighten($indigo-2, $saturation-subtrahend);
+$indigo-4: lighten($indigo-3, $saturation-subtrahend);
+$indigo-5: lighten($indigo-4, $saturation-subtrahend);
+$indigo-6: lighten($indigo-5, $saturation-subtrahend);
+$indigo-7: lighten($indigo-6, $saturation-subtrahend);
+$indigo-8: lighten($indigo-7, $saturation-subtrahend);
+$indigo-colors: ($indigo-1, $indigo-2, $indigo-3, $indigo-4, $indigo-5, $indigo-6, $indigo-7, $indigo-8);
+
+$red-1: hsl(355, 100%, 34%);
+$red-2: lighten($red-1, $saturation-subtrahend);
+$red-3: lighten($red-2, $saturation-subtrahend);
+$red-4: lighten($red-3, $saturation-subtrahend);
+$red-5: lighten($red-4, $saturation-subtrahend);
+$red-6: lighten($red-5, $saturation-subtrahend);
+$red-7: lighten($red-6, $saturation-subtrahend);
+$red-8: lighten($red-7, $saturation-subtrahend);
+$red-colors: ($red-1, $red-2, $red-3, $red-4, $red-5, $red-6, $red-7, $red-8);
+
+$pink-1: hsl(330, 81%, 29%);
+$pink-2: lighten($pink-1, $saturation-subtrahend);
+$pink-3: lighten($pink-2, $saturation-subtrahend);
+$pink-4: lighten($pink-3, $saturation-subtrahend);
+$pink-5: lighten($pink-4, $saturation-subtrahend);
+$pink-6: lighten($pink-5, $saturation-subtrahend);
+$pink-7: lighten($pink-6, $saturation-subtrahend);
+$pink-8: lighten($pink-7, $saturation-subtrahend);
+$pink-colors: ($pink-1, $pink-2, $pink-3, $pink-4, $pink-5, $pink-6, $pink-7, $pink-8);
+
+$purple-1: hsl(291, 46%, 27%);
+$purple-2: lighten($purple-1, $saturation-subtrahend);
+$purple-3: lighten($purple-2, $saturation-subtrahend);
+$purple-4: lighten($purple-3, $saturation-subtrahend);
+$purple-5: lighten($purple-4, $saturation-subtrahend);
+$purple-6: lighten($purple-5, $saturation-subtrahend);
+$purple-7: lighten($purple-6, $saturation-subtrahend);
+$purple-8: lighten($purple-7, $saturation-subtrahend);
+$purple-colors: ($purple-1, $purple-2, $purple-3, $purple-4, $purple-5, $purple-6, $purple-7, $purple-8);
+
+$green-1: hsl(122, 37%, 28%);
+$green-2: lighten($green-1, $saturation-subtrahend);
+$green-3: lighten($green-2, $saturation-subtrahend);
+$green-4: lighten($green-3, $saturation-subtrahend);
+$green-5: lighten($green-4, $saturation-subtrahend);
+$green-6: lighten($green-5, $saturation-subtrahend);
+$green-7: lighten($green-6, $saturation-subtrahend);
+$green-8: lighten($green-7, $saturation-subtrahend);
+$green-colors: $green-1 $green-2 $green-3 $green-4 $green-5 $green-6 $green-7 $green-8;
+
+$lime-1: hsl(65, 69%, 30%);
+$lime-2: lighten($lime-1, $saturation-subtrahend);
+$lime-3: lighten($lime-2, $saturation-subtrahend);
+$lime-4: lighten($lime-3, $saturation-subtrahend);
+$lime-5: lighten($lime-4, $saturation-subtrahend);
+$lime-6: lighten($lime-5, $saturation-subtrahend);
+$lime-7: lighten($lime-6, $saturation-subtrahend);
+$lime-8: lighten($lime-7, $saturation-subtrahend);
+$lime-colors: $lime-1 $lime-2 $lime-3 $lime-4 $lime-5 $lime-6 $lime-7 $lime-8;
+
+$yellow-1: hsl(49, 100%, 40%);
+$yellow-2: lighten($yellow-1, $saturation-subtrahend);
+$yellow-3: lighten($yellow-2, $saturation-subtrahend);
+$yellow-4: lighten($yellow-3, $saturation-subtrahend);
+$yellow-5: lighten($yellow-4, $saturation-subtrahend);
+$yellow-6: lighten($yellow-5, $saturation-subtrahend);
+$yellow-7: lighten($yellow-6, $saturation-subtrahend);
+$yellow-8: lighten($yellow-7, $saturation-subtrahend);
+$yellow-colors: ($yellow-1, $yellow-2, $yellow-3, $yellow-4, $yellow-5, $yellow-6, $yellow-7, $yellow-8);
+
+$orange-1: hsl(27, 100%, 35%);
+$orange-2: lighten($orange-1, $saturation-subtrahend);
+$orange-3: lighten($orange-2, $saturation-subtrahend);
+$orange-4: lighten($orange-3, $saturation-subtrahend);
+$orange-5: lighten($orange-4, $saturation-subtrahend);
+$orange-6: lighten($orange-5, $saturation-subtrahend);
+$orange-7: lighten($orange-6, $saturation-subtrahend);
+$orange-8: lighten($orange-7, $saturation-subtrahend);
+$orange-colors: ($orange-1, $orange-2, $orange-3, $orange-4, $orange-5, $orange-6, $orange-7, $orange-8);
+
+$brown-1: hsl(11, 26%, 24%);
+$brown-2: lighten($brown-1, $saturation-subtrahend);
+$brown-3: lighten($brown-2, $saturation-subtrahend);
+$brown-4: lighten($brown-3, $saturation-subtrahend);
+$brown-5: lighten($brown-4, $saturation-subtrahend);
+$brown-6: lighten($brown-5, $saturation-subtrahend);
+$brown-7: lighten($brown-6, $saturation-subtrahend);
+$brown-8: lighten($brown-7, $saturation-subtrahend);
+$brown-colors: ($brown-1, $brown-2, $brown-3, $brown-4, $brown-5, $brown-6, $brown-7, $brown-8);
+
+$azure-1: hsl(205, 67%, 35%);
+$azure-2: lighten($azure-1, $saturation-subtrahend);
+$azure-3: lighten($azure-2, $saturation-subtrahend);
+$azure-4: lighten($azure-3, $saturation-subtrahend);
+$azure-5: lighten($azure-4, $saturation-subtrahend);
+$azure-6: lighten($azure-5, $saturation-subtrahend);
+$azure-7: lighten($azure-6, $saturation-subtrahend);
+$azure-8: lighten($azure-7, $saturation-subtrahend);
+$azure-colors: ($azure-1 $azure-2 $azure-3 $azure-4 $azure-5 $azure-6 $azure-7 $azure-8);
+
+$grey-1: hsl(1, 1%, 26%);
+$grey-2: lighten($grey-1, $saturation-subtrahend);
+$grey-3: lighten($grey-2, $saturation-subtrahend);
+$grey-4: lighten($grey-3, $saturation-subtrahend);
+$grey-5: lighten($grey-4, $saturation-subtrahend);
+$grey-6: lighten($grey-5, $saturation-subtrahend);
+$grey-7: lighten($grey-6, $saturation-subtrahend);
+$grey-8: lighten($grey-7, $saturation-subtrahend);
+$grey-colors: ($grey-1, $grey-2, $grey-3, $grey-4, $grey-5, $grey-6, $grey-7, $grey-8);
+
+$blue-grey-1: hsl(200, 18%, 25%);
+$blue-grey-2: lighten($blue-grey-1, $saturation-subtrahend);
+$blue-grey-3: lighten($blue-grey-2, $saturation-subtrahend);
+$blue-grey-4: lighten($blue-grey-3, $saturation-subtrahend);
+$blue-grey-5: lighten($blue-grey-4, $saturation-subtrahend);
+$blue-grey-6: lighten($blue-grey-5, $saturation-subtrahend);
+$blue-grey-7: lighten($blue-grey-6, $saturation-subtrahend);
+$blue-grey-8: lighten($blue-grey-7, $saturation-subtrahend);
+$blue-grey-colors: ($blue-grey-1, $blue-grey-2, $blue-grey-3, $blue-grey-4, $blue-grey-5, $blue-grey-6, $blue-grey-7, $blue-grey-8);
+
+$cyan-1: hsl(182, 50%, 40%);
+$cyan-2: lighten($cyan-1, $saturation-subtrahend);
+$cyan-3: lighten($cyan-2, $saturation-subtrahend);
+$cyan-4: lighten($cyan-3, $saturation-subtrahend);
+$cyan-5: lighten($cyan-4, $saturation-subtrahend);
+$cyan-6: lighten($cyan-5, $saturation-subtrahend);
+$cyan-7: lighten($cyan-6, $saturation-subtrahend);
+$cyan-8: lighten($cyan-7, $saturation-subtrahend);
+$cyan-colors: ($cyan-1, $cyan-2, $cyan-3, $cyan-4, $cyan-5, $cyan-6, $cyan-7, $cyan-8);
+
+$light-grey-1: hsl(0, 1%, 54%);
+$light-grey-2: lighten($light-grey-1, $saturation-subtrahend);
+$light-grey-3: lighten($light-grey-2, $saturation-subtrahend);
+$light-grey-4: lighten($light-grey-3, $saturation-subtrahend);
+$light-grey-5: lighten($light-grey-4, $saturation-subtrahend);
+$light-grey-6: lighten($light-grey-5, $saturation-subtrahend);
+$light-grey-7: lighten($light-grey-6, $saturation-subtrahend);
+$light-grey-8: lighten($light-grey-7, $saturation-subtrahend);
+$light-grey-colors: ($light-grey-1, $light-grey-2, $light-grey-3, $light-grey-4, $light-grey-5, $light-grey-6, $light-grey-7, $light-grey-8);
+
+//Datetimepicker
+$bs-datetimepicker-timepicker-font-size: 1.2em !default;
+$bs-datetimepicker-active-bg: darken($color-hover, 10%) !default;
+$bs-datetimepicker-active-color: #fff!default;
+$bs-datetimepicker-border-radius: 4px !default;
+$bs-datetimepicker-btn-hover-bg: $color-grid-selection !default;
+$bs-datetimepicker-disabled-color: #777777 !default;
+$bs-datetimepicker-secondary-border-color: $color-input-border !default;
+$bs-datetimepicker-secondary-border-color-rgba: rgba(0, 0, 0, 0.2) !default;
+$bs-datetimepicker-primary-border-color: #fff !default;
+$bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
+
+// common containers
+$header-height: 48px;
+$mainbar-height: 34px;
+
+// common
+$font-size-1: 32px;
+$font-size-2: 48px;
+$font-size-3: 16px;
+$font-weight-bold: 700;
+
+// Container-Short-Overlay
+$line-height-size-1: 18px;
+$background-color-number-selected: $color-rib;
+$color-not-active: $color-text;
+
+//badge
+$badge-border-radius: 10px;
+$badge-bg: #777;
+
+$colors: (blue, teal, indigo, red, pink, purple, green, lime, yellow, orange, brown, azure, grey, blue-grey, cyan, light-grey);
+
+//
+@function getColorList($color) {
+	// default-color
+	$colorList: $grey-colors;
+
+	@if $color == lime {
+		$colorList: $lime-colors;
+	} @else if $color == azure {
+		$colorList: $azure-colors;
+	} @else if $color == blue {
+		$colorList: $blue-colors;
+	} @else if $color == teal {
+		$colorList: $teal-colors;
+	} @else if $color == indigo {
+		$colorList: $indigo-colors;
+	} @else if $color == green {
+		$colorList: $green-colors;
+	} @else if $color == red {
+		$colorList: $red-colors;
+	} @else if $color == pink {
+		$colorList: $pink-colors;
+	} @else if $color == purple {
+		$colorList: $purple-colors;
+	} @else if $color == yellow {
+		$colorList: $yellow-colors;
+	} @else if $color == orange {
+		$colorList: $orange-colors;
+	} @else if $color == brown {
+		$colorList: $brown-colors;
+	} @else if $color == blue-grey {
+		$colorList: $blue-grey-colors;
+	} @else if $color == cyan {
+		$colorList: $cyan-colors;
+	} @else if $color == light-grey {
+		$colorList: $light-grey-colors;
+	}
+
+	@return $colorList;
+}

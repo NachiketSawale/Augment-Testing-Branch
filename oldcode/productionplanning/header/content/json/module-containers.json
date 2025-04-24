@@ -1,0 +1,264 @@
+[
+	{
+		"id": "productionplanning.header.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.header.headerListTitle",
+		"controller": "productionplanningHeaderListController",
+		"uuid": "a90e2c686c3b45b884c0498f5404f23c",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.header.headerDetailTitle",
+		"controller": "productionplanningHeaderDetailController",
+		"uuid": "b3eb27dc5c954de8bdcaea19df99e3ba",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.header2clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.header.header2clerkListTitle",
+		"controller": "productionplanningHeader2ClerkListController",
+		"uuid": "d8d86407fc56453988bcb78bfbb63431",
+		"permission": "4e4dd1f922d14bcb8fd831a8babb5cdb"
+	},
+	{
+		"id": "productionplanning.header.businesspartner.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.item.listBizPartnerTitle",
+		"controller": "ppsCommonBizPartnerController",
+		"moduleName": "productionplanning.header",
+		"uuid": "8ad87c147d1040d4956966a37c7e749c",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.businesspartner.contact.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.item.listBizpPartnerContactTitle",
+		"controller": "ppsCommonBizPartnerContactController",
+		"moduleName": "productionplanning.header",
+		"uuid": "ebe6aee8a1264b159d19d312ed087d0a",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "e89a4d571d334472a9bddb6df9799d19",
+		"controller": "",
+		"sectionId": "44",
+		"mainService": "productionplanningHeaderDataService"
+	},
+	{
+		"id": "productionplanning.header.comments",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "a17598ce80fe4cddb4979f76bba28441",
+		"commentQualifier": "productionplanning.header.comment",
+		"parentService": "productionplanningHeaderDataService",
+		"permission": "a17598ce80fe4cddb4979f76bba28441",
+		"showLastComments": true
+	},
+	{
+		"id": "productionplanning.header.project.documents.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"showOriginColumn": true,
+		"uuid": "4eaa47c530984b87853c6f2e4e4fc67e"
+	},
+	{
+		"id": "productionplanning.header.project.documents.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "d68e124fc94e4701882c838c14269fd3",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.documentList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.header.documentListTitle",
+		"controller": "ppsCommonGenericDocumentListController",
+		"serviceOptions": {
+			"module":"productionplanning.header",
+			"entityNameTranslationID": "productionplanning.header.documentListTitle",
+			"serviceName": "productionplanningHeaderGenericDocumentDataService",
+			"parentServiceName": "productionplanningHeaderDataService",
+			"url": "productionplanning/header/documents/",
+			"parentFilter": "headerFk",
+			"uploadServiceKey": "pps-header",
+			"dataProcessor": "ppsHeaderDocumentProcessor"
+		},
+		"uuid": "cbd65f45ca8d446a9cf706a0015e8b12",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.prcpackage.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.header.prcPackage.listTitle",
+		"controller": "ppsPrcPackageListController",
+		"uuid": "55d65f45ca8d446a9cf706a0015e8b55",
+		"permission": "1D58A4DA633A485981776456695E3241"
+	},
+	{
+		"id": "productionplanning.header.ppsupstreamitem.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.item.upstreamItem.listTitle",
+		"controller": "ppsItemUpstreamItemListController",
+		"moduleName": "productionplanning.header",
+		"uuid": "23edab99edgb492d84r29947e734fh99",
+		"permission": "23edab57edgb492d84r2gv47e734fh8u",
+		"hasCopy": "true"
+	},
+	{
+		"id": "productionplanning.header.ppssplitppsupstreamitem.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.item.splitUpstreamItem.listTitle",
+		"controller": "ppsItemUpstreamItemListController",
+		"moduleName": "productionplanning.header",
+		"uuid": "7fff4a90a51841a899e98aca1bf5c04c",
+		"permission": "23edab57edgb492d84r2gv47e734fh8u"
+	},
+	{
+		"id": "productionplanning.header.model.viewer.hoops",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "ce2a706f7cf645b084317872176f4783",
+		"defaultView": "Iso",
+		"permission": "7ac2a568c32e4a16a2b4106db572133d"
+	},
+	{
+		"id": "productionplanning.header.map",
+		"template": "basics.common/templates/multi-address-map.html",
+		"title": "productionplanning.common.map",
+		"uuid": "327b56b55e0f4a2b8bb5cab12360f12a",
+		"controller": "ppsCommonMapController",
+		"permission": "c3edae3d673443b7badc9eee399ae880",
+		"options": {
+			"parentService": "productionplanningHeaderDataService",
+			"jobPropName": "LgmJobFk"
+		}
+	},
+	{
+		"id": "productionplanning.header.job.pinboard",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "productionplanning.common.jobCommentContainerTitle",
+		"controller": "ppsCommonJobPinboardController",
+		"uuid": "c20525961d92406a9fd8445cd035d01d",
+		"commentQualifier": "logistic.job1.comment",
+		"parentService": "productionplanningHeaderDataService",
+		"configServiceName": "logisticJobPinBoardConfigService",
+		"permission": "f7a4c2016e614d21834c50e44c6a65dd",
+		"attributeName": "LgmJobFk",
+		"showLastComments": true
+	},
+	{
+		"id": "productionplanning.header.job.deliveryAddressRemark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "logistic.job.deliveryAddressRemark",
+		"uuid": "1815e614d75f46ef80d2fbdab3bd4ef0",
+		"controller": "ppsHeaderJobAddressRemarkController",
+		"permission": "ca4314096bea4206a6423df7b0864c7a"
+	},
+	{
+		"id": "productionplanning.header.upstream.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.item.upstreamFormDataLisTitle",
+		"controller": "ppsItemCommonFormDataController",
+		"uuid": "025b01a229af4e268a59360aba2e00b3",
+		"rubricId": 86,
+		"mainService": "ppsUpstreamItemDataService",
+		"mainEntityService":"productionplanningHeaderDataService",
+		"parentService": "productionplanningHeaderDataService",
+		"serviceKey": "productionplanning.header.ppsitem.upstreamitem",
+		"moduleName": "productionplanning.header",
+		"ppsItemColumn": "NotExistingColumnName",
+		"ppsHeaderColumn": "Id",
+		"mainItemColumn": "Id",
+		"upstreamEndRead": "listbyppsheader",
+		"statusWizardGuid": "2d1bababfa40410ca725cb16c4d77304",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.job.deliveryAddressBlob",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "productionplanning.header.headerJobSketch",
+		"controller": "ppsHeaderJobAddressBlobController",
+		"uuid": "1641a1aec3d74cb195471d336a07fcf0",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	},
+	{
+		"id": "productionplanning.header.plannedquantity.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.header.plannedQuantityListTitle",
+		"controller": "ppsPlannedQuantityTreeController",
+		"uuid": "e3c70e91bc5546969da39896d9c72028",
+		"permission": "e3c70e91bc5546969da39896d9c72028",
+		"serviceOption": {
+			"parentService": "productionplanningHeaderDataService",
+			"parentFilter": "PpsHeaderFk",
+			"serviceName": "productionplanning.header.plannedQuantity",
+			"isParentPlannedQty":"false"
+		}
+	},
+	{
+		"id": "productionplanning.header.plannedquantity.parentlist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.header.parentPlannedQuantityListTitle",
+		"controller": "ppsParentPlannedQuantityListController",
+		"uuid": "8799d0784da24cb3a94ff9ba671a93d9",
+		"permission": "e3c70e91bc5546969da39896d9c72028",
+		"serviceOption": {
+			"parentService": "productionplanningHeaderDataService",
+			"parentFilter": "PpsHeaderFk",
+			"serviceName": "productionplanning.header.parentPlannedQuantity",
+			"isParentPlannedQty":"true",
+			"gridId": "8799d0784da24cb3a94ff9ba671a93d9"
+		}
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "7dc295cc035842228bddf576c5f7582a",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "productionplanning.header.project.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.item.projectFormDataLisTitle",
+		"controller": "ppsItemCommonFormDataController",
+		"uuid": "5c5d31d1de514feea77e7f5f785830bd",
+		"rubricId": 3,
+		"mainService": "productionplanningHeaderDataService",
+		"statusWizardGuid": "7b0fb8993f56434f99368ec9875ee4fd",
+		"permission": "c3edae3d673443b7badc9eee399ae880",
+		"contextFk": "PrjProjectFk"
+	},
+	{
+		"id": "productionplanning.header.plannedquantity.boqreference",
+		"template": "productionplanning.common/templates/pps-specification-plain-container.html",
+		"title": "productionplanning.header.plannedQuantityBoqReferenceTitle",
+		"controller": "ppsHeaderPlannedQuantityBoqReferenceController",
+		"uuid": "1f2dbb3b8de2457695741163153f6995",
+		"permission": "e3c70e91bc5546969da39896d9c72028"
+	},
+	{
+		"id": "productionplanning.header.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.header.headerFormDataLisTitle",
+		"controller": "ppsItemCommonFormDataController",
+		"uuid": "b9efa35dd8b24299a2cec0eb3456d9da",
+		"rubricId": 75,
+		"mainService": "productionplanningHeaderDataService",
+		"statusWizardGuid": "74a279b3d2884562ba49048b8cb88d9f",
+		"permission": "c3edae3d673443b7badc9eee399ae880"
+	}
+]

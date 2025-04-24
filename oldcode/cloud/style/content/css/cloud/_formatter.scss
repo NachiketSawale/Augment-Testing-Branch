@@ -1,0 +1,36 @@
+/*-------------------------------------------------------------------------------
+	 Formatter (_formatter.scss)
+  -------------------------------------------------------------------------------*/
+
+
+// Grid Formatter
+.slick-cell {
+	button.navigator-button {
+		@include square($size-icon);
+		background-size: $size-icon $size-icon;
+		display: none;
+		position: absolute;
+		right: 2px;
+		padding: 2px 4px;
+		vertical-align: middle;
+	}
+
+	button.skype-button {
+		width: 20px;
+		height: 20px;
+		background-size: 20px 20px;
+		display: none;
+		position: absolute;
+		right: 2px;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	&:hover {
+		button.navigator-button:not(.ico-goto):not(.ico-goto2),
+		button.navigator-button.navigator-dynamic,
+		button.skype-button {
+			display: inline;
+		}
+	}
+}

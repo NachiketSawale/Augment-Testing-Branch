@@ -1,0 +1,23 @@
+<div class="ms-commodity-row-add-delete">
+    <div class="ms-commodity-row-add-button">
+        <a href data-ng-click="increaseQty()">
+            <i class="block-image control-icons ico-plus"></i>
+        </a>
+    </div>
+    <div class="ms-commodity-row-input">
+        <input class="quantity-input" type="text" title="{{titleMsg}}"
+               autocomplete="false" data-ng-model="ngModel"
+               data-procurement-ticket-system-cart-quantity-converter data-uom="uom"
+               data-ng-blur="onBlur()"
+               data-ng-change="onChange()"
+               data-cloud-desktop-on-key-enter="onEnterKeyDown()"
+               data-ng-keydown="onKeyDown($event)"
+               ng-keyup="onKeyup($event)"/>
+    </div>
+
+    <div class="ms-commodity-row-delete-button">
+        <a href data-ng-click="decreaseQty()">
+            <i class="block-image control-icons ico-minus"></i>
+        </a>
+    </div>
+</div>

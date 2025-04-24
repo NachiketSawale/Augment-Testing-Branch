@@ -1,0 +1,16 @@
+<div class="flex-box flex-column flex-element filler">
+	<div id="numberRangsSplitter" data-platform-kendo-splitter-adjust
+	     option="{panes: [ { collapsible: true, size: '40%' },{ collapsible: true, size: '60%' }],orientation:'horizontal'}"
+	     class="flex-element filler">
+
+		<div id="ui-layout-east" data-ng-controller="boqMainOenParameterTreeController" class="filler">
+			<div class="flex-box filler">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+		</div>
+		<div id="ui-layout-west" data-ng-controller="boqMainOenParameterDetailController">
+			<div data-platform-form-container  data-form-container-options="formContainerOptions" entity="currentItem" class="fullheight"></div>
+		</div>
+	</div>
+</div>
+

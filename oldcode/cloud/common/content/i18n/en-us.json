@@ -1,0 +1,17 @@
+{
+  "cloud": {
+    "common": {
+      "dialogTitleRfQHeader": "Assign RFQ Header",
+      "entityBasRubricCategoryFk": "Category",
+      "fax": "Fax",
+      "number": "Project Number",
+      "privatMobil": "Private Mobile",
+      "telephonePrivat": "Private Telephone",
+      "AddressTokenDesc_Street": "Street Address",
+      "emailPrivate": "Private E-Mail",
+      "entityVolume": "Volume",
+      "privatEmail": "Private E-Mail",
+      "entityRubricCategoryDescription": "Category"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+﻿{
+	"productionplanning": {
+		"processconfiguration": {
+			"entityProcessTemplate": "Process Template",
+			"listTitle": "PPS Process Configuration",
+			"processTemplate": {
+				"listTitle": "PPS Process Templates",
+				"detailTitle": "PPS Process Template Detail"
+			},
+			"entityPhaseTemplate": "Phase Template",
+			"entityPhase": "Phase",
+			"processType": "Process Type",
+			"placeHolder": "PlaceHolder",
+			"phaseTemplate": {
+				"ListTitle": "Phase Templates",
+				"detailTitle": "Phase Template Detail",
+				"phaseType": "Phase Type",
+				"sequenceOrder": "Sequence Order",
+				"duration": "Duration",
+				"successorLeadTime": "Successor Lead Time",
+				"psdRelationKind": "Relation Kind",
+				"successorMinSlackTime": "Min Time",
+				"isPlaceholder": "IsPlaceholder",
+				"defaultProcessTemplate": "DefaultProcessTemplate",
+				"executionLimit": "Execution Limit",
+				"length": "Length",
+				"height": "Height",
+				"weight": "Weight",
+				"width" : "Width",
+				"weight2": "Weight 2",
+				"weight3": "Weight 3",
+				"area" : "Area",
+				"area2" : "Area 2",
+				"area3" : "Area 3",
+				"volume" :"Volume",
+				"volume2" :"Volume 2",
+				"volume3" :"Volume 3",
+				"planquantity" : "Plan Quantity",
+				"billquantity": "Bill Quantity",
+				"general": "General",
+				"code" : "Code",
+				"producttemplatecode": "Template Code",
+				"description" : "Description",
+				"userdefined1" : "Userdefined 1",
+				"userdefined2" : "Userdefined 2",
+				"userdefined3" : "Userdefined 3",
+				"userdefined4" : "Userdefined 4",
+				"userdefined5" : "Userdefined 5",
+				"product" : "Product",
+				"formwork" : "Formwork",
+				"status" : "Status",
+				"formworktypefk" : "Formwork Type",
+				"project" : "Project",
+				"productdimension": "Product Dimension",
+				"projectno" : "Project No",
+				"projectname" : "Project Name",
+				"lgmjobcode" : "LgmJobCode"
+			},
+			"phasereqtemplate": {
+				"listTitle": "Phase Requirement Templates",
+				"detailTitle": "Phase Requirement Template Detail",
+				"upstreamGoodsType": "Requirement Goods Type ",
+				"upstreamGoods": "Requirement Good",
+				"resultType": "Requirement Result Type",
+				"result": "Requirement Result",
+				"resultstatus": "Requirement Result Status"
+			},
+			"phase": {
+				"PpsProdPlaceFk": "Production Place ",
+				"Islockedfinish": "Locked Finish",
+				"Islockedstart": "Locked Start"
+			},
+			"phasereq": {
+				"correctionQuantity": "Correction Quantity"
+			},
+			"entityPhaseReqTemplate": "Phase Requirement Template",
+			"location": "Location",
+			"secondaryPhase" : "Secondary Phase"
+		}
+	}
+}

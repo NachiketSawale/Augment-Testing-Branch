@@ -1,0 +1,112 @@
+<script type="text/ng-template" id="dialog/modaldialog-template.html">
+	<header class="modal-header main-color" data-ng-include="dialog.modalOptions.headerTemplateUrl"></header>
+	<main class="modal-body flex-box flex-column"
+	      data-ng-class="{'margin-large': dialog.modalOptions.bodyMarginLarge }">
+		<div data-ng-include="'dialog/modaldialog-topdescription-template.html'"></div>
+		<div platform-alarm-overlay data-info="dialog.alarm.text" data-config="dialog.alarm.config"></div>
+		<div data-ng-if="dialog.modalOptions.bodyTemplate" class="modal-body-template flex-element flex-box"
+		     data-ng-class="::[{ 'flex-column': dialog.modalOptions.bodyFlexColumn }, dialog.modalOptions.bodyCssClass]"
+		     data-platform-angular-compile="dialog.modalOptions.bodyTemplate"></div>
+		<div data-ng-if="!dialog.modalOptions.bodyTemplate" class="modal-body-template flex-element flex-box"
+		     data-ng-class="::[{ 'flex-column': dialog.modalOptions.bodyFlexColumn }, dialog.modalOptions.bodyCssClass]"
+		     data-ng-include="dialog.modalOptions.bodyTemplateUrl"></div>
+
+		<div data-ng-include="'dialog/modaldialog-bottomdescription-template.html'"></div>
+	</main>
+	<footer class="modal-footer" data-ng-include="dialog.modalOptions.footerTemplateUrl"></footer>
+	<footer class="modal-footer-deactivate-option" data-ng-if="dialog.modalOptions.dontShowAgain.showOption">
+		<div class="checkbox"><label><input type="checkbox" data-ng-model="dialog.modalOptions.dontShowAgain.activated">{{dialog.dontShowAgain.label}}</label></div>
+	</footer>
+</script>
+
+<script type="text/ng-template" id="dialog/modaldialog-topdescription-template.html">
+	<div class="top-description icon-message" data-ng-if="dialog.modalOptions.topDescription !== undefined">
+		<div data-ng-if="dialog.modalOptions.topDescription.iconClass.length" class="icon {{ dialog.modalOptions.topDescription.iconClass }}"></div>
+		<div class="message selectable" data-ng-bind-html="dialog.modalOptions.topDescription.text || dialog.modalOptions.topDescription"></div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="dialog/modaldialog-bottomdescription-template.html">
+	<div class="bottom-description icon-message" data-ng-if="dialog.modalOptions.bottomDescription !== undefined">
+		<div data-ng-if="::dialog.modalOptions.bottomDescription.iconClass.length" class="icon {{ dialog.modalOptions.bottomDescription.iconClass }}"></div>
+		<div class="message selectable" data-ng-bind-html="::dialog.modalOptions.bottomDescription.text || dialog.modalOptions.bottomDescription"></div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="dialog/modaldialog-header-template.html">
+	<span class="modal-title font-bold" data-ng-bind="(dialog.modalOptions.headerText || modalTitle)"></span>
+	<div ng-if="dialog.modalOptions.showMinimizeMaximizeButton" data-platform-dialog-header-resize-button></div>
+	<button data-ng-show="::dialog.modalOptions.showCloseButton" class="db close" data-dismiss="modal" data-ng-click="dialog.cancel($event)">
+		<svg data-ng-if="dialog.modalOptions.isMessageBox" data-cloud-desktop-svg-image data-sprite="control-icons" data-image="ico-close" class="block-image"></svg>
+		<svg data-ng-if="!dialog.modalOptions.isMessageBox" data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+</script>
+
+<script type="text/ng-template" id="dialog/modaldialog-body-template.html">
+	<div class="icon-message">
+		<div data-ng-if="::dialog.modalOptions.iconClass.length" class="icon tlb-icons {{ dialog.modalOptions.iconClass }}"></div>
+		<div class="message flex-element">
+			<h1 data-ng-if="dialog.modalOptions.isMessageBox" data-ng-bind="(dialog.modalOptions.headerText || modalTitle)"></h1>
+			<div data-ng-bind-html="dialog.modalOptions.bodyText"></div>
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="dialog/modaldialog-footer-template.html">
+	<!--	<section>-->
+<div class="custom-btn-group" data-ng-hide="!dialog.customButtons.length">
+	<button data-ng-repeat="btn in dialog.customButtons" data-ng-show="dialog.isShown(btn)" class="{{btn.id}} btn"
+		data-ng-click="dialog.click(btn, $event)" data-ng-disabled="dialog.isDisabled(btn)"
+		title="{{ dialog.getTooltip(btn) }}" id="{{btn.id}}"
+		data-ng-class="[(dialog.modalOptions.defaultButtonId === '{{ btn.id }}' ) ? 'btn-return btn-primary' : 'btn-default btn-tertiary', btn.cssClass]">
+		<span data-ng-if="btn.iconClass" data-ng-class="btn.iconClass"></span>
+		<svg data-ng-if="btn.showSVGTag" data-cloud-desktop-svg-image data-sprite="{{btn.svgSprite}}"
+		     class="{{btn.svgCssClass}}" data-image="{{btn.svgImage}}"></svg>{{ btn.caption }}
+	</button>
+</div>
+<button data-ng-repeat="btn in dialog.buttons" data-ng-show="dialog.isShown(btn)" class="{{btn.id}} btn"
+	data-ng-click="dialog.click(btn, $event)" data-ng-disabled="dialog.isDisabled(btn)"
+	title="{{ dialog.getTooltip(btn) }}" id="{{btn.id}}"
+	data-ng-class="[(dialog.modalOptions.defaultButtonId === '{{ btn.id }}' ) ? 'btn-return btn-primary' : 'btn-default btn-secondary', btn.cssClass]"><span
+		data-ng-if="btn.iconClass" data-ng-class="btn.iconClass"></span>
+	{{ btn.caption }}
+</button>
+<!--	</section>-->
+<!--	<section class="modal-footer-deactivate-option checkbox" data-ng-if="dialog.modalOptions.dontShowAgain.showDeactivateOption"><label><input type="checkbox" data-ng-model="dialog.modalOptions.dontShowAgain.activated">{{dialog.dontShowAgain.label}}</label></section>-->
+<!--	<div class="modal-footer-addon" data-ng-include="dialog.modalOptions.footerAddonTemplateUrl" data-ng-if="dialog.modalOptions.footerAddonTemplateUrl"></div>-->
+
+</script>
+
+
+<script type="text/ng-template" id="dialog/save-profile-as-template.html">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{modalOptions.areaLabelText}}</label>
+			<div class="platform-form-col">
+				<select class="form-control" data-ng-model="dialog.modalOptions.value.selectedArea" data-ng-options="item.description for item in dialog.modalOptions.areaItems"></select>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{dialog.modalOptions.nameLabelText}}</label>
+			<div class="platform-form-col">
+				<input class="form-control" name="inputProfileName" type="text" data-ng-model="dialog.modalOptions.value.textProfileName" placeholder="{{ dialog.modalOptions.bodyText }}" required>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="dialog/detail-msgbox-template.html">
+	<div class="icon-message">
+		<div data-ng-if="::dialog.modalOptions.iconClass.length" class="icon {{ dialog.modalOptions.iconClass }}"></div>
+		<div class="message flex-element">
+			<h1 data-ng-bind="(dialog.modalOptions.headerText || modalTitle)"></h1>
+			<div data-ng-bind-html="dialog.modalOptions.bodyText"></div>
+		</div>
+	</div>
+	<div data-ng-if="dialog.details.show" class="modal-details" data-ng-class="::[dialog.details.type, dialog.modalOptions.details.cssClass]">
+		<div data-ng-if="dialog.details.type === 'longtext'" data-ng-bind-html="::dialog.modalOptions.details.value" class="selectable"></div>
+		<div data-ng-if="dialog.details.type === 'grid'" data-platform-grid-form data-ng-model="dialog.modalOptions.value" data-options="::dialog.modalOptions.details.options" data-items="::dialog.modalOptions.details.value"
+		     class="grid-container-wrapper"></div>
+		<div data-ng-if="dialog.details.type === 'template'" data-ng-include="dialog.modalOptions.details.templateUrl"></div>
+	</div>
+</script>

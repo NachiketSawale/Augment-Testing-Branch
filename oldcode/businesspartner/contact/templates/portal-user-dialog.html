@@ -1,0 +1,39 @@
+<div data-ng-controller="businessPartnerContactPortalUserDialogController">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body">
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div class="radio spaceToUp pull-left">
+                        <label>
+                            <input type="radio" ng-model="executeType" value="1">{{executeTypeTexts.reactivate}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div class="radio spaceToUp pull-left">
+                        <label>
+                            <input type="radio" ng-model="executeType" value="2">{{executeTypeTexts.inactivate}}
+                        </label>
+                    </div>
+                 </div>
+            </div>
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <div class="flex-column">
+                        <platform-Grid data="contactData"></platform-Grid>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="execute()" data-ng-disabled="!canExecuteFn()">{{::'basics.common.button.execute' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$close()"> {{::'basics.common.button.close' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

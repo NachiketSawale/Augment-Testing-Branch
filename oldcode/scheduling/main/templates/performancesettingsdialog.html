@@ -1,0 +1,34 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body" data-platform-form-adjust-label>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'scheduling.main.dueDate' | translate}}</div>
+			<div class="platform-form-col">
+				<div class="form-control" data-domain-control data-domain="dateutc" data-model="selectedItem.dueDate"
+				     data-options="dueDate"></div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'cloud.common.entityDescription' | translate}}</div>
+			<div class="platform-form-col">
+				<div class="form-control" data-domain-control data-domain="description" data-model="selectedItem.description"
+				     data-options="description"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" data-ng-if="modalOptions.reset" class="btn btn-default" data-ng-disabled="requirement"
+	        data-ng-click="modalOptions.reset()">
+		{{modalOptions.resetButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.ok()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>

@@ -1,0 +1,7 @@
+<div class="cover-letter-container">
+	<h2 class="title">{{'basics.workflow.sendRfQEmailBody.subject' | platformTranslate}}</h2>
+	<ui-common-domain-control-host [fieldType]="fieldType" [controlContext]="controlContext"></ui-common-domain-control-host>
+
+	<h2 class="cover-letter title">{{'basics.workflow.sendRfQEmailBody.coverLetterEMailBody' | platformTranslate}}</h2>
+	<workflow-common-generic-wizard-report [reportList]="coverLetters" [placeholders]="placeholders"></workflow-common-generic-wizard-report>
+</div>

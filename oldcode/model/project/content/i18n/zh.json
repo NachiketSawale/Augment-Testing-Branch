@@ -1,0 +1,31 @@
+{
+  "model": {
+    "project": {
+      "twoDViewer":"2D Viewer",
+      "translationDescModel": "Model",
+      "translationDescModelFile": "Model File",
+      "modelListContainer": "Model",
+      "modelDetailContainer": "Model Details",
+      "modelFileListContainer": "Model File",
+      "modelFileDetailContainer": "Model File Details",
+      "entityLod": "Level of Development",
+      "entityHeader": "EstHeader",
+      "entitySchedule": "Schedule",
+      "entityFileArchiveDoc": "File Archive",
+      "entityProjectNo": "Number",
+      "action": "Action",
+      "errorTitle":"Error by selection",
+      "errorMessage":"No or wrong file selected!",
+      "createModelFileTitle": "Create Model File",
+      "convert": "Convert?",
+      "skipPropertyValue": "Ignore properties with too long values?",
+      "errorEmptyInput": "Please select a model and/or upload a file!",
+      "errorFileExists": "A model file already exists in this model. You can't create a new model file!",
+      "errorModelNotSaved": "Please save the model first!",
+      "showLogFileTitle": "Conversion Log messages",
+      "status": " Conversion State",
+      "questionDeleteJob": "Do you want to delete the job?",
+      "logFileNotAvailable": "No log messages exists."
+    }
+  }
+}

@@ -1,0 +1,137 @@
+[
+	{
+		"id": "logistic.pricecondition.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listPriceConditionTitle",
+		"controller": "logisticPriceConditionListController",
+		"uuid": "5d0e37f033664ce6b0faf2114db0906a"
+	},
+	{
+		"id": "logistic.pricecondition.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailPriceConditionTitle",
+		"controller": "logisticPriceConditionDetailController",
+		"uuid": "24c4f1aecb6d4a5aa735201177521649",
+		"permission": "5d0e37f033664ce6b0faf2114db0906a"
+	},
+	{
+		"id": "logistic.priceconditionitem.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listPriceConditionItemTitle",
+		"controller": "logisticPriceConditionItemListController",
+		"uuid": "bc0c1a5bc4dc420d98bd85a0eeac59f4"
+	},
+	{
+		"id": "logistic.priceconditionitem.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailPriceConditionItemTitle",
+		"controller": "logisticPriceConditionItemDetailController",
+		"uuid": "96e91752e0ca46f59eb4b332fb6573b4",
+		"permission": "bc0c1a5bc4dc420d98bd85a0eeac59f4"
+	},
+	{
+		"id": "logistic.equipmentcatalogprice.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listEquipmentCatalogPriceTitle",
+		"controller": "logisticPriceConditionEquipmentCatalogPriceListController",
+		"uuid": "bc736a161cc248eaad95db451e06b541"
+	},
+	{
+		"id": "logistic.equipmentcatalogprice.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailEquipmentCatalogPriceTitle",
+		"controller": "logisticPriceConditionEquipmentCatalogPriceDetailController",
+		"uuid": "6e88700ea7a54efe805436ee4272ba99",
+		"permission": "bc736a161cc248eaad95db451e06b541"
+	},
+	{
+		"id": "logistic.materialcatalogprice.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listMaterialCatalogPriceTitle",
+		"controller": "logisticPriceConditionMaterialCatalogPriceListController",
+		"uuid": "bd261e0906984702a6d01964ffc58bcc"
+	},
+	{
+		"id": "logistic.materialcatalogprice.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailMaterialCatalogPriceTitle",
+		"controller": "logisticPriceConditionMaterialCatalogPriceDetailController",
+		"uuid": "00c2aee866bc4607b3824ea4e05700b6",
+		"permission": "bd261e0906984702a6d01964ffc58bcc"
+	},
+	{
+		"id": "logistic.plantprice.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listPlantPriceTitle",
+		"controller": "logisticPriceConditionPlantPriceListController",
+		"uuid": "2934c2d1160447bc860cc5c3897e4d9f"
+	},
+	{
+		"id": "logistic.plantprice.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailPlantPriceTitle",
+		"controller": "logisticPriceConditionPlantPriceDetailController",
+		"uuid": "dc76760660e9466da30b5a7116fc2f52",
+		"permission": "2934c2d1160447bc860cc5c3897e4d9f"
+	},
+	{
+		"id": "logistic.sundryserviceprice.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listSundryServicePriceTitle",
+		"controller": "logisticPriceConditionSundryServicePriceListController",
+		"uuid": "76206e93e60a4f60a71fd0d0961c6da1"
+	},
+	{
+		"id": "logistic.sundryserviceprice.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailSundryServicePriceTitle",
+		"controller": "logisticPriceConditionSundryServicePriceDetailController",
+		"uuid": "9eefecb804a840e0bcefd6825c957374",
+		"permission": "76206e93e60a4f60a71fd0d0961c6da1"
+	},
+	{
+		"id": "logistic.costcoderate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listCostCodeRateTitle",
+		"controller": "logisticPriceConditionCostCodeRateListController",
+		"uuid": "e07d54925ba64e7db4928907939e1bda"
+	},
+	{
+		"id": "logistic.costcoderate.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailCostCodeRateTitle",
+		"controller": "logisticPriceConditionCostCodeRateDetailController",
+		"uuid": "e37b49b2796d4950bd7c54dfaf6cf86a",
+		"permission": "e07d54925ba64e7db4928907939e1bda"
+	},
+	{
+		"id": "logistic.materialprice.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listMaterialPriceTitle",
+		"controller": "logisticPriceConditionMaterialPriceListController",
+		"uuid": "ef3955379c4447a3bda9264908229c8b"
+	},
+	{
+		"id": "logistic.materialprice.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailMaterialPriceTitle",
+		"controller": "logisticPriceConditionMaterialPriceDetailsController",
+		"uuid": "39f4db632f194d0bb918fc8981f1011e",
+		"permission": "ef3955379c4447a3bda9264908229c8b"
+	},
+	{
+		"id": "logistic.plantcostcode.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.pricecondition.listPlantCostCodeTitle",
+		"controller": "logisticPriceConditionPlantCostCodeListController",
+		"uuid": "767c6e762ece45f6bedf133f02e9baa3"
+	},
+	{
+		"id": "logistic.plantcostcode.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.pricecondition.detailPlantCostCodeTitle",
+		"controller": "logisticPriceConditionPlantCostCodeDetailsController",
+		"uuid": "28e3bcdb271d40f29c2f1a97683dc1ca",
+		"permission": "767c6e762ece45f6bedf133f02e9baa3"
+	}
+]

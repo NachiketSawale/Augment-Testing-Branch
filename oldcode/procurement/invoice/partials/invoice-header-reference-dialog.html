@@ -1,0 +1,17 @@
+﻿<div data-ng-controller="procurementInvoiceHeaderReferenceDialogController">
+	<header class="modal-header main-color" data-ng-include="modalOptions.headerTemplateUrl"></header>
+
+	<div data-platform-alert data-error="error"></div>
+	<div>
+		<section class="modal-body">
+			<div class="overflow-hidden" style="height: 300px;">
+				<div class="fullheight" style="overflow-y: auto">
+					<platform-Grid data="gridData"></platform-Grid>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onOK()"> {{'cloud.common.ok' | translate}}</button>
+	</footer>
+</div>

@@ -1,0 +1,23 @@
+<style type="text/css">
+	.image-preview {
+		position: relative;
+		max-height: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.image-preview img.comment-image {
+		max-width: 100%;
+		max-height: 100%;
+	}
+</style>
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+	<div class="image-preview text-center"></div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close()">{{'basics.common.button.ok' | translate}}</button>
+</footer>

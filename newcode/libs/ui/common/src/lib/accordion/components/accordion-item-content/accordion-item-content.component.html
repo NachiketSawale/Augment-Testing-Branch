@@ -1,0 +1,12 @@
+<div class="accordion-item-content">
+	<button class="rw rw-content" [disabled]="data.disabled" (click)="onClick()">
+		<div class="flex-box">
+			<div *ngIf="data.imgCss" class="nodeimg app-small-icons" [ngClass]="data.imgCss"></div>
+			<ul class="rw-content">
+				<!--translation pipe is not available-->
+				<li class="title" [innerText]="!data.title? data.id: (data.title | platformTranslate)"></li>
+				<li *ngIf="data.comment" [innerText]="data.comment | platformTranslate"></li>
+			</ul>
+		</div>
+	</button>
+</div>

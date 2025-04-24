@@ -1,0 +1,17 @@
+<div data-ng-controller="productionplanningProductReuseFromStockWizardRemainderSettingController" ng-cloak class="filler">
+	<section ng-cloak class="modal-body flex-box flex-column">
+		<div data-ng-disabled="settingObj.hasNoRemLength">
+			<span class="ms-icon-img attribute-icon" ng-disabled="settingObj.hasNoRemLength">
+				<input type="checkbox" data-ng-model="settingObj.scrapRemainingLength" ng-disabled="settingObj.hasNoRemLength">
+			</span>
+			<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.product.wizard.scrapRemainingLength" | translate }}</span>
+		</div>
+		<div data-ng-disabled="settingObj.hasNoRemWidth">
+			<span class="ms-icon-img attribute-icon" ng-disabled="settingObj.hasNoRemWidth">
+				<input type="checkbox" data-ng-model="settingObj.scrapRemainingWidth" ng-disabled="settingObj.hasNoRemWidth">
+			</span>
+			<span class="ms-commodity-attributes-checkbox-label">{{ "productionplanning.product.wizard.scrapRemainingWidth" | translate }}</span>
+		</div>
+
+	</section>
+</div>

@@ -1,0 +1,43 @@
+﻿{
+	"scheduling": {
+		"template": {
+			"activityTemplateGroup": "施工组织组",
+			"activityTemplateGroupfk": "Parent",
+			"activityTemplateGroupGridHeader": "施工组织组",
+		  	"activityTemplateGroupEditGridHeader": "施工组织组",
+			"activityTemplateGroupDetailHeader": "施工组织组明细",
+		  	"activityTemplateGroupEditDetailHeader": "施工组织组明细",
+		    "activityTemplateGridHeader": "施工组织",
+		 	"activityTemplateDetailHeader": "施工组织明细",
+			"performanceRuleGridHeader": "Performance Rules",
+		  	"performanceRuleDetailHeader": "Details Performance Rule",
+		  	"performanceSheetGridHeader": "进度表单",
+		  	"performanceSheetDetailHeader": "进度表单明细",
+		  	"activityTemplate": "施工组织模板",
+			"allowModify":"修改",
+			"eventTemplateGridHeader": "事件",
+		 	"eventTemplateDetailHeader": "事件明细",
+			"eventType": "事件类型",
+		 	"performanceSheet":"进度表单",
+			"activityTmplGrp2CUGrpGridHeader":"控制项分配",
+		 	"activityTmplGrp2CUGrpDetailHeader":"控制项分配明细",
+		  	"activityTmpl2CUGrpGridHeader":"控制项分配",
+		  	"activityTmpl2CUGrpDetailHeader":"控制项分配",
+		  	"controllingGroupFk":"控制组",
+			"controllingGroupDetailFk":"控制组明细",
+		  	"inherited":"继承",
+		  	"inheritedcontrollingGroupDetailFk":"继承控制组明细",
+		    "infoHeader": "信息",
+		    "isCodeUnique": "编码不唯一！",
+		  	"translationDesc": "翻译",
+			"translationDescActivities": "施工组织",
+		  	"translationDescActivitiesGroupEdit": "施工组织组",
+		   	"translationDescActivitiesGroup": "Overview Activity Group",
+		  	"translationDescEvents": "事件",
+		  	"translationDescRules": "Performance Rule",
+		    "controllingUnitTemplate": "控制项模板",
+		    "exitConfirmHeader": "退出确认",
+		  	"exitConfirm": "数据已被更改，是否在退出之前保存数据？"
+		}
+	}
+}

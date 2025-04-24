@@ -1,0 +1,9 @@
+<div class="ms-sv-container-title">
+    <span>{{ title | platformTranslate }}</span>
+    <span class="ms-sv-attribute-show-hide">
+        <a (click)="collapsed=!collapsed" class="control-icons block-image" [class]="collapsed ? 'ico-plus' : 'ico-minus'"></a>
+    </span>
+</div>
+<div *ngIf="!collapsed" class="ms-sv-collapse-content">
+    <ng-content></ng-content>
+</div>

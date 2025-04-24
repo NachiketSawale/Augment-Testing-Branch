@@ -1,0 +1,70 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<!-- isRolebase Id -->
+		<div class="radiolist-container" style="margin-top: 0px;">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input name="radioGroupA" ng-click="onRadioGroupOptChanged('1', 'isRoleBase');onClerkBaseChanged(1)" ng-disabled="readonly" ng-model="input.isRoleBase"
+					       ng-value="1" type="radio">
+					{{'basics.workflow.action.customEditor.clerkBase' | translate }}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left margin-left-ld">
+				<label>
+					<input name="radioGroupA" ng-click="onRadioGroupOptChanged('2', 'isRoleBase');onClerkBaseChanged(2)" ng-disabled="readonly" ng-model="input.isRoleBase"
+					       ng-value="2" type="radio">
+					{{'basics.workflow.action.customEditor.roleBase' | translate }}
+				</label>
+			</div>
+		</div>
+
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.approvalLevel' | translate
+					}}</label>
+				<div class="platform-form-col input-group-content">
+					<input data-ng-model="input.level" id="nodeCount" ng-keypress="OnApprKeyPressCount($event)"
+					       ng-keyup="OnApprKeyUp($event)"
+					       style="width: 100%" type="text"/>
+				</div>
+			</div>
+		</div>
+
+		<!-- content div -->
+		<div id='div_approve'>
+		</div>
+
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.approvers' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.property" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

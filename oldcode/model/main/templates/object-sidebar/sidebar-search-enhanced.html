@@ -1,0 +1,61 @@
+﻿
+<div data-ng-controller="modelMainObjectSidebarSearchEnhancedController" data-platform-add-css-class-directive="searchOptions.cssClassForParent" data-cloud-Desktop-On-Key-Enter="searchOptions.onStartSearch" class="flex-element flex-box flex-column overflow-hidden">
+
+	<div data-cloud-Common-Overlay data-loading="filterDataLoading"></div>
+
+		<div data-ng-show="isPinnedModelSelected">
+			<div class="projectContextInfo" data-ng-include="'sidebar-filter-pinned-container.html'"></div>
+		</div>
+
+		<div class="input-group enhanced form-control">
+			<div data-dropdown-select2
+			     data-model="searchOptions.selectedItemId"
+			     data-info="filderdefcontrol"
+			     data-change="searchOptions.selectionChanged()"
+			     data-options="searchOptions.dropboxOptions"
+			     data-use-deep-watch="true"
+			     data-template-Result="searchOptions.dropboxOptions.templateResult"
+			     data-template-Selection="searchOptions.dropboxOptions.templateResult"
+			     data-matchfunction="default">
+			</div>
+
+			<span class="input-group-btn">
+
+				<button class="btn btn-default control-icons ico-input-delete2" type="button"
+				        data-ng-disabled="searchOptions.filterInfo.isPending || !searchOptions.canDeleteFilter()"
+				        data-ng-class="{btndeactive: searchOptions.filterInfo.isPending || !searchOptions.canDeleteFilter()}"
+				        data-ng-click="searchOptions.onDeleteFilter()">
+				</button>
+				<button id="onStartSearch" class="btn btn-default middle tlb-icons ico-search" type="button"
+				        data-ng-disabled="searchOptions.filterInfo.isPending"
+				        data-ng-class="{btndeactive: searchOptions.filterInfo.isPending}"
+				        data-ng-click="searchOptions.onStartSearch()">
+				</button>
+			</span>
+		</div>
+
+		<div class="flex-box flex-column flex-element overflow-hidden">
+			<label class="subTitle" data-ng-bind="'cloud.desktop.sdSearchOptionLabel'|translate"></label>
+
+			<div data-model-main-object-sidebar-Filter-Definition data-options="searchOptions.enhancedFilter" class="overflow flex-element"></div>
+
+			<div class="flex-box btnGroup">
+
+				<button class="btn btn-default flex-element" data-ng-click="searchOptions.onSaveFilter()"
+				        data-ng-disabled="!searchOptions.canSaveFilter()">
+					{{::searchOptions.onSaveFilterBtnText}}
+				</button>
+				<button class="btn btn-default flex-element" data-ng-click="searchOptions.onSaveAsFilter()"
+				        data-ng-disabled="!searchOptions.canSaveFilterAs()">
+					{{::searchOptions.onSaveAsFilterBtnText}}
+				</button>
+				<button class="btn btn-default flex-element" data-ng-disabled="searchOptions.filterInfo.isPending"
+				   data-ng-class="{btndeactive: searchOptions.filterInfo.isPending}"
+				   data-ng-click="searchOptions.onStartSearch()">
+					{{::searchOptions.onExecuteSearchBtnText}}
+				</button>
+
+				<!--<button class="btn btn-default flex-element" data-ng-click="searchOptions.onSnapshot()">SH</button>-->
+			</div>
+		</div>
+</div>

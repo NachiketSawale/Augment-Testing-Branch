@@ -1,0 +1,33 @@
+﻿[
+  {
+    "id": "controlling-actuals-costheader-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.actuals.costHeaderListTitle",
+    "controller": "controllingActualsCostHeaderListController",
+    "uuid": "bb7a4b489f674664a5f853259d5382ff"
+  },
+  {
+    "id": "controlling-actuals-costheader-detail-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "controlling.actuals.costHeaderDetailTitle",
+    "controller": "controllingActualsCostHeaderDetailController",
+    "uuid": "bd82c66d78c84a3ca67c3baf4135fd98",
+    "permission": "bb7a4b489f674664a5f853259d5382ff"
+  },
+  {
+    "id": "controlling-actuals-costdata-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.actuals.costDataListTitle",
+    "controller": "controllingActualsCostDataListController",
+    "uuid": "519f57ab55da420694b4d52264db09b4"
+  },
+
+  {
+    "id": "controlling-actuals-costdata-detail-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "controlling.actuals.costDataDetailTitle",
+    "controller": "controllingActualsCostDataDetailController",
+    "uuid": "8c235d8d773a4828995911974a6b4a87",
+    "permission": "519f57ab55da420694b4d52264db09b4"
+  }
+]

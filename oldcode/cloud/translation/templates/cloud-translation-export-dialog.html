@@ -1,0 +1,133 @@
+<div class="flex-element" data-ng-controller="cloudTranslationExportDialogController">
+    <div data-cloud-common-overlay data-loading="loading" data-info2="message"></div>
+
+    <div class="flex-box flex-element">
+        <div class="flex-inline margin-top-xld" style="border-right: solid 1px #dcdcdc; padding-right: 10px">
+            <i class="block-image app-icons ico-translation btn-square-28" style="background-size: 56px;"></i>
+            <i class="block-image control-icons ico-arrow-right btn-square-28"></i>
+            <i class="block-image app-icons ico-tables btn-square-28" style="background-size: 56px;"></i>
+        </div>
+        <div class="flex-element margin-top-xld" style="padding-left: 10px;">
+
+            <div data-ng-show="dialog.modalOptions.value.buttonActive">
+					<div style="padding-bottom: 5px;">
+						<h3 class="font-bold">{{titleTextConfig}}</h3>
+						<div class="platform-form-group margin-bottom-ld" style="border-spacing: 0px;">
+
+							<div class="platform-form-row">
+								<div class="platform-form-label">{{dialog.modalOptions.value.untranslatedTitle}}</div>
+								<div class="platform-form-col">
+									<input type="checkbox" data-ng-model="dialog.modalOptions.value.untranslated">
+								</div>
+							</div>
+							<div class="platform-form-row">
+								<div class="platform-form-label">{{dialog.modalOptions.value.newOrChangedTitle}}</div>
+								<div class="platform-form-col">
+									<input type="checkbox" data-ng-model="dialog.modalOptions.value.exportChanged">
+								</div>
+							</div>
+
+							<div class="platform-form-row">
+								<div class="platform-form-label">{{dialog.modalOptions.value.exportByCategoryTitle}}</div>
+								<div class="platform-form-col">
+									<div data-platform-checkbox-list data-items="dialog.modalOptions.value.checkBoxCategories"
+									     data-options="dialog.modalOptions.value.checkboxOptions"></div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+	            <div style="padding-bottom: 5px;">
+		            <h3 class="margin-top-xld font-bold">{{titleTextAdditionalColumns}}</h3>
+		            <div class="platform-form-group margin-bottom-ld" style="border-spacing: 0px;">
+			            <div class="platform-form-row">
+				            <div class="platform-form-label">{{dialog.modalOptions.value.addResourceRemarkTitle}}</div>
+				            <div class="platform-form-col">
+					            <input type="checkbox" data-ng-model="dialog.modalOptions.value.resourceRemarkAdded">
+				            </div>
+			            </div>
+			            <div class="platform-form-row">
+				            <div class="platform-form-label">{{dialog.modalOptions.value.addPathTitle}}</div>
+				            <div class="platform-form-col">
+					            <input type="checkbox" data-ng-model="dialog.modalOptions.value.pathAdded">
+				            </div>
+			            </div>
+			            <div class="platform-form-row">
+				            <div class="platform-form-label">{{dialog.modalOptions.value.addParameterInfoTitle}}</div>
+				            <div class="platform-form-col">
+					            <input type="checkbox" data-ng-model="dialog.modalOptions.value.parameterInfoAdded">
+				            </div>
+			            </div>
+			            <div class="platform-form-row">
+				            <div class="platform-form-label">{{dialog.modalOptions.value.addTranslationRemarkTitle}}</div>
+				            <div class="platform-form-col">
+					            <input type="checkbox" data-ng-model="dialog.modalOptions.value.translationRemarkAdded">
+				            </div>
+			            </div>
+			            <div class="platform-form-row">
+				            <div class="platform-form-label">{{dialog.modalOptions.value.addCategoryTitle}}</div>
+				            <div class="platform-form-col">
+					            <input type="checkbox" data-ng-model="dialog.modalOptions.value.categoryAdded">
+				            </div>
+			            </div>
+		            </div>
+	            </div>
+
+					<div style="padding-bottom: 5px;">
+						<h3 class="margin-top-xld font-bold">{{titleTextLanguages}}</h3>
+						<div class="platform-form-group" style="border-spacing: 0px;">
+							<div class="platform-form-row">
+								<div class="checkbox spaceToUp"><label for="checkbox_default"><input id="checkbox_default" type="checkbox" disabled="disabled" checked="checked">ENGLISH ({{dialog.modalOptions.value.defaultLanguage}})</label>
+								</div>
+							</div>
+							<div class="platform-form-row">
+								<div data-cloud-translation-checkbox-grid data-name="'exportLanguages'" data-items="dialog.modalOptions.value.checkboxItems"
+								     data-options="dialog.modalOptions.value.checkboxOptions"></div>
+							</div>
+						</div>
+					</div>
+
+
+            </div>
+
+            <div data-ng-show="linkActive">
+                <h3>{{dialog.modalOptions.value.successText}}</h3>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{dialog.modalOptions.value.defaultLanguage}}</div>
+                        <div class="platform-form-col">
+                            <ul style="margin-top: 5px;">
+                                <li>ENGLISH</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{dialog.modalOptions.value.selectedLanguages}}</div>
+                        <div class="platform-form-col">
+                            <ul style="margin-top: 5px;">
+                                <li data-ng-repeat="language in selectedLanguages">{{language.text}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{dialog.modalOptions.value.downloadFile}}</div>
+                        <div class="platform-form-col"><a data-ng-href="{{linkData}}"
+                                                          data-target="_blank">{{fileName}}</a></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div data-ng-show="failed" class="flex-element">
+                <h3>{{dialog.modalOptions.value.failedText}}</h3>
+                <p>{{error}}</p>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

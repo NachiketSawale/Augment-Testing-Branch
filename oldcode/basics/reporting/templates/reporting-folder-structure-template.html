@@ -1,0 +1,17 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+	<div data-cloud-common-overlay loading="loadingOption.loading" data-info="loadingOption.info"></div>
+	<div style="height: 330px;">
+		<platform-Grid data="gridData" style="height: 330px;"></platform-Grid>
+	</div>
+</section>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.onUpload()"
+	        data-ng-disabled="!modalOptions.canUpload()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>

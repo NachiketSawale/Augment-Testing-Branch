@@ -1,0 +1,32 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" name="evaluationCheckBox" class="e2e-evaluation-isActive"
+				       data-ng-model="evaluation.isActive"/>
+				{{evaluation.header}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<div class="lg-6 md-6">
+					<div data-business-partner-evaluation-schema-combobox
+					     data-ng-model="evaluation.selectedItemFk"
+					     data-config="evaluation.codeLookupConfig"
+					     data-options="lookupOptions"></div>
+
+				</div>
+				<div class="lg-2 md-2 text-center" style="padding-top: 4px;">
+					{{evaluation.description}}
+				</div>
+
+				<input type="text" data-ng-model="evaluation.point" min="0"
+				       class="form-control lg-4 md-4"
+				       data-ng-pattern-restrict="^(([-+]?(\d{0,3})([.,]\d{3}){0,3}([.,]\d{0,3}))|([-+]?\d{0,12})([.,]\d{0,3})?)$"
+				       data-ng-disabled="!evaluation.isActive" />
+			</li>
+		</ul>
+	</li>
+</ul>

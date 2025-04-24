@@ -1,0 +1,21 @@
+<div data-model-viewer-hoops class="flex-box flex-column flex-element" data-platform-dragdrop-component="ddDummyTarget"></div>
+<div class="model-viewer-graphical-overlay">
+	<svg data-model-viewer-graphical-overlay class="fullheight fullwidth text-center graphical-3d-viewer-overlay"></svg>
+</div>
+
+<div data-ng-if="viewerSettings.showSelectionInfo" class="img-overlay-lb"><span data-ng-bind="displayedFilteringInfo"></span></div>
+<div data-ng-if="viewerSettings.showInputInfo" class="img-overlay-lt" data-ng-bind-html="displayedOperatorInfo"></div>
+<div class="toolbar img-overlay-rt" data-ng-if="contextTools.available">
+    <div data-platform-menu-list data-list="$parent.contextTools.items"></div>
+</div>
+<div data-platform-dragdrop-component="ddTarget" class="viewer-drag-box" data-ng-if="isDragMode" data-is-3d-viewer="true" data-ng-bind="dropExplanation"></div>
+<div class="viewer-invisible-drag" data-ng-if="isInvisibleDragMode" data-is-3d-viewer="true"></div>
+
+<svg data-basics-common-smart-canvas class="model-viewer-graphical-overlay" data-set-manager="setOverlayManager(scMgr)"></svg>
+
+<div data-basics-common-white-board data-show="showInfoOverlay || isLoading()" data-info="isLoading() ? _none : overlayInfo"></div>
+<div cloud-common-overlay data-loading="isLoading() || isBusyIndicatorVisible" data-info2="loadingInfo"></div>
+
+<div resizable-overlay data-data="resizableOverlayDir">
+	<svg data-model-map-minimap data-minimap="minimapData.minimap" data-ng-show="supportsMinimap" class="fullheight fullwidth"></svg>
+</div>

@@ -1,0 +1,28 @@
+<script type="text/ng-template" id="project-navigator/submenu-projectlist.html">
+	<ul class="navigator-menu" style="width: 300px;">
+		<li class="title-wrapper">
+			<button class="title" style="border-top: none;border-bottom: none" disabled ng-if="naviProjectList.favourite.length > 0">{{ 'basics.common.projectNavi.projectListFavouriteTitle' | translate }}</button>
+		</li>
+		<li data-ng-repeat="item in naviProjectList.favourite">
+			<button data-ng-click="naviOpts.onProjectListItemClick(item)">
+				<span>{{ item.FormattedDescription }}</span>
+			</button>
+			<button type="button" class="control-icons ico-favourite-selected" style="float: right; width: 20px;"
+			        title="{{ 'basics.common.projectNavi.removeProjectFromFavourite' | translate }}"
+			        data-ng-click="naviOpts.onToggleFavorite(item.ProjectFk)">
+			</button>
+		</li>
+		<li class="title-wrapper">
+			<button class="title" style="border-bottom: none" disabled>{{ 'basics.common.projectNavi.projectListRecentTitle' | translate }}</button>
+		</li>
+		<li data-ng-repeat="item in naviProjectList.recent">
+			<button data-ng-click="naviOpts.onProjectListItemClick(item)">
+				<span>{{ item.FormattedDescription }}</span>
+			</button>
+			<button type="button" class="control-icons" ng-class="item.IsFavourite?'ico-favourite-selected':'ico-favourite-unselected'" style="float: right; width: 20px;"
+			        title="{{ (item.IsFavourite ? 'basics.common.projectNavi.removeProjectFromFavourite' : 'basics.common.projectNavi.saveProjectToFavourite') | translate }}"
+			        data-ng-click="naviOpts.onToggleFavorite(item.ProjectFk)">
+			</button>
+		</li>
+	</ul>
+</script>

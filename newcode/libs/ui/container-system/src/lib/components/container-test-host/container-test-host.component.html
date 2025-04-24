@@ -1,0 +1,15 @@
+<div class="flex-box fullheight">
+	<div  style="width: 15%; margin: 5px">
+		<h1>Containers</h1>
+		<div>Active Tab ID: {{activeTabId}}</div>
+		<ng-container *ngFor="let cnt of availableContainers">
+			<label class="spaceToUp">
+				<input type="checkbox" [(ngModel)]="cnt.isVisible">{{cnt.containerDef.title | platformTranslate}}
+			</label>
+			<br>
+		</ng-container>
+	</div>
+	<div class="fullwidth fullheight">
+		<ui-container-system-container-group [containers]="visibleContainers"></ui-container-system-container-group>
+	</div>
+</div>

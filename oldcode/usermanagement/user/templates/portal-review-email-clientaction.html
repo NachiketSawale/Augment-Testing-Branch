@@ -1,0 +1,30 @@
+<section data-ng-hide="!parameterInvalid">
+	<h1>Parameter Error<p></h1>
+	<h3>Workflow Client Action wrong configured</h3>
+	<h2><b>Error:</b>&ensp;</h2>
+	<h3 data-ng-bind-html="parameterInvalidInfo.error"></h3>
+	<br>
+	<h2>Please fix issues and try again!</h2>
+</section>
+<section data-ng-hide="parameterInvalid">
+	
+	<label class="platform-form-label" ng-bind-html="dlgOptions.subtitle"></label>
+	<br> <br>
+	<div class="platform-form-group">
+		<div data-ng-hide="!data.recipient" data-platform-label-text data-label="dlgOptions.recipient" data-forid="recipient" data-model="data.recipient" readonly></div>
+		<div data-platform-label-text data-label="dlgOptions.subject" data-forid="subject" data-model="data.subject" readonly></div>
+	</div>
+	<br>
+	<label class="platform-form-label" ng-bind-html="dlgOptions.body"></label>
+	<div style="overflow: auto; display: flex;max-width: 574px; ">
+		<div class="text-left" style="flex: 1; " ng-bind-html="data.body"></div>
+	</div>
+	
+	<br>	<br>
+	<div class="platform-form-group">
+		<div data-platform-label-select data-label="dlgOptions.sendemail" data-forid="sendemail" data-isrequired
+		     data-model="data.sendemail" data-options="dlgOptions.sendemailoptions" data-onchange="onChangeSendEmail()"></div>
+	</div>
+
+</section>
+</div>

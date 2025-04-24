@@ -1,0 +1,259 @@
+[
+  {
+    "id": "timekeeping.employee.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.employeeListTitle",
+    "controller": "timekeepingEmployeeListController",
+    "uuid": "3b47dae9be994a8c8aab95ca3aba7725"
+  },
+  {
+    "id": "timekeeping.employee.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.employee.employeeDetailTitle",
+    "controller": "timekeepingEmployeeDetailController",
+    "uuid": "6fa7a4435630483b8ffe16d6dbd3d17c",
+    "permission": "3b47dae9be994a8c8aab95ca3aba7725"
+  },
+  {
+    "id": "timekeeping.crewassignment.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.crewAssignmentListTitle",
+    "controller": "timekeepingCrewAssignmentListController",
+    "uuid": "b89f95becdc44a84ba8cf3f32f2f06cf"
+  },
+  {
+    "id": "timekeeping.crewassignment.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.employee.crewAssignmentDetailTitle",
+    "controller": "timekeepingCrewAssignmentDetailController",
+    "uuid": "0326e2061c0f45a790536a4741ec137c",
+    "permission": "b89f95becdc44a84ba8cf3f32f2f06cf"
+  },
+  {
+    "id": "timekeeping.plannedabsence.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.plannedAbsenceListTitle",
+    "controller": "timekeepingPlannedAbsenceListController",
+    "uuid": "fdf3f45827f6410f8c89536f03982064"
+  },
+  {
+    "id": "timekeeping.plannedabsence.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.employee.plannedAbsenceDetailTitle",
+    "controller": "timekeepingPlannedAbsenceDetailController",
+    "uuid": "4933b71664ea4c4db200937bd6e39cdb",
+    "permission": "fdf3f45827f6410f8c89536f03982064"
+  },
+  {
+    "id": "timekeeping.employee.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "31f3f1c12e2346b08da6f668c26c9174"
+  },
+  {
+    "id": "timekeeping.employee.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "9af696fc260445b9b577c4681bf2f92a",
+    "controller": "",
+    "sectionId": "39",
+    "mainService": "timekeepingEmployeeDataService"
+  },
+  {
+    "id": "timekeeping.employee.photoList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.pictureListTitle",
+    "controller": "timekeepingEmployeePictureListController",
+    "uuid": "cb717989d7494402a312e14f00974d51"
+  },
+  {
+    "id": "timekeeping.employee.photoView",
+    "template": "app/components/base/partials/image-partial.html",
+    "title": "timekeeping.employee.pictureViewTitle",
+    "controller": "timekeepingEmployeePictureController",
+    "uuid": "14d107fb61184d6abb207033aef44e47",
+    "permission": "cb717989d7494402a312e14f00974d51"
+  },
+  {
+    "id": "timekeeping.employee.remark",
+    "template": "app/components/remark/single-remark-container.html",
+    "title": "cloud.common.entityRemark",
+    "uuid": "726429485e844236bbc249a3982326fe",
+    "controller": "timekeepingEmployeeRemarkController"
+  },
+  {
+    "id": "timekeeping.employeeskill.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.employeeSkillListTitle",
+    "controller": "timekeepingEmployeeSkillListController",
+    "uuid": "a0ce2e3271734b7db3e13b2b6c2ad44a"
+  },
+  {
+    "id": "timekeeping.employeeskill.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.employee.employeeSkillDetailTitle",
+    "controller": "timekeepingEmployeeSkillDetailController",
+    "uuid": "3a0dc9c87b63405895bbe38caff26e0b",
+    "permission": "a0ce2e3271734b7db3e13b2b6c2ad44a"
+  },
+  {
+    "id": "timekeeping.employee.default.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.employeeDefaultListTitle",
+    "controller": "timekeepingEmployeeDefaultListController",
+    "uuid": "e5a38b354fe84b39b6d541ec661acb7e"
+  },
+  {
+    "id": "timekeeping.employee.default.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.employee.employeeDefaultDetailTitle",
+    "controller": "timekeepingEmployeeDefaultDetailController",
+    "uuid": "5c0b3429333b401a90057101a209c85c",
+    "permission": "e5a38b354fe84b39b6d541ec661acb7e"
+  },
+  {
+    "id": "timekeeping.employee.crewmember.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.crewMemberListTitle",
+    "controller": "timekeepingEmployeeCrewMemberListController",
+    "uuid": "41653191a89a4f279710b2b6bafd8a5b"
+  },
+  {
+    "id": "timekeeping.employee.crewmember.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.employee.crewMemberDetailTitle",
+    "controller": "timekeepingEmployeeCrewMemberDetailController",
+    "uuid": "7edfbf3ed45849e5acc2d49cbd2eddb6",
+    "permission": "41653191a89a4f279710b2b6bafd8a5b"
+  },
+  {
+    "id": "timekeeping.employee.skill.document.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.employee.skillDocumentListTitle",
+    "controller": "timekeepingEmployeeSkillDocumentListController",
+    "uuid": "1aefc92216ac4bd6b614aae9b54e0dbc"
+  },
+  {
+    "id": "timekeeping.employee.skill.document.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.employee.skillDocumentDetailTitle",
+    "controller": "timekeepingEmployeeSkillDocumentDetailController",
+    "uuid": "d8704e0684b047ea949e6785f6a6ee92",
+    "permission": "1aefc92216ac4bd6b614aae9b54e0dbc"
+  },
+	{
+		"id": "timekeeping.employeeworkingtimeaccount.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.employee.employeeWorkingTimeAccountListTitle",
+		"controller": "timekeepingEmployeeWorkingTimeAccountListController",
+		"uuid": "e66a0a6fad844616b5c4c8be9de1c170"
+	},
+	{
+		"id": "timekeeping.employeeworkingtimeaccount.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.employee.employeeWorkingTimeAccountDetailTitle",
+		"controller": "timekeepingEmployeeWorkingTimeAccountDetailController",
+		"uuid": "285614dd3e3847189844bafa8f029f7f",
+		"permission": "e66a0a6fad844616b5c4c8be9de1c170"
+	},
+	{
+		"id": "timekeeping.employeeworkingtimemodel.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.employee.employeeWorkingTimeModelListTitle",
+		"controller": "timekeepingEmployeeWorkingTimeModelListController",
+		"uuid": "67b5049e07304887abe0d7b29fcf20e3"
+	},
+	{
+		"id": "timekeeping.employeeworkingtimemodel.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.employee.employeeWorkingTimeModelDetailTitle",
+		"controller": "timekeepingEmployeeWorkingTimeModelDetailController",
+		"uuid": "0eb6d19bf95546af8792202826993c7b",
+		"permission": "67b5049e07304887abe0d7b29fcf20e3"
+	},
+	{
+		"id": "timekeeping.employee.ppsassignment.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.employee.ppsAssignmentListTitle",
+		"controller": "ppsCommonEmployeeAssignmentListController",
+		"uuid": "950faa0aa2c44010ae992948d82c40f6"
+	},
+	{
+		"id": "timekeeping.employee.employeesmap",
+		"template": "app/components/base/partials/multi-address-map.html",
+		"title": "timekeeping.employee.employeesMap",
+		"uuid": "a300434e50774f38b70540765e8e53a0",
+		"controller": "timekeepingEmployeeMainMapController"
+	},
+	{
+		"id": "timekeeping.employee.employeesdocument",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.employee.employeesDocument",
+		"uuid": "e36248434a2c47219b813546e5bcd8bd",
+		"controller": "timekeepingEmployeeDocumentController"
+	},
+	{
+		"id": "timekeeping.employee.document-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.employee.employeesDocumentDetailTitle",
+		"controller": "timekeepingEmployeeDocumentDetailController",
+		"uuid": "33b305dec16b11edafa10242ac120002",
+		"permission": "e36248434a2c47219b813546e5bcd8bd"
+	},
+	{
+		"id": "timekeeping.employee.employeescertification",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.employee.employeesCertification",
+		"uuid": "16e0f41c255e48038090ab70a92692e7",
+		"controller": "timekeepingEmployeeCertificationController"
+	},
+	{
+		"id": "timekeeping.employee.employeescertification-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.employee.employeesCertificationDetailTitle",
+		"controller": "timekeepingEmployeeCertificationDetailController",
+		"uuid": "56v185feb13m77evgvb10659jh557801",
+		"permission": "16e0f41c255e48038090ab70a92692e7"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "5f4f0deab3a0426e95ef5832c8cb1dbe",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "timekeeping.vacationaccount.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.employee.vacationAccount",
+		"uuid": "k9903131mo4a48l1a6524c4927252f47",
+		"controller": "timekeepingVacationAccountListController"
+	},
+	{
+		"id": "timekeeping.vacationaccount.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.employee.vacationAccountDetailTitle",
+		"controller": "timekeepingVacationAccountDetailController",
+		"uuid": "1829a2061c0f45a790536a4741ec897c",
+		"permission": "k9903131mo4a48l1a6524c4927252f47"
+	},
+	{
+		"id": "timekeeping.licensecheck.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.employee.licenseCheckListTitle",
+		"controller": "timekeepingEmployeeLicenseCheckListController",
+		"uuid": "3bcfa94250ea4c57b57fdbddcf59aa79"
+	},
+	{
+		"id": "timekeeping.licensecheck.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.employee.licenseCheckDetailTitle",
+		"controller": "timekeepingEmployeeLicenseCheckDetailController",
+		"uuid": "709b789198e04428b85ee78a02c63bca",
+		"permission": "3bcfa94250ea4c57b57fdbddcf59aa79"
+	}
+]

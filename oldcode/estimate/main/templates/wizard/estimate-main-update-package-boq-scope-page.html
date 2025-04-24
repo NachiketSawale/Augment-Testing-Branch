@@ -1,0 +1,31 @@
+<div ng-controller="estimateMainUpdatePackageBoqEstimateScopePageController" class="modal-wrapper">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body">
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.label' | translate}}</label>
+                <div class="platform-form-col">
+                    <ul>
+                        <li><input type="radio" data-ng-model="estimateScope" name="estimateScope" id="RESULT_HIGHLIGHTED"  value="2" ng-disabled="noLineItemSelected" data-ng-checked="estimateScope==2" data-ng-click="onEstimateScopeChanged(2)">
+                            <label for="RESULT_HIGHLIGHTED" style="padding-top:0px;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.Highlighted' | translate}}</label>
+                        </li>
+
+                        <li><input type="radio" data-ng-model="estimateScope" name="estimateScope" id="RESULT_SET"  value="1" data-ng-checked="estimateScope==1" data-ng-click="onEstimateScopeChanged(1)">
+                            <label for="RESULT_SET" style="padding-top:0px;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.resultSet' | translate}}</label>
+                        </li>
+
+                        <li><input type="radio" data-ng-model="estimateScope" name="estimateScope" id="ALL_ESTIMATE"  value="0"  data-ng-checked="estimateScope==0" data-ng-click="onEstimateScopeChanged(0)">
+                            <label for="ALL_ESTIMATE" style="padding-top:0px;">{{'estimate.main.createBoqPackageWizard.selectScopeSource.scope.allEstimate' | translate}}</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="next()"> {{::'basics.common.button.nextStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{::'basics.common.button.cancel' | translate}}</button>
+    </footer>
+</div>

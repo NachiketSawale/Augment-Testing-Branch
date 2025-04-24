@@ -1,0 +1,42 @@
+<div data-ng-controller="procurementPriceComparisonCreateContractWizardOptionController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+        <div style="height: 100%;">
+            <div class="fullheight" style="overflow-y: auto">
+                <div data-platform-alert data-error="error"></div>
+
+                <div data-ng-if="showCreateType">
+                    <div>
+                        <input type="radio" name="createContractType" checked="checked" id="createContractType1"
+                               data-ng-click="changeCreateType('multip')"
+                               style="float:left;height: 30px; margin: 0 5px 0 0;" title=""/>
+                        <label style="height: 30px; line-height: 30px;" for="createContractType1">{{translateTemplate.createContractsTemplate}}</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="createContractType" id="createContractType2"
+                               data-ng-click="changeCreateType('merge')"
+                               style="float:left;height: 30px;margin: 0 5px 0 0;" title=""/>
+                        <label style="height: 30px; line-height: 30px;" for="createContractType2">{{translateTemplate.createOneContractTemplate}}</label>
+	                     <label style="height: 30px; line-height: 30px;">{{'procurement.pricecomparison.wizard.createOneContractNote' | translate}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-message" ng-if="!showCreateType">
+            <div class="icon tlb-icons ico-info"></div>
+            <div class="message" ng-if="creating">{{'procurement.common.creating' | translate}}</div>
+            <div class="message" ng-if="created">{{createdText}}</div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="okBtnDisabled" data-ng-if="!created">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

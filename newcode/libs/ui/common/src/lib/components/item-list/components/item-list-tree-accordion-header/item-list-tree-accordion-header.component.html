@@ -1,0 +1,35 @@
+<div class="projectname tree-accordion-header flex-box">
+  <div
+    *ngIf="!treeitem.hasChildren"
+    class="nodetoggleimg header-collapse control-icons"
+    (keypress)="expand(treeitem, true, $event)"
+    [ngClass]="{
+      'ico-tree-expand': treeitem.expanded,
+      'ico-tree-collapse': !treeitem.expanded
+    }"
+  ></div>
+  <div
+    class="nodetoggle header-body flex-element"
+    [ngStyle]="{ 'padding-left': treeitem.hasChildren ? 0 : '20px' }"
+  >
+    <div
+      *ngIf="!treeitem.imgUrl"
+      class="nodeimg app-small-icons"
+      [ngClass]="treeitem.cssClass"
+    ></div>
+    <img
+      *ngIf="treeitem.imgUrl"
+      class="nodeimg"
+      [ngClass]="treeitem.cssClass"
+      [src]="treeitem.imgUrl"
+    />
+    <button
+      class="onClickNode nodetitle"
+      title="{{ treeitem.Description }}"
+      (keydown)="expand(treeitem, false, $event)"
+      (click)="header(treeitem.id, $event)"
+    >
+      {{ treeitem.Description }}
+    </button>
+  </div>
+</div>

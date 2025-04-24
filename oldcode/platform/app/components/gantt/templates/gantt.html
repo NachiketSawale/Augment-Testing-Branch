@@ -1,0 +1,35 @@
+<div class="ganttsplitter" ng-controller="platformGanttLeftGridController">
+	<div>
+		<div class="gridspacer" style="height:55px;">&nbsp;</div>
+		<div class="gridwrapper" style="height:600px;">
+			<!--			<div data-platform-grid data-data="gridData" data-platform-dragdrop-component="ddTarget" style="height:100%"></div>-->
+			<div style="height: 100%; width: 100%;">
+				<platform-grid ng-if="gridConfigReady" data-platform-dragdrop-component="ddTarget" data="ganttGridData"></platform-grid>
+			</div>
+		</div>
+	</div>
+	<div class="chart gantt">
+		<div class="toppanel" style="border:solid gainsboro;border-width: 0 0 3px 0;padding-top:10px;">
+			<svg class="chart" style="width:100%;height:70px;">
+				<g class="axis layer adjust"></g>
+			</svg>
+		</div>
+		<div class="basestatic" style="overflow-y: hidden;width:100%;"><!--Height of viewport-->
+			<svg class="chart" style="width:100%;"><!--Complete scroll height-->
+					<g class="weekend layer"></g>
+					<g class="holiday layer"></g>
+					<g class="calendarline layer"></g>
+					<g class="bar-items layer"></g>
+					<g class="locks layer"></g>
+					<g class="relationships layer"></g>
+					<g class="information layer"></g>
+					<g class="event layer"></g>
+			</svg>
+		</div>
+		<div class="staticpanel" style="width:100%;position:absolute;top:0;pointer-events:none;">
+			<svg class="chart" style="pointer-events: none;width:100%">
+				<g class="selection layer"></g>
+			</svg>
+		</div>
+	</div>
+</div>

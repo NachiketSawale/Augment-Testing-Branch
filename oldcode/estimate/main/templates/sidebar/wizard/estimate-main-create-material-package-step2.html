@@ -1,0 +1,126 @@
+<div id="createMaterialPackagePage2"  data-platform-kendo-splitter-adjust class="flex-element"
+	 option="{panes: [ { collapsible: true, size: '65%' },{ collapsible: true, size: '35%',collapsed:true }],orientation:'horizontal'}">
+
+	<div id="ui-layout-west" class="flex-box flex-column">
+		<div class="flex-element flex-box flex-column subview-container" style="min-height: 100px;">
+			<platform-Grid data="simulation" style="height:443px"></platform-Grid>
+		</div>
+		<div  style="padding-top:20px;display: flex;flex-direction: row;overflow:auto;">
+
+			<fieldset style="padding:2px;border:1px solid #dcdcdc;border-radius:3px;flex:1;min-width:auto;">
+				<legend style="margin-left:3px;width:auto;background-color:#fff;font-size:13px;vertical-align: middle;">
+					<input type="checkbox" data-ng-checked="updateOptions.generateItemFlg" data-ng-model="updateOptions.generateItemFlg" data-ng-change="onGenerateItemFlg()" style="margin-top:0px;vertical-align: middle;"/>
+					<label class="platform-form-label ng-binding" style="vertical-align: middle;">{{'estimate.main.createMaterialPackageWizard.generateItemFlg'| translate}}</label>
+				</legend>
+				<div class="platform-form-group " style="padding-left:6px;display: inline-block;">
+					<div class="col-sm-12" style="padding-top:7px;padding-left:0px;white-space: nowrap;">
+						<input type="checkbox" data-ng-disabled="!updateOptions.generateItemFlg" style="vertical-align: middle;"  data-ng-checked="updateOptions.aggregateProfileFlg" data-ng-model="updateOptions.aggregateProfileFlg"/>
+						<label class="platform-form-label" style="vertical-align: middle;margin-top:0px;" >{{'estimate.main.createMaterialPackageWizard.aggregateProfileItemFlg'| translate}}</label>
+						<label class="platform-form-label" style="vertical-align: middle;">/{{'estimate.main.createMaterialPackageWizard.aggregateProfileItem'| translate}}</label>
+
+						<div class="platform-form-col" style="width:180px;display: inline-block;vertical-align: middle;" ng-show="updateOptions.generateItemFlg&&updateOptions.aggregateProfileFlg">
+							<div basics-common-unique-fields-profile-lookup data-ng-model="updateOptions.uniqueFieldsProfile" data-options="serviceoptions"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="platform-form-group" style="padding-left:10px;">
+					<div class="col-sm-5 checkbox spaceToUp" style="padding:0px;">
+						<input type="checkbox" data-ng-disabled="!updateOptions.generateItemFlg" data-ng-checked="updateOptions.generateCostcodeFlg" data-ng-model="updateOptions.generateCostcodeFlg"/>
+						<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.generateCostCodeFlg'| translate}}</label>
+					</div>
+					<div class="col-sm-7 checkbox spaceToUp" style="padding:0px;">
+						<input type="checkbox" data-ng-disabled="!updateOptions.generateItemFlg" data-ng-checked="updateOptions.freeQuantityFlg" data-ng-model="updateOptions.freeQuantityFlg"/>
+						<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.setFreeQuantityFlg'| translate}}</label>
+					</div>
+				</div>
+
+				<div class="platform-form-group" style="padding-left:10px;">
+					<div class="col-sm-5 checkbox spaceToUp" style="padding:0px;">
+						<input type="checkbox" data-ng-disabled="!updateOptions.generateItemFlg" data-ng-checked="updateOptions.isCopyBoqOutline" data-ng-model="updateOptions.isCopyBoqOutline" title="{{'estimate.main.createMaterialPackageWizard.copyBoqTip' | translate}}"/>
+						<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.copyBoqOutline'| translate}}</label>
+					</div>
+					<div class="col-sm-7 checkbox spaceToUp" style="padding:0px;">
+						<input type="checkbox" data-ng-disabled="!updateOptions.generateItemFlg" data-ng-checked="updateOptions.isCopyBoqSpecification" data-ng-model="updateOptions.isCopyBoqSpecification" title="{{'estimate.main.createMaterialPackageWizard.copyBoqTip' | translate}}"/>
+						<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.copyBoqSpecification'| translate}}</label>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset style="padding:2px;border:1px solid #dcdcdc;border-radius:3px;flex:0.8;margin-left:20px;min-width:350px;">
+				<legend style="margin-left:3px;width:auto;background-color:#fff;font-size:13px;vertical-align: middle;">{{'estimate.main.createMaterialPackageWizard.newPackageOption'| translate}}</legend>
+				<ul style="padding:4px 10px 6px">
+					<li class="platform-form-group checkbox spaceToUp">
+						<input type="checkbox"  data-ng-checked="updateOptions.onePackageFlg" data-ng-model="updateOptions.onePackageFlg" data-ng-change="onSamePackage()" data-ng-disabled="!hasNewItem"/>
+						<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.onePackageAll'| translate}}</label>
+					</li>
+					<li class="platform-form-group checkbox spaceToUp">
+						<input type="checkbox" data-ng-disabled="disableMaterialCatalogFlg()" data-ng-checked="updateOptions.eachMaterialCatalogFlg" data-ng-model="updateOptions.eachMaterialCatalogFlg"  data-ng-change="onEachMaterialCatalog()"/>
+						<label>
+							{{'estimate.main.createMaterialPackageWizard.separatePackageForEachMaterialCatalog'| translate}}
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+	</div>
+	<div id="ui-layout-east" style="overflow:hidden;">
+		<div  style="overflow:auto;padding:10px;" class="fullheight">
+			<label style="font-weight: bold;padding:10px 0px;">
+				{{'estimate.main.createMaterialPackageWizard.newPackageDefinition'| translate}}
+			</label>
+			<div class="platform-form-group platform-md">
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label" style="min-width: 130px;padding-left:0px;">{{'estimate.main.createMaterialPackageWizard.procurementStr'| translate}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="packageOption.procurementstructureId"
+							 data-options="prcStructureLookupOptions" data-basics-lookupdata-lookup-composite class="control-directive" data-config="config" data-ng-readonly="config.rt$readonly()">
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label" style="min-width:130px;padding-left:0px;">{{'estimate.main.createMaterialPackageWizard.configuration'| translate}}</label>
+					<div class="platform-form-col">
+						<div basics-configuration-configuration-combobox data-ng-model="packageOption.configurationId"
+							 data-options="{filterKey: 'create-package-configuration-filter'}"  ng-change="configurationChange()" data-config="config" data-ng-readonly="config.rt$readonly()">
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label" style="min-width: 130px;padding-left:0px;">{{'estimate.main.createMaterialPackageWizard.procurementPackage'| translate}}</label>
+					<div class="platform-form-col">
+						<div class="control-directive platform-md">
+							<div class="lg-4 md-4">
+								<div data-domain-control data-domain="code" data-ng-model="packageOption.code" data-readonly="codeReadOnly||!updateOptions.onePackageFlg"></div>
+							</div>
+							<div class="lg-8 md-8 composite-last-item">
+								<div data-domain-control data-domain="description" data-ng-model="packageOption.description" data-readonly="!updateOptions.onePackageFlg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label" style="min-width: 130px;padding-left:0px;">{{'estimate.main.createMaterialPackageWizard.subPackage'| translate}}</label>
+					<div class="platform-form-col">
+						<div data-domain-control data-domain="description" data-ng-model="packageOption.subpackageDescription" data-readonly="!updateOptions.onePackageFlg"></div>
+					</div>
+				</div>
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label" style="min-width: 130px;padding-left:0px;">{{'estimate.main.createMaterialPackageWizard.reference'| translate}}</label>
+					<div class="platform-form-col">
+						<div data-domain-control data-domain="description" data-ng-model="packageOption.reference" data-readonly="!updateOptions.onePackageFlg"></div>
+					</div>
+				</div>
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label" style="min-width: 130px;padding-left:0px;">{{'estimate.main.createMaterialPackageWizard.responsible'| translate}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="packageOption.responsibleId"
+							 data-options="clerkLookupOptions" data-basics-lookupdata-lookup-composite class="control-directive" data-config="config" data-ng-readonly="config.rt$readonly()">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

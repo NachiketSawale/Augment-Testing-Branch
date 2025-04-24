@@ -1,0 +1,8 @@
+<div class="flex-element flex-box flex-column subview-container lookup-grid-container overflow-hidden"
+     style="margin-top:0px">
+    <div class="subview-header toolbar">
+        <div data-platform-menu-list data-list="setting.tools"></div>
+    </div>
+    <div class="lookup-grid flex-basis-auto grid-container flex-element" data-platform-grid data="setting.grid"></div>
+    <div ng-if="setting.active" transportplanning-transport-trigger-grid-div grids="[setting.grid.state]"></div>
+</div>

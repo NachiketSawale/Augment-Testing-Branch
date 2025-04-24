@@ -1,0 +1,9 @@
+<div class="icon-message">
+    <div class="icon tlb-icons {{ ::dialog.modalOptions.iconClass }}"></div>
+    <div class="message selectable"
+         data-ng-bind-html="::dialog.modalOptions.dataItem.exception.errorCodeMessage()"></div>
+</div>
+
+<div class="longtext selectable" style="max-height: 400px" data-ng-if="dialog.modalOptions.dataItem.details.show">
+    <p data-ng-bind-html="::dialog.modalOptions.dataItem.exception.errorDetail"></p>
+</div>

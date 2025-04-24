@@ -1,0 +1,175 @@
+<div class="t-table fitler-context" data-ng-if="showHeaderInfo">
+		<div class="platform-form-row form-group t-table-row mb4" >
+			<div class="t-table-cell w80"></div>
+			<div class="input-adjust-price t-table-cell  t-table-cell w120">
+				<span>{{'estimate.main.priceAdjust.WqEstimatedPrice' | translate}}</span>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<span>{{'estimate.main.priceAdjust.WqAdjustmentPrice' | translate}}</span>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<span>{{'estimate.main.priceAdjust.modification' | translate}}</span>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<span>{{'estimate.main.priceAdjust.modificationAbs' | translate}}</span>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<span>{{'estimate.main.priceAdjust.WqTenderPrice' | translate}}</span>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<span>{{'estimate.main.priceAdjust.WqDeltaPrice' | translate}}</span>
+			</div>
+		</div>
+
+		<div class="platform-form-row form-group t-table-row mb4">
+			<div class="t-table-cell">
+				<span class="t-line-text">{{('estimate.main.priceAdjust.filterTotal' | translate) + ':'}}</span>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="filteredTotalEntity.WqEstimatedPrice"
+				     data-entity="filteredTotalEntity"
+				     data-readonly="true">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="filteredTotalEntity.WqAdjustmentPrice"
+				     data-entity="filteredTotalEntity"
+				     data-readonly="true">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="filteredTotalEntity.WqModificationPercent"
+				     data-entity="filteredTotalEntity"
+				     data-keydown="onKeyDown($event,'filteredTotalEntity', 'WqModificationPercent')"
+				     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+				     data-change="headerInfoValueChange('filteredTotalEntity', 'WqModificationPercent')">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell"></div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="filteredTotalEntity.WqTenderPrice"
+				     data-entity="filteredTotalEntity"
+				     data-keydown="onKeyDown($event,'filteredTotalEntity', 'WqTenderPrice')"
+				     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+				     data-change="headerInfoValueChange('filteredTotalEntity', 'WqTenderPrice')">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="filteredTotalEntity.WqDeltaPrice"
+				     data-entity="filteredTotalEntity"
+				     data-readonly="true">
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-row form-group t-table-row mb4">
+			<div class="t-table-cell">
+				<span class="t-line-text">{{('estimate.main.priceAdjust.entireTotal' | translate) + ':'}}</span>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="totalEntity.WqEstimatedPrice"
+				     data-entity="totalEntity"
+				     data-readonly="true">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="totalEntity.WqAdjustmentPrice"
+				     data-entity="totalEntity"
+				     data-readonly="true">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="totalEntity.WqModificationPercent"
+				     data-entity="totalEntity"
+				     data-keydown="onKeyDown($event,'totalEntity', 'WqModificationPercent')"
+				     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+				     data-change="headerInfoValueChange('totalEntity', 'WqModificationPercent')">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell  ">
+				<div class="form-control w120  w120" data-domain-control
+				     data-domain="percent"
+				     data-model="totalEntity.WqModificationAbsolute"
+				     data-entity="totalEntity"
+				     data-keydown="onKeyDown($event,'totalEntity', 'WqModificationAbsolute')"
+				     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+				     data-change="headerInfoValueChange('totalEntity', 'WqModificationAbsolute')">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="totalEntity.WqTenderPrice"
+				     data-entity="totalEntity"
+				     data-keydown="onKeyDown($event,'totalEntity', 'WqTenderPrice')"
+				     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+				     data-change="headerInfoValueChange('totalEntity', 'WqTenderPrice')">
+				</div>
+			</div>
+			<div class="input-adjust-price t-table-cell">
+				<div class="form-control w120 " data-domain-control
+				     data-domain="percent"
+				     data-model="totalEntity.WqDeltaPrice"
+				     data-entity="totalEntity"
+				     data-readonly="true">
+				</div>
+			</div>
+		</div>
+</div>
+<platform-Grid data="gridData" class="margin-top-ld"></platform-Grid>
+<div cloud-common-overlay data-loading="isLoading"></div>
+<style>
+	.fitler-context{
+		width:100%;
+		overflow: auto;
+		margin: 3px;
+	}
+	.input-adjust-price {
+		text-align: center;
+	}
+	.t-table{
+		display: table-cell;
+	}
+	.t-table-row{
+		display: table-row;
+	}
+	.t-table-cell{
+		display: table-cell;
+		padding: 2px;
+	}
+	.t-line-text{
+		width: 80px;
+		display: block;
+	}
+	.w120{
+		width: 120px;
+	}
+	.w80{
+		width: 80px;
+	}
+
+	.mb4{
+		margin-bottom: 4px;
+	}
+
+	span{
+		padding: 0;
+		display: inline-block;
+	}
+</style>

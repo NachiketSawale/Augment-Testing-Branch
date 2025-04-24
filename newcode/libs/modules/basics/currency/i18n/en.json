@@ -1,0 +1,28 @@
+{
+	"basics": {
+		"currency": {
+			"Id": "Id",
+			"Currency": "Currency",
+			"SortBy": "Sort By",
+			"IsDefault": "IsDefault",
+			"ConversionPrecision": "Conversion Precision",
+			"DisplayPrecision": "Display Precision",
+			"DecimalsRoundTo": "DecimalsRoundTo",
+			"DecimalsShow": "DecimalsShow",
+			"RateType": "Rate Type",
+			"RateDate": "Rate Date",
+			"ForeignCurrency": "Foreign Currency",
+			"ForeignCurrencyName": "Foreign Currency Name",
+			"Basis": "Basis",
+			"HomeCurrency": "Home Currency",
+			"HomeCurrencyName": "Home Currency Name",
+			"CurrencyDetails": "Currency Details",
+			"CurrencyConversion": "Currency Conversion",
+			"ExchangeRates": "Exchange Rates",
+			"CurrencyTranslation": "Currency Translation",
+			"currencyHomeFk": "CurrencyHomeFk",
+			"currencyRateTypeFk": "Rate Type",
+			"RoundlogicTypeFk": "Roundlogic Type"
+		}
+	}
+}

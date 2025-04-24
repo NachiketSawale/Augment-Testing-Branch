@@ -1,0 +1,12 @@
+//--------------------------------------------------------------------------------------
+// Hack for browsers with active touch functionality
+//--------------------------------------------------------------------------------------
+.slick-resizable-handle {
+	background-image: url(../../images/control-icons.svg#ico-column-grip);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 18px;
+	height: 100%;
+	background-color: white;
+}
+

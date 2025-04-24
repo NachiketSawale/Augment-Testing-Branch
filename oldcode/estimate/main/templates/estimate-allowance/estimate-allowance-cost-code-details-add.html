@@ -1,0 +1,23 @@
+<div data-ng-controller="estimateMainAllowanceCostCodeDetailAddController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+
+		<div class="toolbar">
+			<div data-platform-menu-list data-list="tools"></div>
+		</div>
+
+		<div class="fullheight">
+			<div>
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="hasErrors()"   data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>
+
+
+

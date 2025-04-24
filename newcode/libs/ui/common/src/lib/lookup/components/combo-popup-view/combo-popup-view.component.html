@@ -1,0 +1,19 @@
+<ui-common-popup>
+	<input header type="text" placeholder="insert your filter" class="form-control filter-input" [ngModel]="inputValue" (ngModelChange)="onInputChange($event)" (keydown)='onKeyDown($event)' />
+
+	<ul content class="combo-viewport flex-element">
+		<li *ngFor="let item of dataItems" [id]="generateKey(item)" class="combo-lookup-item" [style.background]="itemBg(item)" (click)="apply(item)" (mouseenter)="focus([item], false)"
+			[innerHTML]="item | uiCommonLookupContent: lookupContext"></li>
+	</ul>
+
+	<!--<div data-cloud-common-overlay data-loading="dataFacade.loading"></div>-->
+
+	<div footer class="popup-tlb">
+		<button class="control-icons ico-refresh" title="Refresh" (click)="refresh()" [disabled]="lookupFacade.loading"></button>
+		<span *ngIf="lookupFacade.paging.enabled">
+				<button class="control-icons ico-previous" title="Previous Page" [disabled]="!lookupFacade.paging.canPrev() || lookupFacade.loading" (click)="loadPreviousPage()"></button>
+				<span>{{lookupFacade.paging.getPageInfo()}}</span>
+				<button class="control-icons ico-next" title="Next Page" [disabled]="!lookupFacade.paging.canNext() || lookupFacade.loading" (click)="loadNextPage()"></button>
+			</span>
+	</div>
+</ui-common-popup>

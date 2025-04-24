@@ -1,0 +1,90 @@
+<style>
+	.material-filter-numeric li div {
+		height: 32px;
+		align-items: center;
+	}
+
+	.material-filter-numeric li input[type='radio'] {
+		margin: 0 8px 0 0;
+	}
+
+	.material-filter-numeric .form-control {
+		margin: 0 0 8px 22px;
+		width: 200px;
+	}
+
+	.material-filter-numeric .form-control.ng-invalid {
+		border: solid 1px red;
+	}
+
+	.material-filter-numeric .range {
+		margin-left: 20px;
+		margin-bottom: 8px;
+	}
+
+	.material-filter-numeric .range .form-control {
+		display: inline-flex;
+		width: 100px;
+		margin-left: initial;
+		height: 32px;
+	}
+
+	.material-filter-numeric .range .separator {
+		margin: 0 4px;
+	}
+
+	.material-filter-numeric .range .validation {
+		color: red;
+		margin-top: 4px;
+	}
+</style>
+
+<div class="material-filter-numeric">
+	<ul class="material-filter-content-padding">
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="equals" name="operator" value="{{ ::filterOperator.equals }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="equals">{{ 'basics.material.lookup.condition.equals' | translate }}</label>
+			</div>
+			<div class="input-group form-control" data-ng-if="definition.Operator===filterOperator.equals">
+				<input type="number" class="input-group-content" data-ng-model="definition.Factors[0]">
+			</div>
+		</li>
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="lessThan" name="operator" value="{{ ::filterOperator.lessThan }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="lessThan">{{ 'basics.material.lookup.condition.lessThan' | translate }}</label>
+			</div>
+			<div class="input-group form-control" data-ng-if="definition.Operator===filterOperator.lessThan">
+				<input type="number" class="input-group-content" data-ng-model="definition.Factors[0]">
+			</div>
+		</li>
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="greaterThan" name="operator" value="{{ ::filterOperator.greaterThan }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="greaterThan">{{ 'basics.material.lookup.condition.greaterThan' | translate }}</label>
+			</div>
+			<div class="input-group form-control" data-ng-if="definition.Operator===filterOperator.greaterThan">
+				<input type="number" class="input-group-content" data-ng-model="definition.Factors[0]">
+			</div>
+		</li>
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="rangesFrom" name="operator" value="{{ ::filterOperator.range }}" data-ng-model="definition.Operator" data-ng-change="changeOperator($event)">
+				<label for="rangesFrom">{{ 'basics.material.lookup.condition.range' | translate }}</label>
+			</div>
+			<div class="range form-group" data-ng-if="definition.Operator===filterOperator.range">
+				<input class="input-group form-control range-min" name="min" type="number" class="input-group-content text-center" material-filter-range-validation error="basics.material.lookup.filter.rangeValidation.min" identical-error="basics.material.lookup.filter.rangeValidation.identical" data-ng-model="definition.Factors[0]">
+				<span class="range-separator">-</span>
+				<input class="input-group form-control range-max" name="max" type="number" class="input-group-content text-center" material-filter-range-validation error="basics.material.lookup.filter.rangeValidation.max" identical-error="basics.material.lookup.filter.rangeValidation.identical" data-ng-model="definition.Factors[1]">
+				<div class="validation" ng-show="rangeError">
+					<span data-ng-bind="rangeError | translate"></span>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<div class="material-filter-divider-top">
+		<button class="btn pull-right material-filter-btn-apply" data-ng-click="apply()" data-ng-disabled="!canApply()">{{ 'basics.material.lookup.apply' | translate }}</button>
+	</div>
+</div>

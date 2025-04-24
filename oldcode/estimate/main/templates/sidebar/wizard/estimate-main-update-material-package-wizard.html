@@ -1,0 +1,22 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="estimateMainUpdateMaterialPackageWizardController">
+
+    <header class="modal-header" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body" style="overflow-y:hidden;">
+        <div ng-switch="selectStep.number" class="modal-wrapper margin-bottom-ld fullheight" style="overflow-y:hidden;">
+            <div ng-switch-when="0" class="modal-wrapper fullheight">
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-update-material-package-step0.html'" class="modal-wrapper fullheight"></ng-include>
+            </div>
+            <div ng-switch-when="1" class="modal-wrapper fullheight" style="overflow-y:auto;overflow-x:hidden;">
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-update-material-package-step1.html'" class="modal-wrapper fullheight"></ng-include>
+            </div>
+        </div>
+        <div data-platform-wizard-dialog-body class="flex-box flex-column margin-top-ld" style="height: 70px;display: none;"></div>
+    </section>
+    <div class="modal-footer">
+        <span ng-if="getCurrentStepNumber() !== 1" >
+            <button ng-show = "getCurrentStepNumber() !== 1" type="button" class="btn btn-default" data-ng-click="previousStep()">{{::'basics.common.button.previousStep' | translate}}</button>
+        </span>
+        <button type="button" class="btn btn-default"  data-ng-click="nextStep()"  style="margin-left: 5px;">{{getButtonText()}}</button>
+        <button data-ng-disabled="currentStep.disallowCancel"  type="button" data-ng-click="$close(false)" class="btn btn-default" >{{::'platform.cancelBtn' | translate}}</button>
+    </div>
+</div>

@@ -1,0 +1,328 @@
+/*-------------------------------------------------------------------------------
+	 RIB common (common.scss)
+  -------------------------------------------------------------------------------*/
+// Floats
+// -------------------------
+
+.clearfix {
+	@include clearfix();
+}
+.center-block {
+	@include center-block();
+}
+.pull-right {
+	float: right !important;
+}
+.pull-left, .rib-fl {
+	float: left !important;
+}
+
+.debug {
+	border: 1px solid #f00;
+	opacity: .5;
+}
+
+.cell-opacity {
+	opacity: .4;
+}
+
+.fullheight {
+	height: 100%;
+}
+
+.fullwidth {
+	width: 100%;
+}
+
+.filler {
+	@include square(100%);
+}
+
+.filler-absolute {
+	@include square(100%);
+	position: absolute;
+}
+
+.margin-full-lg {
+	margin: $padding-large-horizontal;
+}
+
+.margin-full-md {
+	margin: $padding-medium-horizontal;
+}
+
+.margin-full-sm {
+	margin: $padding-small-horizontal;
+}
+
+.margin-top-ld {
+	margin-top: $padding-large-vertical;
+}
+
+.margin-top-xld {
+	margin-top: $padding-xlarge-vertical;
+}
+
+.margin-top-xxld {
+	margin-top: $padding-xxlarge-vertical;
+}
+
+.margin-bottom-ld {
+	margin-bottom: $padding-large-vertical;
+}
+
+.margin-left-ld {
+	margin-left: $padding-large-vertical;
+}
+
+.margin-right-ld {
+	margin-right: $padding-large-horizontal;
+}
+
+.margin-left-md {
+	margin-left: $padding-medium-vertical;
+}
+
+.margin-none {
+	margin: 0 !important; //does'nt overwrite the margin from another css-classs. therefore important
+}
+
+.padding-none {
+	padding: 0 !important;
+}
+.icon-size-sm {
+	@include square($size-icon);
+	background-size: $size-icon $size-icon;
+}
+
+// to use border, set color in component e.g. grid, because each component can have his own color.
+.border-left {
+	border-left: 1px solid;
+}
+
+.border-left-none {
+	border-left: 0;
+}
+
+.border-top {
+	border-top: 1px solid;
+}
+
+.border-right {
+	border-right: 1px solid;
+}
+
+.border-bottom {
+	border-bottom: 1px solid;
+}
+
+.border-all {
+	border: 1px solid;
+}
+
+.border-none {
+	border: 0 !important;
+	box-shadow: none;
+}
+
+// Flex classes
+.flex-element {
+	flex: 1;
+}
+
+.flex-2-element {
+	flex: 2;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-basis-auto {
+	flex-basis: auto;
+}
+
+.flex-box {
+	display: flex;
+}
+
+.flex-inline-box {
+	display: inline-flex;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-align-center {
+	align-items: center;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.unselectable {
+	user-select: none;
+}
+
+.selectable {
+	user-select: text;
+}
+
+// Hide from screenreaders and browsers
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.text-hide {
+	@include text-hide();
+}
+
+.placeholder {
+	color: $color-input-placeholder;
+	font-style: italic;
+	padding: $input-text-padding;
+}
+
+// Reset an entire region to box-sizing: content-box
+.reset-box-sizing {
+	@include reset-box-sizing;
+}
+
+// Single Line Ellipsis
+.ellipsis {
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.reverse-ellipsis {
+	text-align: left;
+	direction: rtl;
+}
+
+//horizontally and vertically with flex
+.vert-hori-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rotate-90 {
+	transform: rotate(90deg);
+}
+
+.rotate-180 {
+	transform: rotate(180deg);
+}
+
+.rotate-270 {
+	transform: rotate(270deg);
+}
+
+.overflow {
+	overflow: auto;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.cursorHair {
+	cursor: crosshair;
+}
+
+// Text Alignment
+.text-left           { text-align: left !important; }
+.text-right          { text-align: right !important; }
+.text-center         { text-align: center !important; }
+.text-justify        { text-align: justify !important; }
+.text-nowrap         { white-space: nowrap !important; }
+
+.margin-top-overlap {
+	margin-top: -1px;
+}
+
+.margin-left-overlap {
+	margin-left: -1px;
+}
+
+.relative-container {
+	position: relative;
+}
+
+.static-container {
+	position: static;
+}
+
+.absolute-container {
+	@include container-position(0, 0, 0, 0);
+}
+
+// used for background images in inline-elements like <i>
+.block-image {
+	@include square($size-icon);
+	display: inline-block;
+	background-size: $size-icon;
+	vertical-align: middle;
+}
+
+.auto-width {
+	width: auto;
+}
+
+// For Affix plugin
+// -------------------------
+.affix {
+	position: fixed;
+	transform: translate3d(0, 0, 0);
+}
+
+//move later to button.scss
+.btn-success {
+	background-color: #4fab52;
+
+	&:not(.plain):not(:disabled):hover {
+		background-color: #6FBD70;
+	}
+
+	span {
+		color: var(--company-font-color);
+	}
+}
+
+.btn-square-26 {
+	@include square(26px);
+	background-size: 16px 16px;
+}
+
+.btn-square-28 {
+	@include square(28px);
+}
+
+small {
+	&.sub-title {
+		font-family: 'Source Sans Pro';
+		color: #999;
+		padding-left: $padding-xlarge-horizontal;
+	}
+}

@@ -1,0 +1,10 @@
+.cos-filter-form-control{
+  height: 30px;
+  border: solid var(--border-width-default) var(--input-border-color);
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  font-size: 13px;
+  line-height: 1.42857;
+  padding: 0;}
+.platform-form-group .platform-form-row .input-group .cos-image-filter.form-control {
+  border: none
+}

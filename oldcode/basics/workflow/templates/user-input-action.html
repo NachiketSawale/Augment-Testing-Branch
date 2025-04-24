@@ -1,0 +1,140 @@
+<script id="basics.workflow/user-input-action/link.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<a href="{{##options.url##}}" target="_blank">{{##options.displayText##}}
+			</a>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/label.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<label data-ng-bind="##options.displayText##">
+			</label>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/table.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<label data-basics-workflow-table-display-directive options="##options##">
+			</label>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/entityLink.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<label data-basics-workflow-entity-link-directive options="##options##">
+			</label>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/reportButton.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div data-basics-workflow-report-button-directive options="##options##">
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/documentButton.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div data-basics-workflow-document-button-directive options="##options##">
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/pinboardButton.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div data-basics-workflow-pinboard-button-directive options="##options##"/>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/workflowButton.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div data-basics-workflow-workflow-button-directive options="##options##">
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/wizardButton.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div data-basics-workflow-wizard-button-directive options="##options##">
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/divider.html" type="text/ng-template">
+	<hr>
+</script>
+
+<script id="basics.workflow/user-input-action/space.html" type="text/ng-template">
+	<br>
+</script>
+
+<script id="basics.workflow/user-input-action/commentBox.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div data-basics-workflow-add-get-clerk-fn data-basics-workflow-comment-box data-ng-model="##model##"
+		     get-Current-Clerk="getCurrentClerk()">
+		</div>
+	</div>
+</script>
+<script id="basics.workflow/user-input-action/clerkLookup.html" type="text/ng-template">
+		<div class="platform-form-group">
+			<div class="platform-form-row form-group">
+				<div class="platform-form-col">
+					<div class="control-directive" data-basics-lookupdata-lookup-composite
+					     data-options="##options##"
+					     data-entity="Context"
+					     data-ng-model="##model##"></div>
+				</div>
+			</div>
+		</div>
+</script>
+
+<script id="basics.workflow/user-input-action/uploadDocuments.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div data-basics-workflow-documents-file-upload options="##options##" data-ng-model="##model##" data-entity="Context">
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/materialLookup.html" type="text/ng-template">
+	<div class="platform-form-group">
+		<div class="platform-form-row form-group">
+			<div class="platform-form-col">
+				<div class="control-directive" data-basics-lookupdata-lookup-composite
+				     data-options="##options##"
+				     data-entity="Context"
+				     data-ng-model="##model##"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/user-input-action/select.html" type="text/ng-template">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div data-basics-workflow-module-multi-select1 options="##options##"
+			     data-entity="Context"
+			     data-ng-model="##model##">
+			</div>
+		</div>
+	</div>
+</script>

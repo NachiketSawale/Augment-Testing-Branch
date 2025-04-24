@@ -1,0 +1,97 @@
+{
+  "basics": {
+    "costcodes": {
+      "description2": "Further Description",
+      "costCodeTypes": "Cost Types",
+      "costType": "Cost Type",
+      "abcClassification": "Abc Classification",
+      "costCodePortions": "Cost Portions",
+      "costGroupPortions": "Cost Group Portions",
+      "uoM": "UoM",
+      "currency": "Currency",
+      "factorCosts": "Factor(Costs)",
+      "factorQuantity": "Factor(Quantity)",
+      "realFactorCosts": "Real Factor(Costs)",
+      "realFactorQuantity": "Real Factor(Quantity)",
+      "factorHour" : "Factor (Hour)",
+      "rate": "Market Rate",
+      "dayWorkRate": "DW/T+M Rate",
+      "costCodePriceListFk": "Price Version",
+      "isLabour": "Labour Cost Code",
+      "isRate": "Fixed Unit Rate",
+      "costCodes": "Cost Codes",
+      "costCodesDetails": "Cost Codes Details",
+      "costCodesTranslation": "CostCodes Translation",
+      "assignments": "Assignments",
+      "translation": "Translation",
+      "prcStructure": "Procurement Structure",
+      "moduleDisplayNameCostCodes": "Basics CostCodes",
+      "isBudget": "Budget",
+      "isCost": "Cost",
+      "isSubcontractedWork": "Subcontracted Work",
+      "isCorporateWork": "Corporate Work",
+      "isConsortiumWork": "Consortium Work",
+
+      "priceVerion": {
+        "pricelist": "Price List",
+        "validfrom": "Valid From",
+        "validTo": "Valid To",
+        "dataDate": "Record Date",
+        "weighting": "Weighting",
+        "grid": {
+          "title": "Price Versions"
+        },
+        "details": {
+          "title": "Price Version Detail"
+        }
+      },
+      "priceList": {
+        "priceVersionDescription": "Price Version Description",
+        "priceListDescription": "Price List Description",
+        "rate": "Market Rate",
+        "salesPrice": "DW/T+M Rate",
+        "grid": {
+          "title": "Price Lists"
+        },
+        "details": {
+          "title": "Price List Detail"
+        }
+      },
+      "priceVerionsToCompany": {
+        "title": "Price Version to Companies"
+      },
+      "checked":"Checked",
+      "canlookup": "Can Look Up",
+      "company": "Used In Company",
+      "companyName": "Company Name",
+      "prcStructureDescription":"Procurement Structure Description",
+      "resType":"Resource Type",
+      "resourceContext":"Resource Context",
+      "unitRate": "Market Rate",
+      "entityType": "Type",
+      "controllingCostCode" : "Controlling CostCode",
+		"technicalCostCode": "Technical Cost Code",
+      "controllingCostCodeDescription" : "Controlling CostCode Description",
+      "isEditable":"Editable",
+      "confirmAssignCompany":"Assign Company",
+      "confirmAssignCompanyToChildren":"Do you want to assign the children of the selected CostCode(s) to the same company?",
+      "isChildAllowed" : "Child Allowed",
+      "efbType221" : "EFB Type 221",
+      "efbType222" : "EFB Type 222",
+      "factorCost": "Factor (Cost)",
+      "realFactorCost": "RealFactor (Cost)",
+		 "dialogTitle": "RIB iTWO 2022",
+		 "dialogMsg": "Do you really want to move the selected Cost Code?",
+		 "source": "Source",
+		 "detailsstack": "Details Stack",
+		 "selectCostCode": "Please select a cost code!",
+		 "enableDisableCostCode": {
+			 "title": "Enable/Disable Cost Code",
+			 "message": "The Cost Code with its children will be {{status}}",
+			 "success": "The Cost Code has been {{status}} successfully."
+		 },
+      "vhbSheetDjcType": "VHB Sheet DJC Type",
+      "vhbSheetGcType": "VHB Sheet GC Type"
+    }
+  }
+}

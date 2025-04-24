@@ -1,0 +1,40 @@
+﻿{
+  "basics": {
+    "costgroups": {
+      "moduleName": "成本类别{{p_0}}",
+      "tabs": {
+        "tabTitle1": "成本类别1",
+        "tabTitle2": "成本类别2",
+        "tabTitle3": "成本类别3",
+        "tabTitle4": "成本类别4",
+        "tabTitle5": "成本类别5"
+      },
+      "containers": {
+      },
+      "codeUniqueError": "编码应该唯一",
+      "costGroup": {
+        "costGroupTitle1": "成本类别1",
+        "costGroupTitle2": "成本类别2",
+        "costGroupTitle3": "成本类别3",
+        "costGroupTitle4": "成本类别4",
+        "costGroupTitle5": "成本类别5",
+        "uomDescription": "单位描述"
+      },
+      "detail": {
+        "detailTitle1": "成本类别1明细",
+        "detailTitle2": "成本类别2明细",
+        "detailTitle3": "成本类别3明细",
+        "detailTitle4": "成本类别4明细",
+        "detailTitle5": "成本类别5明细",
+        "header": "明细"
+      },
+      "translation": {
+        "translationTitle1": "成本类别1翻译",
+        "translationTitle2": "成本类别2翻译",
+        "translationTitle3": "成本类别3翻译",
+        "translationTitle4": "成本类别4翻译",
+        "translationTitle5": "成本类别5翻译"
+      }
+    }
+  }
+}

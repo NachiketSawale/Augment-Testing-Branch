@@ -1,0 +1,12 @@
+<div platform-alarm-overlay data-info="dialog.modalOptions.dataItem.alarm.text" data-config="dialog.modalOptions.dataItem.alarm.config"></div>
+<div data-ng-if="::dialog.modalOptions.codeMode" class="longtext selectable filler">
+	<div class="flex-box flex-element filler"
+	     data-script-editor-Directive
+	     data-ng-model="dialog.modalOptions.dataItem.dataSource.current"
+	     data-options="{ lineNumbers: false, readOnly: true, lint: false, gutters: [] }">
+		<!--data-options="{ lineNumbers: false, readOnly: true, lint: false, showHint: false, gutters: [], mode: 'xml' }">-->
+	</div>
+</div>
+<div data-ng-if="::!dialog.modalOptions.codeMode" class="longtext selectable">
+	<p data-ng-bind-html="dialog.modalOptions.dataItem.dataSource.current"></p>
+</div>

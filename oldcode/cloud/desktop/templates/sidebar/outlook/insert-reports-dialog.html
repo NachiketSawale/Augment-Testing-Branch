@@ -1,0 +1,79 @@
+<style>
+	.insert-reports-dialog .reports {
+		overflow-y: auto;
+	}
+
+	.insert-reports-dialog .report-item {
+		border-bottom: 1px solid #ccc;
+		line-height: 16px;
+		padding: 8px;
+	}
+
+	.insert-reports-dialog .report-item:hover {
+		background-color: #aec3d4;
+		cursor: pointer;
+	}
+
+	.insert-reports-dialog .report-item:last-child {
+		border-bottom: none;
+	}
+
+	.insert-reports-dialog .report-item span {
+		font-size: 12px;
+	}
+</style>
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body insert-reports-dialog">
+	<div class="flex-element flex-box flex-basis-auto grid-layout-wrapper overflow-hidden">
+			<div class="flex-element flex-box flex-column subview-container">
+				<div class="toolbar">
+					<h3 class="title font-bold">{{'cloud.desktop.outlook.selectReport' | translate}}</h3>
+				</div>
+				<div class="flex-element flex-box flex-column subview-content overflow-hidden">
+					<div class="fullheight reports">
+						<div class="report-item" data-ng-repeat="item in reports" data-ng-click="onSelectReport(item.id)">
+							<label class="ellipsis">{{item.name}}</label>
+							<span class="ellipsis">{{item.text}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="flex-element flex-box flex-column subview-container">
+			<div class="toolbar">
+				<h3 class="title font-bold">{{'cloud.desktop.outlook.reportParameters' | translate}}</h3>
+			</div>
+			<div class="flex-element flex-box flex-column subview-content overflow-hidden">
+				<div data-platform-refresh-on="reportingSidebar.report.errors.length" class="flex-box">
+					<ul data-platform-item-list-directive
+					    data-list="reportingSidebar.report.errors"
+					    data-item-template="reportingSidebar.errorTemplate"
+					    class="scroll-padding flex-element">
+					</ul>
+				</div>
+				<div class="outlook-report-parameters-container reports" data-ng-if="isShowParameters && hasParameters">
+					<div class="outlook-report-parameters-view">
+						<div data-basics-reporting-sidebar-parameter></div>
+					</div>
+				</div>
+				<span class="title font-bold" data-ng-if="isShowParameters && !hasParameters">{{'cloud.desktop.outlook.noParameters' | translate}}</span>
+				<div data-ng-if="reportingSidebar.report.dialogSection" class="margin-bottom-ld">
+					<div ng-repeat="(key, value) in reportingSidebar.report.dialogSection" class="margin-top-ld">
+						<div class="flex-box flex-align-center">
+							<div class="input-group-content flex-element">{{key}}</div>
+							<span class="input-group-btn">
+								<button class="btn btn-default tlb-icons ico-menu" data-ng-click="processDialogSection(value)"></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+</section>
+<div class="modal-footer">
+	<button class="btn btn-default" type="button" data-ng-disabled="isDisableGenerate" data-ng-click="generate(1)">{{'cloud.desktop.outlook.generateContent' | translate}}</button>
+	<button class="btn btn-default" type="button" data-ng-disabled="isDisableGenerate" data-ng-click="generate(2)">{{'cloud.desktop.outlook.generateAttachment' | translate}}</button>
+	<button class="btn btn-default" type="button" data-ng-click="modalOptions.cancel()">{{'cloud.common.cancel' | translate}}</button>
+</div>

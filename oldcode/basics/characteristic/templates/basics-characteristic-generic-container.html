@@ -1,0 +1,30 @@
+<div data-platform-alert data-error="error"></div>
+<div class="flex-box flex-column flex-element filler">
+    <div data-platform-kendo-splitter-adjust id="characteristicSplitter" class="flex-element"
+         option="{panes: [ { collapsible: true, size: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}" >
+
+
+        <div id="ui-layout-east" data-ng-controller="basicsCharacteristicDataGroupController">
+            <!--<platform-Grid data="gridData"></platform-Grid>-->
+            <div id="company-scroller" class="overflow filler">
+                 <div treecontrol class="tree-classic"
+                      data-tree-model="dataForTheTree"
+                      data-options="treeOptions"
+                      data-order-by="code"
+                      data-on-selection="onSelection(node)"
+                      data-on-node-dbl-click="onNodeDblClick(node)"
+                      data-selected-node="treeOptions.selectedNode"
+                      data-expanded-nodes="treeOptions.expandedNodes">
+                      <span style="" class="sm control-icons" data-ng_class="::classByType(node)"> </span>
+                      <span data-ng_bind="getDisplaytext(node)"></span>
+                 </div>
+             </div>
+        </div>
+        <div id="ui-layout-west" data-ng-controller="basicsCharacteristicDataController" class="characteristicsGrid" >
+           <div class="flex-box flex-column filler">
+               <platform-Grid data="gridData"></platform-Grid>
+               <div class="information" style="max-height: 70px;">{{selectedItem.Remark}}</div>
+           </div>
+         </div>
+    </div>
+</div>

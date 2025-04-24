@@ -1,0 +1,47 @@
+<div data-ng-controller="controllingGeneralContractorCreatePackagesWizardController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="fullheight">
+            <div class="fullheight" style="overflow-y: auto">
+                <div class="ng-scope">
+                   <div>
+
+                       <div class="platform-lg" >
+                          <div class="col-xs-24 rib-alert-col0">
+                            <div data-platform-alert data-error="noPinProjectError"></div>
+                              <div data-platform-alert data-error="generatenNumberFailedInfo"></div>
+                              <div data-platform-alert data-error="budgetInfo"></div>
+                              <div data-platform-alert data-error="budgetKindInfo"></div>
+                        </div>
+                       </div>
+
+                       <div class="platform-form-group ng-scope">
+                            <div class="platform-form-row form-group">
+                                <label class="platform-form-label" style="min-width: 134px;">{{'controlling.generalcontractor.GenerateType' | translate}}</label>
+                                <div class="platform-form-col">
+                                    <div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty" >
+                                    <input type="radio" name="GenerateType" data-ng-model="GenerateType" id="create" value="1" ng-click="onSelectionChanged('1')" />
+                                    <label for="create" style="vertical-align: 3px;" class="ng-binding ng-scope"> {{'controlling.generalcontractor.Create' | translate}}</label>&nbsp;&nbsp;
+                                    <input type="radio" name="GenerateType" data-ng-model="GenerateType" id="update" value="2" ng-click="onSelectionChanged('2')" >
+                                    <label for="update" style="vertical-align: 3px;" class="ng-binding ng-scope"> {{'controlling.generalcontractor.Update' | translate}}</label>
+                                </div>
+                        </div>
+                            </div>
+                       </div>
+
+                    <div data-platform-form-container data-form-container-options="formContainerOptions"
+                         entity="dataItem"
+                         class="fullheight">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="hasErrors()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' |
+            translate}}
+        </button>
+    </footer>
+</div>

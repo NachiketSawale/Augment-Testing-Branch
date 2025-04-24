@@ -1,0 +1,17 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var reg = new RegExp("(^|&)" + "code=([^&]*)(&|$)","i");
+        var r = window.location.search.substr(1).match(reg) ;
+        window.localStorage.setItem("bim360AuthCode",r[2]);
+        window.close();
+    </script>
+    <title>
+
+    </title>
+</head>
+<body>
+
+</body>
+
+</html>

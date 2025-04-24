@@ -1,0 +1,40 @@
+.entity-filter-profile {
+	padding: 4px 16px;
+
+	.save-as {
+		height: 32px;
+		line-height: 32px;
+		font-weight: 600;
+	}
+
+	.btn {
+		color: #3789cc;
+
+		&:disabled {
+			color: #c1c1c1;
+			opacity: unset;
+		}
+	}
+
+	.radio {
+		display: inline-block;
+		margin: 0 16px 0 0;
+		height: 32px;
+		line-height: 32px;
+
+		label {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 0 0 0 24px;
+
+			span {
+				margin: 0;
+			}
+		}
+	}
+
+	.name {
+		margin: 6px 0;
+	}
+}

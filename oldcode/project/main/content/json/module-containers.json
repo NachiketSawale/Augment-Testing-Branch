@@ -1,0 +1,1801 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.projectListTitle",
+		"controller": "projectMainProjectListController",
+		"uuid": "713B7D2A532B43948197621BA89AD67A"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailContainerTitle",
+		"controller": "projectMainProjectDetailController",
+		"uuid": "E33FC83676E9439A959E4D8C2F4435B6",
+		"permission": "713B7D2A532B43948197621BA89AD67A"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/form-text-partial.html",
+		"title": "project.main.remarkContainerTitle",
+		"controller": "projectMainRemarksController",
+		"uuid": "6CC22AB7897D4B0F8A96F4C5978EAA59"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.schedule.listTitle",
+		"controller": "schedulingScheduleEditListController",
+		"uuid": "7447B8DF191C45118F56DD84D25D1B41"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.schedule.detailTitle",
+		"controller": "schedulingScheduleEditDetailController",
+		"uuid": "7F2C6C99ACB84BA8B1D455C2ACF93050",
+		"permission": "7447B8DF191C45118F56DD84D25D1B41"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.location.listContainerTitle",
+		"controller": "projectLocationListController",
+		"uuid": "42FF27D7F0EA40EABA389D669BE3A1DF"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.location.detailContainerTitle",
+		"controller": "projectLocationDetailController",
+		"uuid": "33761E17BFB84451BD226BF2882BC11D",
+		"permission": "42FF27D7F0EA40EABA389D669BE3A1DF"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkAuthTitle",
+		"controller": "projectMainClerkListController",
+		"uuid": "975AEC379E4E4B02BE76CCB7A0059F65"
+	},
+	{
+		"id": "9",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkAuthTitle",
+		"controller": "projectMainClerkDetailController",
+		"uuid": "190FEBD3204840F58F5D6398705744F9",
+		"permission": "975AEC379E4E4B02BE76CCB7A0059F65"
+	},
+	{
+		"id": "project.main.costgroupcatalog.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listCostGroupCatalogTitle",
+		"controller": "projectMainCostGroupCatalogListController",
+		"uuid": "02a8e37bada946f9939ce17f551cab6d"
+	},
+	{
+		"id": "project.main.costgroupcatalog.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailCostGroupCatalogTitle",
+		"controller": "projectMainCostGroupCatalogDetailController",
+		"uuid": "9ff91fd62965439d95102a1a62b48741",
+		"permission": "02a8e37bada946f9939ce17f551cab6d"
+	},
+	{
+		"id": "project.main.costgroup.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listCostGroupTitle",
+		"controller": "projectMainCostGroupListController",
+		"uuid": "e1f73b4dbf484db98db890921790c6d6"
+	},
+	{
+		"id": "project.main.costgroup.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailCostGroupTitle",
+		"controller": "projectMainCostGroupDetailController",
+		"uuid": "138ba13460d6421dac6566fb65076b2b",
+		"permission": "e1f73b4dbf484db98db890921790c6d6"
+	},
+	{
+		"id": "prj.main.projectBoqChangeOverview",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.projectBoqChangeOverview",
+		"controller": "prjMainBoqChangeOverviewController",
+		"uuid": "39d0fd4bf4ba4cd697d3b9198b321d9b"
+	},
+	{
+		"id": "23",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.userform.defaultContainerTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "b499f098a24511e489d3123b93f75cba",
+		"rubricId": "3",
+		"mainService": "projectMainService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "25",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.currency.ExchangeRates",
+		"controller": "projectMainCurrencyRateListController",
+		"uuid": "463C61DED9AE494AA02850DBA570234F"
+	},
+	{
+		"id": "project.main.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "project.main.characteristics",
+		"uuid": "ae98a15a959e48b89770125ca714de4c",
+		"controller": "",
+		"sectionId": "1",
+		"mainService": "projectMainService"
+	},
+	{
+		"id": "27",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqList",
+		"controller": "boqProjectListController",
+		"uuid": "ac4a13a8f33540ed80d0d9f67983fa01"
+	},
+	{
+		"id": "29",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.estimate",
+		"uuid": "ce87d35899f34e809cad2930093d86b5",
+		"controller": "estimateProjectListController"
+	},
+	{
+		"id": "30",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.costCodes",
+		"controller": "projectCostCodesListController",
+		"uuid": "EBB7B20BD41047179D2FA0610423C1B1"
+	},
+	{
+		"id": "31",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.costCodesDetails",
+		"controller": "projectCostCodesDetailController",
+		"uuid": "01970505BE4B428288EE23567DEEED58",
+		"permission": "EBB7B20BD41047179D2FA0610423C1B1"
+	},
+	{
+		"id": "32",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "1B83B76FAC8B4AE782BE99455B47FE54"
+	},
+	{
+		"id": "33",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.material",
+		"controller": "projectMaterialListController",
+		"uuid": "486bac686fa942449b4effcb8b2de308"
+	},
+	{
+		"id": "34",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.materialDetails",
+		"controller": "projectMaterialDetailController",
+		"uuid": "9b3839487a6445cdb63d307dbf9de780",
+		"permission": "486bac686fa942449b4effcb8b2de308"
+	},
+	{
+		"id": "project.main.material.portion",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.materialPortion",
+		"controller": "projectMaterialPortionListController",
+		"uuid": "def9a05422154aeba42939052f280a1a"
+	},
+	{
+		"id": "project.main.material.portion.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.materialPortionDetails",
+		"controller": "projectMaterialPortionDetailController",
+		"uuid": "4a1245ec24f94aa9a8005db8618bfe2d",
+		"permission": "def9a05422154aeba42939052f280a1a"
+	},
+	{
+		"id": "35",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.entityGeneralList",
+		"controller": "projectMainGeneralListController",
+		"uuid": "8d00d49507ea490f8f256518e84a98e8"
+	},
+	{
+		"id": "36",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.entityGeneralDetail",
+		"controller": "projectMainGeneralDetailController",
+		"uuid": "82366961458345aa8113ed3c2fcddc1d",
+		"permission": "8d00d49507ea490f8f256518e84a98e8"
+	},
+	{
+		"id": "37",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.entityTenderResultList",
+		"controller": "projectMainTenderResultListController",
+		"uuid": "d161af4bc60047cc8961e186f889863a"
+	},
+	{
+		"id": "38",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.entityTenderResultDetail",
+		"controller": "projectMainTenderResultDetailController",
+		"uuid": "3dd9fa3c5742468db296da347a7f1c31",
+		"permission": "d161af4bc60047cc8961e186f889863a"
+	},
+	{
+		"id": "40",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.schedule.entityTimeline",
+		"controller": "schedulingScheduleTimelineEditListController",
+		"uuid": "D11B8A235A8646B4AF9C7D317F192973"
+	},
+	{
+		"id": "41",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.schedule.entityDetailTimeline",
+		"controller": "schedulingScheduleTimelineEditDetailController",
+		"uuid": "6681A59396F24D02A4BEAB2FFF3C735F",
+		"permission": "D11B8A235A8646B4AF9C7D317F192973"
+	},
+	{
+		"id": "42",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "C1DC179E9BEA402ABFF0F5F6DA4557B2",
+		"commentQualifier": "project.main.projectcomment",
+		"parentService": "projectMainService",
+		"showLastComments": true
+	},
+	{
+		"id": "43",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "project.main.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "E3C65C3D3CE44C9E83CFA4B8A00E273E",
+		"commentQualifier": "project.main.tenderresult",
+		"parentService": "projectMainTenderResultService"
+	},
+	{
+		"id": "44",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listPrj2BpTitle",
+		"controller": "projectPrj2BPListController",
+		"uuid": "B15A05E067094D3988F4626281C88E24"
+	},
+	{
+		"id": "45",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailPrj2BpTitle",
+		"controller": "projectPrj2BPDetailController",
+		"uuid": "A47736265C1242348D032A55DE80AA99",
+		"permission": "B15A05E067094D3988F4626281C88E24"
+	},
+	{
+		"id": "46",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listPrj2BpContactTitle",
+		"controller": "projectPrj2BPContactListController",
+		"uuid": "09B099CDD4BF4AAFB4BC7D28DD8BF1C9"
+	},
+	{
+		"id": "47",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailPrj2BpContactTitle",
+		"controller": "projectPrj2BPContactDetailController",
+		"uuid": "B2CDEC2972234462804B1ACA15E00330",
+		"permission": "09B099CDD4BF4AAFB4BC7D28DD8BF1C9"
+	},
+	{
+		"id": "48",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listSaleTitle",
+		"controller": "projectMainSaleListController",
+		"uuid": "011b0cf9e74e4e5094995de0ec1e9217"
+	},
+	{
+		"id": "49",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailSaleTitle",
+		"controller": "projectMainSaleDetailController",
+		"uuid": "b85c94bf5b2a4496bd7e2cd7312b9104",
+		"permission": "011b0cf9e74e4e5094995de0ec1e9217"
+	},
+	{
+		"id": "50",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.entityKeyFigureList",
+		"controller": "projectMainKeyFigureListController",
+		"uuid": "e755a4d373c44fb7a19339d238685dac"
+	},
+	{
+		"id": "51",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.containerBidsTitle",
+		"controller": "salesBidProjectBidsListController",
+		"uuid": "96E96054B48C4F82AED3F9140611B010"
+	},
+	{
+		"id": "52",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.contract.containerTitleContracts",
+		"controller": "salesContractProjectContractsListController",
+		"uuid": "F28370473E8648498FC471FB88D7BAAC"
+	},
+	{
+		"id": "53",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.containerDetailsBidsTitle",
+		"controller": "salesBidProjectBidsDetailController",
+		"uuid": "FDF2E64888F544EC8310359384E823C6",
+		"permission": "96E96054B48C4F82AED3F9140611B010"
+	},
+	{
+		"id": "54",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.contract.containerTitleContractsForm",
+		"controller": "salesContractProjectContractsDetailController",
+		"uuid": "00B327A345274E5A8B57B02DB5FCAAB7",
+		"permission": "F28370473E8648498FC471FB88D7BAAC"
+	},
+	{
+		"id": "55",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.billing.containerTitleBills",
+		"controller": "salesBillingProjectBillsListController",
+		"uuid": "4B0D79FFFCE24775B00D8CCD88E489DE"
+	},
+	{
+		"id": "56",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.billing.containerTitleBillsForm",
+		"controller": "salesBillingProjectBillsDetailController",
+		"uuid": "C49BD5BAA6454B0E80D3985C93789EB4",
+		"permission": "4B0D79FFFCE24775B00D8CCD88E489DE"
+	},
+	{
+		"id": "57",
+		"template": "app/components/base/grid-partial.html",
+		"title": "sales.wip.containerTitleWips",
+		"controller": "salesWipProjectWipsListController",
+		"uuid": "E462BC1E81F648039CB506B9FCF70F4E"
+	},
+	{
+		"id": "58",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "sales.wip.containerTitleWipsForm",
+		"controller": "salesWipProjectWipsDetailController",
+		"uuid": "EE83BC7FF01E47CDAAF2771245E8374C",
+		"permission": "E462BC1E81F648039CB506B9FCF70F4E"
+	},
+	{
+		"id": "model-project-model-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelListContainer",
+		"controller": "modelProjectModelListController",
+		"uuid": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-model-version-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelVersionListContainer",
+		"controller": "modelProjectModelVersionListController",
+		"uuid": "d5d4776c5ea64701912a9c8b007ec446",
+		"permission": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-model-version-Detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelVersionDetailContainer",
+		"controller": "modelProjectModelVersionDetailController",
+		"uuid": "a16d5eb0ec314c00871308b03f4a1c39",
+		"permission": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-model-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelDetailContainer",
+		"controller": "modelProjectModelDetailController",
+		"uuid": "8a10e1cb69774d56926abd47c0c8dca9",
+		"permission": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-modelfile-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelFileListContainer",
+		"controller": "modelProjectModelFileListController",
+		"uuid": "8b4e238704f84550b00830dec07b25b5"
+	},
+	{
+		"id": "model-project-modelfile-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelFileDetailContainer",
+		"controller": "modelProjectModelFileDetailController",
+		"uuid": "4909263a40954a3caf4f757e782dd679",
+		"permission": "8b4e238704f84550b00830dec07b25b5"
+	},
+	{
+		"id": "project.main.est.rules",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.rule.ruleContainer",
+		"controller": "estimateProjectEstimateRulesListController",
+		"parentService": "projectMainService",
+		"uuid": "f0930caddf2c4043b08b24661a683bc4"
+	},
+	{
+		"id": "project.main.est.rule.parameter",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.rule.ruleParameterContainer",
+		"controller": "estimateProjectEstRuleParamListController",
+		"parentService": "estimateProjectEstimateRulesService",
+		"uuid": "677F693B516C41C3B65FD3D1B68E652D"
+	},
+	{
+		"id": "project.main.est.rule.parameter.value",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.rule.estimateRuleParameterValue",
+		"controller": "estimateProjectEstRuleParamValueListController",
+		"uuid": "EDAB9784710A4822AEA158E82ECE45F7"
+	},
+	{
+		"id": "project.main.est.rule.script",
+		"template": "estimate.rule/partials/script-partial.html",
+		"title": "estimate.rule.ruleScriptContainer",
+		"controller": "estimateProjectEstRuleScriptController",
+		"uuid": "B514A6F1041B40499F4CFFF00A149A25"
+	},
+	{
+		"id": "project.main.est.parameter",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.parameter.prjParamContainer",
+		"controller": "estimateParameterPrjParamListController",
+		"uuid": "0f73eafb75614d60bb5334d6586fd539"
+	},
+	{
+		"id": "model.viewer.hoops",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "1d9edc7227ef492c8dea37bd11a2011e",
+		"defaultView": "Iso",
+		"permission": "7ac2a568c32e4a16a2b4106db572133d"
+	},
+	{
+		"id": "model.viewer.hoops-2",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "4fbadfb0ca71406eba039925a82daba2",
+		"defaultView": "ReverseIso",
+		"permission": "9275c055a1e14f82a37831cd0f68c40f"
+	},
+	{
+		"id": "model.viewer.hoops-3",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "71b46d3a2dc949fc80404d0a0f3996ea",
+		"defaultView": "Left",
+		"permission": "a272cac0ae67421eb9976bf6392f80a7"
+	},
+	{
+		"id": "model.viewer.hoops-4",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "fba385e1c79846acbf5db4a3ff4bae12",
+		"defaultView": "Top",
+		"permission": "097de59303a8453680bdc61d350365fd"
+	},
+	{
+		"id": "model-main-viewpoint-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.main.viewpointList",
+		"controller": "modelMainViewpointListController",
+		"uuid": "17c46d111cd44732827332315ea206ed"
+	},
+	{
+		"id": "model-main-viewpoint-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.main.viewpointDetails",
+		"controller": "modelMainViewpointDetailController",
+		"uuid": "10b630738b584731a275fa5dbdf225a3",
+		"permission": "17c46d111cd44732827332315ea206ed"
+	},
+	{
+		"id": "model.main.objectInfoList",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "model.main.objectInfo.list",
+		"controller": "modelMainObjectInfoListController",
+		"uuid": "b187af9db8be4cdd87307c06b12d7c1c",
+		"permission": "36abc91df46f4129a78cc26fe79a6fdc"
+	},
+	{
+		"id": "model.main.objectInfoDetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.main.objectInfo.details",
+		"controller": "modelMainObjectInfoDetailController",
+		"uuid": "38f9abc2a0024f898a2607dbc27e647d",
+		"permission": "36abc91df46f4129a78cc26fe79a6fdc"
+	},
+	{
+		"id": "model.main.viewerLegendList",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "model.main.viewerLegend.list",
+		"controller": "modelMainViewerLegendListController",
+		"uuid": "3b5c28631ef44bb293ee05475a9a9513"
+	},
+	{
+		"id": "model.simulation.cockpit",
+		"template": "model.simulation/partials/model-simulation-cockpit-template.html",
+		"title": "model.simulation.cockpitTitle",
+		"controller": "modelSimulationCockpitController",
+		"uuid": "b1482570d88e42978e5acdc79c15f2fa",
+		"permission": "a919c5302c1a4a8c975726f2466ca52d"
+	},
+	{
+		"id": "project.main.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentAssignObject",
+		"controller": "documentsProjectModelObjectController",
+		"uuid": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentAssignObjectFormTitle",
+		"controller": "documentsProjectModelObjectDetailController",
+		"uuid": "ee68ae76fefe4b758c282594a1746480",
+		"permission": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "project.main.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "project.main.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "project.main.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "constructionsystem.project.instanceheader.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "constructionsystem.project.instanceHeaderGridContainerTitle",
+		"uuid": "f3044885941741b8a9c0c8eea34fb647",
+		"controller": "constructionSystemProjectInstanceHeaderController"
+	},
+	{
+		"id": "project.main.remark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "project.main.entityProjectRemark",
+		"uuid": "fd77a1ee53124d0ebbc1715996942dcc",
+		"controller": "projectMainProjectRemarkController"
+	},
+	{
+		"id": "project.main.tenderremark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "project.main.entityTenderRemark",
+		"uuid": "078ea761dbf74be19f8b29cb28705e5a",
+		"controller": "projectMainProjectTenderRemarkController"
+	},
+	{
+		"id": "project.main.calloffremark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "project.main.entityCallOffRemark",
+		"uuid": "8f8e4f4d4d3f4ccb9a4fb173f849d18d",
+		"controller": "projectMainProjectCallOffRemarkController"
+	},
+	{
+		"id": "project.main.warrentyremark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "project.main.entityWarrentyRemark",
+		"uuid": "7e2299e11b01408290b7b3f49548a4a8",
+		"controller": "projectMainProjectWarrentyRemarkController"
+	},
+	{
+		"id": "project.main.projectsmap",
+		"template": "app/components/base/partials/multi-address-map.html",
+		"title": "project.main.projectMap",
+		"uuid": "43d4482c29aa4b119675465dc928fdfa",
+		"controller": "projectMainMapController"
+	},
+	{
+		"id": "f9aae1e070e24b5bb2dacc96d5af9763",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectProjectHeaderTitle",
+		"controller": "objectProjectHeaderListController",
+		"uuid": "f9aae1e070e24b5bb2dacc96d5af9763",
+		"permission": "34ce2fbe7aa74734b5389b19df8646b6"
+	},
+	{
+		"id": "22be537a8ca5497a86350d825f809378",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectProjectHeaderTitle",
+		"controller": "objectProjectHeaderDetailController",
+		"uuid": "22be537a8ca5497a86350d825f809378",
+		"permission": "34ce2fbe7aa74734b5389b19df8646b6"
+	},
+	{
+		"id": "79bf98afdcfc42b1be7b9e661c6500ff",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectProjectLevelTitle",
+		"controller": "objectProjectLevelListController",
+		"uuid": "79bf98afdcfc42b1be7b9e661c6500ff",
+		"permission": "230a2d63c31e429486325c62660afcca"
+	},
+	{
+		"id": "d2f88bec61c14c89a93f87a226797f3d",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectProjectLevelTitle",
+		"controller": "objectProjectLevelDetailController",
+		"uuid": "d2f88bec61c14c89a93f87a226797f3d",
+		"permission": "230a2d63c31e429486325c62660afcca"
+	},
+	{
+		"id": "9ae8c2111f354edea6c775fb64469de3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode01List",
+		"controller": "projecStructuresSortcode01ListController",
+		"uuid": "9ae8c2111f354edea6c775fb64469de3"
+	},
+	{
+		"id": "93ddf76ff23842e29fa921764da97226",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.project.listObjectProjectHeaderDocumentTitle",
+		"controller": "objectProjectHeaderDocumentListController",
+		"uuid": "a93d6d0701a04a15b88685b3c0800125"
+	},
+	{
+		"id": "320b4d6f192a4a39b312a22b02c12c4f",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.project.detailObjectProjectHeaderDocumentTitle",
+		"controller": "objectProjectHeaderDocumentDetailController",
+		"uuid": "909b0d66111643bf92a6e8d6e810c7f0",
+		"permission": "a93d6d0701a04a15b88685b3c0800125"
+	},
+	{
+		"id": "b5b27ff9adae4de09deb1e765b53bff9",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode01Details",
+		"controller": "projecStructuresSortcode01DetailController",
+		"uuid": "b5b27ff9adae4de09deb1e765b53bff9",
+		"permission": "9ae8c2111f354edea6c775fb64469de3"
+	},
+	{
+		"id": "8a747d2e83ab42ed8c918f9840af2b2e",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode02List",
+		"controller": "projecStructuresSortcode02ListController",
+		"uuid": "8a747d2e83ab42ed8c918f9840af2b2e"
+	},
+	{
+		"id": "77058c67284b412e92a65bfab55f8beb",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode02Details",
+		"controller": "projecStructuresSortcode02DetailController",
+		"uuid": "77058c67284b412e92a65bfab55f8beb",
+		"permission": "8a747d2e83ab42ed8c918f9840af2b2e"
+	},
+	{
+		"id": "8b8070460f8c477382a3f4ca0eccecf0",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode03List",
+		"controller": "projecStructuresSortcode03ListController",
+		"uuid": "8b8070460f8c477382a3f4ca0eccecf0"
+	},
+	{
+		"id": "67f570d0ac7c4ee7b0049f7bd2069eaa",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode03Details",
+		"controller": "projecStructuresSortcode03DetailController",
+		"uuid": "67f570d0ac7c4ee7b0049f7bd2069eaa",
+		"permission": "8b8070460f8c477382a3f4ca0eccecf0"
+	},
+	{
+		"id": "4232f7b7aa174dc9b9b1cbfb2d92e61b",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode04List",
+		"controller": "projecStructuresSortcode04ListController",
+		"uuid": "4232f7b7aa174dc9b9b1cbfb2d92e61b"
+	},
+	{
+		"id": "b47caaaecb014b9cabbbcc547eeb83f8",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode04Details",
+		"controller": "projecStructuresSortcode04DetailController",
+		"uuid": "b47caaaecb014b9cabbbcc547eeb83f8",
+		"permission": "4232f7b7aa174dc9b9b1cbfb2d92e61b"
+	},
+	{
+		"id": "5d796e309aeb45318236d806a34f0028",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode05List",
+		"controller": "projecStructuresSortcode05ListController",
+		"uuid": "5d796e309aeb45318236d806a34f0028"
+	},
+	{
+		"id": "e5c93bd4eba44faeb922d79718f9d69e",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode05Details",
+		"controller": "projecStructuresSortcode05DetailController",
+		"uuid": "e5c93bd4eba44faeb922d79718f9d69e",
+		"permission": "5d796e309aeb45318236d806a34f0028"
+	},
+	{
+		"id": "bd4aebdaf1fe4a779bb2096946a918a5",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode06List",
+		"controller": "projecStructuresSortcode06ListController",
+		"uuid": "bd4aebdaf1fe4a779bb2096946a918a5"
+	},
+	{
+		"id": "2ae50bf1b5074521a66f799b5b2db27b",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode06Details",
+		"controller": "projecStructuresSortcode06DetailController",
+		"uuid": "2ae50bf1b5074521a66f799b5b2db27b",
+		"permission": "bd4aebdaf1fe4a779bb2096946a918a5"
+	},
+	{
+		"id": "76cf8afdfef64049b7820423d83c24c5",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode07List",
+		"controller": "projecStructuresSortcode07ListController",
+		"uuid": "76cf8afdfef64049b7820423d83c24c5"
+	},
+	{
+		"id": "b788d63109d040ceb43615efaaf050a7",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode07Details",
+		"controller": "projecStructuresSortcode07DetailController",
+		"uuid": "b788d63109d040ceb43615efaaf050a7",
+		"permission": "76cf8afdfef64049b7820423d83c24c5"
+	},
+	{
+		"id": "3a86e227a1d245148a04d0da26162ac4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode08List",
+		"controller": "projecStructuresSortcode08ListController",
+		"uuid": "3a86e227a1d245148a04d0da26162ac4"
+	},
+	{
+		"id": "f4055b7677cb48609b5346cf1c52c480",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode08Details",
+		"controller": "projecStructuresSortcode08DetailController",
+		"uuid": "f4055b7677cb48609b5346cf1c52c480",
+		"permission": "3a86e227a1d245148a04d0da26162ac4"
+	},
+	{
+		"id": "7eb96a183423427c8427f809c658359b",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode09List",
+		"controller": "projecStructuresSortcode09ListController",
+		"uuid": "7eb96a183423427c8427f809c658359b"
+	},
+	{
+		"id": "f38d7efcb775488191ed248bf121f52d",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode09Details",
+		"controller": "projecStructuresSortcode09DetailController",
+		"uuid": "f38d7efcb775488191ed248bf121f52d",
+		"permission": "7eb96a183423427c8427f809c658359b"
+	},
+	{
+		"id": "138e7d85bbc141a29501b08ec1e3d92e",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.structures.sortCode10List",
+		"controller": "projecStructuresSortcode10ListController",
+		"uuid": "138e7d85bbc141a29501b08ec1e3d92e"
+	},
+	{
+		"id": "9e2d856e32cf4e4aa36a79f29b1ce59f",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.structures.sortCode10Details",
+		"controller": "projecStructuresSortcode10DetailController",
+		"uuid": "9e2d856e32cf4e4aa36a79f29b1ce59f",
+		"permission": "138e7d85bbc141a29501b08ec1e3d92e"
+	},
+	{
+		"id": "1db4b61556414ef7893837ae7af004b0",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "project.main.sourceLocationTitle",
+		"controller": "projectMainSourceWindowController",
+		"uuid": "1db4b61556414ef7893837ae7af004b0",
+		"permission": "42FF27D7F0EA40EABA389D669BE3A1DF",
+		"filter": "projectFk"
+	},
+	{
+		"id": "b053362c4d4a4331bfe32bc3a835e664",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "project.main.sourceCostGroupTitle",
+		"controller": "projectMainSourceWindowController",
+		"uuid": "b053362c4d4a4331bfe32bc3a835e664",
+		"permission": "e1f73b4dbf484db98db890921790c6d6",
+		"filter": [
+			"costGroupCatalogFk",
+			"projectFk"
+		]
+	},
+	{
+		"id": "c32e69481fa6417d871b0f422d37468e",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "project.main.sourceCostGroupByContextTitle",
+		"controller": "projectMainSourceWindowController",
+		"uuid": "c32e69481fa6417d871b0f422d37468e",
+		"permission": "e1f73b4dbf484db98db890921790c6d6",
+		"filter": [
+			"costGroupCatalogFk"
+		]
+	},
+	{
+		"id": "basics.material.priceCondition",
+		"template": "basics.material/partials/price-condition-partial.html",
+		"title": "basics.material.record.priceConditionTitle",
+		"controller": "basicsMaterialPriceConditionController",
+		"uuid": "851058B59DAD4C80B0EF544B9DB4DD8C",
+		"dataService": "projectMaterialPriceConditionServiceNew"
+	},
+	{
+		"id": "productionplanning.common.header",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.common.header.listTitle",
+		"controller": "productionplanningCommonHeaderListController",
+		"currentModule": "productionplanning.common.project.header",
+		"parentService": "projectMainService",
+		"foreignKey": "PrjProjectFk",
+		"uuid": "66ed2d9c263c4ed694332ee7fb6744f1",
+		"permission": "66ed2d9c263c4ed694332ee7fb6744f1"
+	},
+	{
+		"id": "productionplanning.common.header.clerklist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.common.header.clerkListTitle",
+		"controller": "productionplanningCommonHeaderClerkListController",
+		"currentModule": "productionplanning.common.project.header",
+		"parentService": "projectMainService",
+		"foreignKey": "PrjProjectFk",
+		"uuid": "5d316438f8de42258a92b58d294f4acd",
+		"permission": "66ed2d9c263c4ed694332ee7fb6744f1"
+	},
+	{
+		"id": "productionplanning.mounting.requisitionlist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.mounting.requisition.listTitle",
+		"controller": "productionplanningMountingRequisitionForProjectListController",
+		"uuid": "42859c49547445f3862a4ec10588db45",
+		"permission": "42859c49547445f3862a4ec10588db45"
+	},
+	{
+		"id": "productionplanning.mounting.requisitiondetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.mounting.requisition.detailTitle",
+		"controller": "productionplanningMountingRequisitionForProjectDetailController",
+		"uuid": "25489c49547445f3862a4ec10588db99",
+		"permission": "42859c49547445f3862a4ec10588db45"
+	},
+	{
+		"id": "model-project-model-part-list",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "model.project.modelPartListContainer",
+		"controller": "modelProjectModelPartListController",
+		"uuid": "eee4bf0089af41d2ae0f4a68027b58b3"
+	},
+	{
+		"id": "model-project-model-part-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelPartDetailContainer",
+		"controller": "modelProjectModelPartDetailController",
+		"uuid": "b5faadeba52d44828e9cb453913eb8fd",
+		"permission": "eee4bf0089af41d2ae0f4a68027b58b3"
+	},
+	{
+		"id": "project-stock-stock-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.stock.stockListContainerTitle",
+		"controller": "projectStockListController",
+		"uuid": "84f41825c88a463286c9502f983b4e90"
+	},
+	{
+		"id": "project-stock-stock-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.stock.stockDetailContainerTitle",
+		"controller": "projectStockDetailController",
+		"uuid": "82554e69247e442e82175ccd48147b81",
+		"permission": "84f41825c88a463286c9502f983b4e90"
+	},
+	{
+		"id": "project-stock-location-stock-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.stock.stockLocationListContainerTitle",
+		"controller": "projectStockLocationListController",
+		"uuid": "55f6ac464f67460882c719f035091290"
+	},
+	{
+		"id": "project-stock-location-stock-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.stock.stockLocationDetailContainerTitle",
+		"controller": "projectStockLocationDetailController",
+		"uuid": "90b9dd6abb7c40c1b4f8f17d8919ac88",
+		"permission": "55f6ac464f67460882c719f035091290"
+	},
+	{
+		"id": "project-stock-material-stock-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.stock.stockMaterialListContainerTitle",
+		"controller": "projectStockMaterialListController",
+		"uuid": "562132b3f18e470f8eef6b9dbe5dc9d4"
+	},
+	{
+		"id": "project-stock-material-stock-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.stock.stockMaterialDetailContainerTitle",
+		"controller": "projectStockMaterialDetailController",
+		"uuid": "ca05a162837b4e01b1416116a8a846be",
+		"permission": "562132b3f18e470f8eef6b9dbe5dc9d4"
+	},
+	{
+		"id": "project-address-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.addressList",
+		"controller": "projectMainAddressListController",
+		"uuid": "130eb724690c429aa4e359ed0c53115b"
+	},
+	{
+		"id": "project-address-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.addressDetail",
+		"controller": "projectMainAddressDetailController",
+		"uuid": "caa64e99b7d449bd981e798331c458f9",
+		"permission": "130eb724690c429aa4e359ed0c53115b"
+	},
+	{
+		"id": "project-main-estimate-characteristics",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "project.main.estimateCharacteristics",
+		"uuid": "183c55b9f3e7482298098e2346b2de84",
+		"controller": "",
+		"sectionId": 38,
+		"mainService": "estimateProjectService"
+	},
+	{
+		"id": "project.main.estimate.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.estimateFormData",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "b278decd9b204e2fbcb61b4952e194e5",
+		"rubricId": 18,
+		"mainService": "estimateProjectService",
+		"statusWizardGuid": "1cac76c21a8f460f82c8041cd9692226"
+	},
+	{
+		"id": "project.engineering.header.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.engineering.headerListTitle",
+		"controller": "productionplanningEngineeringHeaderListController",
+		"uuid": "17947c4e6d894d7792e79f18848fc3f8",
+		"permission": "e48b688d24114e2da6ff2358f80cbcc9"
+	},
+	{
+		"id": "project.engineering.header.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.engineering.headerDetailTitle",
+		"controller": "productionplanningEngineeringHeaderDetailController",
+		"uuid": "abfa68a6d1a34097ab6f87a57b0e97cf",
+		"permission": "e48b688d24114e2da6ff2358f80cbcc9"
+	},
+	{
+		"id": "scheduling.schedule.clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.schedule.scheduleClerkListTitle",
+		"controller": "schedulingScheduleClerkListController",
+		"uuid": "468be38b0d104ee58361b7e4395ac82d"
+	},
+	{
+		"id": "scheduling.schedule.clerk.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.schedule.scheduleClerkDetailTitle",
+		"controller": "schedulingScheduleClerkDetailController",
+		"uuid": "9dba09dfec334213bc8cb59ef42ffc27",
+		"permission": "468be38b0d104ee58361b7e4395ac82d"
+	},
+	{
+		"id": "boq.project.clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.project.boqProjectClerkListTitle",
+		"controller": "boqProjectClerkListController",
+		"uuid": "c1fc5b2e7f6f47bdabaef27a7dfe05f1"
+	},
+	{
+		"id": "project.main.certificate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listCertificateTitle",
+		"controller": "projectMainCertificateListController",
+		"uuid": "54a408657d304e7f8bbb51dba5d184c2"
+	},
+	{
+		"id": "project.main.certificate.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailCertificateTitle",
+		"controller": "projectMainCertificateDetailController",
+		"uuid": "f21fe8dbcc1d47d7baaa495bf9a9015a",
+		"permission": "54a408657d304e7f8bbb51dba5d184c2"
+	},
+	{
+		"id": "project.main.actualcertificatelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.certificate.actualCertificateListContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateListController",
+		"uuid": "d1488a1012e9497eb29910439f11b647",
+		"currentModule": "project.main",
+		"parentService": "projectMainService",
+		"translationService": "projectMainTranslationService"
+	},
+	{
+		"id": "project.main.actualcertificatedetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.certificate.actualCertificateDetailContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateDetailController",
+		"uuid": "397eb272474b40e7a5a8334322ff8325",
+		"permission": "d1488a1012e9497eb29910439f11b647",
+		"currentModule": "project.main",
+		"parentService": "projectMainService",
+		"translationService": "projectMainTranslationService"
+	},
+	{
+		"id": "project.main.lineItemSelectionStatement",
+		"template": "project.main/templates/selection-statement/project-main-selection-statement-container.html",
+		"title": "estimate.main.lineItemSelStatement.containerTitle",
+		"uuid": "8fbb8f4fb42343149666a3d7c24dc1b4",
+		"controller": "estimateMainLineItemSelectionStatementParentController",
+		"parentService": "estimateProjectEstimateLineItemSelStatementListService",
+		"gridUUID": "19546cd64b5b4225a1a549df3d189793",
+		"permission": "591C9D3784ED4FA496B0E03FD7A56838"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.title",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "006979a341cdde9c3b1642f571b4c816",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"readonly": true
+	},
+	{
+		"id": "project.main.ratebook",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listRateBookTitle",
+		"controller": "estimateProjectRateBookListController",
+		"parentService": "projectMainService",
+		"uuid": "37de9c2128f54ab199a62c1526b4d411"
+	},
+	{
+		"id": "project.main.characteristic2.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "project.main.characteristics2",
+		"uuid": "564fd6161554490090f8ccfce58522d0",
+		"controller": "",
+		"sectionId": "40",
+		"mainService": "projectMainService"
+	},
+	{
+		"id": "model.evaluation.rulesetList",
+		"template": "model.evaluation/partials/ruleset-list-partial.html",
+		"title": "model.evaluation.rulesetListTitleEverywhere",
+		"controller": "modelEvaluationRulesetListController",
+		"uuid": "63e957df0af245a19f9608ac9beced3b",
+		"permission": "0fe1504979b947e68234ecd04c799af8"
+	},
+	{
+		"id": "model.evaluation.rulesetDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.evaluation.rulesetDetailTitleEverywhere",
+		"controller": "modelEvaluationRulesetDetailController",
+		"uuid": "5488706fc0b047cc94029e502ecd2bfe",
+		"permission": "0fe1504979b947e68234ecd04c799af8"
+	},
+	{
+		"id": "model.evaluation.ruleList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.evaluation.ruleListTitleEverywhere",
+		"controller": "modelEvaluationRuleListController",
+		"uuid": "3a0e7703abd140febba420db01e72c88",
+		"permission": "3e58fcde812847c89942f3d365dc2d9b"
+	},
+	{
+		"id": "model.evaluation.ruleDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.evaluation.ruleDetailTitleEverywhere",
+		"controller": "modelEvaluationRuleDetailController",
+		"uuid": "5a4d078143764838ac5d8e7dcfa5ca9b",
+		"permission": "3e58fcde812847c89942f3d365dc2d9b"
+	},
+	{
+		"id": "model.evaluation.ruleEditor",
+		"template": "model.evaluation/partials/rule-editor-partial.html",
+		"title": "model.evaluation.ruleEditorTitleEverywhere",
+		"controller": "modelEvaluationRuleEditorController",
+		"uuid": "15f94335f80e4d5a88dcd044f9e48336",
+		"permission": "3e58fcde812847c89942f3d365dc2d9b"
+	},
+	{
+		"id": "project.main.release.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.releaseListTitle",
+		"controller": "projectMainReleaseListController",
+		"uuid": "fa709a78d4f94faaaf224d31ec05093f"
+	},
+	{
+		"id": "project.main.release.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.releaseDetailTitle",
+		"controller": "projectMainReleaseDetailController",
+		"uuid": "3447b10db17548e496012f8871b7fdea",
+		"permission": "fa709a78d4f94faaaf224d31ec05093f"
+	},
+	{
+		"id": "project.price.condition.param",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.pricecondition.headerParamTitle",
+		"controller": "basicsPriceConditionParamController",
+		"uuid": "d0d70f1f6b9c4b16accc03b100855587",
+		"paramTypeId": "6",
+		"mainService": "projectMainService",
+		"permission": "1057666761d54b97a7334d71cdb72ed2"
+	},
+	{
+		"id": "project.main.estimate.specification",
+		"template": "basics.textmodules/partials/basics-textmodules-html-text-view.html",
+		"title": "project.main.estimateSpecificationTitle",
+		"controller": "estimateProjectSpecificationController",
+		"uuid": "e7bde34dea234e43ae69eb36612bedf3",
+		"permission": "ce87d35899f34e809cad2930093d86b5"
+	},
+	{
+		"id": "project.calendar.exceptionday.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.projectExceptionDayTitle",
+		"controller": "projectCalendarExceptionDayListController",
+		"uuid": "ee297e5e837b4d9ab6fe1029874ab1a3"
+	},
+	{
+		"id": "project.calendar.exceptionday.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.projectExceptionDayDetailTitle",
+		"controller": "projectCalendarExceptionDayDetailController",
+		"uuid": "da054f29c8d04d0aa8f4aa33fb946408",
+		"permission": "ee297e5e837b4d9ab6fe1029874ab1a3"
+	},
+	{
+		"id": "project.main.documents.project.document.history.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProjectHistory",
+		"controller": "documentsProjectDocumentHistoryController",
+		"uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+	},
+	{
+		"id": "model.project.model2DataTreeList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.dataTree.model2DataTreeListTitle",
+		"controller": "modelProjectAdministrationDataTree2ModelListController",
+		"uuid": "4541517fca60493cac556035d34d6209",
+		"permission": "710cd16529f6429fa457d207481adc26"
+	},
+	{
+		"id": "model.project.model2DataTreeDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.dataTree.model2DataTreeDetailTitle",
+		"controller": "modelProjectAdministrationDataTree2ModelDetailController",
+		"uuid": "db96f2a2b9d546dca4f339e2305f00e7",
+		"permission": "710cd16529f6429fa457d207481adc26"
+	},
+	{
+		"id": "model.project.blackListList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.propertyKeyBlackList.blackListListTitle",
+		"controller": "modelProjectPropertyKeyBlackListListController",
+		"uuid": "90ed732516e74347a59f2a187f3246ad",
+		"permission": "e669db59cf314255a84f02c276ce224c"
+	},
+	{
+		"id": "model.project.blackListDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.propertyKeyBlackList.blackListDetailTitle",
+		"controller": "modelProjectPropertyKeyBlackListDetailController",
+		"uuid": "5511a01cf9f94875bdb51f48d4bdebfa",
+		"permission": "e669db59cf314255a84f02c276ce224c"
+	},
+	{
+		"id": "project-main-powerbi-list-container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.powerBIElements",
+		"controller": "projectMainPowerBiListController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ac63",
+		"permission": "e669db59cf314255a84f02c276ce224c"
+	},
+	{
+		"id": "project-main-powerbi-view-container",
+		"template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+		"title": "project.main.powerbiView",
+		"controller": "projectMainPowerbiViewController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ac64",
+		"permission": "e669db59cf314255a84f02c276ce224c"
+	},
+	{
+		"id": "project.main.billto.list",
+		"template": "project.main/templates/bill-to-grid-partial.html",
+		"title": "project.main.billToListTitle",
+		"controller": "projectMainBillToListController",
+		"uuid": "8f386520b10f4707936d7dbc36c976b8"
+	},
+	{
+		"id": "project.main.billto.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.billToDetailTitle",
+		"controller": "projectMainBillToDetailController",
+		"uuid": "0cd910bacc8b4bacac0d4a5bf5cf2319",
+		"permission": "8f386520b10f4707936d7dbc36c976b8"
+	},
+	{
+		"id": "documents.clerk.authorization.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkListController",
+		"clerkQualifier": "documents.project.clerk",
+		"uuid": "47620dd38c874f97b75ee3b6ce342666",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "documents.authorization.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7806e7a22b2142f8865ab189efe23c5a",
+		"permission": "47620dd38c874f97b75ee3b6ce342666",
+		"clerkQualifier": "documents.project.clerk",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "basics.efbsheets.crewmixes",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.crewMixes",
+		"controller": "basicsEfbsheetsProjectListController",
+		"uuid": "02c3e17b1fc448789beb50a22ed21143"
+	},
+	{
+		"id": "basics.efbsheets.crewmixes.details",
+		"template": "basics.efbsheets/partials/crewmix-detail.html",
+		"title": "project.main.crewMixesDetails",
+		"controller": "basicsEfbsheetsProjectDetailController",
+		"uuid": "f31c710ae1854e30aad0812c8ba14be6",
+		"permission": "02c3e17b1fc448789beb50a22ed21143"
+	},
+	{
+		"id": "basics.efbsheets.averagewage",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.averageWage",
+		"controller": "basicsEfbsheetsProjectAverageWageController",
+		"uuid": "f90a007080a5434bba20abd90a6ce823"
+	},
+	{
+		"id": "basics.efbsheets.averagewageDetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.averageWageDetails",
+		"controller": "basicsEfbsheetsProjectAverageWageDetailController",
+		"uuid": "b9e35e5438c441c1ad3e056f7fcf29e8",
+		"permission": "f90a007080a5434bba20abd90a6ce823"
+	},
+	{
+		"id": "basics.efbsheets.crewMixaf",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.crewMixAf",
+		"controller": "basicsEfbsheetsProjectCrewMixAfController",
+		"uuid": "e05fa5f85cc14e419fd7ca3adc492a88"
+	},
+	{
+		"id": "basics.efbsheets.crewMixafdetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.crewMixAfDetails",
+		"controller": "basicsEfbsheetsProjectCrewMixAfDetailController",
+		"uuid": "c61d6e182951469dbf47cbd719345e76",
+		"permission": "e05fa5f85cc14e419fd7ca3adc492a88"
+	},
+	{
+		"id": "basics.efbsheets.crewmixafsn",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.crewMixAfsn",
+		"controller": "basicsEfbsheetsProjectCrewMixAfsnController",
+		"uuid": "252747cc4407415d9304a330a2340ea9"
+	},
+	{
+		"id": "basics.efbsheets.crewmixafsndetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.crewMixAfsnDetails",
+		"controller": "basicsEfbsheetsProjectCrewMixAfsnDetailController",
+		"uuid": "c72b5000b2a542c18cf76abebc1bd65a",
+		"permission": "252747cc4407415d9304a330a2340ea9"
+	},
+	{
+		"id": "basics.efbsheets.crewmix2costcode",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.crewMixToCostCodes",
+		"controller": "basicsEfbsheetsProjectCrewMixCostCodeController",
+		"uuid": "5fbf701267ea4e20b4723a7d46dbee24"
+	},
+	{
+		"id": "basics.efbsheets.crewmix2costcodedetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.crewMixToCostCodesDetails",
+		"controller": "basicsEfbsheetsProjectCrewMixCostCodeDetailController",
+		"uuid": "4e0ba68eb6a94cd7bcada61f767c9fae",
+		"permission": "5fbf701267ea4e20b4723a7d46dbee24"
+	},
+	{
+		"id": "project.costcode.job.rate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.costcodes.job.rateList",
+		"controller": "projectCostCodesJobRateListController",
+		"uuid": "efbb019d03b541538ff24ef67dc683dc"
+	},
+	{
+		"id": "project.costcode.job.rate.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.costcodes.job.rateDetails",
+		"controller": "projectCostCodesJobRateDetailController",
+		"uuid": "a6005785aa2b40179b87c8caf833fa9b",
+		"permission": "efbb019d03b541538ff24ef67dc683dc"
+	},
+	{
+		"id": "project.main.cashflow.dashboard",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "project.main.cashflowDashboardTitle",
+		"controller": "",
+		"uuid": "89645150c0544fc8a7bd4dcef5a29ec6",
+		"permission": "89645150c0544fc8a7bd4dcef5a29ec6",
+		"dashboard": {
+			"name": "Cash Flow Analysis",
+			"platform": "dashboard",
+			"dataService": "projectMainService",
+			"filters": [
+				{
+					"filter": "RIB_COMPANY_ID",
+					"field": "CompanyCode"
+				},
+				{
+					"filter": "PROJECT_ID",
+					"field": "ProjectNo"
+				}
+			]
+		}
+	},
+	{
+		"id": "project.main.procurement.dashboard",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "project.main.procurementDashboardTitle",
+		"controller": "",
+		"uuid": "95d29385af3a4493a6ff4d65c8cb1e24",
+		"permission": "95d29385af3a4493a6ff4d65c8cb1e24",
+		"dashboard": {
+			"name": "Procurement Analysis",
+			"platform": "dashboard",
+			"dataService": "projectMainService",
+			"filters": [
+				{
+					"filter": "RIB_COMPANY_ID",
+					"field": "CompanyCode"
+				},
+				{
+					"filter": "PROJECT_ID",
+					"field": "ProjectNo"
+				}
+			]
+		}
+	},
+	{
+		"id": "project.main.action.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.actionListTitle",
+		"controller": "projectMainActionListController",
+		"uuid": "67d04e0fce4442519adf8fb786749bbf"
+	},
+	{
+		"id": "project.main.action.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.actionDetailsTitle",
+		"controller": "projectMainActionDetailController",
+		"uuid": "a9c6b70e70be4043b540e2aa69a4b5c2",
+		"permission": "67d04e0fce4442519adf8fb786749bbf"
+	},
+	{
+		"id": "project.main.subschedule.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.schedule.subSchedulelistTitle",
+		"controller": "schedulingScheduleSubScheduleListController",
+		"uuid": "c4e358d939c54ee6aac910b3c06b3e8",
+		"permission": "7447B8DF191C45118F56DD84D25D1B41"
+	},
+	{
+		"id": "project.main.subschedule.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.schedule.subScheduledetailTitle",
+		"controller": "schedulingScheduleSubScheduleDetailController",
+		"uuid": "c7281a461e144aeda6478c6b1789a6ee",
+		"permission": "7447B8DF191C45118F56DD84D25D1B41"
+	},
+	{
+		"id": "model-project-model-stakeholder-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelStakeholderListContainer",
+		"controller": "modelProjectModelStakeholderListController",
+		"uuid": "4a870e66e25044f0985a567df1395500"
+	},
+	{
+		"id": "model-project-model-stakeholder-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelStakeholderDetailContainer",
+		"controller": "modelProjectModelStakeholderDetailController",
+		"uuid": "f254928aff3d427193c35f1596304523",
+		"permission": "4a870e66e25044f0985a567df1395500"
+	},
+	{
+		"id": "project.main.bidding.consortium.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.biddingConsortiumListTitle",
+		"controller": "projectMainBiddingConsortiumListController",
+		"uuid": "08fbf6f22fe04a619eb91ec02b35c54e"
+	},
+	{
+		"id": "project.main.bidding.consortium.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.biddingConsortiumDetailTitle",
+		"controller": "projectMainBiddingConsortiumDetailController",
+		"uuid": "2b0b2115f71e4d30af1a8ee3c244b6dd",
+		"permission": "08fbf6f22fe04a619eb91ec02b35c54e"
+	},
+	{
+		"id": "project.assembly.structure",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.assemblies.containers.assemblyStructure",
+		"controller": "projectAssemblyStructureController",
+		"uuid": "b0b09a5709be478e9da50d8adbd3aa6d"
+	},
+	{
+		"id": "project.main.assembly.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.assemblyTitle",
+		"controller": "projectAssemblyListController",
+		"uuid": "51f9aff42521497898d64673050588f4"
+	},
+	{
+		"id": "project.assembly.resource.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.assemblies.containers.assemblyResources",
+		"controller": "projectAssemblyResourceController",
+		"uuid": "20c0401F80e546e1bf12b97c69949f5b"
+	},
+	{
+		"id": "project.main.actionemployee.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.actionEmployeeListTitle",
+		"controller": "projectMainActionEmployeeListController",
+		"uuid": "a10753eb750d4f208863daef08e31f0d"
+	},
+	{
+		"id": "project.main.actionemployee.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.actionEmployeeDetailsTitle",
+		"controller": "projectMainActionEmployeeDetailController",
+		"uuid": "8e59e6b041084802a12a64d7e52a2b43",
+		"permission": "a10753eb750d4f208863daef08e31f0d"
+	},
+	{
+		"id": "project.main.plantassembly.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.equipassemblyTitle",
+		"controller": "projectPlantAssemblyListController",
+		"uuid": "c163031647d6459288c5c43ed46cf6e8",
+		"permission": "713B7D2A532B43948197621BA89AD67A"
+	},
+	{
+		"id": "project.main.plantassembly.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.equipassemblyDetailsTitle",
+		"controller": "projectPlantAssemblyDetailController",
+		"uuid": "f7b4578655914fbc85dc7f65c803cfd8",
+		"permission": "c163031647d6459288c5c43ed46cf6e8"
+	},
+	{
+		"id": "project.main.plantassembly.resource.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.equipassemblyResourceTitle",
+		"controller": "projectPlantAssemblyResourceListController",
+		"uuid": "BEDC9497CA84537AE6C8CABBB0B8FAEB",
+		"permission": "c163031647d6459288c5c43ed46cf6e8"
+	},
+	{
+		"id": "project.main.project2salestaxcode.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.project2salestaxcodeListTitle",
+		"controller": "project2SalesTaxCodeListController",
+		"uuid": "323812e8f71549019915dbb494a65142"
+	},
+	{
+		"id": "project.main.project2salestaxcode.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.project2salestaxcodeDetailTitle",
+		"controller": "project2SalesTaxCodeDetailController",
+		"uuid": "7cb4984e06ba46a4bb64ff72d169d23b",
+		"permission": "323812e8f71549019915dbb494a65142"
+	},
+	{
+		"id": "project.main.salestaxmatrix.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.salestaxmatrixListTitle",
+		"controller": "salesTaxMatrixListController",
+		"uuid": "08a1a648b75547dda3fa06bb151a1eee"
+	},
+	{
+		"id": "project.main.salestaxmatrix.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.salestaxmatrixDetailTitle",
+		"controller": "salesTaxMatrixDetailController",
+		"uuid": "fc8217925f694f2296112740a1aa8b1b",
+		"permission": "08a1a648b75547dda3fa06bb151a1eee"
+	},
+	{
+		"id": "project.main.qto.header",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.qtoHeaderTitle",
+		"controller": "qtoMainHeaderProjectGridController",
+		"uuid": "19F99BCCD88746D4A5DCA58E1620061E"
+	},
+	{
+		"id": "estimate.project.clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.project.estimateProjectClerkListTitle",
+		"controller": "estimateProjectClerkListController",
+		"uuid": "bceaa9e8a4f04e5797e87871078e6edc"
+	},
+	{
+		"id": "estimate.project.clerk.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "estimate.project.estimateProjectClerkDetailTitle",
+		"controller": "estimateProjectClerkDetailController",
+		"uuid": "a8eceb9f41f8475fa35b876a642c22d5",
+		"permission": "bceaa9e8a4f04e5797e87871078e6edc"
+	},
+	{
+		"id": "project.main.clerkrole.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listClerkRoleTitle",
+		"controller": "projectMainClerkRoleListController",
+		"uuid": "dc92d091a0d044639d43778058510e8c"
+	},
+	{
+		"id": "project.main.clerkrole.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailClerkRoleTitle",
+		"controller": "projectMainClerkRoleDetailController",
+		"uuid": "400358467500411da957e0ea5e805ca1",
+		"permission": "dc92d091a0d044639d43778058510e8c"
+	},
+	{
+		"id": "project.stock.downtime.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.stock.downtimeListContainerTitle",
+		"controller": "projectStockDownTimeListController",
+		"uuid": "585cdb266f5a4fdb82f1fd22ca6a44c7",
+		"dataService": "projectMain2ProjectStockDownTimeDataService"
+	},
+	{
+		"id": "project.stock.downtime.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.stock.downtimeDetailContainerTitle",
+		"controller": "projectStockDownTimeDetailController",
+		"uuid": "2b7ed018e6a240918f5bb791c337468a",
+		"permission": "585cdb266f5a4fdb82f1fd22ca6a44c7",
+		"dataService": "projectMain2ProjectStockDownTimeDataService"
+	},
+	{
+		"id": "project.stock.clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.stock.clerkListContainerTitle",
+		"controller": "ProjectStock2ClerkListController",
+		"uuid": "c032155470ec4b67873c8d59887e0590",
+		"dataService": "projectMain2ProjectStock2ClerkDataService"
+	},
+	{
+		"id": "project.stock.clerk.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.stock.clerkDetailContainerTitle",
+		"controller": "ProjectStock2ClerkDetailController",
+		"uuid": "02fdd0c53fe6408c9baf85931f707a6a",
+		"permission": "c032155470ec4b67873c8d59887e0590",
+		"dataService": "projectMain2ProjectStock2ClerkDataService"
+	},
+	{
+		"id": "project.main.clerksite.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listClerkSiteTitle",
+		"controller": "projectMainClerkSiteListController",
+		"uuid": "dd03663c3664443c9a25f2187bddba84"
+	},
+	{
+		"id": "project.main.clerksite.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailClerkSiteTitle",
+		"controller": "projectMainClerkSiteDetailController",
+		"uuid": "635efc6ae0534575b2a93847cef76139",
+		"permission": "dd03663c3664443c9a25f2187bddba84"
+	},
+	{
+		"id": "project.main.bizpartnersite.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listBusinessPartnerSiteTitle",
+		"controller": "projectMainBusinessPartnerSiteListController",
+		"uuid": "fdedb62839b849ddb8cddf717d561e9d"
+	},
+	{
+		"id": "project.main.bizpartnersite.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.detailBusinessPartnerSiteTitle",
+		"controller": "projectMainBusinessPartnerSiteDetailController",
+		"uuid": "cc4f2574ded745f296fc516a6d1e0c62",
+		"permission": "fdedb62839b849ddb8cddf717d561e9d"
+	},
+	{
+		"id": "project.main.headerTextTitle",
+		"template": "project.common/partials/header-text-view-new.html",
+		"title": "project.main.prjHeaderTextContainerTitle",
+		"controller": "projectHeaderTextController",
+		"uuid": "e9a2694b8556481daf8dcd01d6c63e57",
+		"textFormat": 1,
+		"moduleName": "project.main",
+		"permission": "713B7D2A532B43948197621BA89AD67A"
+	},
+	{
+		"id": "model-project-model-clerk-authorization",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelClerkAuthorizationContainer",
+		"controller": "modelProjectClerkListController",
+		"uuid": "70ce0ba51f5545fdabb81be621cfa2c5"
+	},
+	{
+		"id": "model-project-model-clerk-authorization-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelClerkAuthorizationDetailContainer",
+		"controller": "modelProjectClerkDetailController",
+		"uuid": "32942b95e0e441e392a69c73361023cb",
+		"permission": "70ce0ba51f5545fdabb81be621cfa2c5"
+	},
+	{
+		"id": "project-timekeeping-clerk-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.timekeeping2ClerkAuthListTitle",
+		"controller": "projectMainTimekeepingClerkListController",
+		"uuid": "f15717298ad24cf0a7891b3a4a6900ba"
+	},
+	{
+		"id": "project-timekeeping-clerk-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.timekeeping2ClerkAuthDetailTitle",
+		"controller": "projectMainTimekeepingClerkDetailController",
+		"uuid": "c9902287755c4d51bacc15895b8fcb83",
+		"permission": "f15717298ad24cf0a7891b3a4a6900ba"
+	},
+	{
+		"id": "project-main-managed-plant-loc-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.listManagedPlantLocTitle",
+		"controller": "projectMainManagedPlantLocListController",
+		"uuid": "dc5f95a4f8c143a8ae0b2521a83d4e19"
+	},
+	{
+		"id": "project-main-managed-plant-loc-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.DetailManagedPlantLocTitle",
+		"controller": "projectMainManagedPlantLocDetailController",
+		"uuid": "6ff893e4f04448d38552f2e3678e2c25",
+		"permission": "dc5f95a4f8c143a8ae0b2521a83d4e19"
+	},
+	{
+		"id": "project.assemblies.characteristic1",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "estimate.main.assemblyCharacteristics1",
+		"uuid": "5ef94a5e030041f0a16a7eebf18348c0",
+		"controller": "",
+		"sectionId": 29,
+		"pKey1Field": "EstHeaderFk",
+		"mainService": "projectAssemblyMainService"
+	},
+	{
+		"id": "project.assemblies.characteristic2",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "estimate.main.assemblyCharacteristics2",
+		"uuid": "d1d1d1edf95a4558946d0083599720df",
+		"controller": "",
+		"sectionId": 30,
+		"pKey1Field": "EstHeaderFk",
+		"mainService": "projectAssemblyMainService"
+	},
+	{
+		"id": "project.assembly.resource-characteristics",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "estimate.main.assemblyResourceCharacteristics",
+		"uuid": "6ab56eb5f55a4021be50932e2fc0d450",
+		"controller": "",
+		"sectionId": 45,
+		"pKey1Field": "EstHeaderFk",
+		"pKey2Field": "EstLineItemFk",
+		"mainService": "projectAssemblyResourceService"
+	},
+	{
+		"id": "project-main-publish-company",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.publishedForCompanyTitle",
+		"controller": "projectMainCompanyController",
+		"uuid": "038bd9f8e0114c3e8c14940baa458935"
+	},
+	{
+		"id": "project.main.activity.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.mainActivityList",
+		"controller": "projectMainActivityListController",
+		"uuid": "2a107e4b607d4358892d1ed762495f8c"
+	},
+	{
+		"id": "project.main.activity.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.main.mainActivityDetail",
+		"controller": "projectMainActivityDetailController",
+		"uuid": "69980c941e9d4295b41c586c74919b1f",
+		"permission": "2a107e4b607d4358892d1ed762495f8c"
+	},
+	{
+		"id": "businesspartner.main.activities.specification",
+		"template": "app/components/specificationcontainer/platform-specification-container.html",
+		"title": "project.main.activitiesSpecificationContainerTitle",
+		"controller": "projectMainActivitySpecificationController",
+		"uuid": "b70422b1072743349098945dd3ce7f0c",
+		"permission": "2a107e4b607d4358892d1ed762495f8c"
+	},
+	{
+		"id": "project.main.pictureList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.pictureListTitle",
+		"controller": "projectMainPictureListController",
+		"uuid": "d233150e79da4216b311676ef48051df",
+		"permission": "428870a65a7a4e48b753387259c6acfa"
+	},
+	{
+		"id": "project-main-photo-container",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "project.main.photoContainerTitle",
+		"controller": "projectMainPictureViewController",
+		"uuid": "428870a65a7a4e48b753387259c6acfa"
+	}
+]

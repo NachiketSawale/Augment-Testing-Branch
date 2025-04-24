@@ -1,0 +1,11 @@
+<div class="right-side flex-element flex-box flex-align-right">
+  <div *ngFor="let field of fields" class="ng-scope">
+    <i
+      class="item image block-image control-icons {{ field.iconClass }}"
+      data-title=" {{ field.toolTip.title }}  &#013; {{
+        field.toolTip.caption
+      }}"
+    >
+    </i>
+  </div>
+</div>

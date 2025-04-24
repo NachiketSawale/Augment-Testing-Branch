@@ -1,0 +1,27 @@
+<section class="modal-body" style="margin-top: 1em;">
+    <div class="platform-form-label">
+        <h5>{{'basics.material.updatePriceWizard.materialScope' | platformTranslate}}</h5>
+    </div>
+    <div class="platform-form-row" style="padding-left: 5em;">
+        <div class="platform-form-label" *ngFor="let scopeOption of scopeOptions">
+            <label>
+                <input type="radio"
+                       name="scopeRadio"
+                       [(ngModel)]="selectedOption"
+                       [value]="scopeOption.value"
+                       [disabled]="!scopeOption.isActive"
+                       (change)="changeScopeOption()"
+                />
+                {{scopeOption.label | platformTranslate}}
+            </label>
+        </div>
+    </div>
+    <div class="platform-form-row" style="margin-top: 2em; color: darkred"
+         *ngIf="(selectedOption === 1 || selectedOption === 2) && isNotFromSameCatalog === true">
+        {{'basics.material.updatePriceWizard.refineSelection' | platformTranslate}}
+    </div>
+    <div class="platform-form-row" style="margin-top: 2em; color: darkred"
+         *ngIf="catalogIsInternet === true && isNotFromSameCatalog === false">
+        {{'basics.material.updatePriceWizard.cannotUpdateInternetMaterial' | platformTranslate}}
+    </div>
+</section>

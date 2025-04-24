@@ -1,0 +1,96 @@
+[
+  {
+    "id": "documents.central.querygrid",
+	  "template": "documents.project/partials/documentgridView.html",
+    "title": "cloud.common.documentsProject",
+    "controller": "documentCentralQueryHeaderGridController",
+    "uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "documents.central.queryform",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsProjectForm",
+    "controller": "documentCentralQueryHeaderDetailController",
+    "uuid": "8BB802CB31B84625A8848D370142B95C",
+    "permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "project.main.documents.project.revision.grid",
+    "template": "documents.project/partials/documentGridRevisionView.html",
+    "title": "cloud.common.documentsRevision",
+    "controller": "documentCentralQueryRevisionController",
+    "uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "project.main.documents.project.revision.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsRevisionDetail",
+    "controller": "documentCentralQueryRevisionDetailController",
+    "uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+    "permission": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "project.main.documents.project.document.history.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentsProjectHistory",
+    "controller": "documentsProjectDocumentHistoryController",
+    "uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+  },
+  {
+    "id": "platform.generic.structure",
+    "template": "app/components/grid/generic-structure/generic-container.html",
+    "title": "documents.centralquery.groupingContainer",
+    "uuid": "9446bd24a443452e852511e173948f50",
+    "controller": "platformGenericStructureController",
+    "mainService": "documentCentralQueryDataService",
+    "configurationService": "centralQueryStandardConfigurationService",
+    "enableCaching": "true"
+  },
+  {
+    "id": "documents.clerk.authorization.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+    "controller": "basicsCommonClerkListController",
+    "clerkQualifier":"documents.project.clerk",
+    "uuid": "47620dd38c874f97b75ee3b6ce342666",
+    "parentService":"documentCentralQueryDataService"
+  },
+  {
+    "id": "documents.authorization.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+    "controller": "basicsCommonClerkFormController",
+    "uuid": "7806e7a22b2142f8865ab189efe23c5a",
+    "permission": "47620dd38c874f97b75ee3b6ce342666",
+    "clerkQualifier":"documents.project.clerk",
+    "parentService":"documentCentralQueryDataService"
+  },
+  {
+    "include": "model.viewer/content/json/viewer-containers.json"
+  },
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "5e0c9dc352734a45b4db317cf3cdaa36",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+  {
+    "id": "procurement.contract.documents.project.modelobject.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentAssignObject",
+    "controller": "documentsProjectModelObjectController",
+    "uuid": "7BACDAB1A06B439895ACBA767E42205E"
+  },
+  {
+    "id": "procurement.contract.documents.project.modelobject.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentAssignObjectFormTitle",
+    "controller": "documentsProjectModelObjectDetailController",
+    "uuid": "ee68ae76fefe4b758c282594a1746480",
+    "permission": "7BACDAB1A06B439895ACBA767E42205E"
+  }
+]

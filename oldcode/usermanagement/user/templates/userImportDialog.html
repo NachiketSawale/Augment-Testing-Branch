@@ -1,0 +1,47 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+
+    <div data-cloud-common-overlay loading="loadingOption.loading" data-info="loadingOption.info"></div>
+
+    <div class="modal-wrapper">
+        <div data-platform-kendo-splitter-adjust class="modal-wrapper border-none" option="{panes: [ { collapsible: true, size: '55%' },{ collapsible: true, size: '45%' }],orientation:'horizontal'}">
+            <div id="ui-layout-east" class="modal-wrapper">
+                <div class="toolbar">
+                    <h3 class="title font-bold">{{'usermanagement.user.userImport.adsUsers'|translate}}</h3>
+                    <div data-platform-menu-list data-list="tools"></div>
+                </div>
+
+                <div data-ng-if="avGridData" class="subview-container modal-wrapper filler">
+                    <platform-Grid data="gridData"></platform-Grid>
+                </div>
+
+                <div data-ng-if="!avGridData">
+                    <div class="container-overlay">
+                        {{'usermanagement.user.userSync.noUserPath'|translate}}
+                    </div>
+                </div>
+            </div>
+
+            <div id="ui-layout-west" class="modal-wrapper">
+                <div class="toolbar">
+                    <h3 class="title font-bold">{{'usermanagement.user.userImport.adsUsersSelected'|translate}}</h3>
+                    <div data-platform-menu-list data-list="toolsOverview"></div>
+                </div>
+
+                <div class="subview-container modal-wrapper filler">
+                    <platform-Grid data="gData"></platform-Grid>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="!modalOptions.canImport()"
+            data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

@@ -1,0 +1,23 @@
+<div class="treelist tree-accordion">
+	<div *ngFor="let item of data; trackBy: trackById;">
+		<div *ngIf="!item.hidden">
+			<div *ngIf="!hasChild(item)">
+				<ui-common-accordion-item class="tree-accordion-item" [data]="item" [config]="config" (selected)="onItemClick(item)"></ui-common-accordion-item>
+			</div>
+
+			<div *ngIf="hasChild(item)">
+				<mat-expansion-panel class="tree-accordion-panel" [togglePosition]="'before'" (opened)="onPanelOpened(item)" (closed)="onPanelClosed(item)" [expanded]="item.expanded" [disabled]="item.disabled">
+					<mat-expansion-panel-header class="tree-accordion-header">
+						<!--					<mat-panel-title>{{item.title}}</mat-panel-title>-->
+						<ui-common-accordion-item class="tree-accordion-item" [data]="item" [config]="config" (selected)="onItemClick(item)"></ui-common-accordion-item>
+					</mat-expansion-panel-header>
+
+					<!--Lazy rendering for better performance until the panel is open-->
+					<ng-template matExpansionPanelContent>
+						<ui-common-accordion-tree [data]="item.children" [config]="config" (opened)="onPanelOpened($event)" (closed)="onPanelClosed($event)" (selected)="onItemClick($event)"></ui-common-accordion-tree>
+					</ng-template>
+				</mat-expansion-panel>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+fieldset {
+	border: 1px solid #d0d0d0;
+}
+
+legend {
+	border-bottom: 1px solid #d0d0d0;
+	padding: 8px;
+	font-weight: bold;
+}
+
+fieldset > div {
+	padding: 8px;
+}
+
+fieldset > div input {
+	width: 100%;
+	line-height: 26px;
+	border: 1px solid #d0d0d0;
+	text-indent: 4px;
+}

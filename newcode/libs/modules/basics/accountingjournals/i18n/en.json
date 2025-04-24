@@ -1,0 +1,47 @@
+{
+	"basics": {
+		"accountingJournals": {
+			"accountingJournalsListContainerTitle": "Transaction Headers",
+			"accountingJournalsDetailContainerTitle": "Transaction Headers Detail",
+			"entityTranslation": "Translation",
+			"entityTradingYear": "Trading Year",
+			"entityTradingPeriod": "Trading Period",
+			"entityTradingPeriodStartDate": "Trading Period Start Date",
+			"entityTradingPeriodEndDate": "Trading Period End Date",
+			"entityTransactionTypeDescription": "Transaction Type Description",
+			"entityTransactionTypeAbbreviation": "Transaction Type Abbreviation",
+			"entityDescription": "Description",
+			"entityPostingDate": "Posting Date",
+			"entityCommentText": "Comment Text",
+			"entityReturnValue": "Return Value",
+			"entityIsSuccess": "Is Success",
+			"listTransactionTitle": "Transaction",
+			"detailTransactionTitle": "Transaction Detail",
+			"tradingPeriodIsEmpty": "The field Trading Period should not be empty.",
+			"entityAccount": "Account",
+			"entityControllingUnit": "Controlling Unit",
+			"entityOffsetContUnit": "Offset Cont Unit",
+			"entityPesHeaderFk": "Pes Header",
+			"entityInvHeaderFk": "Inv Header",
+			"entityPrjStockFk": "Stock Header",
+			"entityNominalDimension": "Nominal Dimension",
+			"entityNominalDimension2": "Nominal Dimension 2",
+			"entityNominalDimension3": "Nominal Dimension 3",
+			"entityIsCancel": "Is Cancel",
+			"entityAccessRoleFk": "Access Role",
+			"entityProjektContextFk": "Projekt Context",
+			"entityPriceConditionFk": "Price Condition",
+			"entityTransheader": "Transaction Header",
+			"entityWipHeaderFk": "WIP Code",
+			"entityBillNo": "Bill No.",
+			"entityWipHeaderFkDesc": "WIP Description",
+			"entityBillHeaderFkDesc": "Bill Description",
+			"entityPrrHeaderFkDesc": "Revenue Recognition",
+			"wizard": {
+				"changeStatus": {
+					"title": "Change Transaction Status"
+				}
+			}
+		}
+	}
+}

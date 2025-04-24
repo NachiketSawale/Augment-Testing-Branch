@@ -1,0 +1,25 @@
+<div class="font-bold">{{ 'cloud.desktop.aboutdialog.titleMobileSolution' | platformTranslate }}</div>
+<div class="margin-bottom-ld">{{ 'cloud.desktop.aboutdialog.descriptionMobileSolution' | platformTranslate }}<br></div>
+<div class="flex-box margin-bottom-ld">
+
+  <div class="flex-element" style="padding: 3px;">
+    <img class="qr-code-image" [src]="serverQrCodeDataURL" alt="Client QR Code">
+    <div class="margin-top-ld">{{ 'cloud.desktop.aboutdialog.titleServerUrl' | platformTranslate }}</div>
+  </div>
+
+  <div class="flex-element" style="padding: 3px;">
+    <img class="qr-code-image" [src]="clientQrCodeDataURL" alt="Server QR Code">
+    <div class="margin-top-ld">{{ 'cloud.desktop.aboutdialog.titleClientUrl' | platformTranslate }}</div>
+  </div>
+
+  <div class="flex-element" style="padding: 3px;">
+    <img class="qr-code-image" [src]="servicesQrCodeDataURL" alt="Services QR Code">
+    <div class="margin-top-ld">{{ 'cloud.desktop.aboutdialog.titleServicesUrl' | platformTranslate }}</div>
+  </div>
+
+ 
+
+</div> 
+
+
+

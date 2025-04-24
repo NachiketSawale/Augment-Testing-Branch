@@ -1,0 +1,5 @@
+<select class="form-control" [attr.id]="controlContext.fieldId" [attr.name]="controlContext.fieldId"
+  [disabled]="controlContext.readonly" [(ngModel)]="selectedItemId">
+  <option *ngFor="let item of items" [ngValue]="item.id" [textContent]="item.displayName | platformTranslate">
+  </option>
+</select>

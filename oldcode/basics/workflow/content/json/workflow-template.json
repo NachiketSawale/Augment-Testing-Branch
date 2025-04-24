@@ -1,0 +1,25 @@
+{
+	"id": 1,
+	"code": "",
+	"description": "Start",
+	"documentList": null,
+	"actionTypeId": 1,
+	"actionId": "0",
+	"priorityId": 1,
+	"transitions": [
+		{
+			"id": 2,
+			"parameter": null,
+			"workflowAction": {
+				"id": 5,
+				"code": "",
+				"description": "End",
+				"documentList": [],
+				"actionTypeId": 2,
+				"actionId": null,
+				"transitions": null,
+				"priorityId": 1
+			}
+		}
+	]
+}

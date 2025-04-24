@@ -1,0 +1,2070 @@
+{
+	"layout0": {
+		"id": 0,
+		"template": "app/components/layoutsystem/templates/layouts/layout0.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-0",
+					"no": "1"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout0.html"
+		},
+		"splitterDef": [
+		]
+	},
+	"layout1": {
+		"id": 6,
+		"template": "app/components/layoutsystem/templates/layouts/layout1.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-r",
+					"no": "2"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout1.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout2": {
+		"id": 7,
+		"template": "app/components/layoutsystem/templates/layouts/layout2.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-r",
+					"no": "2"
+				},
+				{
+					"name": "pane-lb",
+					"no": "3"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout2.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout3": {
+		"id": 1,
+		"template": "app/components/layoutsystem/templates/layouts/layout3.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-rt",
+					"no": "2"
+				},
+				{
+					"name": "pane-rb",
+					"no": "3"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout3.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout4": {
+		"id": 2,
+		"template": "app/components/layoutsystem/templates/layouts/layout4.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-r",
+					"no": "2"
+				},
+				{
+					"name": "pane-lc",
+					"no": "3"
+				},
+				{
+					"name": "pane-lb",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout4.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "30%"
+					},
+					{
+						"collapsible": true,
+						"size": "40%"
+					},
+					{
+						"collapsible": true,
+						"size": "30%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout5": {
+		"id": 8,
+		"template": "app/components/layoutsystem/templates/layouts/layout5.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-rt",
+					"no": "2"
+				},
+				{
+					"name": "pane-rc",
+					"no": "3"
+				},
+				{
+					"name": "pane-rb",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout5.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "30%"
+					},
+					{
+						"collapsible": true,
+						"size": "40%"
+					},
+					{
+						"collapsible": true,
+						"size": "30%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout24": {
+		"id": 25,
+		"template": "app/components/layoutsystem/templates/layouts/layout24.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-lb",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-rc",
+					"no": "4"
+				},
+				{
+					"name": "pane-rb",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout24.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout25": {
+		"id": 26,
+		"template": "app/components/layoutsystem/templates/layouts/layout25.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-lc",
+					"no": "2"
+				},
+				{
+					"name": "pane-lb",
+					"no": "3"
+				},
+				{
+					"name": "pane-rt",
+					"no": "4"
+				},
+				{
+					"name": "pane-rb",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout25.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout6": {
+		"id": 3,
+		"template": "app/components/layoutsystem/templates/layouts/layout6.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-rt",
+					"no": "2"
+				},
+				{
+					"name": "pane-lb",
+					"no": "3"
+				},
+				{
+					"name": "pane-rb",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout6.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout7": {
+		"id": 9,
+		"template": "app/components/layoutsystem/templates/layouts/layout7.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-rt",
+					"no": "2"
+				},
+				{
+					"name": "pane-lc",
+					"no": "3"
+				},
+				{
+					"name": "pane-rc",
+					"no": "4"
+				},
+				{
+					"name": "pane-lb",
+					"no": "5"
+				},
+				{
+					"name": "pane-rb",
+					"no": "6"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout7.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout8": {
+		"id": 10,
+		"template": "app/components/layoutsystem/templates/layouts/layout8.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-c",
+					"no": "2"
+				},
+				{
+					"name": "pane-r",
+					"no": "3"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout8.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout9": {
+		"id": 11,
+		"template": "app/components/layoutsystem/templates/layouts/layout9.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-c",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-rb",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout9.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout10": {
+		"id": 12,
+		"template": "app/components/layoutsystem/templates/layouts/layout10.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-c",
+					"no": "2"
+				},
+				{
+					"name": "pane-r",
+					"no": "3"
+				},
+				{
+					"name": "pane-lb",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout10.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout11": {
+		"id": 13,
+		"template": "app/components/layoutsystem/templates/layouts/layout11.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-c",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-lb",
+					"no": "4"
+				},
+				{
+					"name": "pane-rb",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout11.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout12": {
+		"id": 5,
+		"template": "app/components/layoutsystem/templates/layouts/layout12.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-c",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-rc",
+					"no": "4"
+				},
+				{
+					"name": "pane-rb",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout12.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout13": {
+		"id": 14,
+		"template": "app/components/layoutsystem/templates/layouts/layout13.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-c",
+					"no": "2"
+				},
+				{
+					"name": "pane-r",
+					"no": "3"
+				},
+				{
+					"name": "pane-lc",
+					"no": "4"
+				},
+				{
+					"name": "pane-lb",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout13.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout14": {
+		"id": 15,
+		"template": "app/components/layoutsystem/templates/layouts/layout14.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-c",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-lc",
+					"no": "4"
+				},
+				{
+					"name": "pane-rc",
+					"no": "5"
+				},
+				{
+					"name": "pane-lb",
+					"no": "6"
+				},
+				{
+					"name": "pane-rb",
+					"no": "7"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout14.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout15": {
+		"id": 16,
+		"template": "app/components/layoutsystem/templates/layouts/layout15.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-ct",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-lc",
+					"no": "4"
+				},
+				{
+					"name": "pane-rc",
+					"no": "5"
+				},
+				{
+					"name": "pane-lb",
+					"no": "6"
+				},
+				{
+					"name": "pane-cb",
+					"no": "7"
+				},
+				{
+					"name": "pane-rb",
+					"no": "8"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout15.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalCenter",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout16": {
+		"id": 17,
+		"template": "app/components/layoutsystem/templates/layouts/layout16.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-t",
+					"no": "1"
+				},
+				{
+					"name": "pane-b",
+					"no": "2"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout16.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout17": {
+		"id": 18,
+		"template": "app/components/layoutsystem/templates/layouts/layout17.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-t",
+					"no": "1"
+				},
+				{
+					"name": "pane-lb",
+					"no": "2"
+				},
+				{
+					"name": "pane-rb",
+					"no": "3"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout17.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout18": {
+		"id": 19,
+		"template": "app/components/layoutsystem/templates/layouts/layout18.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-rt",
+					"no": "2"
+				},
+				{
+					"name": "pane-b",
+					"no": "3"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout18.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalTop",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout19": {
+		"id": 20,
+		"template": "app/components/layoutsystem/templates/layouts/layout19.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-t",
+					"no": "1"
+				},
+				{
+					"name": "pane-lb",
+					"no": "2"
+				},
+				{
+					"name": "pane-cb",
+					"no": "3"
+				},
+				{
+					"name": "pane-rb",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout19.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout20": {
+		"id": 21,
+		"template": "app/components/layoutsystem/templates/layouts/layout20.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-ct",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-b",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout20.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalTop",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout21": {
+		"id": 22,
+		"template": "app/components/layoutsystem/templates/layouts/layout21.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-t",
+					"no": "1"
+				},
+				{
+					"name": "pane-lb",
+					"no": "2"
+				},
+				{
+					"name": "pane-cb1",
+					"no": "3"
+				},
+				{
+					"name": "pane-cb2",
+					"no": "4"
+				},
+				{
+					"name": "pane-rb",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout21.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout22": {
+		"id": 23,
+		"template": "app/components/layoutsystem/templates/layouts/layout22.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-ct1",
+					"no": "2"
+				},
+				{
+					"name": "pane-ct2",
+					"no": "3"
+				},
+				{
+					"name": "pane-rt",
+					"no": "4"
+				},
+				{
+					"name": "pane-b",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout22.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalTop",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout23": {
+		"id": 24,
+		"template": "app/components/layoutsystem/templates/layouts/layout23.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-ct",
+					"no": "2"
+				},
+				{
+					"name": "pane-rt",
+					"no": "3"
+				},
+				{
+					"name": "pane-cb",
+					"no": "4"
+				},
+				{
+					"name": "pane-rb",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout23.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "verticalLeft",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "verticalRight",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			}
+		]
+	},
+	"layout26": {
+		"id": 27,
+		"template": "app/components/layoutsystem/templates/layouts/layout26.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-ct",
+					"no": "2"
+				},
+				{
+					"name": "pane-r",
+					"no": "3"
+				},
+				{
+					"name": "pane-cb1",
+					"no": "4"
+				},
+				{
+					"name": "pane-cb2",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout26.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout27": {
+		"id": 28,
+		"template": "app/components/layoutsystem/templates/layouts/layout27.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-ct",
+					"no": "2"
+				},
+				{
+					"name": "pane-r",
+					"no": "3"
+				},
+				{
+					"name": "pane-cb1",
+					"no": "4"
+				},
+				{
+					"name": "pane-cb2",
+					"no": "5"
+				},
+				{
+					"name": "pane-cb3",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout27.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout28": {
+		"id": 29,
+		"template": "app/components/layoutsystem/templates/layouts/layout28.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-rt",
+					"no": "2"
+				},
+				{
+					"name": "pane-rb1",
+					"no": "3"
+				},
+				{
+					"name": "pane-rb2",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout28.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "75%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout29": {
+		"id": 30,
+		"template": "app/components/layoutsystem/templates/layouts/layout29.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-r",
+					"no": "2"
+				},
+				{
+					"name": "pane-lb1",
+					"no": "3"
+				},
+				{
+					"name": "pane-lb2",
+					"no": "4"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout29.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "75%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout30": {
+		"id": 31,
+		"template": "app/components/layoutsystem/templates/layouts/layout30.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-l",
+					"no": "1"
+				},
+				{
+					"name": "pane-rt",
+					"no": "2"
+				},
+				{
+					"name": "pane-rb1",
+					"no": "3"
+				},
+				{
+					"name": "pane-rb2",
+					"no": "4"
+				},
+				{
+					"name": "pane-rb3",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout30.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "25%"
+					},
+					{
+						"collapsible": true,
+						"size": "75%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	},
+	"layout31": {
+		"id": 32,
+		"template": "app/components/layoutsystem/templates/layouts/layout31.html",
+		"editor": {
+			"paneNames": [
+				{
+					"name": "pane-lt",
+					"no": "1"
+				},
+				{
+					"name": "pane-r",
+					"no": "2"
+				},
+				{
+					"name": "pane-lb1",
+					"no": "3"
+				},
+				{
+					"name": "pane-lb2",
+					"no": "4"
+				},
+				{
+					"name": "pane-lb3",
+					"no": "5"
+				}
+			],
+			"template": "app/components/layoutsystem/templates/layouts/editorlayout31.html"
+		},
+		"splitterDef": [
+			{
+				"selectorName": "horizontal",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "75%"
+					},
+					{
+						"collapsible": true,
+						"size": "25%"
+					}
+				],
+				"orientation": "horizontal"
+			},
+			{
+				"selectorName": "vertical",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "50%"
+					},
+					{
+						"collapsible": true,
+						"size": "50%"
+					}
+				],
+				"orientation": "vertical"
+			},
+			{
+				"selectorName": "horizontalBottom",
+				"panes": [
+					{
+						"collapsible": true,
+						"size": "33%"
+					},
+					{
+						"collapsible": true,
+						"size": "34%"
+					},
+					{
+						"collapsible": true,
+						"size": "33%"
+					}
+				],
+				"orientation": "horizontal"
+			}
+		]
+	}
+}

@@ -1,0 +1,77 @@
+.rule-editor .rule-container .rule-operand-editor {
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	min-height: 28px;
+	margin-left: 6px;
+}
+
+.rule-editor .rule-container .rule-operand-editor .form-control {
+	border: none;
+}
+
+.rule-editor .rule-container .rule-operand-kind-selector button {
+	width: 26px;
+	height: 26px;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0 1px 0 0;
+	vertical-align: middle;
+	background-size: 16px 16px;
+}
+
+.rule-editor .toolbar .lookup-wrapper .form-control .input-group-btn .btn span.caret {
+	display: none;
+}
+
+.rule-editor .lookup-value-list span.select2-selection.select2-selection--multiple {
+	min-height: unset;
+	line-height: unset;
+}
+
+.rule-editor .lookup-value-list span.select2-selection.select2-selection--multiple .select2-search--inline {
+	margin-top: 3px;
+}
+
+.rule-editor .lookup-value-list span.select2-selection.select2-selection--multiple ul.select2-selection__rendered {
+	line-height: unset;
+}
+
+.rule-editor .lookup-value-list span.select2-selection.select2-selection--multiple ul.select2-selection__rendered li {
+	line-height: unset;
+}
+
+.rule-editor .lookup-value-list span.select2-selection.select2-selection--multiple ul.select2-selection__rendered li span.select2-selection__choice__remove {
+	line-height: unset;
+}
+
+.rule-editor .rule-container .rule-operand-editor .environment-expression-title {
+	padding-top: 5px;
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-bottom: 2px;
+	overflow: hidden;
+	background-color: #eee;
+}
+
+.rule-editor .rule-container .first-operand-selector > .input-group.lookup-container.form-control {
+	border-left-color: rgb(204, 204, 204);
+	border-left-style: solid;
+	border-left-width: 1px;
+}
+
+.rule-editor .rule-container .rule-condition-operator-selector {
+	margin-left: 6px;
+	border-left-color: rgb(204, 204, 204);
+	border-left-style: solid;
+	border-left-width: 1px;
+}
+
+
+.odd.notFilterAttributeColor {
+	 background-color: rgb(200, 200, 200);
+ }
+
+.notFilterAttributeColor {
+	 background-color: rgb(200, 200, 200);
+ }

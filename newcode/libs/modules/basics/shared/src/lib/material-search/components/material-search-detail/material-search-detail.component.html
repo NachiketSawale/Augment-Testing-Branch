@@ -1,0 +1,71 @@
+<div class="flex-box flex-column fullheight">
+    <!--back button-->
+    <div class="ms-sv-commodity-preview-navbar">
+        <button type="button" class="ms-sv-commodity-preview-back" (click)="goBack()">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            {{'basics.material.materialSearchLookup.htmlTranslate.back' | platformTranslate}}
+        </button>
+    </div>
+    <div class="ms-sv-search-view fullheight" >
+        <div class="ms-sv-commodity-preview-panel fullheight">
+            <!--Information-->
+            <div class="row">
+                <div class="ms-sv-container-title">
+                    <span>{{scope.translations.information | platformTranslate}}</span>
+                </div>
+                <basics-shared-material-search-item [scope]="scope" [dataItem]="scope.detailItem!"></basics-shared-material-search-item>
+            </div>
+
+            <!--Specifications-->
+            <div class="row">
+                <div class="ms-sv-container-title">
+                    <span>{{scope.translations.attributes | platformTranslate}}</span>
+                </div>
+                <div *ngIf="previewAttributes.length"
+                     class="ms-sv-container-attributes ms-sv-border-bottom">
+                    <div *ngFor="let attribute of previewAttributes"
+                         class="ms-sv-commodity-preview-attribute-box row">
+                        <div class="ms-sv-commodity-preview-attribute-property col-md-2">{{attribute.Property}}</div>
+                        <div class="ms-sv-commodity-preview-attribute-value col-md-10">{{attribute.Value}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--3D Model-->
+            <div class="row" *ngIf="mdc3dShow">
+                <div class="ms-sv-container-title ms-sv-container-3d">
+                    <span>{{scope.translations.model3D | platformTranslate}}</span>
+                </div>
+            </div>
+           <!-- <div class="row" *ngIf="scope.mdc3dShow">
+                <div class="ms-sv-container-title ms-sv-container-3d">
+                    <span>{{scope.translations.model3D | platformTranslate}}</span>
+                    <div class="toolbar" data-platform-collapsable-list data-ng-model="tools">
+                        <div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 flex-box ms-sv-container-hoops"
+                     data-ng-controller="modelViewerHoopsController"
+                     data-basics-material-include="model.viewer/partials/model-viewer-hoops-template.html">
+                </div>
+            </div>-->
+
+            <!--Documents-->
+            <div class="row">
+                <div class="ms-sv-container-title">
+                    <span>{{scope.translations.documents | platformTranslate}}</span>
+                </div>
+                <div class="ms-sv-container-documents ms-sv-border-bottom">
+                    <div *ngFor="let doc of previewDocuments; let i = index"
+                         class="ms-sv-commodity-preview-document-box row">
+                        <div class="ms-sv-commodity-preview-document-title"
+                             (click)="onDocumentPreview(doc.Id, i)">
+                            {{doc.Description}}
+                        </div>
+                        <div [className]="'hidden ms-sv-commodity-preview-document-content ms-sv-commodity-preview-document-content_' + i"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

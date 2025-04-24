@@ -1,0 +1,78 @@
+<div data-ng-controller="documentsCentralqueryITwo40toBim360Controller" class="modal-wrapper">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{modalOptions.header.title}}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+
+        <div class="platform-form-group ">
+            <table class="tableWidth">  <!-- 571px -->
+                <tr>
+                    <td style="width: 10%; text-align: right;"><label class="platform-form-label" style="margin-right: 5px">{{modalOptions.body.projectNameText}}</label></td>
+                    <td style="width: 40%">
+                        <table class="tableWidth">
+                            <tr>
+                                <td style="max-width: 130px"><div class="lg-4 md-4 trMargin" data-documentscentralqueryitwo40tobim360projectslookupdialog data-ng-model="selectedItem.ProjectNo" data-entity="selectedItem"></div></td>
+                                <td><div class="form-control"><input type="text" class="input-group-content lg-8 md-8" data-ng-model="selectedItem.projectName" data-entity="selectedItem" readonly /></div></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width: 10%; text-align: right;"><label class="platform-form-label" style="margin-right: 5px">{{modalOptions.body.keywordText}}</label> </td>
+                    <td style="width: 30%">
+                        <div style="margin-right: 2px;">
+                            <div class="input-group form-control">
+                                <input type="text" data-ng-model="dlgOptions.searchText" class="form-control" data-entity="dlgOptions"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="modalOptions.clearKeyword()"></button>
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 10%">
+                        <button class="btn btn-default" style="width: 100%; height: 28px" type="button" data-ng-click="modalOptions.loadDocuments()"  data-ng-disabled="dlgOptions.searchBtnDisabled">
+                            {{modalOptions.body.btnSearchText}}
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="modal-wrapper subview-container">
+           <div data-platform-grid data-data="gridData"></div>
+        </div>
+
+        <div class="platform-form-group ">
+            <table class="tableWidth">  <!-- 571px -->
+                <tr>
+                    <td style="width: 10%;text-align: right;"><label class="platform-form-label" style="margin-right: 5px">{{modalOptions.body.folderText}}</label></td>
+                    <td style="width: 80%"><div class="lg-4 md-4 trMargin" data-documentscentralqueryitwo40tobim360folderlookupdialog data-ng-model="selectedFolder.folderDisplay" data-entity="selectedFolder"></div></td>
+                    <td style="width: 10%; text-align: right;"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+
+
+
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="dlgOptions.OKBtnDisabled">
+            {{modalOptions.footer.btnOk}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{modalOptions.footer.btnCancel}}
+        </button>
+    </footer>
+
+    <div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>
+<style>
+    .trMargin {margin: 2px 2px;}
+    .tableWidth {width: 100%;}
+    .tdWidth15 {width: 15%;}
+    .tdWidth10 {width: 10%;}
+    .verticalAlignCenter {vertical-align: center;}
+</style>

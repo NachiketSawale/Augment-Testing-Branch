@@ -1,0 +1,20 @@
+﻿{
+	"basics": {
+		"country": {
+			"entitySorting":"!Sorting",
+			"detailCountryTitle": "!Country Details",
+			"detailCountryStateTitle": "!State Details",
+			"listCountryTitle": "!Countrys",
+			"listCountryStateTitle": "!States",
+			"listCountryDescription": "!Country Description",
+			"entityRecordState":"!State required",
+			"entityAreaCode": "!Area Code",
+			"entityISO3": "!ISO3",
+			"entityAddressFormat": "!Address Format",
+			"entityCountryFk": "!Country",
+			"entityState": "!State Structure",
+			"Sorting": "!State Structure",
+			"entityTranslation":"!Translation"
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"project": {
+        "costcodes": {
+          "rate":"Rate(Project)",
+          "dayWorkRate":"DW/T+M Rate(Project)",
+          "uoM":"UoM(Project)",
+          "uoMDescription":"UoM(Project)-Description",
+          "costType":"Cost Type(Project)",
+          "currency":"Currency(Project)",
+          "currencyDescription":"Currency(Project)-Description",
+          "factorCosts":"Factor (Project Costs)",
+          "factorQuantity":"Factor (Project Quantity)",
+          "realFactorCosts":"RealFactor (Project Costs)",
+          "realFactorQuantity":"RealFactor (Project Quantity)",
+          "factorHour" : "Factor (Project Hour)",
+          "isLabour":"Labour Cost Code(Project)",
+          "isRate":"Fixed Unit Rate(Project)",
+          "isDefault":"Default(Project)",
+          "remark":"Remark(Project)",
+          "lgmJobFk":"Job",
+          "isEditable":"Editable(Project)",
+          "priceListRate" : "Rate",
+          "isPrjChildAllowed" : "Project Child Allowed",
+          "entityType": "Type(Project)",
+          "uniqueCodeErrorMessage" : "The CostCode with same code already exist. The Code should be uniq!",
+          "job" : {
+            "rateList" : "CostCodes Job Rates",
+            "rateDetails" : "CostCodes Job Rates Details"
+          },
+          "projectcostcodes": "Project Cost Codes",
+          "new": "New",
+          "doNotAskAgain": "DO NOT ASK AGAIN",
+          "updateRelatedAssemblies": "Update related Job in Assemblies?",
+          "updateRelatedAssemblyTitle": "Update related Job in Assemblies"
+        }
+	}
+}

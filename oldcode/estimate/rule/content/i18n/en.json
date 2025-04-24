@@ -1,0 +1,100 @@
+{
+  "estimate": {
+    "rule": {
+      "invalidParam":"Invalid Parameter :{{object}}",
+      "invalidParam2":"Cannot reference Parameter :{{object}} ,the formula is invalid",
+      "cycleReferenceErrorMessage":"Cyclic Dependence:{{object}}",
+      "selfReferenceErrorMessage":"The valueDetail has reference self parameter code",
+      "errors": {
+        "emptyCode": "Please enter Code. The Code is missing.",
+        "uniqCode": "Please enter a unique Code. This code is already exist.",
+        "calculationRule": "Please enter param code of double.The boolean type can't calculate.",
+        "calculationRule": "Please enter param code of double.The boolean type can't calculate.",
+        "valueDetailLengthError1":"The length of file name shouldn't more than 13",
+        "valueDetailLengthError2":"The length of file name shouldn't more than 42",
+        "differentTypeToSameCode": "There are already same parameter code but different type(lookup) in other rules, more detail please refer to Info column.",
+        "noParameterError1": "not exist parameter in master.",
+        "noParameterError2": "not exist parameter in project.",
+			"ruleCodeMaxLength": "The Code length should not more than {{count}}"
+		},
+      "valuetext": "Default Value",
+      "Info":"Info",
+      "rulMasterTitle" : "Rule Definition Master",
+      "estimateRule": "Estimate Rule",
+      "estimateRuleParameter": "Estimate Rule Parameter",
+      "estimateRuleParameterValue": "Estimate Rule Parameter Value",
+      "estimateRuleScript": "Estimate Rule Script",
+      "estimateComboRule" : "Project Estimate Rule",
+      "evaluationSequence":"Evaluation Sequence",
+      "estRuleExecutionType":"Rule Execution Type",
+
+      "detailEstimateComboRule" : "Project Estimate Rule Details",
+      "detailEstimateRule" : "Estimate Rule Details",
+      "detailEstimateRuleParameter" : "Estimate Rule Parameter Details",
+      "detailEstimateRuleScript" : "Estimate Rule Script Details",
+      "detailParameterValueType": "Type",
+      "detailParameterIsLookup": "Is Lookup",
+
+      "estParameterGroupFk" : "Estimate Parameter Group",
+      "valueDetail": "Default Value Detail",
+      "defaultValue": "Default Value",
+
+      "ruleContainer": "Estimate Rules",
+      "ruleParameterContainer":"Estimate Rules Parameter",
+      "ruleScriptContainer":"Estimate Rules Script",
+      "rules": "Rules",
+      "userForm": "User Form",
+
+      "dialog": {
+        "deleteRuleItemTitle" : "Delete Project Estimate Rules",
+        "confirmRuleDelete": "Confirm Delete",
+        "canDeletePrjEstRuleOrNot": "Can't delete this ProjectEstimateRule item, because some tables such as Boq2Rule relates to it",
+        "canDeleteLineItem2PrjRuleOrNot": "Can't delete this LS2Rule item such as LineItem2PrjRule item, because the LS2Rule such as LineItem2PrjRule is used to generate lineitems and ProgressReport use above lineitems",
+
+        "deleteAllSelectedRulesMessage": "Are you sure you want to delete selected rule(s) and their children?",
+        "deleteUnAssignedRulesMessage": "Rule(s) {{codes}} (or its children) already assigned to any of BoQ, Activity, Location, Cost Groups, Project Cost Groups, Procurement Structure, Assembly Catalog, Line Items, Controlling Units, etc. Are you sure you want to delete remaining rule(s) and their children?",
+        "allRulesAssignedMessage": "Can not delete selected rules as all (or their children) are assigned to any of BoQ, Activity, Location, Cost Groups, Project Cost Groups, Procurement Structure, Assembly Catalog, Line Items, Controlling Units, etc.",
+        "allParamAssignedMessage": "Can not delete selected Parameters and Parameter values which are assigned to any of BoQ, Activity, Location, Cost Groups, Project Cost Groups, Procurement Structure, Assembly Catalog, Line Items, Controlling Units, etc.",
+        "allParamValueAssignedMessage": "Can not delete selected  Parameter values which are assigned to any of BoQ, Activity, Location, Cost Groups, Project Cost Groups, Procurement Structure, Assembly Catalog, Line Items, Controlling Units, etc.",
+        "allEstRulesAssignedMessage": "Can not delete selected rules as all (or their children) are assigned to any of BoQ, Activity, Location, Cost Groups, Project Cost Groups, Procurement Structure, Assembly Catalog, Line Items, Controlling Units, etc.",
+        "allEstParamValueAssignedMessage": "Can not delete selected  Parameter values which are assigned  to Assembly('{{value0}}') or Assembly category('{{value1}}')",
+        "allEstParamAssignedMessage": "Can not delete selected Parameters and Parameter values which are assigned  to any Assembly or Assembly category"
+      },
+
+      "scriptContainerTitle":"Estimate Rules Script",
+      "testInputDetailTitle":"Script Test Input",
+
+      "parameter":{
+        "code": "Parameter Code",
+        "valueType": {
+          "double": "Double",
+          "boolean": "Boolean",
+          "text" : "Text",
+          "TextFormula":"Text Formula"
+        }
+      },
+      "validationTypeAndValueTitle": "Parameter Type Changing Confirmation",
+      "validationTypeAndValueContent": "The parameter type '{{value0}}' changes to '{{value1}}' will clear the parameter Values,continue?",
+      "validationIsLookupTitle": "Uncheck IsLookup Confirmation",
+      "validationIsLookupContent": "Uncheck IsLookup will clear the parameter Values,continue?",
+      "confirmDeleteBodyContent":"This will delete selected parameter values, including cited one. Are you sure you want to continue?",
+      "confirmDeleteBodyTitle":"Delete Parameter value Confirmation",
+      "filterByParameter": "Show All Parameter Value",
+      "MergedParamValuesTitle": "Merged Parameter Values",
+      "MergedParamValues": "The Current Parameter Values will be merged. Continue?",
+      "CreateParameterValue": "Create Parameter Value",
+      "ParamReferenceLoop": "The parameter reference is loop:{{value1}}",
+      "formFk": "User Form",
+      "removeEstimateRulesWizard": {
+        "groupTitle1": "Assigned Level",
+        "groupTitle2": "Search Rules",
+        "groupTitle3": "Additional Options"
+      },
+      "removePackageWizard": {
+        "groupTitle1": "Assigned Level",
+        "groupTitle2": "Select Packages",
+        "groupTitle3": "Select Resources"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+	"name": "modules-documents-common",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/documents/common/src",
+	"prefix": "documents-common",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/modules/documents/common/jest.config.ts"
+			}
+		}
+	}
+}

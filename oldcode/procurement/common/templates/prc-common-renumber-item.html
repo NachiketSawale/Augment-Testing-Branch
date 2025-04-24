@@ -1,0 +1,56 @@
+<style type="text/css">
+	.pes-row {
+		margin: 5px 0;
+	}
+
+	.pes-row label {
+		line-height: 28px;
+	}
+</style>
+
+<div data-ng-controller="ProcurementCommonRenumberItemController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+
+		<div data-ng-show="!isSuccess">
+			<div class="row pes-row">
+				<label class="col-md-3">{{ 'boq.main.StartValue' | translate }}</label>
+				<div class="col-md-9">
+					<div data-domain-control data-platform-numeric-converter data-ng-model="entity.StartValue" data-domain="integer"></div>
+				</div>
+			</div>
+			<div class="row pes-row">
+				<label class="col-md-3">{{ 'boq.main.Stepincrement' | translate }}</label>
+				<div class="col-md-9">
+					<div data-domain-control data-platform-numeric-converter data-ng-model="entity.Stepincrement" data-domain="integer"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div data-ng-show="isSuccess">
+			<div class="tlb-icons icon ico-info"></div>
+			<div class="message">
+				<div> {{ 'procurement.common.renumberItem.message' | translate }}</div>
+			</div>
+		</div>
+
+	</section>
+	<footer class="modal-footer">
+		<div data-ng-show="!isSuccess">
+			<button type="button" class="btn btn-default" data-ng-click="onOk()" data-ng-disabled="!canOk()" style="display:inline-block;">
+				{{'procurement.common.renumberItem.renumber' | translate}}
+			</button>
+			<button type="button" class="btn btn-default" data-ng-click="$close(false)" style="display:inline-block;">
+				{{'cloud.common.cancel' | translate}}
+			</button>
+		</div>
+
+		<div data-ng-show="isSuccess">
+			<button type="button" class="btn btn-default" data-ng-click="success()">
+				{{'cloud.common.ok' | translate}}
+			</button>
+		</div>
+	</footer>
+</div>

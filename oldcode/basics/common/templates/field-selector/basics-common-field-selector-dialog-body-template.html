@@ -1,0 +1,46 @@
+<div class="modal-wrapper">
+	<div class="flex-box margin-bottom-ld" data-ng-if="supportsSimpleMode">
+		<div class="flex-column flex-element radio spaceToUp">
+			<label>
+				<input type="radio" name="rgObjectSource" id="rgListMode-simple" data-ng-model="selectedMode.id" value="simple" data-ng-disabled="readonly">
+				{{'basics.common.fieldSelector.simpleMode' | translate}}
+			</label>
+		</div>
+		<div class="flex-column flex-element radio spaceToUp">
+			<label>
+				<input type="radio" name="rgObjectSource" id="rgListMode-full" data-ng-model="selectedMode.id" value="full" data-ng-disabled="readonly">
+				{{'basics.common.fieldSelector.fullMode' | translate}}
+			</label>
+		</div>
+	</div>
+
+	<div class="form-control input-group" data-cloud-desktop-on-key-enter="searchFields">
+		<input type="text" id="searchfield" data-ng-model="currentSearchText" placeholder="{{::modalOptions.searchHint}}" class="input-group-content exclude-resize"/>
+
+		<span class="input-group-btn" data-ng-show="currentSearchText !== ''">
+             <button class="btn btn-default control-icons ico-input-delete" data-ng-click="onClearSearch()"></button>
+        </span>
+		<span class="input-group-btn">
+            <button class="btn btn-default tlb-icons ico-search" data-ng-click="searchFields()" data-ng-disabled="isSearchBusy" data-ng-class="{btndeactive: isSearchBusy}" title="{{'basics.common.fieldSelector.startSearch' | translate}}"></button>
+        </span>
+	</div>
+	<div class="modal-wrapper margin-top-ld">
+		<div data-platform-kendo-splitter-adjust class="flex-element filler jsResizeGrid" data-option="{panes: [{collapsible: true, size: '40%'}, {collapsible: true, size: '60%'}], orientation:'horizontal'}">
+			<div class="fullheight">
+				<div class="filler flex-box flex-column">
+					<div data-ng-if="supportsSubentities" class="subview-header toolbar">
+						<h3 class="font-bold title fix">{{'basics.common.fieldSelector.toolbar' | translate}}</h3>
+						<div data-platform-menu-list data-list="pinningTools"></div>
+					</div>
+					<div class="flex-box flex-column flex-element subview-content" id="structureGrid"></div>
+				</div>
+			</div>
+			<div class="fullheight">
+				<div class="flex-box fullheight">
+					<div class="flex-element flex-box flex-column filler subview-content" id="contentGrid"></div>
+					<div data-ng-include="'cloud.common/templates/datadictionaryinfoc.html'" data-ng-if="showTranslationContainer" style="width: 200px; overflow: auto; padding: 8px; border-left: 1px solid #dcdcdc;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+[
+  {
+    "include": "model.viewer/content/json/viewer-containers.json"
+  },
+  {
+    "id": "model.main.change",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.change.modelChangeListTitle",
+    "controller": "modelChangeListController",
+    "uuid": "35f7e04a283b44a9b726be260b886ea1"
+  },
+  {
+    "id": "model.main.changeDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.change.modelChangeDetailTitle",
+    "controller": "modelChangeDetailController",
+    "uuid": "37b54001f96f479ab3babd481b500d2b",
+    "permission": "35f7e04a283b44a9b726be260b886ea1"
+  }
+]

@@ -1,0 +1,43 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+
+<section class="modal-body">
+	<div data-ng-hide="modalOptions.disableSearch === true" class="input-group form-control exclude-resize">
+		<input type="text" data-ng-model="searchValue" class="form-control"
+		       data-ng-keydown="onSearchInputKeydown($event, searchValue)"/>
+		<span class="input-group-btn">
+			<button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="search(searchValue)"></button>
+		</span>
+	</div>
+	<div id="assemblytemplateSplitter" data-platform-kendo-splitter-adjust class="flex-element">
+		<div id="ui-layout-west" data-ng-controller="treeviewListDialogTreeviewController" class="fullheight" data-ng-if="modalOptions.isShowTreeview">
+			<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+				<div class="lookup-grid flex-basis-auto" data-platform-grid data="gridData"></div>
+				<div cloud-common-overlay data-loading="isLoading"></div>
+			</div>
+		</div>
+		<div id="ui-layout-east" data-ng-controller="treeviewListDialogListController" class="fullheight">
+			<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+				<div class="lookup-grid flex-basis-auto" data-platform-grid data="gridData"></div>
+				<div cloud-common-overlay data-loading="isLoading"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<label class="ms-checkbox-multi-select" data-ng-show="true">
+		<input type="checkbox" data-ng-model="enableMultiSelection" data-ng-click="modalOptions.onMultipleSelection(enableMultiSelection)">
+		{{ 'basics.common.treeviewListDialog.multipleSelection' | translate }} - {{ modalOptions.selectedItems.length }} {{ 'basics.common.treeviewListDialog.itemsSelected' | translate }}
+	</label>
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.refresh()">
+		{{modalOptions.refreshButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disableOkButton"
+	        data-ng-click="modalOptions.ok()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>

@@ -1,0 +1,27 @@
+<div data-ng-controller="OrderProposalsCreateContractRequisitionController" class="wizard-wrapper wizard-dialog modal-wrapper overflow-hidden">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{options.headerText + ' ' + getCurrentStepNumber() + ' / ' +
+            getTotalStepCount() + ' - Catalog "' + currentItem.catalogCode + ' ' + currentItem.catalogDescription + '"'}}</h2>
+        <button class="db close" data-dismiss="modal" data-ng-disable="isLoading" data-ng-click="$parent.$close()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+        <h3>{{options.body.bodyTitle}}</h3>
+        <div class="modal-wrapper">
+            <div data-platform-form-container data-form-container-options="formContainerOptions"
+                 entity="currentItem" class="fullheight" data-ng-readonly="false"></div>
+        </div>
+        <div data-platform-wizard-dialog-body class="flex-box flex-column margin-top-ld"  ng-show = "getTotalStepCount() > 1"></div>
+    </section>
+    <footer class="modal-footer">
+        <span ng-if="getCurrentStepNumber() !== 1" >
+            <button ng-show = "getCurrentStepNumber() !== 1" type="button" class="btn btn-default" data-ng-click="previousStep()">{{::'basics.common.button.previousStep' | translate}}</button>
+        </span>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()" data-ng-disabled="getCurrentStepNumber() >= getTotalStepCount()" >{{::'basics.common.button.nextStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="saveStep()" >{{::'basics.common.button.ok' | translate}}</button>
+        <button data-ng-disabled="currentStep.disallowCancel"  type="button" data-ng-click="modalOptions.cancel()" class="btn btn-default" >{{::'platform.cancelBtn' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="options.dialogLoading" data-info="options.loadingInfo"></div>
+</div>

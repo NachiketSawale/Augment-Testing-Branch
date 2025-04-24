@@ -1,0 +1,606 @@
+<script type="text/ng-template" id="sblastobject-summary.html">
+	<button class="lastObjectItem rw app-small-icons $$moduleimage$$" data-ng-click="$$navigateTo$$">
+		<ul class="flex-element overflow-hidden">
+			<li class="title ellipsis">$$title$$</li>
+			<li>$$subtitle$$</li>
+		</ul>
+	</button>
+</script>
+<script type="text/ng-template" id="sidebar-wrapper.html">
+
+	<div class="sidebar" ng-class="{'pinned': pinned, 'expanded': sidebarOptions.lastButtonId != '' }">
+		<section data-ng-repeat="sidebar in sidebarOptions.sidebarContainers" id="{{sidebar.name}}"
+				 data-ng-class="{ 'selected': ('#' + sidebar.name) === $parent.sidebarOptions.lastButtonId }"
+				 class="content-wrapper">
+
+			<div class="filler-absolute" data-ng-include="sidebar.templateUrl"
+				 data-ng-if="sidebar.isActive? sidebar.isActive(): true"></div>
+		</section>
+	</div>
+
+	<nav id="commandBar" class="main-color">
+		<div data-platform-menu-list data-last-button="sidebarOptions.lastButtonId"
+			 data-list="sidebarOptions.getActiveCommandBarDeclarations()"></div>
+
+		<button class="js-pin indicator pin" data-ng-class="{ 'selected': pinned }" data-ng-click="pinSidebar()">
+			<svg data-cloud-desktop-svg-image data-sprite="sidebar-icons" data-image="ico-pin" data-replace></svg>
+		</button>
+
+		<button class="indicator" id="ico-notification" data-ng-class="{selected: '#sidebar-notification'===sidebarOptions.getActiveCommandBarDeclarations().currentButton}" data-ng-click="showNotifications('#sidebar-notification',sidebarOptions.getActiveCommandBarDeclarations())" basics-sidebar-notification-button>
+			<svg data-cloud-desktop-svg-image  data-sprite="sidebar-icons" data-image="ico-notification" data-replace></svg>
+		</button>
+	</nav>
+</script>
+
+<script type="text/ng-template" id="sidebar-filter-pinned-container.html">
+	<cloud-desktop-pinned-view-filter></cloud-desktop-pinned-view-filter>
+	<cloud-desktop-filter-pinned-context data-options="searchOptions"></cloud-desktop-filter-pinned-context>
+</script>
+
+<script type="text/ng-template" id="sidebar-search-form-wizard-step1">
+	<div class="subview-container">
+		<div class="margin-full-lg">
+			<h2 class="margin-bottom-ld" >{{'cloud.desktop.searchFormWizard.step1.titleSearchQuery' | translate }}</h2>
+
+			<div cloud-desktop-query-description-output data-info="entity.criterionItems"></div>
+
+			<h2 class="margin-bottom-ld" style="margin-top: 20px;">{{'cloud.desktop.searchFormWizard.step1.titleSearchCriteria' | translate }}</h2>
+
+			<div data-ng-repeat="operands in entity.criterionItems">
+				<div data-ng-repeat="operand in operands.operands">
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="checkbox" data-ng-click="isChanged(operand, $event)" data-ng-checked="operand.referenzItem.search_form_items.checked">
+							[{{operand.fieldName}}][{{operand.operator}}]<label data-ng-if="operand.stringLiteral" class="margin-none">[{{operand.stringLiteral}}]</label>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/ng-template" id="sidebar-bulk-search-form-wizard-step1">
+	<div class="subview-container">
+		<div class="margin-full-lg">
+			<h2 class="margin-bottom-ld" >{{'cloud.desktop.searchFormWizard.step1.titleSearchQuery' | translate }}</h2>
+
+			<div cloud-desktop-query-description-output data-info="entity.conditionGroups"></div>
+
+			<h2 class="margin-bottom-ld" style="margin-top: 20px;">{{'cloud.desktop.searchFormWizard.step1.titleSearchCriteria' | translate }}</h2>
+
+			<div data-ng-repeat="conditionGroups in entity.conditionGroups">
+				<div data-ng-repeat="condition in conditionGroups.operands">
+					<div class="checkbox spaceToUp">
+						<label>
+							<input type="checkbox" data-ng-click="isChanged(condition, $event)" data-ng-checked="condition.checked" data-ng-disabled="condition.isInvalid">
+							[{{condition.fieldName}}][{{condition.operator}}]<label data-ng-if="condition.stringLiteral" class="margin-none">[{{condition.stringLiteral}}]</label>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/ng-template" id="query-description-output.html">
+	<span data-ng-repeat="item in info">
+
+		<span>(</span>
+
+		<span data-ng-repeat="oper in item.operands">
+			<span data-ng-if="oper.fieldName" class="query-red">[{{oper.fieldName}}]</span>
+			<span data-ng-if="oper.operator" class="query-green">[{{oper.operator}}]</span>
+			<span data-ng-if="oper.stringLiteral" class="query-blue">[{{oper.stringLiteral}}]</span>
+
+			<span ng-if="(info[$parent.$index + 1].selector) || !$last" class="font-bold">{{item.selector | uppercase}}</span>
+		</span>
+	</span>
+	<span data-ng-repeat="item in info">)</span>
+</script>
+
+<script type="text/ng-template" id="sidebar-content-navbar">
+	<div>
+		<div class="flex-box flex-align-center border-none">
+			<div class="flex-element" style="font-size: 13pt;">{{option.title}}</div>
+
+			<div class="input-group-btn" data-ng-show="!option.mainMenuDeclaration.disabled">
+				<div data-cloud-desktop-dropdown-button data-dropdown-button="option.mainMenuDeclaration"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="sidebar-search-form-wizard-step3">
+	<div class="modal-wrapper search-form-wizard-step3">
+		<div class="flex-box margin-top-ld">
+			<div class="text">{{'cloud.desktop.searchFormWizard.step3.labelDescription' | translate }}</div>
+
+			<div class="flex-element flex-box subview-container">
+				<div class="vert-hori-center margin-left-ld">
+					<div data-domain-control data-domain="boolean" data-ng-model="entity.searchFormDefinitionInfo.description.show"></div>
+				</div>
+
+				<div class="flex-element flex-box description" data-ng-if="entity.searchFormDefinitionInfo.accessLevel === 'u'">
+					<div domain-control data-domain="comment" ng-model="entity.searchFormDefinitionInfo.description.text"
+				        data-readonly="!entity.searchFormDefinitionInfo.description.show" data-model-options="{debounce:1000}" class="noresize margin-left-ld"></div>
+				</div>
+
+				<div class="flex-element flex-box description" data-ng-if="entity.searchFormDefinitionInfo.accessLevel !== 'u'" >
+					<div domain-control data-model-options="{debounce:1000}" data-domain="customtranslate" data-options="descCtrlOptions"
+					     data-ng-model="entity.searchFormDefinitionInfo.description.text$tr$" data-readonly="!entity.searchFormDefinitionInfo.description.show" class="margin-left-ld"></div>
+				</div>
+			</div>
+		</div>
+		<div class="flex-box margin-top-ld">
+			<div class="text">{{'cloud.desktop.searchFormWizard.step3.labelLocation' | translate }}</div>
+			<div class="flex-element">
+				<div data-domain-control data-domain="select"
+				     data-options="entity.step3.locationSelectOption"
+				     data-model="entity.searchFormDefinitionInfo.accessLevel"
+				     class="form-control" data-change="accessLevelChanged()"></div>
+			</div>
+		</div>
+
+		<div class="flex-box flex-element margin-top-ld">
+			<div class="text">{{'cloud.desktop.searchFormWizard.step3.labelAvailableSearchForms' | translate }}</div>
+
+			<div class="availableContainer relative-container" data-ng-class="{ 'minHeight' : availableItems.length < 4 }">
+				<div data-ng-if="countOfAvailablesItems < 1" class="form-control border-none flex-align-center placeholder">{{'cloud.desktop.searchFormWizard.step3.placeholderlabel' | translate}}</div>
+				<button data-ng-repeat="item in availableItems | filter: startsWithAccessLevel" class="btn text-left" data-ng-click="selectAvailableForm(item)" data-ng-class="(item.id === entity.searchFormDefinitionInfo.id) ? 'selected' : ''">
+					{{item.name}}
+				</button>
+				<div data-cloud-common-overlay data-loading="loading"></div>
+			</div>
+		</div>
+		<div class="flex-box margin-top-ld nameWrapper">
+			<div class="text">{{'cloud.desktop.searchFormWizard.step3.labelSearchFormName' | translate }}<span class="required-cell"></span></div>
+
+			<div class="flex-element" data-ng-if="entity.searchFormDefinitionInfo.accessLevel !== 'u'">
+				<div data-domain-control data-model-options="{debounce:1000}" data-domain="customtranslate" data-options='nameCtrlOptions' data-model="entity.searchFormDefinitionInfo.name$tr$"></div>
+			</div>
+
+			<div class="flex-element" data-ng-if="entity.searchFormDefinitionInfo.accessLevel === 'u'">
+				<div data-domain-control data-domain="description" data-model="entity.searchFormDefinitionInfo.name" data-model-options="{debounce:1000}"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="custom-select-domain.html">
+	<div class="flex-element flex-basis-auto popup-content" style="width: 285px;">
+		<input type="text" class="form-control border-none" ng-model="searchFormOptions.listDeclaration.searchField" data-ng-keyup="handleFilter($event)" data-ng-click="handleClick($event)"
+		       placeholder="{{'cloud.desktop.searchform.searchformSearchPlaceholder' | translate}}">
+
+		<div data-platform-menu-list data-list="searchFormOptions.listDeclaration"></div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="sidebar-search-form-wizard-step2">
+	<div class="modal-wrapper search-form-wizard-step2">
+		<div class="relative-container flex-element overflow subview-container" style="min-height: 150px;">
+			<div class="margin-full-lg" data-ng-show="output.length > 0">
+
+				<div class="flex-box">
+					<div class="flex-2-element" style="margin-right: 100px;">
+						<h2>{{'cloud.desktop.searchFormWizard.step2.title' | translate }}</h2>
+						<hr>
+					</div>
+					<div class="flex-element"><h2>{{'cloud.desktop.searchFormWizard.step2.rightSubTitle' | translate }}</h2><hr></div>
+				</div>
+
+				<div data-ng-repeat="item in output" class="margin-top-ld flex-box list-container-primary" data-ng-class="{'active' : selectedItem === $index}">
+					<div class="big optionsContainer flex-box flex-column" style="margin-right: 100px;">
+						<div class="flex-box flex-align-center subview-container">
+							<div>
+								<div data-domain-control data-domain="boolean" data-ng-model="item.referenzItem.search_form_items.showLabel" data-change="setSelectStatus($index)"></div>
+							</div>
+							<div class="flex-element flex-box flex-align-center fullheight">{{'cloud.desktop.searchFormWizard.step2.labelCriteria' | translate }} {{item.fieldName}}</div>
+
+							<div data-ng-if="item.referenzItem.search_form_items.showLabel" class="flex-element flex-box flex-align-center padding-none">
+
+								<div data-ng-if="entity.searchFormDefinitionInfo.accessLevel === 'u'" class="flex-element">
+									<div data-domain-control
+									     data-domain="description"
+									     class="form-control border-none"
+									     data-placeholder="{{'cloud.desktop.searchFormWizard.step2.placeholderCriteria' | translate}}"
+									     data-model="item.referenzItem.search_form_items.label"
+									     data-click="setSelectStatus($index)" data-suppress-debounce="true"></div>
+								</div>
+
+								<div data-ng-if="entity.searchFormDefinitionInfo.accessLevel !== 'u'" class="flex-element">
+									<div domain-control data-domain="customtranslate"
+									     data-options="option{{$index}}"
+									     data-ng-model="item.referenzItem.search_form_items.label$tr$"
+									     data-model-options="{debounce:1000}"
+									     class="form-control"
+									     data-click="setSelectStatus($index)"
+									     data-placeholder="{{'cloud.desktop.searchFormWizard.step2.placeholderCriteria' | translate}}" style="border: none;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="flex-box flex-align-center subview-container none-top-border form-control">
+							<div>
+								<div style="width: 16px;"></div>
+							</div>
+							<div class="flex-element flex-box flex-align-center fullheight">{{'cloud.desktop.searchFormWizard.step2.labelOperator' | translate }} {{item.operator}}</div>
+						</div>
+						<div class="flex-box flex-align-center subview-container none-top-border" data-ng-if="!item.referenzItem.search_form_items.showSearchTermContainer">
+							<div>
+								<div data-domain-control data-domain="boolean" data-ng-model="item.referenzItem.search_form_items.showSearchterm" data-change="setSelectStatus($index)"></div>
+							</div>
+							<div class="flex-element flex-box flex-align-center fullheight">{{'cloud.desktop.searchFormWizard.step2.labelSearchterm' | translate }} {{item.stringLiteral}}</div>
+						</div>
+					</div>
+
+					<div class="small interactionContainer flex-column">
+						<div data-ng-if="item.referenzItem.search_form_items.showLabel" data-ng-bind="item.referenzItem.search_form_items.label" class="margin-none"></div>
+						<div data-ng-if="item.referenzItem.search_form_items.showOperator" class="form-control input-group item"><span class="value-input">{{item.operator}}</span></div>
+						<div data-ng-if="item.referenzItem.search_form_items.showSearchterm" cloud-desktop-criterion-content data-criterion="item.referenzItem"></div>
+					</div>
+				</div>
+			</div>
+			<div data-ng-show="output.length < 1" class="container-overlay flex-column text-center">
+				<div ng-bind-html="descriptionNoSearchCriteria"></div>
+				<div cloud-desktop-query-description-output data-info="entity.criterionItems"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+
+
+<script type="text/ng-template" id="sidebar-bulk-search-form-wizard-step2">
+	<div class="modal-wrapper search-form-wizard-step2">
+		<div class="relative-container flex-element overflow subview-container" style="min-height: 150px;">
+			<div class="margin-full-lg" data-ng-show="entity.output.length > 0">
+
+				<div class="flex-box">
+					<div class="flex-element" >
+						<h2>{{'cloud.desktop.searchFormWizard.step2.title' | translate }}</h2>
+						<hr>
+					</div>
+					<div class="flex-2-element" style="margin-left: 100px;"><h2>{{'cloud.desktop.searchFormWizard.step2.rightSubTitle' | translate }}</h2><hr></div>
+				</div>
+
+				<div class="margin-top-ld flex-box list-container-primary" data-ng-class="{'active' : selectedItem === $index}">
+
+					<div class="small interactionContainer flex-column">
+						<div data-ng-repeat="condition in entity.output" >
+							<label>
+								<input type="checkbox" data-ng-checked="condition.assigned" data-ng-disabled="true">
+								{{condition.fieldName}}
+							</label>
+						</div>
+					</div>
+
+					<div class="big optionsContainer flex-box flex-column" style="margin-left: 100px;">
+						<div data-ng-repeat="param in entity.formParameters">
+							<div class="flex-box  border-all">
+
+								<div class="flex-element subview-container" style="margin-right: 100px;">
+									<div data-ng-if="entity.searchFormDefinitionInfo.accessLevel === 'u'" class="flex-element">
+										<div data-domain-control
+											 data-domain="description"
+											 data-readonly="param.assignedConditions.length <= 0"
+											 class="form-control border-none"
+											 data-placeholder="{{'cloud.desktop.searchFormWizard.step2.placeholderCriteria' | translate}}"
+											 data-model="param.label"
+											 data-click="setSelectStatus($index)" data-suppress-debounce="true"></div>
+									</div>
+
+									<div data-ng-if="entity.searchFormDefinitionInfo.accessLevel !== 'u'" class="flex-element">
+										<div domain-control data-domain="customtranslate"
+											 data-readonly="param.assignedConditions.length <= 0"
+											 data-options="option{{$index}}"
+											 data-ng-model="param.label$tr$"
+											 data-model-options="{debounce:1000}"
+											 class="form-control"
+											 data-click="setSelectStatus($index)"
+											 data-placeholder="{{'cloud.desktop.searchFormWizard.step2.placeholderCriteria' | translate}}" style="border: none;"></div>
+									</div>
+								</div>
+
+								<div class="flex-2-element flex-box flex-column">
+									<div data-ng-repeat="condition in param.assignedConditions" class="flex-column">
+										{{condition.fieldName}}
+										<span class="input-group-btn">
+											<button class="btn btn-default control-icons ico-input-delete" ng-click="param.onRemoveCondition(condition)"></button>
+										</span>
+									</div>
+									<div data-domain-control data-domain="select"
+										 data-readonly="param.dropDownOptions.items.length <= 0"
+										 data-options="param.dropDownOptions" data-ng-model="param.selected"
+										 class="form-control" data-change="param.onSelectCondition()">
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+			<div data-ng-show="entity.output.length < 1" class="container-overlay flex-column text-center">
+				<div ng-bind-html="descriptionNoSearchCriteria"></div>
+				<div cloud-desktop-query-description-output data-info="entity.criterionItems"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/ng-template" id="sidebar-bulk-search-form-wizard-step3">
+	<div class="modal-wrapper search-form-wizard-step3">
+		<div class="relative-container flex-element overflow subview-container" style="min-height: 150px;">
+			<div class="margin-full-lg" data-ng-show="entity.formParameters.length > 0">
+
+				<div class="flex-box">
+					<div class="flex-2-element" style="margin-right: 100px;">
+						<h2>{{'cloud.desktop.searchFormWizard.step2.title' | translate }}</h2>
+						<hr>
+					</div>
+					<div class="flex-element">
+						<h2>{{'cloud.desktop.searchFormWizard.step2.rightSubTitle' | translate }}</h2><hr>
+						<p>{{'cloud.desktop.searchFormWizard.step2.rightSubTitleDescription' | translate }}</p>
+					</div>
+				</div>
+
+				<div data-ng-repeat="item in entity.formParameters" class="margin-top-ld flex-box list-container-primary" data-ng-class="{'active' : selectedItem === $index}">
+					<div class="big optionsContainer flex-box flex-column" style="margin-right: 100px;">
+						<div class="flex-box flex-align-center subview-container">
+							<div>
+								<div data-domain-control data-domain="boolean" data-ng-model="item.showLabel" data-change="item.onDisplayChanged()"></div>
+							</div>
+							<div class="flex-element flex-box flex-align-center fullheight">{{'cloud.desktop.searchFormWizard.step2.labelCriteria' | translate }} {{item.fieldName}}</div>
+
+							<div data-ng-if="item.showLabel" class="flex-element flex-box flex-align-center padding-none">
+
+								<div data-ng-if="entity.searchFormDefinitionInfo.accessLevel === 'u'" class="flex-element">
+									<div data-domain-control
+										 data-change="item.onDisplayChanged()"
+										 data-domain="description"
+										 class="form-control border-none"
+										 data-placeholder="{{'cloud.desktop.searchFormWizard.step2.placeholderCriteria' | translate}}"
+										 data-model="item.label"
+										 data-model-options="{debounce:1000}"
+										 data-click="setSelectStatus($index)" data-suppress-debounce="true"></div>
+								</div>
+
+								<div data-ng-if="entity.searchFormDefinitionInfo.accessLevel !== 'u'" class="flex-element">
+									<div domain-control data-domain="customtranslate"
+										 data-options="option{{$index}}"
+										 data-ng-model="item.label$tr$"
+										 data-model-options="{debounce:1000}"
+										 class="form-control"
+										 data-click="setSelectStatus($index)"
+										 data-placeholder="{{'cloud.desktop.searchFormWizard.step2.placeholderCriteria' | translate}}" style="border: none;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="flex-box flex-align-center subview-container none-top-border form-control">
+							<div>
+								<div style="width: 16px;"></div>
+							</div>
+							<div class="flex-element flex-box flex-align-center fullheight">{{'cloud.desktop.searchFormWizard.step2.labelOperator' | translate }} {{item.operator}}</div>
+						</div>
+
+						<!-- hidden feature -->
+						<div data-ng-if="item.values.length > 0" class="flex-box flex-align-center none-top-border subview-container" style="height: auto;">
+							<div>
+								<div style="width: 16px;"></div>
+							</div>
+							<div class="flex-element flex-box flex-align-center fullheight ng-binding">{{'cloud.desktop.searchFormWizard.step4.defaultValue' | translate }}</div>
+							<div class="flex-element flex-column fullheight">
+								<div cloud-desktop-search-form-parameter-control data-parameter="item" data-bulk-manager="entity.bulkManager" data-ui-options="item.displayOptions"></div>
+							</div>
+						</div>
+
+						<div data-ng-if="item.values.length > 0" class="flex-box flex-align-center subview-container none-top-border">
+							<div>
+								<div data-domain-control data-domain="boolean" data-ng-model="item.showSearchTerm" data-change="item.onDisplayChanged()"></div>
+							</div>
+							<div class="flex-element flex-box flex-align-center fullheight">{{'cloud.desktop.searchFormWizard.step2.labelSearchterm' | translate }} {{item.valueDescriptionEdit}}</div>
+						</div>
+
+						<div data-ng-if="item.showSearchTerm" class="flex-box flex-align-center none-top-border subview-container" style="height: auto;">
+							<div>
+								<div style="width: 16px;"></div>
+							</div>
+							<div data-ng-repeat="mode in item.getModes() track by mode.id" class="flex-box flex-element flex-align-center">
+								<div>
+									<div data-domain-control data-domain="boolean" data-ng-model="mode.active" data-change="item.onDisplayChanged()" data-readonly="!mode.editable"></div>
+								</div>
+								<div class="flex-element flex-box flex-align-center fullheight margin-left-md">{{mode.label | translate }}</div>
+
+								<div data-ng-if="mode.active" class="margin-full-sm">
+									<div data-ng-repeat="option in mode.options track by option.value" class="radio spaceToUp">
+										<label>
+											<input class="inputRadioSearchForm" type="radio" data-ng-model="mode.value" data-ng-value="option.value" data-ng-click="item.onDisplayModeChanged(mode.id, option.value)"
+												   name="{{entity.searchFormDefinitionInfo.id + '-mode-' + mode.id}}"/> {{option.label | translate }}
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+					<div class="small  flex-column">
+						<div data-ng-class="entity.searchFormDefinitionInfo.id + 'prev' + $index"></div>
+					</div>
+				</div>
+			</div>
+			<div data-ng-show="entity.formParameters.length < 1" class="container-overlay flex-column text-center">
+				<div ng-bind-html="descriptionNoSearchCriteria"></div>
+				<div cloud-desktop-query-description-output data-info="entity.criterionItems"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="sidebar-bulk-search-form-wizard-step4">
+	<div class="modal-wrapper search-form-wizard-step4">
+		<div class="filler flex-box flex-column subview-container filler">
+			<div class="margin-full-lg" data-ng-show="entity.formParameters.length > 0">
+
+				<div class="flex-box">
+					<div class="flex-2-element" style="margin-right: 100px;">
+						<h2>{{'cloud.desktop.searchFormWizard.step4.customSequnceTitle' | translate }}</h2>
+						<hr>
+					</div>
+				</div>
+
+				<div class="sortable-container flex-element overflow fullheight flex-box flex-column">
+					<div data-as-sortable="dropHandler" data-ng-model="optionsList" class="subview-content fullheight">
+						<div data-ng-repeat="opt in optionsList track by opt.uuid" data-as-sortable-item class="platform-form-group">
+							<span as-sortable-item-handle class="flex-box flex-element platform-form-row">
+								<span class="form-control" style="display: inline-flex;
+								align-items: center; padding: 10px" data-ng-class="{ 'cursor-pointer' : header.sortable }">{{opt.description}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</script>
+
+
+<script  type="text/ng-template" id="sidebar-search-form-control">
+	<div data-ng-repeat="parameter in parameters" class="flex-box flex-column interactionContainer item">
+		<div class="flex-box" style="flex-grow: 1;">
+			<div data-domain-control data-domain="boolean" data-ng-model="parameter.active" data-change="parameter.onActiveValueChanged(parameter)" data-class="checkbox wrapper"></div>
+			<div data-ng-if="parameter.showLabel" data-ng-bind="parameter.label"></div>
+		</div>
+			<div data-ng-if="parameter.active && parameter.values.length > 0">
+				<div data-ng-if="!parameter.showSearchTerm" class="alert alert-warning">
+					<div>{{'cloud.desktop.searchform.default' | translate}} </div>
+					<div>{{parameter.valueDescription}} </div>
+				</div>
+				<div class="flex-box" style="flex-grow: 1; justify-content: center;">
+					<!--			<div data-ng-if="parameter.showLabel" data-ng-bind="parameter.label"></div>-->
+					<div data-ng-if="parameter.showOperator" class="form-control input-group item">
+						<span class="value-input" data-ng-bind="parameter.operator"></span>
+					</div>
+					<div class="flex-element" data-cloud-desktop-search-form-parameter-control data-ng-if="parameter.showSearchTerm" data-parameter="parameter" data-bulk-manager="bulkManager" data-index="$index"></div><!--max-width: 235px;-->
+					<!--<div data-ng-show="!parameter.active" class="cell-opacity container-overlay margin-none"></div>-->
+				</div>
+			</div>
+	</div>
+
+</script>
+
+<script type="text/ng-template" id="sidebar-search-form-parameter-control">
+	<div data-ng-repeat="value in parameter.values" class="flex-box flex-column item">
+		<div ng-if="!$first" data-ng-show="!value.hidden" class="flex-element flex-basis-auto">
+			<div class="fullwidth text-center" style="color: #ccc;">|</div>
+		</div>
+		<div data-cloud-desktop-search-form-input-control class="platform-form-group"
+			 data-value="value" data-parameter="parameter" data-bulk-manager="bulkManager" data-ui-options="uiOptions"></div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="sidebar-search-form-input-control">
+	<tabset data-ng-if="valueReady" data-ng-show="!value.hidden" class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex" data-ng-class="{singleTab: localConfig.singleTab}">
+
+		<tab data-ng-if="uiOptions.literal" ng-click="onSwitchMode('literal')" active="localConfig.tabs.literal" >
+			<tab-heading data-ng-hide="localConfig.singleTab" >
+				{{'cloud.desktop.searchform.literal' | translate}}
+			</tab-heading>
+			<div data-ng-if="uiOptions.literal === 'dropdown'">
+				<div class="flex-element flex-basis-auto">
+					<div dynamic-domain-control data-domain="{{parameter.domain}}"  data-ng-model="getDataPathAccessor" data-ng-model-options="{ getterSetter: true, updateOn:'blur default', debounce: { default: 2000, blur: 0} }"
+						 class="margin-top-overlap" data-placeholder="<enter search>"></div>
+				</div>
+			</div>
+			<div data-ng-if="uiOptions.literal === 'inline'"
+				 data-options="inlineCalendarOptions"
+				 data-platform-datetime-handler
+				 data-platform-datetime-converter
+				 data-domain="dateutc"
+				 data-ng-model="getDataPathAccessor"
+				 data-ng-model-options="{ getterSetter: true }"
+				 class="flex-align-center"></div>
+		</tab>
+
+		<tab data-ng-if="getEnvironmentExpressions().length > 0 && uiOptions.envExpr" ng-click="onSwitchMode('envExpr')" active="localConfig.tabs.envExpr">
+			<tab-heading data-ng-hide="localConfig.singleTab">
+				{{'cloud.desktop.searchform.variable' | translate}}
+			</tab-heading>
+			<div data-sidebar-environment-expression data-model="localConfig.selExpr.label"
+				 data-items="environmentExpressionOptions.items" data-options="environmentExpressionOptions"
+				 class="environment-expressions" data-ng-if="uiOptions.envExpr === 'inline'"></div>
+
+			<div>
+				<div dynamic-domain-control data-domain="select" data-options="environmentExpressionOptions" data-model="localConfig.selExpr"
+					 data-change="onSelectExpression(localConfig.selExpr)" data-ng-if="uiOptions.envExpr === 'dropdown'"></div>
+			</div>
+		</tab>
+		<tab data-ng-if="uiOptions.dynamicRangeExpr" ng-click="onSwitchMode('dynamicRangeExpr')" active="localConfig.tabs.dynamicRangeExpr">
+			<tab-heading data-ng-hide="localConfig.singleTab">
+				{{'cloud.desktop.searchform.variable' | translate}}
+			</tab-heading>
+
+			<div class="flex-element">
+				<div data-domain-control
+				     data-domain="select"
+				     data-model="parameter.values[0].model.DynamicValue.Transformation"
+				     data-readonly="false"
+				     data-options="unitSelectorOptions()"
+				     data-change="transformationChanged(model)"></div>
+			</div>
+
+			<div
+			     class="columns flex-element dynamic-range-past">
+				<div class="flex-box">
+					<div class="platform-form-col">
+						<div data-domain="integer" data-domain-control style="width: 50%"
+						     data-ng-model="parameter.values[0].model.DynamicValue.Parameters[0].Literal.Integer" readonly="isReadOnly"
+						     data-change="onRangesChanged('p', entity, model)"></div>
+					</div>
+					<div class="platform-form-col">
+						<div data-domain="integer" data-domain-control  style="width: 50%"
+						     data-ng-model="parameter.values[1].model.DynamicValue.Parameters[0].Literal.Integer" readonly="isReadOnly"
+						     data-change="onRangesChanged('f', entity, model)"></div>
+					</div>
+				</div>
+			</div>
+
+		</tab>
+		<tab data-ng-if="uiOptions.lookup" ng-click="onSwitchMode('lookup')" active="localConfig.tabs.lookup">
+			<tab-heading data-ng-hide="localConfig.singleTab">
+				{{'cloud.desktop.searchform.lookup' | translate}}
+			</tab-heading>
+			<div data-sidebar-environment-expression data-model="localConfig.selLookup.Name"
+				 data-items="lookupOptions.items" data-options="lookupOptions"
+				 class="environment-expressions" data-ng-if="uiOptions.lookup === 'inline'"></div>
+			<div>
+				<div dynamic-domain-control data-domain="select" data-model="localConfig.selLookup" data-change="onSelectLookup(localConfig.selLookup)"
+					 class="margin-top-overlap" data-placeholder="<select something>" data-options="lookupOptions" data-ng-if="uiOptions.lookup === 'dropdown'"></div>
+			</div>
+			<div   data-ng-if="uiOptions.lookup === 'multiSelect'">
+				<div data-dropdown-select2-tags multiple nosearch
+					 data-on-changed="onMultiSelectLookup"
+					 data-model="localConfig.selLookup"
+					 data-options="lookupOptions"></div>
+			</div>
+		</tab>
+
+	</tabset>
+
+</script>
+
+<script type="text/ng-template" id="pinned-item-container">
+	<div class="form-control shaded" title="{{ ::options.title }}">
+		<span class="header-body" data-ng-class="::options.icon"></span>
+		<div class="input-group-content"><div class="ellipsis" data-ng-bind="::options.info"></div></div>
+		<span class="input-group-btn"><button class="btn btn-default control-icons ico-input-delete" title="{{::options.deleteTitle}}" data-ng-click="options.fn()"></button></span>
+	</div>
+</script>

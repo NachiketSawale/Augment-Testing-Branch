@@ -1,0 +1,146 @@
+﻿<script type="text/ng-template" id="modal.html">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{::configuration.component.modal.title}}</h2>
+    </header>
+    <div data-platform-alert data-error="error"></div>
+    <section class="modal-body material-lookup-modal-body" style="overflow-y: hidden;height:auto;max-height: 600px !important;">
+        <div style="height:600px; overflow: hidden;">
+            <div class="flex-box flex-column flex-element subview-content filler">$content$</div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="onOK()">{{::configuration.component.modal.okBtn}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()">
+            {{::configuration.component.modal.cancelBtn}}
+        </button>
+    </footer>
+</script>
+
+
+<script type="text/ng-template" id="isPreview.html">
+    <div data-ng-show="!configuration.isPreview" class="flex-box flex-column flex-element subview-content filler">
+        $content$
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="searchTopBar.html">
+    <div class="ms-sv-search-div" data-ng-keydown="keyDown($event)">$searchText$ $sortOption$ $cartItemCount$</div>
+</script>
+
+<script type="text/ng-template" id="searchText.html">
+    <div class="col-md-9 col-sm-12 ms-sv-search-input">
+        <input class="ms-sv-search-button-text" type="text" ng-model="searchText"
+               placeholder="{{::htmlTranslate.keyWord}}"/>
+
+        <div class="ms-sv-search-button">
+            <a href data-ng-click="searchClick()">
+                <i class="ms-sv-search-button-img block-image tlb-icons ico-search"></i>
+            </a>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="sortOption.html">
+    <div class="col-md-2 col-sm-6 col-xs-6">
+        <select class="ms-sv-select-option" data-ng-model="currentSortOption"
+                data-ng-change="pageChanged()" data-ng-options="m.description for m in sortOption">
+        </select>
+    </div>
+</script>
+
+<script type="text/ng-template" id="cartItemCount.html">
+    <div class="col-md-1 col-sm-6 col-xs-6">
+        <a href class="ms-sv-cart-item-count" data-ng-click="gotoCart()">
+            <i class="block-image control-icons" ng-class="cartItemCount > 0?'ico-cart-full':'ico-cart-empty'"></i>
+            <span data-ng-bind="cartItemCount"></span>
+        </a>
+    </div>
+</script>
+
+<script type="text/ng-template" id="navigateRow.html">
+    <div data-basics-material-search-navigate-map data-ng-show="showResultPanel"
+         class="ms-sv-category-navigate-row"></div>
+</script>
+
+<script type="text/ng-template" id="resultPanel.html">
+    <div class="ms-sv-search-view fullheight">
+        <div data-ng-show="showResultPanel">
+            <div class="row ms-sv-result-panel">$left$$right$</div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="leftPanel.html">
+    <div class="col-md-3 ms-sv-result-panel-left">
+        <div class="row">
+            <div class="ms-sv-container-title"><span>{{::htmlTranslate.category}}</span></div>
+            <div data-basics-material-commodity-category>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ms-sv-container-title">
+                <span>{{::htmlTranslate.attributes}}</span>
+				<span class="ms-sv-attribute-show-hide">
+					<a href="" data-ng-click="attributeShow=!attributeShow">
+                    <i class="block-image control-icons" ng-class="attributeShow?'ico-plus':'ico-minus'"></i>
+                </a>
+				</span>
+            </div>
+            <div data-basics-material-commodity-attributes data-filter-data="filterData"
+                 data-ng-show="!attributeShow"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="rightPanel.html">
+    <div class="col-md-9 ms-sv-result-panel-right">
+        <div class="ms-sv-container-title"><span>{{::htmlTranslate.searchResults}}</span></div>
+        <div class="row ms-sv-commodity-result-pane">
+            <div data-ng-repeat="materialEntity in material.dataSource">
+                <div data-basics-material-commodity-row
+                     data-entity="materialEntity"
+                     data-row-type="configuration.component.commodityRowType"
+                     data-action-click="btnCartAction"
+                     data-is-preview="false"
+                     data-go-preview="goPreview"
+                     data-select-row-action="selectRowAction"></div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="page.html">
+    <div class="ms-sv-commodity-pagination" data-ng-show="showResultPanel">
+        <pagination data-total-items="totalItems"
+                    data-ng-model="currentPage"
+                    data-items-per-page="itemsPerPage"
+                    data-max-size="maxSize"
+                    data-class="pagination-sm"
+                    data-num-pages="numPages"
+                    data-boundary-links="true"
+                    data-rotate="false"
+                    data-ng-change="pageChanged()">
+        </pagination>
+    </div>
+</script>
+<script type="text/ng-template" id="loadingView.html">
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="companyOptions.loadingInfo"></div>
+</script>
+<script type="text/ng-template" id="previewView.html">
+    <div data-ng-if="configuration.isPreview" class="ms-sv-search-view ms-sv-search-view fullheight">
+        <div data-basics-material-commodity-preview
+             data-entity="previewItem"
+             data-row-type="configuration.component.commodityRowType"
+             data-action-click="btnCartAction"
+             data-cart-list-change="cartListChange"
+             data-preview-back-click="previewBackClick"
+             data-select-row-action="selectRowAction"
+             data-preview-item-attributes="previewItemAttributes">
+        </div>
+    </div>
+</script>

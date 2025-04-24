@@ -1,0 +1,47 @@
+﻿[
+	{
+		"id": "privacy.config.privacyHandledTypedList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "privacy.config.privacyHandleTypedListTitle",
+		"controller": "privacy.config.privacyHandledTypedListController",
+		"uuid": "2fc25afb5e2b4b06afac50f375b2469a"
+	},
+	{
+		"id": "privacy.config.privacyHandledTypedDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "privacy.config.privacyHandleTypedDetailTitle",
+		"controller": "privacy.config.privacyHandledTypedDetailController",
+		"uuid": "daa575f137f247b18b3b2b395f0e40ff",
+		"permission": "2fc25afb5e2b4b06afac50f375b2469a"
+	},
+	{
+		"id": "privacy.config.privacyRequestedByList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "privacy.config.privacyRequestedByListTitle",
+		"controller": "privacy.config.privacyRequestedByListController",
+		"uuid": "26768c4cdeab4319b82cd1f089e527b3"
+	},
+	{
+		"id": "privacy.config.privacyRequestedByDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "privacy.config.privacyRequestedByDetailTitle",
+		"controller": "privacy.config.privacyRequestedByDetailController",
+		"uuid": "81f644a94ace4b8888528fa14500e6ad",
+		"permission": "26768c4cdeab4319b82cd1f089e527b3"
+	},
+	{
+		"id": "privacy.config.privacyGradeList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "privacy.config.privacyGradeListTitle",
+		"controller": "privacy.config.privacyGradeListController",
+		"uuid": "986a939e7f604cc393dc98af08dff830"
+	},
+	{
+		"id": "privacy.config.privacyGradeDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "privacyConfigPrivacyGradeDetailTitle",
+		"controller": "privacy.config.privacyGradeDetailController",
+		"uuid": "3796f7576666465b972b46e107945691",
+		"permission": "986a939e7f604cc393dc98af08dff830"
+	}
+]

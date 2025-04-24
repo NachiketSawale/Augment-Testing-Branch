@@ -1,0 +1,428 @@
+<!-- TODO: 'modalOptions.isWatch' should no longer to use and will be removed.-->
+
+<div>
+	<section class="modal-body">
+
+		<div id="accordion" class="show">
+			<!--                AppointmentTime-->
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="modalOptions.showAppointmentTime = !modalOptions.showAppointmentTime">
+								<span class="platform-from-group-header-test ng-binding ng-scope">{{'basics.meeting.recurrence.appointmentTime'| platformTranslate}}</span>
+								<span class="platform-form-group-header ng-scope">
+									<div class="toggleImg control-icons" [class]="modalOptions.showAppointmentTime ? 'ico-up' : 'ico-down'"></div>
+								</span>
+							</a>
+						</h4>
+					</div>
+					<!-- TODO: There is no transition animation when collapsing. It seems that the style will be overridden when using mat-expansion-panel element. -->
+					<div [hidden]="!modalOptions.showAppointmentTime">
+						<div class="panel-body">
+							<div class="platform-form-group ng-scope">
+								<div class="platform-form-row form-group">
+									<div class="platform-form-label" style="padding-left: 15px; vertical-align: middle">{{ 'basics.meeting.recurrence.start'| platformTranslate }}</div>
+									<div class="platform-form-col" data-ng-mouseup="modalOptions.isWatch = true" style="width:35%; padding-left: 10px">
+<!--										TODO: 'FieldType.Time' has not been implemented yet, waiting for the framework to complete it.-->
+										<input type="time" class="form-control" [ngModel]="modalOptions.startTime.toTimeString().slice(0, 5)" (change)="updateTime($event, 1)">
+									</div>
+									<div class="platform-form-col" style="width: 55%; padding-left: 10px"></div>
+								</div>
+								<div class="platform-form-row form-group">
+									<div class="platform-form-label" style="padding-left: 15px; vertical-align: middle">{{ 'basics.meeting.recurrence.end'| platformTranslate }}</div>
+									<div class="platform-form-col" data-ng-mouseup="modalOptions.isWatch = false" style="width:35%; padding-left: 10px; ">
+<!--										TODO: 'FieldType.Time' has not been implemented yet, waiting for the framework to complete it.-->
+										<input type="time" class="form-control" [ngModel]="modalOptions.endTime.toTimeString().slice(0, 5)" (change)="updateTime($event, 2)">
+									</div>
+									<div class="platform-form-col" style="width: 55%; padding-left: 10px"></div>
+								</div>
+								<div class="platform-form-row form-group">
+									<div class="platform-form-label" style="padding-left: 15px; vertical-align: middle">{{ 'basics.meeting.recurrence.duration'| platformTranslate }}</div>
+									<div class="platform-form-col" data-ng-mouseup="modalOptions.isWatch = true" style="width:35%; padding-left: 10px">
+										<select class="form-control" style="width: 100%;height: 26px" [(ngModel)]="modalOptions.duration" (change)="processEndTime()">
+										<option *ngFor="let opt of modalOptions.durationOption" [value]="opt" [ngStyle]="hideOption(opt)">
+											{{ opt.split(' ')[0] + ' ' + (opt.split(' ')[1] | platformTranslate) }}
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!--                RecurrencePattern-->
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="modalOptions.showRecurrencePattern = !modalOptions.showRecurrencePattern">
+								<span class="platform-from-group-header-test ng-binding ng-scope">{{'basics.meeting.recurrence.recurrencePattern'| platformTranslate}}</span>
+								<span class="platform-form-group-header ng-scope">
+									<div class="toggleImg control-icons" [class]="modalOptions.showRecurrencePattern ? 'ico-up' : 'ico-down'"></div>
+								</span>
+							</a>
+						</h4>
+					</div>
+					<!-- TODO: There is no transition animation when collapsing. It seems that the style will be overridden when using mat-expansion-panel element. -->
+					<div class="panel-collapse" [hidden]="!modalOptions.showRecurrencePattern">
+						<div class="panel-body" >
+							<div class="platform-form-group ng-scope">
+								<div class="platform-form-row form-group">
+									<div class="platform-form-col" style="width: 16%; padding-left: 15px; border-right: 1px solid #99999a">
+										<ui-common-domain-control-host [fieldType]="FieldType.Radio" [controlContext]="modalOptions.recurrencePatternType" [options]="modalOptions.recurrencePatternRadioGroupOpt" (change)="updateRadio()"/>
+									</div>
+									<div class="platform-form-col" style="width: 74%; padding-left: 15px">
+										<!--                                           Daily-->
+										<div *ngIf="modalOptions.recurrencePatternType.value === RecurRadio.Daily">
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 45%">
+													<div class="platform-form-col">
+														<div class="radio">
+															<label>
+																<input name="radioGroupA" [(ngModel)]="modalOptions.recurrencePattern.dailyRadio" [value]="DailyRadio.EveryDay" type="radio">
+																{{ 'basics.meeting.recurrence.every'| platformTranslate }}
+															</label>
+														</div>
+													</div>
+													<div class="platform-form-col">
+														<label style="padding-bottom: 5px">
+															<input type="text" class="form-control" style="width: 40px" maxlength="3"
+															       (blur)="setDefaultInterval()" (keyup)="estimateInterval()"
+															       [(ngModel)]="modalOptions.recurrencePattern.interval"
+															       [disabled]="modalOptions.recurrencePattern.dailyRadio === DailyRadio.EveryWeekday">
+														</label>
+													</div>
+													<div class="platform-form-col">
+														<div class="platform-form-label" style="padding-left: 15px; vertical-align: middle">{{'basics.meeting.recurrence.severalDays'| platformTranslate}}</div>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 45%"></div>
+											</div>
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 45%;">
+													<div class="radio">
+														<label>
+															<input name="radioGroupA" type="radio" [(ngModel)]="modalOptions.recurrencePattern.dailyRadio"
+															       [value]="DailyRadio.EveryWeekday">{{'basics.meeting.recurrence.everyWeekday'| platformTranslate}}
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 45%;"></div>
+											</div>
+										</div>
+										<!--                                           Weekly-->
+										<div *ngIf="modalOptions.recurrencePatternType.value === RecurRadio.Weekly">
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 70%;">
+													<div class="platform-form-col" style="width: 5%">
+														<div class="platform-form-label" style=" vertical-align: middle">{{'basics.meeting.recurrence.recurEvery'| platformTranslate}}</div>
+													</div>
+													<div class="platform-form-col" style="width: 5%">
+														<label>
+															<input type="text" class="form-control" style="width: 40px" maxlength="2"
+															       (blur)="setDefaultInterval()" (keyup)="estimateInterval()"
+															       [(ngModel)]="modalOptions.recurrencePattern.interval">
+														</label>
+													</div>
+													<div class="platform-form-col">
+														<div class="platform-form-label" style="padding-left: 10px; vertical-align: middle">{{'basics.meeting.recurrence.weeksOn'| platformTranslate}}</div>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 20%;"></div>
+											</div>
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 70%">
+													<div class="platform-form-col">
+														<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [controlContext]="modalOptions.weekOption[0].state"/>
+													</div>
+													<div class="platform-form-label" style="padding-left:5px">{{'basics.meeting.recurrence.sunday'| platformTranslate}}</div>
+													<div class="platform-form-col"  style="padding-left:24px">
+														<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [controlContext]="modalOptions.weekOption[1].state"/>
+													</div>
+													<div class="platform-form-label" style="padding-left:5px">{{'basics.meeting.recurrence.monday'| platformTranslate}}</div>
+													<div class="platform-form-col"  style="padding-left:15px">
+														<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [controlContext]="modalOptions.weekOption[2].state"/>
+													</div>
+													<div class="platform-form-label" style="padding-left:5px">{{'basics.meeting.recurrence.tuesday'| platformTranslate}}</div>
+													<div class="platform-form-col"  style="padding-left:15px">
+														<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [controlContext]="modalOptions.weekOption[3].state"/>
+													</div>
+													<div class="platform-form-label" style="padding-left:5px">{{'basics.meeting.recurrence.wednesday'| platformTranslate}}</div>
+												</div>
+												<div class="platform-form-col" style="width: 20%"></div>
+											</div>
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 70%">
+													<div class="platform-form-col" >
+														<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [controlContext]="modalOptions.weekOption[4].state"/>
+													</div>
+													<div class="platform-form-label" style="padding-left:5px">{{'basics.meeting.recurrence.thursday'| platformTranslate}}</div>
+													<div class="platform-form-col"  style="padding-left:15px">
+														<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [controlContext]="modalOptions.weekOption[5].state"/>
+													</div>
+													<div class="platform-form-label" style="padding-left:5px">{{'basics.meeting.recurrence.friday'| platformTranslate}}</div>
+													<div class="platform-form-col"  style="padding-left:25px">
+														<ui-common-domain-control-host [fieldType]="FieldType.Boolean" [controlContext]="modalOptions.weekOption[6].state"/>
+													</div>
+													<div class="platform-form-label" style="padding-left:5px">{{'basics.meeting.recurrence.saturday'| platformTranslate}}</div>
+												</div>
+												<div class="platform-form-col" style="width: 20%"></div>
+											</div>
+										</div>
+										<!--                                           Monthly-->
+										<div *ngIf="modalOptions.recurrencePatternType.value === RecurRadio.Monthly">
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 15%">
+													<div class="platform-form-label" style=" vertical-align: middle">{{'basics.meeting.recurrence.recurEvery'| platformTranslate}}</div>
+												</div>
+												<div class="platform-form-col" style="width: 40%;padding-left: 15px">
+													<div class="platform-form-col">
+														<input type="text" class="form-control" style="width: 40px" maxlength="2"
+														       (blur)="setDefaultInterval()" (keyup)="estimateInterval()"
+														       [(ngModel)]="modalOptions.recurrencePattern.interval">
+													</div>
+													<div class="platform-form-col" style="padding-left: 10px">
+														<div class="platform-form-label" style=" vertical-align: middle">{{'basics.meeting.recurrence.months'| platformTranslate}}</div>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 35%;"></div>
+											</div>
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 15%">
+													<div class="radio">
+														<label>
+															<input name="radioGroupB" type="radio"
+															       [(ngModel)]="modalOptions.recurrencePattern.monthlyRadio"
+															       [value]="MonthlyRadio.AbsoluteDay">
+															{{'basics.meeting.recurrence.onDay'| platformTranslate}}
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 40%;">
+													<div class="platform-form-col">
+														<div class="platform-form-col">
+															<label>
+																<input type="text" class="form-control" style="width: 40px" maxlength="2"
+																       (blur)="setDefaultDayOfMonth()" (keyup)="estimateDayOfMonth()"
+																       [(ngModel)]="modalOptions.recurrencePattern.dayOfMonth"
+																       [disabled]="modalOptions.recurrencePattern.monthlyRadio === MonthlyRadio.RelativeDay">
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 35%"></div>
+											</div>
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 15%;">
+													<div class="radio">
+														<label>
+															<input name="radioGroupB" type="radio"
+															       [(ngModel)]="modalOptions.recurrencePattern.monthlyRadio"
+															       [value]="MonthlyRadio.RelativeDay">{{'basics.meeting.recurrence.onThe'| platformTranslate}}
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 40%;">
+													<div class="platform-form-col">
+														<label>
+															<select style="height: 26px" [(ngModel)]="modalOptions.recurrencePattern.index"
+															        [disabled]="modalOptions.recurrencePattern.monthlyRadio === MonthlyRadio.AbsoluteDay">
+
+																<option *ngFor="let opt of modalOptions.frequencyOption" [value]="opt.id">{{opt.value | platformTranslate}}</option>
+															</select>
+														</label>
+													</div>
+													<div class="platform-form-col" style="padding-left: 5px">
+														<label>
+															<select style="height: 26px" [(ngModel)]="modalOptions.recurrencePattern.day"
+															        [disabled]="modalOptions.recurrencePattern.monthlyRadio === MonthlyRadio.AbsoluteDay">
+
+																<option *ngFor="let opt of modalOptions.weekOption" [value]="opt.id">{{opt.value | platformTranslate}}</option>
+															</select>
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 35%;"></div>
+											</div>
+										</div>
+										<!--                                           Yearly-->
+										<div *ngIf="modalOptions.recurrencePatternType.value === RecurRadio.Yearly">
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 15%">
+													<div class="platform-form-label" style=" vertical-align: middle">{{'basics.meeting.recurrence.recurEvery'| platformTranslate}}</div>
+												</div>
+												<div class="platform-form-col" style="width: 40%;padding-left: 15px">
+													<div class="platform-form-col">
+														<input type="text" class="form-control" style="width: 40px" maxlength="2"
+														       (blur)="setDefaultInterval()" (keyup)="estimateInterval()"
+														       [(ngModel)]="modalOptions.recurrencePattern.interval" >
+													</div>
+													<div class="platform-form-col" style="padding-left: 10px">
+														<div class="platform-form-label" style=" vertical-align: middle">{{'basics.meeting.recurrence.years'| platformTranslate}}</div>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 35%;"></div>
+											</div>
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 15%">
+													<div class="radio">
+														<label>
+															<input name="radioGroupC" type="radio"
+															       [(ngModel)]="modalOptions.recurrencePattern.yearlyRadio"
+															       [value]="YearlyRadio.AbsoluteDay">{{'basics.meeting.recurrence.on'| platformTranslate}}
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 40%">
+													<div class="platform-form-col">
+														<label>
+															<select style="height: 26px" [(ngModel)]="modalOptions.recurrencePattern.month1"
+															        [disabled]="modalOptions.recurrencePattern.yearlyRadio === YearlyRadio.RelativeDay">
+
+																<option *ngFor="let opt of modalOptions.monthOption" [value]="opt.id">{{opt.value | platformTranslate}}</option>
+															</select>
+														</label>
+													</div>
+													<div class="platform-form-col">
+														<label>
+															<input type="text" class="form-control" style="width: 40px" maxlength="2"
+															       (blur)="setDefaultDayOfMonth()" (keyup)="estimateDayOfMonth()"
+															       [(ngModel)]="modalOptions.recurrencePattern.dayOfMonth"
+															       [disabled]="modalOptions.recurrencePattern.yearlyRadio === YearlyRadio.RelativeDay">
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 35%"></div>
+											</div>
+											<div class="platform-form-row form-group">
+												<div class="platform-form-col" style="width: 15%">
+													<div class="radio">
+														<label>
+															<input name="radioGroupC" type="radio"
+															       [(ngModel)]="modalOptions.recurrencePattern.yearlyRadio"
+															       [value]="YearlyRadio.RelativeDay">{{'basics.meeting.recurrence.onThe'| platformTranslate}}
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 40%">
+													<div class="platform-form-col">
+														<label>
+															<select style="height: 26px" [(ngModel)]="modalOptions.recurrencePattern.index"
+															        [disabled]="modalOptions.recurrencePattern.yearlyRadio === YearlyRadio.AbsoluteDay">
+																<option *ngFor="let opt of modalOptions.frequencyOption" [value]="opt.id">{{opt.value | platformTranslate}}</option>
+															</select>
+														</label>
+													</div>
+													<div class="platform-form-col" style="padding-left: 5px">
+														<label>
+															<select style="height: 26px" [(ngModel)]="modalOptions.recurrencePattern.day"
+															        [disabled]="modalOptions.recurrencePattern.yearlyRadio === YearlyRadio.AbsoluteDay">
+
+																<option *ngFor="let opt of modalOptions.weekOption" [value]="opt.id">{{opt.value | platformTranslate}}</option>
+															</select>
+														</label>
+													</div>
+													<div class="platform-form-col">
+														<div class="platform-form-label" style="padding-left: 10px; vertical-align: middle">{{'basics.meeting.recurrence.of'| platformTranslate}}</div>
+													</div>
+													<div class="platform-form-col">
+														<label>
+															<select style="height: 26px" [(ngModel)]="modalOptions.recurrencePattern.month2"
+															        [disabled]="modalOptions.recurrencePattern.yearlyRadio === YearlyRadio.AbsoluteDay">
+
+																<option *ngFor="let opt of modalOptions.monthOption" [value]="opt.id">{{opt.value | platformTranslate}}</option>
+															</select>
+														</label>
+													</div>
+												</div>
+												<div class="platform-form-col" style="width: 35%;"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!--                RangeOfRecurrence-->
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="modalOptions.showRecurrenceRange = !modalOptions.showRecurrenceRange">
+								<span class="platform-from-group-header-test ng-binding ng-scope">{{'basics.meeting.recurrence.rangeOfRecurrence'| platformTranslate}}</span>
+								<span class="platform-form-group-header ng-scope">
+									<div class="toggleImg control-icons" [class]="modalOptions.showRecurrenceRange ? 'ico-up' : 'ico-down'"></div>
+								</span>
+							</a>
+						</h4>
+					</div>
+					<!-- TODO: There is no transition animation when collapsing. It seems that the style will be overridden when using mat-expansion-panel element. -->
+					<div class="panel-collapse" [hidden]="!modalOptions.showRecurrenceRange">
+						<div class="panel-body">
+							<div class="platform-form-group ng-scope">
+								<div class="platform-form-row form-group">
+									<div class="platform-form-col" style="width:30%; padding-left: 10px">
+										<div class="platform-form-label" style="padding-left: 15px; vertical-align: middle">{{'basics.meeting.recurrence.start'| platformTranslate}}</div>
+										<div class="platform-form-col">
+											<ui-common-domain-control-host [fieldType]="FieldType.Date" [controlContext]="modalOptions.recurrenceRange.startDate" (blur)="updateRadio()"/>
+										</div>
+									</div>
+									<div class="platform-form-col" style="width: 20%; padding-left: 10px">
+										<div class="radio">
+											<label>
+												<input name="radioGroupD" type="radio"
+												       [(ngModel)]="modalOptions.recurrenceRange.type"
+												       [value]="RangeRadio.EndByDate">{{'basics.meeting.recurrence.endBy'| platformTranslate}}
+											</label>
+										</div>
+									</div>
+									<div class="platform-form-col" style="width: 30%;">
+										<!-- TODO: readonly does work. Wait for the framework to fix it. -->
+										<ui-common-domain-control-host [fieldType]="FieldType.Date" [controlContext]="modalOptions.recurrenceRange.endDate" [readOnly]="modalOptions.recurrenceRange.type === 2"/>
+									</div>
+									<div class="platform-form-col" style="width: 10%;"></div>
+								</div>
+								<div class="platform-form-row form-group">
+									<div class="platform-form-col" style="width:30%;"></div>
+									<div class="platform-form-col" style="width: 20%; padding-left: 10px">
+										<div class="radio">
+											<label>
+												<input name="radioGroupD" type="radio"
+												       [(ngModel)]="modalOptions.recurrenceRange.type"
+												       [value]="RangeRadio.EndByTimes">{{'basics.meeting.recurrence.endAfter'| platformTranslate}}
+											</label>
+										</div>
+									</div>
+									<div class="platform-form-col" style="width: 30%;">
+										<div class="platform-form-row">
+											<div class="platform-form-col" style="width: 20%">
+												<input type="text" class="form-control" style="width: 40px" maxlength="3"
+												       (keyup)="estimateNumberOfOccurrences()"
+												       (blur)="setDefaultNumberOfOccurrences()"
+												       [(ngModel)]="modalOptions.recurrenceRange.numberOfOccurrences"
+												       [disabled]="modalOptions.recurrenceRange.type === RangeRadio.EndByDate">
+											</div>
+											<div class="platform-form-col">
+												<div class="platform-form-label" style="padding-left: 15px; vertical-align: middle">{{'basics.meeting.recurrence.occurrences'| platformTranslate}}</div>
+											</div>
+										</div>
+									</div>
+									<div class="platform-form-col" style="width: 10%;"></div>
+								</div>
+								<div class="platform-form-col" style="width: 10%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

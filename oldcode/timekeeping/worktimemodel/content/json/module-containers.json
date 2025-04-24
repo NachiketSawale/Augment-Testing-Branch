@@ -1,0 +1,77 @@
+[
+  {
+    "id": "timekeeping.worktimemodel.workTimeModelList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.worktimemodel.workTimeModelListTitle",
+    "controller": "timekeepingWorkTimeModelListController",
+    "uuid": "990a46ae64d74fa4ae226a74730c5ccf"
+  },
+  {
+    "id": "timekeeping.worktimemodel.workTimeModelDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.worktimemodel.workTimeModelDetailTitle",
+    "controller": "timekeepingTimeModelDetailController",
+    "uuid": "ad495e8fb0ff4cf09296789ee58fd6af",
+    "permission": "990a46ae64d74fa4ae226a74730c5ccf"
+  },
+  {
+    "id": "timekeeping.worktimemodel.workTimeDerivationList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.worktimemodel.workTimeDerivationListTitle",
+    "controller": "timekeepingWorkTimeDerivationListController",
+    "uuid": "099dbd22e4334b27af27d080bee3dd65"
+  },
+  {
+    "id": "timekeeping.worktimemodel.workTimeDerivationDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.worktimemodel.workTimeDerivationDetailTitle",
+    "controller": "timekeepingWorkTimeDerivationDetailController",
+    "uuid": "f9bd8c7b94a74663900f47f8a2a5bb9e",
+    "permission": "099dbd22e4334b27af27d080bee3dd65"
+  },
+  {
+    "id": "timekeeping.worktimemodel.workTimeModelDayList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.worktimemodel.workTimeModelDayListTitle",
+    "controller": "timekeepingWorkTimeModelDayListController",
+    "uuid": "2c97189d84574b82a555e20301529c1c"
+  },
+  {
+    "id": "timekeeping.worktimemodel.workTimeModelDayDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.worktimemodel.workTimeModelDayDetailTitle",
+    "controller": "timekeepingWorkTimeModelDayDetailController",
+    "uuid": "e31e2637059e41d4a32856fb2126bdd5",
+    "permission": "2c97189d84574b82a555e20301529c1c"
+  },
+  {
+    "id": "timekeeping.worktimemodel.workTimeModelDtlList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.worktimemodel.workTimeModelDtlListTitle",
+    "controller": "timekeepingWorkTimeModelDtlListController",
+    "uuid": "b49b64d4b0204eb190350168633ef306"
+  },
+	{
+		"id": "timekeeping.worktimemodel.workTimeModelDtlDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.worktimemodel.workTimeModelDtlDetailTitle",
+		"controller": "timekeepingWorkTimeModelDtlDetailController",
+		"uuid": "7a1e913380024d598a65902a6e24fc27",
+		"permission": "b49b64d4b0204eb190350168633ef306"
+	},
+	{
+		"id": "timekeeping.worktimemodel.timeSymbol2WorkTimeModelDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.worktimemodel.timeSymbol2WorkTimeModelDetailTitle",
+		"controller": "timekeepingTimeSymbol2WorkTimeModelDetailController",
+		"uuid": "79369d99b969492b830da0e62aea78bd",
+		"permission": "b3aa28b1d5db4b4b884679a95c3a32b8"
+	},
+	{
+		"id": "timekeeping.worktimemodel.timeSymbol2WorkTimeModelList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.worktimemodel.timeSymbol2WorkTimeModelListTitle",
+		"controller": "timekeepingTimeSymbol2WorkTimeModelListController",
+		"uuid": "b3aa28b1d5db4b4b884679a95c3a32b8"
+	}
+]

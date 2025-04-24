@@ -1,0 +1,1017 @@
+[
+	{
+		"id": "prc.con.header.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.contractGridTitle",
+		"controller": "procurementContractHeaderGridController",
+		"uuid": "E5B91A61DBDD4276B3D92DDC84470162"
+	},
+	{
+		"id": "prc.con.header.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.contractFormTitle",
+		"controller": "procurementContractHeaderFormController",
+		"uuid": "B3B0FDF482AE4973A4B6BBEA754876C3",
+		"permission": "E5B91A61DBDD4276B3D92DDC84470162"
+	},
+	{
+		"id": "prc.con.headerStructure.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.mainContractStructure",
+		"controller": "procurementContractHierarchicalListController",
+		"uuid": "d3c6691f0af64490b9f4dc6ecc481992"
+	},
+	{
+		"id": "prc.con.item.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.item.prcItemContainerGridTitle",
+		"controller": "procurementCommonPrcItemListController",
+		"uuid": "DEF60CC8FA044FE08FF72B773AF9D7EF"
+	},
+	{
+		"id": "prc.con.item.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.item.prcItemContainerFormTitle",
+		"controller": "procurementCommonPrcItemFormController",
+		"uuid": "32BD7DDE490A449EBAD0395FF8EFFD1E",
+		"permission": "DEF60CC8FA044FE08FF72B773AF9D7EF"
+	},
+	{
+		"id": "prc.con.item2plant",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.item.item2plantContainerGridTitle",
+		"controller": "prcCommonItem2plantGridController",
+		"uuid": "c18b6ffa74254e76bbedce5ea1c8fb9c"
+	},
+	{
+		"id": "prc.con.item2plant.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.item.item2plantContainerFormTitle",
+		"controller": "prcCommonItem2plantDetailController",
+		"uuid": "1ddef8ec0a2340a2adf4c63908556ca1",
+		"permission": "c18b6ffa74254e76bbedce5ea1c8fb9c"
+	},
+	{
+		"id": "prc.con.total",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.total.totalContainerGridTitle",
+		"controller": "procurementCommonTotalListController",
+		"uuid": "B19C1F681EEE490EBB3AC023854DB68D"
+	},
+	{
+		"id": "prc.con.total.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.total.totalContainerFormTitle",
+		"controller": "procurementCommonTotalDetailController",
+		"uuid": "2060A0F87A74486DA566831AC64C8BE6",
+		"permission": "B19C1F681EEE490EBB3AC023854DB68D"
+	},
+	{
+		"id": "prc.con.data",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.data.dataTitle",
+		"controller": "procurementCommonOverviewController",
+		"uuid": "314DF1FA485D4D1AA8722A086BD57C70"
+	},
+	{
+		"id": "prc.con.header.text",
+		"template": "procurement.common/partials/header-text-view-new.html",
+		"title": "procurement.common.headerText.prcHeaderTextContainerTitle",
+		"controller": "procurementCommonHeaderTextController",
+		"uuid": "AF859543498E499FB082581FF7DA6201",
+		"textFormat": 1,
+		"moduleName": "procurement.contract"
+	},
+	{
+		"id": "prc.con.item.text",
+		"template": "procurement.common/partials/itemtext-view-new.html",
+		"title": "procurement.common.itemText.itemTextsTitle",
+		"controller": "procurementCommonItemTextController",
+		"uuid": "F9C0779669854BD0ABD9836DF8C9A0D1",
+		"textFormat": 1,
+		"moduleName": "procurement.contract"
+	},
+	{
+		"id": "prc.con.item.itemPlainTitle",
+		"template": "procurement.common/partials/common-item-plaintext-html-container.html",
+		"title": "procurement.common.itemText.itemPlainTitle",
+		"controller": "procurementCommonItemTextController",
+		"uuid": "75A2C7C6748B4C7BBE489EE5575939C8",
+		"textFormat": 2,
+		"moduleName": "procurement.contract"
+	},
+	{
+		"id": "prc.con.deliver.schedule",
+		"template": "procurement.common/partials/deliverschedule-view-new.html",
+		"title": "procurement.common.delivery.deliveryScheduleContainerGridTitle",
+		"controller": "procurementCommonDeliveryScheduleListController",
+		"uuid": "3BC0EAFCAE734307B5CC0974405BA10F"
+	},
+	{
+		"id": "procurement.common.deliverScheduleDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.delivery.deliveryScheduleContainerFormTitle",
+		"controller": "procurementCommonDeliveryScheduleFormController",
+		"uuid": "57F7A43EDC2D40F198704F06E2B7AD5B",
+		"permission": "3BC0EAFCAE734307B5CC0974405BA10F"
+	},
+	{
+		"id": "prc.con.contact",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.contact.contactContainerGridTitle",
+		"controller": "procurementCommonContactController",
+		"uuid": "9DE5ED967FA84B638446C8C50FDB867A"
+	},
+	{
+		"id": "prc.con.contact.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.contact.contactContainerFormTitle",
+		"controller": "procurementCommonContactDetailController",
+		"uuid": "B5D264ADB1F746D9B2055742CA84C7A7",
+		"permission": "9DE5ED967FA84B638446C8C50FDB867A"
+	},
+	{
+		"id": "procurement.common.certificates.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.certificate.certificatesContainerGridTitle",
+		"controller": "procurementCommonCertificatesController",
+		"uuid": "5055BA9CE9C14F78B445A97D74BC8B90"
+	},
+	{
+		"id": "procurement.common.certificates.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.certificate.certificatesContainerFormTitle",
+		"controller": "procurementCommonCertificatesFormController",
+		"uuid": "2EF9CDB7254C4FB597DD79B86CEFA948",
+		"permission": "5055BA9CE9C14F78B445A97D74BC8B90"
+	},
+	{
+		"id": "prc.con.milestones.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.milestone.milestoneContainerGridTitle",
+		"controller": "procurementCommonMilestoneListController",
+		"uuid": "E146E86368BF41FF9682B989A9DF3291"
+	},
+	{
+		"id": "prc.con.milestones.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.milestone.milestoneContainerFormTitle",
+		"controller": "procurementCommonMilestoneFormController",
+		"uuid": "5F9769E2287446ECA7BAB31FA2BADF04",
+		"permission": "E146E86368BF41FF9682B989A9DF3291"
+	},
+	{
+		"id": "prc.con.paymentSchedules.list",
+		"template": "procurement.common/partials/prc-common-payment-schedule-grid-partial.html",
+		"title": "procurement.common.paymentSchedule.paymentScheduleContainerGridTitle",
+		"controller": "procurementCommonPaymentScheduleListController",
+		"uuid": "0613476F0A9A4A87BA62F830FFF99C7D"
+	},
+	{
+		"id": "prc.con.paymentSchedules.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.paymentSchedule.paymentScheduleContainerFormTitle",
+		"controller": "procurementCommonPaymentScheduleFormController",
+		"uuid": "6E93FB1D19E841D190F240C0013E164D",
+		"permission": "0613476F0A9A4A87BA62F830FFF99C7D"
+	},
+	{
+		"id": "prc.con.document",
+		"template": "procurement.common/partials/prcdocument-view.html",
+		"title": "procurement.common.document.prcDocumentContainerGridTitle",
+		"controller": "procurementCommonDocumentListController",
+		"uuid": "EC2420D04C8D458490C29EDBD9B9CAFC"
+	},
+	{
+		"id": "prc.con.document.from",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.document.prcDocumentContainerFormTitle",
+		"controller": "procurementCommonDocumentDetailController",
+		"uuid": "03b10c1f188f4b219b491f5696c056c6",
+		"permission": "EC2420D04C8D458490C29EDBD9B9CAFC"
+	},
+	{
+		"id": "prc.con.subcontractor.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.subcontractor.subcontractorContainerGridTitle",
+		"controller": "procurementCommonSubcontractorListController",
+		"uuid": "2A7E35D3FDDC41A0ABB141DC2D868EBD"
+	},
+	{
+		"id": "procurement.common.subcontractor.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.subcontractor.subcontractorContainerFormTitle",
+		"controller": "procurementCommonSubcontractorFormController",
+		"uuid": "3C851039B52B493FBB86F7AE4A459EC0",
+		"permission": "2A7E35D3FDDC41A0ABB141DC2D868EBD"
+	},
+	{
+		"id": "prc.con.general.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.general.generalsContainerGridTitle",
+		"controller": "procurementCommonGeneralsListController",
+		"uuid": "54DC0AE6C79E44548AD5C84EDD339DB4"
+	},
+	{
+		"id": "prc.con.general.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.general.generalsContainerFormTitle",
+		"controller": "procurementCommonGeneralsFormController",
+		"uuid": "85354099AE654207B6AB5C3C770F4837",
+		"permission": "54DC0AE6C79E44548AD5C84EDD339DB4"
+	},
+	{
+		"id": "boq.main.containerheader.boqStructure",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqStructure",
+		"controller": "prcBoqMainNodeController",
+		"uuid": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "boq.main.pricecondition.container",
+		"template": "boq.main/templates/price-condition-edit-dialog.html",
+		"title": "boq.main.PriceCondition",
+		"controller": "boqMainPriceconditionListController",
+		"dataService": "prcContractBoqStructurePriceconditionService",
+		"uuid": "698ED3B0BC7B4E8B8A43876FA38979C6",
+		"permission": "50C3504A0FA1423CA419CE32A3465F96"
+	},
+	{
+		"id": "boq.main.containerheader.boqDetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.boqDetails",
+		"controller": "prcBoqMainDetailFormController",
+		"uuid": "03CDF7295D694522A9AC00F1135FEE33",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "boq.main.containerheader.boqList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.procurementBoqList",
+		"controller": "procurementCommonPrcBoqListController",
+		"uuid": "A56A75CBE90545ECBFAFA5DE3F437F10"
+	},
+	{
+		"id": "boq.main.containerheader.boqDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.boq.prcBoqDetailTitle",
+		"controller": "procurementCommonPrcBoqDetailController",
+		"uuid": "28A7DC156449404D83CD5109D4321461",
+		"permission": "A56A75CBE90545ECBFAFA5DE3F437F10"
+	},
+	{
+		"id": "boq.main.containerheader.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.ContainerUserformDefaultTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "13FD1F28813A4772A4CE9074FAEFCB0A",
+		"rubricId": 26,
+		"mainService": "procurementContractHeaderDataService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "procurement.main.containerheader.entityApprovers",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.workflow.ContainerEntityApproversDefaultTitle.conApprovers",
+		"controller": "basicsWorkflowEntityApproverController",
+		"uuid": "C6079D3605874E1691C1221C77E8421A",
+		"entityGUID": "A853F0B9E5E840D1B5B1882323C1C8F7",
+		"isReadonly": true,
+		"mainService": "procurementContractHeaderDataService"
+	},
+	{
+		"id": "procurement.contract.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "d2b5525ef2ee49e4b820de6004dfb8c4",
+		"controller": "",
+		"sectionId": "8",
+		"mainService": "procurementContractHeaderDataService"
+	},
+	{
+		"id": "procurement.contract.actualcertificatelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.certificate.actualCertificateListContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateListController",
+		"uuid": "0F6AE8F1F34545559C008FCA53BE2754",
+		"permission": "2c39331cf48c4016af9d17a573388100",
+		"currentModule": "procurement.contract",
+		"parentService": "procurementContractHeaderDataService",
+		"translationService": "procurementContractTranslationService"
+	},
+	{
+		"id": "procurement.contract.actualcertificatedetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.certificate.actualCertificateDetailContainerTitle",
+		"controller": "businesspartnerCertificateActualCertificateDetailController",
+		"uuid": "724E448CCE7249328149F8CE8F830940",
+		"permission": "2c39331cf48c4016af9d17a573388100",
+		"currentModule": "procurement.contract",
+		"parentService": "procurementContractHeaderDataService",
+		"translationService": "procurementContractTranslationService"
+	},
+	{
+		"id": "procurement.contract.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentAssignObject",
+		"controller": "documentsProjectModelObjectController",
+		"uuid": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentAssignObjectFormTitle",
+		"controller": "documentsProjectModelObjectDetailController",
+		"uuid": "ee68ae76fefe4b758c282594a1746480",
+		"permission": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "procurement.contract.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "procurement.contract.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "procurement.contract.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "project.main.documents.project.document.history.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProjectHistory",
+		"controller": "documentsProjectDocumentHistoryController",
+		"uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+	},
+	{
+		"id": "boq.main.containerheader.boqCopy",
+		"template": "boq.main/templates/boq-copysource-container.html",
+		"title": "boq.main.boqLookup",
+		"controller": "",
+		"uuid": "6e1299c6d9c844ac90daf517b7d7eab9",
+		"mainService": "procurementContractHeaderDataService"
+	},
+	{
+		"id": "prc.con.header.plainText",
+		"template": "procurement.common/partials/common-header-plaintext-html-container.html",
+		"title": "procurement.common.headerText.prcHeaderPlainTextContainerTitle",
+		"controller": "procurementCommonHeaderTextController",
+		"uuid": "AAC4FC428BB1456CBF580ECD442CD802",
+		"textFormat": 2,
+		"moduleName": "procurement.contract"
+	},
+	{
+		"id": "procurement.contract.boqdocument.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.documentTitle",
+		"controller": "prcCommonBoqDocumentController",
+		"uuid": "292c2db151564ccd9747e1ebc7ab5f5a",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.crbvariable.container",
+		"template": "boq.main/templates/boq-main-crb-variable-container.html",
+		"title": "boq.main.crbVariableTitle",
+		"controller": "prcCommonCrbVariableController",
+		"uuid": "00b342f2e32d402f8df9fc3c5f256910",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.crbboqitemscope.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.crbBoqItemScopeTitle",
+		"controller": "prcCommonCrbBoqItemScopeController",
+		"uuid": "374e360e935b45e4bf78cb69ab0a1268",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.crbpricecondition.container",
+		"template": "boq.main/templates/boq-main-crb-pricecondition-container.html",
+		"title": "boq.main.crbPriceconditionTitle",
+		"controller": "prcCommonCrbPriceconditionController",
+		"uuid": "138b355681124e1fa3adb1f77bb339cc",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "boq.main.containerheader.boqSpecification",
+		"template": "boq.main/templates/boq-specification-html-container.html",
+		"title": "boq.main.boqSpecification",
+		"controller": "prcBoqMainSpecificationController",
+		"uuid": "51D11ADE0EAB47CC8AB1C5BACED1D5AF",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.requisition.htmltextcomplement.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqMainHtmlTextComplement",
+		"controller": "prcCommonBoqHtmlTextComplementController",
+		"uuid": "aa66c3adabfe412f8891cb0c6f173881",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.pes.boqSurcharge.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqSurchargeOn",
+		"controller": "prcCommonBoqSurchargeController",
+		"uuid": "de5b16e007494f3994b08bef14405deb",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.event.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.event.eventGridTitle",
+		"controller": "procurementPackageEventGridController",
+		"uuid": "7879859FDBD94C1CA3462C7919B7BC6E",
+		"permission": "07946CB829634366B34547B3C5987B23"
+	},
+	{
+		"id": "procurement.contract.event.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.event.eventFormTitle",
+		"controller": "procurementPackageEventFormController",
+		"uuid": "27b072c4d6074bf9938718b79d95c967",
+		"permission": "07946CB829634366B34547B3C5987B23"
+	},
+	{
+		"id": "procurement.contract.CallOffAgreement.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.listCallOffAgreementTitle",
+		"controller": "procurementContractCallOffAgreementGridController",
+		"uuid": "16d4b43815ce46bfb37189ec58d973bb"
+	},
+	{
+		"id": "procurement.contract.CallOffAgreement.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.detailCallOffAgreementTitle",
+		"controller": "procurementContractCallOffAgreementFormController",
+		"uuid": "7c9932be107843f4979bd93de61f72ad",
+		"permission": "16d4b43815ce46bfb37189ec58d973bb"
+	},
+	{
+		"id": "procurement.contract.MandatoryDeadline.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.listMandatoryDeadlineTitle",
+		"controller": "procurementContractMandatoryDeadlineGridController",
+		"uuid": "bf1dc8854bd945928f5f890af558a5e5"
+	},
+	{
+		"id": "procurement.contract.MandatoryDeadline.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.detailMandatoryDeadlineTitle",
+		"controller": "procurementContractMandatoryDeadlineFormController",
+		"uuid": "4f95fed11a894177975dc33975405e42",
+		"permission": "bf1dc8854bd945928f5f890af558a5e5"
+	},
+	{
+		"id": "procurement.contract.splitquantity.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.SplitQuantity",
+		"controller": "prcCommonBoqSplitQuantityController",
+		"uuid": "0da233bc77f3447db8a0e059b0df8cae",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "basics.material.priceCondition",
+		"template": "basics.material/partials/price-condition-partial.html",
+		"title": "basics.material.record.priceConditionTitle",
+		"controller": "basicsMaterialPriceConditionController",
+		"uuid": "7E92ACAC64E2497782D6DEC303940BB2",
+		"dataService": "procurementCommonPriceConditionServiceFactory"
+	},
+	{
+		"id": "procurement.contract.clerk.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.contract.entityClerk",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "8559f4ea73e746c7a1f7cb718917b125",
+		"clerkQualifier": "procurement.contract.clerk",
+		"parentService": "procurementContractHeaderDataService"
+	},
+	{
+		"id": "procurement.contract.clerk.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.contract.entityClerkForm",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "b5f7cdcc332d4297aefb909934eeceb4",
+		"clerkQualifier": "procurement.contract.clerk",
+		"parentService": "procurementContractHeaderDataService",
+		"permission": "8559f4ea73e746c7a1f7cb718917b125"
+	},
+	{
+		"id": "procurement.contract.billingschemalist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.billingSchemaContainer",
+		"controller": "basicsBillingSchemaCommonListController",
+		"uuid": "9f5d33b39555424ba877447f2bfd1269",
+		"permission": "9f5d33b39555424ba877447f2bfd1269",
+		"billingSchemaQualifier": "procurement.contract.billingschmema",
+		"parentService": "procurementContractHeaderDataService",
+		"dataService": "prcContractBillingSchemaDataService"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "app/components/grid/generic-structure/generic-container.html",
+		"title": "procurement.contract.contractGroupingContainer",
+		"uuid": "6c4f9de0262b46a999629f931efa8728",
+		"controller": "platformGenericStructureController",
+		"mainService": "procurementContractHeaderDataService",
+		"configurationService": "contractMainStandardConfigurationService",
+		"enableCaching": "true"
+	},
+	{
+		"id": "prc.con.accountAssignment.grid",
+		"template": "procurement.contract/partials/prc-contract-account-assignment-view.html",
+		"title": "procurement.contract.accountAssignmentGridTitle",
+		"controller": "procurementContractAccountAssignmentGridController",
+		"uuid": "1C5E0A69E0A343EEB3E9F9E700F171EB"
+	},
+	{
+		"id": "prc.con.accountAssignment.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.accountAssignmentFormTitle",
+		"controller": "procurementContractAccountAssignmentFormController",
+		"uuid": "41536BFCB3804F9DB46E1373AF41F561",
+		"permission": "1C5E0A69E0A343EEB3E9F9E700F171EB"
+	},
+	{
+		"id": "prc.con.crew.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.crewGridTitle",
+		"controller": "procurementContractCrewGridController",
+		"uuid": "518782BB7E024921B68890D83332867A"
+	},
+	{
+		"id": "prc.con.crew.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.crewFormTitle",
+		"controller": "procurementContractCrewFormController",
+		"uuid": "CD70F3E8A849453DBCCE28E511B9BEA6",
+		"permission": "518782BB7E024921B68890D83332867A"
+	},
+	{
+		"id": "prc.con.masterrestriction.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.masterRestrictionGridTitle",
+		"controller": "procurementContractMasterRestrictionGridController",
+		"uuid": "5f355e34c4dc43a2a7e5dcda155afc92"
+	},
+	{
+		"id": "prc.con.masterrestriction.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.masterRestrictionFormTitle",
+		"controller": "procurementContractMasterRestrictionFormController",
+		"uuid": "b3d8667528184d69908c505d76729efd",
+		"permission": "5f355e34c4dc43a2a7e5dcda155afc92"
+	},
+	{
+		"id": "procurement.contract.prcItemInfoBlGrid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.item.prcItemInfoBlGridTitle",
+		"controller": "procurementCommonItemInfoBlGridController",
+		"uuid": "cca0f519d5b14830b052dc9053f5bc8f",
+		"permission": "87aa7026f1704173938cf4ec8d3ce967"
+	},
+	{
+		"id": "procurement.contract.prcItemInfoBlForm",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.item.prcItemInfoBlFormTitle",
+		"controller": "procurementCommonItemInfoBlDetailController",
+		"uuid": "d7a5e82de8b24dc1907a6b8c9f07c362",
+		"permission": "87aa7026f1704173938cf4ec8d3ce967"
+	},
+	{
+		"id": "procurement.contract.prcItemInfoBlSpecificationPlain",
+		"template": "procurement.common/templates/prc-common-specification-plain-container.html",
+		"title": "procurement.common.item.itemInfoBLSpecification",
+		"controller": "procurementCommonItemInfoBlSpecificationController",
+		"uuid": "26e0dad94ac54e35a39e3b79ac22af4f",
+		"permission": "87aa7026f1704173938cf4ec8d3ce967"
+	},
+	{
+		"id": "contract.price.condition.param",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.pricecondition.headerParamTitle",
+		"controller": "basicsPriceConditionParamController",
+		"uuid": "1ad2b47c38cb44d6bd75555e82d39e67",
+		"paramTypeId": "4",
+		"mainService": "procurementContractHeaderDataService",
+		"permission": "65AABBD453E0452783829CB3CEFBA94D"
+	},
+	{
+		"id": "controlling.structure.grpsetdlt.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.structure.grpsetdltGridTitle",
+		"controller": "controllingStructureGrpSetDTLListController",
+		"uuid": "4B2C873526CC4F8C8E8B652CFDA4F8FE",
+		"dataService": "procurementContractGrpSetDTLDataService"
+	},
+	{
+		"id": "controlling.structure.grpsetdlt.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "controlling.structure.grpsetdltFormTitle",
+		"controller": "controllingStructureGrpSetDTLDetailController",
+		"uuid": "69940AAA863843C3ACCC5BBE1C6FD2C2",
+		"permission": "4B2C873526CC4F8C8E8B652CFDA4F8FE",
+		"dataService": "procurementContractGrpSetDTLDataService"
+	},
+	{
+		"id": "procurement.contract.advance.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.advanceGridTitle",
+		"controller": "procurementContractAdvanceGridController",
+		"uuid": "06e6c5040b5640ebbd18b99d77717014"
+	},
+	{
+		"id": "procurement.contract.advance.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.advanceFormTitle",
+		"controller": "procurementContractAdvanceFormController",
+		"uuid": "3e550f8dc3d7421087c699e1a09c72af",
+		"permission": "06e6c5040b5640ebbd18b99d77717014"
+	},
+	{
+		"id": "procurement.pes.postconhistory.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.listPostconHistoryTitle",
+		"controller": "procurementCommonPostconHistoryController",
+		"uuid": "7255830deaab4be180657d0bceb05bdd"
+	},
+	{
+		"id": "procurement.pes.postconhistory.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.detailPostconHistoryTitle",
+		"controller": "procurementCommonPostconHistoryDetailController",
+		"uuid": "5460b6c4365343dd92a8ddd0c1331520",
+		"permission": "7255830deaab4be180657d0bceb05bdd"
+	},
+	{
+		"id": "procurement.quote.business.partner.evaluationstructure",
+		"template": "businesspartner.main/partials/evaluatoin-chart-grid.html",
+		"title": "basics.common.evaluation.businessPartnerEvaluationStructure",
+		"controller": "commonBusinessPartnerBusinessPartnerEvaluationNewController",
+		"uuid": "9d67469eaff347a097267622cf076401",
+		"permission": "953895e120714ab4b6d7283c2fc50e14",
+		"configService": "procurementContractBusinessPartnerEvaluationAdaptorService"
+	},
+	{
+		"id": "procurement.common.warranty.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.warranty.warrantyContainerGridTitle",
+		"controller": "procurementCommonWarrantyController",
+		"uuid": "96ad9514b39e48a697354249640402cd"
+	},
+	{
+		"id": "procurement.common.warranty.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.warranty.warrantyContainerDetailTitle",
+		"controller": "procurementCommonWarrantyDetailController",
+		"uuid": "f3cc0860a2ef422ea60cbe978490a02d",
+		"permission": "96ad9514b39e48a697354249640402cd"
+	},
+	{
+		"id": "procurement.contract.callOffslist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.callOffsContainer",
+		"controller": "procurementCallOffsChangeController",
+		"uuid": "1358a3d7ad534a86a38393d64de36486",
+		"parentService": "procurementContractHeaderDataService",
+		"dataService": "procurementContractCallOffsDataService"
+	},
+	{
+		"id": "procurement.contract.comment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "454c582d76004d37a9975728c9444bc1",
+		"commentQualifier": "procurement.contract.comment",
+		"parentService": "procurementContractHeaderDataService"
+	},
+	{
+		"id": "procurement.contract.change.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.projectChangeTitle",
+		"controller": "procurementContractProjectChangeController",
+		"uuid": "9d95591bec814875bed99ec4919374b4",
+		"parentService": "procurementContractHeaderDataService",
+		"dataService": "changeMainContractChangeDataService"
+	},
+	{
+		"id": "procurement.contract.change.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.detailChangeTitle",
+		"controller": "procurementContractProjectChangeDetailController",
+		"uuid": "e7b68e56026c414f9e50e3017467e753",
+		"permission": "9d95591bec814875bed99ec4919374b4"
+	},
+	{
+		"id": "documents.clerk.authorization.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkListController",
+		"clerkQualifier": "documents.project.clerk",
+		"uuid": "47620dd38c874f97b75ee3b6ce342666",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "documents.authorization.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7806e7a22b2142f8865ab189efe23c5a",
+		"permission": "47620dd38c874f97b75ee3b6ce342666",
+		"clerkQualifier": "documents.project.clerk",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "procurement.contract.transaction.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.transaction.title",
+		"controller": "procurementContractTransactionGridController",
+		"uuid": "d91c9fc9474e446ca31d1e7a0739f9c6"
+	},
+	{
+		"id": "procurement.contract.transaction.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.transaction.detailTitle",
+		"controller": "procurementContractTransactionFormController",
+		"uuid": "cce3de0c40884576a377d1ecb4a96953",
+		"permission": "d91c9fc9474e446ca31d1e7a0739f9c6"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "d7bb075997478318bdbcd9fa1bc92262",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "procurement.contract.characteristic2.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"uuid": "abdcb806f0fe4b78b3a3a0d8a947c3bf",
+		"controller": "",
+		"sectionId": "46",
+		"mainService": "procurementContractHeaderDataService"
+	},
+	{
+		"id": "procurement.contract.headerapproval.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.listHeaderApprovalTitle",
+		"controller": "procurementContractHeaderApprovalGridController",
+		"uuid": "22307f2249d04061986c26508e5f6b1a"
+	},
+	{
+		"id": "procurement.contract.headerapproval.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.contract.detailHeaderApprovalTitle",
+		"controller": "procurementContractHeaderApprovalDetailController",
+		"uuid": "0e76058ee10645f186195895a9502b7a",
+		"permission": "22307f2249d04061986c26508e5f6b1a"
+	},
+	{
+		"id": "procurement.common.statushistory.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.common.changeStatus.statusHistory",
+		"controller": "procurementCommonStatusHistoryListController",
+		"uuid": "f1c2e26d271146dbbcc73b1905348d77"
+	},
+	{
+		"id": "procurement.contract.historical.price.for.boq",
+		"template": "basics.common/templates/historical/common-historical-price-for-boq.html",
+		"title": "basics.common.historicalPrice.historicalPriceForBoqContainerTitle",
+		"controller": "commonHistoricalPriceForBoqController",
+		"configService": "commonHistoricalPriceForBoqService",
+		"isDynamicParent": "true",
+		"uuid": "2886b0dc937048d9a70811f63803b14d",
+		"permission": "2886b0dc937048d9a70811f63803b14d"
+	},
+	{
+		"id": "procurement.contract.historical.price.for.item",
+		"template": "basics.common/templates/historical/common-historical-price-for-item.html",
+		"title": "basics.common.historicalPrice.historicalPriceForItemContainerTitle",
+		"controller": "commonHistoricalPriceForItemController",
+		"configService": "commonHistoricalPriceForItemService",
+		"isDynamicParent": "true",
+		"uuid": "f473de936d114c72b3b12b01673fc7d2",
+		"permission": "f473de936d114c72b3b12b01673fc7d2"
+	},
+	{
+		"id": "procurement.contract.extbidder.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.extBidderGridTitle",
+		"controller": "procurementPackage2ExtBidderGridController",
+		"uuid": "D3C764793B92489EABD741230A7C2741",
+		"permission": "DE4193FE7CAF4AA1BD69C0FCAAC8041D"
+	},
+	{
+		"id": "procurement.contract.extbidder.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.extBidderFormTitle",
+		"controller": "procurementPackage2ExtBidderFormController",
+		"uuid": "70790606C90B43D59702EF94833E8101",
+		"permission": "DE4193FE7CAF4AA1BD69C0FCAAC8041D"
+	},
+	{
+		"id": "basics.material.specification",
+		"template": "procurement.common/templates/prc-common-specification-html-container.html",
+		"title": "procurement.common.specificationFormatText",
+		"controller": "prcCommonMaterialSpecificationController",
+		"uuid": "e850ba1740c24c35907491f922a3716b"
+	},
+	{
+		"id": "procurement.contract.status.history.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.common.entityStatusHistoryTitle",
+		"controller": "basicsCommonStatusHistoryListController",
+		"uuid": "bcb8622d676944edb5f113fd524608b6",
+		"parentService": "procurementContractHeaderDataService",
+		"StatusName": "contract",
+		"DisplayMember": "DescriptionInfo.Translated",
+		"LookupTypeName": "ConStatus"
+	},
+	{
+		"id": "procurement.package.specificationPlainText",
+		"template": "basics.material/partials/material-specificationPlainText-view.html",
+		"title": "procurement.common.specificationPlainText",
+		"controller": "prcCommonMaterialSpecificationPlainController",
+		"uuid": "902c3e85e137426b9eaf7095a55df3b5",
+		"permission": "e850ba1740c24c35907491f922a3716b"
+	},
+	{
+		"id": "procurement.contract.boq.oen.boqitem",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oenExtension.detailContainerTitle",
+		"controller": "prcCommonOenBoqItemFormController",
+		"uuid": "14aa56956a3c442294aee472c3ea8103",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.contact",
+		"template": "boq.main/templates/boq-main-oen-contact-container.html",
+		"title": "boq.main.oen.uicontainer.contact.title",
+		"controller": "prcCommonOenContactController",
+		"uuid": "ef7dfc307eb24b50a73f5936d39bfdf2",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.lbMetadata",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.LbMetadata",
+		"controller": "prcCommonOenLbMetadataController",
+		"uuid": "b00b2dbba353461db5388d7626b1a624",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.graphic",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "boq.main.oen.graphicContainerTitle",
+		"controller": "prcCommonOenPictureController",
+		"uuid": "1754656f44fb4d9aa90da21a01c13c20",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.lvHeader",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.uicontainer.lvHeader.title",
+		"controller": "prcCommonOenLVHeaderController",
+		"uuid": "66932cd92d56456497059f7aecda68ac",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.akz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.akz.title",
+		"controller": "prcCommonOenAkzController",
+		"uuid": "ab73017f862d4560a39c27ba64e133df",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.zz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zz.title",
+		"controller": "prcCommonOenZzController",
+		"uuid": "f9dfd0fd041d41c79c9d30d03bea9387",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.zzVariant",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zzVariant.title",
+		"controller": "prcCommonOenZzVariantController",
+		"uuid": "3ca74de0a21947eaaff3ab71fe5a54e0",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.boq.oen.servicePart",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.servicePart.title",
+		"controller": "prcCommonOenServicePartController",
+		"uuid": "61af10f0b780499abb173b34230ef9d8",
+		"permission": "DC5C6ADCDC2346E09ADADBF5508842DE"
+	},
+	{
+		"id": "procurement.contract.item.scope.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.scope.listTitle",
+		"controller": "prcItemScopeListController",
+		"uuid": "1becbb65bdc0df7696b73b1800b5534f",
+		"permission": "4e3ca36d3ef04a4984ba33fcccb8b4c6"
+	},
+	{
+		"id": "procurement.contract.item.scope.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.scope.formTitle",
+		"controller": "prcItemScopeDetailController",
+		"uuid": "0d1766fa375e251caae7d2fd3e13058c",
+		"permission": "4e3ca36d3ef04a4984ba33fcccb8b4c6"
+	},
+	{
+		"id": "procurement.contract.item.scope.detail.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.scopeDetail.listTitle",
+		"controller": "prcItemScopeDetailListController",
+		"uuid": "38f5473d49816e82acfe96be709fb81e",
+		"permission": "1b0a9a4ed62a4d3c8951a76ec336eaaf"
+	},
+	{
+		"id": "procurement.contract.item.scope.detail.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.scopeDetail.formTitle",
+		"controller": "prcItemScopeDetailDetailController",
+		"uuid": "cf86b67e70e1b83cac761a106f4fa68b",
+		"permission": "1b0a9a4ed62a4d3c8951a76ec336eaaf"
+	},
+	{
+		"id": "procurement.contract.item.scope.detail.priceCondition",
+		"template": "basics.material/partials/price-condition-partial.html",
+		"title": "basics.material.scopeDetail.priceConditionTitle",
+		"controller": "basicsMaterialPriceConditionController",
+		"uuid": "a85ddb8363189b7eb48ad7e09b01885e",
+		"permission": "b05a32047bd84d92847e294b0598e452",
+		"dataService": "prcItemScopeDetailPriceConditionDataService",
+		"getService": true
+	},
+	{
+		"id": "procurement.contract.item.scope.detail.itemText",
+		"template": "procurement.common/partials/itemtext-view-new.html",
+		"title": "basics.material.scopeDetail.itemTextTitle",
+		"controller": "basicsMaterialScopeItemTextController",
+		"uuid": "5d8bb73681edf2dc2760b5f5895189c8",
+		"permission": "72351d420c9f42aa90f06f9afb365e5e",
+		"dataService": "prcItemScopeItemTextDataService",
+		"uiService": "prcItemScopeItemTextUIStandardService",
+		"getService": true
+	},
+	{
+		"id": "procurement.contract.item.scope.detail.itemPlainText",
+		"template": "procurement.common/partials/common-item-plaintext-html-container.html",
+		"title": "basics.material.scopeDetail.itemPlainTextTitle",
+		"controller": "basicsMaterialScopeItemTextController",
+		"uuid": "4f0d5c4a310956f35789b31fe8eafcd1",
+		"permission": "72351d420c9f42aa90f06f9afb365e5e",
+		"dataService": "prcItemScopeItemTextDataService",
+		"uiService": "prcItemScopeItemTextUIStandardService",
+		"getService": true
+	},
+	{
+		"id": "procurement.contract.extbidder2contact.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.package.extBidder2ContactGridTitle",
+		"controller": "packageExtBidder2ContactGridController",
+		"uuid": "338DD6F7E2DF4AA3B0089A91EBD93018",
+		"permission": "5FBD673B50874A02A9A63A81FB24909A"
+	},
+	{
+		"id": "procurement.contract.extbidder2contact.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.package.extBidder2ContactFormTitle",
+		"controller": "packageExtBidder2ContactFormController",
+		"uuid": "5678C7A50B984D32942922EE6827B464",
+		"permission": "338DD6F7E2DF4AA3B0089A91EBD93018"
+	}
+]

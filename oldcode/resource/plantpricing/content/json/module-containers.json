@@ -1,0 +1,54 @@
+[
+  {
+    "id": "resource-plantpricing-pricelist-type-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.plantpricing.pricelistTypeListTitle",
+    "controller": "resourcePlantpricingPricelistTypeListController",
+    "uuid": "03d826201fda4a318c0ac1d7937b3a81"
+  },
+  {
+    "id": "resource-plantpricing-pricelist-type-details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.plantpricing.pricelistTypeDetailTitle",
+    "controller": "resourcePlantpricingPricelistTypeDetailController",
+    "uuid": "eed809fca1ab4cb9ab3df7964dd2d28c",
+    "permission": "03d826201fda4a318c0ac1d7937b3a81"
+  },
+  {
+	"id": "resource-plantpricing-pricelist-list",
+	"template": "app/components/base/grid-partial.html",
+	"title": "resource.plantpricing.pricelistListTitle",
+	"controller": "resourcePlantpricingPricelistListController",
+	"uuid": "b3e5fc95b1a6496c9d83fb923abf100b"
+  },
+  {
+	"id": "resource-plantpricing-pricelist-details",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "resource.plantpricing.pricelistDetailTitle",
+	"controller": "resourcePlantpricingPricelistDetailController",
+	"uuid": "bb28b8eba1604d95a1d0acc24f7b188d",
+	"permission": "b3e5fc95b1a6496c9d83fb923abf100b"
+  },
+  {
+	"id": "resource-plantpricing-est-pricelist-list",
+	"template": "app/components/base/grid-partial.html",
+	"title": "resource.plantpricing.estPricelistListTitle",
+	"controller": "resourcePlantpricingEstPricelistListController",
+	"uuid": "fb0d5f61d72e426c847cd01b0d74008d"
+  },
+  {
+	"id": "resource-plantpricing-est-pricelist-details",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "resource.plantpricing.estPricelistDetailTitle",
+	"controller": "resourcePlantpricingEstPricelistDetailController",
+	"uuid": "69fc598b3b3645279ff52a862f4e0b45",
+	"permission": "fb0d5f61d72e426c847cd01b0d74008d"
+  },
+  {
+    "id": "resource-type-translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "c354126f74754bbaade2b918d09b1f01"
+  }
+]

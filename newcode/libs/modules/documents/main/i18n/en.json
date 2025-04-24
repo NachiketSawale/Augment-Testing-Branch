@@ -1,0 +1,15 @@
+{
+  "documents": {
+	"main": {
+	  "moduleName": "Document Main",
+	  "invoiceModuleName": "Invoice Document Main",
+	  "invoiceHeader":"Invoice Header",
+	  "billingHeader":"Sales Billing",
+	  "billModuleName": "Bill Document Main",
+	  "tab": {
+		"search": "Search"
+	  }
+	}
+  }
+}
+

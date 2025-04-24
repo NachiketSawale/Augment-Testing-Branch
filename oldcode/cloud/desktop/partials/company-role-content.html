@@ -1,0 +1,66 @@
+<div data-ng-disabled="companyOptions.loading" class="flex-element flex-box flex-column overflow-hidden" data-ng-keydown="companyOptions.keyPress($event)">
+
+	<h3 data-ng-if="companyOptions.languagesActive" data-ng-bind="companyOptions.dialogSubTitleLanguages"
+	    class="section-header"></h3>
+
+	<div class="platform-form-group">
+		<div data-ng-if="companyOptions.languagesActive" class="platform-form-row">
+			<span class="platform-form-label" ng-bind="companyOptions.uilanguagelabel"></span>
+
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="select" data-model="uiLangOptions.selectedUiLang" class="form-control"
+				     data-options="uiLangOptions" data-change="uiLangOptions.changeEvent(item)"></div>
+			</div>
+		</div>
+		<div data-ng-if="companyOptions.languagesActive" class="platform-form-row">
+			<span class="platform-form-label" ng-bind="companyOptions.datalanguagelabel"></span>
+
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="select" data-model="dataLangOptions.selectedDataLang"
+				     class="form-control"
+				     data-options="dataLangOptions" data-change="dataLangOptions.changeEvent(item)"></div>
+			</div>
+		</div>
+	</div>
+
+	<h3 data-ng-bind="companyOptions.dialogSubTitle"></h3>
+
+	<div class="platform-form-flex flex-element flex-box flex-column" data-platform-form-adjust-label>
+		<div class="platform-form-group overflow-hidden">
+			<div class="platform-form-row flex-container overflow-hidden">
+				<span class="platform-form-label"
+				      data-ng-bind="companyOptions.companyLabel"></span>
+
+				<div class="platform-form-col">
+					<div id="company-scroller" class="form-control_ overflow subview-container">
+						<div treecontrol class="tree-classic flex-element_ overflow"
+						     data-tree-model="dataForTheTree"
+						     data-options="treeOptions"
+						     data-order-by="code"
+						     data-on-selection="onSelection(node)"
+						     data-on-node-dbl-click="onNodeDblClick(node)"
+						     data-selected-node="treeOptions.selectedNode"
+						     data-expanded-nodes="treeOptions.expandedNodes"
+						     data-item-name="company">
+							<span class="sm control-icons" data-ng_class="::classByType(node)"> </span>
+							<span data-ng_bind="getDisplaytext(node)"></span>
+						</div>
+					</div>
+				</div>
+		</div>
+
+			<div class="platform-form-row">
+				<span class="platform-form-label" ng-bind="companyOptions.roleLabel"></span>
+
+				<div class="platform-form-col">
+					<div data-domain-control data-domain="select" data-model="roleOptions.selectedRole" class="form-control"
+					     data-options="roleOptions" data-change="roleOptions.changeEvent(item)"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-if="companyOptions.showReloadHint()" class="pane-b">
+		<h3 data-ng-bind="companyOptions.reloadHint"></h3>
+	</div>
+</div>

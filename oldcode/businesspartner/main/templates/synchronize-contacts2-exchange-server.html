@@ -1,0 +1,53 @@
+<div data-ng-controller="businessPartnerSynchronizeContactsController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="platform-form-group">
+			<div class="checkbox spaceToUp col-lg-offset-0">
+				<label>
+					<input type="checkbox" name="userContact" data-ng-model="modalOptions.body.checkUserContact" data-ng-click="modalOptions.onHeaderClick()">{{modalOptions.body.toUserContact}}
+				</label>
+			</div>
+
+			<!--<div class="platform-form-row">
+				 <div class="checkbox spaceToUp col-lg-offset-0">
+					  <label>
+							<input type="checkbox" name="globalContact" data-ng-model="modalOptions.body.checkGlobalContact">{{modalOptions.body.toGlobalContact}}
+					  </label>
+				 </div>
+			</div>-->
+
+			<!--<div class="platform-form-row">
+				 <div class="checkbox spaceToUp col-lg-offset-0">
+					  <label>
+							<input type="checkbox" name="synContacts">{{modalOptions.body.synContacts}}
+					  </label>
+				 </div>
+			</div>-->
+		</div>
+
+		<h3 class="pane-t pane-b">{{modalOptions.body.bPtitle}} </h3>
+		<div style="height: 340px;" class="flex-box flex-column"
+		     data-ng-controller="businessPartnerSynContactsBPController">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+
+		<h3 class="margin-top-ld">{{modalOptions.body.contactGridTitle}}</h3>
+		<div class="flex-box flex-column" style="height: 150px;"
+		     data-ng-controller="businessPartnerSynContactsCtController">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.check(true)" data-ng-disabled="modalOptions.footer.disableCheckButton">
+			{{modalOptions.footer.checkBtn}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.uncheck(false)" data-ng-disabled="modalOptions.footer.disableUncheckButton">
+			{{modalOptions.footer.uncheckBtn}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.footer.cancelBtn}}
+		</button>
+	</footer>
+</div>

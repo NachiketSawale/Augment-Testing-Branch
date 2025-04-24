@@ -1,0 +1,438 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.lineItemContainer",
+		"controller": "estimateMainLineItemListController",
+		"uuid": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.line.item.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "estimate.main.lineItemsDetails",
+		"controller": "estimateMainLineItemDetailController",
+		"uuid": "e1956964883749dfa7cf4207d1eb3b50",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.line.item.costgroup",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.costGroupListTitle",
+		"controller": "basicsCostGroupAssignmentListController",
+		"costGroupService": "estimateMainLineItemCostGroupService",
+		"uuid": "250D65D6FBC542678BAE824A2D077420",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.resourceContainer",
+		"controller": "estimateMainResourceListController",
+		"uuid": "bedd392f0e2a44c8a294df34b1f9ce44",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.resource.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "estimate.main.resourceDetailContainer",
+		"controller": "estimateMainResourceDetailController",
+		"uuid": "9ddb004429ab4d58a8e778eecaa877db",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.boqContainer",
+		"controller": "estimateMainBoqListController",
+		"uuid": "ECAF41BE6CC045588297D5EFB9745FE4"
+	},
+	{
+		"id": "estimate.main.splitquantity.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.SplitQuantity",
+		"controller": "boqMainGenericSplitQuantityController",
+		"boqService": "estimateMainBoqService",
+		"moduleName": "estimate.main",
+		"uuid": "c3455e699b6e4906acf3f8066dc695b4"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.activityContainer",
+		"controller": "estimateMainActivityListController",
+		"uuid": "F423A7DAA8CD474385097AF443F3C73F"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.controllingContainer",
+		"controller": "estimateMainControllingListController",
+		"uuid": "72E7C6850EEC42E9ACA9A0FD831CB7CC"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.assemblyCategoryContainer",
+		"controller": "estimateMainAssemblyCategoryTreeController",
+		"uuid": "75BBD8DF20DE4A3B8F132BDACBB203F6"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.locationContainer",
+		"controller": "estimateMainLocationListController",
+		"uuid": "1DD77E2E10B54F2392870A53FCB44982"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.escalationCostChartContainer",
+		"controller": "estimateMainEscalationCostChartController",
+		"uuid": "96b4926b9fb244b59e85e2642cc6fd5b",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "root-assignment-of-rules-parameters",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.rootAssignmentTotalContainer",
+		"controller": "estimateMainRootController",
+		"uuid": "7925D8CDB20B4256A0808620C28D4666"
+	},
+	{
+		"id": "est-main-config-total-container",
+		"template": "estimate.main/templates/estimate-main-config-total.html",
+		"title": "estimate.main.totalContainer",
+		"controller": "estimateMainConfigTotalController",
+		"uuid": "07B7499A1F314F16A94EDDDC540C55D4",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "19",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.prcStructureContainer",
+		"controller": "estimateMainProcurementStructureTreeController",
+		"uuid": "5BAFBAD1E3FE4BC2A7A114E27972795C"
+	},
+	{
+		"id": "20",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.ruleContainer",
+		"controller": "estimateMainRuleListController",
+		"uuid": "c41abea3ef7741d083bfc34029e8a8f1",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "21",
+		"template": "estimate.main/partials/estimate-main-output-partial.html",
+		"title": "estimate.main.outputContainerTitle",
+		"controller": "estimateMainOutputController",
+		"uuid": "8989297C1CE24515A2F81521BDA937C7"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "lineitem2mdlobject",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.lineItem2MdlObjectContainer",
+		"controller": "estimateMainLineItem2MdlObjectController",
+		"uuid": "a08569edfec7481fa903fc29273d8df5",
+		"permission": "8b2b9def0459434eb95d412c9d031f01"
+	},
+	{
+		"id": "estimate.main.lineitemquantity",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.lineItemQuantityContainer",
+		"controller": "estimateMainLineItemQuantityController",
+		"uuid": "9cc2043da33141f78511adf92662cfb9",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.characteristic1",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "E1B52E16CD0549F7B5707E3F0DE534F4",
+		"controller": "",
+		"sectionId": 27,
+		"pKey1Field": "EstHeaderFk",
+		"mainService": "estimateMainService",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.characteristic2",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle2",
+		"uuid": "E78E840150CE4A4B933D73772412E6EB",
+		"controller": "",
+		"sectionId": 28,
+		"pKey1Field": "EstHeaderFk",
+		"mainService": "estimateMainService",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "estimate.main/templates/filter-structures/estimate-main-line-items-generic-container.html",
+		"title": "estimate.main.lineItemGroupingContainer",
+		"uuid": "66788defaa8f43319b5122462e09c41d",
+		"controller": "platformGenericStructureController",
+		"mainService": "estimateMainService",
+		"enableCaching": "true",
+		"configurationService": "estimateMainLineitemStructureConfigService",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.wic2assembly",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.assemblyRelatedWic",
+		"controller": "estimateMainAssemblyRelateWicListController",
+		"uuid": "23572CA132F44B9E8269B39002C2908B",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.resource-characteristics",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "estimate.main.resourceCharacteristics",
+		"uuid": "9201bfe4297c4eb9bdf2bbca7d798148",
+		"controller": "",
+		"sectionId": 33,
+		"pKey1Field": "EstHeaderFk",
+		"pKey2Field": "EstLineItemFk",
+		"mainService": "estimateMainResourceService",
+		"permission": "9201bfe4297c4eb9bdf2bbca7d798148"
+	},
+	{
+		"id": "estimate.main.simulationChartCostCode",
+		"template": "app/components/datavis/templates/datavis.html",
+		"title": "estimate.main.simulationChart.containerTitle",
+		"uuid": "528680507d384fc08cc5c0426ad64a48",
+		"controller": "estimateMainCostCodeChartController",
+		"sectionId": 34,
+		"permission": "a919c5302c1a4a8c975726f2466ca52d"
+	},
+	{
+		"id": "estimate.main.wicGroupContainer",
+		"template": "estimate.main/templates/wic-boq/estimate-main-wic-boq-container.html",
+		"title": "estimate.main.wicGroupContainer",
+		"uuid": "C6F28F5792C54DFD91409B16FA2E79A1",
+		"controller": "",
+		"sectionId": 35,
+		"mainService": "estimateMainService"
+	},
+	{
+		"id": "estimate.main.lineItemSelectionStatement",
+		"template": "estimate.main/templates/selection-statement/line-item-selection-statement-container.html",
+		"title": "estimate.main.lineItemSelStatement.containerTitle",
+		"uuid": "c90e5cf712f646a1b163d8ef308c1960",
+		"controller": "estimateMainLineItemSelectionStatementParentController",
+		"parentService":"estimateMainLineItemSelStatementListService",
+		"gridUUID":"f66addcbeade45c59c5b04b85476a8bf",
+		"permission": "49e56a48a2b5481189f871774a0e641a"
+	},
+	{
+		"id": "estimate.main.CostGroup",
+		"template": "estimate.main/templates/cost-group/cost-group-container.html",
+		"title": "estimate.main.costGroupContainer",
+		"uuid": "4f3dd493c4e145a49b54506af6da02ef",
+		"controller": "",
+		"sectionId": 35,
+		"mainService": "estimateMainService"
+	},
+	{
+		"id": "scheduling.main.simulatedGanttVis",
+		"template": "app/components/datavis/templates/datavis.html",
+		"title": "scheduling.main.simulatedGantt.title",
+		"controller": "schedulingMainSimulatedGanttVisController",
+		"uuid": "a7482dd41cd44ece9f554d028d7f518f"
+	},
+	{
+		"id": "estimate-main-resource-summary-container",
+		"template": "estimate.main/templates/estimate-main-resource-summary.html",
+		"title": "estimate.main.resourceSummaryContainer",
+		"controller": "estimateMainResourceSummaryController",
+		"uuid": "3c17c15475964e4fae3d1e8915a56947",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "constructionsystem.project.instanceheader.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.instanceHeaderGridContainerTitle",
+		"uuid": "f3044885941741b8a9c0c8eea34fb647",
+		"controller": "constructionSystemProjectInstanceHeaderController"
+	},
+	{
+		"id": "model-project-model-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelListContainer",
+		"controller": "modelProjectModelListController",
+		"uuid": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "estimate-main-risk-events-contianer",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.estimateRiskEvents",
+		"controller": "estimateMainRiskEventsController",
+		"uuid": "204663b245a146b4a23791b950833e61"
+	},
+	{
+		"id": "estimate-main-assigned-risk-events-contianer",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.estimateAssignedRiskEvents",
+		"controller": "estimateMainAssignedRiskEventsController",
+		"uuid": "ee8a005db2cb4fccaf4228bb311b56bb"
+	},
+	{
+		"id": "estimate-main-risk-events-impact-contianer",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "estimate.main.impactContainer",
+		"controller": "estimateMainRiskEventsImpactController",
+		"uuid": "9719261f74544c80851daf3554c49cdb"
+	},
+	{
+		"id": "estimate-main-risk-events-resources-contianer",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.riskResourcesContainer",
+		"controller": "estimateMainRiskEventResourcesController",
+		"uuid": "9719261f74544c80851daf3554c49cda",
+		"permission": "9719261f74544c80851daf3554c49cdb"
+	},
+	{
+		"id": "estimate-main-boq-specification-contianer",
+		"template": "boq.main/templates/boq-specification-html-container.html",
+		"title": "estimate.main.boqSpecification",
+		"controller": "estimateMainSpecificationController",
+		"uuid": "6248dfcf6a554714bf16eae61fea0c71",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+    },
+	{
+		"id": "estimate-main-combined-lineitem-client-container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.combineLineItemContainerClient",
+		"controller": "estimateCombinedLineItemClientController",
+		"uuid": "b46b9e121808466da59c0b2959f09960",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate-main-powerbi-list-container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.powerBIElements",
+		"controller": "estimateMainPowerBiController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ac61",
+		"permission": "9719261f74544c80851daf3554c49cdb"
+	},
+	{
+		"id": "estimate-main-powerbi-view-container",
+		"template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+		"title": "estimate.main.powerBIView",
+		"controller": "estimateMainPowerbiViewController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ac62",
+		"permission": "9719261f74544c80851daf3554c49cdb"
+	},
+	{
+		"id": "estimate-main-copysource-contianer",
+		"template": "estimate.main/templates/copy-source-estimate/estimate-main-copysource-container.html",
+		"title": "estimate.main.copySourceLineItems",
+		"controller": "",
+		"uuid": "72893426739f41c895fba1dcfda9ca4e",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.title",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "0739ea924988255d90c631bc224587f6",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "estimateMainIgeDimensionService"
+	},
+	{
+		"id": "estimate.main.lineitem.parameters",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.lineItemParameterContainer",
+		"controller": "estimateMainLineitemParamertersController",
+		"uuid": "1964c1d48f5B4b2b99778a0917e2666a",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.standard.allowances",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.StandardAllowancesContainer",
+		"controller": "estimateMainStandardAllowancesController",
+		"uuid": "fec1963fae2e43f2815921ac04bcdff3",
+		"permission": "96e6498b2ffc429dbb1ef2336b45a369"
+	},
+	{
+		"id": "estimate.main.allowanceArea",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.allowanceArea",
+		"controller": "estimateMainAllowanceAreaController",
+		"uuid": "4265ca844fcb457e83e0fd8fadda115f"
+	},
+	{
+		"id": "estimate.main.boqAreaAssignment",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.boqAreaAssignment",
+		"controller": "estimateMainAllowanceBoqAreaAssignmentController",
+		"uuid": "e92749dba52e4d6d8e70293530aff5e8"
+	},
+	{
+		"id": "estimate.main.standard.allowances.cost.code.detail",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.standardAllowancesCostCodesDetails",
+		"controller": "estimateMainStandardAllowancesCostCodeDetailController",
+		"uuid": "e4a0ca6ff2214378afdc543646e6b079",
+		"permission": "3416213311ef4b078db786669a80735e"
+	},
+	{
+		"id": "estimate.main.itemAssignment",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.itemAssignment",
+		"controller": "estimateMainPrcItemAssignmentListController",
+		"uuid": "4cf3bc54dd38437b8aaae2005cc80ae4",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.price.adjustment.container",
+		"template": "estimate.main/templates/price-adjustment/estimate-main-price-adjustment-grid.html",
+		"title": "estimate.main.priceAdjust.adjustment",
+		"controller": "estimateMainPriceAdjustmentController",
+		"uuid": "6e1c35741cbe47269d291ee0a7e09e44",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	},
+	{
+		"id": "estimate.main.price.adjustment.total.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.priceAdjust.total",
+		"controller": "estimateMainPriceAdjustmentTotalController",
+		"uuid": "07a3c46b264a4c7898c108f17488768b",
+		"permission": "6e1c35741cbe47269d291ee0a7e09e44"
+	},
+	{
+		"id": "estimate.main.confidenceCheck",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "estimate.main.confidenceCheck.confidenceCheck",
+		"controller": "estimateMainConfidenceCheckController",
+		"uuid": "e790ba05b2f54e35ab95041e10941499"
+	},
+	{
+		"id": "estimate.main.est.rule.script",
+		"template": "estimate.rule/partials/script-partial.html",
+		"title": "estimate.rule.ruleScriptContainer",
+		"controller": "estimateMainRuleScriptController",
+		"uuid": "cf0e55a317b441a4a1f9837758f2e0cd",
+		"permission": "c41abea3ef7741d083bfc34029e8a8f1"
+	},
+	{
+		"id": "estimate.main.plantList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "estimate.main.plantList",
+		"controller": "estimateMainPlantListController",
+		"uuid": "6d24769943a34e9a9700935de548f7fe"
+	},
+	{
+		"id": "est-plant-total-container",
+		"template": "estimate.main/templates/plant-totals/estimate-main-plant-total.html",
+		"title": "estimate.main.plantTotalContainer",
+		"controller": "estimateMainPlantTotalsController",
+		"uuid": "bcc24e53c7604ed9bdc5f97b10cf5a81"
+	}
+]

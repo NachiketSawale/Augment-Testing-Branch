@@ -1,0 +1,42 @@
+{
+	"basics": {
+		"costcodes": {
+
+			"description2":"Weitere Bezeichnung",
+			"costCodeTypes":"Kostenarten-Typ",
+			"costType":"!Cost Type",
+			"abcClassification": "ABC Klassifizierung",
+			"costCodePortions":"Kosten-Anteil",
+			"costGroupPortions":"Kostengruppen-Anteil",
+			"uoM":"ME",
+			"currency":"Währung",
+			"factorCosts":"Faktor(Kosten)",
+			"factorQuantity":"Faktor(Menge)",
+			"realFactorCosts":"Effektiv-Faktor(Kosten)",
+			"realFactorQuantity":"Effektiv-Faktor(Menge)",
+			"rate":"Marktpreis",
+			"dayWorkRate":"Regiepreis",
+			"isLabour": "Stundenkostenart",
+			"isRate": "Fester VS",
+			"costCodes":"Kostenarten",
+			"costCodesDetails":"Kostenarten Details",
+			"costCodesTranslation":"Kostenarten Übersetzung",
+		  	"assignments":"Zuordnungen",
+		  	"translation":"Übersetzung",
+            "prcStructure":"Beschaffungsstruktur",
+			"moduleDisplayNameCostCodes":"Basis Kostenarten",
+			"checked":"Checked",
+			"canlookup": "In Suche sichtbar",
+			"company":"Used In Company",
+			"companyName":"Company Name",
+			"prcStructureDescription":"Procurement Structure Description",
+			"resType":"Resource Type",
+			"resourceContext":"Resource Context",
+			"isBudget": "Budget",
+			"isCost": "Kosten",
+			"isEditable":"Editable",
+			"confirmAssignCompany":"Assign Company",
+			"confirmAssignCompanyToChildren":"Do you want to assign the children of the selected CostCode(s) to the same company?"
+		}
+	}
+}

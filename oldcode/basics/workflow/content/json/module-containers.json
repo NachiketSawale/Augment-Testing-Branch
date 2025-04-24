@@ -1,0 +1,114 @@
+[
+	{
+		"id": "1",
+		"template": "basics.workflow/partials/workflow-designer.html",
+		"title": "basics.workflow.designer.containerHeader",
+		"controller": "basicsWorkflowDesignerController",
+		"uuid": "c1abf57656fc418e8e9acc65aa0e9ea4",
+		"permission": "c1abf57656fc418e8e9acc65aa0e9ea4"
+	},
+	{
+		"id": "2",
+		"template": "basics.workflow/partials/grid-container-upload.html",
+		"title": "basics.workflow.template.containerHeader",
+		"controller": "basicsWorkflowTemplateController",
+		"uuid": "14d5f58009ff11e5a6c01697f925ec7b",
+		"permission": "14d5f58009ff11e5a6c01697f925ec7b"
+	},
+	{
+		"id": "3",
+		"template": "basics.workflow/partials/action-detail.html",
+		"title": "basics.workflow.action.containerHeader",
+		"controller": "basicsWorkflowActionDetailController",
+		"uuid": "a040cedc1e2d11e5b5f7727283247c7f",
+		"permission": "a040cedc1e2d11e5b5f7727283247c7f"
+	},
+	{
+		"id": "4",
+		"template": "basics.workflow/partials/grid-container.html",
+		"title": "basics.workflow.template.context.containerHeader",
+		"controller": "basicsWorkflowTemplateContextController",
+		"uuid": "8d61c1ee263a11e5b345feff819cdc9f",
+		"permission": "8d61c1ee263a11e5b345feff819cdc9f"
+	},
+	{
+		"id": "7",
+		"template": "basics.workflow/partials/grid-container.html",
+		"title": "basics.workflow.action.input.containerHeader",
+		"controller": "basicsWorkflowInputParamsController",
+		"uuid": "c76ac86dfcb84d2f8ee94627c3cf4a40",
+		"permission": "c76ac86dfcb84d2f8ee94627c3cf4a40"
+	},
+	{
+		"id": "8",
+		"template": "basics.workflow/partials/grid-container.html",
+		"title": "basics.workflow.action.output.containerHeader",
+		"controller": "basicsWorkflowOutputParamsController",
+		"uuid": "8e78bb9d0a7646b595ba01b23055af30",
+		"permission": "8e78bb9d0a7646b595ba01b23055af30"
+	},
+	{
+		"id": "basics.workflow.template.version.grid",
+		"template": "basics.workflow/partials/grid-container-upload.html",
+		"title": "basics.workflow.template.version.containerHeader",
+		"controller": "basicsWorkflowTemplateVersionController",
+		"uuid": "a8601aedc43e42fab13fee63a84d01f6",
+		"permission": "a8601aedc43e42fab13fee63a84d01f6"
+	},
+	{
+		"id": "10",
+		"template": "basics.workflow/partials/custom-parameter-editor.html",
+		"title": "basics.workflow.action.customEditor.containerHeader",
+		"controller": "basicsWorkflowCustomEditorParamsController",
+		"uuid": "7f93baff24f1464b8444430ca7f5cbad",
+		"permission": "c76ac86dfcb84d2f8ee94627c3cf4a40"
+	},
+	{
+		"id": "11",
+		"template": "basics.workflow/partials/workflow-debug.html",
+		"title": "basics.workflow.debug.containerHeader",
+		"controller": "basicsWorkflowDebugController",
+		"uuid": "d1507842b178486dae3c3c03d9268435",
+		"permission": "14d5f58009ff11e5a6c01697f925ec7b"
+	},
+	{
+		"id": "12",
+		"template": "basics.workflow/partials/grid-container.html",
+		"title": "basics.workflow.subscribedEvents.containerHeader",
+		"controller": "basicsWorkflowSubscribedEventsController",
+		"uuid": "201f20c6e7be494dbc81252a5f0ee50f",
+		"permission": "14d5f58009ff11e5a6c01697f925ec7b"
+	},
+	{
+		"id": "13",
+		"template": "basics.workflow/partials/status-matrix-details.html",
+		"title": "basics.workflow.statusMatrix.containerHeader",
+		"controller": "basicsWorkflowStatusMatrixController",
+		"uuid": "0d6f558e159a471a959681c52f0cebf0",
+		"permission": "14d5f58009ff11e5a6c01697f925ec7b"
+	},
+	{
+		"id": "14",
+		"template": "basics.workflow/partials/grid-container.html",
+		"title": "basics.workflow.template.version.globalScripts.containerName",
+		"controller": "basicsWorkflowGlobalScriptsController",
+		"uuid": "f6d1574a1e2849c3826f28db23f745b6",
+		"permission": "a8601aedc43e42fab13fee63a84d01f6"
+	},
+	{
+		"id": "15",
+		"template": "basics.workflow/partials/grid-container.html",
+		"title": "basics.workflow.approver.approverConfigContainerTitle",
+		"controller": "basicsWorkflowApproverConfigController",
+		"uuid": "1517256d3ba543dcbdb76fe973ee8087",
+		"permission": "1517256d3ba543dcbdb76fe973ee8087"
+	},
+	{
+		"id": "16",
+		"template": "basics.workflow/partials/grid-container.html",
+		"title": "basics.workflow.approver.approverContainerTitle",
+		"controller": "basicsWorkflowApproverController",
+		"uuid": "902d530d4a7c45ba8ca7d29064d550d5",
+		"permission": "902d530d4a7c45ba8ca7d29064d550d5"
+	}
+]

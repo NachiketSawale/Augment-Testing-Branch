@@ -1,0 +1,31 @@
+<div data-ng-controller="procurementTicketsystemPlaceOrderDialogController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="fullheight">
+            <div data-platform-alert data-error="error"></div>
+            <div data-platform-form data-form-options="formOptions" data-entity="submitcart"></div>
+            <div class="checkbox ts-space-up" data-ng-show="params.hasContract">
+                <label>
+                    <input type="checkbox" data-ng-model="submitcart.CreateSeparateContractForEachItem">
+                    {{ 'procurement.ticketsystem.submitDialog.separateContract' | translate }}
+                </label>
+            </div>
+            <label class="ts-space-up cursor-pointer">
+                {{ 'procurement.ticketsystem.submitDialog.noteSeperateRequistionContract' | translate }}
+            </label>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isSubmitting || isValidating"
+                data-ng-bind="modalOptions.actionButtonText">
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-disabled="isSubmitting"
+                data-ng-bind="modalOptions.closeButtonText">
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="companyOptions.loadingInfo"></div>
+</div>
+
+
+
+

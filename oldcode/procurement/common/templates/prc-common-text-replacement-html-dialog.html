@@ -1,0 +1,43 @@
+<div ng-controller="procurementCommonTextReplacementDialogController">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<h3 class="margin-top-ld">{{modalOptions.beforeReplacement}}</h3>
+		<div ng-controller="procurementCommonTextReplacementSourceController">
+			<div class="flex-element flex-box flex-column overflow" style="height: 250px">
+					<platform-editor data-textarea-id="beforeReplaceEditor" data-textarea-class=""
+					                 data-textarea-name="textareaBeforeReplace"
+					                 data-textarea-height="100%"
+					                 data-textarea-required
+					                 data-ng-model="currentData.source"
+					                 data-textarea-editable="false"
+					                 data-show-toolbar="false">
+					</platform-editor>
+			</div>
+		</div>
+		<h3 class="margin-top-ld">{{modalOptions.afterReplacement}}</h3>
+		<div ng-controller="procurementCommonTextReplacementResultController">
+			<div class="flex-element flex-box flex-column overflow" style="height: 250px">
+					<platform-editor data-textarea-id="afterReplaceEditor" data-textarea-class=""
+					                 data-textarea-name="textareaAfterReplace"
+					                 data-textarea-height="100%"
+					                 data-textarea-required
+					                 data-ng-model="currentData.replaced"
+					                 data-textarea-editable="false"
+					                 data-show-toolbar="false">
+						</platform-editor>
+			</div>
+		</div>
+		<h4 class="margin-top-ld">{{modalOptions.note}}</h4>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+			{{modalOptions.replaceBtn}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="progress.isReplacing" data-info="progress.info"></div>
+</div>

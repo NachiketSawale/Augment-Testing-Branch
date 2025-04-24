@@ -1,0 +1,61 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+    <div class="platform-lg">
+        <div class="panel-group">
+            <div class="platform-form-group pane-t">
+                <div class="platform-form-row">
+                    <div class="platform-form-col">
+                        <div class="platform-form-label h3">
+                            {{currentData.masterPositionInfo}}
+                        </div>
+                        <div class="platform-form-label">
+                            {{currentData.masterData.Code}}-{{currentData.masterData.DescriptionInfo.Translated}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="platform-form-group pane-b">
+                <div class="platform-form-row">
+                    <div class="platform-form-col">
+                        <div class="lg-7 md-7 h3">
+                            {{htmlTranslate.parameter}}
+                        </div>
+                        <select class="form-control lg-5 md-5"
+                                data-ng-model="currentData.selectedTemplateId"
+                                data-ng-change="changeSelectedTemplate(currentData.selectedTemplateId)">
+                            <option ng-repeat="t in currentData.templates" data-ng-disabled="t.disabled" value="{{t.Id}}">{{t.DescriptionInfo.Translated}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="platform-form-row">
+                    <div class="platform-form-col">
+                        <div class="toolbar">
+                            <div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-col">
+                        <div class="flex-element flex-box flex-column" data-platform-grid data="gridData"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-click="previous()" data-ng-disabled="ctlStatus.disabledPreviousBtn">
+        {{htmlTranslate.previousButton}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="next()" data-ng-disabled="ctlStatus.disabledNextBtn">
+        {{htmlTranslate.nextButton}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="ok()">
+        {{htmlTranslate.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="cancel()">
+        {{htmlTranslate.cancelButtonText}}
+    </button>
+</footer>

@@ -1,0 +1,6 @@
+<div style="padding:20px;height:100%" ng-hide="!!configErr">
+	<basics-common-chart-config-directive chart-data-source="chartDataSource" chart-type="chartType" trigger-update-event="triggerUpdateEvent" chart-uuid="gridId" legend-colors="legendColors" chart-option="chartOption" plugins="plugins" chart-click-fun="chartClickFun"></basics-common-chart-config-directive>
+</div>
+<div style="padding:20px;height:100%" ng-hide="!configErr">
+	<basics-common-chart-empty-directive chart-entity="chartEntity" config-err="configErr"></basics-common-chart-empty-directive>
+</div>

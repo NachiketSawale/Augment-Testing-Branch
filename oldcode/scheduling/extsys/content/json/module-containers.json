@@ -1,0 +1,17 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.extsys.calendarGridHeader",
+		"controller": "schedulingExtSysCalendarListController",
+		"uuid": "281b93e2ae5641bb9f644c74d5aefb5b"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.extsys.calendarDetailTitle",
+		"controller": "schedulingExtSysCalendarDetailController",
+		"uuid": "fe9fa2d886f643b29ca009bb9fe7ac53",
+		"permission": "281b93e2ae5641bb9f644c74d5aefb5b"
+	}
+]

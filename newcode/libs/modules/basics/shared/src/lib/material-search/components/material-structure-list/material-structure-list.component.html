@@ -1,0 +1,27 @@
+<ui-common-popup>
+	<div content class="generic-popup">
+		<select class="form-control" [(ngModel)]="selectedOption" (ngModelChange)="structureOptionChange()">
+			<option *ngFor="let structureOptionItem of structureOptionList"
+			        [value]="structureOptionItem.value">
+				{{structureOptionItem.description | platformTranslate}}
+			</option>
+		</select>
+		<div class="toolbar structure-toolbar">
+			<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+		</div>
+		<div class="form-control">
+			<input type="text" class="form-control" [(ngModel)]="searchText"
+			       placeholder="{{'basics.material.lookup.search' | platformTranslate}}" (keydown)="searchTextChange()" >
+		</div>
+		<div class="flex-element flex-box flex-column subview-container modal-wrapper" [ngClass]="'cid_' + gridConfig.uuid">
+			<ui-common-grid [configuration]="gridConfig" (dblclick)="doubleSelect()" (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+		</div>
+		<ui-common-loading [loading]="isLoading"></ui-common-loading>
+	</div>
+	<div footer class="form-control">
+		<span class="structure-footer">
+			<button type="button" class="btn btn-default structure-footer-button" (click)="onOK()" [disabled]="isLoading">{{'ui.common.dialog.okBtn' | platformTranslate }}</button>
+			<button type="button" class="btn btn-default structure-footer-button" (click)="onCancel()" >{{'ui.common.dialog.cancelBtn' | platformTranslate }}</button>
+		</span>
+	</div>
+</ui-common-popup>

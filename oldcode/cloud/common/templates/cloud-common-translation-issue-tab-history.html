@@ -1,0 +1,12 @@
+<div data-ng-controller="cloudCommonTranslationResolutionHistoryController">
+	<div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+	<div style="height: 100%;">
+
+		<div data-ng-if="!loading" style="display: flex;flex-direction: column;height: 100%;">
+			<h3>{{historyTitle}}</h3>
+			<div style="margin-top: 1rem; ">
+				<platform-grid data-data="gridData" style="height: 250px;"></platform-grid>
+			</div>
+		</div>
+	</div>
+</div>

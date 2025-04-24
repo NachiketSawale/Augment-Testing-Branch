@@ -1,0 +1,37 @@
+﻿{
+	"timekeeping": {
+		"certificate": {
+			"certificateListTitle": "Certificate List",
+			"certificateDetailTitle": "Certificate Detail",
+			"certificateEntity": "Timekeeping Certificate",
+			"entityType": "Certificate Type",
+			"entityStatus": "Certificate Status",
+			"entityValidFrom": "Valid From",
+			"entityValidTo" : "Valid To",
+			"entityComment": "Comment",
+			"entityRemark": "Remark",
+			"entityClerkFk": "Clerk",
+			"entityDescription": "Description",
+			"entityBusinessPartnerFk": "Business Partner",
+			"entityContactFk": "Contact",
+			"entitySupplierFk": "Supplier",
+			"changeStatus": "Change Status",
+			"certifiedEmployeeListTitle": "Certified Employees",
+			"certifiedEmployeeDetails": "Certified Employee Details",
+			"employeeCertificateEntity": "Employee Certificate",
+			"entityEmployeeFk": "Employee",
+			"entityEmployeeStatusFk": "Employee Status",
+			"employeeDocumentListTitle": "Employee Document",
+			"employeeDocumentDetails": "Employee Document Details",
+			"employeeCertificateDocumentEntity": "Employee Certificate Document",
+			"certificatedocumententity": "Certificate Document",
+			"entityCertificateFk": "Certificate",
+			"entityDocumentTypeFk": "Document Type",
+			"entityCertificateDoctypeFk": "Certificate Document Type",
+			"entityDate": "Date",
+			"entityBarcode" : "Barcode",
+			"entityFileArchivedocFk": "Document Original File Name",
+			"entityOriginFileName": "Origin File Name"
+		}
+	}
+}

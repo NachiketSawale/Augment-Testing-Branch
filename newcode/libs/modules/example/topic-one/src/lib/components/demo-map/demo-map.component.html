@@ -1,0 +1,17 @@
+<p>demo-map works!</p>
+
+<button (click)="selectEditMap()" class="edit">EditMap</button> 
+<button (click)="showRoute()" class="route">showRoute</button>
+<button (click)="selectReadOnlyMap()" class="route">ReadOnlyMap</button>
+<br>
+<br>
+
+<div class="flex-element map"  style="display: flex;">
+    <div *ngIf="editMap && !route">
+        <ui-map [entity]="entity" [showRoutes]="showRoutes" [canCalculateDist]="calculateDist" [editable]="true"></ui-map>
+    </div>
+    <div *ngIf="route && !editMap">
+        <ui-map [entity]="entity" [showRoutes]="showRoutes" [canCalculateDist]="calculateDist"></ui-map>
+    </div>
+    <ui-map *ngIf="!editMap && !route" [entity]="entity" [showRoutes]="showRoutes" [canCalculateDist]="calculateDist"></ui-map>
+</div>

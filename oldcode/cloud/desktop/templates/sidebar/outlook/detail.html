@@ -1,0 +1,139 @@
+<style>
+	.sidebar-outlook-detail ul.tools {
+		order: inherit;
+	}
+
+	.sidebar-outlook-detail .toolbar {
+		padding-bottom: 8px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.sidebar-outlook-detail .content-inner {
+		overflow: hidden;
+		padding-top: 8px;
+	}
+
+	.sidebar-outlook-detail .content-scrollable {
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding-top: 8px;
+	}
+
+	.sidebar-outlook-detail .content-scrollable iframe {
+		height: 100%;
+	}
+
+	.sidebar-outlook-detail .toolbar h3 {
+		padding: 0 8px;
+		line-height: 32px;
+	}
+
+	.sidebar-outlook-detail .avatar span {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+	}
+
+	.sidebar-outlook-detail .avatar span.name {
+		background-color: chocolate;
+		text-align: center;
+		font-size: 16px;
+		font-weight: normal;
+		color: #fff;
+	}
+
+	.sidebar-outlook-detail .avatar span.img {
+		overflow: hidden;
+	}
+
+	.sidebar-outlook-detail .avatar span.img img {
+		width: 100%;
+	}
+
+	.sidebar-outlook-detail .info {
+		padding: 4px 12px;
+		line-height: 20px;
+	}
+
+	.sidebar-outlook-detail .info label.user {
+		margin-left: 4px;
+	}
+
+	.sidebar-outlook-detail .border-bottom {
+		border-color: #ccc;
+	}
+
+	.sidebar-outlook-detail .more {
+		color: #0c9aa0;
+		cursor: pointer;
+	}
+
+	.sidebar-outlook-detail .attachments {
+		border-bottom: 1px solid #ccc;
+		padding: 8px 0;
+	}
+
+	.sidebar-outlook-detail .attachments span {
+		line-height: 20px;
+		padding: 4px 8px;
+		border: 1px solid #ccc;
+		white-space: nowrap;
+		display: inline-block;
+		margin: 4px 4px 4px 0;
+	}
+</style>
+<div class="fullheight sidebar-outlook-detail" data-ng-controller="cloudDesktopOutlookDetailController">
+	<div class="content-inner fullheight flex-box flex-column">
+		<div class="fullheight flex-box flex-column">
+			<div class="flex-box flex-row toolbar">
+				<ul class="tools">
+					<li>
+						<button type="button" class="control-icons ico-input-delete" data-ng-click="close()" title="{{'cloud.desktop.outlook.close' | translate}}">
+							<span>{{'cloud.desktop.outlook.close' | translate}}</span>
+						</button>
+					</li>
+				</ul>
+				<div class="fullwidth overflow-hidden">
+					<h3 class="font-bold ellipsis">{{message.subject}}</h3>
+				</div>
+			</div>
+			<div class="flex-box flex-column border-bottom" data-ng-if="message.from">
+				<div class="flex-box flex-row">
+					<div class="avatar fullheight vert-hori-center">
+						<span class="name vert-hori-center font-bold" data-ng-show="!photoUrl">{{getUserName()}}</span>
+						<span class="img" data-ng-show="photoUrl">
+							<img data-ng-src="{{photoUrl}}" alt="{{getUserName()}}">
+						</span>
+					</div>
+					<div class="fullwidth flex-box flex-column info">
+						<div title="{{message.from.emailAddress.address}}">{{message.from.emailAddress.name}}</div>
+						<div>
+							<label>{{'cloud.desktop.outlook.to' | translate}}:</label>
+							<span>
+								<label class="user" data-ng-repeat="user in message.toRecipients track by $index" data-ng-show="showAll || $index < displayNumber">{{user.emailAddress.name || user.emailAddress.address}};</label>
+								<label data-ng-show="!showAll && message.toRecipients.length > displayNumber">&nbsp;&nbsp;+{{message.toRecipients.length > displayNumber ? message.toRecipients.length - displayNumber : 0}}</label>
+							</span>
+						</div>
+						<div data-ng-if="message.ccRecipients.length">
+							<label>{{'cloud.desktop.outlook.cc' | translate}}:</label>
+							<span>
+								<label class="user" data-ng-repeat="user in message.ccRecipients track by $index" data-ng-show="showAll || $index < displayNumber">{{user.emailAddress.name || user.emailAddress.address}};</label>
+								<label data-ng-show="!showAll && message.ccRecipients.length > displayNumber">&nbsp;&nbsp;+{{message.ccRecipients.length > displayNumber ? message.ccRecipients.length - displayNumber : 0}}</label>
+							</span>
+						</div>
+						<div>
+							<span>{{message.sentDateTime}}</span>
+							<span class="more margin-left-ld" data-ng-click="showMore()" data-ng-show="!showAll">{{'cloud.desktop.outlook.showMore' | translate}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="attachments" data-ng-if="message['hasAttachments'] && attachments.length > 0">
+				<span data-ng-repeat="doc in attachments" data-ng-mouseenter="onMouseEnterAttachment(doc)" data-ng-mousedown="onMouseDownAttachment(doc)">{{doc.name}}</span>
+			</div>
+			<div class="fullheight flex-box flex-column content-scrollable">
+				<iframe data-ng-show="url" sandbox="allow-popups" credentialless></iframe>
+			</div>
+		</div>
+	</div>
+</div>

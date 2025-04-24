@@ -1,0 +1,19 @@
+<div data-ng-controller="invoiceReconciliationWarnController" class="flex-element flex-box flex-column fullheight">
+    <header class="modal-header main-color" data-ng-include="modalOptions.headerTemplateUrl"></header>
+    <section class="modal-body flex-element fullheight">
+        <div class="icon-message">
+            <div class="icon tlb-icons ico-warning"></div>
+            <div class="message" style="line-height: 5;">{{ WarningMessage }}</div>
+        </div>
+       <!-- <div class="tlb-icons ico-info"></div>
+        <div data-platform-alert data-error="error"></div>-->
+        <div class="flex-box flex-column fullheight">
+            <platform-grid data="gridData"></platform-grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div>
+            <button type="button" class="btn btn-default" data-ng-click="onOK()"> {{actionButtonText}}</button>
+        </div>
+    </footer>
+</div>

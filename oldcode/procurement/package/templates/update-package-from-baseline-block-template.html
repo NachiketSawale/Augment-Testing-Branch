@@ -1,0 +1,19 @@
+<div data-ng-controller="updatePackageFromBaselineBlockController">
+    <header class="modal-header main-color" data-ng-include="modalOptions.headerTemplateUrl"></header>
+    <div class="modal-body flex-box">
+        <div class="icon-message">
+            <div class="icon tlb-icons {{ modalOptions.iconClass }}"></div>
+            <div class="message" data-ng-bind-html="modalOptions.bodyText"></div>
+        </div>
+    </div>
+
+    <footer class="modal-footer">
+        <button ng-if="modalOptions.isShown('ok')" class="ok btn"
+                data-ng-class="(modalOptions.defaultButton === 'ok') ? 'btn-return' : 'btn-default'"
+                data-ng-click="modalOptions.ok()"
+                data-ng-disabled="modalOptions.isDisabled('ok')">
+            {{modalOptions.okBtnText}}
+        </button>
+    </footer>
+</div>
+

@@ -1,0 +1,113 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<!-- Comapany Id -->
+		<div class="radiolist-container" style="margin-top: 0px;">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input name="radioGroupA" ng-click="onRadioGroupOptChanged('1', 'editorModeCompany')" ng-disabled="readonly" ng-model="input.editorModeCompany"
+					       ng-value="1" type="radio">
+					{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left margin-left-ld">
+				<label>
+					<input name="radioGroupA" ng-click="onRadioGroupOptChanged('2', 'editorModeCompany')" ng-disabled="readonly" ng-model="input.editorModeCompany"
+					       ng-value="2" type="radio">
+					{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorModeCompany === 1">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.company' | translate }}</label>
+				<div class="platform-form-col">
+					<!--data-basics-lookup-data-project-project-dialog-->
+					<div class="fullwidth" data-ng-model="input.companySelect"></div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-group" data-ng-show="input.editorModeCompany === 2">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.companyId' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.companyId" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Clerk Role Id -->
+		<div class="radiolist-container">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input name="radioGroupB" ng-click="onRadioGroupOptChanged('1', 'editorModeClerkRole')" ng-disabled="readonly" ng-model="input.editorModeClerkRole"
+					       ng-value="1" type="radio">
+					{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left margin-left-ld">
+				<label>
+					<input name="radioGroupB" ng-click="onRadioGroupOptChanged('2', 'editorModeClerkRole')" ng-disabled="readonly" ng-model="input.editorModeClerkRole"
+					       ng-value="2" type="radio">
+					{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorModeClerkRole == 1">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.clerkRole' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-entity="input.clerkRoleUrl"
+					     data-model="input.clerkRoleSelect" data-options="selectOptionsStatusId"
+					     readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorModeClerkRole == 2">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.clerkRoleId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.clerkRoleId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.companyClerk' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="setOutputAction()" data-domain="description" data-domain-control
+					     data-ng-model="output.property" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

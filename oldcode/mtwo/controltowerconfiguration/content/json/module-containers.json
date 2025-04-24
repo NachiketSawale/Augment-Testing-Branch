@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "mtwo.controltowerconfiguration.PowerBIAccount",
+    "controller": "mtwoControlTowerConfigurationListController",
+    "uuid": "e06020acd9eb45569d4c8344d9b657bb",
+	"permission": "e06020acd9eb45569d4c8344d9b657bb"
+
+   
+  },
+    {
+    "id": "2",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "mtwo.controltowerconfiguration.PowerBIDetails",
+    "controller": "mtwoControlTowerConfigurationDetailController",
+    "uuid": "ef77063c96ab49aa92c1f6e62641259b",
+	"permission": "ef77063c96ab49aa92c1f6e62641259b"
+
+   
+  },
+ {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "mtwo.controltowerconfiguration.PowerBIElements",
+    "controller": "mtwoControlTowerConfigurationItemListController",
+    "uuid": "d716f285c4a449159066f93cf1df1c88",
+	"permission": "d716f285c4a449159066f93cf1df1c88"
+
+   
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/grid-partial.html",
+    "title": "mtwo.controltowerconfiguration.powerbiClerkList",
+    "controller": "basicsCommonClerkListController",
+    "uuid": "c12bb5c9dc5a4e66932eb6a067fca04b",
+    "clerkQualifier":"mtwo.controltower.clerk",
+    "parentService":"mtwoControlTowerConfigurationItemService"
+  },
+  {
+    "id": "5",
+    "template": "app/components/base/grid-partial.html",
+    "title": "mtwo.controltowerconfiguration.moduleAssignment",
+    "controller": "mtwoControltowerConfigurationPermissionsController",
+    "uuid": "8b7b355acb6a457e95985b07f36549fd",
+    "permission": "d716f285c4a449159066f93cf1df1c88"
+  }
+] 

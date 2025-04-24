@@ -1,0 +1,25 @@
+﻿<div class="content" data-ng-controller="modelMainObjectSidebarSearchController">
+
+	<div class="toolbar">
+		<div class="title" data-ng-bind="searchOptions.title"></div>
+		<div data-platform-menu-list data-list="searchOptions.toolBarDefs"></div>
+	</div>
+
+	<div class="content-inner" data-ng-if="searchOptions.canSearchInModel()">
+		<div class="searchWrapper">
+
+			<div data-ng-if="searchOptions.searchType==='google'"
+			     data-ng-include="searchOptions.searchGoogleUrl"></div>
+
+			<div data-ng-if="searchOptions.searchType==='enhanced'"
+			     data-ng-include="searchOptions.searchEnhancedUrl" class="flex-element flex-box flex-column overflow-hidden"></div>
+
+			<div data-ng-if="searchOptions.settingsActive===true"
+			     data-ng-include="searchOptions.searchSettingsUrl"></div>
+		</div>
+	</div>
+
+	<div class="content-inner" data-ng-if="!searchOptions.canSearchInModel()">
+		<div class="vert-hori-center fullheight">{{ 'model.main.noSearchableModel' | translate }}</div>
+	</div>
+</div>

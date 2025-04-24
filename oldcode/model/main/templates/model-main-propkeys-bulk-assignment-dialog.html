@@ -1,0 +1,12 @@
+<div data-ng-controller="modelMainPropkeysBulkAssignmentController" class="flex-element">
+    <div data-model-main-object-source data-model="dataItem.ObjectIds"></div>
+
+    <div data-model-main-propkeys-bulk-assignment-list data-model="options.dataItem"></div>
+
+    <div class="checkbox spaceToUp">
+        <label>
+            <input id="overwritePropValues" type="checkbox" data-ng-model="dataItem.OverwriteValues"/>
+            {{'model.main.propKeysBulkAssignment.overwrite' | translate}}
+        </label>
+    </div>
+</div>

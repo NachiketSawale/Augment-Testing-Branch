@@ -1,0 +1,14 @@
+
+<div #container class="input-group form-control">
+<input  type="text"  class="input-group-content"
+        [(ngModel)]="controlContext.value"
+       [readonly]="!!readonly"
+       [disabled]="!!readonly"
+        [attr.id]="controlContext.fieldId"
+        [attr.name]="controlContext.fieldId"
+/>
+    <span class="input-group-btn">
+<button #clearBtn class="hasToolTip btn btn-default control-icons ico-question" title="{{toolTip}}"
+        (click)="openDialog()"></button>
+        </span>
+</div>

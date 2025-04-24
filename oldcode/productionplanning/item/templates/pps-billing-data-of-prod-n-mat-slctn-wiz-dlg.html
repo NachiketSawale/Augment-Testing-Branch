@@ -1,0 +1,27 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body">
+    <div style="margin-left: -10px" data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+    <tabset class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex" style="padding: 0px">
+        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" ng-click="onTabSelect(tab)">
+            <div data-ng-class="{false:'hidden'}[tab.active]" pps-billing-data-selection-tab setting="tab" ng-if="tab.initialized"></div>
+        </tab>
+    </tabset>
+    <div cloud-common-overlay data-loading="isBusy"></div>
+</section>
+<div>
+<footer class="modal-footer">
+	<div>
+		<input type="checkbox" data-ng-model="entity.doesCreateWIP"/>
+		<label>{{'productionplanning.item.wizard.billingDataOfProductAndMaterialSelection.createWIP' | translate}}</label>
+	</div>
+	<div style="margin-left: auto" >
+		<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+			{{'cloud.common.ok' | translate}}
+		</button>
+	</div>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)" style="margin-left: 5px;">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>
+</div>

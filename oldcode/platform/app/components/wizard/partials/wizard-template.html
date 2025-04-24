@@ -1,0 +1,11 @@
+<div class="steps-wrapper">
+	<div class="steps" ng-transclude></div>
+	<div class="status-indicator margin-top-ld">
+		<div class="nextStep">{{$parent.wzStrings.nextStep}} {{$parent.getNextStep(true)}}</div>
+		<ul class='steps-indicator' ng-if='!hideIndicators'>
+			<li ng-class='{default: !step.completed && !step.selected, current: step.selected && step.completed, done: step.completed , editing: step.selected && !step.completed}' ng-repeat='step in getEnabledSteps()'>
+				<a ng-click="goTo(step)" title="{{step.title}}"></a>
+			</li>
+		</ul>
+	</div>
+</div>

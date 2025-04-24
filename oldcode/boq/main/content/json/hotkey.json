@@ -1,0 +1,57 @@
+[
+	{
+		"combo": "alt+n",
+		"description": "New (Append by context paste).",
+		"callbackId": "boqNewByContext",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Alt+N"
+	},
+	{
+		"combo": "ctrl+alt+n",
+		"description": "cloud.common.toolbarInsert",
+		"callbackId": "boqInsert",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Alt+N"
+	},
+	{
+		"combo": "ctrl+d",
+		"description": "cloud.common.toolbarNewDivision",
+		"callbackId": "boqNewDivision",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+D"
+	},
+	{
+		"combo": "ctrl+alt+d",
+		"description": "cloud.common.toolbarNewSubdivision",
+		"callbackId": "boqNewSubdivision",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Alt+D"
+	},
+	{
+		"combo": "ctrl+g",
+		"description": "boq.main.goToEstimate",
+		"callbackId": "boqGoToEstimate",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+G"
+	}
+]

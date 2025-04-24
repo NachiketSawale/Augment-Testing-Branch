@@ -1,0 +1,31 @@
+[
+    {
+        "id": "mtwo.aiconfiguration.modellist",
+        "template": "app/components/base/grid-partial.html",
+        "title": "mtwo.aiconfiguration.modelList",
+        "controller": "mtwoAIConfigurationModelListController",
+        "uuid": "05c9e0602169424889b56326d65239b7"
+    },
+	 {
+		  "id": "mtwo.aiconfiguration.modelversion",
+		  "template": "app/components/base/grid-partial.html",
+		  "title": "mtwo.aiconfiguration.modelVersion",
+		  "controller": "mtwoAIConfigurationModelVersionController",
+		  "uuid": "79faf63ee34d40b6933c03ad000c5420"
+	 },
+    {
+        "id": "mtwo.aiconfiguration.modelinput",
+        "template": "app/components/base/grid-partial.html",
+        "title": "mtwo.aiconfiguration.modelInput",
+        "controller": "mtwoAIConfigurationModelInputParameterController",
+        "uuid": "f6b4194427ad4ee592aee8f15934111b"
+    },
+	 {
+		 "id": "mtwo.aiconfiguration.modeloutput",
+		 "template": "app/components/base/grid-partial.html",
+		 "title": "mtwo.aiconfiguration.modelOutput",
+		 "controller": "mtwoAIConfigurationModelOutputParameterController",
+		 "uuid": "592e58b7ca2d473ca5631e0ef90b356d"
+	 }
+
+]

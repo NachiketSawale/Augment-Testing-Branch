@@ -1,0 +1,25 @@
+﻿<div class="ticket-system-order-list-div  fullheight">
+	<div class="ticket-system-no-margin">
+		<div class="ticket-system-order-request-pane">
+			<div class="row ticket-system-error">
+				<div data-platform-alert data-error="error"></div>
+			</div>
+			<div data-ticket-system-order-request-list data-order-list="orderList"
+			     data-order-option="orderOption"></div>
+		</div>
+
+	</div>
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="companyOptions.loadingInfo"></div>
+</div>
+<div class="ticket-system-order-list-pagination-container">
+	<pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"
+	            max-size="maxSize"
+	            class="pagination-sm" num-pages="numPages"
+	            boundary-links="true" rotate="false"
+				data-first-text="{{htmlTranslate.firstText}}"
+				data-previous-text="{{htmlTranslate.previousText}}"
+				data-next-text="{{htmlTranslate.nextText}}"
+				data-last-text="{{htmlTranslate.lastText}}"
+	            ng-change="pageChanged()"></pagination>
+</div>
+

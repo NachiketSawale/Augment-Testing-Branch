@@ -1,0 +1,18 @@
+<div class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body" style="padding: 20px;">
+        <div class="icon-message ng-scope">
+            <div class="icon tlb-icons {{iconStyle}}"></div>
+            <div class="message" data-ng-bind-html="trustAsHtml(textContent)"></div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button data-ng-repeat="button in buttons" type="button" class="btn btn-default" data-ng-click="button.__fn()">
+            {{button.buttonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{'cloud.common.close' | translate}}
+        </button>
+    </footer>
+</div>

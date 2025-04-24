@@ -1,0 +1,48 @@
+<div class="platform-lg">
+	<div class="ng-scope">
+		<div class="ng-scope">
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="toggleOpen(0)">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'estimate.main.backwardCalculation.basicHeader' | platformTranslate }}</span>
+								<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" [class]="showForm ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse" [hidden]="!showForm">
+						<div class="panel-body">
+							<ui-common-form [formConfig]="formConfiguration" [entity]="entity"></ui-common-form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ng-scope">
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="toggleOpen(1)">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'estimate.main.backwardCalculation.detailHeader' | platformTranslate }}</span>
+								<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" [class]="showGrid ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse" [hidden]="!showGrid">
+						<div class="panel-body">
+							<ui-common-grid [configuration]="gridConfiguration" [items]="items"></ui-common-grid>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

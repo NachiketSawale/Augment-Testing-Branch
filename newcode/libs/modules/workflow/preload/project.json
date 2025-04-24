@@ -1,0 +1,20 @@
+{
+	"name": "modules-workflow-preload",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/workflow/preload/src",
+	"prefix": "itwo40",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/workflow/preload"],
+			"options": {
+				"jestConfig": "libs/modules/workflow/preload/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

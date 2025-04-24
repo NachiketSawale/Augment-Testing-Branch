@@ -1,0 +1,12 @@
+﻿{
+  "controlling": {
+    "enterprise": {
+      "dashboard1": "Dashboard 1",
+      "dashboard2": "Dashboard 2",
+      "dashboard3": "Dashboard 3",
+      "dashboard4": "Dashboard 4",
+      "dashboard5": "Dashboard 5",
+      "syncUsers": "Controlling User Synchronisation"
+    }
+  }
+}

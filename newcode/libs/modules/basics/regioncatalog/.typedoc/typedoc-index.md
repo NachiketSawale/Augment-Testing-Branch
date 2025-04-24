@@ -1,0 +1,1 @@
+This is the regionCatalog area of the basics regionCatalog module.

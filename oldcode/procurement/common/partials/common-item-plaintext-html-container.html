@@ -1,0 +1,24 @@
+<div data-platform-alert data-error="error"></div>
+<div data-split-container class="border-none" data-option='{"orientation": "horizontal"}'>
+    <div data-split-container-view data-option='{ "collapsible": true, "size": "20%" }'
+         id="798dbdb453ec45f2b4b3e94dda613877" class="flex-element relative-container">
+        <div class="fullheight" data-ng-controller="procurementCommonSplitTextPanelController">
+            <platform-Grid class="border-all flex-box flex-column" data="gridData"/>
+        </div>
+    </div>
+    <div data-split-container-view data-option='{ "collapsible": true, "size": "80%" }'
+         id="c61086cada2544b19ba068279069e733" class="flex-element relative-container">
+        <div class="fullheight" data-ng-controller="procurementCommonSplitTextPanelController">
+            <div class="wysiwyg-editor filler">
+                <basics-common-text-area-toolbar-directive></basics-common-text-area-toolbar-directive>
+                <textarea id="itemTextArea" name="itemTextArea" class="k-content-frame" data-ng-model="currentItem.PlainText"
+                          data-ng-change="onChange()"
+                          data-ng-click="commitEdit()"
+                          data-ng-readonly="rt$readonly"
+                          data-ng-keydown="onKeyDown($event)" data-ng-keyup="onKeyUp($event)" data-ng-mouseup="onMouseUp($event)" style="padding-left:2px;">
+                </textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<div cloud-common-overlay data-loading="containerLoading" data-info="loadingInfo"></div>

@@ -1,0 +1,34 @@
+
+    <div>
+        <div data-ng-if="showDuration">
+            <div  data-ng-bind="::'timekeeping.recording.beforeHHMM' | translate" class="tk-text"></div>
+            <div data-domain-control data-domain="integer" data-model="phaseInstance.duration.hours" ></div>
+            <div data-ng-bind="::'timekeeping.recording.betweenHHMM' | translate" class="tk-text"></div>
+            <div data-domain-control data-domain="integer" data-model="phaseInstance.duration.minutes" ></div>
+            <div  data-ng-bind="::'timekeeping.recording.afterHHMM' | translate" class="tk-text"></div>
+        </div>
+        <div data-ng-if="showTime">
+            <div data-ng-if="notAttachedToPrevious" >
+                <div>
+                    <div data-ng-bind="::'timekeeping.recording.beforeTimeSpan' | translate" class="tk-text"></div>
+                    <div data-domain-control data-domain="datetime" data-model="phaseInstance.from" ></div>
+                    <div data-ng-bind="::'timekeeping.recording.betweenTimeSpan' | translate" class="tk-text"></div>
+                </div>
+            </div>
+            <div data-domain-control data-domain="datetime" data-model="phaseInstance.to"></div>
+            <div data-ng-bind="::'timekeeping.recording.afterTimeSpan' | translate"></div>
+        </div>
+    </div>
+
+    <div>
+        <div data-ng-if="timeSymbol.showList">
+            <div data-domain-control data-domain="select" data-options="timeSymbol.options" data-model="timeSymbol.selectedId"></div>
+        </div>
+        <div data-ng-if="timeSymbol.showText" data-ng-bind="timeSymbol.text" class="tk-text"></div>
+        <div data-ng-if="timeSymbol.showCheck">
+            <div data-ng-repeat="ts in ::timeSymbol.eligible track by ts.Id">
+                <input type="radio" name="{{timeSymbol.groupName}}" id="{{timeSymbol.groupName}}-{{ts.Id}}" data-ng-value="::ts.Id" />
+                <label for="{{timeSymbol.groupName}}-{{ts.Id}}" data-ng-bind="ts.Code" title="{{ts.Description.Translated}}"></label>
+            </div>
+        </div>
+    </div>

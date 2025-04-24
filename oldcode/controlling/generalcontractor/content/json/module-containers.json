@@ -1,0 +1,96 @@
+﻿[
+	{
+		"id": "1",
+		"template": "controlling.generalcontractor/templates/cost-control-grid.html",
+		"title": "controlling.generalcontractor.CostControlTitle",
+		"controller": "controllingGeneralContractorCostHeaderListController",
+		"uuid": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.SalesContractsContainer",
+		"controller": "controllingGeneralContractorSalesContractsListController",
+		"uuid": "69601b8f4a7d4c519c8e2d7781a7aabc",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.LineItemsListController",
+		"controller": "controllingGeneralContractorLineItemsListController",
+		"uuid": "b299831694ee4b2b9de7623fb894eb1c",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.BudgetShiftTitle",
+		"controller": "controllingGeneralContractorBudgetShiftController",
+		"uuid": "054e0701989342c7ae3cd72ca1cc83ad",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.AdditionalExpenses",
+		"controller": "controllingGeneralContractorAdditionalExpensesListController",
+		"uuid": "e49ea538c4d942a6be3721f710392ba1",
+
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.PackagesListController",
+		"controller": "controllingGeneralContractorPackagesListController",
+		"uuid": "29CAF5BFB483446E9DAAD4126D1F13C4",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.PrcContractsTile",
+		"controller": "controllingGeneralContractorPrcContractsController",
+		"uuid": "c5969b77708e4e70b2baca4ad802a3f4",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "9",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.PesHeaderListController",
+		"controller": "controllingGeneralContractorPesHeaderListController",
+		"uuid": "9fe07bf7c81e4d45a680400d5aa47c88",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.PRCInvoicesTitle",
+		"controller": "controllingGeneralPRCInvoicesListController",
+		"uuid": "9fe07bf7c81e4d45a680400d5aa47c23",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "10",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.ActualTitle",
+		"controller": "controllingGeneralActualListController",
+		"uuid": "c20856f7ecf44b1ca2e68defb7d1fd7f",
+		"permission": "363147351c1a426b82e3890cf661493d"
+	},
+	{
+		"id": "11",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "12",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.generalcontractor.estimate",
+		"controller": "controllingGeneralContractorEstimateController",
+		"uuid": "3e6548c8d60043c6998f94dcc94b4829"
+	}
+]

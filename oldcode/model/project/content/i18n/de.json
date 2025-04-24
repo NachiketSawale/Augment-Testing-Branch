@@ -1,0 +1,40 @@
+{
+  "model": {
+    "project": {
+      "twoDViewer":"2D Viewer",
+      "translationDescModel": "Modell",
+      "translationDescModelFile": "Modell Datei",
+      "modelListContainer": "Modelle",
+      "modelDetailContainer": "Modell Details",
+      "modelFileListContainer": "Modelldateien",
+      "modelFileDetailContainer": "Modelldatei Details",
+      "entityLod": "Detailtiefe Entwicklung",
+      "entityHeader": "LV",
+      "entitySchedule": "Plan",
+      "entityFileArchiveDoc": "Dateiarchiv",
+      "entityProjectNo": "Nummer",
+      "action": "Aktion",
+      "errorTitle":"Fehler bei Auswahl",
+      "errorMessage":"Keine oder ungültige Datei ausgewählt!",
+      "createModelFileTitle": "Modelldatei anlegen",
+      "convert": "Konvertieren?",
+      "skipPropertyValue": "Eigenschaften mit zu langen Werten ignorieren?",
+      "errorEmptyInput": "Bitte wählen Sie ein Modell und/oder laden Sie eine Datei hoch.",
+      "errorFileExists": "In diesem Model existiert bereits eine Modelldatei. Es kann keine weitere angelegt werden.",
+      "errorModelNotSaved": "Bitte sichern Sie zuerst das Modell.",
+      "showLogFileTitle": "Log Eintragungen aus der Konvertierung",
+      "status": "Status der Konvertierung",
+      "questionDeleteJob": "Soll der Job gelöscht werden?",
+      "logFileNotAvailable": "Keine Log-Eintragungen vorhanden.",
+      "deleteModelTitle": "Modelldatei komplett löschen",
+      "deleteQuestion": "Wollen Sie das komplette Modell löschen?",
+      "deleteFailed": "Das Modell konnte nicht gelöscht werden!",
+      "disableModelTitle": "Modell Aktivieren",
+      "enableModelTitle": "Modell Deaktivieren",
+      "disableModelDone": "Modell {{model}} wurde erfolgreich deaktiviert",
+      "modelAlreadyDisabled": "Modell {{model}} ist bereits deaktiv",
+      "enableModelDone": "Modell {{model}} wurde erfolgreich aktiviert",
+      "modelAlreadyEnabled": "Modell {{model}} ist bereits aktiv"
+    }
+  }
+}

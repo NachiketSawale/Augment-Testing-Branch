@@ -1,0 +1,24 @@
+{
+  "hsqe": {
+    "checklisttemplate": {
+      "groupGridContainerTitle":"Group",
+      "groupFormContainerTitle":"Group Detail",
+      "headerGridContainerTitle":"Template",
+      "headerFormContainerTitle":"Template Detail",
+      "checkTemplate2FromGridContainerTitle":"Form",
+      "checkTemplate2FromContainerDetailTitle":"Form Detail",
+      "entityCheckListGroup":"Group",
+      "entityCheckListType":"Type",
+      "entityActivityTemplate":"Activity Template",
+      "entityPrcStructure":"Prc Structure",
+      "uniqueInSameGroupRoot":"The Code should be unique in same group root.",
+      "entityBasForm":"Form",
+		"groupDescription":"Group-Description",
+      "deleteGroupTitle": "Delete Check List Group Template",
+      "deleteChildGroupMsg": "Please delete the child groups first!",
+      "deleteGroupMsg": "Please delete the data in the check list templates first!",
+      "entityChecklistId": "CheckList Id",
+      "LookupDialogTitle": "CheckList Template Search Dialog"
+    }
+  }
+}

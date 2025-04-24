@@ -1,0 +1,33 @@
+<footer class="modal-footer flex-box flex-row">
+	<div class="custom-btn-group" *ngIf="!!data.dialog.customButtons?.length">
+		<button
+			*ngFor="let btn of data.dialog.customButtons"
+			[hidden]="!data.dialog.isShown(btn)"
+			class="{{ btn.id }} btn btn-overflow"
+			(click)="data.dialog.click(btn, $event)"
+			[disabled]="data.dialog.isDisabled(btn)"
+			title="{{ data.dialog.getTooltip(btn) }}"
+			[ngClass]="{ 'btn-return': data.dialog.defaultButtonId === btn.id, 'btn-default': data.dialog.defaultButtonId !== btn.id, 'btn.cssClass': true }"
+		>
+			<span *ngIf="btn.iconClass" class="icon tlb-icons {{ btn.iconClass }}"></span>
+			{{ (data.dialog.getCaption(btn) ?? '') | platformTranslate }}
+		</button>
+	</div>
+	<button
+		*ngFor="let btn of data.dialog.buttons"
+		[hidden]="!data.dialog.isShown(btn)"
+		class="{{ btn.id }} btn btn-overflow"
+		(click)="data.dialog.click(btn, $event)"
+		[disabled]="data.dialog.isDisabled(btn)"
+		title="{{ data.dialog.getTooltip(btn) }}"
+		[ngClass]="{ 'btn-return': data.dialog.defaultButtonId === btn.id, 'btn-default': data.dialog.defaultButtonId !== btn.id, 'btn.cssClass': true }"
+	>
+		<span *ngIf="btn.iconClass" class="icon tlb-icons {{ btn.iconClass }}"></span>
+		{{ (data.dialog.getCaption(btn) ?? '') | platformTranslate }}
+	</button>
+</footer>
+<footer class="modal-footer-deactivate-option checkbox-margin checkboxset" *ngIf="showCheckboxOption">
+	<div class="checkbox">
+		<label><input type="checkbox" (change)="onDontShowAgain()" [(ngModel)]="isChecked" />{{ data.dialog.doNotShowAgain?.label ?? '' | platformTranslate }}</label>
+	</div>
+</footer>

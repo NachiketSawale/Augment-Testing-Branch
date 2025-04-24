@@ -1,0 +1,28 @@
+<div class="input-group form-control">
+	<input #searchInput type="text" class="form-control" (keydown.enter)="search(searchInput.value,$event)" autofocus>
+	<span class="input-group-btn">
+	    <button class="btn btn-default input-sm btn-search tlb-icons ico-search" (click)="search(searchInput.value,$event)"></button>
+	</span>
+</div>
+<div class="lookup-grid-container" *ngIf="formConfig.rows.length > 0">
+	<div class="subview-header toolbar">
+		<h2 class="title fix ng-binding">{{criteriaTitle | platformTranslate}}</h2>
+	</div>
+	<div class="fullheight">
+		<ui-common-form [formConfig]="formConfig" [entity]="formValue" [entityRuntimeData]="entityRuntimeData"></ui-common-form>
+	</div>
+</div>
+<div class="lookup-grid-container">
+	<div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+		<h2 class="title fix">{{'cloud.common.searchResults'| platformTranslate}} </h2>
+		<div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+	</div>
+	<div class="flex-box flex-column flex-element subview-content">
+		<ui-common-grid
+			[configuration]="configuration"
+			(selectionChanged)="selectionChanged($event)"
+		>
+		</ui-common-grid>
+	</div>
+</div>
+<ui-common-loading [loading]="loading"></ui-common-loading>

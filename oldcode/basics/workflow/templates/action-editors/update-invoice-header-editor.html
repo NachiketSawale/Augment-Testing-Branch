@@ -1,0 +1,107 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.code' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.Code" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.invoiceId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.InvoiceId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.newCode' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.NewCode" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.remark' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.Remark" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined1' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.Userdefined1" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined2' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.Userdefined2" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined3' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.Userdefined3" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined4' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.Userdefined4" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined5' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.Userdefined5" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputResult' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.Result" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

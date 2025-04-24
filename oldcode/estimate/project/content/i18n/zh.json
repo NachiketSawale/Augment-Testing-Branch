@@ -1,0 +1,19 @@
+{
+  "estimate": {
+	"project": {
+	  "estimate":"Estimate",
+      "goToEstimate": "Open Estimation",
+      "typeDialogText" : "Estimate Type Configuration",
+      "estBudgetDialogText":"Budget",
+      "actualEstType":"Actual Estimate Type",
+      "newEstType":"New Estimate Type",
+      "copyBudget":"Copy Budget",
+      "updateBudget":"Update Controlling Structure Budget",
+      "lgmJobFk" : "Job",
+      "isControlling":"Controlling",
+      "currency1Fk": "Foreign Currency 1",
+      "currency2Fk": "Foreign Currency 2"
+
+    }
+  }
+}

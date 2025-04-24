@@ -1,0 +1,55 @@
+/*-------------------------------------------------------------------------------
+	 Layout Manager (_layout.scss)
+  -------------------------------------------------------------------------------*/
+
+#editorSplitter {
+	width: 100%;
+}
+
+.layout-bar {
+	width: 160px;
+	overflow-y: scroll;
+	border: 1px solid $color-border;
+	margin-right: $padding-large-horizontal;
+
+	button {
+		width: 100%;
+		text-indent: -9999px;
+		height: 100px;
+		background-size: 108px;
+	}
+}
+
+#layout-editor-content {
+	flex-direction: row-reverse;
+	overflow: hidden;
+
+	.platform-form-group {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 8px;
+		height: 28px;
+	}
+
+	.platform-form-row {
+		display: flex;
+	}
+
+	.margin {
+		&.flex-column {
+			> div + div {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.margin:not(.flex-column) {
+		> div + div {
+			margin-left: 10px;
+		}
+	}
+}
+
+div[editor-container] {
+	position:relative;
+}

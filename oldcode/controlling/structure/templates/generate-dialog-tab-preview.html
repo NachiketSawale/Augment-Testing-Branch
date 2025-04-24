@@ -1,0 +1,11 @@
+<div data-ng-controller="controllingStructureGenerateWizardTabPreviewController" class="modal-wrapper">
+    <div class="modal-wrapper">
+        <platform-Grid data="gridData"></platform-Grid>
+        <div data-ng-show="alerts && alerts.length">
+            <div class="lookup-alert {{::alert.css}}" data-ng-repeat="alert in alerts">
+                <span data-ng-bind="alert.title"></span>: <span data-ng-bind="alert.message"></span>
+            </div>
+        </div>
+        <div cloud-common-overlay data-loading="isLoading"></div>
+    </div>
+</div>

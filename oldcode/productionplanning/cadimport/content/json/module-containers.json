@@ -1,0 +1,114 @@
+[
+  {
+    "id": "productionplanning.cadImport.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.cadimport.listViewTitle",
+    "controller": "ppsCadimportDrawingListController",
+    "uuid": "ec2e3e47be9f4eae9414773ad5d3d5b5",
+    "permission": "0168b0569d954cc6b2097c5078cf56ff"
+  },
+  {
+    "id": "productionplanning.cadImport.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.cadimport.detailsTitle",
+    "controller": "ppsCadimportDrawingDetailController",
+    "uuid": "abfe2ee0b77c4567a98a0a2275501df7",
+    "permission": "0168b0569d954cc6b2097c5078cf56ff"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.productdescription.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.productDescription.listTitle",
+    "controller": "productionplanningProducttemplateProductDescriptionListController",
+    "moduleName": "productionplanning.cadimport",
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f81",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.productdescription.component.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.productDescription.drawingComponent.listTitle",
+    "controller": "productionplanningDrawingComponentListController",
+    "moduleName": "productionplanning.cadimport",
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f82",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.component.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.drawingComponent.listTitle",
+    "controller": "productionplanningDrawingComponentListController",
+    "moduleName": "productionplanning.cadimport",
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f83",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.stack.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.stackListTitle",
+    "controller": "productionplanningDrawingStackListController",
+    "moduleName": "productionplanning.cadimport",
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f84",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.stack.producttemplate.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.stackProductTemplateListTitle",
+    "controller": "productionplanningProducttemplateProductDescriptionListController",
+    "moduleName": "productionplanning.cadimport",
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f85",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.ppsdocument.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.document.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.cadImport.ppsdocument",
+    "parentService": "ppsCadimportDrawingDataService",
+    "foreignKey": "EngDrawingFk",
+    "idProperty": "DrawingId",
+    "isReadonly": true,
+    "hideDownload": true,
+    "instantPreview": true,
+    "useLocalResource": {
+      "key": "cadImportDrawing"
+    },
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f86",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.productdescription.ppsdocument.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.productDescription.document.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "containerInfo": "productionplanningCadimportContainerInformationService",
+    "getParentServiceParams": "productionplanningCadImportProductDescriptionDataService",
+    "foreignKey": "ProductDescriptionFk",
+    "isReadonly": true,
+    "hideDownload": true,
+    "instantPreview": true,
+    "useLocalResource": {
+      "key": "cadImportProductTemplate"
+    },
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f87",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.engineering.cadImport.log.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.cadimport.log.listViewTitle",
+    "controller": "ppsEngineeringCadImportLogListController",
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f89",
+    "permission": "887a4c2fg6594tft95e7e6c5brgf1f88"
+  },
+  {
+    "id": "productionplanning.cadImport.preview.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.cadimport.preview.listViewTitle",
+    "controller": "ppsCadImportPreviewListController",
+    "uuid": "887a4c2fg6594tft95e7e6c5brgf1f90",
+    "permission": "7777ba47179b42cd8a1eb2e9b3a20200"
+  }
+]

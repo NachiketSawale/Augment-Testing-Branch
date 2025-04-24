@@ -1,0 +1,13 @@
+<div data-ng-controller="usermanagementRightDescriptorStructureSelectionDialogController">
+     <div class="input-group form-control">
+         <input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="search(searchValue,$event)" />
+			<span class="input-group-btn">
+				<button class="btn btn-default input-sm tlb-icons ico-search" data-ng-click="search(searchValue)">
+            </button>
+			</span>
+     </div>
+
+     <div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+         <platform-grid data="gridData" style=""></platform-grid>
+     </div>
+</div>

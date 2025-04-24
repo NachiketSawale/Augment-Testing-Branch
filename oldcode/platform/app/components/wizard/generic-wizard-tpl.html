@@ -1,0 +1,77 @@
+<div class="modal-wrapper wizard-wrapper genWiz wizard-dialog" ng-controller="genericWizardController">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{config.DialogTitle + ' - ' + stepInfo.currentStepNum + ' / ' +
+		stepInfo.totalStepNum + ' ' + stepInfo.currentTitle}}</h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+			     class="block-image"></svg>
+		</button>
+	</header>
+	<section class="modal-body">
+		<generic-wizard-directive step-info="stepInfo" modal-options="options"
+		                          wizard-config="config">
+		</generic-wizard-directive>
+	</section>
+	<footer class="modal-footer">
+		<div data-ng-if="config.actionInstance.allowReassign" class="platform-form-group re-assign-container">
+			<div class="platform-form-row re-assign">
+				<label class="platform-form-label re-assign-label">{{'basics.workflow.modalDialogs.clerk' | translate }}</label>
+				<div data-change="change" class="clerk" data-cloud-clerk-clerk-dialog data-ng-if="!isReadOnly" data-ng-model="config.actionInstance.userId" data-options="config.actionInstance.clerkLookUpConfig.lookupOptions" readonly="isReadOnly"></div>
+				<label class="platform-form-label" data-ng-bind="config.actionInstance.userId" data-ng-if="isReadOnly"></label>
+			</div>
+			<button type="button" class="btn btn-default re-assign-btn" data-ng-disabled="config.actionInstance.userId === undefined || config.actionInstance.userId === 0 || config.actionInstance.userId === null" data-ng-click="config.actionInstance.reassignTaskOwner(config.actionInstance.Id,config.actionInstance.userId,$parent.$close)" >{{ ::'basics.workflow.modalDialogs.Reassign' | translate }}</button>
+		</div>
+
+
+		<button data-ng-repeat="btn in config.wizardButtons" type="button" data-ng-disabled="btn.isDisabled(btn)"
+		        data-ng-click="btn.fn(btn)" class="btn btn-default wizard-btn" data-ng-hide="btn.isHidden && btn.isHidden(btn)">{{btn.titleTranslated}}
+		</button>
+		<button type="button" data-ng-click="closeDialog(false)" class="btn btn-default wizard-btn">{{ ::'basics.workflow.modalDialogs.closeButton' | translate }}</button>
+	</footer>
+</div>
+
+<style>
+	.re-assign-container{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.re-assign-container .re-assign{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.re-assign-container .re-assign .re-assign-label{
+		display: flex;
+		align-items: center;
+		margin-right:10px;
+		padding: 0px;
+	}
+
+	.re-assign-container .re-assign .clerk{
+		margin-right:10px;
+	}
+
+	.re-assign-container .re-assign .clerk .lookup-container{
+		width: 400px;
+	}
+
+	.re-assign-container .re-assign button{
+		min-width: 26px;
+		margin-left: 0px
+	}
+	.re-assign .input-group-btn{
+		display: flex;
+    	justify-content: center;
+	}
+
+	.re-assign-container .re-assign .btn + .btn {
+		margin-left: 0px;
+    	margin-bottom: 0;
+	}
+
+	.re-assign-container .re-assign-btn{
+		margin-right:10px;
+	}
+</style>

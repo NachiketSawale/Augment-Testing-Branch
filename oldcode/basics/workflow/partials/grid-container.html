@@ -1,0 +1,6 @@
+<div data-cloud-common-overlay data-loading="listIsLoading"></div>
+<platform-Grid data="gridData" data-ng-hide="!gridVisible"></platform-Grid>
+
+<div class="flex-box flex-column flex-element relative-container overflow filler" data-ng-if="!gridVisible">
+	<span>{{missingParentText | translate}}</span>
+</div>

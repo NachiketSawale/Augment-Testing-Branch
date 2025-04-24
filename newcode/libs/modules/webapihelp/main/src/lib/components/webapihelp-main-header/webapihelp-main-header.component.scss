@@ -1,0 +1,146 @@
+.formControl {
+    background-color: rgba(3, 25, 40, 0.00);
+    border-radius: 3px;
+    width: 90%;
+    height: 35px;
+    border: thin solid #FFF;
+    text-indent: 0.5em;
+    font-weight: bold;
+    border-color: #d0d0d0;
+    margin: 10px 0px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+
+
+.control-label {
+    padding: 8px;
+    font-size: 24px;
+}
+
+
+.logo {
+    font-size: 24px;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.logo>img {
+    width: 48px;
+    height: 48px;
+}
+
+a.download-disabled {
+    text-decoration: none;
+    background-color: #d0d0d0 !important;
+    cursor: not-allowed !important;
+    color: #e0e0e0 !important;
+    border-color: #d0d0d0 !important;
+    pointer-events: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    [class*="col-md"] {
+        width: 100%;
+    }
+}
+
+
+.btn {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.btn:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.download-btn {
+    color: #ffffff !important;
+    background-color: #39b3d7 !important;
+    border-color: #269abc !important;
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+
+.explore-btn {
+    color: #ffffff !important;
+    background-color: #5fa9f8 !important;
+    border-color: #5fa9f8 !important;
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+
+.reload-btn {
+    border-color: #d0d0d0;
+    background-color: #ffffff !important;
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+
+#DownloadPageBtn {
+    text-decoration: none;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.login-box .login-info {
+    color: #666;
+    float: right;
+    position: relative;
+    color: #666;
+    text-align: right;
+    font-size: 12px;
+    line-height: 60px;
+    background-color: inherit;
+    padding-right: 10px;
+}
+
+.input {
+    margin: 5px;
+    background: transparent;
+    height: 33px;
+    font: menu;
+    width: 100%;
+}

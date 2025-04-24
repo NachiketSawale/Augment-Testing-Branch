@@ -1,0 +1,33 @@
+<section class="modal-body" data-platform-form-adjust-label>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{'scheduling.main.printing.header' | translate}}</label>
+			<div class="platform-form-col">
+				<span data-domain-control data-domain="select" data-options="headerOptions"
+				      data-model="settings.reportHeaderId" data-change="settings.headerChanged(item, prevItem)"></span>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding">{{'scheduling.main.printing.footer' | translate}}</label>
+			<div class="platform-form-col">
+				<span data-domain-control data-domain="select" data-options="footerOptions"
+				      data-model="settings.reportFooterId" data-change="settings.footerChanged(item, prevItem)"></span>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label ng-binding"> </label>
+			<div class="platform-form-col">
+				<div class="flex-box">
+					<div data-domain-control class="flex-element" data-domain="boolean"
+					     data-model="settings.reportHeaderOnlyFirst"
+					     data-options="settings.reportHeaderOnlyFirstOpt"
+					     data-change="settings.changeReportHeaderOnlyFirst()"></div>
+					<div data-domain-control class="flex-element" data-domain="boolean" data-model="settings.reportFooterOnlyLast"
+					     data-options="settings.reportFooterOnlyLastOpt"
+					     data-change="settings.changeReportFooterOnlyLast()"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

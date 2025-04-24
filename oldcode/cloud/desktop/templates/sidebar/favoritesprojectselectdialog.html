@@ -1,0 +1,41 @@
+<!--<header class="modal-header">-->
+<!--<button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close(false)"-->
+<!--aria-hidden="true">-->
+<!--</button>-->
+
+<!--<h2 class="modal-title">{{modalOptions.dialogTitle}}</h2>-->
+<!--</header>-->
+
+<!--<div>-->
+<!--<section class="modal-body">-->
+<!--<h3 class="modal-title">{{modalOptions.dialogHint}}</h3>-->
+<!--<div class="flex-box">-->
+<!--<div data-basics-Lookup-Data-Project-Project-Dialog="" data-ng-model="projectModel"></div>-->
+<!--</div>-->
+<!--</section>-->
+<!--</div>-->
+
+<!--<footer class="modal-footer">-->
+<!--<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">{{modalOptions.actionButtonText}}</button>-->
+<!--</footer>-->
+
+
+<header class="modal-header"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<div>
+	<div class="modal-body" style="margin-top: 20px; margin-bottom: 20px;">
+		<h4 style="margin-top: 15px; margin-bottom: 15px">!!!this is a temporary solution for selecting a project !!!</h4>
+
+		<h3 class="modal-title">{{modalOptions.dialogHint}}</h3>
+		<div class="" data-basics-Lookup-Data-Project-Project-Dialog="" data-ng-model="AddProjectDialogParams.selectedProject"></div>
+	</div>
+</div>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+		{{modalOptions.okBtnText}}
+	</button>
+
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+		{{modalOptions.cancelBtnText}}
+	</button>
+</footer>

@@ -1,0 +1,114 @@
+<div class="toolbar">
+	<div class="title"><span data-ng-bind="workflowSidebar.terms.headline"></span></div>
+	<ul class="tools">
+		<li class="sublist">
+			<ul class="radio-group">
+				<li>
+					<button class="tlb-icons ico-refresh"
+					        data-ng-click="workflowSidebar.refresh()"
+					        title="{{ 'cloud.common.toolbarRefresh' | translate }}"
+					        type="button">
+					</button>
+				</li>
+
+				<li>
+					<button class="tlb-icons ico-search"
+					        data-ng-class="{active: workflowSidebar.showFilter}"
+					        data-ng-click="workflowSidebar.showFilter = !workflowSidebar.showFilter"
+					        type="button">
+					</button>
+				</li>
+				<li>
+					<button class="tlb-icons ico-settings"
+					        data-ng-class="{active: workflowSidebar.showSettings}"
+					        data-ng-click="workflowSidebar.showSettings = !workflowSidebar.showSettings"
+					        type="button">
+					</button>
+				</li>
+				<li data-ng-if="workflowSidebar.getModule().length >0">
+					<button class="control-icons ico-pin3"
+					        data-ng-class="{active: workflowSidebar.showDebug}"
+					        data-ng-click="workflowSidebar.showDebug = !workflowSidebar.showDebug"
+					        type="button">
+					</button>
+				</li>
+			</ul>
+	</ul>
+</div>
+
+<div class="content-inner flex-box flex-column">
+	<div data-ng-if="workflowSidebar.showFilter">
+		<div class="form-control margin-top-ld margin-bottom-ld">
+			<input class="input-group-content" data-ng-model="workflowSidebar.listConfig.filter.value" ng-keypress="($event.which === 13)?workflowSidebar.refresh():0"
+			       placeholder="Filter" type="text">
+
+			<span class="input-group-btn">
+				<button class="btn btn-default control-icons ico-input-delete btndeactive"
+				        data-ng-click="workflowSidebar.clearSearch()"></button>
+
+				<button class="btn btn-default tlb-icons ico-search" data-ng-click="workflowSidebar.refresh()"></button>
+			</span>
+		</div>
+	</div>
+	<div class="showgroups" data-ng-if="workflowSidebar.showSettings">
+		<div data-change="workflowSidebar.refresh()" data-domain="select" data-domain-control
+		     data-model="workflowSidebar.listConfig.grouping" data-options="workflowSidebar.grouping.options"></div>
+
+		<div class="margin-top-ld">
+			<div data-change="workflowSidebar.refresh()" data-domain="select" data-domain-control
+			     data-model="workflowSidebar.listConfig.sort" data-options="workflowSidebar.sorting.options"></div>
+		</div>
+	</div>
+	<div class="showgroups" data-ng-if="workflowSidebar.showDebug && workflowSidebar.getModule().length >0">
+
+		<div>
+			<span>{{'basics.workflow.template.entity' | translate}}</span>
+		</div>
+		<div>
+            <span data-domain="select" data-domain-control data-model="workflowSidebar.selectedEntityId"
+                  data-options="workflowSidebar.entityOptions"></span>
+		</div>
+
+		<table class="table" style="margin-top: 20px">
+			<thead>
+			<tr>
+				<th>Id</th>
+				<th>Description</th>
+				<th>{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.table.action' | translate}}</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr data-ng-repeat="item in workflowSidebar.testData.currentList">
+				<td>{{item.Id}}</td>
+				<td>{{item.Description}}</td>
+				<td>
+					<button class="block-image tlb-icons ico-rec-delete"
+					        data-ng-click="workflowSidebar.remove(item.Id)"></button>
+				</td>
+			</tr>
+			<tr>
+				<td><span class="form-control" data-domain="integer" data-domain-control
+				          data-model="workflowSidebar.newId"></span></td>
+				<td><span class="form-control" data-domain="description" data-domain-control
+				          data-model="workflowSidebar.newDescription"></span></td>
+				<td>
+					<button class="block-image tlb-icons ico-rec-new"
+					        data-ng-click="workflowSidebar.add()"></button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<ul class="scroll-padding flex-element flex-basis-auto"
+	    data-click-fn="workflowSidebar.detailFn.switchListDetail"
+	    data-item-template="workflowSidebar.itemTemplate" data-list="workflowSidebar.workflowList"
+	    data-ng-if="!workflowSidebar.listConfig.isGrouped && !workflowSidebar.showDebug "
+	    data-platform-item-list-directive></ul>
+	<ul class="scroll-padding flex-element panel-group flex-basis-auto"
+	    data-child-property="'childs'"
+	    data-click-fn="workflowSidebar.detailFn.switchListDetail" data-group-template="workflowSidebar.groupTemplate"
+	    data-grouped-list="workflowSidebar.workflowList" data-item-template="workflowSidebar.itemTemplate"
+	    data-ng-if="workflowSidebar.listConfig.isGrouped && !workflowSidebar.showDebug"
+	    data-platform-grouped-item-list-directive></ul>
+
+</div>

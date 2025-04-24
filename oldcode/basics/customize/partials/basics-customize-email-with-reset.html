@@ -1,0 +1,6 @@
+<div class="input-group form-control">
+    <div domain-control class="form-control" data-entity="entity" data-ng-model="entity.SenderEmail" readonly="false" data-domain="email" data-platform-control-validation data-placeholder="{{placeholderText}}"></div>
+    <div class="input-group-btn" ng-if="entity.SenderEmail !== entity.inheritedServer.SenderEmail">
+        <button ng-click="resetToDefault()" class="btn btn-default tlb-icons ico-set-to-default" title="{{btnTooltip}}"></button>
+    </div>
+</div>

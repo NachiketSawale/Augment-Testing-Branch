@@ -1,0 +1,40 @@
+<style>
+	.has-border {
+		border: 1px solid #dcdcdc;
+	}
+</style>
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+	<section ng-cloak class="modal-body flex-box flex-column">
+		<div style="float: left;" class="flex-box flex-column">
+			<div style="float: left;"
+			     class="flex-box flex-column has-border subview-container">
+				<div class="subview-header toolbar">
+					<h3 class="font-bold title fix">{{'transportplanning.transport.wizard.createdRecordTitle' | translate}}</h3>
+					<div data-platform-menu-list data-list="recordGrid.tools"></div>
+				</div>
+				<div class="flex-element flex-box flex-column overflow-hidden">
+					<div class="flex-basis-auto" data-platform-grid data="recordGrid">
+					</div>
+				</div>
+			</div>
+			<div class="flex-box flex-column lookup-grid-container subview-container">
+				<div class="subview-header toolbar">
+					<h3 class="font-bold title fix">{{'transportplanning.transport.wizard.relatedComponentTitle' | translate}}</h3>
+					<div data-platform-menu-list data-list="componentGrid.tools"></div>
+				</div>
+				<div class="flex-element flex-box flex-column overflow-hidden">
+					<div class="flex-basis-auto" data-platform-grid data="componentGrid"></div>
+					<div cloud-common-overlay data-loading="isLoading"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>

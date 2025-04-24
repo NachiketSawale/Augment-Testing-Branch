@@ -1,0 +1,76 @@
+{
+	"ui": {
+		"business-base": {
+			"defaultListContainerTitle": "{{entity}} List",
+			"defaultDetailsContainerTitle": "{{entity}} Details",
+			"defaultTreeContainerTitle": "{{entity}} Structure",
+			"translationContainerTitle": "Translations",
+			"demoteItem": "Demote",
+			"promoteItem": "Promote",
+			"translationIssueDialog": {
+				"dialogTitle": "Translation Issues",
+				"tabIssue": "Issue",
+				"tabHistory": "History",
+				"notifications": {
+					"noIssue": "No Issues found!",
+					"issueResolved": "The translation issue was resolved successfully."
+				},
+				"obsoleteEnglishIssue": {
+					"issueTitle": "Obsolete English Translation",
+					"issueDescription": "Obsolete English translation found. The obsolete items should be removed. You can replace the item description with the translation item prior to the cleanup.",
+					"buttonResolve": "Resolve Issue",
+					"availableActions": "Available Actions",
+					"columns": {
+						"itemValue": "Item Description",
+						"translationValue": "Obsolete Translation"
+					}
+				},
+				"issueHistory": {
+					"columns": {
+						"actionTaken": "Action Taken",
+						"columnName": "Column Name",
+						"columnValue": "Column Value",
+						"translationValue": "Translation",
+						"inserted": "Inserted"
+					},
+					"options": {
+						"directRemove": "Direct Remove",
+						"translationKept": "Translation Kept"
+					}
+				}
+			},
+			"navigator": {
+				"navigateToMainModule": "Navigate to main module",
+				"navigators": "Go to module",
+				"project": "Project",
+				"clerk": "Clerk",
+				"company": "Company",
+				"businessPartner": "Business Partner",
+				"contact": "Contacts",
+				"modelMain": "Model Main",
+				"modelAnnotation": "Model Annotation",
+				"workflowAdmin": "Workflow Administration",
+				"materialCatalog": "Material Catalog",
+				"package": "Package",
+				"reqHeader": "Requisition",
+				"rfqHeader": "RfQ",
+				"qtnHeader": "Quote",
+				"conHeader": "Contract",
+				"pesHeader": "PES",
+				"invHeader": "Invoice",
+				"wipHeader": "WIP",
+				"bilHeader": "Billing",
+				"qtoHeader": "QTO",
+				"estHeader": "Estimate",
+				"controllingUnit": "Controlling Units",
+				"materialCatalog": "Material Catalog",
+				"prcStructure": "Procurement Structure",
+				"certificate": "Certificate",
+				"job": "Logistic Job",
+				"dispatchHeader": "Dispatching Notes",
+				"change": "Changes",
+				"settlement": "Settlement"
+			}
+		}
+	}
+}

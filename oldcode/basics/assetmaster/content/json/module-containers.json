@@ -1,0 +1,32 @@
+[
+  {
+    "id": "basics.assetmaster.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.assetmaster.containers.grid",
+    "controller": "basicsAssetMasterGridController",
+    "uuid": "3C17E18947514D48AB6417ED2D991F63"
+  },
+  {
+    "id": "basics.assetmaster.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.assetmaster.containers.detail",
+    "controller": "basicsAssetMasterDetailController",
+    "uuid": "0661BA89AE1B439583511DA867667F95",
+    "permission": "3C17E18947514D48AB6417ED2D991F63"
+  },
+	{
+		"id": "basics.assetmaster.remark",
+		"template": "procurement.invoice/partials/invoice-rejectionremark.html",
+		"title": "cloud.common.remark",
+		"controller": "basicsAssetMasterRemarkController",
+		"uuid": "677930C52E4C4B0998E67E7DFF33E870",
+		"permission": "3C17E18947514D48AB6417ED2D991F63"
+	},
+  {
+    "id": "basics.assetmaster.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "5285C5679E7A4301A9448058897BEAFB"
+  }
+]

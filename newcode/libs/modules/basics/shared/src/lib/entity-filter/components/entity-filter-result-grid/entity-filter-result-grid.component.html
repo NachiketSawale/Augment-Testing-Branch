@@ -1,0 +1,16 @@
+<div class="entity-filter-grid-toolbar toolbar">
+	<div class="flex-box">
+		<ui-common-toolbar [toolbarData]="gridOption.gridTools"></ui-common-toolbar>
+	</div>
+</div>
+<div *ngIf="isFilterNoResult" class="entity-filter-no-result">
+	<span class="no-result-title">{{'basics.shared.noResultTitle' | platformTranslate}}</span>
+	<br>
+	<span class="no-result-sub-title">{{'basics.shared.noResultSubTitle' | platformTranslate}}</span>
+</div>
+<ui-common-grid
+	[items]="items"
+	[configuration]="gridConfig"
+	(doubleClick)="onDoubleClick($event)"
+	(selectionChanged)="onSelectionChanged($event)">
+</ui-common-grid>

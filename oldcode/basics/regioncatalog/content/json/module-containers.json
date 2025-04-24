@@ -1,0 +1,40 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.regionCatalog.regionTypeList",
+		"controller": "basicsRegionTypeListController",
+		"uuid": "4B02A602E9504978B271011EA1B4F42E"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.regionCatalog.regionTypeDetail",
+		"controller": "basicsRegionTypeDetailController",
+		"uuid": "BF11F19D012145D097E879CE5878E2DD",
+		"permission": "4B02A602E9504978B271011EA1B4F42E"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.regionCatalog.regionCatalogList",
+		"controller": "basicsRegionCatalogListController",
+		"uuid": "B3006840f41A4624A194bf52DDCFAAE6"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.regionCatalog.regionCatalogDetail",
+		"controller": "basicsRegionCatalogDetailController",
+		"uuid": "45725AAD31A34E44BB92D163A658ED7A",
+		"permission": "B3006840f41A4624A194bf52DDCFAAE6"
+	},
+	{
+		"id": "5",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "basics.regionCatalog.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "A0F71F8D3ACA493498023807BEDC7543",
+		"wizardDisabled":"true"
+	}
+]

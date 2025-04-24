@@ -1,0 +1,18 @@
+.minimap rect.bg {
+    stroke: black;
+    fill: rgba(255, 255, 255, 0.7);
+}
+.minimap .actor {
+    pointer-events: none;
+}
+.minimap .actor .actorPosition {
+    fill: red;
+}
+.minimap .map {
+    pointer-events: none;
+}
+.minimap .map .mapPolygon {
+    stroke: blue;
+    stroke-width: 1px;
+    fill: none;
+}

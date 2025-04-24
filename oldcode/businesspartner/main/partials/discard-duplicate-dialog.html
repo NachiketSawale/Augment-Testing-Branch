@@ -1,0 +1,45 @@
+<div data-ng-controller="businessPartnerMainDiscardDuplicateDialogController">
+	<form method="post" autocomplete="on">
+		<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+		<section class="modal-body">
+			<div style="height: 100%;">
+				<div class="pane-t h2">
+					<label>{{htmlTranslate.description}}</label>
+				</div>
+				<div class="fullheight" style="overflow-y: auto">
+					<div data-platform-grid data="gridData" style="height: 300px"></div>
+				</div>
+				<div class="statusbar" ng-show="canShowPage()">
+					<div class="right-side flex-element flex-box flex-align-center">
+						<!-- go to first page -->
+						<button class="btn tlb-icons ico-rec-first item block-image" data-ng-click="getFirstPage()"
+						        data-ng-disabled="isLoading||!canFirstPage()"></button>
+
+						<!-- go to previous page -->
+						<button class="btn control-icons ico-previous item block-image" data-ng-click="getPrevPage()"
+						        data-ng-disabled="isLoading||!canPrevPage()"></button>
+
+						<span class="item ellipsis">
+										{{getPageText()}}
+									</span>
+						<!-- go to next page -->
+						<button class="btn control-icons ico-next item block-image" data-ng-click="getNextPage()"
+						        data-ng-disabled="isLoading||!canNextPage()"></button>
+
+						<!-- go to last page -->
+						<button class="btn tlb-icons ico-rec-last item block-image" data-ng-click="getLastPage()"
+						        data-ng-disabled="isLoading||!canLastPage()"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="modal-footer">
+			<button type="button" class="btn btn-default" data-ng-click="discardAndDisplay()">
+				{{htmlTranslate.displayAndDiscardBtnText}}
+			</button>
+			<button type="button" class="btn btn-default" data-ng-click="ignore()">
+				{{htmlTranslate.ignoreBtnText}}
+			</button>
+		</footer>
+	</form>
+</div>

@@ -1,0 +1,9 @@
+{
+  "searchRequest": {
+    "filter": " {\"operator\": \"and\",\"criterions\": [{ \"operator\": \"contains\", \"attribute\": \"MaterialCode\", \"value1\":  \"11\"} ]}",
+    "pageNumber": 1,
+    "pageSize": 20,
+    "includeNonActiveItems": false
+  },
+  "companyCode": "901"
+}

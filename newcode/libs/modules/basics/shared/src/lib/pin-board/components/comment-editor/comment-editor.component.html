@@ -1,0 +1,24 @@
+<div class="comment-editor form-control" [ngSwitch]="options?.commentType ?? CommentType.Standard">
+	<div id="comment-textarea" class="comment-text-area input-group-content selectable" [contentEditable]="isEditable()" (keydown)="onKeyDown($event)"
+	     (click)="onClick($event)" style="overflow-y: scroll; display: inline-block;"></div>
+
+	<div class="comment-toolbar input-group-btn" *ngSwitchCase="CommentType.Standard" (mousedown)="onMouseDown($event)">
+		<button id="comment-link-btn" title="{{'basics.common.link'|platformTranslate}}"
+		        type="button" class="btn btn-default control-icons ico-link" (click)="insertLink()" [disabled]="isDisabled()">
+		</button>
+		<button id="comment-image-btn" title="{{ 'basics.common.image' | platformTranslate }}"
+		        type="button" class="btn btn-default control-icons ico-camera" (click)="insertImage()" [disabled]="isDisabled()">
+		</button>
+		<input id="editorImageUpload" type="file" accept="{{acceptType}}" name="upload" (change)="uploadFile()"
+		       style="display: none"/>
+		<button #owner id="comment-emotion-btn" title="{{'basics.common.emotion'|platformTranslate}}"
+		        type="button" class="btn btn-default control-icons ico-emoticon-add" (click)="insertEmotion()" [disabled]="isDisabled()"></button>
+	</div>
+
+	<div class="statusPanel overflow" *ngSwitchDefault>
+		<ui-common-domain-control-host *ngIf="statusRadioOptions" [fieldType]="FieldType.Radio" [controlContext]="statusControlContext" [options]="statusRadioOptions"></ui-common-domain-control-host>
+	</div>
+</div>
+<div class="comment-error" *ngIf="invalid()">
+	{{ 'cloud.common.validationErrorComment'|platformTranslate }} {{ maxLength }}.
+</div>

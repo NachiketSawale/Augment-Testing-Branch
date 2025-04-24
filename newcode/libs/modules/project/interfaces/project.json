@@ -1,0 +1,20 @@
+{
+	"name": "modules-project-interfaces",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/project/interfaces/src",
+	"prefix": "project-interfaces",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/project/interfaces"],
+			"options": {
+				"jestConfig": "libs/modules/project/interfaces/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

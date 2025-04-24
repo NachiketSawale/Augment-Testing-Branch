@@ -129,7 +129,7 @@
 						showGrouping: false,
 						groups: [{
 							gid: 'baseGroup',
-							attributes: ['rubriccategoryfk', 'configurationfk', 'description']
+							attributes: ['rubriccategoryfk', 'configurationfk', 'description', 'performedfrom', 'performedto']
 						}],
 						rows: [
 							// adding option [x] "Collective WIP for BoQs that are split to contracts with different bill-to"
@@ -163,6 +163,28 @@
 									getListName: generateType === 'update' ? 'getWipRelatedContracts' : 'getContractsFromServer'
 								},
 								readonly: true, disabled: false, maxlength: 5000, rows: 20, visible: true
+							},
+							{
+								gid: 'baseGroup',
+								rid: 'performedFrom',
+								label: 'Performed From',
+								label$tr$: 'sales.common.entityPerformedFrom',
+								validator: salesWipValidationService.validatePerformedFrom,
+								model: 'PerformedFrom',
+								type: 'dateutc',
+								visible:true,
+								sortOrder: 14
+							},
+							{
+								gid: 'baseGroup',
+								rid: 'performedTo',
+								label: 'Performed To',
+								label$tr$: 'sales.common.entityPerformedTo',
+								validator: salesWipValidationService.validatePerformedTo,
+								model: 'PerformedTo',
+								type: 'dateutc',
+								visible:true,
+								sortOrder: 15
 							}
 						]
 					};

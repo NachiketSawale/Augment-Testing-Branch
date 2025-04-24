@@ -1,0 +1,31 @@
+<div data-ng-controller="createPaymentScheduleTotalLineController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<p style="margin-bottom: 16px;text-indent: 4px;margin-top: 4px;">{{::createPSText}}</p>
+		<div class="platform-form-row form-group" style="margin-bottom: 4px;position:relative;height: 28px;">
+			<div style="width: 48%;display:inline-block;">
+				<label class="platform-form-label" style="width:100px;padding-left:5px;">Total Source:</label>
+				<div class="platform-form-col" style="width:calc(100% - 105px);padding-left:2px;display:inline-block;">
+					<div data-ng-if="showTotalDropDown" data-payment-schedule-setting-total-drop-down data-entity="currentItem" data-displayText="Code" data-ng-model="currentItem.PsTotalId" data-config="totalSourceConfig"></div>
+				</div>
+			</div>
+			<div style="width: 45%;display:inline-block;" data-ng-if="!isOverGross">
+				<label class="platform-form-label text-right" style="width:calc(35% - 5px);padding-left:5px;">{{::netOcText}}</label>
+				<div class="platform-form-col" style="width:calc(65% - 2px);padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right ng-pristine ng-valid ng-scope ng-valid-platform ng-not-empty ng-touched" data-platform-select-on-focus="" data-platform-numeric-converter="" data-ng-model="currentItem.TotalNetOc" data-ng-model-options="{ updateOn: 'blur' }" data-enterstop="true" data-tabstop="true" data-domain="money" data-config="totalNetOcConfig" data-entity="currentItem" data-platform-control-validation>
+				</div>
+			</div>
+			<div style="width: 45%;display:inline-block;" data-ng-if="isOverGross">
+				<label class="platform-form-label text-right" style="width:calc(40% - 5px);padding-left:5px;">{{::grossOcText}}</label>
+				<div class="platform-form-col" style="width:calc(60% - 2px);padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right ng-pristine ng-valid ng-scope ng-valid-platform ng-not-empty ng-touched" data-platform-select-on-focus="" data-platform-numeric-converter="" data-ng-model="currentItem.TotalGrossOc" data-ng-model-options="{ updateOn: 'blur' }" data-enterstop="true" data-tabstop="true" data-domain="money" data-config="totalGrossOcConfig" data-entity="currentItem" data-platform-control-validation>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="options.onOk()" data-ng-bind="options.okText" data-ng-disabled="okBtnDisable">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="options.cancel()" data-ng-bind="options.cancelText"></button>
+	</footer>
+</div>

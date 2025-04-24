@@ -1,0 +1,69 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.calendar.calendarGridHeader",
+		"controller": "schedulingCalendarListController",
+		"uuid": "AFECDB4A08404395855258B70652D04B"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.calendar.calendarDetailTitle",
+		"controller": "schedulingCalendarDetailController",
+		"uuid": "506FC12756F8439E8FECB7EE4B360538",
+		"permission": "AFECDB4A08404395855258B70652D04B"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.calendar.weekdayListHeader",
+		"controller": "schedulingCalendarWeekdayListController",
+		"uuid": "4196114C284B49EFAC5B4431BF9836B2"
+	},
+	{
+		"id": "4",
+		"template": "scheduling.calendar/partials/scheduling-calendar-workday-workhour-list.html",
+		"title": "scheduling.calendar.workhourListHeader",
+		"controller": "schedulingCalendarWorkdayWorkhourListController",
+		"uuid": "50D82415E24C47ACA182C0F634EE9515"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.calendar.exceptionListHeader",
+		"controller": "schedulingCalendarExceptionDayListController",
+		"uuid": "3159C0A0C6D34287BF80FA1398F879EC"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.calendar.weekdayDetailHeader",
+		"controller": "schedulingCalendarWeekdayDetailController",
+		"uuid": "4196114C284B49EFAC5B4431BF9836B4",
+		"permission": "4196114C284B49EFAC5B4431BF9836B2"
+	},
+	{
+		"id": "9",
+		"template": "scheduling.calendar/partials/scheduling-calendar-workday-workhour-detail.html",
+		"title": "scheduling.calendar.workhourDetailHeader",
+		"controller": "schedulingCalendarWorkdayWorkhourDetailController",
+		"uuid": "50D82415E24C47ACA182C0F634EE9520",
+		"permission": "50D82415E24C47ACA182C0F634EE9515"
+	},
+	{
+		"id": "10",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.calendar.exceptionDetailHeader",
+		"controller": "schedulingCalendarExceptionDayDetailController",
+		"uuid": "3978757E36BC49CBA7E8A177272F2BFC",
+		"permission": "3159C0A0C6D34287BF80FA1398F879EC"
+	},
+	{
+		"id": "11",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "scheduling.calendar.translationCalendar",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "2ECD381D1C7C4D858C74A5A373E00E5D"
+	}
+]

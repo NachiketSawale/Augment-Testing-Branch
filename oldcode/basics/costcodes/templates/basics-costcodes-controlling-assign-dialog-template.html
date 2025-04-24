@@ -1,0 +1,20 @@
+<div>
+    <div class="modal-body flex-box" ng-show="modalOptions.value.showAssignToChildren">
+        <input class="form-control" type="checkbox" ng-model="modalOptions.value.isAssignToChildren"
+               id="isAssignToChildren" style="margin: 0 5px 0 0;">
+        <label for="isAssignToChildren" class="platform-form-label">{{'basics.costcodes.controlling.assignToChildCostCodes'
+            | translate}}</label>
+    </div>
+    <div class="modal-body flex-box" ng-show="modalOptions.value.showOverwrite">
+        <input class="form-control" type="checkbox" ng-model="modalOptions.value.isOverwrite" id="isOverwrite"
+               style="margin: 0 5px 0 0;">
+        <label for="isOverwrite" class="platform-form-label">{{'basics.costcodes.controlling.overwriteControllingCostCode'
+            | translate}}</label>
+    </div>
+    <div class="modal-body flex-box" ng-show="modalOptions.value.showPreserveSelection">
+        <input class="form-control" type="checkbox" ng-model="modalOptions.value.isPreserveSelection" id="isPreserveSelection"
+               style="margin: 0 5px 0 0;">
+        <label for="isPreserveSelection" class="platform-form-label">{{'basics.costcodes.controlling.preserveSelection'
+            | translate}}</label>
+    </div>
+</div>

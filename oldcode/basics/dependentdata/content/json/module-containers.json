@@ -1,0 +1,62 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.dependentdata.dependentDataListTitle",
+		"controller": "basicsDependentDataListController",
+		"uuid": "9ea72ac6d3884be582b2e6507987b9d2"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.dependentdata.dependentDataDetailTitle",
+		"controller": "basicsDependentDataDetailController",
+		"uuid": "369ffe77b01f4910bf302fb001c50398",
+		"permission": "9ea72ac6d3884be582b2e6507987b9d2"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.dependentdata.dependentDataColumnListTitle",
+		"controller": "basicsDependentDataColumnListController",
+		"uuid": "ac74931e5d124f8faefee74e490af726"
+	},
+	{
+		"id": "4",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.languageColHeader_ContainerTitle",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "7fb114adecdf41d999ab7e3a1359e463"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.dependentdata.dependentDataChartListTitle",
+		"controller": "basicsDependentDataChartListController",
+		"uuid": "38DD62EAE5544544905D10D0B9BEF0C3"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.dependentdata.dependentDataChartDetailTitle",
+		"controller": "basicsDependentDataChartDetailController",
+		"uuid": "2C46C63D1EEF4F68AAA749EBDD08E18C",
+		"permission": "38DD62EAE5544544905D10D0B9BEF0C3"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.dependentdata.dependentDataChartSeriesListTitle",
+		"controller": "basicsDependentDataChartSeriesListController",
+		"uuid": "6F7AE102F33C4B62B46EBD0FB64BC879",
+		"permission": "38DD62EAE5544544905D10D0B9BEF0C3"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.dependentdata.dependentDataChartSeriesDetailTitle",
+		"controller": "basicsDependentDataChartSeriesDetailController",
+		"uuid": "D549130037EC4296920673B626F8EECD",
+		"permission": "38DD62EAE5544544905D10D0B9BEF0C3"
+	}
+]

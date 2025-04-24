@@ -1,0 +1,38 @@
+<div data-ng-controller="procurementPriceComparisonFormatterController" class="pc-formatter">
+	<style>
+		div.pc-formatter .wysiwyg-toolbar{
+			line-height: 30px;
+		}
+		div.pc-formatter .wysiwyg-colorpicker{
+			position: absolute;
+			top: 0;
+			width: 30px;
+			opacity: 0;
+		}
+	</style>
+    <header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+    <section class="modal-body">
+        <div data-platform-container>
+            <div class="toolbar toolbar-icons">
+                <div data-platform-menu-list data-list="tools"></div>
+            </div>
+
+            <div class="flex-box flex-column">
+                <div data-platform-grid  data="gridData" style="height: 150px;"></div>
+            </div>
+        </div>
+
+        <div data-platform-style-editor-directive textarea-id="itemTextHtmlEditor" textarea-class="cell-center"
+             textarea-name="textareaQuestion"
+             ng-model="sampleText"
+             style-handle="styleHandle"
+             enable-bootstrap-title="true"
+             data-ng-disable="true" class="layout1">
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button"  class="btn btn-default" data-ng-click="onOK()"> {{'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

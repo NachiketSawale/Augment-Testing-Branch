@@ -1,0 +1,39 @@
+[
+  {
+    "id": "basics.price.condition.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.pricecondition.priceConditionGridTitle",
+    "controller": "basicsPriceConditionListController",
+    "uuid": "E4AAC153B33A433EA476691FF66838A3"
+  },
+  {
+    "id": "basics.price.condition.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.pricecondition.priceConditionFormTitle",
+    "controller": "basicsPriceConditionFormController",
+    "uuid": "1E5899C725B1444E9585689C88DC2911",
+    "permission": "E4AAC153B33A433EA476691FF66838A3"
+  },
+  {
+    "id": "basics.price.condition.detail.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.pricecondition.priceConditionDetailGridTitle",
+    "controller": "basicsPriceConditionDetailListController",
+    "uuid": "EF70B73523424E6AB26A2848AD4ACB47"
+  },
+  {
+    "id": "basics.price.condition.detail.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.pricecondition.priceConditionDetailFormTitle",
+    "controller": "basicsPriceConditionDetailFormController",
+    "uuid": "8FA442458EAC4306BC1A85BD9360643F",
+    "permission": "EF70B73523424E6AB26A2848AD4ACB47"
+  },
+  {
+    "id": "basics.price.condition.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "8C1C67B130914C1285B9D0DD7A2145CA"
+  }
+]

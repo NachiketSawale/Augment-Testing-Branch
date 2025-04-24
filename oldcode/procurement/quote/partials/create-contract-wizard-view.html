@@ -1,0 +1,61 @@
+<div data-ng-controller="procurementQuoteCreateContractWizardsController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+        <div style="height: 100%;">
+            <div class="fullheight" style="overflow-y: auto">
+                <div data-platform-alert data-error="error"></div>
+
+                <div data-ng-if="showCreateType">
+                    <div>
+                        <input type="radio" name="createContractType" checked="checked" id="createContractType1"
+                                data-ng-click="changeCreateType('multip')"
+                               style="float:left;height: 30px; margin: 0 5px 0 0;" title=""/>
+                        <label style="height: 30px; line-height: 30px;" for="createContractType1">{{translateTemplate.createContractsTemplate}}</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="createContractType" id="createContractType2"
+                                data-ng-click="changeCreateType('merge')"
+                               style="float:left;height: 30px;margin: 0 5px 0 0;" title=""/>
+                        <label style="height: 30px; line-height: 30px;" for="createContractType2">{{translateTemplate.createOneContractTemplate}}</label>
+                    </div>
+	                <div style="margin-top: 10px;" ng-if="showFilterEvaluated">
+		                <label style="margin-left: 10px;"><input type="radio" style="vertical-align: bottom;margin-right: 5px;" data-ng-model="modalOptions.isFilterEvaluated" name="priceRadio" data-ng-change="priceRadioChg(1)" ng-value="1" />{{'procurement.common.wizard.IsFilterEvaluated' | translate}}</label>
+		                <label style="margin-left: 10px;"><input data-ng-model="modalOptions.isFilterEvaluated" name="priceRadio" data-ng-change="priceRadioChg(2)" ng-value="2" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItems' | translate}}</label>
+		                <label style="margin-left: 10px;"><input data-ng-model="modalOptions.isFilterEvaluated" name="priceRadio" data-ng-change="priceRadioChg(3)" ng-value="3" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItemsPrice' | translate}}</label>
+	                </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-message" ng-if="!showCreateType">
+            <div class="icon tlb-icons ico-info"></div>
+	        <div style="margin-top: 10px;" ng-if="showFilterEvaluated">
+		        <div>
+			        <label style="margin-left: 10px;"><input type="radio" style="vertical-align: bottom;margin-right: 5px;" data-ng-model="modalOptions.isFilterEvaluated" name="priceRadio" data-ng-change="priceRadioChg(1)" ng-value="1" />{{'procurement.common.wizard.IsFilterEvaluated' | translate}}</label>
+		        </div>
+		        <div>
+			        <label style="margin-left: 10px;"><input data-ng-model="modalOptions.isFilterEvaluated" name="priceRadio" data-ng-change="priceRadioChg(2)" ng-value="2" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItems' | translate}}</label>
+		        </div>
+		        <div>
+			        <label style="margin-left: 10px;"><input data-ng-model="modalOptions.isFilterEvaluated" name="priceRadio" data-ng-change="priceRadioChg(3)" ng-value="3" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItemsPrice' | translate}}</label>
+		        </div>
+	        </div>
+            <div class="message" ng-if="creating">{{'procurement.common.creating' | translate}}</div>
+            <div class="message" ng-if="created">{{createdText}}<br/>{{codeText}}</div>
+        </div>
+	    <div style="margin:8px 0 8px 0;" ng-if="hasContractItem">{{'procurement.common.wizard.IsContractNote' | translate}}</div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="okBtnDisabled" data-ng-if="!created && !creating">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="goToContract()" data-ng-disabled="!created" data-ng-if="created">
+            {{'procurement.common.GoToContract' | translate }}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

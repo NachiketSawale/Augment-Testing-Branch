@@ -1,0 +1,14 @@
+<as-split #split [direction]="splitter.direction" unit="percent">
+	<as-split-area [size]="splitter.areaSizes[0]">
+		<div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden" [ngClass]="'cid_' + config.uuid">
+			<ui-common-grid [configuration]="config" (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+			<!--<ui-common-loading [loading]="loading"></ui-common-loading>-->
+		</div>
+	</as-split-area>
+
+	<as-split-area [size]="splitter.areaSizes[1]">
+		<div *ngIf="rightComponent">
+			<ng-container *ngComponentOutlet="rightComponent; injector:subInjector"></ng-container>
+		</div>
+	</as-split-area>
+</as-split>

@@ -1,0 +1,33 @@
+{
+	"Entity": {
+		"Id": 10,
+		"ProjectFk": 1815,
+		"PackageStatusFk": 1,
+		"Code": "2015061101lan",
+		"Description": "2015061101lan",
+		"StructureFk": null,
+		"CurrencyFk": 1,
+		"Reference": null,
+		"PlannedStart": "2015-01-01T00:00:00",
+		"PlannedEnd": "2015-12-31T00:00:00",
+		"ActualStart": null,
+		"ActualEnd": null,
+		"Quantity": 0,
+		"UomFk": 0,
+		"PackageTypeFk": null,
+		"ClerkPrcFk": 2380,
+		"ClerkReqFk": 2741,
+		"TaxCodeFk": 158,
+		"Remark": null,
+		"Remark2": null,
+		"Remark3": null,
+		"ActivityFk": null,
+		"ScheduleFk": null,
+		"IsLive": false,
+		"Userdefined1": null,
+		"Userdefined2": null,
+		"Userdefined3": null,
+		"Userdefined4": null,
+		"Userdefined5": null
+	}
+}

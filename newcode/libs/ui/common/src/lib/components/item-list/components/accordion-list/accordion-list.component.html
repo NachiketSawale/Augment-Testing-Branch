@@ -1,0 +1,10 @@
+<button
+  (click)="clickFn(list.id)"
+  [disabled]="list.disabled"
+  class="panel-item rw {{ list.itemIcon }}"
+>
+  <ul class="rw-content">
+    <li class="title">{{ list.name }}</li>
+    <li>{{ list.text }}</li>
+  </ul>
+</button>

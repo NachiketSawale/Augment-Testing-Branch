@@ -1,0 +1,25 @@
+<div data-ng-controller="genericWizardTransmissionController">
+	<table class="table">
+		<thead>
+		<tr>
+			<th>Bidder</th>
+			<th>Status</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr data-ng-repeat="includedBusinessPartner in includedBusinessPartnerList">
+			<td>
+				<div data-ng-if="!!includedBusinessPartner.lookup" data-ng-bind="includedBusinessPartner.lookup.BusinessPartnerName1"></div>
+				<div data-ng-if="!includedBusinessPartner.lookup" data-ng-bind="includedBusinessPartner.BusinessPartnerName1"></div>
+			</td>
+			<td>
+				<div>
+					<i class="fa"
+					   data-ng-class=" ( includedBusinessPartner.SendStatus == null ? '' :  includedBusinessPartner.SendStatus === 2 ? 'fa-check' :includedBusinessPartner.SendStatus===1 ? 'fa-times' : includedBusinessPartner.SendStatus=== -1 ? 'fa-spinner fa-spin' : 'fa-times') "></i>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<div data-ng-repeat="error in errorList" class="alert-danger">{{error.message}}</div>
+</div>

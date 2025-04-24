@@ -1,0 +1,58 @@
+{
+	"productionplanning": {
+		"producttemplate": {
+			"productDescriptionListTitle": "Product Templates",
+			"productDescriptionDetailTitle": "Product Template Details",
+			"productDescriptionDialogTitle": "Assign Product Template",
+			"productDescParamListTitle": "Product Template Parameters",
+			"productDescParamDetailTitle": "Product Template Parameter Detail",
+			"productListTitle": "Products",
+			"productDetailTitle": "Products Details",
+
+			"documentListTitle": "Documents",
+			"documentRevisionListTitle": "Document: Revisions",
+
+			"drawingComponentListTitle": "Drawing Components",
+			"drawingComponentDetailTitle": "Drawing Component Details",
+
+			"entityProductDescription": "Product Template",
+			"entityEngDrawingFk": "Drawing",
+			"engDrawingDescription": "Drawing-Description",
+			"entityMaterialFk": "Material",
+			"entityProductDescParam": "Parameter",
+			"entityVariableName": "VariableName",
+
+			"checkCreationTitle": "Check Creation",
+			"noDrawingPinned": "Please pin a Drawing at first.",
+
+			"errors": {
+				"uniqProductDescriptionCode": "Code should be unique over all entries of the same engineering drawing",
+				"uniqVariableName": "Variable Name should be unique over all entries of the same product template"
+
+			},
+
+			"createPdtTransactionDialogTitle": "Transaction Parameters",
+			"entityStack": "Stack",
+			"stackCode": "Stack Code",
+			"entityTranslation": "Translations",
+			"level": "Level",
+			"sortCode": "Sort Code",
+			"number4Stack": "Number in Stack",
+			"number4Plan": "Number in Plan",
+			"GUID": "GUID",
+			"userdefinedbymaterial1": "Text By Material 1",
+			"userdefinedbymaterial2": "Text By Material 2",
+			"userdefinedbymaterial3": "Text By Material 3",
+			"userdefinedbymaterial4": "Text By Material 4",
+			"userdefinedbymaterial5": "Text By Material 5",
+			"wizard": {
+				"disableProductDesc": "Disable Product Template",
+				"enableProductDesc": "Enable Product Template",
+				"enableDisableProductDescDone": "The field 'Active' of the Product Template {{code}} has been changed.",
+				"productDescAlreadyEnabled": "Product Template ({{code}}) is already enabled.",
+				"productDescAlreadyDisabled": "Product Template ({{code}}) is already disabled."
+			},
+			"productsInstallationSequence": "Products Installation Sequence No."
+		}
+	}
+}

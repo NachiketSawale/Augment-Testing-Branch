@@ -1,0 +1,63 @@
+<div class="modal-wrapper" data-ng-controller="procurementCommonUpdatePackageBoqController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+      <div ng-if="'quote'!=modalOptions.value.SourceType">
+		<div style="padding-top:10px;padding-left:25px;">{{'procurement.common.wizard.updatePackageBoq.updateTip' | translate}}</div>
+		<div  class="platform-form-group" style="padding-left:55px;">
+			<div class="platform-form-row">
+				<input type="checkbox" name="SyncBaseQuantity"  ng-model="modalOptions.value.SyncBaseQuantity" />
+				<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'procurement.common.wizard.updatePackageBoq.updateQuantity' | translate}}</label>
+
+			</div>
+			<div class="platform-form-row">
+				<input type="checkbox" name="SyncBasePrice"  ng-model="modalOptions.value.SyncBasePrice" />
+				<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'procurement.common.wizard.updatePackageBoq.updatePrice' | translate}}
+				</label>
+			</div>
+			<div class="platform-form-row">
+				<input type="checkbox" name="SyncCostGroups"  ng-model="modalOptions.value.SyncCostGroups" />
+				<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'procurement.common.wizard.updatePackageBoq.updateCostGroup' | translate}}
+				</label>
+			</div>
+		</div>
+      </div>
+		<div ng-if="'quote'==modalOptions.value.SourceType">
+         <div style="margin-left:40px;">
+	         <div>
+		         <input type="checkbox" name="UpdateExistItem"  ng-model="modalOptions.value.UpdateExistItem"/>
+		         <label style="vertical-align: top;margin-top:4px;margin-left:4px;">Update existing Items</label>
+		         <div  style="margin-left:40px;">
+			         <div>
+				         <input type="checkbox" name="UpdateQuantity"  ng-model="modalOptions.value.UpdateQuantity"/>
+				         <label style="vertical-align: top;margin-top:4px;margin-left:4px;">Update Quantities</label>
+			         </div>
+			         <div>
+				         <input type="checkbox" name="UpdatePrice"  ng-model="modalOptions.value.UpdatePrice"/>
+				         <label style="vertical-align: top;margin-top:4px;margin-left:4px;">Update Prices</label>
+			         </div>
+		         </div>
+	         </div>
+	         <div>
+		         <input type="checkbox" name="AddNewItem"  ng-model="modalOptions.value.AddNewItem" data-ng-change="onNewItemChange(modalOptions.value.AddNewItem)"/>
+		         <label style="vertical-align: top;margin-top:4px;margin-left:4px;">Add new Items</label>
+		         <div  style="margin-left:40px;">
+			         <div>
+				         <input type="checkbox" name="AddQuantity"  ng-model="modalOptions.value.AddQuantity"  data-ng-change="onNewOptionChange(modalOptions.value.AddQuantity)"/>
+				         <label style="vertical-align: top;margin-top:4px;margin-left:4px;">Add Quantities</label>
+			         </div>
+			         <div>
+				         <input type="checkbox" name="AddPrice"  ng-model="modalOptions.value.AddPrice"  data-ng-change="onNewOptionChange(modalOptions.value.AddPrice)"/>
+				         <label style="vertical-align: top;margin-top:4px;margin-left:4px;">Add Prices</label>
+			         </div>
+		         </div>
+	         </div>
+         </div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" > {{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

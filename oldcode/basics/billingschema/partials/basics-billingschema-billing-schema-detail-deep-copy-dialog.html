@@ -1,0 +1,51 @@
+<div data-ng-controller="basicsBillingSchemaDetailDeepCopyDialogController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-disable="isLoading" data-ng-click="$parent.$close(false)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title" data-ng-bind="options.headerText"></h2>
+    </header>
+    <section class="modal-body">
+
+        <div class="flex-element flex-basis-auto">
+            <div class="platform-form-group">
+
+                <div class="platform-form-row">
+                    <label class="platform-form-label">
+                        {{sourceBillingSchemaInfo.SourceBillingSchemaLabel}}
+                    </label>
+
+                    <div class="platform-form-col">
+                        <input type="text" readonly data-ng-model="sourceBillingSchemaInfo.SourceBillingSchemaText" class="form-control">
+                    </div>
+                </div>
+                <div class="platform-form-row">
+                    <label class="platform-form-label">
+                        {{sourceBillingSchemaInfo.SourceRubricCategoryLabel}}
+                    </label>
+
+                    <div class="platform-form-col">
+                        <input class="form-control" readonly data-ng-model="sourceBillingSchemaInfo.SourceRubricCategoryText">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-message ng-scope">
+            <div class="icon tlb-icons ico-info"></div>
+            <div class="message ng-binding">
+                {{options.bodyText}}
+            </div>
+        </div>
+
+        <div class="flex-element flex-box flex-column subview-content">
+            <platform-grid data="gridData"></platform-grid>
+        </div>
+
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="options.onOK()" data-ng-disabled="isOkDisabled()" data-ng-bind="options.yesBtnText">
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="options.onCancel()" data-ng-bind="options.noBtnText"></button>
+    </footer>
+</div>

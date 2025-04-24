@@ -1,0 +1,40 @@
+[
+    {
+        "id": "1",
+        "template": "app/components/base/grid-partial.html",
+        "title": "basics.indextable.indexHeaderTitle",
+        "controller": "basicsIndexHeaderListController",
+        "uuid": "B20D865CA3594FA98AD281468419BAEB"
+    },
+    {
+        "id": "2",
+        "template": "app/components/base/form-detail-partial.html",
+        "title": "basics.indextable.indexHeaderDetails",
+        "controller": "basicsIndexHeaderDetailController",
+        "uuid": "65CADB68E8484235BA460341A509DB7F",
+        "permission": "B20D865CA3594FA98AD281468419BAEB"
+    },
+    {
+        "id": "3",
+        "template": "app/components/base/grid-partial.html",
+        "title": "basics.indextable.indexDetailTitle",
+        "controller": "basicsIndexDetailListController",
+        "uuid": "E6A6F3D969CE4265955EF17465F662FE"
+    },
+    {
+        "id": "4",
+        "template": "app/components/base/form-detail-partial.html",
+        "title": "basics.indextable.indexDetailDetails",
+        "controller": "basicsIndexDetailDetailController",
+        "uuid": "85204B8ECC5E4921A5C004B18FD01507",
+        "permission": "E6A6F3D969CE4265955EF17465F662FE"
+    },
+    {
+        "id": "5",
+        "template": "cloud.common/partials/languagegridView.html",
+        "title": "basics.indextable.entityTranslation",
+        "controller": "cloudCommonLanguageGridController",
+        "uuid": "A1C3AD3E09FE495D858F1446C0E7E77C",
+        "wizardDisabled":"true"
+    }
+]

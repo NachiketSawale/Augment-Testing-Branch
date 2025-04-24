@@ -1,0 +1,22 @@
+<ng-container *ngIf="data.dialog.topDescription">
+	<ui-common-dialog-body-description [value]="data.dialog.topDescription"></ui-common-dialog-body-description>
+</ng-container>
+
+<ui-common-alarm-overlay [config]="data.dialog.alarm"></ui-common-alarm-overlay>
+
+<ng-container *ngIf="data.dialog.modalOptions.bodyComponent">
+	<ng-container #body></ng-container>
+</ng-container>
+
+<ng-container *ngIf="data.dialog.bottomDescription">
+	<ui-common-dialog-body-description [value]="data.dialog.bottomDescription"></ui-common-dialog-body-description>
+</ng-container>
+
+<div *ngIf="data.dialog.details.isDetailsVisible" class="modal-details  {{ data.dialog.details.cssClasses }}">
+	<div *ngIf="data.dialog.details.type === DialogDetailsType.LongText" [innerHtml]="data.dialog.details.textValue || '' | uiCommonSafeHtml"></div>
+	<!-- TODO: add grid once ready -->
+	<div *ngIf="data.dialog.details.type === DialogDetailsType.Custom">
+		<ng-container #detailsBody></ng-container>
+	</div>
+</div>
+

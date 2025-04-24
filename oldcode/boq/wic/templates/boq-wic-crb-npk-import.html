@@ -1,0 +1,18 @@
+<div data-ng-controller="boqWicCrbNpkImportController">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'boq.main.npkGroupBy' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="select" class="form-control" data-change="onSelectedOptionChanged()" data-options="groupOptions" data-model="selectedGroup"></div>
+			</div>
+		</div>
+	</div>
+	<div class="flex-element flex-box flex-basis-auto grid-layout-wrapper">
+		<div class="flex-element flex-box flex-column subview-container modal-wrapper">
+			<platform-grid data="leftGridData"></platform-grid>
+		</div>
+		<div class="flex-element flex-box flex-column subview-container modal-wrapper margin-left-ld">
+			<platform-grid data="rightGridData"></platform-grid>
+		</div>
+	</div>
+</div>

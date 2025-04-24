@@ -1,0 +1,14 @@
+<ui-common-lookup-input
+  *ngIf="usesIntegerReferences"
+  [(value)]="integerValue"
+  [usedAsGridEditor]="usedAsGridEditor"
+  [entityContext]="controlContext.entityContext"
+  [options]="controlContext.lookupOptions.getTypedOptions()"
+  [readonly]="controlContext.readonly"></ui-common-lookup-input>
+<ui-common-lookup-input
+  *ngIf="usesIdentificationDataReferences"
+  [(compositeValue)]="compositeValue"
+  [usedAsGridEditor]="usedAsGridEditor"
+  [entityContext]="controlContext.entityContext"
+  [options]="controlContext.lookupOptions.getTypedOptions()"
+  [readonly]="controlContext.readonly"></ui-common-lookup-input>

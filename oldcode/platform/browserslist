@@ -1,0 +1,7 @@
+ie >= 11
+last 2 edge versions
+Chrome >= 66
+Firefox >= 52
+FirefoxAndroid >= 52
+ChromeAndroid >= 66
+iOS >= 11

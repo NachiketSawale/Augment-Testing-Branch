@@ -1,0 +1,20 @@
+<div *ngIf="error" class="fullwidth container-fluid ribalert alert alert-dismissable alert-warning">
+	<div class="row">
+		<div class="col-xs-12 rib-alert-col1">
+			<span>{{ error }}</span>
+		</div>
+	</div>
+</div>
+<ui-common-accordion [data]="accordionItems"></ui-common-accordion>
+<div *ngIf="hasChangeOrder" class="alert alert-info margin-top-ld">{{ 'procurement.pricecomparison.wizard.create.contract.note' | platformTranslate }}</div>
+<procurement-pricecomparison-create-contract-evaluated-handle-mode *ngIf="!loading"
+	[(evaluatedItemHandleMode)]="dlgWrapper.value"
+>
+</procurement-pricecomparison-create-contract-evaluated-handle-mode>
+<div *ngIf="!loading && showContractNote" class="margin-top-ld">
+	<label>{{ 'procurement.common.wizard.IsContractNote' | platformTranslate }}</label>
+</div>
+<div class="margin-top-ld" *ngIf="customNote" [innerHTML]="customNote | uiCommonSafeHtml">
+
+</div>
+<ui-common-loading *ngIf="loading" [loading]="loading" [attr.class]="'fullwidth flex-element flex-box flex-column'"></ui-common-loading>

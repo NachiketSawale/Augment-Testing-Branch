@@ -1,0 +1,467 @@
+[
+  {
+    "id":"constructionsystem.master.groupGrid",
+    "template":"app/components/base/grid-partial.html",
+    "title":"constructionsystem.master.groupGridContainerTitle",
+    "controller":"constructionSystemMasterGroupController",
+    "uuid":"7fb0f988359341e6950d9f679d0c7b62",
+    "permission":"7fb0f988359341e6950d9f679d0c7b62"
+  },
+  {
+    "id":"constructionsystem.master.groupForm",
+    "template":"app/components/base/form-detail-partial.html",
+    "title":"constructionsystem.master.groupFormContainerTitle",
+    "controller":"constructionSystemMasterGroupDetailController",
+    "uuid":"189564016710460192353d6dd68daa44",
+    "permission":"7fb0f988359341e6950d9f679d0c7b62"
+  },
+  {
+    "id": "constructionsystem.master.headerGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.headerGridContainerTitle",
+    "controller": "constructionSystemMasterHeaderController",
+    "uuid": "ACC544C6504A4A678DBE74D8F390EEA8",
+    "permission": "df958953d5774978a24be290074c2fdc"
+  },
+  {
+    "id": "constructionsystem.master.headerForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.headerFormContainerTitle",
+    "controller": "constructionSystemMasterHeaderDetailController",
+    "uuid": "FD415CFDA30F423CAA757762F9F9D6DE",
+    "permission": "df958953d5774978a24be290074c2fdc"
+  },
+  {
+    "id": "constructionsystem-master-help-container",
+    "template": "app/components/base/partials/image-partial.html",
+    "title": "constructionsystem.master.helpContainerTitle",
+    "controller": "constructionSystemMasterHelpController",
+    "uuid": "4fb2bbe16e21445282f5b3c9c64bde9b",
+    "permission": "df958953d5774978a24be290074c2fdc"
+  },
+  {
+    "id": "constructionsystem.master.assemblyGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.assemblyGridContainerTitle",
+    "controller": "constructionSystemMasterAssemblyController",
+    "uuid": "12ED89F703F9484D8934A967DA15BBE4",
+    "permission": "12ed89f703f9484d8934a967da15bbe4"
+  },
+  {
+    "id": "constructionsystem.master.assemblyResourceGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.assemblyResourceGridContainerTitle",
+    "controller": "constructionSystemMasterAssembliesResourceTreeController",
+    "uuid": "574b34f0674d450ca9c696d9bd5c4ea7",
+    "permission": "12ed89f703f9484d8934a967da15bbe4"
+  },
+  {
+    "id": "constructionsystem.master.assemblyForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.assemblyFormContainerTitle",
+    "controller": "constructionSystemMasterAssemblyDetailController",
+    "uuid": "068F5A3774344F85905A18ABD2FC3E2A",
+    "permission": "12ED89F703F9484D8934A967DA15BBE4"
+  },
+  {
+    "id": "constructionsystem.master.parameter.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.parameterGridContainerTitle",
+    "controller": "constructionSystemMasterParameterController",
+    "uuid": "1BF54E1872EA4559BC95A1C2C6152450",
+    "permission": "1bf54e1802ea4559bc95a1c2c6152450"
+  },
+  {
+    "id": "constructionsystem.master.parameter.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.parameterFormContainerTitle",
+    "controller": "constructionSystemMasterParameterDetailController",
+    "uuid": "1BF54E1802EA4559BC95A1C2C6152454",
+    "permission": "1bf54e1802ea4559bc95a1c2c6152450"
+  },
+  {
+    "id": "constructionsystem.master.controllingGroupGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.controllingGroupGridContainerTitle",
+    "controller": "constructionSystemMasterControllingGroupController",
+    "uuid": "9A833119C0594C3EB541364E8E4C7136",
+    "permission": "9a833119c0594c3eb541364e8e4c7136"
+  },
+  {
+    "id": "constructionsystem.master.controllingGroupForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.controllingGroupFormContainerTitle",
+    "controller": "constructionSystemMasterControllingGroupDetailController",
+    "uuid": "DC659B57E6F943BE84A334A16D08DC96",
+    "permission": "9A833119C0594C3EB541364E8E4C7136"
+  },
+  {
+    "id": "constructionsystem.master.activityTemplateGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.activityTemplateGridContainerTitle",
+    "controller": "constructionSystemMasterActivityTemplateController",
+    "uuid": "B13B068F2F7C439D8EAA3DF7D66EBB96",
+    "permission": "b13b068f2f7c439d8eaa3df7d66ebb96"
+  },
+  {
+    "id": "constructionsystem.master.activityTemplateForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.activityTemplateFormContainerTitle",
+    "controller": "constructionSystemMasterActivityTemplateDetailController",
+    "uuid": "14CAE87B5C294052A8CFB8A733ACE89A",
+    "permission": "B13B068F2F7C439D8EAA3DF7D66EBB96"
+  },
+  {
+    "id": "constructionsystem.master.parameterGroupGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.parameterGroupGridContainerTitle",
+    "controller": "constructionSystemMasterParameterGroupController",
+    "uuid": "37CF0F655BD94DBBB424DEEE45547E32"
+  },
+  {
+    "id": "constructionsystem.master.parameterGroupForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.parameterGroupFormContainerTitle",
+    "controller": "constructionSystemMasterParameterGroupDetailController",
+    "uuid": "27CF0F655BD94DBBB424DEEE45547E35",
+    "permission": "37CF0F655BD94DBBB424DEEE45547E32"
+  },
+  {
+    "id": "constructionsystem.master.parameterValueGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.parameterValueGridContainerTitle",
+    "controller": "constructionSystemMasterParameterValueController",
+    "uuid": "F312265433D140F7BB9F00CD7A026E91"
+  },
+  {
+    "id": "constructionsystem.master.parameterValueForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.parameterValueFormContainerTitle",
+    "controller": "constructionSystemMasterParameterValueDetailController",
+    "uuid": "F312265433D140F7BB9F66CD7A026E32",
+    "permission": "F312265433D140F7BB9F00CD7A026E91"
+  },
+  {
+    "id": "constructionsystem.master.script",
+    "template": "constructionsystem.master/partials/script-partial.html",
+    "title": "constructionsystem.master.scriptContainerTitle",
+    "controller": "constructionsystemMasterScriptController",
+    "uuid": "691B4F8931344A529B9210D44EA2B504",
+    "permission": "691b4f8931344a529b9210d44ea2b504"
+  },
+  {
+    "id": "constructionsystem.master.scriptValidation",
+    "template": "constructionsystem.master/partials/script-validation-partial.html",
+    "title": "constructionsystem.master.scriptValidationContainerTitle",
+    "controller": "constructionsystemMasterScriptValidationController",
+    "uuid": "896DFCEFDBA44B40A8EFE4A0A3B086B6",
+    "permission": "691b4f8931344a529b9210d44ea2b504"
+  },
+  {
+    "id": "constructionsystem.master.wicGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.wicGridContainerTitle",
+    "controller": "constructionSystemMasterWicController",
+    "uuid": "1CD70E4C9E1740C39E00213C9745153F",
+    "permission": "1cd70e4c9e1740c39e00213c9745153f"
+  },
+  {
+    "id": "constructionsystem.master.wicForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.wicFormContainerTitle",
+    "controller": "constructionSystemMasterWicDetailController",
+    "uuid": "76F471CFD25F48CC8F6306C5C4B1D6A9",
+    "permission": "1CD70E4C9E1740C39E00213C9745153F"
+  },
+  {
+    "id": "constructionsystem.master.testInputGroupGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.testInputGridContainerTitle",
+    "controller": "constructionSystemMasterTestParameterInputController",
+    "uuid": "59C5523F1B754E3FB4AEA87F7B1B2CB1",
+    "permission": "59c5523f1b754e3fb4aea87f7b1b2cb1"
+  },
+  {
+    "id": "constructionsystem.master.testInputGroupForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.testInputFormContainerTitle",
+    "controller": "constructionSystemMasterTestInputController",
+    "uuid": "A758BAF3DC574A8DACE61DAC349D3F62",
+    "permission": "59c5523f1b754e3fb4aea87f7b1b2cb1"
+  },
+  {
+    "id": "constructionsystem.master.modelObjectGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.main.modelObjectListTitle",
+    "controller": "constructionSystemMasterModelObjectGridController",
+    "uuid": "2F47326E7B2441DABADB4DAEBB327E2D",
+    "permission":"765fe63c3e3446c8945aea76ab584249"
+  },
+  {
+    "id": "constructionsystem.master.modelObjectForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.main.modelObjectDetailTitle",
+    "controller": "constructionSystemMasterModelObjectDetailController",
+    "uuid": "4F2AF86298A941E8A2AA35B0EED27220",
+    "permission": "765FE63C3E3446C8945AEA76AB584249"
+  },
+  {
+    "id": "constructionsystem.master.modelPropertyGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.main.modelPropertyListTitle",
+    "controller": "constructionSystemCommonModelPropertyGridController",
+    "currentModule": "constructionsystem.master.modelProperty",
+    "parentService":"constructionSystemMasterModelObjectDataService",
+    "readOnly": "true",
+    "uuid": "575D3224FF8C4943A9C5C25D904BEEAA",
+    "permission": "EC7F4AFAE0D24E5296F594A65C8D176E"
+  },
+  {
+    "id": "constructionsystem.master.modelPropertyForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.main.modelPropertyDetailTitle",
+    "controller": "constructionSystemCommonModelPropertyDetailController",
+    "currentModule": "constructionsystem.master.modelProperty",
+    "parentService":"constructionSystemMasterModelObjectDataService",
+    "readOnly": "true",
+    "uuid": "61CFEA3536D44F30B92681EB3665DC98",
+    "permission": "EC7F4AFAE0D24E5296F594A65C8D176E"
+  },
+  {
+    "id": "constructionsystem.master.output",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.outputContainerTitle",
+    "controller": "constructionsystemMasterOutputController",
+    "uuid": "EA37CE7D43C04139994976B6F26957CF",
+    "permission": "ea37ce7d43c04139994976b6f26957cf"
+  },
+  {
+    "id": "constructionsystem.master.lineItem",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.lineItemContainerTitle",
+    "controller": "constructionsystemMasterLineItemController",
+    "uuid": "6A4CAEB75CA542D8AF545196F3948D3D",
+    "dataService": "constructionsystemMasterLineItemDataService",
+    "permission": "6a4caeb75ca542d8af545196f3948d3d"
+  },
+  {
+    "id": "constructionsystem.master.resource",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.resourceContainerTitle",
+    "controller": "constructionsystemMasterResourceController",
+    "uuid": "31C33108B9C4455692B3E443D5B60224",
+    "dataService": "constructionsystemMasterResourceDataService",
+    "permission": "31c33108b9c4455692b3e443d5b60224"
+  },
+  {
+    "id": "constructionsystem.master.sourceboq",
+    "template": "constructionsystem.master/templates/constructionsystem-master-copysorce-container.html",
+    "title": "constructionsystem.master.boqLookup",
+    "controller": "",
+    "uuid": "798F2A76CDD74E6384A410FE145F62B2"
+  },
+  {
+    "id": "constructionsystem.master.languagegrid",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.languageColHeader_ContainerTitle",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "BE4D2704BB964CC0B6465746DDCF8B6A"
+  },
+  {
+    "id": "constructionsystem.master.templateGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.templateGridContainerTitle",
+    "controller": "constructionSystemMasterTemplateGridController",
+    "uuid": "1318e19a7da04d8ba01a0fbcde2c77bd",
+    "permission": "1318e19a7da04d8ba01a0fbcde2c77bd"
+  },
+  {
+    "id": "constructionsystem.master.templateForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.templateFormContainerTitle",
+    "controller": "constructionSystemMasterTemplateDetailController",
+    "uuid": "79e66f0c359a4d109c20b82ee3cc507a",
+    "permission": "1318e19a7da04d8ba01a0fbcde2c77bd"
+  },
+  {
+    "id": "constructionsystem.master.paramter2TemplateGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.parameter2TemplateGridContainerTitle",
+    "controller": "constructionSystemMasterParameter2TemplateGridController",
+    "uuid": "907a9e74be7245b4b277cbf4febd6806",
+    "permission": "907a9e74be7245b4b277cbf4febd6806"
+  },
+  {
+    "id": "constructionsystem.master.parameter2TemplateForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.parameter2TemplateFormContainerTitle",
+    "controller": "constructionSystemMasterParameter2TemplateDetailController",
+    "uuid": "6058b3709bbc4faeb8425512d7cc5d95",
+    "permission": "907a9e74be7245b4b277cbf4febd6806"
+  },
+  {
+    "id": "constructionsystem.master.QuantityQueryEditor",
+    "template": "constructionsystem.master/partials/quantity-query-editor-partial.html",
+    "title": "constructionsystem.master.quantityQueryEditorContainerTitle",
+    "controller": "constructionSystemMasterQuantityQueryEditorController",
+    "uuid": "1F3CAE3E5D8E426CA890A5AB12B42DEA",
+    "permission": "65214281626142ac8e15849d813db1dd"
+  },
+  {
+    "id": "constructionsystem.master.Parameter2TemplateQuantityQueryEditor",
+    "template": "constructionsystem.master/partials/quantity-query-editor-partial.html",
+    "title": "constructionsystem.master.parameter2TemplateQuantityQueryEditorContainerTitle",
+    "controller": "constructionSystemMasterParameter2TemplateQuantityQueryEditorController",
+    "uuid": "e57bb3b02c9c4dcfa304d693e15c4972",
+    "permission": "907a9e74be7245b4b277cbf4febd6806"
+  },
+  {
+    "id": "constructionsystem.master.masterSelectionStatement",
+    "template": "constructionsystem.common/templates/main-filter.html",
+    "title": "constructionsystem.master.masterSelectionStatementContainerTitle",
+    "controller": "constructionsystemMasterSelectionStatementController",
+    "parentService":"constructionSystemMasterHeaderService",
+    "gridUUID":"105d6ee6c6ca4b3298d35718974df94e",
+    "uuid": "e2c61acaa5ef423c805c3098d13cb049",
+    "permission": "474afedbb5ef474c878a027d03143eb9"
+  },
+  {
+    "id": "constructionsystem-main-instance2object-param-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.main.instance2ObjectParamGridTitle",
+    "controller": "constructionSystemMasterObjectParamListController",
+    "uuid": "4FC1FBE850564609AD2677F9F0C15E44"
+  },
+  {
+    "id": "constructionsystem.master.templateSelectionStatement",
+    "template": "constructionsystem.common/templates/main-filter.html",
+    "title": "constructionsystem.master.templateSelectionStatementContainerTitle",
+    "controller": "constructionsystemTemplateSelectionStatementController",
+    "parentService":"constructionSystemMasterTemplateDataService",
+    "gridUUID":"2d60156e33554ff286a0cf1614097945",
+    "uuid": "e2c61acaa5ef423c805c3098d13cb041",
+    "permission": "82d7957dfe484db28038fcf1c5446dfd"
+  },
+  {
+    "id": "constructionsystem.master.globalParameterGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.globalParameterGridContainerTitle",
+    "controller": "constructionSystemMasterGlobalParameterController",
+    "uuid": "d736297005f9469d93d09a14c59fe414"
+  },
+  {
+    "id": "constructionsystem.master.globalParameter.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.globalParameterFormContainerTitle",
+    "controller": "constructionSystemMasterGlobalParameterDetailController",
+    "uuid": "aab5cdd616ba0498daaeb8215c3c6022",
+    "permission": "d736297005f9469d93d09a14c59fe414"
+  },
+  {
+    "id": "constructionsystem.master.globalParameterValueGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.globalParameterValueGridContainerTitle",
+    "controller": "constructionSystemMasterGlobalParameterValueController",
+    "uuid": "a096f97b3ef242febe7219478f06f9b4"
+  },
+  {
+    "id": "constructionsystem.master.globalParameterValueForm",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.globalParameterValueFormContainerTitle",
+    "controller": "constructionSystemMasterGlobalParameterValueDetailController",
+    "uuid": "42555609fbcd47aeb64468d270a648ab",
+    "permission": "a096f97b3ef242febe7219478f06f9b4"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplateGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplateGridContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplateController",
+    "uuid": "2e51def88fbb40bbbb53876e54de22c9"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplate.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplateFormContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplateDetailController",
+    "uuid": "fcb2a29ce70f4a1db8489cc5c997431b",
+    "permission": "2e51def88fbb40bbbb53876e54de22c9"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplatePropertyGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplatePropertyGridContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplatePropertyController",
+    "uuid": "83ef6ff7f7704edc9a2f1b50bd35690d"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplateProperty.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplatePropertyFormContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplatePropertyDetailController",
+    "uuid": "29aba7c0e5bb464b894a477169cd5233",
+    "permission": "83ef6ff7f7704edc9a2f1b50bd35690d"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplate2TemplateGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplate2TemplateGridContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplate2TemplateController",
+    "uuid": "25cdff39a402445188247d0096836cc2"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplate2Template.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplate2TemplateFormContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplate2TemplateDetailController",
+    "uuid": "e36ceb46cae143ada0413d8e0f21737d",
+    "permission": "25cdff39a402445188247d0096836cc2"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplateProperty2TemplateGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplateProperty2TemplateGridContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplateProperty2TemplateController",
+    "uuid": "193e273962d747bc94d4a9c82782e000"
+  },
+  {
+    "id": "constructionsystem.master.objectTemplateProperty2Template.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "constructionsystem.master.2dObjectTemplateProperty2TemplateFormContainerTitle",
+    "controller": "constructionSystemMasterObjectTemplateProperty2TemplateDetailController",
+    "uuid": "b74fbd432f7e470194efcfd460e0ff24",
+    "permission": "193e273962d747bc94d4a9c82782e000"
+  },
+  {
+    "id": "constructionsystem-master-powerbi-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "constructionsystem.master.powerBIElements",
+    "controller": "constructionsystemMasterPowerBiListController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ad20",
+    "permission": "193e273962d747bc94d4a9c82782e000"
+  }
+,
+  {
+    "id": "constructionsystem-master-powerbi-view-container",
+    "template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+    "title": "constructionsystem.master.powerbiView",
+    "controller": "constructionsystemMasterPowerbiViewController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ad21",
+    "permission": "193e273962d747bc94d4a9c82782e000"
+  },
+	{
+		"id": "constructionsystem-master-global-param-group-container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "constructionsystem.master.globalParamGroupTitle",
+		"controller": "constructionSystemMasterGlobalParamGroupController",
+		"uuid": "6649459c8df046b3bbaaf3ceec4233fd"
+	},
+	{
+		"id": "constructionsystem-master-global-param-group-detail-container",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "constructionsystem.master.globalParamGroupDetail",
+		"controller": "constructionSystemMasterGlobalParamGroupDetailController",
+		"uuid": "1f974111b07143ab81bbcaca9aeee6a2",
+		"permission": "6649459c8df046b3bbaaf3ceec4233fd"
+	}
+]

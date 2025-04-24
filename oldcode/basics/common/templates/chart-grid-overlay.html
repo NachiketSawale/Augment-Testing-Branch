@@ -1,0 +1,16 @@
+<div style="width:100%;height:100%;">
+	<div common-kendo-splitter-adjust-extend class="flex-element filler" ng-if="groups"
+	     option="{panes: [ { collapsible: true, size: '40%' },{ collapsible: true, size: '60%' }],orientation:'horizontal'}">
+		<div id="ui-layout-west">
+			<platform-grid data="gridData"></platform-grid>
+		</div>
+		<div id="ui-layout-east">
+			<div style="padding:10px;height:100%">
+				<basics-common-custom-chart-directive chart-data-source="chartDataSource" chart-data-config="chartDataConfig" trigger-update-event="triggerUpdateEvent"></basics-common-custom-chart-directive>
+			</div>
+		</div>
+	</div>
+	<div style="padding:10px;height:100%" ng-if="!groups">
+		<basics-common-custom-chart-directive chart-data-source="chartDataSource" chart-data-config="chartDataConfig" trigger-update-event="triggerUpdateEvent"></basics-common-custom-chart-directive>
+	</div>
+</div>

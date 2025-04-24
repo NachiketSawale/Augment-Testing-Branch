@@ -1,0 +1,16 @@
+<div data-ng-controller="procurementTxInterfaceWizardController">
+    <header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+    <section class="modal-body" >
+        <div>
+            <div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+
+            <div data-platform-form data-form-options="formOptions" entity="entity"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <!--<button type="button" class="btn btn-default" data-ng-click="$parent.$close(okClicked())" data-ng-disabled="!canExecuteOkButton()"> {{::'cloud.common.ok' | translate}}</button>-->
+        <button type="button" class="btn btn-default" data-ng-click="startProcess()" data-ng-disabled="!canExecuteOkButton()"> {{::'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>
+

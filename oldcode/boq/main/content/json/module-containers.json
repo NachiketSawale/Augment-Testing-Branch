@@ -1,0 +1,260 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "boq.main.boqStructure",
+		"controller": "boqMainNodeController",
+		"uuid": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.boqDetails",
+		"controller": "boqMainDetailFormController",
+		"uuid": "D4D78F39037C416EA48D07D0364086B9",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "3",
+		"template": "boq.main/templates/boq-specification-html-container.html",
+		"title": "boq.main.boqSpecification",
+		"controller": "boqMainSpecificationController",
+		"uuid": "43107E9C90944E7BADC9239DEF245820",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "4",
+		"template": "boq.main/templates/boq-copysource-container.html",
+		"title": "boq.main.boqLookup",
+		"controller": "",
+		"uuid": "50455BCE7DAB48CE97D1D6B9BC67CFE5"
+	},
+	{
+		"id": "boq.main.copysourcedetails.container",
+		"template": "boq.main/templates/boq-main-copysource-details-container.html",
+		"title": "boq.main.sourceBoqDetailsTitle",
+		"controller": "boqMainCopySourceDetailController",
+		"uuid": "7c7dfaf9b0bd488a882f50aa7a4bae92",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "6",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "8324B2ABBF264D2F9EFAB261DE134FBC",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqSurchargeOn",
+		"controller": "boqMainSurchargeController",
+		"uuid": "f3110913ee9c49e28a1abfa6da33671d",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.crbvariable.container",
+		"template": "boq.main/templates/boq-main-crb-variable-container.html",
+		"title": "boq.main.crbVariableTitle",
+		"controller": "boqMainCrbVariableController",
+		"uuid": "569d4eac577e4b4e998ed6322bf87a2e",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.htmltextcomplement.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.boqMainHtmlTextComplement",
+		"controller": "boqMainHtmlTextComplementController",
+		"uuid": "88b9a8bb2111450b9fd724eee6b0f6a0",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.splitquantity.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.SplitQuantity",
+		"controller": "boqMainGenericSplitQuantityController",
+		"boqService": "boqMainService",
+		"moduleName": "boq.main",
+		"uuid": "fda1ee3a56614031903ab8d711680a2f",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.wic2assembly.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.Wic2AssemblyListTitle",
+		"controller": "boqMainWic2AssemblyListController",
+		"uuid": "e026a8499c684a5788c0193b1399364c",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.textconfiguration.container",
+		"template": "boq.main/templates/boq-main-text-configuration.html",
+		"title": "boq.main.textConfig",
+		"controller": "",
+		"uuid": "31165e4ac43a48f7b151ce18f57cd976",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.pricecondition.container",
+		"template": "boq.main/templates/price-condition-edit-dialog.html",
+		"title": "boq.main.PriceCondition",
+		"controller": "boqMainPriceconditionListController",
+		"dataService": "boqMainPriceconditionService",
+		"moduleName": "boq.main",
+		"uuid": "4f906f233da944a4b9952f57999a8baf",
+		"permission": "C954E888CF9B4997A8DFCCA117E96916"
+	},
+	{
+		"id": "boq.main.document.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.documentTitle",
+		"controller": "boqMainDocumentController",
+		"uuid": "b7a795244b6740bcb8dea6f0537a2368",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.crbsketch.container",
+		"template": "boq.main/templates/boq-main-crb-sketch-container.html",
+		"title": "boq.main.crbSketchTitle",
+		"controller": "boqMainCrbSketchController",
+		"uuid": "56c6826d641344db93b697b7b6f5217b",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.crbboqitemscope.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.crbBoqItemScopeTitle",
+		"controller": "boqMainCrbBoqItemScopeController",
+		"uuid": "9074f79bbc8c457c8eaa7a6d777fca2a",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq-main-powerbi-list-container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.powerBIElements",
+		"controller": "boqMainPowerBiListController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ad00",
+		"permission": "C954E888CF9B4997A8DFCCA117E96916"
+	},
+	{
+		"id": "boq-main-powerbi-view-container",
+		"template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+		"title": "boq.main.powerbiView",
+		"controller": "boqMainPowerbiViewController",
+		"uuid": "1013a209ba7144f18d8d93e5b533ad01",
+		"permission": "C954E888CF9B4997A8DFCCA117E96916"
+	},
+	{
+		"id": "boq.main.qtoDetail.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.detail.gridTitle",
+		"controller": "boqMainQtoDetailController",
+		"uuid": "47E4AE7B9F0F4253A2CE7875A79E39B5"
+	},
+	{
+		"id": "project.main.billto.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.billToListTitle",
+		"controller": "boqMainGenericBillToListController",
+		"boqService": "boqMainService",
+		"moduleName": "boq.main",
+		"uuid": "307d2a07601f496ba8ae601d58ce1516",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oenExtension.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oenExtension.detailContainerTitle",
+		"controller": "boqMainOenBoqItemFormController",
+		"uuid": "95dc49fc17594890b33e094fe444c7ae"
+	},
+	{
+		"id": "boq.main.oen.lbMetadata",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.LbMetadata",
+		"controller": "boqMainOenLbMetadataController",
+		"uuid": "4e0435cecb1c47d4b5a1f5197c7ad925",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.graphic",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "boq.main.oen.graphicContainerTitle",
+		"controller": "boqMainOenPictureController",
+		"uuid": "2B07723E45A34BBC93355F38B47DE10C",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.contact",
+		"template": "boq.main/templates/boq-main-oen-contact-container.html",
+		"title": "boq.main.oen.uicontainer.contact.title",
+		"controller": "boqMainOenContactController",
+		"uuid": "5c4f76ed0f964b81961c1f923ffa6b28",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.lvHeader",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "boq.main.oen.uicontainer.lvHeader.title",
+		"controller": "boqMainOenLVHeaderController",
+		"uuid": "bfa158d5b45a4bf8bdfbe6008503c4e5",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.zz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zz.title",
+		"controller": "boqMainOenZzController",
+		"uuid": "a3b6037eb9d444b5849426b345f08f2e",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.zzVariant",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.zzVariant.title",
+		"controller": "boqMainOenZzVariantController",
+		"uuid": "6dcfd92700734139a7dc62db1187f179",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.akz",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.akz.title",
+		"controller": "boqMainOenAkzController",
+		"uuid": "f7b7d6b4dfb745be924c759bb8b57435",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.parameter",
+		"template": "boq.main/templates/boq-main-oen-paramlist-grid-form-composite.html",
+		"title": "boq.main.oen.uicontainer.parameter.title",
+		"controller": "",
+		"uuid": "2293d0864da04ff3844f18666d2dad4a",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.oen.servicePart",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.oen.uicontainer.servicePart.title",
+		"controller": "boqMainOenServicePartController",
+		"uuid": "645c198984724d009859425728277871",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.priceSideComputations",
+		"template": "boq.main/templates/boq-main-boq-item-subprice-container.html",
+		"title": "boq.main.priceSideComputation.title",
+		"controller": "boqMainSubpriceController",
+		"uuid": "9c4e32e8e42f4b1084a91d78b7b412c5",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	},
+	{
+		"id": "boq.main.qtodetailCopy",
+		"template": "qto.main/templates/qto-main-detail-copysource-container.html",
+		"title": "qto.main.sourceQto",
+		"controller": "",
+		"uuid": "1bd8d838cad8444b9389af028fa52221",
+		"permission": "342bf3af97964f5ba24d3e3acc2242dd"
+	}
+]

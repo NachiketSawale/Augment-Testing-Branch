@@ -1,0 +1,25 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.payment.listPaymentTitle",
+		"controller": "basicsPaymentListController",
+		"uuid": "24790afafd35416595ef14527d0ba021"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.payment.detailPaymentTitle",
+		"controller": "basicsPaymentDetailController",
+		"uuid": "997d0546dca4406dae95ab214aae9d0d",
+		"permission": "24790afafd35416595ef14527d0ba021"
+	},
+	{
+		"id": "3",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "basics.payment.PaymentTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "162414311ae94f1a9e0d92d9ff731ec1"
+	}
+
+]

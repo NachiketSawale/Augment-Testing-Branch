@@ -1,0 +1,84 @@
+<style type="text/css">
+	.pes-row {
+		margin: 5px 0;
+	}
+
+	.pes-row label {
+		line-height: 28px;
+	}
+
+	.pes-row .invalid-cell {
+		color: red;
+		height: 20px;
+	}
+
+	.btn-goto {
+		background-position-x: 12px;
+	}
+</style>
+
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+	<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+
+	<div data-ng-show="!isSuccess">
+		<div class="row pes-row">
+			<label class="col-md-3">{{ 'cloud.common.entityCompanyName' | translate }}</label>
+			<div class="col-md-9" basics-company-company-lookup data-ng-model="entity.CompanyId" disabled="true"></div>
+		</div>
+		<div class="row pes-row">
+			<label class="col-md-3">{{ modalOptions.businessYear | translate }}</label>
+			<div class="col-md-9" controlling-revenue-recognition-company-year-combobox data-ng-model="entity.CompanyYearId" data-options="yearOptions"></div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ modalOptions.businessPeriod | translate }}</label>
+			<div class="col-md-9" controlling-revenue-recognition-company-period-combobox data-ng-model="entity.CompanyPeriodId" data-options="periodOptions"></div>
+		</div>
+
+		<div class="row pes-row">
+			<label class="col-md-3">{{ modalOptions.effectiveDate | translate }}</label>
+			<div class="col-md-9">
+				<div data-domain-control data-ng-model="entity.EffectiveDate" data-domain="date" data-change="changedEffectiveDate()"></div>
+				<div class="invalid-cell" data-ng-if="isDateError" data-ng-bind="validation.effectiveDateError"></div>
+			</div>
+		</div>
+
+		<div class="row pes-row">
+			<div class="col-md-12">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-show="isSuccess">
+		<div class="tlb-icons icon ico-info"></div>
+		<div class="message">
+			<div> {{modalOptions.interCompanyCreated}}{{message}}</div>
+		</div>
+	</div>
+</section>
+<footer class="modal-footer">
+	<div class="custom-group pes-row">
+		<label style="font-weight: bold;color:red" data-ng-hide="hasItems">
+			{{modalOptions.notRecharged | translate}}
+		</label>
+	</div>
+	<div data-ng-show="!isSuccess">
+		<button type="button" class="btn btn-default" data-ng-click="onGoto()" data-ng-disabled="!canGoto()" style="display:inline-block;">
+			{{'cloud.common.Navigator.goTo' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="onOk()" data-ng-disabled="!canOk()" style="display:inline-block;">
+			{{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="$close(false)" style="display:inline-block;">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</div>
+
+	<div data-ng-show="isSuccess">
+		<button type="button" class="btn btn-default" data-ng-click="success()">
+			{{'cloud.common.ok' | translate}}
+		</button>
+	</div>
+</footer>

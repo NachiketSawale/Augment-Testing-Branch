@@ -1,0 +1,93 @@
+// Form control focus state
+//
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `$input-border-focus` variable.
+//
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+//
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+@mixin form-control-focus($color: var(--company-color)) {
+	&:not([readonly]):focus-within {
+		border-color: $color;
+		border: 1px solid $color;
+		outline: 0;
+	}
+}
+
+// Lime Clamp
+//
+// This indicates to display an ellipsis ('…', U+2026 HORIZONTAL ELLIPSIS) to represent clipped text.
+// The ellipsis is displayed inside the content area, decreasing the amount of text displayed.
+// If there is not enough space to display the ellipsis, it is clipped.
+// With the $lines-to-show parameter can be defined from how many lines the text should be shortened.
+// The '…' are only shown in webkit browser. In other browsers, an linear-gradient is used. For this
+// the $background-color are needed.
+@mixin line-clamp($lines-to-show: 2, $background-color: #e6e6e6) {
+	position: relative;
+	height: $lines-to-show * 1.2em;
+	overflow: hidden;
+	display: block;
+
+	&:after {
+		content: "";
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 30px;
+		height: 1.2em;
+		background: linear-gradient(to right, rgba($background-color, 0), rgba($background-color, 1) 60%);
+	}
+
+	@supports (-webkit-line-clamp: 2) {
+		display: -webkit-box;
+		-webkit-line-clamp: $lines-to-show;
+		-webkit-box-orient: vertical;
+		height: auto;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+@mixin button-action-wrapper($action-width, $action-height: 100%) {
+	position: relative;
+
+	&.reporting-items {
+		&.selected {
+			background-color: $color-hover;
+		}
+
+		&:hover, &.selected {
+			.right {
+				display: flex;
+			}
+		}
+
+		.right {
+			display: none;
+		}
+	}
+
+	.left {
+		padding-right: $action-width;
+	}
+
+	.right {
+		@include container-position(0, 0, auto, auto);
+		@extend .fullheight;
+		display: flex;
+		flex-direction: column;
+
+		&.top, .top, .bottom {
+			width: $action-width;
+			height: $action-height;
+			background-size: $size-icon $size-icon;
+		}
+	}
+}

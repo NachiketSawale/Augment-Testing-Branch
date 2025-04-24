@@ -1,0 +1,16 @@
+<div data-ng-controller="basicsCommonContentDialogController" class="modal-wrapper">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{modalOptions.headerText}}</h2>
+	</header>
+	<section class="modal-body">
+		<pre ng-bind="content" class="selectable flex-element fullheight"> </pre>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="$close(false)"> {{::'basics.common.button.cancel' | translate}}</button>
+	</footer>
+</div>
+

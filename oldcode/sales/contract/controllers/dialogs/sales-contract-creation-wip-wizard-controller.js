@@ -35,6 +35,10 @@
 				$scope.loadFormConfig = function (generateType) {
 					return salesContractCreateWizardDialogUIService.getCreateOrUpdateWipFormConfig(onSelectedItemChangedHandler, generateType);
 				};
+				$scope.okValidationOnPerformDates = function okValidationOnPerformDates () {
+					let data = $scope.entity;
+					$scope.isOkDisabled = !(data.PerformedFrom <= data.PerformedTo);
+				}
 
 				$scope.formOptions = {
 					configure: formConfig
@@ -84,6 +88,13 @@
 					salesContractCreateWipWizardDialogService.getWipHeaderFk($scope.entity.WipHeaderFk);
 					// make sure grid is reloaded
 					$scope.$broadcast('reloadGrid');
+				});
+
+				$scope.$watch('entity.PerformedFrom', function () {
+					$scope.okValidationOnPerformDates();
+				});
+				$scope.$watch('entity.PerformedTo', function () {
+					$scope.okValidationOnPerformDates();
 				});
 				function ok() {
 					$scope.loading.show = true;

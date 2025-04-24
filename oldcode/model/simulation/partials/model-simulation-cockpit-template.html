@@ -1,0 +1,15 @@
+<div class="sim-cockpit">
+    <div data-model-simulation-timebar></div>
+    <div class="container-bar-default margin-top-ld">
+        <button type="button" class="control-icons ico-ar1-left3" title="{{::navBar.monthBackText}}" data-ng-disabled="navBar.isDisabled()" data-ng-click="navBar.moveRelative(-1, 'months')"></button>
+        <button type="button" class="control-icons ico-ar1-left2" title="{{::navBar.weekBackText}}" data-ng-disabled="navBar.isDisabled()" data-ng-click="navBar.moveRelative(-1, 'weeks')"></button>
+        <button type="button" class="control-icons ico-ar1-left1" title="{{::navBar.dayBackText}}" data-ng-disabled="navBar.isDisabled()" data-ng-click="navBar.moveRelative(-1, 'days')"></button>
+        <button type="button" class="wrapper border-left border-right" title="{{::navBar.goToTimeText}}" data-ng-disabled="navBar.isDisabled()" data-ng-click="navBar.moveAbsolute()">
+            <i class="pull-left block-image control-icons ico-date14"></i>
+            <span class="margin-left-ld" data-ng-bind="navBar.currentDateText"></span>
+        </button>
+        <button type="button" class="control-icons ico-ar1-right1" title="{{::navBar.dayForwardText}}" data-ng-disabled="navBar.isDisabled()" data-ng-click="navBar.moveRelative(1, 'days')"></button>
+        <button type="button" class="control-icons ico-ar1-right2" title="{{::navBar.weekForwardText}}" data-ng-disabled="navBar.isDisabled()" data-ng-click="navBar.moveRelative(1, 'weeks')"></button>
+        <button type="button" class="control-icons ico-ar1-right3" title="{{::navBar.monthForwardText}}" data-ng-disabled="navBar.isDisabled()" data-ng-click="navBar.moveRelative(1, 'months')"></button>
+    </div>
+</div>

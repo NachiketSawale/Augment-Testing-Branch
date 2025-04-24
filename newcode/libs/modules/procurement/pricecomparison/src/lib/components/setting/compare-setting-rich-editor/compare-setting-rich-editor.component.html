@@ -1,0 +1,8 @@
+<div
+	class="compare-setting-rich-editor"
+	contenteditable="true"
+	[innerHTML]="sanitizedContent | uiCommonSafeHtml"
+	(keyup)="onKeyup()"
+	(focus)="onFocus()"
+	(blur)="onBlur()"
+></div>

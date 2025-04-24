@@ -1,0 +1,1 @@
+This is the procurementConfiguration area of the basics procurementConfiguration module.

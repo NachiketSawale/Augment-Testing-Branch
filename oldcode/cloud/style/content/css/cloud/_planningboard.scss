@@ -1,0 +1,267 @@
+/*-------------------------------------------------------------------------------
+	 Planning Board (_planningboard.scss)
+	   - responsible Team: RIB SAA
+  -------------------------------------------------------------------------------*/
+.planningboardMain {
+  width: 100%;
+  height: 100%;
+
+  .widthheight100 {
+    width: 100% ;
+    height: 100%;
+  }
+
+  .height100 {
+    height: 100%;
+  }
+
+  .statusPanel {
+    position: absolute;
+    background: #f1f1f1;
+    height: 17px;
+    width: 0;
+    padding-left: 2px;
+    padding-top: 1px;
+    margin-top: -17px;
+  }
+
+  .centerPane {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .placeholder {
+    height: 36px;
+    padding: 0 6px 0 0;
+  }
+
+  defs {
+    display: none;
+  }
+
+  svg.planningboard {
+    .item {
+      fill: rgb(128, 171, 202);
+      cursor: pointer;
+    }
+
+    .headerContent {
+      .header {
+        width: 100%;
+        &.header-light-grey {
+          fill: lightgrey;
+          height: 64px;
+        }
+        &.header-white {
+          fill: white;
+          height: 57px;
+        }
+      }
+    }
+
+    g.dayLinesAxis {
+      opacity: .25;
+    }
+
+    .assignments {
+      .disabled {
+        opacity: .5;
+        pointer-events: none;
+        fill: rgba(0,0,0,.3) !important;
+        stroke-dasharray: 5;
+      }
+
+      .indicator-area {
+        &.error {
+          fill: rgba(201,34,34, .2);
+        }
+        &.warning {
+          fill: rgba(205,133,25, .2);
+        }
+      }
+
+      // layer specific styles
+      .layer-1-container {
+        .assignment.disabled {
+          opacity: 1;
+          fill: rgba(220, 220, 220, 1) !important;
+        }
+      }
+      .layer-2-container {
+        .assignment.disabled {
+          opacity: 1;
+          fill: rgba(190, 190, 190, 1) !important;
+        }
+      }
+    }
+
+    // aggregations
+    .aggregation-container, .aggregation-sum-container {
+      .aggregation {
+        cursor: pointer;
+
+        .background {
+          fill: $color-grey;
+          &:hover {
+            fill: $color-grey-light;
+          }
+        }
+      }
+    }
+
+    .tooltip-container {
+      .collection-row {
+        padding: 5px 10px;
+        border: 1px solid #000;
+        border-top: 0;
+        &:first-child {
+          border-top: 1px solid #000;
+        }
+      }
+    }
+
+    .chart {
+      shape-rendering: crispEdges;
+    }
+
+    .mini text {
+      font: 9px sans-serif;
+    }
+
+    .main text {
+      font: 12px sans-serif;
+    }
+
+    .month text {
+      text-anchor: start;
+    }
+
+    .todayLine {
+      stroke: blue;
+      stroke-width: 1.5;
+    }
+
+    .axis line,
+    .axis path {
+      stroke: gray;
+    }
+
+    .miniItem {
+      stroke-width: 6;
+    }
+
+    .future {
+      stroke: gray;
+      fill: url(#grayGradient);
+    }
+
+    .past {
+      stroke: green;
+      fill: lightgreen;
+    }
+
+    .yellow {
+      stroke: yellow;
+      fill: #ffff8c;
+    }
+
+    .blue {
+      stroke: #266691;
+      fill: url(#blueGradient);
+    }
+
+    .orange {
+      stroke: orange;
+      fill: #f5cd6d;
+    }
+
+    .brush .extent {
+      stroke: gray;
+      fill: green;
+      fill-opacity: .165;
+    }
+
+    .itemLabel {
+      fill: black;
+    }
+
+    .sample {
+      width: 100px;
+      height: 80px;
+      background: green;
+    }
+
+    .lanesLine {
+      fill: #666666;
+      opacity: .4;
+    }
+
+    .backgrounds {
+      opacity: .2;
+    }
+
+    .toolTipBackground {
+      fill: lightgrey;
+    }
+
+    .toolTipLabel {
+      fill: black;
+    }
+
+    .tick {
+      pointer-events: none;
+    }
+
+    /* hier ist das item */
+
+    .dateRangePreview {
+      fill: #efa381;
+      opacity: .5;
+    }
+
+    #notAssignedItemsPanel ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 4px;
+        padding: 4px;
+        border: 1px solid black;
+        background-color: #8FC0E3;
+
+        &.ui-draggable {
+          cursor: move;
+        }
+      }
+    }
+
+    .item-dragging {
+      opacity: .75;
+    }
+
+    .activeAssignmentItem {
+      fill: rgb(196, 226, 248);
+      stroke: $color-rib;
+      stroke-width: 1;
+      cursor: move;
+    }
+
+    .assignmentDragSizeCircle {
+      fill: #4679B8 !important;
+      stroke: #D6FEFF;
+      stroke-width: 1;
+      cursor: ew-resize;
+    }
+
+    .assignmentActiveSizeCircle {
+      display: block;
+    }
+
+    .assignmentSizeCircle {
+      display: none;
+    }
+  }
+}

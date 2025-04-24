@@ -1,0 +1,20 @@
+{
+	"name": "modules-productionplanning-common",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/productionplanning/common/src",
+	"prefix": "productionplanning-common",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/productionplanning/common"],
+			"options": {
+				"jestConfig": "libs/modules/productionplanning/common/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

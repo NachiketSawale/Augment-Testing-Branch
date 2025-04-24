@@ -1,0 +1,64 @@
+{
+	"qto": {
+		"formula": {
+			"tab": {
+				"formula": "Formula",
+				"specification": "Specification"
+			},
+			"gridViewTitle": "Formula",
+			"FormViewTitle":"Formula Detail",
+			"icon": "Icon",
+			"value": "Value{{p_0}}",
+			"operator": "Operator {{p_0}}",
+			"formulaType": "FormulaType",
+			"gonimeter": "Gonimeter",
+			"isdefault": "IsDefault",
+			"sorting": "Sorting",
+			"uniqueError": "uniqueError",
+			"nullError": "nullError",
+			"presentation":"Presentation",
+			"islive": "IsLive",
+			"uom": {
+				"gridViewTitle": "Formula Uom",
+				"formViewTitle": "Formula Uom Detail",
+				"uom": "Uom",
+				"uomDescription": "Description"
+			},
+			"rubric": {
+				"gridViewTitle": "Quantity takeoff Rubric",
+				"description": "Quantity Takeoff Type"
+			},
+			"image": {
+				"Title": "Image"
+			},
+			"specification": {
+				"Title": "Specification"
+			},
+			"script": {
+				"Title": "Script Definition"
+			},
+			"scriptValidation": {
+				"scriptValidationContainerTitle": "Validation Script"
+			},
+			"scriptValidationTrans": {
+				"code" : "Code",
+				"validationText": "Validation Text",
+				"scriptValidationTransContainerTitle": "Validation Script Translation"
+			},
+			"comment": {
+				"title": "QTO Comment",
+				"formTitle":"QTO Comment Detail"
+			},
+		    "formulaIsDefaultError":"only one default can be checked",
+		    "formulaSpecificationError":"Specification is too long",
+			"dialog": {
+				"allFormulaAssignedMessage": "Can not delete selected Qto Formula as they are assigned to QTO Detail."
+			},
+			"ismultiline": "Is MultiLine",
+			"maxlinenumber": "Max LineNumber",
+			"isdialog": "Is Dialog",
+			"basformfk": "User Form",
+			"scriptDefinitionText": " Script definition only availiable for \"Script\" (Formula Type) formula"
+		}
+	}
+}

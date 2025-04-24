@@ -1,0 +1,29 @@
+<div id="search-container" class="row">
+	<div id="logo-container" class="col-lg-2 col-md-2 col-sm-3 col-12 logo ">
+		<a href="###" id="homelink" title="iTWO4.0 API" class="link">
+			<span id="hometext" class="control-label">iTWO4.0 API</span>
+		</a>
+	</div>
+	<div id="searchbox-container" class="col-lg-4 col-md-4 col-sm-3 col-12">
+		<input id="searchBox-x" type="text" [matAutocomplete]="auto" [formControl]="control" matInput
+			(input)="inputChange()"
+			class="formControl input">
+		<mat-autocomplete #auto="matAutocomplete">
+			<mat-option *ngFor="let data of filteredData" [value]="data">
+				{{data}}
+			</mat-option>
+		</mat-autocomplete>
+	</div>
+	<div class="col-lg-1 col-md-2 col-sm-2 col-12  button-wrap" title="Explore">
+		<a type="button" id="SearchBtn" class="btn explore-btn" style="margin:5px;" (click)="search()">Explore</a>
+	</div>
+	<div class="col-lg-1 col-md-2 col-sm-2 col-12 button-wrap" title="Reload">
+		<a type="button" id="ReloadBtn" class="btn reload-btn" style="margin: 5px;"
+			(click)="reloadbuttonEvent()">Reload</a>
+	</div>
+	<div class="col-lg-1 col-md-2 col-sm-2 col-12 button-wrap" title="Download Current Page">
+		<a type="button" id="DownloadPageBtn" class="formControl btn download-btn" (click)="navigateToDownloadPage()"
+			 style="margin: 5px;">Download Page</a>
+	</div>
+	<div class="col-lg-3"></div>
+</div>

@@ -1,0 +1,16 @@
+﻿{
+	"language": "nl",
+	"culture": "nl-nl",
+	"base": "en",
+	"translation": {
+		"en": "Engels",
+		"en-us": "Engels (VS)",
+		"de": "Duits",
+		"fi": "Finse",
+		"ru": "Russisch",
+		"fr": "Frans",
+		"es": "Spaans",
+		"nl": "Nederland",
+		"zh": "Chinees"
+	}
+}

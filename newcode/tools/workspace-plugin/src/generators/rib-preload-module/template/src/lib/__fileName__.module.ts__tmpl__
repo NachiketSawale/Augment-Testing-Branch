@@ -1,0 +1,17 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {ModuleManagerService} from "@platform-common/services/module-management/module-manager.service";
+import {ModulePreloadInfo} from "./model/module-preload-info.class";
+
+@NgModule({
+	imports: [CommonModule],
+})
+export class <%=className  %>Module {
+	public constructor(moduleManager: ModuleManagerService) {
+		moduleManager.registerPreloadModule(new ModulePreloadInfo());
+	}
+}

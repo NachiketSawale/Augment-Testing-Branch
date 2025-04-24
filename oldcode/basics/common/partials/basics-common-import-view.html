@@ -1,0 +1,59 @@
+<div data-ng-controller="basicsCommonImportDataController">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+			     class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{modalOptions.headerText}}</h2>
+	</header>
+	<div>
+		<section class="modal-body">
+			<div data-platform-alert data-error="error"></div>
+			<div data-ng-if="modalOptions.currentStepId==0">
+				<div style="height: 100%;width:100%">
+					<div class="platform-form-row">
+						<div class="platform-lg" data-ng-hide="!modalOptions.canShowStyle">
+							<div class="ng-scope">
+								<div class="platform-form-group ng-scope">
+									<div class="platform-form-row form-group">
+										<label class="platform-form-label">{{'basics.common.importXML.costgroupsstyle' |
+										translate}}</label>
+										<div class="platform-form-col">
+											<div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty">
+												<select class="form-control"
+												        data-ng-model="modalOptions.style">
+													<option ng-repeat="opt in modalOptions.styleOption"
+													        value="{{opt.id}}">{{opt.value}}
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div data-platform-form-container data-form-container-options="formContainerOptions"
+						     entity="currentItem" class="fullheight"></div>
+					</div>
+				</div>
+			</div>
+			<div data-ng-if="modalOptions.currentStepId==1">
+				<div>
+					<div data-platform-grid class="subview-container" data="gridData"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="modal-footer">
+		<button data-ng-disabled="modalOptions.OKBtnRequirement" data-ng-hide="modalOptions.canShow" type="button"
+		        class="btn btn-default"
+		        data-ng-click="modalOptions.ok()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading"
+	     data-info2="modalOptions.loadingInfo"></div>
+</div>

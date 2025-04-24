@@ -1,0 +1,204 @@
+{
+	"platform": {
+		"cancelBtn": "Cancelar",
+		"containerContentNotShown": "¡No se mostrará el contenido del contenedor debido a la falta de permisos!",
+		"deleteConfirm": "¿Desea eliminar la selección actual?",
+		"deleteConfirmHeader": "Confirmar Eliminar",
+		"error": {
+			"errormsgCode": "Códigodeerror: {{code}}",
+			"errormsgCodeMsg": "Códigodeerror: {{code}}<br>Mensaje: {{msg}}",
+			"errormsgCodeMsgDetail": "Códigodeerror: {{code}}<br>Mensaje: {{msg}}<br>Detalles: {{detail}}"
+		},
+		"exception": "Excepción",
+		"formAbout": "Acerca de '{{p1}}'",
+		"formConfigAllowEnterNavigation": "Permitir ingresar navegación",
+		"formConfigCancelBnt": "Cancelar",
+		"formConfigCloseBnt": "Cancelar",
+		"formConfigCustomerLabelName": "Nombre de Etiquetas Personalización",
+		"formConfigDialogTitle": "Personalizar desde",
+		"formConfigLabelName": "Nombre de etiqueta ",
+		"formConfigMoveDownBnt": "Mover hacia abajo",
+		"formConfigMoveUpBnt": "Ir Arriba",
+		"formConfigOKBnt": "OK",
+		"formConfigRestoreBnt": "Restaurar",
+		"formConfigVisibility": "Visibilidad",
+		"formSettings": "Configuración",
+		"gridDropPanel": "Arrastre aquí el encabezado de una columna para agrupar por columna.",
+		"gridMarkerHeader": "Filtro",
+		"gridTreeHeader": "Estructura",
+		"ignoreBtn": "Ignorar",
+		"latestview": "Última Vista",
+		"layoutsystem": {
+			"edit": "Editar vista",
+			"export": "Exportar Vistas",
+			"import": "Importar Vistas",
+			"roleviews": "Vista de Función",
+			"save": "Guardar Vista",
+			"systemviews": "Vistas del sistema",
+			"userviews": "Vista de Usuarios"
+		},
+		"loginBusyMessage": "Proceso de Inicio de Sesión... ¡Por favor, espere!",
+		"loginButton": "Inicio de sesión",
+		"loginEnterPassword": "Introducir contraseña",
+		"loginEnterUsername": "introduce usuario",
+		"loginFailedMessage": "¡El Inicio de Sesión ha fallado! Por favor, inténtelo de nuevo...",
+		"loginLanguage": "Idioma",
+		"loginLanguageEnglish": "English",
+		"loginLanguageEnglishUS": "English (US)",
+		"loginLanguageGerman": "Deutsch",
+		"loginLanguageGermanDE": "Deutsch (DE)",
+		"loginLanguageSpanish": "Español",
+		"loginPassword": "Contraseña",
+		"loginSuccessfulMessage": "¡Se ha iniciado sesión correctamente! Continuar la carga, espere, por favor...",
+		"loginUsername": "Nombre de usuario",
+		"loginViaFacebook": "Iniciar sesión con  Facebook",
+		"loginViaMicrosoftAccount": "Iniciar Sesión con una cuenta de Microsoft",
+		"loginViaTwitter": "Iniciar sesión con  Twitter",
+		"longTextContainer": {
+			"container": "Contenedor",
+			"field": "Campo"
+		},
+		"navOptionsMenu": "Menú de Opciones",
+		"newMessage": "Mensaje nuevo",
+		"noBtn": "No",
+		"okBtn": "OK",
+		"overwriteInherited": "Sobrescribir valor heredado",
+		"refreshConfirm": "Se han detectado cambios. ¿Desea guardar antes de recargar?",
+		"refreshConfirmHeader": "Actualizar Confirmación",
+		"retryBtn": "Reintentar",
+		"searchPanelPlaceholder": "Buscar Término",
+		"searchPanelString": "Buscar Término",
+		"yesBtn": "Sí",
+		"dragdrop": {
+			"anyData": "Datos",
+			"items": "{{count}} artículo(s)"
+		},
+		"inputControls": {
+			"boolean": "Booleano",
+			"code": "Código",
+			"comment": "Texto de líneas múltiples (255)",
+			"dateutc": "Fecha (UTC)",
+			"description": "Texto de línea única",
+			"email": "Email",
+			"exchangerate": "Flotante (5-dígitos)",
+			"factor": "Flotante (6-dígitos)",
+			"inputselect": "Lista desplegable",
+			"integer": "Número entero",
+			"money": "Dinero",
+			"percent": "Porcentaje",
+			"quantity": "Flotante (3-dígitos)",
+			"remark": "Texto de líneas múltiples (2000)",
+			"select": "Desplegable"
+		},
+		"loginViaGoogle": "Iniciar sesión con  Google",
+		"masterdetail": {
+			"add": "Añadir Artículo",
+			"delete": "Eliminar elemento",
+			"filter": "Filtrar Artículos",
+			"filterTemplate": "Buscar Término"
+		},
+		"wizard": {
+			"back": "Atrás",
+			"finish": "Finalizar",
+			"next": "Siguiente",
+			"nextStep": "Paso Siguiente:",
+			"stepFinish": "Finalizar",
+			"isIncluded": "Incluido",
+			"listFilter": "Introduzca texto para filtrar la lista"
+		},
+		"generatingMatrix": "Se está generando la matriz",
+		"hours": "Horas",
+		"loginWith": "Acceder con",
+		"minutes": "Minutos",
+		"niceNames": {
+			"codeDesc": "{{code}} ({{desc}})",
+			"id": "#{{id}}"
+		},
+		"processing": "Procesando",
+		"removeTooltip": "Eliminar",
+		"subordinated": "Subordinado",
+		"summary": "Resumen",
+		"todayTooltip": "Hoy",
+		"bulkEditor": {
+			"configName": "nuevo Nombre de Config",
+			"run": "Ejecutar",
+			"save": "Guardar",
+			"saveAndRun": "Guardar y Ejecutar",
+			"changedRecords": "Registros Cambiados",
+			"changeReport": "Editor Masico - Cambiar Informe",
+			"details": "Detalles",
+			"logs": "Comunicar Entrada",
+			"msgChangeError": "No se ha podido establecer {{property}} a {{value}}. Motivo: {{validationErrorMsg}}",
+			"msgChangeSuccess": "Establecer {{property}} a: {{value}}",
+			"msgNewOldValueAreTheSame": "El valor de {{property}} ya es: {{value}}",
+			"msgPropertyIsReadonly": "No se ha podido establecer un valor {{property}} es de solo-lectura",
+			"records": "Registro",
+			"totalRecords": "Registros Totales",
+			"unchangedRecords": "Registros no modificados",
+			"Colour": "Color",
+			"compareEnd": "Valor final",
+			"Icon": "Icono"
+		},
+		"wysiwygEditor": {
+			"bold": "Negrita.",
+			"centerJustify": "Justificar al Centro",
+			"code": "Código",
+			"font": "Fuente",
+			"fontColor": "Color de Fuente",
+			"fontSize": "Tamaño de Fuente",
+			"highlightColor": "Color de Subrayado",
+			"indent": "Sangría",
+			"insertImage": "Introducir Imagen",
+			"italic": "Cursiva",
+			"leftJustify": "Justificar a la Izquierda",
+			"link": "Vínculo",
+			"orderedList": "Lista Ordenada",
+			"outdent": "EliminarSangría",
+			"paragraph": "Párrafo",
+			"removeFormatting": "Eliminar Formato",
+			"rightJustify": "Justificar a la Derecha",
+			"strikeThrough": "Tachado",
+			"subscript": "Subíndice",
+			"superscript": "Superíndice",
+			"underline": "Subrayar",
+			"unlink": "Desvincular",
+			"unorderedList": "Lista noordenada",
+			"uploadFile": "Cargar Archivo"
+		},
+		"formContainer": {
+			"collapseall": "ContraerTodo",
+			"discard": "Descartar",
+			"expandall": "Expandirtodo",
+			"first": "Primero",
+			"last": "Último",
+			"next": "Siguiente",
+			"previous": "Anterior",
+			"print": "Imprimir",
+			"refresh": "Actualizar",
+			"save": "Guardar",
+			"search": "Búsqueda",
+			"settings": "Configuración"
+		},
+		"gridContainer": {
+			"configDialogTitle": "Diseño cuadrícula"
+		},
+		"grid": {
+			"availableColumns": "Columnas Disponibles",
+			"visibleColumns": "Columnas Visibles"
+		},
+		"formattedUnits": {
+			"cubicMeters": {
+				"short": "{{value}}m³"
+			},
+			"meters": {
+				"short": "{{value}}m"
+			},
+			"squareMeters": {
+				"short": "{{value}}m²"
+			}
+		},
+		"listselection": {
+			"selected": "Seleccionar"
+		}
+	}
+}

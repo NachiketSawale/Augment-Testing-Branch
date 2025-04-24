@@ -1,0 +1,32 @@
+<div data-businesspartner-kendo-splitter-adjust-extend class="flex-element filler"
+     option="{panes: [ { collapsible: true, size: '40%' },{ collapsible: true, size: '60%' }],orientation:'horizontal'}">
+
+    <div id="ui-layout-west">
+        <div class="full-size" style="overflow: auto;padding: 4px;">
+            <div style="margin-bottom: 10px;">
+                <div style="background-color: whitesmoke;padding: 5px 10px;border: solid 1px gainsboro;" data-ng-bind="'procurement.pricecomparison.compareQuotationColumns' | translate"></div>
+                <div style="padding: 5px 10px;">
+                    <div data-ng-repeat="item in data.entities">
+                        <input type="checkbox" data-ng-model="item.IsSelected" data-ng-change="refresh($event)" />
+                        <span data-ng-bind="item.Name"></span>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <div style="background-color: whitesmoke;padding: 5px 10px;border: solid 1px gainsboro;" data-ng-bind="'procurement.pricecomparison.compareQuotationCompareFieldsTitle' | translate"></div>
+                <div style="padding: 5px 10px;">
+                    <div data-ng-repeat="item in data.quotes">
+                        <input type="checkbox" data-ng-model="item.IsSelected" data-ng-change="refresh($event)" />
+                        <span data-ng-bind="item.Name"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ui-layout-east">
+        <div style="text-align:center;padding:20px 20px 0 20px; font-weight: bold; display: none;" ng-bind="chartTitle"></div>
+        <div style="padding:20px;height:100%">
+            <basics-common-chart-directive chart-data-source="chartDataSource" chart-type="chartType" trigger-update-event="triggerUpdateEvent" chart-uuid="gridId" legend-colors="legendColors" chart-option="chartOption"></basics-common-chart-directive>
+        </div>
+    </div>
+</div>

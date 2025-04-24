@@ -1,0 +1,20 @@
+<div class="fullheight flex-box flex-column">
+    <div class="platform-form-group platform-lg" data-ng-controller="boqMainProjectLookupController">
+        <div class="platform-form-row" data-ng-controller="boqMainHeaderLookupController">
+            <label class="platform-form-label">{{'boq.main.boqHeaderSel' | translate}}</label>
+
+            <div class="platform-form-col" data-ng-init="boqHeaderLookupFilter.boqType=1">
+                <div class="lg-4 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedBoqHeader.boqHeaderFk"
+                     data-options="lookupOptions"
+                     data-entity="entity"></div>
+                <input class="form-control lg-8 md-8" data-ng-model="selectedBoqHeader.Description" readonly />
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-element relative-container" data-ng-controller="boqMainLookupController" data-platform-dragdrop-component="ddTarget">
+        <div class="filler-absolute">
+            <platform-Grid class="border-all" data="gridData"></platform-Grid>
+        </div>
+    </div>
+</div>

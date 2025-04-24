@@ -1,0 +1,316 @@
+[
+	{
+		"id": "basics.material.materialCatalog",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.record.catalogTitle",
+		"controller": "basicsMaterialMaterialCatalogGridController",
+		"uuid": "DE9355B7DED945918F287D76043602FF"
+	},
+	{
+		"id": "basics.material.materialGroup",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.record.groupTitle",
+		"controller": "basicsMaterialMaterialGroupsController",
+		"uuid": "29BCF2F0BD994B0D9CDB941C2F4FBFCD"
+	},
+	{
+		"id": "basics.material.preview",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "basics.material.preview.title",
+		"controller": "basicsMaterialPreviewController",
+		"uuid": "875C61BB2C5A4F54987A8DB8125DD211"
+	},
+	{
+		"id": "basics.material.document.grid",
+		"template": "basics.material/partials/material-documents-view.html",
+		"title": "basics.material.documents.title",
+		"controller": "basicsMaterialDocumentsController",
+		"uuid": "C84BD59DDA4B4644AAE314E1A5A11A0C"
+	},
+	{
+		"id": "basics.material.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.documents.detailTitle",
+		"controller": "basicsMaterialDocumentsDetailController",
+		"uuid": "CD7BE1A005DA4C199E84369963D464E9",
+		"permission": "C84BD59DDA4B4644AAE314E1A5A11A0C"
+	},
+	{
+		"id": "basics.material.specification",
+		"template": "basics.material/partials/material-specification-view.html",
+		"title": "basics.material.specification.formatText",
+		"controller": "basicsMaterialSpecificationController",
+		"uuid": "e850ba1740c24c35907491f922a3716b"
+	},
+	{
+		"id": "basics.material.specificationPlainText",
+		"template": "basics.material/partials/material-specificationPlainText-view.html",
+		"title": "basics.material.specification.plainText",
+		"controller": "basicsMaterialSpecificationPlainTextController",
+		"uuid": "598ec1bff35c4f92ab46400c5d58a1d2",
+		"permission": "e850ba1740c24c35907491f922a3716b"
+	},
+	{
+		"id": "basics.material.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.record.gridViewTitle",
+		"controller": "basicsMaterialRecordGridController",
+		"uuid": "DD40337F1F534A42A844122203639ED8"
+	},
+	{
+		"id": "basics.material.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.record.formViewTitle",
+		"controller": "basicsMaterialRecordFormController",
+		"uuid": "EBF18CFA17C64948BEE42582B45B4A75",
+		"permission": "DD40337F1F534A42A844122203639ED8"
+	},
+	{
+		"id": "basics.material.characteristic.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.characteristic.title",
+		"controller": "basicsMaterialCharacteristicController",
+		"uuid": "127DCD97F72546CC90B8FB5583883F4B"
+	},
+	{
+		"id": "basics.material.characteristic.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.characteristic.detailTitle",
+		"controller": "basicsMaterialCharacteristicDetailController",
+		"uuid": "8306AA461B94460EA4BE03F6B1CE44A9",
+		"permission": "127DCD97F72546CC90B8FB5583883F4B"
+	},
+	{
+		"id": "basics.material.translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "F15ABE2A43684FFC8BF5E1D59A31F87C"
+	},
+	{
+		"id": "basics.material.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "66dfcac15d7b45928f80ae9e873b3bcc",
+		"controller": "",
+		"sectionId": "16",
+		"mainService": "basicsMaterialRecordService"
+	},
+	{
+		"id": "model.viewer.hoops.scsfile",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "basics.material.record.3DViewer",
+		"controller": "modelViewerHoopsController",
+		"uuid": "26c9da52c4a44991b16fb5fcf1ef1370",
+		"mode": "scs"
+	},
+	{
+		"id": "basics.material.priceCondition",
+		"template": "basics.material/partials/price-condition-partial.html",
+		"title": "basics.material.record.priceConditionTitle",
+		"controller": "basicsMaterialPriceConditionController",
+		"uuid": "13F6AA1F21CF42BDB3B9219361284E59",
+		"dataService": "basicsMaterialPriceConditionDataServiceNew"
+	},
+	{
+		"id": "basics.material.priceList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.priceList.priceListTitle",
+		"controller": "basicsMaterialPriceListController",
+		"uuid": "8161248d9b014fb4a284326e5dd3d1c7"
+	},
+	{
+		"id": "basics.material.priceList.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.priceList.priceListDetailTitle",
+		"controller": "basicsMaterialPriceListDetailController",
+		"uuid": "83f4d48ff373416aa8c5a8fd389af1c2",
+		"permission": "8161248d9b014fb4a284326e5dd3d1c7"
+	},
+	{
+		"id": "basics.material.pricelistpriceCondition",
+		"template": "basics.material/partials/price-condition-partial.html",
+		"title": "basics.material.priceList.priceListPriceConditionTitle",
+		"controller": "basicsMaterialPriceConditionController",
+		"uuid": "51054c9176dd42d0b029c58a4f75bad0",
+		"dataService": "basicsMaterialPriceListPriceConditionDataService",
+		"permission": "5e7398f8048e4862802e7d146bbc9e8c"
+	},
+	{
+		"id": "basics.material.stockList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.stockList.stockListTitle",
+		"controller": "basicsMaterialStockController",
+		"uuid": "d5aaf97f50e24a83831b8c3d07d15fb9"
+	},
+	{
+		"id": "basics.material.stockList.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.stockList.stockListDetailTitle",
+		"controller": "basicsMaterialStockDetailController",
+		"uuid": "34f41831bacd4e979edd8f0a9efd101d",
+		"permission": "d5aaf97f50e24a83831b8c3d07d15fb9"
+	},
+	{
+		"id": "basics.material.certificate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.certificate.listTitle",
+		"controller": "basicsMaterial2CertificateGridController",
+		"uuid": "327797c391a948d4bffb252099bdc6a3",
+		"RubricId": 23
+	},
+	{
+		"id": "basics.material.certificate.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.certificate.formTitle",
+		"controller": "basicsMaterial2CertificateFormController",
+		"uuid": "42b48e9002794059b5e773f65adb5f0c",
+		"permission": "327797c391a948d4bffb252099bdc6a3",
+		"RubricId": 23
+	},
+	{
+		"id": "basics.material.scope.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.scope.listTitle",
+		"controller": "basicsMaterialScopeListController",
+		"uuid": "34b38ef093254e26bd13cbe2c7a27c3c"
+	},
+	{
+		"id": "basics.material.scope.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.scope.formTitle",
+		"controller": "basicsMaterialScopeDetailController",
+		"uuid": "51b0ba93b767989c8829cb4c9cc3a099",
+		"permission": "34b38ef093254e26bd13cbe2c7a27c3c"
+	},
+	{
+		"id": "basics.material.scope.detail.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.scopeDetail.listTitle",
+		"controller": "basicsMaterialScopeDetailListController",
+		"uuid": "65ff8ab73a2c8430e6aedeac3682b30a"
+	},
+	{
+		"id": "basics.material.scope.detail.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.scopeDetail.formTitle",
+		"controller": "basicsMaterialScopeDetailDetailController",
+		"uuid": "18e3f417bc0fc27fb773a4dfba3f397c",
+		"permission": "65ff8ab73a2c8430e6aedeac3682b30a"
+	},
+	{
+		"id": "basics.material.scope.detail.priceCondition",
+		"template": "basics.material/partials/price-condition-partial.html",
+		"title": "basics.material.scopeDetail.priceConditionTitle",
+		"controller": "basicsMaterialPriceConditionController",
+		"uuid": "11a499665f2e92d41e3c1743ffef757f",
+		"dataService": "basicsMaterialScopeDetailPriceConditionDataService"
+	},
+	{
+		"id": "basics.material.scope.detail.itemText",
+		"template": "procurement.common/partials/itemtext-view-new.html",
+		"title": "basics.material.scopeDetail.itemTextTitle",
+		"controller": "basicsMaterialScopeItemTextController",
+		"uuid": "f044708c79c2dbd9fd00612e3195bea0",
+		"dataService": "basicsMaterialScopeItemTextDataService"
+	},
+	{
+		"id": "basics.material.scope.detail.itemPlainText",
+		"template": "procurement.common/partials/common-item-plaintext-html-container.html",
+		"title": "basics.material.scopeDetail.itemPlainTextTitle",
+		"controller": "basicsMaterialScopeItemTextController",
+		"uuid": "4ab4e56b8b89f8d679aa1fccf2798a0e",
+		"permission": "f044708c79c2dbd9fd00612e3195bea0",
+		"dataService": "basicsMaterialScopeItemTextDataService"
+	},
+	{
+		"id": "basics.material.basUom.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.basUom.listTitle",
+		"controller": "basicsMaterial2basUomGridController",
+		"uuid": "49f6e969068844539d3faa7cd155de24"
+	},
+	{
+		"id": "basics.material.basUom.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.basUom.formTitle",
+		"controller": "basicsMaterial2basUomFormController",
+		"uuid": "caa04e7f99aa44fa850dbeab916eeebc",
+		"permission": "49f6e969068844539d3faa7cd155de24"
+	},
+	{
+		"id": "basics.material.reference.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.reference.referenceTitle",
+		"controller": "basicsMaterialReferenceListController",
+		"uuid": "829eb265578a484a8719180f4e10ec57"
+	},
+	{
+		"id": "basics.material.reference.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.reference.referenceDetailTitle",
+		"controller": "basicsMaterialReferenceDetailController",
+		"uuid": "a9fee4f6099142c19f482312e66af2b1",
+		"permission": "829eb265578a484a8719180f4e10ec57"
+	},
+	{
+		"id": "basics.material.historical.price.for.item",
+		"template": "basics.common/templates/historical/common-historical-price-for-item.html",
+		"title": "basics.material.historicalPriceForMaterialContainerTitle",
+		"controller": "commonHistoricalPriceForItemController",
+		"configService": "materialHistoricalPriceForItemService",
+		"uuid": "ca7d3a0de6794cf288a9283f5601d861",
+		"permission": "ca7d3a0de6794cf288a9283f5601d861"
+	},
+	{
+		"id": "basics.material.priceVersionToStockList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.priceVersionToStockList.priceVersionToStockListTitle",
+		"controller": "basicsMaterialPriceVersionToStockListController",
+		"uuid": "67707f3826cf42e7944bbf200db5cb35",
+		"permission": "d5aaf97f50e24a83831b8c3d07d15fb9"
+	},
+	{
+		"id": "basics.material.stockTotal",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.stockTotal.title",
+		"controller": "basicsMaterialStockTotalGridController",
+		"uuid": "0b28c1bcc71741239d6fbcb7f137ff20"
+	},
+	{
+		"id": "basics.material.stockTotal.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.stockTotal.detailTitle",
+		"controller": "basicsMaterialStockTotalDetailController",
+		"uuid": "fb513658fc0e48f1bfbfd6b370cb44d0",
+		"permission": "0b28c1bcc71741239d6fbcb7f137ff20"
+	},
+	{
+		"id": "basics.material.portion.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.material.portion.title",
+		"controller": "basicsMaterialPortionListController",
+		"uuid": "203a73460cc042efaf1879a45cb788fe"
+	},
+	{
+		"id": "basics.material.portion.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.material.portion.detailTitle",
+		"controller": "basicsMaterialPortionFormController",
+		"uuid": "6ae13c2c810b488285a3588933c592e5",
+		"permission": "203a73460cc042efaf1879a45cb788fe"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "2b439e03f8a74cac966da334a4016845",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

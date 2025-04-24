@@ -1,0 +1,8 @@
+<div data-ng-controller="basicsCommonMatrixProfileSettingsController" class="flex-element flex-basis-auto">
+	<tabset class="tabsWrapper">
+		<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+			<div data-ng-include="tab.content"></div>
+		</tab>
+	</tabset>
+</div>
+

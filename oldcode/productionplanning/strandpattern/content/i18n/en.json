@@ -1,0 +1,17 @@
+﻿{
+	"productionplanning": {
+		"strandpattern": {
+			"entityStrandPattern": "Strand Pattern",
+			"CadCode": "Cad Code",
+			"BasClobsFk": "",
+			"listTitle": "Strand Pattern",
+			"detailTitle": "Strand Pattern Detail",
+			"photo": "Strand Pattern Photo",
+			"strandpattern2material": {
+				"listTitle": "Strand Pattern: Materials",
+				"ppsMaterial": "PPS Material",
+				"entityStrandPattern2Mat": "Strand Pattern Material"
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+[
+	{
+		"id": "model.measurements.measurementsList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.measurements.modelMeasurementListTitle",
+		"controller": "modelMeasurementListController",
+		"uuid": "1b72a5f32b6646e8b5358653fcc51a77"
+	},
+	{
+		"id": "model.measurements.measurementsDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.measurements.modelMeasurementDetailTitle",
+		"controller": "modelMeasurementDetailController",
+		"uuid": "82a0d97bcd4842d9b2d5460b05473158",
+		"permission": "1b72a5f32b6646e8b5358653fcc51a77"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.measurements.measurementPointList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.measurements.modelMeasurementPointListTitle",
+		"controller": "modelMeasurementPointListController",
+		"uuid": "8c8f48d17387402694b8359bef7bde6d"
+	},
+	{
+		"id": "model.measurements.measurementPointDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.measurements.modelMeasurementPointDetailTitle",
+		"controller": "modelMeasurementPointDetailController",
+		"uuid": "4c7ea712d06a42feae5926d17446986c",
+		"permission": "8c8f48d17387402694b8359bef7bde6d"
+	},
+	{
+		"id": "model.measurements.measurementGroupList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.measurements.modelMeasurementGroupListTitle",
+		"controller": "modelMeasurementGroupListController",
+		"uuid": "aa43043e0a954d99a8f58c90ef1cb581"
+	},
+	{
+		"id": "model.measurements.measurementGroupDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.measurements.modelMeasurementGroupDetailTitle",
+		"controller": "modelMeasurementGroupDetailController",
+		"uuid": "65195e08535840448858c60b59b44bcf",
+		"permission": "aa43043e0a954d99a8f58c90ef1cb581"
+	},{
+	"id": "model.annotation.annotationObjectLinkList",
+	"template": "app/components/base/grid-partial.html",
+	"title": "model.annotation.annotationObjectLinkListTitle",
+	"controller": "modelAnnotationObjectLinkListController",
+	"uuid": "26110cbc14374f7895d1d7934efd0a63",
+	"depAnnoDataServiceName": "modelMeasurementModelAnnoObjectLinkDataService"
+	},
+	{
+		"id": "model.annotation.annotationObjectLinkDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.annotationObjectLinkDetailTitle",
+		"controller": "modelAnnotationObjectLinkDetailController",
+		"uuid": "de29ed7ffa5d415fb38138f7eda5922e",
+		"permission": "26110cbc14374f7895d1d7934efd0a63",
+		"depAnnoDataServiceName": "modelMeasurementModelAnnoObjectLinkDataService"
+	},
+	{
+		"id": "model.annotation.cameraList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.cameraListTitle",
+		"controller": "modelAnnotationCameraListController",
+		"uuid": "1278a2ca11f947bb8e02eab65e815a7d",
+		"depAnnoDataServiceName": "modelMeasurementModelAnnoCameraDataService"
+	},
+	{
+		"id": "model.annotation.cameraDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.cameraDetailTitle",
+		"controller": "modelAnnotationCameraDetailController",
+		"uuid": "dfb06f32f92744358eee5d8b88496786",
+		"permission": "1278a2ca11f947bb8e02eab65e815a7d",
+		"depAnnoDataServiceName": "modelMeasurementModelAnnoCameraDataService"
+	},
+	{
+		"id": "model.annotation.markerList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.markerListTitle",
+		"controller": "modelAnnotationMarkerListController",
+		"uuid": "cf264c9dbb51466cb147e1a7f7f5d888",
+		"depAnnoDataServiceName": "modelMeasurementModelAnnoMarkerDataService"
+	},
+	{
+		"id": "model.annotation.markerDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.markerDetailTitle",
+		"controller": "modelAnnotationMarkerDetailController",
+		"uuid": "b162c7c601ce4c6da794e49140ace8a7",
+		"permission": "cf264c9dbb51466cb147e1a7f7f5d888",
+		"depAnnoDataServiceName": "modelMeasurementModelAnnoMarkerDataService"
+	}]
+
+

@@ -1,0 +1,27 @@
+﻿<div data-ng-controller="procurementInvoiceImportFileListController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="modalOptions.headerTemplateUrl"></header>
+	<section class="modal-body">
+		<div data-platform-alert data-error="error"></div>
+
+		<h3 data-ng-bind-html="modalOptions.bodyText" class="margin-bottom-ld"></h3>
+
+		<div class="modal-wrapper subview-container grid-wrapper">
+			<div data-platform-grid data="gridData"></div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'procurement.invoice.wizard.invoice.import.Filter' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-domain-control data-domain="select" class="form-control" data-change="onFilterOptionChanged()" data-options="filterOptions" data-model="selectedFilter" />
+				</div>
+			</div>
+		</div>
+
+		<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info2="modalOptions.loadingInfo"></div>
+	</section>
+	<footer class="modal-footer">
+		<button data-ng-disabled="modalOptions.OKBtnRequirement" type="button" class="btn btn-default" data-ng-click="onOK()" data-ng-bind="'basics.common.button.import' | translate"></button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()" data-ng-bind="'basics.common.button.cancel' | translate"> </button>
+	</footer>
+</div>

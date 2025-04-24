@@ -1,0 +1,30 @@
+{
+  "model": {
+    "simulation": {
+      "cockpitTitle": "Simulations-Cockpit",
+      "open": "Öffnen...",
+      "play": "Abspielen",
+      "pause": "Pausieren",
+      "stop": "Anhalten",
+      "faster": "Schneller",
+      "slower": "Langsamer",
+      "monthBack": "Einen Monat zurück",
+      "monthForward": "Einen Monat weiter",
+      "weekBack": "Eine Woche zurück",
+      "weekForward": "Eine Woche weiter",
+      "dayBack": "Einen Tag zurück",
+      "dayForward": "Einen Tag weiter",
+      "goTo": "Zu Datum springen...",
+      "goToTitle": "Zu Datum springen",
+      "noData": "(kein Zeitplan geladen)",
+      "loadTimelineTitle": "Zeitplan laden",
+      "schedules": "Pläne",
+      "model": "Modell",
+      "noEvents": "Auf Grundlage der angegebenen Suchparameter wurden keine Ereignisse gefunden.",
+      "noEventsTitle": "Keine Ereignisse",
+      "isIncluded": "Einschließen",
+      "animationControl": "Animationssteuerung",
+      "simulationSpeed": "Simulationsgeschwindigkeit"
+    }
+  }
+}

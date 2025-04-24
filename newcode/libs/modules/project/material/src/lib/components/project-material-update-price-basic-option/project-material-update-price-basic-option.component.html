@@ -1,0 +1,48 @@
+<div class="platform-form-group">
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+            <div>
+                <label>
+                    {{ 'project.main.updatePriceFromCatalogWizard.updatePriceOptionPageLabel' | platformTranslate }}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+
+            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                <label>
+                    <input type="radio" name="supplierSelect" value="fromCatalog" [disabled]="!canUpdateFromCatalog"
+                           [ngModel]="radioSelect" (ngModelChange)="onRadioSelectChange($event)"/>{{ 'project.main.updateFromMaterialCatalog' | platformTranslate }}
+                </label>
+                <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                    <label>
+                        <input type="radio" name="catalogSelect" value="byMaterialItem" [disabled]="!canUpdateFromCatalog"
+                               [ngModel]="catalogSelect" (ngModelChange)="onCatalogSelectChange($event)"/>{{ 'project.main.updateByMaterialItem' | platformTranslate }}
+                    </label>
+                </div>
+                <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                    <label>
+                        <input type="radio" name="catalogSelect" value="byMaterialCatalog" [disabled]="!canUpdateFromCatalog"
+                               [ngModel]="catalogSelect" (ngModelChange)="onCatalogSelectChange($event)"/>{{ 'project.main.updateByMaterialCatalog' | platformTranslate }}
+                    </label>
+                </div>
+            </div>
+
+            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                <label>
+                    <input type="radio" name="supplierSelect" value="fromQuote"
+                           [ngModel]="radioSelect" (ngModelChange)="onRadioSelectChange($event)"/>{{ 'project.main.updateMaterialPricesFromQuote' | platformTranslate }}
+                </label>
+            </div>
+
+            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                <label>
+                    <input type="radio" name="supplierSelect" value="fromContract"
+                           [ngModel]="radioSelect" (ngModelChange)="onRadioSelectChange($event)"/>{{ 'project.main.updateMaterialPricesFromContract' | platformTranslate }}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

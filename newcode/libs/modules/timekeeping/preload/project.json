@@ -1,0 +1,20 @@
+{
+	"name": "modules-timekeeping-preload",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/timekeeping/preload/src",
+	"prefix": "itwo40",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/timekeeping/preload"],
+			"options": {
+				"jestConfig": "libs/modules/timekeeping/preload/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

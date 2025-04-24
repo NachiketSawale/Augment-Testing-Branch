@@ -1,0 +1,21 @@
+<div class="flex-element" data-ng-controller="usermanagementRightAssignCategoryDialogController">
+	<div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+	<div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'usermanagement.right.dialogAssignCategory.labelRolesCount' | translate}}</div>
+				<div class="platform-form-col" style="padding-top: 6px;">{{rolesCount}}</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'usermanagement.right.dialogAssignCategory.newCategory' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-domain-control data-domain="select" data-options="categoryConfig" data-model="selectedCategory"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-ng-if="showResultInfo()">
+		<div class="alert-info" style="padding: 5px;">{{resultInfo}}</div>
+	</div>
+
+</div>

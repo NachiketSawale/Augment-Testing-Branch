@@ -1,0 +1,110 @@
+<div data-ng-controller="cloudDesktopBulkSearchFormController"
+	data-platform-add-css-class-directive="searchFormOptions.cssClassForParent"
+	data-cloud-desktop-on-key-enter="searchFormOptions.onEnterKeyPress"
+	class="flex-element flex-box flex-column overflow-hidden">
+
+	<!-- title and menu-container -->
+	<div cloud-desktop-sidebar-content-navbar data-option="option"></div>
+
+	<div class="projectContextInfo" data-ng-include="'sidebar-filter-pinned-container.html'"></div>
+
+
+	<!--<div data-domain-control data-domain="select"-->
+	<!--data-options="searchFormOptions.listDeclaration"-->
+	<!--data-model="searchFormOptions.listDeclaration.selected"-->
+	<!--class="form-control" data-change="itemChanged()"></div>-->
+
+	<div data-domain-control data-domain="select" data-options="searchFormOptions.listDeclaration"
+		data-model="searchFormOptions.selectedItem" class="form-control" data-change="itemChanged()"></div>
+
+	<div>
+		<div class="input-group recordInfoText">
+			<div class="form-control flex-align-center">
+				<div class="input-group-content" data-ng-bind="searchFormOptions.filterInfo.recordInfoText"></div>
+			</div>
+
+			<span class="input-group-btn">
+				<!-- go to first page -->
+				<button class="btn btn-default" data-ng-disabled="!searchFormOptions.filterInfo.backwardEnabled"
+					data-ng-click="searchFormOptions.onPageFirst()"><span class="tlb-icons ico-rec-first"></span></button>
+
+				<!-- go to previous page -->
+				<button class="btn btn-default" data-ng-class="{btndeactive:!searchFormOptions.filterInfo.backwardEnabled}"
+					data-ng-disabled="!searchFormOptions.filterInfo.backwardEnabled"
+					data-ng-click="searchFormOptions.onPageBackward()"><span
+						class="control-icons ico-previous"></span></button>
+
+				<!-- go to next page -->
+				<button class="btn btn-default" data-ng-class="{btndeactive:!searchFormOptions.filterInfo.forwardEnabled}"
+					data-ng-disabled="!searchFormOptions.filterInfo.forwardEnabled"
+					data-ng-click="searchFormOptions.onPageForward()"><span class="control-icons ico-next"></span></button>
+
+				<!-- go to last page -->
+				<button class="btn btn-default" data-ng-click="searchFormOptions.onPageLast()"
+					data-ng-disabled="!searchFormOptions.filterInfo.forwardEnabled"><span
+						class="tlb-icons ico-rec-last"></span></button>
+			</span>
+		</div>
+
+		<!-- radius search -->
+		<div data-ng-if="searchFormOptions.filterRequest.includeRadiusSearch!=null" class="platform-form-row">
+			<div data-domain-control data-domain="boolean" data-model="searchFormOptions.filterRequest.includeRadiusSearch"
+				data-options="searchFormOptions.includeRadiusSearchChk">
+			</div>
+		</div>
+		<div data-ng-if="searchFormOptions.filterRequest.includeRadiusSearch==true" class="platform-form-row">
+			<div class="search-google-radiussearch" cloud-desktop-search-google-radiussearch></div>
+		</div>
+
+		<div class="flex-box flex-align-center subTitle">
+			<label class="flex-element" data-ng-bind="'cloud.desktop.sdSearchOptionLabel'|translate"></label>
+			<div class="input-group-btn">
+				<button class="btn btn-default border-none tlb-icons ico-discard"
+					data-ng-click="searchFormOptions.discardSearchFilter()"
+					data-ng-attr-title="{{::searchOptions.onDiscardBtnText}}"></button>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="sidebar-panel overflow-hidden">
+		<div class="sidebar-panel-body">
+			<!-- show description -->
+			<div
+				data-ng-if="searchFormOptions.selectedItem.description.show && searchFormOptions.selectedItem.description.text.length > 0"
+				data-ng-bind="searchFormOptions.selectedItem.description.text" class="searchform-desc"></div>
+			<!-- show select all / none checkbox -->
+			<div class="flex-box flex-column list-container-primary"
+				data-ng-if="searchFormOptions.selectedItem.filterDef.parameters.length > 1">
+				<div class="domain-type-boolean ng-scope interactionContainer">
+					<div class="flex-box">
+						<div class="domain-type-boolean checkbox wrapper form-control ng-scope"><input type="checkbox"
+								data-ng-model="searchFormOptions.selectedItem.allSelected" data-domain="boolean"
+								data-ng-click="searchFormOptions.selectAll()"></div>
+						<label data-ng-bind="'cloud.desktop.sdSelectAllCond'|translate"></label>
+					</div>
+				</div>
+			</div>
+			<!-- show criterions -->
+			<div data-ng-if="searchFormOptions.selectedItem.filterDef.parameters"
+				class="list-container-primary searchform-criteria">
+				<div cloud-desktop-search-form-control data-parameters="searchFormOptions.selectedItem.filterDef.parameters"
+					data-bulk-manager="bulkManager"></div>
+			</div>
+		</div> <!-- sidebar-panel-body -->
+
+		<div class="margin-top-ld">
+			<div class="flex-box">
+				<button
+					class="btn btn-default flex-element tlb-icons ico-search form-control jsSearchFormButton search-button"
+					data-ng-class="{btndeactive: searchFormOptions.filterInfo.isPending}"
+					data-ng-disabled="searchFormOptions.filterInfo.isPending || searchFormOptions.listDeclaration.items.length < 1"
+					data-ng-click="searchFormOptions.onStartSearch()"
+					data-ng-attr-title="{{::searchFormOptions.onExecuteSearchBtnText}}">
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div data-cloud-common-overlay data-loading="filterDataLoading"></div>
+</div> <!-- sidebar-panel -->

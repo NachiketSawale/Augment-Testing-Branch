@@ -1,0 +1,15 @@
+{
+  "basics": {
+	"textmodules": {
+	  "tabs":{
+		"main":"Main"
+	  },
+	  "textModules":"Text Module",
+	  "textModulesDetails":"Text Module Detail",
+	  "textModulesTranslation":"Text Module Übersetzung",
+	  "htmlText":"Langtext",
+	  "plainText":"Langtext unformatiert",
+	  "translation":"Übersetzung"
+	}
+  }
+}

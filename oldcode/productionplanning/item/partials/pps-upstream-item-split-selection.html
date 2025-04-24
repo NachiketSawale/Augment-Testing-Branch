@@ -1,0 +1,23 @@
+<div ng-controller="productionplanningItemUpstreamItemSplitSelectionController">
+	<section ng-cloak class="modal-body flex-box flex-column">
+		<div style="height: 100%; float: left; margin-left: 1%;"
+		     class="flex-box flex-column lookup-grid-container subview-container">
+			<div class="subview-header toolbar">
+				<h3 class="font-bold title fix">{{'productionplanning.item.listTitle' |
+				translate}}</h3>
+				<div data-platform-menu-list data-list="gridOptions.selectionItemGrid.tools"></div>
+			</div>
+			<div style="" class="flex-element flex-box flex-column overflow-hidden">
+				<div class="flex-basis-auto" data-platform-grid
+				     data="gridOptions.selectionItemGrid">
+				</div>
+			</div>
+		</div>
+	</section>
+	<div data-ng-show="alerts && alerts.length">
+		<div class="lookup-alert {{::alert.css}}" data-ng-repeat="alert in alerts">
+			<span data-ng-bind="alert.title"></span>: <span data-ng-bind="alert.message"></span>
+		</div>
+	</div>
+	<div cloud-common-overlay data-loading="isBusy"></div>
+</div>

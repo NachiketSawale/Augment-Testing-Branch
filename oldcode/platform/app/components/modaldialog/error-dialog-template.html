@@ -1,0 +1,22 @@
+<div data-ng-show="!!dialog.modalOptions.dataItem.exception.detailMessage">
+	<h4>Message</h4>
+	<p data-ng-bind-html="::dialog.modalOptions.dataItem.exception.detailMessage"></p>
+</div>
+<div data-ng-show="!!dialog.modalOptions.dataItem.exception.errorVersion">
+	<h4>Version</h4>
+	<p data-ng-bind-html="::dialog.modalOptions.dataItem.exception.errorVersion"></p>
+</div>
+<div data-ng-show="!!dialog.modalOptions.dataItem.exception.errorDetail">
+	<h4>Detail</h4>
+	<p data-ng-bind-html="::dialog.modalOptions.dataItem.exception.errorDetail"></p>
+</div>
+<div data-ng-show="!!dialog.modalOptions.dataItem.exception.detailMethod">
+	<h4>Method</h4>
+	<p data-ng-bind-html="::dialog.modalOptions.dataItem.exception.detailMethod"></p>
+</div>
+
+<div data-ng-show="!!dialog.modalOptions.dataItem.exception.detailStackTrace">
+	<h4>Stacktrace</h4>
+	<ul data-ng-bind-html="dialog.modalOptions.dataItem.exception.detailStackTrace"></ul>
+</div>
+

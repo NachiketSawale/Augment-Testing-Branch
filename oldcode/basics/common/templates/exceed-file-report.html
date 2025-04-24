@@ -1,0 +1,33 @@
+<div data-ng-controller="showUploadExceedFileReportController">
+	<header class="modal-header">
+		<h2 class="modal-title" data-ng-bind="modalOptions.title"></h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-disable="isLoading"
+		        data-ng-click="$parent.$close(false)"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+	<section class="modal-body">
+		<div class="icon-message">
+			<div class="message">{{ modalOptions.headerText }}</div>
+
+		</div>
+		<div class="alert-warning" info="modalOptions.exceedFileNames"
+		     style="margin-top: 10px;margin-bottom: 10px;padding: 10px;height: 40px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+			{{ modalOptions.exceedFileNames }}
+			<!--      <button class="btn" data-ng-click="showError(name)" >ShowError</button>-->
+		</div>
+		<div class="tips"></div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.copy()"
+		        data-ng-bind="modalOptions.copyBtn">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-disabled="!modalOptions.hasValidFiles" data-ng-click="modalOptions.ok()"
+		        data-ng-bind="modalOptions.okBtn">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"
+		        data-ng-bind="modalOptions.cancelBtn">
+		</button>
+	</footer>
+</div>

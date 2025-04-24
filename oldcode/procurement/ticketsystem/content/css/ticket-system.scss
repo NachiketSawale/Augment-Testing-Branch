@@ -1,0 +1,46 @@
+$ts-background-color: rgb(230, 230, 230);
+$ts-background-color-174195212: rgb(174, 195, 212);
+
+$ts-border-radius: 5px;
+$ts-border-color: #DCDCDC;
+$ts-title-background-color: rgb(240, 240, 240);
+$ts-btn-background-color: rgb(75, 137, 220);
+$ts-title-color: rgb(0, 103, 177);
+$ts-label-color: #515151;
+$ts-label-total-color: #853131;
+$ts-background-color-selected: #AEC3D4;
+
+$ts-font-size-16: 16px;
+$ts-font-size-13: 13px;
+$ts-font-weight: bold;
+
+
+
+.ts-icon-img, .ts-bnt-img {
+  height: 16px;
+  width: 16px;
+}
+
+.ts-add-all{
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+@mixin ts-font-setting($fontSize: $ts-font-size-13, $color: $ts-label-color, $bold: normal) {
+  font-size: $fontSize;
+  color: $color;
+  font-weight: $bold;
+}
+
+@mixin ts-font-13-basic {
+  @include ts-font-setting;
+}
+
+@mixin ts-font-13-bold {
+  @include ts-font-setting($bold: bold);
+}
+
+
+@import "ts-cartitem-view";
+@import "ts-order-request-view";
+@import "ts-safari-hack-view";

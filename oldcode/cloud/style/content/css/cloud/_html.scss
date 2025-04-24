@@ -1,0 +1,210 @@
+/*-------------------------------------------------------------------------------
+	 HTML (_html.scss)
+  -------------------------------------------------------------------------------*/
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	background: $color-body-background;
+	height: 100%;
+	color: $color-text;
+	//	-webkit-font-smoothing: none;
+}
+
+.app-font-family {
+	// overwrites line-height from bootstrap, as this causes an error in nav tabs.
+	font: $size-font-base/normal 'Source Sans Pro', 'Meiryo UI', Microsoft YaHei, STHeiti;
+}
+
+body {
+	@extend .app-font-family;
+	user-select: none;
+	// Prevent iOS text size adjust after orientation change, without disabling user zoom.
+	-ms-text-size-adjust: 100%; // 2
+	-webkit-text-size-adjust: 100%; // 2
+}
+
+legend {
+	color: $color-text;
+}
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.1;
+}
+
+h1, h2, h4, .h1, .h2, .h4 {
+	@extend .font-bold;
+}
+
+h1, .h1 {
+	font-size: 13.5pt;
+}
+
+h2, .h2 {
+	font-size: 12pt;
+}
+
+h3, .h3 {
+	font-size: 12pt;
+}
+
+h4, .h4 {
+	font-size: 10.5pt;
+}
+
+h5, .h5 {
+	font-size: 10pt;
+}
+
+// standard Buttons style
+input[type='button'],
+button {
+	background: 0 none;
+	padding: 0 0 0 0;
+	border: 0 none; /* activate after debug again */
+	outline: 0;
+
+	&:not(.plain) {
+		@include status-styles($color-hover, default);
+
+		&.highlight {
+			@include status-styles($color-highlight-hover, darken);
+			background-color: $color-highlight;
+		}
+	}
+}
+
+img, svg {
+	border: 0;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+textarea {
+	resize: vertical;
+	overflow: auto;
+}
+
+p {
+	line-height: 1.42857;
+	margin-bottom: 1.42857em
+}
+
+.font-bold, b, strong, optgroup {
+	font-weight: bold;
+	//color:  $color-text-light;
+}
+
+.font-italic {
+	font-style: italic;
+}
+
+//:focus {
+//	outline: var(--company-color) auto 5px;
+//}
+
+// Links
+a {
+	color: $color-link;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: $color-link-hover;
+		text-decoration: underline;
+	}
+
+	&:focus {
+		@include tab-focus();
+	}
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	@include square($size-checkbox-radio-input);
+	margin: 4px 0 0;
+	margin-top: 1px \9; // IE8-9
+	line-height: normal;
+	cursor: pointer;
+}
+
+%ol-native, %ul-native {
+	margin: 1em 1em 1em 2em;
+}
+
+%ul-native {
+	list-style-type: disc;
+}
+
+%ol-native {
+	list-style-type: decimal;
+}
+
+ol.native {
+	@extend %ol-native;
+}
+
+ul.native {
+	@extend %ul-native;
+	list-style-position: inside;
+}
+
+// Horizontal rules
+hr {
+	margin: $padding-medium-vertical 0;
+	border: 0;
+	border-top: 1px solid $color-hr-divider;
+}
+
+iframe{
+	border: none;
+}
+
+.typography {
+	h1, h2, h3, h4, h5 {
+		font-weight: bold;
+		letter-spacing: normal;
+		line-height: normal;
+	}
+
+	h1 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	h4 {
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	h5 {
+		font-size: 12px;
+	}
+
+	* {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+		letter-spacing: 0.28px;
+	}
+}

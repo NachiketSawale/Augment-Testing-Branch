@@ -1,0 +1,59 @@
+{
+  "basics": {
+    "import": {
+      "entityProfileName": "Profil",
+      "headerPreviewresult": "Vorschau",
+      "entityImportFormat": "Format",
+      "headerFieldmappings": "Zuordnungen",
+      "entityUserProfile": "Benutzerprofil",
+      "entityMappingName": "Quelle",
+      "entityDestinationField": "Ziel",
+      "header": {
+        "saveImportDefinition": "Sichere Import Definition"
+      },
+      "entityDefaultValue": "Standardwert",
+      "entityNewValue": "Neuer Inhalt",
+      "fieldNewValue": "Neu",
+      "rowNum": "Zeilennummer",
+      "headerFileSelection": "Import",
+      "entityIsImportPriceAfterTax": "Import Preis inkl. Steuer",
+      "headerEditimport": "Import bearbeiten",
+      "fieldOldValue": "Alt",
+      "entityExcelSheetName": "Datenblatt",
+      "entityLanguage2Id": "Alternative Sprachen",
+      "entitySelected": "Ausgewählt",
+      "headerDoubletFindMethods": "Bitte einzigartes Validierungsfeld auswählen",
+      "entityImportResult": "Ergebnis",
+      "entityDoubletFindMethods": "Suche nach Dubletten über",
+      "button": {
+        "mappingProposal": "Klassifikation 1"
+      },
+      "status": "Status",
+      "message": {
+        "importSuccessful": "Import erfolgreich.",
+        "importFailed": "Import fehlgeschlagen - Details entnehmen Sie bitte der Statusspalte!",
+        "noMainEntitySelected": "Bitte zuerst eine verbundene Hauptentität auswählen."
+      },
+      "entityExcelProfile": "Excel Profil",
+      "importResult": "Ergebnis Bezeichnung",
+      "headerImportsettings": "Importeinstellungen",
+      "entityFile2Import": "Datei",
+      "selectExcelFile": "Bitte Exceldatei auswählen",
+
+		 "Code": "Code",
+		 "Description" : "Description",
+		 "Uom" : "UoM(import)",
+		 "BasUom" : "UoM(verify)",
+		 "Reference2": "Reference No.2",
+		 "OutlineSpecification": "Outline Specification",
+		 "UoM": "UoM",
+		 "Quantity": "Quantity",
+		 "UnitRate": "Unit Rate",
+		 "FinalPrice": "Final Price",
+		 "MergeSame": "Merge resource if reference is same",
+		 "MergeAll": "Add all resources as new",
+		 "MergeOption": "Merge Option",
+		 "Resource": "Resource"
+    }
+  }
+}

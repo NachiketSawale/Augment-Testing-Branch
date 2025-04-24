@@ -1,0 +1,39 @@
+<section class="modal-body">
+	<div>
+		<ul class="list-group">
+			<li>
+				<div class="checkbox spaceToUp">
+					<label>
+						<input type="checkbox" name="copyTenderPriceToBoqItem" [(ngModel)]="currentItem.copyTenderPriceToBoqItem"
+						       [disabled]="false" (ngModelChange)="copyTenderPriceToBoqItemChange()"/>
+						{{ 'estimate.main.priceAdjust.copyTenderPriceToBoqItem' | platformTranslate }}
+					</label>
+				</div>
+			</li>
+			<li>
+				<ul class="subgroup">
+					<li>
+						<div class="radio spaceToUp">
+							<label>
+								<input type="checkbox" name="copyAQQuantityToBoqItem" [(ngModel)]="currentItem.copyAQQuantityToBoqItem"
+								       [disabled]="!currentItem.copyTenderPriceToBoqItem"/>
+								{{ 'estimate.main.priceAdjust.copyAQQuantityToBoqItem' | platformTranslate }}
+							</label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="checkbox spaceToUp">
+					<label>
+						<input type="checkbox" name="copyTenderPriceToLineItem" [(ngModel)]="currentItem.copyTenderPriceToLineItem"
+						       [disabled]="false"/>
+						{{ 'estimate.main.priceAdjust.copyTenderPriceToLineItem' | platformTranslate }}
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+

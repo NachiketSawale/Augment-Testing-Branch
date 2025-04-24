@@ -1,0 +1,93 @@
+[
+  {
+    "id": "controlling-revenue-recognition-header-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.revrecognition.progressReportHeaderListTitle",
+    "controller": "controllingRevenueRecognitionHeaderListController",
+    "uuid": "5167e45d71034697bf9dbd272888f1b0"
+  },
+  {
+    "id": "controlling-revenue-recognition-detail-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "controlling.revrecognition.progressReportHeaderDetailTitle",
+    "controller": "controllingRevenueRecognitionHeaderDetailController",
+    "uuid": "317ea2cdd36247edad0e5fbc44e433ae",
+    "permission": "5167e45d71034697bf9dbd272888f1b0",
+    "mainService": "controllingRevenueRecognitionHeaderDataService"
+  },
+  {
+    "id": "controlling-revenue-recognition-item-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.revrecognition.progressReportItemListTitle",
+    "controller": "controllingRevenueRecognitionItemListController",
+    "uuid": "0cbab2c461504ccd82a484542f9ea130"
+  },
+  {
+    "id": "controlling-revenue-recognition-item-detial-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "controlling.revrecognition.progressReportItemDetailTitle",
+    "controller": "controllingRevenueRecognitionItemDetialController",
+    "uuid": "6e5e80f15f88432ca3f19515519a1ee1",
+    "permission": "0cbab2c461504ccd82a484542f9ea130"
+  },
+  {
+    "id": "controlling-revenue-recognition-remark",
+    "template": "app/components/base/form-text-partial.html",
+    "title": "controlling.revrecognition.remarkContainerTitle",
+    "controller": "controllingRevenueRecognitionRemarkController",
+    "uuid": "7d8893d70e624f799e94804054ede390"
+  },
+  {
+    "id": "controlling-revenue-recognition-characteristic",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "dfbf5212e68e491d8e0959590a1bceb0",
+    "controller": "",
+    "sectionId": "57",
+    "mainService": "controllingRevenueRecognitionHeaderDataService"
+  },
+  {
+    "id": "controlling-revenue-recognition-document-list-container",
+    "template": "defect.main/partials/defect-document-view.html",
+    "title": "defect.main.documentGridTitle",
+    "controller": "controllingRevenueRecognitionDocumentGridController",
+    "uuid": "ee935053b6294d1e957bd8942edfb728"
+  },
+  {
+    "id": "controlling-revenue-recognition-document-detail-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "defect.main.documentDetailTitle",
+    "controller": "controllingRevenueRecognitionDocumentDetailController",
+    "uuid": "b4a0d29617464d4d84116abada3d16c0"
+  },
+  {
+    "id": "controlling-revenue-recognition-accrual-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.revrecognition.accrualListTitle",
+    "controller": "controllingRevenueRecognitionAccrualListController",
+    "uuid": "37e35f1b9e914b24802ca6e4a3a99a5c"
+  },
+  {
+    "id": "controlling-revenue-recognition-accrual-detail-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "controlling.revrecognition.accrualDetailTitle",
+    "controller": "controllingRevenueRecognitionAccrualDetailController",
+    "uuid": "3c6d7949d9e84ee385b3d58e7672975c",
+    "permission": "37e35f1b9e914b24802ca6e4a3a99a5c"
+  },
+	{
+		"id": "controlling-revenue-recognition-e2c-list-container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.revrecognition.estimateToCompleteListTitle",
+		"controller": "controllingRevenueRecognitionE2cListController",
+		"uuid": "c285d946758648cf88c037431179f31b"
+	},
+	{
+		"id": "controlling-revenue-recognition-e2c-detail-container",
+      "template": "app/components/base/form-detail-partial.html",
+		"title": "controlling.revrecognition.estimateToCompleteDetailTitle",
+		"controller": "controllingRevenueRecognitionE2cDetailController",
+		"uuid": "c285d946758648cf88c037431179f321",
+		"permission": "c285d946758648cf88c037431179f31b"
+	}
+]

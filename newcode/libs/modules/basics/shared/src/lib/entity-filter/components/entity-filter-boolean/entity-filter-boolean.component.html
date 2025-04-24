@@ -1,0 +1,23 @@
+<ui-common-popup>
+	<div content class="entity-filter-popup entity-filter-boolean">
+		<ul class="entity-filter-content-padding">
+			<li>
+				<div class="fullwidth flex-box">
+					<input type="radio" id="yes" name="condition" [value]="1" [(ngModel)]="definition.Factors![0]">
+					<label for="yes">{{ 'basics.material.lookup.condition.yes' | platformTranslate }}</label>
+				</div>
+			</li>
+
+			<li>
+				<div class="fullwidth flex-box">
+					<input type="radio" id="no" name="condition" [value]="0" [(ngModel)]="definition.Factors![0]">
+					<label for="no">{{ 'basics.material.lookup.condition.no' | platformTranslate }}</label>
+				</div>
+			</li>
+		</ul>
+
+		<div class="entity-filter-divider-top">
+			<button class="btn pull-right entity-filter-btn-apply" (click)="apply()" [disabled]="definition.Factors![0] === undefined">{{ 'basics.material.lookup.apply' | platformTranslate }}</button>
+		</div>
+	</div>
+</ui-common-popup>

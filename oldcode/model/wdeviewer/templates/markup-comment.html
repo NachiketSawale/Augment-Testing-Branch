@@ -1,0 +1,56 @@
+
+<div class="content fullheight" data-ng-controller="modelWdeViewerMarkupCommentController">
+	<div data-cloud-common-overlay data-loading="isLoading" data-info2="loadingMessage"></div>
+	<div class="toolbar">
+		<!--<div class="title margin-right-ld">
+		    <label class="ms-checkbox-multi-select">
+			    <input type="checkbox" data-ng-model="isAllSelect" data-ng-checked="isAllMarkerSelect()" data-ng-click="showAllMarkup(isAllSelect)">
+			    {{ 'model.wdeviewer.showAllMarkers' | translate }}
+		    </label>
+		</div>-->
+		<ul class="tools flex-box flex-column flex-element">
+			<li class="sublist">
+				<ul class="radio-group">
+					<li class="flex-box flex-element">
+						<button type="button" class="tlb-icons ico-goto"
+						        data-ng-click="gotoModule()" data-ng-disabled="gotoDisabled()" data-ng-show="gotoShow()"
+						        title="{{'cloud.common.Navigator.goTo' | translate }} {{gotoName()}}">
+						</button>
+						<button type="button" class="tlb-icons ico-rec-delete"
+						        data-ng-click="deleteAllMarker()"
+						        title="{{'model.wdeviewer.deleteAllAnnotation' | translate }}">
+						</button>
+					</li>
+					<li class="flex-end">
+						<button type="button" class="control-icons ico-close"
+						        data-ng-click="closeView()"
+						        title="{{'cloud.common.close' | translate }}">
+						</button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content-inner popup-content flex-box flex-auto">
+	<ul class="margin-full-sm">
+		<li data-ng-repeat="comment in commentItems" class="{{ comment.isSelect?'comment-select active':'' }}" style="{{(comment.isFocus === true) ? 'border-style:groove; display:block;' : 'display:block;'}}">
+			<div data-ng-click="select(comment)" title="{{comment.Description}}" class="nav-tabs pane-rc cursor-pointer">
+				<!--<input type="checkbox" data-ng-model="comment.IsShow" data-ng-click="markupShowEvent(comment)" >-->
+				<span>{{ comment.Clerk }} - {{comment.UpdateTime}}  </span>
+				<!--<li>
+					<button type="button" class="tlb-icons ico-goto" data-ng-disabled="comment.isDisableGoto" title="go to {{comment.ModuleName}}" data-ng-click="gotoMarkupModule(comment)"/>
+				</li>-->
+				<button type="button" class="tlb-icons ico-delete" title="{{'model.wdeviewer.deleteAnnotation' | translate }}" style="width: 18px;height: 18px;float: right;margin-left:10px;" data-ng-click="deleteMarkup(comment)" />
+			</div>
+			<div data-ng-show="comment.isSelect" data-ng-if="comment.isSelect" style="{{commentStyle(comment)}}">
+				<!--<textarea data-ng-model="comment.Content" class="form-control" data-ng-blur="commentBlur(comment)"></textarea>-->
+				<div data-model-wde-viewer-markup-comment-view></div>
+			</div>
+		</li>
+	</ul>
+	</div>
+</div>
+
+
+

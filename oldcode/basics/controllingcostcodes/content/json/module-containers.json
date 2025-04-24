@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.controllingcostcodes.controllingCostCode",
+    "controller": "basicsControllingCostCodesListController",
+    "uuid": "ec5c193f31594e03b340da66dc42cc17"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.controllingcostcodes.controllingCostCodesDetails",
+    "controller": "basicsControllingCostCodesDetailController",
+    "uuid": "f45707e67df846dfaf61f8a0c76053d3",
+    "permission": "ec5c193f31594e03b340da66dc42cc17"
+  },
+	{
+		"id": "3",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "basics.controllingcostcodes.translation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "1489730c292c42f7a6f8d4be4a913c08"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.controllingcostcodes.account",
+		"controller": "basicsControllingCostCodesAccountListController",
+		"uuid": "8a15f3b3c08248249a5b564bd9af9957"
+	}
+]

@@ -1,0 +1,9 @@
+<div class="input-group form-control">
+	<input id="GoogleSearchInput" type="text" class="input-group-content"
+	       [(ngModel)]="searchText"
+	       placeholder="{{'cloud.desktop.sdGoogleSearchFilter' | platformTranslate}}">
+	<div *ngIf="tools" class="toolbar" style="display: flex; justify-content: flex-end">
+		<ui-common-menu-list [menu]="tools" [context]="context"></ui-common-menu-list>
+	</div>
+</div>
+<ui-common-filter-script-editor [(model)]='doc' [option]='option'></ui-common-filter-script-editor>

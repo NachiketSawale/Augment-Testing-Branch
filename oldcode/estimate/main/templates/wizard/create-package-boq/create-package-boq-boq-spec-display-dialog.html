@@ -1,0 +1,22 @@
+<div ng-controller="estimateMainCreatePackageBoqBoqSpecDisplayDialogController">
+    <header id="boqSpecHeader" class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section id="boqSpecBody" class="modal-body">
+        <div>
+            <platform-editor data-textarea-id="boqSpec" data-textarea-class=""
+                             data-textarea-name="boqSpec"
+                             data-textarea-height="100%"
+                             data-textarea-required
+                             data-ng-model="modalOptions.data.specContent"
+                             data-textarea-editable="false"
+                             data-show-toolbar="false">
+            </platform-editor>
+        </div>
+    </section>
+    <footer id="boqSpecFooter" class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="$close(false)"> {{::'basics.common.button.ok' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="isLoading" data-info="isLoadingInfo"></div>
+    <div basics-common-resize-editor-in-dialog header-name="boqSpecHeader" body-name="boqSpecBody" footer-name="boqSpecFooter"></div>
+</div>

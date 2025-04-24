@@ -1,0 +1,38 @@
+{
+	"mtwo": {
+	  "controltower": {
+		"moduleName": "Control Tower",
+		"dashboards": "Dashboards",
+		"reports": "Reports",
+		"itemName": "Name",
+		"visualizationView": "View",
+		"reload": "Reload",
+		"fullScreen": "Full Screen",
+		"unFullScreen": "Exit Full Screen",
+		"print": "Print",
+		"PowerBIAccount": "Accounts",
+		"proDashboards": "Pro Dashboards" ,
+		"proReports" : "Pro Reports",
+		"errorDialog": {
+			"ErrorInfo": {
+			   	"header": "Access Token is not available!",
+				"TokenNull":"The Token is empty!"
+			}
+		},
+		"error": {
+		  "uniqueCode": "Code should be unique"
+		},
+		"datapine": {
+		  "dashboards":"BI+ Dashboards",
+		  "dashboardTitle": "Dashboard Title",
+		  "dashboardDescription": "Description",
+		  "externalName": "External Name",
+		  "viewer": {
+			"ContainerTitle": "BI+ Dashboard Viewer"
+		  }
+		},
+		"entityDashboardTypeId": "Dashboard Type"
+	  }
+	}
+  }
+  

@@ -1,0 +1,10 @@
+@mixin background-svg($url, $position: left) {
+	background: url($url) no-repeat $position;
+}
+
+@mixin background-svg-box($url, $size, $position: center) {
+	@include square($size);
+
+	background: url($url) no-repeat $position;
+	background-size: $size;
+}

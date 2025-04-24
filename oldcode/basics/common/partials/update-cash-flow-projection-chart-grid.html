@@ -1,0 +1,13 @@
+﻿<div data-businesspartner-kendo-splitter-adjust-extend class="flex-element filler"
+     option="{panes: [ { collapsible: true, size: '40%' },{ collapsible: true, size: '60%' }],orientation:'horizontal'}">
+
+	<div id="ui-layout-west">
+		<platform-grid data="gridData"></platform-grid>
+	</div>
+	<div id="ui-layout-east">
+		<div style="text-align:center;padding:20px 20px 0 20px;" ng-bind="chartTitle"></div>
+		<div style="padding:20px;height:100%">
+			<basics-common-chart-directive chart-data-source="chartDataSource" chart-type="chartType" trigger-update-event="triggerUpdateEvent"></basics-common-chart-directive>
+		</div>
+	</div>
+</div>

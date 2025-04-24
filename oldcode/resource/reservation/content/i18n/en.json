@@ -1,0 +1,63 @@
+{
+  "resource": {
+	"reservation": {
+		"listReservationTitle": "Reservations",
+		"detailReservationTitle": "Reservation Details",
+		"entityReservation": "Reservation",
+		"entityResource": "Resource",
+		"entityReservedFrom": "Reserved From",
+		"entityReservedTo": "Reserved To",
+		"entityJobHeader": "Job Header",
+		"entityRequestedFrom": "Requested From",
+		"entityRequestedTo": "Requested To",
+		"planningBoard": "Planning Board",
+		"lookupAssignReservation": "Assign Reservations",
+		"refreshButtonText": "Refresh",
+		"rubricCategoryFk": "Rubric Category",
+		"reservation2dispatchHeaderWizard": {
+			"description": "Description",
+			"filterStepTitle": "Filter Reservations",
+			"entityRubric": "Rubric Category",
+			"dialogTitle": "Create Dispatch Notes for Reservations",
+			"amountReservations": "Amount of Reservations",
+			"performingJobFk": "Performing Job",
+			"filterInfo": "You can filter the Reservations with Parameters below",
+			"defaultWithRecJob": "Default Description with Receiving Job",
+			"useCustomDescription": "Use Custom Description",
+			"descriptionOption": "Description Option",
+			"from": "From",
+			"to": "To",
+			"entityWorkingDays": "Working Days",
+			"entityCalendarDays": "Calendar Days",
+			"reservationStepList": "Reservations",
+			"topDescription": "Select Reservations for Dispatching",
+			"isSelectedForDispatch": "Selected for Dispatching",
+			"isSelectedForDispatchToolTip": "Selected for Dispatching",
+			"usePlanningBoardReservations": "Use Planningboard Reservations"
+		},
+		"changeReservationStatusWizard": {
+			"title": " Change Reservation Status"
+		},
+		"entityJob": "Job",
+		"entityJobGroup": "Job Group",
+		"structureContainerTitle": "Reservations Structure",
+		"JobPreferredFk": "Preferred Performing Job",
+		"validateResourceValidFrom": "Field is before than specified resource Valid From",
+		"validateResourceValidTo": "Field is after than specified resource Valid To",
+		"validateResourceTimespan": "The Resource is not available in the requisition period",
+		"validOnCheckBox": "Use Resource valid on Due Date",
+		"validOnDueDate": "Due Date",
+		"validateResourceIsAfterReservationFrom": "Resource Valid From is after Reservation Reserved From",
+		"validateResourceIsBeforeReservationTo": "Resource Valid To is before Reservation Reserved To",
+		"infoFullyCoveredSucceeded": "The status is set to fully covered successfully",
+		"createDispatchNotesWizard": {
+			"ErrorNoReservationSelected": "At least one Reservation must be selected!"
+		},
+		"isWorkOnWeekend": "Work On Weekend",
+		"instructionsOfDriver": "Instructions Of Driver",
+		"informationHeader": "Unit of Measurement is missing",
+		"informationBody": "Please assign a UOM to the requisition first!",
+		"entityCode": "Code"
+	}
+  }
+}

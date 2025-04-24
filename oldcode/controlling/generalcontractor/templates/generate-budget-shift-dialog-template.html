@@ -1,0 +1,24 @@
+<div data-ng-controller="controllingGeneralContractorBudgetShiftWizardController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="platform-lg" >
+            <div class="ng-scope">
+                <div>
+                    <div data-platform-alert data-error="noPinProjectError"></div>
+                    <div data-platform-alert data-error="othererror"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <platform-Grid class="border-all" data="gridData"></platform-Grid>
+        <div cloud-common-overlay data-loading="!isReady || isLoading"></div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="hasErrors()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' | translate}}
+        </button>
+    </footer>
+</div>

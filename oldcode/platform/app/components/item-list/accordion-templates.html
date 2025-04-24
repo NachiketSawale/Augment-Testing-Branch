@@ -1,0 +1,24 @@
+<script type="text/ng-template" id="platform/list-items.html">
+	<li>
+		<!-- itemIcon: bild links --->
+		<button data-ng-click="clickFn({{id}})" data-ng-disabled="{{disabled}}" class="panel-item rw {{itemIcon}}">
+			<ul class="rw-content">
+				<li class="title">{{name}}</li>
+				<li>{{text}}</li>
+			</ul>
+		</button>
+	</li>
+</script>
+
+<script type="text/ng-template" id="platform/accordion-group.html">
+	<li class="panel panel-primary">
+		<button class="panel-heading" data-ng-click="invert({{id}})" title="{{text}}">
+			<span class="{{groupIconClass}}"></span>
+			<h4 class="panel-title">{{text}}</h4>
+			<div class="panel-toggle-img control-icons {{toggleClass}}"></div>
+		</button>
+		<ul class="panel-body">
+			##items##
+		</ul>
+	</li>
+</script>

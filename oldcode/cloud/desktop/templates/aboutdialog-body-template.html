@@ -1,0 +1,27 @@
+<div class="flex-element" data-ng-controller="cloudDesktopAboutDialogController">
+	<div class="app-icons ico-rib-40 about-itwo40-logo fullwidth"></div>
+
+	<article class="margin-top-ld">
+		<div class="font-bold" data-ng-bind="productVersion"></div>
+		<div ng-if="additionalInfo!==''" class="font-bold" data-ng-bind-html="additionalInfo"></div>
+		<div data-ng-bind="productBuildNo"></div>
+		<div data-ng-bind="productDate"></div>
+		<div data-ng-hide="!productInstallationDate" data-ng-bind="productInstallationDate"></div>
+		<div data-ng-hide="!languageInfo" data-ng-bind="languageInfo"></div>
+	</article>
+	<article class="margin-top-ld" ng-if="systemInfo.databaseServerName">
+		<div data-cloud-desktop-about-db-ver-server></div>
+	</article>
+	<article class="margin-top-ld">
+		<div data-cloud-desktop-about-db-ver-table></div>
+	</article>
+	<article class="margin-top-ld">
+		<div data-cloud-desktop-about-add-components-version-table></div>
+	</article>
+	<article class="margin-top-ld">
+		<div data-cloud-desktop-about-qr-codes></div>
+	</article>
+	<article class="margin-top-ld">
+		<a href="https://www.rib-software.com" target="_blank">© 2025 RIB Software GmbH</a>
+	</article>
+</div>

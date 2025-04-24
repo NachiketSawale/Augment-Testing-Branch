@@ -1,0 +1,43 @@
+{
+    "ui":{
+        "common":{
+            "dialog":{
+                "okBtn":"OK",
+                "yesBtn":"Yes",
+                "noBtn":"No",
+                "ignoreBtn":"Ignore",
+                "cancelBtn":"Cancel",
+                "retryBtn":"Retry",
+                "deleteBtn":"Delete",
+                "defaultButton":"Default",
+                "continueBtn":"Continue",
+					 "refreshBtn": "Refresh",
+                "changePwdBtn":"Change Password",
+                "dialogDeactivate": "Don’t show this message again",
+                "showDetails":"Show Details",
+                "hideDetails":"Hide Details",
+                "copyToClipboardSucess":"CopyToClipboardSucess",
+                "copyToClipboardFailed":"CopyToClipboardFailed",
+                "bottomDescription":"Bottom description",
+                "errorTitle": "Error",
+                "exceptionSummaryPattern": "{{errorMessage}}",
+                "errorMessage": "Message",
+                "errorVersion": "Version",
+                "errorDetail": "Details",
+                "errorMethod": "Method",
+                "errorStacktrace": "Stacktrace",
+                "deleteSelMsg": "Do you want to delete the selected data? Possible dependencies will also be deleted.",
+                "deleteSelTitle": "Delete Data",
+                "multistep": {
+                    "finishBtn": "Finish",
+                    "backBtn": "Back",
+                    "nextBtn": "Next"
+                }
+            },
+			  "lookup": {
+				  "clear": "Clear",
+				  "edit": "Edit"
+			  }
+        }
+    }
+}

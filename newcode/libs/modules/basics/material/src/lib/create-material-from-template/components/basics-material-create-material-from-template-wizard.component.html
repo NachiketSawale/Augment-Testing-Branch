@@ -1,0 +1,52 @@
+<div class="filler modal-wrapper" >
+	<div class="col-sm-12 platform-form-group">
+		<div class="col-sm-4 platform-form-row">
+			<label class="platform-form-label">
+				{{'basics.material.record.materialCatalog' | platformTranslate}}
+
+			</label>
+			<ui-common-lookup-input class="platform-form-col"	[(value)]="templateSearchParam.MaterialCatalogFk" [dataService]="lookups.materialCatalog" ></ui-common-lookup-input>
+		</div>
+		<div class="col-sm-4 platform-form-row">
+			<label class="platform-form-label">
+				{{'basics.material.record.materialTemplateType' | platformTranslate}}
+			</label>
+			<ui-common-lookup-input class="platform-form-col"	[(value)]="templateSearchParam.TemplateTypeFk" [dataService]="lookups.materialTemplateType" ></ui-common-lookup-input>
+		</div>
+		<div class="col-sm-4 platform-form-row">
+			<label class="platform-form-label">
+				{{'basics.material.createMaterialByTemplate.keywordSearch' | platformTranslate}}
+			</label>
+			<div class="platform-form-col">
+				<div class="form-control input-group margin-bottom-ld">
+					<input type="text" [value]="templateSearchParam.SearchValue" class="input-group-content" />
+					<span class="input-group-btn">
+                  <button class="btn btn-default input-sm btn-search tlb-icons ico-search"  (click)="onSearch()" ></button>
+	            </span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="platform-form-group">
+		<div class="modal-wrapper subview-container">
+			<!--TODO need a grid toolbar here-->
+			<div [ngClass]="'cid_' + gridConfig.uuid" class="flex-box flex-column flex-element subview-content relative-container overflow-hidden">
+				<ui-common-grid  [configuration]="gridConfig" [items]="materialTemplateList"
+				                 class="lookup-grid flex-basis-auto"></ui-common-grid>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 platform-form-group">
+		<div class="col-sm-6 platform-form-row">
+			<label class="platform-form-label">{{'basics.material.createMaterialByTemplate.quantityOfCopy' | platformTranslate}}:</label>
+			<div class="platform-form-col">
+				<input  class="form-control"  [value]="Quantity">
+			</div>
+		</div>
+		<div class="col-sm-6 platform-form-row">
+			<label class="platform-form-label">{{'basics.material.createMaterialByTemplate.inheritCode' | platformTranslate}}:</label>
+			<ui-common-lookup-input class="platform-form-col"	[(value)]="InheritCodeFk" [dataService]="lookups.inheritCode" ></ui-common-lookup-input>
+		</div>
+	</div>
+</div>

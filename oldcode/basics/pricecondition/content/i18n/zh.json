@@ -1,0 +1,21 @@
+﻿{
+  "basics": {
+    "pricecondition": {
+      "moduleName": "物料调价",
+      "entityValue":"!Value",
+      "entityPriceCondition": "物料调价类型",
+      "entityPriceConditionDescription": "物料调价类型描述",
+      "entityIsActivated": "!Is Activated",
+      "priceConditionGridTitle":"物料调价",
+      "priceConditionFormTitle":"物料调价表单",
+      "priceConditionDetailGridTitle":"物料调价明细",
+      "priceConditionDetailFormTitle":"物料调价明细表单",
+      "priceConditionDescriptionUniqueError": "描述应该唯一！",
+      "tabs": {
+        "main": "物料调价"
+      },
+      "entityCommentText": "备注",
+      "headerParamTitle": "!Price Condition Values"
+    }
+  }
+}

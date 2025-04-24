@@ -1,0 +1,43 @@
+/*-------------------------------------------------------------------------------
+	 Desktop MainList (_desktopmainlist.scss)
+  -------------------------------------------------------------------------------*/
+
+#docPropertiesModal {
+	&.fade {
+		background-color: $color-logindialog-fade-background;
+	}
+
+	font-size: 17px;
+
+	label {
+		margin-bottom: 0;
+	}
+
+	hr {
+		border-bottom: 5px solid var(--company-color);
+		margin: 0 15px;
+	}
+
+	.modal-footer {
+		margin-top: 0;
+		border-top: none;
+	}
+
+	.form-group:not(:last-of-type) div {
+		margin-bottom: 10px;
+	}
+}
+
+.mainListBox {
+	box-shadow: -4px 4px 5px #cacaca inset;
+	@include square(150px);
+
+	display: none;
+	z-index: 10;
+	position: fixed;
+	top: 52px;
+	right: 0;
+	color: $color-text;
+	background-color: $color-body-background;
+	border: 1px solid var(--company-color);
+}

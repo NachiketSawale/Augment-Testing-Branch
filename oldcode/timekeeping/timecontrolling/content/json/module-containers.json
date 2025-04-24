@@ -1,0 +1,50 @@
+[
+	{
+		"id": "timekeeping.controlling.report.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.timecontrolling.reportListTitle",
+		"controller": "timekeepingTimeControllingReportListController",
+		"uuid": "ed78f11aecf14c11be28f8399f4d4590",
+		"permission": "f78bcdebfebc494392a7759e48e6b0ed"
+	},
+	{
+		"id": "timekeeping.controlling.report.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.timecontrolling.reportDetailTitle",
+		"controller": "timekeepingTimeControllingReportDetailController",
+		"uuid": "9e6540d3c380465cb8e8c7afa0a2a98a",
+		"permission": "f78bcdebfebc494392a7759e48e6b0ed"
+	},
+	{
+		"id": "timekeeping.controlling.break.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.recording.recordingBreakListTitle",
+		"controller": "timekeepingTimeControllingBreakListController",
+		"uuid": "36f4e73f15ab4fc283c9492dcd9fa50c",
+		"permission": "5d34ff4e0bf347e3976e6ef2079bf91d"
+	},
+	{
+		"id": "timekeeping.controlling.break.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.recording.recordingBreakDetailTitle",
+		"controller": "timekeepingTimeControllingBreakDetailController",
+		"uuid": "9b148bd082fd4470831c6686a24db1e3",
+		"permission": "5d34ff4e0bf347e3976e6ef2079bf91d"
+	},
+	{
+		"id": "timekeeping.controlling.report.verification.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.recording.recordingReportVerificationListTitle",
+		"controller": "timekeepingTimeControllingReportVerificationListController",
+		"uuid": "a6bf0eb6d1ca4e5cb945fef7fb3f6ab8",
+		"permission": "2deddcc178a84cfebdfa8d7a094032bf"
+	},
+	{
+		"id": "timekeeping.controlling.report.verification.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.recording.recordingReportVerificationDetailTitle",
+		"controller": "timekeepingTimeControllingReportVerificationDetailController",
+		"uuid": "67045a0fa32d41fe92d0083d5997c49c",
+		"permission": "2deddcc178a84cfebdfa8d7a094032bf"
+	}
+]

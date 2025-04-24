@@ -1,0 +1,15 @@
+﻿<div class="content">
+    <div class="toolbar">
+        <div class="title" data-ng-bind="sidebarOptions.title"></div>
+    </div>
+
+    <div class="content-inner">
+        <div class="{{sidebarOptions.reports.cssClass}}" platform-accordion-container data-accordion-list="sidebarOptions.reports.items"></div>
+
+        <nav style="display: none;">
+            <div data-platform-menu-list
+                 data-list="sidebarOptions.reports">
+            </div>
+        </nav>
+    </div>
+</div>

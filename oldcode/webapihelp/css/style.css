@@ -1,0 +1,255 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+#login-container{
+	padding-right: 0;
+}
+.login-box {
+    display: none;
+    clear: both;
+    min-height: 60px;
+}
+
+.login-box .login-info {
+    color: #666;
+    /*float: right;*/
+    position: relative;
+    color: #666;
+    text-align: right;
+    font-size: 12px;
+    line-height: 60px;
+    background-color: inherit;
+    /*padding-right:10px;*/
+}
+.login-box .login-info div.b{
+
+}
+.login-box .login-info div.i{
+    margin-right: 36px;
+    line-height: 20px;
+}
+.login-box .menu {
+    /*position: absolute;*/
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+    height: 60px;
+    line-height: 60px;
+    background-color: inherit;
+    float: right;
+    /*top: 50%;*/
+    /*margin-top: -23px;*/
+    /*right: -30px;*/
+    margin-left: 16px;;
+}
+.login-box .login-info span {
+    display: block;
+    text-align: right;
+}
+
+.login-box .login-info span.company{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.login-box .login-info span.company label{
+    display: block;
+    font-weight: normal;
+    margin: 0;
+    word-break: break-word;
+}
+
+
+.login-box .login-info a.link {
+    font-size: 16px;
+    color: #49cc90;
+    display: block;
+    height: 100%;
+    line-height: 46px;
+    padding: 0px 20px;
+    margin-right: 100px;
+    border: 1px solid #49cc90;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.login-box .login-info a.link:hover{
+    background-color: #f0f0f0;
+}
+
+.login-box .login-info button.action {
+    display: block;
+    width: 30px;
+    height: 60px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.login-box .login-info button.action:hover {
+    background-color: #e0e0e0;
+}
+
+.login-box .login-info button .block-image {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: 16px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.login-box .login-info .menu-action {
+    position: absolute;
+    width: 200px;
+    border: 1px solid #bebebe;
+    font-size: 14px;
+    background-color: #fff;
+    right: 10px;
+    top: 56px;
+    display: none;
+    z-index:1;
+    border-radius:2px;
+}
+
+.login-box .login-info .menu-action p {
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+    height: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.login-box .login-info .menu-action p:first-child {
+    border-top: none;
+}
+
+.login-box .login-info .menu-action p:hover {
+    background-color: #f0f0f0;
+}
+
+.login-box .login-info .menu-action a {
+    color: #666;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/*** External link ***/
+.external {
+    line-height: 60px;
+}
+.external a {
+    line-height: 30px;
+}
+.external a span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px dashed #428bca;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+/*** Go to top ***/
+div.api-go-top {
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #2a6496;
+    border-radius: 4px;
+    opacity: 0.6;
+    cursor: pointer;
+    display: none;
+}
+div.api-go-top:hover{
+    opacity:1;
+}
+div.api-go-top .box{
+    position: relative;
+}
+div.api-go-top .box span{
+    position: absolute;
+    border-width: 10px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #fafafa transparent;
+    left: 10px;
+    top: 3px;
+}
+
+#DownloadPageBtn{
+    text-decoration: none;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 1547px) {
+    .external {
+        position: absolute;
+        top:0;
+        right:0px;
+    }
+    .login-box .login-info{
+        /*margin-right: 80px;*/
+    }
+    .login-box .login-info a.btn{
+        margin-right: 40px;
+    }
+    .external.expand{
+        position: relative;
+        display: block;
+        text-align: right;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 15px;
+    }
+    .login-box.expand .login-info{
+        margin-right: 0px;
+    }
+    .login-box.expand .login-info a.btn{
+        margin-right: 0px;
+    }
+}
+@media (min-width: 990px) and (max-width: 1556px) {
+    .external {
+        display: block;
+        text-align: right;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 989px) {
+    .external {
+        position: absolute;
+        text-align: right;
+        height: 60px;
+        line-height: 60px;
+        left: 36px;
+        top: 0px;
+    }
+	.logo{
+		padding-left: 36px;
+		margin-bottom: 6px;
+	}
+	.login-box .login-info{
+		padding-left: 26px;
+		padding-right: 26px;
+	}
+	.login-box .login-info .menu-action{
+		right: 36px;
+	}
+}

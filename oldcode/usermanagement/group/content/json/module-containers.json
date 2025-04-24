@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "template":"app/components/base/grid-partial.html",
+    "title": "usermanagement.group.groupContainerTitle",
+    "controller": "usermanagementGroupListController",
+    "uuid": "60D295EF1A2C4D0788C17F2BD0696400"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "usermanagement.group.group2RoleContainerTitle",
+    "controller": "usermanagementGroupXRoleListController",
+    "uuid": "E1332FCC1DA34AAABAB324D55BD7F7F9"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/grid-partial.html",
+    "title": "usermanagement.group.user2GroupContainerTitle",
+    "controller": "usermanagementGroupUserXGroupListController",
+    "uuid": "1D1F0228F8EE47C697E82789029CC15A"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/grid-partial.html",
+    "title": "usermanagement.group.logContainer.logContainerTitle",
+    "controller": "usermanagementGroupLogController",
+    "uuid": "3782c1e6085d409ebc01122159c2e462"
+  }
+]

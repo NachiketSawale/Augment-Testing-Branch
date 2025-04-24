@@ -1,0 +1,61 @@
+<style>
+    .input-group-btn .print-format-btn {
+        background-color: #e1e1e1;
+        border: 1px solid #b5b5b5;
+        margin-left: 5px;
+        font-size:13px;
+        font-weight: bold;
+        width: 25px;
+        height: 25px;
+    }
+
+    /*.input-group-btn .input-file-btn {*/
+        /*width: 25px;*/
+        /*height: 25px;*/
+        /*opacity: 0;*/
+        /*filter:alpha(opacity: 0);*/
+        /*overflow: hidden;*/
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*left: 0;*/
+    /*}*/
+
+    div.print-format-div {
+		 width: 100%;
+		 height: 70px;
+		 overflow-y: scroll;
+		 overflow-x: hidden;
+		 outline: none;
+		 flex-direction: column;
+		 padding: 4px;
+	 }
+</style>
+
+<div class="platform-lg platform-form-group">
+    <div class="platform-form-row form-group">
+
+        <fieldset style="padding-left: 10px; border:1px solid #dcdcdc;border-radius:3px;">
+            <legend style="margin-left:1px;width:auto;background-color:#fff;font-size:13px;font-weight: bold;">{{infoProperty}}</legend>
+            <div class="platform-form-group" style="padding-bottom: 6px;">
+                <div class="platform-form-row form-group">
+                    <div class="platform-form-group" style="border-spacing: 0;">
+                        <div class="platform-form-row form-group">
+                            <div class="lg-4">
+                                <label class="platform-form-label" style="padding: 2px 0;">{{'procurement.pricecomparison.printing.leftSection'| translate}}</label>
+                                <div id="left" print-report-textarea-directive data-ng-model="settings.report.leftTemplate" data-ng-click="textChange('left')" div-flag="left"></div>
+                            </div>
+                            <div class="lg-4">
+                                <label class="platform-form-label" style="padding: 2px 0;">{{'procurement.pricecomparison.printing.centerSection'| translate}}</label>
+                                <div id="middle" print-report-textarea-directive data-ng-model="settings.report.middleTemplate" data-ng-click="textChange('middle')" div-flag="middle"></div>
+                            </div>
+                            <div class="lg-4">
+                                <label class="platform-form-label" style="padding: 2px 0;">{{'procurement.pricecomparison.printing.rightSection'| translate}}</label>
+                                <div id="right" print-report-textarea-directive data-ng-model="settings.report.rightTemplate" data-ng-click="textChange('right')" div-flag="right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

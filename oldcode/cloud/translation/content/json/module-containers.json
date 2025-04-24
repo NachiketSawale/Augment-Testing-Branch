@@ -1,0 +1,85 @@
+[
+  {
+	"id": "1",
+	"template": "app/components/base/grid-partial.html",
+	"title": "cloud.translation.resourceListTitle",
+	"controller": "cloudTranslationResourceListController",
+	"uuid": "4d35ae8687dd4ed6aa5ce4b47befad0b"
+  },
+  {
+	"id": "2",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "cloud.translation.resourceDetailTitle",
+	"controller": "cloudTranslationResourceDetailController",
+	"uuid": "3475cdad8acb4432a2bae7dbba8af912",
+	"permission": "4d35ae8687dd4ed6aa5ce4b47befad0b"
+  },
+  {
+	"id": "3",
+	"template": "app/components/base/grid-partial.html",
+	"title": "cloud.translation.translationListTitle",
+	"controller": "cloudTranslationTranslationListController",
+	"uuid": "13ff9d4cc7e149ca8965c702870639c2"
+  },
+  {
+	"id": "4",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "cloud.translation.translationDetailTitle",
+	"controller": "cloudTranslationTranslationDetailController",
+	"uuid": "26fb24afe1d64f8aa6434b9ee43919e5",
+	"permission": "13ff9d4cc7e149ca8965c702870639c2"
+  },
+  {
+	"id": "5",
+	"template": "app/components/base/grid-partial.html",
+	"title": "cloud.translation.languageListTitle",
+	"controller": "cloudTranslationLanguageListController",
+	"uuid": "f13984620ae3483c913aef196f02ad7e"
+  },
+  {
+	"id": "6",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "cloud.translation.languageDetailTitle",
+	"controller": "cloudTranslationLanguageDetailController",
+	"uuid": "6b045c1965cb43beab6f0efff980ca3c",
+	"permission": "f13984620ae3483c913aef196f02ad7e"
+  },
+  {
+	"id": "7",
+	"template": "app/components/base/grid-partial.html",
+	"title": "cloud.translation.sourceListTitle",
+	"controller": "cloudTranslationSourceListController",
+	"uuid": "55c5907fd4224605876685a2b6066783"
+  },
+  {
+	"id": "8",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "cloud.translation.sourceDetailTitle",
+	"controller": "cloudTranslationSourceDetailController",
+	"uuid": "4444643b757b4b1db98d603599E0a7a0",
+	"permission": "55c5907fd4224605876685a2b6066783"
+  },
+  {
+	"id": "9",
+	"template": "app/components/base/partials/file-partial.html",
+	"title": "cloud.translation.fileUpload",
+	"controller": "cloudTranslationFileUploadController",
+	"uuid": "69aa8c9bfa7f499cb2cff41ba9a3bf17"
+  },
+  {
+	"id": "10",
+	"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+	"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+	"uuid": "e626a95e3ddc4da8a1aa1875c083a651",
+	"sectionId": "31",
+	"controller":"",
+	"mainService":"cloudTranslationResourceDataService"
+  },
+  {
+	"id": "11",
+	"template": "app/components/base/grid-partial.html",
+	"title": "cloud.translation.toDoTranslationTitle",
+	"controller": "cloudTranslationTodoTranslationController",
+	"uuid": "f3a44c895396452a925e4b464a1a7864"
+  }
+]

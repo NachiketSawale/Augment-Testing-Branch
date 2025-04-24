@@ -1,0 +1,64 @@
+<div id="paymentschedule-total-setting-box" style="height:108px;width:100%;overflow: auto;overflow-y: hidden;margin-bottom: 5px;margin-top: 4px;">
+	<div style="width:570px" data-ng-if="showTotalSettingSection">
+		<div class="platform-form-row form-group" style="margin-bottom: 4px;position:relative;height: 28px;">
+			<div style="width:400px;display:inline-block">
+				<label class="platform-form-label" style="width:230px;padding-left:5px;">{{isOverGross ? totalSourceGrossOc : totalSourceNetOc}}</label>
+				<div class="platform-form-col" style="width:164px;padding-left:2px;display:inline-block">
+					<div data-payment-schedule-setting-total-drop-down data-entity="currentItem" data-displayText="Code" data-ng-model="currentItem.PsTotalId" data-config="totalSourceConfig"></div>
+				</div>
+			</div>
+			<div style="width:156px;display:inline-block;" data-ng-if="!isOverGross">
+				<label class="platform-form-label text-right" style="width:0;padding-left:0;"></label>
+				<div class="platform-form-col" style="width:150px;padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right ng-pristine ng-valid ng-scope ng-valid-platform ng-not-empty ng-touched" data-platform-select-on-focus="" data-platform-numeric-converter="" data-ng-model="currentItem.TotalNetOc" data-ng-model-options="{ updateOn: 'blur' }" data-enterstop="true" data-tabstop="true" data-domain="money" data-config="totalNetOcConfig" data-entity="currentItem" data-ng-disabled="!showTotalSettingSection || currentItem.totalInputDisabled()" data-platform-control-validation>
+				</div>
+			</div>
+			<div style="width:156px;display:inline-block;" data-ng-if="isOverGross">
+				<label class="platform-form-label text-right" style="width:0;padding-left:0;"></label>
+				<div class="platform-form-col" style="width:150px;padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right ng-pristine ng-valid ng-scope ng-valid-platform ng-not-empty ng-touched" data-platform-select-on-focus="" data-platform-numeric-converter="" data-ng-model="currentItem.TotalGrossOc" data-ng-model-options="{ updateOn: 'blur' }" data-enterstop="true" data-tabstop="true" data-domain="money" data-config="totalGrossOcConfig" data-entity="currentItem" data-ng-disabled="!showTotalSettingSection || currentItem.totalInputDisabled()" data-platform-control-validation>
+				</div>
+			</div>
+
+			<div style="width: 22%;display:inline-block;">
+				<button type="button" class="btn btn-default ng-binding" data-ng-click="setPaymentScheduleTotal()" style="width:200px;height:30px;position:absolute;top:60px;white-space:pre-line;left:580px;" data-ng-disabled="!showTotalSettingSection || currentItem.btnDisabled()">{{::setPaymentScheduleTotalText}}</button>
+			</div>
+		</div>
+		<div class="platform-form-row form-group" style="margin-bottom: 4px;">
+			<div style="width:400px;display:inline-block">
+				<span style="padding-left: 5px;display: inline-block;">{{isOverGross ? paymentScheduleTargetGrossOc : paymentScheduleTargetNetOc}}</span>
+			</div>
+			<div style="width:156px;display:inline-block;" data-ng-if="!isOverGross">
+				<label class="platform-form-label text-right" style="width:0;padding-left:0;"></label>
+				<div class="platform-form-col" style="width:150px;padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right" data-domain="money" data-ng-model="currentItem.paymentScheduleNetOc" data-platform-numeric-converter data-entity="currentItem" readonly>
+				</div>
+			</div>
+			<div style="width:156px;display:inline-block;" data-ng-if="isOverGross">
+				<label class="platform-form-label text-right" style="width:0;padding-left:0;"></label>
+				<div class="platform-form-col" style="width:150px;padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right" data-domain="money" data-ng-model="currentItem.paymentScheduleGrossOc" data-platform-numeric-converter data-entity="currentItem" readonly>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-row form-group">
+			<div style="width:400px;display:inline-block;padding-left: 5px;">{{::varianceSourceTargetText}}</div>
+			<div style="width:156px;display:inline-block;" data-ng-if="!isOverGross">
+				<label class="platform-form-label text-right" style="width:0;padding-left:0;"></label>
+				<div class="platform-form-col" style="width:150px;padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right" data-domain="money" data-ng-model="currentItem.VarianceNet" data-platform-numeric-converter data-entity="currentItem" readonly>
+				</div>
+			</div>
+			<div style="width:156px;display:inline-block;" data-ng-if="isOverGross">
+				<label class="platform-form-label text-right" style="width:0;padding-left:0;"></label>
+				<div class="platform-form-col" style="width:150px;padding-left:2px;display:inline-block;">
+					<input type="text" class="domain-type-money form-control text-right" data-domain="money" data-ng-model="currentItem.VarianceGross" data-platform-numeric-converter data-entity="currentItem" readonly>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="height:40px;line-height: 40px;text-indent: 4px;font-size: 12pt;" data-ng-if="!showTotalSettingSection">{{itemsFromMainNotice}}</div>
+</div>
+<platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+<div cloud-common-overlay data-info2="loadingText" data-loading="isLoading"></div>
+<platform-statusbar data-ng-if="statusBarVisible" style="height: 25px;width: 100%;" data-current-page=" currentPage" data-options="statusbarOptions" data-on-pagechange="onPageChanged(args)" ></platform-statusbar>

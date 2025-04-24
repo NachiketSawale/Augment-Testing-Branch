@@ -1,0 +1,22 @@
+<div id="info-bar-wrapper">
+	<h1>{{'cloud.desktop.contractApproval.info' | translate }}</h1>
+	<ul id="info-bar-header-list" class="list-group">
+		<li class="info-bar-header margin-top-ld" data-ng-repeat="header in config">
+			<h2 class="list-group-item">
+				<a data-ng-click="goToStep(header, $index)" class="cursor-pointer">{{header.title}}</a>
+				<span class="badge badge-rib-color margin-left-md" data-ng-bind="getHeaderCount(header)"></span>
+			</h2>
+			<ul id="info-bar-container-list">
+				<li class="info-bar-container" data-ng-repeat="container in header.headerInfos">
+					<span data-ng-if="container.list.length > 0" class="list-group-item">{{container.title}}</span>
+					<ul id="info-bar-entity-list">
+						<li class="info-bar-entity list-group-item" data-ng-repeat="entity in container.filterFn(container.list)">
+							<a data-ng-if="entity.navigationEnabled && hasModulePermission(entity)" data-ng-click="openEntityInNewTab(entity);$event.stopPropagation()" class="cursor-pointer">{{entity.displayValue}}</a>
+							<span data-ng-if="!entity.navigationEnabled">{{entity.displayValue}}</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>

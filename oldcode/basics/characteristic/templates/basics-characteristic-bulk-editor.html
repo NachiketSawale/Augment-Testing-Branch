@@ -1,0 +1,23 @@
+﻿<div data-ng-controller="basicsCharacteristicBulkEditorController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section>
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div cloud-common-overlay data-loading="isBusy" data-info="busyInfo"></div>
+        <div data-platform-alert data-error="error"></div>
+        <div class="modal-wrapper subview-container grid-wrapper">
+            <platform-Grid data="gridData"></platform-Grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div class="custom-group">
+            <span>{{recordsAffectedMsg}}</span>
+        </div>
+
+        <button type="button" class="btn btn-default" data-ng-click="okClicked()" data-ng-disabled="!canStart()">{{::'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

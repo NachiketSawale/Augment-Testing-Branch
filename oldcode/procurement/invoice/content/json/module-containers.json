@@ -1,0 +1,582 @@
+[
+  {
+    "id": "prc.inv.header.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.header",
+    "controller": "procurementInvoiceHeaderGridController",
+    "uuid": "da419bc1b8ee4a2299cf1dde81cf1884"
+  },
+  {
+    "id": "prc.inv.header.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.headerDetail",
+    "controller": "procurementInvoiceHeaderFormController",
+    "uuid": "295FE4EE5C974E0TTT3CFD5473574D2B",
+    "permission": "da419bc1b8ee4a2299cf1dde81cf1884"
+  },
+	{
+		"id": "prc.inv.header.rejectionremark.form",
+		"template": "procurement.invoice/partials/invoice-rejectionremark.html",
+		"title": "procurement.invoice.title.rejectionremarkDetail",
+		"controller": "procurementInvoiceRemarkController",
+		"uuid": "49D1400580C74AB99C88C73B744DFDAA",
+		"permission": "da419bc1b8ee4a2299cf1dde81cf1884"
+	},
+  {
+    "id": "prc.inv.pes.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.pes",
+    "controller": "procurementInvoicePesGridController",
+    "uuid": "AB72D4BED5BA408BBB77B429E8A462EF"
+  },
+  {
+    "id": "prc.inv.pes.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.pesDetail",
+    "controller": "procurementInvoicePesFormController",
+    "uuid": "1FC9C49861644F4ABB0F83E6ED6FD76A",
+    "permission": "AB72D4BED5BA408BBB77B429E8A462EF"
+  },
+  {
+    "id": "prc.inv.other.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.other",
+    "controller": "procurementInvoiceOtherGridController",
+    "uuid": "4CF775EB68064CD5AD1F75E38AFFE41F"
+  },
+  {
+    "id": "prc.inv.other.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.otherDetail",
+    "controller": "procurementInvoiceOtherFormController",
+    "uuid": "D7B759C877E44D4D82735DAA65EBC340",
+    "permission": "4CF775EB68064CD5AD1F75E38AFFE41F"
+  },
+  {
+    "id": "prc.inv.rejection.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.rejection",
+    "controller": "procurementInvoiceRejectionGridController",
+    "uuid": "B5EA8B9CAE134B96A91FE364B4012121"
+  },
+  {
+    "id": "prc.inv.rejection.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.rejectionDetail",
+    "controller": "procurementInvoiceRejectionFormController",
+    "uuid": "B7F11367557442528540FF73850B8A1E",
+    "permission": "B5EA8B9CAE134B96A91FE364B4012121"
+  },
+  {
+    "id": "prc.inv.contract.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.contract",
+    "controller": "procurementInvoiceContractGridController",
+    "uuid": "75F8704D0EEE480BA3DFD2528D99ADA1"
+  },
+  {
+    "id": "prc.inv.contract.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.contractDetail",
+    "controller": "procurementInvoiceContractFormController",
+    "uuid": "7AB56CA10A254EC3BCEED4C8D9561AB2",
+    "permission": "75F8704D0EEE480BA3DFD2528D99ADA1"
+  },
+  {
+    "id": "prc.inv.general.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.general",
+    "controller": "procurementInvoiceGeneralGridController",
+    "uuid": "B6F91E1D615D4501A546E1E999FE6153"
+  },
+  {
+    "id": "prc.inv.general.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.generalDetail",
+    "controller": "procurementInvoiceGeneralFormController",
+    "uuid": "81D1F21FED6F47AE82D1ED8ABE850142",
+    "permission": "B6F91E1D615D4501A546E1E999FE6153"
+  },
+  {
+    "id": "prc.inv.comment",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "basics.common.commentContainerTitle",
+    "controller": "basicsCommonCommentController",
+    "uuid": "9752FD548EB240F98851C696E53CDE68",
+    "commentQualifier": "procurement.invoice.comment",
+    "parentService": "procurementInvoiceHeaderDataService"
+  },
+  {
+    "id": "prc.inv.header2header.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.header2header",
+    "controller": "procurementInvoiceHeader2HeaderGridController",
+    "uuid": "5F8DCFED83324BBEB9704576B94651FC"
+  },
+  {
+    "id": "prc.inv.certificate.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.certificate",
+    "controller": "procurementInvoiceCertificateGridController",
+    "uuid": "11EC024D7DD3412BB53BEDA7741B6636"
+  },
+  {
+    "id": "prc.inv.certificate.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.certificateDetail",
+    "controller": "procurementInvoiceCertificateFormController",
+    "uuid": "90D5538E5A104059930D394296E96D8B",
+    "permission": "11EC024D7DD3412BB53BEDA7741B6636"
+  },
+  {
+    "id": "prc.inv.billingschema.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.billingschema",
+    "controller": "invoiceBillingSchemaGridController",
+    "uuid": "1EC2793FB7854C209EB128810298FA89"
+  },
+  {
+    "id": "prc.inv.reconciliation2.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.reconciliation2",
+    "controller": "procurementInvoiceReconciliation2GridController",
+    "uuid": "0E14D4C48DF94E85B816119C2F95F20B"
+  },
+  {
+    "id": "prc.inv.documents.project.document.grid",
+    "template": "documents.project/partials/documentgridView.html",
+    "title": "cloud.common.documentsProject",
+    "controller": "documentsProjectDocumentController",
+    "uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "prc.inv.documents.project.document.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsProjectForm",
+    "controller": "documentsProjectDocumentDetailController",
+    "uuid": "8BB802CB31B84625A8848D370142B95C",
+    "permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "prc.inv.documents.project.revision.grid",
+    "template": "documents.project/partials/documentGridRevisionView.html",
+    "title": "cloud.common.documentsRevision",
+    "controller": "documentsProjectDocumentRevisionController",
+    "uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "prc.inv.documents.project.revision.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsRevisionDetail",
+    "controller": "documentsProjectDocumentRevisionDetailController",
+    "uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+    "permission": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "project.main.documents.project.document.history.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentsProjectHistory",
+    "controller": "documentsProjectDocumentHistoryController",
+    "uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+  },
+  {
+    "id": "prc.inv.import.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.importInvoiceTitle",
+    "controller": "procurementInvoiceImportGridController",
+    "uuid": "A453D1390DB54AD6A05D8518CCCD3A04"
+  },
+  {
+    "id": "prc.inv.import.warning.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.importInvoiceWarningTitle",
+    "controller": "procurementInvoiceImportWarningGridController",
+    "uuid": "FC8E5673B0FC41FB972DEA9110C8F986"
+  },
+  {
+    "id": "procurement.invoice.characteristic",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "771d062f8d634ed6a33b897752fb7b16",
+    "controller": "",
+    "sectionId": 21,
+    "mainService": "procurementInvoiceHeaderDataService"
+  },
+  {
+    "id": "prc.invoice.payment.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.payment",
+    "controller": "procurementInvoicePaymentGridController",
+    "uuid": "94147A35CEBA4D4A87141E154C7EC326"
+  },
+  {
+    "id": "prc.invoice.payment.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.paymentDetail",
+    "controller": "procurementInvoicePaymentFormController",
+    "uuid": "8BF8E35C862A4BF48951FBC7DA8825E9",
+    "permission": "94147A35CEBA4D4A87141E154C7EC326"
+  },
+  {
+    "id": "procurement.invoice.event.Grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.event.eventGridTitle",
+    "controller": "procurementPackageEventGridController",
+    "uuid": "266FF910EAE74DF78496A1F0E0D08484",
+    "permission": "07946CB829634366B34547B3C5987B23"
+  },
+  {
+    "id": "procurement.invoice.event.Form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.event.eventFormTitle",
+    "controller": "procurementPackageEventFormController",
+    "uuid": "c68a5427a8cb44609111be17f0b95f34",
+    "permission": "07946CB829634366B34547B3C5987B23"
+  },
+  {
+    "id": "procurement.invoice.validation.Grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.validation",
+    "controller": "procurementInvoiceValidationGridController",
+    "uuid": "842dd38c610d4501851750a6e14e2b19"
+  },
+  {
+    "id": "procurement.invoice.validation.Form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.validationDetail",
+    "controller": "procurementInvoiceValidationFormController",
+    "uuid": "c1aa10a264b04e5fbf9468a4b19e4764",
+    "permission": "842dd38c610d4501851750a6e14e2b19"
+  },
+  {
+    "id": "procurement.invoice.transaction.Grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.transaction",
+    "controller": "procurementInvoiceTransactionGridController",
+    "uuid": "40157baf6a2a4ab38bb434eb0af003c0"
+  },
+  {
+    "id": "procurement.invoice.transaction.Form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.transactionDetail",
+    "controller": "procurementInvoiceTransactionFormController",
+    "uuid": "1bb0c1bbd4d24a30b1bc45ff0f25c2ea",
+    "permission": "40157baf6a2a4ab38bb434eb0af003c0"
+  },
+  {
+    "id": "procurement.invoice.formData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.ContainerUserformDefaultTitle",
+    "controller": "basicsUserFormFormDataController",
+    "uuid": "2f475527c2854daeb00a286480b4fb77",
+    "rubricId": 28,
+    "mainService": "procurementInvoiceHeaderDataService",
+    "statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+  },
+  {
+    "id": "procurement.invoice.actualcertificatelist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "businesspartner.certificate.actualCertificateListContainerTitle",
+    "controller": "businesspartnerCertificateActualCertificateListController",
+    "uuid": "8AE614753E634735B87FCC3A8A033099",
+    "permission": "2c39331cf48c4016af9d17a573388100",
+    "currentModule": "procurement.invoice",
+    "parentService": "procurementInvoiceHeaderDataService",
+    "translationService": "procurementInvoiceTranslationService"
+  },
+  {
+    "id": "procurement.invoice.actualcertificatedetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "businesspartner.certificate.actualCertificateDetailContainerTitle",
+    "controller": "businesspartnerCertificateActualCertificateDetailController",
+    "uuid": "EF81E82E2EC3496D8916F3C486CD2778",
+    "permission": "2c39331cf48c4016af9d17a573388100",
+    "currentModule": "procurement.invoice",
+    "parentService": "procurementInvoiceHeaderDataService",
+    "translationService": "procurementInvoiceTranslationService"
+  },
+  {
+    "id": "platform.generic.structure",
+    "template": "app/components/grid/generic-structure/generic-container.html",
+    "title": "procurement.invoice.title.invoiceGroupingContainer",
+    "uuid": "2df330521516494485d43e6f497d0750",
+    "controller": "platformGenericStructureController",
+    "mainService": "procurementInvoiceHeaderDataService",
+    "configurationService": "invoiceMainStandardConfigurationService",
+    "enableCaching": "true"
+  },
+  {
+    "id": "procurement.invoice.pdfOverlay",
+    "template": "app/components/base/partials/pdfOverlay.html",
+    "title": "basics.common.pdfOverlay.containerTitle",
+    "controller": "",
+    "uuid": "e47ce57cdbcf4ff9a84e1f0554abd07b",
+    "permission": "e47ce57cdbcf4ff9a84e1f0554abd07b",
+    "currentModule": "procurement.invoice"
+  },
+  {
+    "include": "model.viewer/content/json/viewer-containers.json"
+  },
+  {
+    "id": "prc.inv.accountAssignment.grid",
+    "template": "procurement.invoice/partials/invoice-account-assignment-view.html",
+    "title": "procurement.invoice.accountAssignmentGridTitle",
+    "controller": "procurementInvoiceAccountAssignmentGridController",
+    "uuid": "94d42d2ad7474bd6b4ff95c437ece934"
+  },
+  {
+    "id": "prc.inv.accountAssignment.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.accountAssignmentFormTitle",
+    "controller": "procurementInvoiceAccountAssignmentFormController",
+    "uuid": "1eb6d69bb01847c2b6ffc59254e2f3c1",
+    "permission": "94d42d2ad7474bd6b4ff95c437ece934"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByOther.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByOtherGridTitle",
+    "controller": "controllingStructureGrpSetDTLListController",
+    "uuid": "73E4BC3F65A2414B96B4ABC62AF286FA",
+    "dataService": "procurementInvGrpSetDTLByOtherDataService"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByOther.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByOtherFormTitle",
+    "controller": "controllingStructureGrpSetDTLDetailController",
+    "uuid": "A2B4C694E5D14BFE970D5527BCBB627C",
+    "permission": "73E4BC3F65A2414B96B4ABC62AF286FA",
+    "dataService": "procurementInvGrpSetDTLByOtherDataService"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByContract.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByContractGridTitle",
+    "controller": "controllingStructureGrpSetDTLListController",
+    "uuid": "304308041EF7432CAB36FE2C269E5C4F",
+    "dataService": "procurementInvGrpSetDTLByContractDataService"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByContract.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByContractFormTitle",
+    "controller": "controllingStructureGrpSetDTLDetailController",
+    "uuid": "F57055BADEB3447ABDACE63CD958AD14",
+    "permission": "304308041EF7432CAB36FE2C269E5C4F",
+    "dataService": "procurementInvGrpSetDTLByContractDataService"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByTransaction.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByTransactionsGridTitle",
+    "controller": "controllingStructureGrpSetDTLListController",
+    "uuid": "3B9381545D4C48019F8F409241E7D533",
+    "dataService": "procurementInvGrpSetDTLByTransactionDataService"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByTransaction.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByTransactionsFormTitle",
+    "controller": "controllingStructureGrpSetDTLDetailController",
+    "uuid": "BF2B224F1929400691E7528C605F5849",
+    "permission": "3B9381545D4C48019F8F409241E7D533",
+    "dataService": "procurementInvGrpSetDTLByTransactionDataService"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByRejection.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByRejectionGridTitle",
+    "controller": "controllingStructureGrpSetDTLListController",
+    "uuid": "E7D3F773133A462D89CAE482D1F7E531",
+    "dataService": "procurementInvGrpSetDTLByRejectionDataService"
+  },
+  {
+    "id": "controlling.structure.grpsetdltByRejection.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.invoice.title.InvGrpSetDTLByRejectionFormTitle",
+    "controller": "controllingStructureGrpSetDTLDetailController",
+    "uuid": "0283B40918414112A7CCDC1B2B54CBB8",
+    "permission": "E7D3F773133A462D89CAE482D1F7E531",
+    "dataService": "procurementInvGrpSetDTLByRejectionDataService"
+  },
+  {
+    "id": "procurement.pes.postconhistory.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.common.listPostconHistoryTitle",
+    "controller": "procurementCommonPostconHistoryController",
+    "uuid": "784f5f9b7b654c49b227bd468e3c16d5"
+  },
+  {
+    "id": "procurement.pes.postconhistory.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.common.detailPostconHistoryTitle",
+    "controller": "procurementCommonPostconHistoryDetailController",
+    "uuid": "e57bb6e3eb2240f8be55d4e6183c3c4a",
+    "permission": "784f5f9b7b654c49b227bd468e3c16d5"
+  },
+  {
+    "id": "documents.clerk.authorization.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+    "controller": "basicsCommonClerkListController",
+    "clerkQualifier":"documents.project.clerk",
+    "uuid": "47620dd38c874f97b75ee3b6ce342666",
+    "parentService":"documentsProjectDocumentDataService"
+  },
+  {
+    "id": "documents.authorization.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+    "controller": "basicsCommonClerkFormController",
+    "uuid": "7806e7a22b2142f8865ab189efe23c5a",
+    "permission": "47620dd38c874f97b75ee3b6ce342666",
+    "clerkQualifier":"documents.project.clerk",
+    "parentService":"documentsProjectDocumentDataService"
+  },
+  {
+  "id": "procurement.contract.documents.project.modelobject.grid",
+  "template": "app/components/base/grid-partial.html",
+  "title": "cloud.common.documentAssignObject",
+  "controller": "documentsProjectModelObjectController",
+  "uuid": "7BACDAB1A06B439895ACBA767E42205E"
+ },
+  {
+    "id": "procurement.contract.documents.project.modelobject.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentAssignObjectFormTitle",
+    "controller": "documentsProjectModelObjectDetailController",
+    "uuid": "ee68ae76fefe4b758c282594a1746480",
+    "permission": "7BACDAB1A06B439895ACBA767E42205E"
+  },
+  {
+    "id": "model.wdeviewer.ige",
+    "template": "model.wdeviewer/partials/ige-partial.html",
+    "title": "model.wdeviewer.pdfTitle",
+    "controller": "modelWdeViewerIgeController",
+    "uuid": "534a35ea1c9ef2a8cd5f89054f3f153d",
+    "permission": "7b1f2a36a94245ecb03dd964e79d2254",
+    "dimensionService": "modelWdeViewerReadonlyDimensionService",
+	  "defaultMode": "document"
+  },
+  {
+    "id": "procurement.invoice.characteristic2.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "basics.common.characteristic2.title",
+    "uuid": "9ca2525bb81e47eba6582eea65990b1b",
+    "controller": "",
+    "sectionId": "47",
+    "mainService": "procurementInvoiceHeaderDataService"
+  },
+	{
+		"id": "procurement.invoice.extbidder.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.extBidderGridTitle",
+		"controller": "procurementPackage2ExtBidderGridController",
+		"uuid": "D4F39AE248194046A641AD22769C0607",
+		"permission": "DE4193FE7CAF4AA1BD69C0FCAAC8041D"
+	},
+	{
+		"id": "procurement.invoice.extbidder.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.extBidderFormTitle",
+		"controller": "procurementPackage2ExtBidderFormController",
+		"uuid": "A31906810F4F47CA87BF081D37A393C8",
+		"permission": "DE4193FE7CAF4AA1BD69C0FCAAC8041D"
+	},
+	{
+		"id": "procurement.invoice.status.history.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.common.entityStatusHistoryTitle",
+		"controller": "basicsCommonStatusHistoryListController",
+		"uuid": "bcb8622d676944edb5f113fd524608b6",
+		"parentService": "procurementInvoiceHeaderDataService",
+		"StatusName": "invoice",
+		"DisplayMember": "DescriptionInfo.Translated",
+		"LookupTypeName": "InvStatus"
+	},
+	{
+		"id": "procurement.invoice.accrual",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.invoice.accrualGridContainerTitle",
+		"controller": "procurementInvoiceAccrualGridController",
+		"uuid": "a1cca86d94fe4c2cb1261435244b2eb9"
+	},
+	{
+		"id": "procurement.invoice.accrual.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.invoice.accrualDetailContainerTitle",
+		"controller": "procurementInvoiceAccrualDetailController",
+		"uuid": "c4023caaf11e4af88a466716067e6c77",
+		"permission": "a1cca86d94fe4c2cb1261435244b2eb9"
+	},
+	{
+		"id": "procurement.invoice.sales.tax",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.saleTax.SalesTaxGridTitle",
+		"controller": "procurementCommonSalesTaxListController",
+		"uuid": "a62055fa1da1409dab412e247acb5508",
+		"dataService": "procurementInvSalesTaxDataService",
+		"moduleName": "procurement.invoice"
+	},
+	{
+		"id": "procurement.invoice.sales.tax.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.saleTax.SalesTaxDetailTitle",
+		"controller": "procurementCommonSalesTaxDetailController",
+		"uuid": "bbeaec592a974385a48c669c1c21ac09",
+		"permission": "a62055fa1da1409dab412e247acb5508",
+		"dataService": "procurementInvSalesTaxDataService",
+		"moduleName": "procurement.invoice"
+	},
+	{
+		"id": "procurement.invoice.approval.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.common.listHeaderApprovalTitle",
+		"controller": "basicsCommonApprovalListController",
+		"uuid": "85338c6b98c9410d82ecfa6e17eca315",
+		"clerkQualifier": "procurement.invoice.approval",
+		"parentService": "procurementInvoiceHeaderDataService"
+	},
+	{
+		"id": "procurement.invoice.approval.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.common.detailHeaderApprovalTitle",
+		"controller": "basicsCommonApprovalFormController",
+		"uuid": "18109659fab5475da6db5b51346f1728",
+		"clerkQualifier": "procurement.invoice.approval",
+		"parentService": "procurementInvoiceHeaderDataService",
+		"permission": "85338c6b98c9410d82ecfa6e17eca315"
+	},
+	{
+		"id": "procurement.invoice.ic.transaction.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.invoice.title.IcTransaction",
+		"controller": "procurementInvoiceIcTransactionGridController",
+		"uuid": "c84d5a3ae18942f9a1ac5a7aa9124c43"
+	},
+	{
+		"id": "procurement.invoice.ic.transaction.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.invoice.title.IcTransactionDetail",
+		"controller": "procurementInvoiceIcTransactionFormController",
+		"uuid": "8a028635b85a49b4a4e9e915496f0b58",
+		"permission": "c84d5a3ae18942f9a1ac5a7aa9124c43"
+	},
+	{
+		"id": "procurement.invoice.extbidder2contact.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.package.extBidder2ContactGridTitle",
+		"controller": "packageExtBidder2ContactGridController",
+		"uuid": "161C8DBFC01A4983A63EA3A05A12872E",
+		"permission": "5FBD673B50874A02A9A63A81FB24909A"
+	},
+	{
+		"id": "procurement.invoice.extbidder2contact.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.package.extBidder2ContactFormTitle",
+		"controller": "packageExtBidder2ContactFormController",
+		"uuid": "DC223D925E194B42A347BAC4F11C0535",
+		"permission": "161C8DBFC01A4983A63EA3A05A12872E"
+	}
+]

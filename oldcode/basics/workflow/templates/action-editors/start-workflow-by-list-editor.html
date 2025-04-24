@@ -1,0 +1,79 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.entityIdArray' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.EntityIdArray" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.startContext' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.StartContext" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="radiolist-container">
+			<div data-radiolistctrl ng-model="editorMode" on-selection-changed="onRadioGroupOptChanged(value)"
+			     options="radioGroupOpt"></div>
+		</div>
+
+		<div class="platform-form-group">
+			<div basics-workflow-resize-grid-directive class="platform-form-row" data-ng-show="editorMode === 1">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.template' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-basics-workflow-combo-box data-ng-model="input.WorkflowId"
+					     disabled="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-show="editorMode === 2">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.templateId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.TemplateId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.resultContex' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.ResultContext" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

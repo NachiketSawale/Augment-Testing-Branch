@@ -1,0 +1,17 @@
+{
+	"name": "modules-documents-import",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/documents/import/src",
+	"prefix": "documents-import",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/modules/documents/import/jest.config.ts"
+			}
+		}
+	}
+}

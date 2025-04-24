@@ -1,0 +1,28 @@
+{
+	"project": {
+		"droppoints": {
+			"entityProject": "Project",
+			"dropPointProjectList": "Project",
+			"dropPointProjectDetail": "Project Details",
+			"entityCode": "Code",
+			"entityGlncode": "GLN-Code",
+			"entityDroppointtype": "Drop Point Type",
+			"entityIsactive": "Is Active",
+			"entityHidinpubapi": "Hidden In Public Api",
+			"entityIsmanual": "Is Manual",
+			"entityControllingunit": "Controlling Unit",
+			"entityPrjaddress": "Project Address",
+			"entityIcon": "Icon",
+			"entityClerkresp": "Clerk Responsible",
+			"entityComment": "Comment",
+			"dropPointList": "Drop Points",
+			"dropPointDetail": "Drop Points Details",
+			"entityDroppoint": "Drop Point",
+			"entityQuantity": "Quantity",
+			"dropPointArticlesList": "Drop Point Articles",
+			"dropPointArticlesDetail": "Drop Point Articles Details",
+			"entityArticle": "Article",
+			"entityArticleType": "Article Type"
+		}
+	}
+}

@@ -1,0 +1,38 @@
+<div class="modal-wrapper subview-content">
+    <div class="row">
+        <ui-common-form [formConfig]="formConfig" [entity]="contractStatus"></ui-common-form>
+    </div>
+    <div class="input-group form-control">
+        <input id="GoogleSearchInput" type="text" class="input-group-content" width="600px"
+               [(ngModel)]="searchText"
+               placeholder="{{'cloud.desktop.sdGoogleSearchFilter' | platformTranslate}}">
+    </div>
+    <div *ngIf="tools" class="toolbar" style="display: flex; justify-content: flex-end">
+        <ui-common-menu-list [menu]="tools" [context]="context"></ui-common-menu-list>
+    </div>
+    <div class="modal-wrapper grid-wrapper subview-container">
+        <ui-common-grid class="flex-element" [configuration]="updatePricesFromContract" (selectionChanged)="selectionChanged($event)"></ui-common-grid>
+        <div class="statusbar">
+            <div class="right-side flex-element flex-box flex-align-center">
+                <!-- go to first page -->
+                <button class="btn tlb-icons ico-rec-first item block-image" (click)="getFirstPage()"
+                        [disabled]="!canFirstOrPrevPage()"></button>
+
+                <!-- go to previous page -->
+                <button class="btn control-icons ico-previous item block-image" (click)="getPrevPage()"
+                        [disabled]="!canFirstOrPrevPage()"></button>
+
+                <span class="item ellipsis">
+										{{getPageText()}}
+									</span>
+                <!-- go to next page -->
+                <button class="btn control-icons ico-next item block-image" (click)="getNextPage()"
+                        [disabled]="!canLastOrNextPage()"></button>
+
+                <!-- go to last page -->
+                <button class="btn tlb-icons ico-rec-last item block-image" (click)="getLastPage()"
+                        [disabled]="!canLastOrNextPage()"></button>
+            </div>
+        </div>
+    </div>
+</div>

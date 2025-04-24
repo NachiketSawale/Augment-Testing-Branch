@@ -1,0 +1,26 @@
+{
+  "basics": {
+    "assetmaster": {
+      "moduleName": "Asset Master",
+      "disableDone": "Asset {{code}} is disabled successfully. Please save the record to make this changes permanent.",
+      "alreadyDisabled": "Asset {{code}} is already disabled",
+      "enableDone": "Asset {{code}} is enabled successfully. Please save the record to make this changes permanent.",
+      "alreadyEnabled": "Asset {{code}} is already enabled",
+      "wizardTitle": "Asset Master",
+      "assetMasterTitle":"Assign Asset Master",
+      "tabs": {
+        "assetmaster": "Asset Master"
+      },
+      "views": {
+        "assetmaster": "Asset Master"
+      },
+      "containers": {
+        "grid": "Asset Master Grid",
+        "detail": "Asset Master Detail"
+      },
+      "errors" : {
+        "codeUnique" : "{{p_0}} already existed"
+      }
+    }
+  }
+}

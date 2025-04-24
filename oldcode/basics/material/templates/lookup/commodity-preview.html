@@ -1,0 +1,30 @@
+﻿<div class="ms-sv-commodity-preview-panel">
+    <!--back button-->
+    <div class="row">
+        <button type="button" class="ms-sv-commodity-preview-back"
+                data-ng-click="previewBackClick()">
+            <span class="glyphicon glyphicon-chevron-left"></span>{{::back}}
+        </button>
+    </div>
+    <!--Information-->
+    <div class="row">
+        <div class="ms-sv-container-title"><span>{{::htmlTranslate.information}}</span></div>
+        <div data-basics-material-commodity-row data-entity="entity"
+             data-row-type="rowType"
+             data-action-click="actionClick"
+             data-is-preview="true"
+             data-cart-list-change="cartListChange"
+             data-select-row-action="selectRowAction">
+        </div>
+    </div>
+
+    <!--Specifications-->
+    <div class="row">
+        <div class="ms-sv-container-title"><span>{{::htmlTranslate.attributes}}</span></div>
+        <div data-ng-repeat="item in previewItemAttributes" class="ms-sv-container-attributes">
+            <span>{{::item.CommodityProperty}}</span>
+            <span>{{::item.Characteristic}}</span>
+        </div>
+    </div>
+
+</div>

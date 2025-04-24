@@ -1,0 +1,9 @@
+﻿{
+	"privacy": {
+		"config": {
+			"privacyHandledTypeEntityName": "Privacy Handled Type",
+			"privacyHandledTypeListTitle": "Privacy Handled Type List",
+			"privacyHandledTypeDetailTitle": "Privacy Handled Type Detail"
+		}
+	}
+}

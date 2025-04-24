@@ -1,0 +1,285 @@
+[
+	{
+		"id": "qto.main.header.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.header.gridTitle",
+		"controller": "qtoMainHeaderGridController",
+		"uuid": "7CBAC2C0E6F6435AA602A72DCCD50881"
+	},
+	{
+		"id": "qto.main.header.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "qto.main.header.formTitle",
+		"controller": "qtoMainHeaderFormController",
+		"uuid": "7CBAC2C0E6F6435AA602A72DCCD50882",
+		"permission": "7CBAC2C0E6F6435AA602A72DCCD50881"
+	},
+	{
+		"id": "qto.main.detail.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.detail.gridTitle",
+		"controller": "qtoMainDetailGridController",
+		"uuid": "6D3013BD4AF94808BEC8D0EC864119C9"
+	},
+	{
+		"id": "qto.main.detail.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "qto.main.detail.formTitle",
+		"controller": "qtoMainDetailFormController",
+		"uuid": "051C10AD93904E5ABF98E31208FB7334",
+		"permission": "6D3013BD4AF94808BEC8D0EC864119C9"
+	},
+	{
+		"id": "qto.main.subtotal",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.subtotal.title",
+		"controller": "qtoMainSubTotalGridController",
+		"uuid": "BE8B60195CF44F5680C37B96BCED9BA6"
+	},
+	{
+		"id": "qto.main.location",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.locations.title",
+		"controller": "qtoLocationListController",
+		"uuid": "9FE0906F463F4AD19D9987DBB58C0704"
+	},
+	{
+		"id": "qto.main.location.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "qto.main.locations.form",
+		"controller": "qtoMainLocationDetailFormController",
+		"uuid": "8cfad7031c3a414796b7a5ade42673bb",
+		"permission": "9FE0906F463F4AD19D9987DBB58C0704"
+	},
+	{
+		"id": "qto.main.subtotal.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "qto.main.subtotal.form",
+		"controller": "qtoMainSubTotalFormController",
+		"uuid": "31593395b9764e3aaae9c678f599d1c3",
+		"permission": "BE8B60195CF44F5680C37B96BCED9BA6"
+	},
+	{
+		"id": "qto.main.boq",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.boq",
+		"controller": "qtoBoqStructureController",
+		"uuid": "F116BD36D831483DA0364D1DB70AF4D7"
+	},
+	{
+		"id": "qto.main.structure",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.structure",
+		"controller": "qtoMainStructureController",
+		"uuid": "4bf041831fee4206bc5c096770c0a56e"
+	},
+	{
+		"id": "qto.main.boq.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "qto.main.boqForm",
+		"controller": "qtoBoqDetailFormController",
+		"uuid": "e081581e841d49f69057d0e850363516",
+		"permission": "F116BD36D831483DA0364D1DB70AF4D7"
+	},
+	{
+		"id": "qto.main.splitquantity.container",
+		"template": "app/components/base/grid-partial.html",
+		"title": "boq.main.SplitQuantity",
+		"controller": "qtoBoqSplitQuantityController",
+		"uuid": "142c713d311c4220bd9f2f0bbfeb8713"
+	},
+	{
+		"id": "qto.main.translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "87DB2F74D87844E79447D7F0ED576610"
+	},
+	{
+		"id": "qto.main.containerheader.boqSpecification",
+		"template": "boq.main/templates/boq-specification-html-container.html",
+		"title": "boq.main.boqSpecification",
+		"controller": "qtoMainBoqSpecificationController",
+		"uuid": "fa217348c03b48f3904ce9f3962461f4",
+		"permission": "F116BD36D831483DA0364D1DB70AF4D7"
+	},
+	{
+		"id": "qto.main.crbvariable.container",
+		"template": "boq.main/templates/boq-main-crb-variable-container.html",
+		"title": "boq.main.crbVariableTitle",
+		"controller": "qtoMainCrbVariableController",
+		"uuid": "147fd66bf6d24f47808e2c45f5d27744",
+		"permission": "F116BD36D831483DA0364D1DB70AF4D7"
+	},
+	{
+		"id": "qto.main.imageSpecification",
+		"template": "qto.main/templates/qto-main-formula-specification-image.html",
+		"title": "qto.main.imagSpecification",
+		"controller": "qtoMainFormulaSpecificationImageController",
+		"uuid": "1c05d2f405a54679b12e70524919e19c"
+	},
+	{
+		"id": "boq.main.containerheader.boqCopy",
+		"template": "boq.main/templates/boq-copysource-container.html",
+		"title": "boq.main.boqLookup",
+		"controller": "",
+		"uuid": "ddf267de362f42989765d4569bdbf0b4",
+		"permission": "F116BD36D831483DA0364D1DB70AF4D7"
+	},
+	{
+		"id": "qto.header.postconhistory.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.listPostconHistoryTitle",
+		"controller": "qtoHeaderHistoryController",
+		"uuid": "61c44d54375b4600bdb318c9926e81c7"
+	},
+	{
+		"id": "qto.header.postconhistory.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.detailPostconHistoryTitle",
+		"controller": "qtoHeaderHistoryDetailController",
+		"uuid": "50f5def8e7f94faabda2e873e3744cf8",
+		"permission": "61c44d54375b4600bdb318c9926e81c7"
+	},
+	{
+		"id": "qto.header.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "qto.header.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "qto.header.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "qto.header.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "project.main.documents.project.document.history.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProjectHistory",
+		"controller": "documentsProjectDocumentHistoryController",
+		"uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+	},
+
+	{
+		"id": "documents.clerk.authorization.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkListController",
+		"clerkQualifier": "documents.project.clerk",
+		"uuid": "47620dd38c874f97b75ee3b6ce342666",
+		"parentService": "documentsProjectDocumentDataService",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "documents.authorization.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7806e7a22b2142f8865ab189efe23c5a",
+		"permission": "47620dd38c874f97b75ee3b6ce342666",
+		"clerkQualifier": "documents.project.clerk",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentAssignObject",
+		"controller": "documentsProjectModelObjectController",
+		"uuid": "7BACDAB1A06B439895ACBA767E42205E",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentAssignObjectFormTitle",
+		"controller": "documentsProjectModelObjectDetailController",
+		"uuid": "ee68ae76fefe4b758c282594a1746480",
+		"permission": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "qto.main.document.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.document.containerGridTitle",
+		"controller": "qtoDetailDocumentListController",
+		"uuid": "886f9059992f46d3864d2Cbe173bd251",
+		"permission": "6D3013BD4AF94808BEC8D0EC864119C9"
+	},
+	{
+		"id": "qto.main.comments.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.comments.containerGridTitle",
+		"controller": "qtoDetailCommentsListController",
+		"uuid": "004EBBD55C9947879A938A640C4A4747",
+		"permission": "6D3013BD4AF94808BEC8D0EC864119C9"
+	},
+	{
+		"id": "qto.main.CostGroup",
+		"template": "qto.main/templates/cost-group-container.html",
+		"title": "estimate.main.costGroupContainer",
+		"uuid": "b5a4e0a57af844ac82648ed1e536c521",
+		"permission": "6D3013BD4AF94808BEC8D0EC864119C9",
+		"controller": "",
+		"sectionId": 35,
+		"mainService": "qtoMainHeaderDataService",
+		"filterService": "qtoDetailDataFilterService"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "c08b71ab6fb74c45a079ad5ad5320776",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "qto.main.qtocomment",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.qtocommenttitle",
+		"controller": "prjQtoCommentController",
+		"uuid": "335c3fbe0adc4db0a00f64d7fba9e532"
+	},
+	{
+		"id": "qto.main.qtodetailCopy",
+		"template": "qto.main/templates/qto-main-detail-copysource-container.html",
+		"title": "qto.main.sourceQto",
+		"controller": "",
+		"uuid": "b4be72bba5324d0795239ab5e5a4eb01",
+		"permission": "F116BD36D831483DA0364D1DB70AF4D7"
+	},
+	{
+		"id": "qto.main.billto.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.billToListTitle",
+		"controller": "qtoMainBillToListController",
+		"uuid": "316d0dd8ca0446248198d2265f363704"
+	},
+	{
+		"id": "qto.main.lineitem.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.main.lineItem.title",
+		"controller": "qtoMainLineItemListController",
+		"uuid": "b806c811989248a0bf06aa05a496ecda"
+	}
+]

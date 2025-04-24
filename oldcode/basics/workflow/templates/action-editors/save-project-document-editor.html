@@ -1,0 +1,69 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.status' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-config="input.selectConfig" data-domain="select" data-domain-control
+					     data-entity="input.lookupUrl" data-model="input.status" data-options="selectOptionsStatusId"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.category' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-config="input.selectConfig" data-domain="select" data-domain-control
+					     data-entity="input.lookupDocCatUrl" data-model="input.category"
+					     data-options="selectOptionsCategoryId"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.barCode' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.barCode" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.description' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.description" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.comment' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.comment" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.revision' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.revision" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.docId' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.docId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div basics-workflow-radio-list-container></div>
+	</div>
+</div>

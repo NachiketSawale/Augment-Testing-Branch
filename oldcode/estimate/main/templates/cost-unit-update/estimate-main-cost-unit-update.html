@@ -1,0 +1,27 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="estimateMainCostUnitUpdateController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div  class="modal-wrapper fullheight">
+            <div data-platform-form data-form-options="formCostUnitUpdateOptionSettings" entity="entity"></div>
+            <div class="modal-wrapper margin-bottom-ld fullheight" style="overflow-y:hidden;">
+                <div class="platform-form-row form-group">
+                    <label class="platform-form-label" style="min-width: 94px;">{{::'estimate.main.resourceDetailContainer' | translate}}</label>
+                </div>
+                <platform-Grid data="gridData"></platform-Grid>
+                <div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+            </div>
+
+			  <div class="modal-wrapper margin-bottom-ld fullheight" style="overflow:scroll;" data-ng-hide="isHidden" data-ng-controller="estimateMainMaterialPortionListController">
+				  <platform-Grid data="gridData"></platform-Grid>
+			  </div>
+
+        </div>
+    </section>
+    <footer class="modal-footer">
+
+            <button type="button" class="btn btn-default" data-ng-click="execute()"  data-ng-disabled="!canExecute()">{{::'basics.common.button.execute' | translate}}</button>
+            <button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+
+
+    </footer>
+</div>

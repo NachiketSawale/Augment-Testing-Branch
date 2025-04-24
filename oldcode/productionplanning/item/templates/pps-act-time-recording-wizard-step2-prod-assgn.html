@@ -1,0 +1,55 @@
+<style>
+	.content {
+		height: 100%; width: 100%; display: flex; flex-direction: column;
+	}
+
+	.formPart {
+		flex-shrink: 0;
+	}
+
+	.gridsPart {
+		flex: 1;
+	}
+</style>
+
+<div class="filler" ng-controller="productionplanningActualTimeRecordingWizardStep2ProductAssignmentController">
+	<div class="content">
+		<!-- Date and Site form -->
+		<div class="formPart" data-platform-form data-form-options="formOptions" data-entity="formOptions.entity"></div>
+		<!-- Grids -->
+		<div data-trs-kendo-splitter class="gridsPart border-none"
+		     option="{ panes: [{ collapsible:true, size:'50%' },{ collapsible:true, size:'50%' }], orientation:'horizontal' }">
+			<!-- AreasGrid -->
+			<div class="pane-content fullheight">
+				<div id="pane-step2-area" class="fullheight">
+					<div class="filler flex-box flex-column subview-container" data-ng-controller="ppsActualTimeRecordingArea2Controller">
+						<div class="subview-header toolbar">
+							<h3 class="title font-bold">{{'productionplanning.item.wizard.actualTimeRecording.perActionAreasGridTitle' | translate}}</h3>
+							<div data-platform-menu-list data-list="tools"></div>
+						</div>
+						<div class="flex-box flex-column flex-element subview-content relative-container">
+							<platform-Grid class="border-none" data-data="gridData"></platform-Grid>
+							<div data-cloud-common-overlay data-loading="!isReady"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Products Grid -->
+			<div class="pane-content fullheight">
+				<div id="pane-step2-product" class="fullheight">
+					<div class="filler flex-box flex-column subview-container" data-ng-controller="ppsActualTimeRecordingProductController">
+						<div class="subview-header toolbar">
+							<h3 class="title font-bold">{{'productionplanning.item.products.productsGroup' | translate}}</h3>
+							<div data-platform-menu-list data-list="tools"></div>
+						</div>
+						<div class="flex-box flex-column flex-element subview-content relative-container">
+							<platform-Grid class="border-none" data-data="gridData"></platform-Grid>
+							<div data-cloud-common-overlay data-loading="!isReady"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>

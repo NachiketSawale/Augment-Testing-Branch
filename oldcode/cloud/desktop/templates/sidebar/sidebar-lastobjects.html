@@ -1,0 +1,17 @@
+﻿<div class="content" data-ng-controller="cloudDesktopLastObjectsController">
+	<div class="toolbar">
+		<div class="title" data-ng-bind="lastObjectsOptions.title">
+			<!-->{{'cloud.desktop.sdMainSearchTitle'| translate}}-->
+			<!--data-ng-bind="{{'cloud.desktop.sdMainSearchTitle'| translate}}"-->
+		</div>
+
+		<!-- actually toolbar buttons disabled -->
+		<div data-ng-if="::false" data-platform-menu-list data-list="lastObjectsOptions.toolBarDefs"></div>
+	</div>
+
+	<div class="content-inner">
+
+		<div data-cloud-common-lastobjects-list data-list="lastObjectsOptions.lastObjects" class="scroll-padding"></div>
+
+	</div>
+</div>

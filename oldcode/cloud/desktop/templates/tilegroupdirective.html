@@ -1,0 +1,12 @@
+﻿<div class="flex-box flex-column tilegroups-wrapper">
+	<h1 class="flex-box flex-align-center" data-ng-bind="group.groupName"></h1>
+	<div class="tileGroup">
+		<div data-ng-repeat="tile in group.tiles track by $index" data-ng-if="tile.btngrp !== 'end'" class="tilegroup-wrapper">
+
+			<div cloud-desktop-tile-group-button data-tile="tile"></div>
+
+			<div data-ng-if="(tile.btngrp === 'begin') && group.tiles[$index + 1]" cloud-desktop-tile-group-button data-tile="group.tiles[$index + 1]"></div>
+
+		</div>
+	</div>
+</div>

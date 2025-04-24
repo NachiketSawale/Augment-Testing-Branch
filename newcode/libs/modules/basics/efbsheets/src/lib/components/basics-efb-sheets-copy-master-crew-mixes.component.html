@@ -1,0 +1,24 @@
+<div class="flex-element flex-box">
+	<div class="input-group form-control">
+	  <input #searchInput type="text" class="form-control" [(ngModel)]="searchData" placeholder="Search..." autofocus>
+	  <span class="input-group-btn">
+		<button class="btn btn-default input-sm btn-search tlb-icons ico-search" (click)="onSearch()">
+		  <i class="fa fa-search"></i>
+		</button>
+	  </span>
+	</div>
+  
+	<div class="grid-container-wrapper">
+	  <!-- <div *ngIf="tools" class="toolbar">
+		<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+	  </div> -->
+	  <div class="grid-content-wrapper">
+		<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + gridConfig.uuid">
+		  <ui-common-grid [configuration]="gridConfig" (selectionChanged)="onSelectionChanged($event)">
+		  </ui-common-grid>
+		</div>
+	  </div>
+	</div>
+</div>
+    
+  

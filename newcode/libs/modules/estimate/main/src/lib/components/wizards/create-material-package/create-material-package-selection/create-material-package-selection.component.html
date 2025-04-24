@@ -1,0 +1,49 @@
+<div *ngIf="optionItem.selectedItem!==EstimateMainCreateMaterialPackageSelectionOption.MaterialAndCostCode">
+	<div class="platform-form-group">
+		<div class="platform-form-row modeOption">
+			<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.materialCatalog'| platformTranslate }}</label>
+			<div class="platform-form-col">
+				<ui-common-domain-control-host [fieldType]="FieldType.Radio"
+				                               [(value)]="optionItem.modeOption"
+				                               [options]="modeOptions" (valueChange)="onModeChange()"></ui-common-domain-control-host>
+				<label *ngIf="optionItem.selectedItem===EstimateMainCreateMaterialPackageSelectionOption.CostCode">
+
+					<ui-common-domain-control-host [(value)]="optionItem.isIncludeMarkUpCost" [fieldType]="FieldType.Boolean" (valueChange)="includeMarkUpCostChange()"></ui-common-domain-control-host>
+					{{ 'estimate.main.createMaterialPackageWizard.includeMarkUpCost'| platformTranslate }}
+
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="flex-element flex-box flex-column subview-container gridContainer" [ngSwitch]="optionItem.selectedItem">
+
+		<ui-common-grid [configuration]="structureGridConfig" [items]="structureItems" *ngSwitchCase="EstimateMainCreateMaterialPackageSelectionOption.ProcurementStructure"></ui-common-grid>
+		<ui-common-grid [configuration]="costCodeGridConfig" [items]="optionItem.showCostCodeItems" *ngSwitchCase="EstimateMainCreateMaterialPackageSelectionOption.CostCode"></ui-common-grid>
+		<ui-common-grid [configuration]="materialCatalogGridConfig" [items]="catalogAndGroupItems" *ngSwitchCase="EstimateMainCreateMaterialPackageSelectionOption.MaterialCatalogAndGroup"></ui-common-grid>
+
+	</div>
+	<div class="note">
+		<label>
+			{{ 'estimate.main.createMaterialPackageWizard.note'| platformTranslate }}:
+		</label>
+		<ol>
+			<li *ngIf="optionItem.modeOption===EstimateMainCreateMaterialPackageModeOption.inclusiveMode">
+				{{ 'estimate.main.createMaterialPackageWizard.note1'| platformTranslate }}
+			</li>
+			<li *ngIf="optionItem.modeOption===EstimateMainCreateMaterialPackageModeOption.distinctMode">
+				{{ 'estimate.main.createMaterialPackageWizard.noteDistinct'| platformTranslate }}
+			</li>
+			<li
+				*ngIf="optionItem.selectedItem===EstimateMainCreateMaterialPackageSelectionOption.ProcurementStructure||optionItem.selectedItem===EstimateMainCreateMaterialPackageSelectionOption.CostCode">{{ 'estimate.main.createMaterialPackageWizard.note3'| platformTranslate }}
+			</li>
+			<li *ngIf="optionItem.selectedItem===EstimateMainCreateMaterialPackageSelectionOption.ProcurementStructure||optionItem.selectedItem===EstimateMainCreateMaterialPackageSelectionOption.CostCode" class="platform-form-group checkbox spaceToUp">
+				<ui-common-domain-control-host [(value)]="optionItem.isRootLevel" [fieldType]="FieldType.Boolean" [readOnly]="optionItem.isRootLevelDisable"></ui-common-domain-control-host>
+				<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.rootLevel'| platformTranslate }}</label>
+			</li>
+		</ol>
+	</div>
+</div>
+<div class="platform-form-group" *ngIf="optionItem.selectedItem===EstimateMainCreateMaterialPackageSelectionOption.MaterialAndCostCode">
+	<estimate-main-create-material-package-selection-material-cost-code [optionItem]="optionItem" [items]="optionItem.selectionMaterialAndCostCodeItems"></estimate-main-create-material-package-selection-material-cost-code>
+</div>
+

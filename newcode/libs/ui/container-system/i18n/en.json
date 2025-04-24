@@ -1,0 +1,8 @@
+{
+  "ui": {
+    "container-system": {
+		 "missingCntTitle": "Unknown {{cntUuid}}",
+		 "missingCntMessage": "A container with the following UUID is either not supported by the current product version or currently unavailable:"
+    }
+  }
+}

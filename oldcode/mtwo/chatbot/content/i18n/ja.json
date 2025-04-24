@@ -1,0 +1,13 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "構成",
+      "configurationTitle": "構成",
+      "entityChatbotConfigurationDescription": "説明",
+      "entityChatbotConfigurationIslive": "ライブ",
+      "entityChatbotConfigurationUpdatedAt": "更新日時",
+      "entityChatbotHeaderLanguageFK": "言語",
+      "headerTitle": "ヘッダー"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!--suppress HtmlUnknownAttribute -->
+<script type="text/ng-template" id="basics-import-custom-grid.html">
+
+	<section class="modal-body" data-ng-controller="basicsImportCustomGridController">
+		<div class="toolbar">
+			<div data-platform-menu-list data-list="tools"></div>
+		</div>
+		<div class="flex-box flex-column flex-element overflow-hidden">
+			<platform-grid data="gridData"></platform-grid>
+		</div>
+	</section>
+
+</script>
+
+<script type="text/ng-template" id="basics-import-custom-estimate-grid.html">
+
+	<section class="modal-body" data-ng-controller="basicsImportCustomEstimateGridController">
+		<div class="toolbar">
+			<div data-platform-menu-list></div>
+		</div>
+		<div class="flex-box flex-column flex-element overflow-hidden">
+			<platform-grid data="gridData"></platform-grid>
+		</div>
+	</section>
+
+</script>
+
+<script type="text/ng-template" id="basics-import-custom-wizard-grid.html">
+	<div data-ng-controller="basicsImportCustomGridWizardController">
+		<header className="modal-header"></header>
+		<section className="modal-body">
+			<div className="fullheight">
+				<div className="fullheight" style="overflow-y: auto">
+					<div>
+						<div data-platform-form-container data-form-container-options="formContainerOptions"
+						     entity="dataItem"
+						     className="fullheight"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</script>

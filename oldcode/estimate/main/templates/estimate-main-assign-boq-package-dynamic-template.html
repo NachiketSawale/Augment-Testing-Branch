@@ -1,0 +1,26 @@
+<script type="text/ng-template" id="estimate-main-assign-boq-package-dynamic-composite-lookup-template.html">
+    <div class="lg-4 md-4" $$directiveHolder$$ $$entityHolder$$ $$configHolder$$ data-options="lookupOptions"
+         data-ng-hide="hideLookup"></div>
+    <div class="lg-4 md-4" data-ng-show="hideLookup">
+        <div class="form-control" data-domain-control data-domain="code" data-model="{{ codeField }}"
+             data-tabstop="true" data-readonly="isReadOnlyPackageCode">
+            <!--<input  readonly type="text" class="domain-type-code form-control ng-pristine ng-valid ng-scope ng-empty ng-touched"/>-->
+        </div>
+    </div>
+    <div class="lg-8 md-8 form-control" data-domain-control data-domain="description"
+         data-model="{{ descriptionField }}"
+         $$descriptionReadonlyHolder$$ data-tabstop="true">
+    </div>
+</script>
+<script type="text/ng-template" id="estimate-main-assign-boq-package-dynamic-lookup-template.html">
+    <div data-ng-hide="hideLookup" $$directiveHolder$$ $$entityHolder$$ $$configHolder$$ data-options="lookupOptions">
+    </div>
+    <div data-ng-show="hideLookup">
+        <div class="form-control" data-domain-control data-domain="description" data-model="{{ descriptionField }}"
+             data-tabstop="true">
+        </div>
+    </div>
+</script>
+
+
+

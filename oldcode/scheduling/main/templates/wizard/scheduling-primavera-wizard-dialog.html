@@ -1,0 +1,41 @@
+<div data-ng-controller="schedulingPrimaveraWizardDialogController" class="modal-wrapper">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="close()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalTitle | translate }} </h2>
+    </header>
+    <section class="modal-body">
+        <div class="row">
+            <div class="col-md-12" data-platform-form data-form-options="configureOptions"
+                 entity="currentItem"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="enableOK()" data-ng-click="modalOptions.ok()" data-ng-bind="'basics.common.button.ok' | translate"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+    </footer>
+</div>
+
+<!--<div data-ng-controller="schedulingPrimaveraWizardDialogController" class="modal-wrapper">-->
+    <!--<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>-->
+    <!--<section class="modal-body">-->
+        <!--<tabset class="tabsWrapper">-->
+            <!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled"-->
+                 <!--ng-click="onTabSelect(tab)">-->
+
+                <!--<div data-ng-include="tab.content"></div>-->
+            <!--</tab>-->
+        <!--</tabset>-->
+    <!--</section>-->
+    <!--<footer class="modal-footer">-->
+        <!--<div>-->
+            <!--<button type="button" class="btn btn-default" data-ng-click="onOK()"> {{'cloud.common.ok' | translate}}-->
+            <!--</button>-->
+            <!--<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'cloud.common.cancel' | translate}}-->
+            <!--</button>-->
+        <!--</div>-->
+    <!--</footer>-->
+<!--</div>-->
+

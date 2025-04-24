@@ -1,0 +1,74 @@
+<div class="flex-element">
+    <!--TODO: Overlay is mocked will be replaced by overlay component -->
+    <div *ngIf="isLoading" class="wait-overlay">
+        <div class="box">
+            <div class="spinner-lg"></div>
+            <span *ngIf="spinnermsg" [innerHTML]="spinnermsg"></span>
+        </div>
+    </div>
+    <div class="flex-box flex-element">
+        <div class="margin-top-xld" style="border-right: solid 1px #dcdcdc; padding-right: 10px">
+            <i class="block-image app-icons ico-tables btn-square-28" style="background-size: 56px;"></i>
+            <i class="block-image control-icons ico-arrow-right btn-square-28"></i>
+            <i class="block-image app-icons ico-translation btn-square-28" style="background-size: 56px;"></i>
+        </div>
+        <div class="flex-element margin-top-xld" *ngIf="isLanguageSelection" style="padding-left: 10px;">
+            <div class="flex-element">
+                <h3>{{ 'cloud.translation.languageSelectionDlg.messages.step2Info' | platformTranslate }}</h3>
+                <div class="platform-form-group">
+                    <div class="platform-form-row" *ngFor="let info of infoList">
+                        <div class="platform-form-label">{{ info.key }}</div>
+                        <div class="platform-form-col">
+                            <input type="text" class="form-control" readonly [ngModel]="info.value">
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{ defaultLanguage }}</div>
+                        <div class="platform-form-col">
+                            <div class="checkbox">
+                                <label for="checkbox_default">
+                                    <input id="checkbox_default" type="checkbox" [(ngModel)]="englishResource.isChecked">
+                                    {{ englishResource.text }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-form-row" *ngIf="isLanguageSelection" style="margin-top: 10px;">
+                        <div class="platform-form-label">{{ checkboxTitle}}</div>
+                        <div class="platform-form-col">
+
+                            <!--TODO: platform-checkbox-list is mocked will be replaced by platform-checkbox-list component -->
+                            <div class="checkbox-list" [ngClass]="{ 'flat': checkboxOptions?.flatDesign }">
+                                <div *ngFor="let item of checkboxItem" class="checkbox spaceToUp">
+                                    <label for="checkbox_{{item.id}}">
+                                        <input id="checkbox_{{item.id}}" type="checkbox" [(ngModel)]="item.isChecked">
+                                        {{item.text}}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-col">
+                            <div class="checkbox">
+                                <label for="checkbox_reset">
+                                    <input id="checkbox_reset" type="checkbox" [(ngModel)]="isResetChanged">
+                                    {{ resetChangedTitle }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-info" style="padding: 5px;">{{
+                'cloud.translation.languageSelectionDlg.messages.uploadSuccess' | platformTranslate }}</div>
+            <div class="alert-info" style="padding: 5px;">{{
+                'cloud.translation.languageSelectionDlg.messages.buttonHints' | platformTranslate }}</div>
+            <div class="alert-warning" style="padding: 5px; margin-top: 5px;" *ngIf="englishResource.isChecked">{{
+                'cloud.translation.languageSelectionDlg.messages.resourceSelected' | platformTranslate }}</div>
+        </div>
+
+    </div>
+</div>

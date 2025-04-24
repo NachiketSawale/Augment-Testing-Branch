@@ -1,0 +1,229 @@
+//	Login Form
+// is not responsive. Therefore we are using absolute px sizes.
+#loginModal {
+	.modal-content {
+		opacity: 0.94;
+	}
+
+	.modal-body {
+		padding: 10px;
+	}
+
+	//Because keydown for enter, is the markup over other buttons. And by css is pushed area in the footer of the login button.
+	.modal-footer {
+		align-items: flex-end;
+		padding: $padding-xxlarge-vertical 0 0;
+		min-height: auto;
+		border-top: 1px solid $color-dropdown-divider;
+	}
+
+	.idpLogin {
+		border: 1px solid $color-border;
+		margin-top: $padding-large-vertical;
+		padding: $padding-xlarge-vertical;
+
+		button {
+			height: 28px; //IE Bugfix
+		}
+	}
+
+	div[class*="alert-"] {
+		display: flex;
+		align-items: center;
+		padding: $padding-large-vertical;
+	}
+}
+
+.login-portal:not(.embedded) {
+	background-image: url(../images/background/bg-portal.jpg);
+}
+
+.login-sso:not(.embedded) {
+	background-image: url(../images/background/bg-sso.jpg);
+}
+
+.login-portal, .login-sso {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+
+	.modal-dialog {
+		width: 700px;
+		border: 2px solid rgba(var(--company-color), 0.9);
+	}
+
+	.left-side {
+		padding: $padding-xxlarge-vertical 0 0;
+		justify-content: unset;
+		width: 205px;
+		background-color: #0067B1;
+		color: #fff;
+		background-image: url(../images/background/symbol-overlay-white.svg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+
+		.productLogo {
+			flex: none; //IE BugFix. Anotherwise is logo in the middle
+			min-width: 120px; //IE11 BugFix. IE needs for the left side a width.
+			margin: $padding-large-horizontal $padding-xxlarge-vertical 0 $padding-xxlarge-vertical;
+			background-position: top;
+			height: 40px;
+		}
+
+		.container-footer {
+			border-top: none;
+			height: auto;
+			min-height: auto;
+			margin: 0px 16px;
+			padding: 4px 0;
+			align-self: center;
+
+			.copyright {
+				color: #fff;
+			}
+		}
+	}
+
+	.right-side {
+		display: flex;
+		flex-direction: column;
+		padding: $padding-xxlarge-vertical 0 0;
+		background-color: $color-body-background;
+		opacity: 0.94;
+
+		.header {
+			margin: 0 $padding-xxlarge-vertical;
+			height: 50px;
+
+			.company-login-logo {
+				height: 40px;
+				background-size: contain;
+				background-position: right;
+				background-repeat: no-repeat;
+				min-width: 100px;
+				display: none;
+
+				+ img {
+					margin: 0;
+					max-height: 40px;
+				}
+			}
+
+			.header-label {
+				color: #999;
+				font-size: 34px;
+				font-weight: bold;
+			}
+		}
+
+		.text-justify {
+			margin: 0 $padding-xxlarge-vertical;
+		}
+		.form-icon {
+			position: relative;
+
+			input {
+				padding-left: 26px;
+			}
+
+			i {
+				@include container-position(6px, auto, auto, 16px);
+				font-size: 17px;
+			}
+		}
+
+		section {
+			margin: 0 $padding-xxlarge-vertical;
+		}
+
+		.btn-group-link {
+			margin: 0 $padding-xxlarge-vertical;
+			overflow: hidden;
+			flex: 1;
+
+			a {
+				text-decoration: none;
+			}
+
+			button {
+				span {
+					flex-basis: auto; //IE Bugfix
+				}
+			}
+		}
+
+		.btn-success {
+			background-color: #4fab52;
+
+			&:hover {
+				background-color: #6FBD70;
+			}
+
+			span {
+				color: var(--company-font-color);
+			}
+		}
+	}
+
+	.container-footer {
+		@extend %containerFooter;
+	}
+
+	.language-control {
+		font-size: $size-font-dialog-footer;
+		min-width: 150px;
+	}
+}
+
+.login-portal {
+	.modal-dialog {
+		&.primary {
+			max-height: 100%;
+			min-height: 470px;
+
+			.right-side {
+				.btn-group-link {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	.modal-dialog.primary .platform-form-group {
+		border-spacing: 0 $padding-large-vertical;
+	}
+}
+
+// overrides styles when embedded
+.login-portal.embedded, .login-sso.embedded {
+	&.company-dialog {
+		height: 100%;
+
+		.modal-body {
+			max-height: 100% !important;
+		}
+	}
+
+	.modal-dialog {
+		border: 0;
+		margin: unset;
+		max-height: 100%;
+		max-width: 100%;
+		width: 100% !important;
+		height: 100% !important;
+
+		.modal-content {
+			box-shadow: unset;
+			height: 100%;
+
+			.modal-body {
+				flex: 1;
+
+				/* BIM Qualifier embedded Company-Dialog. The goal is to set this container higher. */
+				#company-scroller {
+					min-height: 400px;
+				}
+			}
+		}
+	}
+}

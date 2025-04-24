@@ -1,0 +1,53 @@
+<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body flex-box flex-column">
+    <div lookup-filter-dialog-autofocus="{{focusRow}}">
+        <div data-platform-form data-form-options="formOptions" data-entity="request"></div>
+        <div class="input-group form-control">
+            <input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="onSearchInputKeydown($event, searchValue)" autofocus/>
+            <span class="input-group-btn" style="margin-left: -1px;">
+                <button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="search(searchValue, true)" title="search"></button>
+            </span>
+        </div>
+    </div>
+    <div data-ng-if="enabledPaging()">
+        <div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+            <div class="form-control flex-align-center" style="border: none;">
+                <div class="input-group-content" data-ng-bind="getPageText()"></div>
+            </div>
+
+                <span class="input-group-btn">
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageUp()}"
+                        data-ng-disabled="isLoading||!canPageUp()"
+                        data-ng-click="pageUp()" style="border: none;"><span class="control-icons ico-previous"></span></button>
+
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageDown()}"
+                        data-ng-disabled="isLoading||!canPageDown()"
+                        data-ng-click="pageDown()" style="border: none;"><span class="control-icons ico-next"></span></button>
+			</span>
+        </div>
+    </div>
+	<!-- Remove "overflow-hidden" attribute in the outer div element, so the default fixed height of grid is 300px -->
+    <div class="lookup-grid-container flex-element flex-box flex-column">
+        <div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+            <h2 class="title fix" title="{{'cloud.common.searchResults' | translate}}">{{'cloud.common.searchResults' | translate}}</h2>
+            <div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+        </div>
+        <div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden">
+            <div class="lookup-grid" data-platform-grid data="grid"></div>
+        </div>
+        <div data-cloud-common-overlay data-loading="isLoading"></div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="refresh(true)" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+        {{'basics.common.button.refresh' | translate}}
+    </button>
+    <button type="button" class="ok btn btn-return" data-ng-disabled="disableOkButton" data-ng-click="close(true)" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="cancel btn btn-default" data-ng-disabled="requirement" data-ng-click="close(false)" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

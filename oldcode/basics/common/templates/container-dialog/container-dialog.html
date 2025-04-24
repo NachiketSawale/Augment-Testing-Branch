@@ -1,0 +1,51 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+
+<section class="modal-body">
+	<div class="fullheight">
+		<div class="input-group form-control margin-bottom-ld">
+			<input type="text" data-ng-model="filterString" class="form-control"
+			       data-ng-keydown="onSearchInputKeydown($event, filterString)"/>
+			<span class="input-group-btn">
+				<button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="search(filterString)"></button>
+			</span>
+		</div>
+
+		<div ng-include="bodyTemplateUrl" style="height: 90%">
+		</div>
+
+		<div class="alert alert-info margin-top-ld exclude-resize" data-ng-if="uiConfig.info">
+			<button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			{{ uiConfig.info }}
+		</div>
+	</div>
+
+
+	<!--<div class="bg-info margin-top-ld exclude-resize" style="bottom: 0;" data-ng-if="uiConfig.info">-->
+	<!--<p class="text-info margin-full-md">{{uiConfig.info}}</p>-->
+	<!--</div>-->
+</section>
+
+<footer class="modal-footer">
+	<div>
+		<label data-ng-if="uiConfig.filterCheckbox">
+			<input type="checkbox" data-ng-model="isFilterDisable" data-ng-click="onFilterCheckboxClick()">
+			{{uiConfig.filterCheckbox.title}}
+		</label>
+		<label class="margin-left-ld">
+			{{selectedItems.length}} {{uiConfig.entitySelectedText}}
+		</label>
+	</div>
+	<button class="btn btn-default margin-left-ld" type="button" data-ng-click="refresh()">
+		{{uiConfig.refreshButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="uiConfig.disableOkButton"
+	        data-ng-click="ok()">
+		{{uiConfig.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-click="close()">
+		{{uiConfig.closeButtonText}}
+	</button>
+</footer>

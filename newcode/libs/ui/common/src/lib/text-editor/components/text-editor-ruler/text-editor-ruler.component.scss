@@ -1,0 +1,78 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+@import 'variables';
+
+
+.ruler-div {
+    padding-top: 5px;
+}
+
+.ruler-container {
+    .ruler {
+        position: relative;
+        border-top: 1px solid #000000;
+        margin: 12px 12px 13px $padding-large-vertical;
+
+        .ruler-first-mark,
+        .ruler-mark,
+        .ruler-mark1 {
+            position: absolute;
+            border-left: 1px solid #000000;
+            height: 10px;
+        }
+
+        .ruler-mark1 {
+            height: 5px;
+        }
+
+        .ruler-mark::after,
+        .ruler-first-mark::after {
+            content: attr(data-label);
+            font-size: 9pt;
+        }
+
+        .ruler-mark::after {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .ruler-first-mark::after {
+            position: relative;
+            bottom: 15px;
+            right: 10%;
+        }
+    }
+
+    &.document-view {
+        background-color: #e6e6e6;
+
+        >.ruler-div {
+            background-color: #ffffff;
+            margin: 0 auto;
+            position: relative;
+
+            >.ruler {
+                position: relative;
+                border-top: 1px solid #000000;
+                margin: -2px 0 0 0;
+            }
+        }
+    }
+}
+
+:host ::ng-deep .ql-editor strong {
+    font-weight: 700 !important;
+}
+
+:host ::ng-deep .ql-editor em {
+    font-style: italic !important;
+}
+
+:host ::ng-deep .ql-editor strong em {
+    font-style: italic !important;
+    font-weight: 700 !important;
+}

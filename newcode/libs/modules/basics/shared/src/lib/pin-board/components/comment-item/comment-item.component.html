@@ -1,0 +1,38 @@
+<div class="media">
+	<div class="pull-left">
+		<div *ngIf="!clerkPhotoSrc" class="circle control-icons ico-user-default"></div>
+		<img *ngIf="!!clerkPhotoSrc" class="circle" alt="" [src]="clerkPhotoSrc"/>
+	</div>
+
+	<div class="media-body">
+		<div class="flex-box">
+			<div class="message-header">
+				<span class="comment-status" [innerHTML]="iconContent" style="margin-right: 3px;"></span>
+				<span class="comment-status"></span>
+				<span class="title">{{ clerkName }}</span>
+				<span> | {{ insertedDate }}</span>
+			</div>
+			<div class="input-group-btn action-btn">
+				<button class="btn control-icons ico-comment" (click)="clickCommentButton()" [disabled]="isCommentButtonDisabled()"></button>
+				<button class="btn tlb-icons ico-delete2" (click)="clickDeleteButton()" [disabled]="isDeleteButtonDisabled()"></button>
+			</div>
+		</div>
+
+		<div class="message-body" style="padding-left: 58px;" [innerHTML]="bodyContent"></div>
+
+		<div class="message-footer" [innerHTML]="footerContent"></div>
+
+		<div *ngIf="isOpenEditor">
+			<basics-shared-comment-editor [readonly]="isReadOnly" [options]="editorOptions" (submitComment)="addComment($event)"></basics-shared-comment-editor>
+		</div>
+
+		<div *ngFor="let item of dataService.getChildren(comment)">
+			<basics-shared-comment-item *ngIf="dataService.getIsVisible(item)" [comment]="item" [dataService]="dataService" [parent]="comment" (delete)="deleteComment($event)" (toggleAction)="handlePageEvent()"></basics-shared-comment-item>
+		</div>
+
+		<div *ngIf="detailInfo !== ''" class="comment-interval cursor-pointer">
+			<a (click)="toggle()"> {{ detailInfo | platformTranslate }} </a>
+		</div>
+
+	</div>
+</div>

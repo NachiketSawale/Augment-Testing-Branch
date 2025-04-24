@@ -1,0 +1,52 @@
+/*-------------------------------------------------------------------------------
+	 upload progress bar
+  -------------------------------------------------------------------------------*/
+
+.upd-info-view {
+	float: left;
+	height: 25%;
+	min-width: 25%;
+}
+
+.upd-selection-image-row {
+  width: 100%;
+  .upd-selection-image {
+    height: $size-large-icon;
+    width: $size-large-icon;
+  }
+}
+
+.upd-file-name {
+  overflow-wrap: break-word;
+  float: left;
+  width: 100%;
+}
+.upd-cancel-button-image {
+  float: right;
+  height: $size-icon;
+  width: $size-icon;
+}
+
+.upd-upload-status-rest-upload-time-row {
+  width: 100%;
+  float: left;
+  .upd-upload-status {
+    float: left;
+  }
+  .upd-rest-upload-time {
+    float: right;
+  }
+}
+
+.upd-progress-bar {
+  width: 100%;
+}
+
+.upd-progress-bar-fixed-width{
+	width: 25%;
+    padding-right: 20px;
+}
+
+.upd-progress-bar-auto-width{
+	width: 100%;
+}

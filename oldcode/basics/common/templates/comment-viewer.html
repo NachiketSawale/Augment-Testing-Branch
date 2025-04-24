@@ -1,0 +1,29 @@
+<div class="flex-box flex-element flex-column comment-viewer" style="-webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text;">
+	<div class="flex-element comment-view" data-ng-click="preview($event)"></div>
+	<div class="flex-box comment-footer" data-ng-show="showPager()">
+		<pagination data-total-items="totalItems"
+		            data-items-per-page="config.pageSize"
+		            data-ng-model="config.pageNum"
+		            data-ng-change="onPageChange(config.pageNum)"
+		            data-previous-text="<<"
+		            data-next-text=">>"
+		            data-boundary-links="true">
+		</pagination>
+	</div>
+	<!--defect:#99641, if parent item status is readonly, then can not add comment-->
+	<div class="comment-editor-container margin-top-ld" data-ng-hide="IsReadonlyStatus()">
+		<div data-basics-common-comment-editor data-ng-model="trunkComment" data-status-options="options.statusOptions" data-submit="submit()"></div>
+	</div>
+	<div data-basics-common-white-board data-show="disabled"
+	     data-info="'cloud.common.disableCommentInfo' | translate"></div>
+	<div data-cloud-common-overlay data-loading="loading()"></div>
+	<style>
+		.media .media-body .message-body {
+			margin-left: 58px;
+		}
+
+		.media .media-body .message-body .block-image {
+			overflow: hidden;
+		}
+	</style>
+</div>

@@ -1,0 +1,50 @@
+{
+  "basics": {
+    "biplusdesigner": {
+      "Dashboard2GroupContainerTitle": "Dashboard assignment to Group",
+      "DashboardContainerTitle": "DashboardContainerTitle",
+      "dashboard2GroupContainerTitle": "Dashboard In Groups",
+      "designerContainerTitle": "Dashboard Designer",
+      "dashboardContainerTitle": "Dashboard",
+      "entityBasDashboardFk": "Dashboard",
+      "entityBasDashboardTypeFk": "Dashboard Type",
+      "entityExternalId": "External Id",
+      "entityExternalName": "External Name",
+      "entityIsVisible": "Is Visible",
+      "entityVisibility": "Visibility",
+      "dashboard": {
+        "parameterContainerTitle": "Parameters",
+        "parameterDetailsContainerTitle": "Parameters Detail"
+      },
+      "dashboard2GroupDetailsContainerTitle": "Dashboard in Group Detail",
+      "dashboardDetailsContainerTitle": "Dashboard Detail",
+      "entityName": "Name",
+      "entityDataSource": "Data Source",
+      "entityHasTranslation": "Has Translation",
+      "entityIsActive": "Is Active",
+      "entityIsAvailable": "Is Available",
+      "toolbarSyncBtn": "Sync Dashboard",
+      "import": {
+        "btnCancel": "Close",
+        "btnExecuteImport": "Import",
+        "dialogTitle": "Import Dashboards",
+        "errorText": "Import Failed!!",
+        "instructionsText": "The dashboards and parameter definitions updates in the BI+ server are not tracked automatically. To perform the synchronization with the BI+ server, please click Import.",
+        "loadingMessage": "Import in Progress",
+        "successText": "Dashboards and Parameters imported successfully. The following modifications took place.",
+        "warningText": "Items can be inserted, updated or deleted. The process may take a while to be finished depending on the number of import items."
+      },
+      "syscontextCompany": "Company",
+      "syscontextMainEntityId": "Main Entity Id",
+      "syscontextMainEntityIdArray": "Main Entity Ids",
+      "syscontextNull": "",
+      "syscontextProfitCenter": "Profit Center",
+      "syscontextProject": "Project",
+      "syscontextSelectedMainEntities": "Selected Main Entity Ids",
+      "syscontextUserDescription": "User Description",
+      "syscontextUserId": "User ID",
+      "syscontextUserName": "User Name",
+      "DashboardGroupFk": "Dashboard Group Name"
+    }
+  }
+}

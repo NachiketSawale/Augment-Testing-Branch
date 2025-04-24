@@ -1,0 +1,21 @@
+.material-filter-search-no-result {
+	position: absolute;
+	top: 50%;
+	z-index: 99;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+
+	.no-result-title {
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 8px;
+		display: inline-block;
+	}
+
+	.no-result-sub-title {
+		font-size: 16px;
+		font-weight: 400;
+	}
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "id": "timekeeping.shiftmodel.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.shiftmodel.shiftListTitle",
+    "controller": "timekeepingShiftModelListController",
+    "uuid": "c271fb74bb5c4e7dbfadc1222f1bb8ef"
+  },
+  {
+    "id": "timekeeping.shiftmodel.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.shiftmodel.shiftDetailTitle",
+    "controller": "timekeepingShiftModelDetailController",
+    "uuid": "3f8b36e4b22441e7a994dd85e610567f",
+    "permission": "c271fb74bb5c4e7dbfadc1222f1bb8ef"
+  },
+  {
+    "id": "timekeeping.shiftmodel.workingtime.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.shiftmodel.shiftWorkingTimeListTitle",
+    "controller": "timekeepingShiftModelWorkingTimeListController",
+    "uuid": "370d136ef46d4c13a7b3ce9bf8b1e5e4"
+  },
+  {
+    "id": "timekeeping.shiftmodel.workingtime.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.shiftmodel.shiftWorkingTimeDetailTitle",
+    "controller": "timekeepingShiftModelWorkingTimeDetailController",
+    "uuid": "dd118689baf94608808fad8c942b565f",
+    "permission": "370d136ef46d4c13a7b3ce9bf8b1e5e4"
+  },
+  {
+  "id": "timekeeping.shiftmodel.exceptionday.detail",
+  "template": "app/components/base/form-detail-partial.html",
+  "title": "timekeeping.shiftmodel.shiftExceptionDayDetailTitle",
+  "controller": "timekeepingShiftModelExceptionDayDetailController",
+  "uuid": "f95528f510124a91a6195954d746ee60",
+  "permission": "63d97d8327c249cfa91e3eb4b426162c"
+  },
+  {
+  "id": "timekeeping.shiftmodel.exceptionday.list",
+  "template": "app/components/base/grid-partial.html",
+  "title": "timekeeping.shiftmodel.shiftExceptionDayListTitle",
+  "controller": "timekeepingShiftModelExceptionDayListController",
+  "uuid": "4188c8efe29248c2a36840edc530b71f",
+  "permission": "63d97d8327c249cfa91e3eb4b426162c"
+  },
+  {
+    "id": "timekeeping.shiftmodel.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "c19bf3d2ae9f46aabbefe3d2b1e10758"
+  },
+	{
+		"id": "timekeeping.shiftmodel.2group.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.shiftmodel.shift2GroupListTitle",
+		"controller": "timekeepingShiftModel2GroupListController",
+		"uuid": "7809c35d6f0840fe83d3637f62d41138"
+	},
+	{
+		"id": "timekeeping.shiftmodel.2group.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.shiftmodel.shift2GroupDetailTitle",
+		"controller": "timekeepingShiftModel2GroupDetailController",
+		"uuid": "2da1e64a72a64ffca12dd12c1968e88b",
+		"permission": "7809c35d6f0840fe83d3637f62d41138"
+	},
+	{
+		"id": "timekeeping.shiftmodel.break.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.shiftmodel.recordingBreakListTitle",
+		"controller": "timekeepingShiftModelBreakListController",
+		"uuid": "e0004627cb3846fc9071394d96e52702"
+	},
+	{
+		"id": "timekeeping.shiftmodel.break.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.shiftmodel.recordingBreakDetailTitle",
+		"controller": "timekeepingShiftModelBreakDetailController",
+		"uuid": "0de2fa1dac2c409980fd98dd96063391",
+		"permission": "e0004627cb3846fc9071394d96e52702"
+	}
+]

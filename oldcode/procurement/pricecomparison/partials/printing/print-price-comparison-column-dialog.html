@@ -1,0 +1,17 @@
+<div data-ng-controller="procurementPriceComparisonItemColumnDialogController">
+
+    <header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+    <section class="modal-body">
+        <div class="fullheight">
+            <div data-platform-grid class="subview-container" style="height: 400px" data="gridData"></div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="onOK()"> {{'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' |
+            translate}}
+        </button>
+    </footer>
+</div>

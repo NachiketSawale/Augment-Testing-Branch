@@ -1,0 +1,37 @@
+<div class="flex-element">
+	<ui-common-popup>
+		<div content class="entity-filter-popup entity-filter-boolean">
+			<ul class="entity-filter-content-padding">
+				<li>
+					<div class="fullwidth flex-box">
+						<input type="radio" id="1" name="condition" [value]="1" [(ngModel)]="objectSource">
+						<label for="1">{{ 'model.main.objectSrcViewer' | platformTranslate }}</label>
+					</div>
+				</li>
+
+				<li>
+					<div class="fullwidth flex-box">
+						<input type="radio" id="2" name="condition" [value]="2" [(ngModel)]="objectSource">
+						<label for="2">{{ 'model.main.objectSrcViewer' | platformTranslate }}</label>
+					</div>
+				</li>
+
+				<li>
+					<div class="fullwidth flex-box">
+						<input type="radio" id="3" name="condition" [value]="3" [(ngModel)]="objectSource">
+						<label for="3">{{ 'model.main.objectSrcViewer' | platformTranslate }}</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</ui-common-popup>
+
+	<ui-common-grid [configuration]="value2AssignGridConfig"></ui-common-grid>
+
+	<div class="checkbox spaceToUp">
+		<label>
+			<input id="overwritePropValues" type="checkbox" [(ngModel)]='IsOverwriteValues'/>
+			{{'model.main.propKeysBulkAssignment.overwrite' | platformTranslate}}
+		</label>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+.slick-header-menubutton {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 14px;
+	background: url(/assets/ui/common/images/control-icons.svg#ico-down);
+	background-position: 50%;
+	cursor: pointer;
+	display: none;
+	border-left: thin ridge silver;
+}
+.slick-header-column-active .slick-header-menubutton,
+.slick-header-column:hover > .slick-header-menubutton,
+.slick-header-menu {
+	display: inline-block;
+}
+.slick-header-menu {
+	position: absolute;
+	margin: 0;
+	padding: 2px;
+	cursor: default;
+}
+.slick-header-menuitem {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+.slick-header-menuicon {
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+.slick-header-menucontent,
+.slick-header-menuicon {
+	display: inline-block;
+	vertical-align: middle;
+}
+.slick-header-menuitem-disabled {
+	color: silver;
+}
+

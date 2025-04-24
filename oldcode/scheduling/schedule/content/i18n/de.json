@@ -1,0 +1,14 @@
+{
+  "scheduling": {
+    "schedule": {
+      "listTitle": "Pläne",
+      "detailTitle": "Plan Details",
+      "entityPsdScheduleTypeFk": "Plantyp",
+      "entitySchedule": "Plan",
+      "entityTimeline": "Stichtage",
+      "entityDetailTimeline": "Stichtag Details",
+      "entityText": "Text",
+      "entityIsActive":"Ist Aktiv"
+    }
+  }
+}

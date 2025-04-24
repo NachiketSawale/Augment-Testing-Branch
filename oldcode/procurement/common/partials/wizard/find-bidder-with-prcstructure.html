@@ -1,0 +1,28 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" name="prcStructureCheckBox" class="e2e-prc-isActive"
+				       data-ng-model="prcstructure.isActive"/>
+				{{prcstructure.header}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<div class="control-directive subgroup"
+				     data-basics-lookupdata-lookup-composite
+				     data-options="options"
+				     data-entity="prcstructure"
+				     data-model="prcstructure.selectedItemFk"
+				     data-ng-model="prcstructure.selectedItemFk"
+				     data-config="prcstructure"
+				     data-dirty="true"></div>
+
+				<div class="invalid-cell invalid-form" data-ng-if="prcstructure.rt$hasError()"
+				     data-ng-bind="prcstructure.rt$errorText()"></div>
+			</li>
+		</ul>
+	</li>
+</ul>

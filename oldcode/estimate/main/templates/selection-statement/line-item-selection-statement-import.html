@@ -1,0 +1,28 @@
+<div data-ng-controller="basicsMaterialImportRecordsController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="close()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+    </header>
+    <section class="modal-body">
+        <div class="fullheight">
+            <div class="fullheight" style="overflow-y: auto">
+                <div data-platform-alert data-error="error"></div>
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="import.fileName" readonly="readonly">
+                    <span class="input-group-btn">
+                        <button id="importFileBtn" class="btn btn-default tlb-icons ico-upload" data-ng-disabled="import.isDisabled"></button>
+                    </span>
+                </div>
+                <!--<div data-basics-common-upload-progress-bar data-options="progressBarOptions"></div>-->
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="showInfo()" data-ng-disabled="import.disableInfo()">{{::'basics.common.taskBar.info' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="close()" data-ng-disabled="import.isDisabled"> {{::'basics.common.button.close' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

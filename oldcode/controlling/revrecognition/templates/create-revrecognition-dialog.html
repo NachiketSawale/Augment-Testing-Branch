@@ -1,0 +1,30 @@
+<div data-ng-controller="controllingRevenuerecognitionCreateRevrecognitionController" class="modal-wrapper overflow-hidden">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<h3>{{options.body.bodyTitle}}</h3>
+		<div data-platform-form-container data-form-container-options="formContainerOptions"
+		     entity="currentItem" class="fullheight" data-ng-readonly="false"></div>
+		<div class="createBySet" ng-if="createFromWiard" style="margin-left:20px;margin-top:10px;">
+			<div class="platform-form-group checkbox spaceToUp">
+				<input type="checkbox" data-ng-model="additionOption.createByCurrentResultSet" data-ng-checked="additionOption.createByCurrentResultSet" data-ng-change="resultCheckboxChange()"/>
+				<label class="platform-form-label">{{ 'controlling.revrecognition.createRevenueRecognition.createByCurrentResult' | translate }}</label>
+			</div>
+			<div class="platform-form-group checkbox spaceToUp">
+				<input type="checkbox" data-ng-model="additionOption.createBySelectResultSet"  data-ng-checked="additionOption.createBySelectResultSet" data-ng-change="selectCheckboxChange()"/>
+				<label class="platform-form-label">{{ 'controlling.revrecognition.createRevenueRecognition.createBySelectResult' | translate }}</label>
+			</div>
+		</div>
+		<div class="note" style="margin:20px;">
+			<div>{{ 'controlling.revrecognition.createRevenueRecognition.note' | translate }}</div>
+			<ul style="list-style-type: disc;padding:0px 20px;">
+				<li>{{ 'controlling.revrecognition.createRevenueRecognition.noteMessage1' | translate }}</li>
+				<li>{{ 'controlling.revrecognition.createRevenueRecognition.noteMessage2' | translate }}</li>
+			</ul>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button data-ng-disabled="isDisabled" type="button" class="btn btn-default" data-ng-click="options.onOK()" data-ng-bind="options.okBtnText">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="options.onCancel()" data-ng-bind="modalOptions.cancelBtnText"></button>
+	</footer>
+</div>

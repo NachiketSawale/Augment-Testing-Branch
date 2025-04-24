@@ -1,0 +1,17 @@
+<div class="container-fluid ribalert alert alert-dismissable" data-ng-class="alertclass" data-ng-show="error.show">
+	<div class="row">
+		<div class="col-xs-2 rib-alert-col0">
+			<img data-ng-src="{{error.icon}}" data-ng-click="error.iconFunction()" data-ng-show="error.iconCol == 0"/>
+			<span data-ng-show="error.messageCol == 0" data-ng-bind="error.message"></span>
+		</div>
+		<div class="col-xs-8 rib-alert-col1">
+			<img data-ng-src="{{error.icon}}" data-ng-click="error.iconFunction()" data-ng-show="error.iconCol == 1"/>
+			<span data-ng-show="error.messageCol == 1" data-ng-bind="error.message"></span>
+		</div>
+		<div class="col-md-2 rib-alert-col2">
+			<img data-ng-src="{{error.icon}}" data-ng-click="error.iconFunction()" data-ng-show="error.iconCol == 2"/>
+			<span data-ng-show="error.messageCol == 2" data-ng-bind="error.message"></span>
+			<button type="button" data-ng-show="error.dismissable" class="close" data-ng-click="error.show = false">&times;</button>
+		</div>
+	</div>
+</div>

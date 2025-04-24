@@ -1,0 +1,25 @@
+<style>
+	.margin10 {
+		margin: 10px;
+		width: inherit;
+	}
+
+	.bulkError {
+		width: 25px;
+		height: 25px;
+		border: none;
+	}
+
+</style>
+<div data-ng-controller="platformBulkEditorController" class="bulk-editor-container">
+	<div class="flex-box margin10">
+		<div ng-if="bulkConfig.valid === false" title="{{'platform.bulkEditor.invalidConfig' | translate}}"
+		     class="bulkError invalid-cell"></div>
+		<div class="text-center  flex-element" data-placeholder="{{'platform.bulkEditor.configName' | translate}}"
+		     data-ng-model="bulkConfig" data-options="inputSelectOptions"
+		     data-model-options="{debounce:150}" data-domain-control data-domain="inputselect"></div>
+	</div>
+	<div basics-common-rule-editor data-rule-editor-manager="manager" data-fake-create="true" data-hierarchy="false"
+	     data-rule-definition="bulkGroup"
+	     class="filler"></div>
+</div>

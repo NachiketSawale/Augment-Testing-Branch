@@ -1,0 +1,54 @@
+{
+  "model": {
+    "simulation": {
+      "cockpitTitle": "Simulation Cockpit",
+      "open": "Open...",
+      "play": "Play",
+      "pause": "Pause",
+      "stop": "Stop",
+      "faster": "Faster",
+      "slower": "Slower",
+      "monthBack": "One month back",
+      "monthForward": "One month ahead",
+      "weekBack": "One week back",
+      "weekForward": "One week ahead",
+      "dayBack": "One day back",
+      "dayForward": "One day ahead",
+      "goTo": "Jump to date...",
+      "goToTitle": "Jump to Date",
+      "noData": "(no timeline loaded)",
+      "loadTimelineTitle": "Load Timeline",
+      "schedules": "Schedules",
+      "estimates": "Estimates",
+      "model": "Model",
+      "noEvents": "No events were found based upon the supplied parameters.",
+      "noEventsTitle": "No Events Found",
+      "isIncluded": "Include",
+      "animationControl": "Animation control",
+      "simulationSpeed": "Simulation speed",
+      "dateKind": "Simulated Dates",
+      "dateKindCurrent": "Current",
+      "dateKindPlanned": "Planned",
+      "eventsForModel": "Linked to Model",
+      "hasEventsForModel": "Yes",
+      "hasNoEventsForModel": "No",
+      "timeline": {
+        "refresh": "Reload Data for Timeline {{timeline}}",
+        "delete": "Remove Timeline {{timeline}}"
+      },
+      "pinnedSchedAndEst": "Pinned Schedule/Estimate ({{dateKind}})",
+      "timelineName": "Timeline Name",
+      "autoValueHint": "(leave blank to auto-generate name)",
+      "simFilterTitle": "Simulation: {{name}}",
+      "simFilterDisposedSuffix": " (Disposed)",
+      "filter": {
+        "stateDesc": "{{timeline}} - 3D meshes: {{appearing}} added, {{disappearing}} removed, {{modified}} modified, {{temporary}} temporary."
+      },
+      "timelineSelector": "Select Timeline",
+      "timelineSelectorStep": "Select Timeline",
+      "timelineSelectorStepDesc": "Please select one of the available timelines to proceed.",
+      "timelineSelectorDefault": "(Default)",
+      "loadTimeline": "Load Timeline..."
+    }
+  }
+}

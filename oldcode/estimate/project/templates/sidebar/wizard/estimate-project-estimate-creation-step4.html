@@ -1,0 +1,14 @@
+<div class="modal-wrapper subview-container grid-wrapper">
+    <div class="toolbar"><h2 class="title">{{'estimate.project.estimateCreationWizard.gridVintageAttributes' | translate}}</h2>
+        <h2 class="title"> {{'| Total Current Value ($):'}} {{totalVintage | number : 2}} </h2>
+        <div data-platform-menu-list data-list="tools" ></div>
+    </div>
+    <platform-Grid data="gridOptionsVintageAttributesSettings" style="height: 500px;"></platform-Grid>
+</div>
+<div height="20px"></div>
+<div class="modal-wrapper subview-container grid-wrapper">
+    <div class="toolbar"><h2 class="title">{{'estimate.project.estimateCreationWizard.gridTargetValues' | translate}}</h2>
+        <div data-platform-menu-list data-list="toolsTarget"></div>
+    </div>
+    <platform-Grid data="gridOptionsTargetValuesSettings" style="height: 500px;"></platform-Grid>
+</div>

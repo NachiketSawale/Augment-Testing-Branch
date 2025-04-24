@@ -1,0 +1,300 @@
+<script type="text/ng-template" id="main-view-tabbar">
+	<div id="tabbar" class="flex-element">
+		<ul class="tabs">
+			<li data-ng-repeat="tab in tabs track by $id(tab)" id="tab_{{tab.Id}}" data-ng-class="{active: isActive($index),disabled: isDisabled($index) }" class="tab" style="display: block;">
+				<div class="tab-wrapper" data-ng-click="onTabClicked($index)">
+					<span data-ng-bind="getTitle(tab)" style="color: inherit"></span>
+					<div class="divider"></div>
+					<div class="btn-group toolbar-icons" data-dropdown data-is-open="tab.open">
+						<button class="button tab-dropdown tlb-icons ico-menu"
+						        data-ng-click="openPopupLayoutMenue($index, $event, tab)"></button>
+
+						<input type="file" id="layoutinport" name="files[]" accept=".lsv" style="display: none;"/>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="tabbar-buttons">
+		<button class="overflow-anchor dropdown-toggle menu-button tlb-icons ico-menu fullheight" data-ng-click="openPopupOverflowAnchor($event)" data-ng-attr-title="{{ 'platform.layoutsystem.anchorButtonTitle' | translate }}"
+		        style="display: none;"></button>
+		<button class="control-icons ico-close fullheight" data-ng-click="home()" data-ng-attr-title="{{ 'platform.layoutsystem.closeModuleButton' | translate }}"></button>
+	</div>
+</script>
+<script type="text/ng-template" id="main-view-tabbar-dropdown-container">
+	<ul>
+		<li data-ng-if="fn.enabled" data-ng-repeat="fn in defaultFunctions">
+			<button data-ng-click="fn.execute(tab.activeView)" data-ng-class="fn.css" data-ng-bind="fn.description"><i class="test"></i></button>
+		</li>
+		<li data-ng-repeat="(type, views) in tab.grouped track by $id(views)" data-ng-if="userViewsVisible(type,views)">
+			<ul>
+				<li>
+					<button class="title" disabled data-ng-bind="getHeader(type)"></button>
+				</li>
+				<li class="flex-box" data-ng-repeat="view in views track by $id(view)" data-ng-if="!view.hidden" data-ng-class="view.css">
+					<button data-ng-click="changeView(view,$index)" data-ng-bind="view.Description"></button>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</script>
+<script type="text/ng-template" id="subview-overlay">
+	<div class="subview-overlay filler flex-element flex-box"></div>
+</script>
+<script type="text/ng-template" id="subview-container-2">
+	<div class="filler flex-box flex-column subview-container" data-platform-context-menu data-context-items="tools">
+		<div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+			<h2 class="title fix {{getIconClass()}}" data-ng-bind="getTitle()" title="{{getTitle()}}"></h2>
+			<div data-ng-hide="hideToolbar()" data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+		</div>
+		<div class="flex-box flex-column flex-element subview-content relative-container" data-sub-container-view></div>
+	</div>
+</script>
+<script type="text/ng-template" id="split-container">
+	<ng-transclude class="splitcontainer"></ng-transclude>
+</script>
+<script type="text/ng-template" id="splitview-container">
+	<div class="filler flex-box flex-column splitview-container">
+		<div data-ng-hide="hideHeader()" class="splitview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+			<h2 class="title fix {{getIconClass()}}" data-ng-bind="title" title="title"></h2>
+			<div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+		</div>
+		<div class="flex-box flex-column flex-element subview-content splitview-content relative-container"></div>
+	</div>
+</script>
+<script type="text/ng-template" id="layout-editor">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{modalOptions.headerText}}</h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close()"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+	<section class="modal-body">
+		<div id="layout-editor-content" data-layout-editor-content class="flex-element flex-box"></div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="layoutOK">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</script>
+<script type="text/ng-template" id="layout-editor-content.html">
+	<div platform-menu-list data-list="layoutBar" data-init-once="true"></div>
+	<!-- <div data-ng-include="getTemplate()" class="flex-element"></div>-->
+	<div data-ng-include="activeTemplate" class="flex-box fullwidth"></div>
+</script>
+<script type="text/ng-template" id="layout-editor-container.html">
+	<div class="filler flex-box flex-column subview-container filler-absolute">
+		<div class="subview-header toolbar">
+			<h3 class="title font-bold" data-ng-bind="containerTitle"></h3>
+			<div data-platform-menu-list data-list="editorTools"></div>
+		</div>
+
+		<div class="sortable-container flex-element overflow fullheight flex-box flex-column">
+			<div data-as-sortable="dropHandler" data-ng-model="optionsList" class="subview-content fullheight">
+				<div data-ng-repeat="opt in optionsList track by opt.uuid" data-as-sortable-item class="platform-form-group">
+               <span as-sortable-item-handle class="flex-box flex-element platform-form-row">
+                  <span class="input-group-addon dragzone control-icons ico-grip"></span>
+	               <div class="input-group flex-box cursor-pointer" style="width: 100%;">
+		               <div data-domain-control
+		                    data-domain="select"
+		                    data-options="opt"
+		                    class="ellipsis"
+		                    data-model="opt.selected">
+		               </div>
+							<div data-ng-if="opt.selected"
+							     data-domain-control
+							     data-domain="select"
+							     data-model="opt.shortcut"
+							     data-options="opt.alpha"
+							     class="flex-element" style="width: 30px;">
+		               </div>
+			            <span data-ng-if="opt.selected" class="input-group-btn form-control flex-element">
+								<button class="btn control-icons ico-input-delete"
+								        ng-click="removeOptionByUUID(opt)">
+								</button>
+							</span>
+	               </div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/ng-template" id="layout-DropDownBtn.html">
+	<span class="dropdown">
+        <div class="input-group form-control">
+	        <!--<span ng-if="options1.showDragZone" class="input-group-addon dragzone">@</span>-->
+	         <label class="input-group-content" ng-bind="selectedItem[options1.displayMember]"></label>
+				<span class="input-group-btn">
+						<button ng-show="isSelected()" class="btn btn-default control-icons ico-input-delete"
+						        ng-click="removeDropdown()">
+						</button>
+						<button id="btnToggle" class="btn btn-default control-icons ico-down" aria-expanded="true"
+						        data-toggle="dropdown">
+						</button>
+
+						<ul class="dropdown-menu max-sized pull-right" role="menu" aria-labelledby="btnToggle">
+							<li role="presentation" data-ng-hide="item.isHidden" ng-repeat="item in options1.items"><a
+								role="menuitem" ng-click="setItem(item[options1.valueMember])" tabindex="-1">{{item[options1.displayMember]}}</a>
+							</li>
+
+						</ul>
+				</span>
+        </div>
+    </span>
+</script>
+<script type="text/ng-template" id="layout-DropDownBtnHtml.html">
+	<span class="dropdown">
+        <div class="input-group form-control">
+	        <!--<span ng-if="options1.showDragZone"  class="input-group-addon dragzone">@</span>-->
+	        <label class="input-group-content" ng-bind-html="selectedItem[options1.displayMember]"></label>
+			   <span class="input-group-btn">
+                <button id="btnToggle" class="btn btn-default control-icons ico-down" aria-expanded="true"
+                        data-toggle="dropdown"></button>
+                <ul class="dropdown-menu max-sized pull-right" role="menu" aria-labelledby="btnToggle">
+	                <li role="presentation" data-ng-hide="item.isHidden" ng-repeat="item in options1.items">
+		                <a role="menuitem" ng-click="setItem(item[options1.valueMember])" tabindex="-1"
+		                   ng-bind-html="item[options1.displayMember]"></a>
+	                </li>
+                </ul>
+			</span>
+        </div>
+    </span>
+</script>
+<script type="text/ng-template" id="layout-save-dialog.html">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body" data-platform-form-adjust-label>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label ng-binding">{{labels[0].description}}</label>
+
+				<div class="platform-form-col">
+					<select class="form-control" data-ng-model="selections.selectedType"
+					        data-ng-options="type.name for type in viewTypes" data-ng-change="selectedTypeChanged()">
+					</select>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label ng-binding">{{labels[1].description}}</label>
+				<div class="platform-form-col">
+					<select class="form-control overflow" size="5" data-ng-model="selections.selectedView"
+					        data-ng-options="view.dialogName for view in displayedViews" data-ng-change="selectedViewChanged()" >
+						<option value="" data-ng-if="showIt"></option>
+					</select>
+				</div>
+			</div>
+
+			<div class="platform-form-row" ng-show="showSaveFilterInput">
+				<label class="platform-form-label ng-binding">{{labels[2].description}}</label>
+
+				<div class="platform-form-col">
+					<div data-domain-control data-domain="select"
+					     data-options="selections.filterDefs"
+					     data-model="selections.selectedFilter"
+					     class="enhanced" data-ng-disabled="disableInput"
+					     data-change="onFilterChanged()"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label ng-binding">{{labels[4].description}}</label>
+				<div class="platform-form-col">
+					<input type="checkbox" class="form-control" ng-model="selections.loadDataModuleStart" data-ng-disabled="disableInput|| disableLoadDataModuleStart"/>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label ng-binding">{{labels[5].description}}</label>
+				<div class="platform-form-col">
+					<input type="checkbox" class="form-control" ng-model="selections.loadDataTabChanged" data-ng-disabled="disableInput"/>
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-if="selections.selectedType.id !== 'u'">
+				<label class="platform-form-label">{{labels[3].description}}</label>
+				<div class="platform-form-col">
+					<div data-domain-control data-show="selections.selectedType.id !== 'u'"
+					     data-model-options="{debounce:1000}"
+					     data-domain="customtranslate"
+					     data-options='viewnameCtrlOptions'
+					     data-model="selections.inputView.Description$tr$"
+					     data-change="inputChanged()">
+					</div>
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-if="selections.selectedType.id === 'u'">
+				<label class="platform-form-label ng-binding">{{labels[3].description}}</label>
+				<div class="platform-form-col">
+					<input type="text" class="form-control" ng-model="selections.inputView.Description" data-ng-change="inputChanged()"
+					       data-ng-disabled="disableInput" enter-key-pressed="saveview"  />
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer flex-box flex-row">
+		<button type="button" class="btn btn-default pull-left" data-ng-click="modalOptions.delete()"
+		        data-ng-disabled="disableDelete">
+			{{modalOptions.deleteButtonText}}
+		</button>
+		<button type="button" class="btn btn-default pull-left" data-ng-click="modalOptions.default()"
+		        data-ng-disabled="disableDefault()">
+			{{modalOptions.defaultButtonText}}
+		</button>
+		<button data-ng-if="selections.selectedType.id !== 'u'" type="button" class="btn btn-default pull-left"
+		        data-ng-click="modalOptions.renameTranslationObject()" data-ng-disabled="disableRename()">
+			{{modalOptions.renameButtonText}}
+		</button>
+		<button data-ng-if="selections.selectedType.id === 'u'" type="button" class="btn btn-default pull-left" data-ng-click="modalOptions.rename()"
+		        data-ng-disabled="disableRename()">
+			{{modalOptions.renameButtonText}}
+		</button>
+		<span style="flex: 1; min-width: 50px;"></span>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+		        data-ng-disabled="disableOkay()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</script>
+<script type="text/ng-template" id="layout-export-dialog.html">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body" data-platform-form-adjust-label>
+		<platform-grid data="gridData" style="height: 200px;"></platform-grid>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+		        data-ng-disabled="disableOkay()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</script>
+<script type="text/ng-template" id="layout-import-dialog.html">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body" data-platform-form-adjust-label>
+		<span>{{modalOptions.contentText}}</span>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.yes()">
+			{{modalOptions.yesButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.no()">
+			{{modalOptions.noButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</script>
+

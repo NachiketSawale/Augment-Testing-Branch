@@ -1,0 +1,39 @@
+<div id="qtoDetailFormulaResultDetails" data-ng-controller="qtoDetailFormulaResultDetailsController" class="flex-element flex-box flex-column flex-basis-auto overflow-hidden">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{modalTitle | translate }} </h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+
+	<section class="modal-body">
+		<div class="fullheight">
+			<div class="fullheight" style="overflow-y: auto">
+				<div data-accordion data-close-others="false" data-ng-show="showFormulaResult">
+					<div data-accordion-group data-is-open="showFormulaResult">
+						<div data-accordion-heading>
+							<span class="platform-form-group-header-text">{{'qto.main.FormulaResult' | translate}}</span>
+
+							<span class="platform-form-group-header">
+                                <div data-ng-show="showFormulaResult" class="toggleImg control-icons ico-up"></div>
+                                <div data-ng-show="!showFormulaResult" class="toggleImg control-icons ico-down"></div>
+                            </span>
+						</div>
+
+						<div class="platform-form-group">
+							<div class="platform-form-row">
+								<div class="platform-form-col">
+										<textarea class="form-control lg-12 md-12 " data-ng-model="formulaResult" readonly></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+	</footer>
+</div>

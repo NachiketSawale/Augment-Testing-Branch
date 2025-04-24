@@ -1,0 +1,27 @@
+<div ng-controller="procurementPriceComparisonCreateIdealQuoteDialogController">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+
+    <section class="modal-body">
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <div class="platform-form-col">
+                    <label class="platform-form-label ng-binding">{{'procurement.pricecomparison.createIdealQuoteDialog.body' | translate}}</label>
+                    <div class="lg-12 md-12" data-procurement-pricecomparison-simple-quote-lookup
+                         data-ng-model="data.selectedItemId"
+                         data-entity="data.selectedItem"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+	    <div class="custom-btn-group">
+	     <button type="button" class="btn btn-default" data-ng-click="modalOptions.deleteData()"> {{'procurement.pricecomparison.deleteIdealQuote.deleteButton' | translate}}</button>
+	    </div>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"> {{'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.proceeding" data-info="modalOptions.proceedingInfo"></div>
+</div>

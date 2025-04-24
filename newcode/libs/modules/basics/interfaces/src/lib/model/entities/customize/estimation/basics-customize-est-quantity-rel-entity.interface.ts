@@ -1,0 +1,13 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { IDescriptionInfo, IEntityBase, IEntityIdentification } from '@libs/platform/common';
+
+export interface IBasicsCustomizeEstQuantityRelEntity extends IEntityBase, IEntityIdentification {
+	Icon: number;
+	DescriptionInfo?: IDescriptionInfo;
+	Sorting: number;
+	IsDefault: boolean;
+	IsLive: boolean;
+}

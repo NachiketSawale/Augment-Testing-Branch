@@ -1,0 +1,203 @@
+{
+	"procurement": {
+		"quote": {
+			"billingSchemaContainer": "Billing Schema",
+			"headerBusinessPartnerGroup": "Find Business Partner",
+			"itemPriceCondition": "Price Condition",
+			"itemFactor": "Factor",
+			"headerRfqHeaderCode": "RfQ Header",
+			"itemDeliveryAddress": "Delivery Address",
+			"headerFormGroupDeliveryRequirements": "Delivery Requirements",
+			"toolbar": {
+				"filterByRfQ": "List all quotations under current RfQ"
+			},
+			"quoteContainerGridTitle": "Quotes",
+			"quoteContainerFormTitle": "Quote Details",
+			"itemPrice": "Price",
+			"itemDescription2": "Description 2",
+			"rfqDocument": {
+				"prcDocumentContainerFormTitle": "RFQ Document Details",
+				"prcDocumentContainerGridTitle": "RfQ Documents"
+			},
+			"changeQuoteCodeWizard": "Change Quote Code",
+			"headerFormGroupSupplier": "Bidder",
+			"viewItem": "Item View",
+			"evaluatoinContainerTitle": "Quote Evaluation",
+			"headerValidated": "Validated",
+			"headerQuoteHeaderDescription": "Basis Quote Description",
+			"headerRfqHeaderDescription": "RfQ Header Description",
+			"viewGeneral": "General View",
+			"itemQuantity": "Quantity",
+			"headerEvaluation": "Evaluation",
+			"headerQuoteHeaderCode": "Basis Quote",
+			"headerShortlisted": "Shortlisted",
+			"itemRequiredBy": "Required By",
+			"importQuote": {
+				"replacementItemItemNo": "Replace ItemNo",
+				"emptyErrorMessage": "{{DisplayName}} should map to source field",
+				"mustSelectQuote": "Please select a quotation first.",
+				"userDefined3": "Userdefined3",
+				"importAll": "Import to all requisitions",
+				"userDefined5": "Userdefined5",
+				"importSelected": "Import to selected requisitions",
+				"prcStructure": "Procurement structure",
+				"priceConditionType": "Price Condition Type",
+				"userDefined2": "Userdefined2",
+				"priceConditionValue": "Price Condition Value",
+				"userDefined4": "Userdefined4",
+				"reqCode": "Req Code",
+				"userDefined1": "UserDefined1",
+				"title": "Import Procurement Quote"
+			},
+			"itemPriceExtras": "Price Extras",
+			"itemOffHireDate": "Off Hire Date",
+			"itemUserDefined4": "User Defined 4",
+			"tabQuote": "Quote",
+			"headerExcluded": "Excluded",
+			"quoteStatusIsReadonly": "Please select a quote status is not readonly",
+			"itemSpecification": "Specification",
+			"headerVersion": "Version",
+			"UseSupplierPaymentTerm": "Use Supplier Payment Term",
+			"itemUoM": "UoM",
+			"itemUserDefined5": "User Defined 5",
+			"headerDataPricefixing": "Date Price Fixing",
+			"uniqueValueErrorMessage": "One quote should not have the same related requisitions",
+			"headerDateQuoted": "Quote",
+			"headerReferenceUniqueError": "The reference code should be unique",
+			"itemItemHeader": "Item",
+			"itemUserDefined3": "User Defined 3",
+			"tabGeneral": "General",
+			"itemTotal": "Total",
+			"itemMaterialNo": "Material No.",
+			"itemPriceUnit": "Price Unit",
+			"updateItContinue": "Do you want to update the price of BoQ from WIC?",
+			"viewDetail": "Detail View",
+			"itemUserDefined2": "User Defined 2",
+			"itemTotalPrice": "Total Price",
+			"headerExternalCode": "External Code",
+			"itemItemNo": "Item Number",
+			"powerbiView": "PowerBI Viewer",
+			"itemUoMDescription": "UoM Description",
+			"isChecked": "ischecked",
+			"boqHasNoWicNo": "BoQ has no WIC number and will not update!",
+			"wizard": {
+				"copyNewMaterialItem": {
+					"title": "Copy New Material Item(s) Wizard",
+					"selectItem": "Select New Item(s)",
+					"noItemNeedToCopy": "No Material Items Need To Copy"
+				},
+				"isActivateCaption": "Warning",
+				"copyNewBoqItem": {
+					"copyNewBoqItemTitle": "Copy New Boq Item",
+					"noBoqItemNeedToCopy": "No Any New Boq Item Needs To Copy!",
+					"prcBoqReferenceNo": "Procurement Boq Reference.No",
+					"copySuccessfully": "Copy Successfully!",
+					"reqHeaderCode": "ReqHeader Code",
+					"IdealQuoteNotCopy": "The selected quote is 'Ideal Quote' and cannot copy to other quotation!",
+					"selectNewBoqItem": "Select new item(s):",
+					"selectOneQuoteFirst": "Please select one quotation first!"
+				},
+				"create": {
+					"contract": {
+						"rfqStatusIsOrderedDeny": "Cannot create contract since the Request for Quote has been ordered",
+						"deny": "Cannot create contract for the selected quote as  the quote has been contracted.",
+						"qtnStatusIsOrderedDeny": "Cannot create contract since the quote has been ordered",
+						"dialog": {
+							"netTotal": "Net Total",
+							"title": "Create Contract",
+							"dateReceived": "Date Received",
+							"currency": "Currency"
+						},
+						"confirm": "Do you want to create a contract?",
+						"qtnIsOrdered": "The selected quotation contains a previous contract , do you want to create another contract again?",
+						"noQuoteRequisition": "The current quote does not has a Quote Requisition",
+						"rfqStatusIsCanceledDeny": "Cannot create contract since the Request for Quote has been canceled",
+						"createContracts": "Create separate contract by each requisition",
+						"noRequisitionsHeaderFk": "None of the requisitions has reqHeaderFk",
+						"noRequisitions": "No requisition in current quote record",
+						"success": "Create contract(s) successfully!",
+						"successfully": "Create contract(s) successfully!",
+						"fail": "Create contract failed, please review and try",
+						"newCode": "Code(s) : {{newCode}} ",
+						"rfqStatusIsQuotedDeny": "Cannot create contract without a quote",
+						"title": "Create Contract",
+						"createOneContract": "Create one contract with all requisitions"
+					}
+				},
+				"change": {
+					"status": "Change Status",
+					"code": {
+						"headerText": "Change Quote Code"
+					},
+					"statusTitle": "Change Quote Status"
+				},
+				"increase": {
+					"error": {
+						"idealBidderSelected": "The ideal bidder(s), ({{invalidQuoteCodes}}), won't increase version."
+					},
+					"version": "Increase Version"
+				},
+				"import": {
+					"noCurrentQuoteSelection": "Please select a quotation first!",
+					"importSuccessful": "Imported successfully!",
+					"header": "Import Material",
+					"importFailed": "Import Failed!"
+				},
+				"isActiveMessage": "Wizard cannot proceed due to selected record's status (not approved)!",
+				"header": "Quote  Group Name",
+				"update": {
+					"package": {
+						"updateQuantitiesAndPrice": "update quantities and prices(oc)",
+						"title": "Update Package",
+						"updatePrice": "update prices(oc) only",
+						"updatePackageFailed": "UpdatePackage Failed!",
+						"dialog": {
+							"updatePackageSucceed": "Update Package Successfully!",
+							"updatePackageFailed": "Update Package Failed!",
+							"title": "Update Package"
+						},
+						"updatePackageSucceed": "UpdatePackage Succeed!"
+					}
+				},
+				"createContact": {
+					"title": "Create Contact",
+					"failToCreateContact": "Fail to create Contact",
+					"processInfo": "Creation Processing..."
+				}
+			},
+			"tabBoq": "BoQ",
+			"isSelected": "Is Selected",
+			"emptyValueErrorMessage": "Choose a requisition",
+			"powerBIElements": "Power BI Workspaces,Dashboards and Reports",
+			"sidebar": {
+				"quoteVersion": "Quote Version",
+				"dateQuoted": "Date Quoted",
+				"dateReceived": "Date Received"
+			},
+			"selectedQuote": "Please select a quote first",
+			"itemUserDefined1": "User Defined 1",
+			"headerCreateDialog": "Create Quote",
+			"itemStatus": "Status",
+			"tabDetails": "Detail",
+			"itemOnHireDate": "On Hire Date",
+			"entityUserDefinedDate": "User Defined Date {{p_0}}",
+			"entityVariantCode": "Variant Code",
+			"entityVariantDescription": "Variant Description",
+			"headerFormGroupHeader": "Header",
+			"itemDescription1": "Description 1",
+			"itemPriceUnitUom": "Price Unit UoM",
+			"QuoteTitle": "Quote Search Dialog",
+			"tabItem": "Item",
+			"itemsGridTitle": "Items",
+			"itemSystemHeader": "System",
+			"netFinal": "Net Final",
+			"totalGroup": "Total",
+			"entityAmountDiscountBasis": "Amount Discount Basis",
+			"entityAmountDiscountBasisOc": "Amount Discount Basis Oc",
+			"entityPercentDiscount": "Percent Discount",
+			"entityAmountDiscount": "Amount Discount",
+			"entityAmountDiscountOc": "Amount Discount Oc",
+			"entityPercentDiscountTip": "Priority will be PA>FI>AD."
+		}
+	}
+}

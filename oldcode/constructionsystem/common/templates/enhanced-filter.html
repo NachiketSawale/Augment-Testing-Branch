@@ -1,0 +1,74 @@
+﻿<div class="filler selection-statement">
+    <div class="filler flex-box flex-column enhanced-directive-container" style="position: relative;height:100%">
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <div class="input-group form-control">
+                    <div data-dropdown-select2 style="border:none;"
+                         data-model="searchOptions.selectedItemId"
+                         data-info="filderdefcontrol"
+                         data-change="searchOptions.selectionChanged()"
+                         data-options="searchOptions.dropboxOptions"
+                         data-use-deep-watch="true"
+                         data-template-Result="searchOptions.dropboxOptions.templateResult"
+                         data-template-Selection="searchOptions.dropboxOptions.templateResult"
+                         data-matchfunction="$parent.dropDownMatcher">
+                    </div>
+                    <span class="input-group-btn">
+                        <button type="button"
+                                class="btn btn-default control-icons tlb-icons ico-object-restrictions-1"
+                                data-ng-class="{'active': searchOptions.filterRequest.treePartMode === 'min'}"\
+                                title="{{ 'model.viewer.selectionWz.treePartMinimal' | translate }}"
+                                data-ng-click="searchOptions.filterRequest.treePartMode = 'min'; searchOptions.onSaveAsSelectionStatement();">
+                        </button>
+                        <button type="button"
+                                class="btn btn-default control-icons tlb-icons ico-object-restrictions-3"
+                                data-ng-class="{'active': searchOptions.filterRequest.treePartMode === 'l'}"
+                                title="{{ 'model.viewer.selectionWz.treePartLeaves' | translate }}"
+                                data-ng-click="searchOptions.filterRequest.treePartMode = 'l'; searchOptions.onSaveAsSelectionStatement();">
+                        </button>
+	                     <button type="button"
+	                             class="btn btn-default control-icons tlb-icons ico-object-restrictions-5"
+	                             data-ng-class="{'active': searchOptions.filterRequest.treePartMode === 'mincl'}"
+	                             title="{{ 'model.viewer.selectionWz.treePartMinimalCompositeAndLeaves' | translate }}"
+	                             data-ng-click="searchOptions.filterRequest.treePartMode = 'mincl'; searchOptions.onSaveAsSelectionStatement();">
+                        </button>
+
+                        <button class="btn btn-default control-icons ico-refresh" type="button"
+                                data-ng-attr-title="{{searchOptions.refreshBtnText}}"
+                                data-ng-click="searchOptions.onRefreshFilter()">
+                        </button>
+                        <button class="btn btn-default control-icons ico-input-delete2" type="button"
+                                data-ng-attr-title="{{searchOptions.onDeleteFilterBtnText}}"
+                                data-ng-disabled="!searchOptions.canDeleteFilter()"
+                                data-ng-click="searchOptions.onDeleteFilter()">
+                        </button>
+                        <button class="btn btn-default tlb-icons ico-save" type="button"
+                                data-ng-attr-title="{{searchOptions.onSaveFilterBtnText}}"
+                                data-ng-disabled="!searchOptions.canSaveFilter()"
+                                data-ng-click="searchOptions.onSaveFilter()">
+                        </button>
+                        <button class="btn btn-default tlb-icons ico-save-as" type="button"
+                                data-ng-attr-title="{{searchOptions.onSaveAsFilterBtnText}}"
+                                data-ng-disabled="!searchOptions.canSaveFilterAs()"
+                                data-ng-click="searchOptions.onSaveAsFilter()">
+                        </button>
+                        <button class="btn btn-default tlb-icons ico-undo" type="button"
+                                data-ng-attr-title="{{searchOptions.onRevertFilterBtnText}}"
+                                data-ng-disabled="!searchOptions.canRevertFilter()"
+                                data-ng-click="searchOptions.onRevertFilter()">
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="enhanced-directive">
+            <div data-cos-common-object-filter-filter-definition data-options="searchOptions.enhancedFilter">
+            </div>
+        </div>
+        <div data-cos-common-disable-overlay data-show="!searchOptions.active"
+             data-info="searchOptions.canNotEditMsg" data-active="searchOptions.active">
+        </div>
+    </div>
+    <div data-cloud-common-overlay data-loading="searchOptions.filterDataLoading"></div>
+    <div data-ng-include="'constructionsystem.common/templates/selection-statement-filterdef-templates.html'"></div>
+</div>

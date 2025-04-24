@@ -1,0 +1,27 @@
+<div data-ng-controller="procurementInvoiceHeaderCorrectDialogController" class="modal-wrapper">
+  <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+  <section class="modal-body">
+    <div class="row" data-ng-if="showCodeInput">
+      <div class="col-md-12" entity="currentItem"
+           data-platform-form data-form-options="configureOptions"></div>
+    </div>
+    <div class="row" data-ng-if="!showCodeInput">
+      <div class="col-md-12" >{{messageText}}</div>
+    </div>
+  </section>
+  <footer class="modal-footer">
+    <button type="button"
+            class="btn btn-default"
+            data-ng-if="!cannotCorrect"
+            data-ng-disabled="disableOk()"
+            data-ng-click="ok()"
+            data-ng-bind="::'basics.common.button.ok' | translate"></button>
+    <button type="button"
+            class="btn btn-default"
+            data-ng-if="!correctSuccess"
+            data-ng-disabled="disableCancel()"
+            data-ng-click="cancel()"
+            data-ng-bind="::'basics.common.button.cancel' | translate"></button>
+  </footer>
+  <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

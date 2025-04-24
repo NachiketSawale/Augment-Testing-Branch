@@ -1,0 +1,38 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section>
+
+    <div class="platform-form-group" style="padding-bottom: 6px;padding-left: 50px;">
+        <div class="platform-form-row form-group">
+            <div class="platform-form-group">
+                <div class="platform-form-row form-group">
+                    <div class="radio spaceToUp">
+                        <label class="platform-form-label" style="white-space: normal;">
+                            <input type="radio"
+                                   name="saveType"
+                                   value="newVersion"
+                                   data-ng-model="modalOptions.value.selectedValue"/>
+                            {{'procurement.pricecomparison.saveNewVersion' | translate}}
+                        </label>
+                    </div>
+
+                    <div class="radio spaceToUp">
+                        <label class="platform-form-label" style="white-space: normal;">
+                            <input type="radio"
+                                   name="saveType"
+                                   value="originalVersion"
+                                   data-ng-model="modalOptions.value.selectedValue"/>
+                            {{'procurement.pricecomparison.saveOriginalVersion' | translate}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.ok()">
+        {{'cloud.common.ok' | translate}}
+    </button>
+</footer>

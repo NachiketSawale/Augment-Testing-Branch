@@ -1,0 +1,6 @@
+<div class="title-toolbar">
+    <div *ngIf="title" class="title">{{ title | platformTranslate}}</div>
+    <div *ngIf="toolbarData">
+        <ui-common-toolbar [toolbarData]="toolbarData!"></ui-common-toolbar>
+    </div>
+</div>

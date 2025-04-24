@@ -1,0 +1,46 @@
+<div class="flex-element" data-ng-controller="cloudTranslationImportFileUploadDialogController">
+    <div data-cloud-common-overlay data-loading="loading" data-info2="dialog.modalOptions.value.spinnermsg"></div>
+
+    <div class="flex-box flex-element">
+        <div class="margin-top-xld" style="border-right: solid 1px #dcdcdc; padding-right: 10px">
+            <i class="block-image app-icons ico-tables btn-square-28" style="background-size: 56px;"></i>
+            <i class="block-image control-icons ico-arrow-right btn-square-28"></i>
+            <i class="block-image app-icons ico-translation btn-square-28" style="background-size: 56px;"></i>
+        </div>
+        <div class="flex-element margin-top-xld" style="padding-left: 10px;">
+            <div data-ng-show="showFileUpload">
+                <h3>{{dialog.modalOptions.value.introText}}</h3>
+            </div>
+
+            <div class="control-directive input-group form-control" data-ng-show="showFileUpload">
+                <input type="file" class="form-control hidden" id="fileElement" accept=".xlsx">
+                <input type="text" class="input-group-content" id="fileName" readonly placeholder="Choose an EXCEL File"
+                       data-ng-model="fileName"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default input-sm" data-ng-click="chooseFile($event)">
+                        <img data-ng-src="cloud.style/content/images/tlb-icons.svg#ico-upload"
+                             src="cloud.style/content/images/tlb-icons.svg#ico-upload">
+                    </button>
+                </span>
+            </div>
+
+            <div class="platform-form-group" data-ng-show="languageselection">
+                <div class="platform-form-row" ng-repeat="info in dialog.modalOptions.value.infoList">
+                    <div class="platform-form-label">{{info.key}}</div>
+                    <div class="platform-form-col">
+                        <input type="text" class="form-control" readonly="readonly" ng-model="info.value">
+                    </div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">{{dialog.modalOptions.value.checkboxTitle}}</div>
+                    <div class="platform-form-col">
+                        <div data-platform-checkbox-list data-items="dialog.modalOptions.value.checkboxItems"
+                             data-options="dialog.modalOptions.value.checkboxOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

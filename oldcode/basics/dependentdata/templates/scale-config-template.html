@@ -1,0 +1,309 @@
+<div data-ng-controller="basicsDependentScaleConfigController">
+    <!--title-->
+    <div data-accordion data-close-others="false">
+        <div data-accordion-group data-is-open="inputOpen">
+        <div data-accordion-heading>
+            <span class="platform-form-group-header-text">{{'basics.dependentdata.entityTitleConfig' | translate}}</span>
+                <span class="platform-form-group-header">
+                 <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+                </span>
+        </div>
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.dependentdata.show' | translate}}</label>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="boolean" data-ng-model="modalOptions.dataItem.title.show"></div>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.dependentdata.position' | translate}}</label>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="select" data-ng-model="modalOptions.dataItem.title.position" data-options="positionOptions"></div>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.dependentdata.color' | translate}}</label>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="color" data-ng-model="modalOptions.dataItem.title.color"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<!--legend-->
+  <div data-accordion data-close-others="false">
+        <div data-accordion-group data-is-open="inputOpen">
+            <div data-accordion-heading>
+                <span class="platform-form-group-header-text">{{'basics.dependentdata.entityLegendConfig' | translate}}</span>
+                <span class="platform-form-group-header">
+                 <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+                </span>
+            </div>
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <label class="platform-form-label">{{'basics.dependentdata.show' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="boolean" data-ng-model="modalOptions.dataItem.legend.show"></div>
+                    </div>
+                </div>
+                <div class="platform-form-row">
+                    <label class="platform-form-label">{{'basics.dependentdata.position' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="select" data-ng-model="modalOptions.dataItem.legend.position" data-options="positionOptions"></div>
+                    </div>
+                </div>
+                <div class="platform-form-row">
+                    <label class="platform-form-label">{{'basics.dependentdata.color' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="color" data-ng-model="modalOptions.dataItem.legend.color"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+
+        <!--group-->
+  <div data-accordion data-close-others="false">
+        <div data-accordion-group data-is-open="inputOpen">
+            <div data-accordion-heading>
+                <span class="platform-form-group-header-text">{{'basics.dependentdata.entityGroupConfig' | translate}}</span>
+                <span class="platform-form-group-header">
+                 <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+                </span>
+            </div>
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <label class="platform-form-label">{{'basics.dependentdata.selectable' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="boolean" data-ng-model="modalOptions.dataItem.group.enable"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+        <!--x axes-->
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="inputOpen">
+            <div data-accordion-heading>
+                <span class="platform-form-group-header-text">{{'basics.dependentdata.entityxAxesConfig' | translate}}</span>
+                <span class="platform-form-group-header">
+                 <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+                </span>
+            </div>
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <label class="platform-form-label">{{'basics.dependentdata.scaleType' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="select"
+                             data-model="modalOptions.dataItem.scale.x.type" data-options="modalOptions.scaleXOptions" data-change="scaleTypeChanged(modalOptions.dataItem.scale.x.type)">
+                        </div>
+                    </div>
+                </div>
+               <!--linear -->
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.step' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                        <input class="input-group-content" data-platform-numeric-converter data-ng-model="modalOptions.dataItem.scale.x.linear.step" data-domain="integer" data-ng-change="scaleStepChange(modalOptions.dataItem.scale.x.linear)" />
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearXValue('step')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.minValue' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter data-ng-model="modalOptions.dataItem.scale.x.linear.min" data-domain="integer" data-ng-change="scaleMinMaxChange(modalOptions.dataItem.scale.x.linear)" />
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearXValue('min')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.maxValue' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter data-ng-model="modalOptions.dataItem.scale.x.linear.max" data-domain="integer" data-ng-change="scaleMinMaxChange(modalOptions.dataItem.scale.x.linear)"/>
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearXValue('max')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.tickCount' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter data-ng-model="modalOptions.dataItem.scale.x.linear.tickCount" data-domain="integer" data-ng-change="scaleTickChange(modalOptions.dataItem.scale.x.linear)"/>
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearXValue('tickCount')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.uom' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="description" data-model="modalOptions.dataItem.scale.x.linear.uom" ></div>
+                    </div>
+                </div>
+                <!--time -->
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='time'">
+                    <label class="platform-form-label">{{'basics.dependentdata.displayFormat' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="select"
+                             data-model="modalOptions.dataItem.scale.x.time.dataFormat" data-options="formatOptions">
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='time'">
+                    <label class="platform-form-label">{{'basics.dependentdata.unit' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="select"
+                             data-model="modalOptions.dataItem.scale.x.time.unit" data-options="unitOptions">
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='time'">
+                    <label class="platform-form-label">{{'basics.dependentdata.step' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter data-ng-model="modalOptions.dataItem.scale.x.time.step" data-domain="integer" data-ng-change="scaleStepChange(modalOptions.dataItem.scale.x.time)" />
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearTimeXValue('step')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='time'">
+                    <label class="platform-form-label">{{'basics.dependentdata.minValue' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="form-control" data-domain-control data-domain="datetimeutc" data-ng-model="modalOptions.dataItem.scale.x.time.min" />
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='time'">
+                    <label class="platform-form-label">{{'basics.dependentdata.maxValue' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="form-control" data-domain-control data-domain="datetimeutc" data-ng-model="modalOptions.dataItem.scale.x.time.max" />
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='time'">
+                    <label class="platform-form-label">{{'basics.dependentdata.tickCount' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter data-ng-model="modalOptions.dataItem.scale.x.time.tickCount" data-domain="integer" data-ng-change="scaleTickChange(modalOptions.dataItem.scale.x.time)"/>
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearTimeXValue('tickCount')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='time'">
+                    <label class="platform-form-label">{{'basics.dependentdata.uom' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="description" data-model="modalOptions.dataItem.scale.x.time.uom" ></div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.x.type=='category'">
+                    <label class="platform-form-label">{{'basics.dependentdata.customCategory' | translate}}</label>
+                    <div class="platform-form-col">
+                        <input type="checkbox" data-ng-model="modalOptions.dataItem.scale.x.customCategory" />
+                    </div>
+                </div>
+            </div>
+            <!--category -->
+            <div ng-if="modalOptions.dataItem.scale.x.type=='category'">
+                <section>
+                    <div class="toolbar">
+                        <div data-platform-menu-list data-list="tools"></div>
+                    </div>
+                </section>
+                <section class="modal-body">
+                    <div cloud-common-overlay data-loading="isBusy" data-info="busyInfo"></div>
+                    <div data-platform-alert data-error="error"></div>
+                    <div class="flex-box flex-column filler subview-container">
+                        <platform-Grid data="gridData"></platform-Grid>
+                    </div>
+                </section>
+            </div>
+
+
+
+    </div>
+</div>
+    <!--y axes-->
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="inputOpen">
+        <div data-accordion-heading>
+            <span class="platform-form-group-header-text">{{'basics.dependentdata.entityyAxesConfig' | translate}} </span>
+                <span class="platform-form-group-header">
+                 <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+                </span>
+        </div>
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                    <label class="platform-form-label">{{'basics.dependentdata.scaleType' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div data-domain-control data-domain="select"
+                             data-model="modalOptions.dataItem.scale.y.type" data-options="scaleYOptions">
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.y.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.step' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter  data-ng-model="modalOptions.dataItem.scale.y.linear.step" data-domain="integer" data-ng-change="scaleStepChange(modalOptions.dataItem.scale.y.linear)"/>
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearYValue('step')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.y.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.minValue' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter  data-ng-model="modalOptions.dataItem.scale.y.linear.min" data-domain="integer" data-ng-change="scaleMinMaxChange(modalOptions.dataItem.scale.y.linear)"/>
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearYValue('min')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.y.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.maxValue' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content"  data-platform-numeric-converter data-ng-model="modalOptions.dataItem.scale.y.linear.max" data-domain="integer" data-ng-change="scaleMinMaxChange(modalOptions.dataItem.scale.y.linear)"/>
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearYValue('max')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row" ng-if="modalOptions.dataItem.scale.y.type=='linear'">
+                    <label class="platform-form-label">{{'basics.dependentdata.tickCount' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="input-group form-control">
+                            <input class="input-group-content" data-platform-numeric-converter  data-ng-model="modalOptions.dataItem.scale.y.linear.tickCount"  data-domain="integer" data-ng-change="scaleTickChange(modalOptions.dataItem.scale.y.linear)"/>
+                         <span class="input-group-btn">
+                          <button class="btn btn-default control-icons ico-input-delete input-sm" data-ng-click="clearLinearYValue('tickCount')"></button>
+                         </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.dependentdata.uom' | translate}}</label>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="description" data-model="modalOptions.dataItem.scale.y.linear.uom" ></div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

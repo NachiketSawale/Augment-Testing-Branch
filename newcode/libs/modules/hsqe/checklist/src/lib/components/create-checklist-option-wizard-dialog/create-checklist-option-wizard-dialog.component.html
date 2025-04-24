@@ -1,0 +1,14 @@
+<section class="modal-body">
+    <div style="padding-left:8px;"><i class="block-image control-icons ico-grid-stop"
+                                      style="width:30px;height:30px;background-size: 25px;"></i>{{'hsqe.CheckList.wizard.createCheckList.createNewCheckListForActivityTip' | platformTranslate}}
+    </div>
+    <div style="padding-top:10px;padding-left:5px;">{{'hsqe.CheckList.wizard.createCheckList.createNewCheckListForActivityTip2' | platformTranslate}}</div>
+    <div class="platform-form-group" style="padding-left:55px;">
+        <div *ngFor="let item of radioItemInfo" class="radio spaceToUp ">
+            <div class="platform-form-row">
+                <input type="radio" [name]='name' [value]='item.id' [(ngModel)]='checklistCreationMode'/>
+                <label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{item.displayName | platformTranslate}}</label>
+            </div>
+        </div>
+    </div>
+</section>

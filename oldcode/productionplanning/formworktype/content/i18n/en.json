@@ -1,0 +1,10 @@
+﻿{
+	"productionplanning": {
+		"formworktype": {
+			"listTitle": "Formwork Types",
+			"entityFormworktype": "Formwork Type",
+			"detailTitle": "Formwork Type Details",
+			"processTemplateFk": "Process Template"
+		}
+	}
+}

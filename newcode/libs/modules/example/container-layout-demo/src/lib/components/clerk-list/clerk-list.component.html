@@ -1,0 +1,8 @@
+
+<p>Single Image Viewer</p>
+<button class="btn ok btn btn-overflow btn-return btn.cssClass" (click)="addChangeImage(fileInput,'add')">  Add Image </button>
+<button class="btn ok btn btn-overflow btn-return btn.cssClass" (click)="addChangeImage(fileInput,'change')">  Change Image </button>
+<button class="btn ok btn btn-overflow btn-return btn.cssClass" (click)="deleteImage()">  Delete Image </button>
+<ui-common-image-view [isMultiple]="false"  [itemSrc]="(dataSet$|async)||''"></ui-common-image-view>
+
+<input #fileInput type="file" accept="image/*" hidden (change)="addImage($event)">

@@ -1,0 +1,53 @@
+<style>
+	.material-filter-char li div {
+		height: 32px;
+		align-items: center;
+	}
+
+	.material-filter-char li input[type='radio'] {
+		margin: 0 8px 0 0;
+	}
+
+	.material-filter-char .form-control {
+		margin: 0 0 8px 22px;
+		width: 200px;
+	}
+</style>
+
+<div class="material-filter-char">
+	<ul class="material-filter-content-padding">
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="startsWith" name="operator" value="{{ ::filterOperator.startsWith }}" ng-model="definition.Operator" ng-change="changeOperator($event)">
+				<label for="startsWith">{{ 'basics.material.lookup.condition.startsWith' | translate }}</label>
+			</div>
+			<div class="input-group form-control" data-ng-if="definition.Operator===filterOperator.startsWith">
+				<input type="text" class="input-group-content" data-ng-model="definition.Factors[0]">
+			</div>
+		</li>
+
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="contains" name="operator" value="{{ ::filterOperator.contains }}" ng-model="definition.Operator" ng-change="changeOperator($event)">
+				<label for="contains">{{ 'basics.material.lookup.condition.contains' | translate }}</label>
+			</div>
+			<div class="input-group form-control" data-ng-if="definition.Operator===filterOperator.contains">
+				<input type="text" class="input-group-content" data-ng-model="definition.Factors[0]">
+			</div>
+		</li>
+
+		<li>
+			<div class="fullwidth flex-box">
+				<input type="radio" id="endsWith" name="operator" value="{{ ::filterOperator.endsWith }}" ng-model="definition.Operator" ng-change="changeOperator($event)">
+				<label for="endsWith">{{ 'basics.material.lookup.condition.endsWith' | translate }}</label>
+			</div>
+			<div class="input-group form-control" data-ng-if="definition.Operator===filterOperator.endsWith">
+				<input type="text" class="input-group-content" data-ng-model="definition.Factors[0]">
+			</div>
+		</li>
+	</ul>
+
+	<div class="material-filter-divider-top">
+		<button class="btn pull-right material-filter-btn-apply" data-ng-click="apply()" data-ng-disabled="!definition.Factors[0]">{{ 'basics.material.lookup.apply' | translate }}</button>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+.app-icons {
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.app-icons.ico-itwo40-logo-wh {
+	background-image: url(../images/app-icons.svg#ico-itwo40-logo-wh); }
+
+.app-icons.ico-rib-logo {
+	background-image: url(../images/app-icons.svg#ico-rib-logo); }
+.app-icons.ico-rib-logo-text {
+	background-image: url(../images/app-icons.svg#ico-rib-logo-text); }

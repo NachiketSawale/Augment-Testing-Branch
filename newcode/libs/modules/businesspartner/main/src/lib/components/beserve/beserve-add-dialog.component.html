@@ -1,0 +1,75 @@
+<div class="flex-element flex-box flex-box">
+    <div class="flex-box flex-column" style="width: 230px;">
+        <div class="toolbar">
+            <h2 class="subtitlepad title fix">{{'businesspartner.main.crefodlg.searchcriteria' | platformTranslate }} </h2>
+        </div>
+
+        <!-- key enter only handled for the edit fields, this ensures only on event when search button pressed itself -->
+        <div class="flex-element overflow" data-cloud-desktop-on-key-enter="crefoOption.onSearch">
+            <div class="margin-top-ld">
+                <input class="form-control" type="text" [(ngModel)]="crefoOption.searchParams.query" id="onCrefoStartFocus" name="query" placeholder="{{'businesspartner.main.crefodlg.searchquery' | platformTranslate }}" data-autofocus="50" />
+            </div>
+            <div class="margin-top-ld">
+                <input class="form-control" type="text" [(ngModel)]="crefoOption.searchParams.name" name="name" data-placeholder="{{'businesspartner.main.crefodlg.searchname' | platformTranslate }}" />
+             </div>
+            <div class="margin-top-ld">
+                <input class="form-control" type="text" [(ngModel)]="crefoOption.searchParams.location" name="location" data-placeholder="{{'businesspartner.main.crefodlg.searchlocation' | platformTranslate }}" />
+            </div>
+            <div class="margin-top-ld">
+                <input class="form-control" type="text" [(ngModel)]="crefoOption.searchParams.street" name="street" data-placeholder="{{'businesspartner.main.crefodlg.searchstreet' | platformTranslate }}" />
+            </div>
+            <div class="margin-top-ld">
+                <input class="form-control" type="text" [(ngModel)]="crefoOption.searchParams.zipcode" name="zipcode" data-placeholder="{{'businesspartner.main.crefodlg.searchzipcode' | platformTranslate }}" />
+<!--                todo chi: regex or domain control is not ready-->
+<!--                <div data-domain-control data-domain="description" data-regex="^\d*$" data-model="crefoOption.searchParams.zipcode" data-placeholder="{{'businesspartner.main.crefodlg.searchzipcode'|platformTranslate }}"></div>-->
+            </div>
+            <div class="margin-top-ld">
+                <input class="form-control" type="text" [(ngModel)]="crefoOption.searchParams.areacode" name="areacode" data-placeholder="{{'businesspartner.main.crefodlg.searchareacode' | platformTranslate }}" />
+                <!--                todo chi: regex or domain control is not ready-->
+<!--                <div data-domain-control data-domain="description" data-regex="^[+-\d]*$" data-model="crefoOption.searchParams.areacode" data-placeholder="{{'businesspartner.main.crefodlg.searchareacode'|platformTranslate }}"></div>-->
+            </div>
+            <div class="margin-top-ld">
+                <input class="form-control" type="text" [(ngModel)]="crefoOption.searchParams.phoneno" name="phoneno" data-placeholder="{{'businesspartner.main.crefodlg.searchphone' | platformTranslate }}" />
+                <!--                todo chi: regex or domain control is not ready-->
+<!--                <div data-domain-control data-domain="description" data-regex="^[+-\d]*$" data-model="crefoOption.searchParams.phoneno" data-placeholder="{{'businesspartner.main.crefodlg.searchphone'|platformTranslate }}"></div>-->
+            </div>
+        </div>
+
+        <div class="margin-top-ld">
+            <div class="platform-form-group">
+                <input [(ngModel)]="crefoOption.keepfilter"
+                       type="checkbox"/>
+                {{ crefoOption.keepFilterChkLabel }}
+            </div>
+            <div class="flex-box">
+                <button id="onExecuteStartFocus" type="button" class="btn btn-default btn-return flex-element" [disabled]="crefoOption.loading" (click)="onSearch()">
+                    {{'businesspartner.main.crefodlg.searchstartbtn' | platformTranslate }}
+                </button>
+                <button type="button" class="btn btn-default flex-element margin-left-ld" [disabled]="crefoOption.loading" (click)="onClear()">{{'businesspartner.main.crefodlg.searchclearbtn' | platformTranslate }}</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex-element flex-box flex-column margin-left-ld">
+        <div data-platform-alarm-overlay data-config="alarmConfig"></div>
+        <div class="toolbar">
+            <h2 class="subtitlepad title fix">{{'businesspartner.main.crefodlg.searchresult' | platformTranslate }}{{recordCount()}}</h2>
+            <ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+        </div>
+        <div class="grid-content-wrapper">
+            <div class="filler flex-box flex-column flex-element">
+                <ui-common-grid [configuration]="configuration"
+                                (selectionChanged)="onSelectedRowsChanged($event)" ></ui-common-grid>
+            </div>
+        </div>
+
+<!--            todo chi: the framework is not ready-->
+<!--        <div data-basics-common-white-board data-show="crefoOption.noresult && !crefoOption.resultMessage" data-info="crefoOption.searchIdle"></div>-->
+<!--        <div data-basics-common-white-board data-show="crefoOption.resultMessage" data-info="crefoOption.resultMessage"></div>-->
+
+    </div>
+    <ui-common-loading [loading]="crefoOption.loading">
+        {{crefoOption.searchStarted}}
+    </ui-common-loading>
+</div>

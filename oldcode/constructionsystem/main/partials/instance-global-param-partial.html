@@ -1,0 +1,22 @@
+
+<section class="flex-box flex-column flex-element subview-content" data-cos-global-param-group-container>
+    <div class="input-group form-control">
+        <input type="text" data-ng-model="searchOptions.searchValue" class="form-control"
+               data-ng-keydown="searchOptions.onSearchInputKeyDown($event, searchOptions.searchValue)"
+               data-ng-keyup="searchOptions.onSearchInputkeyup($event, searchOptions.searchValue)">
+        <span class="input-group-btn">
+            <button class="btn btn-default input-sm btn-search"
+                    data-ng-click="searchOptions.search(searchOptions.searchValue)">
+                <i class="block-image tlb-icons ico-search"></i>
+            </button>
+        </span>
+    </div>
+    <div id="cosGlobalParamGroupSplitter" data-platform-kendo-splitter-adjust class="margin-top-ld flex-element flex-box flex-column">
+        <div data-basics-lookupdata-lookup-grid data-options="gridOptions.parent"></div>
+        <div class="flex-element relative-container">
+            <div class="filler-absolute" data-ng-controller="constructionSystemMainInstanceHeaderParameterListController">
+                <platform-grid class="border-all" data="gridData" data-platform-dragdrop-component="ddTarget"></platform-grid>
+            </div>
+        </div>
+    </div>
+</section>

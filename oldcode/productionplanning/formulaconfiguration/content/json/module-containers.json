@@ -1,0 +1,50 @@
+[
+	{
+		"id": "productionplanning.formulaconfiguration.formula.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.formulaconfiguration.formula.listTitle",
+		"controller": "ppsFormulaListController",
+		"uuid": "025e8f7c4d624f31bcc7d5a493bdbca4",
+		"permission": "025e8f7c4d624f31bcc7d5a493bdbca4"
+	},
+	{
+		"id": "productionplanning.formulaconfiguration.formula.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.formulaconfiguration.formula.detailTitle",
+		"controller": "ppsFormulaDetailController",
+		"uuid": "462bbc55ac864fc2a2078ed568f4debd",
+		"permission": "025e8f7c4d624f31bcc7d5a493bdbca4"
+	},
+	{
+		"id": "productionplanning.formulaconfiguration.version.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.formulaconfiguration.version.listTitle",
+		"controller": "ppsFormulaVersionListController",
+		"uuid": "7d65f3bd54224873bef7ef881eeab365",
+		"permission": "210f7e368bfc4cea8d34d6ff2dec36c4"
+	},
+	{
+		"id": "productionplanning.formulaconfiguration.formula.script",
+		"template": "productionplanning.formulaconfiguration/partials/pps-formula-script-editor.html",
+		"title": "productionplanning.formulaconfiguration.script.title",
+		"controller": "ppsFormulaScriptController",
+		"uuid": "47d053a2025f4552a45316e3d21440fc",
+		"permission": "210f7e368bfc4cea8d34d6ff2dec36c4"
+	},
+	{
+		"id": "productionplanning.formulaconfiguration.instance.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.formulaconfiguration.instance.listTitle",
+		"controller": "ppsFormulaInstanceListController",
+		"uuid": "204126a8563e49caa9aa4fa95ff5c786",
+		"permission": "bdfa67ea15424bf6b1ab28198b420e4e"
+	},
+	{
+		"id": "productionplanning.formulaconfiguration.parameter.list",
+		"template": "productionplanning.formulaconfiguration/partials/parametergridView.html",
+		"title": "productionplanning.formulaconfiguration.ppsParameter.listTitle",
+		"controller": "ppsFormulaParameterListController",
+		"uuid": "b70a255d837043c09bf55d3309e98d62",
+		"permission": "9e5740d2fdbf48df984de6ffdcd8b9a2"
+	}
+]

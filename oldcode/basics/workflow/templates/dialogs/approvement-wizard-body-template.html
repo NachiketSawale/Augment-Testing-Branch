@@ -1,0 +1,155 @@
+<section class="modal-body" data-ng-controller="basicsWorkflowApprovementWizardController">
+	<div class="flex-element two-side-row-1 fullheight">
+		<div class="left margin-full-md overflow" ui-tabs-button-trigger-directive>
+			<h1>{{'basics.workflow.approvementProcessWizard.header' | translate}}</h1>
+			<ul class="list-group margin-top-xld">
+				<!--Entity-->
+				<li class="list-group-item">
+					<h2>
+						<a data-toggle="tab"
+						   href="#templatesEntitySelection">{{'basics.workflow.approvementProcessWizard.entityTab.header' | translate}}</a>
+						<span class="badge badge-rib-color margin-left-md"
+						      data-ng-bind="info.selectedBidder.length"></span>
+					</h2>
+				</li>
+
+				<li class="list-group-item">
+					<span data-ng-bind="selectedEntity().Description"></span>
+				</li>
+			</ul>
+			<!--End States-->
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-toggle="tab"
+						   href="#templatesEndStateDefiniton">{{'basics.workflow.approvementProcessWizard.endStatesDefintionTab.header' | translate}}</a>
+					</h2>
+				</li>
+
+				<li class="list-group-item">
+					<span>{{'basics.workflow.approvementProcessWizard.endStatesDefintionTab.approved' | translate}}: {{status.approved.Description}}</span>
+				</li>
+				<li class="list-group-item">
+					<span>{{'basics.workflow.approvementProcessWizard.endStatesDefintionTab.rejected' | translate}}: {{status.rejected.Description}}</span>
+				</li>
+			</ul>
+			<!--Steps-->
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-toggle="tab"
+						   href="#templatesStepDefinition">{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.header' | translate}}</a>
+					</h2>
+				</li>
+
+				<li class="list-group-item" data-ng-repeat="step in stepList">
+					<span data-ng-bind="step.role.Description + ' - ' + step.status.Description"></span>
+				</li>
+			</ul>
+
+
+		</div>
+		<div class="right margin-full-md overflow">
+			<div class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex">
+
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab"
+					                      href="#templatesEntitySelection">{{'basics.workflow.approvementProcessWizard.entityTab.header' | translate}}</a>
+					</li>
+					<li><a data-toggle="tab"
+					       href="#templatesEndStateDefiniton">{{'basics.workflow.approvementProcessWizard.endStatesDefintionTab.header' | translate}}</a>
+					</li>
+					<li><a data-toggle="tab"
+					       href="#templatesStepDefinition">{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.header' | translate}}</a>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="templatesEntitySelection">
+						<section>
+							<h1>{{'basics.workflow.approvementProcessWizard.entityTab.header' | translate}}</h1>
+							<div><span>{{'basics.workflow.approvementProcessWizard.entityTab.templateName' | translate}}</span>
+							</div>
+							<div><span class="form-control" data-domain="description" data-domain-control
+							           data-model="templateName"></span></div>
+							<div><span>{{'basics.workflow.approvementProcessWizard.entityTab.entity' | translate}}</span></div>
+							<div><span class="form-control" data-domain="select" data-domain-control data-model="entityId"
+							           data-options="entityDropDownOptions"></span></div>
+						</section>
+					</div>
+					<div class="tab-pane fade" id="templatesEndStateDefiniton">
+						<section>
+							<h1>{{'basics.workflow.approvementProcessWizard.endStatesDefintionTab.header' | translate}}</h1>
+							<div>
+								<span>{{'basics.workflow.approvementProcessWizard.endStatesDefintionTab.approved' | translate}}</span>
+							</div>
+							<div><span class="form-control" data-domain="select" data-domain-control
+							           data-model="approvedStatus"
+							           data-options="statusDropDownOptions"></span></div>
+							<div>
+								<span>{{'basics.workflow.approvementProcessWizard.endStatesDefintionTab.rejected' | translate}}</span>
+							</div>
+							<div><span class="form-control" data-domain="select" data-domain-control
+							           data-model="rejectedStatus"
+							           data-options="statusDropDownOptions"></span></div>
+						</section>
+					</div>
+					<div class="tab-pane fade" id="templatesStepDefinition">
+						<section>
+							<h1>{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.header' | translate}}</h1>
+							<table class="table">
+								<thead>
+								<tr>
+									<th>
+										{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.table.position' | translate}}
+									</th>
+									<th>
+										{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.table.status' | translate}}
+									</th>
+									<th>{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.table.role' | translate}}
+									</th>
+									<th>{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.table.rule' | translate}}
+									</th>
+									<th>
+										{{'basics.workflow.approvementProcessWizard.stepDefinitionTab.table.action' | translate}}
+									</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr data-ng-repeat="step in stepList">
+									<td>{{step.pos}}</td>
+									<td>{{step.status.Description}}</td>
+									<td>{{step.role.Description}}</td>
+									<td>{{step.rule}}</td>
+									<td>
+										<button class="block-image tlb-icons ico-rec-delete"
+										        data-ng-click="removeStep(step.pos)"></button>
+									</td>
+								</tr>
+								<tr>
+									<td>{{(stepList.length + 1)}}</td>
+									<td><span class="form-control" data-domain="select" data-domain-control
+									          data-model="newStatusId"
+									          data-options="statusDropDownOptions"></span></td>
+									<td><span class="form-control" data-domain="select" data-domain-control
+									          data-model="newRoleId"
+									          data-options="roleDropDownOptions"></span></td>
+									<td>
+										<div class="filler" data-ng-model="newRule"
+										     data-options="codeMirrorRuleOptions" data-script-editor-directive style="height: 28px"></div>
+									</td>
+									<td>
+										<button class="block-image tlb-icons ico-rec-new"
+										        data-ng-click="addStep()"></button>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</section>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

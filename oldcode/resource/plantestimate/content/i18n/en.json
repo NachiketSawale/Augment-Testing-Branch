@@ -1,0 +1,8 @@
+﻿{
+	"resource": {
+		"plantestimate": {
+			"_dummy": "entry needed, otherwise json import fails",
+			"recalculatePlantAssemblies": "Recalculate Plant Assemblies"
+		}
+	}
+}

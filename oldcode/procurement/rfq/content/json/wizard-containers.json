@@ -1,0 +1,86 @@
+[
+	{
+		"id": "procurement.rfq.bidderWizard.bidderSelection",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.rfqBidderWizard.bidderSelectionTitle",
+		"uuid": "2dd4dc4f50844b22b55f5815f83fed2e"
+	},
+	{
+		"id": "procurement.rfq.rfqApprovalWizard.allBidders",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.rfqApprovalWizard.allBidders",
+		"uuid": "b239479113c24b49a0e19fff093e58cf"
+	},
+	{
+		"id": "procurement.rfq.bidderWizard.settings",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.rfq.rfqBidderWizard.settings",
+		"uuid": "e907d30b10274a1fb760f76b113c3b0d"
+	},
+	{
+		"id": "procurement.rfq.bidderWizard.reports",
+		"template": "app/components/base/partials/procurement-rfq-bidder-wizard-reports-partial.html",
+		"title": "procurement.rfq.rfqBidderWizard.reportsTitle",
+		"uuid": "42ede45a94ce421f822305090bbd0915"
+	},
+	{
+		"id": "procurement.common.document.prcDocumentContainer",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.document.prcDocumentContainerGridTitle",
+		"uuid": "26E2ED9B49A14FB3BC4DC989177BC937"
+	},
+	{
+		"id": "procurement.rfq.data.format",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.dataFormatSetting.dataFormat",
+		"uuid": "9d4498f32ca046ecb961fba5bac6436d"
+	},
+	{
+		"id": "procurement.rfq.document.for.send.rfq",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.documentForSendRfq.title",
+		"uuid": "7016ed0f76da4be19b63c516d75891f6"
+	},
+	{
+		"id": "procurement.rfq.clerk.document.for.send.rfq",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.documentForSendRfq.clerkTitle",
+		"uuid": "1e7537f6803c4bebb821634bb17cb068"
+	},
+	{
+		"id": "procurement.rfq.send.rfq.boq",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.sendRfqBoq.title",
+		"uuid": "c31cc0077055459d8000a6ebbf523cb6"
+	},
+	{
+		"id": "procurement.rfq.bidderWizard.transmission",
+		"template": "procurement.rfq/templates/transmission-list.html",
+		"title": "procurement.rfq.rfqBidderWizard.transmission",
+		"uuid": "b6a85fec74a2402fb3bc16f108c9c0b3"
+	},
+	{
+		"id": "procurement.rfq.bidderWizard.coverLetter",
+		"template": "app/components/base/partials/procurement-rfq-bidder-wizard-coverletter-partial.html",
+		"title": "procurement.rfq.rfqBidderWizard.coverLetterTitle",
+		"uuid": "7ba78cfb8fd242ec8eb4190a8ba3559f"
+	},
+	{
+		"id": "procurement.rfq.project.document.for.send.rfq",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProject",
+		"uuid": "fc2ce31089fa456587193a13bcab3a43"
+	},
+	{
+		"id": "procurement.rfq.structure.document.for.send.rfq",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.documentForSendRfq.structureDocTitle",
+		"uuid": "851d650c916a42778042f7730e48198a"
+	},
+	{
+		"id": "procurement.rfq.bidderWizard.sender",
+		"template": "procurement.rfq/partials/procurement-rfq-email-sender.html",
+		"title": "procurement.rfq.rfqBidderWizard.sender",
+		"uuid": "44e5b148b85845c5bb13e35f7c97c5c6"
+	}
+]

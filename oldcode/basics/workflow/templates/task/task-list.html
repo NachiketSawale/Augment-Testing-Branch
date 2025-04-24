@@ -1,0 +1,119 @@
+<div class="subview-header toolbar">
+	<div class="title"><span>{{ ::'basics.workflow.task.list.headerTask' | translate }}</span>
+		({{taskSidebar.listConfig.select.count}} / {{totalRunningTasksCount}})
+	</div>
+	<ul class="tools">
+		<li class="sublist">
+			<ul class="radio-group">
+				<li>
+					<button class="tlb-icons ico-filter" data-ng-class="{active: isMainEntityFilter}"
+					data-ng-click="taskSidebar.mainEntityFilter()"
+					data-ng-disabled="taskSidebar.isFilterDisable"
+					title="{{ ::'basics.workflow.task.list.mainEntityFilter' | translate }}"
+					type="button">
+					</button>
+				</li>
+				<li>
+					<button class="app-small-icons ico-company-structure" data-ng-class="{active: isCompanyFilter}"
+					        data-ng-click="taskSidebar.companyFilter()"
+					        data-ng-disabled="taskSidebar.isFilterDisable"
+					        title="{{ ::'basics.workflow.task.list.companyFilter' | translate }}"
+					        type="button">
+					</button>
+				</li>
+				<li>
+					<button class="tlb-icons ico-discard"
+					        data-ng-click="taskSidebar.clearNotificationTask()"
+					        title="{{ ::'basics.workflow.task.list.clear' | translate }}"
+					        type="button">
+					</button>
+				</li>
+				<li>
+					<button class="tlb-icons ico-refresh"
+					        data-ng-click="taskSidebar.refresh()"
+					        title="{{ ::'cloud.common.toolbarRefresh' | translate }}"
+					        type="button">
+					</button>
+				</li>
+
+				<li>
+					<button class="tlb-icons ico-search"
+					        data-ng-class="{active: taskSidebar.showFilter}"
+					        data-ng-click="taskSidebar.showFilter = !taskSidebar.showFilter"
+					        title="{{ ::'basics.workflow.task.list.showFilter' | translate }}"
+					        type="button">
+					</button>
+				</li>
+				<li>
+					<button class="tlb-icons ico-settings"
+					        data-ng-class="{active: taskSidebar.showSettings}"
+					        data-ng-click="taskSidebar.showSettings = !taskSidebar.showSettings"
+					        title="{{:: 'basics.workflow.task.list.groupOrSortingSetting' | translate }}"
+					        type="button">
+					</button>
+				</li>
+				<li>
+					<cloud-desktop-sidebar-minmax></cloud-desktop-sidebar-minmax>
+				</li>
+			</ul>
+	</ul>
+</div>
+
+<div class="content-inner flex-box flex-column">
+	<div data-ng-if="taskSidebar.showFilter">
+		<div class="form-control margin-top-ld margin-bottom-ld">
+			<input class="input-group-content" data-ng-keypress="($event.which === 13)?taskSidebar.refresh():0" data-ng-model="taskSidebar.listConfig.filter.value"
+			       placeholder="{{ ::'basics.workflow.task.list.filter' | translate }}"
+			       type="text">
+
+			<span class="input-group-btn">
+						<button class="btn btn-default control-icons ico-input-delete btndeactive"
+						        data-ng-click="taskSidebar.clearSearch()"
+						        title="{{ ::'basics.workflow.task.list.clearfilter' | translate }}"></button>
+
+						<button class="btn btn-default tlb-icons ico-search"
+						        data-ng-click="taskSidebar.refresh()"
+						        title="{{ ::'basics.workflow.task.list.executefilter' | translate }}"></button>
+					</span>
+		</div>
+	</div>
+
+	<div class="showgroups" data-ng-if="taskSidebar.showSettings">
+		<div class="flex-element flex-box flex-column overflow-hidden"
+		     data-cloud-desktop-on-key-enter="searchOptions.onStartSearch"
+		     data-ng-controller="basicsWorkflowGroupSettingController"
+		     data-platform-add-css-class-directive="searchOptions.cssClassForParent">
+			<div>
+				<div data-cloud-desktop-sidebar-content-navbar data-option="option"></div>
+
+				<div class="enhanced" data-change="searchOptions.selectionChanged()"
+				     data-domain="select"
+				     data-domain-control
+				     data-model="searchOptions.selectedItemId" data-options="searchOptions.searchListSelectbox"></div>
+
+				<div class="margin-top-ld">
+					<div data-change="taskSidebar.updateView()" data-domain="select" data-domain-control
+					     data-model="taskSidebar.listConfig.grouping" data-options="taskSidebar.grouping.options"></div>
+				</div>
+
+				<div class="margin-top-ld">
+					<div data-change="taskSidebar.updateView()" data-domain="select" data-domain-control
+					     data-model="taskSidebar.listConfig.sort" data-options="taskSidebar.sorting.options"></div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div data-cloud-common-overlay data-loading="taskSidebar.taskListIsLoading"></div>
+	<ul class="scroll-padding flex-element overflow flex-basis-auto" data-click-fn="taskSidebar.detailFn.switchListDetail"
+	    data-item-template="taskSidebar.itemTemplate" data-list="taskSidebar.taskList"
+	    data-ng-if="!taskSidebar.listConfig.isGrouped"
+	    data-platform-item-list-directive></ul>
+	<ul class="scroll-padding flex-element panel-group overflow flex-basis-auto" data-child-property="'childs'"
+	    data-click-fn="taskSidebar.detailFn.switchListDetail" data-group-template="taskSidebar.groupTemplate"
+	    data-grouped-list="taskSidebar.taskList" data-item-template="taskSidebar.itemTemplate"
+	    data-ng-if="taskSidebar.listConfig.isGrouped"
+	    data-platform-grouped-item-list-directive></ul>
+</div>

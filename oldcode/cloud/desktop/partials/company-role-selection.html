@@ -1,0 +1,33 @@
+<style data-cloud-desktop-custom-login-css></style>
+<div class="login-sso flex-element company-dialog" data-ng-class="{ 'embedded': embedded }" window-class="company-dialog" id="companyModal" tabindex="-1"
+     role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+		data-cloud-desktop-on-key-enter="companyOptions.ok" data-on-key-enter-disabled="!canExecuteOkButton()"
+>
+	<div class="modal-dialog primary" id="companyForm" style="opacity: 0.94;">
+		<div class="modal-content" data-platform-modaldialog-rescale>
+			<header class="modal-header">
+				<div class="{{::productLogoPrimary}} productLogo" title="{{::productName}}"></div>
+			</header>
+
+			<main class="modal-body flex-box flex-column" style="min-height: 400px;">
+
+				<div data-cloud-common-overlay data-loading="companyOptions.loading"
+				     data-info="companyOptions.loadingInfo"></div>
+
+				<div data-ng-include="'cloud.desktop/partials/company-role-content.html'" class="flex-element flex-box flex-column overflow-hidden"></div>
+
+				<div class="processingInfo" data-ng-if="companyOptions.showProcessingInfo"
+				     data-ng-class="companyOptions.alertClass">
+					<span data-ng-bind="companyOptions.processingInfo"></span>
+				</div>
+			</main>
+
+			<footer class="modal-footer">
+				<button type="button" class="ok btn btn-primary" data-ng-click="companyOptions.ok()"
+				        data-ng-disabled="!canExecuteOkButton() || companyOptions.loading">
+					{{::companyOptions.continueBtnText}}
+				</button>
+			</footer>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+<table class="table">
+	<thead>
+	<tr>
+		<th class="text-center" style="width: 10%;">{{'basics.workflow.sendRfQReports.select' | translate}}</th>
+		<th style="width: 40%;">{{'basics.workflow.sendRfQReports.templateName' | translate}}</th>
+		<th style="width: 40%;">{{'basics.workflow.sendRfQEmailBody.description' | translate}}</th>
+		<th class="text-center" style="width: 10%;">{{'basics.workflow.sendRfQEmailBody.preview' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat-start="report in list">
+		<td class="text-center">
+			<div data-ng-if="report.IsCoverLetter"><input type="radio" data-ng-model="report.IsIncluded" data-ng-change="coverLetterSelectionChanged(report.Id)" data-ng-value="true" name="coverLetterRadioButton"></div>
+			<div data-ng-if="!report.IsCoverLetter">
+				<div data-domain-control data-domain="boolean" data-model="report.IsIncluded" readonly="true"
+				     data-ng-if="report.IsMandatory"></div>
+				<div data-domain-control data-domain="boolean" data-model="report.IsIncluded"
+				     data-ng-if="!report.IsMandatory"></div>
+			</div>
+		</td>
+		<td>
+			<a role="button" data-toggle="collapse" data-parent="{{ '#accordion-' + report.Id }}"
+			   href="#{{ '#collapse-' + report.Id }}" class="toggle block-image control-icons collapsed"
+			   aria-expanded="true" aria-controls="{{ 'collapse-' + report.Id }}">
+
+			</a>
+			<span data-ng-bind="report.Name.Description"></span>
+		</td>
+		<td><span data-ng-bind="report.Description.Description"></span></td>
+		<td class="text-center">
+			<button data-ng-click="openReport(report.Id)" class="block-image control-icons fa fa-eye"></button>
+		</td>
+	</tr>
+	<tr data-ng-repeat-end class="collapsible">
+		<td></td>
+		<td colspan="3">
+			<div id="{{ 'accordion-' + report.Id }}" role="tablist" aria-multiselectable="true">
+				<div id="{{ 'collapse-' + report.Id }}" class="panel-collapse collapse" role="tabpanel"
+				     aria-labelledby="{{ 'heading-' + report.Id }}">
+					<div class="panel-body " id="{{ 'reportParametersPanelBody-' + report.Id }}">
+						<hr>
+						<div data-generic-wizard-report-parameters-editor parameter-list="report.parameters"></div>
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+	</tbody>
+</table>

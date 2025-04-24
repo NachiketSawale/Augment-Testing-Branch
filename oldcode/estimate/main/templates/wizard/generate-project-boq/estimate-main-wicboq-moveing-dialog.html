@@ -1,0 +1,18 @@
+<div data-ng-controller="estimateMainWicboqMovingController" class="modal-wrapper overflow-hidden">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+        <div data-platform-form data-form-options="formOptionsCompareOptionSettings" entity="entity" class="exclude-resize"></div>
+
+        <div  data-ng-controller="estimateMainMovingWicboqTreeController" data-ng-hide="hideTreeGrid">
+	        <div class="flex-box flex-column subview-container">
+		        <platform-Grid data="gridData"></platform-Grid>
+	        </div>
+        </div>
+
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="execute()"  data-ng-disabled="!canExecute()">{{::'basics.common.button.execute' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+    </footer>
+</div>

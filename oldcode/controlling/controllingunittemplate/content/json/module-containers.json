@@ -1,0 +1,49 @@
+[
+  {
+    "id": "controlling.controllingunittemplate.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.controllingunittemplate.controllingunittemplateListTitle",
+    "controller": "controllingControllingunittemplateListController",
+    "uuid": "201b468b575042a090e366d830c5a60d"
+  },
+  {
+    "id": "controlling.controllingunittemplate.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "controlling.controllingunittemplate.controllingunittemplateDetailTitle",
+    "controller": "controllingControllingunittemplateDetailController",
+    "uuid": "a16785bd94a8441f9f4e6fb5798a7112",
+    "permission": "201b468b575042a090e366d830c5a60d"
+  },
+  {
+    "id": "controlling.controllingunittemplate.controllingunit.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.controllingunittemplate.controllingunitListTitle",
+    "controller": "controllingControllingunittemplateUnitListController",
+    "uuid": "0f64dd41abe541a5ba4470f605373b2c",
+    "permission": "201b468b575042a090e366d830c5a60d"
+  },
+  {
+    "id": "controlling.controllingunittemplate.group.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "controlling.controllingunittemplate.controllinggroupListTitle",
+    "controller": "controllingControllingunittemplateGroupListController",
+    "uuid": "a3aaf163058647c0872d13d0d2cd1c3d",
+    "permission": "201b468b575042a090e366d830c5a60d"
+  },
+  {
+    "id": "controlling.controllingunittemplate.group.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "controlling.controllingunittemplate.controllinggroupDetailTitle",
+    "controller": "controllingControllingunittemplateGroupDetailController",
+    "uuid": "e062e5cb80894fd8abf2949ab1c164bb",
+    "permission": "201b468b575042a090e366d830c5a60d"
+  },
+  {
+    "id": "controlling.controllingunittemplate.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "40aff310efc648d4b9c66b2b7a4685ed",
+    "permission": "589a60e896dc4c9098f32fbff8d43618"
+  }
+]

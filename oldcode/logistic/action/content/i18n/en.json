@@ -1,0 +1,25 @@
+﻿{
+	"logistic": {
+		"action": {
+			"actionTargetListTitle": "Action Target",
+			"actionTargetDetailTitle": "Action Target Details",
+			"actionItemTemplatesListTitle": "Action Item Templates",
+			"actionItemTemplatesDetailTitle": "Action Item Templates Details",
+			"actionItemTypesListTitle": "Action Item Types",
+			"actionItemTypesDetailTitle": "Action Item Types Details",
+			"actionItemTemplatesByTypeTitle": "Action Item Templates By Type",
+			"entityActionTarget": "Action Target",
+			"entityRecordNo": "Record No",
+			"entityLongDescriptionInfo": "Long Description",
+			"entityHasDate": "Has Date",
+			"entityHasUrl": "Has Url",
+			"entityHasPrjDoc": "Has Project Document",
+			"entityHasPlantCert": "Has Plant Certificate",
+			"entityHasBusinessPartner": "Has Business Partner",
+			"entityHasPrcContract": "Has Procurement Contract",
+			"entityHasClerk": "Has Clerk",
+			"entityActionItemTemplate": "Action Item Template",
+			"entityActionItemType": "Action Item Type"
+		}
+	}
+}

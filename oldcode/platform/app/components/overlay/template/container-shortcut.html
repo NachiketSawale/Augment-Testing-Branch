@@ -1,0 +1,32 @@
+<div class="container-overlay shortcut-overlay">
+	<header>
+		<div>
+			<h2>{{'platform.containerOverlay.title' | translate }}</h2>
+			<div>{{'platform.containerOverlay.description' | translate }}</div>
+			<div>{{'platform.containerOverlay.subDescription' | translate }}</div>
+		</div>
+	</header>
+	<main>
+		<div ng-repeat="view in options.shortcutViews" ng-class="{focus: view.isSelectedContainer}" class="overlay" data-ng-style="{
+					'width': view.dimensions.width,
+					'height': view.dimensions.height,
+					'top' : view.dimensions.top,
+					'left' : view.dimensions.left
+			     }">
+
+			<div class="number-wrapper flex-element">
+				<div class="number">{{$index + 1}}</div>
+			</div>
+
+			<div class="letter-wrapper" ng-if="view.content.length > 0" >
+					<div ng-repeat="content in view.content" data-ng-if="$index < view.visibleTabsCount" class="relative-container">
+						<label>
+							{{content.title | translate}}
+						</label>
+						<div class="letter" data-ng-if="existsLetter(content)">{{content.letter}}</div>
+					</div>
+			</div>
+		</div>
+		<div class="coverSidebar fullheight" data-ng-class="{wider: isPinStatusActive}"></div>
+	</main>
+</div>

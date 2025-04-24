@@ -1,0 +1,29 @@
+<!--<pre ng-bind="service.output" class="selectable" style="height: 100%;"> </pre>-->
+
+<div class="table-responsive" style="overflow: auto;">
+    <table class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Description</th>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Model Object</th>
+            <th>Call Stack</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="item in service.gridData" data-ng-click="onErrorItemClick(item)"
+            data-ng-class="item.IsSelected | constructionsystemMasterScriptErrorSelectedFilter">
+            <th style="vertical-align: middle;" data-ng-class="item.ErrorType | constructionsystemMasterScriptErrorTypeFilter"></th>
+            <th style="vertical-align: middle;" data-ng-bind="item.Id"></th>
+            <th><pre data-ng-bind="item.Description"></pre></th>
+            <th style="vertical-align: middle;" data-ng-bind="item.Line"></th>
+            <th style="vertical-align: middle;" data-ng-bind="item.Column"></th>
+            <th style="vertical-align: middle;" data-ng-bind="item.ModelObject"></th>
+            <th style="vertical-align: middle;" data-ng-bind="item.CallStack"></th>
+        </tr>
+        </tbody>
+    </table>
+</div>

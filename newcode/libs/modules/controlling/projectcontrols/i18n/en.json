@@ -1,0 +1,36 @@
+{
+	"controlling": {
+		"projectcontrols": {
+			"moduleDisplayName" : "Project Controls",
+			"containerTitleProjects": "Projects",
+			"containerTitleControllingVersion": "Controlling Versions",
+			"groupingContainer": "Project Controls Dashboard",
+			"bisPaBoqFk": "BoQ Item",
+			"bisPaActivityFk": "Activity Item",
+			"period": "Period",
+			"chart1ContainerTitle": "Chart 1",
+			"chart2ContainerTitle": "Chart 2",
+			"ControllingActualListController": "Controlling Actuals",
+			"code": "Code",
+			"noConfigData": "No chart config data can be found",
+			"LineItemsListController": "Line Item",
+			"ControllingPesListController": "Procurement PES",
+			"ControllingPrcContractController": "Procurement Contract",
+			"ControllingCostCodes": "Controlling Cost Codes",
+			"goBack": "Back",
+			"resetdata": "Reset Data",
+			"value": "Value",
+			"controllingUnit": "Controlling Unit",
+			"activity": "Activity",
+			"costCode": "Cost Code",
+			"controllingUnitCostCode": "Controlling Cost Code",
+			"boQ": "BoQ",
+			"costGroup1": "Classification 1",
+			"costGroup2": "Classification 2",
+			"costGroup3": "Classification 3",
+			"costGroup4": "Classification 4",
+			"reportPeriod" : "Report Period",
+			"version" : "Version"
+		}
+	}
+}

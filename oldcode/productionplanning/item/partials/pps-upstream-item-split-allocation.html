@@ -1,0 +1,18 @@
+<div ng-controller="productionplanningItemUpstreamItemSplitAllocationController">
+	<section ng-cloak class="modal-body flex-box flex-column">
+		<div style="height: 100%; float: left; margin-left: 1%;"
+		     class="flex-box flex-column lookup-grid-container subview-container">
+			<div class="subview-header toolbar">
+				<h3 class="font-bold title fix">{{'productionplanning.item.listTitle' |
+				translate}}</h3>
+				<div data-platform-menu-list data-list="gridOptions.allocationItemGrid.tools"></div>
+			</div>
+			<div style="" class="flex-element flex-box flex-column overflow-hidden">
+				<div class="flex-basis-auto" data-platform-grid
+				     data="gridOptions.allocationItemGrid">
+				</div>
+			</div>
+		</div>
+	</section>
+	<div cloud-common-overlay data-loading="isBusy"></div>
+</div>

@@ -1,0 +1,85 @@
+<div data-ng-controller="basicsMeetingAttendeeLookupController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body">
+		<div class="platform-form-group" style="padding-left: 10px">
+			<div class="platform-form-row">
+				<button data-ng-if = "isLookupClerk && ativeFromContextButtonForClerk ()" type="button" class="btn btn-default" data-ng-click="copyFromContext()">
+					{{modalOptions.copyFromContext}}
+				</button>
+				<button data-ng-if = "isLookupClerk && !ativeFromContextButtonForClerk ()" disabled type="button" class="btn btn-default" data-ng-click="copyFromContext()">
+					{{modalOptions.copyFromContext}}
+				</button>
+				<button data-ng-if = "!isLookupClerk && ativeFromContextButtonForContact ()" type="button" class="btn btn-default" data-ng-click="copyFromContext()">
+					{{modalOptions.copyFromContext}}
+				</button>
+				<button data-ng-if = "!isLookupClerk && !ativeFromContextButtonForContact ()" disabled type="button" class="btn btn-default" data-ng-click="copyFromContext()">
+					{{modalOptions.copyFromContext}}
+				</button>
+			</div>
+
+			<div class="platform-form-row" style="padding-top: 3px" data-ng-if="!isLookupClerk">
+				<div class="platform-form-label" style=" vertical-align: middle;min-width: 165px">{{modalOptions.contactFromBp}}</div>
+				<div class="platform-form-col" style="width: 90%;padding-left: 15px">
+					<div class="control-directive" filter-business-partner-dialog-lookup
+						 data-entity="settings"
+						 data-model="settings.Bp.selectedValue"
+						 data-ng-model="settings.Bp.selectedValue"
+						 data-options="settings.Bp.options"
+					></div>
+				</div>
+				<div style="width: 40px"></div>
+			</div>
+		</div>
+
+		<div class="platform-form-group" style="padding-top: 10px; padding-left: 10px">
+			<div class="platform-form-row">
+				<div class="input-group form-control">
+					<input type="text" data-ng-model="searchValue" class="form-control ng-pristine ng-valid ng-not-empty ng-touched"
+						   data-ng-keydown="onSearchInputKeydown($event, searchValue)"/>
+					<span class="input-group-btn" style="margin-left: -1px">
+						<button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="onSearch(searchValue)" title="search"></button>
+					</span>
+				</div>
+			</div>
+			<div data-ng-if="!isLookupClerk">
+				<div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none; margin-top: -5px">
+					<div class="form-control flex-align-center" style="border: none;">
+						<div class="input-group-content" data-ng-bind="getPageText()"></div>
+					</div>
+
+					<span class="input-group-btn">
+				<button class="btn btn-default"
+				        data-ng-class="{btndeactive:!canPageUp()}"
+				        data-ng-disabled="isLoading||!canPageUp()"
+				        data-ng-click="pageUp()" style="border: none;"><span class="control-icons ico-previous"></span></button>
+
+				<button class="btn btn-default"
+				        data-ng-class="{btndeactive:!canPageDown()}"
+				        data-ng-disabled="isLoading||!canPageDown()"
+				        data-ng-click="pageDown()" style="border: none;"><span class="control-icons ico-next"></span></button></span>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="modal-wrapper subview-container">
+					<div class="toolbar">
+						<h3 class="title font-bold">{{'basics.common.fieldSelector.searchResults' | translate}}</h3>
+						<div data-platform-menu-list data-list="tools"
+						     data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+					</div>
+					<div data-platform-grid data-data="gridData"></div>
+				</div>
+			</div>
+			<div data-cloud-common-overlay data-loading="isLoading"></div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.add()" data-ng-disabled="!modalOptions.isValid()">
+			{{modalOptions.addButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.cancelButtonText}}
+		</button>
+	</footer>
+</div>

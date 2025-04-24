@@ -1,0 +1,45 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp ">
+			<label>
+				<input type="checkbox" name="characteristicCheckBox" data-ng-model="withCharacteristic.isActive" class="e2e-withCharacteristic-isActive" />
+				{{withCharacteristic.title}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<div class="lg-6 md-6">
+					<div class="control-directive" data-basics-characteristic-group-data-combine-lookup
+					     data-ng-model="withCharacteristic.selectedItemFk"
+					     data-model="withCharacteristic.selectedItemFk"
+					     data-options="withCharacteristic.charCodeLookupOptions"
+					     data-entity="withCharacteristic"
+					     data-config="withCharacteristic.codeLookupConfig">
+					</div>
+				</div>
+
+				<input type="text" class="form-control lg-6 md-6"
+				       value="{{withCharacteristic.characteristicDesc}}"
+				       data-ng-disabled="true"/>
+			</li>
+			<li>
+				<div class="lg-6 md-6">
+					<select class="form-control e2e-withCharacteristic-selectedOp"
+					        data-ng-model="withCharacteristic.selectedOp"
+					        ng-options="o.description for o in withCharacteristic.operators track by o.id"
+					        data-ng-disabled="!withCharacteristic.selectedItem || !withCharacteristic.isActive"></select>
+				</div>
+				<div class="lg-6 md-6 padding-none">
+					<div class="control-directive" data-procurement-common-find-bidder-with-characteristic-select-control
+					     data-ng-model="withCharacteristic.selectedItem"
+					     data-options="withCharacteristic.lookupOptions"
+					     data-entity="withCharacteristic.selectedItem"
+					     data-config="withCharacteristic"></div>
+					<div class="invalid-cell invalid-form" data-ng-if="withCharacteristic.rt$hasError()" data-ng-bind="withCharacteristic.rt$errorText()"></div>
+				</div>
+			</li>
+		</ul>
+	</li>
+</ul>

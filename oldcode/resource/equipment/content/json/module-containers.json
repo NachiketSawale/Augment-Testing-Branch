@@ -1,0 +1,492 @@
+[
+	{
+		"id": "resource.equipment.plant.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantListTitle",
+		"controller": "resourceEquipmentPlantListController",
+		"uuid": "b71b610f564c40ed81dfe5d853bf5fe8"
+	},
+	{
+		"id": "resource.equipment.plant.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantDetailTitle",
+		"controller": "resourceEquipmentPlantDetailController",
+		"uuid": "14744d2f5e004676abfefd1329b6beff",
+		"permission": "b71b610f564c40ed81dfe5d853bf5fe8"
+	},
+	{
+		"id": "resource.equipment.plant.fixed.asset.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantFixedAssetListTitle",
+		"controller": "resourceEquipmentPlantFixedAssetListController",
+		"uuid": "b46a50394062485b9c0f5ddabf9a1b01"
+	},
+	{
+		"id": "resource.equipment.plant.fixed.asset.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantFixedAssetDetailTitle",
+		"controller": "resourceEquipmentPlantFixedAssetDetailController",
+		"uuid": "e85c0d0ed4dd46f2b36f55e9ba8376da",
+		"permission": "b46a50394062485b9c0f5ddabf9a1b01"
+	},
+	{
+		"id": "resource.equipment.plant.document.list",
+		"template": "basics.common/partials/header-zip-checkbox-documents-view.html",
+		"title": "resource.equipment.plantDocumentListTitle",
+		"controller": "resourceEquipmentPlantDocumentListController",
+		"uuid": "f0e92216d80d4f9892c0d591cfd93a06"
+	},
+	{
+		"id": "resource.equipment.plant.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantDocumentDetailTitle",
+		"controller": "resourceEquipmentPlantDocumentDetailController",
+		"uuid": "b364e4d2d3e7438cacfb320e3c8e93d9",
+		"permission": "f0e92216d80d4f9892c0d591cfd93a06"
+	},
+	{
+		"id": "resource.equipment.business.partner.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.BusinessPartnerListTitle",
+		"controller": "resourceEquipmentBusinessPartnerListController",
+		"uuid": "c84bcfcbcb3f41eca885db0e9a08f179"
+	},
+	{
+		"id": "resource.equipment.business.partner.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.BusinessPartnerDetailTitle",
+		"controller": "resourceEquipmentBusinessPartnerDetailController",
+		"uuid": "442c8df8e82346ae942d9c50fc495bb7",
+		"permission": "c84bcfcbcb3f41eca885db0e9a08f179"
+	},
+	{
+		"id": "resource.equipment.plantaccessory.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantAccessoryListTitle",
+		"controller": "resourceEquipmentPlantAccessoryListController",
+		"uuid": "c8814c5d27b54f60827f48112dc1fc57"
+	},
+	{
+		"id": "resource.equipment.plantaccessory.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantAccessoryDetailTitle",
+		"controller": "resourceEquipmentPlantAccessoryDetailController",
+		"uuid": "d5a69c4da56845f2b5420016f4fc0de3",
+		"permission": "c8814c5d27b54f60827f48112dc1fc57"
+	},
+	{
+		"id": "resource.equipment.translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "519cb47956cc446ba4735bb95d000775"
+	},
+	{
+		"id": "resource.equipment.photoList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.photoList",
+		"controller": "resourceEquipmentPhotoListController",
+		"uuid": "eebaa9c4e6c747b3b6fb477d8e285d69"
+	},
+	{
+		"id": "resource.equipment.photoView",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "resource.equipment.photoView",
+		"controller": "resourceEquipmentPhotoController",
+		"uuid": "a5cde9dbb48f4319a0bc937faf31bdd9",
+		"permission": "eebaa9c4e6c747b3b6fb477d8e285d69"
+	},
+	{
+		"id": "resource.equipment.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "resource.equipment.characteristics",
+		"uuid": "2bf921a9d13840bbb9f2b893d109fbdd",
+		"controller": "",
+		"sectionId": "35",
+		"mainService": "resourceEquipmentPlantDataService"
+	},
+	{
+		"id": "resource.equipment.plant.assignment.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantAssignmentListTitle",
+		"controller": "resourceEquipmentPlantAssignmentListController",
+		"uuid": "dd49d6ac8e844f50b8411e50e31caea8"
+	},
+	{
+		"id": "resource.equipment.plant.assignment.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantAssignmentDetailTitle",
+		"controller": "resourceEquipmentPlantAssignmentDetailController",
+		"uuid": "dd1bbd6ab5c949d998665092a5c583d9",
+		"permission": "dd49d6ac8e844f50b8411e50e31caea8"
+	},
+	{
+		"id": "resource.equipment.plant.component.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantComponentListTitle",
+		"controller": "resourceEquipmentPlantComponentListController",
+		"uuid": "9f4ef6e2ff6d403fbb24f760c0c5fb70"
+	},
+	{
+		"id": "resource.equipment.plant.component.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantComponentDetailTitle",
+		"controller": "resourceEquipmentPlantComponentDetailController",
+		"uuid": "5f0e8f1e8d5142b099cc5fb4aabd26fa",
+		"permission": "9f4ef6e2ff6d403fbb24f760c0c5fb70"
+	},
+	{
+		"id": "resource.equipment.plant.eurolist.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantEurolistListTitle",
+		"controller": "resourceEquipmentPlantEurolistListController",
+		"uuid": "c779f23a59854b0c9c9960044319d8a4"
+	},
+	{
+		"id": "resource.equipment.plant.eurolist.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantEurolistDetailTitle",
+		"controller": "resourceEquipmentPlantEurolistDetailController",
+		"uuid": "2dd482ff9dd043209388b267dd278a83",
+		"permission": "c779f23a59854b0c9c9960044319d8a4"
+	},
+	{
+		"id": "resource-comments",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "resource.equipment.pinBoard",
+		"controller": "basicsCommonCommentController",
+		"uuid": "90ae201df9584e09b26c8b091635fa7e",
+		"commentQualifier": "resource.equipment.pinBoard",
+		"parentService": "resourceEquipmentPlantDataService",
+		"configServiceName": "resourceEquipmentPinBoardConfigService"
+	},
+	{
+		"id": "resource.equipment.maintenance.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantMaintenanceListTitle",
+		"controller": "resourceEquipmentMaintenanceListController",
+		"uuid": "af1dcf780b1b49c48857b990b455ac3c"
+	},
+	{
+		"id": "resource.equipment.maintenance.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantMaintenanceDetailTitle",
+		"controller": "resourceEquipmentMaintenanceDetailController",
+		"uuid": "76ea5f472fa14838915bad3b76e64f43",
+		"permission": "af1dcf780b1b49c48857b990b455ac3c"
+	},
+	{
+		"id": "resource.equipment.pricelist.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.pricelistListTitle",
+		"controller": "resourceEquipmentPlantPricelistListController",
+		"uuid": "2e0de4514e1e4873b5c650edbe6f2c41"
+	},
+	{
+		"id": "resource.equipment.pricelist.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.pricelistDetailTitle",
+		"controller": "resourceEquipmentPlantPricelistDetailController",
+		"uuid": "2d915e6ca9db4c4ba1d03bb09c3aea0e",
+		"permission": "2e0de4514e1e4873b5c650edbe6f2c41"
+	},
+	{
+		"id": "resource.equipment.plant.allocationview.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantAllocVListTitle",
+		"controller": "resourceEquipmentPlantAllocationViewListController",
+		"uuid": "7d12068f91774d119268f8c79e018385"
+	},
+	{
+		"id": "resource.equipment.plant.allocationview.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantAllocVDetailTitle",
+		"controller": "resourceEquipmentPlantAllocationViewDetailController",
+		"uuid": "4ab67f61ff25460e9d8fb982e36fd031",
+		"permission": "7d12068f91774d119268f8c79e018385"
+	},
+	{
+		"id": "resource.equipment.controlling.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.controllingUnitListTitle",
+		"controller": "resourceEquipmentControllingUnitListController",
+		"uuid": "1ae4a9f6b86b4b3f964dab760767219f"
+	},
+	{
+		"id": "resource.equipment.controlling.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.controllingUnitDetailTitle",
+		"controller": "resourceEquipmentControllingUnitDetailController",
+		"uuid": "ce5585bb21744dbab053f24f49c07bc2",
+		"permission": "1ae4a9f6b86b4b3f964dab760767219f"
+	},
+	{
+		"id": "resource.equipment.meterreading.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.meterReadingListTitle",
+		"controller": "resourceEquipmentMeterReadingListController",
+		"uuid": "0c898f4872c244e599379151ebd8830f"
+	},
+	{
+		"id": "resource.equipment.meterreading.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.meterReadingDetailTitle",
+		"controller": "resourceEquipmentMeterReadingDetailController",
+		"uuid": "4e5a48e1ff614608841430ce1a19101c",
+		"permission": "0c898f4872c244e599379151ebd8830f"
+	},
+	{
+		"id": "resource.equipment.plant.location.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantLocationListTitle",
+		"controller": "resourceEquipmentLocationListController",
+		"uuid": "7e44180e839c44fa98189a3481bb8087",
+		"permission": "7d12068f91774d119268f8c79e018385"
+	},
+	{
+		"id": "resource.equipment.plant.location.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantMovementDetailTitle",
+		"controller": "resourceEquipmentLocationDetailController",
+		"uuid": "ca37d6c1dadb4c0387c94a86070e36ad",
+		"permission": "7d12068f91774d119268f8c79e018385"
+	},
+	{
+		"id": "resource.equipment.pooljobplant.location.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantPoolJobPlantLocationListTitle",
+		"controller": "resourceEquipmentPoolJobPlantLocationListController",
+		"uuid": "657218995049421ea0ed688bf0b4eb2e",
+		"permission": "7d12068f91774d119268f8c79e018385"
+	},
+	{
+		"id": "resource.equipment.pooljobplant.location.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantPoolJobPlantLocationDetailTitle",
+		"controller": "resourceEquipmentPoolJobPlantLocationDetailController",
+		"uuid": "41533c9ee59e442f958fc26f9ff16ef7",
+		"permission": "7d12068f91774d119268f8c79e018385"
+	},
+	{
+		"id": "resource.equipment.plant.certificate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantCertificationListTitle",
+		"controller": "resourceEquipmentPlantCertificateListController",
+		"uuid": "6182b7c0ed6e498492dbe88e061f3457"
+	},
+	{
+		"id": "resource.equipment.plant.certificate.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantCertificationDetailTitle",
+		"controller": "resourceEquipmentPlantCertificateDetailController",
+		"uuid": "c53907e3aa1c42c0b1222d233a63f825",
+		"permission": "6182b7c0ed6e498492dbe88e061f3457"
+	},
+	{
+		"id": "resource.equipment.plant.costv.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.costVGridTitle",
+		"controller": "resourceEquipmentPlantCostVListController",
+		"uuid": "c827ac51271d40b2af1ad364afe7c10c"
+	},
+	{
+		"id": "resource.equipment.plant.costv.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.costVDetailTitle",
+		"controller": "resourceEquipmentPlantCostVDetailController",
+		"uuid": "4ed827706c314183bdef73c70c1ac05e",
+		"permission": "c827ac51271d40b2af1ad364afe7c10c"
+	},
+	{
+		"id": "resource.equipment.plant.componentmaintschema.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.componentMaintSchemaListTitle",
+		"controller": "resourceEquipmentPlantComponentMaintSchemaListController",
+		"uuid": "adacb904781511eabc550242ac130003"
+	},
+	{
+		"id": "resource.equipment.plant.componentmaintschema.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.componentMaintSchemaDetailTitle",
+		"controller": "resourceEquipmentPlantComponentMaintSchemaDetailController",
+		"uuid": "adacbb70781511eabc550242ac130003",
+		"permission": "adacb904781511eabc550242ac130003"
+	},
+	{
+		"id": "resource.equipment.plant.location2.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantLocation2ListTitle",
+		"controller": "resourceEquipmentPlantLocation2ListController",
+		"uuid": "f1dcfde01b2b4be89d6e26d3525742e6",
+		"permission": "432068179c654b419d3d42d7153d10f8"
+	},
+	{
+		"id": "resource.equipment.plant.location2.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantLocation2DetailTitle",
+		"controller": "resourceEquipmentPlantLocation2DetailController",
+		"uuid": "c234c2ab9544405da857b5b9b73a5740",
+		"permission": "432068179c654b419d3d42d7153d10f8"
+	},
+	{
+		"id": "resource.equipment.locationmap",
+		"template": "app/components/base/partials/multi-address-map.html",
+		"title": "resource.equipment.locationMap",
+		"uuid": "23c00fd45b934a6b8d65f0264af30260",
+		"controller": "resourceEquipmentLocationMapController"
+	},
+	{
+		"id": "resource.equipment.plant.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.ContainerUserformDefaultTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "d9a32b5ee88c11eb9a030242ac130003",
+		"rubricId": 30,
+		"mainService": "resourceEquipmentPlantDataService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "resource.equipment.plant.clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.clerkListTitle",
+		"controller": "resourceEquipmentPlantClerkListController",
+		"uuid": "38f8b5920cb411ec82a80242ac130003"
+	},
+	{
+		"id": "resource.equipment.plant.clerk.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.clerkDetailTitle",
+		"controller": "resourceEquipmentPlantClerkDetailController",
+		"uuid": "51b816720cb411ec82a80242ac130003",
+		"permission": "38f8b5920cb411ec82a80242ac130003"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "app/components/grid/generic-structure/generic-container.html",
+		"title": "resource.equipment.structureContainerTitle",
+		"uuid": "16d8ed8226c811ec96210242ac130002",
+		"controller": "platformGenericStructureController",
+		"mainService": "resourceEquipmentPlantDataService",
+		"enableCaching": "true",
+		"configurationService": "resourceEquipmentPlantStructureConfigService",
+		"permission": "b71b610f564c40ed81dfe5d853bf5fe8"
+	},
+	{
+		"id": "resource.equipment.plant2estimatepricelist.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plant2EstimatePriceListList",
+		"controller": "resourceEquipmentPlant2EstimatePriceListListController",
+		"uuid": "341542acb5594af784726a65fba10dbc"
+	},
+	{
+		"id": "resource.equipment.plant2estimatepricelist.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plant2EstimatePriceListDetail",
+		"controller": "resourceEquipmentPlant2EstimatePriceListDetailController",
+		"uuid": "968ff95930cc46e0946d043a4ec08ddc",
+		"permission": "341542acb5594af784726a65fba10dbc"
+	},
+	{
+		"id": "resource.equipment.component.warranty.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.componentWarrantyListTitle",
+		"controller": "resourceEquipmentPlantWarrantyListController",
+		"uuid": "9552282e659b480c8e3b3a2338861377"
+	},
+	{
+		"id": "resource.equipment.component.warranty.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.componentWarrantyDetailTitle",
+		"controller": "resourceEquipmentPlantWarrantyDetailController",
+		"uuid": "6e2f6cdff8244bc5a7bda75cc1983b35",
+		"permission": "9552282e659b480c8e3b3a2338861377"
+	},
+	{
+		"id": "resource.equipment.compatibleMaterialList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.compatibleMaterialListTitle",
+		"controller": "resourceEquipmentCompatibleMaterialListController",
+		"uuid": "26b70d12f6134c08af7f3b173dd76c37"
+	},
+	{
+		"id": "resource.equipment.compatibleMaterialDetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.compatibleMaterialDetailsTitle",
+		"controller": "resourceEquipmentCompatibleMaterialDetailController",
+		"uuid": "47488ebd7e73436ab9ae9ba7acfc6cec",
+		"permission": "26b70d12f6134c08af7f3b173dd76c37"
+	},
+	{
+		"id": "resource.equipment.catalogRecord1",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "resource.equipment.catalogRecordSource1",
+		"controller": "resourceEquipmentSourceWindowController",
+		"uuid": "00d61b7a655d47448292f819b321d6a1",
+		"permission": "bae34453f83744d3a6f7e53b7851e657",
+		"filter": [ "catalogFk" ]
+	},
+	{
+		"id": "resource.equipment.catalogRecord2",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "resource.equipment.catalogRecordSource2",
+		"controller": "resourceEquipmentSourceWindowController",
+		"uuid": "4a924a0f6cf14d408f1ca859bb21ee11",
+		"permission": "bae34453f83744d3a6f7e53b7851e657",
+		"filter": [ "catalogFk" ]
+	},
+	{
+		"id": "resource.equipment.procurement.contracts.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.procurementContractsListTitle",
+		"controller": "resourceEquipmentProcurementContractsListController",
+		"uuid": "213a828ef4e94991a8210e161fc17cba"
+	},
+	{
+		"id": "resource.equipment.procurement.contracts.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.procurementContractsDetailTitle",
+		"controller": "resourceEquipmentProcurementContractsDetailController",
+		"uuid": "d2015e219c124e6cbdb1134dffa062b2",
+		"permission": "213a828ef4e94991a8210e161fc17cba"
+	},
+	{
+		"id": "resource.equipment.specificvalue.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.specificValueList",
+		"controller": "resourceEquipmentSpecificValueListController",
+		"uuid": "7318154aabd6471d9b99a6a8a376cfe7"
+	},
+	{
+		"id": "resource.equipment.specificvalue.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.specificValueDetail",
+		"controller": "resourceEquipmentSpecificValueDetailController",
+		"uuid": "cb30d921aa5e4d3cb897e944b4d95de2",
+		"permission": "7318154aabd6471d9b99a6a8a376cfe7"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "ac88f325062c46ff9f5589ece3e2ba2d",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "resource.equipment.bulkplantowner.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.bulkPlantOwnerList",
+		"controller": "resourceEquipmentBulkPlantOwnerListController",
+		"uuid": "5a0fe583fb6d477cb60ac090fd742e9b"
+	},
+	{
+		"id": "resource.equipment.bulkplantowner.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.bulkPlantOwnerDetail",
+		"controller": "resourceEquipmentBulkPlantOwnerDetailController",
+		"uuid": "f1b17cf6415e4d4e91a1038e27053f1c",
+		"permission": "5a0fe583fb6d477cb60ac090fd742e9b"
+	}
+]

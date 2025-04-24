@@ -1,0 +1,76 @@
+<div style="overflow:auto">
+    <div class="platform-lg platform-form-group">
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="padding-left:10px;">
+                <div class="flex-box flex-row">
+                    <div class="checkbox" style="padding-bottom: 10px;">
+                        <label class="platform-form-label">{{'procurement.pricecomparison.hideZeroValueLines'| translate}}
+                            <input data-ng-model-options="{debounce: { default: 0, blur: 0}}"
+                                   type="checkbox"
+                                   data-ng-change="boqOptions[0].onHideZeroValueLinesChanged()"
+                                   data-ng-model="boqOptions[0].settings.generic.boq.hideZeroValueLines"
+                                   class="ng-pristine ng-untouched ng-valid ng-empty"/>
+                        </label>
+                    </div>
+	                <div class="checkbox col-lg-offset-1" style="margin-top: initial;">
+		                <label class="platform-form-label">{{'procurement.pricecomparison.percentageLevels'| translate}}
+			                <input data-ng-model-options="{debounce: { default: 0, blur: 0}}"
+			                       type="checkbox"
+			                       data-ng-change="boqOptions[0].onHideZeroValueLinesChanged()"
+			                       data-ng-model="boqOptions[0].settings.generic.boq.percentageLevels"
+			                       class="ng-pristine ng-untouched ng-valid ng-empty"/>
+		                </label>
+	                </div>
+                </div>
+                <div class="lg-4">
+                    <div>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="platform-form-group-header-text"
+                                          style="max-width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display: inline-block;"
+                                          title="{{'procurement.pricecomparison.showSummary'| translate}}">{{'procurement.pricecomparison.showSummary'| translate}}</span>
+                                </h4>
+                            </div>
+                            <div class="flex-box flex-column" style="height: 200px;">
+                                <platform-grid data="boqOptions[0].gridData"></platform-grid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg-4">
+                    <div data-ng-controller="procurementPricecomparisonPrcBoqItemTypeController">
+                        <div class="panel panel-default ">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="platform-form-group-header-text"
+                                          style="max-width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display: inline-block;"
+                                          title="{{'procurement.pricecomparison.boqItemTypeConfigTitle'| translate}}">{{'procurement.pricecomparison.boqItemTypeConfigTitle'| translate}}</span>
+                                </h4>
+                            </div>
+                            <div class="flex-box flex-column" style="height: 200px;">
+                                <platform-grid data="gridData"></platform-grid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg-4">
+                    <div data-ng-controller="procurementPricecomparisonPrcBoqItemType2Controller">
+                        <div class="panel panel-default ">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="platform-form-group-header-text"
+                                          style="max-width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display: inline-block;"
+                                          title="{{'procurement.pricecomparison.boqItemType2ConfigTitle'| translate}}">{{'procurement.pricecomparison.boqItemType2ConfigTitle'| translate}}</span>
+                                </h4>
+                            </div>
+                            <div class="flex-box flex-column" style="height: 200px;">
+                                <platform-grid data="gridData2"></platform-grid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

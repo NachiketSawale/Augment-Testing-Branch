@@ -1,0 +1,67 @@
+<div>
+	<div class="change-status-editor-title">
+		<h3>{{ config?.title }}</h3>
+	</div>
+	<div id="change-status-container">
+		<div class="zoom-img">
+			<a class="ui-slider-increase control-icons ico-plus block-image" (click)="OnSelectUp()">
+			</a>
+		</div>
+		<div id="change-status-detail">
+			<!-- disable the slider, because currently can't find a way to prevent user to drag the slider into a not available status-->
+			<mat-slider
+				[min]="0"
+				[max]="sliderMaxValue"
+				[discrete]="false"
+				disabled="true"
+				class="custom-slider"
+				[ngStyle]="{ 'width': sliderHeight,'position':'absolute'} ">
+				<input [value]="currentStateValue" matSliderThumb>
+			</mat-slider>
+			<ul class="change-status-detail-list">
+				<li class="change-status-detail-item" *ngFor="let status of statusList"
+				    [ngClass]="{'change-status-detail-item-select': selectedStatus === status,'change-status-detail-item-disable': !status.isAvailable}"
+				    (click)="onSelectStatus(status)" data-ng-dblclick="rowDoubleClick(item)"
+				    (dblclick)="onDoubleClickStatus(status)">
+					<div class="change-status-detail-item-content">
+						<div>
+							<svg class="block-image change-status-detail-img" [ngStyle]="getStatusIconStyle(status)">
+								<use [attr.xlink:href]="getStatusIconURL(status)"></use>
+							</svg>
+
+							<a [ngClass]="{'change-status-detail-item-default': status.IsDefault}">
+								{{ status.DescriptionInfo?.Translated ? status.DescriptionInfo?.Translated : "" | platformTranslate }}
+							</a>
+							<!--Maybe we can remove this code, cause these two flags are not needed anymore-->
+							<!--							<div *ngIf="state.IsOptionalUpwards === false"-->
+							<!--							     class="control-icons ico-sort-asc block-image"></div>-->
+							<!--							<div *ngIf="state.IsOptionalDownwards === false"-->
+							<!--							     class="control-icons ico-sort-desc block-image"></div>-->
+						</div>
+						<div class="change-status-detail-item-tick" *ngIf="selectedStatus === status">
+							<div class="control-icons ico-tick block-image"></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="zoom-img zoom-img-out">
+			<a class="ui-slider-decrease control-icons ico-minus block-image" (click)="OnSelectDown()">
+			</a>
+		</div>
+	</div>
+	<div>
+		<div id="show-all-status-button" class="text-right spaceToUp">
+			<label style="vertical-align: middle; margin: 0 10px;">
+				<input type="checkbox" name="showAvailableStatusFlg" [(ngModel)]="showAvailableStatus"
+				       style="vertical-align: middle;margin:0;">
+				{{ 'basics.common.changeStatus.showAvailableStatus' | platformTranslate }}
+			</label>
+		</div>
+		<div id="status-remark" *ngIf="!config?.isSimpleStatus">
+			<h3>{{ 'basics.common.changeStatus.remark' | platformTranslate }}</h3>
+			<textarea (ngModelChange)="remarkChanged()" class="form-control" [(ngModel)]="remark"></textarea>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="procurementCommonReplaceNeutralMaterialWizardController">
+   
+   <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+   <section class="modal-body" style="overflow-y:hidden;">
+       <div ng-switch="selectStep.number" class="modal-wrapper margin-bottom-ld fullheight" style="overflow-y:hidden;">
+           <div ng-switch-when="0" class="modal-wrapper fullheight">
+               <ng-include src="'procurement.common/partials/wizard/replace-neutral-material-step1.html'" class="modal-wrapper fullheight"></ng-include>
+           </div>
+           <div ng-switch-when="1" class="modal-wrapper fullheight" style="overflow-y:auto;overflow-x:hidden;">
+               <ng-include src="'procurement.common/partials/wizard/replace-neutral-material-step2.html'" class="modal-wrapper fullheight" width="1000px"></ng-include>
+           </div>
+       </div>
+        <span  ng-if="1==selectStep.number">
+            {{'procurement.common.wizard.replaceNeutralMaterial.note2'| translate}}
+        </span>
+       <div data-platform-wizard-dialog-body class="flex-box flex-column margin-top-ld" style="height: 70px;"></div>
+   </section>
+   <div class="modal-footer">
+       <label style="position:absolute;left: 15px;">
+       <span ng-if="0==selectStep.number" class="font-italic">
+           {{'procurement.common.wizard.replaceNeutralMaterial.note1'| translate}}
+       </span>
+
+       </label>
+       <span ng-if="getCurrentStepNumber() !== 1" >
+           <button type="button" class="btn btn-default" data-ng-click="aiItemAlternative()" data-ng-hide="!isShowAIFunction" style="display: inline-block;">{{::'procurement.common.wizard.replaceNeutralMaterial.aiItemAlternative' | translate}}</button>
+           <button type="button" class="btn btn-default" data-ng-click="refresh()" style="display: inline-block;">{{::'procurement.common.wizard.replaceNeutralMaterial.refresh' | translate}}</button>
+           <button type="button" class="btn btn-default" data-ng-click="previousStep()" style="display: inline-block;">{{::'basics.common.button.previousStep' | translate}}</button>
+       </span>
+       <button type="button" class="btn btn-default" ng-disabled="(0==selectStep.number && !(haveCatalog && haveCriteriaChooseArr))||(1==selectStep.number&&disableReplace)"  data-ng-click="nextStep()" style="margin-left:5px;">{{getButtonText()}}</button>
+       <button type="button" data-ng-click="$close(false)" class="btn btn-default" >{{::'platform.cancelBtn' | translate}}</button>
+   </div>
+   <div cloud-common-overlay data-loading="dialogLoading"
+        data-info2="loadingInfo"></div>
+</div>
+

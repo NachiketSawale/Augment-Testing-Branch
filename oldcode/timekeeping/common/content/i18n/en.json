@@ -1,0 +1,29 @@
+﻿{
+	"timekeeping": {
+		"common": {
+			"period": "Period",
+			"employee": "Employee",
+			"sheetSymbol": "Sheet Symbol",
+			"dueDate": "Due Date",
+			"timeSymbol": "Time Symbol",
+			"from": "From",
+			"to": "To",
+			"fromTime": "From Time",
+			"toTime": "To Time",
+			"duration": "Duration",
+			"startTime": "Start",
+			"endTime": "End",
+			"payrollYear": "Payroll Year",
+			"payrollPeriod": "Payroll Period",
+			"payrollDate": "Payroll Date",
+			"postingDate": "Posting Date",
+			"due1Date": "Due Date 1",
+			"due2Date": "Due Date 2",
+			"timekeepingGroup": "Timekeeping Group",
+			"costGroup": "Cost Group",
+			"entityWeekday": "Weekday",
+			"entityExceptionDay": "Exception Day",
+			"entityTksResult": "Result"
+		}
+	}
+}

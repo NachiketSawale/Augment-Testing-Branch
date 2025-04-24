@@ -1,0 +1,21 @@
+{
+  "logistic": {
+    "sundryservice": {
+      "entitySundryService": "Sundry Service",
+      "listSundryServiceTitle": "Sundry Services",
+      "detailSundryServiceTitle": "Sundry Service Details",
+      "listSundryServicePriceListTitle": "Sundry Service Price Lists",
+      "detailSundryServicePriceListTitle": "Sundry Service Price List Details",
+      "isManual": "Is Manual",
+      "pricePortion01": "Price Portion 1",
+      "pricePortion02": "Price Portion 2",
+      "pricePortion03": "Price Portion 3",
+      "pricePortion04": "Price Portion 4",
+      "pricePortion05": "Price Portion 5",
+      "pricePortion06": "Price Portion 6",
+      "pricePortionSum": "Price Portion Sum",
+      "sundryServiceEntity": "Sundry Service",
+      "priceListEntity": "Sundry Service Price List"
+    }
+  }
+}

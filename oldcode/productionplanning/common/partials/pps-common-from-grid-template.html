@@ -1,0 +1,12 @@
+<section class="modal-body flex-box flex-column" ng-controller="ppsCommonTakeProductsFromStockController">
+    <div data-platform-form data-form-options="formOptions" data-entity="formOptions.entity"></div>
+
+    <div class="toolbar">
+        <h3 class="title font-bold">{{'productionplanning.producttemplate.productListTitle' | translate}}</h3>
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div class="flex-box flex-column flex-element filler subview-content">
+        <platform-Grid data-data="gridData"></platform-Grid>
+    </div>
+    <div data-cloud-common-overlay data-loading="isLoading"></div>
+</section>

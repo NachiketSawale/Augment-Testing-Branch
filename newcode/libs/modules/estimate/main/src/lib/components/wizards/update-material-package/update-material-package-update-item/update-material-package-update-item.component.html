@@ -1,0 +1,54 @@
+<div class="update-Package-page col-md-12">
+	<div class="col-md-4">{{ 'estimate.main.updateMaterialPackageWizard.updatePackageTitle'| platformTranslate }}:</div>
+	<div class="col-md-8 text-right">
+		<div>
+			<ui-common-domain-control-host [(value)]="isUpdateBudgetForExistedAssignment" [fieldType]="FieldType.Boolean"></ui-common-domain-control-host>
+			<label class="platform-form-label">{{ 'estimate.main.updateMaterialPackageWizard.updateBudgetForExistedAssignmentLabel'| platformTranslate }}</label>
+		</div>
+		<div>
+			<ui-common-domain-control-host [(value)]="isHideBoqGeneratePackage" [fieldType]="FieldType.Boolean" (valueChange)="onHideBoqGeneratePackageChanged()"></ui-common-domain-control-host>
+			<label class="platform-form-label">{{ 'estimate.main.updateMaterialPackageWizard.hideBoqGeneratePackageFlg'| platformTranslate }}</label>
+		</div>
+	</div>
+</div>
+<div class="flex-element flex-box flex-column subview-container gridContainer">
+	<div class="toolbar">
+		<h2 class="title fix ">{{ 'estimate.main.updateMaterialPackageWizard.package'| platformTranslate }}</h2>
+		<!--todo group grid and search grid in toolbar<div data-platform-menu-list data-list="tools"></div>-->
+	</div>
+	<ui-common-grid [configuration]="packageGridConfig" [items]="showUpdatePackages" class="lookup-grid flex-basis-auto"></ui-common-grid>
+</div>
+
+<div class="margin-top-ld">{{ 'procurement.package.wizard.generateItems.optionNewItemTitle'| platformTranslate }}</div>
+<div class="margin-left-ld margin-top-ld">
+	<div class="checkbox spaceToUp margin-right-ld">
+		<label>
+			<ui-common-domain-control-host [(value)]="isAggregateItem" [fieldType]="FieldType.Boolean"></ui-common-domain-control-host>
+			{{ 'procurement.package.wizard.generateItems.aggregateProfileItemFlg'| platformTranslate }}
+		</label>
+	</div>
+</div>
+<div class="flex-box flex-align-center profile-lookup">
+	<div class="flex-inline-box margin-right-ld">{{ 'procurement.package.wizard.generateItems.aggregateProfileItem'| platformTranslate }}</div>
+	<div class="flex-element">
+    <basics-shared-unique-fields-profile-lookup [uniqueFieldOption]="uniqueFieldOption" [value]="uniqueFields"></basics-shared-unique-fields-profile-lookup>
+	</div>
+</div>
+<div class="margin-left-ld margin-top-ld">
+	<div class="margin-left-ld margin-top-ld">{{ 'procurement.package.wizard.generateItems.sameItemTitle'| platformTranslate }}:</div>
+	<div class="margin-left-ld">
+		<div class="radio spaceToUp margin-left-ld">
+			<!--todo DEV-25789  FieldType.radio can't support disabled property now ,use below code implement first,The best way is to implement it in the form-->
+			<label>
+				<input type="radio" name="mode" [disabled]="isUpdateBudgetForExistedAssignment" [(ngModel)]="mergeOrCreate" [value]="merge">
+				{{ 'procurement.package.wizard.generateItems.mergeExisted'| platformTranslate }}
+			</label>
+		</div>
+		<div class="radio spaceToUp margin-left-ld">
+			<label>
+				<input type="radio" name="mode" [disabled]="isUpdateBudgetForExistedAssignment" [(ngModel)]="mergeOrCreate" [value]="create">
+				{{ 'procurement.package.wizard.generateItems.createNewItem'| platformTranslate }}
+			</label>
+		</div>
+	</div>
+</div>

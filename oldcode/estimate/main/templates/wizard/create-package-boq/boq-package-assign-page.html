@@ -1,0 +1,356 @@
+<style>
+    fieldset .platform-form-group {
+        padding-left: 6px;
+        display: inline-block;
+        border-spacing: 0;
+    }
+
+    .form-group label {
+        padding: 0;
+    }
+
+    .left-container .platform-form-row label {
+        min-width: 100px;
+    }
+
+    fieldset {
+        padding: 2px;
+        border: 1px solid #dcdcdc;
+        border-radius: 3px;
+        flex: 1;
+        min-width: auto;
+    }
+
+    legend {
+        margin-left: 3px;
+        width: auto;
+        background-color: #fff;
+        font-size: 13px;
+        vertical-align: middle;
+    }
+</style>
+<div data-ng-controller="estimateMainBoqPackageAssignPageController" style="width: 1500px;">
+    <!--        <div id="createBoqPackageAssignPage" data-platform-kendo-splitter-adjust class="flex-element flex-box flex-column"-->
+    <!--             option="{panes: [ { collapsible: true, size: '65%' },{ collapsible: true, size: '35%',collapsed:true }],orientation:'horizontal'}">-->
+    <div class="flex-element flex-box flex-basis-auto grid-layout-wrapper">
+        <!--                <div id="ui-layout-west"  class="flex-box flex-column flex-element">-->
+        <div class="flex-element flex-box flex-column">
+            <div>
+                <b>{{'estimate.main.createBoqPackageWizard.assignPage.simulation.title' | translate}}</b>
+	            <div>
+	             <label
+                    data-ng-show="canShowError()"
+                    style="color: red">{{errorMessage}}</label>
+	            </div>
+	            <div>
+		            <label
+			            data-ng-show="canShowNote()"
+			            style="color: blue">{{noteMessage}}</label>
+	            </div>
+            </div>
+            <div class="flex-element flex-box flex-column subview-container" style="min-height: 100px;">
+                <platform-Grid data-data="simulation"></platform-Grid>
+            </div>
+            <div style="padding-top:10px;display: flex;flex-direction: row;">
+                <fieldset>
+                    <legend>
+                        <div data-change="valueChanged('boqPackageAssignmentEntity.CreateUpdateBoQInPackage')"
+                             data-domain="boolean" data-domain-control
+                             data-model="entity.boqPackageAssignmentEntity.CreateUpdateBoQInPackage"
+                             data-ng-model="entity.boqPackageAssignmentEntity.CreateUpdateBoQInPackage"
+                             data-entity="entity"
+                             data-options="createUpdateBoQInPackageOptions">
+                        </div>
+                    </legend>
+                    <div data-ng-show="isForResource()">
+                        <label class="platform-form-label">{{'estimate.main.createBoqPackageWizard.boqHierarchy' | translate}}</label>
+                        <ul style="padding:4px 10px 6px;min-width: 330px;">
+                            <li class="platform-form-group spaceToUp">
+                                <input type="radio" name="boqStructure4SourceResources" data-ng-value="boqHierarchy.projectBoqAndLineItem"
+                                       data-ng-change="valueChanged('boqPackageAssignmentEntity.BoqStructureOption4SourceResources')"
+                                       data-ng-model="entity.boqPackageAssignmentEntity.BoqStructureOption4SourceResources"
+                                       data-ng-disabled="getConfig('boqPackageAssignmentEntity.BoqStructureOption4SourceResources').rt$readonly()"
+                                       data-ng-model-options="{debounce: 0}"/>
+	                            {{'estimate.main.createBoqPackageWizard.projectBoqAndLineItemAsBoqHierarchy' | translate}}
+                            </li>
+                            <li class="platform-form-group spaceToUp">
+                                <div style="padding-left: 30px;">
+	                                <div data-domain="boolean" data-domain-control
+	                                     data-entity="entity"
+	                                     data-model="entity.boqPackageAssignmentEntity.IsSkipBoqPositionAsDivisionBoq"
+	                                     data-ng-model="entity.boqPackageAssignmentEntity.IsSkipBoqPositionAsDivisionBoq"
+	                                     data-config="getConfig('boqPackageAssignmentEntity.IsSkipBoqPositionAsDivisionBoq')"
+	                                     data-ng-readonly="getConfig('boqPackageAssignmentEntity.IsSkipBoqPositionAsDivisionBoq').rt$readonly()"
+	                                     data-options="isSkipBoqPositionAsDivisionBoqOptions">
+	                                </div>
+                                </div>
+                            </li>
+                            <li class="platform-form-group spaceToUp">
+                                <input type="radio" name="boqStructure4SourceResources" data-ng-value="boqHierarchy.lineItem"
+                                       data-ng-change="valueChanged('boqPackageAssignmentEntity.BoqStructureOption4SourceResources')"
+                                       data-ng-model="entity.boqPackageAssignmentEntity.BoqStructureOption4SourceResources"
+                                       data-ng-disabled="getConfig('boqPackageAssignmentEntity.BoqStructureOption4SourceResources').rt$readonly()"
+                                       data-ng-model-options="{debounce: 0}"/>
+                                {{'estimate.main.createBoqPackageWizard.lineItemAsBoqHierarchy' | translate}}
+                            </li>
+                        </ul>
+	                    <label class="platform-form-label">
+		                    {{'basics.common.uniqueFields.costTransferOptprofile' | translate}}
+	                    </label>
+	                    <div class="platform-form-col">
+		                    <div cost-transfer-option-profile
+		                         data-entity="entity"
+		                         data-model="entity.boqPackageAssignmentEntity.CostTransferOptprofile"
+		                         data-ng-model="entity.boqPackageAssignmentEntity.CostTransferOptprofile"
+		                         data-options="costTransferOptionProfileOptions"></div>
+	                    </div>
+                    </div>
+                    <div class="platform-form-group" data-ng-show="isForBoq() || isForStructure()">
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">
+                                <div data-domain="boolean" data-domain-control
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.IsConsiderBoqQtyRelation"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.IsConsiderBoqQtyRelation"
+                                     data-config="getConfig('boqPackageAssignmentEntity.IsConsiderBoqQtyRelation')"
+                                     data-ng-readonly="getConfig('boqPackageAssignmentEntity.IsConsiderBoqQtyRelation').rt$readonly()"
+                                     data-change="valueChanged('boqPackageAssignmentEntity.IsConsiderBoqQtyRelation')"
+                                     data-options="isConsiderBoqQtyRelationOptions">
+                                </div>
+                            </div>
+                            <div class="platform-form-col">
+                                <div class="platform-form-label" data-ng-show="isForStructure()">
+                                    <div data-domain="boolean" data-domain-control
+                                         data-entity="entity"
+                                         data-model="entity.boqPackageAssignmentEntity.IsControllingUnit"
+                                         data-ng-model="entity.boqPackageAssignmentEntity.IsControllingUnit"
+                                         data-config="getConfig('boqPackageAssignmentEntity.IsControllingUnit')"
+                                         data-ng-readonly="getConfig('boqPackageAssignmentEntity.IsControllingUnit').rt$readonly()"
+                                         data-options="isControllingUnitOptions">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platform-form-row" data-ng-show="canShowQuantityTransferFrom()">
+                            <label class="platform-form-label">{{'estimate.main.createBoqPackageWizard.quantityTransferFrom' | translate}}</label>
+                            <div class="platform-form-col">
+                                <div basics-common-quantity-transfer-form-lookup
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.QuantityTransferFrom"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.QuantityTransferFrom"
+                                     data-ng-change="valueChanged('boqPackageAssignmentEntity.QuantityTransferFrom')"
+                                     data-config="getConfig('boqPackageAssignmentEntity.QuantityTransferFrom')"
+                                     data-ng-readonly="getConfig('boqPackageAssignmentEntity.QuantityTransferFrom').rt$readonly()"
+                                     data-options="quantityTransferFromOptions">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="platform-form-row" data-ng-show="isForStructure()">
+                            <div class="platform-form-label">
+                                <div data-domain="boolean" data-domain-control
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.isAggregate"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.isAggregate"
+                                     data-change="valueChanged('boqPackageAssignmentEntity.isAggregate')"
+                                     data-config="getConfig('boqPackageAssignmentEntity.isAggregate')"
+                                     data-ng-readonly="getConfig('boqPackageAssignmentEntity.isAggregate').rt$readonly()"
+                                     data-options="isAggregateOptions">
+                                </div>
+                            </div>
+                            <div class="platform-form-col">
+                                <div basics-common-unique-fields-profile-lookup
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.uniqueFieldsProfile"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.uniqueFieldsProfile"
+                                     data-config="getConfig('boqPackageAssignmentEntity.uniqueFieldsProfile')"
+                                     data-ng-readonly="getConfig('boqPackageAssignmentEntity.uniqueFieldsProfile').rt$readonly()"
+                                     data-options="uniqueFieldsProfileOptions"></div>
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <label class="platform-form-label">
+                                {{'basics.common.uniqueFields.costTransferOptprofile' | translate}}
+                            </label>
+                            <div class="platform-form-col">
+                                <div cost-transfer-option-profile
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.CostTransferOptprofile"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.CostTransferOptprofile"
+                                     data-options="costTransferOptionProfileOptions"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset style="margin-left:20px;">
+                    <legend>
+                        <div class="platform-form-label">
+                            {{'estimate.main.createMaterialPackageWizard.newPackageOption' | translate}}
+                        </div>
+                    </legend>
+                    <div class="platform-form-group">
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">
+                                <div data-domain="boolean" data-domain-control
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.IsCreateNew"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.IsCreateNew"
+                                     data-config="getConfig('boqPackageAssignmentEntity.IsCreateNew')"
+                                     data-ng-readonly="getConfig('boqPackageAssignmentEntity.IsCreateNew').rt$readonly()"
+                                     data-change="valueChanged('boqPackageAssignmentEntity.IsCreateNew')"
+                                     data-options="isCreateNewOptions">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platform-form-row" data-ng-show="isForBoq()">
+                            <div class="platform-form-label">
+                                <div data-domain="boolean" data-domain-control
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.IsToCreateSeparatePackages"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.IsToCreateSeparatePackages"
+                                     data-config="getConfig('boqPackageAssignmentEntity.IsToCreateSeparatePackages')"
+                                     data-ng-readonly="getConfig('boqPackageAssignmentEntity.IsToCreateSeparatePackages').rt$readonly()"
+                                     data-change="valueChanged('boqPackageAssignmentEntity.IsToCreateSeparatePackages')"
+                                     data-options="isToCreateSeparatePackagesOptions">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platform-form-row" data-ng-show="isForBoq() || isForStructure()">
+                            <div class="platform-form-label">
+                                <div data-domain="boolean" data-domain-control
+                                     data-entity="entity"
+                                     data-model="entity.boqPackageAssignmentEntity.lineItemWithNoResourcesFlag"
+                                     data-ng-model="entity.boqPackageAssignmentEntity.lineItemWithNoResourcesFlag"
+                                     data-options="lineItemWithNoResourcesFlagOptions">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset style="margin-left:20px;">
+                    <legend>
+                        <div class="platform-form-label">
+                            {{'estimate.main.createBoqPackageWizard.assignPage.setting.legend' | translate}}
+                        </div>
+                    </legend>
+                    <div class="platform-form-group">
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">
+                                <div package-option-profile-lookup data-ng-model="updateOptions.optionProfile"
+                                     data-options="optionProfileOptions" class="package-option-lookup"></div>
+                            </div>
+                        </div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-label">
+                                <button type="button" class="btn btn-default" data-ng-click="reset()">
+                                    {{'estimate.main.createBoqPackageWizard.assignPage.setting.resetSimulationData' | translate}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <!--                <div id="ui-layout-east" class="left-container flex-box flex-column" style="overflow:hidden;max-width: 450px;">-->
+        <div class="left-container flex-box flex-column" style="max-width: 750px; min-width: 500px;">
+            <div style="overflow:auto;padding:10px;" class="fullheight">
+                <label style="font-weight: bold;padding-top:10px;">
+                    {{'estimate.main.createMaterialPackageWizard.updateToExistedPackageOption' | translate}}
+                </label>
+                <div style="padding-left:20px;">
+                    <div data-domain="boolean" data-domain-control
+                         data-entity="entity"
+                         data-model="entity.boqPackageAssignmentEntity.hidePackageWithMaterialOrNonCurrentCriteria"
+                         data-ng-model="entity.boqPackageAssignmentEntity.hidePackageWithMaterialOrNonCurrentCriteria"
+                         data-config="getConfig('boqPackageAssignmentEntity.hidePackageWithMaterialOrNonCurrentCriteria')"
+                         data-ng-readonly="getConfig('boqPackageAssignmentEntity.hidePackageWithMaterialOrNonCurrentCriteria').rt$readonly()"
+                         data-options="hidePackageWithMaterialOrNonCurrentCriteriaOptions">
+                    </div>
+                </div>
+
+                <label style="font-weight: bold;padding-top:20px;">
+                    {{'estimate.main.createMaterialPackageWizard.newPackageDefinition' | translate}}
+                </label>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <label class="platform-form-label">{{'estimate.main.prcStructureFk' | translate}}<span
+                                class="required-cell"></span></label>
+                        <div class="platform-form-col">
+                            <div data-ng-model="entity.boqPackageAssignmentEntity.Package.StructureFk"
+                                 data-options="prcStructureLookupOptions"
+                                 data-basics-lookupdata-lookup-composite
+                                 class="control-directive"
+                                 data-config="getConfig('boqPackageAssignmentEntity.Package.StructureFk')"
+                                 data-entity="entity"
+                                 data-ng-readonly="getConfig('boqPackageAssignmentEntity.Package.StructureFk').rt$readonly()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.configuration' | translate}}</label>
+                        <div class="platform-form-col">
+                            <div basics-configuration-configuration-combobox
+                                 data-ng-model="entity.boqPackageAssignmentEntity.Package.ConfigurationFk"
+                                 data-ng-change="valueChanged('boqPackageAssignmentEntity.Package.ConfigurationFk')"
+                                 data-options="configurationLookupOptions"
+                                 data-config="getConfig('boqPackageAssignmentEntity.Package.ConfigurationFk')"
+                                 data-entity="entity"
+                                 data-ng-readonly="getConfig('boqPackageAssignmentEntity.Package.ConfigurationFk').rt$readonly()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <label class="platform-form-label">{{'estimate.main.prcPackageFk' | translate}}</label>
+                        <div class="platform-form-col">
+                            <div class="control-directive">
+                                <div data-estimate-main-assign-boq-package-dynamic-composite-lookup
+                                     data-ng-model="entity.boqPackageAssignmentEntity.Package.Id"
+                                     data-options="packageLookupOptions"
+                                     data-entity="entity">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.subPackage' | translate}}</label>
+                        <div class="platform-form-col">
+                            <div data-domain-control data-domain="description"
+                                 data-model="entity.boqPackageAssignmentEntity.SubPackageDescription"
+                                 data-ng-model="entity.boqPackageAssignmentEntity.SubPackageDescription"
+                                 data-config="getConfig('boqPackageAssignmentEntity.SubPackageDescription')"
+                                 data-ng-readonly="getConfig('boqPackageAssignmentEntity.SubPackageDescription').rt$readonly()"
+                                 data-entity="entity">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <label class="platform-form-label">{{'cloud.common.entityReference' | translate}}</label>
+                        <div class="platform-form-col">
+                            <div data-domain-control data-domain="description"
+                                 data-entity="entity"
+                                 data-model="entity.boqPackageAssignmentEntity.Package.Reference"
+                                 data-ng-model="entity.boqPackageAssignmentEntity.Package.Reference"
+                                 data-config="getConfig('boqPackageAssignmentEntity.Package.Reference')"
+                                 data-ng-readonly="getConfig('boqPackageAssignmentEntity.Package.Reference').rt$readonly()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.responsible' | translate}}</label>
+                        <div class="platform-form-col">
+                            <div data-ng-model="entity.boqPackageAssignmentEntity.Package.ClerkPrcFk"
+                                 data-entity="entity"
+                                 data-options="clerkLookupOptions" data-basics-lookupdata-lookup-composite
+                                 class="control-directive"
+                                 data-config="getConfig('boqPackageAssignmentEntity.Package.ClerkPrcFk')"
+                                 data-ng-readonly="getConfig('boqPackageAssignmentEntity.Package.ClerkPrcFk').rt$readonly()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

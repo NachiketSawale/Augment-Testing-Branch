@@ -1,0 +1,21 @@
+/*-------------------------------------------------------------------------------
+	 Menu (_menu.scss)
+  -------------------------------------------------------------------------------*/
+#menu {
+	width: 100%;
+	background-color: #fff;
+	height: 30px;
+
+	a {
+		text-decoration: none;
+		color: #000;
+		cursor: pointer;
+	}
+
+	> div {
+		padding-top: 6px;
+		text-align: center;
+		float: left;
+		width: 60px;
+	}
+}

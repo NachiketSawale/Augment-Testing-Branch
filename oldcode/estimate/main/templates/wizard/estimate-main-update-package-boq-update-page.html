@@ -1,0 +1,48 @@
+<div ng-controller="estimateMainUpdatePackageBoqUpdatePageController" class="modal-wrapper subview-container">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body">
+        <div class="modal-wrapper">
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <label class="platform-form-label h4">{{'estimate.main.updatePackageBoqWizard.updatePage.packagePartTitle' | translate}}</label>
+                    <div class="platform-form-col" style="text-align: right;">
+                        <span style="margin-right:70px;">
+                            <input type="checkbox" data-ng-model="updateBudgetOnlyOption" data-ng-change="onUpdateBudgetOnlyOptionChanged(updateBudgetOnlyOption)" style="vertical-align: middle; margin-top:0;margin-right: 2px;margin-bottom: 5px" />
+                            {{'estimate.main.updatePackageBoqWizard.updatePage.updateBudgetOnlyOption' | translate}}
+                        </span>
+                        <input type="checkbox" data-ng-model="hidePackageOption" data-ng-change="onHidePackageOptionChanged(hidePackageOption)" style="vertical-align: middle; margin-top:0;margin-right: 2px;margin-bottom: 5px" />
+                        {{'estimate.main.updatePackageBoqWizard.updatePage.hidePackageOption' | translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <div class="platform-form-col">
+                        <div class="toolbar">
+                            <label class="platform-form-label h4" style="margin-left: 5px;">{{'estimate.main.updatePackageBoqWizard.updatePage.packageGridTitle' | translate}}</label>
+                            <div data-platform-menu-list data-list="tools"></div>
+                        </div>
+                        <div class="subview-content">
+                            <div data-platform-grid style="height: 500px;" data-data="gridData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <h4>{{'estimate.main.updatePackageBoqWizard.updatePage.updateOptionPartTitle' | translate}}</h4>
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <div class="col-md-12" data-platform-form data-form-options="updateOptions" entity="updateOption"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="previous()"> {{::'basics.common.button.previousStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="update()" data-ng-disabled="!canUpdate()" > {{::'estimate.main.updatePackageBoqWizard.updatePage.updateBtnText' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{::'basics.common.button.cancel' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.isProcessing" data-info2="modalOptions.processingInfo"></div>
+</div>

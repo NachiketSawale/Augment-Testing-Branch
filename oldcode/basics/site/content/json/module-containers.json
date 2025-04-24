@@ -1,0 +1,106 @@
+﻿[
+  {
+    "id": "basics.site.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.site.listSiteTitle",
+    "controller": "basicsSiteGridController",
+    "uuid": "d7d2e8cf9d9b47999e7a391ead0d3e00",
+	"permission": "d7d2e8cf9d9b47999e7a391ead0d3e00"
+  },
+  {
+    "id": "basics.site.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.site.detailSiteTitle",
+    "controller": "basicsSiteDetailController",
+    "uuid": "a34485a41a6d4de6810f5198ac3e2459",
+    "permission": "d7d2e8cf9d9b47999e7a391ead0d3e00"
+  },
+  {
+    "id": "basics.site.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "basics.site.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "e40fdef629324924a71ad7fe16ad11ab",
+    "wizardDisabled": "true"
+  },
+  {
+    "id": "basics.site.site2stock",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.site.site2StockListTitle",
+    "controller": "basicsSite2StockListController",
+    "uuid": "8b552a67b0104c298f542de5fedff1aa",
+    "permission": "d7d2e8cf9d9b47999e7a391ead0d3e00"
+  },
+  {
+    "id": "basics.site.site2external",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.site.site2ExternalListTitle",
+    "controller": "basicsSite2ExternalListController",
+    "uuid": "e3ddd810665a48598ba6fc70f6f10c6c",
+    "permission": "d7d2e8cf9d9b47999e7a391ead0d3e00"
+  },
+  {
+    "id": "basics.site.site2tksshift",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.shiftmodel.shiftListTitle",
+    "controller": "basicsSite2TksShiftListController",
+    "uuid": "dee5249511c14645a2C91cb84ecab0ad",
+    "permission": "dee5249511c14645a2C91cb84ecab0ad"
+  },
+  {
+    "id": "basics.site.productionplace.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.productionplace.listTitle",
+    "controller": "ppsProductionPlaceListController",
+    "uuid": "dd709fb2800e46e48c538c7fccfcef64",
+    "permission": "d7d2e8cf9d9b47999e7a391ead0d3e00",
+    "serviceOptions": {
+      "parentService": "basicsSiteMainService",
+      "parentFilter": "siteId",
+      "endRead": "listBySite"
+    }
+  },
+  {
+    "id": "basics.site.productionplace.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.productionplace.detailTitle",
+    "controller": "ppsProductionPlaceDetailController",
+    "uuid": "4ef929af69aa47a0beb4da5b968b3b50",
+    "permission": "d7d2e8cf9d9b47999e7a391ead0d3e00",
+    "serviceOptions": {
+      "parentService": "basicsSiteMainService",
+      "parentFilter": "siteId",
+      "endRead": "listBySite"
+    }
+  },
+  {
+    "id": "basics.site.prodplace2prodplaces.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.productionplace.childrenProdPlaceListTitle",
+    "controller": "ppsProdPlaceChildrenController",
+    "uuid": "f94cff3eb40d486aa58c8d4af0686fb3",
+    "permission": "d7d2e8cf9d9b47999e7a391ead0d3e00",
+    "parentServiceOptions": {
+      "parentService": "basicsSiteMainService",
+      "parentFilter": "siteId",
+      "endRead": "listBySite"
+    }
+  },
+	{
+		"id": "basics.site.site2clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.site.site2clerkListTitle",
+		"controller": "basicSite2ClerkListController",
+		"uuid": "6a4eae4b8f384d95b960e8d498219fe6",
+		"permission": "d7d2e8cf9d9b47999e7a391ead0d3e00"
+	},
+	{
+		"id": "basics.site.calendar4site.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.site.calendar4siteListTitle",
+		"controller": "ppsCommonCalendarSiteListController",
+		"uuid": "5b555d06656c450dae151d73b83d6261",
+		"permission": "d7d2e8cf9d9b47999e7a391ead0d3e00",
+		"moduleName": "basics.site"
+	}
+]

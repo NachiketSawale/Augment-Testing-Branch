@@ -1,0 +1,11 @@
+<mat-slider class="ms-commodity-attributes-range-slider"
+			[min]="price.Min"
+			[max]="price.Max"
+			[discrete]="true">
+	<input [value]="price.Value[0]" (valueChange)="priceValueChange($event, price.Value[1])" matSliderStartThumb>
+	<input [value]="price.Value[1]" (valueChange)="priceValueChange(price.Value[0], $event)" matSliderEndThumb>
+</mat-slider>
+<div  class="ms-commodity-attributes-range-slider-num">
+	<span class="float-start">{{price.Min}}</span>
+	<span class="float-end">{{price.Max}}</span>
+</div>

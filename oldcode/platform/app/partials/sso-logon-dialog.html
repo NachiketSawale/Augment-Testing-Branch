@@ -1,0 +1,49 @@
+<style data-cloud-desktop-custom-login-css></style>
+<div class="login-sso flex-element">
+	<!--     style="background-image: url('../content/images/sso-background.jpg');background-repeat:no-repeat;background-size:cover;background-position:center bottom;" >
+	-->
+	<div class="modal-dialog primary flex-box">
+
+
+		<div class="flex-box flex-column left-side main-color">
+			<div class="{{::productLogoPrimary}} productLogo" title="{{::productName}}"></div>
+
+			<div class="container-footer flex-box">
+				<div class="text-left flex-element copyright">© 2022 RIB Software GmbH</div>
+			</div>
+		</div>
+
+
+		<div class="flex-element right-side overflow-hidden flex-box flex-column">
+			<div class="flex-box header">
+				<div class="flex-element flex-box flex-align-center margin-left-ld header-label">{{text.platform.sso.title}}</div>
+				<div class="company-login-logo"></div>
+			</div>
+
+			<p>
+			<p>
+			<div class="text-justify overflow selectable" ng-bind-html="dialogOptions.singleSignOnInfoMsg">
+			</div>
+			<p>
+			<p></p>
+
+			<section>
+				<div data-cloud-common-overlay data-loading="dialogOptions.loading" data-info2="dialogOptions.loadingInfo"></div>
+			</section>
+
+			<div class="btn-group-link">
+				<button id="backbutton" class="btn btn-default text-right margin-top-ld flex-box flex-align-center pull-right" data-ng-click="onBackBtn()"
+				        title="{{text.platform.portal.backButton}}">
+					<i class="fa text-center"></i>
+					<span class="margin-left-ld flex-element">{{text.platform.portal.backButton}}</span>
+					<i class="block-image"></i>
+				</button>
+			</div>
+			<div style="margin-top: 30px"></div>
+			<div class="container-footer flex-box">
+				<div data-platform-language-selection></div>
+				<div imprint-legal-notice-container></div>
+			</div>
+		</div>
+	</div>
+</div>

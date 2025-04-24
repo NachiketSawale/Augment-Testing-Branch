@@ -1,0 +1,7 @@
+@import 'mixins';
+:host {
+    @include flexbox-container($direction: column, $flex: 1);
+    > div {
+        @include flexbox-container($direction: column, $flex: 1);
+    }
+}

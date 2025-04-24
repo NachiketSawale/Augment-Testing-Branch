@@ -1,0 +1,58 @@
+﻿{
+	"basics": {
+		"characteristic": {
+			"entityType": "类型",
+			"entityDefaultValue": "默认值",
+			"entitySelected": "已选择",
+			"entityGroup": "组别",
+			"entitySection": "分部",
+			"entityValueText": "值",
+			"entityCode": "编码",
+			"entityChecked": "选择",
+			"entityGrpFk": "组别ID",
+			"entityIsReadonly": "只读",
+			"defaultContainerTitle": "特征",
+			"recordsAffectedMsg":"!record(s) will be affected ...",
+			"title": {
+				"characteristicGroups": "特征组别",
+				"characteristicSections": "特征分部",
+				"characteristics": "特征",
+				"characteristicDetail": "特征明细",
+				"discreteValues": "离散值",
+				"remark": "备注",
+				"usedInCompany": "公司设定",
+				"automaticAssignment": "自动分配",
+				"characteristicGroupDetail": "特征组明细",
+				"discreteValueDetail": "离散值明细",
+				"characteristicSectionDetail": "特征分部明细"
+			},
+			"tab": {
+				"groups": "特征组别",
+				"characteristics": "特征"
+			},
+			"header": {
+				"codeLookup": "编码查找"
+			},
+			"section": {
+				"Project": "项目",
+				"BusinessPartner": "商业伙伴",
+				"Contact": "联系人",
+				"Clerk": "职员",
+				"Certificate": "证书",
+				"Requisition": "采购申请",
+				"Quote": "报价",
+				"Contract": "合同",
+				"ProcurementStructure": "采购目录",
+				"CostCodes": "成本代码",
+				"ControllingUnit": "控制项",
+				"Scheduling": "项目计划",
+				"ActivityTemplate": "施工组织模板",
+				"Company": "公司",
+				"MaterialCatalog": "材料目录",
+				"Material": "材料",
+				"ProcurementPackage": "采购分包",
+				"RfQ": "询价请求"
+			}
+		}
+	}
+}

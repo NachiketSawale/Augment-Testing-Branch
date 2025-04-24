@@ -1,0 +1,21 @@
+<header class="modal-header main-color">
+	<h2 class="modal-title">{{'basics.workflow.entity.infoDialog.header' | translate}}</h2>
+	<button aria-hidden="true" class="close db" data-dismiss="modal" data-ng-click="onOk()"
+	        type="button">
+		<svg class="block-image" data-cloud-desktop-svg-image data-image="ico-close" data-sprite="control-wh-icons"></svg>
+	</button>
+</header>
+
+<div>
+	<section class="modal-body">
+		<span class="form-control" data-domain="select" data-domain-control data-model="entityInfo.selectedItem"
+		      data-options="entityInfo.options"></span>
+		<span data-ng-bind="entityInfo.selectedItem.properties"></span>
+	</section>
+</div>
+
+<footer class="modal-footer">
+	<button class="btn btn-default" data-ng-click="onOk()" type="button">
+		{{'cloud.common.ok' | translate}}
+	</button>
+</footer>

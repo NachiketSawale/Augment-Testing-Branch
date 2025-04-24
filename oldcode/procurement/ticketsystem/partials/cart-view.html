@@ -1,0 +1,163 @@
+﻿<div class="ts-cart-item-panel ts-cart-item-list-panel fullheight flex-element" data-ng-show="!isPreview">
+	<div class="row fullwidth">
+
+		<div id="accordion" class="show">
+			<div class="panel-group">
+				<div data-ng-repeat="item in cartService.catalogs" class="panel container-bar-primary" style="margin-bottom: 6px;">
+					<div id="cart-view-materials-header" class="panel-heading flex-box cart-group">
+						<article class="flex-box" style="flex: 0 0 260px;">
+							<input type="checkbox" ng-model="item.checked" data-ng-change="cartService.refreshSummary()"><label class="visible-sm visible-md visible-lg ellipsis" style="padding-left: 5px;padding-right: 5px;background: #d6d6d6;margin-left: 2px;">{{htmlTranslate.vendor}} </label>
+							<div filter-business-partner-dialog-lookup class="fullwidth flex-element" data-ng-model="item.businessPartnerFk" data-entity="item"
+							     data-options="getLookupOptions(item.isFrameworkType)" data-ng-change="changeProcurementType(item)" style="max-width: 191px;"></div>
+						</article>
+						<div class="flex-box" style="flex: 0 0 260px;border-right:solid 1px #fff;">
+							<div class="visible-sm visible-md visible-lg ellipsis" style="padding: 0px 5px;background: #d6d6d6;">
+								<label>{{htmlTranslate.configuration}}</label>
+							</div>
+							<article class="form-control">
+								<div data-basics-configuration-configuration-combobox class="fullwidth flex-element" data-ng-model="item.configurationFk" data-entity="item" data-options="configurationOptions"></div>
+							</article>
+						</div>
+						<div class="flex-box" style="flex: 0 0 260px;border-right:solid 1px #fff;">
+							<div class="visible-sm visible-md visible-lg ellipsis" style="padding: 0px 5px;background: #d6d6d6;">
+								<label>{{ htmlTranslate.prcTypeLabel }}</label>
+							</div>
+							<article class="form-control">
+								<div data-domain-control data-domain="select"
+								     data-model="item.prcType"
+								     data-options="getPrcTypeOptions(item)"
+								     data-change="changePrcType(item)">
+								</div>
+							</article>
+						</div>
+						<div class="flex-box" style="flex: 0 0 260px;border-right:solid 1px #fff;">
+							<div class="visible-sm visible-md visible-lg ellipsis" style="padding: 0px 5px;background: #d6d6d6;">
+								<label>{{ htmlTranslate.requiredDate }}</label>
+							</div>
+							<article class="flex-box flex-align-center">
+								<div data-domain-control data-domain="dateutc"
+								     data-ng-init="item.requireDate = getFormatedDate(item.requireDate);"
+								     data-model="item.requireDate" class="flex-element margin-left-md"
+								     data-change="changeUseReportStart()"></div>
+							</article>
+						</div>
+						<div class="flex-box" style="border-right:solid 1px #fff;">
+							<div class="visible-sm visible-md visible-lg ellipsis" style="padding: 0px 5px;background: #d6d6d6;">
+								<label>{{ htmlTranslate.documents + (!item.docs.length? '': '(' + item.docs.length + ')') }}:</label>
+							</div>
+							<article class="form-control">
+								<button class="btn btn-default input-sm" style="width: 26px;height: 26px;border-width: 0 0 0 1px;" data-ng-click="editDocs(item)">
+									<div class="control-icons ico-input-lookup lookup-ico-dialog"></div>
+								</button>
+							</article>
+						</div>
+						<article class="text-right" style="justify-content: flex-end;height:28px;padding: 5px 5px 0 0;">
+							<a role="button" data-ng-init="item.collapsed" data-toggle="collapse" data-parent="#accordion"  ng-click="toggleOpen(item)" class="cursor-pointer">
+								<i class="block-image control-icons" data-ng-class="item.collapsed ? 'ico-down' : 'ico-up'"></i>
+							</a>
+						</article>
+					</div>
+					<div id="collapse{{$index}}" class="panel-collapse collapse" data-collapse="item.collapsed">
+						<div id="cart-view-materials-list" class="panel-body">
+							<div data-ng-repeat="entity in item.items">
+								<div data-basics-material-material-row
+								     data-entity="entity.Material"
+								     data-show-html-spec="false"
+								     data-button-panel="rowButtonPanelHtml"
+								     datat-on-delivery="onDelivery"
+								     data-on-preview="onPreview"
+								>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="hide">
+			<div data-ng-repeat="entity in cartService.cartList">
+				<div data-basics-material-material-row
+				     data-entity="entity.Material"
+				     data-show-html-spec="false"
+				     data-button-panel="rowButtonPanelHtml"
+				     datat-on-delivery="onDelivery"
+				     data-on-preview="onPreview"
+				>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="ts-cart-item-total" data-ng-show="!isPreview">
+	<div class="ts-cart-item-total-panel">
+		<span class="ts-cart-item-total-left">
+			<label>{{htmlTranslate.total}} (</label>
+			<label data-ng-bind="cartService.cartSummary.selectCartCount"></label>/
+			<label data-ng-bind="cartService.cartSummary.cartCount"></label>
+			<label> {{htmlTranslate.items}}) </label>
+		</span>
+
+		<span data-ticket-system-show-price><label data-ng-bind="cartService.cartSummary.cartTotal"></label></span>
+		<label data-ng-bind="cartService.cartSummary.homeCurrency"></label>
+	</div>
+	<div class="ts-cart-foot-button-panel">
+		<div class="flex-box">
+			<button class="ts-commodity-car-bnt btn" data-ng-click="cartService.clear()" title="{{htmlTranslate.empty}}" style="">
+				<i class="block-image control-wh-icons ico-cart-item-delete"></i>
+			</button>
+			<button class="ts-commodity-car-bnt margin-left-ld btn" data-ng-disabled="!cartService.canMergeCatalogs()" data-ng-click="cartService.mergeCatalogs()" title="{{htmlTranslate.merge}}">
+				<i class="control-wh-icons ico-merge block-image"></i>
+			</button>
+			<button class="btn btn-success flex-element margin-left-ld" data-ng-disabled="!cartService.canPlaceOrder()" data-ng-click="cartService.placeOrder()" title="{{htmlTranslate.submitButton}}">
+				<span>{{ htmlTranslate.submitButton }}</span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div data-ng-if="isPreview" style="display:flex;flex-direction: column;">
+	<!--back button-->
+	<div class="ms-sv-commodity-preview-navbar" style="height:40px;">
+		<button type="button" class="ms-sv-commodity-preview-back"
+				data-ng-click="previewBackClick()">
+			<span class="glyphicon glyphicon-chevron-left"></span>{{::htmlTranslate.back}}
+		</button>
+	</div>
+   <div class="ts-cart-item-panel flex-element ts-cart-item-preview">
+	<div class="ms-sv-commodity-preview-panel">
+		<!--Information-->
+		<div id="cart-view-materials-list-2" class="row">
+			<div class="ms-sv-container-title"><span>{{::htmlTranslate.information}}</span></div>
+			<div data-basics-material-material-row
+				 data-entity="previewItem"
+				 data-show-html-spec="true"
+				 data-button-panel="rowButtonPanelHtml"
+				 data-is-preview="isPreview">
+			</div>
+		</div>
+		<!--Specifications-->
+		<div class="row">
+			<div class="ms-sv-container-title"><span>{{::htmlTranslate.attributes}}</span></div>
+			<div data-basics-material-search-preview
+				 class="ms-sv-container-attributes"></div>
+		</div>
+
+		<!--3D Model data-basics-material-d-->
+		<div class="row" ng-if="mdc3dShow" data-basics-material-d3-model>
+
+		</div>
+
+		<!--Documents-->
+		<div class="row">
+			<div class="ms-sv-container-title"><span>{{::htmlTranslate.documents}}</span></div>
+			<div data-basics-material-document-preview
+				 class="ms-sv-container-documents ms-sv-border-bottom"></div>
+		</div>
+
+	</div>
+	</div>
+</div>
+

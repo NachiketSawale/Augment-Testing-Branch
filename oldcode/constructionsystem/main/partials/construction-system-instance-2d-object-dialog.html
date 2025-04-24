@@ -1,0 +1,30 @@
+<div data-ng-controller="cosMain2dObjectAndPropertyDialogController" class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <p style="margin: 18px 10px 0px 12px;">{{::'cloud.desktop.moduleDisplayNameConstructionSystemInstance' | translate}}: {{::modalOptions.code}} - {{::modalOptions.desc}}</p>
+    <section class="modal-body">
+        <div class="subview-container modal-wrapper" data-ng-controller="cosMainObjectTemplateDialogController">
+            <div class="toolbar">
+                <h2 class="title fix">{{::'constructionsystem.main.title2dObject' | translate}}</h2>
+                <div data-platform-menu-list data-list="tools" data-platform-collapsable-list data-ng-model="tools"></div>
+            </div>
+            <div data-platform-grid style="height: 170px;" data="gridData"></div>
+        </div>
+        <br/>
+        <div class="subview-container modal-wrapper" data-ng-controller="cosMainObjectTemplatePropertyDialogController">
+            <div class="toolbar">
+                <h2 class="title fix">{{::'constructionsystem.main.title2dObjectProperty' | translate}}</h2>
+                <div data-platform-menu-list data-list="tools" data-platform-collapsable-list data-ng-model="tools"></div>
+            </div>
+            <div data-platform-grid style="height: 170px;" data="gridData"></div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+	    <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+		    {{::'cloud.common.ok' | translate}}
+	    </button>
+	    <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+		    {{::'cloud.common.cancel' | translate}}
+	    </button>
+    </footer>
+</div>

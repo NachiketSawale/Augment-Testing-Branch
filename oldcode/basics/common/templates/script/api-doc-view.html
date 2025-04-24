@@ -1,0 +1,14 @@
+<header class="modal-header main-color">
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close()" aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+	<h2 class="modal-title" data-ng-bind="'basics.common.title.scriptDoc' | translate"></h2>
+</header>
+
+<section class="modal-body">
+	<pre data-ng-bind="doc" style="user-select: initial;"></pre>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-click="$close()" data-ng-bind="'basics.common.button.ok' | translate"></button>
+</footer>

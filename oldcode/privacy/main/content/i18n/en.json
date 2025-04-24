@@ -1,0 +1,41 @@
+﻿{
+	"privacy": {
+		"main": {
+			"privacyRequestEntityName": "Privacy Request",
+			"privacyRequestListTitle": "Privacy Requests",
+			"privacyRequestDetailTitle": "Privacy Request Detail",
+			"entityHandledType": "Handled Type",
+			"entityGrade": "Grade",
+			"entityRequestedBy": "Requested By",
+			"entityRenderedData": "Rendered Data",
+			"entityIsWithBackup": "Backup available",
+			"entityConfirmedBy": "Confirmed By",
+			"anonymiseClerk": "Preparation to anonymise Clerk",
+			"anonymiseClerk2": "Anonymise Clerk",
+			"anonymizedSucceed":  "The Anonymisation was successful!",
+			"usernotallowed": "User is not allowed to anonymise data!",
+			"confirmationClerkQuestion": "Are you sure you want to anonymise selected clerk?",
+			"confirmationContactQuestion": "Are you sure you want to anonymise selected contact?",
+			"confirmationBpQuestion": "Are you sure you want to anonymise selected business partner?",
+			"confirmationUserQuestion": "Are you sure you want to anonymise selected user?",
+			"isWithBackup": "Anonymise with Backup",
+			"clerkId": "Clerk",
+			"contactId": "Contact",
+			"businessPartnerId": "Businss Partner",
+			"anonymiseContact": "Preparation to anonymise Contact",
+			"anonymiseContact2": "Anonymise Contact",
+			"anonymiseBusinessPartner": "Preparation to anonymise Business Partner",
+			"anonymiseBusinessPartner2": "Anonymise Business Partner",
+			"anonymiseDelete": "Delete Anonymised Data",
+			"deleteSucceed":  "The Anonymisation Data are deleted!",
+			"confirmationDeleteQuestion": "Are you sure you want to delete anomized data?",
+			"requestAlreadyAnonymized": "The data are already anonymized!",
+			"noBackup": "No backup available!",
+			"wrongType": "Selected record has wrong handled type!",
+			"requestAlreadyExists": "The data are already requested or anonymized!",
+			"anonymiseUser": "Preparation to anonymise User",
+			"anonymiseUser2": "Anonymise User",
+			"userId": "User"
+		}
+	}
+}

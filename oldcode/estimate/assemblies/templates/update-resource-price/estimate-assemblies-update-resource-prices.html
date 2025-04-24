@@ -1,0 +1,27 @@
+<div data-ng-controller="estimateAssembliesUpdateResourcePricesWizardController" class="modal-wrapper">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="close()" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{currentStep.name}}</h2>
+    </header>
+    <section class="modal-body">
+        <div ng-switch="currentStep.number" class="modal-wrapper">
+            <div ng-switch-when="0">
+                 <ng-include src="'estimate.assemblies/templates/update-resource-price/estimate-assemblies-update-resource-price-options.html'"></ng-include>
+            </div>
+            <div ng-switch-when="1">
+                <ng-include src="'estimate.assemblies/templates/update-resource-price/estimate-assemblies-update-from-material.html'"></ng-include>
+            </div>
+            <div ng-switch-when="2">
+                <ng-include src="'estimate.assemblies/templates/update-resource-price/estimate-assemblies-update-resource-prices-result.html'"></ng-include>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="previousStep()" data-ng-disabled="!canPrevious()">{{::'basics.common.button.previousStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()" data-ng-disabled="!canNext()">{{getButtonText()}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

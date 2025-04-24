@@ -1,0 +1,2 @@
+﻿<!--<select class="form-control" data-ng-model="ngModel" data-ng-options="item[displayMember] for item in items"></select>-->
+<select class="form-control" data-ng-model="ngModel" data-ng-options="item[displayMember] for item in items"><option value="" ng-hide="ngModel">{{ ngModel[displayMember]  || "not selected" }}</option></select>

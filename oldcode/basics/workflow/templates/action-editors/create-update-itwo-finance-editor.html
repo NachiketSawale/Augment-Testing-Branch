@@ -1,0 +1,123 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<!-- Business Partner -->
+		<div class="radiolist-container" style="margin: 0px;">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input name="radioGroupA" ng-click="onRadioGroupOptChanged('1', 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+					       ng-value="1" type="radio">
+					{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left margin-left-ld">
+				<label>
+					<input name="radioGroupA" ng-click="onRadioGroupOptChanged('2', 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+					       ng-value="2" type="radio">
+					{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorMode === 1">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.bp' | translate }}</div>
+				<div class="platform-form-col">
+					<div class="flex-box flex-row">
+						<div business-partner-main-business-partner-dialog class="fullwidth"
+						     data-config="businesspartner.selectConfig" disabled="codeMirrorOptions.readOnly"
+						     ng-model="businesspartner.select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorMode === 2">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.bpId' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="businesspartner.script" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Company -->
+		<div class="radiolist-container">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input name="radioGroupB" ng-click="onRadioGroupOptChanged('1', 'editorModeCompany')" ng-disabled="readonly" ng-model="input.editorModeCompany"
+					       ng-value="1" type="radio">
+					{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left margin-left-ld">
+				<label>
+					<input name="radioGroupB" ng-click="onRadioGroupOptChanged('2', 'editorModeCompany')" ng-disabled="readonly" ng-model="input.editorModeCompany"
+					       ng-value="2" type="radio">
+					{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorModeCompany === 1">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.company' | translate }}</div>
+				<div class="platform-form-col">
+					<div basics-company-company-lookup class="fullwidth" data-config="company.selectConfig"
+					     disabled="codeMirrorOptions.readOnly" ng-model="company.select"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorModeCompany === 2">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.companyId' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="company.script" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputUpdateFinanceCode' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.code" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputUpdateFinance' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.message" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

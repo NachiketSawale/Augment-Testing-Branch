@@ -1,0 +1,32 @@
+[
+  {
+    "id": "timekeeping.settlement.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.settlement.settlementListTitle",
+    "controller": "timekeepingSettlementListController",
+    "uuid": "128de81cbbe945759306123364a20cb1"
+  },
+  {
+    "id": "timekeeping.settlement.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.settlement.settlementDetailTitle",
+    "controller": "timekeepingSettlementDetailController",
+    "uuid": "5608ca31f98343ee8fc34b832eabb893",
+    "permission": "128de81cbbe945759306123364a20cb1"
+  },
+  {
+    "id": "timekeeping.settlement.item.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.settlement.settlementItemListTitle",
+    "controller": "timekeepingSettlementItemListController",
+    "uuid": "6f4303109d94448bb98e71852946e039"
+  },
+  {
+    "id": "timekeeping.settlement.item.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.settlement.detailSettlementItemTitle",
+    "controller": "timekeepingSettlementItemDetailController",
+    "uuid": "643fbcea9f8a44df94c7483549af3ef0",
+    "permission": "6f4303109d94448bb98e71852946e039"
+  }
+]

@@ -1,0 +1,76 @@
+<div class="platform-form-group" style="margin: 0px 20px;width: 450px;">
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+            <label> </label>
+        </div>
+        <div class="platform-form-col">
+            <label style="width: 130px; text-align: center"> Contract </label>
+        </div>
+        <div class="platform-form-col">
+            <label style="width: 130px; text-align: center"> Contract(OC) </label>
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+            <label class="platform-form-label"> Currency:  </label>
+        </div>
+        <div class="platform-form-col">
+            <input type="text" class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.conCurrency" readonly="true" style="width: 130px">
+        </div>
+        <div class="platform-form-col">
+            <input type="text"
+                   class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.conCurrencyOc" readonly="true" style="width: 130px">
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+            <label class="platform-form-label"> Total(Net): </label>
+        </div>
+        <div class="platform-form-col">
+            <input type="text" class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.currentContractTotalNet | number:2" readonly="true" style="width: 130px">
+        </div>
+        <div class="platform-form-col">
+            <input type="text"
+                   class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.currentContractTotalNetOc | number:2" readonly="true" style="width: 130px">
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+            <label class="platform-form-label"> Verification Breakdown Amount: </label>
+        </div>
+        <div class="platform-form-col">
+            <input type="text" class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.totalAmount | number:2" readonly="true" style="width: 130px">
+        </div>
+        <div class="platform-form-col">
+            <input type="text" class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.totalAmountOc | number:2" readonly="true" style="width: 130px">
+        </div>
+    </div>
+</div>
+<div class="platform-form-group" style="margin: 0px 20px;width: 450px;">
+<div class="platform-form-row">
+        <div class="platform-form-col">
+            <label class="platform-form-label"> Verification Breakdown in %: </label>
+        </div>
+        <div class="platform-form-col">
+            <input type="text" class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.totalPercent | number:2" readonly="true" style="width: 260px">
+        </div>
+        <!--<div class="platform-form-col">
+            <input type="text" class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.totalPercent | number:2" readonly="true" style="width: 130px">
+        </div>
+        <div class="platform-form-col">
+            <input type="text" class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                   ng-value="containerInfo.totalPercent | number:2" readonly="true" style="width: 130px">
+        </div>-->
+    </div>
+</div>
+<div class="flex-element flex-box flex-column fullheight" style="overflow: hidden;outline: 0px;position: relative;">
+    <platform-grid data="gridData"></platform-grid>
+</div>

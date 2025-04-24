@@ -1,0 +1,19 @@
+{
+	"name": "modules-estimate-shared",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/estimate/shared/src",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/estimate/shared"],
+			"options": {
+				"jestConfig": "libs/modules/estimate/shared/jest.config.ts"
+			}
+		}
+	},
+	"tags": []
+}

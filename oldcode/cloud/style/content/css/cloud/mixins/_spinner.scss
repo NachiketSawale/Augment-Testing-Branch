@@ -1,0 +1,18 @@
+@use 'sass:math' as math;
+// wait spinner
+//
+// Generate a customized spinner for wait feedback with the specified color
+@mixin spinner($size: 10px, $color: $color-rib) {
+	@include square($size);
+	border-bottom: math.div($size, 5) solid lightgray;
+	border-left: math.div($size, 5) solid lightgray;
+	border-right: math.div($size, 5) solid lightgray;
+	border-top: math.div($size, 5) solid $color;
+	border-radius: 100%;
+	-webkit-animation: full-rotation .8s infinite linear;
+	-moz-animation: full-rotation .8s infinite linear;
+	-o-animation: full-rotation .8s infinite linear;
+	animation: full-rotation .8s infinite linear;
+	display: inline-block;
+	vertical-align: middle;
+}

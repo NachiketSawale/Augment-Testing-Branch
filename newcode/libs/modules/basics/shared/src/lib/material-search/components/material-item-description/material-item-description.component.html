@@ -1,0 +1,40 @@
+<div>
+	<div *ngIf="dataItem.BasBlobsFk"
+		 class="ms-commodity-row-img visible-md visible-lg visible-sm"
+		 [class]="dataItem.BasBlobsFk ? 'col-sm-4 col-md-3 col-lg-3' : ''">
+		<i *ngIf="dataItem.HasRfaFile"
+		   class="ms-commodity-row-img-3d control-icons ico-3d"></i>
+		<img [src]="dataItem.Image"
+			 [alt]="dataItem.Code"/>
+	</div>
+	<div class="ms-commodity-row-description"
+		 [class]="dataItem.BasBlobsFk ? 'col-xs-12 col-sm-8 col-md-9 col-lg-9' : 'fullwidth'">
+		<div class="ms-commodity-row-item-title cursor-pointer">
+			<span [innerText]="description" (click)="toDetail()"></span>
+		</div>
+		<div>
+			<span [innerText]="supplierInfo"></span>
+		</div>
+		<div *ngIf="showDetail">
+			<span [innerText]="leadTimesInfo"></span>
+		</div>
+		<div *ngIf="showDetail">
+			<span [innerText]="minQuantityInfo"></span>
+		</div>
+		<div class="ms-commodity-row-description-specification">
+			<span [innerText]="specification"></span>
+		</div>
+		<div *ngIf="itemOptions && itemOptions.itemDeliveryOptionsComponent && showDelivery">
+			<div *ngComponentOutlet="itemOptions.itemDeliveryOptionsComponent;injector:dataInjector;"></div>
+		</div>
+		<div *ngIf="showDetail && dataItem.Co2Project">
+			<span>{{translations.co2Project | platformTranslate}} : {{ dataItem.Co2Project }}</span>
+		</div>
+		<div *ngIf="showDetail && dataItem.Co2Source">
+			<span>{{translations.co2Source | platformTranslate}} : {{ dataItem.Co2Source }}</span>
+		</div>
+		<div *ngIf="showDetail && dataItem.BasCo2SourceFk">
+			<span>{{translations.co2SourceName | platformTranslate}} : {{ dataItem.BasCo2SourceName }}</span>
+		</div>
+	</div>
+</div>

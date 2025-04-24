@@ -1,0 +1,184 @@
+svg.chart {
+  /*
+  path, rect {
+    stroke: $rib-gray;
+    stroke-width: $thin-stroke;
+  }*/
+}
+svg.chart g.timeline path.domain, svg.chart g.calendarline path.domain {
+  display: none;
+  visibility: hidden;
+}
+svg.chart g.timeline .tick line, svg.chart g.timeline .tick-wide line, svg.chart g.calendarline .tick line, svg.chart g.calendarline .tick-wide line {
+  stroke: #777;
+  stroke-dasharray: 2, 2;
+  stroke-width: 1px;
+}
+svg.chart g.timeline .tick-wide line, svg.chart g.calendarline .tick-wide line {
+  /*stroke: #ccc;*/
+  stroke: #e6e6e6;
+}
+svg.chart g.timeline line, svg.chart g.calendarline line {
+  stroke-width: 2px;
+  stroke: #101080;
+}
+svg.chart g.timeline line.vertical, svg.chart g.timeline line.horizontal, svg.chart g.calendarline line.vertical, svg.chart g.calendarline line.horizontal {
+  stroke: gainsboro;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+svg.chart g.timeline {
+  pointer-events: none;
+}
+svg.chart g.activities rect.background {
+  fill: rgba(220, 160, 140, 0);
+}
+svg.chart g.barinformation {
+  pointer-events: none;
+}
+svg.chart text.barinfo {
+  font-size: 12px;
+  pointer-events: none;
+}
+svg.chart g rect {
+  shape-rendering: crispEdges;
+}
+svg.chart g.holiday rect, svg.chart g.weekend rect {
+  stroke-width: 0;
+  fill: #eee;
+}
+svg.chart g.weekend, svg.chart g.calendarline, svg.chart g.holiday {
+  pointer-events: all;
+}
+svg.chart g.handle path, svg.chart g.handle circle, svg.chart g.handle rect, svg.chart g.finishhandle path, svg.chart g.finishhandle circle, svg.chart g.finishhandle rect, svg.chart g.starthandle path, svg.chart g.starthandle circle, svg.chart g.starthandle rect, svg.chart g.relationshiphandle path, svg.chart g.relationshiphandle circle, svg.chart g.relationshiphandle rect, svg.chart g.milestonehandle path, svg.chart g.milestonehandle circle, svg.chart g.milestonehandle rect {
+  fill: steelblue;
+  stroke: white;
+  stroke-width: 1px;
+  pointer-events: all;
+}
+svg.chart rect.targetindicator {
+  fill: steelblue;
+  stroke: white;
+  stroke-width: 1px;
+}
+svg.chart g.link path {
+  fill: none;
+  stroke: blue;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+svg.chart g.link path.background {
+  stroke-width: 8px;
+  stroke: rgba(230, 230, 230, 0);
+}
+svg.chart g.link path.selectedrs {
+  stroke-width: 3px;
+}
+svg.chart g.link path.arrow {
+  fill: blue;
+  fill-rule: nonzero;
+  shape-rendering: auto;
+}
+svg.chart g.headers rect.header {
+  pointer-events: all;
+  visibility: hidden;
+}
+svg.chart path.progressline {
+  stroke-width: 2px;
+  stroke: blue;
+  fill: none;
+}
+svg.chart g.axis g path.domain {
+  transform: translateX(-1px);
+}
+svg.chart g.activities.readonly {
+  pointer-events: none;
+}
+svg.chart g.event path, svg.chart g.event g.event path {
+  stroke: white;
+}
+svg.chart rect.panel1, svg.chart rect.panel2 {
+  stroke: gainsboro;
+  stroke-width: 1px;
+  fill: none;
+  shape-rendering: crispEdges;
+}
+svg.chart g.axis path, svg.chart g.axis line, svg.chart g.timeaxis path, svg.chart g.timeaxis line {
+  fill: none;
+  shape-rendering: crispEdges;
+}
+svg.chart g.lines line {
+  stroke: gainsboro;
+}
+svg.chart g.tick line, svg.chart path.domain {
+    stroke: gainsboro; }
+svg.chart g.activitygroup line {
+  stroke-width: 2pt;
+  shape-rendering: auto;
+}
+svg.chart g.activitygroup path {
+  fill: none;
+  stroke-width: 2px;
+}
+svg.chart g.activitygroup line.critical {
+  stroke: red;
+}
+svg.chart g.activitygroup path.critical {
+  stroke: red;
+}
+svg.chart g.activitygroup line.selected {
+  stroke-width: 4pt;
+  box-shadow: 1em 0.5em 0.5em gray;
+}
+svg.chart g.activitygroup text {
+  font-size: 13px;
+}
+svg.chart g.activitygroup path.click {
+  pointer-events: all; /* respond to a click even when hidden */
+  stroke-width: 20px; /* make a fat click target */
+  visibility: hidden; /* make invisible but with dimension*/
+}
+svg.chart g.activitylabels text {
+  font-size: 13px;
+  font-weight: normal;
+}
+svg.chart g.locationbar rect {
+  stroke-width: 0;
+}
+svg.chart g.locationbar text {
+  font-size: 10px;
+  color: white;
+}
+svg.chart path.domain {
+  stroke-width: 1px;
+  transform: translate(-2, 0);
+}
+svg.chart g.timeaxis text {
+  font-size: 10px;
+}
+svg.chart rect.holiday {
+  stroke-width: 0;
+  fill: #eee;
+}
+
+div#chart p, div.mainpanel p {
+  padding: 1em; }
+
+  g.splits line.splits {
+		stroke: gray;
+		stroke-dasharray: 2, 2;
+		stroke-width: 1px;
+}
+
+div.chart-tooltip {
+  position: absolute;
+  text-align: left;
+  width: 210px;
+  padding: 8px;
+  font: 10px sans-serif;
+  background: lightyellow;
+  border: solid 1px #aaa;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=chart.css.map */

@@ -1,0 +1,297 @@
+/*-------------------------------------------------------------------------------
+	 Dropdown Menus (_dropdown.scss)
+  -------------------------------------------------------------------------------*/
+$height-normal: 1.846em;
+
+// Dropdown arrow/caret
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+
+// The dropdown wrapper (div)
+.dropdown {
+	position: relative;
+}
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.btn.dropdown-toggle:focus {
+	outline: 0;
+}
+
+// Basis class for The standard dropdown menu (ul)
+%dropdown-li {
+	li {
+		@include status-styles($color-grid-selection, darken);
+		display: flex;
+		background-color: $color-body-background;
+		color: $color-text;
+
+		> button {
+			@extend .btn-default;
+			@extend .flex-element;
+			@extend .flex-basis-auto;
+
+			padding: 0 $padding-base-horizontal;
+			width: 100%;
+			text-align: left;
+			height: 30px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			background-position: -9999px;
+
+			&.title, &.dropdown-header {
+				@extend .h4;
+				border-bottom: $border-width-default solid #c2c2c2;
+				border-top: $border-width-default solid #c2c2c2;
+				background-color: $color-body-background;
+				opacity: inherit !important;
+			}
+
+			&[class*="ico-"] {
+				@include icon-placeholder-left($padding-left: $padding-base-horizontal);
+			}
+		}
+
+		> a {
+			text-decoration: none;
+			outline: 0;
+			cursor: pointer;
+			display: block;
+			padding: 3px 20px 3px $padding-base-horizontal;
+			clear: both;
+			//			line-height: $line-height-base;
+			color: $color-text;
+			white-space: nowrap; // prevent links from randomly breaking onto new lines
+		}
+
+		ul {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+}
+
+%dropdown {
+	font-size: $size-font-base;
+	line-height: normal;
+	min-width: 158px; //because icon-view has a width 158px. this 2px can be hovered by a li-element. Does'nt look good
+
+	.headline {
+		background-color: $color-border;
+		width: 100%;
+		padding-left: $padding-base-horizontal;
+		line-height: $height-normal;
+	}
+
+	//I have to extract that
+	.item {
+		@extend .flex-element;
+		@extend .flex-basis-auto;
+
+		padding: 0 $padding-base-horizontal;
+		width: 100%;
+		text-align: left;
+		height: 30px;
+		min-height: 30px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		background-position: -9999px;
+
+		&.title, &.dropdown-header {
+			@extend .h4;
+			border-bottom: $border-width-default solid #c2c2c2;
+
+			background-color: $color-body-background;
+			opacity: inherit !important;
+
+			&:not(:first-child) {
+				border-top: $border-width-default solid #c2c2c2;
+			}
+		}
+
+		&[class*="ico-"] {
+			@include icon-placeholder-left($padding-left: $padding-base-horizontal);
+		}
+	}
+
+	&.showimages,
+	ul.showimages {
+
+		button {
+			@include icon-placeholder-left($padding-left: $padding-base-horizontal);
+		}
+
+		.dropdown-toggle {
+			position: relative;
+
+			>  .submenu-ico {
+				position: absolute;
+				right: 1px;
+				top: 0;
+				width: 16px;
+				height: 100%;
+			}
+		}
+
+		&.icon-view {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			width: 158px;
+
+			> li {
+				flex-grow: 1;
+
+				> button {
+					text-indent: -9999px;
+					background-position: center;
+				}
+			}
+		}
+	}
+
+	// Dividers (basically an hr) within the dropdown
+	.divider {
+		padding: 0;
+		margin: 6px $padding-base-horizontal;
+		height: 1px;
+		overflow: hidden;
+		background-color: $color-dropdown-divider;
+	}
+
+	// Nuke hover/focus effects
+	> .disabled > a {
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			//			background-image: none; // Remove CSS gradient
+			//			@include reset-filter();
+			cursor: default;
+		}
+	}
+}
+
+// The standard dropdown menu (ul)
+.dropdown-menu {
+	@extend %dropdown;
+	@extend %dropdown-li;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	display: none; // none by default, but block on "open" of the menu
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: $zindex-dropdown;
+	border: 1px solid $color-bar-border;
+	border-radius: $size-border-radius-base;
+	float: left;
+	text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	cursor: initial;
+	background-color: $color-body-background;
+	background-clip: padding-box;
+
+	ul {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	&.max-sized {
+		max-height: 210px;
+		overflow: auto;
+	}
+
+	//ul.showimages {
+	//	> li > button {
+	//		@include icon-placeholder-left($padding-left: $padding-base-horizontal);
+	//	}
+	//}
+}
+
+// Elements in overflow button dropdown
+.toolbar .fix {
+	.dropdown-menu {
+
+		.sublist {
+			background-color: inherit;
+			padding: 0;
+		}
+
+		.radio-group {
+			flex: 1;
+			display: block;
+		}
+	}
+}
+
+// Open state for the dropdown
+.open {
+	// Show the menu
+	> .dropdown-menu {
+		display: block;
+	}
+}
+
+// Menu positioning
+//
+// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
+// menu with the parent.
+.dropdown-menu-right {
+	left: auto; // Reset the default from `.dropdown-menu`
+	right: 0;
+}
+
+// With v3, we enabled auto-flipping if you have a dropdown within a right
+// aligned nav component. To enable the undoing of that, we provide an override
+// to restore the default dropdown menu alignment.
+//
+// This is only for left-aligning a dropdown menu within a `.navbar-right` or
+// `.pull-right` nav component.
+.dropdown-menu-left {
+	left: 0;
+	right: auto;
+}
+
+// Popup Container used like dropdown
+.generic-popup,
+.popup-content {
+	> ul {
+		@extend %dropdown-li;
+		width: 100%;
+	}
+
+	.popup-menu {
+		@extend %dropdown;
+
+		&.max-sized {
+			max-height: 210px;
+			overflow: auto;
+		}
+	}
+
+	.btn-group {
+		&.bottom {
+			.btn {
+				border-bottom: none;
+
+				&:first-child {
+					border-left: none;
+				}
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
+	}
+}

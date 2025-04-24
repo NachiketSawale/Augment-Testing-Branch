@@ -1,0 +1,95 @@
+<div ng-controller="businessPartnerMainUpdatePrcStructureFromQtnNConDialogController" class="modal-wrapper subview-container">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<div class="modal-wrapper">
+			<div class="platform-form-label">
+				<h5>{{'businesspartner.main.updatePrcStructureWizard.notification' | translate}}</h5>
+			</div>
+			<br/>
+			<div class="platform-form-label">
+				<h5>{{'businesspartner.main.updatePrcStructureWizard.label.scope' | translate}}</h5>
+			</div>
+			<div class="platform-form-group platform-lg" style="padding-left:30px;">
+				<div class="platform-form-row">
+					<div class="lg-2 md-2">
+						<div class="platform-form-label">
+							{{'businesspartner.main.updatePrcStructureWizard.label.quoteStatus' | translate}}:
+						</div>
+					</div>
+					<div class="lg-3 md-3">
+						<!--quote status-->
+						<div procurement-quote-status-for-update-bp-structure-lookup
+						     data-ng-model="data.quoteStatusId"
+						     data-entity="data">
+						</div>
+					</div>
+					<div class="lg-1 md-1" style="width: 5%;max-width: 50px;">
+						&nbsp;
+					</div>
+					<div class="lg-2 md-2">
+						<div class="platform-form-label">
+							{{'businesspartner.main.updatePrcStructureWizard.label.contractStatus' | translate}}:
+						</div>
+					</div>
+					<div class="lg-3 md-3">
+						<!--contract status-->
+						<div procurement-contract-status-for-update-bp-structure-lookup
+						     data-ng-model="data.contractStatusId"
+						     data-entity="data">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="padding-left:30px;">
+				<div class="invalid-cell invalid-form" style="color:#cc4c33" data-ng-if="config.status.rt$hasError()" data-ng-bind="config.status.rt$errorText()"></div>
+			</div>
+			<div class="platform-form-group platform-lg" style="padding-left:30px;">
+				<div class="platform-form-row">
+					<div class="lg-2 md-2">
+						<div class="platform-form-label">
+							{{'businesspartner.main.updatePrcStructureWizard.label.from' | translate}}:
+						</div>
+					</div>
+					<div class="lg-3 md-3">
+						<!--from-->
+						<div data-domain-control class="form-control"
+						     data-domain="dateutc"
+						     data-entity="data"
+						     data-ng-model="data.from"
+						     data-model="data.from"
+						     data-dirty="true">
+						</div>
+					</div>
+					<div class="lg-1 md-1" style="width: 5%;max-width: 50px;">
+						&nbsp;
+					</div>
+					<div class="lg-2 md-2">
+						<div class="platform-form-label">
+							{{'businesspartner.main.updatePrcStructureWizard.label.to' | translate}}:
+						</div>
+					</div>
+					<div class="lg-3 md-3">
+						<!--to-->
+						<div data-domain-control class="form-control"
+						     data-domain="dateutc"
+						     data-entity="data"
+						     data-ng-model="data.to"
+						     data-model="data.to"
+						     data-dirty="true">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="padding-left:30px;">
+				<div class="invalid-cell invalid-form" style="color:#cc4c33" data-ng-if="config.date.rt$hasError()" data-ng-bind="config.date.rt$errorText()"></div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="update()" data-ng-disabled="!canUpdate()"> {{::'businesspartner.main.updatePrcStructureWizard.btnUpdate' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{::'basics.common.button.cancel' | translate}}</button>
+	</footer>
+	<div cloud-common-overlay data-loading="isProcessing" data-info2="text.processingInfo"></div>
+</div>

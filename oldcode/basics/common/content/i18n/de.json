@@ -1,0 +1,291 @@
+﻿{
+	"basics": {
+		"common": {
+			"entityAddress": "Adresse",
+			"commentContainerTitle": "Pinnwand",
+			"privateCommentContainerTitle": "Privater Kommentar",
+			"questionDeleteImageHeaderText": "Bild löschen?",
+			"deleteDialogTitle": "Löschen bestätigen",
+			"questionDeleteImageBodyText": "Möchten Sie dieses Bild unwiderruflich löschen?",
+			"questionDeleteProfile": "Möchten Sie das Profil '{{p1}}' wirklich löschen?",
+			"questionDialogDefaultTitle": "Frage",
+			"remain": "Behalten",
+			"cancel": "Abbrechen",
+			"continue": "Weiter?",
+			"ok": "Ok",
+			"recipient": "Empfänger",
+			"sender": "Absender",
+			"termsOfUse": "Impressum",
+			"legalNotice": "Datenschutz-Grundverordnung",
+			"excelProfileDetails": "Excel Profil Details",
+			"email": {
+				"headerText": "E-Mail senden",
+				"recipientText": "Die Email-Adresse des Empfängers muss angegeben werden.",
+				"success": "E-Mail wurde erfolgreich gesendet",
+				"fail": "E-Mail konnte nicht gesendet werden."
+			},
+			"fax": {
+				"headerText": "Fax senden",
+				"recipientText": "Die Faxnummer des Empfängers muss angegeben werden.",
+				"success": "Fax wurde erfolgreich gesendet.",
+				"fail": "Fax konnte nicht gesendet werden."
+			},
+			"wizardDialog": {
+				"title": {
+					"businesspartnerPortal": "Geschäftspartner-Portal"
+				},
+				"gridEntity": {
+					"doesSend": "Sendet"
+				}
+			},
+			"validation": {
+				"correctValidationErrors": "Bitte beheben Sie folgende(n) Fehler:",
+				"validationWizard": "Validierungs-Assistent",
+				"uniqueValueErrorMessage": "{{object}} muss eindeutig sein."
+			},
+			"changeStatus": {
+				"headerText": "Status ändern",
+				"workflowRunning": "Running status change workflow",
+				"workflowInfo": "Workflow: '{{p1}}'\nStatus: {{p2}}\n",
+				"workflowError": "Error: {{p1}}",
+				"from": "From",
+				"to": "To",
+				"remark": "Remark",
+				"changedAt": "Changed At",
+				"changedBy": "Changed By",
+				"Running": "Running",
+				"Finished": "Finished",
+				"Escalate": "Escalate",
+				"Waiting": "Waiting",
+				"Failed": "Fail"
+			},
+			"poChange": {
+				"ChangeType": "!Change Type",
+				"UpdateDate": "!Update Date",
+				"itemsData": "!Items Data",
+				"itemNo": "!Item No",
+				"rollback": "!Roll Back",
+				"rollbackResult": "!Roll Back Result",
+				"rollbackSuccess": "!Successful",
+				"rollbackFailed": "!Failed",
+				"workflowRunning": "!Running Purchase Order Change WorkFlow...",
+				"controller": {
+					"modalQuestion": {
+						"headerTextKey": "!Yes/No",
+						"bodyTextKey": "!Are you sure to change purchase order?"
+					},
+					"modalInfo": {
+						"headerTextKey": "!Message",
+						"bodyTextKey": "!Data Validate Failed Or No Data Change.",
+						"CancelPOMeg": "!Purchase order have been cancelled, can not be changed!",
+						"DeliveryDateMeg": "!New Delivery Date must be later than Old Date!",
+						"DeliveryAddressCountryMeg": "!New Address's Country can't be changed!"
+					},
+					"modalOptions": {
+						"chkItems": {
+							"DecreaseQty": "!Decrease Quantity",
+							"DeliveryDate": "!Delivery Date",
+							"DeliveryAddress": "!Delivery Address",
+							"CancelPO": "!Cancel Purchase Order"
+						}
+					},
+					"dDformConfig": {
+						"groups": {
+							"dDChange": "!Delivery Date",
+							"dAChange": "!Delivery Address",
+							"cPOChange": "!Decrease Quantity"
+						},
+						"rows": {
+							"TotalPrice": "!Total Price",
+							"ExpressFree": "!Express Free",
+							"PremiumFreight": "!Premium Freight",
+							"OldDate": "!Old Delivery Date",
+							"NewDate": "!New Delivery Date",
+							"OldAddress": "!Old Address",
+							"NewAddress": "!New Address"
+						}
+					}
+				},
+				"services": {
+					"modalInfo": {
+						"headerText": "!Message",
+						"bodyText": "!This Status hasn't permission to open Wizard!",
+						"bodyTextRB": "!Only contract's status is Change Rejected can be Roll Back!"
+					},
+					"modalQuestion": {
+						"bodyText": "!Do you want to roll back purchase order change?"
+					},
+					"exeErrorMsg": "!Running Purchase Order Change WorkFlow Failed!",
+					"exeRBErrorMsg": "!Roll Back Purchase Order Change Failed!",
+					"errorHeaderText": "!Error"
+				}
+			},
+			"updateCashFlowProjection": {
+				"headerText": "!Update Cash Flow Projection",
+				"refreshBtnText": "Refresh",
+				"updateProjectionErrorMsg": "!Update Cash Flow Projection Failed",
+				"updateFailedTitle": "!Update Cash Flow Projection Failed",
+				"deleteAndRecreateText": "!The change of S-curve, StartWork or EndWork will cause all the exist cash projection details delete and recreate,are you sure?",
+				"overValueErrorMessage": "!The value cannot larger than total cost",
+				"sCurve": "!S-Curve",
+				"totalCost": "!Total Cost",
+				"startDate": "!Start Date",
+				"endDate": "!End Date",
+				"onlyLinearAdjustment": "!Only Linear Adjustment"
+			},
+			"toolbarChangePicture": "Bild ändern",
+			"toolbarDeletePicture": "Bild löschen",
+			"button": {
+				"send": "Senden",
+				"close": "Schließen",
+				"ok": "Ok",
+				"cancel": "Abbrechen",
+				"previousStep": "Zurück",
+				"nextStep": "Weiter",
+				"save": "Speichern",
+				"saveAs": "Speichern Unter",
+				"simulate": "Simulieren",
+				"history": "History",
+				"back": "Back",
+				"preview": "Vorschau",
+				"execute": "Ausführen",
+				"proceed": "Fortsetzen",
+				"refresh": "!Refresh"
+			},
+			"settings": "Einstellungen",
+			"entitySended": "gesendet",
+			"map": {
+				"addressNotFound": "Adresse konnte auf Karte nicht gefunden werden",
+				"iconPickLocation": "Ort auswählen",
+				"iconExpandMap": "Karte erweitern"
+			},
+			"dialog": {
+				"saveProfile": {
+					"labelAccessLevel": "Zugriffsebene",
+					"labelProfileName": "Profilname",
+					"placeholderProfileName": "Geben Sie bitte einen neuen Profilnamen ein"
+				},
+				"showContent": "Inhalt"
+			},
+			"procurementDialog": {
+				"Title": "!Validation Error Message",
+				"FactorZeroDescription": "!Factor of item {{Itemno}}  is zero",
+				"PriceUnitZeroDescription": "!Price Unit of item {{Itemno}}  is zero"
+			},
+			"upload": {
+				"errorHeaderText": {
+					"uploadFileError": "Fehler beim Hochladen der Datei."
+				},
+				"errorMessage": {
+					"fileSizeUndefined": "Die Dateigröße ist nicht definiert.",
+					"fileSizeOverflow": "Dateigröße ({{p1}}{{p2}}) größer als ({{p3}}{{p4}})."
+				},
+				"button": {
+					"downloadCaption": "Herunterladen",
+					"cancelUploadCaption": "Hochladen abbrechen",
+					"uploadCaption": "Hochladen"
+				},
+				"copyToClipboard": "In die Zwischenablage kopieren"
+			},
+			"preview": {
+				"button": {
+					"previewCaption": "!Preview"
+				}
+			},
+			"matrixSettingsDialogHeader": "Matrix Anzeige Einstellungen",
+			"matrixSettingsDialog": {
+				"createRules": "Fügen Sie eine Regel hinzu",
+				"createDescriptionFonts": "Keine Schriften definiert",
+				"createDescriptionBackground": "Keine Hintergrund-Farben definiert",
+				"contentDefinition": "Inhalte",
+				"backgrounds": "Hintergrund-Farben",
+				"fonts": "Schriften",
+				"compareValue": "Vergleichwert",
+				"anyMustMatch": "Ein Kriterium muss erfüllt sein",
+				"allMustMatch": "Alle Kriterien müssen erfüllt sein",
+				"compareDate": "Vergleichsdatum",
+				"substring": "Teilzeichenkette",
+				"string": "Zeichenkette",
+				"compareField": "Vergleichsfeld",
+				"compareStart": "Startwert",
+				"compareEnd": "Endwert",
+				"numberOfDays": "Anzahl Tage"
+			},
+			"Description": "Bezeichnung",
+			"Colour": "Farbe",
+			"Isbold": "Fett",
+			"Isitalic": "Italic",
+			"Isunderlined": "Unterstrichen",
+			"Isstriked": "Durchgestrichen",
+			"Icon": "Icon",
+			"BasOverlayTypeFk": "Overlay Typ",
+			"configLocation": {
+				"label": "Speicherort",
+				"user": "Benutzer",
+				"role": "Rolle",
+				"system": "System"
+			},
+			"taskBar": {
+				"error": "Fehler",
+				"warning": "Warnung",
+				"info": "Information",
+				"findNext": "Vor",
+				"findPrev": "Zurück",
+				"replace": "Ersetzen",
+				"replaceAll": "Alles ersetzen",
+				"clearSearch": "Suche löschen",
+				"jumpToLine": "Zur Zeile springen",
+				"shortcuts": "Shortcuts",
+				"undo": "!Undo",
+				"redo": "!Redo",
+				"jumpToDef": "!Jump To Definition",
+				"jumpBack": "!Jump Back",
+				"renameVariable": "!Rename Variable",
+				"showTypeDoc": "!Show Document",
+				"codeFold": "!Fold",
+				"codeUnfold": "!Unfold",
+				"comment": "!Toggle Comment",
+				"indent": "!Indent",
+				"format": "!Format"
+			},
+			"percentOfTime": "!Percent Of Time",
+			"percentOfCost": "!Percent Of Cost",
+			"calcCumCost": "!Calculated Cumulative Cost",
+			"calcPeriodCost": "!Calculated Period Cost",
+			"calcCumCash": "!Calculated Cumulative Cash",
+			"calcPeriodCash": "!Calculated Period Cash",
+			"cumCost": "!Cumulative Cost",
+			"periodCost": "!Period Cost",
+			"cumCash": "!Cumulative Cash",
+			"periodCash": "!Period Cash",
+			"actPeriodCost": "!Actual Period Cost",
+			"actPeriodCash": "!Actual Period Cash",
+			"cashFlowForecastGridTitle": "!Cash Flow Forecast",
+			"bulkEditor": {
+				"newDateValue": "neues Datum",
+				"newNumberValue": "neue Nummer",
+				"newTextValue": "neuer Text",
+				"newSelection": "neue Auswahl",
+				"newDecimalValue": "neuer Dezimalwert",
+				"newEmailValue": "neue Email",
+				"appendText": "anzuhängender Text",
+				"prependText": "Vorangestellter Text",
+				"InDecrease": "Erhöhen / Vermindern  %",
+				"percentValue": "Prozent Wert (%)",
+				"value": "Wert"
+			},
+			"entityPrcStructureFk": "Beschaffungsstruktur ",
+			"alert": {
+				"info": "!Note",
+				"danger": "!Error",
+				"success": "!Success",
+				"warning": "!Warning"
+			},
+			"edit": "!Edit",
+			"link": "!Link",
+			"image": "!Image",
+			"emotion": "!Emotion",
+			"dateEffective": "!Date Effective"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<div class="platform-form-group">
+	<div class="col-sm-12 platform-form-row">
+		<label class="col-sm-3 title">{{ 'estimate.main.createMaterialPackageWizard.materialCostCode'| platformTranslate }}</label>
+		<div class="col-sm-9">
+			<div class="col-sm-3 option">
+				<ui-common-domain-control-host [(value)]="optionItem.isIncludeMaterial" [fieldType]="FieldType.Boolean" (valueChange)="filterByOption()"></ui-common-domain-control-host>
+				<label>{{ 'estimate.main.createMaterialPackageWizard.material'| platformTranslate }}</label>
+			</div>
+			<div class="col-sm-3 option">
+				<ui-common-domain-control-host [(value)]="optionItem.isIncludeDirectCost" [fieldType]="FieldType.Boolean" (valueChange)="filterByOption()"></ui-common-domain-control-host>
+				<label>{{ 'estimate.main.createMaterialPackageWizard.includeDirectCost'| platformTranslate }}</label>
+			</div>
+			<div class="col-sm-3 option">
+				<ui-common-domain-control-host [(value)]="optionItem.isIncludeInDirectCost" [fieldType]="FieldType.Boolean" (valueChange)="filterByOption()"></ui-common-domain-control-host>
+				<label>{{ 'estimate.main.createMaterialPackageWizard.includeInDirectCost'| platformTranslate }}</label>
+			</div>
+			<div class="col-sm-3 option">
+				<ui-common-domain-control-host [(value)]="optionItem.isIncludeMarkUpCost" [fieldType]="FieldType.Boolean" (valueChange)="filterByOption()"></ui-common-domain-control-host>
+				<label>{{ 'estimate.main.createMaterialPackageWizard.includeMarkUpCost'| platformTranslate }}</label>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="flex-element flex-box flex-column subview-container gridContainer">
+	<ui-common-grid [configuration]="selectItemConfig" [items]="optionItem.showMaterialAndCostCodeItems"></ui-common-grid>
+</div>
+

@@ -1,0 +1,88 @@
+
+<div>
+	<section class="modal-body">
+
+		<div>
+			<ui-common-form [formConfig]="formConfig" [entity]="meetingItem"/>
+		</div>
+
+		<div id="accordion" class="show">
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="modalOptions.showTime = !modalOptions.showTime">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{'basics.meeting.meetingTime' | platformTranslate}}</span>
+								<span class="platform-form-group-header ng-scope">
+										<div class="toggleImg control-icons" [class]="modalOptions.showTime ? 'ico-up' : 'ico-down'"></div>
+									</span>
+							</a>
+						</h4>
+					</div>
+					<!-- TODO: There is no transition animation when collapsing. It seems that the style will be overridden when using mat-expansion-panel element. -->
+					<div class="panel-collapse" [hidden]="!modalOptions.showTime">
+						<div class="panel-body">
+							<div class="platform-form-group ng-scope">
+								<div class="platform-form-row form-group">
+									<div class="platform-form-label" style="padding-left: 15px">{{'basics.meeting.startTime' | platformTranslate}}<span class="required-cell"></span></div>
+									<div class="platform-form-col" style="width: 30%">
+										<!-- TODO: readonly does work. Wait for the framework to fix it. -->
+										<ui-common-domain-control-host [fieldType]="FieldType.Date" [controlContext]="modalOptions.startDate" [readOnly]="modalOptions.isRecurring"/>
+									</div>
+									<div class="platform-form-col" style="width: 30%; padding-left:15px">
+										<input type="time" class="form-control" [ngModel]="modalOptions.startTime.toTimeString().slice(0, 5)" (change)="updateTime($event, MeetingTime.Start)" [readOnly]="modalOptions.isAllDay || modalOptions.isRecurring">
+									</div>
+									<div class="platform-form-col"  style="width: 30%; padding-left:25px">
+										<label style="padding-left: 0px; padding-bottom: 5px">
+											<input type="checkbox" style="vertical-align: bottom; margin-left: 0px"
+											       [ngModel]="modalOptions.isAllDay" [disabled]="modalOptions.isRecurring" (click)="onAllDateClick()"/>
+											{{'basics.meeting.allDay' | platformTranslate}}
+										</label>
+									</div>
+								</div>
+								<div class="platform-form-row form-group">
+									<div class="platform-form-label" style="padding-left: 15px">{{'basics.meeting.endTime' | platformTranslate}}<span class="required-cell"></span></div>
+									<div class="platform-form-col" style="width: 30%">
+										<!-- TODO: readonly does work. Wait for the framework to fix it. -->
+										<ui-common-domain-control-host [fieldType]="FieldType.Date" [controlContext]="modalOptions.endDate" [readOnly]="modalOptions.isRecurring"/>
+									</div>
+									<div class="platform-form-col" style="width: 30%; padding-left:15px">
+										<input type="time" class="form-control" [ngModel]="modalOptions.endTime.toTimeString().slice(0, 5)" (change)="updateTime($event, MeetingTime.End)" [readOnly]="modalOptions.isAllDay || modalOptions.isRecurring">
+									</div>
+									<div class="platform-form-col" style="width: 30%; padding-left:25px">
+										<button type="button" class="btn btn-default" (click)="openRecurringDialog()">{{recurrence ? ('basics.meeting.wizard.editRecurring' | platformTranslate) : ('basics.meeting.wizard.makeRecurring' | platformTranslate)}}</button>
+									</div>
+								</div>
+							</div>
+							<div class="platform-form-group">
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="padding-left: 15px">
+										<div class="invalid-cell invalid-form" *ngIf="hasError()">{{ 'cloud.common.Error_EndDateTooEarlier' | platformTranslate }}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group ng-scope" style="padding-top: 10px">
+			<div class="platform-form-row form-group">
+				<label class="platform-form-label">{{ 'basics.meeting.syncToExt' | platformTranslate }}</label>
+				<div class="platform-form-col" style="width: 50%">
+					<div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty">
+						<select class="form-control" [(ngModel)]="modalOptions.syncMeetingType">
+							<option *ngFor="let opt of modalOptions.syncOption" [value]="opt.id">{{ opt.value | platformTranslate }}
+						</select>
+					</div>
+				</div>
+				<div class="platform-form-col" style="width: 50%">
+				</div>
+			</div>
+		</div>
+
+		<ui-common-loading [loading]="modalOptions.isLoading"></ui-common-loading>
+
+	</section>
+</div>

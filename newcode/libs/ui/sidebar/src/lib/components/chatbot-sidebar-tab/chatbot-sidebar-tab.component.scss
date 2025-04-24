@@ -1,0 +1,53 @@
+.chatfooter {
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.grid {
+	height: 100%;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.col {
+	height: 100%;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.textareaStyle {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	height: 50px;
+	line-height: 18px;
+	resize: none;
+	font-size: 12pt;
+	outline: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	box-shadow: 0px -2px 5px #ccc;
+	color: #333;
+}
+
+.send-btn {
+	flex: 1;
+	background-color: #007ee6;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 12pt;
+	text-align: center;
+	opacity: 1;
+}

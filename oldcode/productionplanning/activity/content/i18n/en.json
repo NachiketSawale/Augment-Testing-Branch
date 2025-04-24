@@ -1,0 +1,93 @@
+{
+  "productionplanning": {
+    "activity": {
+      "entityActivity": "Mounting Activity",
+      "entityDesc": "Mounting Activity-Description",
+      "activity": {
+        "listTitle": "Activities",
+        "activityDesc": "Activity-Description",
+        "detailTitle": "Activity Detail",
+        "dialogTitle": "Assign Mounting Activity",
+        "bundleListTitle": "Activity: Bundles",
+        "resourceListTitle": "Activity: Resources",
+        "Estworkinghours": "Planned Working Hours",
+        "Actworkinghours": "Actual Working Hours",
+        "eventTypeFk": "Activity Type",
+        "bundle": {
+          "listTitle": "Activity: Bundles",
+          "dialogTitle": "Select Bundles for Activity",
+          "document": {
+            "listTitle": "Activity Bundle: Documents"
+          }
+        }
+      },
+      "trsRequisition": {
+        "ListTitle": "Activity: Transport Requisitions",
+        "dialogContainerTitle": "Transport Requisitions",
+        "DetailTitle": "Activity: Transport Requisition Detail",
+        "bundleListTitle": "Transport Requisition: Bundles",
+        "dialogTitle": "Select Transport Requisitions for Activity",
+        "entity": "Requisition",
+        "createLink": "Create Link",
+        "matRequisitionListTitle": "Transport Requisition: Material Requisition",
+        "matRequisitionDetailTitle": "Transport Requisition: Material Requisition Detail",
+        "bundle": {
+          "dialogContainerTitle": "Bundles",
+          "dialogTitle": "Select Bundles for Transport Requisition"
+        },
+			"all": {
+				"ListTitle": "Installation Requisition: Transport Requisitions"
+			},
+        "resReservationListTitle": "Transport Requisition: Resource Reservations",
+        "resRequisitonListTitle": "Transport Requisition: Resource Requisitions"
+      },
+      "bundle": {
+        "listTitle": "Unassigned Bundles",
+        "product": {
+          "listTitle": "Unassigned Bundle: Products"
+        }
+      },
+      "resRequisition": {
+        "ListTitle": "Activity: Resource Requisitions",
+        "dialogEntity": "resource requisition(s)"
+      },
+      "resReservation": {
+        "ListTitle": "Activity: Resource Reservation"
+      },
+      "document": {
+        "revision": {
+          "reportListTitle": "Report Document: Revisions",
+          "itemListTitle": "Item Document: Revisions",
+          "activityListTitle": "Activity Document: Revisions"
+        },
+        "activityDocumentListTitle": "Activity Documents",
+        "activityItemsDocumentListTitle": "Items Documents",
+        "trsRequisitionBundleListTitle": "Activity Transport Requisition Bundle: Documents",
+        "unassignedBundleListTitle": "Unassigned Bundle: Item Document"
+      },
+      "wizard": {
+        "changeActivityStatus": "Change Activity Status"
+      },
+      "additionalFilter": {
+        "prjLocationFilterListTitle": "Project Location Filter",
+        "ctrlUnitFilterListTitle": "Controlling Unit Filter",
+        "ppsItemFilterListTitle": "Production Unit Filter",
+        "ppsItemFilterForBundleGridTitle": "Production Unit Filter For Unassigned Bundles",
+        "psdActivityFilterListTitle": "Psd Activity Filter"
+      },
+      "activityWizard": {
+        "actWizardTitle": "Create Mounting-Activity",
+        "createAll": "Create-All",
+        "createSuccess": "Create Mounting-Activity Success",
+        "createFail": "Create Mounting-Activity Failed",
+        "noSelectedError": "No Activity Selected",
+        "noEventSelectedType": "No Event-Type Selected",
+        "noRequisitionSelectedError": "No Mounting-Requisition Selected",
+        "noPinnedProjectError": "Multiple-selected need Project Pinned",
+        "exist": "Exist",
+        "succeed": "Succeed",
+        "failed": "Failed"
+      }
+    }
+  }
+}

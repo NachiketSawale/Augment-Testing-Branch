@@ -1,0 +1,342 @@
+{
+  "cloud": {
+    "translation": {
+      "approvedby": "Approved by",
+      "assignAResource": "Assign a Resource",
+      "fileUpload": "Source File Upload",
+      "isapproved": "Is Approved",
+      "isglossary": "Is Glossary",
+      "languageDetailTitle": "Language Detail",
+      "languageEntity": "Language",
+      "languageid": "Language Id",
+      "languageListTitle": "Languages",
+      "modulename": "Module Name",
+      "resourceDetailTitle": "Resource Detail",
+      "resourceEntity": "Resource",
+      "resourceListTitle": "Resources",
+      "resourceterm": "Term",
+      "source": "Source",
+      "sourceDetailTitle": "Source Detail",
+      "sourceEntity": "Source",
+      "sourceListTitle": "Sources",
+      "translationDetailTitle": "Translation Detail",
+      "translationEntity": "Translation",
+      "uploadTranslationFile": "Upload a Translation File",
+      "maxlength": "Max Length",
+      "subjectfk": "Subject",
+      "translatable": "Translate",
+      "isTranslated": "Is Translated",
+      "toolTipDisableAutoMatch": "Is not considered in duplicate search",
+      "dialogTitleFileUpload": "Import : Upload Translation File",
+      "entityNameOverview": "Overview",
+      "exportdlg": {
+        "buttons": {
+          "export": "Export"
+        },
+        "dialogTitle": "Export Translation File",
+        "downloadFile": "Download File",
+        "exportLoadingMessage": "Generating Excel File",
+        "failedText": "Export Failed!!!",
+        "fetchLanguageLoadingMessage": "Fetching Available Languages",
+        "infoText": "Select languages to be exported",
+        "languageLoadingMsg": "Fetching Languages",
+        "selectedLanguages": "Selected Languages",
+        "successText": "Export was completed successfully. Translation file is ready to be downloaded",
+        "untranslatedText": "Untranslated Only",
+        "newOrChangedTitle": "Changed Resource Only",
+        "checkboxTitle": "Other Languages",
+        "defaultLanguage": "Default Language",
+        "addResourceRemark": "Add Resource Remarks",
+        "addTranslationRemark": "Add Translation Remark",
+        "categories": "Categories",
+        "exportByCategory": "Export by Category",
+        "titleTextConfig": "Export Filter Options",
+        "titleTextLanguages": "Export Languages",
+        "addCategory": "Category",
+        "titleTextAdditionalColumns": "Add Columns in Excel",
+        "addParameterInfo": "Resource Parameter Info",
+        "addPath": "Resource Path"
+      },
+      "fileImportdllg": {
+        "buttons": {
+          "cancel": "Cancel",
+          "upload": "Upload"
+        },
+        "introText": "Select an Excel file to import",
+        "spinnermsg": "Uploading Excel File to Server",
+        "step1Info": "Step 1 : Upload translation file"
+      },
+      "importFileInfo": "Translation File Information",
+      "invalidTranslations": "Invalid Translations",
+      "languageSelectionDlg": {
+        "buttons": {
+          "cancel": "Cancel",
+          "import": "Import",
+          "preview": "Preview"
+        },
+        "checkboxTitle": "Translation Languages",
+        "defaultLanguage": "Resource Language",
+        "dialogTitle": "Import Translation",
+        "fileInfoTitle": "File Information",
+        "languageCount": "Number of Languages",
+        "resourceCount": "Number of Resources",
+        "spinnermsg": "Uploading Excel File to Server",
+        "messages": {
+          "buttonHints": "To see a preview of the uploaded translations before importing, click Preview button. By clicking the Import button, the translations are imported directly.",
+          "instruction": "Please select the languages, and click Preview or Import.",
+          "step2Info": "Step 2 : Select import languages and Preview/Import",
+          "uploadSuccess": "Excel file {{uploadedFileName}} uploaded to server successfully.",
+          "resourceSelected": "Resource Import is enabled. Direct import is not possible. Please review the resource changes in the next dialog."
+        }
+      },
+      "previewdlg": {
+        "buttons": {
+          "cancel": "Cancel",
+          "import": "Import",
+          "close": "Close",
+          "copy": "Copy Report"
+        },
+        "chinese": "Chinese",
+        "deleted": "Deleted",
+        "dialogTitleImport": "Import Translation",
+        "dialogTitlePreview": "Import Translation : Preview",
+        "dutch": "Dutch",
+        "english": "English",
+        "finnish": "Finnish",
+        "gridTitlePreview": "Preview Import",
+        "id": "Id",
+        "inserted": "Inserted",
+        "invalid": "Invalid",
+        "russian": "Russian",
+        "spanish": "Spanish",
+        "status": {
+          "deleted": "Deleted",
+          "dutch": "Dutch Status",
+          "english": "English Status",
+          "finnish": "Finnish Status",
+          "french": "French Status",
+          "german": "German Status",
+          "inserted": "Inserted",
+          "notprocessed": "Not Processed",
+          "unchanged": "Unchanged",
+          "updated": "Updated",
+          "chinese": "Chinese Status",
+          "russian": "Russian Status",
+          "spanish": "Spanish Status",
+          "changeindb": "Changed in Db",
+          "isempty": "Is Empty",
+          "resourceinsert": "Resource Insert",
+          "parameterinvalid": "Invalid Parameter",
+          "czech": "Czech Status",
+          "italian": "Italian Status",
+          "norwegian": "Norwegian Status",
+          "polish": "Polish Status",
+          "swedish": "Swedish Status",
+          "lithuanian": "Lithuanian Status",
+          "indonesian": "Indonesian Status",
+          "danish": "Danish Status",
+          "japanese": "Japanese Status",
+          "portuguese": "Portuguese Status",
+          "korean": "Korean Status",
+          "thai": "Thai Status",
+          "vietnamese": "Vietnamese Status",
+          "resourceNoSelect": "Resources changed in Excel"
+        },
+        "statusSummary": "Status Summary",
+        "updated": "Updated",
+        "validationLoadingMsg": "Validation in Progress",
+        "resetChangedTitle": "Reset Ischanged while import",
+        "french": "French",
+        "german": "German",
+        "gridTitleInvalid": "Invalid Translations",
+        "unchanged": "Unchanged",
+        "resource": "Resource",
+        "czech": "Czech",
+        "italian": "Italian",
+        "lithuanian": "Lithuanian",
+        "norwegian": "Norwegian",
+        "polish": "Polish",
+        "swedish": "Swedish",
+        "importLoadingMsg": "Import in Progress",
+        "valid": "Valid",
+        "japanese": "Japanese",
+        "portuguese": "Portuguese",
+        "danish": "Danish",
+        "thai": "Thai",
+        "messages": {
+          "importDone": "Import was completed successfully. Please check the import status. You can close the dialog now.",
+          "step3Info": "Step 3 : Execute Import",
+          "stepFinalInfo": "Import completed!",
+          "validationDone": "Validation completed. You may proceed to Import.",
+          "copyComplete": "Report copied successfully."
+        },
+        "indonesian": "Indonesian",
+        "korean": "Korean",
+        "vietnamese": "Vietnamese",
+        "resourceVerifyConsentLabel": "All the resource changes have been verified by me.",
+        "languageColumn": {
+          "cs": "Czech",
+          "da": "Danish",
+          "de": "German",
+          "de-ch": "German (Swiss)",
+          "en": "English",
+          "en-us": "English (US)",
+          "es": "Spanish",
+          "fi": "Finnish",
+          "fr": "French",
+          "fr-ch": "French (Swiss)",
+          "id": "Indonesian",
+          "it": "Italian",
+          "it-ch": "Italian (Swiss)",
+          "ja": "Japanese",
+          "ko": "Korean",
+          "lt": "Lithuanian",
+          "nb": "Norwegian",
+          "nl": "Dutch",
+          "pl": "Polish",
+          "pt": "Portuguese",
+          "ru": "Russian",
+          "sv": "Swedish",
+          "th": "Thai",
+          "vi": "Vietnamese",
+          "zh": "Chinese",
+          "zh-hant": "Chinese (Traditional)"
+        },
+        "languageStatus": "Status"
+      },
+      "previewTranslation": "Preview Translation",
+      "wizardExportSuccess": "Export was successful",
+      "wizardNameTranslationOffice": "Translation Office",
+      "wizardOptionDescriptionExport": "Exports Data to Excel File",
+      "wizardOptionDescriptionImport": "Imports Data from Excel File",
+      "wizardOptionExportAll": "Export All to Excel",
+      "wizardOptionExportSelectedLanguage": "Select Language and Export",
+      "wizardOptionTitleExport": "Export to Excel",
+      "wizardOptionTitleImport": "Import from Excel",
+      "glossarydlg": {
+        "errorText": {
+          "referenceErrorMake": "This item is already referencing one glossary item. Making this item a glossary is not possible",
+          "referenceErrorRemove": "This item is already referenced by other items. Removing glossary is not possible",
+          "existingGlossaryFound": "Existing glossary entry found with the same resource. <br/>Select an existing glossary and click 'Assign to Glossary' (recommended). <br/>Or, click 'Make Glossary' to make a new glossary (not recommended)."
+        },
+        "makeGlossaryHeader": "Make Glossary",
+        "confirmationText": {
+          "create": "Valid resource for creating glossary. Create now?",
+          "remove": "Valid resource for removing glossary. Delete now?"
+        },
+        "successText": {
+          "create": "Glossary created successfully.",
+          "remove": "Glossary removed successfully."
+        },
+        "removeGlossaryHeader": "Remove Glossary",
+        "assignToGlossary": "Assign to Glossary",
+        "loadingMsg": "Finding existing glossaries",
+        "yes": "Yes"
+      },
+      "removeGlossary": "Remove Glossary",
+      "filter": "Filter",
+      "filterdlg": {
+        "dialogTitle": "TODO Translation Filters"
+      },
+      "toDoTranslationEntity": "TODO Translation",
+      "toDoTranslationTitle": "TODO Translation by Language",
+      "normalizedlg": {
+        "columnGlossary": "Glossary Count",
+        "columnGlossaryNonRefs": "Not Referencing a Glossary",
+        "columnGlossaryRefs": "Referencing a Glossary",
+        "columnInfo": "Info",
+        "columnTotal": "Total Entries",
+        "dialogTitle": "Normalization Results",
+        "errorText": "Could not perform normalization",
+        "finalInfo": "After Normalization",
+        "initialInfo": "Before Normalization",
+        "loadingMessage": "Normalization in progress",
+        "statTitle": "Stats",
+        "successText": "Normalization completed successfully",
+        "buttons": {
+          "cancel": "Cancel",
+          "execute": "Normalize"
+        },
+        "instructions": "Resource Normalization is a process where the resources, which are not referencing any glossaries, are checked and assigned glossary on match. Multiple entries are also checked and new glossaries are created.",
+        "warning": "Warning : The process can cause the reference and path of some resources to be changed."
+      },
+      "normalizeResource": "Normalize Resource",
+      "culture": "Culture",
+      "foreignid": "Foreign Id",
+      "path": "Path",
+      "sourcetype": "Source Type",
+      "translationListTitle": "Translations",
+      "overviewListTitle": "Translation Overview",
+      "createGlossary": "Make Glossary",
+      "parameterinfo": "Parameter Info",
+      "resourcekey": "Resource Key",
+      "glossaryremark": "Glossary Remark",
+      "disableAutoMatch": "Disable Auto Match",
+      "exportcolumnname": "Export Column Name",
+      "islive": "Is Live",
+      "issystem": "Is System",
+      "exportModuleDlg": {
+        "availableModules": "Available Modules",
+        "columns": {
+          "moduleName": "Module Name",
+          "selected": "Selected"
+        },
+        "dialogTitle": "Export Module Test",
+        "exportedValueHeader": "Exported Value",
+        "labelExportAll": "Export All Modules",
+        "labelModuleSubmodule": "Export Specific Module",
+        "moduleSelectionHeader": "Module Name",
+        "sectionHeaderExportResult": "Export Result",
+        "selectedModules": "Selected Modules",
+        "spinnerMsg": "Exporting Module Translations"
+      },
+      "category": "Category",
+      "normalizeDialog": {
+        "assignmentStep": {
+          "columns": {
+            "assignedTo": "Assigned To",
+            "exclude": "Exclude",
+            "id": "Id",
+            "path": "Path",
+            "resourceTerm": "Resource Term"
+          },
+          "stepDescription": "Here you can see all the resources which will be assigned to a glossary. Next step creates the necessary glossaries and assign resources to glossary. You can exclude particular resources from the normalization process as well. Please cancel the wizard if you want to do other modifications.",
+          "stepTitle": "Resource Assignment"
+        },
+        "checkAssignmentStep": {
+          "loadingMessage": "Checking Resources which can be assigned a Glossary",
+          "stepTitle": "Check Resource Assignment"
+        },
+        "checkNewGlossaryStep": {
+          "loadingMessage": "Checking creation of new glossaries",
+          "stepTitle": "Check Glossary Create"
+        },
+        "introStep": {
+          "stepDescription": "Resource Normalization is a process where the resources, which are not referencing any glossaries, are checked and assigned glossary on match. Multiple entries are also checked and new glossaries are created.",
+          "stepTitle": "Introduction"
+        },
+        "newGlossaryStep": {
+          "columns": {
+            "duplicateCount": "Duplicate Count",
+            "glossaryTerm": "Glossary Term"
+          },
+          "stepDescription": "During the normalization process, the following glossaries will be created.",
+          "stepTitle": "New Glossaries"
+        },
+        "normalizationStep": {
+          "loadingMessage": "Normalization in progress",
+          "stepTitle": "Normalization"
+        },
+        "resultStep": {
+          "columns": {
+            "message": "Message",
+            "title": "Title"
+          },
+          "downloadReportBtn": "Download Report",
+          "stepDescription": "Normalization finished. You can download the normalization report By clicking the Download Report button.",
+          "stepTitle": "Normalization Result"
+        }
+      }
+    }
+  }
+}

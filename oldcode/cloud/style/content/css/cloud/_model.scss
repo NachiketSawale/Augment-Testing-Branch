@@ -1,0 +1,37 @@
+/*--------------------------------------
+CSS for Model-Module.
+model.viewer, model.simulation
+----------------------------------------*/
+.viewer-drag-box {
+	@include container-position(0, auto, auto, 0);
+	@extend .fullheight;
+	@extend .text-center;
+	@extend .fullwidth;
+	background-color: $color-primary-fore;
+	opacity: 0.6;
+}
+
+.viewer-invisible-drag {
+	@include container-position(0, auto, auto, 0);
+	@extend .text-center;
+	@extend .filler;
+	background-color: transparent;
+	margin: $padding-xlarge-horizontal;
+}
+
+.highlight.sim-element {
+	&.sim-todayline, &.sim-todayline > line, &.sim-currentline, &.sim-currentline > line {
+		stroke-width: 1px;
+		stroke-dasharray: none;
+		fill: none;
+		shape-rendering: crispEdges;
+	}
+
+	&.sim-todayline, &.sim-todayline > line  {
+		stroke: red;
+	}
+
+	&.sim-currentline, &.sim-currentline > line {
+		stroke: rgb(65,150,106);
+	}
+}

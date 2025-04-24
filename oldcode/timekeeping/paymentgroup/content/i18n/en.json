@@ -1,0 +1,18 @@
+﻿{
+	"timekeeping": {
+		"paymentgroup": {
+			"paymentGroupEntityName": "Payment Group",
+			"paymentGroupListTitle": "Payment Groups",
+			"paymentGroupDetailTitle": "Payment Group Details",
+			"paymentGroupRateEntity": "Payment Group Rate",
+			"paymentGroupRateListTitle": "Payment Group Rates",
+			"paymentGroupRateDetailTitle": "Payment Group Rate Details",
+			"paymentGroupSurchargeEntityName": "Payment Group Surcharge",
+			"paymentGroupSurchargeListTitle": "Payment Group Surcharges",
+			"paymentGroupSurchargeDetailTitle": "Payment Group Surcharge Details",
+			"entitySurchargeTypeFk": "Surcharge Type",
+			"code": "Code",
+			"paymentGroupRateFk": "Payment Group Rate"
+		}
+	}
+}

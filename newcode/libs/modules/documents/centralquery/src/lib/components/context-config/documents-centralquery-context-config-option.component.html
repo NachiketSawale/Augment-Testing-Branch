@@ -1,0 +1,13 @@
+<div class="platform-form-group ">
+	<div class="flex-box flex-align-center profile-lookup">
+		<ui-common-domain-control-host
+			[value]="optionSelectedValue"
+			[fieldType]="fieldType.Radio"
+			[options]="options"
+			(valueChange)="onOptionChanged($event)"
+		></ui-common-domain-control-host>
+		<div class="flex-element">
+			<basics-shared-unique-fields-profile-lookup [uniqueFieldOption]="uniqueFieldOption" [value]="uniqueFields"></basics-shared-unique-fields-profile-lookup>
+		</div>
+	</div>
+</div>

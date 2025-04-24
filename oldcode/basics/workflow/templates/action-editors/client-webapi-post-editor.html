@@ -1,0 +1,128 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.webApiURL' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.script" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Parameter -->
+		<div>
+			<div class="radiolist-container">
+				<div class="radio spaceToUp pull-left">
+					<label>
+						<input name="radioGroupA" ng-click="onRadioGroupOptChanged(1, 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+						       ng-value="1" type="radio">
+						{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+					</label>
+				</div>
+				<div class="radio spaceToUp pull-left margin-left-ld">
+					<label>
+						<input name="radioGroupA" ng-click="onRadioGroupOptChanged(2, 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+						       ng-value="2" type="radio">
+						{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div data-ng-show="input.editorMode === 1">
+			<div class="toolbar margin-top-ld">
+				<h2 class="title fix">{{'basics.workflow.action.customEditor.data' | translate }}</h2>
+				<div data-list="tools" data-platform-menu-list data-platform-refresh-on="tools.version"
+				     ng-if="codeMirrorOptions.readOnly !== true"></div>
+			</div>
+			<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorMode === 2">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.params' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.datascript" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Headers -->
+		<div>
+			<div class="radiolist-container">
+				<div class="radio spaceToUp pull-left">
+					<label>
+						<input name="radioGroupB" ng-click="onRadioGroupOptChanged(1, 'editorModeHeader')" ng-disabled="readonly" ng-model="input.editorModeHeader"
+						       ng-value="1" type="radio">
+						{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+					</label>
+				</div>
+				<div class="radio spaceToUp pull-left margin-left-ld">
+					<label>
+						<input name="radioGroupB" ng-click="onRadioGroupOptChanged(2, 'editorModeHeader')" ng-disabled="readonly" ng-model="input.editorModeHeader"
+						       ng-value="2" type="radio">
+						{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div data-ng-show="input.editorModeHeader === 1">
+			<div class="toolbar margin-top-ld">
+				<h2 class="title fix">{{'basics.workflow.action.customEditor.headers' | translate }}</h2>
+				<div data-list="toolsHeaders" data-platform-menu-list data-platform-refresh-on="toolsHeaders.version"
+				     ng-if="codeMirrorOptions.readOnly !== true"></div>
+			</div>
+			<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+				<platform-Grid data="gridDataHeaders"></platform-Grid>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorModeHeader === 2">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.params' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.headerscript" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputClientPost' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.clientPost" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

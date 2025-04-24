@@ -1,0 +1,10 @@
+<div class="flex-element flex-box flex-column overflow-auto fullheight">
+	<fieldset class="margin-top-ld">
+		<legend>Main Entity Detail</legend>
+		<div>
+			<ui-common-form [formConfig]="formConfig" [entity]="mainEntity"></ui-common-form>
+		</div>
+		<hr class="border-bottom">
+		<pre>{{mainEntity | json}}</pre>
+	</fieldset>
+</div>

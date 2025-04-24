@@ -1,0 +1,25 @@
+// Sizing shortcuts
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+@mixin circle($size: 60px) {
+  @include square($size);
+  border-radius: $size;
+  background-size: $size;
+  overflow:hidden;
+  margin-right: $padding-medium-horizontal;
+}
+
+@mixin riblogo($width: 104px, $height: 24px) {
+	width: $width;
+	height: $height;
+	min-width: $width;
+	min-height: $height;
+}

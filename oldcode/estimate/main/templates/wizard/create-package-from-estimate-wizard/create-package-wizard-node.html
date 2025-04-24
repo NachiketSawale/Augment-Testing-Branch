@@ -1,0 +1,20 @@
+<label style="float:left;width:40px;padding: 0">
+    {{'estimate.main.createMaterialPackageWizard.note' | translate}}:
+</label>
+
+<ol style="margin-left:45px;list-style:none;">
+    <li ng-if="entity.modeFlg===2">
+        {{'estimate.main.createMaterialPackageWizard.note1' | translate}}
+    </li>
+    <li ng-if="entity.modeFlg===1">
+        {{'estimate.main.createMaterialPackageWizard.noteDistinct' | translate}}
+    </li>
+
+    <li>{{ node2 | translate}}
+    </li>
+    <li class="checkbox spaceToUp">
+        <input type="checkbox" data-ng-disabled="entity.rootLevelDisable" data-ng-checked="entity.rootLevelFlg"
+               data-ng-model="entity.rootLevelFlg" data-ng-change="onRootLevelFlg(entity.rootLevelFlg)"/>
+        <label>{{'estimate.main.createMaterialPackageWizard.rootLevel' | translate}}</label>
+    </li>
+</ol>

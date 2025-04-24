@@ -1,0 +1,20 @@
+{
+	"name": "modules-logistic-preload",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/logistic/preload/src",
+	"prefix": "itwo40",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/logistic/preload"],
+			"options": {
+				"jestConfig": "libs/modules/logistic/preload/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	}
+}

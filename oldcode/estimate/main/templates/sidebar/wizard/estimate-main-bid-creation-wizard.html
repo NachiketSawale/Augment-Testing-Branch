@@ -1,0 +1,77 @@
+<div data-ng-controller="estimateMainBidCreationWizardController" class="wizard-wrapper wizard-dialog modal-wrapper overflow-hidden">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body margin-large_ overflow-hidden">
+		<div class="flex-element overflow">
+	        <div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+
+	        <div ng-switch="selectStep.number" class="modal-wrapper">
+	            <div ng-switch-when="0">
+	                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step0.html'"></ng-include>
+	            </div>
+	            <div ng-switch-when="1">
+	                <div data-platform-alert data-error="assignError"></div>
+	                <div data-platform-alert data-error="executionScheduleError"></div>
+	                <div data-platform-alert data-error="noLineItemStructureError"></div>
+	                <div data-platform-alert data-error="noMainBidSelelectedError"></div>
+	                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step2.html'"></ng-include>
+	            </div>
+	            <div ng-switch-when="2">
+	                <div data-platform-alert data-error="error"></div>
+	                <div data-platform-alert data-error="urpSelectionError"></div>
+	                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step1.html'"></ng-include>
+	            </div>
+	            <div class="modal-wrapper" ng-switch-when="3">
+	                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step3.html'" class="modal-wrapper"></ng-include>
+	            </div>
+		        <div class="fullheight modal-wrapper" ng-switch-when="4" style="min-height: 470px">
+			        <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step6.html'" class="modal-wrapper"></ng-include>
+		        </div>
+	            <div class="modal-wrapper" ng-switch-when="5">
+	                <div class="fullwidth container-fluid ribalert alert alert-dismissable ng-isolate-scope alert-info" data-ng-class="alertclass" style="">
+	                    <div class="row">
+	                        <div class="col-xs-12 rib-alert-col1">
+	                            <span class="ng-binding">
+	                                <div data-ng-bind-html="trustAsHtml(optionalWarning)"></div>
+	                            </span>
+	                        </div>
+	                    </div>
+	                </div>
+	                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step4.html'" class="modal-wrapper"></ng-include>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="status-indicator margin-top-ld"  style="height: 70px;">
+	        <style type="text/css">
+	            .modal-content.ui-resizable .steps { display: none; }
+	        </style>
+	        <div data-platform-wizard-dialog-body class="flex-box flex-column"></div>
+	    </div>
+	</section>
+    <footer class="modal-footer">
+	    <span ng-if="getCurrentStepNumber() == 2" class="package-option" >
+				<div estimate-main-create-bid-option-profile-lookup data-ng-model="UpdateOptions.optionProfile" data-options="serviceoptions1" class="package-option-lookup"></div>
+        </span>
+        <button type="button" class="btn btn-default" data-ng-click="previousStep()" data-ng-disabled="isFirstStep() || isExecting" data-ng-hide="isFirstStep()"> {{::'basics.common.button.previousStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()" data-ng-disabled="!canExecuteNextButton()"> {{::'basics.common.button.nextStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="close()" data-ng-disabled="isExecting"> {{::'basics.common.button.cancel' | translate}}</button>
+
+        <button type="button" class="btn btn-default" data-ng-click="execute()" data-ng-disabled="!canExecute() || isExecting">{{::'basics.common.button.execute' | translate}}</button>
+    </footer>
+</div>
+
+<style>
+	.modal-footer .package-option{
+		flex:1;
+		text-align:left;
+	}
+	.modal-footer .package-option .package-option-lookup{
+		max-width: 300px;
+	}
+	.modal-footer .package-option button.btn{
+		margin:0px;
+		padding:0px;
+		min-width:auto;
+		display:inline-block;
+	}
+</style>
+

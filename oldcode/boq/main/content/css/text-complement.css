@@ -1,0 +1,25 @@
+
+textcomplement[kind=Bidder]
+{
+    background-color: #dbe9a0; /* green */
+}
+
+textcomplement[kind=Owner]
+{
+    background-color: #FDDD9B; /* yellow */
+}
+
+textcomplement[kind=al]
+{
+	background-color: #dbe9a0; /* green */
+}
+
+textcomplement[kind=bl]
+{
+	background-color: #FDDD9B; /* yellow */
+}
+
+textcomplement[kind=blo]
+{
+	background-color: #b4d8e1; /* blue */
+}

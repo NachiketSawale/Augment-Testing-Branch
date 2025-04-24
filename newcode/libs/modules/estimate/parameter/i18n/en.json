@@ -1,0 +1,22 @@
+{
+	"estimate": {
+		"parameter": {
+			"prjParamContainer":"Project Parameter",
+			"defaultValue":"Default Value",
+			"valueDetail":"Value Detail",
+			"params":"Parameters",
+			"assignedStructure" : "Assigned Structure",
+			"isLookup":"Lookup",
+			"estRuleParamValueFk":"Item Value",
+			"valueType":"Value Type",
+			"value" :"Value",
+			"description":"Description",
+			"errorCode":"The parameter code only support letters,numeric digits or symbol '_'. It should start with letter or symbol '_'.",
+			"prjEstRule" : "Project Rule",
+			"source": "Source",
+			"projectParam" : "Project",
+			"globalParam" : "Global",
+			"ruleParameter" : "Esimate Rule"
+		}
+	}
+}

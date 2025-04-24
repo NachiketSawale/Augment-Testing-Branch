@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.rule.estimateRule",
+    "controller": "estimateRuleListController",
+    "uuid":"CC9CCF50825140F89E37C95E51813971"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "estimate.rule.detailEstimateRule",
+    "controller": "estimateRuleDetailController",
+    "uuid":"4EA1203C018D49D08D1A671F5EC8B452"
+  },
+  {
+    "id": "estimate.rule.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid":"0A9B433C8FAC484EB302C03F6A768C02"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.rule.estimateRuleParameter",
+    "controller": "estimateRuleParameterListController",
+    "uuid":"7268F6D33A2543D8B3BE0906A253547F"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "estimate.rule.detailEstimateRuleParameter",
+    "controller": "estimateRuleParameterDetailController",
+    "uuid":"C785FAAAFB434C339A92124045C96FA1"
+  },
+  {
+    "id": "5",
+    "template": "estimate.rule/partials/script-partial.html",
+    "title": "estimate.rule.scriptContainerTitle",
+    "controller": "estimateRuleScriptController",
+    "uuid": "691B4F8931344A529B9210D44EA2B505"
+  },
+  {
+    "id": "6",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.rule.estimateRuleParameterValue",
+    "controller": "estimateRuleParameterValueListController",
+    "uuid": "70901a01659e4365a0845f63f01843cb"
+  }
+]

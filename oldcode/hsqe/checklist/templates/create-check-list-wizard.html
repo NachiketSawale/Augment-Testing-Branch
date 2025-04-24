@@ -1,0 +1,46 @@
+<div class="modal-wrapper">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div  class="platform-form-group">
+			<div class="platform-form-row">
+					<input type="radio" name="fromCheckListTemplate" value="1" ng-model="modalOptions.value.fromCheckListTemplate"
+							 data-ng-disabled="!modalOptions.hasCheckListTemplate"/>
+					<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'hsqe.checklist.wizard.createCheckList.createFromCheckListTemplate' | translate}}</label>
+
+			</div>
+			<div class="platform-form-row">
+					<input type="radio" name="fromCheckListTemplate" value="2" ng-model="modalOptions.value.fromCheckListTemplate"
+							 ng-checked="modalOptions.value.fromCheckListTemplate==2"/>
+					<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'hsqe.checklist.wizard.createCheckList.createFromActivityTemplate' | translate}}
+					</label>
+			</div>
+		</div>
+		<div class="platform-form-group platform-lg">
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'hsqe.checklist.header.PrjProject' | translate }}
+				</label>
+				<div class="platform-form-col" data-ng-init="porjectConfig ={lookupDirective:'basics-lookup-data-project-project-dialog',descriptionMember:'ProjectName'}">
+					<div data-ng-model="modalOptions.value.projectFk"
+					     data-options="porjectConfig" data-basics-lookupdata-lookup-composite class="control-directive">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-group">
+		<div class="platform-form-row">
+			<input type="checkbox" name="createDistinctChecklist"  ng-model="modalOptions.value.createDistinctChecklist" data-ng-disabled="modalOptions.value.fromCheckListTemplate!=2"/>
+			<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'hsqe.checklist.wizard.createCheckList.distinctChecklist' | translate}}</label>
+		</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+				  data-ng-disabled="(modalOptions.value.fromCheckListTemplate==2&&!modalOptions.value.projectFk)||(modalOptions.value.fromCheckListTemplate==1&&!modalOptions.hasCheckListTemplate)"> {{'cloud.common.ok' |
+			translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' |
+			translate}}
+		</button>
+	</footer>
+</div>

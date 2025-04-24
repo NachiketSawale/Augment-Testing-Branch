@@ -1,0 +1,88 @@
+<style type="text/css">
+	.legend-editor-container {
+		margin: 10px;
+	}
+</style>
+
+<header class="modal-header main-color">
+	<h2 class="modal-title">{{ 'cloud.common.print' | translate }}</h2>
+	<button class="db close" data-dismiss="modal" data-ng-click="$close(false)"
+	        aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+</header>
+
+<section class="modal-body wde-print">
+	<!--<div class="legend-editor-container" data-legend-editor data-entity="data.header" data-config="config.header"></div>
+	<div class="legend-editor-container" data-legend-editor data-entity="data.footer" data-config="config.footer"></div>-->
+	<div class="legend-editor-container" data-model-wdeviewer-printing-sign data-entity="data.headerSection" data-config="config.header"></div>
+	<div class="legend-editor-container" data-model-wdeviewer-printing-sign data-entity="data.footerSection" data-config="config.footer"></div>
+
+	<div class="legend-editor-container" data-ng-show="data.isShowLegend">
+		<label>{{ 'model.wdeviewer.print.showLegend' | translate }} <input type="checkbox" data-ng-model="data.showLegend" style="vertical-align: bottom;margin-left: 10px;"/></label>
+	</div>
+
+	<div class="legend-editor-container">
+		<label>{{ 'model.wdeviewer.print.useVectorPublisher' | translate }} <input type="checkbox" data-ng-model="data.useVectorPublisher" style="vertical-align: bottom;margin-left: 10px;"/></label>
+	</div>
+
+	<div class="legend-editor-container">
+		<label>{{ 'model.wdeviewer.print.pageOrientation' | translate }}
+			<select data-ng-model="data.pageOrientation">
+				<option value="landscape">{{ 'model.wdeviewer.print.landscape' | translate }}</option>
+				<option value="portrait">{{ 'model.wdeviewer.print.portrait' | translate }}</option>
+			</select>
+		</label>
+	</div>
+
+	<div class="legend-editor-container">
+		<label>{{ 'model.wdeviewer.print.pageSize' | translate }}
+			<select data-ng-model="data.pageSize">
+				<option value="A0">A0</option>
+				<option value="A1">A1</option>
+				<option value="A2">A2</option>
+				<option value="A3">A3</option>
+				<option value="A4">A4</option>
+			</select>
+		</label>
+	</div>
+	<!--<div class="legend-editor-container">-->
+	<!--<fieldset class="legend-editor">-->
+	<!--<legend>Legend</legend>-->
+
+	<!--<div class="row margin-y btn-list">-->
+	<!--<span class="btn-list-group">-->
+	<!--<button class="btn btn-default tlb-icons ico-rec-new" data-ng-click="createLegend()" title="Create Legend" style="width: 26px;height: 26px;"></button>-->
+	<!--</span>-->
+	<!--</div>-->
+
+	<!--<div class="row margin-y">-->
+	<!--<div class="col-md-1" data-ng-bind="'model.wdeviewer.legend.color' | translate"></div>-->
+	<!--<div class="col-md-5" data-ng-bind="'model.wdeviewer.legend.name' | translate"></div>-->
+	<!--<div class="col-md-6" data-ng-bind="'model.wdeviewer.legend.value' | translate"></div>-->
+	<!--</div>-->
+
+	<!--<div class="row margin-y" data-ng-repeat="legend in data.legends">-->
+	<!--<div class="col-md-1"><span data-domain-control data-domain="color" data-ng-model="legend.color" style="width: 40px;"></span></div>-->
+	<!--<div class="col-md-5"><input type="text" class="form-control" data-ng-model="legend.name" placeholder="{{ 'model.wdeviewer.legend.name' | translate }}"></div>-->
+	<!--<div class="col-md-6">-->
+	<!--<div class="input-group form-control">-->
+	<!--<input type="text" class="input-group-content" data-ng-model="legend.value" placeholder="{{ 'model.wdeviewer.legend.value' | translate }}">-->
+	<!--<div class="input-group-btn">-->
+	<!--<button class="btn btn-default control-icons ico-input-delete" data-ng-click="deleteLegend(legend)" title="Delete Legend"></button>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--</div>-->
+	<!--</fieldset>-->
+	<!--</div>-->
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="apply()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>

@@ -1,0 +1,13 @@
+<div class="filler flex-box flex-element " [ngClass]="flexDirection==='horizontal'?'flex-row':'flex-column'">
+    <div *ngIf="topLeftComponent"
+         [ngStyle]="flexDirection==='horizontal'?{'max-width':maxTopLeftLength}:{'max-height':maxTopLeftLength}">
+        <ng-container *ngComponentOutlet="topLeftComponent; injector: subInjector"></ng-container>
+    </div>
+    <div class="subview-container flex-element" [ngClass]="'cid_' + config.uuid">
+        <ui-common-grid [configuration]="config" (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+    </div>
+    <div *ngIf="bottomRightComponent"
+         [ngStyle]="flexDirection==='horizontal'?{'max-width':maxBottomRightLength}:{'max-height':maxBottomRightLength}">
+        <ng-container *ngComponentOutlet="bottomRightComponent; injector:subInjector"></ng-container>
+    </div>
+</div>

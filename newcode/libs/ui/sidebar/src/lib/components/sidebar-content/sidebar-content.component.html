@@ -1,0 +1,7 @@
+<div class="sidebar" [ngClass]="{ pinned: sidebarOptions.isPinned, expanded: sidebarOptions.lastButtonId !== '' }">
+	<section id="{{activeTabId}}" [ngClass]="{ selected: sidebarOptions.lastButtonId !== '', maximize: sidebarOptions.isMaximized }" class="main-border-color">
+		<div>
+			<ng-container *ngComponentOutlet="activeContainer"></ng-container>
+		</div>
+	</section>
+</div>

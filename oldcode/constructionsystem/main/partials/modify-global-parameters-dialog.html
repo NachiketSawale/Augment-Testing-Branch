@@ -1,0 +1,45 @@
+<style>
+	#cosGlobalParamGroupSplitter .flex-lookup div.filler {
+		flex-direction: column;
+	}
+</style>
+<div data-ng-controller="constructionSystemMainInstanceHeaderParameterListDialogController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+			<h2 class="title fix" title="{{'constructionsystem.main.createInstanceWizard.modifyGlobalParameter' | translate}}">{{'constructionsystem.main.createInstanceWizard.modifyGlobalParameter' | translate}}</h2>
+			<div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+		</div>
+	<div class="flex-box flex-column flex-element subview-content" data-cos-global-param-group-container data-uuid="dialog">
+		<div class="input-group form-control">
+			<input type="text" data-ng-model="searchOptions.searchValue" class="form-control"
+			       data-ng-keydown="searchOptions.onSearchInputKeyDown($event, searchOptions.searchValue)"
+			       data-ng-keyup="searchOptions.onSearchInputkeyup($event, searchOptions.searchValue)">
+			<span class="input-group-btn">
+            <button class="btn btn-default input-sm btn-search"
+                    data-ng-click="searchOptions.search(searchOptions.searchValue)">
+                <i class="block-image tlb-icons ico-search"></i>
+            </button>
+        </span>
+		</div>
+		<div id="cosGlobalParamGroupSplitter" data-platform-kendo-splitter-adjust class="margin-top-ld flex-element flex-box flex-column border-none">
+			<div data-basics-lookupdata-lookup-grid class="flex-lookup" data-options="gridOptions.parent"></div>
+			<div class="flex-element relative-container">
+				<div class="filler-absolute" data-ng-controller="constructionSystemMainInstanceHeaderParameterListDialogController">
+					<platform-grid class="border-all" data="gridData" data-platform-dragdrop-component="ddTarget"></platform-grid>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<footer class="modal-footer">
+		<div class="custom-group">
+			<span>{{"constructionsystem.main.createInstanceWizard.modifyGlobalParameterNote"|translate}}</span>
+		</div>
+		<button type="button" class="btn btn-default"
+		        data-ng-click="saveGlobalParameters()"
+		        translate="basics.common.button.ok"></button>
+		<button type="button" class="btn btn-default" data-ng-click="saveGlobalParameters()"
+		        translate="basics.common.button.cancel"></button>
+	</footer>
+</div>

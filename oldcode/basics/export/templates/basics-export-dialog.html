@@ -1,0 +1,15 @@
+<div data-ng-controller="basicsExportDialogController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body" >
+        <div class="fullheight">
+                <div data-platform-form data-form-options="formOptions" entity="entity.data"></div>
+        </div>
+        <!--<a id="downloadLink" href="" target="_self" type="application/octet-stream" style="visibility: hidden;"></a>-->
+        <!--<a id="exportdownloadLink" href="" target="_self" style="visibility:visible;"></a>-->
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(true)" data-ng-disabled="!canExecuteOkButton()"> {{::'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>
+

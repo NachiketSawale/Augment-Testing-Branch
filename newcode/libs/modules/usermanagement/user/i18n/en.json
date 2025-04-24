@@ -1,0 +1,130 @@
+{
+	"usermanagement": {
+		"user": {
+			"dialogTitleUser": "User Selection",
+			"moduleInfoNameUsermanagementUser": "User",
+			"entityGUID": "GUID",
+			"userName": "Name",
+			"userDescription": "Description",
+			"userLogonName": "Logon Name",
+			"userLastLogin": "Last Login",
+			"userPasswordHash": "Password Hash",
+			"userPasswordSalt": "Password Salt",
+			"userDomainSID": "Domain SID",
+			"userSynchronizeDate": "Synchronization Date",
+			"userEmail": "E-Mail",
+			"userIntegratedAccess": "Integrated Access",
+			"userState": "State",
+			"userExplicitAccess": "Explicit Access",
+			"userIsExternal": "Is External",
+			"userPasswordExpiration": "Password Expiration",
+			"accessGroupFK": "Group",
+			"userContainerTitle": "Users",
+			"user2GroupContainerTitle": "User to Group",
+			"usermanagementUserDetailsContainerTitle": "User Details",
+			"userPassword": "Password",
+			"userConfirmPassword": "Confirm Password",
+			"stateEnabled": "Enabled",
+			"stateDisabled": "Disabled",
+			"stateMarkedForDeletion": "Marked for deletion",
+			"validateConfirmPassword": "Enter the same password",
+			"entityUser": "Users",
+			"enterPassword": "Enter password",
+			"enterPasswordConfirmation": "Enter password confirmation",
+			"goto": "Navigate To",
+			"users": "Users",
+			"groups": "Groups",
+			"roles": "Roles",
+			"clerk": "Clerk",
+			"company": "Company",
+			"customizing": "Customizing",
+			"identityProvider": "Identityprovider",
+			"providerUniqueIdentifier": "Provider Unique Identifier",
+			"ispasswordchangeneeded": "Password Change Needed",
+			"isprotected": "Is Protected",
+			"loginAllowedFrom": "Login Allowed From",
+			"loginAllowedTo": "Login Allowed To",
+			"IsAnonymized": "Is Anonymized",
+			"userImport": {
+				"headerText": "Import Users",
+				"selected": "Selected",
+				"disable": "Is Disable",
+				"name": "Name",
+				"loginName": "Login Name",
+				"domainSid": "Domain SID",
+				"adsUsers": "Users in Active Directory",
+				"adsUsersSelected": "Selected Users",
+				"importButton": "Import",
+				"infoBodyText": "Synchronization successful !",
+				"infoDialogHeader": "Active Directory Users Import",
+				"toolbarButtons": {
+					"checkAll": "Check All",
+					"uncheckAll": "Uncheck All",
+					"checkAllSelected": "Check All Selected",
+					"uncheckAllSelected": "Uncheck All Selected"
+				}
+			},
+			"userSync": {
+				"headerText": "Synchronize Users",
+				"syncronize": "Synchronize",
+				"state": "State",
+				"adsUsersSync": "Users to synchronize",
+				"infoBodyText": "Synchronization successful !",
+				"infoDialogHeader": "Active Directory Users Synchronization",
+				"noUserPath": "No AD User Path available."
+			},
+			"adsConfig": {
+				"infoBodyText": "Save successful !",
+				"infoBodyTextGroupError": "Group path invalid.",
+				"infoBodyTextUserError": "User path invalid.",
+				"infoBodyTextGroupAndUserError": "Group & user path invalid.",
+				"infoDialogHeader": "Active Directory Configuration",
+				"adTaskInfo": "AD Scheduler Task saved successful !"
+			},
+			"adButtons": {
+				"adConfig": "AD Configuration & Scheduler Task",
+				"groupImport": "Import AD User",
+				"adDisco": "Disconnect from AD",
+				"groupSync": "Synchronize AD User"
+			},
+			"logContainer": {
+				"logContainerTitle": "Scheduler Logs",
+				"jobstate": "Job State",
+				"starttime": "Start Time",
+				"exstarttime": "Execution Start Time",
+				"exendtime": "Execution End Time",
+				"log": "Logging Message",
+				"showLogFileTitle": "AD Scheduler Log",
+				"refresh": "Refresh"
+			},
+			"stateValues": {
+				"waiting": "Waiting",
+				"starting": "Starting",
+				"running": "Running",
+				"stopped": "Stopped",
+				"finished": "Finished",
+				"repetitive": "Repetitive"
+			},
+			"wizards": {
+				"unlinkSuccessfull": "Unlink Portal User(s) Successfull !",
+				"noContactSelected": "No Contact(s) Selected !",
+				"noUserSelected": "No User(s) Selected !",
+				"disableUsers": "Enable/Disable Users"
+			},
+			"disableUserDialog": {
+				"dialogTitle": "Enable/Disable Users in Bulk",
+				"enable": "Enable",
+				"disable": "Disable",
+				"labelUserCount": "Number of Selected Users",
+				"newState": "Select New State",
+				"btnApply": "Apply",
+				"btnCancel": "Cancel",
+				"btnClose": "Close",
+				"selectedUsers": "Selected Users",
+				"resultEnable": "{{userCount}} Users were enabled successfully.",
+				"resultDisable": "{{userCount}} Users were disabled successfully.",
+				"loadingMessage": "User State Modification In Progress"
+			}
+		}
+	}
+}

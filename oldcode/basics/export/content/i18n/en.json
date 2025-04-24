@@ -1,0 +1,15 @@
+{
+	"basics": {
+		"export": {
+			"entitySubContainers": "Include Container",
+			"entityExcelProfile": "Excel Profile",
+			"justifyPropertyNames": "Remove special chars from Headers",
+			"excelProfile": "Excel Profile",
+			"excelProfileContextFree": "Free Excel",
+			"excelProfileContextBidder": "Bidder",
+			"excelProfileContextPlanner": "Planner",
+			"excelProfileContextPes": "Pes",
+			"excelProfileContextMaterial": "Material"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+﻿{
+	"basics": {
+		"country": {
+			"entitySorting":"Sorting",
+			"detailCountryTitle": "Country Details",
+			"detailCountryStateTitle": "State Details",
+			"listCountryTitle": "Countries",
+			"listCountryStateTitle": "States",
+			"listCountryDescription": "Country Description",
+			"entityRecordState":"State required",
+			"entityAreaCode": "Area Code",
+			"entityISO3": "ISO3",
+			"entityAddressFormat": "Address Format",
+			"entityCountryFk": "Country",
+			"entityState": "State",
+			"Sorting": "Sorting",
+			"entityTranslation":"Translation",
+			"entityRegexVatno":"Regex Vatno",
+			"entityRegexTaxno":"Regex Taxno",
+			"validation": {
+				"propertyNotFilled": "String must not empty or shorter than 2 characters",
+				"noValidRegEx": "The Pattern for the check regex is invalid",
+				"invalidExample": "{{example}} is not valid according to the {{regex}}"
+			},
+			"entityVatNoValidExample": "Vat No. Valid Example",
+			"entityTaxNoValidExample": "Tax No. Valid Example"
+		}
+	}
+}

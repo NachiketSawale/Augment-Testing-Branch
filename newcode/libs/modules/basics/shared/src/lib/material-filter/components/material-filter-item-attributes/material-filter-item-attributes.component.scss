@@ -1,0 +1,20 @@
+.material-filter-preview-attributes-box {
+	min-height: 28px;
+	height: auto;
+	padding: 4px;
+}
+
+.material-filter-preview-attribute {
+	margin: 4px 0;
+}
+
+.material-filter-preview-attribute-property {
+	width: calc(40% - 10px);
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.material-filter-preview-attribute-value {
+	width: 60%;
+	display: inline-block;
+}

@@ -1,0 +1,20 @@
+{
+	"materialCatalogCode": "PLANT",
+	"discountGroups": [
+		{
+			"code": "PLANT",
+			"codeParent": "",
+			"descriptionInfo": {
+				"description": "plant",
+				"otherLanguages": [
+					{
+						"culture": "de",
+						"description": "plant_G"
+					}
+				]
+			},
+			"discountType": "1",
+			"discount": 60
+		}
+	]
+}

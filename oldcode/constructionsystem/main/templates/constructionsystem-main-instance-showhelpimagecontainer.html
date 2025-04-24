@@ -1,0 +1,18 @@
+<div data-ng-controller="constructionSystemMainInstanceShowHelpImageController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="onClose()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalTitle | translate }} </h2>
+    </header>
+    <section class="modal-body">
+        <div class="fullheight">
+            <div class="fullheight" style="overflow-y: auto">
+                <div>
+                    <div class="fullheight"><img data-ng-src="{{dataItem}}"/> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

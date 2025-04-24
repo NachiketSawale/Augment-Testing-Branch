@@ -1,0 +1,49 @@
+<div class="fullheight flex-box flex-column panel-body" style="overflow: hidden; overflow-y: auto; ">
+    <div class="platform-form-group platform-lg" data-ng-controller="boqMainTextTypeController">
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'boq.main.textType' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-domain-control data-domain="select"
+                     data-model="textType.current" data-options="textTypeOptions" data-change="textTypeChanged(textType.current)">
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row" data-ng-controller="boqMainTextSplitController">
+            <label class="platform-form-label">{{'boq.main.textSplit' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-domain-control data-domain="select"
+                     data-model="textSplit.current" data-options="textSplitOptions" data-change="textSplitChanged(textSplit.current)">
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row" data-ng-controller="boqMainTextCombinationController">
+            <label class="platform-form-label">{{'boq.main.textCombination' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-domain-control data-domain="select"
+                     data-model="textCombination.current" data-options="textCombinationOptions" data-change="textCombinationChanged(textCombination.current)">
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row" data-ng-controller="boqMainTextNumberingController">
+            <label class="platform-form-label">{{'boq.main.textNumbering' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-domain-control data-domain="select"
+                     data-model="textNumbering.current" data-options="textNumberingOptions" data-change="textNumberingChanged(textNumbering.current)">
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <h2 class="platform-form-label"  data-ng-bind = "textType.current.Description">{{textType.current.Description}}</h2>
+        </div>
+    </div>
+
+    <div class="flex-element relative-container" data-ng-controller="boqMainTextGridController" data-platform-dragdrop-component="ddTarget">
+        <div class="filler-absolute">
+            <platform-Grid class="border-all" data="gridData"></platform-Grid>
+        </div>
+    </div>
+</div>

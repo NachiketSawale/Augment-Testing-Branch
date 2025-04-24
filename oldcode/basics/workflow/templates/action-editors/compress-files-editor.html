@@ -1,0 +1,67 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+			<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+			<div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.archiveName' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.archiveName" data-options="codeMirrorOptions"
+						data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.fileList' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<input type="text" data-options="codeMirrorOptions" data-ng-model="input.fileList"
+						data-ng-blur="onFileListBlur()" class="form-control">
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.fileStructure' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<input type="text" data-options="codeMirrorOptions" data-ng-model="input.fileStructure"
+						data-ng-blur="onFileStructureBlur()" class="form-control">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+				<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.docId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.docId" data-options="codeMirrorOptions"
+						data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

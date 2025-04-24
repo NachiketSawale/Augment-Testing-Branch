@@ -1,0 +1,50 @@
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="inputOpen">
+        <div data-accordion-heading>
+            <span class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+            <span class="platform-form-group-header">
+                <div data-ng-show="inputOpen" class="toggleImg control-icons ico-up"></div>
+                <div data-ng-show="!inputOpen" class="toggleImg control-icons ico-down"></div>
+			</span>
+        </div>
+
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.filterChain.inFilterChain' | translate}}</label>
+                <div class="platform-form-col">
+                    <div data-script-editor-directive data-ng-model="input.filterChain" data-options="codeMirrorOptions"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolbar margin-top-ld">
+            <h2 class="title fix">{{'basics.workflow.action.customEditor.model.propKeys' | translate}}</h2>
+            <div data-platform-menu-list data-list="toolsPropKeys" data-platform-refresh-on="toolsPropKeys.version"></div>
+        </div>
+        <div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;" basics-workflow-resize-grid-directive>
+            <platform-Grid data="gridDataPropKeys"></platform-Grid>
+        </div>
+    </div>
+</div>
+
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="outputOpen">
+        <div data-accordion-heading>
+            <span class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+            <span class="platform-form-group-header">
+                <div data-ng-show="outputOpen" class="toggleImg control-icons ico-up"></div>
+                <div data-ng-show="!outputOpen" class="toggleImg control-icons ico-down"></div>
+            </span>
+        </div>
+
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.filterChain.outFilterChain' | translate }}</label>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="description" data-ng-model="output.filterChain"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

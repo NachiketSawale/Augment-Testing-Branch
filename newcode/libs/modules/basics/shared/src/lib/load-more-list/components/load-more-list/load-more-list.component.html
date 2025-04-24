@@ -1,0 +1,15 @@
+<div class="load-more-list generic-popup overflow-hidden">
+	<div class="input-group form-control">
+		<input type="text" class="input-group-content" placeholder="{{ 'basics.shared.search' | platformTranslate }}" [(ngModel)]="request.userInput" (ngModelChange)="search()">
+	</div>
+
+	<ul class="popup-list">
+		<li *ngFor="let item of items" (click)="select(item)">{{ format(item) }}</li>
+	</ul>
+
+	<div class="ms-commodity-attributes-item flex-box" style="justify-content: center;border-bottom: none;" *ngIf="hasMore">
+		<a (click)="loadMore()" class="cursor-pointer" *ngIf="!loading && hasMore">{{ 'basics.shared.more' | platformTranslate }}</a>
+		<span *ngIf="loading"><a>{{ 'basics.shared.loading' | platformTranslate }}</a><span class="spinner-sm margin-left-md"></span></span>
+		<span *ngIf="showNoMoreHint">{{ 'basics.shared.noMore' | platformTranslate }}</span>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<header class="modal-header main-color">
+	<h2 class="modal-title">{{'basics.workflow.template.errorDialog.version.header' | translate}}</h2>
+	<button aria-hidden="true" class="close db" data-dismiss="modal" data-ng-click="onOk()"
+	        type="button">
+		<svg class="block-image" data-cloud-desktop-svg-image data-image="ico-close" data-sprite="control-wh-icons"></svg>
+	</button>
+</header>
+
+<div>
+	<section class="modal-body">
+		<h3 data-ng-if="invalidItems.length > 0">{{'basics.workflow.template.errorDialog.version.errorText' | translate}}</h3>
+		<h3 data-ng-if="invalidItems.length === 0">{{'basics.workflow.template.errorDialog.version.noErrorText' | translate}}</h3>
+		<div data-ng-repeat="item in invalidItems">
+			<hr/>
+			<ul>
+				<li>
+					{{item.description}}
+					<ul class="native" data-ng-repeat="error in item.rt$data.errors">
+						<li><span data-ng-bind="error"></span></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</section>
+</div>
+
+<footer class="modal-footer">
+	<button class="btn btn-default" data-ng-click="onOk()" type="button">
+		{{'cloud.common.ok' | translate}}
+	</button>
+</footer>

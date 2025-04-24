@@ -1,0 +1,16 @@
+
+<div ng-repeat="row in formOptionsPartialImport.configure.rows" style="margin-left: 20px;">
+	<label>
+		<input type="checkbox" ng-model="entity.GaebInfo[row.model.split('.')[1]]" ng-change="uncheckSubRows(row)"> {{ row.label }}
+	</label>
+
+	<!-- Render sub-rows for nested checkboxes -->
+	<div ng-if="row.subRows" style="margin-left: 20px;">
+		<div ng-repeat="subRow in row.subRows">
+			<label>
+				<!-- The nested checkboxes are readonly if parent checkox is unchecked-->
+				<input type="checkbox" ng-model="entity.GaebInfo[subRow.model.split('.')[1]]" ng-disabled="!entity.GaebInfo[row.model.split('.')[1]]"> {{ subRow.label }}
+			</label>
+		</div>
+	</div>
+</div>

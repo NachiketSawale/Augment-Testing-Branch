@@ -1,0 +1,15 @@
+<div class="content">
+	<!--Toolbar section-->
+	<ui-sidebar-title [title]="('cloud.desktop.taskDetail.allTasks' | platformTranslate) +  ' (' + currentTaskIndex + '/'+ totalTasks + ')'" [toolbarData]="toolbarItems"></ui-sidebar-title>
+	<!--Panel Title section-->
+	<div class="sidebar-panel overflow-hidden">
+		<div class="sidebar-panel-title-bar">
+			<button class="tlb-icons ico-maximized" (click)="showDialog()"></button>
+			<img src="assets/ui/common/images/control-icons.svg#ico-user">
+			<h4 class="sidebar-panel-title">{{ 'cloud.desktop.taskDetail.userTasks' | platformTranslate }}</h4>
+			<span class="tlb-icons ico-info"
+			      title="{{'cloud.desktop.taskDetail.userTaskDetail'| platformTranslate}}"></span>
+		</div>
+	</div>
+	<ng-template #inlineContainer></ng-template>
+</div>

@@ -1,0 +1,103 @@
+{
+  "productionplanning": {
+    "product": {
+      "listTitle": "Products",
+      "detailTitle": "Product Details",
+      "structure": "Product Structure",
+      "formDataLisTitle": "product: Form Data",
+      "cuttingProduct": {
+        "moduleDisplayNameCuttingProduct": "Cutting Product",
+        "listTitle": "Cutting Products",
+        "productCode": "Product",
+        "productDesc": "Product Description",
+        "productLength": "Product Length",
+        "productWidth": "Product Width",
+        "productHeight": "Product Height",
+        "scrpProductCode": "Replacing-Scrap Product",
+        "scrpProductDesc": "Replacing-Scrap Product Description",
+        "scrpProductLength": "Replacing-Scrap Product Length",
+        "scrpProductWidth": "Replacing-Scrap Product Width",
+        "scrpProductHeight": "Replacing-Scrap Product Height",
+        "keepRemainingLength": "Keep Remaining Length",
+        "keepRemainingWidth": "Keep Remaining Width",
+        "productProductionDate": "Production Date",
+        "order": "Cutting Order"
+      },
+      "productionPlace": {
+        "listTitle": "Production Places",
+        "detailTitle": "Production Place Details",
+        "positionX": "PositionX",
+        "positionY": "PositionY",
+        "positionZ": "PositionZ",
+        "entityName": "Production Place",
+        "childrenProdPlaceListTitle": "Production Place: Production Places",
+        "childrenEntityName": "Production Place Canvas",
+        "productionPlace": "Production Place",
+        "timestamp": "Timestamp",
+        "parentProdPlace": "Parent Prod_Place"
+      },
+      "product2ProdcutionPlace": {
+        "listTitle": "Product: Production Places",
+        "entityName": "Product to Production Place",
+        "slabNumber": "Slab Number"
+      },
+      "engProdComponent": {
+        "listTitle": "Product Components",
+        "detailTitle": "Product Component Details",
+        "engPropCompMapDialogTitle": "Check Mapped Product Components",
+        "MappedQuantity": "Mapped Quantity",
+        "entityEngProdComponent": "Product Component",
+        "engMdcMaterialCostCodeProductFk": "Result",
+        "engDrawingComponentFk": "Drawing Component"
+      },
+      "phase": {
+        "lisTitle": "Product: Phases",
+        "detailTitle": "Product: Phase Details",
+        "requirementLisTitle": "Product: Phase Requirements",
+        "requirementDetailTitle": "Product: Phase Requirement Details"
+      },
+      "wizard": {
+        "changeProductStatusTitle": "Change Product Status",
+        "createDispatchingNoteTitle": "Create Dispatching Notes",
+        "notify2SelectProduct": "Please select a product at least",
+        "notifyForbid2CreateDispNote": "With specific status, product is forbid to create dispatching note: ",
+        "questionCreateDispNote": "Do you want to create dispatching note for ({{sel}})?",
+        "notifySucceed2CreateDispHeader": "Create dispatch header succeed: ",
+        "notifySucceed2CreateDispRecord": "Create dispatch record succeed for product: ",
+        "bookStockLocationTitle": "Book product(s) to stock location",
+        "errorOfHandleProductsThatIsLinkedToBundle": "Bundled products can only be handled as a complete bundle.",
+        "mode": "Mode",
+        "bookOrRebookProductToStock": "Book/Rebook product(s) to stock location",
+        "removeProductToStock": "Remove product(s) from stock location",
+        "products": "Products",
+        "targetStock": "Target Stock",
+        "targetStockLocation": "Target Stock Location",
+        "latestStock": "Latest Stock",
+        "latestLocation": "Latest Location",
+        "nextStock": "Next Stock",
+        "nextLocation": "Next Location",
+        "reuseFromStockTitle": "Reuse From Stock",
+        "selectReusableProductStepTitle": "Select Reusable Product",
+        "remainderSettingStepTitle": "Remainder Setting",
+        "scrapRemainingLength": "Scrap Remaining Length",
+        "scrapRemainingWidth": "Scrap Remaining Width",
+        "notRemainingLengthWidth": "There is no remaining length and remaining width.",
+        "productionSetOfProductIsNull": "The selected product does not belong to any production set.",
+        "productBelongsScrapHeader": "The selected product is a reusable product that belongs to scrap PPS Header.",
+        "productIsAlreadyInPlanningOfReuseStock": "The selected product is already in planning of reusing product from scrap-stock.",
+        "changePhaseReqStatus": "Change Phase Requirement Status"
+      },
+      "rack": {
+        "rackCode": "Rack Code",
+        "rack": "Rack",
+        "rackAssignListTitle": "Rack Assignment"
+      },
+      "transportHistoryListTitle": "Transport History: Product",
+      "siteFilterListTitle": "Site Filter",
+      "ncDataTitle": "Product: NC Data",
+      "workflow": {
+        "assignContractAction": "Assign Contract To Dispatch Note"
+      }
+    }
+  }
+}

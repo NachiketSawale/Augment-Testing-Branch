@@ -1,0 +1,32 @@
+// action-select-btn. Primary added for using in the toolbar
+&.action-select-btn {
+	--element-height: var(--element-height-container, #{$toolbar-height});
+	--action-width: var(--element-height);
+	--actions-width: 15px;
+
+	height: var(--element-height);
+	max-width: calc(var(--action-width) + var(--actions-width));
+	display: flex;
+
+	.action {
+		height: var(--element-height);
+		width: var(--action-width);
+		background-size: 16px;
+	}
+	.actions {
+		@extend %caret-element;
+		height: var(--element-height);
+		width: var(--actions-width);
+
+		&::after {
+			// to set the carret in the right position
+			right: 3px;
+		}
+
+	}
+
+	&:hover {
+		outline: var(--border-width-default) solid #AEC3D4;
+		outline-offset: -1px;
+	}
+}

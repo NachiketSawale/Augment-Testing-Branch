@@ -1,0 +1,49 @@
+<div class="wizard-wrapper wizard-dialog "
+     data-ng-controller="procurementPackageBoqScopeReplacementDialogController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="modal-wrapper">
+			<!-- use this splitter, trs-kendo-splitter, is for it fixes the height of splitter in dialog. -->
+			<div data-trs-kendo-splitter class="flex-element border-none"
+			     option="{panes: [ { collapsible: true, size: '50%' },{ collapsible: true, size: '50%' }],orientation:'vertical'}">
+				<div style="border: solid 1px #dcdcdc;">
+					<!-- the style, height:calc(100% - 30px);, is used to show the horizontal scroll-bar of grid and the grid height is changed when content size is changed.-->
+					<div class="platformgrid 8392589AE22E46749BE92369001BC256" style="height:calc(100% - 30px);">
+						<div class="subview-content">
+							<label class="platform-form-label h3">{{'procurement.package.boqScopeReplacement.targetBoq' | translate}}</label>
+							<label style="padding-left: 20px;">
+								<input type="checkbox" data-ng-model="isDisableTargetBoqAfterReplacement" style="vertical-align: middle;margin-top:0;margin-right: 2px;margin-bottom: 5px"/>
+							</label>
+							{{'procurement.package.boqScopeReplacement.optionDisable' | translate}}
+						</div>
+						<div class="flex-box flex-column flex-element subview-content overflow-hidden" style="height: 100%;position:relative;">
+							<platform-Grid class="lookup-grid flex-basis-auto" data="selectedBoqItemData"></platform-Grid>
+						</div>
+					</div>
+				</div>
+				<div style="border: solid 1px #dcdcdc;">
+					<div class="platformgrid 2d38fb5d51564004b9c20f65d8a65b8d" style="height:calc(100% - 30px);">
+						<div>
+							<label class="platform-form-label h3 subview-content">{{'procurement.package.boqScopeReplacement.selectReplacementBoq' | translate}}</label>
+						</div>
+						<div class="modal-wrapper">
+							<div class="subview-header toolbar">
+								<h3 class="title font-bold">{{'boq.main.boqStructure' | translate}}</h3>
+								<div data-platform-menu-list data-list="tools"
+								     data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+							</div>
+							<div class="flex-box flex-column flex-element subview-content overflow-hidden" style="height: 100%;position:relative;">
+								<platform-grid class="lookup-grid flex-basis-auto" data-data="gridData"></platform-grid>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal-footer">
+		<button data-ng-disabled="!canUpdate()" type="button" class="btn btn-default" data-ng-click="update()">{{'procurement.package.boqScopeReplacement.update' | translate}}</button>
+		<button type="button" data-ng-click="modalOptions.cancel()" class="btn btn-default">{{'cloud.common.cancel' | translate}}</button>
+	</div>
+	<div data-cloud-common-overlay data-loading="isRunning"></div>
+</div>

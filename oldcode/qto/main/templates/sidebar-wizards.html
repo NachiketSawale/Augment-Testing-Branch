@@ -1,0 +1,17 @@
+﻿<div class="content">
+	<div class="toolbar">
+		<div class="title" data-ng-bind="sidebarOptions.title"></div>
+	</div>
+
+	<div class="content-inner">
+		<ul platform-grouped-accordion-list-directive
+		    data-grouped-list="sidebarOptions.wizards.items"
+		    data-child-property="'subitems'"
+		    data-key-property="'id'"
+		    data-click-fn="sidebarOptions.showItemFunction"
+		    class="scroll-padding flex-element overflow panel-group">
+		</ul>
+	</div>
+
+
+</div>

@@ -1,0 +1,10 @@
+{
+  "change": {
+	"main": {
+	  "entityChange": "Änderungen",
+	  "listChangeTitle": "Änderungen",
+	  "detailChangeTitle": "Änderung Details"
+
+		}
+	}
+}

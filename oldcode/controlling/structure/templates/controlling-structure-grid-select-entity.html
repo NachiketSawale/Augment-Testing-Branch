@@ -1,0 +1,11 @@
+<!--
+  ~ Copyright (c) 2023.
+  -->
+
+<div ng-if="isToolbar" class="toolbar">
+	<div data-platform-menu-list data-list="tools"></div>
+</div>
+<div class="modal-wrapper grid-wrapper relative-container" style="{{options.gridStyle}}"><!-- TODO: remove style information later from here -->
+	<div data-platform-grid class="subview-container" data="gridData" style="{{options.gridStyle}}"></div> <!-- workaround: duplicate style here -->
+	<div cloud-common-overlay data-loading="isLoading" data-info2="loadingText"></div>
+</div>

@@ -1,0 +1,88 @@
+{
+  "basics": {
+    "materialcatalog": {
+      "frameworkContractTitle":"Framework Contract Search Dialog",
+      "moduleName": "Materialkatalog",
+      "createDialogTitle":"Materialkatalog anlegen",
+      "wizard": {
+        "updateDiscountWizard": "Skonto aktualisieren Wizard",
+        "updateDiscount": "Skonto aktualisieren"
+      },
+      "tab": {
+        "MaterialCatalog": "Katalog",
+        "MaterialGroup": "Materialgruppe",
+        "DiscountGroup": "Rabattgruppe",
+        "Attribute": "Eigenschaft"
+      },
+      "view": {
+        "MaterialCatalog": "Katalog",
+        "MaterialGroup": "Materialgruppe",
+        "DiscountGroup": "Rabattgruppe",
+        "Attribute": "Eigenschaft"
+      },
+      "lookup":{
+        "annualTurnover":"Jahresumsatz",
+        "cashBack":"Rückzahlung"
+      },
+	  "isTicketSystem":"TicketSystem",
+      "IsInternetCatalog":"!Is Internet Catalog",
+      "property": "Attribut",
+      "hasFixedValues": "Festegelegter Wert",
+      "characteristic": "Wert",
+      "group": "Katalog",
+      "validFrom": "Gültig von",
+      "validTo": "Gültig bis",
+      "dataDate": "Versionsdatum",
+      "termsGroup": "Konditionen",
+      "paymentTerm": "Zahlungskondition",
+      "paymentTermCode": "Zahlungskondition Nr.",
+      "paymentTermDescription": "Zahlungskondition",
+      "isNeutral": "Neutraler Artikel",
+      "DiscountType": "Rabatttyp",
+      "baseRubricCategory": "!Rubric Category",
+      "termsAndConditions": "!Terms And Conditions",
+      "Discount": "Rabatt",
+      "Group": {
+        "gridViewTitle": "Materialgruppe"
+      },
+      "HeadTitle": {
+        "grid": "Materialkataloge",
+        "form": "Materialkatalog Detail",
+        "discountGroup": "Rabattgruppen",
+        "discountGroupDetail": "Rabattgruppe Detail",
+        "group": "Materialgruppen",
+        "groupDetail": "Materialgruppe Detail",
+        "groupChar": "Eigenschaften",
+        "groupCharDetail": "Eigenschaft Detail",
+        "groupCharval": "Eigenschaftswerte",
+        "groupCharvalDetail": "Eigenschaftswert Detail"
+      },
+      "Wizard": {
+        "Title": "Rabatt hochladen",
+        "Message": "{{p_0}} Materialrabatt hochladen",
+        "DeepCopyTitle" : "!Deep Copy",
+        "DeepCopyWarningMessage" : "!Please select a material catalog!",
+        "DeepCopyConfirmMessage" : "!Execute deep copy? "
+      },
+      "disableDone": "Standard Materialkatalog {{code}} gesperrt",
+      "alreadyDisabled": "Standard Materialkatalog {{code}} ist bereits gesperrt",
+      "enableDone": "Standard Materialkatalog {{code}} entsperrt",
+      "alreadyEnabled": "Standard Materialkatalog {{code}} ist bereits entsperrt",
+      "url": "!Url",
+      "urlUser": "!Url User",
+      "urlPassword": "!Url Password",
+      "priceVersions": "!Price Versions",
+      "priceVersionDetail": "!Price Version Detail",
+      "entityPriceList": "!Price List",
+      "entityPriceVersionDataDate": "!Record Date",
+      "entityWeighting": "!Weighting",
+      "priceVersionDescription": "!Price Version Description",
+      "priceListDescription": "!Price List Description",
+      "priceVersionToCompanyTitle": "!Price Version to Companies",
+      "priceVersionToCompanyDetailTitle": "!Price Version to Company Detail",
+      "checked": "!Checked",
+      "errGreaterThanZero": "!The value must be greater than 0.",
+      "synccodes":"!Sync Material Catalog Codes"
+    }
+  }
+}

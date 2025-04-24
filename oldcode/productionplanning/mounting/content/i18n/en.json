@@ -1,0 +1,58 @@
+{
+  "productionplanning": {
+    "mounting": {
+      "updateComments": "Comments for updating",
+      "updateRemarks": "Remarks for updating",
+      "entityRequisition": "Mounting Requisition",
+      "planningBoardTitle": "Planning Board",
+      "enableMountingRequisitionTitle":"Enable Mounting Requisition",
+      "enableDisableMountingRequisitionDone":"The field 'Is Live' of the Mounting Requisition {{req}} has been changed.<br>",
+      "mountingRequisitionAlreadyEnabled":"Mounting Requisition ({{req}}) is already enabled",
+	  "disableMountingRequisitionTitle":"Disable Mounting Requisition",
+      "mountingRequisitionAlreadyDisabled":"Mounting Requisition ({{req}}) is already disabled",
+	  "enableMountingActivityTitle":"Enable Mounting Activity",
+      "enableDisableMountingActivityDone":"The field 'Is Live' of the Mounting Activity ({{act}}) has been changed.<br>",
+      "mountingActivityAlreadyEnabled":"Mounting Activity ({{act}}) is already enabled",
+	  "disableMountingActivityTitle":"Disable Mounting Activity",
+      "mountingActivityAlreadyDisabled":"Mounting Activity ({{act}}) is already disabled",
+      "goToReport":"Go to Report",
+      "goToTrsReq":"Go to Transport Requisition",
+      "planningBoardMountingRequisitions": "Mounting Requisition Planning Board",
+      "contact": "Contact",
+      "businesspartner": "Businesspartner",
+      "businesspartnerContactRole": "Role",
+      "businesspartnerContactRemark": "Remark",
+      "errors": {
+        "uniqCode": "Code should be unique",
+        "uniqName": "The VariableName should be unique"
+      },
+      "requisition": {
+        "listTitle": "Mounting Requisitions",
+        "detailTitle": "Mounting Requisition Detail",
+        "startDate":"Start Date",
+        "endDate":"End Date",
+        "projectFk": "ProjectNo",
+        "dialogTitle": "Assign Mounting Requisition",
+        "description": "Mounting Requisition-Description",
+        "formDataLisTitle": "Mounting Requisition: Form Data",
+        "logListTitle": "Mounting Requisition: Logs",
+        "logPinboardTitle": "Mounting Requisition: Logs (Pinboard)",
+        "wizard": {
+          "changeRequisitionStatus": "Change Mounting Requisition Status"
+        }
+      },
+      "bizPartnerListTitle": "Mounting Requisition Partners",
+      "bizPartnerDetailTitle": "Mounting Requisition Partner Detail",
+      "contactListTitle": "Mounting Requisition Partner Contacts",
+      "contactDetailTitle": "Mounting Requisition Partner Contact Detail",
+      "Userdefined1": "Userdefined 1",
+      "Userdefined2": "Userdefined 2",
+      "Userdefined3": "Userdefined 3",
+      "Userdefined4": "Userdefined 4",
+      "Userdefined5": "Userdefined 5",
+      "reqJobDocumentList": "Mounting Requisition Job Document List",
+      "reqJobSketch": "Mounting Requisition Job Delivery Address Sketch",
+		 "jobDescription": "Job Description"
+    }
+  }
+}

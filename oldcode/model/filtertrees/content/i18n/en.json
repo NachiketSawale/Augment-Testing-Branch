@@ -1,0 +1,10 @@
+{
+	"model": {
+		"filtertrees": {
+			"modelFilterTreeListTitle": "Model Filter Tree",
+			"openTreeTemplate": " Open Tree Template",
+			"selectTreeTemplate": " Select Tree Template",
+			"treeTemplate": "Tree Template"
+		}
+	}
+}

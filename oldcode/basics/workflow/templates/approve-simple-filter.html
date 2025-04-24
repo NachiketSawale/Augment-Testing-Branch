@@ -1,0 +1,60 @@
+﻿<div class="filler">
+
+	<div class="platform-form-group" data-ng-disable="!searchOptions.active" style="position: relative;height:100%">
+		<div class="platform-form-row  form-group" style="display: table-header-group;">
+			<div class="input-group form-control">
+				<div data-change="searchOptions.selectionChanged()"
+				     data-dropdown-select2
+				     data-info="filderdefcontrol"
+				     data-matchfunction="$parent.dropDownMatcher"
+				     data-model="searchOptions.selectedItemId"
+				     data-options="searchOptions.dropboxOptions"
+				     data-template-Result="searchOptions.dropboxOptions.templateResult"
+				     data-template-Selection="searchOptions.dropboxOptions.templateResult"
+				     data-use-deep-watch="true">
+				</div>
+				<span class="input-group-btn">
+                    <button class="btn btn-default control-icons ico-refresh" data-ng-attr-title="{{searchOptions.refreshBtnText}}"
+                            data-ng-click="searchOptions.onRefreshFilter()"
+                            type="button">
+                    </button>
+                    <button class="btn btn-default control-icons ico-input-delete2" data-ng-attr-title="{{searchOptions.onDeleteFilterBtnText}}"
+                            data-ng-click="searchOptions.onDeleteFilter()"
+                            data-ng-disabled="!searchOptions.canSaveOrDeleteFilter()"
+                            type="button">
+                    </button>
+					<!--                            data-ng-disabled="!searchOptions.canSaveOrDeleteFilter()"-->
+                    <button class="btn btn-default tlb-icons ico-save" data-ng-attr-title="{{searchOptions.onSaveFilterBtnText}}"
+                            data-ng-click="searchOptions.onSaveFilter()"
+                            type="button">
+                    </button>
+					<!--                            data-ng-disabled="!searchOptions.filterRequest.pattern"-->
+                    <button class="btn btn-default tlb-icons ico-save-as" data-ng-attr-title="{{searchOptions.onSaveAsFilterBtnText}}"
+                            data-ng-click="searchOptions.onSaveAsFilter()"
+                            type="button">
+                    </button>
+                </span>
+			</div>
+		</div>
+
+		<!--        <div class="platform-form-row  form-group">-->
+		<!--            <div class="input-group form-control">-->
+		<!--                <input type="text" class="input-group-content" placeholder="{{searchOptions.placeholder}}"-->
+		<!--                       data-ng-model="searchOptions.filterRequest.pattern"-->
+		<!--                       data-ng-readonly="!searchOptions.active"-->
+		<!--                       data-ng-blur="searchOptions.onSaveAsSelectionStatement()">-->
+		<!--                <span class="input-group-btn">-->
+		<!--                    <button class="btn btn-default control-icons ico-input-delete"-->
+		<!--                            data-ng-disabled="!searchOptions.filterRequest.pattern"-->
+		<!--                            data-ng-click="searchOptions.onClearSearch();searchOptions.onSaveAsSelectionStatement();">-->
+		<!--                    </button>-->
+		<!--                </span>-->
+		<!--            </div>-->
+		<!--        </div>-->
+		<!--        <div data-cos-common-disable-overlay data-show="!searchOptions.active"-->
+		<!--             data-info="searchOptions.canNotEditMsg" data-active="searchOptions.active">-->
+		<!--        </div>-->
+	</div>
+	<div data-cloud-common-overlay data-loading="searchOptions.filterDataLoading"></div>
+
+</div>

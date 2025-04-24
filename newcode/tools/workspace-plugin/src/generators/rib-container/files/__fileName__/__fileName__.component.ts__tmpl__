@@ -1,0 +1,15 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { Component<% if(addOn){ %>, Inject <% } %>} from '@angular/core';
+<% if(addOn){ %> import { IContainerUiAddOns } from '@ui-container-system/model/container-ui-add-ons.interface' <% } %>;
+
+@Component({
+	selector: '<%=selector%>',
+	templateUrl: './<%=fileName%>.component.html',
+	styleUrls: ['./<%=fileName%>.component.scss'],
+})
+export class <%= className %>Component {
+    constructor(<% if(addOn){ %> @Inject('containerUiaddOn') private readonly uiAddOns: IContainerUiAddOns <% } %>) { }
+}

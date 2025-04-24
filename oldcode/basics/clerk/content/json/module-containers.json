@@ -1,0 +1,225 @@
+[
+    {
+        "id": "1",
+        "template": "app/components/base/grid-partial.html",
+        "title": "basics.clerk.listClerkTitle",
+        "controller": "basicsClerkListController",
+	    "uuid": "F01193DF20E34B8D917250AD17A433F1"
+    },
+    {
+        "id": "2",
+        "template": "app/components/base/form-detail-partial.html",
+        "title": "basics.clerk.detailClerkTitle",
+        "controller": "basicsClerkDetailController",
+	    "uuid": "8B10861EA9564D60BA1A86BE7E7DA568",
+	    "permission": "F01193DF20E34B8D917250AD17A433F1"
+    },
+    {
+        "id": "3",
+        "template": "app/components/base/grid-partial.html",
+        "title": "basics.clerk.listAbsenceTitle",
+        "controller": "basicsClerkAbsenceListController",
+	    "uuid": "DDE598002BBF4A2D96C82DC927E3E578"
+    },
+	{
+		"id": "4",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "basics.clerk.embedBlobsfotoHeader",
+		"controller": "basicsClerkPhotoController",
+		"uuid": "880ec74c43cc4778b94cd26f1b6115e3",
+        "wizardDisabled":"true"
+	},
+	{
+		"id": "5",
+		"template": "basics.clerk/partials/basics-clerk-email-html-text-view.html",
+		"title": "basics.clerk.entityEmail",
+		"controller": "basicsClerkEmailSpecificationController",
+		"uuid": "353a050190c24df1809a9005712b15c5",
+        "wizardDisabled":"true"
+	},
+    {
+        "id": "6",
+        "template": "basics.clerk/partials/basics-clerk-footer-html-text-view.html",
+        "title":  "basics.clerk.entityBlobsFooterFk",
+        "controller": "basicsClerkFooterSpecificationController",
+        "uuid": "e706ff9ebfe145d98270124f7727d174",
+        "wizardDisabled":"true"
+    },
+    {
+        "id": "basics.clerk.characteristic.container",
+        "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+        "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+        "uuid": "c2dd899746024732aa0fc583526f04eb",
+        "controller": "",
+        "sectionId": "4",
+        "mainService":"basicsClerkMainService"
+    },
+    {
+        "id": "basics.clerk.detailClerkAbsenceTitle",
+        "template": "app/components/base/form-detail-partial.html",
+        "title": "basics.clerk.detailClerkAbsenceTitle",
+        "controller": "basicsClerkAbsenceDetailController",
+	    "uuid": "6122EEE3BF1A41CE994E0F1E5C165850",
+	    "permission": "DDE598002BBF4A2D96C82DC927E3E578"
+    },
+    {
+        "id": "7",
+        "template": "app/components/base/form-detail-partial.html",
+        "title": "basics.clerk.detailClerkGroupTitle",
+        "controller": "basicsClerkGroupDetailController",
+        "uuid": "008843fcaa8246faa41f620a0742b3ae",
+        "permission": "82bb9ecf97e94aadab3d30f79cba2c02"
+    },
+    {
+        "id": "8",
+        "template": "app/components/base/grid-partial.html",
+        "title": "basics.clerk.listClerkGroupTitle",
+        "controller": "basicsClerkGroupListController",
+        "uuid": "82bb9ecf97e94aadab3d30f79cba2c02"
+    },
+	{
+		"id": "clerkforpackagelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkForPackageTitle",
+		"controller": "basicsClerkForPackageListController",
+		"uuid": "4fefcbe307f14fb09e7371b5726e8b85"
+	},
+	{
+		"id": "clerkforpackagedetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkForPackageTitle",
+		"controller": "basicsClerkForPackageDetailController",
+		"uuid": "f8e0f47316db4f628e0f3c394e0bda2f",
+		"permission": "4fefcbe307f14fb09e7371b5726e8b85"
+	},
+	{
+		"id": "clerkforprojectlist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkForProjectTitle",
+		"controller": "basicsClerkForProjectListController",
+		"uuid": "81de3f7a458942018890cd82b2333e5b"
+	},
+	{
+		"id": "clerkforprojectdetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkForProjectTitle",
+		"controller": "basicsClerkForProjectDetailController",
+		"uuid": "5af6320d446b4945a1d4f7daa9eb1013",
+		"permission": "81de3f7a458942018890cd82b2333e5b"
+	},
+	{
+		"id": "clerkforschedulelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkForScheduleTitle",
+		"controller": "basicsClerkForScheduleListController",
+		"uuid": "e84e703543fd4cb2b8d9bd8e48ecce94"
+	},
+	{
+		"id": "clerkforscheduledetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkForScheduleTitle",
+		"controller": "basicsClerkForScheduleDetailController",
+		"uuid": "be18520a1fb34649bf3c4ebcd6da2eea",
+		"permission": "e84e703543fd4cb2b8d9bd8e48ecce94"
+	},
+	{
+		"id": "clerkforwiclist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkForWicTitle",
+		"controller": "basicsClerkForWicListController",
+		"uuid": "9f5b6cfd39114a25b04b7ea69ef0ddc7"
+	},
+	{
+		"id": "clerkforwicdetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkForWicTitle",
+		"controller": "basicsClerkForWicDetailController",
+		"uuid": "6042e0bf1d66478da8042b3a207d77bf",
+		"permission": "9f5b6cfd39114a25b04b7ea69ef0ddc7"
+	},
+	{
+		"id": "clerkdocument",
+		"template": "basics.clerk/partials/basics-clerk-document-view.html",
+		"title": "basics.clerk.documentContainerGridTitle",
+		"controller": "clerkDocumentListController",
+		"uuid": "fbbf119ec03b442b87dcc3de1029c440"
+	},
+	{
+		"id": "clerkdocumentdetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.documentDetailTitle",
+		"controller": "clerkDocumentDetailController",
+		"uuid": "76a09b0b774e4626a3d5cf6a1c05e276",
+		"permission": "fbbf119ec03b442b87dcc3de1029c440"
+	},
+	{
+		"id": "clerkabsenceproxylist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkAbsenceProxyTitle",
+		"controller": "basicsClerkAbsenceProxyListController",
+		"uuid": "b5f01723e4c34b8d8f5b90262d7f0288"
+	},
+	{
+		"id": "clerkabsenceproxydetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkAbsenceProxyTitle",
+		"controller": "basicsClerkAbsenceProxyDetailController",
+		"uuid": "dcb1b0d146af4bec84d574de19a9f01b",
+		"permission": "b5f01723e4c34b8d8f5b90262d7f0288"
+	},
+	{
+		"id": "detailClerkMemberTitle",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkMemberTitle",
+		"controller": "basicsClerkMemberDetailController",
+		"uuid": "6723baf728274de9a7b455bd518c0a79",
+		"permission": "1e606c28d2244e6587965611e602244d"
+	},
+	{
+		"id": "listClerkMemberTitle",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkMemberTitle",
+		"controller": "basicsClerkMemberListController",
+		"uuid": "1e606c28d2244e6587965611e602244d"
+	},
+	{
+		"id": "detailClerkRoleDefaultValueTitle",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkRoleDefaultValueTitle",
+		"controller": "basicsClerkRoleDefaultValueDetailController",
+		"uuid": "88bddfa6b18e4f6c81960df2fc0e6744",
+		"permission": "087f9e6948a2416e936e7e88f33e46df"
+	},
+	{
+		"id": "listClerkRoleDefaultValueTitle",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkRoleDefaultValueTitle",
+		"controller": "basicsClerkRoleDefaultValueListController",
+		"uuid": "087f9e6948a2416e936e7e88f33e46df"
+	},
+	{
+		"id": "clerkforestimatelist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listClerkForEstimateTitle",
+		"controller": "basicsClerkForEstimateListController",
+		"uuid": "d0919db314094f058b6eca179f017e6d"
+	},
+	{
+		"id": "clerkforestimatedetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailClerkForEstimateTitle",
+		"controller": "basicsClerkForEstimateDetailController",
+		"uuid": "874e6bfd2cad48bca4a578699a51ee81",
+		"permission": "d0919db314094f058b6eca179f017e6d"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "a44b1be797934e3d9df187c0452efbaf",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

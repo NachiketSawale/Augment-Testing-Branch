@@ -1,0 +1,30 @@
+<div data-ng-controller="procurementPriceComparisonCreateContractWizardController">
+
+    <header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+    <section class="modal-body">
+        <div data-platform-alert data-error="error" class="fullwidth"></div>
+        <div data-platform-form-container data-form-container-options="containerOptions" class="modal-wrapper"></div>
+        <div ng-show="hasChangeOrder()" class="alert alert-info">
+            {{'procurement.pricecomparison.wizard.create.contract.note' | translate}}
+        </div>
+	    <div ng-if="isFilterEvaluated">
+		    <label style="margin-left: 10px;"><input data-ng-model="isFilterEvaluated" name="price" data-ng-change="priceRadioChg(1)" ng-value="1" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.IsFilterEvaluated' | translate}}</label>
+		    <label style="margin-left: 10px;"><input data-ng-model="isFilterEvaluated" name="price" data-ng-change="priceRadioChg(2)" ng-value="2" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItems' | translate}}</label>
+		    <label style="margin-left: 10px;"><input data-ng-model="isFilterEvaluated" name="price" data-ng-change="priceRadioChg(3)" ng-value="3" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItemsPrice' | translate}}</label>
+	    </div>
+	    <div style="padding-top:8px;">
+		    <label>{{'procurement.common.wizard.IsContractNote' | translate}}</label>
+	    </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default"
+                data-ng-click="modalOptions.ok()"
+                data-ng-disabled="modalOptions.isBtnOkDisabled || okBtnStatus">{{modalOptions.btnOkText}}
+        </button>
+        <button type="button" class="btn btn-default"
+                data-ng-click="modalOptions.close()">{{modalOptions.btnCancelText}}
+        </button>
+    </footer>
+
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

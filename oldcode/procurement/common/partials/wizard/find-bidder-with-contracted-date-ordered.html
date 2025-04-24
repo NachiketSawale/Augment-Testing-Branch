@@ -1,0 +1,31 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" name="contractGrandTotalCheckBox" class="e2e-contractedDateOrdered-isActive"
+				       data-ng-model="contractedDateOrdered.isActive"/>
+				{{contractedDateOrdered.header}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<div class="lg-6 md-6">
+			<div class="platform-form-row form-group">
+				<div class="platform-form-label" style="padding-left: 15px">{{'procurement.common.from' | translate}}</div>
+				<div class="platform-form-col" style="width: 30%">
+					<div class="form-control" data-domain-control data-domain="date" data-readonly="!contractedDateOrdered.isActive"
+					     data-ng-model="contractedDateOrdered.startDate"></div>
+				</div>
+				<div class="platform-form-label" style="padding-left: 15px">{{'procurement.common.to' | translate}}</div>
+				<div class="platform-form-col" style="width: 30%">
+					<div class="form-control" data-domain-control data-domain="date" data-readonly="!contractedDateOrdered.isActive"
+					     data-ng-model="contractedDateOrdered.endDate"></div>
+				</div>
+			</div>
+				<div class="platform-form-col" style="padding-left: 15px">
+					<div class="invalid-cell invalid-form" data-ng-if="modalOptionsError.rt$hasError()"
+					     data-ng-bind="modalOptionsError.rt$errorText"></div>
+				</div>
+		</div>
+	</li>
+</ul>

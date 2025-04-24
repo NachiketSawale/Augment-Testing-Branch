@@ -1,0 +1,11 @@
+{
+  "resource": {
+    "componenttype": {
+      "componentTypeListTitle": "Component Types",
+      "componentTypeDetailTitle": "Component Type Details",
+      "entityIsBaseComponent": "Base Component",
+      "characteristics": "Characteristics",
+      "entityComponentType": "Component Type"
+    }
+  }
+}

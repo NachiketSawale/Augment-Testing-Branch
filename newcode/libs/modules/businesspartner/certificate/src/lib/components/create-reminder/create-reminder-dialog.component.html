@@ -1,0 +1,6 @@
+<div class="flex-box flex-column flex-element">
+	<ui-common-form [formConfig]="configuration" [entity]="model.CreateReminderEntity"></ui-common-form>
+	<div *ngIf="model.ResultStatus===responseStatus.Success" class="alert alert-success" role="alert">{{model.ResultMessage}}</div>
+	<div *ngIf="model.ResultStatus===responseStatus.Error" class="alert alert-danger" role="alert">{{model.ResultMessage}}</div>
+	<ui-common-loading [loading]="model.Loading"></ui-common-loading>
+</div>

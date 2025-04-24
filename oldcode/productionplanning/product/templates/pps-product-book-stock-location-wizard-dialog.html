@@ -1,0 +1,40 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body">
+	<fieldset data-ng-show="true"
+	          style="padding:2px;border:1px solid #dcdcdc;border-radius:3px;margin-bottom:10px;">
+		<legend class="font-bold title fix" style="margin-left:3px;width:auto;background-color:#fff;font-size:13px;">
+			{{'productionplanning.product.wizard.mode'| translate}}
+		</legend>
+		<ul style="padding:4px 5px 6px">
+			<li class="platform-form-group" style="display:inline">
+				<input id="bookToNew" type="radio" value="1" data-ng-checked="entity.Mode==='1'" data-ng-model="entity.Mode"
+				       data-ng-click="onCheckedMode1(this.entity)">
+				<label >{{'productionplanning.product.wizard.bookOrRebookProductToStock'| translate}}</label>
+			</li>
+			<li class="platform-form-group" style="display:inline;margin-left: 100px">
+				<input id="removeFromOld" type="radio" value="2" data-ng-checked="entity.Mode==='2'" data-ng-model="entity.Mode"
+				       data-ng-click="onCheckedMode2(this.entity)">
+				<label >{{'productionplanning.product.wizard.removeProductToStock'| translate}}</label>
+			</li>
+		</ul>
+	</fieldset>
+
+	<div data-ng-show="entity.Mode==='1'" class="filler flex-box flex-column ">
+		<div style="margin-left: -10px" data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+	</div>
+
+	<p style="background-color: #dcdcdc;padding: 5px; margin: 0px;" class="font-bold">
+		{{'productionplanning.product.wizard.products'| translate}}
+	</p>
+	<div class="lookup-grid flex-basis-auto grid-container flex-element" data-platform-grid data="grid"></div>
+
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

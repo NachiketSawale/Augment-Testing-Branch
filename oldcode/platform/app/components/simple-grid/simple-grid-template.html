@@ -1,0 +1,28 @@
+<table class="table {{options.cssClass}}">
+	<thead>
+	<tr>
+		<th ng-repeat="header in options.columns" data-ng-click="sortColumn($event, header)" class="{{header.cssClass}}" data-ng-style="{ 'width' : header.width ? header.width + 'px' : 'auto' }">
+			<span data-ng-class="{ 'cursor-pointer' : header.sortable }">{{header.name}}</span>
+			<i data-ng-if="header.sortable" class="sort-indicator block-image control-icons cursor-pointer"></i>
+		</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	<tr ng-repeat="row in items | orderBy:sortedColumn:sortingDesc">
+		<td ng-repeat="col in options.columns" class="{{col.cssClass}}">
+
+			<label ng-if="col.formatter === 'description'" ng-bind="row[col.field]"></label>
+
+			<input ng-if="col.formatter === 'radio' && !isModelAnArray" type="radio" ng-model="data.selectedValue" ng-value="row[col.options.valueMember]">
+
+			<div ng-if="col.formatter === 'checkbox'" data-domain-control data-domain="boolean" data-model="row[col.field]"></div>
+
+			<button data-ng-if="col.formatter === 'button'" class="btn {{col.cssClassButton}}" data-ng-click="col.fn($event, { row: row })"><span data-ng-if="col.buttonName">{{col.buttonName}}</span></button>
+
+			<!-- add an image-element -->
+			<div data-ng-if="col.formatter === 'image'" platform-simple-grid-image></div>
+		</td>
+	</tr>
+	</tbody>
+</table>

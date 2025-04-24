@@ -1,0 +1,16 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+</header>
+
+<!--<section class="modal-body">-->
+<section class="modal-body" style="height: 560px;">
+    <div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem"></div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled" data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

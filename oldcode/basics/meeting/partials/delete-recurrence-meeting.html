@@ -1,0 +1,25 @@
+<div data-ng-controller="basicsMeetingDeleteRecurrenceController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <div class="modal-body">
+        <div class="platform-form-group ng-scope" style="padding-top: 10px">
+            <div class="platform-form-row form-group">
+					 <p data-ng-bind-html="::modalOptions.deleteTypeConfirmText"></p>
+                </div>
+            </div>
+    </div>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.current()">
+            {{modalOptions.currentButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.currentAndFuture()">
+            {{modalOptions.currentAndFutureButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.allMeeting()">
+            {{modalOptions.allMeetingButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

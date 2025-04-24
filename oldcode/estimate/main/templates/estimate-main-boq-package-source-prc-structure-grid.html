@@ -1,0 +1,23 @@
+<div class="flex-element flex-box flex-column"
+     data-ng-controller="estimateMainBoqPackageSourcePrcStructureGridController">
+    <div style="padding-bottom: 5px">
+        <div estimate-main-create-package-wizard-selection-mode data-title-label="estimate.main.createMaterialPackageWizard.procurementStructure"></div>
+    </div>
+    <div class="toolbar">
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div data-platform-alert data-error="error"></div>
+    <div class="flex-box flex-column flex-element" data-ng-show="message">
+        <label
+            data-ng-bind="message|translate"></label>
+    </div>
+    <div class="flex-element flex-box flex-column" style="width: 100%; min-height: 100px; border: 1px solid #ccc">
+        <div data-platform-grid data-data="gridData"></div>
+    </div>
+    <div style="padding-top:5px;display: flex;flex-direction: row;">
+        <div estimate-main-create-package-wizard-node data-node2="estimate.main.createBoqPackageWizard.structureSelectionPage.withoutStructureNote"></div>
+    </div>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>
+
+

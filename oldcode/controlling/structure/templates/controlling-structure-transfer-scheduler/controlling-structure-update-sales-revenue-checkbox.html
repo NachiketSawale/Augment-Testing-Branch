@@ -1,0 +1,35 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" data-ng-model="entity.updateRevenue" data-ng-click="onCheckUpdateRevenue()" data-ng-disabled="entity.isUpdateRevenueDisabled" value="{{entity.updateRevenue}}" />
+				{{'controlling.structure.updateRevenue' | translate}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<div class="radio spaceToUp">
+					<label>
+						<input type="radio" id="SCHEDULE" name="updateRevenueFrom" data-ng-model="entity.revenueUpdateFrom" value="1"
+						       data-ng-disabled="!entity.updateRevenue || !entity.isActive "/>
+						{{'controlling.structure.distributeByCost' | translate}}
+					</label>
+				</div>
+			</li>
+
+			<li>
+				<div class="radio spaceToUp">
+					<label>
+						<input type="radio" id="WIP" name="updateRevenueFrom" data-ng-model="entity.revenueUpdateFrom" value="2"
+						       data-ng-disabled="!entity.updateRevenue || !entity.isActive"/>
+						{{'controlling.structure.distributeByBudget' | translate}}
+					</label>
+				</div>
+			</li>
+		</ul>
+	</li>
+
+</ul>
+

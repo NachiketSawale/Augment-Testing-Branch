@@ -1,0 +1,29 @@
+<script type="text/ng-template" id="scale-control.html">
+
+	<div class="flex-box" ng-if="'factor'==domainType">
+
+		<div class="flex-element form-control" data-domain-control data-domain="factor"
+		     data-model="entity.##model1##" data-options="modelOptions" data-readonly="readonly"></div>
+
+
+		<div style="font-weight: bolder;padding-top: 4px;vertical-align: middle;text-align: center;width: 10px;">:</div>
+
+		<div class="flex-element" data-domain-control data-domain="factor"
+		     data-model="entity.##model2##" data-options="modelOptions" data-readonly="readonly">
+		</div>
+
+	</div>
+	<div class="flex-box" ng-if="'inputselect'==domainType">
+
+		<div class="flex-element form-control" data-domain-control data-domain="inputselect"
+		     data-model="entity.##model1##" data-options="modelOptionsLeft" data-readonly="readonly" data-change="modelOptionsLeft.change()"></div>
+
+
+		<div style="font-weight: bolder;padding-top: 4px;vertical-align: middle;text-align: center;width: 10px;">:</div>
+
+		<div class="flex-element" data-domain-control data-domain="inputselect"
+		     data-model="entity.##model2##" data-options="modelOptionsRight" data-readonly="readonly">
+		</div>
+
+	</div>
+</script>

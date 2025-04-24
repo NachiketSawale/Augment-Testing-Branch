@@ -1,0 +1,50 @@
+<div data-platform-form-adjust-label>
+	<div data-ng-if="inputParams.length !== 0">
+		<div data-accordion data-close-others="false">
+			<div data-accordion-group data-is-open="inputOpen">
+				<div data-accordion-heading>
+					<span
+						class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+					<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+				<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+			 </span>
+				</div>
+				<div class="platform-form-group">
+					<div class="platform-form-row" data-ng-repeat="item in inputParams track by $index">
+						<label class="platform-form-label">{{item.key }}</label>
+						<div class="platform-form-col">
+							<div data-ng-model="item.value" data-options="editorOptions"
+							     data-script-editor-directive></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-if="outputParams.length !== 0">
+		<div data-accordion data-close-others="false">
+			<div data-accordion-group data-is-open="outputOpen">
+				<div data-accordion-heading>
+					<span
+						class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+					<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+				<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+			 </span>
+				</div>
+
+				<div class="platform-form-group" data-ng-repeat="item in outputParams track by $index">
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{item.key }}</label>
+						<div class="platform-form-col">
+							<div data-ng-model="item.value" data-options="editorOptions"
+							     data-script-editor-directive></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

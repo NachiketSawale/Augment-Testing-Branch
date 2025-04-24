@@ -1,0 +1,32 @@
+{
+  "project": {
+	"stock": {
+		"entityStock": "Stock",
+		"entityStockLocation": "Storage Location",
+		"stockListContainerTitle": "Stock Locations",
+		"stockDetailContainerTitle": "Stock Location Details",
+		"stockLocationListContainerTitle": "Storage Locations",
+		"stockLocationDetailContainerTitle": "Storage Location Details",
+		"stockMaterialListContainerTitle": "Project Stock Materials",
+		"stockMaterialDetailContainerTitle": "Project Stock Material Details",
+		"downtimeListContainerTitle": "Stock DownTime",
+		"downtimeDetailContainerTitle": "Stock DownTime Details",
+		"clerkListContainerTitle": "Stock Responsibles",
+		"clerkDetailContainerTitle": "Stock Responsibles Details",
+		"minQuantity": "Minimum Quantity",
+		"maxQuantity": "Maximum Quantity",
+		"provisionPercent": "Provision Percent",
+		"provisionPerUoM": "Provision Per UoM",
+		"isLotManagement": "Is Lot Management",
+		"locationMandatory": "Location Mandatory",
+		"provisionAllowed": "Provision Allowed",
+		"stockValuationRule": "Evaluation Rule",
+		"stockAccountingType": "Accounting Type",
+		"stockType": "Stock Type",
+		"controllingUnitFk": "Controlling Unit",
+		"standardCost": "Standard Cost",
+		"loadingCostPercent": "Loading Cost %",
+		"entitystock2materialstatus": "Status"
+	}
+  }
+}

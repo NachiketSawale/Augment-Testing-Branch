@@ -1,0 +1,29 @@
+<div class="expression">
+	<div class="input-group flex-box">
+		<ui-common-expression-field-selector [ddStateConfig]="configuration?.ddStateConfig" ($onSelectedNode)="onSelectColumn($event)" class="input-group-content flex-box flex-element"></ui-common-expression-field-selector>
+		<span class="input-group-btn"><button class="btn btn-default control-icons ico-input-delete" (click)="onRemoveSelfClicked()" title="Delete Rule"></button></span>
+	</div>
+
+
+	<div class="expression-operators">
+
+		<select *ngIf="selectedNode" (change)="selectOperatorOption(operatorSelect.value)" class="form-control" #operatorSelect>
+			<option *ngFor="let operator of ruleOperatorsSelectOptions.itemsSource.items" [value]="operator.id">{{ operator.displayName }}</option>
+		</select>
+
+<!--		<ui-common-domain-control-host-->
+<!--			*ngIf="selectedNode"-->
+<!--			[(ngModel)]="selectedOperatorId"-->
+<!--			[fieldType]="FieldType.Select"-->
+<!--			[options]="ruleOperatorsSelectOptions"-->
+<!--			(valueChange)="selectOperatorOption($event)"-->
+<!--			class="fullwidth"-->
+<!--		></ui-common-domain-control-host>-->
+
+	</div>
+	<div class="expression-operands">
+		<div *ngIf="selectedOperator">
+			<ui-common-expression-operator [ddStateConfig]="configuration?.ddStateConfig" [operator]="selectedOperator"></ui-common-expression-operator>
+		</div>
+	</div>
+</div>

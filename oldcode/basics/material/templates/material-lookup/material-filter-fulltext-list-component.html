@@ -1,0 +1,26 @@
+<style>
+	.material-filter-fulltext-list {
+		padding: 6px;
+	}
+
+	.material-filter-fulltext-list li {
+		margin: 4px 0;
+	}
+
+	.material-filter-fulltext-list .list-container{
+		max-height: 420px;
+		overflow: auto;
+	}
+
+	.material-filter-fulltext-list li.selected {
+		color: #3789cc;
+	}
+</style>
+
+<div class="generic-popup material-filter-fulltext-list">
+	<div class="flex-element list-container">
+		<ul class="popup-list">
+			<li data-ng-repeat="item in list" data-ng-bind="item.caption | translate" data-ng-class="{ 'selected': item.selected }" data-ng-click="select(item)"></li>
+		</ul>
+	</div>
+</div>

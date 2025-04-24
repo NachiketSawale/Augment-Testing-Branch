@@ -1,0 +1,175 @@
+.cm-quantity-query-number {
+}
+
+.cm-quantity-query-functionName {
+  color: #77ee77;
+}
+
+.cm-quantity-query-parameterName {
+  color: #F9B43D;
+}
+
+.cm-quantity-query-parameterValue {
+  color: #00b3ee;
+}
+
+.cm-quantity-query-operator {
+}
+
+.cm-quantity-query-assignOperator {
+}
+
+.cm-quantity-query-string {
+}
+
+.CodeMirror-container-QuantityQuery-outMost {
+
+  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
+  border-radius: 3px;
+  border: 1px solid silver;
+  background: white;
+  font-family: monospace;
+  max-height: 20em;
+  position: absolute;
+  width: 410px;
+  height: 250px;
+  z-index: 10;
+}
+
+
+.CodeMirror-tip-container-QuantityQuery-outMost {
+  width: 410px;
+  color: black;
+  max-width: 410px;
+}
+
+.CodeMirror-container-QuantityQuery-outMost-noPicture {
+  width: 205px;
+}
+
+.CodeMirror-container-QuantityQuery-picturePanel {
+  background: white;
+  font-size: 90%;
+  font-family: monospace;
+  max-height: 20em;
+  width: 203px;
+  height: 250px;
+  line-height: 250px;
+  float: left;
+  text-align: center;
+}
+
+.CodeMirror-container-QuantityQuery-picturePanel > img {
+  vertical-align: middle;
+}
+
+.CodeMirror-container-QuantityQuery {
+  border-right: 1px solid silver;
+  background: white;
+  font-size: 90%;
+  font-family: monospace;
+  max-height: 20em;
+  width: 204px;
+  height: 250px;
+  float: left;
+}
+
+.CodeMirror-tab-QuantityQuery {
+  width: 100%;
+  height: 30px;
+  background: #f2f2f2;
+  font-weight: bold;
+}
+
+.CodeMirror-content-QuantityQuery {
+  width: 100%;
+  height: 218px;
+  padding: 2px 0;
+}
+
+.CodeMirror-tab-item-QuantityQuery {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
+  text-align: center;
+}
+
+.CodeMirror-tab-item-QuantityQuery:hover {
+  cursor: pointer;
+}
+
+.CodeMirror-tab-item-QuantityQuery-active {
+  background: white;
+  border-bottom: none;
+  cursor: default;
+}
+
+.CodeMirror-tab-item-end-QuantityQuery {
+  border-right: none;
+}
+
+.CodeMirror-hints-QuantityQuery {
+  z-index: 10;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 2px;
+  overflow-y: auto;
+  width: 98%;
+  height: 214px;
+  position: relative;
+  cursor: default;
+}
+
+.CodeMirror-hints-QuantityQuery-noTab {
+  height: 248px;
+}
+.CodeMirror-Tree-Common-QuantityQuery {
+  width: 100%;
+}
+
+.CodeMirror-ParentLi-QuantityQuery {
+  padding-left: 44px;
+}
+
+.CodeMirror-ParentLi-QuantityQuery:before {
+  margin-left: 20px;
+}
+
+.CodeMirror-ParentLi-QuantityQuery-Img {
+  margin-left: -38px;
+  height: 16px;
+  width: 16px;
+}
+
+.CodeMirror-ParentLi-QuantityQuery-Span {
+  margin-left: 20px;
+}
+
+.CodeMirror-ChildLi-QuantityQuery {
+  padding-left: 58px;
+  display: none;
+}
+
+.CodeMirror-ChildLi-QuantityQuery:before {
+  margin-left: 38px;
+}
+
+.CodeMirror-ChildLi-QuantityQuery-Active {
+  display: inline-block;
+}
+
+.CodeMirror-fullscreen {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 9000;
+}

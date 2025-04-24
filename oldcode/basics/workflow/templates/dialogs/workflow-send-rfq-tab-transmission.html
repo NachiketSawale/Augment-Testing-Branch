@@ -1,0 +1,15 @@
+<h1>{{'basics.workflow.sendRfQTransmission.transmissionProtocol' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQTransmission.bidder' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQTransmission.status' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="bidder in info.selectedBidder">
+		<td data-ng-bind="bidder.CompanyName"></td>
+		<td data-ng-bind="bidder.SendStatus"></td>
+	</tr>
+	</tbody>
+</table>

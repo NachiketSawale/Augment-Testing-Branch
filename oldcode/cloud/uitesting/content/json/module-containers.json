@@ -1,0 +1,9 @@
+﻿[
+  {
+    "id": "1",
+    "template":"app/components/base/grid-partial.html",
+    "title": "cloud.uitesting.listUITestingTitle",
+    "controller": "cloudUitestingSlickgridController",
+    "uuid": "47b7250f2934415e900ba9484fd6bcfb"
+  }
+]

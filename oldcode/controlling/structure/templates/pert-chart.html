@@ -1,0 +1,19 @@
+<div class="flex-element text-center overflow">
+    <svg ng-attr-width="{{pertChartWidth*scaleFac}}" ng-attr-height="{{pertChartHeight*scaleFac}}">
+
+        <!-- group for zoom + pan -->
+        <g ng-attr-transform="{{'scale(' + scaleFac + ')'}}">
+
+            <!-- border -->
+            <rect x="0" y="0" ng-attr-width="{{pertChartWidth*scaleFac}}" ng-attr-height="{{pertChartHeight*scaleFac}}"
+                  style="fill:rgb(255,255,255)"></rect>
+
+            <!-- draw rectangles -->
+            <g controlling-structure-pertnode ng-if="isVisible(n)" node-data="n" ng-repeat="n in nodes" ng-click="nodeClick(n, $event)"></g>
+
+            <!-- draw lines / connections -->
+            <polyline ng-repeat="p in paths" ng-attr-points="{{p}}" style="fill:none;stroke:grey;stroke-width:1"></polyline>
+        </g>
+
+    </svg>
+</div>

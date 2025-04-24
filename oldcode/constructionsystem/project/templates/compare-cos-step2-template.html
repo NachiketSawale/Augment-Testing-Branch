@@ -1,0 +1,17 @@
+<section class="modal-body">
+	<h5>{{'constructionsystem.main.applyNote'|translate}}</h5>
+	<div class="platform-form-group">
+		<div class="radio spaceToUp col-lg-offset-2">
+			<label>
+				<input type="radio" name="update" value="false" data-ng-model="updateOnApply" data-ng-change="onOptionChange('updateOnApply', updateOnApply)">{{'constructionsystem.main.update'|translate}}
+			</label>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<div class="radio spaceToUp col-lg-offset-2">
+			<label>
+				<input type="radio" name="overwrite" value="true" data-ng-model="overrideOnApply" data-ng-change="onOptionChange('overrideOnApply', overrideOnApply)">{{'constructionsystem.main.overwriteAll'|translate}}
+			</label>
+		</div>
+	</div>
+</section>

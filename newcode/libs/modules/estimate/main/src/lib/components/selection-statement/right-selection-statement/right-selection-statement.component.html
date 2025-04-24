@@ -1,0 +1,15 @@
+<ui-common-lookup-input [dataService]="filterLookupService" [(value)]="currentSelFk" (selectedItemChanged)="onSelectedItemChanged($event)"></ui-common-lookup-input>
+<estimate-main-expert-filter *ngIf="currentSelFk===1"></estimate-main-expert-filter>
+<estimate-main-object-expert-filter *ngIf="currentSelFk===2"></estimate-main-object-expert-filter>
+<!--
+<div class="input-group form-control">
+	<input id="GoogleSearchInput" type="text" class="input-group-content"
+	       [(ngModel)]="searchText"
+	       placeholder="{{'cloud.desktop.sdGoogleSearchFilter' | platformTranslate}}">
+	<div *ngIf="tools" class="toolbar" style="display: flex; justify-content: flex-end">
+		<ui-common-menu-list [menu]="tools" [context]="context"></ui-common-menu-list>
+	</div>
+</div>
+<ui-common-filter-script-editor [(model)]='doc' [option]='option'></ui-common-filter-script-editor>
+
+-->

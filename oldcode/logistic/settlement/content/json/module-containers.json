@@ -1,0 +1,288 @@
+[
+	{
+		"id": "logistic.settlement.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listSettlementTitle",
+		"controller": "logisticSettlementListController",
+		"uuid": "f766b788850241e9a338eb411dafbd79"
+	},
+	{
+		"id": "logistic.settlement.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailSettlementTitle",
+		"controller": "logisticSettlementDetailController",
+		"uuid": "cc74b0044501457194046d47ca7dc2de",
+		"permission": "f766b788850241e9a338eb411dafbd79"
+	},
+	{
+		"id": "logistic.settlement.item.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listSettlementItemTitle",
+		"controller": "logisticSettlementItemListController",
+		"uuid": "83b83e9c1f704f74bf28f721435b7f93"
+	},
+	{
+		"id": "logistic.settlement.item.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailSettlementItemTitle",
+		"controller": "logisticSettlementItemDetailController",
+		"uuid": "9b9435c1d83d4a6e902ab45c8938701b",
+		"permission": "83b83e9c1f704f74bf28f721435b7f93"
+	},
+	{
+		"id": "logistic.settlement.formatted.text1.view",
+		"template": "logistic.settlement/partials/logistic-settlement-formatted-text1-view.html",
+		"title": "logistic.settlement.entityFormattedText1",
+		"controller": "logisticSettlementFormattedText1Controller",
+		"uuid": "b2e8f2664b684862a796698a7235305f",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "logistic.settlement.formatted.text2.view",
+		"template": "logistic.settlement/partials/logistic-settlement-formatted-text2-view.html",
+		"title": "logistic.settlement.entityFormattedText2",
+		"controller": "logisticSettlementFormattedText2Controller",
+		"uuid": "f17f6ae7602b4f8d976c0376ab3f7b27",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "logistic.settlement.formatted.text3.view",
+		"template": "logistic.settlement/partials/logistic-settlement-formatted-text3-view.html",
+		"title": "logistic.settlement.entityFormattedText3",
+		"controller": "logisticSettlementFormattedText3Controller",
+		"uuid": "27c61887696745768368bd15f437eb1b",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "logistic.settlement.formatted.text4.view",
+		"template": "logistic.settlement/partials/logistic-settlement-formatted-text4-view.html",
+		"title": "logistic.settlement.entityFormattedText4",
+		"controller": "logisticSettlementFormattedText4Controller",
+		"uuid": "6c8e98371244440e83b70eb6649633e2",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "logistic.settlement.formatted.text5.view",
+		"template": "logistic.settlement/partials/logistic-settlement-formatted-text5-view.html",
+		"title": "logistic.settlement.entityFormattedText5",
+		"controller": "logisticSettlementFormattedText5Controller",
+		"uuid": "f8e4363d6ec845cf86b0fce9655430f6",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "logistic.settlement.formatted.text6.view",
+		"template": "logistic.settlement/partials/logistic-settlement-formatted-text6-view.html",
+		"title": "logistic.settlement.entityFormattedText6",
+		"controller": "logisticSettlementFormattedText6Controller",
+		"uuid": "b787937d61474c7280aee33f6f054500",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "logistic.settlement.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "object.settlement.documents.project.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "logistic.settlement.billingSchema.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listSettlementBillingSchemaTitle",
+		"controller": "logisticSettlementBillingSchemaListController",
+		"uuid": "ba266dee53274c009f78307f98dbfcbc"
+	},
+	{
+		"id": "logistic.settlement.billingSchema.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailSettlementBillingSchemaTitle",
+		"controller": "logisticSettlementBillingSchemaDetailController",
+		"uuid": "9b6d9118e5bc486b816323c36d7626cb",
+		"permission": "ba266dee53274c009f78307f98dbfcbc"
+	},
+	{
+		"id": "logistic.settlement.transaction.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listSettlementTransactionTitle",
+		"controller": "logisticSettlementTransactionListController",
+		"uuid": "5c40f34757a140a4956fd60da1072129"
+	},
+	{
+		"id": "logistic.settlement.transaction.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailSettlementTransactionTitle",
+		"controller": "logisticSettlementTransactionDetailController",
+		"uuid": "58d2195480fc44de9744010f06c9a978",
+		"permission": "5c40f34757a140a4956fd60da1072129"
+	},
+	{
+		"id": "logistic.settlement.validation.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listSettlementValidationTitle",
+		"controller": "logisticSettlementValidationListController",
+		"uuid": "aebd263b496149239676a52a48c94be3"
+	},
+	{
+		"id": "logistic.settlement.validation.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailSettlementValidationTitle",
+		"controller": "logisticSettlementValidationDetailController",
+		"uuid": "953e98ce9064458f873465b10d75533a",
+		"permission": "aebd263b496149239676a52a48c94be3"
+	},
+	{
+		"id": "logistic.settlement.dispatchrecord",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.recordDetailTitle",
+		"controller": "logisticSettlementDispatchRecordDetailController",
+		"uuid": "58dbe2df01d7465f81877bca1d5b44e4",
+		"permission": "2aba47e0b663449e8cd86d5e6258e417"
+	},
+	{
+		"id": "logistic.settlement.dispatchrecord.article",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.superiorDetailTitle",
+		"controller": "logisticSettlementDispatchRecordArticleDetailController",
+		"uuid": "a1fc255297904fb892be872ba735f2cc",
+		"permission": "2aba47e0b663449e8cd86d5e6258e417"
+	},
+	{
+		"id": "controlling.structure.grpsetdltByItem.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.SettlementGrpSetDTLByItemGridTitle",
+		"controller": "controllingStructureGrpSetDTLListController",
+		"uuid": "575f5d8dab5040ff87038603429c8f23",
+		"dataService": "logisticSettlementGrpSetDtlByItemDataService"
+	},
+	{
+		"id": "controlling.structure.grpsetdltByItem.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.SettlementGrpSetDTLByItemFormTitle",
+		"controller": "controllingStructureGrpSetDTLDetailController",
+		"uuid": "cd31b2e573ad46d78d95fc08e65573f9",
+		"permission": "575f5d8dab5040ff87038603429c8f23",
+		"dataService": "logisticSettlementGrpSetDtlByItemDataService"
+	},
+	{
+		"id": "controlling.structure.grpsetdltByTransaction.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.SettlementGrpSetDTLByTransactionGridTitle",
+		"controller": "controllingStructureGrpSetDTLListController",
+		"uuid": "a15b52c989de4100b649fa1f68d66c27",
+		"dataService": "logisticSettlementGrpSetDtlByTransactionDataService"
+	},
+	{
+		"id": "controlling.structure.grpsetdltByTransaction.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.SettlementGrpSetDTLByTransactionFormTitle",
+		"controller": "controllingStructureGrpSetDTLDetailController",
+		"uuid": "7c1333e48a454265a081b2650072598d",
+		"permission": "a15b52c989de4100b649fa1f68d66c27",
+		"dataService": "logisticSettlementGrpSetDtlByTransactionDataService"
+	},
+	{
+		"id": "logistic.settlement.batch.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listSettlementBatchTitle",
+		"controller": "logisticSettlementBatchListController",
+		"uuid": "54eb41757bff45f7b6c1941aceb2bdd8",
+		"permission": "f766b788850241e9a338eb411dafbd79"
+	},
+	{
+		"id": "logistic.settlement.batch.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailSettlementBatchTitle",
+		"controller": "logisticSettlementBatchDetailController",
+		"uuid": "fc7ebafbccd14a0f89b6445cf8041d69",
+		"permission": "f766b788850241e9a338eb411dafbd79"
+	},
+	{
+		"id": "logistic.settlement.batchvalidation.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listSettlementBatchValidationTitle",
+		"controller": "logisticSettlementBatchValidationListController",
+		"uuid": "2a2dace70a434dbbb8a3f1d654923ad6",
+		"permission": "f766b788850241e9a338eb411dafbd79"
+	},
+	{
+		"id": "logistic.settlement.batchvalidation.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailSettlementBatchValidationTitle",
+		"controller": "logisticSettlementBatchValidationDetailController",
+		"uuid": "46ca8d13fd514512b56421c72101040a",
+		"permission": "f766b788850241e9a338eb411dafbd79"
+	},
+	{
+		"id": "logistic.settlement.posteddispheadernotsettled.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.listPostedDispHeaderNotSettledTitle",
+		"controller": "logisticPostedDispHeaderUnsettledListController",
+		"uuid": "1d2c5ecb849942d38f9e8d298706340d"
+	},
+	{
+		"id": "logistic.settlement.posteddispheadernotsettled.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.detailPostedDispHeaderNotSettledTitle",
+		"controller": "logisticPostedDispHeaderUnsettledDetailController",
+		"uuid": "ce8e55f36f5b490b870527018d2f8548",
+		"permission": "1d2c5ecb849942d38f9e8d298706340d"
+	},
+	{
+		"id": "logistic.settlement.settlementclaim.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.settlementClaimTitle",
+		"controller": "logisticSettlementClaimListController",
+		"uuid": "87a661f5906040119174d4b07af402d1"
+	},
+	{
+		"id": "logistic.settlement.settlementclaim.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.settlementClaimDetailTitle",
+		"controller": "logisticSettlementClaimDetailController",
+		"uuid": "fa0cca4e53254044afd41b0fac1fd664",
+		"permission": "87a661f5906040119174d4b07af402d1"
+	},
+	{
+		"id": "logistic.settlement.jobsWithNegativeQuantityForBulk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.settlement.jobsWithNegativeQuantityForBulkTitle",
+		"controller": "logisticSettlementJobsNegativeQuantityBulkListController",
+		"uuid": "100f2401c73242f39947767bdca3cb7b"
+	},
+	{
+		"id": "logistic.settlement.jobsWithNegativeQuantityForBulk.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.settlement.jobsWithNegativeQuantityForBulkDetailTitle",
+		"controller": "logisticSettlementJobsNegativeQuantityBulkDetailController",
+		"uuid": "88e30a234fe64bbc9b51563a4e4d5ce7",
+		"permission": "100f2401c73242f39947767bdca3cb7b"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "6697696512614e3fb18a9789742af963",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "app/components/grid/generic-structure/generic-container.html",
+		"title": "logistic.settlement.structureContainerTitle",
+		"uuid": "c0e4879759da417087be9e4a4f418458",
+		"controller": "platformGenericStructureController",
+		"mainService": "logisticSettlementDataService",
+		"enableCaching": "true",
+		"configurationService": "logisticSettlementStructureConfigService",
+		"permission": "f766b788850241e9a338eb411dafbd79"
+	}
+]

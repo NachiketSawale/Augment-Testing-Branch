@@ -1,0 +1,94 @@
+<style>
+	.material-filter-item-detail .toolbar {
+		border-right: 1px solid #dcdcdc;
+	}
+
+	.material-filter-item-detail .break-word {
+		overflow-wrap: break-word;
+	}
+
+	.material-filter-item-detail .item-detail {
+		padding: 10px;
+		height: calc(100% - 30px);
+		border-right: 1px solid #dcdcdc;
+	}
+
+	.material-filter-item-detail .item-detail-title,
+	.material-filter-item-detail .item-detail-title-image {
+		margin-bottom: 8px;;
+	}
+
+	.material-filter-item-detail .item-detail-sub-title {
+		margin-bottom: 16px;
+	}
+
+	.material-filter-item-detail .display-image {
+		max-width: 80%;
+		max-height: 200px;
+		margin-top: 10px;
+		height: auto;
+		object-fit: cover;
+	}
+
+	.material-filter-item-detail .item-preview-customize > span {
+		margin: 8px 0;
+	}
+
+	.material-filter-item-detail .item-detail-document {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.material-filter-item-detail .item-preview-left {
+		width: calc(40% - 10px);
+	}
+
+	.material-filter-item-detail .item-preview-space {
+		width: 10px;
+	}
+
+	.material-filter-item-detail .item-preview-right {
+		width: 60%;
+	}
+
+	.material-filter-item-detail .preview-document-box {
+		padding: 0;
+		margin: 0;
+	}
+
+	.material-filter-item-detail .preview-document-title {
+		color: #0067b1;
+		cursor: pointer;
+		font-size: 13px;
+		line-height: 25px;
+		text-decoration: underline;
+	}
+</style>
+
+<div class="material-filter-item-detail border-color-bar1 border-left border-bottom fullheight">
+	<div class="toolbar bg-light-grey-8">
+		<span class="title fix" title="Items">{{"basics.material.lookup.preview" | translate}}</span>
+	</div>
+	<div class="item-detail flex-box flex-column overflow">
+		<h2 class="break-word item-detail-title">{{getDescription1()}}</h2>
+		<div class="text-center">
+			<img class="display-image auto-width item-detail-title-image" data-ng-if="entity.BasBlobsFk && displayImage" data-ng-src="{{entity.Image}}" alt="{{::entity.Code}}"/>
+		</div>
+		<h3 class="break-word item-detail-sub-title">{{getDescription2()}}</h3>
+		<div class="item-preview-customize flex-box flex-column">
+			<span data-ng-repeat="attr in displayAttributes" class="flex-box">
+				<span class="break-word item-preview-left" data-ng-class="(!attr.isAttributeItem) ? 'font-bold' : ''" data-ng-bind="attr.name"></span>
+				<span class="item-preview-space"></span>
+
+				<span class="break-word item-preview-right" data-ng-if="!attr.isDocument" data-ng-bind-html="attr.value"></span>
+
+				<span class="break-word item-preview-right preview-document-box" data-ng-if="attr.isDocument">
+					<a class="item-detail-document" data-ng-repeat="val in attr.value">
+						<span class="preview-document-title" data-ng-click="onDocumentPreview(val.Id, val.Description)">{{val.Description}}</span>
+						<br/>
+					</a>
+				</span>
+			</span>
+		</div>
+	</div>
+</div>

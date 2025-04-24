@@ -1,0 +1,261 @@
+{
+  "model": {
+	"viewer": {
+	  "connectionSettings": "Verbindung",
+	  "modelSettings": "Modellspezifische Einstellungen",
+	  "modelSettingsTitle": "Modellspezifische Einstellungen",
+	  "cameraSettings": "Kamera",
+	  "renderingSettings": "Darstellung",
+	  "cameraPos": "Kameraposition",
+	  "defaultCamPos": "Vordefinierte Kamerapositionen",
+	  "camPosManager": "Kamerapositionsverwaltung",
+	  "customCameraPos": "Benutzerdefinierte Kamerapositionen",
+	  "saveCustomCameraPos": "Kameraposition speichern",
+	  "deleteCustomCameraPos": "Kameraposition löschen",
+	  "newCustomCameraPos": "Neue Kameraposition",
+	  "customCameraPosPos": "Kameraposition",
+	  "customCameraPosTrg": "Kameraziel",
+	  "customCameraPosDirection": "Blickrichtung",
+	  "customCameraPosNormalizedDirection": "Normalisierte Blickrichtung",
+	  "customCameraPosList": "Gespeicherte Kamerapositionen",
+	  "customCameraPosName": "Name",
+	  "customCameraPosImportant": "Wichtig",
+	  "cameraIsoFrontRight": "Iso-Ansicht (Vorderseite)",
+	  "cameraIsoBackLeft": "Iso-Ansicht (Rückseite)",
+	  "cameraBack": "Ansicht von hinten",
+	  "cameraFront": "Ansicht von vorne",
+	  "cameraLeft": "Ansicht von links",
+	  "cameraRight": "Ansicht von rechts",
+	  "cameraTop": "Ansicht von oben",
+	  "cameraBottom": "Ansicht von unten",
+	  "defaultView": "(Initiale) Standardansicht",
+	  "cameraFit": "An Darstellungsbereich anpassen",
+	  "cameraReset": "Ansicht zurücksetzen",
+	  "configTitle": "Anzeigeeinstellungen",
+	  "config": "Anzeigeeinstellungen",
+	  "cfgGroup": "Konfiguration",
+	  "transitions": "Flüssige Kameraübergänge",
+	  "bgColor": "Hintergrundfarbe",
+	  "bgColorSet": "Hintergrundfarbe überschreiben",
+	  "bgColor2": "Überblenden zu Hintergrundfarbe",
+	  "gradientBG": "Hintergrund mit Farbverlauf",
+	  "selColor": "Selektionsfarbe",
+	  "selColorSet": "Selektionsfarbe überschreiben",
+	  "showInputInfo": "Eingabeoptionen anzeigen",
+	  "operator": {
+		"pan": {
+		  "name": "Verschieben"
+		},
+		"turntable": {
+		  "name": "Drehtisch"
+		},
+		"orbit": {
+		  "name": "Umkreisen"
+		},
+		"keyboardWalk": {
+		  "name": "Gehen"
+		},
+		"mouseWalk": {
+		  "name": "Gehen (Maus-optimiert)"
+		},
+		"keyboardFly": {
+		  "name": "Fliegen"
+		},
+		"mouseFly": {
+		  "name": "Fliegen (Maus-optimiert)"
+		},
+		"pointer": {
+		  "name": "Auswahl"
+		},
+		"cut": {
+		  "name": "Schnittflächen modifizieren",
+		  "tools": {
+			"reset": "Zurücksetzen",
+			"resetPlanePos": "Schnittflächenposition zurücksetzen",
+			"resetAxisPos": "Position der Rotationsachse zurücksetzen",
+			"resetAngle": "Rotation zurücksetzen",
+			"mode": "Modus",
+			"active": "Schnittflächen an-/ausschalten"
+		  }
+		},
+		"drag": {
+		  "name": "Ausgewählte Objekte in andere Container ziehen",
+		  "objectData": "{{count}} Modell-Objekt(e)"
+		},
+		"position": {
+		  "name": "Position im 3D-Raum wählen",
+		  "modes": {
+			"title": "Auswahlmodus",
+			"anchor": "Position zwischen Ankerpunkt und Kamera",
+			"axisIntersection": "Position an Achsenschnittpunkt",
+			"planeBeforeDistance": "Position zwischen Sichtebene und Kamera"
+		  }
+		}
+	  },
+	  "goToCustomCameraPos": "Im Viewer anzeigen",
+	  "projection": "Projektion",
+	  "projectionOrthograph": "orthographisch",
+	  "projectionPerspective": "perspektivisch",
+	  "showModelSetting": "Komplettes Modell anzeigen",
+	  "showModelSettingShow": "Modell immer zeigen",
+	  "showModelSettingHide": "Modell immer verbergen",
+	  "noModelData": "Keine Modelldaten verfügbar.",
+	  "noModelListSelected": "Kein Modell ausgewählt. Verwenden Sie die Modellliste, um ein Modell anzuzeigen.",
+	  "noModelPinned": "Kein Modell ausgewählt. Pinnen Sie bitte erst ein Modell im Modell-Modul.",
+	  "loadModelFailed": "Die Modelldaten konnten nicht geladen werden.",
+	  "modelTimeout": "Die Verbindung zum Server wurde wegen einer Zeitüberschreitung beendet.",
+	  "infoSettings": "Informationen",
+	  "showModelName": "Modellnamen anzeigen",
+	  "preventTimeout": "Zeitüberschreitungen verhindern",
+	  "zoomIn": "Vergrößern",
+	  "zoomOut": "Verkleinern",
+	  "zoomFeatures": "Zoom-Funktionen",
+	  "aa": "Kantenglättungsmodus",
+	  "aaNone": "Deaktiviert",
+	  "aaSMAA": "SMAA",
+	  "chunkedUpdates": "Blockweise Grafikaktualisierung",
+	  "unfilteredViewerWindow": "Ungefilterte 3D-Ansicht in externem Browserfenster zeigen",
+	  "mainEntityViewerWindow": "Nach Tabelleninhalt gefilterte 3D-Ansicht in externem Browserfenster zeigen",
+	  "filterResultsViewerWindow": "3D-Ansicht in externem Browserfenster für Filterergebnisse zeigen",
+	  "commands": "Weitere Befehle",
+	  "selectionTitle": "Automatische Auswahl",
+	  "selectAll": "Alles auswählen",
+	  "selectNone": "Auswahl aufheben",
+	  "toggleSelection": "Auswahl umkehren",
+	  "showSelectionInfo": "Information zur Auswahl anzeigen",
+	  "selCount": "{{selected}} Objekt(e) ausgewählt",
+	  "selCountAllShown": "(alle im Filter inbegriffen)",
+	  "selCountHidden": "({{hidden}} durch Filter ausgeschlossen)",
+	  "blacklistTitle": "Sperrlisten-Optionen",
+	  "addToBlacklist": "Ausgewählte Objekte verbergen (auf Sperrliste setzen)",
+	  "isolate": "Ausgewählte Objekte isolieren (andere auf Sperrliste setzen)",
+	  "clearBlacklist": "Alles anzeigen (Sperrliste leeren)",
+	  "refresh": "Darstellung neu zeichnen",
+	  "ods": {
+		"selector": "Objektanzeigeeinstellungsauswahl",
+		"menu": "Objektfilterung",
+		"active": "Aktive Objektanzeigeeinstellungen",
+		"manager": "Verwalten...",
+		"managerTitle": "Objektanzeigeeinstellungen",
+		"add": "Neues Schema",
+		"delete": "Schema löschen",
+		"name": "Name",
+		"visExplode": "Explosion",
+		"visVisible": "sichtbar",
+		"visHidden": "verborgen",
+		"visModel": "modellabhängig",
+		"visibility": "Sichtbarkeit",
+		"color": "Farbe",
+		"colorSet": "Farbe überschreiben",
+		"opacity": "Deckkraft",
+		"opacitySet": "Deckkraft überschreiben",
+		"generalSettings": "Allgemeine Einstellungen",
+		"states": {
+		  "onlyExcluded": "Grundeinstellungen",
+		  "excluded": "Entspricht nicht den Kriterien",
+		  "included": "Entspricht den Kriterien",
+		  "appearing": "Wird hinzugefügt",
+		  "disappearing": "Wird entfernt",
+		  "modified": "In Bearbeitung",
+		  "blacklisted": "In Sperrliste"
+		}
+	  },
+	  "hoops": {
+		"title": "3D-Anzeige",
+		"numberedTitle": "3D-Anzeige #{{name}}",
+		"windowTitle": "3D-Anzeige",
+		"numberedWindowTitle": "3D-Anzeige #{{name}} (in externem Fenster)",
+		"numberedWindowFullTitle": "3D-Anzeige #{{name}} ({{filter}})",
+		"renderMode": "Rendermodus",
+		"renderModeServer": "Server-seitig",
+		"renderModeClient": "Client-seitig",
+		"streamingMode": "Streaming-Modus",
+		"streamingModeFull": "Komplettes Modell laden",
+		"streamingModeLazy": "Modellbestandteile nach Bedarf laden",
+		"draw": "Zeichenmodus",
+		"drawHidden": "Verborgene Linien",
+		"drawShaded": "Flächen",
+		"drawWireframe": "Drahtgitter",
+		"drawWireframeOnShaded": "Flächen und Drahtgitter"
+	  },
+	  "activeFilter": "Aktiver Filter",
+	  "filterSelector": "Filterauswahl",
+	  "filters": {
+		"disabled": {
+		  "command": "Filterung deaktivieren",
+		  "state": "keine Filterung"
+		},
+		"mainEntity": {
+		  "command": "Nach Hauptentität filtern",
+		  "state": "nach Hauptentität gefiltert"
+		},
+		"objectSideBar": {
+		  "command": "Seitenleisten-Objektfilter",
+		  "state": "nach Seitenleisten-Objektfilter gefiltert"
+		},
+		"simulation": {
+		  "command": "Simulationsfortschritt zeigen",
+		  "state": "Simulation wird dargestellt"
+		}
+	  },
+	  "inputHelp": {
+		"modifierPattern": "{{modifier}} + {{commandInput}}",
+		"alternativePattern": "{{list}}, {{alternative}}",
+		"inputRulePattern": "{{input}}: {{effect}}",
+		"ctrlKey": "Strg",
+		"altKey": "Alt",
+		"shiftKey": "Umschalttaste",
+		"spaceKey": "Leertaste",
+		"pageUpDown": "Seite auf/ab",
+		"pageUpKey": "Seite auf",
+		"pageDownKey": "Seite ab",
+		"arrowKeys": "Pfeiltasten",
+		"arrowKeysUpDown": "Pfeiltasten auf/ab",
+		"arrowKeysLeftRight": "Pfeiltasten links/rechts",
+		"arrowLeftKey": "Pfeiltaste links",
+		"arrowRightKey": "Pfeiltaste rechts",
+		"arrowUpKey": "Pfeiltaste auf",
+		"arrowDownKey": "Pfeiltaste ab",
+		"modifierActionPattern": "{{modifier}} gedrückt halten",
+		"mouseButtonLeftClick": "Linksklick",
+		"mouseButtonMiddleClick": "Klick mit der mittleren Maustaste",
+		"mouseButtonRightClick": "Rechtsklick",
+		"mouseButtonLeftDrag": "mit linker Maustaste ziehen",
+		"mouseButtonMiddleDrag": "mit mittlerer Maustaste ziehen",
+		"mouseButtonRightDrag": "mit rechter Maustaste ziehen",
+		"mouseButtonLeftDragH": "horizontal mit linker Maustaste ziehen",
+		"mouseButtonMiddleDragH": "horizontal mit mittlerer Maustaste ziehen",
+		"mouseButtonRightDragH": "horizontal mit rechter Maustaste ziehen",
+		"mouseButtonLeftDragV": "vertikal mit linker Maustaste ziehen",
+		"mouseButtonMiddleDragV": "vertikal mit mittlerer Maustaste ziehen",
+		"mouseButtonRightDragV": "vertikal mit rechter Maustaste ziehen",
+		"mouseWheel": "Mausrad",
+		"features": {
+		  "horizontalForwardBackward": "vorwärts/rückwärts gehen",
+		  "flyForwardBackward": "vorwärts/rückwärts fliegen",
+		  "turnLeftRight": "nach links/rechts drehen",
+		  "turnUpDown": "nach oben/unten blicken",
+		  "moveSidewaysAllDirections": "seitlich/aufwärts/abwärts bewegen",
+		  "moveUpDown": "aufwärts/abwärts bewegen",
+		  "turnGazeDirection": "Blickrichtung drehen",
+		  "pan": "Ansicht verschieben",
+		  "accelerate": "Bewegung beschleunigen",
+		  "moveToLocation": "direkt zur angeklickten Position bewegen",
+		  "zoom": "zoomen",
+		  "select": "Objekte auswählen (für Mehrfachauswahl Umschalttaste gedrückt halten)",
+		  "rotateAround": "um das Modell rotieren",
+		  "toggleCutting": "Schnittflächen an-/abschalten",
+		  "selectCuttingPlane": "Schnittfläche auswählen",
+		  "moveCuttingPlane": "Schnittfläche verschieben",
+		  "rotateCuttingPlane": "Schnittfläche drehen",
+		  "moveCuttingPlaneAxis": "Rotationsachse der Schnittfläche verschieben",
+		  "moveCuttingPlaneOrAxis": "Schnittfläche/Rotationsachse verschieben",
+		  "dragObjects": "ausgewählte Objekte in andere Container ziehen"
+		}
+	  }
+	},
+	"marker": "Markierung",
+	"markerMenu": "Sichtbarkeit von Markierungen",
+	"rfiMarkers": "Markierungen für Informations-Anfragen"
+  }
+}

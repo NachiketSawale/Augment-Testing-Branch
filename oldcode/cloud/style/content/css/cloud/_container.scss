@@ -1,0 +1,1620 @@
+/*-------------------------------------------------------------------------------
+	 Container (_container.scss)
+  -------------------------------------------------------------------------------*/
+
+/*
+	table style from bootstrap derived.
+	move table css to /cloud/
+*/
+
+.table {
+	border-bottom: 1px solid #ddd;
+
+	> thead  {
+		> tr {
+			> th {
+				border-top: 1px solid #000 !important;
+				border-bottom: 1px solid #000;
+				padding: 4px;
+				font-weight: bold;
+				vertical-align: top;
+
+				.form-control {
+					height: auto;
+				}
+			}
+		}
+	}
+	tbody {
+		tr {
+			td {
+				padding: 4px;
+				vertical-align: middle;
+
+				.form-control {
+					align-items: center;
+					justify-content: center;
+
+					input[type='checkbox'], input[type='radio'] {
+						margin-top: 0;
+					}
+				}
+
+				.panel-body {
+					.form-control {
+						justify-content: left;
+					}
+				}
+
+				a.toggle {
+					background-image: url(../cloud.style/content/images/control-icons.svg#ico-tree-expand);
+
+					&.collapsed {
+						background-image: url(../cloud.style/content/images/control-icons.svg#ico-tree-collapse);
+					}
+				}
+			}
+
+			&.collapsible {
+				td {
+					border: none;
+					padding: 0;
+
+					.panel-body {
+						padding-top: 0;
+						hr {
+							margin: 0;
+							border-color: #ddd;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/*
+	list-group style from bootstrap derived.
+	move table css to /cloud/
+*/
+.list-group {
+	margin-bottom: 10px;
+	li {
+		@extend .ellipsis;
+		&.list-group-item, .list-group-item {
+			margin: 0;
+			padding: $padding-medium-vertical $padding-base-horizontal $padding-base-vertical;
+			background-color: transparent;
+			border: none;
+			border-bottom: solid 1px $color-bar-border;
+		}
+		h2 {
+			position: relative;
+			a {
+				@extend .ellipsis;
+				padding-right: 26px;
+			}
+			.badge {
+				@include container-position(5px, 0, auto, auto);
+				margin: 0;
+			}
+		}
+		ul {
+			&.subgroup {
+				margin-left: 20px;
+				overflow: hidden;
+
+				li {
+					margin-top: 5px;
+
+					ul {
+						list-style: none;
+						padding-left: 20px;
+						li:first-child {
+							margin-top: 5px;
+						}
+					}
+				}
+			}
+
+			ul {
+				padding-left: $padding-xlarge-horizontal;
+				list-style: disc inside;
+
+				li {
+					display: list-item;
+				}
+			}
+		}
+	}
+}
+
+%toolbar-button {
+	@extend .btn-default;
+	box-sizing: content-box;
+	vertical-align: middle;
+	height: $toolbar-height;
+	width: $tabbar-button-width;
+	text-indent: -9999em;
+	background-size: $size-icon $size-icon;
+}
+
+.toolbar-overlay {
+	@include square(100%);
+	display: flex;
+	position: absolute;
+	width: auto;
+	height: auto;
+	border: $border-width-default solid $overlay-shadow-color;
+	background-color: #fff;
+
+	z-index: 800;
+
+	button {
+		@extend %toolbar-button;
+	}
+
+	&.bottom-right {
+		bottom: 10px;
+		right: 10px;
+
+		&.v-scroll {
+			right: 30px;
+		}
+		&.h-scroll {
+			bottom: 30px;
+		}
+	}
+
+	&.bottom-center {
+		bottom: 10px;
+		align-self: center;
+
+		&.h-scroll {
+			bottom: 30px;
+		}
+	}
+
+	&.bottom-left {
+		bottom: 10px;
+		left: 10px;
+
+		&.h-scroll {
+			bottom: 30px;
+		}
+	}
+
+	&.top-left {
+		top: 10px;
+		left: 10px;
+	}
+
+	&.top-center {
+		top: 10px;
+		align-self: center;
+	}
+
+	&.top-right {
+		top: 10px;
+		right: 10px;
+
+		&.v-scroll {
+			right: 30px;
+		}
+	}
+}
+
+.toolbar {
+	display: flex;
+	flex-flow: row nowrap;
+	box-sizing: content-box;
+	background-color: $color-bar3;
+	border-bottom: $border-width-default solid  $color-border;
+	height: $toolbar-height;
+	min-height: $toolbar-height;
+	box-sizing: border-box;
+
+	> .title {
+		@extend .ellipsis;
+
+		cursor: default;
+		max-width: 350px; //set highter because a russion text in BP does not fit
+		padding-left: $padding-medium-horizontal;
+		line-height: $toolbar-height;
+
+		&[class*="ico-"] {
+			@include icon-placeholder-left($padding-left: $padding-medium-horizontal);
+		}
+	}
+
+	> [data-platform-menu-list] {
+		min-width: 2px;
+		flex: 1;
+		order: 1;
+	}
+
+	//> .tools { //the html-structure for actionlist is not the same like menulist-directive
+	.tools {
+		display: flex;
+		order: 2;
+
+		&.left {
+			order: 0;
+		}
+
+		&.center {
+			flex: 2;
+		}
+
+		> .divider {
+			border-left: $border-width-default solid $color-body-background;
+		}
+
+		&.model-tools {
+			.tlb-icons.ico-rec-new {
+				background-image: url(../../images/tlb-icons.svg#ico-add-single-model);
+			}
+		}
+	}
+
+	button {
+		@extend %toolbar-button;
+
+		&.dropdown-caret {
+			@extend %caret-element;
+			width: $tabbar-button-width + 7px;
+			background-position: 7px;
+		}
+	}
+
+	.dropdown-menu {
+		button {
+			text-indent: 0;
+		}
+	}
+
+	li + .sublist {
+		border-left: $border-width-default solid $color-body-background;
+	}
+
+	.sublist + li {
+		border-left: $border-width-default solid $color-body-background;
+	}
+
+	.sublist {
+		> ul {
+			display: flex;
+		}
+	}
+
+	/* a lookup in toolbar.
+		exist for example in Activity Location Matrix. Dialog 'Matrix Display Settings'
+	 */
+	.lookup-wrapper {
+		padding-left: $padding-small-horizontal;
+		max-width: 180px;
+
+		button {
+			text-indent: 0px;
+			background-color: $color-bar3;
+
+			&:not(.plain):not(:disabled):hover {
+				background-color: transparent;
+				border: none;
+				box-shadow: none;
+			}
+		}
+
+		.form-control {
+			@extend .font-bold;
+
+			.input-group-content[disabled] {
+				background-color: $color-bar3;
+				padding-top: $padding-base-vertical;
+			}
+
+			.input-group-btn {
+				padding-top: 1px;
+			}
+		}
+
+		.form-control, input, button {
+			background-color: $color-bar3;
+			border: none;
+		}
+	}
+
+	&.plain {
+		background-color: transparent;
+	}
+
+	&.left {
+		flex-direction: row-reverse;
+	}
+
+	.item-list-content {
+		display: flex;
+		flex: 1;
+
+		button {
+			width: 30px;
+			padding: 0;
+		}
+	}
+}
+
+li {
+	&.horizontal-list {
+		&:hover {
+			background-color: transparent !important;
+		}
+		padding: 12px;
+	}
+}
+li {
+	.horizontal-list-item {
+		float: left;
+		&:hover {
+			background-color: white !important;
+		}
+	}
+}
+
+//like a toolbar
+.container-bar-default {
+	@include container-bar-variant($color-bar3);
+}
+
+.radiolist-container {
+	margin-top: $padding-xxlarge-vertical;
+	background-color: $color-grid-even-background;
+	overflow: hidden;
+	padding: $padding-small-vertical 0 $padding-medium-vertical $padding-base-horizontal;
+}
+
+// temporally classes for custom container
+.custom-container {
+	display: flex;
+	flex-direction: column;
+
+	.field {
+		margin-top: $padding-large-horizontal;
+
+		&:not(.grid-container) {
+			margin-left: $padding-large-horizontal;
+			margin-right: $padding-large-horizontal;
+		}
+	}
+}
+
+// A temporary Solution. #66312
+#ui-layout-west.characteristicsGrid {
+	.slick-cell input[type='checkbox'] {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2px;
+	}
+}
+
+// see for example in Characteristics-layout
+.information {
+	border-top: solid 1px $color-border;
+	padding: $padding-large-vertical $padding-medium-horizontal;
+	overflow: auto;
+}
+
+.container-info {
+	margin-bottom: $padding-xlarge-vertical;
+	padding: $padding-base-vertical;
+	width: 100%;
+
+	.info-title {
+		font-weight: bold;
+	}
+}
+
+// see for example in Clerk Photo
+.image-container {
+	/* IE need a fix width
+	   margin: auto; */
+	@extend .flex-element;
+	@extend .vert-hori-center;
+}
+
+// Solution without javascript code for set max-height & max-width
+//.image-container {
+//	position: relative;
+//	height: 100%;
+//	width: 100%;
+//
+//	img {
+//		@include translate(-50%, -50%);
+//		position: absolute;
+//		top: 50%;
+//		left: 50%;
+//		max-width: 100%;
+//		max-height: 100%;
+//	}
+//}
+
+.checkbox, .radio {
+	@extend .checkbox-radio-box;
+
+	&.spaceToUp {
+		//need e.g. in Send E-mail - Modaldialog
+		margin-top: $padding-base-vertical;
+		padding-top: 1px;
+	}
+
+	&.wrapper {
+		width: 17px; //because of IE11 -> +1px
+		margin-right: $padding-xlarge-horizontal;
+
+		input[type='checkbox'],
+		input[type='radio']  {
+			margin-top: 0;
+		}
+	}
+}
+
+/* style for toggle-switch(checkbox) */
+.toggle-switch {
+	input {
+		position: relative;
+		-webkit-appearance: none;
+		outline: none;
+		width: 36px;
+		height: 15px;
+		background-color: #fff;
+		border: 2px solid #999;
+		border-radius: 50px;
+		box-shadow: inset -21px 0 0 0 #999;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 1px;
+			background: transparent;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 0px rgb(0 0 0 / 20%);
+		}
+
+		&:before {
+			content: url(../cloud.style/content/images/control-icons.svg#ico-toggle-switch-off);
+			position: absolute;
+			left: 17px;
+			width: 16px;
+			height: 16px;
+			top: -2px;
+		}
+
+		&:checked {
+			box-shadow: inset 21px 0 0 0 #282828;
+			border-color: #282828;
+
+			&:after {
+				left: 20px;
+				box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+			}
+
+			&:before {
+				content: url(../cloud.style/content/images/control-icons.svg#ico-toggle-switch-on) " ";
+				position: absolute;
+				left: 1px;
+				top: -2px;
+			}
+		}
+
+		&:disabled {
+			background-color: #ddd;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+	//wysiwyg-editor
+.tooltip.textEditor {
+	font-size: $size-font-grid;
+	border: none;
+	width: inherit;
+}
+
+.itwo40-logo {
+	width: 87px;
+	height: 17px;
+	background-size: 87px;
+}
+
+.about-itwo40-logo {
+	height: 50px;
+	background-position: left;
+}
+
+.rule-editor {
+	margin-top: 15px;
+
+	.rule-container {
+		margin: $padding-large-horizontal;
+		min-height: 25px;
+		overflow: auto;
+
+		&:first-child {
+			margin: 0px;
+		}
+
+		.rule {
+			.form-control {
+				border-left: none;
+			}
+
+			.columns:first-child {
+				border-left: solid 1px $color-input-border;
+			}
+		}
+
+		input.compareValue {
+			width: 100%;
+		}
+
+		/* This icon is not displayed in IE. Therefore, the icon is shown in img-tag */
+		img.group {
+			@include square(16px);
+			display: block;
+			margin-left: 7px;
+		}
+	}
+
+	button.createMainGroup {
+		padding-top: $padding-medium-vertical;
+
+		img {
+			@include square(16px);
+		}
+	}
+
+	span.rule button, span.rule-group button {
+		@include square(28px);
+		background-size: $size-icon $size-icon;
+	}
+}
+
+//for example: gantt-bar-templates
+.img-40-20 {
+	.block-image {
+		width: 40px;
+		height: 20px;
+		background-size: 40px auto;
+	}
+}
+
+//for example in sidebar watchlist, sidebar reports
+.button-right-action {
+	@include button-action-wrapper(30px, 30px);
+}
+
+// Generic Struckture
+.generic-struct {
+	display: flex;
+	flex-direction: column;
+
+	.group-items {
+		display: inline-flex;
+
+
+
+		.dropdown-menu {
+			height: 300px;
+			overflow: auto;
+			top: 29px;
+		}
+
+		[data-dropdown] {
+			position: relative;
+		}
+
+		.btn-dropdown {
+			height: 27px;
+			width: 27px;
+			background-size: 16px 16px;
+			border: solid 1px $color-border;
+			margin-top: $padding-small-vertical;
+		}
+
+		.group-placeholder {
+			display: inline-flex;
+			flex-wrap: wrap;
+			height: 100%;
+
+			[generic-groupitem] {
+				display: inline-flex;
+			}
+
+			.grouped-item {
+				display: inline-flex;
+				align-items: center;
+				border: solid 1px $color-border;
+				height: 27px;
+				margin: $padding-small-vertical $padding-base-horizontal 0 0;
+
+				> span {
+					padding-left: $padding-base-horizontal;
+					padding-right: $padding-base-horizontal;
+					border-right: solid 1px $color-border;
+				}
+
+				.btn {
+					height: 27px;
+					width: 20px;
+					background-size: 16px 16px;
+
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.group-panel {
+	height: 40px;
+	width: 100%;
+	display: inline-block;
+}
+
+.group-dropdown {
+	height: 30px;
+	width: 30px;
+	padding: $padding-medium-vertical $padding-small-horizontal;
+	margin: $padding-small-vertical $padding-large-vertical $padding-small-vertical 0;
+	border: 1px solid $color-border;
+}
+
+.dropdown-child-item {
+	padding-left: 25px;
+}
+
+.dropdown-divider {
+	margin-bottom: 0;
+	margin-top: 0;
+	height: 1px;
+}
+
+.grp-dd-header {
+	padding: $padding-small-horizontal;
+}
+
+.active-filter {
+	background-color: #B9DBB5;
+}
+
+.inactive-filter {
+	background-color: #dcdcdc;
+}
+
+.info-panel {
+	height: 25px;
+	width: 100%;
+}
+
+.info-panel-color {
+	background-color: #B9DBB5;
+}
+
+// popup-container
+.generic-popup {
+	flex: 1;
+
+	.form-control {
+		height: auto;
+	}
+
+	.popup-list {
+		overflow: auto;
+
+		li {
+			margin: 0 10px 0 6px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+
+			&.header-item{
+				border-bottom: 1px solid #dcdcdc;
+
+				&:hover {
+					background-color: transparent !important;
+				}
+			}
+
+			&.popup-item-divider {
+				border-bottom: 1px solid #dcdcdc;
+			}
+
+			input[disabled] {
+				background-color: transparent;
+			}
+
+			&.colour-line {
+				height: auto;
+
+				&:hover {
+					background-color: transparent;
+				}
+
+				span {
+					input[type="color"] {
+						margin: 0;
+					}
+				}
+
+				//color picker for safari and IE
+				div.domain-type-colorpicker {
+					flex: 2;
+				}
+			}
+			//by grouping
+			&.dropdown-group:hover {
+				background-color: transparent;
+			}
+
+
+		}
+
+		.dropdown-header {
+			width: 100%;
+			padding: 6px $padding-large-horizontal;
+			border-bottom: 1px solid $color-border;
+
+
+			&.top {
+				border-top: 1px solid $color-border;
+				margin-top: $padding-base-vertical;
+			}
+		}
+
+		input[type='checkbox'],
+		input[type='radio'] {
+			margin: 0 0 0 4px;
+
+			+ label {
+				padding-left: $padding-small-horizontal;
+			}
+		}
+
+		input[type='button'] {
+			border: 1px solid $color-input-border;
+			border-bottom: none;
+			border-left: none;
+			margin-top: $padding-small-horizontal;
+			padding: $padding-small-horizontal $padding-base-vertical;
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		.header-border-top{
+			border-top: 1px solid #dcdcdc;
+		}
+
+		input[type="button"]{
+			border: 1px solid #ccc;
+			border-bottom: none;
+			border-left: none;
+			margin-top: 4px;
+			padding: 4px 4px;
+		}
+
+		input[type="color"]::-webkit-color-swatch-wrapper {
+			padding: 0;
+		}
+
+		input[type="color"]::-webkit-color-swatch {
+			border: none;
+		}
+	}
+
+	input[type="button"]{
+		width: 50%;
+		border: 1px solid #dcdcdc;
+		border-bottom: none;
+		border-left: none;
+		padding: 4px;
+	}
+}
+// End: Generic Struckture
+
+// Category Strucktur Popup in Ticket-system //
+.ticket-categories {
+	flex: 1;
+	flex-basis: auto;
+	width: auto;
+	overflow: hidden;
+
+	.categories-wrapper {
+		height: 300px;
+		border-bottom: solid 1px $color-bar1;
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+
+	button {
+		line-height: 100%;
+	}
+}
+
+.category-dropdown {
+	width: 250px;
+	height: 30px;
+	border-radius: 5px 0 0 5px;
+	background-position-x: right;
+	background-size: $size-icon $size-icon;
+	padding: 0 20px 0 10px;
+	text-align: left;
+}
+//End
+
+.table-default {
+	tbody {
+		tr {
+			td, th {
+				padding: $padding-small-vertical $padding-medium-horizontal 0 0;
+				border: none;
+			}
+		}
+	}
+}
+
+//used in skype-sidebar
+.search-field {
+	&.primary {
+		display: flex;
+		height: 30px;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+
+		input[type='text'] {
+			flex: 1;
+			padding: 5px 6px 2px;
+			border: none;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		button {
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+// --------------------------------------------------
+// Status Bar (for the container)
+// --------------------------------------------------
+.statusbar {
+	display: flex;
+	background-color: $color-bar3;
+	padding-right: $padding-medium-horizontal;
+
+	.right-side {
+		justify-content: flex-end;
+	}
+
+	.item {
+		margin-left: $padding-medium-horizontal;
+		padding: 0;
+		line-height: $statusbar-height;
+		height: $statusbar-height;
+
+		&.none-distance {
+			margin-left: 0;
+			padding: 0;
+		}
+	}
+
+	button {
+		&[class*="ico-"] {
+			@include icon-placeholder-left($padding-left: $padding-small-vertical);
+			margin-left: $padding-small-vertical;
+		}
+	}
+
+	.statusbar { //type=sublist -> new statusbar
+		padding-right: 0;
+	}
+}
+
+//actionlist -> todo: bring statusbar and actionlist together
+.row-2-groups {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	li {
+		display: inline-flex;
+	}
+}
+
+.toolbar-overflow-showimages {
+	.item-list-content {
+		button {
+			text-align: left;
+
+			span {
+				@extend .app-font-family;
+				margin-left: 6px;
+			}
+
+			&.dropdown-toggle {
+				margin: 0;
+				padding-left: 0; //
+			}
+		}
+
+		.color-picker-wrapper {
+			display: flex;
+
+			&.fa:before {
+				align-self: center;
+			}
+
+			.domain-type-color {
+				border: none;
+
+				.input-group-content {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.popup-content {
+	[platform-action-item-list] {
+		@extend .flex-element;
+	}
+}
+
+//.popup-content {
+//	.item-list-content {
+//		button[class*="ico"] {
+//			span {
+//				margin-left: 0;
+//			}
+//		}
+//	}
+//}
+
+.item-list-content {
+	button {
+		padding: 0 $padding-base-horizontal;
+		width: 100%;
+		height: 30px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		background-position: -9999px;
+		text-align: left;
+
+		&[class*="ico"] {
+			text-align: left;
+			background-position: 6px center;
+			background-size: 16px 16px;
+
+			span {
+				margin-left: 26px;
+			}
+		}
+
+		&.dropdown-btn-text {
+			text-align: left;
+
+			&.small {
+				min-width: 50px;
+			}
+			&.middle {
+				min-width: 150px;
+			}
+
+			&::after {
+				content: " ";
+				display: block;
+				width: 0;
+				height: 0;
+				border-top: $border-width-large solid $color-text;
+				border-right: $border-width-large solid transparent;
+				border-left: $border-width-large solid transparent;
+				position: absolute;
+				right: 2px;
+				top: 40%;
+			}
+		}
+	}
+}
+
+.skype-contact-business-card {
+	width: 500px;
+	padding: 16px 10px;
+
+	.image {
+		width: 64px;
+		height: 64px;
+		margin-right: 8px;
+
+		img {
+			max-height: 64px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		div {
+			border-radius: 8px;
+         position: absolute;
+			bottom: -2px;
+         right: -2px;
+		}
+	}
+
+	.flex-box:first-child {
+		margin-bottom: 10px;
+	}
+
+	.flex-box:last-child {
+		margin-top: 16px;
+		.flex-element {
+			div {
+				margin-bottom: 16px;
+
+				h3 {
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+}
+
+//used in search-form-wizard
+.list-container-primary {
+	&.active {
+		.status {
+			background-color: #0067B1;
+		}
+	}
+
+	.status {
+		background-color: #DCDCDC;
+		width: 10px;
+	}
+
+	div {
+		.subview-container {
+
+			> div {
+				padding: 0 6px;
+				border-left: solid 1px #dcdcdc;
+
+				&.padding-none {
+					padding: 0;
+				}
+
+				&:first-child {
+					border-left: none;
+				}
+
+				.icon-button {
+					@include square(28px);
+					border-left: solid 1px $color-border;
+				}
+			}
+		}
+		.none-top-border {
+			border-top: none;
+		}
+	}
+
+	div {
+		.splitview-container {
+
+			> div {
+				padding: 0 6px;
+				border-left: solid 1px #dcdcdc;
+
+				&.padding-none {
+					padding: 0;
+				}
+
+				&:first-child {
+					border-left: none;
+				}
+
+				.icon-button {
+					@include square(28px);
+					border-left: solid 1px $color-border;
+				}
+			}
+		}
+		.none-top-border {
+			border-top: none;
+		}
+	}
+
+	.big {
+		flex: 2;
+		margin-right: 16px;
+	}
+
+	.small {
+		font-size: 100%;
+		flex: 1;
+		display: flex;
+
+		> div {
+			margin-top: $padding-medium-vertical;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.domain-type-datetime {
+		input {
+			width: 100px;
+		}
+	}
+
+	.interactionContainer {
+		padding: 8px 0;
+
+		.item + .item {
+			.form-control {
+				&:focus {
+					border-color: $color-input-border;
+				}
+			}
+		}
+		.item {
+			span:nth-child(2){
+				.form-control {
+					border-left: none;
+				}
+			}
+		}
+	}
+}
+
+//used in workflow send-rfq dialog
+.two-side-row-1 {
+	display: flex;
+
+	h1 {
+		color: #999;
+	}
+
+	.left {
+		padding: $padding-xxlarge-vertical;
+		background-color: #f3f3f3;
+		border-right: solid 1px $color-border;
+	}
+
+	.right {
+		flex: 3;
+	}
+}
+
+//used in Tile-Config-Dialog
+.content-border-container {
+	padding: $padding-medium-horizontal;
+	border: solid 1px $color-grid-border;
+}
+
+//used in model-viewer-hoops
+#transparentContainer {
+	@include container-position(0, auto, auto, 0);
+	@include square(100%);
+	padding: 8px;
+	background-color: transparent;
+	pointer-events: auto;
+}
+
+#resizableWrapper {
+	@include container-position(auto, 8px, 8px, auto);
+	border: solid 1px $color-border;
+
+	.control-container {
+		background-color: #fff;
+		height: 30px;
+		min-width: 90px;
+
+		.resize-icon {
+			transform: rotate(180deg);
+		}
+
+		.collapse-button {
+			@include container-position(0, 0, auto, auto);
+			@include square(30px);
+			transition: transform 500ms ease !important;
+
+			&.collapsed {
+				transform: rotate(180deg);
+				transition: transform 500ms ease;
+			}
+		}
+	}
+
+	.resizable {
+		@include square(100%);
+	   background: transparent;
+
+		.resizers {
+			@include square(100%);
+			box-sizing: border-box;
+
+			.resizer {
+				@include square(20px);
+				position: absolute;
+				border-radius: 0;
+				background: transparent;
+			   border: 0px solid inherit;
+
+				&.top-left {
+					left: -5px;
+			      top: -5px;
+			      cursor: nwse-resize; /*resizer cursor*/
+				}
+
+				&.top-right {
+					right: -5px;
+					top: -5px;
+					cursor: nesw-resize;
+				}
+
+				&.bottom-left {
+					left: -5px;
+					bottom: -5px;
+					cursor: nesw-resize;
+				}
+
+				&.bottom-right {
+					right: -5px;
+					bottom: -5px;
+					cursor: nwse-resize;
+				}
+			}
+		}
+	}
+}
+
+// accordion in form generator
+.form-accordion .panel-title {
+	margin-bottom: 0;
+}
+
+//used in Estimate Module/Cost Groups
+.accordion-directive-wrapper {
+	.panel {
+		border: none;
+
+		.panel-heading {
+			h4 {
+				.accordion-toggle {
+					display: flex;
+
+					.platform-form-group-header-text {
+						@extend .ellipsis;
+						flex: 1;
+					}
+				}
+			}
+		}
+
+		.panel-body {
+			padding: 0;
+
+			.tree-classic {
+				li {
+					line-height: 26px;
+
+					&:hover {
+						background-color: #aec3d4;
+					}
+
+					&.tree-leaf {
+						div {
+							display: flex;
+						}
+					}
+
+					.tree-selected {
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+#splitter.fullscreen {
+	> .k-splitter, > .k-splitter * {
+		visibility: collapse !important;
+	}
+
+	> .k-pane {
+		width: 100% !important;
+		height: 100% !important;
+		top:0 !important;
+		left:0 !important;
+		position: absolute !important;
+	}
+}
+
+.splitcontainer-view {
+	height: 100% !important;
+	height: 100% !important;
+	margin: 0;
+}
+
+.splitcontainer {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	&.k-splitter {
+		border-color: transparent;
+	}
+}
+
+.subview-header {
+	&.toolbar {
+		 .title {
+			overflow: visible;
+			margin-right: $padding-medium-horizontal;
+
+			&.ellipsis {
+				overflow: hidden;
+			}
+		}
+	}
+
+	> div[data-platform-menu-list] {
+		order: 1;
+		flex: none;
+	}
+
+	> .tools {
+		order: 2;
+		flex: 1;
+		justify-content: flex-end;
+	}
+
+	> platform-fullsize-button {
+		order: 3
+	}
+
+	platform-fullsize-button, [data-platform-fullsize-button] {
+		margin-left: auto;
+		border-left: $border-width-default solid $color-body-background;
+
+		button {
+			@extend %toolbar-button;
+		}
+	}
+
+	.toggle-switch {
+		padding: $padding-small-vertical 0 0 $padding-base-horizontal;
+	}
+}
+
+.search-control-popup {
+	.top-container {
+		padding: 0 $padding-base-horizontal;
+	}
+
+	input[type='text'] {
+		margin: $padding-base-vertical 0;
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+// Extention to set a split area to fullscreen
+// used in Sales.Bid.SplitQuantities
+.split-container {
+	&.single {
+		> .k-splitbar, > .k-pane:not(.full) {
+			display: none;
+		}
+
+		> .k-pane.full {
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+}
+
+.splitview-header {
+	&.toolbar {
+		background-color: transparent !important;
+	}
+}
+
+.overlay-wrapper {
+	aside {
+		padding: $padding-large-horizontal;
+
+		main {
+			margin-top: $padding-medium-vertical;
+
+			.image {
+				margin: $padding-medium-vertical 0;
+				position: relative;
+			}
+			.lnk {
+				margin-top: $padding-medium-vertical;
+				display: block;
+			}
+		}
+
+		+ aside {
+			padding: 0px;
+		}
+
+	}
+
+	.image {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+/* used in Estimate Rules/Parameters popup */
+.userFormAssignParamTabBg {
+	background-color: #fff;
+}
+
+/* used in modules-container. Container: Command/Navbar */
+.toggle-overlay-container {
+	@extend .subview-container;
+
+	aside {
+		padding: 0;
+		flex: 1;
+
+		header {
+			padding: 15px 20px 0 20px;
+		}
+
+		main {
+			padding: 0 20px 15px 20px;
+		}
+
+		&.image {
+			width: 25px;
+			flex: none;
+		}
+
+		h4 {
+			color: #666;
+		}
+	}
+}
+
+.navbar-wrapper, .combar-wrapper {
+	padding: $padding-xxlarge-horizontal;
+	width: 500px;
+}
+
+.combar-wrapper {
+	aside {
+		&.image {
+			background-color: $color-rib;
+		}
+	}
+}
+
+.container-type-1 {
+	margin-bottom: $padding-large-vertical;
+
+	.title {
+		@extend .font-bold;
+		margin-bottom: $padding-base-vertical;
+	}
+
+	.description {
+		margin-bottom: $padding-xlarge-vertical;
+	}
+}
+
+.context-menu-item {
+	display: flex;
+	align-items: center;
+
+	span {
+		flex: 1;
+	}
+}
+
+.ui-expandcollapsenode{
+	cursor: auto;
+}
+
+.minus-sign {
+	@include square(12px);
+	display: inline-block;
+	position: relative;
+
+	&.plus::before,
+	&::after {
+		content: '';
+		position: absolute;
+		background-color: #555;
+	}
+
+	&.plus::before {
+		width: 2px;
+		height: 100%;
+		left: 50%;
+		transform: translate(-50%, 0%);
+	}
+
+	&::after {
+		width: 100%;
+		height: 2px;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&.plus:hover::before,
+	&:hover::after {
+		background-color: $color-hover3;
+	}
+}
+
+.ui-breadcrumb {
+	display: flex;
+	white-space: nowrap;
+	overflow: hidden;
+
+	.ui-breadcrumb-item {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		flex: 0 auto;
+
+		.image {
+			@include size(14px, 16px);
+			display: inline-block;
+			background-size: 12px 12px;
+			vertical-align: bottom;
+			margin: 0 $padding-small-vertical;
+		}
+
+		a {
+			pointer-events: none;
+			cursor: none;
+			color: inherit;
+
+			&.clickable {
+				cursor: pointer;
+				pointer-events: auto;
+				&:hover {
+					color: $color-link;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"project": {
+		"assembly": {
+            "quantityFactor1": "Mengenfaktor 1(Project)",
+            "quantityFactor2": "Mengenfaktor 2(Project)",
+            "quantityFactor3": "Mengenfaktor 3(Project)",
+            "quantityFactor4": "Mengenfaktor 4(Project)",
+            "costFactor1": "Kostenfaktor 1(Project)",
+            "costFactor2": "Kostenfaktor 2(Project)",
+            "lgmJobFk":"Auftrag"
+		}
+	}
+}

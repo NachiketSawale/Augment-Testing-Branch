@@ -1,0 +1,537 @@
+{
+  "companycode": "904",
+  "CosMasters": [
+    {
+      "code": "103",
+      "descriptionInfo": {
+        "description": "COS script Can access estimate parameters",
+        "OtherLanguages": [
+          {
+            "Culture": "ch",
+            "Description": "zhongwen"
+          },
+          {
+            "Culture": "de",
+            "Description": "dewen"
+          }
+        ]
+      },
+      "reference": "010",
+      "cosGroupCode": "A-2-2",
+      "cosGroupRootCode":"A",
+      "cosType": "Super Structure",
+      "matchCode": "010",
+      "commentText": "0200",
+      "selectStatement": "02",
+      "isDistinctInstances": true,
+      "structureCode": "PLANT",
+      "costGroup1Code": "P01",
+      "costGroup2Code": "P02",
+      "costGroup3Code": "P03",
+      "costGroup4Code": "P04",
+      "costGroup5Code": "",
+      "script": "//var t=estimate.getParameter('P02');\n//log.info(t);\nvar l=context.createLineItem().setDescription('estimateParameters:').setQuantity(50);\nl.createMaterial().setDescription('youad');",
+      "validateScript": "var t=10;\t",
+      "cosMasterParameterGroups": [
+        {
+          "descriptionInfo": {
+            "description": "Parameters",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "sorting": 1,
+          "isDefault": true
+        },
+        {
+          "descriptionInfo": {
+            "description": "N01",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "sorting": 2,
+          "isDefault": false
+        }
+      ],
+      "cosMasterParameters": [
+        {
+          "descriptionInfo": {
+            "description": "property  and query",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "groupDescription": "Parameters",
+          "variableName": "t01",
+          "typeDescription": "Decimal6",
+          "uom": null,
+          "defaultType": "Property or Quantity Query",
+          "propertyName": "cpiSourceID",
+          "quantityQuery": "QTO(Type:=\"Volume\";UoM:=\"m3\")",
+          "defaultValue": 10,
+          "sorting": 1,
+          "isLookup": true,
+          "cosMasterParameterValues": [
+            {
+              "descriptionInfo": {
+                "description": "10",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "parameterValue": "10.000001",
+              "sorting": 1,
+              "isDefault": true
+            }
+          ]
+        },
+        {
+          "descriptionInfo": {
+            "description": "property and default",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "groupDescription": "Parameters",
+          "variableName": "t02",
+          "typeDescription": "Decimal6",
+          "uom": null,
+          "defaultType": "Property or given default",
+          "propertyName": "cpiTriangleCount",
+          "quantityQuery": null,
+          "defaultValue": "2.000000",
+          "sorting": 2,
+          "isLookup": true,
+          "cosMasterParameterValues": [
+            {
+              "descriptionInfo": {
+                "description": "02",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "parameterValue": "2.000000",
+              "sorting": 1,
+              "isDefault": false
+            }
+          ]
+        },
+        {
+          "descriptionInfo": {
+            "description": "query",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "groupDescription": "Parameters",
+          "variableName": "t03",
+          "typeDescription": "Decimal6",
+          "uom": null,
+          "defaultType": "Quantity Query",
+          "propertyName": null,
+          "quantityQuery": "QTO(Type:=\"Volume\";UoM:=\"m3\")",
+          "defaultValue": null,
+          "sorting": 3,
+          "isLookup": true,
+          "cosMasterParameterValues": [
+            {
+              "descriptionInfo": {
+                "description": "10",
+                "otherLanguages": null
+              },
+              "parameterValue": "10.006520",
+              "sorting": 1,
+              "isDefault": false
+            },
+            {
+              "descriptionInfo": {
+                "description": "20",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "parameterValue": "20.000000",
+              "sorting": 2,
+              "isDefault": true
+            }
+          ]
+        },
+        {
+          "descriptionInfo": {
+            "description": "default",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "groupDescription": "Parameters",
+          "variableName": "t04",
+          "typeDescription": "Decimal6",
+          "uom": null,
+          "defaultType": "Given Default",
+          "propertyName": null,
+          "quantityQuery": null,
+          "defaultValue": "2515",
+          "sorting": 4,
+          "isLookup": true,
+          "cosMasterParameterValues": [
+            {
+              "descriptionInfo": {
+                "description": "02",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "parameterValue": "1.000000",
+              "sorting": 1,
+              "isDefault": false
+            },
+            {
+              "descriptionInfo": {
+                "description": "03",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "parameterValue": "2.000000",
+              "sorting": 2,
+              "isDefault": true
+            }
+          ]
+        },
+        {
+          "descriptionInfo": {
+            "description": "query",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "groupDescription": "Parameters",
+          "variableName": "t05",
+          "typeDescription": "Decimal6",
+          "uom": null,
+          "defaultType": "Quantity Query",
+          "propertyName": null,
+          "quantityQuery": "QTO(Type:=\"Volume\";UoM:=\"m3\")",
+          "defaultValue": null,
+          "sorting": 5,
+          "isLookup": true,
+          "cosMasterParameterValues": [
+            {
+              "descriptionInfo": {
+                "description": "01",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "parameterValue": "0.000000",
+              "sorting": 1,
+              "isDefault": false
+            },
+            {
+              "descriptionInfo": {
+                "description": "03",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "parameterValue": "0.000000",
+              "sorting": 2,
+              "isDefault": true
+            }
+          ]
+        }
+      ],
+      "cosAssemblies": [
+        {
+          "code": "N01",
+          "commentText": "0001",
+          "assemblyCatalogCode": "1.1.1.1",
+          "assemblyCode": "A1-5"
+        },
+        {
+          "code": "N02",
+          "commentText": "0002",
+          "assemblyCatalogCode": "1.1.1.1",
+          "assemblyCode": "A1-5"
+        }
+      ],
+      "cosWicBoqs": [
+        {
+          "code": "N01",
+          "commentText": "0001",
+          "wicCatalogCode": "GD",
+          "boqCode": "8a",
+          "boqItemReference": "8a"
+        },
+        {
+          "code": "N02",
+          "commentText": "0002",
+          "wicCatalogCode": "GD",
+          "boqCode": "8a",
+          "boqItemReference": "8a"
+        }
+      ],
+      "cosActivityTemplates": [
+        {
+          "code": "N0111",
+          "commentText": "0001",
+          "activityTemplateGroupCode": "5",
+          "activityTemplateCode": "5.1"
+        },
+        {
+          "code": "N0211",
+          "commentText": "00002",
+          "activityTemplateGroupCode": "5",
+          "activityTemplateCode": "5.1"
+        },
+        {
+          "code": "121",
+          "commentText": null,
+          "activityTemplateGroupCode": "5",
+          "activityTemplateCode": "5.1"
+        }
+      ],
+      "cosControllingGroups": [
+        {
+          "code": "N01",
+          "commentText": "00001",
+          "controllingGroupCode": "CAT",
+          "controllingGroupDetailCode": "CAT1"
+        },
+        {
+          "code": "N02",
+          "commentText": "00002",
+          "controllingGroupCode": "REG",
+          "controllingGroupDetailCode": "REG4"
+        }
+      ],
+      "cosTemplates": [
+        {
+          "descriptionInfo": {
+            "description": "N01",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "sorting": 1,
+          "isDefault": false,
+          "parameters": [
+            {
+              "descriptionInfo": {
+                "description": "N02",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "variableName": "t04",
+              "typeDescription": "Text",
+              "defaultType": "Given Default",
+              "propertyName": null,
+              "quantityQuery": null,
+              "defaultValue": "2515",
+              "sorting": 1
+            },
+            {
+              "descriptionInfo": {
+                "description": "N02",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "variableName": "t03",
+              "typeDescription": "Text",
+              "defaultType": "Quantity Query",
+              "propertyName": null,
+              "quantityQuery": "QTO(Type:=\"Volume\";UoM:=\"m3\")",
+              "defaultValue": null,
+              "sorting": 2
+            }
+          ]
+        },
+        {
+          "descriptionInfo": {
+            "description": "N02",
+            "OtherLanguages": [
+              {
+                "Culture": "ch",
+                "Description": "zhongwen"
+              },
+              {
+                "Culture": "de",
+                "Description": "dewen"
+              }
+            ]
+          },
+          "sorting": 2,
+          "isDefault": true,
+          "parameters": [
+            {
+              "descriptionInfo": {
+                "description": "N02",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "variableName": "t01",
+              "typeDescription": "Decimal4",
+              "defaultType": "Property or Quantity Query",
+              "propertyName": "Höhe für automatische Raumberechnung",
+              "quantityQuery": "QTO(Type:=\"Volume\";UoM:=\"m3\")",
+              "defaultValue": null,
+              "sorting": 1
+            },
+            {
+              "descriptionInfo": {
+                "description": "N02",
+                "OtherLanguages": [
+                  {
+                    "Culture": "ch",
+                    "Description": "zhongwen"
+                  },
+                  {
+                    "Culture": "de",
+                    "Description": "dewen"
+                  }
+                ]
+              },
+              "variableName": "t03",
+              "typeDescription": "Text",
+              "defaultType": "Quantity Query",
+              "propertyName": null,
+              "quantityQuery": "QTO(Type:=\"Volume\";UoM:=\"m3\")",
+              "defaultValue": null,
+              "sorting": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

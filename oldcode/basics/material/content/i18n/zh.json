@@ -1,0 +1,185 @@
+﻿{
+  "basics": {
+    "material": {
+      "moduleName": "材料",
+      "toolBar":{
+        "checkAll":"全选"
+      },
+      "wizard":{
+        "importMaterialWizard":"导入材料向导",
+        "importMaterialRecord":"导入材料记录",
+        "import3dModel":"Import 3D Model",
+        "chooseFile":"!Choose File"
+      },
+      "record": {
+        "catalogTitle": "材料目录筛选",
+        "groupTitle": "材料组筛选",
+        "gridViewTitle": "材料记录",
+        "formViewTitle": "材料记录明细",
+        "header": "记录",
+        "materialCatalog": "材料目录",
+        "materialCatalogCode": "材料目录编码",
+        "materialCatalogDescription": "材料目录描述",
+        "materialGroup": "材料组",
+        "materialGroupCode": "材料组编码",
+        "materialGroupDescription": "材料组描述",
+        "matchCode": "匹配码",
+        "furtherDescription": "更多描述",
+        "aBCGroup": "ABC 组",
+        "retailPrice": "零售价",
+        "listPrice": "标价",
+        "discount": "折扣%",
+        "charges": "运费",
+        "priceExtras": "额外费用",
+        "costPrice": "成本",
+        "estimatePrice": "估价",
+        "sellUnit": "销售单位",
+        "discountGroup": "折扣组",
+        "discountGroupCode": "折扣组编码",
+        "discountGroupDescription": "折扣组描述",
+        "weightType": "重量类型",
+        "weightNumber": "单位",
+        "weight": "重量",
+        "externalCode": "外部编码",
+        "neutralMaterialCatalog": "中性材料目录",
+        "neutralMaterialCatalogCode": "材料目录编码",
+        "neutralMaterial": "中性材料",
+        "neutralMaterialCode": "中性材料编码",
+        "neutralMaterialDescription": "中性材料描述",
+        "addError": "所有的条件类型都已被使用，不能再添加新项。",
+        "duplicateError": "该条件类型已经存在，不能再被使用。",
+        "priceConditionTitle": "物料调价",
+        "priceConditionTypeFormulaError": "!Price Condition Type: {{errorCode}} 's formula might be wrong",
+        "filter": "筛选",
+        "partnerAgreement": "!Partner Agreement",
+        "3DViewer": "3D 视图",
+        "minQuantity":"!Minimum Order Qty",
+		"entityUserDefinedFields":"用户自定义字段"
+      },
+      "error": {
+        "materialCodeUniqueError": "在同一材料目录中材料编码应该唯一",
+        "materialGroupSelectError": "!Catalog cannot be selected as group."
+      },
+      "warning": {
+        "priceConditionTypeWarningMsg": "!All pre-defined price condition line types have been listed thus cannot add new record.",
+        "import3dModelWarningMsg": "Please select a material.",
+        "delete3dModelWarningMsg": "!There is none 3D model of selected material",
+        "warningTitle": "!Warning"
+      },
+      "documents": {
+        "title": "文档",
+        "detailTitle": "文档明细",
+        "materialDocumentToolbarLoadDocument": "上传/打开/下载文件",
+        "materialDocumentName": "文档名称",
+        "materialDocumentEmptyFileErrorMessage": "文档不能为空，请选择文档上传!"
+      },
+      "characteristic": {
+        "noMaterialSelected": "请先选择材料",
+        "noMaterialGroupSelected": "请先选择材料组",
+        "property": "属性",
+        "char": "特征",
+        "title": "属性",
+        "detailTitle": "属性明细"
+      },
+      "specification": {
+        "title": "说明",
+        "formatText":"!Specification Formatted Text",
+        "plainText":"!Specification Plain Text"
+      },
+      "basSpecification":"详细说明",
+      "preview": {
+        "title": "预览"
+      },
+      "tab": {
+        "materialRecord": "记录",
+        "materialDetail": "明细",
+        "materialAttribute": "属性",
+        "materialDocument": "文档"
+      },
+      "view": {
+        "materialRecord": "材料记录",
+        "materialDetail": "材料明细",
+        "materialAttribute": "材料属性"
+      },
+      "lookup": {
+        "SupplierAscending": "供应商 - 升序",
+        "SupplierDescending": "供应商 - 降序",
+        "CodeAscending": "编码 - 升序",
+        "CodeDescending": "编码 - 降序",
+        "PriceDescending": "价格- 高到低",
+        "PriceAscending": "价格 - 低到高",
+        "gross": "毛重",
+        "net": "净重",
+        "packaging": "分包",
+        "kg": "千克",
+        "to": "顿",
+        "g": "克"
+      },
+      "materialSearchLookup": {
+        "htmlTranslate": {
+          "attributes": "属性",
+          "documents":"!Documents",
+          "minQuantity":"!Min Quantity",
+          "leadTimes":"交付周期",
+          "days":" {{days}} 天",
+          "searchResults": "搜索结果",
+          "category": "分类",
+          "back": "返回",
+          "information": "信息",
+          "keyWord": " 输入关键字",
+          "supplier": "供应商",
+          "materialSearch":"材料搜索",
+          "all": "全部",
+          "uom": "Uom",
+          "price": "Price"
+        },
+        "page": {
+          "firstText": "第一页",
+          "previousText": "上一页",
+          "nextText": "下一页",
+          "lastText": "最后一页"
+        }
+      },
+      "import":{
+        "materialCode":"!Material Code",
+        "catalogCode" : "!Material Catalog",
+        "selectOneCatalog":"!Please Select One Material Catalog Record",
+        "keepOrNewMaterialGroup":"!Group Setting",
+        "attribute":"!Attribute Quantity",
+        "documents":"!Document Quantity",
+        "document":"!Document Files",
+        "3DView":"!3DModelFile",
+        "image":"!Image",
+        "priceConditionValue":"!Price Condition Value",
+        "priceConditionType":"!Price Condition Type",
+        "specification":"!Specification",
+        "group":"!Group Code Level {{grade}}",
+        "groupDescription":"!Group Description of Level {{grade}}",
+        "property":"!Property {{prop}}",
+        "dynamicPropertyName":"!Property",
+        "dynamicProperty":"{{name}} {{prop}}",
+        "dynamicMaterialDocument":"!{{name}} {{prop}}",
+        "headName":"!Import Material",
+        "structure":"!Group of Level {{grade}} Structure",
+        "blobSpecification":"Blob Specification",
+        "placeholder" : "请选择zip或者是excel文件",
+        "importMaterial":"!Import Material",
+        "importPriceList":"!Import Price List",
+        "specifiedPriceVersion": "!Specified Price Version",
+        "importType": "!Import Type"
+      },
+      "priceList": {
+        "materialPriceVersion": "!Price Version",
+        "materialPriceVersionOption": "!Price Version Option",
+        "priceList": "!Price List",
+        "priceListTitle": "!Price Lists",
+        "priceListDetailTitle": "!Price List Detail",
+        "priceListPriceConditionTitle": "!Price List Condition",
+        "importPriceList":"!Import Price List"
+      },
+      "leadTimeExtra": "!Express Lead Time",
+      "materialCatalog": "!Material Catalog",
+      "procurementStructure": "!Procurement Structure"
+    }
+  }
+}

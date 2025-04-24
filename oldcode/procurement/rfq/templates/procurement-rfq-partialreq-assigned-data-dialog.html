@@ -1,0 +1,15 @@
+<div class="wizard-wrapper wizard-dialog "
+     data-ng-controller="procurementRfqPartialReqAssignedDialogController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div procurement-rfq-partialreq-assigned-data-directive></div>
+	</section>
+	<div class="modal-footer">
+		<button data-ng-disabled="disabledOk()" type="button" class="btn btn-default" data-ng-click="ok()">{{'cloud.common.ok' | translate}}</button>
+		<button type="button" data-ng-click="modalOptions.cancel()" class="btn btn-default">{{'cloud.common.cancel' | translate}}</button>
+	</div>
+	<div data-cloud-common-overlay data-loading="isRunning"></div>
+</div>
+
+
+

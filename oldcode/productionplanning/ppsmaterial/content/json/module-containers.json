@@ -1,0 +1,195 @@
+[
+	{
+		"id": "productionplanning.ppsmaterial.materialCatalog",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.record.catalogTitle",
+		"controller": "basicsMaterialMaterialCatalogGridController",
+		"uuid": "aa051ff3aecb4616824bd8ca6cfbbf4a",
+		"permission": "aa051ff3aecb4616824bd8ca6cfbbf4a"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.materialGroup",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.record.groupTitle",
+		"controller": "basicsMaterialMaterialGroupsController",
+		"uuid": "bb5a7bda5ffa4ce7ac27655af85b66f4",
+		"permission": "bb5a7bda5ffa4ce7ac27655af85b66f4"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.record.listViewTitle",
+		"controller": "productionplanningPpsmaterialRecordListController",
+		"uuid": "1ed6d6955a20488e83c10c1c76326275",
+		"permission": "1ed6d6955a20488e83c10c1c76326275"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.ppsmaterial.record.detailViewTitle",
+		"controller": "productionplanningPpsmaterialRecordDetailController",
+		"uuid": "ef4562bf23b54fcba3f84643bd64212c",
+		"permission": "1ed6d6955a20488e83c10c1c76326275"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.productDesc.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.ppsmaterial.productDescription.detailViewTitle",
+		"controller": "productionplanningPpsmaterialProductdescDetailController",
+		"uuid": "211110394b224dd392b69c5b60fe4e80",
+		"permission": "211110394b224dd392b69c5b60fe4e80"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.productDesc.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.productDescription.listViewTitle",
+		"controller": "productionplanningPpsmaterialProductdescListController",
+		"uuid": "4f92e30bd24849b4bf2f6db12e83afde",
+		"permission": "211110394b224dd392b69c5b60fe4e80"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.productDesc.parameter.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.productDescParameter.listViewTitle",
+		"controller": "productionplanningPpsmaterialProductdescParameterListController",
+		"uuid": "3a0ff92d9fc74bc691845427bf566bd3",
+		"permission": "3a0ff92d9fc74bc691845427bf566bd3"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.materialEventType.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.materialEventType.listViewTitle",
+		"controller": "productionplanningPpsmaterialEventTypeListController",
+		"uuid": "43d8655f5b7b4357a3b3a7839ce7243b",
+		"permission": "43d8655f5b7b4357a3b3a7839ce7243b"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.materialEventType.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.ppsmaterial.materialEventType.detailViewTitle",
+		"controller": "productionplanningPpsmaterialEventTypeDetailController",
+		"uuid": "0de5eadccc3f47d98ff39b2af6d6dd2c",
+		"permission": "43d8655f5b7b4357a3b3a7839ce7243b"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.ppsEventTypeRel.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.ppsEventTypeRelation.listViewTitle",
+		"controller": "productionplanningPpsmaterialPpsEventTypeRelationListController",
+		"uuid": "5ea20e4b3d0f40399bbf006633500b26",
+		"permission": "5ea20e4b3d0f40399bbf006633500b26"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.ppsEventTypeRel.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.ppsmaterial.ppsEventTypeRelation.detailViewTitle",
+		"controller": "productionplanningPpsmaterialPpsEventTypeRelationDetailController",
+		"uuid": "de0bbc30b6954aec9ed0abf0c66b4130",
+		"permission": "5ea20e4b3d0f40399bbf006633500b26"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.translate",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "e2839982fe5f4032b865401612a1611c",
+		"wizardDisabled": "true"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.ppsCadToMaterial.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.ppsCadToMaterial.listViewTitle",
+		"controller": "ppsCadToMaterialListController",
+		"uuid": "6727ab5728gb492d8612gv47e73dgh90",
+		"permission": "6727ab5728gb492d8612gv47e73dgh90"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.ppsCadToMaterial.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.ppsmaterial.ppsCadToMaterial.detailViewTitle",
+		"controller": "ppsCadToMaterialDetailController",
+		"uuid": "7727ab5728gb492d8612gv47e73dgh97",
+		"permission": "6727ab5728gb492d8612gv47e73dgh90"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.ppsMaterialToMdlProductType.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.ppsMaterialToMdlProductType.listViewTitle",
+		"controller": "ppsMaterialToMdlProductTypeListController",
+		"uuid": "dc136f0fea314fcda4517b27edbe0dee",
+		"permission": "dc136f0fea314fcda4517b27edbe0dee"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.ppsMaterialToMdlProductType.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.ppsmaterial.ppsMaterialToMdlProductType.detailViewTitle",
+		"controller": "ppsMaterialToMdlProductTypeDetailController",
+		"uuid": "6813f89fc9974d5daa7da9f1079c5dfc",
+		"permission": "dc136f0fea314fcda4517b27edbe0dee"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.ppsMaterialComp.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.ppsMaterialComp.listViewTitle",
+		"controller": "ppsMaterialCompatibilityListController",
+		"uuid": "addd32320fb24fd3b047db0ab575816c",
+		"permission": "addd32320fb24fd3b047db0ab575816c"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "7c0e0311bc1543c2876ed2d9526f4150",
+		"controller": "",
+		"sectionId": "59",
+		"mainService": "productionplanningPpsMaterialRecordMainService"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.characteristic2",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"uuid": "63a70db448184034ac9df80616f3255d",
+		"controller": "",
+		"sectionId": "60",
+		"mainService": "productionplanningPpsMaterialRecordMainService"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.summarized.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.summarized.listViewTitle",
+		"controller": "productionplanningPpsmaterialSummarizedListController",
+		"uuid": "99b37b037ffd4ed98965378f2061fc61",
+		"permission": "211110394b224dd392b69c5b60fe4e80"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.mapping.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.mapping.listViewTitle",
+		"controller": "productionplanningPpsmaterialMappingListController",
+		"uuid": "3f4a022fd7a24394892e4666b5d24240"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.drawingcomponent.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.drawingComponent.listViewTitle",
+		"controller": "mdcDrawingComponentListController",
+		"uuid": "fea2f801c7524d83905a3de9c5b3b6f8",
+		"permission": "fea2f801c7524d83905a3de9c5b3b6f8"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.strandpattern.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppsmaterial.strandPatternListViewTitle",
+		"controller": "ppsMaterialStrandPatternListController",
+		"uuid": "cf50201f373f4b30848e552aa1cec739",
+		"permission": "8e390164f0d441fba5a8f7dc5c4da845"
+	},
+	{
+		"id": "productionplanning.ppsmaterial.preview",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "productionplanning.ppsmaterial.preview.title",
+		"controller": "productionplanningPpsmaterialPreviewController",
+		"uuid": "875C61BB2C5A4F54987A8DB8125DD211",
+		"permission": "1ed6d6955a20488e83c10c1c76326275"
+	}
+]

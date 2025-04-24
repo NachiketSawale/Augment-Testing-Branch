@@ -1,0 +1,4 @@
+<div class="top-description icon-message">
+	<div *ngIf="iconClass" class="icon tlb-icons {{ iconClass }}"></div>
+	<div class="message selectable">{{ (text ?? '') | platformTranslate }}</div>
+</div>

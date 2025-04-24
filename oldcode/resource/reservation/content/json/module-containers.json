@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.reservation.listReservationTitle",
+    "controller": "resourceReservationListController",
+    "uuid": "6540965b6c84450aa1da41fd1c870a47"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.reservation.detailReservationTitle",
+    "controller": "resourceReservationDetailController",
+    "uuid": "f1c290f9673c4ed2af8893510f93f6a5",
+    "permission": "6540965b6c84450aa1da41fd1c870a47"
+  },
+  {
+	"id": "resource.reservation.planningboard",
+	"template": "app/components/planningboard/templates/platform-planning-board-template.html",
+	"title": "resource.reservation.planningBoard",
+	"controller": "resourceReservationPlanningBoardController",
+	"uuid": "b1436d024b4b4ca592e58c8ea34384a7",
+	"permission": "b1436d024b4b4ca592e58c8ea34384a7",
+    "subcontainers": [{
+      "uuid": "1046a3bd867147feb794bdb60a805eca"
+    },
+    {
+      "uuid": "ea6bd9f8d84f4b5f8bf53917e8525888"
+    }]
+  },
+  {
+	"id": "platform.generic.structure",
+	"template": "app/components/grid/generic-structure/generic-container.html",
+	"title": "resource.reservation.structureContainerTitle",
+	"uuid": "7f08c23a04614982a2d4be561c72442e",
+	"controller": "platformGenericStructureController",
+	"mainService": "resourceReservationDataService",
+	"enableCaching": "true",
+	"configurationService": "resourceReservationStructureConfigService",
+	"permission": "6540965b6c84450aa1da41fd1c870a47"
+  },
+  {
+  "id": "resource.reservation.formFormData",
+  "template": "app/components/base/grid-partial.html",
+  "title": "cloud.common.ContainerUserformDefaultTitle",
+  "controller": "basicsUserFormFormDataController",
+  "uuid": "0dab929e4cc24cc5b70e3879968959fc",
+  "rubricId": 99,
+  "mainService": "resourceReservationDataService",
+  "statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+}
+]

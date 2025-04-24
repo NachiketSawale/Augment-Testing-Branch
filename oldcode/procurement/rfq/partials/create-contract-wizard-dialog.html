@@ -1,0 +1,18 @@
+<div data-ng-controller="procurementRfqWizardCreateContractController" class="modal-wrapper">
+	<header class="modal-header main-color"><span class="modal-title font-bold ng-binding ng-scope" data-ng-bind="initOptions.headerTitle">Create Contract</span>
+	</header>
+	<section class="modal-body" style="padding: 20px 40px 20px 16px;">
+		<div class="icon-message ng-scope">
+			<div class="icon tlb-icons ico-info"></div>
+			<div >{{initOptions.Msg}}<br/>{{initOptions.Code}}</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+			<button type="button" class="btn btn-default" data-ng-click="initOptions.onNext()" data-ng-disabled="btnNextStatus">
+				{{initOptions.navigateTitle}}
+			</button>
+			<button type="button" class="btn btn-default" data-ng-click="initOptions.onClose()">
+				{{initOptions.closeBtnText}}
+			</button>
+	</footer>
+</div>

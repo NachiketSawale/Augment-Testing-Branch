@@ -1,0 +1,19 @@
+﻿{
+	"resource": {
+		"certificate": {
+			"certificateListTitle": "Certificates",
+			"certificateDetailTitle": "Certificate Details",
+			"resourceCertificateDocumentListTitle": "Certificate Documents",
+			"resourceCertificateDocumentDetailTitle": "Certificate Document Details",
+			"resourceCertificatedPlantListTitle": "Certificated Plants",
+			"resourceCertificatedPlantDetailTitle": "Certificated Plant Details",
+			"resourceCertificateEntity": "Plant Certificate",
+			"resourceCertificateDocumentEntity": "Plant Certificate Document",
+			"resourceCertificatedPlantEntity": "Certificated Plant",
+			"contactInfo": "Contact Information",
+			"changeStatus": "Change Status",
+		  	"entityBarcode": "Barcode",
+		  	"entityFileArchiveDoc": "Document Original File Name"
+		}
+	}
+}

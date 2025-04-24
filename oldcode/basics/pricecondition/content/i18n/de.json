@@ -1,0 +1,21 @@
+{
+  "basics": {
+    "pricecondition": {
+      "moduleName": "Preiskonditionen",
+      "entityValue":"!Value",
+      "entityPriceCondition": "Preiskonditionsart",
+      "entityPriceConditionDescription": "Preiskonditionsart Beschreibung",
+      "entityIsActivated": "!Is Activated",
+      "priceConditionGridTitle":"Preiskondition",
+      "priceConditionFormTitle":"Preiskondition Formblatt",
+      "priceConditionDetailGridTitle":"Preiskondition Detail",
+      "priceConditionDetailFormTitle":"Preiskondition Formblatt Detail ",
+      "priceConditionDescriptionUniqueError": "Die Beschreibung muss eindeutig sein",
+      "tabs": {
+        "main": "Preiskonditionen"
+      },
+      "entityCommentText": "!Comment Text",
+      "headerParamTitle": "!Price Condition Values"
+    }
+  }
+}

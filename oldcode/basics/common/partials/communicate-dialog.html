@@ -1,0 +1,24 @@
+<div data-ng-controller="basicsCommonCommunicateDialogController">
+	<form method="post" autocomplete="on">
+		<header class="modal-header main-color">
+			<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+				<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+			</button>
+			<h2 class="modal-title">{{modalOptions.headerText}}</h2>
+		</header>
+		<section class="modal-body">
+			<div class="fullheight">
+				<div data-platform-alert data-error="error"></div>
+				<div class="fullheight overflow">
+					<div data-platform-form-container data-form-container-options="containerOptions" class="fullheight"></div>
+				</div>
+			</div>
+		</section>
+		<footer class="modal-footer">
+			<button type="button" class="btn btn-default" data-ng-click="modalOptions.preview()" data-ng-disabled="modalOptions.isBtnPreviewDisable" data-ng-show="modalOptions.isBtnPreviewShow">{{modalOptions.previewButtonText}}</button>
+			<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="modalOptions.isBtnSendDisable">{{modalOptions.actionButtonText}}</button>
+			<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+		</footer>
+	</form>
+	<div cloud-common-overlay data-loading="modalOptions.isLoading"></div>
+</div>

@@ -1,0 +1,14 @@
+<div data-ng-controller="invoiceHeaderChangeProcurementConfigurationWizardController" class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="row">
+            <div class="col-md-12" data-platform-form data-form-options="configureOptions"
+                 entity="currentItem"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="enableOK()" data-ng-click="modalOptions.ok()" data-ng-bind="'basics.common.button.ok' | translate"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+    </footer>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

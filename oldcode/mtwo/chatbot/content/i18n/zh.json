@@ -1,0 +1,14 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "配置",
+      "configurationTitle": "配置",
+      "entityChatbotConfigurationCode": "编码",
+      "entityChatbotConfigurationDescription": "描述",
+      "entityChatbotConfigurationIslive": "激活",
+      "entityChatbotConfigurationUpdatedAt": "修改时间",
+      "entityChatbotHeaderLanguageFK": "语言",
+      "headerTitle": "抬头"
+    }
+  }
+}

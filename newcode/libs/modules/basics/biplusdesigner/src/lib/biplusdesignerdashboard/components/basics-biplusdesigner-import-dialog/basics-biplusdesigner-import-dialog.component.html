@@ -1,0 +1,31 @@
+<div class="flex-element" >
+    
+    <div *ngIf="displayInfo">
+        {{'basics.biplusdesigner.import.instructionsText'| platformTranslate}}
+    </div>
+
+    <div *ngIf="displayInfo" style="margin-top: 10px; padding: 5px;" class="alert-info">
+        {{'basics.biplusdesigner.import.warningText'| platformTranslate}}
+    </div>
+
+    <div *ngIf="!loading">
+        <h5>{{notificationText | platformTranslate}}</h5>
+        <div class="flex-box flex-element">
+            <div class="flex-element platform-form-group" *ngFor="let stat of data">
+                <h4>{{stat.Description}}</h4>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">Inserted : {{stat.Inserted}}</div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">Updated : {{stat.Updated}}</div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">Deleted : {{stat.Deleted}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

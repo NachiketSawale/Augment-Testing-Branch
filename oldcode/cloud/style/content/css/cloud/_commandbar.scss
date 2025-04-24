@@ -1,0 +1,53 @@
+/*-------------------------------------------------------------------------------
+	 Command Bar (_commandbar.scss)
+  -------------------------------------------------------------------------------*/
+$commandbar-button-height: 40px;
+
+#commandBar {
+	display: flex;
+	flex-direction: column-reverse;
+	width: $size-commandbar-width;
+	z-index: 10;
+
+	li {
+		border: 0 none;
+		height: $commandbar-button-height;
+		box-sizing: content-box;
+}
+
+	button {
+		@include square($commandbar-button-height);
+		@extend .text-hide;
+		text-align: center;
+		text-indent: -9999em;
+		background-size: 24px 24px; // for the case when button displays an img
+
+		&.indicator {
+			text-indent: inherit;
+			color: var(--company-font-color);
+		}
+
+		&.pin {
+			&.selected svg {
+				transform:  rotate( -180deg );
+				transition: transform 200ms ease;
+			}
+		}
+
+		svg {
+			@include square(24px);
+			background-size: 24px 24px;
+		}
+
+		.search-indicator {
+			width: 4px;
+			height: 4px;
+			background: var(--icon-main-color);
+			position: absolute;
+			margin-top: 23px;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,18 @@
+﻿{
+	"awp": {
+		"main": {
+			"projects": "Projects",
+			"packageStructureLineItem": "Package Structure - Line Item",
+			"boQ": "BoQ",
+			"wicBoQ": "WIC BoQ",
+			"lineItemCode": "Line Item Code",
+			"estimateHeader": "Estimate Header",
+			"prcStructure": "Procurement Structure",
+			"aqQuantity": "AQ Quantity",
+			"wqQuantity": "WQ Quantity",
+			"servicePackages": "Service Packages",
+			"reference": "Reference",
+			"briefInfo": "Outline Specification"
+		}
+	}
+}

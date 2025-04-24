@@ -1,0 +1,131 @@
+﻿{
+	"CompanyCode": "GUANGDONG2017001",
+	"CanOverWrite": true,
+	"AssemblyCatalogs": [
+		{
+			"Code": "B",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "复合材料"
+			}
+		},
+		{
+			"Code": "B2.42.1",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "水泥砂浆"
+			}
+		},
+		{
+			"Code": "B2.42.2",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "石灰砂浆"
+			}
+		},
+		{
+			"Code": "B2.42.3",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "混合砂浆"
+			}
+		},
+		{
+			"Code": "B2.42.4",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "特种砂浆"
+			}
+		},
+		{
+			"Code": "B2.42.6",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "灰浆、水泥浆"
+			}
+		},
+		{
+			"Code": "B2.42.7",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "石子浆"
+			}
+		},
+		{
+			"Code": "B2.42.8",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "胶泥、脂、油"
+			}
+		},
+		{
+			"Code": "B2.42.9",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "水泥混凝土"
+			}
+		},
+		{
+			"Code": "B2.42.10",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "轻质水泥混凝土"
+			}
+		},
+		{
+			"Code": "B2.42.12",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "特种混凝土"
+			}
+		},
+		{
+			"Code": "B2.42.14",
+			"ParentCode": "B2.42",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "多合土垫层"
+			}
+		},
+		{
+			"Code": "B2.42",
+			"ParentCode": "B2",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "砼、砂浆及其它配合比材料"
+			}
+		},
+		{
+			"Code": "B2",
+			"ParentCode": "B",
+			"MinValue": "",
+			"MaxValue": "",
+			"DescriptionInfo": {
+				"Description": "材料"
+			}
+		}
+	]
+}

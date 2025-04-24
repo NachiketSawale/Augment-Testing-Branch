@@ -1,0 +1,88 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+    <div ng-switch="currentStep.number" class="modal-wrapper">
+        <div ng-switch-when="0">
+            <div class="filler">
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <label class="platform-form-label" style="min-width: 112px;">
+                            <input type="radio" name="radioSelect" data-ng-model="currentItem.RadioType"
+                                   style="vertical-align:text-bottom;margin: 2px 0;"
+                                   data-ng-change="radioOptionChanged()"
+                                   value="0"/>
+                            &nbsp;{{'procurement.common.wizard.generatePaymentSchedule.sCurve'| translate}}
+                        </label>
+                        <div class="platform-form-col">
+                            <div data-basics-lookupdata-scurve-combobox data-ng-model="currentItem.ScurveFk"
+                                 data-config="config"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <label class="platform-form-label" style="min-width: 112px;">
+                            <input type="radio" name="radioSelect" data-ng-model="currentItem.RadioType"
+                                   style="vertical-align:text-bottom;margin: 2px 0;"
+                                   data-ng-change="radioOptionChanged()"
+                                   value="1"/>
+                            &nbsp;{{'procurement.common.wizard.generatePaymentSchedule.userFrequence'| translate}}
+                        </label>
+                        <div class="platform-form-col">
+                            <select class="form-control"
+                                    data-ng-model="currentItem.Repeat"
+                                    data-ng-disabled="!config.rt$readonly()"
+                                    data-ng-readonly="!config.rt$readonly()"
+                                    data-ng-change="repeatOptionChanged()">
+                                <option ng-repeat="opt in repeatOption" value="{{opt.id}}">{{opt.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <label class="platform-form-label" style="padding-left: 25px; min-width: 97px;">
+                            {{'procurement.common.wizard.generatePaymentSchedule.occurence'| translate}}
+                        </label>
+                        <div class="platform-form-col">
+                            <div class="input-group form-control">
+                                <input class="input-group-content" data-platform-numeric-converter
+                                       data-ng-model="currentItem.Occurence"
+                                       data-ng-disabled="occurenceDisable || !config.rt$readonly()"
+                                       data-ng-change="occurenceChanged()"
+                                       data-domain="integer" title="occurence"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-platform-form-container data-form-container-options="formContainerOptions"
+                     entity="currentItem" class="fullheight" data-ng-readonly="false"></div>
+                <div class="platform-form-group">
+                    <div class="platform-form-row form-group">
+                        <label class="platform-form-label" style="min-width: 112px;">
+                            {{'procurement.common.wizard.generatePaymentSchedule.isdelay'| translate}}
+                        </label>
+                        <div class="platform-form-col">
+                            <input type="checkbox" data-ng-model="currentItem.IsDelay"  data-ng-disabled="config.rt$readonly()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-switch-when="1" class="modal-wrapper">
+            <div class="platform-form-group">
+                <div class="platform-form-group-header-text" style="font-weight: bold;">
+                    {{ 'procurement.common.wizard.generatePaymentSchedule.message' | translate }}
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default"
+            data-ng-repeat="button in currentStep.buttons"
+            data-ng-bind="button.label | translate"
+            data-ng-disabled="button.disable && button.disable()"
+            data-ng-click="button.action()">
+    </button>
+</footer>
+<div cloud-common-overlay data-loading="isLoading"></div>

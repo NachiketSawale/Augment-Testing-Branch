@@ -1,0 +1,79 @@
+<header class="modal-header main-color">
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close()" aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+	<h2 class="modal-title" data-ng-bind="'basics.common.title.scriptDoc' | translate"></h2>
+</header>
+
+<style type="text/css">
+	.flex-two {
+		flex: 2;
+	}
+
+	.vertical-splitter {
+		width: 4px;
+	}
+
+	.horizontal-splitter {
+		height: 4px;
+	}
+
+	.textarea-container {
+		height: 80px;
+	}
+
+	.textarea-container textarea {
+		width: 100%;
+	}
+</style>
+
+<section class="modal-body">
+	<div class="flex-element flex-box">
+		<div class="flex-box flex-column flex-element subview-container">
+			<div class="toolbar">
+				<h3 class="title font-bold" data-ng-bind="'basics.common.title.scriptObject' | translate"></h3>
+			</div>
+			<div class="flex-element flex-box flex-column subview-content">
+				<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+				<div data-platform-grid data="gridData1"></div>
+			</div>
+		</div>
+		<div class="vertical-splitter"></div>
+		<div class="flex-box flex-column flex-two">
+			<div class="flex-box flex-column flex-element subview-container">
+				<div class="toolbar">
+					<h3 class="title font-bold" data-ng-bind="'basics.common.title.scriptProperty' | translate"></h3>
+				</div>
+				<div class="flex-element flex-box flex-column subview-content">
+					<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+					<div data-platform-grid data="gridData2"></div>
+				</div>
+			</div>
+			<div class="horizontal-splitter"></div>
+			<div class="flex-box textarea-container">
+				<textarea class="flex-element" data-ng-model="selectedProp.translated" data-ng-change="onDocChange()"></textarea>
+			</div>
+		</div>
+		<div class="vertical-splitter"></div>
+		<div class="flex-box flex-column flex-two">
+			<div class="flex-box flex-column flex-element subview-container">
+				<div class="toolbar">
+					<h3 class="title font-bold" data-ng-bind="'cloud.common.languageColHeader_ContainerTitle' | translate"></h3>
+				</div>
+				<div class="flex-element flex-box flex-column subview-content">
+					<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+					<div data-platform-grid data="gridData3"></div>
+				</div>
+			</div>
+			<div class="horizontal-splitter"></div>
+			<div class="flex-box textarea-container">
+				<textarea class="flex-element" data-ng-model="selectedTranslation.v" data-ng-change="onTranslationChange()"></textarea>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-click="close(true)" data-ng-bind="'basics.common.button.save' | translate"></button>
+	<button type="button" class="btn btn-default" data-ng-click="close(false)" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+</footer>

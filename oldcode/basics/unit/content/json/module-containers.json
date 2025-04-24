@@ -1,0 +1,40 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.unit.entityUnitTitle",
+		"controller": "basicsUnitListController",
+		"uuid": "438973C14EAD47D3A651742BBC9B5696"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.unit.entityUnitDetails",
+		"controller": "basicsUnitDetailController",
+		"uuid": "A68D72F3D8B74A4A9DD677738A79EBAA",
+		"permission": "438973C14EAD47D3A651742BBC9B5696"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.unit.synonymsHeader",
+		"controller": "basicsUnitSynonymListController",
+		"uuid": "92CD68EFDE7247AAB4F955C125EF8ECB"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.unit.entityUnitSynonymDetails",
+		"controller": "basicsUnitSynonymDetailController",
+		"uuid": "7B3E7ACEB29D4EDC9B0F7B4F02F73581",
+		"permission": "92CD68EFDE7247AAB4F955C125EF8ECB"
+	},
+	{
+		"id": "6",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "basics.unit.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "7B3E7ACEB29D4EDC8B0F7B4F02F73585",
+	  	"wizardDisabled":"true"
+	}
+]

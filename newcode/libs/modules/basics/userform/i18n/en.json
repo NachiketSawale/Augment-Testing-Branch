@@ -1,0 +1,38 @@
+{
+	"basics": {
+		"userform": {
+			"entityId": "ID",
+			"entityValidFrom": "Valid From",
+			"entityValidTo": "Valid To",
+			"entityRubricFk": "Rubric",
+			"entityWindowParameter": "Window options",
+			"entityHtmlTemplateFileName": "Html template",
+			"noFormSelectedInfo": "Please first select a form",
+			"noRubricSelectedInfo": "Please first select a valid rubric",
+			"overrideFieldListHeader": "Warning",
+			"overrideFieldList": "You are going to override the current field list - continue ?",
+			"formListTitle": "Form list",
+			"formDetailsTitle": "Form details",
+			"formFieldListTitle": "Field list",
+			"entityFieldName": "Fieldname",
+			"entityVisibleName": "Visiblename",
+			"entityFieldType": "Field Type",
+			"entitySqlQuery": "SQL Query",
+			"entityDataSource": "Datasource",
+			"entityLookupQualifier": "Lookup Source",
+			"entityProcessingType": "Processing type",
+			"entityWorkflowTemplateFk": "Trigger Workflow",
+			"entityIsContainer": "Is Container",
+			"Error_SqlQueryDoesNotFulfillAllSpecifications": "Please input a valid sql query string (e.g. 'SELECT field FROM table WHERE id=@id')",
+			"Error_SqlQueryDoesNotFulfillLookupSpecifications": "Please input a valid sql query string for Lookups (e.g. 'SELECT f1 AS [ID],f2 AS [DESCRIPTION] FROM table)",
+			"defaultContainerTitle": "Form data",
+			"newWindow": "New Window",
+			"popWindow": "Popup Window",
+			"tab": "This Tab",
+			"editBy": "Edit by",
+			"entityFormFk": "FormFk",
+			"entityIsReadonly": "IsReadonly",
+			"entityFormDataStatusFk": "FormDataStatusFk"
+		}
+	}
+}

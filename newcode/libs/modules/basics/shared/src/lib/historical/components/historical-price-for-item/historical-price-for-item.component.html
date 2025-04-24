@@ -1,0 +1,30 @@
+<basics-shared-historical-price-base [dataService]="dataService" [currentItem]="currentItem">
+	<header>
+		<div class="lg-7 ellipsis">{{ 'basics.common.historicalPrice.itemLabel' | platformTranslate }} : {{ setCodeDesc() }}</div>
+	</header>
+	<content>
+		<div class="lg-12" style="margin-bottom: 5px;margin-top: 5px;">
+			<div class="lg-4">
+				<div class="checkbox spaceToUp">
+					<label class="ellipsis">
+						<ui-common-domain-control-host [fieldType]="fieldType.Boolean" [value]="currentItem.queryFromMaterialCatalog!" (change)="materialCatalogChange()">
+						</ui-common-domain-control-host>
+						{{ 'procurement.common.wizard.updateItemPrice.catalogPriceVersion' | platformTranslate }}
+					</label>
+				</div>
+			</div>
+			<div class="lg-8">
+				<ui-common-lookup-input [(value)]="lookupValue" [dataService]="lookupDataService" [readonly]="!currentItem.queryFromMaterialCatalog" (valueChange)="valueChange(lookupValue!)"></ui-common-lookup-input>
+				<div class="lg-6">
+					<div class="checkbox spaceToUp">
+						<label class="ellipsis">
+							<ui-common-domain-control-host [readOnly]="!currentItem.queryFromMaterialCatalog" [fieldType]="fieldType.Boolean" [value]="currentItem.queryNeutralMaterial!" (change)="neutralMatChange()">
+							</ui-common-domain-control-host>
+							{{ 'procurement.common.wizard.updateItemPrice.neutralMaterial' | platformTranslate }}
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</content>
+</basics-shared-historical-price-base>

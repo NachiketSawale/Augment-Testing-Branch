@@ -1,0 +1,15 @@
+<div class="modal-content">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<div class="modal-body flex-box" data-ng-class="{ 'flex-column': true }">
+		<div class="icon-message">
+			<div class="icon tlb-icons ico-question"></div>
+			<div class="message"> {{::modalOptions.bodyText}} </div>
+		</div>
+	</div>
+
+	<footer class="modal-footer">
+		<button class="btn btn-default" data-ng-click="modalOptions.include()">{{::'procurement.pes.wizard.inculde' | translate}}</button>
+		<button class="btn btn-default" data-ng-click="modalOptions.ignore()">{{::'procurement.pes.wizard.ignore' | translate}}</button>
+	</footer>
+</div>

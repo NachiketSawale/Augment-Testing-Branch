@@ -1,0 +1,87 @@
+<div class="flex-element flex-box fullwidth fullheight flex-column border-all">
+	<ul>
+		<li [ngClass]="{'activated':tab.activated}" *ngFor="let tab of tabs;let i = index;" (click)="activeTab(i)">{{tab.title}}</li>
+	</ul>
+	<div class="fullheight">
+		<div [ngClass]="{'hidden':!tab.activated}" class="flex-element flex-box fullwidth fullheight" *ngFor="let tab of tabs" style="padding: 8px;">
+			<div class="fullwidth fullheight" *ngIf="tab.id === 'basics-settings'">
+				<table>
+					<tr>
+						<td>Form Id</td>
+						<td><input type="number" name="formId" [(ngModel)]="options.formId"/></td>
+					</tr>
+					<tr>
+						<td>Form Data Id</td>
+						<td><input type="number" name="formDataId" [(ngModel)]="options.formDataId"/></td>
+					</tr>
+					<tr>
+						<td>Context Id</td>
+						<td><input type="number" name="contextId" [(ngModel)]="options.contextId"/></td>
+					</tr>
+					<tr>
+						<td>Context1 Id</td>
+						<td><input type="number" name="context1Id" [(ngModel)]="options.context1Id"/></td>
+					</tr>
+					<tr>
+						<td>tempContext Id</td>
+						<td><input type="number" name="tempContextId" [(ngModel)]="options.tempContextId"/></td>
+					</tr>
+					<tr>
+						<td>From Module</td>
+						<td><input type="number" name="fromModule" [(ngModel)]="options.fromModule"/></td>
+					</tr>
+					<tr>
+						<td>RubricFk</td>
+						<td><input type="number" name="rubricFk" [(ngModel)]="options.rubricFk"/></td>
+					</tr>
+					<tr>
+						<td>Intersection Id</td>
+						<td><input type="number" name="intersectionId" [(ngModel)]="options.intersectionId"/></td>
+					</tr>
+					<tr>
+						<td>Editable</td>
+						<td><input type="checkbox" name="editable" [(ngModel)]="options.editable"/></td>
+					</tr>
+					<tr>
+						<td>Readonly</td>
+						<td><input type="checkbox" name="isReadonly" [(ngModel)]="options.isReadonly"/></td>
+					</tr>
+					<tr>
+						<td>Modal</td>
+						<td><input type="checkbox" name="modal" [(ngModel)]="options.modal"/></td>
+					</tr>
+					<tr>
+						<td>Description</td>
+						<td><input type="text" name="description" [(ngModel)]="options.description"/></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<br>
+							<button class="btn btn-overflow btn-default fullwidth" (click)="saveSettings()">Save Settings</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="flex-box flex-element flex-column fullwidth fullheight" *ngIf="tab.id === 'open-in-preview'">
+				<button class="btn btn-overflow btn-default" (click)="previewUserForm()">Open in Preview</button>
+			</div>
+			<div class="flex-box flex-element flex-column fullwidth fullheight" *ngIf="tab.id === 'open-in-dialog'">
+				<button class="btn btn-overflow btn-default" (click)="showUserForm()">Open in Dialog</button>
+			</div>
+			<div class="flex-box flex-element flex-column fullwidth fullheight" *ngIf="tab.id === 'open-in-window'">
+				<button class="btn btn-overflow btn-default" (click)="showUserForm()">Open in Window</button>
+			</div>
+			<div class="flex-box flex-element flex-column fullwidth fullheight" *ngIf="tab.id === 'open-in-iframe'">
+				<button class="btn btn-overflow btn-default" (click)="showUserForm()">Open in Iframe</button>
+				<iframe credentialless class="fullwidth fullheight  border-all margin-top-ld"></iframe>
+			</div>
+			<div class="flex-box flex-element flex-column fullwidth fullheight" *ngIf="tab.id === 'open-in-container'">
+				<button class="btn btn-overflow btn-default" (click)="showUserForm()">Open in Container</button>
+				<div class="user-form-container flex-box flex-element flex-column fullwidth fullheight border-all margin-top-ld">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<ui-common-loading [loading]="loading"></ui-common-loading>
+</div>

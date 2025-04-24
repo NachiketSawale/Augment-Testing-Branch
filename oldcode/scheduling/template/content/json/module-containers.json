@@ -1,0 +1,124 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.activityTemplateGroupGridHeader",
+    "controller": "schedulingTemplateActivityTemplateGroupListController",
+    "uuid": "AFECDE4A08404395855258B70652D04C"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.activityTemplateGridHeader",
+    "controller": "schedulingTemplateActivityTemplateListController",
+    "uuid": "AFECDE4A08404395855258B70652D04D"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.eventTemplateGridHeader",
+    "controller": "schedulingTemplateEventTemplateListController",
+    "uuid": "AFECDE4A08404395855258B70652D04E"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.activityTmpl2CUGrpGridHeader",
+    "controller": "schedulingTemplateActivityTmpl2CUGrpListController",
+    "uuid": "AFECDE4A08404395855258B70652D050"
+  },
+  {
+    "id": "6",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.activityTemplateDetailHeader",
+    "controller": "schedulingTemplateActivityTemplateDetailController",
+    "uuid": "AFECDE4A08404395855258B70652D060",
+    "permission": "AFECDE4A08404395855258B70652D04D"
+  },
+  {
+    "id": "7",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.eventTemplateDetailHeader",
+    "controller": "schedulingTemplateEventTemplateDetailController",
+    "uuid": "AFECDE4A08404395855258B70652D070",
+    "permission": "AFECDE4A08404395855258B70652D04E"
+  },
+  {
+    "id": "8",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.activityTmpl2CUGrpDetailHeader",
+    "controller": "schedulingTemplateActivityTmpl2CUGrpDetailController",
+    "uuid": "AFECDE4A08404395855258B70652D080",
+    "permission": "AFECDE4A08404395855258B70652D050"
+  },
+  {
+    "id": "10",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.activityTemplateGroupDetailHeader",
+    "controller": "schedulingTemplateActivityTmplGrpDetailController",
+    "uuid": "AFECDE4A08404395855258B70652F060",
+    "permission": "AFECDE4A08404395855258B70652D04C"
+  },
+  {
+    "id": "11",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "scheduling.template.translationDesc",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "5E5A1CF157E54D799AFF00D4D747BBD2"
+  },
+  {
+    "id": "12",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.performanceRuleDetailHeader",
+    "controller": "schedulingTemplatePerformanceRuleDetailController",
+    "uuid": "8CBBCED1A6E142D095F19E0387AF0664",
+    "permission": "A7F6EEA9117C4F72BB73F88709F6583D"
+  },
+  {
+    "id": "13",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.performanceRuleGridHeader",
+    "controller": "schedulingTemplatePerformanceRuleListController",
+    "uuid": "A7F6EEA9117C4F72BB73F88709F6583D"
+  },
+  {
+    "id": "14",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.activityCriteriaGridHeader",
+    "controller": "schedulingTemplateActivityCriteriaListController",
+    "uuid": "1760df4e1cb24c218e70e3c9f3fbe092"
+  },
+  {
+    "id": "15",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.activityCriteriaDetailHeader",
+    "controller": "schedulingTemplateActivityCriteriaDetailController",
+    "uuid": "f4960681c4a84df28dcb77aee3802a9c",
+    "permission": "1760df4e1cb24c218e70e3c9f3fbe092"
+  },
+  {
+    "id": "scheduling.template.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "8724f845940c46c4b2767ad4109b345d",
+    "controller": "",
+    "sectionId": "13",
+    "mainService": "schedulingTemplateActivityTemplateService"
+  },
+  {
+    "id": "16",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.activityTemplateDocuments",
+    "uuid": "e573dacc1e3c4a60aee6043ea736dfdf",
+    "permission": "df54895c27bf4f8cba25466ba8bd64db",
+    "controller": "schedulingTemplateActivityTemplateDocumentListController"
+  },
+  {
+    "id": "17",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.activityTemplateDocument",
+    "uuid": "680410db44fb436282e502f7d386c64c",
+    "permission": "df54895c27bf4f8cba25466ba8bd64db",
+    "controller": "schedulingTemplateActivityTemplateDocumentDetailController"
+  }
+]

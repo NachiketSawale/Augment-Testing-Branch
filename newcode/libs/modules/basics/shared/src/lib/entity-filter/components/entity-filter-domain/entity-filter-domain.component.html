@@ -1,0 +1,31 @@
+<ui-common-popup>
+	<div content class="entity-filter-popup entity-filter-domain">
+		<ul class="entity-filter-content-padding">
+			<li *ngFor="let option of domain.options">
+				<div class="fullwidth flex-box">
+					<input type="radio" [id]="option.id" name="operator" [value]="option.operator" [(ngModel)]="definition.Operator" (ngModelChange)="changeOperator()">
+					<label [for]="option.id">{{ option.label | platformTranslate }}</label>
+				</div>
+
+				<div class="margin-horizontal domain-control" *ngIf="definition.Operator === option.operator && definition.Operator !== EntityFilterOperator.Range">
+					<ui-common-domain-control-host class="input-group-content" [value]="getFactor(0)" (valueChange)="setFactor(0, $event)" [fieldType]="domain.type"></ui-common-domain-control-host>
+				</div>
+
+				<div class="margin-horizontal range" *ngIf="definition.Operator === option.operator && definition.Operator === EntityFilterOperator.Range">
+					<ui-common-domain-control-host class="domain-control range-min input-group-content text-center" [value]="getFactor(0)" (valueChange)="setFactor(0, $event)" [fieldType]="domain.type"
+					                               [ngClass]="{'ng-invalid':!!validationErrors[0]}"></ui-common-domain-control-host>
+					<span class="range-separator">-</span>
+					<ui-common-domain-control-host class="domain-control range-min input-group-content text-center" [value]="getFactor(1)" (valueChange)="setFactor(1, $event)" [fieldType]="domain.type"
+					                               [ngClass]="{'ng-invalid':!!validationErrors[1]}"></ui-common-domain-control-host>
+					<div *ngIf="hasValidationError()" class="validation">
+						<div>{{ rangeError! | platformTranslate }}</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+		<div class="entity-filter-divider-top">
+			<button class="btn pull-right entity-filter-btn-apply" (click)="apply()" [disabled]="!canApply()">{{ 'basics.material.lookup.apply' | platformTranslate }}</button>
+		</div>
+	</div>
+</ui-common-popup>

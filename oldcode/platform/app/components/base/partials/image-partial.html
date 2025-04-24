@@ -1,0 +1,12 @@
+<div data-platform-container-content class="flex-element flex-box flex-column filler" ngf-multiple="false"
+     ngf-drop="uploadFiles($file)"
+     ngf-drag-over-class="'dragover'">
+	<div class="image-container">
+		<input data-platform-click-event name="fileInput" type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+		       class="hide" accept="image/*" ngf-max-height="10000" ngf-max-size= "getMaxSize($file) ? getMaxSize($file) : '4MB'" >
+		</input>
+		<img ng-show="file.src" ng-src="{{file.src}}" ng-style="{ 'max-width' : getCurrentDimensions().width, 'max-height' : getCurrentDimensions().height }">
+
+		<div data-cloud-common-overlay data-info2="info2" file="file" data-loading="viewContentLoading"></div>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+{
+	"resource": {
+		"maintenance": {
+			"entityComment": "Comment",
+			"leadQuantity": "Quantity",
+			"leadDays": "Lead Days",
+			"entityIsDefault": "IsDefault",
+			"entitySorting": "Sorting",
+			"entityIsLive": "Active",
+			"entityMaintenanceSchema": "MaintenanceSchemaFk",
+			"entityCode": "Code",
+			"fixedDays": "Fixed Days",
+			"daysAfter": "Days After",
+			"performanceBased": "Do Recalculate Performance",
+			"duration": "Duration",
+			"jobCardTemplate": "Job Card Template",
+			"entityRemark": "Remark",
+			"entityIsRecalcDates": "Do Recalculate Dates",
+			"schemaListTitle": "Maintenance Schemes",
+			"schemaDetailTitle": "Maintenance Scheme Details",
+			"schemaRecordListTitle": "Scheme Records",
+			"schemaRecordDetailTitle": "Scheme Record Details",
+			"entityUoM": "UoM",
+			"entityMaintenanceScheme": "Maintenance Scheme",
+			"translationDescMaintenanceScheme": "Maintenance Schemes",
+			"translationDescMaintenanceSchemeRecord": "Scheme Records",
+			"maintenanceSchemaRecordEntity": "Scheme Record",
+			"entityIsRecalcPerformance": "Do Recalculate Performance"
+		}
+	}
+}

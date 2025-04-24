@@ -1,0 +1,53 @@
+{
+  "basics": {
+    "workflowTask": {
+      "moduleName":"Task",
+      "taskList": {
+        "header": "Task List",
+        "colums":{
+          "taskClerk": "Task Clerk",
+          "startTime": "Start Time",
+          "endBefore": "End before",
+          "priority": "Priority",
+          "title": "Title",
+          "subTitle": "Sub Title",
+          "userDefined1": "User Defined 1",
+          "userDefined2": "User Defined 2",
+          "userDefined3": "User Defined 3",
+          "userDefined4": "User Defined 4",
+          "userDefined5": "User Defined 5"
+        }
+      },
+      "detail":{
+        "header": "Task Detail",
+        "buttons":{
+          "escalate": "Eskalieren"
+        }
+      },
+      "action": {
+        "escalation": {
+          "header": "Task Escalation",
+          "taskEscalation": "The selected task(s) has been deleted."
+        }
+      },
+      "deleteTask": {
+          "header": "Confirm Task Delete?",
+          "deleteConfirmation": "Do you want to delete the selected Task(s)?"
+      },
+      "countinueTask": {
+        "header": "Confirm Task Finish?",
+        "statusConfirmation": "Do you want to finish the selected {{taskCount}} Task(s)?"
+      },
+      "countinueTaskStatus": {
+        "taskChangeSuccessfully": {
+          "header": "Finish Task",
+          "taskFinishedStatus": "The selected {{taskCount}} task(s) Finish Successfully."
+        }
+      },
+		 "tools": {
+			 "escalateTask" : "Escalate Tasks(s)",
+			 "finishTask" : "Finish Task(s)"
+		 }
+    }
+  }
+}

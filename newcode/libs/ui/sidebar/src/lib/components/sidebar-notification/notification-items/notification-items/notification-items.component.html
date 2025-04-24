@@ -1,0 +1,20 @@
+<div class="accordion-item">
+	<div class=" rw rw-content flex-box ">
+		<svg class="block-image notification-status">
+			<use [attr.xlink:href]="notificationIcon()"></use>
+		</svg>
+		<ul class="rw-content">
+			<li class="title">{{notificationTitle}}</li>
+			<li>{{notification.NotificationStatus}}</li>
+			<li class="notification-details">
+				<span>{{ notification.CurrentAction }}</span> |
+				<span>{{ formattedStartDate }}</span> |
+				<span>{{ notification.User }}</span>
+			</li>
+			<li *ngIf="notification.IsReport">
+				<button class="btn btn-default" (click)="showReport()">{{'cloud.desktop.notification.showReport' |
+					platformTranslate}}</button>
+			</li>
+		</ul>
+	</div>
+</div>

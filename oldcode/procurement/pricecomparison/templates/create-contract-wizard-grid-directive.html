@@ -1,0 +1,17 @@
+﻿<div class="modal-wrapper grid-wrapper subview-container">
+    <div data-platform-grid data="gridData"></div>
+</div>
+<div class="margin-top-ld" data-ng-show="qtnRequisitionCount">
+    <div class="radio spaceToUp">
+        <label>
+            <input id="priceCompareToContractType1" type="radio" name="createContractType" value="createContracts" data-ng-model="createContractType" />
+            {{'procurement.pricecomparison.wizard.createContracts' | translate}}
+        </label>
+    </div>
+    <div class="radio spaceToUp">
+        <label>
+            <input id="priceCompareToContractType2" type="radio" name="createContractType" value="createOneContract" data-ng-model="createContractType" />
+            {{'procurement.pricecomparison.wizard.createOneContract' | translate}}
+        </label>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<h2 class="break-word material-filter-preview-title">{{getDescription1()}}</h2>
+<div class="text-center">
+	<img class="material-filter-preview-display-image auto-width" *ngIf="previewItem?.BasBlobsFk && isDisplayImage" [src]="previewItem?.Image"  [alt]="previewItem?.Code"/>
+</div>
+<h3 class="break-word item-detail-sub-title">{{getDescription2()}}</h3>

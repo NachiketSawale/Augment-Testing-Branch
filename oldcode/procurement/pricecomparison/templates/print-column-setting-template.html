@@ -1,0 +1,29 @@
+<section class="modal-body">
+    <div class="flex-element flex-box flex-basis-auto grid-layout-wrapper">
+        <div class="flex-element flex-box flex-column subview-container">
+            <div class="toolbar">
+                <h3 class="title font-bold">{{'platform.grid.availableColumns' | translate}}</h3>
+            </div>
+            <div class="flex-element flex-box flex-column subview-content" style="min-height: 350px;">
+                <platform-Grid data="availableGridData"></platform-Grid>
+            </div>
+        </div>
+        <div class="middle-container vert-hori-center flex-column">
+            <button class="btn btn-default control-icons ico-ar1-right1" data-ng-click="fromStartToTarget('part', 'availableGridId', 'visibleGridId', true)" data-ng-disabled="isAvailablePartToVisibleDisabled"></button>
+            <button class="btn btn-default control-icons ico-ar1-right2" data-ng-click="fromStartToTarget('total', 'availableGridId', 'visibleGridId', true)"></button>
+            <button class="btn btn-default control-icons ico-ar1-left1" data-ng-click="fromStartToTarget('part', 'visibleGridId', 'availableGridId', false)" data-ng-disabled="isVisiblePartToAvailableDisabled"></button>
+            <button class="btn btn-default control-icons ico-ar1-left2" data-ng-click="fromStartToTarget('total', 'visibleGridId', 'availableGridId', false)"></button>
+        </div>
+        <div class="left-container flex-box flex-column">
+            <div class="flex-element flex-box flex-column subview-container">
+                <div class="toolbar">
+                    <h3 class="title font-bold">{{'platform.grid.visibleColumns' | translate}}</h3>
+                    <div data-platform-menu-list data-list="tools"></div>
+                </div>
+                <div class="flex-element flex-box flex-column subview-content">
+                    <platform-Grid data="gridData" style="min-width: 560px;"></platform-Grid>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

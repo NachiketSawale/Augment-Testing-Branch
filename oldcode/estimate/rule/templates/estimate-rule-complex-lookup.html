@@ -1,0 +1,49 @@
+<div class="flex-box flex-element flex-column">
+	<div class="toolbar">
+		<h2 class="title fix" data-ng-bind="getTitle()"></h2>
+		<div data-platform-menu-list data-list="tools">
+			<div data-ng-repeat="item in paramsTab"
+			     style="float:left; height:29px; margin-top:2px; padding:0px 10px 0px 10px; line-height:29px;"
+			     class="{{item.className}}"
+			     ng-click="tabClick(item, 'user_form_assign_parameter_frame')">
+				{{item.name}}
+			</div>
+			<div data-ng-repeat="item in tabs"
+			     style="float:left; height:29px; margin-top:2px; padding:0px 10px 0px 10px; line-height:29px;"
+			     class="{{item.className}}" ng-click="tabClick(item, 'user_form_assign_parameter_frame', 3)"
+			     ng-mouseenter="openMethodOption(item,true)" ng-mouseleave="openMethodOption(item)">
+				{{item.name}}
+				<div
+					style="position: fixed; z-index: 100; padding:0 5px 0 5px; background-color: #dcdcdc; color:#666; font-size:12px; display:{{item.display}}">
+					<div style="display:block;cursor: pointer" ng-repeat="option in item.openOptions"
+					     ng-click="tabClick(item, 'user_form_assign_parameter_frame', option.method); $event.stopPropagation();">
+						<button type="button" class=" tlb-icons ico-preview-data"></button>
+						<span>{{option.name}}</span>
+					</div>
+				</div>
+				<div
+					style="position: fixed; z-index: 100; padding:0 5px 0 5px; background-color: #fff; color:#666; font-size:12px; display:{{item.displayNew}}">
+					<div style="display:block;cursor: pointer" ng-repeat="option in item.openOptionNews"
+					     ng-click="tabClick(item, 'user_form_assign_parameter_frame', option.method); $event.stopPropagation();">
+						<button type="button" class=" tlb-icons ico-preview-data"></button>
+						<span>{{option.name}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="modal-body padding-none" style="height: calc(100% - 30px)">
+		<div class="flex-box flex-column flex-element filler subview-content"
+		     style="height: 100%; width: 100%;position:relative;">
+			<!--div style="position: fixed; height:310px; width: 862px; z-index:100;background-color:#fff"
+			     data-ng-show="showParamGridCover"></div-->
+			<div data-platform-grid data="grid" data-ng-show="showParamGrid"></div>
+			<div data-cloud-common-overlay data-loading="isLoading"></div>
+			<iframe credentialless class="platformgrid grid-container ng-isolate-scope flex-element controls-icons ui-widget" id="user_form_assign_parameter_frame" name="user_form_assign_parameter_frame" style="border:none;"
+			        data-ng-show="showIframe" src="about:blank" height="100%"></iframe>
+			<div style="color: green; padding: 2px 0px 0px 7px;" data-ng-show="SaveResult">
+				{{ 'cloud.common.doneSuccessfully' | translate }}
+			</div>
+		</div>
+	</section>
+</div>

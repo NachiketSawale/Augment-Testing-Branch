@@ -1,0 +1,37 @@
+<div class="relative-container" data-ng-if="searchOptions.filterRequest.includeDateSearch!=null">
+    <div data-domain-control data-domain="select" data-model="dateParameters.parameters.field" data-options="dateConfig.dateSelectOptions">
+    </div>
+    <tabset class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex">
+
+        <tab ng-click="dateConfig.onTabSelect('tags')" active="dateParameters.tab.tags">
+            <tab-heading>
+                {{'cloud.desktop.searchGoogle.variable' | translate}}
+            </tab-heading>
+            <div data-sidebar-environment-expression data-model="dateParameters.selectedTag" data-items="environmentExpressionOptions.items" data-options="environmentExpressionOptions" class="environment-expressions"></div>
+
+        </tab>
+
+        <tab ng-click="dateConfig.onTabSelect('calendar')" active="dateParameters.tab.calendar">
+            <tab-heading>
+                {{'cloud.desktop.searchGoogle.calendar' | translate}}
+            </tab-heading>
+
+            <div class="platform-form-row cell-center">
+                <div data-ng-bind="dateParameters.formattedDate">
+                </div>
+            </div>
+
+            <div class="platform-form-row">
+                <div data-domain-control data-ng-model="dateParameters.parameters.date" data-model-options="{}" data-options="dateConfig.calendarOptions" data-domain="dateutc">
+                </div>
+            </div>
+
+             <!-- <div class="platform-form-row">
+                <div data-platform-slider-handler data-ng-model="dateParameters.parameters.time" style="width: 100%" data-options="dateConfig.sliderOptions"></div>
+            </div> -->
+
+        </tab>
+
+    </tabset>
+    <div data-ng-show="searchOptions.filterInfo.isPending" class="cell-opacity container-overlay margin-none"></div>
+</div>

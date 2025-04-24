@@ -1,0 +1,554 @@
+@use 'sass:math' as math;
+/*-------------------------------------------------------------------------------
+	 Forms (_forms.scss)
+  -------------------------------------------------------------------------------*/
+
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="week"]
+// input[type="number"]
+// input[type="search"]
+// input[type="color"]
+
+
+:root {
+	--form-control-height: calc(#{$size-input-height-base} - (2 * var(--border-width-default)));
+}
+
+// style for default form controls
+// ---------------------------------------
+%defaultFormControl {
+	// Placeholder
+	@include placeholder();
+	height: var(--form-control-height);
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	@include disabledReadonlyProps();
+
+	outline: 0;
+	padding: $input-text-padding;
+	background-color: var(--input-bg-color);
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+input[type='text'], input[type="tel"], input[type="url"], input[type='password'], input[type='email'], input[type='time'], textarea {
+	&.form-control {
+		@extend %defaultFormControl;
+	}
+	&.height-m {
+		height: 32px;
+	}
+}
+
+.form-control {
+	input[type='text'], input[type="tel"], input[type="url"], input[type='password'], input[type='email'], input[type='time'], textarea {
+		@extend %defaultFormControl;
+	}
+}
+
+.form-control {
+	@include form-control-focus();
+	display: flex;
+	width: 100%;
+	height: $size-input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+	padding: 0;
+	font-size: $size-font-base;
+	line-height: $size-line-height-base;
+	color: $color-text;
+
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: solid var(--border-width-default) var(--input-border-color);
+	border-radius: var(--input-border-radius);
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+	input.input-group-content{
+		min-width: 0;
+	}
+
+	.input-group-content {
+		@include placeholder();
+		@include disabledReadonlyProps();
+		flex: 1;
+		display: flex;
+		//flex-basis: auto; // deactivated because there are problems with lookups in Forms in Internet Explorer 11.
+		outline: 0;
+		border: none;
+		overflow: hidden;
+		align-items: center;
+		padding-left: 4px;
+
+		&.ellipsis {
+			line-height: var(--form-control-height);
+			display: block;
+		}
+
+		img {
+			@extend .icon-size-sm;
+			margin-top: -1px;
+		}
+
+		// this existing too: .input-group-btn + .input-group-btn --> e.g. skype-buttons
+		& + .input-group-btn {
+			border-left: var(--border-width-default) solid var(--input-border-color);
+
+			.btn {
+				&:first-child {
+					border-left: 0; //because parent has a border-left
+
+					&.ng-hide + .btn {
+						border-left: 0; //second button has border-left. Is first btn hide -> ui-> border-left: 2px
+					}
+				}
+			}
+		}
+	}
+
+	&.img-40-20 {
+		.input-group-content {
+			//@extend .ellipsis;
+			padding-top: 3px;
+		}
+	}
+
+	.input-group-btn {
+		.btn {
+			@include square(var(--form-control-height));
+			border-width: 0 0 0 1px;
+
+			&:focus {
+				outline: var(--border-width-default) dashed var(--company-color);
+				outline-offset: calc(-1 * (var(--border-width-default) * 2));
+			}
+		}
+
+		.btn-search {
+			width: $mbox-icon-size;
+		}
+	}
+
+	// disable buttons if read only
+	&[readonly] .input-group-btn {
+		display: none;
+	}
+
+	//used in search-sidebar. Filter-Pinned
+	&.shaded {
+		margin-bottom: $padding-large-vertical;
+		background-color: $color-input-bg-disabled;
+
+		span[class*="ico-"] {
+			width: 24px;
+		}
+	}
+
+	&.size-sm {
+		width: $size-sm-width;
+	}
+
+	&.border-none {
+		box-shadow: none;
+
+		.input-group-btn .btn {
+			border-width: 0;
+		}
+	}
+
+	.form-control {
+		border: none;
+	}
+
+	&.multiline {
+		background-color: $color-input-bg-disabled;
+		height: auto;
+		min-height: var(--form-control-height);
+
+		.input-group-btn {
+			height: var(--form-control-height);
+		}
+	}
+}
+
+.form-control + .form-control {
+	margin-left: $padding-base-horizontal;
+}
+
+// iTWO Cloud Form Generator
+[data-platform-form-container] {
+	overflow: auto;
+}
+
+.accordion-toggle {
+	cursor: pointer;
+	color: inherit;
+
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+/*responsive css sizes*/
+$sizes: (xs, sm, md, lg);
+
+// literate each size
+@each $size in $sizes {
+	.platform-#{$size} {
+		[class*='#{$size}-'] {
+			float: left;
+			padding-right: 10px;
+		}
+
+		@for $i from 1 through 12 {
+			.#{$size}-#{$i} {
+				width: math.div($i, 12)*100%;
+			}
+		}
+	}
+}
+
+.platform-form-container {
+	min-width: 375px;
+
+	//without composite-wrapper
+	.navigator-button {
+		border-width: 1px 1px 1px 0;
+	}
+}
+
+.platform-sm, .platform-xs {
+	[class*='sm'], [class*='xs'] {
+		padding-right: 0;
+	}
+
+	// margin only when small displays
+	[data-platform-composite-input],
+	[data-basics-lookupdata-lookup-composite] {
+		.form-control {
+			margin-top: 1px;
+		}
+	}
+}
+
+.platform-form-status-bar {
+	position: absolute;
+	bottom: 0;
+	background-color: #f0f0f0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 0.9em;
+
+	label {
+		margin: 5px;
+	}
+}
+
+.platform-form-group-active {
+	.panel-heading {
+		background-color: #bed4e5;
+	}
+}
+
+.platform-form-group-header:focus {
+	background-color: #f5f5f5;
+	border: 0;
+}
+
+.platform-form-label + .platform-form-col {
+	padding-left: 24px;
+}
+
+.form-icon-box {
+	width: var(--form-control-height);
+	height: var(--form-control-height);
+	background-size: 16px;
+
+	&.left {
+		position: relative;
+	}
+}
+
+.platform-form-group {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 0 5px;
+	width: 100%;
+
+	&.offset-1 {
+		padding-left: $form-offset-1;
+	}
+
+	> * {
+		border-spacing: 0;
+	}
+
+	.group-description {
+		display: table-caption;
+		padding: 0 0 $padding-base-vertical $padding-xlarge-horizontal;
+
+		&:empty {
+			display: none;
+		}
+	}
+
+	.control-directive {
+		flex: 1;
+		overflow: hidden;
+
+		/* e.g. layout: company details. lookups text in div and are readonly*/
+		[readonly], [disabled] {
+			.form-control {
+				background-color: $color-input-bg-disabled;
+			}
+		}
+
+		.form-control {
+			> [readonly], > [disabled] {
+				background-color: $color-input-bg-disabled;
+				//@include plainDisabledReadonlyProps();
+			}
+		}
+
+		.composite-last-item {
+			padding-right: 0;
+
+			//without this css --> it exist 2 borders side by side on the left side.
+			.navigator-button {
+				@include square(28px);
+				border-width: 1px 1px 1px 0;
+				background-size: 16px 16px;
+
+				//this class exiting if more than one form-element(using lg-* classes) in a row
+				&.navigatorButtonWrapper {
+					border-left: solid 1px $color-input-border;
+				}
+			}
+
+			&.form-control {
+				.navigator-button {
+					height: var(--form-control-height);
+					width: var(--form-control-height);
+					border-width: 0 0 0 1px;
+				}
+			}
+		}
+
+	}
+
+	.lookup-img-box {
+		padding-left: $padding-base-horizontal;
+	}
+
+	.lookup-input-image {
+		padding-left: $padding-base-horizontal + $size-icon + $padding-small-horizontal;
+	}
+
+	.form-group {
+		margin-bottom: 0;
+	}
+
+	.border-all {
+		border-color: $color-border;
+	}
+
+	.platform-form-row {
+		//display: flex;
+		display: table-row;
+
+		//don't work with table
+		//+ .platform-form-row {
+		//	margin-top: 10px;
+		//}
+
+		.platform-form-label {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 300px;
+			padding-top: $padding-medium-vertical;
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		.platform-form-col {
+			//flex: 1;
+			width: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			//all the elements in form can be selectable
+			user-select: text;
+
+			span.text {
+				display: inline-block;
+				padding-top: $padding-medium-vertical;
+			}
+
+			.image-viewer-content {
+				//e.g. Module: QTO Detail Properties
+				img {
+					max-height: 180px;
+				}
+			}
+
+			.border-container {
+				border: 1px solid $color-input-border;
+				padding: $padding-xlarge-vertical;
+			}
+
+			.text-container {
+				background-color: $color-input-bg-disabled;
+				padding: $padding-large-vertical;
+			}
+
+			.domain-type-boolean + input[type='color'] {
+				width: 78px; //100px - 16(checkbox) - margin(6px)
+				height: 26px;
+			}
+
+		}
+
+		.input-group {
+			width: 100%;
+
+			& + button {
+				margin-left: -1px;
+			}
+
+			&.info {
+				position: relative;
+				.input-group-content {
+					padding-left: 24px;
+				}
+			}
+
+			.form-control {
+				display: flex;
+				text-overflow: ellipsis;
+			}
+
+			.value-input {
+				padding: $input-text-padding;
+			}
+
+			.navigatorButtonWrapper {
+				position: absolute;
+				right: 0;
+			}
+		}
+
+		&.drag-right {
+			.platform-form-label {
+				padding-left: 25px;
+			}
+		}
+	}
+
+	//deactivated because it is redundant Michael Alisch@2020-12-04
+	//input[type="checkbox"], input[type="radio"] {
+	//	//label just behind the checkbox, radio
+	//	& + label {
+	//		margin-left: $padding-small-horizontal;
+	//		vertical-align: top;
+	//		margin-top: 5px;
+	//		padding: 0;
+
+	//	}
+	//}
+
+	// forms for dialogues
+	.form-modal-dialog {
+		.modal-content {
+			width: 700px;
+		}
+
+		.modal-footer {
+			.left-button {
+				float: left;
+			}
+
+			button {
+				width: 100px;
+			}
+		}
+	}
+
+	/*
+		more then one checkboxes in a container.
+		in modal-dialog -> max-height: 250px -> rest overflow-y: auto
+	 */
+	.form-col-checkbox-list {
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		max-height: 250px;
+		min-height: $size-input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+		width: 100%;
+		border: 1px solid $color-input-border;
+		overflow: auto;
+		padding: $padding-base-vertical $padding-medium-horizontal;
+	}
+
+	.invalid-form {
+		color: $color-danger;
+	}
+}
+
+// used for the color domain control to show the color area.
+.color-field {
+	width: 8px;
+	height: 100%;
+}
+
+// Item Flow Container
+.item-flow-container {
+	display: flex;
+	flex-wrap: wrap;
+
+	textarea {
+		resize: both;
+	}
+}
+
+input[data-platform-prevent-autofill][readonly].form-control {
+	background-color: unset;
+	cursor: text;
+}
+
+.platform-form-flex {
+	height: 100%;
+	overflow: hidden;
+
+	.platform-form-group {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+
+		.flex-container {
+			display: flex;
+			flex: 1;
+			margin: 5px 0;
+
+			.platform-form-label {
+				display: inline-flex;
+			}
+
+			.platform-form-col {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+			}
+		}
+	}
+}

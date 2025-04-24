@@ -1,0 +1,27 @@
+/* ************************************** */
+/* Mandatory CSS required for ng-sortable */
+/* ************************************** */
+.as-sortable-item, .as-sortable-placeholder {
+  display: block; }
+
+.as-sortable-item {
+  touch-action: none; }
+
+.as-sortable-hidden + .as-sortable-item {
+  margin-top: 10px; }
+
+.as-sortable-item-handle {
+  cursor: move; }
+
+.as-sortable-drag {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999; }
+
+.as-sortable-hidden {
+  display: none !important; }
+
+.as-sortable-placeholder {
+  border: 3px dashed #ddd;
+  margin: 10px 0;
+  background-color: #f5f5f5; }

@@ -1,0 +1,54 @@
+<section data-ng-if="parameterInvalid">
+	<h1>Parameter Error<p></h1>
+	<h3>Workflow Action wrong configured</h3>
+	<h2><b>Error:</b>&ensp;</h2>
+	<h3 data-ng-bind-html="parameterInvalidInfo.error"></h3>
+	<br>
+	<h2>Please fix issues and try again!</h2>
+</section>
+<section data-ng-if="!parameterInvalid">
+	<div class="platform-form-group">
+
+		<div data-platform-label-text data-label="'businesspartner.main.portal.wfaction.providerName'|translate" data-forid="providerName" data-model="data.extProviderInfo.FamilyName" readonly></div>
+		<div data-platform-label-text data-label="'platform.portal.email'|translate" data-forid="providerUserEmail" data-model="data.extProviderInfo.Email" readonly></div>
+		<div data-platform-label-text data-label="'businesspartner.main.portal.wfaction.companyName'|translate" data-forid="companyName" data-model="data.extProviderInfo.CompanyName" readonly></div>
+		<div data-platform-label-text data-label="'platform.portal.phone'|translate" data-forid="phone" data-model="data.extProviderInfo.Phone" readonly></div>
+		<div data-platform-label-text data-label="'platform.portal.street'|translate" data-forid="street" data-model="data.extProviderInfo.Street" readonly></div>
+		<div data-platform-label-text data-label="'platform.portal.city'|translate" data-forid="zipCode" data-model="data.extProviderInfo.City" readonly></div>
+		<div data-platform-label-text data-label="'platform.portal.country'|translate" data-forid="country" data-model="data.extProviderInfo.CountryEntity.Description" readonly></div>
+		<div data-platform-label-text data-label="'platform.portal.remark'|translate" data-forid="remark" data-model="data.extProviderInfo.Comment" readonly></div>
+
+	</div>
+</section>
+<section data-ng-if="!parameterInvalid">
+	<div class="btn-group-link overflow-hidden">
+		<hr>
+
+		<div style="text-align: right; margin-top: 8px;">
+			<a href="javascript:void(0)" data-ng-click="onStartBizPartnerModul()" style="text-decoration:underline;" class="cursor-pointer">{{::'businesspartner.main.portal.wfaction.startBizPartnerModule' | translate}}</a>
+		</div>
+
+		<div style="text-align: right; margin-top: 8px;">
+			<a href="javascript:void(0)" data-ng-click="onStartContactModul()" style="text-decoration:underline;" class="cursor-pointer">{{::'businesspartner.main.portal.wfaction.startContactModule' | translate}}</a>
+		</div>
+
+		<button class="btn btn-default fullwidth margin-top-ld" type="button" data-ng-disabled="!canCreateContactToBpd()" data-ng-click="onCreateContacttoBpd()">{{::'businesspartner.main.portal.wfaction.createContact2Bizpartner' | translate}}</button>
+
+		<hr>
+
+		<button class="btn btn-success fullwidth" type="button" data-ng-disabled="!canLinkToContact()" data-ng-click="onLinkSelContactModul()">{{::'businesspartner.main.portal.wfaction.linkSelectedContact' | translate}}</button>
+
+		<div style="text-align: right; font-style: normal;" data-ng-hide="!selectedContact.fullname">
+			<i style="font-size: 22px;font-style: normal;">&#9901;</i>
+			<span>{{selectedContact.fullname}}&ensp;</span><br>
+			<i class="control-icons ico-domain-email block-image"></i>
+			<span>&ensp;{{selectedContact.email}}</span>
+		</div>
+		<hr>
+
+		<div class="flex-box flex-align-center platform-form-group">
+			<div class="flex-box flex-element" data-platform-label-select data-label="'businesspartner.main.portal.wfaction.portalAccessGroup'|translate" data-forid="portalAccessGroup" data-isrequired
+			     data-model="data.extProviderInfo.FrmPortalUserGroupFk" data-options="portalAccessGroupOptions" data-onchange="onChangePortalAccessGroup()"></div>
+		</div>
+	</div>
+</section>

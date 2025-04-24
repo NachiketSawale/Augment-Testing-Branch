@@ -1,0 +1,193 @@
+$ms-commodity-row-cart-color: #4c8adc;
+
+#lblSpecification {
+  height: 50px;
+  overflow: hidden;
+}
+
+.ms-commodity-row {
+  border-bottom: 1px solid $ms-background-color;
+  height: auto;
+  padding: 10px 5px;
+  > div {
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  span {
+    color: $ms-label-color;
+  }
+}
+
+.ms-commodity-row-preview {
+  border-bottom: 1px solid $ms-background-color;
+  height: auto;
+  padding: 10px 5px;
+  > div {
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  span {
+    color: $ms-label-color;
+  }
+}
+
+.ms-commodity-row-img {
+  float: left;
+  max-width:143px;
+  overflow: hidden;
+  padding: 0px !important;
+  > img {
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    margin-left:23px;
+  }
+  .ms-commodity-row-img-3d{
+    position:absolute;
+    width:20px;
+    height:20px;
+    margin-left:0px;
+  }
+}
+
+
+.ms-sv-commodity-result-pane,.ts-cart-item-list-panel{
+    .ms-commodity-row-description-specification {
+      -webkit-line-clamp: 3;
+    }
+}
+
+
+.ms-commodity-row-description-specification{
+
+}
+.ms-commodity-row-description {
+  padding-left: 5px !important;
+  span {
+    font-size: $ms-font-size-13;
+  }
+
+  .ms-commodity-row-item-title {
+    @include ms-font-setting($ms-font-size-16, $ms-label-color, $ms-font-weight);
+    max-height: 42px;
+    overflow: hidden;
+    width: auto;
+    margin: 0px;
+    display: inline-block;
+  }
+  .ms-commodity-row-description-supplier {
+    margin-top: 0px;
+  }
+
+  .ms-commodity-row-description-specification {
+    margin-top: 5px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+  .ms-commodity-row-delivery{
+       margin-top:3px;
+     .ms-commodity-row-delivery-title{
+       font-weight: bold;
+     }
+    .ms-commodity-row-delivery-content{
+       padding:5px 0px;
+    }
+    .ms-commodity-row-delivery-content input{
+      vertical-align: text-top;
+      margin-top:0px;
+    }
+  }
+
+  .ms-commodity-row-description-specification-preview {
+    margin-top: 10px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.ms-commodity-row-operation {
+  > div {
+    text-align: right;
+  }
+  .ms-commodity-row-price {
+    @include ms-font-setting($ms-font-size-16, $ms-label-color, $ms-font-weight);
+    margin: 0px;
+  }
+  .ms-commodity-row-unituom{
+    @include ms-font-setting($ms-font-size-13, $ms-label-color);
+    margin: 0px;
+  }
+  .ms-commodity-row-quantity .ms-row-label{
+    line-height:30px;
+  }
+  .ms-row-label{
+    position:absolute;
+    left:0px;
+  }
+  .ts-cart-item-delivery{
+    margin-top:5px;
+  }
+}
+
+.ms-commodity-row-add-delete {
+  height: 30px;
+  margin-top: 6px;
+  > div {
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: $ms-background-color;
+    text-align: center;
+    padding-top: 6px;
+  }
+  .ms-commodity-row-add-button {
+    border-radius: 0 5px 5px 0;
+  }
+  .ms-commodity-row-input {
+    width: 80px;
+    padding-top: 3px;
+    text-align: center;
+    position: relative;
+    input {
+      width: 100%;
+      padding-top: -4px;
+      border: 0;
+      height: 24px;
+      text-align: center;
+    }
+    div {
+      position: absolute;
+      right: 3px;
+      top: 8px;
+      color: $ms-background-color-174195212;
+    }
+  }
+  .ms-commodity-row-delete-button {
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.ms-commodity-row-cart-empty {
+  background-color: $ms-btn-background-color;
+  padding: 7px;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  margin-top: 8px;
+  float: right;
+}
+.ms-commodity-row-cart-delete {
+  background-color: #4b89dc;
+  padding: 7px;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  margin-top: 6px;
+  margin-left: 2px;
+  float: right; }
+.ms-commodity-row-material-selected {
+  background-color: $ms-background-color-selected;
+}

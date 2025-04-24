@@ -1,0 +1,28 @@
+﻿(function (angular) {
+    'use strict';
+    var moduleName = 'productionplanning.configuration';
+    var angModule = angular.module(moduleName);
+
+    /**
+     * @ngdoc service
+     * @name productionplanningConfigurationEngtype2eventtypeValidationService
+     * @description provides validation methods for EngType instances
+     */
+    angModule.factory('productionplanningConfigurationEngtype2eventtypeValidationService', ValidationService);
+
+    ValidationService.$inject = ['platformDataValidationService','productionplanningConfigurationEngtype2eventtypeDataService','basicsLookupdataLookupDescriptorService'];
+
+    function ValidationService(platformDataValidationService,dataService) {
+        var service = {};
+
+        service.validateSorting = function (entity, value, model) {
+            return platformDataValidationService.validateMandatory(entity, value, model, service, dataService);
+        };
+
+        service.validateRubricCategoryFk = function (entity, value, model) {
+            return platformDataValidationService.validateMandatory(entity, value, model, service, dataService);
+        };
+
+        return service;
+    }
+})(angular);

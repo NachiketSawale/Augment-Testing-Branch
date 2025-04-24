@@ -1,0 +1,30 @@
+<header class="modal-header" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+	<div class="input-group form-control">
+		<input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="search(searchValue,$event)" autofocus/>
+		<span class="input-group-btn">
+			<button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="search(searchValue)"></button>
+		</span>
+	</div>
+	<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+		<div class="subview-header toolbar">
+			<div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+		</div>
+		<div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden">
+			<platform-grid data="gridData" class="lookup-grid"></platform-grid>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<div class="custom-group">
+        <span>
+         <!--   <label>{{htmlTranslate.structureSelectCount}}</label>-->
+				  <label data-ng-bind="htmlTranslate.structureSelectCount"></label>
+        </span>
+	</div>
+	<button class="btn btn-default" data-ng-repeat="button in buttons" data-ng-disabled="button.disabled()" data-ng-click="button.execute($event)">
+		{{button.context$tr$ | translate}}
+	</button>
+</footer>

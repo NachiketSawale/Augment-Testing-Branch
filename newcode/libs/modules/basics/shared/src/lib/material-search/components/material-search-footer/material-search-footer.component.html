@@ -1,0 +1,45 @@
+<div class="ms-commodity-footer"
+	 *ngIf="scope.response.hasResult">
+	<div class="ms-checkbox-multi-select-container"
+		 *ngIf="scope.searchOptions && scope.searchOptions.selectable">
+		<div class="ms-checkbox-multi-select">
+			<div class="ms-checkbox-enable-select">
+				<input type="checkbox"
+					   [(ngModel)]="scope.enableMultiSelection"
+					   (ngModelChange)="onCheckMultiSelection()">
+				{{ 'cloud.common.multipleSelection' | platformTranslate }} -
+				{{scope.selectedItems.length}}
+				{{ 'cloud.common.multipleSelectionItemsSelected' | platformTranslate }}
+			</div>
+			<div class="ms-checkbox-max-select-note">
+				{{ 'basics.material.materialSearchLookup.htmlTranslate.maxSelectMaterialNote' | platformTranslate }}
+			</div>
+		</div>
+		<div class="ms-checkbox-select-all">
+			<div class="ms-checkbox-check-all">
+				<input type="checkbox"
+					   [(ngModel)]="scope.checkAllFromCurrentPage"
+					   (ngModelChange)="onCheckAllFromCurrentPage()">
+				{{ 'basics.material.materialSearchLookup.htmlTranslate.checkAllFromCurrentPage' | platformTranslate }} ({{scope.response.items.length}}
+				{{ 'basics.material.materialSearchLookup.htmlTranslate.items' | platformTranslate }})
+			</div>
+			<div class="ms-checkbox-check-all">
+				<input type="checkbox"
+					   [(ngModel)]="scope.checkAllFromResultSet"
+					   [disabled]="scope.checkAllFromResultSetDisable"
+					   (ngModelChange)="onCheckAllFromResultSet()">
+				{{ 'basics.material.materialSearchLookup.htmlTranslate.checkAllFromResultSet' | platformTranslate }} ({{scope.response.maxGroupCount}}
+				{{ 'basics.material.materialSearchLookup.htmlTranslate.items' | platformTranslate }})
+			</div>
+		</div>
+	</div>
+	<mat-paginator #paginator
+				   (page)="handlePageEvent($event)"
+				   [length]="scope.response.maxGroupCount"
+				   [pageIndex]="scope.request.CurrentPage - 1"
+				   [pageSize]="scope.request.ItemsPerPage"
+				   [showFirstLastButtons]="true"
+				   [pageSizeOptions]="[10, 20, 30, 40, 50]"
+				   [disabled]="scope.loading">
+	</mat-paginator>
+</div>

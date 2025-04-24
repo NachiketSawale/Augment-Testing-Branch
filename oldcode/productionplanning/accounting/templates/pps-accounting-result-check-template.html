@@ -1,0 +1,22 @@
+<header class="modal-header main-color">
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)"
+            aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+             class="block-image"></svg>
+    </button>
+    <h2 class="modal-title">{{ 'productionplanning.accounting.result.testTitle' | translate }}</h2>
+</header>
+<section ng-cloak class="modal-body flex-box flex-column">
+    <div style="margin-left: -10px" data-platform-form data-form-options="formOptions" data-entity="formOptions.entity"></div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="executeBtn()" data-ng-click="onExecute()">
+        {{'productionplanning.accounting.result.executeBtn' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="onOk()">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled=false data-ng-click="$close(false)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

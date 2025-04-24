@@ -1,0 +1,70 @@
+<!--
+<div class="wizard-wrapper wizard-dialog">
+    <div class=" platform-form-row">
+        <div class="platform-form-col cell ">
+            <div data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+        </div>
+    </div>
+</div>
+-->
+<div data-ng-controller="estimateMainRiskRegisterCalculatorController" class="wizard-wrapper wizard-dialog modal-wrapper overflow-hidden">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="close()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{selectStep.name}}</h2>
+    </header>
+    <section class="modal-body">
+        <div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+
+        <div ng-switch="selectStep.number" class="modal-wrapper">
+            <div ng-switch-when="0">
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step0.html'"></ng-include>
+            </div>
+            <div ng-switch-when="1">
+                <div data-platform-alert data-error="assignError"></div>
+                <div data-platform-alert data-error="executionScheduleError"></div>
+                <div data-platform-alert data-error="noLineItemStructureError"></div>
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step2.html'"></ng-include>
+            </div>
+            <div ng-switch-when="2">
+                <div data-platform-alert data-error="error"></div>
+                <div data-platform-alert data-error="urpSelectionError"></div>
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step1.html'"></ng-include>
+            </div>
+            <div class="modal-wrapper" ng-switch-when="3">
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step3.html'" class="modal-wrapper"></ng-include>
+            </div>
+            <div class="modal-wrapper" ng-switch-when="4">
+                <div class="fullwidth container-fluid ribalert alert alert-dismissable ng-isolate-scope alert-info" data-ng-class="alertclass" style="">
+                    <div class="row">
+                        <div class="col-xs-12 rib-alert-col1">
+                            <span class="ng-binding">
+                                <div data-ng-bind-html="trustAsHtml(optionalWarning)"></div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-bid-creation-step4.html'" class="modal-wrapper"></ng-include>
+            </div>
+        </div>
+    </section>
+    <section class="modal-body1" style="height:15%; padding: 10px; padding-top:0px;">
+        <style type="text/css">
+            .modal-content.ui-resizable .steps { display: none}
+        </style>
+        <div data-platform-wizard-dialog-body class="flex-box flex-column" style="height: 70px;"></div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="previousStep()" data-ng-disabled="isFirstStep()" data-ng-hide="isFirstStep()"> {{::'basics.common.button.previousStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()" data-ng-disabled="!canExecuteNextButton()"> {{::'basics.common.button.nextStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+
+        <button type="button" class="btn btn-default" data-ng-click="execute()" data-ng-disabled="!canExecute()">{{::'basics.common.button.execute' | translate}}</button>
+
+    </footer>
+</div>
+
+
+

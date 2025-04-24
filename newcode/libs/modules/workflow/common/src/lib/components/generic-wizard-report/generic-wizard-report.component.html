@@ -1,0 +1,20 @@
+<mat-radio-group aria-label="select option" [name]="'coverletter'" [(ngModel)]="selectedCoverLetter" (change)="onCoverLetterSelected($event)">
+	<mat-accordion *ngFor="let report of reportList" class="example-headers-align">
+		<mat-expansion-panel [hideToggle]="report.parameters === undefined || (report.parameters && report.parameters.length === 0)">
+			<mat-expansion-panel-header>
+				<div class="report">
+					<mat-checkbox *ngIf="!report.IsCoverLetter" [(ngModel)]="report.isIncluded" (click)="$event.stopPropagation()"></mat-checkbox>
+					<mat-radio-button *ngIf="report.IsCoverLetter" (click)="$event.stopPropagation()" [value]="report.Id"></mat-radio-button>
+					<mat-panel-title [textContent]="report.Name?.Description ?? ''"></mat-panel-title>
+					<mat-panel-description [textContent]="report.Description?.Description ?? ''"></mat-panel-description>
+					<button (click)="openReport(report, $event)" class="block-image control-icons fa fa-eye"></button>
+				</div>
+			</mat-expansion-panel-header>
+
+			<ng-template matExpansionPanelContent>
+				<workflow-common-rfq-bidder-report-dynamic-form
+					[reportParameter]="report.parameters ?? []"></workflow-common-rfq-bidder-report-dynamic-form>
+			</ng-template>
+		</mat-expansion-panel>
+	</mat-accordion>
+</mat-radio-group>

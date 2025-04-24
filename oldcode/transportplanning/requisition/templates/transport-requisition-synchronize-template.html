@@ -1,0 +1,18 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body flex-box flex-column">
+    <div style="margin-left: -10px" data-platform-form data-form-options="formOptions" data-entity="formOptions.entity"></div>
+    <tabset class="tabsWrapper" style="padding: 0px 0px">
+        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active"  ng-click="onTabSelect(tab)">
+            <div transportplanning-requisition-synchronize-tab setting="tab" ng-if="tab.initialized"></div>
+        </tab>
+    </tabset>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

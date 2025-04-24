@@ -1,0 +1,25 @@
+<div data-ng-controller="BusinessPartnerCertificateRequiredCreateController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div data-platform-form-container data-form-container-options="formContainerOptions"
+		     entity="currentItem" class="fullheight"></div>
+
+		<div cloud-common-overlay data-loading="isLoading"></div>
+
+		<div data-ng-show="isSuccessed" class="alert alert-success" role="alert">
+			<div data-ng-repeat="info in updateDetail">
+				<div ng-bind="info"></div>
+			</div>
+		</div>
+		<div ng-bind="errorDetail" data-ng-show="isFailed" class="alert alert-danger" role="alert"></div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="!currentItem.StatusFk" data-ng-hide="isSuccessed||isFailed">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

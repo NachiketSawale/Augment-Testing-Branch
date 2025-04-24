@@ -1,0 +1,77 @@
+﻿[
+	{
+		"id": "timekeeping.layout.userInterfaceList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.layout.userInterfaceLayoutListTitle",
+		"controller": "timekeepingLayoutUserInterfaceLayoutListController",
+		"uuid": "af8a45a50e3f467ab563336623d14c3c"
+	},
+	{
+		"id": "timekeeping.layout.userInterfaceDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.layout.userInterfaceLayoutDetailTitle",
+		"controller": "timekeepingLayoutUserInterfaceLayoutDetailController",
+		"uuid": "0f43a4ef30aa4686ab0bf5d5ad256f4b",
+		"permission": "af8a45a50e3f467ab563336623d14c3c"
+	},
+	{
+		"id": "timekeeping.layout.inputPhaseGroupList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.layout.inputPhaseGroupListTitle",
+		"controller": "timekeepingLayoutInputPhaseGroupListController",
+		"uuid": "c56ac5f039ec4cc7a911e9d22953a815"
+	},
+	{
+		"id": "timekeeping.layout.inputPhaseGroupDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.layout.inputPhaseGroupDetailTitle",
+		"controller": "timekeepingLayoutInputPhaseGroupDetailController",
+		"uuid": "dc9c2426a7d442bb9dd7eb343773cad9",
+		"permission": "c56ac5f039ec4cc7a911e9d22953a815"
+	},
+	{
+		"id": "timekeeping.layout.inputPhaseList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.layout.inputPhaseListTitle",
+		"controller": "timekeepingLayoutInputPhaseListController",
+		"uuid": "bb17574b8bdb4c969bc7f13f78e2ba3c"
+	},
+	{
+		"id": "timekeeping.layout.inputPhaseDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.layout.inputPhaseDetailTitle",
+		"controller": "timekeepingLayoutInputPhaseDetailController",
+		"uuid": "c437bd6038b0485ea206aac36172ee2f",
+		"permission": "bb17574b8bdb4c969bc7f13f78e2ba3c"
+	},
+	{
+		"id": "timekeeping.layout.timeSymbolList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.layout.timeSymbolListTitle",
+		"controller": "timekeepingLayoutInputPhaseTimeSymbolListController",
+		"uuid": "784c48ec472d4dd6bee47b2b6d5a83b6"
+	},
+	{
+		"id": "timekeeping.layout.timeSymbolDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.layout.timeSymbolDetailTitle",
+		"controller": "timekeepingLayoutInputPhaseTimeSymbolDetailController",
+		"uuid": "160bc67764a443cea4bcbba1ff6b0cd8",
+		"permission": "784c48ec472d4dd6bee47b2b6d5a83b6"
+	},
+	{
+		"id": "timekeeping.layout-translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "8673fd922c2047b79541ff16dcc0a4dd"
+	},
+	{
+		"id": "timekeeping.recording.inputForm",
+		"template": "timekeeping.recording/partials/timekeeping-recording-input-form.html",
+		"title": "timekeeping.recording.inputFormTitle",
+		"controller": "timekeepingRecordingInputFormController",
+		"uuid": "7acd8d373999463eb561fb23a19fe350",
+		"permission": "f78bcdebfebc494392a7759e48e6b0ed"
+	}
+]

@@ -1,0 +1,23 @@
+[
+	{
+		"id": "mtwo.chatbot.header.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.chatbot.headerTitle",
+		"controller": "mtwochatbotHeaderController",
+		"uuid": "9DC0F6FEAA284933BC8747871A64C00E"
+	},
+	{
+		"id": "mtwo.chatbot.configuration.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "mtwo.chatbot.configurationTitle",
+		"controller": "mtwochatbotConfigurationController",
+		"uuid": "A906C9A8D9BE43F39F9928EB969A2737"
+	},
+	{
+    "id": "mtwo.chatbot.wf2intent.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "mtwo.chatbot.wf2intentTitle",
+    "controller": "mtwochatbotWf2intentController",
+    "uuid": "0097C0C570744F338742B4E906D1F31C"
+  }
+]

@@ -1,0 +1,22 @@
+<div class="modal-wrapper master-detail-dialog" data-ng-controller="estimateMainMasterDetailDialogController">
+    <div data-platform-kendo-splitter-adjust class="modal-wrapper border-none"
+         option="{panes: [ { collapsible: false, min: '25%' },{ collapsible: false, size: '75%' }],orientation:'horizontal'}">
+
+        <div class="modal-wrapper">
+            <div class="pane-l master-list flex-box flex-column flex-element overflow-hidden">
+                <div class="flex-element flex-box flex-column overflow-hidden">
+                    <ul class="master-list-contents flex-element overflow">
+                        <li data-ng-repeat="item in displayedItems">
+                            <button class="master-item" data-ng-disabled="isDisabled(item)" data-ng-click="selectItem(item)" data-ng-class="[{selected: item === selectedItem}, item.cssClass]"><span data-ng-bind="item[nameProperty]"></span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper">
+            <div class="modal-wrapper pane-r overflow">
+                <div data-platform-form data-form-options="formOptions" data-entity="selectedItem" class="fullheight"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div ng-controller="basicsMaterialImportMaterialRecordsResultController" class="modal-wrapper">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body">
+        <div class="flex-column" style="height: 200px;">
+            <platform-Grid data="errorListData"></platform-Grid>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="$close()"> {{::'basics.common.button.ok' | translate}}</button>
+    </footer>
+</div>
+

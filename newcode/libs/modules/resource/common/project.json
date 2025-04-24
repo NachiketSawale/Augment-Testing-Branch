@@ -1,0 +1,20 @@
+{
+	"name": "modules-resource-common",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/resource/common/src",
+	"prefix": "resource-common",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/resource/common"],
+			"options": {
+				"jestConfig": "libs/modules/resource/common/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

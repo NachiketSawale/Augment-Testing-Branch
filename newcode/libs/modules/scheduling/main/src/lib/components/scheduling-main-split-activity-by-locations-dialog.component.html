@@ -1,0 +1,21 @@
+<div class="flex-element flex-box fullwidth fullheight flex-column border-all">
+
+	<ul>
+		<li [ngClass]="{'activated':tab.activated}" *ngFor="let tab of tabs;let i = index;" (click)="activeTab(i)">{{tab.title | platformTranslate}}</li>
+	</ul>
+	<div class="fullheight">
+		<div [ngClass]="{'hidden':!tab.activated}" class="flex-element flex-box fullwidth fullheight" *ngFor="let tab of tabs" style="padding: 8px;">
+
+		<div class="flex-box flex-element flex-column fullwidth fullheight" *ngIf="tab.id === 'locations'">
+			<div>
+				<ui-common-grid [configuration]="locationsGrid"/>
+			</div>
+	   </div>
+	   <div class="flex-box flex-element flex-column fullwidth fullheight" *ngIf="tab.id === 'relation'">
+		   <ui-common-form [formConfig]="formConfig" [entity]="relations"/>
+	   </div>
+
+		</div>
+
+	</div>
+	</div>

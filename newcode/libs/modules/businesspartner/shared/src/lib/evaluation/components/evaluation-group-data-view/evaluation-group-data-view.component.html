@@ -1,0 +1,9 @@
+<div #groupDataViewDiv class="modal-wrapper subview-container">
+	<div class="toolbar" style="display: flex; justify-content: flex-end">
+			<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+	</div>
+
+	<div [ngClass]="'cid_' + gridConfig.uuid" class="filler flex-box flex-column flex-element subview-container">
+		<ui-common-grid [configuration]="gridConfig" (selectionChanged)="onSelectionchange($event)" ></ui-common-grid>
+	</div>
+</div>

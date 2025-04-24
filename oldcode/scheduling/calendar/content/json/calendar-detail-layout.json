@@ -1,0 +1,32 @@
+{
+	"fid": "scheduling.calendar.calendardetailform",
+	"version": "1.0.0",
+	"showGrouping": true,
+	"groups": [
+		{
+			"gid": "baseGroup",
+			"attributes":["code", "description", "isdefault", "workhourdefinesworkday" ]
+		},
+		{
+			"gid": "workHours",
+			"attributes":["workhoursperday", "workhoursperweek", "workhourspermonth", "workhoursperyear"]
+		},
+		{
+			"gid": "userDefinedText",
+			"attributes":["userdefinedtext01", "userdefinedtext02", "userdefinedtext03", "userdefinedtext04", "userdefinedtext05"]
+		},
+		{
+			"gid": "entityHistory",
+			"isHistory": true
+		}
+	],
+	"overloads": {
+		"weekday": {
+			"type": "directive",
+			"directive": "scheduling-calendar-weekday-lookup",
+			"options": {
+				"eagerLoad": true
+			}
+		}
+	}
+}

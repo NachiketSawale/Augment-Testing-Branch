@@ -1,0 +1,208 @@
+<div data-ng-controller="controllingStructureTransferDataToBisDataController" class="modal-wrapper" >
+    <div tabindex="-1" data-ng-keydown="onKeyPress($event)" data-ng-keyup="onKeyPress($event)">
+        <header class="modal-header main-color" data-ng-include="modalOptions.headerTemplateUrl"></header>
+        <section class="modal-body">
+            <div style="height: 100%;width:100%">
+                <div data-platform-alert data-error="error"></div>
+            </div>
+            <div cloud-common-overlay data-loading="isLoading" data-info2="loadingText"></div>
+
+            <div data-accordion data-close-others="false">
+                <div data-accordion-group data-is-open="true">
+                    <div data-accordion-heading>
+                        <span>{{'controlling.structure.basicSettings' | translate}}</span>
+                        <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+                    </div>
+                    <div>
+                        <div class="platform-form-group platform-lg">
+                            <div class="platform-form-row">
+                                <div class="platform-form-col">
+                                    <ul>
+                                        <li>
+                                            <input type="radio" data-ng-model="entity.versionType" name="versionType" id="LableCreateNewVersion"  value="2"
+                                                   data-ng-checked="versionType==2" data-ng-click="onVersionSelected(2)" >
+                                            <label for="LableCreateNewVersion" style="padding-top:0;">{{'controlling.structure.LableCreateNewVersion' | translate}}</label>
+                                            &nbsp;
+                                            &nbsp;
+                                            <input type="radio" data-ng-model="entity.versionType" name="versionType" id="LableUpdateLastVersion"  value="1"
+                                                   data-ng-checked="versionType==1" data-ng-click="onVersionSelected(1)" >
+                                            <label for="LableUpdateLastVersion" style="padding-top:0;">{{'controlling.structure.LableUpdateLastVersion' | translate}}</label>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="platform-form-group platform-lg">
+
+                            <div class="platform-form-row">
+                                <label class="platform-form-label">{{'cloud.common.entityProject' | translate}}</label>
+
+                                <div class="platform-form-col control-directive">
+                                    <div data-ng-model="entity.projectId"
+                                         data-entity="entity"
+                                         data-options="config.project"
+                                         data-basics-lookupdata-lookup-composite>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="platform-form-row">
+
+                                <label class="platform-form-label">{{'controlling.structure.ribHistoryId' | translate}}</label>
+
+                                <div class="platform-form-col">
+                                    <div class="lg-4 md-4">
+                                        <div data-domain-control data-domain="select" data-ng-model="entity.ribHistoryId"   data-change="onRibHistoryIdChanged(histroyEntities,entity.ribHistoryId)" data-options="histroyEntities" data-readonly="isDisabledHistroyId" ></div>
+                                    </div>
+                                    <div class="lg-8 md-8" style="padding-right: 0;">
+                                        <input type="text" data-ng-model="entity.historyDescription" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="platform-form-row">
+                                <label  class="platform-form-label">{{'controlling.structure.remark' | translate}}<span class="required-cell"></span></label>
+                                <div class="platform-form-col">
+                                    <input type="text"
+                                           data-ng-model="entity.histroyRemark"
+                                           class="form-control"
+                                           ng-disabled="UpdateLastVersionSelected"
+                                           data-ng-change = "remarkChanged()"
+                                           data-ng-pattern-restrict="^.{0,240}$"
+                                           data-entity="entity" >
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div data-accordion data-close-others="false">
+                <div data-accordion-group data-is-open="true">
+                    <div data-accordion-heading>
+                        <span>{{'controlling.structure.updateLineitemQuantities' | translate}}</span>
+                        <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+                    </div>
+
+                    <div>
+                        <div class="platform-form-group platform-lg">
+                            <div class="platform-form-row">
+                                <input type="checkbox" data-ng-model="entity.updatePlannedQty" data-ng-checked="entity.updatePlannedQty==true" value="{{entity.updatePlannedQty}}" />
+                                <label data-ng-bind="entity.updateAQLabel" style="padding-top:0px;"></label>
+                            </div>
+
+                            <div class="platform-form-row">
+                                <input type="checkbox" data-ng-model="entity.updateInstalledQty" data-ng-checked="entity.updateInstalledQty==true" data-ng-click="resetUpdateIQOption(entity.updateInstalledQty)" value="{{entity.updateInstalledQty}}" />
+                                <label data-ng-bind="entity.updateIQLabel" style="padding-top:0px;"></label>
+                            </div>
+
+                            <div class="platform-form-row">
+                                <div class="platform-form-col" style="padding-left: 30px;">
+                                    <ul>
+                                        <li><input type="radio" data-ng-model="entity.insQtyUpdateFrom" name="updateFrom" id="SCHEDULE" value="1" data-ng-checked="entity.insQtyUpdateFrom==1" data-ng-disabled="entity.updateInstalledQty !== true" data-ng-click="setInsQtyUpdateFrom(1)">
+                                            <label for="SCHEDULE" style="padding-top:0px;">{{'controlling.structure.fromSchedule' | translate}}</label>
+                                        </li>
+
+                                        <li><input type="radio" data-ng-model="entity.insQtyUpdateFrom" name="updateFrom" id="WIP"  value="2" data-ng-checked="entity.insQtyUpdateFrom==2" data-ng-disabled="entity.updateInstalledQty !== true" data-ng-click="setInsQtyUpdateFrom(2)">
+                                            <label for="WIP" style="padding-top:0px;">{{'controlling.structure.fromWip' | translate}}</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="platform-form-row">
+                                <input type="checkbox" data-ng-model="entity.updateBillingQty" data-ng-checked="entity.updateBillingQty==true" value="{{entity.updateBillingQty}}" />
+                                <label data-ng-bind="entity.updateBQLabel" style="padding-top:0px;"></label>
+                            </div>
+
+                            <div class="platform-form-row">
+                                <input type="checkbox" data-ng-model="entity.updateForecastingPlannedQty" data-ng-checked="entity.updateForecastingPlannedQty==true" value="{{entity.updateForecastingPlannedQty}}" />
+                                <label data-ng-bind="entity.updateFQLabel" style="padding-top:0px;"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+	        <div data-accordion data-close-others="false">
+		        <div data-accordion-group data-is-open="false">
+			        <div data-accordion-heading>
+				        <span>{{'controlling.structure.updateSaleseRevenue' | translate}}</span>
+				        <div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+			        </div>
+
+			        <div>
+				        <div class="platform-form-group platform-lg">
+					        <div class="platform-form-row">
+						        <input type="checkbox" data-ng-model="entity.updateRevenue" data-ng-checked="entity.updateRevenue==true" data-ng-click="resetUpdateRevenueOption(entity.updateRevenue)" value="{{entity.updateRevenue}}" />
+						        <label style="padding-top:0px;">{{'controlling.structure.updateRevenue' | translate}}</label>
+					        </div>
+
+					        <div class="platform-form-row">
+						        <div class="platform-form-col" style="padding-left: 30px;">
+							        <ul>
+								        <li><input type="radio" data-ng-model="entity.revenueUpdateFrom" name="updateRevenueFrom" id="COST" value="1" data-ng-checked="entity.revenueUpdateFrom==1" data-ng-disabled="entity.updateRevenue !== true" data-ng-click="setRevenueUpdateFrom(1)">
+									        <label for="COST" style="padding-top:0px;">{{'controlling.structure.distributeByCost' | translate}}</label>
+								        </li>
+
+								        <li><input type="radio" data-ng-model="entity.revenueUpdateFrom" name="updateRevenueFrom" id="BUDGET"  value="2" data-ng-checked="entity.revenueUpdateFrom==2" data-ng-disabled="entity.updateRevenue !== true" data-ng-click="setRevenueUpdateFrom(2)">
+									        <label for="BUDGET" style="padding-top:0px;">{{'controlling.structure.distributeByBudget' | translate}}</label>
+								        </li>
+							        </ul>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+	        </div>
+
+            <div data-accordion data-close-others="false">
+                <div data-accordion-group data-is-open="isOpen" data-ng-click="onOpen(isOpen)">
+                    <div data-accordion-heading>
+                        <span>{{'controlling.structure.costGroupAssignment' | translate}}</span>
+                        <div class="toggleImg control-icons" data-ng-class="isOpen ? 'ico-up' : 'ico-down'"></div>
+                    </div>
+                    <div>
+                        <div class="platform-form-row">
+                            <div class="platform-form-col">
+                                <div data-platform-grid class="subview-container" data="gridData"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-accordion data-close-others="false">
+                <div data-accordion-group data-is-open="isHistroyOpen" data-ng-click="onHistroyOpen(isHistroyOpen)">
+                    <div data-accordion-heading>
+                        <span>{{'controlling.structure.historySection' | translate}}</span>
+                        <div class="toggleImg control-icons" data-ng-class="isHistroyOpen ? 'ico-up' : 'ico-down'"></div>
+                    </div>
+
+                    <div>
+
+                        <div class="platform-form-row">
+                            <div class="platform-form-col">
+                                <div data-platform-grid class="subview-container" data="gridHistroyData"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="modal-footer" >
+            <div class="custom-group">
+                <label style="color:red" translate="controlling.structure.hint" data-ng-hide="!ctrlKeyIsPressed"></label>
+            </div>
+            <button type="button" class="ok btn btn-default" data-ng-click="onOK($event)" translate="basics.common.button.ok" data-ng-disabled="isDisableOkBtn"></button>
+            <button type="button" class="cancel btn btn-default" data-ng-click="$parent.$close(false)" translate="basics.common.button.cancel"></button>
+        </footer>
+    </div>
+</div>

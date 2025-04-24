@@ -1,0 +1,86 @@
+﻿[
+	{
+		"id": "controlling.enterprise.dashboard1",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.enterprise.dashboard1",
+		"controller": "",
+		"uuid": "44c707ceb47b4458871060578e81e65c",
+		"permission": "44c707ceb47b4458871060578e81e65c",
+		"dashboard": {
+			"name": "Controlling Cost Analysis",
+			"platform": "dashboard",
+			"messageFilters": [
+				{
+					"filter": "FIL_CLIENT",
+					"mapTo": "Client.Id"
+				},
+				{
+					"filter": "FIL_HISTORY_ID",
+					"mapTo": "CostCode.ParentId"
+				},
+				{
+					"filter": "FIL_PA_ID",
+					"mapTo": "CostCode.ParentDescription"
+				},
+				{
+					"filter": "FIL_PRJ_ID",
+					"mapTo": "Project.Id"
+				},
+				{
+					"filter": "FIL_PRJ_VERSION"
+				},
+				{
+					"filter": "PRJ_HISTORY_FK"
+				}
+			]
+		}
+	},
+	{
+		"id": "controlling.enterprise.dashboard2",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.enterprise.dashboard2",
+		"controller": "",
+		"uuid": "241ae101c849454fb6e04f22f92a69ff",
+		"permission": "241ae101c849454fb6e04f22f92a69ff",
+		"dashboard": {
+			"name": "Controlling Changes",
+			"platform": "dashboard"
+		}
+	},
+	{
+		"id": "controlling.enterprise.dashboard3",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.enterprise.dashboard3",
+		"controller": "",
+		"uuid": "a978f7f8120c4144b097482ce52c7c85",
+		"permission": "a978f7f8120c4144b097482ce52c7c85",
+		"dashboard": {
+			"name": "Controlling Revenue and Cost",
+			"platform": "dashboard"
+		}
+	},
+	{
+		"id": "controlling.enterprise.dashboard4",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.enterprise.dashboard4",
+		"controller": "",
+		"uuid": "774f77161992460f86ccfec70deca9a2",
+		"permission": "774f77161992460f86ccfec70deca9a2",
+		"dashboard": {
+			"name": "Controlling General Metrics",
+			"platform": "dashboard"
+		}
+	},
+	{
+		"id": "controlling.enterprise.dashboard5",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.enterprise.dashboard5",
+		"controller": "",
+		"uuid": "70aaf5d2e68f4d7eab66b4c1bf58d2b7",
+		"permission": "70aaf5d2e68f4d7eab66b4c1bf58d2b7",
+		"dashboard": {
+			"name": "Controlling Performance Analysis",
+			"platform": "dashboard"
+		}
+	}
+]

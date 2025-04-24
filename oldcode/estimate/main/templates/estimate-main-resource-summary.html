@@ -1,0 +1,155 @@
+<div style="height:120px;width:100%;overflow: auto;margin-bottom: 5px;margin-top: 4px;">
+    <div style="width: 1750px">
+        <div class="platform-form-row form-group" style="margin-bottom: 4px;">
+            <div style="width:125px;display:inline-block"></div>
+            <div class="headTitleColumn">
+                <span>{{'estimate.main.costSummary' | translate}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <span data-estimate-main-resource-summary-help-info-message data-ng-show="showHelpInfo"></span>
+                <span>{{'estimate.main.costModificationPercent' | translate}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <span data-estimate-main-resource-summary-help-info-message data-ng-show="showHelpInfo"></span>
+                <span>{{'estimate.main.costModificationAbsolute' | translate}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <span data-estimate-main-resource-summary-help-info-message data-ng-show="showHelpInfo"></span>
+                <span>{{'estimate.main.adjCostSummary' | translate}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <span>{{'estimate.main.marginOne' | translate}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <span>{{'estimate.main.marginTwo' | translate}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <span>{{'estimate.main.grandTotal' | translate}}</span>
+            </div>
+        </div>
+
+        <div class="platform-form-row form-group" style="margin-bottom: 4px;">
+            <div style="width:125px;display:inline-block">
+                <span>{{('estimate.main.filteredTotalCost' | translate) + ':'}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="filteredTotalCostEntity.CostSummary"
+                     data-entity="filteredTotalCostEntity"
+                     data-readonly="true">
+                </div>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="filteredTotalCostEntity.CostModificationPercent"
+                     data-entity="filteredTotalCostEntity"
+                     data-keydown="onKeyDown($event,'filteredTotalCostEntity', 'CostModificationPercent')"
+                     data-readonly="isHeaderInfoReadonly()"
+                     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+                     data-change="headerInfoValueChange('filteredTotalCostEntity', 'CostModificationPercent')">
+                </div>
+            </div>
+            <div class="headTitleColumn"></div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="filteredTotalCostEntity.AdjCostSummary"
+                     data-entity="filteredTotalCostEntity"
+                     data-keydown="onKeyDown($event,'filteredTotalCostEntity', 'AdjCostSummary')"
+                     data-readonly="isHeaderInfoReadonly()"
+                     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+                     data-change="headerInfoValueChange('filteredTotalCostEntity', 'AdjCostSummary')">
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row form-group" style="margin-bottom: 4px;">
+            <div style="width:125px;display:inline-block">
+                <span>{{('estimate.main.totalCost' | translate) + ':'}}</span>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="totalCostEntity.CostSummary"
+                     data-entity="totalCostEntity"
+                     data-readonly="true">
+                </div>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="totalCostEntity.CostModificationPercent"
+                     data-entity="totalCostEntity"
+                     data-keydown="onKeyDown($event,'totalCostEntity', 'CostModificationPercent')"
+                     data-readonly="isHeaderInfoReadonly()"
+                     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+                     data-change="headerInfoValueChange('totalCostEntity', 'CostModificationPercent')">
+                </div>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="totalCostEntity.CostModificationAbsolute"
+                     data-entity="totalCostEntity"
+                     data-keydown="onKeyDown($event,'totalCostEntity', 'CostModificationAbsolute')"
+                     data-readonly="isHeaderInfoReadonly()"
+                     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+                     data-change="headerInfoValueChange('totalCostEntity', 'CostModificationAbsolute')">
+                </div>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="totalCostEntity.AdjCostSummary"
+                     data-entity="totalCostEntity"
+                     data-keydown="onKeyDown($event,'totalCostEntity', 'AdjCostSummary')"
+                     data-readonly="isHeaderInfoReadonly()"
+                     data-regex="^([+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.\s\d]*))([,\.][\d]{0,20})$)"
+                     data-change="headerInfoValueChange('totalCostEntity', 'AdjCostSummary')">
+                </div>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="totalCostEntity.MarginOne"
+                     data-entity="totalCostEntity"
+                     data-readonly="true">
+                </div>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="totalCostEntity.MarginTwo"
+                     data-entity="totalCostEntity"
+                     data-readonly="true">
+                </div>
+            </div>
+            <div class="headTitleColumn">
+                <div class="form-control" data-domain-control
+                     data-domain="percent"
+                     data-model="totalCostEntity.GrandTotal"
+                     data-entity="totalCostEntity"
+                     data-readonly="true">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div cloud-common-overlay data-loading="entity.isLoading"></div>
+<platform-Grid data="gridData" class="margin-top-ld"></platform-Grid>
+
+<style>
+    .headTitleColumn{
+        width: 225px;
+        display: inline-block;
+        text-align: center;
+        padding-left: 5px;
+    }
+
+    span{
+        padding: 0;
+        display: inline-block;
+    }
+</style>

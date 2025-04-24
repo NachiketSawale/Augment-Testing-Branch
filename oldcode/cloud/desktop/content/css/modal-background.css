@@ -1,0 +1,77 @@
+#modalBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .50;
+    -webkit-opacity: .5;
+    -moz-opacity: .5;
+    filter: alpha(opacity=50);
+    z-index: 1000;
+}
+
+
+
+ul.info-domtree, ul.info-domtree ul{
+    margin:0;
+    padding:0;
+}
+ul.info-domtree li{
+    list-style: none;
+    position: relative;
+}
+.info-domtree-statusimg{
+    float: left;
+    left: 0;
+    top:0;
+    width: 16px;
+}
+.info-domtree-status{
+    float: left;
+    top:0;
+    width: 90px;
+}
+.info-domtree-description{
+    top:0;
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+ul.info-domtree .info-domtree-description{
+    top:0;
+    width: 180px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    cursor: pointer;
+}
+
+.info-domtree-node-vertical{
+    float: left;
+    content: '';
+    top:0;
+    bottom:0;
+    left: 0;
+    height: 19px;
+    width: 13px;
+    border-style: none none none solid;
+    border-width: 0.05em;
+}
+ul.info-domtree li:last-child .info-domtree-node-vertical{
+    float: left;
+    height: 10px;
+    width: 13px;
+}
+.info-domtree-node-horizontal{
+    content: '';
+    top:0;
+    width: 10px;
+    padding-bottom: 10px;
+    border-style: none none solid none;
+    border-width: 0.05em;
+}

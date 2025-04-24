@@ -1,0 +1,18 @@
+<div class="checkbox spaceToUp">
+	<label>
+		<input type="checkbox" data-ng-model="entity.isSchedule" data-ng-click="onCheckIsScheduleChange()" value="{{entity.isSchedule}}" />
+		{{'estimate.main.schedule' | translate}}
+	</label>
+</div>
+<div class="checkbox spaceToUp">
+	<label>
+		<input type="checkbox" data-ng-model="entity.isWip" data-ng-click="onCheckIsWipChange()" value="{{entity.isWip}}" />
+		{{'estimate.main.wip' | translate}}
+	</label>
+</div>
+<div class="checkbox spaceToUp">
+	<label>
+		<input type="checkbox" data-ng-model="entity.isPes" data-ng-click="onCheckIsPesChange()" value="{{entity.isPes}}" />
+		{{'estimate.main.pes' | translate}}
+	</label>
+</div>

@@ -1,0 +1,23 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { ModuleInfo } from './model/module-info.class'    ;
+import { ModuleClientAreaComponent } from './components/module-client-area/module-client-area.component';
+
+const routes: Routes = [
+	{
+		path: '',
+		component: ModuleClientAreaComponent,
+		data: {
+			moduleInfo: new ModuleInfo(),
+		},
+	},
+];
+@NgModule({
+	imports: [CommonModule, RouterModule.forChild(routes)],
+})
+export class <%=className%>Module {}

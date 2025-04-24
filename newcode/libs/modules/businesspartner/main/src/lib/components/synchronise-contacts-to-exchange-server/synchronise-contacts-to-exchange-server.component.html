@@ -1,0 +1,10 @@
+<div class="fullheight flex-box flex-column">
+    <div class="platform-form-group platform-lg">
+        <div class="platform-form-row">
+            <label>{{container.colIsToExchangeUser| platformTranslate}} &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="userContact" [(ngModel)]="container.IsToExchangeUser"
+                       (click)="checkIsToExchangeUser()" [disabled]="isDisabled()">
+            </label>
+        </div>
+    </div>
+</div>

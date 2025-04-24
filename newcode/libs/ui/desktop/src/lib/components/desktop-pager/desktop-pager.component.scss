@@ -1,0 +1,30 @@
+.desktop-pager div {
+    background-color: white;
+    opacity: 0.85;
+    height: 30px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-pager div button {
+    width: 30px;
+    height: 30px;
+    background-size: 20px;
+}
+
+.control-icons {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-center, .viewer-drag-box, .viewer-invisible-drag {
+    text-align: center !important;
+}
+
+.flex-element {
+    flex: 1;
+}
+
+
+

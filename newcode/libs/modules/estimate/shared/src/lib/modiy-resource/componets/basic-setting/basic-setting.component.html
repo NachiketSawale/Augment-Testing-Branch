@@ -1,0 +1,56 @@
+<div style="height: 220px">
+	<as-split #split [direction]="splitter.direction" unit="percent">
+		<as-split-area [size]="splitter.areaSizes[0]">
+			<div class="basic-setting-Grid filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_41a655fe9ff5439f8254a6fb8ec62339'">
+				<ui-common-grid #parentGridHost [configuration]="parentGridConfig" (selectionChanged)="onParentChanged($event)"></ui-common-grid>
+			</div>
+		</as-split-area>
+
+		<as-split-area [size]="splitter.areaSizes[1]">
+			<div class="basic-setting-Grid filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_41a655fe9ff5439f8254a6fb8ec62400'">
+				<ui-common-grid #childGridHost [configuration]="childConfig"></ui-common-grid>
+			</div>
+		</as-split-area>
+	</as-split>
+</div>
+
+<div class="basic-setting-container ">
+	<div class="basic-setting-container-left">
+		{{ label1 }}
+	</div>
+
+	<div class="basic-setting-container-right">
+		<div class="basic-setting-container-right-l">
+			<select class="basic-setting-select" [value]="lookupType" (change)="resourceTypeChange(typeSelect.value)" #typeSelect>
+				<option *ngFor="let item of items"
+				        [attr.value]="item.id"
+				        [attr.selected]="item.isSelected ? 'selected' : undefined"
+				        [textContent]="item.displayName"></option>
+			</select>
+		</div>
+		<div class="basic-setting-container-right-r">
+			<ng-template #lookupComponent></ng-template>
+		</div>
+		<div></div>
+	</div>
+</div>
+
+<div class="basic-setting-container " *ngIf="!isOpenFromAssembly">
+	<div class="basic-setting-container-left">
+		{{ label2 }}
+	</div>
+
+	<div class="basic-setting-container-right">
+		<input type="checkbox" [(ngModel)]="ignoreResJob" name="ignoreResJob" />
+	</div>
+</div>
+
+<div class="basic-setting-container " *ngIf="!isOpenFromAssembly && !ignoreResJob">
+	<div class="basic-setting-container-left">
+		{{ label3 }}
+	</div>
+
+	<div class="basic-setting-container-right">
+		job lookup
+	</div>
+</div>

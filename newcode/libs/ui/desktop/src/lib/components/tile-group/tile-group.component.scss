@@ -1,0 +1,92 @@
+.flex-box {
+    display: flex;
+}
+
+.fullheight {
+    height: 100%;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.desktopViewWrapper h1 {
+    font-size: 14pt;
+    padding-left: 10px;
+    height: 30px;
+    min-height: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px 10px 0 20px;
+    color: #333;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h1 {
+    line-height: 1.1;
+}
+
+h1 {
+    padding: 0;
+}
+
+.tileGroup {
+    display: flex;
+    flex-flow: column wrap;
+    width: 260px;
+    min-width: 260px;
+    //height: auto;
+    margin: 0px 10px;
+}
+
+.tile-l {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    text-align: left;
+}
+
+.tile-m {
+    width: 120px;
+    padding: 0 10px;
+}
+
+.tile {
+    margin-top: 10px;
+    margin-left: 10px;
+    //background-color: #8b8989;
+    height: 120px;
+    float: left;
+    position: relative;
+    //color: var(--company-font-color);
+}
+
+button {
+    background: 0 none;
+    padding: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    border-radius: 0;
+}
+
+

@@ -1,0 +1,258 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.structure.containerTitleProjects",
+		"controller": "projectMainForCOStructureListController",
+		"uuid": "021C5211C099469BB35DCF68E6AEBEC7"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.structure.containerTitleControllingUnitsTable",
+		"controller": "controllingStructureGridController",
+		"uuid": "011CB0B627E448389850CDF372709F67"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "controlling.structure.containerTitleControllingUnitsForm",
+		"controller": "controllingStructureDetailController",
+		"uuid": "7D688DE3485B440D92154D7C19F376F7",
+		"permission": "011CB0B627E448389850CDF372709F67"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "controlling.structure.containerTitleControllingGroupAssignments",
+		"controller": "controllingStructureUnitgroupListController",
+		"uuid": "9E5B5809635C45DE90E27A567FF6B0E9"
+	},
+	{
+		"id": "5",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "controlling.structure.containerTitleTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "9DCD60856AB34626963F5F6DB332FB90"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "controlling.structure.containerTitleControllingGroupAssignmentsForm",
+		"controller": "controllingStructureUnitgroupDetailController",
+		"uuid": "9832DABE9F3E4EE8BF3A0B3010E2122F",
+		"permission": "9E5B5809635C45DE90E27A567FF6B0E9"
+	},
+	{
+		"id": "7",
+		"template": "controlling.structure/templates/pert-chart.html",
+		"title": "controlling.structure.containerTitleControllingUnitsPertChart",
+		"controller": "controllingStructurePertchartController",
+		"uuid": "41C98D824FF347D09F4DC697FDF9EE80"
+	},
+	{
+		"id": "controlling.structure.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "64632455ab734d10986f71dd1cecd0ce",
+		"controller": "",
+		"sectionId": "11",
+		"mainService": "controllingStructureMainService"
+	},
+	{
+		"id": "controlling.structure.dashboard1",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.structure.dashboard1",
+		"controller": "",
+		"uuid": "2ba099893ac6464bbaeb60979b519545",
+		"permission": "2ba099893ac6464bbaeb60979b519545",
+		"dashboard": {
+			"name": "Controlling Cost Analysis (Project)",
+			"platform": "dashboard",
+			"dataService": "projectMainForCOStructureService",
+			"filters": [
+				{
+					"filter": "RIB_COMPANY_ID",
+					"field": "CompanyCode"
+				},
+				{
+					"filter": "RIB_PRJ_ID",
+					"field": "ProjectNo"
+				},
+				{
+					"filter": "RIB_PRJ_VERSION",
+					"field": "ProjectIndex"
+				}
+			]
+		}
+	},
+	{
+		"id": "controlling.structure.dashboard2",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.structure.dashboard2",
+		"controller": "",
+		"uuid": "6b04a84e9de5458c803fd5a55827c1b1",
+		"permission": "6b04a84e9de5458c803fd5a55827c1b1",
+		"dashboard": {
+			"name": "Controlling Changes (Project)",
+			"platform": "dashboard",
+			"dataService": "projectMainForCOStructureService",
+			"filters": [
+				{
+					"filter": "RIB_COMPANY_ID",
+					"field": "CompanyCode"
+				},
+				{
+					"filter": "RIB_PRJ_ID",
+					"field": "ProjectNo"
+				},
+				{
+					"filter": "RIB_PRJ_VERSION",
+					"field": "ProjectIndex"
+				}
+			]
+		}
+	},
+	{
+		"id": "controlling.structure.dashboard3",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.structure.dashboard3",
+		"controller": "",
+		"uuid": "caa4564715a941c1a160cea4d8de5f72",
+		"permission": "caa4564715a941c1a160cea4d8de5f72",
+		"dashboard": {
+			"name": "Controlling Revenue and Cost (Project)",
+			"platform": "dashboard",
+			"dataService": "projectMainForCOStructureService",
+			"filters": [
+				{
+					"filter": "RIB_COMPANY_ID",
+					"field": "CompanyCode"
+				},
+				{
+					"filter": "RIB_PRJ_ID",
+					"field": "ProjectNo"
+				},
+				{
+					"filter": "RIB_PRJ_VERSION",
+					"field": "ProjectIndex"
+				}
+			]
+		}
+	},
+	{
+		"id": "controlling.structure.dashboard4",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.structure.dashboard4",
+		"controller": "",
+		"uuid": "5057a19445184e4bb9c70d1623387505",
+		"permission": "5057a19445184e4bb9c70d1623387505",
+		"dashboard": {
+			"name": "Controlling General Metrics (Project)",
+			"platform": "dashboard",
+			"dataService": "projectMainForCOStructureService",
+			"filters": [
+				{
+					"filter": "RIB_COMPANY_ID",
+					"field": "CompanyCode"
+				},
+				{
+					"filter": "RIB_PRJ_ID",
+					"field": "ProjectNo"
+				},
+				{
+					"filter": "RIB_PRJ_VERSION",
+					"field": "ProjectIndex"
+				}
+			]
+		}
+	},
+	{
+		"id": "controlling.structure.dashboard5",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "controlling.structure.dashboard5",
+		"controller": "",
+		"uuid": "3e1c1bafe2244315bf1fbbd031f33a05",
+		"permission": "3e1c1bafe2244315bf1fbbd031f33a05",
+		"dashboard": {
+			"name": "Controlling Performance Analysis (Project)",
+			"platform": "dashboard",
+			"dataService": "projectMainForCOStructureService",
+			"filters": [
+				{
+					"filter": "RIB_COMPANY_ID",
+					"field": "CompanyCode"
+				},
+				{
+					"filter": "RIB_PRJ_ID",
+					"field": "ProjectNo"
+				},
+				{
+					"filter": "RIB_PRJ_VERSION",
+					"field": "ProjectIndex"
+				}
+			]
+		}
+	},
+	{
+		"id": "controlling.structure.controllingVersions",
+		"template": "app/components/base/grid-partial.html",
+		"title": "Controlling Versions",
+		"controller": "controllingVersionsListController",
+		"uuid": "E64B8002754046949C4C8F745A4FA836"
+	},
+	{
+		"id": "controlling.structure.contract",
+		"template": "app/components/base/grid-partial.html",
+		"title": "Procurement Contract",
+		"controller": "controllingStructureContractTotalListController",
+		"uuid": "366965e0624bce332aeb92fd3d112eeb",
+		"permission": "E5B91A61DBDD4276B3D92DDC84470162"
+	},
+	{
+		"id": "controlling.structure.pes",
+		"template": "app/components/base/grid-partial.html",
+		"title": "Procurement PES",
+		"controller": "controllingStructurePesTotalListController",
+		"uuid": "bb914418ba5ca5ea647d78cb9edbc481",
+		"permission": "EBE726DBF2C5448F90B417BF2A30B4EB"
+	},
+	{
+		"id": "controlling.structure.actual",
+		"template": "app/components/base/grid-partial.html",
+		"title": "Controlling Actuals",
+		"controller": "controllingStructureActualListController",
+		"uuid": "a16b01f83445cb272f1d29745ec48e8b",
+		"permission": "519f57ab55da420694b4d52264db09b4"
+	},
+	{
+		"id": "controlling.structure.usecase",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "Filter Selection Test (kh)",
+		"controller": "",
+		"uuid": "385404d1db56432aba85aa34fc034554",
+		"dashboard": {
+			"name": "Filter Selection Use Case",
+			"platform": "dashboard",
+			"messageFilters": [
+				{
+					"filter": "CO_DESC",
+					"mapTo": "CostCode.Description"
+				},
+				{
+					"filter": "CO_PARENT_ID",
+					"mapTo": "CostCode.ParentId"
+				},
+				"CO_PARENT_DESC"
+			]
+		}
+	},
+	{
+		"id": "controlling.structure.lineitem",
+		"template": "app/components/base/grid-partial.html",
+		"title": "Line Item",
+		"controller": "controllingStructureLineItemListController",
+		"uuid": "f72d0599cf684e9db64eb4cf9e96fd9b",
+		"permission": "681223e37d524ce0b9bfa2294e18d650"
+	}
+]

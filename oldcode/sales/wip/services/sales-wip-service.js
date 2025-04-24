@@ -305,7 +305,7 @@
 			});
 
 			service.doPrepareUpdateCall = function doPrepareUpdateCall(updateData) {
-				if (!_.isNil(updateData.WipHeader) && !_.isNil(dataFromMainContract.BusinesspartnerFk)) {
+				if (!_.isNil(updateData.WipHeader) && !_.isNil(dataFromMainContract) && !_.isNil(dataFromMainContract.BusinesspartnerFk)) {
 					updateData.WipHeader.BusinesspartnerFk = dataFromMainContract.BusinesspartnerFk;
 				}
 				// the cost group to save

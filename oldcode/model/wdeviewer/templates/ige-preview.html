@@ -1,0 +1,60 @@
+<style type="text/css">
+
+	#markupCommentList {
+		position: absolute;
+		width: 300px;
+		top: 67px;
+		right: 10px;
+		border: 1px solid darkgray;
+		background-color: #fff;
+	}
+
+	.allMarkup {
+		position: absolute;
+		width: 300px;
+		top: 38px;
+		height: 30px;
+		right: 10px;
+		border: 1px solid darkgray;
+		background-color: #fff;
+		padding: 4px 9px;
+	}
+
+	.preview-statusbar {
+		position: fixed;
+		bottom: 0px;
+		width: 99.5%;
+	}
+
+	.modal-header .modal-title {
+		color: #fff;
+	}
+</style>
+
+<div class="flex-box flex-element flex-column margin-full-sm">
+	<div class="toolbar flex-box">
+		<h2 class="title" data-ng-bind="fileInfo.name"></h2>
+		<span class="flex-box flex-element" style="justify-content: flex-end;">
+            <!--<div data-cloud-desktop-dropdown-button title="{{ viewerOptions.drawMarkupTitle | translate }}" data-dropdown-button="markerDropdown"></div>-->
+			<button class="dropdown-toggle dropdown-caret tlb-icons ico-marker-icon" title="{{ viewerOptions.drawMarkupTitle | translate }}" data-ng-click="markerAction()"></button>
+            <button class="tlb-icons ico-container-config" title="{{ viewerOptions.configTitle | translate }}" data-ng-click="configDialog()"></button>
+            <button class="control-icons ico-annotation-simple {{ isAllSelect?'checked':'' }}" title="{{ viewerOptions.showMarkerTitle | translate }}" data-ng-click="showMarker()"></button>
+            <div style="border-left: 1px solid #fff;"></div>
+            <button class="tlb-icons ico-txt-rotate-left" title="Rotate Left" data-ng-click="rotateLeft()"></button>
+            <button class="tlb-icons ico-txt-rotate-right" title="Rotate Right" data-ng-click="rotateRight()"></button>
+            <button class="tlb-icons ico-zoom-fit" title="Reset View" data-ng-click="resetView()"></button>
+            <button class="tlb-icons ico-zoom-in" title="Zoom In" data-ng-click="zoomIn()"></button>
+            <button class="tlb-icons ico-zoom-out" title="Zoom Out" data-ng-click="zoomOut()"></button>
+            <button class="tlb-icons ico-zoom-markup" title="Zoom Last Markup" data-ng-click="zoomLastMarkup()"></button>
+            <div style="border-left: 1px solid #fff;"></div>
+            <button class="tlb-icons ico-print" title="{{ viewerOptions.printTitle | translate }}" data-ng-click="printView()"></button>
+            <button class="tlb-icons ico-download-markers" data-ng-disabled="viewerOptions.disabledDownloadPdf" title="{{ viewerOptions.downloadPdfTitle | translate }}" data-ng-click="downloadPdf()"></button>
+        </span>
+	</div>
+	<div data-model-wde-viewer-ige-viewer class="flex-box flex-element flex-column" data-ng-model="docId" data-options="viewerOptions" data-ng-mouseenter="onMouseEnter($event)" data-ng-mouseleave="onMouseLeave($event)"></div>
+	<div class="preview-statusbar" data-platform-status-bar data-set-link="previewStatusBarLink(link)"></div>
+
+	<div data-ng-show="viewerOptions.showCommentView" class="sidebar leaflet-right panel" style="top:38px;height: 92%">
+		<div data-model-wde-viewer-ige-comment-view class="ellipsis"></div>
+	</div>
+</div>

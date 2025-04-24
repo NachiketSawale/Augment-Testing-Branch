@@ -1,0 +1,25 @@
+<div data-ng-controller="procurementQuoteCopyNewBoqItemWizardController">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{'procurement.quote.wizard.copyNewBoqItem.copyNewBoqItemTitle' | translate}}</h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+
+	<section class="modal-body">
+		<h4>{{"procurement.quote.wizard.copyNewBoqItem.selectNewBoqItem" | translate}}</h4>
+		<div class="fullheight">
+			<div data-platform-grid class="subview-container" style="height: 400px" data="copyNewBoqItemGridConfig"></div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="copy()" data-ng-disabled="!canCopy()"> {{'cloud.common.buttonCopy' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'cloud.common.cancel' |
+			translate}}
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="isLoading"></div>
+</div>

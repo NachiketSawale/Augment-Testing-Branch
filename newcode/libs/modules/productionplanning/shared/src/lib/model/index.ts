@@ -1,0 +1,1 @@
+export { IPpsEntityInfoOptions } from './pps-entity-info-options.interface';

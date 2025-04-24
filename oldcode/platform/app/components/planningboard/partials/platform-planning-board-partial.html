@@ -1,0 +1,44 @@
+<div class="chart planningboard widthheight100">
+	<div class="viewport widthheight100 hiddenOverflow">
+		<!--Height of viewport-->
+		<div class="planningboardCanvas">
+			<svg class="planningboard" style="height: 100%; width: 100%;">
+				<g class="scrollContent">
+					<g class="calendarLine"></g>
+					<g class="dayLinesAxis"></g>
+					<g class="lanes"></g>
+					<g class="background"></g>
+					<g class="assignments">
+						<g class="tag-container"></g>
+						<g class="collection-container"></g>
+					</g>
+					<g class="assignment-preview-container"></g>
+					<g class="assignment-grouping">
+						<g class="assignment-group-container"></g>
+						<g class="assignment-group-max-load-indicator-container"></g>
+					</g>
+					<g class="aggregation-container"></g>
+					<g class="assignment-tooltip-container"></g>
+					<g class="scPreview"></g>
+				</g>
+				<g class="headerContent">
+					<rect class="header header-light-grey"></rect>
+					<rect class="header header-white"></rect>
+					<g class="headerTopAxis"></g>
+					<g class="headerMiddleAxis"></g>
+					<g class="headerBottomAxis"></g>
+					<g class="hcPreview"></g>
+				</g>
+				<g class="footer-content">
+					<rect class="footer-background"></rect>
+					<g class="aggregation-sum-container"></g>
+					<g class="dayLinesAxis" style="transform: translate(0, -17px)"></g>
+				</g>
+			</svg>
+			<div id="statusPanel" class="statusPanel">
+				{{ status }}
+			</div>
+		</div>
+		<defs/>
+	</div>
+</div>

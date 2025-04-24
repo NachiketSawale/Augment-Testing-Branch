@@ -1,0 +1,122 @@
+<div class="platform-form-container">
+	<form class="platform-form platform-lg">
+
+		<div class="platform-form-group">
+			<div class="platform-form-row form-group">
+				<label class="platform-form-label" style="min-width: 183px;">
+					{{'procurement.rfq.reportTemplates.rfqReport'| translate}}
+					<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div class="control-directive" procurement-rfq-email-fax-rfq-report-template-combobox
+						 data-options="lookupOptions.rfqHeader" data-entity="data" data-ng-model="data.rfqReportTemplate" data-model="data.rfqReportTemplate"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row form-group">
+				<label class="platform-form-label">
+					<fieldset style="padding:10px 25px 10px 5px;border:1px solid #dcdcdc;border-radius:3px;">
+						<legend style="margin-left:1px;width:auto;background-color:#fff;font-size:13px; font-weight: bold; ">{{'Bill of Quantity'| translate}}</legend>
+						<div class="platform-form-group">
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label" style="min-width: 183px;">
+									{{'procurement.rfq.reportTemplates.requisitionBoqReport'| translate}}
+								</label>
+								<div class="platform-form-col">
+									<div class="control-directive" procurement-rfq-email-fax-boq-report-template-combobox
+										 data-options="lookupOptions.boqReportTemplate" data-entity="data"
+										 data-ng-model="data.boqReportTemplate" data-model="data.boqReportTemplate"
+										 data-readonly="lookupOptions.boq.readonly"
+										 data-disabled="lookupOptions.boq.readonly"></div>
+								</div>
+							</div>
+
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label" style="min-width: 183px;">
+									{{'BoQ Format'| translate}}
+								</label>
+								<div class="platform-form-col">
+									<div class="control-directive" procurement-rfq-email-fax-report-boq-format-combobox
+										 data-options="lookupOptions.boqFormatType" data-entity="data"
+										 data-ng-model="data.boqFormatTypeId" data-model="data.boqFormatTypeId"
+										 data-readonly="lookupOptions.boq.readonly"
+										 data-disabled="lookupOptions.boq.readonly" data-ng-change="changeCreateType()"></div>
+								</div>
+							</div>
+
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label" style="min-width: 183px;">
+									{{'boq.main.GaebFormat'| translate}}
+								</label>
+								<div class="platform-form-col">
+									<div class="control-directive" boq-main-gaeb-export-format-combobox
+										 data-options="lookupOptions.gaebFormatId" data-entity="data"
+										 data-ng-model="data.gaebFormatId" data-model="data.gaebFormatId"
+										 data-readonly="$parent.lookupOptions.boqFormatType.readonly"
+										 data-disabled="lookupOptions.boqFormatType.readonly"
+										 data-config="true"
+										 ></div>
+								</div>
+							</div>
+
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label" style="min-width: 183px;">
+									{{'boq.main.Gaebtype'| translate}}
+								</label>
+								<div class="platform-form-col">
+									<div class="control-directive" boq-main-gaeb-export-type-combobox
+										 data-options="lookupOptions.gaebTypeId" data-entity="data"
+										 data-ng-model="data.gaebTypeId" data-model="data.gaebTypeId"
+										 data-readonly="$parent.lookupOptions.boqFormatType.readonly"
+										 data-disabled="lookupOptions.boqFormatType.readonly" data-config="true"></div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row form-group">
+				<label class="platform-form-label">
+					<fieldset style="padding:10px 25px 10px 5px;border:1px solid #dcdcdc;border-radius:3px;">
+						<legend style="margin-left:1px;width:auto;background-color:#fff;font-size:13px;font-weight: bold;">{{'Material Item'| translate}}</legend>
+						<div class="platform-form-group">
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label" style="min-width: 183px;">
+									{{'procurement.rfq.reportTemplates.requisitionItemReport'| translate}}
+								</label>
+								<div class="platform-form-col">
+									<div class="control-directive" procurement-rfq-email-fax-item-report-template-combobox
+										 data-options="lookupOptions.itemReportTemplate" data-entity="data"
+										 data-ng-model="data.itemReportTemplate" data-model="data.itemReportTemplate"
+										 data-readonly="lookupOptions.item.readonly"
+										 data-disabled="lookupOptions.item.readonly">
+									</div>
+								</div>
+							</div>
+
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label" style="min-width: 183px;">
+									{{'procurement.rfq.reportTemplates.requisitionItemFormat'| translate}}
+								</label>
+								<div class="platform-form-col">
+									<div class="control-directive" procurement-rfq-email-fax-report-format-combobox
+										 data-options="lookupOptions.item" data-entity="data"
+										 data-ng-model="data.formatTypeId" data-model="data.formatTypeId"
+										 data-readonly="lookupOptions.item.readonly"
+										 data-disabled="lookupOptions.item.readonly">
+									</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</label>
+			</div>
+		</div>
+
+	</form>
+</div>

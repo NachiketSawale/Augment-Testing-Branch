@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "template": "project.location/partials/location-list.html",
+        "title": "project.location.listContainerTitle",
+        "controller": "projectLocationListController",
+        "uuid": "4B79EF1F51FF454494EEE799529AEFAF"
+    },
+    {
+        "id": "2",
+        "template": "project.location/partials/location-detail.html",
+        "title": "project.location.detailContainerTitle",
+        "controller": "projectLocationDetailController",
+        "uuid": "6A471BC4478043519083C2D8739B4C41",
+        "permission": "4B79EF1F51FF454494EEE799529AEFAF"
+    }
+]

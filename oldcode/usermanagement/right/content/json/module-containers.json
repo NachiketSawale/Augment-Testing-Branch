@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "template":"app/components/base/grid-partial.html",
+    "title": "usermanagement.right.roleContainerTitle",
+    "controller": "usermanagementRoleListController",
+    "uuid": "57CE3F7A22C546E4B3A3FCE4A779975B"
+  },
+  {
+    "id": "2",
+    "template":"app/components/base/grid-partial.html",
+    "title": "usermanagement.right.roleXRoleContainerTitle",
+    "controller": "usermanagementRoleXRoleListController",
+    "uuid": "A4B78657E1874B12826C236EDF48AC9F",
+    "permission": "57CE3F7A22C546E4B3A3FCE4A779975B"
+  },
+  {
+    "id": "3",
+    "template":"app/components/base/grid-partial.html",
+    "title": "usermanagement.right.rightContainerTitle",
+    "controller": "usermanagementRightListController",
+    "uuid": "7699ABC07EC946CFB35D3646ED63C273"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "usermanagement.right.usermanagementRightDetailsContainerTitle",
+    "controller": "usermanagementRightDetailController",
+    "uuid": "F8C426A1491D43BBA106BA982B3FCF66",
+    "permission": "7699ABC07EC946CFB35D3646ED63C273"
+  }
+]

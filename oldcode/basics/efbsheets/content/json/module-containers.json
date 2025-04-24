@@ -1,0 +1,91 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.efbsheets.crewMixes",
+    "controller": "basicsEfbsheetsListController",
+    "uuid": "c4feed8d0ff34ff3a540c3ed642cf67c"
+  },
+  {
+    "id": "2",
+    "template": "basics.efbsheets/partials/crewmix-detail.html",
+    "title": "basics.efbsheets.crewMixesDetails",
+    "controller": "basicsEfbsheetsDetailController",
+    "uuid": "2d3a55b0f9694b51a4580a1d362439a4",
+    "permission": "c4feed8d0ff34ff3a540c3ed642cf67c"
+  },
+  {
+    "id": "3",
+    "template": "cloud.common/partials/languagegridview.html",
+    "title": "basics.efbsheets.translation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "8dc8f7b41be54fea8af64507f98e258e"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.efbsheets.averageWage",
+    "controller": "basicsEfbsheetsAverageWageController",
+    "uuid": "c9b63a888cfb4fb9b856e8f00bb57391"
+  },
+  {
+    "id": "5",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.efbsheets.averageWageDetails",
+    "controller": "basicsEfbsheetsAverageWageDetailController",
+    "uuid": "0b75353e6eb94790a745035590538792",
+    "permission": "c9b63a888cfb4fb9b856e8f00bb57391"
+  },
+  {
+    "id": "6",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.efbsheets.crewMixAf",
+    "controller": "basicsEfbsheetsCrewMixAfController",
+    "uuid": "9d015027696b4f369c5191cf37d1e608"
+  },
+  {
+    "id": "7",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.efbsheets.crewMixAfDetails",
+    "controller": "basicsEfbsheetsCrewMixAfDetailController",
+    "uuid": "eaf4a35143104547adf57cd5ffe3adfc",
+    "permission": "9d015027696b4f369c5191cf37d1e608"
+  },
+  {
+    "id": "8",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.efbsheets.crewMixAfsn",
+    "controller": "basicsEfbsheetsCrewMixAfsnController",
+    "uuid": "d452c853f5ef40b181a43c4ff5752a5e"
+  },
+  {
+    "id": "9",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.efbsheets.crewMixAfsnDetails",
+    "controller": "basicsEfbsheetsCrewMixAfsnDetailController",
+    "uuid": "8dd9387c993743999e66a63e3ac0ea9c",
+    "permission": "d452c853f5ef40b181a43c4ff5752a5e"
+  },
+  {
+    "id": "10",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.efbsheets.crewMixToCostCodes",
+    "controller": "basicsEfbsheetsCrewMixCostCodeController",
+    "uuid": "90f4fa0bd6d249d0a2b7d3112f8ae03f"
+  },
+  {
+    "id": "11",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.efbsheets.crewMixToCostCodesDetails",
+    "controller": "basicsEfbsheetsCrewMixCostCodeDetailController",
+    "uuid": "2b2193f79ef74177a34a2345cd5d9e25",
+    "permission": "90f4fa0bd6d249d0a2b7d3112f8ae03f"
+  },
+	{
+		"id": "12",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.efbsheets.costCodePriceList",
+		"controller": "basicsEfbsheetsCrewMixCostCodePriceListController",
+		"uuid": "d256a1e7881142dea135dde54081ff5a"
+	}
+]

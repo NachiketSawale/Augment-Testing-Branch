@@ -1,0 +1,94 @@
+/*-------------------------------------------------------------------------------
+	 steps process (_process-steps.scss)
+	 For example in generic wizards
+  -------------------------------------------------------------------------------*/
+
+.steps-indicator {
+	/* ---- steps quantity ---- */
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 20px 0 0 0;
+	height: 30px;
+	list-style: none;
+
+	&:before {
+		background-color: #e6e6e6;
+		content: '';
+		position: absolute;
+		height: 1px;
+	}
+
+	&.steps-1 {
+		display: none;
+	}
+
+	li {
+		position: relative;
+		float: left;
+		margin: 0;
+		padding: 0;
+		padding-top: 10px;
+		text-align: center;
+		line-height: 15px;
+
+		&.default, &.current,&.editing {
+			pointer-events: none;
+		}
+
+		a {
+			color: #808080;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			transition: 0.25s;
+			cursor: pointer;
+
+			&:before {
+				position: absolute;
+				top: -7px;
+				left: calc(50% - 7px);
+				width: 14px;
+				height: 14px;
+				border-radius: 100%;
+				background-color: #e6e6e6;
+				content: '';
+				transition: 0.25s;
+			}
+		}
+
+		&.current a:before {
+			background-color: #0067b1;
+		}
+
+		&.done a:before {
+			background-color: #339933;
+			content: "\2713 ";
+			font-size: 10px;
+			color: white;
+		}
+
+		&.editing a:before {
+			background-color: #0067b1;
+		}
+	}
+
+	@for $i from 2 through 10 {
+		&.steps-#{$i} {
+			&:before {
+				left: calc(100% / #{$i} /2);
+				right: calc(100% / #{$i} /2);
+			}
+
+			li {
+				width: calc(100% / #{$i});
+			}
+
+		}
+	}
+}
+
+
+
+

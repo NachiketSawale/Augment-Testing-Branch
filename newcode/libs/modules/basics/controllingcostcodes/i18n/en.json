@@ -1,0 +1,32 @@
+{
+  "basics": {
+    "controllingcostcodes": {
+      "assignToChildCostCodes": "Assign controlling cost code to child cost codes also",
+      "assignToCostCodeTitle": "Assign Controlling Cost Code to Cost Code",
+      "confirmDeleteBody": "This will delete selected controlling cost codes, it's children and their cost code assignments. Are you sure you want to continue?",
+      "confirmDeleteTitle": "Confirm Delete",
+      "controllingCostCode": "Controlling Cost Code",
+      "controllingCostCodes": "Controlling Cost Codes",
+      "controllingCostCodesDetails": "Controlling Cost Codes Details",
+      "overwriteControllingCostCode": "Overwrite existing controlling cost code assignment (if applicable)",
+      "preserveSelection": "Always use this options in this session",
+      "controllingCostCodeDescription": "Controlling Cost Code Description",
+      "translation": "Translation",
+      "account": "Account",
+      "basAccountFk": "Account",
+      "errors": {
+        "uniqAccount": "This Account is already assigned to Controlling Cost Codes {{code}}, Would you like to continue? ",
+        "unique": "Please select another Account"
+      },
+      "factor": "Factor",
+      "mdcContextFk": "Master Data Context",
+      "mdcLedgerContextFk": "Ledger-Context",
+      "nominalDimension1": "Nominal Dimension1",
+      "nominalDimension2": "Nominal Dimension2",
+      "nominalDimension3": "Nominal Dimension3",
+      "fileCreated": "Log File Created at Downloads Folder",
+      "mappingValidationWizard": "Controlling Cost Code Mapping Validation",
+      "selectLedgerContext": "Please Select Ledger Context"
+    }
+  }
+}

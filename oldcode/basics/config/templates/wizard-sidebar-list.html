@@ -1,0 +1,18 @@
+<div class="toolbar">
+    <div class="title" translate="cloud.desktop.sdWizardTitle"></div>
+	<div data-platform-expand-collapse-list-directive data-grouped-list="wizardSidebar.data"></div>
+</div>
+<div data-cloud-common-overlay data-loading="asyncInProgress"></div>
+<div class="content-inner">
+	<div data-platform-search-item-list-directive data-grouped-list="wizardSidebar.data" data-name="'wizards'"></div>
+        <ul data-platform-grouped-item-list-directive
+        data-grouped-list="wizardSidebar.data"
+        data-item-template="wizardSidebar.itemTemplate"
+        data-group-template="wizardSidebar.groupTemplate"
+        data-child-property="'wizards'"
+        data-key-property="'id'"
+        data-click-fn="wizardSidebar.executeWizard"
+        data-name="'wizards'"
+        data-sidebar-id="'newWizards'"
+        class="scroll-padding flex-element overflow panel-group"></ul>
+</div>

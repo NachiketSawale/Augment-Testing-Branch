@@ -1,0 +1,9 @@
+[
+  {
+    "id": "procurement-txinterface-activity-stream",
+    "template": "procurement.txinterface/templates/procurement-txinterface-activity-stream.html",
+    "title": "cloud.common.ContainerTxActivityStreamTitle",
+    "controller": "procurementTxInterfaceActivityStreamController",
+    "uuid": "4aeacfe155754ccd9556b9dfcdf67ecf"
+  }
+]

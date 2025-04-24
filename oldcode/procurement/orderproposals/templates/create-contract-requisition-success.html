@@ -1,0 +1,13 @@
+<div data-ng-controller="OrderProposalsCreateContractRequisitionSuccessController">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body" style="padding: 10px 30px;">
+        <div data-ng-include="'dialog/modaldialog-topdescription-template.html'"></div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="goToModule()"
+                title="{{modalOptions.gotoType}}">{{modalOptions.gotoType}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="onOK()">{{::'cloud.common.ok' | translate}}</button>
+    </footer>
+</div>

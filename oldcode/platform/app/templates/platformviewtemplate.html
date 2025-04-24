@@ -1,0 +1,64 @@
+<!--<div id="modulebar" class="module-wrapper">-->
+<!--<div id="navbar"></div>-->
+<!--<div id="tabbar" class="tabs">-->
+<!--<div ng-repeat="tab in tabs" class="tab">-->
+<!--<button ng-bind="tab.heading" ui-sref="tab.route"></button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div id="mainbar">
+	<div platform-nav-bar-directive></div>
+	<div class="corner"></div>
+	<div id="tabbar">
+		<div id="tabs">
+			<div id="{{tab.heading}}" data-ng-repeat="tab in tabs" class="tab">
+				<div class="btn-group" dropdown is-open="tab.open">
+					<a class="tab-toggle" ui-sref="{{tab.route}}">
+						<div data-ng-bind="tab.heading"></div>
+
+						<div class="divider"></div>
+						<button class="button tab-dropdown" ng-click="toggleTabDropdown($event,tab)">
+							<img class="svg" data-ng-src="{{menuTabImage}}">
+						</button>
+					</a>
+					<ul class="dropdown-menu tab-dropdown" role="menu">
+						<div data-ng-show="userHasRights">
+							<li class="dropdown-option" data-ng-repeat="item in executeFN">
+								<button data-ng-click="item.fn()" data-ng-bind="item.name"></button>
+							</li>
+						</div>
+						<div data-ng-show="altered">
+							<li class="dropdown-option">
+								<button data-ng-click="changeSelection($event,'alteredView')">
+									<span class="image-col"><input type="checkbox" name="{{item.name}}"></span>
+									<span class="desc-col">Altered View</span>
+								</button>
+							</li>
+							<div class="divider"></div>
+						</div>
+						<div data-ng-show="tabDD.sysViews">
+							<div class="headline">System</div>
+							<li class="dropdown-option" data-ng-repeat="item in tabDD.sysViews">
+								<button data-ng-click="changeSelection($event,item.name)">
+									<span class="image-col"><input type="checkbox" name="{{item.name}}"></span>
+									<span class="desc-col" data-ng-bind="item.name"></span>
+								</button>
+							</li>
+						</div>
+						<div data-ng-show="tabDD.userViews">
+							<div class="divider"></div>
+							<div class="headline">User</div>
+							<li class="dropdown-option" data-ng-repeat="item in tabDD.userViews">
+								<button data-ng-click="changeSelection($event,item.name)">
+									<span class="image-col"><input type="checkbox" name="{{item.name}}"/></span>
+									<span class="desc-col">data-ng-bind="item.name"></span>
+								</button>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tab-content" ui-view="tabContent"></div>

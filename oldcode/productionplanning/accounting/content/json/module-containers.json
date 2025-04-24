@@ -1,0 +1,58 @@
+[
+  {
+    "id": "productionplanning.accounting.ruleset.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.accounting.ruleSet.listTitle",
+    "controller": "productionplanningAccountingRuleSetListController",
+    "uuid": "fcdf2e62fb8848bc99dd1a52fdbdf47f",
+    "permission": "fcdf2e62fb8848bc99dd1a52fdbdf47f"
+  },
+  {
+    "id": "productionplanning.accounting.ruleset.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.accounting.ruleSet.detailTitle",
+    "controller": "productionplanningAccountingRuleSetDetailController",
+    "uuid": "8995c131011941258ff7bde43ab47773",
+    "permission": "fcdf2e62fb8848bc99dd1a52fdbdf47f"
+  },
+  {
+    "id": "productionplanning.accounting.rule.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.accounting.rule.listTitle",
+    "controller": "productionplanningAccountingRuleListController",
+    "uuid": "ad340a997e8b4ad2876dfdd9d2670656",
+    "permission": "ad340a997e8b4ad2876dfdd9d2670656"
+  },
+  {
+    "id": "productionplanning.accounting.rule.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.accounting.rule.detailTitle",
+    "controller": "productionplanningAccountingRuleDetailController",
+    "uuid": "0689edc8f3d64cc78ded0a987c10b55d",
+    "permission": "ad340a997e8b4ad2876dfdd9d2670656"
+  },
+  {
+    "id": "productionplanning.accounting.result.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.accounting.result.listTitle",
+    "controller": "productionplanningAccountingResultListController",
+    "uuid": "464c261c2b7d4111b6717aa2c13b2e82",
+    "permission": "464c261c2b7d4111b6717aa2c13b2e82"
+  },
+  {
+    "id": "productionplanning.accounting.result.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.accounting.result.detailTitle",
+    "controller": "productionplanningAccountingResultDetailController",
+    "uuid": "6c2687e407024b338f354bc8b250ab98",
+    "permission": "464c261c2b7d4111b6717aa2c13b2e82"
+  },
+	{
+		"id": "productionplanning.accounting.result.script",
+		"template": "productionplanning.accounting/templates/pps-accounting-result-script-editor.html",
+		"title": "productionplanning.accounting.result.formula.title",
+		"controller": "ppsAccountingResultScriptController",
+		"uuid": "f713092732054f8ab65e3ec5c287cc96",
+		"permission": "464c261c2b7d4111b6717aa2c13b2e82"
+	}
+]

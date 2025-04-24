@@ -1,0 +1,26 @@
+<div data-ng-controller="mtwoUploadAIModelController">
+	<header class="modal-header">
+		<h2 class="modal-title">{{'mtwo.aiconfiguration.wizard.createModelVersion' | translate}}</h2>
+		<button class="db close" data-dismiss="modal" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)"
+				  data-ng-click="modalOptions.cancel()">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+				  class="block-image"></svg>
+		</button>
+	</header>
+	<div>
+		<section class="modal-body">
+			<div data-platform-form data-form-options="formOptions"
+				  class="flex-element flex-basis-auto"
+				  data-entity="entity"></div>
+			<div cloud-common-overlay data-loading="isBusy"></div>
+		</section>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+			{{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="$close(false)">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

@@ -1,0 +1,11 @@
+<div class="platform-form-group">
+    <div class="platform-form-row form-group">
+        <label class="platform-form-label">Dialog</label>
+        <div class="platform-form-col">
+            <select (change)="change(mySelect.value)" #mySelect>
+                <option>Select</option>
+                <option *ngFor="let data of modalDialogsOptions" [value]="data.id">{{ data.displayName }}</option>
+            </select>
+        </div>
+    </div>
+</div>

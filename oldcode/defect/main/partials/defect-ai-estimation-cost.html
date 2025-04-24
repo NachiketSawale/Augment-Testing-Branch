@@ -1,0 +1,15 @@
+<div data-ng-controller="defectAiEstimateCostController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div cloud-common-overlay data-loading="isBusy" data-info="busyInfo"></div>
+		<div data-platform-alert data-error="error"></div>
+		<div class="modal-wrapper subview-container grid-wrapper">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+	</section>
+	<footer class="modal-footer">
+
+		<button type="button" class="btn btn-default" data-ng-click="okClicked()" data-ng-disabled="!canUpdate()">{{modalOptions.update}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{modalOptions.cancelBtn}}</button>
+	</footer>
+</div>

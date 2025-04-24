@@ -1,0 +1,19 @@
+<div class="platform-form-group ">
+<div class="platform-form-row">
+    <label class="col-sm-2" style="padding:5px 0px 0px;">{{'procurement.common.wizard.updateItemPrice.scope'| translate}}:</label>
+    <div class="col-sm-10">
+        <div class="radio spaceToUp">
+            <label class="ng-binding">
+                <input type="radio" name="scopeName" value="1" data-ng-checked="allOrSelected==1" data-ng-click="onResult(1)">
+                {{'procurement.common.wizard.updateItemPrice.itemUnderLeadRecordOption'| translate}}
+            </label>
+        </div>
+        <div class="radio spaceToUp">
+            <label class="ng-binding">
+                <input type="radio" name="scopeName" value="2" ng-disabled="itemDisabled" data-ng-checked="allOrSelected==2" data-ng-click="onResult(2)">
+                {{'procurement.common.wizard.updateItemPrice.selectItemOption'| translate}}
+            </label>
+        </div>
+    </div>
+</div>
+</div>

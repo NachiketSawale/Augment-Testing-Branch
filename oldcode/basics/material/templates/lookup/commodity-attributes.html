@@ -1,0 +1,18 @@
+<div class="ms-commodity-attributes-item">
+    <div>
+        <a href="" class="ms-commodity-attributes-title">{{::title}}</a>
+        <a class="ms-commodity-attributes-expend" href="" data-ng-click="canShow = !canShow ">
+            <i class="block-image control-icons" ng-class="canShow?'ico-minus':'ico-plus'"></i>
+        </a>
+    </div>
+
+    <ul class="col-sm-offset-1" data-ng-if="canShow">
+        <li data-ng-repeat="entity in attributeEntities">
+            <!--<img src="cloud.style/content/images/control-icons.svg#{{entity.isCheck?'ico-flatbox-checked':'ico-flatbox-unchecked'}}"-->
+            <!--data-ng-click="filterChange(entity)" class="ms-icon-img"/>-->
+
+            <div data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="filterChange(entity)" data-ng-model="entity.isCheck"></div>
+            <label class="ms-commodity-attributes-checkbox-label">{{::entity.data.Characteristic}}</label>
+        </li>
+    </ul>
+</div>

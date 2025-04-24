@@ -1,0 +1,41 @@
+<div class="platform-form-label" data-change="changeCheckbox()" data-domain="boolean" data-domain-control data-model="evaluateProxy" data-options="EvaluateProxyOptions" readonly="codeMirrorOptions.readOnly"></div>
+
+<div class="radiolist-container">
+	<div data-radiolistctrl displayMember="description" ng-model="input.editorModeReportParams" on-selection-changed="onRadioGroupOptChanged(value)" options="input.radioGroupOpt" valueMember="value"></div>
+</div>
+
+<div basics-workflow-resize-grid-directive data-ng-show="input.editorModeReportParams === 1">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'basics.workflow.action.customEditor.report' | translate }}</div>
+			<div class="platform-form-col">
+				<div data-basics-workflow-report-list-combobox data-ng-change="onReportChanged(input.report)" disabled="codeMirrorOptions.readOnly" ng-model="input.report"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="toolbar margin-top-ld">
+		<h2 class="title fix">{{'basics.workflow.action.customEditor.params' | translate }}</h2>
+	</div>
+
+	<div class="flex-element flex-box flex-column subview-container fullheight" style="height: 150px">
+		<platform-Grid data="gridDataReport"></platform-Grid>
+	</div>
+</div>
+
+<div class="platform-form-group" data-ng-show="input.editorModeReportParams === 2">
+	<div class="platform-form-row">
+		<div class="platform-form-label">{{'basics.workflow.action.customEditor.report' | translate }}</div>
+		<div class="platform-form-col">
+			<div data-ng-model="input.reportScript" data-options="codeMirrorOptions" data-script-editor-directive></div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<div class="platform-form-label">{{'basics.workflow.action.customEditor.params' | translate }}</div>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="flex-element" data-ng-model="input.paramScript" data-options="codeMirrorOptions" data-script-editor-directive style="width: 300px"></div>
+			</div>
+		</div>
+	</div>
+</div>

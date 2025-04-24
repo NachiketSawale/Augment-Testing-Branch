@@ -1,0 +1,211 @@
+<!-- Receivers -->
+<div>
+	<div class="radiolist-container">
+		<div class="radio spaceToUp pull-left">
+			<label>
+				<input name="radioGroupA" ng-click="onRadioGroupOptChanged('1', 'editorModeReceivers', $event)" ng-disabled="readonly" ng-model="input.editorModeReceivers"
+				       ng-value="1" type="radio">
+				{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+			</label>
+		</div>
+		<div class="radio spaceToUp pull-left margin-left-ld">
+			<label>
+				<input name="radioGroupA" ng-click="onRadioGroupOptChanged('2', 'editorModeReceivers', $event)" ng-disabled="readonly" ng-model="input.editorModeReceivers"
+				       ng-value="2" type="radio">
+				{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+			</label>
+		</div>
+	</div>
+
+	<div basics-workflow-resize-grid-directive data-ng-show="input.editorModeReceivers === '1'">
+		<div class="toolbar margin-top-ld">
+			<h2 class="title fix">{{'basics.workflow.action.customEditor.mail.receivers' | translate }}</h2>
+			<div data-list="tools" data-platform-menu-list data-platform-refresh-on="tools.version"
+			     ng-if="codeMirrorOptions.readOnly !== true"></div>
+		</div>
+		<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+	</div>
+	<div data-ng-show="input.editorModeReceivers === '2'">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.receivers' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.rec" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- CC -->
+<div>
+	<div class="radiolist-container">
+		<div class="radio spaceToUp pull-left">
+			<label>
+				<input name="radioGroupB" ng-click="onRadioGroupOptChanged('1', 'editorModeCC', $event)" ng-disabled="readonly" ng-model="input.editorModeCC"
+				       ng-value="1" type="radio">
+				{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+			</label>
+		</div>
+		<div class="radio spaceToUp pull-left margin-left-ld">
+			<label>
+				<input name="radioGroupB" ng-click="onRadioGroupOptChanged('2', 'editorModeCC', $event)" ng-disabled="readonly" ng-model="input.editorModeCC"
+				       ng-value="2" type="radio">
+				{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+			</label>
+		</div>
+	</div>
+
+
+	<div basics-workflow-resize-grid-directive="gridIdCC" data-ng-show="input.editorModeCC === '1'">
+		<div class="toolbar margin-top-ld">
+			<h2 class="title fix">{{'basics.workflow.action.customEditor.mail.cc' | translate }}</h2>
+			<div data-list="toolsCC" data-platform-menu-list data-platform-refresh-on="toolsCC.version"></div>
+		</div>
+		<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+			<platform-Grid data="gridDataCC"></platform-Grid>
+		</div>
+	</div>
+	<div data-ng-show="input.editorModeCC === '2'">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.cc' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.cc" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- BCC -->
+<div>
+	<div class="radiolist-container">
+		<div class="radio spaceToUp pull-left">
+			<label>
+				<input name="radioGroupC" ng-click="onRadioGroupOptChanged('1', 'editorModeBCC', $event)" ng-disabled="readonly" ng-model="input.editorModeBCC"
+				       ng-value="1" type="radio">
+				{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+			</label>
+		</div>
+		<div class="radio spaceToUp pull-left margin-left-ld">
+			<label>
+				<input name="radioGroupC" ng-click="onRadioGroupOptChanged('2', 'editorModeBCC', $event)" ng-disabled="readonly" ng-model="input.editorModeBCC"
+				       ng-value="2" type="radio">
+				{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+			</label>
+		</div>
+	</div>
+
+
+	<div basics-workflow-resize-grid-directive="gridIdBCC" data-ng-show="input.editorModeBCC === '1'">
+		<div class="toolbar margin-top-ld">
+			<h2 class="title fix">{{'basics.workflow.action.customEditor.mail.bcc' | translate }}</h2>
+			<div data-list="toolsBCC" data-platform-menu-list data-platform-refresh-on="toolsBCC.version"
+			     ng-if="codeMirrorOptions.readOnly !== true"></div>
+		</div>
+		<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+			<platform-Grid data="gridDataBCC"></platform-Grid>
+		</div>
+	</div>
+	<div data-ng-show="input.editorModeBCC === '2'">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.bcc' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.bcc" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Attachements-->
+<div>
+	<div class="radiolist-container">
+		<div class="radio spaceToUp pull-left">
+			<label>
+				<input name="radioGroupD" ng-click="onRadioGroupOptChanged('1', 'editorModeAtt', $event)" ng-disabled="readonly" ng-model="input.editorModeAtt"
+				       ng-value="1" type="radio">
+				{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+			</label>
+		</div>
+		<div class="radio spaceToUp pull-left margin-left-ld">
+			<label>
+				<input name="radioGroupD" ng-click="onRadioGroupOptChanged('2', 'editorModeAtt', $event)" ng-disabled="readonly" ng-model="input.editorModeAtt"
+				       ng-value="2" type="radio">
+				{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+			</label>
+		</div>
+	</div>
+
+
+	<div basics-workflow-resize-grid-directive="gridIdAtt" data-ng-show="input.editorModeAtt === '1'">
+		<div class="toolbar margin-top-ld">
+			<h2 class="title fix">{{'basics.workflow.action.customEditor.mail.attachements' | translate }}</h2>
+			<div data-list="toolsAtt" data-platform-menu-list data-platform-refresh-on="toolsAtt.version"
+			     ng-if="codeMirrorOptions.readOnly !== true"></div>
+		</div>
+		<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+			<platform-Grid data="gridDataAtt"></platform-Grid>
+		</div>
+	</div>
+	<div data-ng-show="input.editorModeAtt === '2'">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.attachements' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.att" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Reply to List-->
+<div>
+	<div class="radiolist-container">
+		<div class="radio spaceToUp pull-left">
+			<label>
+				<input name="radioGroupE" ng-click="onRadioGroupOptChanged('1', 'editorModeReplay', $event)" ng-disabled="readonly" ng-model="input.editorModeReplay"
+				       ng-value="1" type="radio">
+				{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+			</label>
+		</div>
+		<div class="radio spaceToUp pull-left margin-left-ld">
+			<label>
+				<input name="radioGroupE" ng-click="onRadioGroupOptChanged('2', 'editorModeReplay', $event)" ng-disabled="readonly" ng-model="input.editorModeReplay"
+				       ng-value="2" type="radio">
+				{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+			</label>
+		</div>
+	</div>
+
+	<div basics-workflow-resize-grid-directive="gridIdR2L" data-ng-show="input.editorModeReplay === '1'">
+		<div class="toolbar margin-top-ld">
+			<h2 class="title fix">{{'basics.workflow.action.customEditor.mail.replyToList' | translate }}</h2>
+			<div data-list="toolsR2L" data-platform-menu-list data-platform-refresh-on="toolsR2L.version"
+			     ng-if="codeMirrorOptions.readOnly !== true"></div>
+		</div>
+		<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+			<platform-Grid data="gridDataR2L"></platform-Grid>
+		</div>
+
+	</div>
+	<div data-ng-show="input.editorModeReplay === '2'">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.replyToList' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.replay" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

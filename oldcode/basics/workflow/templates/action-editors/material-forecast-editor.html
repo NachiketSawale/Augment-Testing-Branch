@@ -1,0 +1,88 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.emailCount' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.emailCount" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.subject' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.subject" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.body' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div class="filler" data-ng-model="input.body" data-options="codeMirrorOptionsMulti"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.sender' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.sender" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label" title="Password">Password</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.password" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive placeholder="<enter password>">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.resultCode' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.resultCode" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.portal.resultMessage' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.resultMessage" data-options="codeMirrorOptionsSingle"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

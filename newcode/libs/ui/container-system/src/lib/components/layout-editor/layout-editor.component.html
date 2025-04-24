@@ -1,0 +1,11 @@
+<div class="flex-element flex-box" style="height:720px;">
+    <ul class="layout-bar">
+        <li *ngFor="let item of layoutMenus">
+            <button class="item layout-icons" [class]="getLayoutMenuCss(item)" [title]="item.caption" (click)="layoutMenu=item"></button>
+        </li>
+    </ul>
+
+    <div class="flex-box flex-element">
+        <ui-container-system-layout-editor-view class="flex-box flex-element" *ngIf="context.paneLayout" [data]="context.paneLayout" [context]="context"></ui-container-system-layout-editor-view>
+    </div>
+</div>

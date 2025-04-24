@@ -1,0 +1,20 @@
+{
+	"name": "modules-example-preload",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/example/preload/src",
+	"prefix": "itwo40",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/example/preload"],
+			"options": {
+				"jestConfig": "libs/modules/example/preload/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

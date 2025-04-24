@@ -1,0 +1,26 @@
+  div.api-go-top {
+    position: fixed;
+    right: 75px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #2a6496;
+    border-radius: 4px;
+    opacity: 1;
+    cursor: pointer;
+    display: none;
+}
+div.api-go-top:hover{
+    opacity:1;
+}
+div.api-go-top .box{
+    position: relative;
+}
+div.api-go-top .box span{
+    position: absolute;
+    border-width: 10px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #fafafa transparent;
+    left: 10px;
+    top: 3px;
+}

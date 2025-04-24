@@ -1,0 +1,48 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.inventory.header.headerContainerTitle",
+    "controller": "procurementInventoryHeaderGridController",
+    "uuid": "307631CD2A13454FA89AD6BAE489254B"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.inventory.header.detailTitle",
+    "controller": "inventoryHeaderDetailController",
+    "uuid": "E68C57F4311249548A2C8553780D0E24",
+    "permission": "307631CD2A13454FA89AD6BAE489254B"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.inventory.title",
+    "controller": "procurementInventoryGridController",
+    "uuid": "414D9E8881C648FAA99FFC2B9BD17CB4"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.inventory.detailTitle",
+    "controller": "inventoryDetailController",
+    "uuid": "814DD84A43DE4C0FB6549AAF202C66A8",
+    "permission": "414D9E8881C648FAA99FFC2B9BD17CB4"
+  },
+  {
+    "id": "5",
+    "template": "procurement.inventory/partials/inventory-documents-view.html",
+    "title": "procurement.inventory.document.documentGridTitle",
+    "controller": "inventoryDocumentListController",
+    "uuid": "23297D263B684366BF16AF7DB11A039E"
+  },
+  {
+    "id": "6",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.inventory.document.documentDetailTitle",
+    "controller": "inventoryDocumentDetailController",
+    "uuid": "2FB3CD3E924246328F450E317CF65581",
+    "permission": "23297D263B684366BF16AF7DB11A039E"
+  }
+
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "prc.orderproposals.header.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.orderproposals.title.header",
+    "controller": "procurementOrderProposalsGridController",
+    "uuid": "f381ad3099f34acabc936ae4d95f728d"
+  },
+  {
+    "id": "prc.orderproposal.header.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.orderproposals.title.headerDetail",
+    "controller": "procurementOrderProposalsDetailController",
+    "uuid": "b2f6d32032a04c75b3a13dac2a439769",
+    "permission": "f381ad3099f34acabc936ae4d95f728d"
+  }
+]

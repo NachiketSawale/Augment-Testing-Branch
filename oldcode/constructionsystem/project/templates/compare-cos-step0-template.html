@@ -1,0 +1,64 @@
+<div class="alert alert-danger" data-ng-show="currentStep.messages.length">
+    <ul>
+        <li  data-ng-repeat="message in currentStep.messages"
+             data-ng-bind="message">
+        </li>
+    </ul>
+</div>
+
+<div data-platform-form-adjust-label>
+    <div class="platform-form-group platform-lg">
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'constructionsystem.project.labelProject' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-ng-model="context.projectId"
+                     data-entity="context"
+                     data-options="config.project"
+                     data-basics-lookupdata-lookup-composite>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'constructionsystem.project.labelTarget' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-ng-model="context.cosInsHeader1Id"
+                     data-entity="context"
+                     data-options="config.cosInsHeader1"
+                     data-basics-lookupdata-lookup-composite>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'constructionsystem.project.labelSource' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-ng-model="context.cosInsHeader2Id"
+                     data-entity="context"
+                     data-options="config.cosInsHeader2"
+                     data-basics-lookupdata-lookup-composite>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'constructionsystem.project.labelEnterprise' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-ng-model="context.isEnterprise"
+                     data-platform-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'constructionsystem.project.labelObjectIgnore' | translate}}</label>
+            <div class="platform-form-col">
+                <div data-ng-model="context.filterDefId"
+                     data-entity="context"
+                     data-options="config.filterDef"
+                     data-cos-model-object-filter-def-combobox>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

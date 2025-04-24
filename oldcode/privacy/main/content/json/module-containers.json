@@ -1,0 +1,17 @@
+﻿[
+	{
+		"id": "privacy.main.privacyRequestList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "privacy.main.privacyRequestListTitle",
+		"controller": "privacyMainPrivacyRequestListController",
+		"uuid": "f955c58a87c94fdbb6bbad703a7b9f58"
+	},
+	{
+		"id": "privacy.main.privacyRequestDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "privacy.main.privacyRequestDetailTitle",
+		"controller": "privacyMainPrivacyRequestDetailController",
+		"uuid": "4ffc67d562c8495f931006e8d9974026",
+		"permission": "f955c58a87c94fdbb6bbad703a7b9f58"
+	}
+]

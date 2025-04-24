@@ -1,0 +1,9 @@
+
+<div class="modal-wrapper">
+	<div *ngIf="tools" class="toolbar" style="display: flex; justify-content: flex-end">
+		<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+	</div>
+	<div class="modal-wrapper grid-wrapper subview-container">
+		<ui-common-grid class="flex-element" [configuration]="configOption" ></ui-common-grid>
+	</div>
+</div>

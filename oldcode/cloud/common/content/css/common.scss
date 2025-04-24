@@ -1,0 +1,179 @@
+$change-status-color: #0268B1;
+$change-status-white-button: #FFF;
+/*-------------------------------------------------------------------------------
+	 change-status-wizard
+  -------------------------------------------------------------------------------*/
+
+.change-status-editor-container {
+	border: 1px solid #eaeaea;
+}
+
+#change-status-editor {
+	padding: 0 10px 10px 10px;
+	.zoom-img {
+		margin-left: 11px;
+	}
+	.zoom-img-out {
+		margin-top: -5px;
+	}
+}
+
+#change-status-detail {
+	overflow: hidden;
+	margin: 0 0 0 12px;
+	> ul {
+		margin-left: 20px;
+	}
+}
+
+.change-status-detail-item {
+	position: relative;
+	padding: 0 7px;
+	zoom: 1;
+	margin: 0 0 6px 0;
+	a {
+		color: #555;
+		font-size: 16px;
+		text-decoration: none !important;
+		cursor: default;
+	}
+
+	> div {
+		border: 1px solid #ccc;
+		padding: 2px 8px;
+	}
+}
+
+.change-status-detail-img {
+	margin: 0 6px;
+}
+
+.change-status-detail-item-tick {
+	position: absolute;
+	right: 7px;
+	top: 0;
+	bottom: 0;
+	background-color: $change-status-color;
+	width: 30px;
+	> img, svg {
+		margin: 5px 0 0 7px;
+	}
+}
+
+.change-status-detail-item-select {
+	border: 1px solid $change-status-color !important;
+}
+
+.change-status-detail-item-default {
+	font-weight: bold;
+}
+
+
+.change-status-detail-item-disable {
+	opacity: 0.5;
+}
+
+.change-status-editor-title {
+	border-bottom: 2px solid $change-status-color;
+	margin-bottom: 15px;
+	width: 99%;
+	> p {
+		margin: 0;
+	}
+}
+
+/*-------------------------------------------------------------------------------
+	change-status- Slider(all come from jQuery-UI-css)
+  -------------------------------------------------------------------------------*/
+
+.ui-slider {
+	text-align: left;
+	position: relative;
+
+	.ui-slider-handle {
+		width: 1.5em;
+		height: 1em;
+		position: absolute;
+		z-index: 2;
+		cursor: default;
+	}
+
+	.ui-slider-range {
+		background-position: 0 0;
+		//		border: 0 currentColor;
+		border-image: none;
+		font-size: 0.7em;
+		display: block;
+		position: absolute;
+		z-index: 1;
+	}
+}
+
+.ui-slider-vertical {
+	width: 1px;
+	height: 100px;
+	.ui-slider-handle {
+		left: -1px;
+		margin-bottom: -1em;
+		margin-left: 0;
+	}
+	.ui-slider-range {
+		left: 0;
+		width: 100%;
+	}
+	.ui-slider-range-min {
+		bottom: 0;
+	}
+	.ui-slider-range-max {
+		top: 0;
+	}
+}
+
+/*-------------------------------------------------------------------------------
+	change-status- Slider(custom)
+  -------------------------------------------------------------------------------*/
+
+#slider-vertical {
+	border: 1px solid $change-status-color;
+	margin-left: -4px;
+	margin-top: 12px;
+}
+
+.ui-slider-container {
+	float: left;
+	margin: 0 9px;
+
+	.ui-slider-increase {
+		width: 1.5em;
+		height: 1.5em;
+		position: absolute;
+		z-index: 10;
+		cursor: hand;
+		margin: -24px -9px;
+	}
+
+	.ui-slider-decrease {
+		width: 1.6em;
+		height: 1.6em;
+		position: absolute;
+		z-index: 10;
+		cursor: hand;
+		margin: 4px -9px;
+	}
+
+	.ui-widget-content .ui-state-default {
+		border: 13px solid;
+		border-color: transparent transparent transparent $change-status-color;
+	}
+
+}
+
+.material-modal-dialog .modal-content {
+	width: 900px; }
+
+/*-------------------------------------------------------------------------------
+	composite input (custom)
+  -------------------------------------------------------------------------------*/
+//.form-group.platform-form-row.composite-last-item {
+//  padding-right: 0;
+//}

@@ -1,0 +1,9 @@
+<div class="input-group lookup-container grid-container ng-scope">
+	<input type="text" debounceChanged
+	       [attr.id]="controlContext.fieldId"
+	       [attr.name]="controlContext.fieldId"
+	       [(ngModel)]="controlContext.value"
+	       [disabled]="controlContext.readonly" autocomplete="off" #variables_input />
+
+	<button [disabled]="controlContext.readonly" class="block-image tlb-icons ico-menu navigator_3620" title="Select " style="position: relative; margin: 2px 3px 0 0" (click)="openVariablesPopup($event)"></button>
+</div>

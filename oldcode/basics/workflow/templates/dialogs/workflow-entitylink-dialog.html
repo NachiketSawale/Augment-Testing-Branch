@@ -1,0 +1,57 @@
+<div data-ng-controller="basicsWorkflowModuleLinkDialog">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.modalDialogs.linkName' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="modalOptions.value.displayText" data-options="input.codeMirrorOptions"
+					     data-script-editor-directive>
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.template.entity' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="modalOptions.value.entity" data-options="input.codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group margin-top-ld">
+			<div class="platform-form-row">
+				<div class="radiolist-container" data-ng-model="input.editorMode" data-on-selection-changed="onRadioGroupOptChanged(value)"
+				     data-options="input.radioGroupOpt" data-radiolistctrl>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.modalDialogs.module' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-basics-workflow-module-list-combobox data-ng-model="input.moduleValue"
+					     data-ng-show="input.editorMode === 1"></div>
+					<div data-ng-model="input.moduleScriptValue" data-ng-show="input.editorMode === 2"
+					     data-options="input.codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<div>
+			<button class="ok btn btn-default" data-ng-click="modalOptions.ok()"
+			        data-ng-disabled="modalOptions.isDisabled('ok')">
+				{{modalOptions.okBtnText}}
+			</button>
+			<button class="cancel btn btn-default" data-ng-click="modalOptions.cancel()"
+			        data-ng-disabled="modalOptions.isDisabled('cancel')">
+				{{modalOptions.cancelBtnText}}
+			</button>
+		</div>
+	</footer>
+</div>
+

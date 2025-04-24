@@ -1,0 +1,8 @@
+{
+  "estimate": {
+    "common": {
+      "noPinnedProject" : "No project is pinned!",
+      "paramDeleteOverlayDialogInfo":"Checking Parameters For Safe Delete"
+   }
+  }
+}

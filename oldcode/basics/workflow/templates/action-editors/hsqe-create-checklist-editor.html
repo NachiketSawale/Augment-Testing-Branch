@@ -1,0 +1,100 @@
+<div data-platform-form-adjust-label>
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="inputOpen">
+			<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+				<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+			</div>
+			<section class="modal-body">
+				<div >
+					<input style="float: left;" type="radio" name="fromCheckListTemplate" value="1" data-ng-model="input.fromCheckListTemplate" ng-checked="true"/>
+					<div style="float: left;margin-left: 5px;">
+						<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'basics.workflow.action.checklist.createFromCheckListTemplate' | translate}}</label>
+					</div>
+				</div>
+				<div class="platform-form-group">
+					<div class="platform-form-row">
+						<label class="platform-form-label" style="padding-left: 25px;">{{'basics.workflow.action.checklist.HsqCheckListTemplateId' | translate }}</label>
+						<div class="platform-form-col">
+							<div data-ng-model="input.checkListTemplateId" data-options="codeMirrorOptions" data-script-editor-directive></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<input style="float: left;"  type="radio" name="fromCheckListTemplate" value="2" data-ng-model="input.fromCheckListTemplate"
+					/>
+					<div style="float: left;margin-left: 5px;">
+						<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'basics.workflow.action.checklist.createFromActivityTemplate' | translate}}
+						</label>
+					</div>
+				</div>
+				<div class="platform-form-group platform-lg">
+					<div class="platform-form-row">
+						<label class="platform-form-label" style="padding-left: 25px;">
+							{{'basics.workflow.action.checklist.PrjProject' | translate }}
+						</label>
+						<div class="platform-form-col" data-ng-init="porjectConfig ={lookupDirective:'basics-lookup-data-project-project-dialog',descriptionMember:'ProjectName'}">
+							<div data-ng-model="input.projectFk"
+							     data-options="porjectConfig" data-basics-lookupdata-lookup-composite class="control-directive">
+							</div>
+						</div>
+<!--						<div class="platform-form-col">-->
+<!--							<div data-ng-model="input.projectFk" data-options="codeMirrorOptions" data-script-editor-directive></div>-->
+<!--						</div>-->
+					</div>
+
+				</div>
+				<div class="platform-form-group">
+					<div class="platform-form-row">
+						<div class="platform-form-col" style="padding-left: 25px;">
+							<input type="checkbox" name="createDistinctChecklist" ng-model="input.createDistinctChecklist" data-ng-disabled="input.fromCheckListTemplate!=2"/>
+							<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'basics.workflow.action.checklist.distinctChecklist' | translate}}</label>
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-group" ng-show="input.fromCheckListTemplate==2" style="padding-left:55px;">
+					<div class="platform-form-row">
+						<input type="radio" name="createCheckListFlg" value="1" ng-model="input.createCheckListFlg" data-ng-disabled="input.createDistinctChecklist==false" ng-checked="true"/>
+						<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'basics.workflow.action.checklist.createNewCheckListForNewActivityOnly' | translate}}</label>
+
+					</div>
+					<div class="platform-form-row">
+						<input type="radio" name="createCheckListFlg" value="2" data-ng-disabled="input.createDistinctChecklist==false" ng-model="input.createCheckListFlg"/>
+						<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'basics.workflow.action.checklist.createNewCheckListForAllActivities' | translate}}
+						</label>
+					</div>
+				</div>
+				<div class="platform-form-group">
+					<label style="padding-left: 25px;">{{'basics.workflow.action.checklist.note' | translate}}</label>
+				</div>
+			</section>
+
+		</div>
+	</div>
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="outputOpen">
+			<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+				<span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+			</div>
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.id' | translate
+						}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="output.id" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

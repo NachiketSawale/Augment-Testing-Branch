@@ -1,0 +1,266 @@
+[
+  {
+    "id": "resource-equipment-group-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupListTitle",
+    "controller": "resourceEquipmentGroupListController",
+    "uuid": "ec561557d8c14da28d7e98aa058acff9"
+  },
+  {
+    "id": "resource-equipment-group-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupDetailTitle",
+    "controller": "resourceEquipmentGroupDetailController",
+    "uuid": "855334f9234246f5840900e646fa0a1e",
+    "permission": "ec561557d8c14da28d7e98aa058acff9"
+  },
+  {
+    "id": "resource.equipment-group.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "resource.equipmentgroup.characteristics",
+    "uuid": "6b934bc7ecc544a7bcdce87b876b94a7",
+    "controller": "",
+    "sectionId": "34",
+    "mainService": "resourceEquipmentGroupDataService"
+  },
+  {
+    "id": "resource.equipment.group.work.order.type.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupWorkOrderTypeListTitle",
+    "controller": "resourceEquipmentGroupWorkOrderTypeListController",
+    "uuid": "d7a7913fcf27457eb7db277790b7812e"
+  },
+  {
+    "id": "resource.equipment.group.work.order.type.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupWorkOrderTypeDetailTitle",
+    "controller": "resourceEquipmentGroupWorkOrderTypeDetailController",
+    "uuid": "9355d63a6f0b4b9991f3e1f8532ceb41",
+    "permission": "d7a7913fcf27457eb7db277790b7812e"
+  },
+  {
+    "id": "resource.equipmentgroup.eurolist.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupEuroListListTitle",
+    "controller": "resourceEquipmentGroupEuroListListController",
+    "uuid": "c686905455cf458fb299c40e0966c5b8"
+  },
+  {
+    "id": "resource.equipmentgroup.eurolist.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupEuroListDetailTitle",
+    "controller": "resourceEquipmentGroupEuroListDetailController",
+    "uuid": "9c0779eb4dc7426988ca468f8bde4daa",
+    "permission": "c686905455cf458fb299c40e0966c5b8"
+  },
+  {
+    "id": "resource.equipmentgroup.pricelist.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupPriceListListTitle",
+    "controller": "resourceEquipmentGroupPriceListListController",
+    "uuid": "aac8d525517c44d794c5ddd7cf406527"
+  },
+  {
+    "id": "resource.equipmentgroup.pricelist.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupPriceListDetailTitle",
+    "controller": "resourceEquipmentGroupPriceListDetailController",
+    "uuid": "1b651939c6f74c3699a9ea9391d08db0",
+    "permission": "aac8d525517c44d794c5ddd7cf406527"
+  },
+  {
+    "id": "resource.equipmentgroup.account.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupAccountListTitle",
+    "controller": "resourceEquipmentGroupAccountListController",
+    "uuid": "73f7e2eea2a842dca95262d9e8832108"
+  },
+  {
+    "id": "resource.equipmentgroup.account.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupAccountDetailTitle",
+    "controller": "resourceEquipmentGroupAccountDetailController",
+    "uuid": "e3cb4d24a11f4cdfbebd9e9c77ba9978",
+    "permission": "73f7e2eea2a842dca95262d9e8832108"
+  },
+  {
+    "id": "resource.equipmentgroup.controllingunit.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupControllingUnitListTitle",
+    "controller": "resourceEquipmentGroupControllingUnitListController",
+    "uuid": "91b78b592b5548cea31092fe04ed94bf"
+  },
+  {
+    "id": "resource.equipmentgroup.controllingunit.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.equipmentGroupControllingUnitDetailTitle",
+    "controller": "resourceEquipmentGroupControllingUnitDetailController",
+    "uuid": "a2190511a5de424e9f5514ac574ea0eb",
+    "permission": "91b78b592b5548cea31092fe04ed94bf"
+  },
+  {
+    "id": "resource.equipmentgroup.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "b8903428bfb644f080588682f1d42e32"
+  },
+  {
+    "id": "resource.equipmentgroup.costv.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipment.costVGridTitle",
+    "controller": "resourceEquipmentGroupCostVListController",
+    "uuid": "c827ac51271d40b2af1ad364afe7c10c"
+  },
+  {
+    "id": "resource.equipmentgroup.costv.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipment.costVDetailTitle",
+    "controller": "resourceEquipmentGroupCostVDetailController",
+    "uuid": "4ed827706c314183bdef73c70c1ac05e",
+    "permission": "c827ac51271d40b2af1ad364afe7c10c"
+  },
+  {
+    "id": "resource.equipmentgroup.plant.location2.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.plantLocationListTitle",
+    "controller": "resourceEquipmentGroupPlantLocationListController",
+    "uuid": "b7ac17787f4748ebb4ab96150dfad8c2",
+    "permission": "432068179c654b419d3d42d7153d10f8"
+  },
+  {
+    "id": "resource.equipmentgroup.plant.location2.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.plantLocationDetailTitle",
+    "controller": "resourceEquipmentGroupPlantLocationDetailController",
+    "uuid": "0cb8ebf396d44528bf71fe22325bf401",
+    "permission": "432068179c654b419d3d42d7153d10f8"
+  },
+  {
+    "id": "resource.equipmentgroup.plantgroup2costcode.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.plantGroup2CostCodeList",
+    "controller": "resourceEquipmentGroupPlantGroup2CostCodeListController",
+    "uuid": "bc1f044294f9419db99e41c2bd14e1bf"
+  },
+  {
+    "id": "resource.equipmentgroup.plantgroup2costcode.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.plantGroup2CostCodeDetail",
+    "controller": "resourceEquipmentGroupPlantGroup2CostCodeDetailController",
+    "uuid": "c622ef8ecbe34fea947b6f8b439e3d41",
+    "permission": "bc1f044294f9419db99e41c2bd14e1bf"
+  },
+  {
+    "id": "resource.equipmentgroup.plantgroup2estimatepricelist.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.plantGroup2EstimatePriceListList",
+    "controller": "resourceEquipmentGroupPlantGroup2EstimatePriceListListController",
+    "uuid": "836f9e2bf22c4aacb210635cfaa32571"
+  },
+  {
+    "id": "resource.equipmentgroup.plantgroup2estimatepricelist.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.plantGroup2EstimatePriceListDetail",
+    "controller": "resourceEquipmentGroupPlantGroup2EstimatePriceListDetailController",
+    "uuid": "cf168a5f73d3417ebea644f92dff46d3",
+    "permission": "836f9e2bf22c4aacb210635cfaa32571"
+  },
+  {
+    "id": "resource.equipmentgroup.taxcode.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.taxCodeList",
+    "controller": "resourceEquipmentGroupTaxCodeListController",
+    "uuid": "0d881efb6e4249718bb5a7a84dad8eb1"
+  },
+  {
+    "id": "resource.equipmentgroup.taxcode.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.taxCodeDetail",
+    "controller": "resourceEquipmentGroupTaxCodeDetailController",
+    "uuid": "3bf917481bfe4b0aaa3dd4a39e03508a",
+    "permission": "0d881efb6e4249718bb5a7a84dad8eb1"
+  },
+  {
+    "id": "resource.equipmentgroup.catalogRecord1",
+    "template": "app/components/sourcecontainer/source-list.html",
+    "title": "resource.equipmentgroup.catalogRecordSource1",
+    "controller": "resourceEquipmentGroupSourceWindowController",
+    "uuid": "9c3870f3319f4e5ca144513e1e79af4a",
+    "permission": "bae34453f83744d3a6f7e53b7851e657",
+    "filter": [
+      "catalogFk"
+    ]
+  },
+  {
+    "id": "resource.equipmentgroup.catalogRecord2",
+    "template": "app/components/sourcecontainer/source-list.html",
+    "title": "resource.equipmentgroup.catalogRecordSource2",
+    "controller": "resourceEquipmentGroupSourceWindowController",
+    "uuid": "9f2c76da266a4b66b10a176e7ec59896",
+    "permission": "bae34453f83744d3a6f7e53b7851e657",
+    "filter": [
+      "catalogFk"
+    ]
+  },
+  {
+    "id": "resource.equipmentgroup.specificvalue.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.specificValueList",
+    "controller": "resourceEquipmentGroupSpecificValueListController",
+    "uuid": "20cd31beb1a34ec8b7d300095139221b"
+  },
+  {
+    "id": "resource.equipmentgroup.specificvalue.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.specificValueDetail",
+    "controller": "resourceEquipmentGroupSpecificValueDetailController",
+    "uuid": "64181b7641994080b6cf3cbecc12f832",
+    "permission": "20cd31beb1a34ec8b7d300095139221b"
+  },
+  {
+    "id": "resource.equipmentgroup.document.list",
+    "template": "basics.common/partials/header-zip-checkbox-documents-view.html",
+    "title": "resource.equipmentgroup.documentListTitle",
+    "controller": "resourceEquipmentGroupDocumentListController",
+    "uuid": "08addb1b387b4b848cbc4898ebdca385"
+  },
+  {
+    "id": "resource.equipmentgroup.document.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.documentDetailTitle",
+    "controller": "resourceEquipmentGroupDocumentDetailController",
+    "uuid": "f81af0c472c240b6aaec7741cb08a266",
+    "permission": "08addb1b387b4b848cbc4898ebdca385"
+  },
+  {
+    "id": "resource.equipmentgroup.compmaintschematemplate.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.compMaintSchemaTemplateListTitle",
+    "controller": "resourceEquipmentGroupCompMaintSchemaTemplateListController",
+    "uuid": "f05293aece8811ef9cd20242ac120002"
+  },
+  {
+    "id": "resource.equipmentgroup.compmaintschematemplate.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.equipmentgroup.compMaintSchemaTemplateDetailTitle",
+    "controller": "resourceEquipmentGroupCompMaintSchemaTemplateDetailController",
+    "uuid": "7de3c969cefe4c5a986e0a809be06d68",
+    "permission": "f05293aece8811ef9cd20242ac120002"
+  },
+  {
+    "id": "resource.equipmentgroup.pictureList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.equipmentgroup.pictureList",
+    "controller": "resourceEquipmentGroupPictureListController",
+    "uuid": "35f2de73e6a147b2ac6740c09031271d"
+  },
+  {
+    "id": "resource.equipmentgroup.pictureView",
+    "template": "app/components/base/partials/image-partial.html",
+    "title": "resource.equipmentgroup.pictureView",
+    "controller": "resourceEquipmentGroupPictureViewController",
+    "uuid": "1207232a312f49cfb06367a036811e52",
+    "permission": "35f2de73e6a147b2ac6740c09031271d"
+  }
+]

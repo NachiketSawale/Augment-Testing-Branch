@@ -1,0 +1,4 @@
+{
+	"include": ["../../**/*.ts", "../../../apps/**/*.ts", "../../**/*.md"],
+	"exclude": ["../../**/*.spec.ts", "../../../apps/**/*.spec.ts", "../../**/*.stories.ts", "../../documentation/**/*"]
+}

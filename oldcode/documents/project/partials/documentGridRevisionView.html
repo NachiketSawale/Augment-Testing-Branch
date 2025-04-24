@@ -1,0 +1,9 @@
+﻿<div class="flex-element flex-box flex-column fullheight">
+    <div style="height: 35px;"></div>
+<label style="position:absolute;right:25px;padding-top:7px;">
+    <input type="checkbox" ng-model="containerHeaderInfo.checkBoxChecked" style="vertical-align:middle;margin-top:0px;margin-right: 2px;">{{containerHeaderInfo.extractZipFileTip}}</label>
+	<div data-basics-common-upload-progress-bar data-options="progressBarOptions"></div>
+<platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+<div cloud-common-overlay data-info2="loadingText" data-loading="isLoading"></div>
+<platform-statusbar data-ng-if="statusBarVisible" style="height: 25px;width: 100%;" data-current-page=" currentPage" data-options="statusbarOptions" data-on-pagechange="onPageChanged(args)" ></platform-statusbar>
+</div>

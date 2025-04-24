@@ -1,0 +1,16 @@
+﻿{
+  "boq": {
+    "wic": {
+      "detailWicGroupContainerTitle": "清单库组明细",
+      "wicGroupListTitle": "清单库组",
+      "wicCatBoqListTitle": "清单库",
+      "wicTab": "清单库",
+      "basicData": "基本数据",
+      "MdcMaterialCatalogFk": "清单库框架",
+      "AccessRightDescriptorName": "!Access Right Name",
+      "wicGroupClerkDetailTitle": "!Details Clerk",
+      "wicGroupClerkListTitle": "!Clerk",
+      "CopyTemplateOnly": "!Copy Template Only"
+    }
+  }
+}

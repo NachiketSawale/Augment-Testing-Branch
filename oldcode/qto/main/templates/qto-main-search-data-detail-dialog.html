@@ -1,0 +1,19 @@
+<div data-ng-controller="qtoMainSearchDataDetailDialogController" class="modal-wrapper">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="modal-wrapper fullheight subview-container">
+            <div data-platform-grid data-data="gridData"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isOkDisabled">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

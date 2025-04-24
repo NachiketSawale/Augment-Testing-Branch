@@ -1,0 +1,18 @@
+.composite-item {
+	margin-right: 5px;
+	
+	&:last-child {
+		margin-right: 0;
+	}
+
+	svg.form-column1-required {
+		width: 16px;
+		height: 16px;
+		min-height: 16px;
+		min-width: 16px;
+	}
+
+	.form-column1-label + .flex-element {
+		margin-left: 8px;
+	}
+}

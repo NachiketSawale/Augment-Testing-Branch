@@ -1,0 +1,67 @@
+<script type="text/ng-template" id="basics.reporting/sidebar-item.html">
+	<li class="button-right-action reporting-items" data-ng-class="{'selected': (groupedListCfg.showSelected && groupedListCfg.selectedId === {{id}})}" data-ng-hide="{{hide}}">
+		<button data-ng-disabled="$parent.$parent.reportingSidebar.pending({{groupId}},{{id}})" class="left rw" data-ng-click="clickFn('preview',{{id}})" >
+			<ul class="rw-content">
+				<li class="title">{{name}}</li>
+				<li>{{text}}</li>
+			</ul>
+		</button>
+		<div class="right">
+			<div data-cloud-desktop-watch-list-submenu data-watchlistid="{{id}}" data-hidestdwl="{{hideStdWl}}" sidebar-Name="'report'" data-group-list-option="groupedListCfg" class="flex-box flex-column">
+			</div>
+			<button type="button" data-ng-click="pinnedItem({{id}})" data-ng-class="pinItemId.includes({{id}}) || pinnedItemId.includes({{id}}) ?'top fullheight btn control-icons ico-close':'top fullheight btn control-icons ico-pin'"></button>
+		</div>
+		</div>
+	</li>
+</script>
+
+<script type="text/ng-template" id="basics.reporting/submenu-itemslist.html">
+	<ul style="width: 160px;">
+		<li>
+			<button data-ng-click="clickFn('pdfPrint',@@id@@)">
+				<i class="block-image control-icons ico-print-pdf"></i>
+				<span>{{ 'basics.reporting.sidebar.submenuItemList.pdfPrint' | translate }}</span>
+			</button>
+		</li>
+		<li class="hide">
+			<button data-ng-click="clickFn('pfdDirectPrint',@@id@@)">
+				<i class="block-image control-icons ico-print-pdf-direct"></i>
+				<span>{{ 'basics.reporting.sidebar.submenuItemList.pdfDirectPrint' | translate }}</span>
+			</button>
+		</li>
+		<li>
+			<button data-ng-click="clickFn('previewViewer',@@id@@)">
+				<i class="block-image control-icons ico-print-preview"></i>
+				<span>{{ 'basics.reporting.sidebar.submenuItemList.preview' | translate }}</span>
+			</button>
+		</li>
+		<li class="hide">
+			<button data-ng-click="clickFn('previewDirectPrint',@@id@@)">
+				<i class="block-image control-icons ico-print-preview-direct"></i>
+				<span>{{ 'basics.reporting.sidebar.submenuItemList.previewDirectPrint' | translate }}</span>
+			</button>
+		</li>
+	</ul>
+</script>
+
+<script type="text/ng-template" id="basics.reporting/sidebar-error.html">
+	<li>
+		<div class="alert-danger" style="padding: 8px; margin: 4px 0px;">
+			<div style="font-size: 16px;">{{parameter.name}} ({{context}})</div>
+			{{text}}
+		</div>
+	</li>
+</script>
+
+<script type="text/ng-template" id="basics.reporting/sidebar-group.html">
+	<li class="panel panel-primary" data-ng-hide="{{hide}}">
+		<button class="panel-heading" data-ng-click="invert({{id}})">
+			<span class="{{icon}}"></span>
+			<h4 class="panel-title">{{name}}</h4>
+			<div class="panel-toggle-img control-icons {{iconClass}}"></div>
+		</button>
+		<ul class="panel-body">
+			##items##
+		</ul>
+	</li>
+</script>

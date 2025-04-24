@@ -1,0 +1,41 @@
+{
+	"timekeeping": {
+		"shiftmodel": {
+			"recordingBreakListTitle": "Breaks",
+			"recordingBreakDetailTitle": "Break Details",
+			"entityBreakStart": "Break Start",
+			"entityBreakEnd": "Break End",
+			"entityShift": "Shift Model",
+			"shiftListTitle": "Shift Models",
+			"shiftDetailTitle": "Shift Model Details",
+			"entityWorkingTime": "Working Time",
+			"entityExceptionDay": "Exception Day",
+			"entityWeekday": "Weekday",
+			"shiftWorkingTimeListTitle": "Working Times",
+			"shiftWorkingTimeDetailTitle": "Working Time Details",
+			"dialog": {
+				"label1": "label",
+				"label2": "label2"
+			},
+			"translationDescShift": "Shift",
+			"shiftExceptionDayDetailTitle": "Exception Details",
+			"shiftExceptionDayListTitle": "Exceptions",
+			"entityExceptDate": "Except Date",
+			"entityIsWorkday": "Is Workday",
+			"createExceptionDaysFromCalendar": "Create ExceptionDays from Calendar",
+			"entityTimeSymbolFk": "Time Symbol",
+			"entityBreakFrom": "Break From",
+			"entityBreakTo": "Break To",
+			"entityTimeSymWorkOnHoliday": "Time Symbol for Work on Holiday",
+			"entityDefaultWorkday": "Default Workday",
+			"entityShiftGroup": "Shift Group",
+			"shift2GroupListTitle": "Shift Model to Groups",
+			"shift2GroupDetailTitle": "Shift Model to Group Details",
+			"timekeepingShiftModel2GroupEntity": "ShiftModel2Group",
+			"entityTimekeepingGroup": "Timekeeping Group",
+			"entityStartAfterMidnight": "Start After Midnight",
+			"entityEndAfterMidnight": "End After Midnight",
+			"selectEntityFirst": "Please select a Shift Model first!"
+		}
+	}
+}

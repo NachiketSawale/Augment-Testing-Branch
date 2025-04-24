@@ -1,0 +1,51 @@
+<div class="flex-box flex-column flex-element filler" data-ng-controller="estimateAssembliesCostGroupStructureController" >
+
+    <div class="generic-struct">
+        <div class="group-items slick-groupby" data-ng-show ="isShowInfo">
+            <div class="group-placeholder" >
+                <div data-ng-repeat="item in mainCategoryList" class="grouped-item">
+                    <span>{{item.CostGroupCode}}:{{item.Code}}</span>
+                    <button class="btn control-icons ico-input-delete" data-ng-click="removeFilter(item.Id)"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-platform-kendo-splitter-adjust id="costGroupCatalog" class="flex-box flex-column flex-element"
+         option="{panes: [ { collapsible: true, size: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}" >
+
+        <div id="ui-layout-east" class="flex-box flex-column flex-element" data-ng-controller="estimateAssembliesCostGroupCatalogController">
+            <div class="flex-element overflow accordion-directive-wrapper">
+                <div data-accordion data-close-others="false">
+                    <div data-accordion-group data-is-open="inputOpen" id="EnterCostGroup-scroller" class="overflow filler">
+                        <div data-accordion-heading>
+                            <span class="platform-form-group-header-text" title="{{'estimate.main.costGroupTitle2' | translate}}">{{'estimate.main.costGroupTitle2' | translate}}</span>
+                                 <span class="platform-form-group-header">
+                                        <div data-ng-show="inputOpen" class="toggleImg control-icons ico-up"></div>
+                                        <div data-ng-show="!inputOpen" class="toggleImg control-icons ico-down"></div>
+                                 </span>
+                        </div>
+                        <div treecontrol class="tree-classic"
+                             data-tree-model="dataForEnterCostGroup"
+                             data-options="treeOptions"
+                             data-order-by="code"
+                             data-on-selection="onSelection(node)"
+                             data-on-node-dbl-click="onNodeDblClick(node)"
+                             data-selected-node="selectedNode">
+
+                            <label data-ng_bind="::getDisplaytext(node)" title="{{::getDisplaytext(node)}}" class="flex-element ellipsis"></label>
+
+                            <button type="button" class="btn" data-ng-if="node.Image" data-ng_class="node.Image" data-ng_click="removeFilter($event,node)"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="ui-layout-west">
+            <div class="flex-box flex-column filler">
+                <platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div data-ng-controller="DocumentsCentralQueryContextConfigController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="platform-form-row" style="padding-left: 2em;">
+			<div class="platform-form-label">
+				<label>
+					<input style="width:16px;margin: 4px 0 0;line-height: normal;cursor: pointer;height:12px;"
+					       type="radio"
+					       data-name="updateOption"
+					       data-ng-value= 'updateOptions.radioValue.selectedStructure'
+					       data-ng-model="updateOptions.radioOption"
+					       data-ng-disabled="" />
+					{{'documents.centralquery.fromDocStructureTitle' | translate}}
+				</label>
+			</div>
+		</div>
+		<div class="platform-form-row" style="padding-left: 2em;">
+			<div class="platform-form-label">
+				<label>
+					<input style="width:16px;margin: 4px 0 0;line-height: normal;cursor: pointer;height:12px;"
+					       type="radio"
+					       data-name="updateOption"
+					       data-ng-value= 'updateOptions.radioValue.selectedCusField'
+					       data-ng-model="updateOptions.radioOption" />
+					{{'documents.centralquery.fromDocProjectTitle' | translate}}
+				</label>
+				<div class="platform-form-col" style="width:180px;display: inline-block;vertical-align: middle;margin-left: 60px;">
+					<div basics-common-unique-fields-profile-lookup data-ng-model="updateOptions.uniqueFieldsProfile" data-options="serviceoptions"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="enableOK()" data-ng-click="modalOptions.ok()" data-ng-bind="'basics.common.button.ok' | translate"></button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="'basics.common.button.cancel' | translate"></button>
+	</footer>
+</div>
+<style>
+	.profile_btn {
+		flex:1;
+		text-align:left;
+	}
+	.modal-footer .profile_btn .profile-lookup{
+		max-width: 300px;
+	}
+	.modal-footer .profile_btn button.btn{
+		margin:0px;
+		padding:0px;
+		min-width:auto;
+		display:inline-block;
+	}
+</style>

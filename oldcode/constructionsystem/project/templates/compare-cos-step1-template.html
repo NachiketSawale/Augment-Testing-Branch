@@ -1,0 +1,43 @@
+<style>
+	.alert img {
+		width: 14px;
+		height: 14px;
+		-webkit-background-size: 14px;
+		background-size: 14px;
+		margin-right: 4px;
+	}
+
+	.alert-cos {
+		padding: 4px;
+		margin-bottom: 4px;
+	}
+</style>
+<div class="alert alert-success alert-cos" data-ng-bind="'constructionsystem.project.noteCopyIsDone' | translate"></div>
+
+<div class="alert alert-info alert-cos" data-ng-show="currentStep.messages.length">
+	<ul>
+		<li data-ng-repeat="message in currentStep.messages"
+			data-ng-bind-html="message">
+		</li>
+	</ul>
+</div>
+
+<div class="flex-box flex-column subview-container grid-wrapper">
+	<div data-platform-grid data="gridData"></div>
+</div>
+<br>
+<div class="checkbox spaceToUp lg-3 md-3">
+	<!--execute selection statement-->
+	<p>
+		<div><label><input type="checkbox" data-ng-model="applySelectionStatement" data-ng-change="onOptionChange('applySelectionStatement', applySelectionStatement)">{{'constructionsystem.project.execSelectionStatement' | translate}}</label></div>
+		<div style="padding-left: 20px;color: red;">({{ 'constructionsystem.project.execSelectionStatementHint' | translate }})</div>
+	</p>
+	<!--execute cos evaluation and calculation	-->
+	<p><label><input type="checkbox" data-ng-model="applyCalculation" data-ng-change="onOptionChange('applyCalculation', applyCalculation);!applyCalculation?(applyEstimate=false):null;">{{'constructionsystem.project.execCalculation' | translate}}</label></p>
+	<!--apply line item -->
+	<p><label><input type="checkbox" data-ng-model="applyEstimate" data-ng-change="onOptionChange('applyEstimate', applyEstimate);applyEstimate?(applyCalculation=true):null;">{{'model.viewer.changeModelWz.applyEstimate' | translate}}</label></p>
+	<!--keep deleted cos instances-->
+	<p><label><input type="checkbox" data-ng-model="keepCosInstance" data-ng-change="onOptionChange('keepCosInstance', keepCosInstance);">{{'constructionsystem.project.keepDeletedInstances' | translate}}</label></p>
+</div>
+<br>
+<div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>

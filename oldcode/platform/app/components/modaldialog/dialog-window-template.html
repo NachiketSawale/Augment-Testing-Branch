@@ -1,0 +1,17 @@
+<div role="dialog" class="modal fade" data-ng-class="{in: animate}" data-ng-attr-id="{{ ::$parent.dialog.id || undefined }}" tabindex="-1"
+     data-ng-style="{'z-index': 1050 + index*10, display: 'block'}" data-ng-click="close($event)"
+     data-cloud-Desktop-On-Key-Enter="$parent.dialog.onReturnButtonPress">
+	<div class="modal-dialog" data-platform-modal-draggable
+	     data-ng-style="{'min-width': $parent.options.minWidth,
+					'max-width': $parent.options.maxWidth,
+					'width': $parent.options.width,
+					'max-height': $parent.options.maxHeight,
+					'min-height': $parent.options.minHeight,
+					'height': $parent.options.height,
+					'top' : $parent.options.top != undefined ? $parent.options.top : '',
+					'left' : $parent.options.left != undefined ? $parent.options.left : ''
+			     }">
+		<div class="modal-content" tabindex="0" data-ng-class="$parent.options.height.length > 0 ? 'ui-resizable' : ''"  data-ng-style="{'top': 0,
+					'left': 0}" data-platform-modaldialog-rescale ng-transclude></div>
+	</div>
+</div>

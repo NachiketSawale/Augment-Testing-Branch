@@ -1,0 +1,154 @@
+<div class="platform-form-group">
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="width:10%;">
+                <label style="width: 100%; text-align: center"> </label>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <label style="width: 100%; text-align: center"> Invoice </label>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <label style="width: 100%; text-align: center"> Invoice(OC) </label>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <label style="width: 100%; text-align: center"> Contract </label>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <label style="width: 100%; text-align: center"> Contract(OC) </label>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <label style="width: 100%; text-align: center"> Previous Invoices </label>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <label style="width: 100%; text-align: center"> Previous Invoices(OC) </label>
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="width:10%;">
+                <span style="display: table-cell;white-space: nowrap">Currency: </span>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.invCompanyCurrency" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.invHeaderCurrency" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.conCompanyCurrency" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.conHeaderCurrency" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.previousInvCompanyCurrency" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-code form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.previousInvHeaderCurrency" readonly="true">
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="width:10%;">
+                <span style="display: table-cell;white-space: nowrap">Total(Net): </span>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.invoiceTotalNet | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.invoiceTotalNetOc | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.conTotalNet | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.conTotalNetOc | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.previousInvoiceNet | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.previousInvoiceNetOc | number:2" readonly="true">
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="width:10%;">
+                <span style="display: table-cell;white-space: nowrap">Verification Breakdown Amount: </span>
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.invoiceTotalAmount | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.invoiceTotalAmountOc | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.conTotalAmount | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.conTotalAmountOc | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.previousInvoiceAmount | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:15%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.previousInvoiceAmountOc | number:2" readonly="true">
+            </div>
+        </div>
+    </div>
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="width:10%">
+                <span style="display: table-cell;white-space: pre">Verification Breakdown in %:       </span>
+            </div>
+            <div class="platform-form-col" style="width:30%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.invoiceTotalPercent | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:30%;">
+                <input type="text"
+                       class="text-right domain-type-quantity form-control ng-pristine ng-untouched ng-valid ng-scope ng-not-empty"
+                       ng-value="containerInfo.conTotalPercent | number:2" readonly="true">
+            </div>
+            <div class="platform-form-col" style="width:30%">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="flex-element flex-box flex-column fullheight" style="overflow: hidden;outline: 0px;position: relative;">
+    <platform-grid data="gridData"></platform-grid>
+</div>

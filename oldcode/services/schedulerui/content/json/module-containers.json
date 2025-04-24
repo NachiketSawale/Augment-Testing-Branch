@@ -1,0 +1,33 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "services.schedulerui.jobListContainerTitle",
+		"controller": "servicesSchedulerUIJobListController",
+		"uuid": "77f863ec4d5748d2a534addd53ecfc50"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "services.schedulerui.jobDetailContainerTitle",
+		"controller": "servicesSchedulerUIJobDetailController",
+		"uuid": "1587d52539e346e89cffaaea211ab644",
+		"permission": "77f863ec4d5748d2a534addd53ecfc50"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "services.schedulerui.childJobListContainerTitle",
+		"controller": "servicesSchedulerUIChildJobListController",
+		"uuid": "b4af02249edc42d28eaf7d71f08ff199",
+		"permission": "77f863ec4d5748d2a534addd53ecfc50"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "services.schedulerui.childJobDetailContainerTitle",
+		"controller": "servicesSchedulerUIChildJobDetailController",
+		"uuid": "baecfb65369043f4b302449ea35fa49b",
+		"permission": "77f863ec4d5748d2a534addd53ecfc50"
+	}
+]

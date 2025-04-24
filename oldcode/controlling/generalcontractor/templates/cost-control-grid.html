@@ -1,0 +1,42 @@
+<platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+<div cloud-common-overlay data-loading="isLoading"></div>
+
+<div class="statusbar-wrapper ng-scope ng-isolate-scope" style="position: relative;">
+	<div class="statusbar">
+		<div class="left-side flex-box flex-align-center">
+
+		</div>
+		<div class="right-side flex-element flex-box flex-align-center">
+			<div>
+				<button class="item status-icons ico-status57" data-ng-click="openFilterType()">
+					<span>{{statusBarInfo.filterTypeLabel}}</span>
+				</button>
+			</div>
+		</div>
+		<div class="last flex-box">
+			<div data-ng-hide="statusBarInfo.currentFilterType">
+				<button class="item" data-ng-click="openDueDate()">
+					<span class="glyphicon-calendar glyphicon" data-ng-hide="!!statusBarInfo.selectedDate"></span>
+					<span data-ng-hide="!statusBarInfo.selectedDate">{{statusBarInfo.selectedDate}}</span>
+				</button>
+			</div>
+			<div data-ng-hide="!statusBarInfo.currentFilterType">
+				<input type="text" class="input-group-content datepickerinput ng-pristine ng-valid ng-not-empty active ng-touched"
+				       data-platform-select-on-focus=""
+				       data-platform-datetime-handler=""
+				       data-platform-datetime-converter=""
+				       data-ng-model="statusBarInfo.customDate"
+				       data-platform-grid-control-key-handler=""
+				       data-ng-model-options="{ updateOn: 'blur' }"
+				       data-domain="dateutc" data-entity="entity" data-grid="true" style="display: none"
+						 data-ng-change="dateChange()"/>
+				<span class="input-group-btn">
+					<button class="btn btn-default" style="padding: 0 0 0 5px; background-color: unset;width: auto; height: 18px; outline: none">
+						<span class="glyphicon-calendar glyphicon" data-ng-hide="!!statusBarInfo.selectedDate"></span>
+						<span data-ng-hide="!statusBarInfo.selectedDate">{{statusBarInfo.selectedDate}}</span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+<div class="itwo40-menu-container" [ngClass]="leftMenuStyle">
+	<div class="menu-header" id="form">
+		<input id="filterinput" class="filterinput" type="text" placeholder="Filter"
+			(input)="filterSidebar(filterinput.value)" #filterinput />
+	</div>
+	<div class="clearfix"></div>
+	<div class="menu-wrapper">
+
+		<ul id="menu-list" *ngFor="let menu of leftMenubarItems;let i = index;">
+			<li>
+				<a class="menu-item" id="active_{{i}}"
+					[ngClass]="{'active-menu' : activeFlag && i=== parentMenuIndexToggle}"
+					(click)="openChildNode(menu.subModules,i)">{{menu.name}}</a>
+
+				<ul id="subModule_{{j}}" class="sub-menu"
+					[ngClass]="parentMenuIndexToggle === i && parentMenuToggle ? 'open-sub-menu': 'close-sub-menu'"
+					*ngFor="let subModule of menu?.subModules; let j = index;">
+					<li>
+						<a href="#" id="childActive_{{j}}" class="menu-tag-item " [ngClass]="{'active-menu' : accordianRotateFlag && childMenuIndexToggle === j , 
+					   			   'menu-item': subModule.entityTags.length !==0,
+								   'menu-link-item':subModule.entityTags.length === 0}"
+							(click)="openSubChildNode(subModule.entityTags, j,menu.name,subModule.name)">{{subModule.name}}</a>
+						<ul id="entityTag_{{k}}" class="entity-tag "
+							[ngClass]="childMenuIndexToggle === j && childMenuToggle ? 'open-sub-menu': 'close-sub-menu'"
+							*ngFor="let entityTag of subModule?.entityTags;let k = index;">
+							<li>
+								<a href="#" class="menu-tag-item menu-link-item short-name"
+									(click)="swaggerLoadFromApi(menu.name,subModule.name,entityTag.name)">
+									{{entityTag.name}}
+									<span class="tooltiptext">{{entityTag.name}}</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<a id="menu-download-pdf" class="menu-download-pdf" title="Download PDF"
+		[ngClass]="{'download-disabled':!downloadBtnFlag,'download-hidden':!downloadBtnFlag}"
+		(click)="navigateToDownloadPage()">Download PDF</a>
+	<div id="menu-button" class="menu-button" [ngClass]="{'expand': leftMenuStyle === 'out'}">
+		<a></a>
+		<span (click)="leftMenubarToggle()"></span>
+	</div>
+</div>

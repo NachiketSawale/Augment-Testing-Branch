@@ -1,0 +1,95 @@
+<div class="modal-wrapper" ng-controller="procurementPriceComparisonItemEvaluationWizardController">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<div class="modal-body">
+		<div data-ng-switch="modalOptions.step" class="fullheight">
+			<div data-ng-switch-when="step1">
+				<h3 data-ng-bind="modalOptions.selectQuotes"></h3>
+				<div class="platform-form-group">
+					<div data-procurement-price-comparison-evaluation-quote-header-list-directive></div>
+				</div>
+				<br/>
+				<div class="platform-form-group" style="border: #dcdcdc 1px solid;">
+					<div class="platform-form-row">
+						<div class="col-xs-4" style="width: 120px;">
+							<h3>{{modalOptions.targetItem}}</h3>
+						</div>
+						<div class="col-xs-2" style="width: 160px; margin-left: 160px;">
+							<h3>{{modalOptions.itemEvaluation}}</h3>
+						</div>
+						<div class="col-xs-2">
+							<label class="ms-checkbox-multi-select">
+								<div data-deviation-reference-combobox data-ng-model="modalOptions.lookupValue" data-options="{filterKey: 'price-comparison-wizard-item_evaluation-filter'}" style="width: 200px;"></div>
+							</label>
+						</div>
+					</div>
+
+					<div class="platform-form-row">
+						<div class="col-xs-10" style="margin-left: 40px;">
+							<label class="ms-checkbox-multi-select">
+								<input type="checkbox" data-ng-model="updateNotSubmitted" style="margin-bottom: 0;" data-ng-change="onUpdateNotSubmittedChange()">
+								<span class="ng-binding">{{modalOptions.updateNotSubmitted}}</span>
+							</label>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<div class="col-xs-10" style="margin-left: 40px;">
+							<label class="ms-checkbox-multi-select">
+								<input type="checkbox" data-ng-model="updateIsEvaluated" style="margin-bottom: 0;" data-ng-change="onUpdateIsEvaluatedChange()">
+								<span class="ng-binding">{{modalOptions.updateIsEvaluated}}</span>
+							</label>
+						</div>
+					</div>
+
+				</div>
+				<div class="platform-form-row" style="margin-top: 20px;">
+					<div style="width: 7%;float: left;vertical-align: top;"><h5 style="margin-left: 2px">{{modalOptions.noteTitle}}</h5></div>
+					<div style="width: 93%;float: right;">
+						<h5 style="vertical-align: top;">
+							{{modalOptions.noteText1}}
+						</h5>
+						<h5 style="height: 30px;vertical-align: top;">
+							{{modalOptions.noteText2}}
+						</h5>
+					</div>
+				</div>
+			</div>
+
+			<div data-ng-switch-when="step2">
+				<span data-ng-show="modalOptions.isEvaluateItem()">
+					<h3 data-ng-bind="modalOptions.selectTargetItems"></h3>
+					<div class="platform-form-group">
+						<div data-evaluation-prc-item-list-directive></div>
+					</div>
+				</span>
+				<br/>
+				<span data-ng-show="modalOptions.isEvaluateBoq()">
+					<h3 data-ng-bind="modalOptions.selectTargetBoqItems"></h3>
+					<div class="platform-form-group">
+						<div data-evaluation-boq-item-list-directive></div>
+					</div>
+				</span>
+			</div>
+		</div>
+	</div>
+	<footer data-ng-switch="modalOptions.step" class="modal-footer">
+		<div data-ng-switch-when="step1">
+			<button type="button" class="btn btn-default" data-ng-disabled="modalOptions.nextBtnDisabled()" ng-click="modalOptions.onNexStep()">
+				{{ 'cloud.common.nextStep' | translate}}
+			</button>
+		</div>
+		<div data-ng-switch-when="step2">
+			<button type="button" class="btn btn-default" style="display: inline-block;" ng-click="modalOptions.onPreviousStep()">
+				{{ 'cloud.common.previousStep' | translate}}
+			</button>
+			<button type="button" class="btn btn-default" style="display: inline-block; margin-left: 0;" data-ng-disabled="modalOptions.okBtnDisabled()" ng-click="modalOptions.onOk()">
+				{{ 'cloud.common.ok' | translate}}
+			</button>
+		</div>
+		<button type="button" class="btn btn-default" style="display: inline-block;" ng-click="modalOptions.cancel()">
+			{{ 'basics.common.cancel' | translate}}
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

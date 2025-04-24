@@ -1,0 +1,15 @@
+﻿{
+  "basics": {
+	"textmodules": {
+	  "tabs":{
+		"main":"主窗口"
+	  },
+	  "textModules":"文本模块",
+	  "textModulesDetails":"文本模块明细",
+	  "textModulesTranslation":"文本模块Übersetzung",
+	  "htmlText":"说明",
+	  "plainText":"无格式文本",
+	  "translation":"翻译"
+	}
+  }
+}

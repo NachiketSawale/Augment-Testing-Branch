@@ -1,0 +1,20 @@
+<div data-ng-controller="estimateMainLineItemsActivityAiMappingController">
+    <header class="modal-header">
+        <h2 class="modal-title">{{modalOptions.LineItemsActivityAiMappingResult}}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+        <div cloud-common-overlay data-loading="isBusy" data-info="busyInfo"></div>
+        <div data-platform-alert data-error="error"></div>
+        <div class="modal-wrapper subview-container grid-wrapper">
+            <platform-Grid data="gridData"></platform-Grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-ng-click="okClicked()" data-ng-disabled="!canUpdate()">{{modalOptions.Update}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{modalOptions.Cancel}}</button>
+    </footer>
+</div>

@@ -1,0 +1,233 @@
+﻿<div>
+	<header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+	<div>
+	<section class="modal-body">
+		<div class="filler">
+            <div  class="fullheight">
+				<div class="platform-form-container">
+					<form class="platform-form platform-lg">
+						<div class="platform-form-group">
+
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label">{{'cloud.common.entityPackage' | translate}}</label>
+								<div class="platform-form-col">
+									<div class="control-directive" data-basics-lookupdata-lookup-composite
+										 data-options="lookupOptions.package"
+										 data-entity="currentItem.PrcBoq"
+										 data-model="currentItem.PrcBoq.PackageFk"
+										 data-ng-model="currentItem.PrcBoq.PackageFk"
+										 data-config="fieldConfig.package"
+										 data-ng-readonly="lookupOptions.package.readonly"
+										 data-ng-disabled="lookupOptions.package.readonly"
+										 data-dirty="true"></div>
+								</div>
+							</div>
+
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label">{{'procurement.common.boq.entityPackage2Header' | translate}}</label>
+								<div class="platform-form-col">
+									<div class="control-directive" procurement-package-package2-header-combobox
+										 data-options="lookupOptions.subpackage"
+										 data-entity="currentItem"
+										 data-model="currentItem"
+										 data-ng-model="currentItem.Package2HeaderFk"
+										 data-config="fieldConfig.subpackage"
+										 data-dirty="true"></div>
+									<div class="invalid-cell invalid-form" data-ng-if="fieldConfig.subpackage.rt$hasError()" data-ng-bind="fieldConfig.subpackage.rt$errorText()"></div>
+								</div>
+							</div>
+
+							<div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.visibleWic">
+								<label class="platform-form-label">{{'procurement.common.boq.useExistPackageBoq' | translate}}</label>
+								<div class="platform-form-col">
+									<input data-ng-model-options="{debounce: { default: 0, blur: 0}}" data-ng-model="currentItem.boqSource"
+										   type="radio"
+										   data-ng-change="fieldConfig.boqSource.rt$change()"
+										   data-ng-disabled="fieldConfig.baseBoq.enableUseBaseBoq.readonly()"
+										   data-ng-readonly="fieldConfig.baseBoq.enableUseBaseBoq.readonly()"
+										   data-ng-value="1"/>
+								</div>
+							</div>
+
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label" data-ng-show="fieldConfig.wicBoq.visibleWic">{{'procurement.common.boq.useExistWicBoq' | translate}}</label>
+								<label class="platform-form-label" data-ng-show="!fieldConfig.wicBoq.visibleWic">{{'procurement.common.boq.useExistPackageBoq' | translate}}</label>
+								<div class="platform-form-col">
+									<div class="platform-form-group" data-ng-show="fieldConfig.wicBoq.visibleWic">
+										<div class="platform-form-row form-group">
+											<div class="platform-form-col">
+												<input data-ng-model-options="{debounce: { default: 0, blur: 0}}" data-ng-model="currentItem.boqSource"
+													   type="radio"
+													   data-ng-change="fieldConfig.boqSource.rt$change()"
+													   data-ng-disabled="fieldConfig.wicBoq.enableUseWicBoq.readonly()"
+													   data-ng-readonly="fieldConfig.wicBoq.enableUseWicBoq.readonly()"
+													   data-ng-value="2"/>
+											</div>
+										</div>
+									</div>
+									<div class="platform-form-group" data-ng-show="!fieldConfig.wicBoq.visibleWic">
+										<div class="platform-form-row form-group">
+											<div class="platform-form-col">
+												<input data-ng-model-options="{debounce: { default: 0, blur: 0}}" data-ng-model="currentItem.boqSource"
+													   type="radio"
+													   data-ng-change="fieldConfig.boqSource.rt$change()"
+													   data-ng-disabled="fieldConfig.baseBoq.enableUseBaseBoq.readonly()"
+													   data-ng-readonly="fieldConfig.baseBoq.enableUseBaseBoq.readonly()"
+													   data-ng-value="1"/>
+											</div>
+										</div>
+									</div>
+									<div class="platform-form-group">
+										<div class="platform-form-row form-group" data-ng-show="fieldConfig.baseBoq.visible">
+											<span class="platform-form-label">{{'procurement.common.boq.packageBoQ' | translate}}</span>
+											<div class="platform-form-col">
+												<div class="control-directive" data-basics-lookupdata-lookup-composite
+													 data-options="lookupOptions.baseBoq"
+													 data-entity="currentItem"
+													 data-model="currentItem"
+													 data-ng-model="currentItem.BaseBoqReference"
+													 data-config="fieldConfig.baseBoq"
+													 data-ng-readonly="fieldConfig.baseBoq.rt$readonly()"
+													 data-ng-disabled="fieldConfig.baseBoq.rt$readonly()"
+													 data-dirty="1"></div>
+											</div>
+										</div>
+										<div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.visible">
+											<span class="platform-form-label">{{'procurement.common.boq.wicGroup' | translate}}</span>
+											<div class="platform-form-col">
+												<div class="control-directive" data-basics-lookupdata-lookup-composite
+													 data-options="lookupOptions.wicGroup"
+													 data-entity="currentItem"
+													 data-model="currentItem"
+													 data-ng-model="currentItem.wicGroupFk"
+													 data-config="fieldConfig.wicGroup"
+													 data-ng-readonly="fieldConfig.wicGroup.rt$readonly()"
+													 data-ng-disabled="fieldConfig.wicGroup.isDisable()"
+													 data-dirty="1"></div>
+											</div>
+										</div>
+										<div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.visible">
+											<span class="platform-form-label">{{'procurement.common.boq.wicBoq' | translate}}</span>
+											<div class="platform-form-col">
+												<div class="control-directive" data-basics-lookupdata-lookup-composite
+													 data-options="lookupOptions.wicBoq"
+													 data-entity="currentItem"
+													 data-model="currentItem"
+													 data-ng-model="currentItem.wicBoqFk"
+													 data-config="fieldConfig.wicBoq"
+													 data-ng-readonly="fieldConfig.wicBoq.rt$readonly()"
+													 data-ng-disabled="fieldConfig.wicBoq.isDisable()"
+													 data-dirty="1"></div>
+											</div>
+										</div>
+										<div class="platform-form-row form-group" data-ng-show="fieldConfig.wicBoq.visible">
+											<span class="platform-form-label">{{'procurement.common.boq.wicBoqReference' | translate}}</span>
+											<div class="platform-form-col">
+												<input type="text" data-ng-model="currentItem.WicBoqReference" class="form-control"
+													   data-platform-select-on-focus
+													   data-platform-control-validation
+													   data-ng-pattern-restrict="^[\s\S]{0,16}$"
+													   data-entity="currentItem"
+													   data-config="fieldConfig.wicBoqReference"
+													   data-ng-readonly="fieldConfig.wicBoqReference.rt$readonly()"
+													   data-ng-disabled="fieldConfig.wicBoqReference.isDisable()"
+													   data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0} }">
+												<div class="invalid-cell invalid-form" data-ng-if="fieldConfig.wicBoqReference.rt$hasError() && currentItem.boqSource === 2" data-ng-bind="fieldConfig.wicBoqReference.rt$errorText()"></div>
+											</div>
+										</div>
+										<div class="platform-form-row form-group">
+											<span class="platform-form-label">{{'procurement.common.boq.takeOverEntireBoq' | translate}}</span>
+											<div class="platform-form-col domain-type-composite form-control">
+												<input type="radio" name="e892e80b01614345bfb7c4974e61a90d" data-ng-model="currentItem.takeOverOption"
+													   data-ng-disabled="!fieldConfig.takeOverOption.enableTakeOverOption()"
+													   data-ng-model-options="{debounce: { default: 0, blur: 0}}" data-ng-value="1">
+											</div>
+										</div>
+										<div class="platform-form-row form-group">
+											<span class="platform-form-label">{{'procurement.common.boq.takeOverBoqHeaderOnly' | translate}}</span>
+											<div class="platform-form-col domain-type-composite form-control">
+												<input type="radio" name="e892e80b01614345bfb7c4974e61a90d" data-ng-model="currentItem.takeOverOption"
+													   data-ng-disabled="!fieldConfig.takeOverOption.enableTakeOverOption()"
+													   data-ng-model-options="{debounce: { default: 0, blur: 0}}" data-ng-value="2">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="platform-form-row form-group">
+								<label class="platform-form-label">{{'procurement.common.boq.createNewBoq' | translate}}</label>
+								<div class="platform-form-col">
+									<div class="platform-form-group">
+										<div class="platform-form-row form-group">
+											<div class="platform-form-col">
+												<input data-ng-model-options="{debounce: { default: 0, blur: 0}}" data-ng-model="currentItem.boqSource"
+													   type="radio"
+													   data-ng-change="fieldConfig.boqSource.rt$change()"
+													   data-ng-disabled="fieldConfig.newBoq.enableUseNewBoq.readonly()"
+													   data-ng-readonly="fieldConfig.newBoq.enableUseNewBoq.readonly()"
+													   data-ng-value="3"/>
+											</div>
+										</div>
+									</div>
+									<div class="platform-form-group">
+										<div class="platform-form-row form-group">
+											<span class="platform-form-label">{{'boq.main.Reference' | translate}}</span>
+											<div class="platform-form-col">
+												<input type="text" data-ng-model="currentItem.BoqRootItem.Reference" class="form-control"
+													   data-platform-select-on-focus
+													   data-platform-control-validation
+													   data-ng-pattern-restrict="^[\s\S]{0,16}$"
+													   data-entity="currentItem"
+													   data-config="fieldConfig.reference"
+													   data-ng-disabled="fieldConfig.reference.rt$readonly()"
+													   data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0} }">
+												<div class="invalid-cell invalid-form" data-ng-if="fieldConfig.reference.rt$hasError()" data-ng-bind="fieldConfig.reference.rt$errorText()"></div>
+											</div>
+										</div>
+										<div class="platform-form-row form-group">
+											<span class="platform-form-label">{{'boq.main.BriefInfo' | translate}}</span>
+											<div class="platform-form-col">
+												<input type="text" data-ng-model="currentItem.BoqRootItem.BriefInfo.Translated" class="form-control"
+													   data-platform-select-on-focus
+													   data-platform-translation-converter
+													   data-platform-control-validation
+													   data-ng-pattern-restrict="^[\s\S]{0,42}$"
+													   data-entity="currentItem"
+													   data-config="fieldConfig.brief"
+													   data-ng-disabled="fieldConfig.brief.rt$readonly()" >
+											</div>
+										</div>
+										<!--<div class="platform-form-row form-group">-->
+											<!--<span class="platform-form-label">{{'cloud.common.entityCurrency' | translate}}</span>-->
+											<!--<div class="platform-form-col">-->
+												<!--<div class="control-directive" basics-lookupdata-currency-combobox-->
+													 <!--data-options="lookupOptions.currency"-->
+													 <!--data-entity="currentItem.PrcBoq"-->
+													 <!--data-model="currentItem.PrcBoq"-->
+													 <!--data-ng-model="currentItem.PrcBoq.BasCurrencyFk"-->
+													 <!--data-dirty="true"></div>-->
+											<!--</div>-->
+										<!--</div>-->
+										<div class="platform-form-row form-group" style="visibility: hidden;">
+											<span class="platform-form-label" style="line-height: 1px;">{{'procurement.common.boq.takeOverBoqHeaderOnly' | translate}}</span>
+											<div class="platform-form-col"><!--^_^ It's just a workaround to align input elements, anybody can help improve it?--></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="!commitableFn()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

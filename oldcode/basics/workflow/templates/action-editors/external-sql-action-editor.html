@@ -1,0 +1,94 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.server' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-domain="description" data-domain-control data-ng-model="server.value"
+					     readony="SQLOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.database' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-domain="description" data-domain-control data-ng-model="database.value"
+					     readony="SQLOptions.readOnly"></div>
+				</div>
+			</div>
+
+
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.sql' | translate }}</div>
+				<div class="platform-form-col">
+					<div class="filler" data-ng-model="sql.value" data-options="SQLOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="radiolist-container">
+			<div data-radiolistctrl displayMember="description" ng-model="editorMode"
+			     on-selection-changed="onRadioGroupOptChanged(value)" options="radioGroupOpt"
+			     valueMember="value"></div>
+		</div>
+
+		<div basics-workflow-resize-grid-directive data-ng-show="editorMode === 1">
+			<div class="toolbar margin-top-ld">
+				<h2 class="title fix">{{'basics.workflow.action.customEditor.params' | translate }}</h2>
+				<div data-list="tools" data-platform-menu-list data-platform-refresh-on="tools.version"
+				     ng-if="codeMirrorOptions.readOnly !== true"></div>
+			</div>
+			<div class="flex-element flex-box flex-column subview-container fullwidth" style="min-height: 130px;">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-if="editorMode === 2">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.params' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="params.value" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.sqlActionOutput' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.value" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

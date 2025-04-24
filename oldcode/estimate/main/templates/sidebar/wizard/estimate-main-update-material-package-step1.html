@@ -1,0 +1,73 @@
+<div style="padding:5px 0px;" class="col-md-12">
+	<div class="col-md-4">{{'estimate.main.updateMaterialPackageWizard.updatePackageTitle'| translate}}:</div>
+	<div class="col-md-8 text-right">
+		<div style="display: inline-block;">
+			<input type="checkbox" style="vertical-align: middle;margin:0px;" data-ng-checked="updateBudgetForExistedAssignmentFlg" data-ng-model="updateBudgetForExistedAssignmentFlg"
+			       data-ng-change="onUpdateBudgetForExistedAssignmentFlg(updateBudgetForExistedAssignmentFlg)">
+			<label class="platform-form-label" style="vertical-align: middle;">{{'estimate.main.updateMaterialPackageWizard.updateBudgetForExistedAssignmentLabel'| translate}}</label>
+		</div>
+		<div style="display: inline-block;text-align:right;">
+			<input type="checkbox" style="vertical-align: middle;margin:0px;" data-ng-checked="hideBoqGeneratePackageFlg" data-ng-model="hideBoqGeneratePackageFlg" data-ng-change="onHideBoqGeneratePackageFlg(hideBoqGeneratePackageFlg)">
+			<label class="platform-form-label" style="vertical-align: middle;">{{'estimate.main.updateMaterialPackageWizard.hideBoqGeneratePackageFlg'| translate}}</label>
+		</div>
+	</div>
+</div>
+<div class="flex-element flex-box flex-column subview-container" style="min-height: 70px; ">
+	<div class="toolbar">
+		<h2 class="title fix ">{{'estimate.main.updateMaterialPackageWizard.package'| translate}}</h2>
+		<div data-platform-menu-list data-list="tools"></div>
+	</div>
+	<platform-Grid data="packageGrid"></platform-Grid>
+</div>
+
+<fieldset style="padding:2px;border:1px solid #dcdcdc;border-radius:3px;height:50px;margin:10px;min-width:350px;">
+	<legend style="margin-left:3px;width:auto;font-size:13px;vertical-align: middle;">{{'estimate.main.updateMaterialPackageWizard.genericOption'| translate}}</legend>
+	<div class="col-md-12">
+		<div class="col-sm-6 checkbox spaceToUp" style="padding:0px;display: inline-block;" title="{{'estimate.main.createMaterialPackageWizard.copyBoqTip' | translate}}">
+			<input type="checkbox" data-ng-checked="isCopyBoqOutline" data-ng-model="isCopyBoqOutline" data-ng-change="onCopyBoqOutline(isCopyBoqOutline)"/>
+			<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.copyBoqOutline'| translate}}</label>
+		</div>
+		<div class="col-sm-6 checkbox spaceToUp" style="padding:0px;display: inline-block;" title="{{'estimate.main.createMaterialPackageWizard.copyBoqTip' | translate}}">
+			<input type="checkbox" data-ng-checked="isCopyBoqSpecification" data-ng-model="isCopyBoqSpecification" data-ng-change="onCopyBoqSpecification(isCopyBoqSpecification)"/>
+			<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.copyBoqSpecification'| translate}}</label>
+		</div>
+	</div>
+</fieldset>
+<fieldset style="padding:2px;border:1px solid #dcdcdc;border-radius:3px;flex:0.8;margin:10px;min-width:350px;">
+	<legend style="margin-left:3px;width:auto;font-size:13px;vertical-align: middle;">{{'procurement.package.wizard.generateItems.optionNewItemTitle'| translate}}</legend>
+	<div class="col-md-12">
+		<div class="col-sm-7" style="display: inline-block;padding:0px;">
+			<div class="margin-top-ld">
+				<div class="checkbox spaceToUp margin-right-ld">
+					<label>
+						<input type="checkbox" data-ng-disabled="updateBudgetForExistedAssignmentFlg" data-ng-checked="aggregateProfileFlg" data-ng-model="aggregateProfileFlg" data-ng-change="onAggregateProfileFlg(aggregateProfileFlg)"/>
+						{{'procurement.package.wizard.generateItems.aggregateProfileItemFlg'| translate}}
+					</label>
+				</div>
+			</div>
+			<div class="flex-box flex-align-center" ng-show="!updateBudgetForExistedAssignmentFlg" style="margin-left: 20px;">
+				<div class="flex-inline-box margin-right-ld">{{'procurement.package.wizard.generateItems.aggregateProfileItem'| translate}}</div>
+				<div class="flex-element">
+					<div basics-common-unique-fields-profile-lookup data-ng-model="uniqueFieldsProfile" data-options="serviceoptions"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-5" style="display: inline-block;padding-right:0px;">
+			<div class="margin-left-ld margin-top-ld">{{'procurement.package.wizard.generateItems.sameItemTitle'| translate}}:</div>
+			<div class="margin-left-ld">
+				<div class="radio spaceToUp margin-left-ld">
+					<label>
+						<input type="radio" name="mode" data-ng-disabled="updateBudgetForExistedAssignmentFlg" value="1" data-ng-checked="modeFlg==1" data-ng-click="onModeResult(1)">
+						{{'procurement.package.wizard.generateItems.mergeExisted'| translate}}
+					</label>
+				</div>
+				<div class="radio spaceToUp margin-left-ld">
+					<label>
+						<input type="radio" name="mode" data-ng-disabled="updateBudgetForExistedAssignmentFlg" value="2" data-ng-checked="modeFlg==2" data-ng-click="onModeResult(2)">
+						{{'procurement.package.wizard.generateItems.createNewItem'| translate}}
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</fieldset>

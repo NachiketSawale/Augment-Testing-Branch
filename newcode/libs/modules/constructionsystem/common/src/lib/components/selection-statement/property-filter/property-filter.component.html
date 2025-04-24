@@ -1,0 +1,75 @@
+<div class="filler selection-statement">
+
+	<div class="platform-form-group" style="position: relative;" data-ng-disable="!searchOptions.active">
+		<div class="platform-form-row  form-group" style="display: table-header-group;">
+			<div class="input-group cos-filter-form-control">
+				<constructionsystem-common-image-filter class="form-control cos-image-filter ng-pristine ng-valid ng-touched"
+														[options]="scope.searchOptions.dropboxOptions.items"
+														[(selectedValue)]="scope.selectedFilterId"
+														(selectedValueChange) = 'scope.selectionFilterChanged($event)'
+				>
+				</constructionsystem-common-image-filter>
+				<span class="input-group-btn">
+							<button type="button"
+							        class="btn btn-default control-icons tlb-icons ico-object-restrictions-1"
+									[ngClass]="{'active': scope.filterRequest.treePartMode === CosTreePartMode.Minimal}"
+							        title="{{ 'model.viewer.selectionWz.treePartMinimal'  | platformTranslate}}"
+							        (click)="scope.filterRequest.treePartMode = CosTreePartMode.Minimal; scope.searchOptions.onSaveAsSelectionStatement();">
+                     </button>
+                     <button type="button"
+                             class="btn btn-default control-icons tlb-icons ico-object-restrictions-3"
+							 [ngClass]="{'active': scope.filterRequest.treePartMode === CosTreePartMode.Leaves}"
+                             title="{{ 'model.viewer.selectionWz.treePartLeaves'| platformTranslate }}"
+                             (click)="scope.filterRequest.treePartMode = CosTreePartMode.Leaves; scope.searchOptions.onSaveAsSelectionStatement();">
+                     </button>
+                     <button type="button"
+                             class="btn btn-default control-icons tlb-icons ico-object-restrictions-5"
+							 [ngClass]="{'active': scope.filterRequest.treePartMode === CosTreePartMode.MinimalCompositeAndLeaves}"
+                             title="{{ 'model.viewer.selectionWz.treePartMinimalCompositeAndLeaves' | platformTranslate}}"
+                             (click)="scope.filterRequest.treePartMode = CosTreePartMode.MinimalCompositeAndLeaves; scope.searchOptions.onSaveAsSelectionStatement();">
+                     </button>
+                    <button class="btn btn-default control-icons ico-refresh" type="button"
+                            title="{{ 'constructionsystem.common.caption.refresh' | platformTranslate }}"
+                            (click)="scope.searchOptions.onRefreshFilter()">
+                    </button>
+                    <button class="btn btn-default control-icons ico-input-delete2" type="button"
+                            title="{{ 'cloud.desktop.filterdefFooterBtnDelete' | platformTranslate }}"
+                            [disabled]="!scope.canSaveOrDeleteFilter()"
+                            (click)="scope.searchOptions.onDeleteFilter()">
+                    </button>
+                    <button class="btn btn-default tlb-icons ico-save" type="button"
+                            title="{{ 'cloud.desktop.filterdefFooterBtnSave' | platformTranslate }}"
+                            [disabled]="!scope.canSaveOrDeleteFilter()"
+                            (click)="scope.searchOptions.onSaveFilter()">
+                    </button>
+                    <button class="btn btn-default tlb-icons ico-save-as" type="button"
+                            title="{{ 'cloud.desktop.filterdefFooterBtnSaveAs' | platformTranslate }}"
+                            (click)="scope.searchOptions.onSaveAsFilter()">
+                    </button>
+                    <button class="btn btn-default tlb-icons ico-undo" type="button"
+                            title="{{ 'constructionsystem.common.caption.revert' | platformTranslate }}"
+							[disabled]="!scope.searchOptions.canRevertFilter()"
+							(click)="scope.searchOptions.onRevertFilter()">
+                    </button>
+                </span>
+			</div>
+		</div>
+	</div>
+		<div class="input-group form-control cos-filter-form-control">
+			<select class="form-control"  (change)="scope.selectionChanged()" [(ngModel)]="scope.matchOption">
+				<option *ngFor="let item of matchOptions.items"
+						[value]="item.id"
+				>{{ item.uiDisplayName | platformTranslate }}
+				</option>
+			</select>
+		</div>
+		<div class="platform-form-row  form-group">
+			<ng-container *ngComponentOutlet="propertyFilterGridComponent; injector:subInjector"></ng-container>
+		</div>
+		<!--todo: disable-overlay-->
+		<!--		<div data-cos-common-disable-overlay data-ng-show="!searchOptions.active"-->
+		<!--			  data-info="searchOptions.canNotEditMsg" data-active="searchOptions.active">-->
+		<!--		</div>-->
+
+	<ui-common-loading [loading]="scope.filterDataLoading"></ui-common-loading>
+</div>

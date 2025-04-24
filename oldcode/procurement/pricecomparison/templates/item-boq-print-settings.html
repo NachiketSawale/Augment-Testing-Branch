@@ -1,0 +1,32 @@
+<header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+
+<section class="modal-body">
+    <div class="platform-form-group">
+
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'procurement.pricecomparison.printing.paperSize' | translate}}</label>
+            <div class="platform-form-col">
+                <span class="form-control" data-domain-control data-domain="select"
+                      data-model="settings.papersize" data-options="settings.papersizeOpt"
+                      data-change="settings.changePapersizeOpt(value)" data-ng-readonly="true" >
+                </span>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'procurement.pricecomparison.printing.pageOrientation' | translate}}</label>
+            <div class="platform-form-col">
+                <data-radiolistctrl ng-model="settings.orientation" options="settings.orientationOpt"
+                                    valueMember="value" displayMemeber="description" data-ng-readonly="true"
+                                    on-selection-changed="settings.changeOrientationOpt(value)">
+                </data-radiolistctrl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button class="btn btn-default" data-ng-click="modalOptions.ok()">{{modalOptions.btnOkText}}</button>
+    <button class="btn btn-default" data-ng-click="modalOptions.cancel()">{{modalOptions.btnCancelText}}</button>
+    <form id="f_itemprint"></form>
+</footer>

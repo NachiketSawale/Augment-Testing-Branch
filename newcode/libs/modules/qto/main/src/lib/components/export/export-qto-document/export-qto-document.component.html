@@ -1,0 +1,18 @@
+<div class="panel-body">
+	<ui-common-form [formConfig]="formConfiguration" [entity]="entity"></ui-common-form>
+</div>
+<div class="panel-body">
+	<label>Option</label>
+	<div *ngFor="let item of checkBoxItemInfo" class="radio spaceToUp">
+		<label class="flex-box flex-align-center">
+			<input type="checkbox"
+			       [(ngModel)]="item.value"
+			       [disabled]="item.readonly" />
+			{{item.displayName | platformTranslate}}
+		</label>
+	</div>
+
+</div>
+<div class="panel-body">
+	<ui-common-grid [configuration]="gridConfiguration"></ui-common-grid>
+</div>

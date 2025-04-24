@@ -1,0 +1,21 @@
+﻿{
+  "basics": {
+    "assetmaster": {
+      "moduleName": "资产管理",
+      "assetMasterTitle":"!Assign Asset Master",
+      "tabs": {
+        "assetmaster": "资产管理"
+      },
+      "views": {
+        "assetmaster": "资产管理"
+      },
+      "containers": {
+        "grid": "资产管理表格",
+        "detail": "资产管理明细"
+      },
+      "errors" : {
+        "codeUnique" : "{{p_0}}已经存在"
+      }
+    }
+  }
+}

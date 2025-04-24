@@ -1,0 +1,35 @@
+<ui-common-popup>
+	<div content class="entity-filter-popup entity-filter-list">
+		<div class="input-group form-control" *ngIf="canShowSearchInput()">
+			<input type="text" class="input-group-content" placeholder="{{ 'basics.material.lookup.search' | platformTranslate }}" [(ngModel)]="userInput" (ngModelChange)="search(userInput)">
+		</div>
+
+		<div class="flex-element list-container">
+			<ul *ngIf="definition.PredefinedList?.length" class="entity-filter-content-padding entity-filter-divider-bottom">
+				<li *ngFor="let predefinedItem of definition.PredefinedList">
+					<div class="fullwidth flex-box">
+						<input type="checkbox" [id]="predefinedItem.Id" [(ngModel)]="predefinedItem.IsSelected" (ngModelChange)="setPredefine(predefinedItem)">
+						<label [for]="predefinedItem.Id">{{ predefinedItem.Description }}</label>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="entity-filter-content-padding">
+				<li *ngFor="let item of visibleList">
+					<div class="fullwidth flex-box">
+						<input type="checkbox" [id]="item.Id" [(ngModel)]="item.IsSelected" (ngModelChange)="resetPredefine(item)">
+						<label [for]="item.Id">{{ item.Description }}</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="flex-box flex-align-center entity-filter-divider-top">
+			<button class="btn entity-filter-btn-clear" [disabled]="getSelectedCount() <= 0" (click)="clear()">{{ 'basics.material.lookup.clear' | platformTranslate }}</button>
+			<span class="flex-element text-center">{{ getSelectedCount() }} {{ 'basics.material.lookup.of' | platformTranslate }} {{ getTotalCount() }}</span>
+			<button class="btn entity-filter-btn-apply" [disabled]="getSelectedCount() <= 0" (click)="apply()">{{ 'basics.material.lookup.apply' | platformTranslate }}</button>
+		</div>
+
+		<ui-common-loading [loading]="isLoading"></ui-common-loading>
+	</div>
+</ui-common-popup>

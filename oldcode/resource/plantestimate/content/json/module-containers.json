@@ -1,0 +1,156 @@
+[
+	{
+		"id": "resource.plantestimate.plant.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantListTitle",
+		"controller": "resourcePlantEstimatePlantListController",
+		"uuid": "b71b610f564c40ed81dfe5d853bf5fe8"
+	},
+	{
+		"id": "resource.plantestimate.plant.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantDetailTitle",
+		"controller": "resourcePlantEstimatePlantDetailController",
+		"uuid": "14744d2f5e004676abfefd1329b6beff",
+		"permission": "b71b610f564c40ed81dfe5d853bf5fe8"
+	},
+	{
+		"id": "resource.plantestimate.accessory.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantAccessoryListTitle",
+		"controller": "resourcePlantEstimateAccessoryListController",
+		"uuid": "c8814c5d27b54f60827f48112dc1fc57"
+	},
+	{
+		"id": "resource.plantestimate.plantaccessory.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantAccessoryDetailTitle",
+		"controller": "resourcePlantEstimateAccessoryDetailController",
+		"uuid": "d5a69c4da56845f2b5420016f4fc0de3",
+		"permission": "c8814c5d27b54f60827f48112dc1fc57"
+	},
+	{
+		"id": "resource.plantestimate.translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "519cb47956cc446ba4735bb95d000775"
+	},
+	{
+		"id": "resource.plantestimate.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "resource.equipment.characteristics",
+		"uuid": "2bf921a9d13840bbb9f2b893d109fbdd",
+		"controller": "",
+		"sectionId": "35",
+		"mainService": "resourceEquipmentPlantDataService"
+	},
+	{
+		"id": "resource.plantestimate.assignment.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantAssignmentListTitle",
+		"controller": "resourcePlantEstimateAssignmentListController",
+		"uuid": "dd49d6ac8e844f50b8411e50e31caea8"
+	},
+	{
+		"id": "resource.plantestimate.assignment.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantAssignmentDetailTitle",
+		"controller": "resourcePlantEstimateAssignmentDetailController",
+		"uuid": "dd1bbd6ab5c949d998665092a5c583d9",
+		"permission": "dd49d6ac8e844f50b8411e50e31caea8"
+	},
+	{
+		"id": "resource.plantestimate.eurolist.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plantEurolistListTitle",
+		"controller": "resourcePlantEstimateEurolistListController",
+		"uuid": "c779f23a59854b0c9c9960044319d8a4"
+	},
+	{
+		"id": "resource.plantestimate.eurolist.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plantEurolistDetailTitle",
+		"controller": "resourcePlantEstimateEurolistDetailController",
+		"uuid": "2dd482ff9dd043209388b267dd278a83",
+		"permission": "c779f23a59854b0c9c9960044319d8a4"
+	},
+	{
+		"id": "resource.plantestimate.pricelist.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.pricelistListTitle",
+		"controller": "resourcePlantEstimatePlantPricelistListController",
+		"uuid": "2e0de4514e1e4873b5c650edbe6f2c41"
+	},
+	{
+		"id": "resource.plantestimate.pricelist.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.pricelistDetailTitle",
+		"controller": "resourcePlantEstimatePlantPricelistDetailController",
+		"uuid": "2d915e6ca9db4c4ba1d03bb09c3aea0e",
+		"permission": "2e0de4514e1e4873b5c650edbe6f2c41"
+	},
+	{
+		"id": "resource.plantestimate.plant.costv.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.costVGridTitle",
+		"controller": "resourceEquipmentPlantCostVListController",
+		"uuid": "c827ac51271d40b2af1ad364afe7c10c"
+	},
+	{
+		"id": "resource.plantestimate.plant.costv.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.costVDetailTitle",
+		"controller": "resourceEquipmentPlantCostVDetailController",
+		"uuid": "4ed827706c314183bdef73c70c1ac05e",
+		"permission": "c827ac51271d40b2af1ad364afe7c10c"
+	},
+	{
+		"id": "resource.plantestimate.estimatepricelist.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.plant2EstimatePriceListList",
+		"controller": "resourcePlantEstimatePriceListListController",
+		"uuid": "341542acb5594af784726a65fba10dbc"
+	},
+	{
+		"id": "resource.plantestimate.plant2estimatepricelist.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.plant2EstimatePriceListDetail",
+		"controller": "resourcePlantEstimatePriceListDetailController",
+		"uuid": "968ff95930cc46e0946d043a4ec08ddc",
+		"permission": "341542acb5594af784726a65fba10dbc"
+	},
+	{
+		"id": "resource.plantestimate.catalogRecord1",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "resource.equipment.catalogRecordSource1",
+		"controller": "resourceEquipmentSourceWindowController",
+		"uuid": "00d61b7a655d47448292f819b321d6a1",
+		"permission": "bae34453f83744d3a6f7e53b7851e657",
+		"filter": [ "catalogFk" ]
+	},
+	{
+		"id": "resource.plantestimate.catalogRecord2",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "resource.equipment.catalogRecordSource2",
+		"controller": "resourceEquipmentSourceWindowController",
+		"uuid": "4a924a0f6cf14d408f1ca859bb21ee11",
+		"permission": "bae34453f83744d3a6f7e53b7851e657",
+		"filter": [ "catalogFk" ]
+	},
+	{
+		"id": "resource.plantestimate.specificvalue.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "resource.equipment.specificValueList",
+		"controller": "resourcePlantEstimateEquipmentSpecificValueListController",
+		"uuid": "7318154aabd6471d9b99a6a8a376cfe7"
+	},
+	{
+		"id": "resource.plantestimate.specificvalue.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "resource.equipment.specificValueDetail",
+		"controller": "resourcePlantEstimateEquipmentSpecificValueDetailController",
+		"uuid": "cb30d921aa5e4d3cb897e944b4d95de2",
+		"permission": "7318154aabd6471d9b99a6a8a376cfe7"
+	}
+]

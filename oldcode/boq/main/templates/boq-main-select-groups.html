@@ -1,0 +1,24 @@
+﻿<div data-ng-controller="boqMainSelectGroupsController">
+    <header class="modal-header">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{'boq.main.selectGroupsPopup' | translate}}</h2>
+    </header>
+    <section>
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div cloud-common-overlay data-loading="isBusy" data-info="busyInfo"></div>
+        <div data-platform-alert data-error="error"></div>
+        <div class="modal-wrapper grid-wrapper subview-container">
+            <platform-Grid data="gridData"></platform-Grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="okClicked()" data-ng-disabled="!canStart()">{{::'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

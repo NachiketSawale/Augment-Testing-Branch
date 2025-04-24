@@ -1,0 +1,245 @@
+<style>
+	.material-filter-search-bar {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.material-filter-search-bar .form-control,
+	.material-filter-search-bar .form-control input,
+	.material-filter-search-bar .form-control button,
+	.material-filter-search-bar .btn-fulltext-ico,
+	.material-filter-search-bar .material-filter {
+		height: 30px !important;
+		box-sizing: content-box;
+		line-height: 30px !important;
+	}
+
+	.material-filter-search-bar .form-control {
+		display: inline-flex;
+		width: 600px;
+		margin: 0 8px 10px 0;
+	}
+
+	.material-filter-search-bar .material-filter {
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		border: solid 1px #dcdcdc;
+		margin: 0 8px 10px 0;
+
+		color: #333;
+		background-color: #f5f5f5;
+
+		max-width: 320px;
+	}
+
+	.material-filter-search-bar button.saved-filters {
+		background-color: white;
+	}
+
+	.material-filter-search-bar button.saved-filters:disabled {
+		background-color: #e0e0e0;
+		border-color: var(--border-color-dark);
+		opacity: .3;
+	}
+
+	.material-filter-search-bar .filter-text {
+		padding-left: 8px;
+	}
+
+	.material-filter-search-bar .filter-btn {
+		width: 16px;
+		height: 16px;
+		flex: 0 0 auto;
+		padding: 0;
+		margin-left: 8px;
+		background-size: 16px 16px;
+		background-position: center;
+	}
+
+	.material-filter-search-bar .filter-btn:last-child {
+		width: 30px;
+		height: 30px;
+		box-sizing: content-box;
+		border-left: 1px solid #dcdcdc;
+	}
+
+	.material-filter-search-bar button.saved-filters .filter-btn:last-child,
+	.material-filter-search-bar button.add-filter .filter-btn:last-child,
+	.material-filter-search-bar button.add-attribute-filter .filter-btn:last-child {
+		border: none;
+	}
+
+	.material-filter-search-bar .filter-column {
+		white-space: nowrap; /* Prevents text from wrapping to a new line */
+		margin-left: 8px;
+		flex: 0 0 auto;
+	}
+
+	.material-filter-search-bar .filter-condition {
+		font-weight: bold;
+		margin: 0 4px;
+		flex: 0 0 auto;
+	}
+
+	.material-filter-search-bar .filter-value {
+		white-space: nowrap; /* Prevents text from wrapping to a new line */
+		overflow: hidden; /* Hides text that overflows the element */
+		text-overflow: ellipsis; /* Adds an ellipsis (...) to indicate truncation */
+	}
+
+	.material-filter-search-bar .filter-number {
+		background: #3789cc;
+		color: white;
+		border-radius: 100%;
+		height: 16px;
+		width: 16px;
+		line-height: 16px;
+		flex: 0 0 auto;
+		margin-left: 4px;
+	}
+
+	.material-filter-search-bar .btn {
+		color: #3789cc;
+	}
+
+	.material-filter-search-bar .search-text-box {
+		margin: 0 16px 0 5px;
+		height: 32px;
+		display: flex;
+		line-height: 32px;
+		align-items: baseline;
+	}
+
+	.material-filter-search-bar .search-text {
+		font-weight: bold;
+		display: inline-block;
+		margin-right: 4px;
+	}
+
+	.search-info-btn > svg {
+		margin-bottom: .3em;
+	}
+
+	.search-info-btn:hover > svg {
+		--icon-color-1: var(--icon-hover-color);
+	}
+
+	.btn-fulltext-search {
+		margin-left: -2px;
+	}
+
+	.material-filter-search-bar .btn-fulltext {
+		display: inline-flex;
+		width: 120px !important;
+	}
+
+	.material-filter-search-bar .btn-fulltext-text {
+		height: 18px;
+		flex: 1;
+		margin: 6px 0;
+		text-align: left;
+		padding: 0 8px;
+		line-height: 18px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: #333;
+	}
+
+	.material-filter-search-bar .btn-fulltext-ico {
+		width: 30px;
+		padding: 0 !important;
+		background-position: 50% !important;
+	}
+
+	ul.popup-list li:hover {
+		background-color: #cde3f3;
+	}
+
+	.material-filter-btn-apply {
+		color: #0068b3;
+		font-weight: 600;
+	}
+
+	.material-filter-btn-apply:hover {
+		color: #0068b3;
+	}
+
+	.material-filter-btn-apply:disabled {
+		color: initial;
+	}
+
+	.material-filter-btn-clear {
+		color: #333333;
+		font-weight: 600;
+	}
+
+	.material-filter-btn-clear:disabled {
+		visibility: hidden;
+	}
+
+	.material-filter-divider-top {
+		border-top: solid 1px #dcdcdc;
+	}
+
+	.material-filter-divider-bottom {
+		border-bottom: solid 1px #dcdcdc;
+	}
+
+	.material-filter-content-padding {
+		padding: 4px 16px;
+	}
+</style>
+
+<div class="material-filter-search-bar">
+	<div class="search-text-box">
+		<h3 class="search-text">{{ 'basics.material.lookup.search' | translate }}</h3>
+		<i class="cursor-pointer search-info-btn"
+		   data-ng-mouseenter="showSearchInfoPopup($event)"
+		   data-ng-mouseleave="showSearchInfoPopup($event)">
+			<svg class="block-image">
+				<use href="cloud.style/content/images/tlb-icons.svg#ico-info2"></use>
+			</svg>
+		</i>
+	</div>
+
+	<div class="input-group form-control">
+		<input type="text"
+		       autofocus
+		       class="input-group-content"
+		       data-ng-model="userInput"
+		       data-input-enter="search()">
+		<span class="input-group-btn">
+			<button class="btn btn-default tlb-icons ico-search" data-ng-click="search()"></button>
+
+			<button data-ng-if="showSearchSetting" class="btn btn-default btn-fulltext" data-ng-click="openSearchSetting($event)">
+				<span class="btn-fulltext-text" data-ng-bind="getSearchDescription()" title="{{ getSearchDescription() }}"></span>
+				<span class="btn-fulltext-ico control-icons ico-down"></span>
+			</button>
+		</span>
+	</div>
+
+	<button class="material-filter saved-filters" data-ng-disabled="!hasSavedFilters" data-ng-click="showSavedFilters($event)">
+		<span class="filter-btn btn control-icons ico-skype-favorites-filled"></span>
+		<span class="filter-text">{{ currentProfile.FilterName || ('basics.material.lookup.filter.saved' | translate) }}</span>
+		<span class="filter-btn btn control-icons ico-down"></span>
+	</button>
+
+	<basics-material-filter-item data-ng-repeat="def in currentFilterDefs" definition="def" remove="removeFilter(def)" is-open-options="isOpenOptions(def)" search="search()"></basics-material-filter-item>
+
+	<button class="material-filter add-filter" data-ng-click="addFilter($event)">
+		<span class="filter-text">{{ 'basics.material.lookup.filter.add' | translate }}</span>
+		<span class="btn filter-btn control-icons ico-input-add"></span>
+	</button>
+
+	<button class="material-filter add-attribute-filter" data-ng-click="addAttributeFilter($event)" data-ng-show="currentFilterDefs.length>0">
+		<span class="filter-text">{{ 'basics.material.lookup.filter.addAttribute' | translate }}</span>
+		<span class="btn filter-btn control-icons ico-input-add"></span>
+	</button>
+
+	<span data-ng-show="currentFilterDefs.length>0">
+		<button class="btn" data-ng-click="remove($event)">{{ 'basics.material.lookup.filter.remove' | translate }}</button>
+		<button class="btn" data-ng-click="save($event)">{{ 'basics.material.lookup.filter.save' | translate }}</button>
+	</span>
+</div>

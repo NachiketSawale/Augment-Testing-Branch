@@ -1,0 +1,27 @@
+<header class="modal-header main-color">
+    <h2 class="modal-title">{{::modalOptions.headerText}}</h2>
+</header>
+<section class="modal-body">
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <label class="platform-form-label" for="projectSelected">{{::modalOptions.labelProject}}</label>
+            <label data-ng-if="!selectPrjOptions.isSelectPrj" class="platform-form-col" id="projectSelected">{{::selectPrjOptions.projectInfo}}</label>
+            <div data-ng-if="selectPrjOptions.isSelectPrj" class="form-control" data-domain-control data-domain="select"
+                 data-model="result.project" data-options="selectPrjOptions" data-change="projectChanged(result.project)">
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <label class="platform-form-label" for="estimateHeaderSelect">{{::modalOptions.labelEstHeader}}</label>
+            <div class="platform-form-col">
+            <div id="estimateHeaderSelect" class="form-control" data-domain-control data-domain="select"
+                 data-model="result.estimateHeader" data-options="selectHeaderOptions">
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.ok()">
+        {{::modalOptions.actionButtonText}}
+    </button>
+</footer>

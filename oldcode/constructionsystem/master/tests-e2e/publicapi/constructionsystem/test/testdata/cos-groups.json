@@ -1,0 +1,105 @@
+{
+  "CompanyCode": "904",
+  "CosGroups": [
+    {
+      "descriptionInfo": {
+        "description": "A",
+        "otherLanguages": [
+          {
+            "culture": "zh",
+            "description": "A"
+          },
+          {
+            "culture": "de",
+            "description": "A"
+          }
+        ]
+      },
+      "code":"A",
+      "rootCode":"A",
+      "parentCode": "",
+      "sorting": "1",
+      "isdefault": "false"
+    },
+    {
+      "descriptionInfo": {
+        "description": "A-1",
+        "otherLanguages": [
+          {
+            "culture": "zh",
+            "description": "A-1"
+          },
+          {
+            "culture": "de",
+            "description": "A-1"
+          }
+        ]
+      },
+      "code":"A-1",
+      "rootCode":"A",
+      "parentCode": "A",
+      "sorting": "1",
+      "isdefault": "true"
+    },
+    {
+      "descriptionInfo": {
+        "description": "A-1-1",
+        "otherLanguages": [
+          {
+            "culture": "zh",
+            "description": "A-1-1"
+          },
+          {
+            "culture": "de",
+            "description": "A-1-1"
+          }
+        ]
+      },
+      "code":"A-1-1",
+      "rootCode":"A",
+      "parentCode": "A-1",
+      "sorting": "1",
+      "isdefault": "false"
+    },
+    {
+      "descriptionInfo": {
+        "description": "A-2",
+        "otherLanguages": [
+          {
+            "culture": "zh",
+            "description": "A-2"
+          },
+          {
+            "culture": "de",
+            "description": "A-2"
+          }
+        ]
+      },
+      "code":"A-2",
+      "rootCode":"A",
+      "parentCode": "A",
+      "sorting": "1",
+      "isdefault": "false"
+    },
+    {
+      "descriptionInfo": {
+        "description": "A-2-2",
+        "otherLanguages": [
+          {
+            "culture": "zh",
+            "description": "A-2-2"
+          },
+          {
+            "culture": "de",
+            "description": "A-2-2"
+          }
+        ]
+      },
+      "code":"A-2-2",
+      "rootCode":"A",
+      "parentCode": "A-2",
+      "sorting": "1",
+      "isdefault": "false"
+    }
+  ]
+}

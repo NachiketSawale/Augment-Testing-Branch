@@ -1,0 +1,84 @@
+<style>
+	.sidebar-outlook-main .toolbar .title {
+		padding-left: 0;
+	}
+
+	.sidebar-outlook-main .mail-box {
+		position: relative;
+		overflow-y: initial !important;
+	}
+
+	.sidebar-outlook-main .mail-box .toolbar {
+		border-bottom: 1px solid #ccc;
+		height: 56px;
+	}
+
+	.sidebar-outlook-main .mail-box .toolbar button {
+		height: 48px;
+		margin-top: 4px;
+	}
+
+	.sidebar-outlook-main .mail-box .dropdown {
+		position: absolute;
+		width: 100%;
+		top: 58px;
+		left: 0;
+		background-color: #fff;
+		z-index: 1;
+	}
+
+	.sidebar-outlook-main .l-h-20 {
+		line-height: 20px;
+	}
+</style>
+<div class="content sidebar-outlook-main flex-box flex-column" data-ng-click="hideMailboxMenu()" data-ng-controller="cloudDesktopOutlookMainController">
+	<div class="subview-header toolbar">
+		<h3 class="title ellipsis">{{'cloud.desktop.outlook.title' | translate}}</h3>
+		
+		<ul class="tools" >
+			<li data-ng-repeat="btn in toolbars" data-ng-if="!btn.hide || !btn.hide()">
+				<button id="sidebar-outlook-{{btn.id}}" type="button" class="{{btn.cssClass}}" title="{{btn.title | translate}}" data-ng-click="toolbarClick(btn.id)"><span>{{btn.title | translate}}</span></button>
+			</li>
+			<li>
+				<cloud-desktop-sidebar-minmax></cloud-desktop-sidebar-minmax>
+			</li>
+		</ul>
+	</div>
+	<!-- Mail Boxes -->
+	<div class="mail-box" data-ng-if="isAuthenticated && showMailboxContainer">
+		<div class="flex-box flex-row toolbar">
+			<div class="fullwidth flex-box flex-column margin-top-ld overflow-hidden">
+				<span class="ellipsis l-h-20">{{selectedAccount.mailbox.mail}}</span>
+				<span class="font-bold l-h-20">{{selectedAccount.folder.displayName}}</span>
+			</div>
+			<div class="flex-box flex-column">
+				<button type="button" class="tlb-icons ico-menu" data-ng-click="toggleMailboxMenu($event)" title="{{'cloud.desktop.outlook.switchAccountAndFolder' | translate}}">
+					<span>{{'cloud.desktop.outlook.switchAccountAndFolder' | translate}}</span>
+				</button>
+			</div>
+		</div>
+		<div class="dropdown" data-ng-show="showMailboxMenu" platform-item-list-tree data-treeitems="mailbox.treeItems" data-options="mailbox.treeOptions"></div>
+	</div>
+	<div class="fullheight">
+		<!-- Login View -->
+		<div data-ng-if="views.login.ready" data-ng-class="{'fullheight': views.login.visible}">
+			<ng-include data-ng-show="views.login.visible" src="'cloud.desktop/templates/sidebar/outlook/login.html'"></ng-include>
+		</div>
+
+		<!-- Send Box -->
+		<div data-ng-if="views.sendBox.ready" data-ng-class="{'fullheight': views.sendBox.visible}">
+			<ng-include data-ng-show="views.sendBox.visible" src="'cloud.desktop/templates/sidebar/outlook/sendbox.html'"></ng-include>
+		</div>
+
+		<!-- In Box -->
+		<div data-ng-if="views.mailbox.ready" data-ng-class="{'fullheight': views.mailbox.visible}">
+			<ng-include data-ng-show="views.mailbox.visible" src="'cloud.desktop/templates/sidebar/outlook/inbox.html'"></ng-include>
+		</div>
+
+		<!-- Detail View -->
+		<div data-ng-if="views.detail.ready" data-ng-class="{'fullheight': views.detail.visible}">
+			<ng-include data-ng-show="views.detail.visible" src="'cloud.desktop/templates/sidebar/outlook/detail.html'"></ng-include>
+		</div>
+	</div>
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>

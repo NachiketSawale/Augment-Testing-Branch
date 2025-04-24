@@ -1,0 +1,63 @@
+<div ng-cloak class="filler" data-ng-controller="productionplanningActualTimeRecordingWizardStep1TimeAssignmentController">
+	<!-- Date and Site form -->
+	<div class="flex-row" data-platform-form data-form-options="formOptions" data-entity="formOptions.entity"></div>
+	<!-- Grids -->
+	<div data-trs-kendo-splitter class="flex-box filler border-none">
+		<div data-trs-kendo-splitter class="flex-box filler border-none"
+		     option="{ panes: [{ collapsible:true, size:'50%' },{ collapsible:true, size:'50%' }], orientation:'vertical' }">
+			<!-- Employees Container -->
+			<div class="pane-content fullheight">
+				<div class="filler flex-box flex-column subview-container" data-ng-controller="ppsActualTimeRecordingEmployeeController">
+					<div class="subview-header toolbar">
+						<h3 class="title font-bold">{{'productionplanning.item.wizard.actualTimeRecording.employeesTitle' | translate}}</h3>
+						<div data-platform-menu-list data-list="tools"></div>
+					</div>
+					<div class="flex-box flex-column flex-element subview-content relative-container">
+						<platform-Grid class="border-none" data-data="gridData"></platform-Grid>
+					</div>
+				</div>
+			</div>
+			<!-- Employee To Areas Container -->
+			<div class="pane-content fullheight">
+				<div class="filler flex-box flex-column subview-container" data-ng-controller="ppsActualTimeRecordingEmployeeToAreaController">
+					<div class="subview-header toolbar">
+						<h3 class="title font-bold">{{'productionplanning.item.wizard.actualTimeRecording.employeeToAreasTitle' | translate}}</h3>
+						<div data-platform-menu-list data-list="tools"></div>
+					</div>
+					<div class="flex-box flex-column flex-element subview-content relative-container">
+						<platform-Grid class="border-none" data-data="gridData"></platform-Grid>
+						<div data-cloud-common-overlay data-loading="!isReady"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-trs-kendo-splitter class="flex-box filler border-none"
+		     option="{ panes: [{ collapsible:true, size:'50%' },{ collapsible:true, size:'50%' }], orientation:'vertical' }">
+			<!--	Areas Container -->
+			<div class="pane-content fullheight">
+				<div class="filler flex-box flex-column subview-container" data-ng-controller="ppsActualTimeRecordingAreaController">
+					<div class="subview-header toolbar">
+						<h3 class="title font-bold">{{'productionplanning.item.wizard.actualTimeRecording.areasTitle' | translate}}</h3>
+						<div data-platform-menu-list data-list="tools"></div>
+					</div>
+					<div class="flex-box flex-column flex-element subview-content relative-container">
+						<platform-Grid class="border-none" data-data="gridData"></platform-Grid>
+					</div>
+				</div>
+			</div>
+			<!--	Area To Employees Container -->
+			<div class="pane-content fullheight">
+				<div class="filler flex-box flex-column subview-container" data-ng-controller="ppsActualTimeRecordingAreaToEmployeeController">
+					<div class="subview-header toolbar">
+						<h3 class="title font-bold">{{'productionplanning.item.wizard.actualTimeRecording.areaToEmployeesTitle' | translate}}</h3>
+						<div data-platform-menu-list data-list="tools"></div>
+					</div>
+					<div class="flex-box flex-column flex-element subview-content relative-container">
+						<platform-Grid class="border-none" data-data="gridData"></platform-Grid>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>

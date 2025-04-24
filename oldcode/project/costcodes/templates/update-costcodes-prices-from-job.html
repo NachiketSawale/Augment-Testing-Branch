@@ -1,0 +1,31 @@
+<div data-ng-controller="projectCostcodesPriceForJobWizardController" class="modal-wrapper fullheight">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body">
+        <h3 class="margin-top-ld">{{'project.main.updateCostCodeForJob.prjCostCodes' | translate}}</h3>
+        <div class="subview-content" data-ng-controller="projectCostcodesPriceListForJobGridController">
+            <div class="toolbar">
+                <div data-platform-menu-list data-list="tools"
+                     data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+            </div>
+            <platform-Grid data="gridData"></platform-Grid>
+        </div>
+        <h3 class="margin-top-ld">{{'project.main.updateCostCodeForJob.costCodesPriceList' | translate}}</h3>
+        <div class="subview-content" data-ng-controller="projectCostcodesPriceListRecordGridController">
+            <div class="toolbar">
+                <div data-platform-menu-list data-list="tools"
+                     data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+            </div>
+            <platform-Grid data="gridData"></platform-Grid>
+        </div>
+
+    </section>
+	<footer class="modal-footer" style="height: auto;">
+		<h3 class="margin-top-ld" style="flex: 1">{{'project.main.noUseJobError.filterReadOnly' | translate}}</h3>
+		<button type="button" class="btn btn-default" style="width:auto;" data-ng-click="updateAllWithBase()" >{{'project.main.resetAllWithBasePriceBtnText' | translate}}</button>
+		<button type = "button" class = "btn btn-default"  data-ng-click="ok()">{{'basics.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">{{'basics.common.cancel' | translate}}</button>
+
+	</footer>
+</div>

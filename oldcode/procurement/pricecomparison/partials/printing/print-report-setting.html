@@ -1,0 +1,58 @@
+<section class="modal-body" data-ng-controller="procurementPriceComparisonReportSettingController"
+			style="padding-top: 5px;">
+	<div class="platform-form-container">
+		<form class="platform-form platform-lg">
+			<div style="margin-bottom: 15px;">
+				<div style="text-align: center;">
+					<div class="checkbox spaceToUp" style="display:inline;">
+						<label>
+							<input type="checkbox" data-ng-model="settings.coverSheet.check"
+									 data-ng-click="settings.onClickChange()"/>
+							{{'procurement.pricecomparison.printing.coverSheet'| translate}}
+						</label>
+					</div>
+					<div class="checkbox spaceToUp" style="display: inline;margin-left: 30px;">
+						<label>
+							<input type="checkbox" name="bidderName" data-ng-model="settings.bidder.nameCheck"
+									 data-ng-click="settings.onClickChange()"/>
+							{{'procurement.pricecomparison.printing.bidderNameAnonymous'| translate}}
+						</label>
+					</div>
+					<div style="display: inline;margin-left: 20px; ">
+						<div class="checkbox spaceToUp" style="display: inline;">
+							<label>
+								<input type="checkbox" name="maxBidders" data-ng-model="settings.bidder.bidderPageSizeCheck"
+										 data-ng-click="settings.onClickChange('pageSize')"/>
+								{{'procurement.pricecomparison.printing.maxiNumBidders'| translate}}
+							</label>
+						</div>
+
+						<div style="padding-left: 20px; padding-right: 10px; display: inline;">
+							<input type="number" title="Page" value="1" size="4" min="1" class="form-control"
+									 data-ng-model="settings.bidder.pageSize" data-ng-value="settings.bidder.pageSize"
+									 style="width: 40px; height: 24px;padding-left: 5px; vertical-align: bottom;display: inline;text-align: center;"
+									 data-ng-change="settings.onClickChange()">
+						</div>
+						<span>{{'procurement.pricecomparison.printing.includingTarget'| translate}}</span>
+					</div>
+					<div style="display: inline;margin-left: 20px; ">
+						<div class="checkbox spaceToUp" style="display: inline;">
+							<label>
+								<input type="checkbox" data-ng-model="settings.shortenOutlineSpec.check"
+									   data-ng-click="settings.onClickChange()"/>
+								{{'procurement.pricecomparison.printing.shortenOutlineSpec'| translate}}
+							</label>
+						</div>
+						<div style="padding-left: 20px; padding-right: 10px; display: inline;">
+							<input type="number" title="Page" value="1" size="4" min="1" class="form-control"
+								   data-ng-model="settings.shortenOutlineSpec.value" data-ng-value="settings.shortenOutlineSpec.value"
+								   style="width: 60px; height: 24px;padding-left: 5px; vertical-align: bottom;display: inline;text-align: center;"
+								   data-ng-change="settings.onClickChange()">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-print-report-setting-fieldset-directive info-report-template="settings"></div>
+		</form>
+	</div>
+</section>

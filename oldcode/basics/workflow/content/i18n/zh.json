@@ -1,0 +1,389 @@
+﻿{
+	"basics": {
+		"workflow": {
+			"moduleName": "流程设计器",
+			"tabHeader": "主窗口",
+			"task": {
+				"list": {
+					"header": "待办事项",
+					"grouping": {
+						"noGrouping": "!No Grouping",
+						"clerk": "!Grouped by Clerk",
+						"prio": "!Group by Priority",
+						"lifeTime": "!Group by Lifetime",
+						"entity": "!Entity Description",
+						"template": "!Template",
+						"endDate": "!End Date",
+						"noEndDate": "!No End Date",
+						"ended": "!ended"
+					},
+					"sorting": {
+						"noSorting": "!Default Sorting",
+						"startAsc": "!By Start (Asc)",
+						"startDesc": "!By Start (Desc)",
+						"prioAsc": "!By Priority (Asc)",
+						"prioDesc": "!By Priority (Desc)",
+						"endTimeDesc": "!By End Time (Desc)",
+						"endTimeAsc": "!By End Time (Asc)"
+					}
+				},
+				"detail": {
+					"group": {
+						"history": "历史",
+						"comment": "注释",
+						"detail": "明细",
+						"document": "文档"
+					}
+				}
+			},
+			"actionForm": {
+				"title": "行为",
+				"groups": {
+					"actionDetail": "行为明细"
+				}
+			},
+			"designer": {
+				"menu": {
+					"delete": "!Delete",
+					"copy": "!Copy",
+					"cut": "!Cut",
+					"paste": "!Paste"
+				},
+				"containerHeader": "设计器",
+				"start": "开始",
+				"end": "结束",
+				"decision": "决定",
+				"object": "对象行为",
+				"script": "脚本行为",
+				"userTask": "用户任务",
+				"externalFn": "外部函数",
+				"message": "发送消息",
+				"userForm": "用户表单",
+				"workflow": "流程行为"
+			},
+			"template": {
+				"containerHeader": "流程模板",
+				"description": "描述",
+				"errorDialog": {
+					"header": "流程版本错误",
+					"text": "发现以下错误"
+				},
+				"kind": "种类",
+				"type": {
+					"description": "类型",
+					"1": "流程",
+					"2": "!Escalation Workflow"
+				},
+				"entity": "Entity",
+				"startWorkflow": "开始流程",
+				"version": {
+					"containerHeader": "流程模板版本",
+					"toolbar": {
+						"changeStatus": "变更状态",
+						"copyVersion": "复制版本",
+						"validate": "验证流程"
+					}
+				},
+				"context": {
+					"key": "!key",
+					"value": "!value",
+					"containerHeader": "!Template Context"
+				}
+			},
+			"subscribedEvents": {
+				"event": "!Event",
+				"containerHeader": "!Subscribed Events"
+			},
+			"action": {
+				"key": "!key",
+				"value": "!value",
+				"detail": {
+					"actionType": "行为类型",
+					"description": "描述",
+					"comment": "注释",
+					"code": "编码",
+					"actionTypeId": "行为类型",
+					"actionId": "行为",
+					"parameter": "参数",
+					"userId": "职员编号",
+					"endTime": "!End Date"
+				},
+				"containerHeader": "流程行为明细",
+				"input": {
+					"containerHeader": "输入参数"
+				},
+				"output": {
+					"containerHeader": "输出参数"
+				},
+				"customEditor": {
+					"portal": {
+						"contactId": "ContactId",
+						"portalAccessGroupId": "Portal Access Group Id",
+						"portalInvitationId": "Portal Invitation Id",
+						"portalBaseUrl": "Portal Base Url",
+						"eMailSubject": "EMail Subject",
+						"eMailBody": "EMail Body",
+						"eMailRecipients": "EMail Recipients",
+						"resultCode": "Result Code",
+						"resultMessage": "Result Message",
+						"confirmed": "Confirmed",
+						"userEntity": "User.Ext.Provider.Entity",
+						"portalAccessGroupList": "Portal Access Group List",
+						"recipient": "Recipient",
+						"invitationUrl": "Invitation Url",
+						"reInvitationUrl": "Re-Invitation Url",
+						"urlValidUntil": "Url Valid Until"
+					},
+					"warningMessage": "Warning Message",
+					"language": "Language",
+					"emailCount": "Email Count",
+					"sender": "Sender",
+					"transactionHeaderId": "Transaction Header Id",
+					"isPopUp": "IsPopUp",
+					"accessToken": "AccessToken",
+					"accessTokenType": "AccessTokenType",
+					"action": "Action",
+					"containerHeader": "行为参数",
+					"formula": "!Formula",
+					"message": "!Message",
+					"entityName": "!Entity",
+					"entityId": "!Entity Id",
+					"id": "!Id",
+					"property": "!Property",
+					"project": "!Project",
+					"statusName": "!StatusName",
+					"objectId": "!ObjectId",
+					"newStatus": "!New Status",
+					"newStatusId": "!New Status Id",
+					"oldStatus": "!Old Status",
+					"oldStatusId": "!Old Status Id",
+					"projectId": "!Project Id",
+					"remark": "!Remark",
+					"webApiURL": "!WebApi URL",
+					"outputClientGet": "!Data",
+					"params": "!Parameter",
+					"headers": "!Headers",
+					"data": "!Data",
+					"bp": "!Business Partner",
+					"company": "!Company",
+					"bpId": "!Business Partner Id",
+					"companyId": "!Company Id",
+					"outputUpdateFinanceCode": "!Result Code",
+					"outputUpdateFinance": "!Result Message",
+					"sectionId": "!SectionId",
+					"code": "!Code",
+					"invoiceId": "!InvoiceId",
+					"outputResult": "!Result",
+					"mail": {
+						"from": "!From",
+						"receivers": "!Receivers",
+						"cc": "!CC",
+						"bcc": "!BCC",
+						"subject": "!Subject",
+						"body": "!Body",
+						"attachements": "!Attachements",
+						"replyToList": "!Reply To List",
+						"isHtml": "!HTML"
+					},
+					"report": "!Report",
+					"exportType": "!Export Type",
+					"fileName": "!Filename",
+					"characteristic": "!Characteristic",
+					"url": "!Url",
+					"content": "!Content",
+					"sql": "!SQL",
+					"columns": "!Columns",
+					"workflow": "!Workflow",
+					"storedProcedureName": "!Stored Procedure Name",
+					"userform": "!Form",
+					"userformId": "!Form Id",
+					"userformData": "!Form Data",
+					"context": "!Context",
+					"description": "!Description",
+					"outputUserform": "!Form Data Id",
+					"messageBox": "!Message Box",
+					"docId": "!Doc Id",
+					"projectDocu": {
+						"project": "!Project Id",
+						"bp": "!Business Partner Id",
+						"certificate": "!Certificate Id",
+						"structure": "!Structure Id",
+						"materialCatalog": "!MaterialCatalog Id",
+						"package": "!Package Id",
+						"rfq": "!RFQ Id",
+						"qtn": "!QTN Id",
+						"con": "!CON Id",
+						"pes": "!PED Id",
+						"inv": "!INV Id",
+						"schedule": "!Schedule Id",
+						"activity": "!Activity Id",
+						"est": "!EST Id",
+						"req": "!REQ Id",
+						"output": "!Document List"
+					},
+					"template": "!Templatename",
+					"costcode": "!Update Cost Code",
+					"commodity": "!Update Commodity",
+					"succeeded": "!Succeeded",
+					"errorMessage": "!Error Message",
+					"ProjectId": "!Project",
+					"Templates": "!Templates",
+					"outputCharacteristic": "!Characteristic",
+					"sqlActionOutput": "!Output",
+					"outputSaveObject": "!Entity Property",
+					"outputReport": "!Doc Id",
+					"outputChangeStatus": "!New Status",
+					"outputClientPost": "!Response",
+					"outputTextDocu": "!Text",
+					"outputServergetAction": "!Output",
+					"outputStored": "!Output",
+					"clerkRole": "!Clerk Role",
+					"clerkRoleId": "!Clerk Role Id",
+					"clerk": "!Clerk",
+					"projectClerk": "!Project Clerk",
+					"structure": "!Structure",
+					"structureId": "!Structure Id",
+					"status": "!Status",
+					"category": "!Category",
+					"docType": "!Document Typ",
+					"docTypeId": "!Document Typ Id",
+					"prjDocType": "!Project Document Typ",
+					"prjDocTypeId": "!Project Document Typ Id",
+					"certificate": "!Certificate",
+					"certificateId": "!Certificate Id",
+					"materialCatalog": "!MaterialCatalog",
+					"materialCatalogId": "!MaterialCatalog Id",
+					"materialCatalogCodes": "Material Catalog Codes",
+					"updatedMaterialCatalogIds": "Updated Material Catalog Ids",
+					"package": "!Package",
+					"packageId": "!Package Id",
+					"rfq": "!RFQ",
+					"rfqId": "!RFQ Id",
+					"qtn": "!QTN",
+					"qtnId": "!QTN Id",
+					"con": "!CON",
+					"conId": "!CON Id",
+					"pes": "!PES",
+					"pesId": "!PES Id",
+					"inv": "!INV",
+					"invId": "!INV Id",
+					"schedule": "!Schedule",
+					"scheduleId": "!Schedule Id",
+					"activity": "!Activity",
+					"activityId": "!Activity Id",
+					"est": "!EST",
+					"estId": "!EST Id",
+					"req": "!REQ",
+					"reqId": "!REQ Id",
+					"infoRequest": "!Info Request",
+					"infoRequestId": "!Info Request Id",
+					"controlUnit": "!Control Unit",
+					"controlUnitId": "!Control Unit Id",
+					"location": "!Location",
+					"locationId": "!Location Id",
+					"barCode": "!BarCode",
+					"comment": "!Comment",
+					"revision": "!Revision",
+					"contract": "!Contract",
+					"contractId": "!Contract Id"
+				}
+			},
+			"sidebar": {
+				"startWorkflow": "开始流程",
+				"startWorkflowForEveryEntity": "!Start Workflow for every Entity"
+			},
+			"workflowAction": {
+				"entity": "流程行为",
+				"errors": {
+					"actionIdMissing": "未定义行为！"
+				}
+			},
+			"modalDialogs": {
+				"wizardLinkHeader": "Wizard Link Editor",
+				"workflowLinkHeader": "Workflow Link Editor",
+				"documentLinkHeader": "Document Link Editor",
+				"selectContentHeader": "Dropdown Data Editor",
+				"wizard": "Wizard",
+				"linkName": "Display Name",
+				"reportLinkHeader": "Report Link Editor",
+				"module": "Module",
+				"report": "Report",
+				"textInputHeader": "Text Input",
+				"defaulttext": "Default Text",
+				"type": "Type",
+				"comboboxContentHeader": "Combobox Data Editor",
+				"defaultRadio": "Standard-Mode",
+				"expertRadio": "Expert-Mode",
+				"selectItems": "Dropdown Items",
+				"labelEditorHeader": "Label Editor",
+				"tableEditorHeader": "Table Editor",
+				"tableData": "Table Data",
+				"labelText": "Label Text",
+				"labelFormat": "Label Formatting",
+				"url": "Adress",
+				"wwwLinkHeader": "Link Editor",
+				"reportParameter": "Report Parameter",
+				"documentId": "Document ID"
+			},
+			"toolbar": {
+				"editOptions": "Edit Options",
+				"insertNumberElements": "Number Fields",
+				"insertTextElements": "Text Fields",
+				"insertSelectElements": "Select Fields",
+				"insertDesignElements": "Design Items",
+				"insertLinkElements": "Links"
+			},
+			"controls": {
+				"table": "Table",
+				"space": "Space",
+				"divider": "Divider",
+				"comboBoxDecision": "Combo Box (Decision)",
+				"linkToProject": "Link to Project",
+				"linkToDocument": "Link to Document",
+				"linkToEntity": "Link to Entity",
+				"linkToWizard": "Link to Wizard",
+				"linkToReport": "Link to Report",
+				"linkToUrl": "Link to URL",
+				"linkToWorkflow": "Link to Workflow",
+				"defaults": {
+					"openWorkflow": "Start Workflow",
+					"openReport": "Open Report",
+					"openDocument": "Open Document",
+					"openUrl": "Open Adress",
+					"openEntity": "Open Entity"
+				}
+			},
+			"escalate": "Escalate",
+			"start": {
+				"idDialog": {
+					"header": "Start Workflow",
+					"body": "Please insert the id of the calling entity."
+				}
+			},
+			"wizard": {
+				"header": "!Workflow Wizard",
+				"text": "!Status of the current workflow:",
+				"statusText": {
+					"1": "!The workflow is currently running.",
+					"2": "!The workflow is finished correctly.",
+					"3": "!The workflow is escalated.",
+					"4": "!The workflow waits for a user input.",
+					"5": "!The workflow is failed",
+					"missingTemplate": "!The parameter TemplateId of the wizard ist empty.",
+					"workflowFailed": "!failed"
+				}
+			},
+			"approve": {
+				"roleBased": "基于角色",
+				"apprCount": "审批节点数:",
+				"ccCount": "Cc节点数：",
+				"apprLevel": "审批节点"
+			},
+			"entity": {
+				"lookup": {
+					"title": "Assign Entity"
+				}
+			}
+		}
+	}
+}

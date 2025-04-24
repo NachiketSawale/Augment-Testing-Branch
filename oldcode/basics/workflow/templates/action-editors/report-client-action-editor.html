@@ -1,0 +1,74 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+
+		<div class="radiolist-container">
+			<div class="ng-pristine ng-untouched ng-valid ng-isolate-scope radio-list ng-not-empty">
+				<div class="radio {{item[input.previewRadioGroupOpt.cssMember]}}"
+				     ng-repeat="item in input.previewRadioGroupOpt.items">
+					<label>{{item[input.previewRadioGroupOpt.displayMember]}}
+						<input data-ng-readonly="codeMirrorOptions.readOnly" id="item[input.previewRadioGroupOpt.valueMember]"
+						       name="input.previewRadioGroupOpt.id" ng-model="input.previewEditorMode"
+						       ng-value="item[input.previewRadioGroupOpt.valueMember]"
+						       type="radio">
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row" data-ng-show="input.previewEditorMode == 1">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.reportType' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-model="input.previewMode"
+					     data-options="previewSelectOptions"
+					     readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-show="input.previewEditorMode == 2">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.reportType' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.previewMode" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div basics-workflow-report-client-action-params-container data-ng-model="action"></div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">ReportId</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.report" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

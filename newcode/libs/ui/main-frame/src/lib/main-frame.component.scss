@@ -1,0 +1,125 @@
+@import 'variables';
+@import 'mixins';
+@import 'general.scss';
+
+:host {
+	> div {
+		@include flexbox-container($direction: column, $height: 100%);
+
+		::ng-deep {
+			ui-main-frame-header {
+				@include flexbox-container($alignItems: center, $height: 48px);
+				z-index: 2;
+				background-color: #fff;
+
+				img {
+					width: 156px;
+					height: 38px;
+					min-width: 156px;
+					min-height: 38px;
+					background-size: auto;
+					cursor: pointer;
+				}
+
+				> div {
+					@include flexbox-container($flex: 1, $alignItems: center, $justifyContent: space-between, $overflow: hidden);
+				}
+
+				ui-main-frame-app-info-header {
+					@include flexbox-container($flex: 1, $alignItems: center, $height: 100%, $overflow: hidden);
+					padding: 0;
+
+					> div {
+						@include flexbox-container($direction: column, $justifyContent: center, $height: 100%, $overflow: hidden);
+						padding: 0;
+					}
+
+					h4 {
+						color: #383838;
+						min-width: calc(100% - 30px);
+						user-select: text;
+
+						> div {
+							@include flexbox-container($alignItems: center);
+						}
+
+						.title {
+							font-size: 12pt;
+							padding-right: 4px;
+						}
+
+						.subtitle {
+							@include flexbox-container($overflow: hidden);
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							position: relative;
+							font-size: 10pt;
+							font-weight: normal;
+
+							label {
+								height: 100%;
+								line-height: 150%;
+							}
+						}
+
+						.jsEllipse {
+							position: absolute;
+							top: auto;
+							right: auto;
+							bottom: 0;
+							left: 0;
+						}
+
+					}
+				}
+
+				ui-main-frame-session-info-header {
+					@include flexbox-container($overflow: hidden);
+					height: 48px;
+					z-index: 3;
+					padding-right: 6px;
+
+					.content {
+						overflow: hidden;
+						flex: 1;
+						color: var(--company-header-color);
+						height: 48px;
+						text-align: right;
+						padding: 8px 6px;
+					}
+
+					.company-logo {
+						@include flexbox-container($alignItems: center);
+						padding: 6px 0 4px 0;
+					}
+				}
+
+				.menu {
+					.menu-button {
+						@include size(40px, 48px);
+						background-size: 16px;
+
+						svg {
+							--icon-main-color: var(--company-component-selected);
+						}
+					}
+				}
+			}
+		}
+
+
+	}
+
+	section {
+		@include flexbox-container($flex: 1, $overflow: hidden);
+		position: relative;
+		border-top: solid 1px #626262;
+		z-index: 1;
+
+		#mainContent {
+			flex: 1;
+			position: relative;
+			overflow: hidden;
+		}
+	}
+}

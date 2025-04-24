@@ -1,0 +1,8 @@
+<p>Multiple Image Viewer Demo!</p>
+<button class="btn ok btn btn-overflow btn-return btn.cssClass" (click)="addChangeImage(fileInput,'add')">  Add Image </button>
+<button class="btn ok btn btn-overflow btn-return btn.cssClass" (click)="addChangeImage(fileInput,'change')">  Change Image </button>
+<button class="btn ok btn btn-overflow btn-return btn.cssClass" (click)="deleteImage()">  Delete Image </button>
+
+<ui-common-image-view [isMultiple]="true"  [items]="(dataSet$|async)||[]" [selectedIndex]="currentIndex" (selectedIndexChanged)="getCurrentIndex($event)"></ui-common-image-view>
+
+<input #fileInput type="file" accept="image/*" hidden (change)="addImage($event)">

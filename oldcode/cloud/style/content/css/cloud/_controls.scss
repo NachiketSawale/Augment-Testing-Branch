@@ -1,0 +1,851 @@
+/*-------------------------------------------------------------------------------
+	 Controls (_controls.scss)
+  -------------------------------------------------------------------------------*/
+[class*="-icons"] {
+	&.sm {
+		@include square(16px);
+		background-size: 16px;
+	}
+}
+
+// buttons with icons, eg. login formular
+.btn {
+	span[class*="ico-"] {
+		padding-left: 20px;
+		background-size: 16px;
+		background-position: 0 0;
+	}
+}
+
+button {
+	&.sm {
+		@include square(16px);
+	}
+}
+
+//.domain-type-imageselect, .domain-type-select {
+//	> .input-group-content {
+//		background-color: $color-input-bg-disabled;
+//	}
+//}
+.hierarchic-box
+{
+	ul {
+		list-style-type: none;
+		border-left: $border-width-default solid $color-bar-border;
+		border-top: $border-width-default solid $color-bar-border;
+		border-bottom: $border-width-default solid $color-bar-border;
+		margin-top: $padding-xxlarge-vertical;
+		padding-left: $padding-xlarge-horizontal;
+
+
+		li {
+			margin-top: $padding-base-vertical;
+
+			&:last-child {
+				margin-bottom: -5px;
+				padding-bottom: $padding-base-vertical;
+			}
+
+			&.last {
+				margin-bottom: 0px;
+			}
+
+			> ul {
+				margin-top: 20px;
+				margin-left: -5px;
+			}
+
+			&.head {
+				line-height: 26px;
+				vertical-align: middle;
+				background-color: #E6E6E6;
+				margin-top: -13px;
+				margin-left: -11px;
+				font-weight: bold;
+
+				.btn {
+					border-color: $color-bar1;
+					background-color: $color-bar1;
+					width: 28px;
+
+					&:focus,
+					&.focus {
+						outline: none;
+					}
+
+					&:not(:disabled):hover {
+						background-color: $color-hover;
+					}
+				}
+
+				span {
+					background-color: $color-bar1;
+				}
+			}
+
+			.criterion {
+				border: $border-width-default solid $color-bar-border;
+				margin-left: -1px;
+				margin-bottom: $padding-base-vertical;
+
+				.lookup-container {
+					display: flex;
+					border: none;
+
+					button {
+						height: 28px;
+					}
+				}
+
+				.border-top {
+					border-top: $border-width-default solid $color-bar-border;
+				}
+
+				textarea {
+					border: none;
+				}
+
+				> div {
+					line-height: 26px;
+					vertical-align: middle;
+
+					.domain-type-datetime {
+						border: none;
+
+						.datepickerinput {
+							@extend .ellipsis;
+							width: 80px;
+						}
+					}
+
+					&:last-child {
+						overflow: hidden;
+					}
+
+					input {
+						@include disabledReadonlyProps($color-input-bg);
+						border: none;
+						background-color: $color-body-background;
+						box-shadow: none;
+						transition: none;
+					}
+
+					button {
+						border-top: none;
+						border-bottom: none;
+
+						&:last-child {
+							border-right: none;
+							width: 26px;
+						}
+					}
+
+					.flex-box {
+						.flex-element:nth-child(2) input {
+							border-left: $border-width-default solid $color-input-border;
+						}
+					}
+
+					.select2-container {
+						border-top: $border-width-default solid $color-bar-border;
+
+						.select2-selection {
+							border: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.select2-container--default .select2-selection--multiple {
+	height: auto;
+
+	> ul {
+		height: auto;
+	}
+}
+
+.select2-container--default .select2-selection--single {
+	border: none;
+
+	.select2-selection__arrow {
+		height: 24px;
+		right: 2px;
+	}
+}
+.select2-selection, .select2-selection__rendered, .filterDefdropboxIconsLeft {
+	height: 26px;
+	line-height: 26px;
+	background-size: 16px 16px;
+}
+
+.select2-container .select2-selection--single {
+	height: 26px;
+}
+
+// For the save view dialog
+select > option {
+	padding-left: $padding-base-horizontal;
+}
+
+//overlay for input-tags(example)
+//without background
+//used in modal.project | upload file(wizard)
+.spinner-inline-md {
+	justify-content: flex-start;
+
+	.box {
+		box-shadow: none;
+		padding: 0 6px;
+		background-color: transparent;
+
+		.spinner-lg {
+			width: 20px;
+			height: 20px;
+			min-width: 20px;
+		}
+	}
+}
+
+//overlay-span for long text for input-tags
+.spinner-span-nowrap {
+	.box {
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		padding-right: 25px;
+		align-items: center;
+
+		span {
+			display: block;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+}
+
+.img-overlay-lb {
+	@include img-overlay(auto, auto, 15px, 15px);
+}
+
+.img-overlay-lt {
+	@include img-overlay(15px, auto, auto, 15px);
+}
+
+.img-overlay-rb {
+	@include img-overlay(auto, 15px, 15px, auto);
+}
+
+.img-overlay-rt {
+	@include img-overlay(15px, 15px, auto, auto);
+}
+
+
+// Special Solution for Material-Search-Dialog
+.material-lookup-modal-body {
+	.wait-overlay {
+		@extend .spinner-inline-md;
+		width: 32px;
+		height: 32px;
+		top: 2px;
+	}
+}
+
+// Nav
+// --------------------------------------------------
+.nav {
+	margin-bottom: 0;
+	padding-left: 0; // Override default ul/ol
+	list-style: none;
+	@include clearfix();
+
+	> li {
+		position: relative;
+		display: block;
+
+		> a {
+			position: relative;
+			display: block;
+			padding: 6px 5px 2px 5px;
+			color: $color-text;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				background-color: transparent;
+			}
+		}
+
+		// Disabled state sets text to gray and nukes hover/tab effects
+		&.disabled > a {
+			color: $color-input-bg-disabled;
+
+			&:hover,
+			&:focus {
+				color: $color-input-bg-disabled;
+				text-decoration: none;
+				background-color: transparent;
+			}
+		}
+	}
+
+	// Prevent IE8 from misplacing imgs
+	//
+	// See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+	> li > a > img {
+		max-width: none;
+	}
+}
+
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+	border-bottom: 1px solid $color-input-border;
+	> li {
+		float: left;
+		// Make the list-items overlay the bottom border
+		margin-bottom: -1px;
+
+		// Actual tabs (as links)
+		> a {
+			line-height: $size-line-height-base;
+			border: 1px solid transparent;
+			border-radius: 0;
+			color: $color-text;
+			cursor: pointer;
+			&:hover {
+				background-color: $color-selection;
+			}
+		}
+
+		// Active state, and its :hover to override normal :hover
+		&.active > a {
+			color: $color-text;
+			background-color: #fff;
+			border: 1px solid $color-input-border;
+			border-bottom-color: transparent;
+			cursor: default;
+
+			&:hover,
+			&:focus {
+				color: $color-rib;
+			}
+		}
+	}
+	// pulling this in mainly for less shorthand
+	&.nav-justified {
+		@extend .nav-justified;
+		@extend .nav-tabs-justified;
+	}
+
+}
+
+// Nav variations
+// --------------------------------------------------
+
+// Justified nav links
+// -------------------------
+
+.nav-justified {
+	width: 100%;
+
+	> li {
+		float: none;
+		> a {
+			text-align: center;
+			margin-bottom: 5px;
+		}
+	}
+
+	> .dropdown .dropdown-menu {
+		top: auto;
+		left: auto;
+	}
+}
+
+// Move borders to anchors instead of bottom of list
+//
+// Mixin for adding on top the shared `.nav-justified` styles for our tabs
+.nav-tabs-justified {
+	border-bottom: 0;
+
+	> li > a {
+		// Override margin from .nav-tabs
+		margin-right: 0;
+		border-radius: 0;
+	}
+
+	> .active > a,
+	> .active > a:hover,
+	> .active > a:focus {
+		border: 1px solid $color-bar-border;
+	}
+}
+
+// Tabbable tabs
+// -------------------------
+
+/* Tabs */
+.tabsWrapper {
+	padding: $padding-medium-horizontal $padding-large-vertical;
+
+	&.tabsWrapper-tabContent-none-flex {
+		padding: 0;
+
+		.tab-content {
+			.tab-pane {
+				flex: none;
+			}
+		}
+	}
+
+	&.tabsWrapper-without-border {
+		padding: 0;
+
+		.nav-tabs {
+			border: none;
+
+			> li {
+				margin-right: 16px;
+
+				&.active {
+					> a {
+						border: none;
+						font-weight: bold;
+						border-bottom: solid 2px $color-rib;
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			padding-top: 25px;
+			border: none;
+		}
+	}
+
+	.tab-content {
+		position: inherit;
+		height: auto;
+		border: solid 1px $color-input-border;
+		border-top: none;
+
+		> .tab-pane {
+			display: block;
+			height: 0;
+			overflow-y: hidden;
+		}
+		> .active {
+			height: auto;
+			overflow-y: visible;
+		}
+	}
+}
+
+/* using in Scheduling -> GANTT -> Dialogbox */
+.more-elements .flex-element + .flex-element {
+	margin-left: 10px;
+}
+
+
+// Checkbox and Radiobox
+// ----------------------------------
+%checkradio {
+	//form-control-height: 28px. checkbox-height: 16px. Therefore 6px.
+	margin-top: $padding-medium-vertical;
+
+	& + label {
+		margin-left: $padding-small-horizontal;
+		vertical-align: top;
+		margin-top: 5px;
+		padding: 0;
+	}
+}
+
+input[type='checkbox'], input[type='radio'] {
+	&.form-control {
+		@extend %checkradio;
+	}
+}
+
+.form-control {
+	input[type='checkbox'], input[type='radio'] {
+		@extend %checkradio;
+	}
+}
+
+/*
+	checkbox or radio Container with input-element and label on right side
+*/
+.checkbox-radio-box {
+	overflow: hidden;
+	position: relative;
+	display: block;
+
+	input[type='checkbox'],
+	input[type='radio']  {
+		position: absolute;
+		left: 1px;
+		margin-top: 0px;
+		box-shadow: none; //for ff
+		outline: none; //for ie
+	}
+
+	label {
+		padding: 0px 0 0 20px;
+		margin-bottom: 0;
+		font-weight: normal;
+		cursor: pointer;
+	}
+
+	span {
+		display: block;
+		margin-top: 5px;
+	}
+}
+
+// various overlays
+// ---------------------------------------------------------
+%overlay {
+	@include square(100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+%overlayWait {
+	&.ng-enter,
+	&.ng-leave {
+		transition: $transition-opacity-fade;
+	}
+
+	&.ng-enter,
+	&.ng-leave.ng-leave-active {
+		opacity: 0;
+	}
+
+	&.ng-leave,
+	&.ng-enter.ng-enter-active {
+		opacity: 1;
+	}
+}
+
+// an overlay with waiting animation and optional a text
+.wait-overlay {
+	@extend %overlay;
+	@extend %overlayWait;
+
+	//scenario: wait-overlay is above the kendo-splitter. How does it look in frontend: splitter is above wait-overlay. Must be reserved.
+	z-index: 880;
+
+	&.backdrop {
+		background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity)
+	}
+
+	span {
+		margin-left: $padding-base-horizontal;
+	}
+
+	.box {
+		box-shadow: 0 5px 15px $overlay-shadow-color;
+		//box-shadow: $overlay-shadow-size $overlay-shadow-color;
+		//border: $border-width-default solid $overlay-shadow-color;
+		background-color: $color-body-background;
+		padding: 12px;
+	}
+}
+
+// an overlay for a container to "disable" it and to show a text to the user
+.container-overlay {
+	@extend %overlay;
+	background-color: $color-body-background;
+	z-index: 860;
+
+	&.top {
+		align-items: flex-start;
+		padding-top: 20px;
+	}
+	span {
+		text-align: center;
+	}
+
+	&.border {
+		border: solid var(--border-width-default) var(--input-border-color);
+	}
+}
+
+// Alarm-Overlay-Directive
+// -------------------------
+.alarm-overlay {
+	@extend %overlay;
+	@extend %overlayWait;
+	z-index: 890;
+
+	> .alert {
+		background-color: $overlay-background-color;
+		border-color: $alarm-overlay-border;
+		color: $alarm-overlay-text;
+		box-shadow: $overlay-shadow-size $overlay-shadow-color;
+		margin-bottom: 0;
+	}
+}
+
+
+// merged form-controls
+//---------------------------
+// used f.e. in portal login-screen.
+.input-group.form-control.merged {
+	@include status-styles($color-hover, darken);
+
+	&:focus-within {
+		outline: var(--company-color) auto 5px;
+	}
+
+	&:active,
+	&.active {
+		box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	}
+
+	//outline: none;
+	.input-group-content {
+		padding-right: 0;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		&+.input-group-btn {
+			border-left: none;
+		}
+	}
+
+	.input-group-btn > .btn {
+		@include status-styles(none);
+		background-color: transparent;
+		width: 16px;
+
+		&:active,
+		&.active {
+			box-shadow: none;
+		}
+	}
+}
+
+// textarea
+//-----------------------------------
+// Reset height for `textarea`s
+textarea {
+	&.form-control {
+		min-height: var(--form-control-height);
+		height: auto;
+		padding: $input-text-padding;
+
+		&.noresize {
+			height: 100%;
+			width: 100%;
+			resize: none;
+		}
+
+		&.size-400-120 {
+			@include size(400px, 120px);
+		}
+	}
+}
+
+
+// radio-list
+//-----------------------------------
+.radio-list {
+	.radio + .radio {
+		margin-top: $padding-base-vertical;
+		padding-top: 1px;
+	}
+
+	&.inline {
+		display: flex;
+
+		.radio + .radio {
+			margin-left: $padding-large-horizontal;
+			margin-top: 0;
+		}
+	}
+}
+
+//platform-navigate-list-items
+.popup-menu, .key-navigate {
+	button {
+		&:not(:disabled):focus {
+			background-color: $color-active;
+		}
+	}
+}
+
+
+//used e.g. in user-Settings
+.domain-type-color, .domain-type-color-picker {
+	position: relative;
+	display: flex;
+	height: 100%;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	> .color-group {
+		@include disabledReadonlyProps();
+		display:flex;
+		width: 100%;
+		height:100%;
+		align-items: unset;
+	}
+
+	.color-picker {
+		position: relative;
+		margin: 3px 0 3px 4px;
+
+		> .overlay {
+			@include container-position(0px, auto, auto, 0px);
+			height: 100%;
+			width: 100%;
+			pointer-events: none;
+			background-color: var(--input-bg-color);
+			//border: 1px dashed var(--input-border-color);
+			border: var(--border-width-default) solid var(--input-border-color);
+
+		}
+	}
+
+	//input[type="text"] {
+	//	margin-left: $padding-base-horizontal;
+	//}
+
+	input[type="color"] {
+		padding: 0;
+		border: none;
+		box-shadow: none;
+		@include square(100%);
+		cursor: pointer;
+
+		&[disabled],
+		&[readonly] {
+			background-color: transparent;
+			cursor: not-allowed;
+		}
+
+		//style for chrome. input-type 'color'
+		&::-webkit-color-swatch-wrapper {
+			padding: 0;
+		}
+
+		&::-webkit-color-swatch {
+			border: solid var(--border-width-default) var(--input-border-color);
+		}
+	}
+
+	&.form-control {
+		.color-picker {
+			min-width: 50px;
+			max-width: 50px;
+		}
+
+		input[type="color"]:focus {
+			outline: var(--border-width-default) dashed var(--company-color);
+		}
+	}
+
+	&.grid-control {
+		.color-picker {
+			position: absolute;
+			margin-left: 2px;
+		}
+
+		input[type="text"] {
+			padding-left: 24px;
+		}
+	}
+
+	//&:not(in-grid) {
+	//	button {
+	//		@include square(26px);
+	//	}
+	//}
+	//
+	//&.in-grid {
+	//	button {
+	//		width: 8px;
+	//	}
+	//}
+}
+
+// time domain control
+.domain-type-time {
+	padding-right: 0 !important;
+
+	&::-webkit-datetime-edit {
+		border-right: solid var(--border-width-default) var(--input-border-color);
+	}
+
+	&[readonly]::-webkit-datetime-edit {
+		border: 0;
+	}
+
+	&::-webkit-calendar-picker-indicator {
+		@include square(26px);
+		//@include form-control-focus();
+		cursor: pointer;
+		margin-left: 0;
+		background-size: 16px;
+		background-position: center;
+		padding: 0;
+	}
+}
+
+.domain-type-boolean,
+.domain-type-composite {
+	&.form-control {
+		border: none !important;
+	}
+}
+
+.projectContextInfo, cloud-desktop-filter-pinned-context, cloud-desktop-pinned-view-filter {
+	.header-body {
+		background-size: 20px 20px;
+	}
+
+	> .form-control {
+		//max-width: 300px;
+
+		> .input-group-content {
+			display: block;
+			margin-top: auto;
+			margin-bottom: auto;
+			padding-right: $padding-small-horizontal;
+		}
+	}
+
+	.form-control + .form-control {
+		margin-left: 0;
+	}
+}
+
+.ui-element {
+	--border-color: var(--border-color-container, var(--border-color-medium));
+
+	@import "cloud/elements/action-select-btn";
+}
+
+ui-element-container {
+
+	// toolbar
+	&.toolbar {
+
+	}
+}

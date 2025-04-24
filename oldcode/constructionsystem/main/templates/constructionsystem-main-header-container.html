@@ -1,0 +1,18 @@
+<div class="fullheight flex-box flex-column">
+    <div class="platform-form-group platform-lg">
+        <div class="platform-form-row" data-ng-controller="constructionSystemMainHeaderGroupLookupController">
+            <label class="platform-form-label">{{'constructionsystem.master.entityGroup' | translate}}</label>
+
+            <div class="platform-form-col">
+                <div class="lg-6 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedGroup.cosGroupFk"
+                     data-options="lookupOptions"
+                     data-entity="entity"></div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-element relative-container" data-ng-controller="constructionSystemMainHeaderListController">
+        <div class="filler-absolute">
+            <platform-Grid class="border-all" data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+        </div>
+    </div>
+</div>

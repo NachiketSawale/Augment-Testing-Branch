@@ -1,0 +1,20 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body">
+    <div style="margin-left: -10px" data-platform-form data-form-options="formOptions" data-entity="entity"></div>
+	<div data-ng-show="alerts && alerts.length">
+		<div class="lookup-alert {{::alert.css}}" data-ng-repeat="alert in alerts">
+			<span data-ng-bind="alert.title"></span>: <span data-ng-bind="alert.message"></span>
+		</div>
+	</div>
+    <div class="lookup-grid flex-basis-auto grid-container flex-element" data-platform-grid data="grid"></div>
+
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

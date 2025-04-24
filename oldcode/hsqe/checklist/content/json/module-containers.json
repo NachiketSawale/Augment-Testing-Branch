@@ -1,0 +1,147 @@
+[
+  {
+    "id": "hsqe.checklist.header.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "hsqe.checklist.title.header",
+    "controller": "hsqeCheckListlistController",
+    "uuid": "aeb09732a35a4e91a0e6d7a9d161092b"
+  },
+  {
+    "id": "hsqe.checklist.header.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "hsqe.checklist.title.headerDetail",
+    "controller": "hsqeCheckListDetailController",
+    "uuid": "b1b8d37ab5dd407bbd1cc1668ef43376",
+    "permission": "aeb09732a35a4e91a0e6d7a9d161092b"
+  },
+  {
+    "id": "hsqe.checklist.headerStructure.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "hsqe.checklist.title.mainContractStructure",
+    "controller": "hsqeCheckListHierarchicalListController",
+    "uuid": "ea1acc747ee94705a5c88af6fe276a31",
+    "permission": "aeb09732a35a4e91a0e6d7a9d161092b"
+  },
+  {
+    "id": "hsqe.checklist.formData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "hsqe.checklist.form.title",
+    "controller": "hsqeCheckListFormGridController",
+    "uuid": "2334381acd314b488be8c8828d7595b2"
+  },
+  {
+    "id": "hsqe.checklist.formDataDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "hsqe.checklist.form.detailTitle",
+    "controller": "hsqeCheckListFormDetailController",
+    "uuid": "f489c3243fbd41038f8679e3f9fcfcd8",
+    "permission": "2334381acd314b488be8c8828d7595b2"
+  },
+  {
+    "id": "hsqe.checklist.comment",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "hsqe.checklist.comment.title",
+    "controller": "basicsCommonCommentController",
+    "uuid": "0436cff1e56443b3b0d73dbe4888152f",
+    "commentQualifier": "hsqe.checklist.comment",
+    "parentService": "hsqeCheckListDataService",
+    "commentEntity": "CommentToSave"
+  },
+  {
+    "id": "hsqe.checklist.locationGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "hsqe.checklist.location.title",
+    "controller": "hsqeCheckListLocationGridController",
+    "uuid": "32330c1c8a1e493abf8b5182daa4d11f"
+  },
+  {
+    "id": "hsqe.checklist.locationDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "hsqe.checklist.location.detailTitle",
+    "controller": "hsqeCheckListLocationDetailController",
+    "uuid": "1aa5125c8ae54e78be677d98d73f1be4",
+    "permission": "32330c1c8a1e493abf8b5182daa4d11f"
+  },
+  {
+    "id": "hsqe.checklist.activityGrid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "hsqe.checklist.activity.title",
+    "controller": "hsqeCheckListActivityGridController",
+    "uuid": "89b8c86e8d53480ebc2551a33f010e94"
+  },
+  {
+    "id": "hsqe.checklist.activityDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "hsqe.checklist.activity.detailTitle",
+    "controller": "hsqeCheckListActivityDetailController",
+    "uuid": "a0b5d5684ee34f5883d4029c6cae6036",
+    "permission": "89b8c86e8d53480ebc2551a33f010e94"
+  },
+  {
+    "id": "model.wdeviewer.ige",
+    "template": "model.wdeviewer/partials/ige-partial.html",
+    "title": "model.wdeviewer.title",
+    "controller": "modelWdeViewerIgeController",
+    "uuid": "ec1e3c300da14769a9e90617e727f6f8",
+    "permission": "7b1f2a36a94245ecb03dd964e79d2254",
+    "dimensionService": "modelWdeViewerReadonlyDimensionService"
+  },
+  {
+    "include": "model.viewer/content/json/viewer-containers.json"
+  },
+  {
+    "id": "hsqe.checklist.group.Template.grid",
+    "template": "hsqe.checkList/templates/hsqe-checklist-template-group-container.html",
+    "title": "hsqe.checklist.header.HsqCheckListTemplate",
+    "controller": "",
+    "uuid": "99f11be1deaf4328889ab939663131a3",
+    "permission": "38c695e4561b426da29491a95c08f4b6"
+  },
+  {
+     "id": "hsqe.checklist.document.main",
+     "template": "defect.main/partials/defect-document-view.html",
+     "title": "hsqe.checklist.documentGridTitle",
+     "controller": "hsqeCheckListDocumentGridController",
+     "uuid": "b87bb8f86135487d8fb332dedf43d183"
+  },
+  {
+    "id": "hsqe.checklist.document.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "defect.main.documentDetailTitle",
+    "controller": "hsqeCheckListDocumentDetailController",
+    "uuid": "d4d5152b4fbd4cf58559a1ffbb32ed86",
+	  "permission": "b87bb8f86135487d8fb332dedf43d183"
+  },
+	{
+		"id": "model.annotation.annotationObjectLinkList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.annotationObjectLinkListTitle",
+		"controller": "checkListModelObjectController",
+		"uuid": "26110cbc14374f7895d1d7934efd0a63"
+	},
+	{
+		"id": "model.annotation.annotationObjectLinkDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.annotationObjectLinkDetailTitle",
+		"controller": "checkListModelObjectDetailController",
+		"uuid": "de29ed7ffa5d415fb38138f7eda5922e",
+		"permission": "26110cbc14374f7895d1d7934efd0a63"
+	},
+	{
+		"id": "checklist.meeting.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.meeting.entityMeetingTitle",
+		"controller": "hsqeMeetingListController",
+		"uuid": "bd9639ffb81fdf4bc81825e3558e4d7c"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "app/components/grid/generic-structure/generic-container.html",
+		"title": "hsqe.checklist.groupingContainer",
+		"uuid": "bc0fc132af624c33b5a7672384268c90",
+		"controller": "platformGenericStructureController",
+		"mainService": "hsqeCheckListDataService",
+		"configurationService": "checkListMainStandardConfigurationService",
+        "enableCaching": "true"
+	}
+]

@@ -1,0 +1,75 @@
+<script type="text/ng-template" id="param-col.html">
+    <div class="platform-form-col"></div>
+</script>
+
+<script type="text/ng-template" id="param-row1.html">
+    <div style="display: flex;"></div>
+    <div class="invalid-cell invalid-form" data-ng-if="$$row$$.rt$hasError()" data-ng-bind="$$row$$.rt$errorText()"></div>
+</script>
+
+<script type="text/ng-template" id="param-domain.html">
+    <div data-domain-control class="form-control"
+         data-domain="$$domain$$"
+         data-readonly="parameter.rt$readonly()"
+         data-model="parameter.ParameterValueVirtual"
+         data-options="domainOptions"
+         data-change="onChange('ParameterValueVirtual')"
+         data-tabStop="true"></div>
+</script>
+
+<script type="text/ng-template" id="param-lookup.html">
+    <div data-construction-system-main-instance-parameter-value-lookup class="control-directive"
+         data-ng-model="parameter.ParameterValueFk"
+         data-entity="parameter"
+         data-options="options"
+         data-config="parameter"
+         data-ng-change="onChange('ParameterValueFk')"
+         data-tabStop="true"></div>
+</script>
+
+<script type="text/ng-template" id="param-uom.html">
+    <div style="line-height: 28px; margin-left: 8px;white-space: nowrap;">$$uom$$</div>
+</script>
+
+<script type="text/ng-template" id="btn-query.html">
+    <span class="input-group-btn">
+        <button class="btn btn-default input-sm" data-tabStop="true" style="margin-left: -1px;width: 23px;" data-ng-click="isQueryShown=!isQueryShown" title="{{'constructionsystem.master.entityQuantityQuery' | translate}}">
+            <img data-ng-src="cloud.style/content/images/control-icons.svg#ico-input-query" />
+        </button>
+    </span>
+</script>
+
+<script type="text/ng-template" id="btn-property-name.html">
+    <span class="input-group-btn">
+        <button class="btn btn-default input-sm" data-tabStop="true" style="margin-left: -1px;width: 23px;" data-ng-click="isPropertyNameShown=!isPropertyNameShown" title="{{'constructionsystem.master.entityPropertyName' | translate}}">
+            <img data-ng-src="cloud.style/content/images/control-icons.svg#ico-input-property" />
+        </button>
+    </span>
+</script>
+
+<script type="text/ng-template" id="param-row2.html">
+    <div style="margin-top:5px;" data-ng-show="isQueryShown">
+        <div data-domain-control class="form-control"
+             data-domain="description"
+             data-model="parameter.QuantityQuery"
+             data-change="onChange('QuantityQuery')"
+             data-tabStop="true"></div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="param-row3.html">
+    <div style="margin-top:5px;" data-ng-show="isPropertyNameShown">
+        <div data-construction-system-main-instance-parameter-property-name-combobox class="control-directive"
+             data-ng-model="parameter.ModelPropertyFk"
+             data-entity="parameter"
+             data-options="propertyNameOptions"
+             data-ng-change="onChange('ModelPropertyFk')"
+             data-tabStop="true"></div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="param-holder.html">
+    <div class="platform-form-col">
+        <input disabled type="text" class="form-control" data-tabStop="true" />
+    </div>
+</script>

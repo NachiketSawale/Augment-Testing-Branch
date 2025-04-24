@@ -1,0 +1,17 @@
+<div id="ui-layout-r">
+	<as-split direction="vertical">
+		<as-split-area [size]="40">
+			<div class="flex-box flex-column flex-element subview-content">
+				<ui-common-form [entity]="filterSettings" [entityRuntimeData]="formEntityRuntimeData" [formConfig]="formConfiguration" (valueChanged)="valueChanged($event)"></ui-common-form>
+			</div>
+		</as-split-area>
+		<as-split-area [size]="60">
+			<div class="flex-box flex-column flex-element subview-content">
+				<ui-common-grid
+					[configuration]="configuration"
+					(selectionChanged)="selectionChanged($event)">
+				</ui-common-grid>
+			</div>
+		</as-split-area>
+	</as-split>
+</div>

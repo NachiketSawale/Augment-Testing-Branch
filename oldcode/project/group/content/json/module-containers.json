@@ -1,0 +1,25 @@
+[
+	{
+		"id": "project.group.projectgroup.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.group.projectGroupList",
+		"controller": "projectGroupProjectGroupListController",
+		"uuid": "5f2c8f5b4d24470f8ff69e81a129f5b8"
+	},
+	{
+		"id": "project.group.projectgroup.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.group.projectGroupDetail",
+		"controller": "projectGroupProjectGroupDetailController",
+		"uuid": "c1592f6e58514d3e904e9e5a4a046e35",
+		"permission": "5f2c8f5b4d24470f8ff69e81a129f5b8"
+	},
+	{
+		"id": "project.group.translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "7d9123130ed4437cba136e05a0911a06",
+		"permission": "5f2c8f5b4d24470f8ff69e81a129f5b8"
+	}
+]

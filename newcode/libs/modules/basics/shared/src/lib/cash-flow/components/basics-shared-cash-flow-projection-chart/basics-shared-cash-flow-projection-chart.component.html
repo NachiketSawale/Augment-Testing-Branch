@@ -1,0 +1,17 @@
+<as-split #split [direction]="'horizontal'" unit="percent">
+	<as-split-area [size]="40">
+		<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + config.uuid">
+			<ui-common-grid #gridHost [configuration]="config" (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+		</div>
+	</as-split-area>
+
+	<as-split-area [size]="60">
+		<div style="text-align:center;padding:20px 20px 0 20px;">{{ chartTitle }}</div>
+		<div style="padding:20px;height:100%">
+			<ui-common-chart-view
+				[chartType]="chartType"
+				[chartDataSource]="chartDataSource"
+			></ui-common-chart-view>
+		</div>
+	</as-split-area>
+</as-split>

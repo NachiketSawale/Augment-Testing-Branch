@@ -1,0 +1,122 @@
+<script type="text/ng-template" id="emailinput.html">
+	<div data-platform-email-input data-entity="entity" data-control-options="$$row$$" $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="urlinput.html">
+	<div data-platform-url-input data-entity="entity" data-control-options="$$row$$" $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="radiobuttongroup.html">
+	<div data-platform-radio-button-group data-entity="entity" data-control-options="$$row$$" $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="dropdown.html">
+	<div data-platform-drop-down data-entity="entity" data-control-options="$$row$$" $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="editdropdown.html">
+	<div data-platform-edit-drop-down data-entity="entity" data-control-options="$$row$$" $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="directive.html">
+	<div class="control-directive" $$directive$$ ng-readonly="$$row$$.readonly" data-options="$$row$$.options" $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="form-group.html">
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="$$group$$.isOpen">
+			<div data-accordion-heading>
+				<span class="platform-form-group-header-text">{{$$group$$.userheader || $$group$$.header}}</span>
+				<span class="platform-form-group-header">
+                 <div class="toggleImg control-icons" data-ng-class="$$group$$.isOpen ? 'ico-up' : 'ico-down'"></div>
+              </span>
+			</div>
+			<div class="platform-form-group">
+				<div class="group-description">$$groupDescription$$</div>
+				$$rows$$
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="form-col.html">
+	<div class="platform-form-col">
+		%%control%%
+		<div class="invalid-cell invalid-form" data-ng-if="YYrowYY.rt$hasError()" data-ng-bind="YYrowYY.rt$errorText()"></div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="form-col-grouped.html">
+	<div class="platform-form-col">
+		<span class="input-group">
+			%%control%%<span class="input-group-btn">%%navigator%%</span>
+		</span>
+		<div class="invalid-cell invalid-form" data-ng-if="YYrowYY.rt$hasError()" data-ng-bind="YYrowYY.rt$errorText()"></div>
+	</div>
+</script>
+
+<!-- UseCase:  2 elements in a row, and end of the row shown a naviagtor-button -->
+<script type="text/ng-template" id="form-col-composite-grouped.html">
+	<div class="platform-form-col $$cssClass$$">
+		<span class="input-group">
+			%%control%%
+		</span>
+		<div class="invalid-cell invalid-form" data-ng-if="YYrowYY.rt$hasError()" data-ng-bind="YYrowYY.rt$errorText()"></div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="form-row.html">
+	<div class="platform-form-row form-group $$cssClass$$">
+		<label class="platform-form-label" $$toolTip$$>$$label$$$$image$$</label>
+		$$col$$
+	</div>
+</script>
+
+<script type="text/ng-template" id="form-row-unlabeled.html">
+	<div class="platform-form-row form-group $$cssClass$$">
+		$$col$$
+	</div>
+</script>
+
+<script type="text/ng-template" id="navigator.html">
+	<span navigator-button class="input-group-btn" $$placeholder$$></span>
+</script>
+
+<script type="text/ng-template" id="domain.html">
+	<div data-domain-control data-domain="$$domain$$" $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="dynamic.html">
+	<div data-dynamic-domain-control $$placeholder$$></div>
+</script>
+
+<script type="text/ng-template" id="form-composite-control.html">
+	<div>
+		<form class="form-inline" role="form" novalidate>
+			<div class="input-group">
+				<div ng-repeat="crow in row.options.rows">
+					<div class="platform-form-col">
+						<div data-platform-form-row data-entity="entity" data-row="crow"></div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</script>
+
+<script type="text/ng-template" id="optiongroupctrl.html">
+	<radiolistctrl data-options="$$row$$" valueMember="$$valueMember$$" displayMember="$$displayMember$$"
+	               $$placeholder$$></radiolistctrl>
+	<div class="invalid-cell invalid-form" data-ng-if="$$row$$.rt$hasError()" data-ng-bind="$$row$$.rt$errorText()"></div>
+</script>
+
+<script type="text/ng-template" id="tristatecheckboxctrl.html">
+	<tristatechk $$placeholder$$
+	"></tristatechk>
+	<div class="invalid-cell invalid-form" data-ng-if="$$row$$.rt$hasError()" data-ng-bind="$$row$$.rt$errorText()"></div>
+</script>
+
+<script type="text/ng-template" id="telephonefax.html">
+	<buttoninputctrl data-options="$$row$$" $$placeholder$$></buttoninputctrl>
+	<div class="invalid-cell invalid-form" data-ng-if="$$row$$.rt$hasError()" data-ng-bind="$$row$$.rt$errorText()"></div>
+</script>

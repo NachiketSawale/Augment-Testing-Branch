@@ -1,0 +1,16 @@
+{
+	"name": "modules-controlling-generalcontractor",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/controlling/generalcontractor/src",
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/modules/controlling/generalcontractor/jest.config.ts"
+			}
+		}
+	},
+	"tags": []
+}

@@ -1,0 +1,187 @@
+{
+  "procurement": {
+    "requisition": {
+      "entityDatePriceFixing": "Date Price Fixing",
+      "confirmDeleteTitle": "Delete Requisition",
+      "confirmDeleteHeader": "Do you want to delete the selected Requisition? Attention: Dependent data will be deleted!",
+      "selectedRequisition":"Please select a requisition first",
+      "moduleName": "Requisition",
+      "placeHolder": "{{p_0}} of {{p_1}} Records testing",
+      "ReqHeaderReferenceUniqueError": "The reference code should be unique",
+      "code": "Requisition Code",
+      "requisitionName": "Requisition Name",
+      "changeRequisitionCodeWizard":"Change Requisition Code Wizard",
+      "frameworkMaterialCatalogSearchDialog": "Framework Material Catalog Search Dialog",
+      "changeBaseRequisition":{
+        "caption":"Assign Basis Requisition"
+      },
+      "headerGrid": {
+        "reqheaderGridTitle": "Requisitions",
+        "reqheaderPrcConfiguration": "Contract Configuration",
+        "reqheaderChangeRequest": "Change Request",
+        "reqheaderChangeRequestDescription": "Change Request Description",
+        "reqheaderBasisRequisition": "Basis Requisition",
+        "reqheaderBasisRequisitionDescription": "Basis Requisition Name",
+        "reqheaderStrategy": "Strategy",
+        "reqheaderContractType": "Contract Type",
+        "rfqCode": "RFQ Code",
+        "rfqDescription": "RFQ Description",
+        "reqFrameworkMaterialCatalog": "Framework Material Catalog"
+      },
+      "headerForm": {
+        "reqheaderFormTitle": "Requisition Detail",
+        "headerGroupHeader": "Header",
+        "headerGroupDesiredSupplier": "Suggested Supplier",
+        "headerGroupDeliveryRequirements": "Delivery Requirements",
+        "headerGroupUserDefinedFields": "User Defined Fields",
+        "headerGroupSystem": "System",
+        "reqheaderIncoterms": "Incoterms"
+      },
+      "variant": {
+        "reqVariantListTitle": "Requisition Variant",
+        "reqVariantDetailTitle": "Requisition Variant Detail",
+        "reqBoqVariantListTitle": "Requisition Boq Variant",
+        "reqBoqVariantDetailTitle": "Requisition Boq Variant Detail",
+        "reqItemVariantListTitle": "Requisition Item Variant",
+        "reqItemVariantDetailTitle":  "Requisition Item Variant Detail",
+        "selectBoqVariantTitle": "Select Boq Variant",
+        "selectItemVariantTitle": "Select Item Variant",
+        "selectBoqVariant":"Select Boq Variant",
+        "selectBoqHeader":"Select BoQ Header :",
+        "selectBoqItem": "Choose Boq Item :",
+        "errorMessage": "Error Message",
+        "statusError": "Requisition status is not allowed to manage Variant!",
+        "variantNoSelectMessage": "No variant highlighted!",
+        "noBoqDataMessage": "There is no BOQ data!",
+        "noItemDataMessage": "There is no item data!",
+        "check": "Check",
+        "variantCodeUniqueError": "The  code should be unique"
+      },
+      "contract": {
+        "createContractWizardHeaderText": "Create Contract",
+        "createContractWizardBusinessName1": "Name",
+        "createContractWizardBusinessName2": "Affix Name",
+        "telephone":"Telephone",
+        "createContractWizardCity": "City",
+        "createContractWizardDescription": "Description",
+        "createContractWizardIos2": "Country",
+        "createContractWizardMatchCode": "MatchCode",
+        "createContractWizardStreet": "Street",
+        "createContractWizardZipCode": "ZipCode",
+        "createContractWizardNoDataFeekBack": "no data show , Please change your potential supplier",
+        "createContractWizardFail": "create contract wizard fail",
+        "createContractWizardBack": "Back",
+        "next": "Search",
+        "cancel": "Cancel",
+        "createContractWizardNoSupplierChoosen": "Please choose a supplier first",
+        "disableCreateContract": "The contract cannot be generated since the requisition is not approved",
+        "selectCountryError": "Select a country, please",
+        "fillBidderError": "Fill Bidder Name, please",
+        "selectEvaluationError": "Select a Evaluation Mark, please",
+        "changeOrderReqNotAllowedToCreateContract":"Change order requisition is not allowed to create contract directly!",
+        "cannotCreateContractDueToStatus":"Cannot create contract due to status.",
+        "cannotCreateContractDueToNoBaseContract":"Can not create change order contract directly due to there are no valid base contract(s)!",
+        "createChangeOrderContract": "Create Change Order Contract",
+        "selectOneBaseContract":"Please select one base contract to proceed:",
+        "changeOrderReqCreateContract": "The requisition '{{code}}: {{desc}}' has been ordered, do you still want to create contract again?",
+        "disableCreateContractByOrdered": "This requisition has been ordered and cannot create contract again!",
+        "createChangeContractSuccessfully": "Create change order contract successfully!"
+      },
+      "tab": {
+        "tabHeader": "Header",
+        "tabDetails": "Detail",
+        "tabItem": "Item",
+        "tabGeneral": "General"
+      },
+      "view": {
+        "viewHeader": "Header View",
+        "viewDetail": "Detail View",
+        "viewItem": "Item View",
+        "viewGeneral": "General View",
+        "viewBoq": "BoQ View"
+      },
+      "copyRequisition": {
+        "saveFail": "Copy Requisition Failed, Please try again.."
+      },
+      "rfq": {
+        "createRfqWizardFail": "Create Rfq Wizard failed.",
+        "createRfqWizardheaderText": "Request for Quotation",
+        "disableCreateRfq": "Can't create the request for quotation for the selected requisition.\nThe status of the requisition should be approved.\nAnd aslo it is not requested for quote or contracted",
+        "notSelectRequisitionError": "Please choose a requisition first.",
+        "disableAcceptedError": "The requisition is not approved.",
+        "disableProgressError": "The current Requisition status will not allow creating Request for Quotation.",
+        "baseNotCreated":"Change order RFQ cannot be created as base RFQ is not found!",
+        "baseStatusNotAllowed":"Change order REQ is not allowed to create change order RFQ as the base contract has been created!",
+        "selfStatusNotAllowed":"Current status does not allow creating Request for Quotation!"
+      },
+      "wizard": {
+        "copy":{
+          "requisition": "Copy Requisition"
+        },
+        "create":{
+          "rfq":{
+            "pass":"Skip Search"
+          },
+          "wizard": "Create Wizard",
+          "contract":"Create Contract",
+			  "createContractSuccessfully": "Create contract(s) successfully!",
+			  "newCode": "Code(s) : {{newCode}} ",
+          "request":{
+            "for":{
+              "quote":"Create Request For Quote",
+              "createSucceed": "Create Rfq(s) successfully!",
+				  "createSuccessfully": "Create RfQ successfully!"
+				}
+          }
+        },
+        "change":{
+          "status":{
+            "headerText":"Change Requisition Status"
+          },
+          "code":{
+            "headerText":"Change Requisition Code"
+          },
+          "ftatus":{
+            "for":{
+              "item":{
+                "headerText":"Change Procurement Item Status"
+              }
+            }
+          }
+        },
+        "renumberAllBoqs":"Renumber all BoQs in current requisition",
+        "isActivateCaption":"Warning",
+        "isActiveMessage":"Wizard cannot be used due to selected record's status!",
+			"noRequisition": "Please select a Requisition first",
+			"contract": {
+				"header": "Create Contract",
+				"contact": "Contact",
+				"isCreateFromVariants": "Create from Variants"
+			},
+        "editBudget": {
+          "title": "Enable Budget Fields",
+          "unusable": "Wizard cannot be used due to system option ‘915 Budget editing in procurement’ is not set to 3",
+          "success": "prc/boq item budget fields are editable",
+          "wizardTranslation": "Enable Item/BoQ Budget Fields"
+        }
+      },
+      "sidebarInfo": {
+        "headerItem": {
+          "status": "Status",
+          "dateReceived": "Received Date",
+          "dateRequired": "Required Date",
+          "dateCanceled": "Canceled Date",
+          "location": "Address"
+        },
+        "clerk": {
+          "email": "Email",
+          "phone": "Phone",
+          "mobile": "Mobile",
+          "fax": "Fax"
+        }
+      },
+      "requisitionCreateDialogTitle": "Create Requisition",
+		 "entityChangeOrder": "Change Order"
+    }
+  }
+}

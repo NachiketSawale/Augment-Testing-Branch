@@ -1,0 +1,14 @@
+{
+	"$schema": "../../node_modules/@compodoc/compodoc/src/config/schema.json",
+	"name": "iTWO 4.0 Documentation",
+	"output": "dist/compodoc",
+	"tsconfig": "libs/documentation/compodoc/tsconfig.doc.json",
+	"customFavicon": "libs/documentation/assets/images/favicon.ico",
+	"customLogo": "libs/documentation/assets/images/rib-logo.svg",
+	"includes": "libs/documentation/compodoc/externals/",
+	"extTheme": "libs/documentation/compodoc/theme/",
+	"templates": "libs/documentation/compodoc/templates",
+	"hideGenerator": true,
+	"minimal": false,
+	"assetsFolder": "libs/documentation/assets"
+}

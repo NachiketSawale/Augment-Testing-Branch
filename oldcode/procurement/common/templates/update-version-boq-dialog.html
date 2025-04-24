@@ -1,0 +1,94 @@
+<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<div cloud-common-overlay data-loading="modalOptions.isLoading"></div>
+<div class="modal-body">
+		<h3 data-ng-bind="modalOptions.selectBaseBoQ"></h3>
+		<div class="platform-form-group">
+			<div prc-common-wizard-update-version-boq-header-list-directive></div>
+		</div>
+		<br/>
+		<h3 data-ng-bind="modalOptions.updateOption"></h3>
+		<div class="platform-form-group" style="border: #dcdcdc 1px solid;padding-left: 100px;">
+			<div class="platform-form-row">
+				<div class="col-xs-2" style="width: 120px;">
+					{{modalOptions.targetModule}}
+					<label style="color: red;">*</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="ms-checkbox-multi-select">
+						<input type="checkbox" data-ng-model="targetRequisition" data-ng-change="onTargetRequisition()" style="margin-bottom: 0;">
+						<span class="ng-binding">Requisition</span>
+					</label>
+				</div>
+				<div class="col-xs-2" style="width: 120px; margin-left: 100px;">
+					{{modalOptions.updateMode}}
+					<label style="color: red;">*</label>
+				</div>
+				<div class="col-xs-2">
+					<label class="ms-checkbox-multi-select">
+						<input type="checkbox" data-ng-model="updateAllFields" data-ng-click="onUpdateAllFields()" data-ng-checked="isUpdateAllFields()" style="margin-bottom: 0;">
+						<span class="ng-binding">{{modalOptions.updateAllFields}}</span>
+					</label>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="col-xs-2" style="width: 120px;"></div>
+				<div class="col-xs-2">
+					<label class="ms-checkbox-multi-select">
+						<input type="checkbox" data-ng-model="targetQuotation" data-ng-change="onTargetQuotation()" style="margin-bottom: 0;">
+						<span class="ng-binding">Quotation</span>
+					</label>
+				</div>
+				<div class="col-xs-2" style="width: 120px;margin-left: 100px;"></div>
+				<div class="col-xs-5">
+					<label class="ms-checkbox-multi-select">
+						<input type="checkbox" data-ng-model="updatePartialFields" data-ng-click="onUpdatePartialFields()" data-ng-checked="isUpdatePartialFields()" style="margin-bottom: 0;">
+						<span class="ng-binding">{{modalOptions.updatePartialFields}}</span>
+					</label>
+					<label class="ms-checkbox-multi-select" style="margin-left: 10px;width: 200px; height: 20px;" data-ng-show="isUpdatePartialFields()" style="margin-bottom: 0;">
+						<div data-prc-common-boq-item-column-combox
+						     data-ng-model='updateModeOption.columnModels'></div>
+					</label>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="col-xs-2" style="width: 120px;">
+				</div>
+				<div class="col-xs-10">
+					<label class="ms-checkbox-multi-select">
+						<input type="checkbox" data-ng-model="targetContract" data-ng-change="onTargetContract()" style="margin-bottom: 0;">
+						<span class="ng-binding">Contract</span>
+					</label>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="col-xs-2" style="width: 120px;">
+				</div>
+				<div class="col-xs-10">
+					<label class="ms-checkbox-multi-select">
+						<input type="checkbox" data-ng-model="targetPes" data-ng-change="onTargetPes()" style="margin-bottom: 0;">
+						<span class="ng-binding">PES</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<h3 data-ng-bind="modalOptions.note" style="margin-top: 20px;"></h3>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-col">{{modalOptions.note1}}</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-col">{{modalOptions.note2}}</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-col">{{modalOptions.note3}}</div>
+			</div>
+		</div>
+</div>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.onUpdate()" data-ng-disabled="modalOptions.isDisableUpdate()">
+		{{modalOptions.updateBtnText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.cancelBtnText}}
+	</button>
+</footer>

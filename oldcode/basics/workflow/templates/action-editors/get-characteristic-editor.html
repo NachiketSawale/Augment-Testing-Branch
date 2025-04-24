@@ -1,0 +1,97 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<!--Object Id-->
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.objectId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.objectId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<!--Radio Container-->
+		<div class="radiolist-container">
+			<div data-ng-model="input.editorMode" data-radiolistctrl displayMember="description"
+			     on-selection-changed="onRadioGroupOptChanged(value)" options="radioGroupOpt"
+			     valueMember="value"></div>
+		</div>
+
+		<!--Standard Mode-->
+		<div class="platform-form-group">
+			<!--SectionId-->
+			<div class="platform-form-row" data-ng-show="input.editorMode == 1">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.sectionId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-basics-characteristic-section-combobox data-ng-model="input.sectionId"
+					     disabled="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+			<!--Code-->
+			<div class="platform-form-row" data-ng-show="input.editorMode == 1">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.code' | translate }}</label>
+				<div class="platform-form-col codelookup">
+					<div data-domain="select" data-domain-control
+					     data-ng-model="input.code" data-options="selectOptions"
+					     readonly="codeMirrorOptions.readOnly || input.sectionId === ''"></div>
+				</div>
+			</div>
+		</div>
+
+		<!--Expert Mode-->
+		<div class="platform-form-group">
+			<!--SectionId-->
+			<div class="platform-form-row" data-ng-show="input.editorMode == 2">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.sectionId' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.sectionId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<!--Code-->
+			<div class="platform-form-row" data-ng-show="input.editorMode == 2">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.code' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.code" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputCharacteristic' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.characteristicId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

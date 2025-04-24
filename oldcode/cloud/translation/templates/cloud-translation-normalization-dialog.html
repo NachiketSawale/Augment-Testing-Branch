@@ -1,0 +1,34 @@
+<div class="flex-element" data-ng-controller="cloudTranslationNormalizationDialogController">
+    <div data-cloud-common-overlay data-loading="loading" data-info2="message"></div>
+
+    <div data-ng-show="displayInfo">
+        {{instructionText}}
+    </div>
+
+    <div data-ng-show="displayInfo" style="margin-top: 10px;">
+        {{warningText}}
+    </div>
+
+    <div data-ng-hide="loading">
+        <h5>{{notificationText}}</h5>
+        <div class="flex-box flex-element">
+            <div class="flex-element platform-form-group" data-ng-repeat="stat in data">
+                <h4>{{stat.Info}}</h4>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">{{stat.Total}}</div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">{{stat.Glossary}}</div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">{{stat.ReferencingAGlossary}}</div>
+                </div>
+                <div class="platform-form-row">
+                    <div class="platform-form-label">{{stat.NotReferencingAGlossary}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

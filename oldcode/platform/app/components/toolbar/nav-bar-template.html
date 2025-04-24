@@ -1,0 +1,40 @@
+<div class="btn-group">
+	<button data-ng-repeat="navBarAction in tools.navBarActions track by navBarAction.key | orderBy:'sortOrder':false"
+		title="{{navBarAction.tooltip | translate}}" data-ng-click="navBarAction.fn()" data-ng-disabled="navBarAction.disabled"
+		data-ng-show="navBarAction.visible" class="navbar-btn {{'e2e-navbar-btn-' + navBarAction.key}}">
+		<span data-ng-if="navBarAction.indicator"
+			data-ng-class="(navBarAction.indicator) ? 'nav-indicator' : ''"></span>
+		<svg data-cloud-desktop-svg-image data-watch="navBarAction.iconCSS"
+			data-sprite="{{splitIcoCssClass(navBarAction.iconCSS, 0)}}"
+			data-image="{{splitIcoCssClass(navBarAction.iconCSS, 1)}}"></svg>
+	</button>
+</div>
+<div class="btn-group" dropdown ng-show="optEnabled">
+	<button type="button" class="dropdown-toggle navbar-btn" title="{{'platform.navOptionsMenu' | translate}}">
+
+		<svg data-cloud-desktop-svg-image data-sprite="tlb-wh-icons" data-image="ico-menu"></svg>
+
+	</button>
+	<ul class="dropdown-menu showimages" role="menu">
+		<li
+			data-ng-repeat="defaultOption in tools.defaultOptionsActions track by defaultOption.key | orderBy:'sortOrder':false">
+			<button type="button" title="{{defaultOption.description}}" data-ng-click="defaultOption.fn()"
+				data-ng-disabled="defaultOption.disabled" data-ng-show="defaultOption.visible"
+				data-ng-class="defaultOption.iconCSS">
+				{{defaultOption.description}}
+			</button>
+		</li>
+		<li class="divider" data-ng-show="showDevider"></li>
+		<li
+			data-ng-repeat="moduleOption in tools.moduleOptionsActions track by moduleOption.key| orderBy:'sortOrder':false">
+			<button type="button" title="{{defaultOption.description}}" data-ng-click="moduleOption.fn()"
+				data-ng-disabled="moduleOption.disabled" data-ng-show="moduleOption.visible"
+				data-ng-class="moduleOption.iconCSS">
+				{{defaultOption.description}}
+			</button>
+		</li>
+	</ul>
+</div>
+
+
+<!--<div data-platform-menu-list data-list="tools"></div>-->

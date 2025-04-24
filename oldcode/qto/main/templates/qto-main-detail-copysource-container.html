@@ -1,0 +1,56 @@
+<style>
+    .boq-spec .wysiwyg-toolbar {
+        display: none;
+    }
+</style>
+
+<div data-platform-kendo-splitter-adjust class="flex-element border-none" option="{panes: [{ collapsible:true, size:'130px', min:'130px' },{ collapsible:false, size:'80%' }],orientation:'vertical'}">
+    <div class="pane-t modal-wrapper" data-ng-controller="qtoMainDetailLookupController">
+        <div class="platform-form-group platform-lg">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'boq.main.copyFrom' | translate}}</label>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="select"
+                         data-model="boqType.current" data-options="boqTypeOptions" data-change="boqTypeChanged(boqType.current)" data-readonly="boqTypeReadonly">
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'boq.main.projectList' | translate}}</label>
+                <div class="platform-form-col">
+                    <div class="lg-4 md-4" qto-main-project-lookup-dialog data-ng-model="selectedProject.Id" data-config="config.selectConfig" data-options="projectLookupOptions"></div>
+                    <input class="form-control lg-8 md-8" data-ng-model="selectedProject.ProjectName" readonly />
+                </div>
+            </div>
+
+            <div class="platform-form-row" data-ng-controller="qtoMainBoqHeaderLookupController">
+                <label class="platform-form-label">{{'boq.main.boqHeaderSel' | translate}}</label>
+
+                <div class="platform-form-col">
+                    <div class="lg-4 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedBoqHeader.Id"
+                         data-options="lookupOptions"
+                         data-entity="entity"></div>
+                    <input class="form-control lg-8 md-8" data-ng-model="selectedBoqHeader.Description" readonly />
+                </div>
+            </div>
+
+            <div class="platform-form-row" data-ng-controller="qtoMainHeaderLookupController">
+                <label class="platform-form-label">{{'qto.main.header.gridTitle' | translate}}</label>
+
+                <div class="platform-form-col">
+                    <div class="lg-4 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedQtoHeader.Id"
+                         data-options="lookupOptions"
+                         data-entity="entity"></div>
+                    <input class="form-control lg-8 md-8" data-ng-model="selectedQtoHeader.Description" readonly />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-platform-kendo-splitter-adjust class="pane-b flex-element border-none" option="{panes: [{ collapsible:false, min:'50%' },{ collapsible:true, size:'100px' }],orientation:'vertical'}">
+        <div class="pane-t" data-ng-controller="qtoMainLineLookupController" data-platform-dragdrop-component="ddTarget">
+            <div class="flex-element relative-container filler-absolute">
+                <platform-Grid class="border-all" data="gridData"></platform-Grid>
+            </div>
+        </div>
+    </div>
+</div>

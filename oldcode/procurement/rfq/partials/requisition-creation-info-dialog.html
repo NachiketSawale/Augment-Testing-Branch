@@ -1,0 +1,37 @@
+<div data-ng-controller="procurementRfqRequisitionInfoDialogController">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{modalOptions.headerText}} </h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+        <div class="media" data-ng-repeat="text in infoTexts">
+            <div class="pull-left">
+                <div class="{{text.icon}} circle"></div>
+            </div>
+            <div class="media-body">
+                <div class="flex-box">
+                    <div class="message-header">
+                        <span class="title">{{text.type}}</span>
+                    </div>
+                </div>
+                <div class="message-body">
+                    {{text.info}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-show="buttonStatus.showOkButton">
+            {{modalOptions.OkButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.proceed()" data-ng-show="buttonStatus.showCancelAndProceedButton">
+            {{modalOptions.ProceedButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"  data-ng-show="buttonStatus.showCancelAndProceedButton">
+            {{modalOptions.CancelButtonText}}
+        </button>
+    </footer>
+</div>

@@ -1,0 +1,20 @@
+﻿<div class="platform-form-group">
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+            <div class="control-directive" data-basics-material-price-condition-simple-combobox
+                 data-ng-model="parentItem.PrcPriceConditionFk"
+                 data-options="lookupOptions"
+                 data-ng-change="priceConditionChanged()"
+                 data-entity="parentItem"
+                 data-config="config"
+                 style="margin-bottom: 8px;"></div>
+        </div>
+    </div>
+</div>
+<div cloud-common-overlay data-info2="loadingText" data-loading="service.isLoading"></div>
+
+<platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+
+<div class="text-right margin-top-ld">
+    <span> {{'cloud.common.entityTotal' | translate}} : {{ service.total | number:2 }}</span><span style="margin-left: 20px;">{{'basics.material.totalCurrency' | translate}} : {{ service.totalOc | number:2 }}</span>
+</div>

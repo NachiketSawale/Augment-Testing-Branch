@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=11" />
+		<title>RIB 4.0 Internet Portal</title>
+		<link rel="icon" type="image/vnd.microsoft.icon" href="cloud.style/content/images/app/rib-logo.ico" />
+		<noscript>Your browser does not support JavaScript!</noscript>
+		<script language="JavaScript">
+			if (window.location.pathname.lastIndexOf("/") !== window.location.pathname.length - 1) {
+				window.location.pathname += "/";
+			} else {
+				var href = '<base href="' + window.location.pathname + '"/>';
+				document.write(href);
+			}
+		</script>
+
+		<link type="text/css" rel="stylesheet" href="_bundle/cloud-min.css?t=1628347848002" />
+		<link type="text/css" rel="stylesheet" href="_bundle/modules-min.css?t=1628347848002" />
+	</head>
+	<body>
+		<div data-ng-controller="platformController" style="height: 100%">
+			<div id="appContainer" data-ui-view></div>
+		</div>
+
+		<script type="text/javascript" src="config.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/lib-min01.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/lib-min02.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/app-min.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/modules-min01.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/modules-min02.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/modules-min03.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/modules-min04.js?t=1628347848002"></script>
+		<script type="text/javascript" src="_bundle/modules-min05.js?t=1628347848002"></script>
+
+		<script type="text/javascript">
+			function loadCSS(filename) {
+				var link = document.createElement("link");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				link.href = filename + globals.timestamp;
+				document.getElementsByTagName("head")[0].appendChild(link);
+			}
+
+			// Chrome, Safari ≥ 3, Opera ≥ 14
+			var isWebkit = "WebkitAppearance" in document.documentElement.style;
+
+			// Chrome, Opera ≥ 14, Android 4.0.4
+			var isChromium = !!window.chrome;
+
+			if (isChromium || isWebkit) {
+				loadCSS("_bundle/app-webkit-min.css");
+			}
+
+			// Touch device detection
+			var isTouch =
+				"ontouchstart" in window || // works on most browsers
+				navigator.maxTouchPoints; // works on IE10/11 and Surface
+
+			if (isTouch) {
+				loadCSS("_bundle/app-touch-min.css");
+			}
+
+			globals.portal = true; // switch to portal mode
+		</script>
+	</body>
+</html>

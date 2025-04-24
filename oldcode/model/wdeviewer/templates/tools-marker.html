@@ -1,0 +1,25 @@
+<div class="flex-box flex-column">
+	<div class="toolbar">
+		<button type="button" title="{{ 'model.wdeviewer.markup.mulAnnotationMsg' | translate }}" class="app-small-icons ico-model-annotation {{ istoolAnno ? 'active':'' }}" data-ng-click="toolAnnoClick()" data-ng-show="toolAnnoShow()"/>
+		<button type="button" title="{{ 'model.wdeviewer.markup.markCloud' | translate }}" class="tlb-icons ico-mark-cloud {{ istoolCloud ? 'active':'' }}" data-ng-click="toolCloudClick()" />
+	</div>
+
+	<div class="popup-content flex-box flex-column" style="overflow: auto;">
+		<ul class="showimages popup-menu dropdown-menu-right">
+			<li class="collapsable">
+				<button type="button" class="tlb-icons ico-mark-text" title="{{ 'model.wdeviewer.markup.fontScaleTitle' | translate }}"/>
+				<button type="button" class="tlb-icons ico-zoom-out" title="{{ 'model.wdeviewer.markup.decrease' | translate }}" data-ng-click="fontSizeDecrease()" ></button>
+				<input style="width:50px" data-ng-model="fontSize" data-ng-blur="fontSizeSet()"/>
+				<button type="button" class="tlb-icons ico-zoom-in" title="{{ 'model.wdeviewer.markup.increase' | translate }}" data-ng-click="fontSizeIncrease()" ></button>
+			</li>
+			<li class="collapsable divider"></li>
+			<li class="collapsable" data-ng-repeat="markerItem in markerItems" data-ng-disabled="{{markerItem.disabled}}">
+				<button type="button" class="{{markerItem.iconClass}} {{ markerItem.isActive ? 'active':'' }}" title="{{markerItem.caption}}" data-ng-click="markerItem.fn(markerItem)" >
+					<span>
+						{{getValue(markerItem)}}
+					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>

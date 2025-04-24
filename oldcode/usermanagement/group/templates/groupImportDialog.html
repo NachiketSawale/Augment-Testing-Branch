@@ -1,0 +1,29 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+    <div data-cloud-common-overlay loading="loadingOption.loading" data-info="loadingOption.info"></div>
+    <div class="toolbar">
+        <h3 class="title fix font-bold">{{'usermanagement.group.groupImport.adsGroups'|translate}}</h3>
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div data-ng-if="avGridData" class="flex-element flex-box flex-column grid-wrapper flex-basis-auto">
+        <platform-Grid data="gridData"></platform-Grid>
+    </div>
+    <div data-ng-if="!avGridData">
+        <div class="container-overlay">
+            {{'usermanagement.group.groupSync.noGroupPath'|translate}}
+        </div>
+    </div>
+    <div>
+        <div data-domain-control data-domain="boolean" data-model="settings.createAssign"
+             data-options="settings.createAssignOpt" class="platform-form-group margin-top-ld"></div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="!modalOptions.canImport()"
+            data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

@@ -1,0 +1,16 @@
+<h1>{{'basics.workflow.sendRfQDataFormats.dataFormats' | translate}}</h1>
+
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQDataformat.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDataformat.dataFormat' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="format in Context.DataFormatList">
+		<td><input ng-model="Context.SelectedDataFormat" type="radio" value="{{format.Id}}"></td>
+		<td><span data-ng-bind="format.Description"></span></td>
+	</tr>
+	</tbody>
+</table>

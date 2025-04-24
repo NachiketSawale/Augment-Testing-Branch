@@ -1,0 +1,26 @@
+<div data-ng-controller="estimateMainRiskAssignDialogController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="onClose()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalTitle | translate }} </h2>
+    </header>
+    <section class="modal-body">
+        <div class="fullheight">
+            <div class="fullheight" style="overflow-y: auto">
+                <div>
+                    <div data-platform-form-container data-form-container-options="formContainerOptions"
+                         entity="dataItem"
+                         class="fullheight"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="isDisable()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' |
+            translate}}
+        </button>
+    </footer>
+</div>

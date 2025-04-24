@@ -1,0 +1,13 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "konfiguracija",
+      "configurationTitle": "konfiguracija",
+      "entityChatbotConfigurationDescription": "Aprašas",
+      "entityChatbotConfigurationIslive": "Tiesiogiai",
+      "entityChatbotConfigurationUpdatedAt": "Atnaujinta",
+      "entityChatbotHeaderLanguageFK": "Kalba",
+      "headerTitle": "Antrašte"
+    }
+  }
+}

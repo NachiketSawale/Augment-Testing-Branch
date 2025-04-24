@@ -1,0 +1,82 @@
+{
+	"transportplanning": {
+		"package": {
+			"listPackageTitle": "Transport Packages",
+			"detailsPackageTitle": "Packages Details",
+			"eventListTitle": "Package events",
+			"eventCostGroupListTitle": "Package event: Cost Groups",
+			"selectionPackageListTitle": "Package: Selection Packages",
+			"entityTranslation": "Translation",
+			"entityPackage": "Transport Package",
+			"entityPackageDesc": "Package Description",
+			"entityCommentText": "Comment",
+			"entityProjectFk": "Project",
+			"entityTransportPackageFk": "Parent Package",
+			"groupDelivery": "Delivery",
+			"entityTransPkgStatusFk": "Status",
+			"entityTrsWaypointSrcFk": "Source Waypoint",
+			"entityTrsWaypointDstFk": "Destination Waypoint",
+			"entityLgmJobSrcFk": "Source Job",
+			"entityLgmJobDstFk": "Destination Job",
+			"entityGood": "Transport Good",
+			"entityGoodsDescription": "Transport Goods Description",
+			"entitySequence": "Sequence",
+			"entityResourceFk": "Resource",
+			"entityQuantity": "Quantity",
+			"entityUoM": "UoM",
+			"entityUoMDescription": "UoM Description",
+			"entityResourceDescription": "Resource Description",
+			"entityQuantityInPkg": "Quantity In Package",
+			"linkResReservation": "Link Resource Reservation to Package",
+			"resreservationstatus": "Reservation Status",
+			"entityWeight": "Weight",
+			"entityWeightCalculated": "Weight Calculated",
+			"entityLengthCalculated": "Length Calculated",
+			"entityWidthCalculated": "Width Calculated",
+			"entityHeightCalculated": "Height Calculated",
+			"entityUomWeightFk": "Weight Uom",
+			"entityLength": "Length",
+			"entityUomLengthFk": "Length Uom",
+			"entityWidth": "Width",
+			"entityUomWidthFk": "Width Uom",
+			"entityHeight": "Height",
+			"entityUomHeightFk": "Height Uom",
+			"kind": "Kind",
+			"drawingFk": "Drawing",
+			"bundleFk": "Bundle",
+			"trsGoodsFk": "Requsition Goods",
+			"materialInfo": "Material",
+			"infoSummary": "Info Summary",
+			"isDeliveryPkg": "Delivery",
+			"isReturnPkg": "Return of Delivery",
+			"internalReloc":"Internal Relocation",
+			"externalReloc":"External Relocation",
+			"none": "None",
+			"summary": "Summary",
+			"hasCancelledGood": "Includes cancelled transport goods!",
+			"wizard": {
+			  "changePackageStatus": "Change package status",
+			  "wizardGroupname1": "Groupname"
+			},
+			"errors": {
+			  "cyclic": "there is a cyclic dependence on package.",
+			  "errorQtyInput": "The Quantity of Package must be greater than 0 and less than or equal to the remaining quantity"
+			},
+			"document": {
+			  "listTitle": "Package: Documents",
+			  "revision": {
+				"listTitle": "Package Document: Revisions"
+			  }
+			},
+			"dangerousGoods": {
+			  "dangerousGoodsGroup": "Dangerous Goods",
+			  "dangerClass": "Danger Class",
+			  "packageType": "Package Type",
+			  "dangerQuantity": "Danger Quantity",
+			  "uomDGFk": "UoM (Danger Good)"
+			},
+			"reproduced": "Reproduction",
+			"statusofgoods": "Status Of Goods"
+		}
+	}
+}

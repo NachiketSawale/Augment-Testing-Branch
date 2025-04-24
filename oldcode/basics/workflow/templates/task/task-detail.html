@@ -1,0 +1,147 @@
+<div class="content-inner flex-box flex-column">
+	<div class="toolbar">
+		<ul class=" showimages tools">
+			<li>
+				<button class="tlb-icons ico-rec-previous"
+				        data-ng-click="taskSidebar.detailFn.switchListDetail()"
+				        title="{{ ::'basics.common.button.back' | translate}}"
+				        type="button">
+				</button>
+			</li>
+			<li>
+				<button class="tlb-icons ico-refresh"
+				        data-ng-click="taskSidebar.refreshSelected()"
+				        title="{{ ::'cloud.common.toolbarRefresh' | translate }}"
+				        type="button">
+				</button>
+			</li>
+		</ul>
+		<ul class="showimages tools flex-end fullwidth">
+			<li>
+				<button class="tlb-icons ico-tree-collapse rotate-270"
+				        data-ng-click="taskSidebar.detailFn.previousTask()"
+				        title="{{ ::'cloud.common.previousStep' | translate}}"
+				        type="button">
+				</button>
+			</li>
+			<li style="color: #0067b1; font-size: 12pt;line-height: 36px;font-weight: bold; ">
+				{{taskSidebar.taskList[taskSidebar.selectedGroup].name ?
+				taskSidebar.taskList[taskSidebar.selectedGroup].name : 'basics.workflow.task.detail.noGroupHeader' |
+				translate}} {{taskSidebar.detailConfig.selectedIndex + 1 }}/{{taskSidebar.listConfig.isGrouped ?
+				taskSidebar.taskList[taskSidebar.selectedGroup].childs.length : taskSidebar.taskList.length}}
+			</li>
+			<li>
+				<button class="tlb-icons ico-tree-collapse rotate-90"
+				        data-ng-click="taskSidebar.detailFn.nextTask()"
+				        title="{{:: 'cloud.common.nextStep' | translate}}"
+				        type="button">
+				</button>
+		</ul>
+	</div>
+
+	<div class="sidebar-panel overflow-hidden">
+		<div class="sidebar-panel-heading"
+		     ng-switch="taskSidebar.selectedItem.OwnerType + '-' + taskSidebar.selectedItem.ProcessingStatus">
+
+			<div class="sidebar-panel-title-bar" ng-switch-when="user-running">
+				<button class="tlb-icons ico-maximized" ng-click="showAsDialog()"></button>
+				<img src="cloud.style/content/images/control-icons.svg#ico-user">
+				<h4 class="sidebar-panel-title">{{::'basics.workflow.task.detail.headerText.user-running' | translate}}</h4>
+				<span class="tlb-icons ico-info" custom-tooltip="{'title':'{{tooltipTitleOptions}}','caption':'{{tooltipCaptionOptions}}', 'width':300}" version="version"></span>
+			</div>
+
+			<div class="sidebar-panel-title-bar" ng-switch-when="portaluser-running">
+				<button class="tlb-icons ico-maximized" ng-click="showAsDialog()"></button>
+				<img src="cloud.style/content/images/control-icons.svg#ico-user">
+				<h4 class="sidebar-panel-title" translate="basics.workflow.task.detail.headerText.user-running"></h4>
+			</div>
+
+			<div class="flex-box sidebar-panel-title-bar" ng-switch-when="group-running">
+				<button class="tlb-icons ico-maximized" ng-click="showAsDialog()"></button>
+				<img src="cloud.style/content/images/control-icons.svg#ico-user-group">
+				<h4 class="sidebar-panel-title" translate="basics.workflow.task.detail.headerText.group-running"></h4>
+				<button class="btn control-icons ico-edit2" data-ng-click="taskSidebar.detailFn.edit(taskSidebar.selectedItem)"
+				        type="button">
+					<!--{{'basics.workflow.task.detail.headerButtons.group-running'|translate}}-->
+				</button>
+			</div>
+
+			<div class="flex-box sidebar-panel-title-bar" ng-switch-when="group-edit">
+				<button class="tlb-icons ico-maximized" ng-click="showAsDialog()"></button>
+				<img src="cloud.style/content/images/control-icons.svg#ico-edit">
+				<h4 class="sidebar-panel-title" translate="basics.workflow.task.detail.headerText.group-edit"></h4>
+				<button class="btn control-icons ico-close" data-ng-click="taskSidebar.detailFn.cancel(taskSidebar.selectedItem)"
+				        type="button">
+					<!--{{'basics.workflow.task.detail.headerButtons.group-edit'|translate}}-->
+				</button>
+			</div>
+
+			<div class="flex-box sidebar-panel-title-bar" ng-switch-when="group-locked">
+				<img src="cloud.style/content/images/control-icons.svg#ico-locked">
+				<h4 class="sidebar-panel-title">{{::'basics.workflow.task.detail.headerText.group-locked' | translate}}
+					{{taskSidebar.selectedItem.OwnerDescription ? taskSidebar.selectedItem.OwnerDescription :
+						taskSidebar.selectedItem.OwnerName}}</h4>
+				<button class="btn control-icons ico-take" data-ng-click="taskSidebar.detailFn.take(taskSidebar.selectedItem)"
+				        type="button">
+					<!--{{'basics.workflow.task.detail.headerButtons.group-locked'|translate}}-->
+				</button>
+			</div>
+
+			<div class="flex-box sidebar-panel-title-bar" ng-switch-when="user-done">
+				<img src="cloud.style/content/images/control-icons.svg#ico-hook2">
+				<h4 class="sidebar-panel-title" translate="basics.workflow.task.detail.headerText.user-done"></h4>
+			</div>
+
+			<div class="flex-box sidebar-panel-title-bar" ng-switch-when="portaluser-done">
+				<img src="cloud.style/content/images/control-icons.svg#ico-hook2">
+				<h4 class="sidebar-panel-title" translate="basics.workflow.task.detail.headerText.user-done"></h4>
+			</div>
+
+			<div class="flex-box sidebar-panel-title-bar" ng-switch-when="group-done">
+				<img src="cloud.style/content/images/control-icons.svg#ico-hook2">
+				<h4 class="sidebar-panel-title">{{::'basics.workflow.task.detail.headerText.group-done' | translate}}
+					{{taskSidebar.selectedItem.Owner.Name}}</h4>
+			</div>
+
+			<div class="rwd border-none">
+				<ul class="rwd-content">
+					<li class="title">{{taskSidebar.selectedItem.description}}</li>
+					<li data-ng-bind-html="taskSidebar.selectedItem.Comment"></li>
+					<li>{{taskSidebar.selectedItem.StartedFormated}}
+						<img class="iconbox" data-ng-src="{{taskSidebar.selectedItem.LifeTimeIcon}}"
+						     style="width: 16px; height: 16px">
+						<img class="iconbox" data-ng-src="{{taskSidebar.selectedItem.PrioIcon}}"
+						     style="width: 16px; height: 16px">
+						<img class="iconbox" data-ng-src="{{taskSidebar.selectedItem.OwnerIcon}}"
+						     style="width: 16px; height: 16px">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="flex-box flex-row sidebar-panel-body flex-element" data-basics-workflow-task-detail-directive
+		     data-ng-if="taskSidebar.selectedItem.Action.HideFooter"
+		     data-ng-model="taskSidebar.selectedItem"></div>
+
+		<div class="sidebar-panel-body flex-element" data-ng-if="!taskSidebar.selectedItem.Action.HideFooter">
+			<div class="flex-box flex-row" data-basics-workflow-task-detail-directive
+			     data-ng-model="taskSidebar.selectedItem"></div>
+		</div>
+		<div style="padding-bottom:10px;padding-top:10px" data-ng-include="'basics.workflow/sidebar/assign-task.html'"> </div>
+		<div style="padding-bottom:10px;padding-top:10px" data-ng-include="'basics.workflow/sidebar/reassign-task.html'"> </div>
+		<div class="sidebar-panel-footer" data-ng-if="!taskSidebar.selectedItem.Action.HideFooter">
+			<div class="btn-group flex-box">
+				<button class="btn btn-default flex-element" data-ng-click="taskSidebar.detailFn.break(taskSidebar.selectedItem)"
+				        data-ng-disabled="taskSidebar.selectedItem.Readonly || taskSidebar.selectedItem.EscalationDisabled"
+				        type="button">
+					{{::"basics.workflow.escalate" | translate}}
+				</button>
+				<button class="btn btn-default flex-element" data-ng-click="taskSidebar.detailFn.ok(taskSidebar.selectedItem)"
+				        data-ng-disabled="taskSidebar.selectedItem.Readonly"
+				        type="button">{{::"cloud.common.ok" |
+				translate}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

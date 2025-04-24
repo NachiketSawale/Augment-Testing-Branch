@@ -1,0 +1,41 @@
+#infoView {
+  height: 48px;
+  width: 100%;
+  padding-right: 350px;
+}
+#infoView .logo {
+  height: 38px;
+  background-size: contain;
+  float: left;
+  text-indent: -9999em;
+
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.module-name {
+  font-weight: 700 !important;
+}
+
+.tlb-icons.ico-search {
+  margin-top: -14px;
+}
+.tlb-icons.ico-reset {
+  margin-top: -14px;
+}
+.panel {
+  font: 13px / normal source_sans, Microsoft YaHei, STHeiti;
+}
+.panel-default {
+  font: 13px / normal source_sans, Microsoft YaHei, STHeiti;
+}
+.ng-scope {
+  font: 13px / normal source_sans, Microsoft YaHei, STHeiti;
+}
+.ng-isolate-scope {
+  font: 13px / normal source_sans, Microsoft YaHei, STHeiti;
+}
+img {
+  max-width: none !important;
+}

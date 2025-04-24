@@ -1,0 +1,29 @@
+<div class="informationWrapper" data-ng-show="showHeaderInfo()">
+	<div class="header">
+		{{::projectInfo}} <br />
+		{{::estimateItem}} {{::lineItemCode}}
+	</div>
+</div>
+<div class="informationWrapper" data-ng-show="dataServiceList.length > 0">
+	<div class="informationInner">
+		<div class="flex-element">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>{{'estimate.main.totalOf' | translate}}</th>
+						<th>{{'estimate.main.total' | translate}}</th>
+						<th>{{'estimate.main.curOrUoM' | translate}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="item in dataServiceList">
+						<td data-ng-bind-html="item.TotalOf"></td>
+						<td data-ng-bind-html="item.Total | infoMoney"></td>
+						<td data-ng-bind-html="item.CurUoM"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,123 @@
+[treecontrol] {
+	/* prevent user selection */
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	white-space: nowrap;
+	font-size: 13px;
+	color: #555;
+	text-decoration: none;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		border: none;
+	}
+
+	li {
+		position: relative;
+		padding: 0;
+		line-height: 21px;
+
+		i {
+			cursor: pointer;
+		}
+
+		ul li {
+			padding-left: 12px;
+		}
+
+		.tree-label {
+			cursor: pointer;
+			display: inline;
+
+			span[class*='ico'] {
+				-webkit-background-size: 16px;
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+	}
+
+	li.tree-expanded {
+		i.tree-leaf-head {
+			display: none;
+		}
+		i.tree-branch-head {
+			display: inline;
+		}
+	}
+
+	li.tree-collapsed {
+		i.tree-leaf-head {
+			display: none;
+		}
+		i.tree-branch-head {
+			display: inline;
+		}
+	}
+
+	li.tree-leaf {
+		i.tree-branch-head {
+			display: none;
+		}
+		i.tree-leaf-head {
+			display: inline;
+		}
+	}
+
+	&.tree-classic {
+		li {
+			.tree-selected {
+				background-color: #aec3d4;
+				padding: 0 10px 0 0px;
+			}
+		}
+
+		li.tree-expanded {
+			i {
+				padding: 1px 6px;
+				margin: 0;
+				margin-right: 6px;
+				background: url(../../images/control-icons.svg#ico-tree-expand) no-repeat left;
+				background-size: 16px;
+			}
+
+			li.tree-leaf {
+				i {
+					padding: 1px 6px;
+					margin: 0;
+					margin-right: 6px;
+					background: none;
+				}
+
+				div {
+					padding-left: 0px;
+				}
+			}
+		}
+
+		li.tree-collapsed {
+			i {
+				padding: 1px 6px;
+				margin: 0;
+				margin-right: 6px;
+				background: url(../../images/control-icons.svg#ico-tree-collapse) no-repeat left;
+				background-size: 16px;
+			}
+
+			li.tree-leaf div {
+				padding-left: 0px;
+			}
+		}
+
+		li.tree-leaf {
+			div {
+				padding-left: 18px;
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+export {IPpsHeaderEntity} from './pps-header-entity.interface';

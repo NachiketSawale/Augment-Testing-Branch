@@ -1,0 +1,41 @@
+{
+  "CostCodePriceVersions": [
+    {
+      "Companys": ["006","002","EX03"],
+      "descriptionInfo": {
+        "description": "CodeV01",
+        "otherLanguages":  [
+          {
+            "culture" : "ch",
+            "description": "cc1234213"
+          }
+        ]
+      },
+
+      "validFrom": "2017-05-20T00:00:00",
+      "validTo": "2017-07-20T00:00:00",
+      "dataDate": "2017-05-25T00:00:00",
+      "weighting": 23,
+      "PriceList": "test"
+    },
+    {
+      "Companys": ["006","002","EX03"],
+      "descriptionInfo": {
+        "description": "CodeV02",
+        "otherLanguages":  [
+          {
+            "culture" : "ch",
+            "description": "CodeV123321321"
+          }
+        ]
+      },
+
+      "validFrom": "2017-05-20T00:00:00",
+      "validTo": "2017-07-20T00:00:00",
+      "dataDate": "2017-05-25T00:00:00",
+      "weighting": 233,
+      "PriceList": "test"
+    }
+  ],
+  "CompanyCode": "901"
+}

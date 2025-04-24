@@ -1,0 +1,25 @@
+<div data-ng-controller="updatePaymentScheduleDegreeOfCompletionController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<h3>{{options.body.bodyTitle}}</h3>
+		<div class="platform-form-group">
+			<div class="radio spaceToUp">
+				<label>
+					<input type="radio" name="supplierSelect" value="CurrentItem"
+						   data-ng-model="options.body.radioSelect" data-ng-disabled="options.disabledUpdateCurrentItem()"/>{{options.body.selectCurrentItem}}
+				</label>
+			</div>
+			<div class="radio spaceToUp">
+				<label>
+					<input type="radio" name="supplierSelect" value="AllItems"
+						   data-ng-model="options.body.radioSelect"/>{{options.body.selectAllItems}}
+				</label>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="options.onOK()" data-ng-bind="options.okBtnText">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()" data-ng-bind="modalOptions.cancelBtnText"></button>
+	</footer>
+</div>

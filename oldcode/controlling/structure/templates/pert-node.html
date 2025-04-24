@@ -1,0 +1,31 @@
+<rect ng-attr-x="{{n.position.x}}" ng-attr-y="{{n.position.y}}" ng-attr-width="{{n.width}}"
+      ng-attr-height="{{n.height}}" rx="3" ry="3" ng-attr-style="{{getStyle(n)}}"></rect>
+
+<text ng-mouseenter="disableOverflowText(n)" ng-mouseleave="enableOverflowText(n)"
+      ng-attr-x="{{n.position.x+(n.width/2)}}" ng-attr-y="{{n.position.y+15}}"
+      style="text-anchor: middle">{{overflowText(n, n.DescriptionInfo.Translated)}}
+</text>
+<text ng-mouseenter="disableOverflowText(n)" ng-mouseleave="enableOverflowText(n)"
+      ng-attr-x="{{n.position.x+(n.width/4)}}" ng-attr-y="{{n.position.y+30}}"
+      style="text-anchor: middle;font-size:12px;">{{overflowText(n, n.Code)}}
+</text>
+<text ng-attr-x="{{n.position.x+(n.width/4)*3}}" ng-attr-y="{{n.position.y+30}}"
+      style="text-anchor: middle;font-size:12px;">{{displayDuration(n.PlannedDuration)}}
+</text>
+<text ng-attr-x="{{n.position.x+(n.width/4)}}" ng-attr-y="{{n.position.y+45}}"
+      style="text-anchor: middle;font-size:12px;">{{displayDate(n.PlannedStart)}}
+</text>
+<text ng-attr-x="{{n.position.x+(n.width/4)*3}}" ng-attr-y="{{n.position.y+45}}"
+      style="text-anchor: middle;font-size:12px;">{{displayDate(n.PlannedEnd)}}
+</text>
+
+<!-- inner separator lines-->
+<line ng-attr-x1="{{n.position.x}}" ng-attr-y1="{{n.position.y+19}}"
+      ng-attr-x2="{{n.position.x+n.width}}" ng-attr-y2="{{n.position.y+19}}"
+      style="stroke:grey;stroke-width:1"></line>
+<line ng-attr-x1="{{n.position.x}}" ng-attr-y1="{{n.position.y+33}}"
+      ng-attr-x2="{{n.position.x+n.width}}" ng-attr-y2="{{n.position.y+33}}"
+      style="stroke:grey;stroke-width:1"></line>
+<line ng-attr-x1="{{n.position.x+n.width/2}}" ng-attr-y1="{{n.position.y+19}}"
+      ng-attr-x2="{{n.position.x+n.width/2}}" ng-attr-y2="{{n.position.y+n.height}}"
+      style="stroke:grey;stroke-width:1"></line>

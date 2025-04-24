@@ -1,0 +1,240 @@
+/*-------------------------------------------------------------------------------
+	 Tab Bar (_tabbar.scss)
+  -------------------------------------------------------------------------------*/
+#mainbar {
+	display: flex;
+	background-color: $color-bar3;
+	height: $mainbar-height;
+	border-bottom: 1px solid $color-border;
+}
+
+#main-tabs {
+	flex: 1;
+	height: 34px;
+	display: flex;
+}
+
+#navbar {
+	height: $mainbar-height;
+	padding:$padding-small-vertical 0 0 $padding-small-horizontal;
+	vertical-align: middle;
+	float: left;
+}
+
+.navbar-btn {
+	@include square($tabbar-button-width);
+	line-height: $size-line-height-computed;
+	margin: 0;
+
+	svg {
+		height: 30px;
+		width: 30px;
+		background-size: 30px;
+		--icon-main-color: $color-icon-grey;
+	}
+}
+
+#tabbar {
+	float: left;
+	margin-left: 10px;
+	height: 33px;
+
+	// a div container that contains the tabs
+	> .tabs {
+		padding-top: 3px;
+
+		// a single tab
+		> .tab {
+			height: 31px;
+			float: left;
+
+			//active tab
+			&.active {
+				background-color: $color-tab-activ;
+
+				> .tab-wrapper {
+					border-color: $color-bar-border;
+
+					//button to open the tab dropdown
+					.tab-dropdown {
+						visibility: visible;
+
+						&:hover {
+							background-color: $color-grid-selection;
+						}
+					}
+
+					.divider {
+						visibility: visible;
+					}
+				}
+			}
+
+			//Tab hover
+			&:hover:not(.active) .tab-wrapper {
+				background-color: $color-tab-selected;
+				height: 31px;
+			}
+
+			> .tab-wrapper {
+				display: inline-flex;
+				border-top: 4px solid transparent;
+				cursor: pointer;
+				height: $tab-height;
+
+				> span {
+					padding: 0 $padding-tab-horizontal;
+					line-height: $tabbar-button-height;
+				}
+
+				.dropdown-menu {
+					margin-top: -1px;
+				}
+
+				//button to open the tab dropdown
+				.tab-dropdown {
+					width: $tabbar-button-width;
+					visibility: hidden;
+					height: $tabbar-button-height;
+					background-size: $size-icon $size-icon;
+
+					> img {
+						height: 24px;
+						margin-top: -1px;
+					}
+				}
+
+				> .divider {
+					visibility: hidden;
+					width: 1px;
+					cursor: default;
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 10%,rgba(206,206,206,0.5) 25%, #bebebe,rgba(206,206,206,0.5) 75%,rgba(0,0,0,0) 90%);
+				}
+			}
+
+			&.highlight {
+				&:hover > .tab-wrapper {
+					height: $tab-height;
+				}
+
+				&.active {
+					.tab-wrapper {
+						border-color: $teal-3;
+						background-color: $color-tab-activ;
+					}
+
+					&:hover > .tab-wrapper {
+						background-color: transparent;
+					}
+				}
+
+				&:hover > .tab-wrapper {
+					background-color: darken($teal-7, 10%);
+				}
+
+				> .tab-wrapper {
+					background-color: $teal-7;
+				}
+			}
+
+			&.gray-out {
+
+				> .tab-wrapper {
+					background-color: transparent;
+
+					> span {
+						color: #999 !important;
+					}
+				}
+
+			}
+
+			&.disabled, &.disabled:hover {
+				> .tab-wrapper {
+					background-color: transparent;
+					cursor: default;
+
+					> span {
+						color: #999 !important;
+					}
+				}
+
+			}
+		}
+	}
+
+	+ .tabbar-buttons {
+		display: inline-flex;
+
+		button {
+			@include size(28px, 100%);
+			background-size: 16px 16px;
+		}
+	}
+}
+
+//used in generic-wizard
+#scroll-tabs-wrapper {
+	margin-bottom: 6px;
+
+	.scroll_tabs_container {
+		position: relative;
+		height: 30px;
+
+		.scroll_tab_right_button,
+		.scroll_tab_left_button {
+			user-select: none;
+			-webkit-touch-callout: none;
+
+			&::before {
+				content: "\25C0";
+				line-height: 30px;
+				padding-left: 5px;
+			}
+		}
+
+		.scroll_tab_right_button {
+			&::before {
+				content: "\25B6";
+			}
+		}
+
+		.scroll_tab_right_button_disabled,
+		.scroll_tab_left_button_disabled {
+			opacity: 0.3;
+		}
+
+		.scroll_tab_inner {
+			height: 30px;
+			cursor: pointer;
+
+			li {
+				font-size: 14px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				margin-right: 16px;
+				padding: 3px 5px 3px 5px;
+
+				&.tab_selected {
+					font-weight: bold;
+					border-bottom: solid 2px $color-rib;
+					cursor: default;
+				}
+
+				&.scroll_tab_over {
+					background-color: $color-tab-selected;
+
+					&.tab_selected {
+						color: $color-rib;
+						background-color: transparent;
+					}
+				}
+			}
+
+			span {
+				padding: 0;
+				width: 0;
+			}
+		}
+	}
+}

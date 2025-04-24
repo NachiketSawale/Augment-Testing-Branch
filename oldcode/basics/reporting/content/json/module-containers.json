@@ -1,0 +1,39 @@
+[
+  {
+    "id": "2",
+    "template":"basics.reporting/partials/reporting-report-container-template.html",
+    "title": "basics.reporting.reportContainerTitle",
+    "controller": "basicsReportingReportListController",
+    "uuid": "43fb6571d246461c9a079c1742085285"
+  },
+  {
+    "id": "1",
+    "template": "cloud.common/partials/languagegridview.html",
+    "title": "cloud.common.languageColHeader_ContainerTitle",
+    "title$": "Language",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "b7816d465487426e8d2d97fa2831a3a4"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.reporting.reportDetailsContainerTitle",
+    "controller": "basicsReportingReportDetailController",
+    "uuid": "A181C99848134B7BAD86A51E84924F90",
+    "permission": "43fb6571d246461c9a079c1742085285"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.reporting.reportParameterContainerTitle",
+    "controller": "basicsReportingReportParameterListController",
+    "uuid": "c846509f1b0345c1b7469e4fd56e11e7"
+  },
+  {
+    "id": "5",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.reporting.reportParameterValuesContainerTitle",
+    "controller": "basicsReportingReportParameterValuesListController",
+    "uuid": "eecedd9408434f51a6e99460453da724"
+  }
+]

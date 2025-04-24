@@ -1,0 +1,53 @@
+﻿<div data-ng-controller="procurementPackageUpdateSchedulingWizardController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <h3 data-ng-show="isInit">{{options.body.bodyToScheduling}}</h3>
+
+        <div class="platform-form-group" data-ng-show="isInit">
+            <div class="radio spaceToUp">
+                <label>
+                    <input type="radio" name="packageSelect" value="CurrentPackage"
+                           data-ng-model="options.body.radioSelect"/>{{options.body.currentPackage}}
+                </label>
+            </div>
+            <div class="radio spaceToUp">
+                <label>
+                    <input type="radio" name="projectSelect" value="CurrentProject"
+                           data-ng-model="options.body.radioSelect"/>{{options.body.currentProject}}
+                </label>
+            </div>
+
+	        <br/>
+
+	        <h3>{{options.body.bodyFromScheduling}}</h3>
+	        <div class="radio spaceToUp" >
+		        <label>
+			        <input type="radio" name="schedulingSelect" value="CurrentScheduling" title="{{options.disabledMsg}}"
+			               data-ng-disabled="!options.hasActivity" data-ng-model="options.body.radioSelect"/>{{options.body.currentScheduling}}
+		        </label>
+	        </div>
+        </div>
+
+        <div class="modal-body flex-box" data-ng-show="!isInit">
+            <div class="icon-message">
+                <div class="tlb-icons icon {{ modalOptions.iconClass }}"></div>
+                <div class="message" data-ng-show="isExecuting">{{ options.executingMessage }}</div>
+                <div class="message" data-ng-show="isSucceed">{{ options.executeSuccessedMessage }}</div>
+                <div class="errorbox message" data-ng-show="isFailed">
+                    <h3 class="errorbox">{{ options.executeFailedMessage }}</h3>
+
+                    <div data-ng-bind="wizardError"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn navigator-button tlb-icons ico-goto" title="{{options.title}}"
+                data-ng-disabled="!isSucceed" ng-click="navigate()"></button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+                data-ng-disabled="!isInit && !isSucceed" data-ng-bind="modalOptions.okBtnText">
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"
+                data-ng-bind="modalOptions.cancelBtnText" data-ng-show="!isSucceed"></button>
+    </footer>
+</div>

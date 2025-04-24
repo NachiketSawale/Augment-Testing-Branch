@@ -1,0 +1,44 @@
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="inputOpen">
+        <div data-accordion-heading>
+            <span class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+            <span class="platform-form-group-header">
+                <div data-ng-show="inputOpen" class="toggleImg control-icons ico-up"></div>
+                <div data-ng-show="!inputOpen" class="toggleImg control-icons ico-down"></div>
+			</span>
+        </div>
+
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'model.main.workflow.objects' | translate}}</label>
+                <div class="platform-form-col">
+                    <div data-script-editor-directive data-ng-model="input.objects" data-options="codeMirrorOptions"></div>
+                </div>
+            </div>
+        </div>
+
+        <div data-model-main-propkeys-bulk-assignment-list data-model="input.propertyChanges"></div>
+    </div>
+</div>
+
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="outputOpen">
+        <div data-accordion-heading>
+            <span class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+            <span class="platform-form-group-header">
+                <div data-ng-show="outputOpen" class="toggleImg control-icons ico-up"></div>
+                <div data-ng-show="!outputOpen" class="toggleImg control-icons ico-down"></div>
+            </span>
+        </div>
+
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'model.main.workflow.objects' | translate }}</label>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="description" data-ng-model="output.objects"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

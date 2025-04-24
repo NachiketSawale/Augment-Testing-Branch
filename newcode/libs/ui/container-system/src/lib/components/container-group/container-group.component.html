@@ -1,0 +1,32 @@
+<div class="outerDiv">
+	<div class="containerLayout splitArea1">
+		<div class="toolbar subview-header" uiCommonCollapsableList [tools]="currentTools" *ngIf="isToolbarVisible">
+			<ng-container *ngIf="activeContainer; else elseNotDone">
+				<h2 class="title fix">{{ activeContainer.title | platformTranslate }}</h2>
+			</ng-container>
+
+			<ng-template #elseNotDone>
+				<h2 class="title fix">Loading...</h2>
+			</ng-template>
+
+			<div class="flex-box">
+				<ui-common-toolbar [toolbarData]="currentTools"></ui-common-toolbar>
+				<ng-container *ngIf="isFullSizeButtonVisible && activeContainer">
+					<ui-container-system-fullsize-button [paneData]="data"
+					                                     (containerResized)="handleFullscreenToggle(_paneName)"></ui-container-system-fullsize-button>
+				</ng-container>
+			</div>
+		</div>
+
+		<div class="contentaline subview-content">
+			<ng-container *ngIf="isContainerActive">
+				<ng-container *ngComponentOutlet="activeContainerInitData!.containerType; injector: activeContainerInitData!.localInjector"></ng-container>
+			</ng-container>
+		</div>
+		<div class="subview-footer" *ngIf="showTabs">
+			<ng-container class="p-2" *ngFor="let cntDef of containers!; let cntIndex = index">
+				<input type="button" [value]="cntDef.title | platformTranslate" [ngClass]="activeContainerIndex === cntIndex ? 'tabbgcolor' : 'tabspace'" (click)="updateActiveContainerIndex(cntIndex)" />
+			</ng-container>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,74 @@
+<style type="text/css">
+	.legend-editor {
+		padding-left: 30px;
+		padding-right: 30px;
+		border: 1px solid #dcdcdc;
+		border-radius: 3px;
+	}
+
+	.legend-editor legend {
+		margin-left: 1px;
+		width: auto;
+		background-color: #fff;
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	.legend-editor .margin-y {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.legend-editor .btn-list {
+		text-align: center;
+	}
+
+
+	.legend-editor .btn-list .btn {
+		background-color: #e1e1e1;
+		border: 1px solid #b5b5b5;
+		margin-left: 5px;
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	.legend-editor .section-text-area {
+		height: 110px;
+		overflow: auto;
+		border: 1px solid #ddd;
+	}
+
+	.legend-editor .section-text-area .section-word {
+		border: 1px solid #ddd;
+		padding: 3px;
+		margin: 3px;
+	}
+</style>
+
+<fieldset class="legend-editor">
+	<legend data-ng-bind="config.title"></legend>
+
+	<div class="row margin-y btn-list">
+        <span class="btn-list-group" data-ng-repeat="group in config.groups">
+            <button class="btn btn-default" data-ng-repeat="item in group.items" data-ng-bind="item.code" data-ng-click="select(item)" title="{{ item.title }}" data-ng-disabled="item.disable"></button>
+        </span>
+	</div>
+
+	<div class="row margin-y">
+		<div class="col-md-4" data-ng-bind="'model.wdeviewer.section.left' | translate"></div>
+		<div class="col-md-4" data-ng-bind="'model.wdeviewer.section.center' | translate"></div>
+		<div class="col-md-4" data-ng-bind="'model.wdeviewer.section.right' | translate"></div>
+	</div>
+
+	<div class="row margin-y">
+		<div class="col-md-4">
+			<div data-model-wdeviewer-print-label-editor data-entity="entity.left" data-config="sectionConfig.left"></div>
+		</div>
+		<div class="col-md-4">
+			<div data-model-wdeviewer-print-label-editor data-entity="entity.center" data-config="sectionConfig.center"></div>
+		</div>
+		<div class="col-md-4">
+			<div data-model-wdeviewer-print-label-editor data-entity="entity.right" data-config="sectionConfig.right"></div>
+		</div>
+	</div>
+</fieldset>

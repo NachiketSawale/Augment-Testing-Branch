@@ -1,0 +1,119 @@
+﻿<div class="modal-wrapper">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{'basics.audittrail.title' | translate}}</h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.cancel()" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+
+	<section class="modal-body" data-ng-controller="basicsAudittrailPopupFilterController">
+		<div data-platform-kendo-splitter-adjust class="modal-wrapper border-none"
+		     option="{panes: [ { collapsible: true, min: '25%' },{ collapsible: true, size: '75%' }],orientation:'horizontal'}">
+			<div id="ui-layout-east" class="pane-l modal-wrapper" data-cloud-desktop-on-key-enter="searchFn">
+				<div class="subview-container modal-wrapper overflow-hidden">
+					<div class="toolbar"><h2 class="title">{{'basics.audittrail.splitterLeftSideTitle' | translate}}</h2></div>
+
+					<div class="flex-element overflow">
+						<hr class="margin-full-lg">
+
+						<div data-ng-if="selectedEntity" class="margin-full-lg">
+							<h3 class="font-bold">{{'basics.audittrail.mainEntity' | translate}}</h3>
+							<div>{{selectedEntity.BusinessPartnerName1}}</div>
+							<div class="checkbox spaceToUp">
+								<label>
+									<input type="checkbox" data-ng-model="entity.selected" data-ng-click="changeEntitySelected()">
+									{{'basics.audittrail.mainEntityCheckbox' | translate }}
+								</label>
+							</div>
+							<hr class="margin-top-xld">
+						</div>
+
+						<div class="margin-full-lg">
+							<h3 class="font-bold">{{'basics.audittrail.period' | translate}}</h3>
+							<div data-domain-control data-domain="select" data-options="selectPeriod" data-model="entity.periodFilter" data-change="changeStartEndDate()"></div>
+							<hr>
+						</div>
+
+						<div class="margin-full-lg">
+							<h3 class="font-bold">{{'basics.audittrail.date' | translate}}</h3>
+							<div class="flex-box platform-md">
+								<div data-domain-control data-domain="date" data-model="entity.startDate" class="flex-element lg-5 md-5 padding-none" data-change="changedDatepicker()"></div>
+								<div class="control-icons ico-minus block-image lg-1 md-1" style="height: 28px;"></div>
+								<div data-domain-control data-domain="date" data-model="entity.endDate" class="flex-element lg-5 md-5 padding-none" data-change="changedDatepicker()"></div>
+							</div>
+							<hr class="margin-top-xld">
+						</div>
+
+						<div class="margin-full-lg">
+							<h3 class="font-bold">{{'basics.audittrail.container' | translate}}</h3>
+							<div data-domain-control data-domain="select" data-options="selectContainer" data-model="entity.container" data-change="setContainerId()"></div>
+							<hr class="margin-top-xld">
+						</div>
+
+						<div class="margin-full-lg">
+							<h3 class="font-bold">{{'basics.audittrail.columns' | translate}}</h3>
+							<div data-domain-control data-domain="select" data-options="selectColumns" data-model="entity.column" data-entity="entity.containerId" data-config="configContainerSelect"></div>
+							<hr class="margin-top-xld">
+						</div>
+
+						<div class="margin-full-lg">
+							<h3 class="font-bold">{{'basics.audittrail.action' | translate}}</h3>
+							<div data-domain-control data-domain="select" data-options="selectAction" data-model="entity.action" data-change="setButtonCSSClass()"></div>
+							<hr class="margin-top-xld">
+						</div>
+
+						<div class="margin-full-lg">
+							<h3 class="font-bold">{{'basics.audittrail.user' | translate}}</h3>
+							<div data-domain-control data-domain="description" data-model="entity.user" data-change="setButtonCSSClass()"></div>
+						</div>
+						<hr>
+					</div>
+
+					<div class="flex-box">
+						<button type="button" class="btn btn-default fullwidth margin-full-lg" data-ng-click="searchFn()" data-ng-class="{ 'highlight': entity.showButtonCSS }">
+							{{'basics.audittrail.Search' | translate}}
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="ui-layout-west" data-ng-controller="basicsAuditTrailPopupController" class="pane-r characteristicsGrid modal-wrapper">
+				<div class="subview-container modal-wrapper overflow-hidden" style="margin-right: 3px;">
+					<div class="toolbar">
+						<h2 class="title">{{'basics.audittrail.splitterRightSideTitle' | translate}}</h2>
+						<div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+					</div>
+
+					<div data-platform-alert data-error="error"></div>
+					<div class="flex-element flex-box flex-column filler subview-content overflow-hidden">
+						<platform-Grid data="gridData"></platform-Grid>
+					</div>
+
+					<div class="toolbar_toolbar-pager statusbar">
+						<div class="right-side flex-element flex-box flex-align-center">
+							<!-- go to first page -->
+							<button class="btn_ btn-default item  block-image tlb-icons ico-rec-first" data-ng-click="getFirstPage()" data-ng-disabled="entity.pager.firstEnabled"></button>
+
+							<!-- go to previous page -->
+							<button class="btn_ btn-default item  block-image control-icons ico-previous" data-ng-click="getPrevPage()" data-ng-disabled="entity.pager.prevEnabled"></button>
+
+							<div class="info-label margin-left-ld margin-right-ld">
+								{{entity.pager.startIndex}} - {{entity.pager.endIndex}} / {{entity.pager.totalrecords}}
+							</div>
+
+							<!-- go to next page -->
+							<button class="btn_ btn-default item  block-image control-icons ico-next" data-ng-click="getNextPage()" data-ng-disabled="entity.pager.nextEnabled"></button>
+
+							<!-- go to last page -->
+							<button class="btn_ btn-default item  block-image tlb-icons ico-rec-last" data-ng-click="getLastPage()" data-ng-disabled="entity.pager.lastEnabled"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}</button>
+	</footer>
+</div>

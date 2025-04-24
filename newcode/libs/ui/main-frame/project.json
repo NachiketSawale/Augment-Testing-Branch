@@ -1,0 +1,20 @@
+{
+	"name": "ui-main-frame",
+	"$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/ui/main-frame/src",
+	"prefix": "ui-main-frame",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/ui/main-frame"],
+			"options": {
+				"jestConfig": "libs/ui/main-frame/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

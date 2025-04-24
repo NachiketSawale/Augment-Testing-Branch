@@ -1,0 +1,44 @@
+{
+	"productionplanning": {
+		"cadimport": {
+			"log": {
+				"listViewTitle": "Import Messages",
+				"message": "Message",
+				"entityTypeDescription": "Type"
+			},
+			"preview": {
+				"listViewTitle": "Import Preview",
+				"checked": "Checked",
+				"entityType": "Type",
+				"existingStacks": "Existed Stacks",
+				"newStacks": "New Stacks"
+			},
+			"listViewTitle": "Drawings",
+			"detailsTitle": "Drawing Details",
+			"importCadBtn": "Import",
+			"ok": "OK",
+			"error": "Error",
+			"warning": "Warning",
+			"new": "New",
+			"existedWithDiff": "Existed but with differences",
+			"existedWithoutDiff": "Existed without differences",
+			"existed": "Existed",
+			"notExisted": "Not Existed",
+			"importMode": "Import Mode",
+			"docOK": "File Check OK",
+			"docMissing": "File Check failed",
+			"cadChecker": "CAD Checker",
+			"pUForCreateProducts": "Create Products in PU",
+			"goToDrawing": "Go to Drawing(s)",
+			"importing": "Is Importing...",
+			"importConfirmBody": "Are you sure you want to import the following drawing(s)?",
+			"importSuccessful": "The following drawing(s) was imported successfully!",
+			"importFailed": "The following drawing(s) was imported failed!",
+			"delete": "Deleted",
+			"inProduction": "In Production",
+			"inTransport": "In Transport",
+			"drawingImportNotAllow": "Drawing not allow to import",
+			"notAllowWihleInProdOrInTran": "Drawing not allow to import while InProduction or InTransport"
+		}
+	}
+}

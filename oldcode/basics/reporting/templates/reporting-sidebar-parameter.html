@@ -1,0 +1,47 @@
+<div class="toolbar">
+		<button type="button"
+		        class="tlb-icons ico-rec-previous pull-left"
+		        title="{{reportingSidebar.backListTitle}}"
+		        data-ng-click="reportingSidebar.toggleView()">
+		</button>
+		<div class="title" data-ng-bind="reportingSidebar.infoHeader">
+	</div>
+</div>
+
+<div class="content-inner">
+	<div class="subTitle">
+		{{reportingSidebar.report.name}}
+	</div>
+	<div class="overflow platform-form-group">
+		<div data-platform-refresh-on="reportingSidebar.report.errors.length" class="flex-box">
+			<ul data-platform-item-list-directive
+			    data-list="reportingSidebar.report.errors"
+			    data-item-template="reportingSidebar.errorTemplate"
+			    class="scroll-padding flex-element">
+			</ul>
+		</div>
+
+		<div data-basics-reporting-sidebar-parameter></div>
+
+		<div data-ng-if="reportingSidebar.report.dialogSection" class="margin-bottom-ld">
+			<div ng-repeat="(key, value) in reportingSidebar.report.dialogSection" class="margin-top-ld">
+				<div class="flex-box flex-align-center">
+				<div class="input-group-content flex-element">{{key}}</div>
+				<span class="input-group-btn">
+					<button class="btn btn-default tlb-icons ico-menu" data-ng-click="reportingSidebar.processDialogSection(value)"></button>
+				</span>
+				</div>
+			</div>
+		</div>
+
+		<div data-ng-if="reportingSidebar.report.storeInDocs && reportingSidebar.report.exportType === 'pdf'" data-domain-control data-domain="boolean" data-model="reportingSidebar.report.storeInDocsState" data-options="checkStoreInDocs"></div>
+
+		<div class="text-right">
+			<button type="button" class="btn btn-default" data-ng-click="reportingSidebar.validateAndExecute(true)"
+			        data-ng-disabled="reportingSidebar.report.errors.length || reportingSidebar.report.pending"
+			        data-ng-bind="::reportingSidebar.validateAndExecuteText"
+			        title="{{reportingSidebar.validateAndExecuteTitle}}"></button>
+		</div>
+	</div>
+</div>
+

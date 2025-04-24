@@ -1,0 +1,8 @@
+<div class="tilegroups-wrapper">
+	<h1 *ngIf="groupNameHeader">{{ groupNameHeader! | platformTranslate }}</h1>
+	<div class="tileGroup" [style]="set_heights()" (window:resize)="set_heights()">
+		<div *ngFor="let tile of group.tiles; let i = index" class="tilegroup-wrapper">
+			<ui-desktop-tile [tile]="tile" [group]="group" [i]="i"></ui-desktop-tile>
+		</div>
+	</div>
+</div>

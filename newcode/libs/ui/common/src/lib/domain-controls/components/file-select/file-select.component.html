@@ -1,0 +1,14 @@
+<ng-container *ngTemplateOutlet="controlContext.customTemplate || defaultTemplate; context: {fileselect: fileselect}"></ng-container>
+
+<ng-template #defaultTemplate>
+	<div class="input-group domain-type-fileselect form-control">
+		<div name="fileName" class="input-group-content text-overflow" readonly="readonly"></div>
+		<div class="input-group-btn">
+			<button [disabled]="isDeleteButtonDisabled()" class="btn btn-default control-icons ico-input-delete2 border-radius" (click)="deleteData()"></button>
+			<button [disabled]="controlContext.readonly" class="btn btn-default control-icons ico-input-lookup border-radius" (click)="fileselect.click()">
+			</button>
+		</div>
+	</div>
+</ng-template>
+
+<input #fileselect type="file" style="display: none" [accept]="controlContext.options?.fileFilter" (change)="onFileSelected($event)" [multiple]="controlContext.options?.multiSelect" />

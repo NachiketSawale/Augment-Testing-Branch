@@ -1,0 +1,53 @@
+<header class="modal-header main-color">
+    <h2 class="modal-title">{{uiConfig.dialogTitle | translate}}</h2>
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="onCancel()" aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+            class="block-image"></svg>
+    </button>
+</header>
+<section class="modal-body" style="min-height: 200px">
+    <div>
+        <div class="input-group form-control">
+            <input type="text" data-ng-model="searchValue" class="form-control"
+                data-ng-keydown="onSearchInputKeydown($event, searchValue)" />
+            <span class="input-group-btn" style="margin-left: -1px;">
+                <button class="btn btn-default input-sm btn-search tlb-icons ico-search"
+                    data-ng-click="search(searchValue)" title="search">
+                </button>
+            </span>
+        </div>
+        <div class="filler flex-box flex-column subview-container lookup-grid-container">
+            <div class="subview-header toolbar">
+                <h3 class="title font-bold">Activity List</h3>
+            </div>
+            <platform-grid class="border-all" data="gridData"></platform-grid>
+            <div cloud-common-overlay data-loading="isLoading"></div>
+        </div>
+    </div>
+    <div>
+        <div id="assemblytemplateSplitter" data-platform-kendo-splitter-adjust class="flex-element fullheight"
+            style="min-height: 500px">
+            <div id="ui-layout-west" class="flex-element fullheight">
+                <div class="subview-header toolbar">
+                    <h3 class="title font-bold">{{uiConfig.westTitle | translate}}</h3>
+                </div>
+                <div data-ng-hide="false" data-ng-readonly="false" data-platform-form
+                    data-form-options="westFormOptions" data-entity="westFormOptions.entity"></div>
+            </div>
+            <div id="ui-layout-east" class="flex-element fullheight">
+                <div class="subview-header toolbar">
+                    <h3 class="title font-bold">{{uiConfig.eastTitle | translate}}</h3>
+                </div>
+                <div data-platform-form data-form-options="eastFormOptions" data-entity="eastFormOptions.entity"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-click="onOk()">
+        {{'basics.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' | translate}}
+    </button>
+</footer>

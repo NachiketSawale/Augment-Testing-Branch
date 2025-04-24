@@ -1,0 +1,104 @@
+<h1>{{'basics.workflow.sendRfQDocuments.projectDocuments' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQDocuments.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.type' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.documentType' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.documentCategory' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.status' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.description' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.date' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.originFileName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.preview' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="doc in Context.ProjectDocuments">
+		<td>
+			<div data-domain="boolean" data-domain-control data-model="doc.Selected"></div>
+		</td>
+		<td data-ng-bind="doc.Type"></td>
+		<td data-ng-bind="doc.PrjDocType"></td>
+		<td data-ng-bind="doc.Category"></td>
+		<td data-ng-bind="doc.Status"></td>
+		<td data-ng-bind="doc.Description"></td>
+		<td data-ng-bind="doc.Date"></td>
+		<td data-ng-bind="doc.OriginFileName"></td>
+		<td>
+			<div data-basics-workflow-document-button-directive options="doc.Options"><i
+				class="block-image control-icons ico-preview"></i></div>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<h1>{{'basics.workflow.sendRfQDocuments.rEQDocuments' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQDocuments.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.type' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.documentType' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.documentCategory' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.status' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.description' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.date' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.originFileName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.preview' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="doc in Context.ReQDocuments">
+		<td>
+			<div data-domain="boolean" data-domain-control data-model="doc.Selected"></div>
+		</td>
+		<td data-ng-bind="doc.Type"></td>
+		<td data-ng-bind="doc.DocumentType"></td>
+		<td data-ng-bind="doc.Category"></td>
+		<td data-ng-bind="doc.Status"></td>
+		<td data-ng-bind="doc.Description"></td>
+		<td data-ng-bind="doc.Date"></td>
+		<td data-ng-bind="doc.OriginFileName"></td>
+		<td>
+			<div data-basics-workflow-document-button-directive options="doc.Options"><i
+				class="block-image control-icons ico-preview"></i></div>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<h1>{{'basics.workflow.sendRfQDocuments.rfQDocuments' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQDocuments.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.type' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.documentType' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.documentCategory' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.status' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.description' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.date' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.originFileName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQDocuments.preview' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="doc in Context.RfQDocuments">
+		<td>
+			<div data-domain="boolean" data-domain-control data-model="doc.Selected"></div>
+		</td>
+		<td data-ng-bind="doc.Type"></td>
+		<td data-ng-bind="doc.DocumentType"></td>
+		<td data-ng-bind="doc.Category"></td>
+		<td data-ng-bind="doc.Status"></td>
+		<td data-ng-bind="doc.Description"></td>
+		<td data-ng-bind="doc.Date"></td>
+		<td data-ng-bind="doc.OriginFileName"></td>
+		<td>
+			<div data-basics-workflow-document-button-directive options="doc.Options"><i
+				class="block-image control-icons ico-preview"></i></div>
+		</td>
+	</tr>
+	</tbody>
+</table>

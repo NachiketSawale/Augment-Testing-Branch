@@ -1,0 +1,63 @@
+{
+	"usermanagement" : {
+		"main" : {
+			"dialog" : {
+				"useSecureConnection" : "Use Secure Connection",
+				"showPreValidation" : "Turn off pre-validation",
+				"adConfig" : "Active Directory & Task Configuration",
+				"tab-adConfig" : "Active Directory Configuration",
+				"tab-scheduleConfig" : "Create new Scheduler Task",
+				"groupsPath" : "Group Path",
+				"usersPath" : "User Path",
+				"activated" : "Create",
+				"autoDelete" : "Delete automatically",
+				"addAdUser" : "Create/Assign  User",
+				"syncAdUser" : "Synchronize User",
+				"syncAdGroup" : "Synchronize Groups",
+				"daily" : "Daily",
+				"weekly" : "Weekly",
+				"nonrep" : "Unrepeatable",
+				"header1" : "Task Configuration",
+				"header2" : "Task Scheduler",
+				"headerCleanupOption" : "Cleanup Option",
+				"date" : "Date: ",
+				"time" : "Time: ",
+				"exampleTextGroup" : "Please insert path: LDAP://...",
+				"exampleTextUser" : "Please insert path: LDAP://...",
+				"username" : "Username",
+				"password" : "Password",
+				"useAuthentication" : "LDAP Authentication",
+				"ldapSampleLabel" : "LDAP Url Syntax",
+				"ldapUrl" : "Url:&emsp;LDAP://[ldapservername[:port]/][OU=Groups,OU=Germany,OU=RIBAG,DC=rib-softwarec,DC=com]<br>i.e.:&emsp;LDAP://rib-s-dc01.rib-software.com:389/OU=Groups,OU=Germany,OU=RIBAG,DC=rib-software,DC=com<br>",
+				"ldapGroupPathInfo" : "Please insert LDAP Group path",
+				"ldapUserPathInfo" : "Please insert LDAP User path",
+				"enterUsername" : "Please enter LDAP Server Username",
+				"enterPassword" : "Please enter LDAP Server Password",
+				"validate" : "Validate LDAP Paths",
+				"importEnabledOnly" : "Import only Enabled Users",
+				"upnNameFilter" : "UPN Name Filter",
+				"keepCount" : "Keep n executed jobs",
+				"keepDuration" : "Keep executed jobs for n days",
+				"btnMultipleConfigurations" : "Configurations",
+				"msgMultipleConfigurations" : "There are multiple configurations available. To customize them, please click the Configurations button in the dialog."
+			},
+			"adsConfig" : {
+				"infoBodyText" : "Save successful !",
+				"authenticationError" : "LDAP Authentication failed. Nothing saved!",
+				"infoBodyTextGroupError" : "Group path invalid. Nothing saved!",
+				"infoBodyTextUserError" : "User path invalid. Nothing saved!",
+				"infoBodyTextGroupAndUserError" : "Group & user path invalid. Nothing saved!",
+				"infoBodyTextNoEntryFound": "No User Directory config found",
+				"infoBodyTextMultipleEntry": "Multiple User Directory config found. Please configure in Customize module",
+				"infoDialogHeader" : "Active Directory Configuration",
+				"adTaskInfo" : "AD Scheduler Task saved successful !",
+				"usernamepasswordErr" : "Username or Password must not be empty and invalid. If you changed Username, you must enter a new Password as well.",
+				"validationBodyText" : "Validation successful!",
+				"validationBodyTextGroupError" : "Group path invalid!",
+				"validationBodyTextUserError" : "User path invalid!",
+				"validationBodyTextGroupAndUserError" : "Group & user path invalid!",
+				"validationBodyTextWrongInput" : "Wrong input, validation failed!"
+			}
+		}
+	}
+}

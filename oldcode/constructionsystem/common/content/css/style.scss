@@ -1,0 +1,18 @@
+.enhanced-directive-container {
+  height: calc(100%);
+  overflow: hidden;
+}
+
+.enhanced-directive {
+  height: calc(100% - 40px);
+  overflow: auto;
+}
+
+.CodeMirror pre.CodeMirror-placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.selection-statement .platform-form-row .select2-container {
+  border:none !important;
+}

@@ -1,0 +1,10257 @@
+{
+	"CanOverwrite": true,
+	"CompanyCode": "GUANGDONG2017001",
+	"UoMs": [
+		{
+			"UnitInfo": {
+				"Description": "----"
+			},
+			"DescriptionInfo": {
+				"Description": "----"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": " m3"
+			},
+			"DescriptionInfo": {
+				"Description": " m3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": " t"
+			},
+			"DescriptionInfo": {
+				"Description": " t"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "%"
+			},
+			"DescriptionInfo": {
+				"Description": "%"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "°C"
+			},
+			"DescriptionInfo": {
+				"Description": "°C"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "1/2 B"
+			},
+			"DescriptionInfo": {
+				"Description": "1/2 B"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "1km/单线"
+			},
+			"DescriptionInfo": {
+				"Description": "1km/单线"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "2.5L"
+			},
+			"DescriptionInfo": {
+				"Description": "2.5L"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 1.2,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "3kg"
+			},
+			"DescriptionInfo": {
+				"Description": "3kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 3,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "4 ltrs"
+			},
+			"DescriptionInfo": {
+				"Description": "4 ltrs"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 4,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "4Litre"
+			},
+			"DescriptionInfo": {
+				"Description": "4Litre"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 4,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "5 ltrs"
+			},
+			"DescriptionInfo": {
+				"Description": "5 ltrs"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 5,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "5Kg"
+			},
+			"DescriptionInfo": {
+				"Description": "5Kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 5,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "5Litre"
+			},
+			"DescriptionInfo": {
+				"Description": "5Litre"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 5,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "5对"
+			},
+			"DescriptionInfo": {
+				"Description": "5对"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "对",
+					"Quantity": 5,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "8点"
+			},
+			"DescriptionInfo": {
+				"Description": "8点"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "点",
+					"Quantity": 8,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10kg"
+			},
+			"DescriptionInfo": {
+				"Description": "10kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10litr"
+			},
+			"DescriptionInfo": {
+				"Description": "10litr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10m"
+			},
+			"DescriptionInfo": {
+				"Description": "10m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10m.月"
+			},
+			"DescriptionInfo": {
+				"Description": "10m.月"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10m/单相"
+			},
+			"DescriptionInfo": {
+				"Description": "10m/单相"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10m2"
+			},
+			"DescriptionInfo": {
+				"Description": "10m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10m3"
+			},
+			"DescriptionInfo": {
+				"Description": "10m3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10m3外围体积"
+			},
+			"DescriptionInfo": {
+				"Description": "10m3外围体积"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10mm2"
+			},
+			"DescriptionInfo": {
+				"Description": "10mm2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm2",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10t"
+			},
+			"DescriptionInfo": {
+				"Description": "10t"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "t",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10t.km"
+			},
+			"DescriptionInfo": {
+				"Description": "10t.km"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10t.m"
+			},
+			"DescriptionInfo": {
+				"Description": "10t.m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10处"
+			},
+			"DescriptionInfo": {
+				"Description": "10处"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10串"
+			},
+			"DescriptionInfo": {
+				"Description": "10串"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10道口"
+			},
+			"DescriptionInfo": {
+				"Description": "10道口"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10副"
+			},
+			"DescriptionInfo": {
+				"Description": "10副"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10个"
+			},
+			"DescriptionInfo": {
+				"Description": "10个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10个测试件"
+			},
+			"DescriptionInfo": {
+				"Description": "10个测试件"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10个点"
+			},
+			"DescriptionInfo": {
+				"Description": "10个点"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10个接头"
+			},
+			"DescriptionInfo": {
+				"Description": "10个接头"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10个口"
+			},
+			"DescriptionInfo": {
+				"Description": "10个口"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10根"
+			},
+			"DescriptionInfo": {
+				"Description": "10根"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10根天"
+			},
+			"DescriptionInfo": {
+				"Description": "10根天"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10基"
+			},
+			"DescriptionInfo": {
+				"Description": "10基"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10件"
+			},
+			"DescriptionInfo": {
+				"Description": "10件"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10节"
+			},
+			"DescriptionInfo": {
+				"Description": "10节"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10口"
+			},
+			"DescriptionInfo": {
+				"Description": "10口"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10块"
+			},
+			"DescriptionInfo": {
+				"Description": "10块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10片"
+			},
+			"DescriptionInfo": {
+				"Description": "10片"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10套"
+			},
+			"DescriptionInfo": {
+				"Description": "10套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10头"
+			},
+			"DescriptionInfo": {
+				"Description": "10头"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10延米"
+			},
+			"DescriptionInfo": {
+				"Description": "10延米"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10延长米"
+			},
+			"DescriptionInfo": {
+				"Description": "10延长米"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10张"
+			},
+			"DescriptionInfo": {
+				"Description": "10张"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10支"
+			},
+			"DescriptionInfo": {
+				"Description": "10支"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10株"
+			},
+			"DescriptionInfo": {
+				"Description": "10株"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "10组"
+			},
+			"DescriptionInfo": {
+				"Description": "10组"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "12m"
+			},
+			"DescriptionInfo": {
+				"Description": "12m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 12,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "17Kg"
+			},
+			"DescriptionInfo": {
+				"Description": "17Kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 17,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "25 Kg"
+			},
+			"DescriptionInfo": {
+				"Description": "25 Kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 12,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "25Kg"
+			},
+			"DescriptionInfo": {
+				"Description": "25Kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 25,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "30m"
+			},
+			"DescriptionInfo": {
+				"Description": "30m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 30,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "30根天"
+			},
+			"DescriptionInfo": {
+				"Description": "30根天"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 30,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "30路"
+			},
+			"DescriptionInfo": {
+				"Description": "30路"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "路",
+					"Quantity": 30,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "50Kg"
+			},
+			"DescriptionInfo": {
+				"Description": "50Kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 50,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "50m"
+			},
+			"DescriptionInfo": {
+				"Description": "50m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 50,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "50根天"
+			},
+			"DescriptionInfo": {
+				"Description": "50根天"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 50,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "90m"
+			},
+			"DescriptionInfo": {
+				"Description": "90m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 90,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100"
+			},
+			"DescriptionInfo": {
+				"Description": "100"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "100cm3"
+			},
+			"DescriptionInfo": {
+				"Description": "100cm3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm3",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100kg"
+			},
+			"DescriptionInfo": {
+				"Description": "100kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100L"
+			},
+			"DescriptionInfo": {
+				"Description": "100L"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m"
+			},
+			"DescriptionInfo": {
+				"Description": "100m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m.天"
+			},
+			"DescriptionInfo": {
+				"Description": "100m.天"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m.月"
+			},
+			"DescriptionInfo": {
+				"Description": "100m.月"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m/单线"
+			},
+			"DescriptionInfo": {
+				"Description": "100m/单线"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m/单相"
+			},
+			"DescriptionInfo": {
+				"Description": "100m/单相"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m/束"
+			},
+			"DescriptionInfo": {
+				"Description": "100m/束"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m2"
+			},
+			"DescriptionInfo": {
+				"Description": "100m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m2(立面积)"
+			},
+			"DescriptionInfo": {
+				"Description": "100m2(立面积)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m2(立面面积)"
+			},
+			"DescriptionInfo": {
+				"Description": "100m2(立面面积)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m2.天"
+			},
+			"DescriptionInfo": {
+				"Description": "100m2.天"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m2.月"
+			},
+			"DescriptionInfo": {
+				"Description": "100m2.月"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m3"
+			},
+			"DescriptionInfo": {
+				"Description": "100m3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100m单线"
+			},
+			"DescriptionInfo": {
+				"Description": "100m单线"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100t"
+			},
+			"DescriptionInfo": {
+				"Description": "100t"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "t",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100丛"
+			},
+			"DescriptionInfo": {
+				"Description": "100丛"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100丛.月"
+			},
+			"DescriptionInfo": {
+				"Description": "100丛.月"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100袋"
+			},
+			"DescriptionInfo": {
+				"Description": "100袋"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100发"
+			},
+			"DescriptionInfo": {
+				"Description": "100发"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100副"
+			},
+			"DescriptionInfo": {
+				"Description": "100副"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100个"
+			},
+			"DescriptionInfo": {
+				"Description": "100个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100工日"
+			},
+			"DescriptionInfo": {
+				"Description": "100工日"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "工日",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100件"
+			},
+			"DescriptionInfo": {
+				"Description": "100件"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100块"
+			},
+			"DescriptionInfo": {
+				"Description": "100块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100盆"
+			},
+			"DescriptionInfo": {
+				"Description": "100盆"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100片"
+			},
+			"DescriptionInfo": {
+				"Description": "100片"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100台"
+			},
+			"DescriptionInfo": {
+				"Description": "100台"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100套"
+			},
+			"DescriptionInfo": {
+				"Description": "100套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100条"
+			},
+			"DescriptionInfo": {
+				"Description": "100条"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100穴"
+			},
+			"DescriptionInfo": {
+				"Description": "100穴"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100延长米"
+			},
+			"DescriptionInfo": {
+				"Description": "100延长米"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100元"
+			},
+			"DescriptionInfo": {
+				"Description": "100元"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100支"
+			},
+			"DescriptionInfo": {
+				"Description": "100支"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100只"
+			},
+			"DescriptionInfo": {
+				"Description": "100只"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100株"
+			},
+			"DescriptionInfo": {
+				"Description": "100株"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100株(丛)"
+			},
+			"DescriptionInfo": {
+				"Description": "100株(丛)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100株(丛).月"
+			},
+			"DescriptionInfo": {
+				"Description": "100株(丛).月"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "100株.月"
+			},
+			"DescriptionInfo": {
+				"Description": "100株.月"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "150m"
+			},
+			"DescriptionInfo": {
+				"Description": "150m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 150,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "250ml"
+			},
+			"DescriptionInfo": {
+				"Description": "250ml"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 0.25,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "300L"
+			},
+			"DescriptionInfo": {
+				"Description": "300L"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 300,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "310ml"
+			},
+			"DescriptionInfo": {
+				"Description": "310ml"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Litre",
+					"Quantity": 0.31,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000"
+			},
+			"DescriptionInfo": {
+				"Description": "1000"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000kg"
+			},
+			"DescriptionInfo": {
+				"Description": "1000kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000m"
+			},
+			"DescriptionInfo": {
+				"Description": "1000m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000m2"
+			},
+			"DescriptionInfo": {
+				"Description": "1000m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000m3"
+			},
+			"DescriptionInfo": {
+				"Description": "1000m3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000m砂井"
+			},
+			"DescriptionInfo": {
+				"Description": "1000m砂井"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000t.m"
+			},
+			"DescriptionInfo": {
+				"Description": "1000t.m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000个"
+			},
+			"DescriptionInfo": {
+				"Description": "1000个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "个",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000根"
+			},
+			"DescriptionInfo": {
+				"Description": "1000根"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "根",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "1000块"
+			},
+			"DescriptionInfo": {
+				"Description": "1000块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "块",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "acre"
+			},
+			"DescriptionInfo": {
+				"Description": "acre"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 4046.8564224,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Bag"
+			},
+			"DescriptionInfo": {
+				"Description": "Bag"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Btu/h"
+			},
+			"DescriptionInfo": {
+				"Description": "Btu/h"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "W",
+					"Quantity": 0.293,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cbm"
+			},
+			"DescriptionInfo": {
+				"Description": "cbm"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cm"
+			},
+			"DescriptionInfo": {
+				"Description": "cm"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cm2"
+			},
+			"DescriptionInfo": {
+				"Description": "cm2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm2",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cm²"
+			},
+			"DescriptionInfo": {
+				"Description": "cm²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cm3"
+			},
+			"DescriptionInfo": {
+				"Description": "cm3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm3",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cm³"
+			},
+			"DescriptionInfo": {
+				"Description": "cm³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cu ft"
+			},
+			"DescriptionInfo": {
+				"Description": "cu ft"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm3",
+					"Quantity": 28316.846592,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cu in"
+			},
+			"DescriptionInfo": {
+				"Description": "cu in"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm3",
+					"Quantity": 16.387064,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cu yd"
+			},
+			"DescriptionInfo": {
+				"Description": "cu yd"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm3",
+					"Quantity": 764554.857984,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "cwt"
+			},
+			"DescriptionInfo": {
+				"Description": "cwt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 50.8023,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "CY"
+			},
+			"DescriptionInfo": {
+				"Description": "CY"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cu yd",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "d"
+			},
+			"DescriptionInfo": {
+				"Description": "d"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "dam"
+			},
+			"DescriptionInfo": {
+				"Description": "dam"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dam2"
+			},
+			"DescriptionInfo": {
+				"Description": "dam2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dam²"
+			},
+			"DescriptionInfo": {
+				"Description": "dam²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dam2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dam3"
+			},
+			"DescriptionInfo": {
+				"Description": "dam3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dam³"
+			},
+			"DescriptionInfo": {
+				"Description": "dam³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dam3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "day"
+			},
+			"DescriptionInfo": {
+				"Description": "day"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "dm"
+			},
+			"DescriptionInfo": {
+				"Description": "dm"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dm2"
+			},
+			"DescriptionInfo": {
+				"Description": "dm2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dm²"
+			},
+			"DescriptionInfo": {
+				"Description": "dm²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dm2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dm3"
+			},
+			"DescriptionInfo": {
+				"Description": "dm3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm3",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "dm³"
+			},
+			"DescriptionInfo": {
+				"Description": "dm³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dm3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Ea"
+			},
+			"DescriptionInfo": {
+				"Description": "Ea"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "each",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "each"
+			},
+			"DescriptionInfo": {
+				"Description": "each"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Einh"
+			},
+			"DescriptionInfo": {
+				"Description": "Einh"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "foot"
+			},
+			"DescriptionInfo": {
+				"Description": "foot"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "ft",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ft"
+			},
+			"DescriptionInfo": {
+				"Description": "ft"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm",
+					"Quantity": 30.48,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ft2"
+			},
+			"DescriptionInfo": {
+				"Description": "ft2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 929.0304,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ft²"
+			},
+			"DescriptionInfo": {
+				"Description": "ft²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "ft2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ft3"
+			},
+			"DescriptionInfo": {
+				"Description": "ft3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm3",
+					"Quantity": 28316.846592,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ft³"
+			},
+			"DescriptionInfo": {
+				"Description": "ft³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "ft3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "g"
+			},
+			"DescriptionInfo": {
+				"Description": "g"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "gal"
+			},
+			"DescriptionInfo": {
+				"Description": "gal"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "GBP"
+			},
+			"DescriptionInfo": {
+				"Description": "GBP"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Grad"
+			},
+			"DescriptionInfo": {
+				"Description": "Grad"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "h"
+			},
+			"DescriptionInfo": {
+				"Description": "h"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "min",
+					"Quantity": 60,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ha"
+			},
+			"DescriptionInfo": {
+				"Description": "ha"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "hl"
+			},
+			"DescriptionInfo": {
+				"Description": "hl"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "l",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "HOUR"
+			},
+			"DescriptionInfo": {
+				"Description": "HOUR"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Hrs",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "hp"
+			},
+			"DescriptionInfo": {
+				"Description": "hp"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "W",
+					"Quantity": 745.7,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Hr"
+			},
+			"DescriptionInfo": {
+				"Description": "Hr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "h",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Hrs"
+			},
+			"DescriptionInfo": {
+				"Description": "Hrs"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "in"
+			},
+			"DescriptionInfo": {
+				"Description": "in"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "inch",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "in2"
+			},
+			"DescriptionInfo": {
+				"Description": "in2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm2",
+					"Quantity": 645.16,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "in²"
+			},
+			"DescriptionInfo": {
+				"Description": "in²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "in2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "in3"
+			},
+			"DescriptionInfo": {
+				"Description": "in3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm3",
+					"Quantity": 16387.064,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "in³"
+			},
+			"DescriptionInfo": {
+				"Description": "in³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "in3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "inch"
+			},
+			"DescriptionInfo": {
+				"Description": "inch"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm",
+					"Quantity": 25.4,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "item"
+			},
+			"DescriptionInfo": {
+				"Description": "item"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Jr"
+			},
+			"DescriptionInfo": {
+				"Description": "Jr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Mt",
+					"Quantity": 12,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "㎏"
+			},
+			"DescriptionInfo": {
+				"Description": "㎏"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "kg"
+			},
+			"DescriptionInfo": {
+				"Description": "kg"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "g",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "kg　"
+			},
+			"DescriptionInfo": {
+				"Description": "kg　"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kg/m³"
+			},
+			"DescriptionInfo": {
+				"Description": "kg/m³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kl"
+			},
+			"DescriptionInfo": {
+				"Description": "kl"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "km"
+			},
+			"DescriptionInfo": {
+				"Description": "km"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "km2"
+			},
+			"DescriptionInfo": {
+				"Description": "km2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 1000000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "km²"
+			},
+			"DescriptionInfo": {
+				"Description": "km²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "km2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "km3"
+			},
+			"DescriptionInfo": {
+				"Description": "km3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 1000000000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "km³"
+			},
+			"DescriptionInfo": {
+				"Description": "km³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "km3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "kN"
+			},
+			"DescriptionInfo": {
+				"Description": "kN"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kN/m"
+			},
+			"DescriptionInfo": {
+				"Description": "kN/m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kt.m"
+			},
+			"DescriptionInfo": {
+				"Description": "kt.m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kt．m"
+			},
+			"DescriptionInfo": {
+				"Description": "kt．m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kt·m"
+			},
+			"DescriptionInfo": {
+				"Description": "kt·m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kW"
+			},
+			"DescriptionInfo": {
+				"Description": "kW"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "W",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "kW.h"
+			},
+			"DescriptionInfo": {
+				"Description": "kW.h"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kW．h"
+			},
+			"DescriptionInfo": {
+				"Description": "kW．h"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kW·h"
+			},
+			"DescriptionInfo": {
+				"Description": "kW·h"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "kWh"
+			},
+			"DescriptionInfo": {
+				"Description": "kWh"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "l"
+			},
+			"DescriptionInfo": {
+				"Description": "l"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dm3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "l ton"
+			},
+			"DescriptionInfo": {
+				"Description": "l ton"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 1016.05,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "lb"
+			},
+			"DescriptionInfo": {
+				"Description": "lb"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "lb tr"
+			},
+			"DescriptionInfo": {
+				"Description": "lb tr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 0.373,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Leaf"
+			},
+			"DescriptionInfo": {
+				"Description": "Leaf"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "LF"
+			},
+			"DescriptionInfo": {
+				"Description": "LF"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "lfm"
+			},
+			"DescriptionInfo": {
+				"Description": "lfm"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Litre"
+			},
+			"DescriptionInfo": {
+				"Description": "Litre"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "LS"
+			},
+			"DescriptionInfo": {
+				"Description": "LS"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "psch",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "lsum"
+			},
+			"DescriptionInfo": {
+				"Description": "lsum"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "psch",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ltr"
+			},
+			"DescriptionInfo": {
+				"Description": "ltr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "l",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "m"
+			},
+			"DescriptionInfo": {
+				"Description": "m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dm",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "m(根)"
+			},
+			"DescriptionInfo": {
+				"Description": "m(根)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m（根）"
+			},
+			"DescriptionInfo": {
+				"Description": "m（根）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m(双轨)"
+			},
+			"DescriptionInfo": {
+				"Description": "m(双轨)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "m、m2"
+			},
+			"DescriptionInfo": {
+				"Description": "m、m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m/m2"
+			},
+			"DescriptionInfo": {
+				"Description": "m/m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m/处"
+			},
+			"DescriptionInfo": {
+				"Description": "m/处"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m/对"
+			},
+			"DescriptionInfo": {
+				"Description": "m/对"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m·日"
+			},
+			"DescriptionInfo": {
+				"Description": "m·日"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2"
+			},
+			"DescriptionInfo": {
+				"Description": "m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dm2",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "m²"
+			},
+			"DescriptionInfo": {
+				"Description": "m²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2(m)"
+			},
+			"DescriptionInfo": {
+				"Description": "m2(m)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2.日"
+			},
+			"DescriptionInfo": {
+				"Description": "m2.日"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2/m3/座"
+			},
+			"DescriptionInfo": {
+				"Description": "m2/m3/座"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2/座"
+			},
+			"DescriptionInfo": {
+				"Description": "m2/座"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2·工日"
+			},
+			"DescriptionInfo": {
+				"Description": "m2·工日"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2·日"
+			},
+			"DescriptionInfo": {
+				"Description": "m2·日"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2d"
+			},
+			"DescriptionInfo": {
+				"Description": "m2d"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2GIFA"
+			},
+			"DescriptionInfo": {
+				"Description": "m2GIFA"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2Mt"
+			},
+			"DescriptionInfo": {
+				"Description": "m2Mt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2SA"
+			},
+			"DescriptionInfo": {
+				"Description": "m2SA"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2Wo"
+			},
+			"DescriptionInfo": {
+				"Description": "m2Wo"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m2槽底面积"
+			},
+			"DescriptionInfo": {
+				"Description": "m2槽底面积"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3"
+			},
+			"DescriptionInfo": {
+				"Description": "m3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "dm3",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "m³"
+			},
+			"DescriptionInfo": {
+				"Description": "m³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3(m)"
+			},
+			"DescriptionInfo": {
+				"Description": "m3(m)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3（t）"
+			},
+			"DescriptionInfo": {
+				"Description": "m3（t）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3（个）"
+			},
+			"DescriptionInfo": {
+				"Description": "m3（个）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3(根)"
+			},
+			"DescriptionInfo": {
+				"Description": "m3(根)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3（根）"
+			},
+			"DescriptionInfo": {
+				"Description": "m3（根）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3(块)"
+			},
+			"DescriptionInfo": {
+				"Description": "m3(块)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3(块、套)"
+			},
+			"DescriptionInfo": {
+				"Description": "m3(块、套)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3(榀)"
+			},
+			"DescriptionInfo": {
+				"Description": "m3(榀)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3d"
+			},
+			"DescriptionInfo": {
+				"Description": "m3d"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3km"
+			},
+			"DescriptionInfo": {
+				"Description": "m3km"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3Mt"
+			},
+			"DescriptionInfo": {
+				"Description": "m3Mt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "m3Wo"
+			},
+			"DescriptionInfo": {
+				"Description": "m3Wo"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "md"
+			},
+			"DescriptionInfo": {
+				"Description": "md"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "mhrs/week"
+			},
+			"DescriptionInfo": {
+				"Description": "mhrs/week"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "mhrs/wk"
+			},
+			"DescriptionInfo": {
+				"Description": "mhrs/wk"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "mile"
+			},
+			"DescriptionInfo": {
+				"Description": "mile"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "km",
+					"Quantity": 1.609344,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "min"
+			},
+			"DescriptionInfo": {
+				"Description": "min"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "s",
+					"Quantity": 60,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "MJ"
+			},
+			"DescriptionInfo": {
+				"Description": "MJ"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "ml"
+			},
+			"DescriptionInfo": {
+				"Description": "ml"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "mm"
+			},
+			"DescriptionInfo": {
+				"Description": "mm"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "mm2"
+			},
+			"DescriptionInfo": {
+				"Description": "mm2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "mm²"
+			},
+			"DescriptionInfo": {
+				"Description": "mm²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "mm3"
+			},
+			"DescriptionInfo": {
+				"Description": "mm3"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "mm³"
+			},
+			"DescriptionInfo": {
+				"Description": "mm³"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "mm3",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "mMt"
+			},
+			"DescriptionInfo": {
+				"Description": "mMt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Mo"
+			},
+			"DescriptionInfo": {
+				"Description": "Mo"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Mon",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Mon"
+			},
+			"DescriptionInfo": {
+				"Description": "Mon"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Mt"
+			},
+			"DescriptionInfo": {
+				"Description": "Mt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Mon",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "mWo"
+			},
+			"DescriptionInfo": {
+				"Description": "mWo"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "No"
+			},
+			"DescriptionInfo": {
+				"Description": "No"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Nr",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Nr"
+			},
+			"DescriptionInfo": {
+				"Description": "Nr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "nr/m²"
+			},
+			"DescriptionInfo": {
+				"Description": "nr/m²"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "oz"
+			},
+			"DescriptionInfo": {
+				"Description": "oz"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "g",
+					"Quantity": 28.35,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "oz tr"
+			},
+			"DescriptionInfo": {
+				"Description": "oz tr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "g",
+					"Quantity": 31.104,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Pack"
+			},
+			"DescriptionInfo": {
+				"Description": "Pack"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "pair"
+			},
+			"DescriptionInfo": {
+				"Description": "pair"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "pau"
+			},
+			"DescriptionInfo": {
+				"Description": "pau"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "psch",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Pc"
+			},
+			"DescriptionInfo": {
+				"Description": "Pc"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Ea",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "PC Sum"
+			},
+			"DescriptionInfo": {
+				"Description": "PC Sum"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Pcs"
+			},
+			"DescriptionInfo": {
+				"Description": "Pcs"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Pc",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "per person"
+			},
+			"DescriptionInfo": {
+				"Description": "per person"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "per week"
+			},
+			"DescriptionInfo": {
+				"Description": "per week"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Pers"
+			},
+			"DescriptionInfo": {
+				"Description": "Pers"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Pkt"
+			},
+			"DescriptionInfo": {
+				"Description": "Pkt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Pound"
+			},
+			"DescriptionInfo": {
+				"Description": "Pound"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Pr"
+			},
+			"DescriptionInfo": {
+				"Description": "Pr"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "prov"
+			},
+			"DescriptionInfo": {
+				"Description": "prov"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Prov Sum"
+			},
+			"DescriptionInfo": {
+				"Description": "Prov Sum"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "psch"
+			},
+			"DescriptionInfo": {
+				"Description": "psch"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "qcm"
+			},
+			"DescriptionInfo": {
+				"Description": "qcm"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "qm"
+			},
+			"DescriptionInfo": {
+				"Description": "qm"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Roll"
+			},
+			"DescriptionInfo": {
+				"Description": "Roll"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "rood"
+			},
+			"DescriptionInfo": {
+				"Description": "rood"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 1011.71,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "s"
+			},
+			"DescriptionInfo": {
+				"Description": "s"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "s cwt"
+			},
+			"DescriptionInfo": {
+				"Description": "s cwt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 45.3592,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "s ton"
+			},
+			"DescriptionInfo": {
+				"Description": "s ton"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 907.185,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Sack"
+			},
+			"DescriptionInfo": {
+				"Description": "Sack"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Set"
+			},
+			"DescriptionInfo": {
+				"Description": "Set"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "SF"
+			},
+			"DescriptionInfo": {
+				"Description": "SF"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 0.093,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Sheet"
+			},
+			"DescriptionInfo": {
+				"Description": "Sheet"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "sq ft"
+			},
+			"DescriptionInfo": {
+				"Description": "sq ft"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 929.0304,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "sq in"
+			},
+			"DescriptionInfo": {
+				"Description": "sq in"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 6.4516,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "sq mi"
+			},
+			"DescriptionInfo": {
+				"Description": "sq mi"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 2589988.1103,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "sq yd"
+			},
+			"DescriptionInfo": {
+				"Description": "sq yd"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 8361.2736,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "St"
+			},
+			"DescriptionInfo": {
+				"Description": "St"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stk",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "St."
+			},
+			"DescriptionInfo": {
+				"Description": "St."
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stk",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "St/J"
+			},
+			"DescriptionInfo": {
+				"Description": "St/J"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "St/M"
+			},
+			"DescriptionInfo": {
+				"Description": "St/M"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Stck"
+			},
+			"DescriptionInfo": {
+				"Description": "Stck"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Std"
+			},
+			"DescriptionInfo": {
+				"Description": "Std"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "h",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Sth"
+			},
+			"DescriptionInfo": {
+				"Description": "Sth"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Stk"
+			},
+			"DescriptionInfo": {
+				"Description": "Stk"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "StMt"
+			},
+			"DescriptionInfo": {
+				"Description": "StMt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "stone"
+			},
+			"DescriptionInfo": {
+				"Description": "stone"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 6.35,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "StWo"
+			},
+			"DescriptionInfo": {
+				"Description": "StWo"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "sum"
+			},
+			"DescriptionInfo": {
+				"Description": "sum"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "t"
+			},
+			"DescriptionInfo": {
+				"Description": "t"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "kg",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "t(樘)"
+			},
+			"DescriptionInfo": {
+				"Description": "t(樘)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "t.月"
+			},
+			"DescriptionInfo": {
+				"Description": "t.月"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Tag"
+			},
+			"DescriptionInfo": {
+				"Description": "Tag"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "d",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "th"
+			},
+			"DescriptionInfo": {
+				"Description": "th"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Thous"
+			},
+			"DescriptionInfo": {
+				"Description": "Thous"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Ea",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "tMt"
+			},
+			"DescriptionInfo": {
+				"Description": "tMt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "to"
+			},
+			"DescriptionInfo": {
+				"Description": "to"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "t",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "ton"
+			},
+			"DescriptionInfo": {
+				"Description": "ton"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "lb",
+					"Quantity": 2000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Tonne"
+			},
+			"DescriptionInfo": {
+				"Description": "Tonne"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "t",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "Tube"
+			},
+			"DescriptionInfo": {
+				"Description": "Tube"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Volt"
+			},
+			"DescriptionInfo": {
+				"Description": "Volt"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "W"
+			},
+			"DescriptionInfo": {
+				"Description": "W"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "wk"
+			},
+			"DescriptionInfo": {
+				"Description": "wk"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "Wo"
+			},
+			"DescriptionInfo": {
+				"Description": "Wo"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "yard"
+			},
+			"DescriptionInfo": {
+				"Description": "yard"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 0.9144,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "yd"
+			},
+			"DescriptionInfo": {
+				"Description": "yd"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "yard",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "yd2"
+			},
+			"DescriptionInfo": {
+				"Description": "yd2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "cm2",
+					"Quantity": 8361.2736,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "把"
+			},
+			"DescriptionInfo": {
+				"Description": "把"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "百对"
+			},
+			"DescriptionInfo": {
+				"Description": "百对"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "百个"
+			},
+			"DescriptionInfo": {
+				"Description": "百个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "百根"
+			},
+			"DescriptionInfo": {
+				"Description": "百根"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "百块"
+			},
+			"DescriptionInfo": {
+				"Description": "百块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 100,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "百片"
+			},
+			"DescriptionInfo": {
+				"Description": "百片"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "包"
+			},
+			"DescriptionInfo": {
+				"Description": "包"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "本"
+			},
+			"DescriptionInfo": {
+				"Description": "本"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "部"
+			},
+			"DescriptionInfo": {
+				"Description": "部"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "层"
+			},
+			"DescriptionInfo": {
+				"Description": "层"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "车组"
+			},
+			"DescriptionInfo": {
+				"Description": "车组"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "处"
+			},
+			"DescriptionInfo": {
+				"Description": "处"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "处（根、块）"
+			},
+			"DescriptionInfo": {
+				"Description": "处（根、块）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "处(条)"
+			},
+			"DescriptionInfo": {
+				"Description": "处(条)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "处（条）"
+			},
+			"DescriptionInfo": {
+				"Description": "处（条）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "次"
+			},
+			"DescriptionInfo": {
+				"Description": "次"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "次(根)"
+			},
+			"DescriptionInfo": {
+				"Description": "次(根)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "次/台"
+			},
+			"DescriptionInfo": {
+				"Description": "次/台"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "次/套"
+			},
+			"DescriptionInfo": {
+				"Description": "次/套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "丛"
+			},
+			"DescriptionInfo": {
+				"Description": "丛"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "丛(缸)"
+			},
+			"DescriptionInfo": {
+				"Description": "丛(缸)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "丛/m2"
+			},
+			"DescriptionInfo": {
+				"Description": "丛/m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "袋"
+			},
+			"DescriptionInfo": {
+				"Description": "袋"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "单侧km"
+			},
+			"DescriptionInfo": {
+				"Description": "单侧km"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "单体"
+			},
+			"DescriptionInfo": {
+				"Description": "单体"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "单体(处)"
+			},
+			"DescriptionInfo": {
+				"Description": "单体(处)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "单元"
+			},
+			"DescriptionInfo": {
+				"Description": "单元"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "点"
+			},
+			"DescriptionInfo": {
+				"Description": "点"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "顶"
+			},
+			"DescriptionInfo": {
+				"Description": "顶"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "端"
+			},
+			"DescriptionInfo": {
+				"Description": "端"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "端口"
+			},
+			"DescriptionInfo": {
+				"Description": "端口"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "段"
+			},
+			"DescriptionInfo": {
+				"Description": "段"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "断面"
+			},
+			"DescriptionInfo": {
+				"Description": "断面"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "对"
+			},
+			"DescriptionInfo": {
+				"Description": "对"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "吨"
+			},
+			"DescriptionInfo": {
+				"Description": "吨"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "吨天"
+			},
+			"DescriptionInfo": {
+				"Description": "吨天"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "墩"
+			},
+			"DescriptionInfo": {
+				"Description": "墩"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "发"
+			},
+			"DescriptionInfo": {
+				"Description": "发"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "方向"
+			},
+			"DescriptionInfo": {
+				"Description": "方向"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "方向（站）"
+			},
+			"DescriptionInfo": {
+				"Description": "方向（站）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "方向/站"
+			},
+			"DescriptionInfo": {
+				"Description": "方向/站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "份"
+			},
+			"DescriptionInfo": {
+				"Description": "份"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "付"
+			},
+			"DescriptionInfo": {
+				"Description": "付"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "副"
+			},
+			"DescriptionInfo": {
+				"Description": "副"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "副(片)"
+			},
+			"DescriptionInfo": {
+				"Description": "副(片)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个"
+			},
+			"DescriptionInfo": {
+				"Description": "个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(m)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(m)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个（m、根）"
+			},
+			"DescriptionInfo": {
+				"Description": "个（m、根）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(部)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(部)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(架、单元)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(架、单元)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个（架、单元）"
+			},
+			"DescriptionInfo": {
+				"Description": "个（架、单元）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(节)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(节)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(台)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(台)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(套)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(套)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个（套）"
+			},
+			"DescriptionInfo": {
+				"Description": "个（套）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(套、台)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(套、台)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(组)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(组)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个(组件)"
+			},
+			"DescriptionInfo": {
+				"Description": "个(组件)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个/套"
+			},
+			"DescriptionInfo": {
+				"Description": "个/套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个·日"
+			},
+			"DescriptionInfo": {
+				"Description": "个·日"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "个块"
+			},
+			"DescriptionInfo": {
+				"Description": "个块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "根"
+			},
+			"DescriptionInfo": {
+				"Description": "根"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "根(个)"
+			},
+			"DescriptionInfo": {
+				"Description": "根(个)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "根(基)"
+			},
+			"DescriptionInfo": {
+				"Description": "根(基)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "根(块)"
+			},
+			"DescriptionInfo": {
+				"Description": "根(块)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "根（套）"
+			},
+			"DescriptionInfo": {
+				"Description": "根（套）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "根（座）"
+			},
+			"DescriptionInfo": {
+				"Description": "根（座）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "根次"
+			},
+			"DescriptionInfo": {
+				"Description": "根次"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "工日"
+			},
+			"DescriptionInfo": {
+				"Description": "工日"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "HOUR",
+					"Quantity": 8,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "工时"
+			},
+			"DescriptionInfo": {
+				"Description": "工时"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "管"
+			},
+			"DescriptionInfo": {
+				"Description": "管"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "盒"
+			},
+			"DescriptionInfo": {
+				"Description": "盒"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "户"
+			},
+			"DescriptionInfo": {
+				"Description": "户"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "环"
+			},
+			"DescriptionInfo": {
+				"Description": "环"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "回路"
+			},
+			"DescriptionInfo": {
+				"Description": "回路"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "基"
+			},
+			"DescriptionInfo": {
+				"Description": "基"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "架"
+			},
+			"DescriptionInfo": {
+				"Description": "架"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "架(个)"
+			},
+			"DescriptionInfo": {
+				"Description": "架(个)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "架(盘)"
+			},
+			"DescriptionInfo": {
+				"Description": "架(盘)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "架（盘）"
+			},
+			"DescriptionInfo": {
+				"Description": "架（盘）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "架（套）"
+			},
+			"DescriptionInfo": {
+				"Description": "架（套）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "架(箱)"
+			},
+			"DescriptionInfo": {
+				"Description": "架(箱)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "架次"
+			},
+			"DescriptionInfo": {
+				"Description": "架次"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "间"
+			},
+			"DescriptionInfo": {
+				"Description": "间"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "间隔"
+			},
+			"DescriptionInfo": {
+				"Description": "间隔"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "件"
+			},
+			"DescriptionInfo": {
+				"Description": "件"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "节"
+			},
+			"DescriptionInfo": {
+				"Description": "节"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "节点机"
+			},
+			"DescriptionInfo": {
+				"Description": "节点机"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "井点"
+			},
+			"DescriptionInfo": {
+				"Description": "井点"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "具"
+			},
+			"DescriptionInfo": {
+				"Description": "具"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "具(组)"
+			},
+			"DescriptionInfo": {
+				"Description": "具(组)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "卷"
+			},
+			"DescriptionInfo": {
+				"Description": "卷"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "棵"
+			},
+			"DescriptionInfo": {
+				"Description": "棵"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "颗"
+			},
+			"DescriptionInfo": {
+				"Description": "颗"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "坑"
+			},
+			"DescriptionInfo": {
+				"Description": "坑"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "孔"
+			},
+			"DescriptionInfo": {
+				"Description": "孔"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "口"
+			},
+			"DescriptionInfo": {
+				"Description": "口"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "跨/三相"
+			},
+			"DescriptionInfo": {
+				"Description": "跨/三相"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "块"
+			},
+			"DescriptionInfo": {
+				"Description": "块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "块（套)"
+			},
+			"DescriptionInfo": {
+				"Description": "块（套)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "粒"
+			},
+			"DescriptionInfo": {
+				"Description": "粒"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "链路"
+			},
+			"DescriptionInfo": {
+				"Description": "链路"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "链路(芯)"
+			},
+			"DescriptionInfo": {
+				"Description": "链路(芯)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "链路(信息点)"
+			},
+			"DescriptionInfo": {
+				"Description": "链路(信息点)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "链路点芯"
+			},
+			"DescriptionInfo": {
+				"Description": "链路点芯"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "列"
+			},
+			"DescriptionInfo": {
+				"Description": "列"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "列(台、处)"
+			},
+			"DescriptionInfo": {
+				"Description": "列(台、处)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "列（台、处）"
+			},
+			"DescriptionInfo": {
+				"Description": "列（台、处）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "路"
+			},
+			"DescriptionInfo": {
+				"Description": "路"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "路（站）"
+			},
+			"DescriptionInfo": {
+				"Description": "路（站）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "路/站"
+			},
+			"DescriptionInfo": {
+				"Description": "路/站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "裸根"
+			},
+			"DescriptionInfo": {
+				"Description": "裸根"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "每个焊口"
+			},
+			"DescriptionInfo": {
+				"Description": "每个焊口"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "每坑"
+			},
+			"DescriptionInfo": {
+				"Description": "每坑"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "每瓶组"
+			},
+			"DescriptionInfo": {
+				"Description": "每瓶组"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "每一试样"
+			},
+			"DescriptionInfo": {
+				"Description": "每一试样"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "每增加10m"
+			},
+			"DescriptionInfo": {
+				"Description": "每增加10m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "门"
+			},
+			"DescriptionInfo": {
+				"Description": "门"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "米"
+			},
+			"DescriptionInfo": {
+				"Description": "米"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "面"
+			},
+			"DescriptionInfo": {
+				"Description": "面"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "模板10m2"
+			},
+			"DescriptionInfo": {
+				"Description": "模板10m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m2",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "排"
+			},
+			"DescriptionInfo": {
+				"Description": "排"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "盘"
+			},
+			"DescriptionInfo": {
+				"Description": "盘"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "盘(部)"
+			},
+			"DescriptionInfo": {
+				"Description": "盘(部)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "盘（部）"
+			},
+			"DescriptionInfo": {
+				"Description": "盘（部）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "盆"
+			},
+			"DescriptionInfo": {
+				"Description": "盆"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "片"
+			},
+			"DescriptionInfo": {
+				"Description": "片"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "片(组)"
+			},
+			"DescriptionInfo": {
+				"Description": "片(组)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "片/单相"
+			},
+			"DescriptionInfo": {
+				"Description": "片/单相"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "频点"
+			},
+			"DescriptionInfo": {
+				"Description": "频点"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "频点/站"
+			},
+			"DescriptionInfo": {
+				"Description": "频点/站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "榀"
+			},
+			"DescriptionInfo": {
+				"Description": "榀"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "平均每一个"
+			},
+			"DescriptionInfo": {
+				"Description": "平均每一个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "瓶"
+			},
+			"DescriptionInfo": {
+				"Description": "瓶"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "铺轨km"
+			},
+			"DescriptionInfo": {
+				"Description": "铺轨km"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "千个"
+			},
+			"DescriptionInfo": {
+				"Description": "千个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "千块"
+			},
+			"DescriptionInfo": {
+				"Description": "千块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "千路端"
+			},
+			"DescriptionInfo": {
+				"Description": "千路端"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "千套"
+			},
+			"DescriptionInfo": {
+				"Description": "千套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "千瓦时"
+			},
+			"DescriptionInfo": {
+				"Description": "千瓦时"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "千线"
+			},
+			"DescriptionInfo": {
+				"Description": "千线"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1000,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "区段"
+			},
+			"DescriptionInfo": {
+				"Description": "区段"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "圈"
+			},
+			"DescriptionInfo": {
+				"Description": "圈"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "全套"
+			},
+			"DescriptionInfo": {
+				"Description": "全套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "扇"
+			},
+			"DescriptionInfo": {
+				"Description": "扇"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "扇.载/站"
+			},
+			"DescriptionInfo": {
+				"Description": "扇.载/站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "扇·载"
+			},
+			"DescriptionInfo": {
+				"Description": "扇·载"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "扇·载/站"
+			},
+			"DescriptionInfo": {
+				"Description": "扇·载/站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "升"
+			},
+			"DescriptionInfo": {
+				"Description": "升"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "l",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "十个"
+			},
+			"DescriptionInfo": {
+				"Description": "十个"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "十块"
+			},
+			"DescriptionInfo": {
+				"Description": "十块"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "十套"
+			},
+			"DescriptionInfo": {
+				"Description": "十套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 10,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "室"
+			},
+			"DescriptionInfo": {
+				"Description": "室"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "束"
+			},
+			"DescriptionInfo": {
+				"Description": "束"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "双"
+			},
+			"DescriptionInfo": {
+				"Description": "双"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台"
+			},
+			"DescriptionInfo": {
+				"Description": "台"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(m)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(m)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(t)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(t)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台（对、系统）"
+			},
+			"DescriptionInfo": {
+				"Description": "台（对、系统）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(个)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(个)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台（个）"
+			},
+			"DescriptionInfo": {
+				"Description": "台（个）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(户)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(户)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台（架、端）"
+			},
+			"DescriptionInfo": {
+				"Description": "台（架、端）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(块)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(块)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(套)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(套)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台（套）"
+			},
+			"DescriptionInfo": {
+				"Description": "台（套）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台（系统）"
+			},
+			"DescriptionInfo": {
+				"Description": "台（系统）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(只)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(只)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台(组)"
+			},
+			"DescriptionInfo": {
+				"Description": "台(组)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台.次"
+			},
+			"DescriptionInfo": {
+				"Description": "台.次"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台．次"
+			},
+			"DescriptionInfo": {
+				"Description": "台．次"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台·次"
+			},
+			"DescriptionInfo": {
+				"Description": "台·次"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台班"
+			},
+			"DescriptionInfo": {
+				"Description": "台班"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "小时",
+					"Quantity": 8,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "台次"
+			},
+			"DescriptionInfo": {
+				"Description": "台次"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "樘"
+			},
+			"DescriptionInfo": {
+				"Description": "樘"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "樘/m2"
+			},
+			"DescriptionInfo": {
+				"Description": "樘/m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套"
+			},
+			"DescriptionInfo": {
+				"Description": "套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套(部)"
+			},
+			"DescriptionInfo": {
+				"Description": "套(部)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套（部）"
+			},
+			"DescriptionInfo": {
+				"Description": "套（部）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套(端)"
+			},
+			"DescriptionInfo": {
+				"Description": "套(端)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套（个）"
+			},
+			"DescriptionInfo": {
+				"Description": "套（个）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套(基)"
+			},
+			"DescriptionInfo": {
+				"Description": "套(基)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套(台)"
+			},
+			"DescriptionInfo": {
+				"Description": "套(台)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套（台）"
+			},
+			"DescriptionInfo": {
+				"Description": "套（台）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套(站)"
+			},
+			"DescriptionInfo": {
+				"Description": "套(站)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套/10m"
+			},
+			"DescriptionInfo": {
+				"Description": "套/10m"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "套/端"
+			},
+			"DescriptionInfo": {
+				"Description": "套/端"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "天"
+			},
+			"DescriptionInfo": {
+				"Description": "天"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "day",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "条"
+			},
+			"DescriptionInfo": {
+				"Description": "条"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "条km"
+			},
+			"DescriptionInfo": {
+				"Description": "条km"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "条公里"
+			},
+			"DescriptionInfo": {
+				"Description": "条公里"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "桶"
+			},
+			"DescriptionInfo": {
+				"Description": "桶"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "筒"
+			},
+			"DescriptionInfo": {
+				"Description": "筒"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "头"
+			},
+			"DescriptionInfo": {
+				"Description": "头"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统"
+			},
+			"DescriptionInfo": {
+				"Description": "系统"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统（端）"
+			},
+			"DescriptionInfo": {
+				"Description": "系统（端）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统（段）"
+			},
+			"DescriptionInfo": {
+				"Description": "系统（段）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统（全电路）"
+			},
+			"DescriptionInfo": {
+				"Description": "系统（全电路）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统(台)"
+			},
+			"DescriptionInfo": {
+				"Description": "系统(台)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统(台、套)"
+			},
+			"DescriptionInfo": {
+				"Description": "系统(台、套)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统(套)"
+			},
+			"DescriptionInfo": {
+				"Description": "系统(套)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统(站)"
+			},
+			"DescriptionInfo": {
+				"Description": "系统(站)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统(组)"
+			},
+			"DescriptionInfo": {
+				"Description": "系统(组)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统/端"
+			},
+			"DescriptionInfo": {
+				"Description": "系统/端"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统/段"
+			},
+			"DescriptionInfo": {
+				"Description": "系统/段"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统/全电路"
+			},
+			"DescriptionInfo": {
+				"Description": "系统/全电路"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统/数字段"
+			},
+			"DescriptionInfo": {
+				"Description": "系统/数字段"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统/站"
+			},
+			"DescriptionInfo": {
+				"Description": "系统/站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统/中继段"
+			},
+			"DescriptionInfo": {
+				"Description": "系统/中继段"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "系统套"
+			},
+			"DescriptionInfo": {
+				"Description": "系统套"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "线"
+			},
+			"DescriptionInfo": {
+				"Description": "线"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "线/架"
+			},
+			"DescriptionInfo": {
+				"Description": "线/架"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "箱"
+			},
+			"DescriptionInfo": {
+				"Description": "箱"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "项"
+			},
+			"DescriptionInfo": {
+				"Description": "项"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "项点"
+			},
+			"DescriptionInfo": {
+				"Description": "项点"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "小时"
+			},
+			"DescriptionInfo": {
+				"Description": "小时"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "HOUR",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "芯"
+			},
+			"DescriptionInfo": {
+				"Description": "芯"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "芯、端口"
+			},
+			"DescriptionInfo": {
+				"Description": "芯、端口"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "芽"
+			},
+			"DescriptionInfo": {
+				"Description": "芽"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "延米"
+			},
+			"DescriptionInfo": {
+				"Description": "延米"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "延长米"
+			},
+			"DescriptionInfo": {
+				"Description": "延长米"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "m",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "元"
+			},
+			"DescriptionInfo": {
+				"Description": "元"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": []
+		},
+		{
+			"UnitInfo": {
+				"Description": "载频"
+			},
+			"DescriptionInfo": {
+				"Description": "载频"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "载频/站"
+			},
+			"DescriptionInfo": {
+				"Description": "载频/站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "攒"
+			},
+			"DescriptionInfo": {
+				"Description": "攒"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "站"
+			},
+			"DescriptionInfo": {
+				"Description": "站"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "站（全电路）"
+			},
+			"DescriptionInfo": {
+				"Description": "站（全电路）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "站(系统)"
+			},
+			"DescriptionInfo": {
+				"Description": "站(系统)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "站/全电路"
+			},
+			"DescriptionInfo": {
+				"Description": "站/全电路"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "张"
+			},
+			"DescriptionInfo": {
+				"Description": "张"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "张(口)"
+			},
+			"DescriptionInfo": {
+				"Description": "张(口)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "支"
+			},
+			"DescriptionInfo": {
+				"Description": "支"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "支（台）"
+			},
+			"DescriptionInfo": {
+				"Description": "支（台）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "支台"
+			},
+			"DescriptionInfo": {
+				"Description": "支台"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "只"
+			},
+			"DescriptionInfo": {
+				"Description": "只"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "只(副、台、系统)"
+			},
+			"DescriptionInfo": {
+				"Description": "只(副、台、系统)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "只（副、系统）"
+			},
+			"DescriptionInfo": {
+				"Description": "只（副、系统）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "中继"
+			},
+			"DescriptionInfo": {
+				"Description": "中继"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "中继段"
+			},
+			"DescriptionInfo": {
+				"Description": "中继段"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "中继站/控制段"
+			},
+			"DescriptionInfo": {
+				"Description": "中继站/控制段"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "中继站系统"
+			},
+			"DescriptionInfo": {
+				"Description": "中继站系统"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "轴"
+			},
+			"DescriptionInfo": {
+				"Description": "轴"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "昼夜"
+			},
+			"DescriptionInfo": {
+				"Description": "昼夜"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "株"
+			},
+			"DescriptionInfo": {
+				"Description": "株"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "株(丛)"
+			},
+			"DescriptionInfo": {
+				"Description": "株(丛)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "株（丛）"
+			},
+			"DescriptionInfo": {
+				"Description": "株（丛）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "株(丛、缸)"
+			},
+			"DescriptionInfo": {
+				"Description": "株(丛、缸)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "株/m2"
+			},
+			"DescriptionInfo": {
+				"Description": "株/m2"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "株丛"
+			},
+			"DescriptionInfo": {
+				"Description": "株丛"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "柱"
+			},
+			"DescriptionInfo": {
+				"Description": "柱"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "子架"
+			},
+			"DescriptionInfo": {
+				"Description": "子架"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "子架(盘)"
+			},
+			"DescriptionInfo": {
+				"Description": "子架(盘)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "总价支付"
+			},
+			"DescriptionInfo": {
+				"Description": "总价支付"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "组"
+			},
+			"DescriptionInfo": {
+				"Description": "组"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "组(片)"
+			},
+			"DescriptionInfo": {
+				"Description": "组(片)"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "组/三相"
+			},
+			"DescriptionInfo": {
+				"Description": "组/三相"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "组件"
+			},
+			"DescriptionInfo": {
+				"Description": "组件"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "组日/3人"
+			},
+			"DescriptionInfo": {
+				"Description": "组日/3人"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "座"
+			},
+			"DescriptionInfo": {
+				"Description": "座"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		},
+		{
+			"UnitInfo": {
+				"Description": "座（个）"
+			},
+			"DescriptionInfo": {
+				"Description": "座（个）"
+			},
+			"RoundingPrecision": 0,
+			"Fallback": false,
+			"Type": "",
+			"UomSynonyms": [
+				{
+					"Synonym": "Stck",
+					"Quantity": 1,
+					"RoundingPrecision": 0,
+					"CommentText": ""
+				}
+			]
+		}
+	]
+}

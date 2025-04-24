@@ -1,0 +1,16 @@
+<div data-ng-controller="constructionsystemMainInstanceResetInstanceParametersController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+	<div class="searchresultpad flex-element flex-box flex-column" style="height:302px;">
+	<div class="flex-element flex-box flex-column gridframe relative-container subview-container">
+	<platform-Grid data="templateData"></platform-Grid>
+	</div>
+	</div>
+	</section>
+	<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-click="ok()"
+translate="basics.common.button.ok"></button>
+	<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"
+translate="basics.common.button.cancel"></button>
+	</footer>
+	</div>

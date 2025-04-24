@@ -1,0 +1,34 @@
+﻿<div class="content" data-ng-controller="cloudDesktopFavoritesController">
+	<div class="toolbar">
+		<div class="title"><span translate="cloud.desktop.sdMainFavoritesTitle"> </span></div>
+		<ul class="tools">
+			<li class="sublist">
+				<ul class="radio-group">
+					<li>
+						<button type="button" class="control-icons ico-plus"
+						        data-ng-click="favOpts.onAddProject()" data-ng-disabled="isAddProjectDisabled"
+						        title="{{'cloud.desktop.sdAddProjectFavorite' | translate }}">
+						</button>
+					</li>
+					<li>
+						<button type="button" class="tlb-icons ico-refresh"
+						        data-ng-click="favOpts.onRefresh()" data-ng-disabled="isRefreshDisabled"
+						        title="{{'cloud.common.toolbarRefresh' | translate }}">
+						</button>
+					</li>
+					<li>
+						<button type="button" btn-checkbox name="1" data-ng-model="btnCheckValue" class="tlb-icons ico-edit-list"
+						        data-ng-click="favOpts.processSortable()" title="{{'cloud.desktop.editModeProjectFavorite' | translate }}">
+						</button>
+					</li>
+				</ul>
+		</ul>
+	</div>
+
+	<div class="content-inner">
+		<div data-cloud-Common-Overlay data-loading="favOpts.refreshPending" data-info="Loading ..."></div>
+
+		<div data-cloud-desktop-favorites data-project-favorites="favData"></div>
+	</div>
+</div>
+

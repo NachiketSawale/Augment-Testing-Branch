@@ -1,0 +1,9 @@
+<h1>{{'basics.import.importProtocol'| platformTranslate}} {{importResult?.File2Import}}</h1><br>
+<ng-container *ngFor="let item of importResultMessageList">
+	{{item}}<br>
+</ng-container>
+<ng-container *ngFor="let item of importResult?.ImportObjects">
+	<ng-container *ngFor="let logEntry of item.ImportResult?.LogEntries">
+		{{logEntry}}<br>
+	</ng-container>
+</ng-container>

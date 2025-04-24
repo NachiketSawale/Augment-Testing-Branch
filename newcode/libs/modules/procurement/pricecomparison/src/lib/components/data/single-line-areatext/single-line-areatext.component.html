@@ -1,0 +1,13 @@
+<div class="input-group lookup-container">
+	<ui-common-domain-control-host
+		[value]="controlContext.value"
+		[fieldType]="fieldType.Description"
+		[attr.class]="'input-group-content'"
+	>
+	</ui-common-domain-control-host>
+	<span class="input-group-btn">
+      <button class="btn btn-default input-sm" (click)="openPopup($event)">
+			<span class="control-icons ico-input-lookup">&nbsp;</span>
+      </button>
+   </span>
+</div>

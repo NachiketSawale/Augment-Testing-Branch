@@ -1,0 +1,100 @@
+[
+  {
+    "id": "qto.formula.header",
+    "template": "app/components/base/grid-partial.html",
+    "title": "qto.formula.rubric.gridViewTitle",
+    "controller": "qtoFormulaRubricCategoryGridController",
+    "uuid": "7CBAC2C0E6F6435AA602A72DCCD50880"
+  },
+  {
+    "id": "qto.formula.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "qto.formula.gridViewTitle",
+    "controller": "qtoFormulaGridController",
+    "uuid": "0A38C749ABE04233AA0704F7D6C27088"
+  },
+  {
+    "id": "qto.formula.Form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "qto.formula.FormViewTitle",
+    "controller": "qtoFormulaGridDetailController",
+    "uuid": "F9F9DD20C26B4DFBA11B1D863006E34B",
+    "permission": "0A38C749ABE04233AA0704F7D6C27088"
+  },
+  {
+    "id": "qto.formula.uom",
+    "template": "app/components/base/grid-partial.html",
+    "title": "qto.formula.uom.gridViewTitle",
+    "controller": "qtoFormulaUomGridController",
+    "uuid": "4D2E1C160068475896D53EB5A4DAA22D"
+  },
+  {
+    "id": "qto.formula.uom.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "qto.formula.uom.formViewTitle",
+    "controller": "qtoFormulaUomDetailController",
+    "uuid": "8A97CE421CAB4889BDB7BD50BE2BD3F5",
+    "permission": "4D2E1C160068475896D53EB5A4DAA22D"
+  },
+  {
+    "id": "qto.formula.image",
+    "template": "qto.formula/partials/qto-formula-image.html",
+    "title": "qto.formula.image.Title",
+    "controller": "qtoFormulaImageController",
+    "uuid": "D9FFA97470F345B4A8817B700DC65720"
+  },
+  {
+    "id": "qto.formula.specification",
+    "template": "qto.formula/partials/qto-formula-specification.html",
+    "title": "qto.formula.specification.Title",
+    "controller": "qtoFormulaSpecificationController",
+    "uuid": "D9FFA97470F345B4A8817B700DC65721"
+  },
+  {
+    "id": "qto.formula.script",
+    "template": "qto.formula/partials/qto-formula-script.html",
+    "title": "qto.formula.script.Title",
+    "controller": "qtoFormulaScriptController",
+    "uuid": "A19431F94D1D4ED9B3B75C357FE68D3C",
+    "permission": "A19431F94D1D4ED9B3B75C357FE68D3C"
+  },
+
+  {
+    "id": "qto.formula.scriptValidation",
+    "template": "qto.formula/partials/script-validation-partial.html",
+    "title": "qto.formula.scriptValidation.scriptValidationContainerTitle",
+    "controller": "qtoFormulaScriptValidationController",
+    "uuid": "3D7638DD7D4F4B568456462FF1A02C68",
+    "permission": "A19431F94D1D4ED9B3B75C357FE68D3C"
+  },
+
+  {
+    "id": "qto.formula.comment",
+    "template": "app/components/base/grid-partial.html",
+    "title": "qto.formula.comment.title",
+    "controller": "qtoFormulaCommentController",
+    "uuid": "C13985FE81814514B659E609551EB406"
+  },
+  {
+    "id": "qto.formula.comment.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "qto.formula.comment.formTitle",
+    "controller": "qtoFormulaCommentDetailController",
+    "uuid": "0FCFCDB869B94462A5B12530A8D127BA",
+    "permission": "C13985FE81814514B659E609551EB406"
+  },
+  {
+    "id": "basics.formula.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "56B0229D1FC5448AB0356581F54B93FC"
+  },
+	{
+		"id": "qto.formula.scriptValidation.translation",
+		"template": "app/components/base/grid-partial.html",
+		"title": "qto.formula.scriptValidationTrans.scriptValidationTransContainerTitle",
+		"controller": "qtoFormulaValidationScriptTranslationGridController",
+		"uuid": "d91f9e1ee98945a98485365129e2c945"
+	}
+]

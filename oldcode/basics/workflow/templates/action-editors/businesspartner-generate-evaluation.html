@@ -1,0 +1,188 @@
+﻿<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.evaluationSchemaId' | translate}}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.schemaId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.evaluationMotiveId' | translate}}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.motiveId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.code' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.code" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.description' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.description" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.evaluationDate' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="input-group date domain-type-dateutc form-control">
+						<input class="formEmailInput input-group-content datepickerinput" data-domain="dateutc"
+						       data-ng-model="model.evaluationDate" data-options="codeMirrorOptions" data-platform-datetime-converter
+						       data-platform-datetime-handler data-platform-select-on-focus disabled
+						       type="text">
+						<span class="input-group-btn"><button class="btn btn-default"><span
+							class="glyphicon-calendar glyphicon"></span></button></span>
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.bpId' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.bpId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.subsidiaryId' | translate}}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.subsidiaryId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.contact1Id' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.contact1Id" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.contact2Id' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.contact2Id" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.prcClerkId' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.prcClerkId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.reqClerkId' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.reqClerkId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.remark' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.remarks" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.projectId' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.projectId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.qtnId' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.qtnId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.conId' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.conId" type="text">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.invoiceId' | translate }}</label>
+				<div class="platform-form-col">
+					<input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+					       data-ng-model="model.invId" type="text">
+				</div>
+			</div>
+
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.authorizationLevel' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="radio spaceToUp pull-left margin-right-ld">
+						<label>
+							<input data-ng-model="model.authorizationLevel" type="radio"
+							       value="evaluation">{{'basics.workflow.action.customEditor.authorizationLevelOfEvaluation' | translate}}
+						</label>
+					</div>
+					<div class="radio spaceToUp pull-left margin-right-ld">
+						<label>
+							<input data-ng-model="model.authorizationLevel" type="radio"
+							       value="group">{{'basics.workflow.action.customEditor.authorizationLevelOfGroup' | translate}}
+						</label>
+					</div>
+					<div class="radio spaceToUp pull-left margin-right-ld">
+						<label>
+							<input data-ng-model="model.authorizationLevel" type="radio"
+							       value="subgroup">{{'basics.workflow.action.customEditor.authorizationLevelOfSubGroup' | translate}}
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.clerkRoleArray' | translate}}</label>
+				<div class="platform-form-col">
+					<textarea class="domain-type-comment form-control ng-pristine ng-valid ng-scope ng-empty ng-touched"
+					          data-ng-focus='model.clerkRoleArrayFocus()'
+					          data-ng-model="model.clerkRoleArray" data-ng-pattern-restrict="^[\s\S]{0,100000}$"
+					          data-ng-style="model.clerkRoleArrayColor" data-ng-trim="false"
+					          data-options="codeMirrorOptions"></textarea>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.evaluationId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.result" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

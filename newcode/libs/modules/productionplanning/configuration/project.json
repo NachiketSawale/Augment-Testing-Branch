@@ -1,0 +1,25 @@
+{
+	"name": "modules-productionplanning-configuration",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/productionplanning/configuration/src",
+	"prefix": "itwo40",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": [
+				"{options.outputFile}"
+			]
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": [
+				"{workspaceRoot}/coverage/{projectRoot}"
+			],
+			"options": {
+				"jestConfig": "libs/modules/productionplanning/configuration/jest.config.ts"
+			}
+		}
+	},
+	"tags": []
+}

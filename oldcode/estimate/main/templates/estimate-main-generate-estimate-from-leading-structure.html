@@ -1,0 +1,38 @@
+<div data-ng-controller="estimateMainGenerateEstimateFromLeadingStructureController" style="height: 100%;">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="fullheight">
+			<div class="fullheight" style="overflow-y: auto">
+				<div>
+					<div data-platform-alert data-error="concurrencyInfo"></div>
+					<div data-platform-form-container data-form-container-options="formContainerOptions"
+					     entity="dataItem" class="fullheight"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		 <span class="package-option" >
+				<div estimate-main-generate-est-from-leading-structure-option-profile-lookup data-ng-model="UpdateOptions.optionProfile" data-options="serviceoptions1" class="package-option-lookup"></div>
+        </span>
+		<button type="button" class="btn btn-default" data-ng-disabled="isDisable()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>
+
+<style>
+	.modal-footer .package-option{
+		flex:1;
+		text-align:left;
+	}
+	.modal-footer .package-option .package-option-lookup{
+		max-width: 300px;
+	}
+	.modal-footer .package-option button.btn{
+		margin:0px;
+		padding:0px;
+		min-width:auto;
+		display:inline-block;
+	}
+</style>

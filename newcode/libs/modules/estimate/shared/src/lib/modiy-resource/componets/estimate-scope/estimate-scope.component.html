@@ -1,0 +1,16 @@
+<div class="scope-container ">
+	<div class="scope-container-left">
+		{{ label }}
+	</div>
+
+	<div class="scope-container-right">
+		<ng-container *ngFor="let row of this.scopeList">
+			<div  class="radio spaceToUp ng-star-inserted">
+				<label  class="flex-box flex-align-center">
+					<input  type="radio"  [(ngModel)]="scopeValue" name="estimateScope"  class="ng-pristine ng-valid ng-touched" value="{{row.id}}">
+					{{ row.displayName }}
+				</label>
+			</div>
+		</ng-container>
+	</div>
+</div>

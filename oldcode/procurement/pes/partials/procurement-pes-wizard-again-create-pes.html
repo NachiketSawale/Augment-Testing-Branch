@@ -1,0 +1,23 @@
+<div class="modal-content">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<div class="modal-body flex-box" data-ng-class="{ 'flex-column': true }">
+		<div class="icon-message">
+			<div class="icon tlb-icons ico-question"></div>
+			<div class="message"> {{::modalOptions.bodyText}} </div>
+		</div>
+		<div class="platform-form-group" style="margin-left: 42px;">
+			<div class="platform-form-row form-group">
+				<label class="platform-form-label">{{::modalOptions.isIncludeText}}</label>
+				<div class="platform-form-col">
+					<div class="domain-type-boolean form-control"><input type="checkbox" data-ng-model="modalOptions.isIncluded"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="modal-footer">
+		<button class="btn btn-default" data-ng-click="modalOptions.yes()">{{::'platform.yesBtn' | translate}}</button>
+		<button class="btn btn-default" data-ng-click="modalOptions.no()">{{::'platform.noBtn' | translate}}</button>
+	</footer>
+</div>

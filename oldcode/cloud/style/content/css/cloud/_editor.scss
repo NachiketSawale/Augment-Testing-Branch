@@ -1,0 +1,134 @@
+/*-------------------------------------------------------------------------------
+	 WYSIWYG Editor (_editor.scss) - Quill Editor
+	 This overrides the rules of the quill-snow.css and quill plugin CSS
+  -------------------------------------------------------------------------------*/
+.ql-container {
+	//default view
+	> .ql-editor {
+		outline: none;
+		padding: 35px $padding-large-vertical $padding-large-vertical $padding-large-vertical;
+		user-select: text;
+		@import "editor-content";
+	}
+
+	// document view
+	&.document-view {
+		overflow-y: auto;
+		background-color: $color-content-background;
+
+		> .ql-editor {
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: white;
+			height: initial;
+			overflow: hidden;
+		}
+	}
+}
+
+.image-resizer.inputGroup {
+	border: 1px solid #000000;
+	position: absolute;
+	bottom: -14px;
+	right: 0;
+	left: 0;
+	font: 12px/1.0 Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #333;
+	box-sizing: border-box;
+	display: flex;
+	margin: auto;
+	width: 220px;
+	background: white;
+	align-items: center;
+}
+
+.image-resizer.inputField {
+	width: 70px;
+	border: none;
+	padding-left: 8px;
+	vertical-align: middle;
+}
+
+.image-resizer.imageIconSpan {
+	width: 26px;
+	height: 26px;
+	background: #eee;
+	border: none;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 3px;
+}
+
+.image-resizer.measurementField {
+	width: 26px;
+	height: 26px;
+	background: #eee;
+	border: none;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 6px 0;
+}
+
+.ruler-div {
+	padding-top: 5px;
+}
+
+.ruler-container {
+	.ruler {
+		position: relative;
+		border-top: 1px solid #000000;
+		margin: 12px 12px 13px $padding-large-vertical;
+
+		.ruler-first-mark,
+		.ruler-mark,
+		.ruler-mark1 {
+			position: absolute;
+			border-left: 1px solid #000000;
+			height: 10px;
+		}
+
+		.ruler-mark1 {
+			height: 5px;
+		}
+
+		.ruler-mark::after,
+		.ruler-first-mark::after {
+			content: attr(data-label);
+			font-size: 9pt;
+		}
+
+		.ruler-mark::after {
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.ruler-first-mark::after {
+			position: relative;
+			bottom: 15px;
+			right: 10%;
+		}
+	}
+
+	&.document-view {
+		background-color: #e6e6e6;
+
+		> .ruler-div {
+			background-color: #ffffff;
+			margin: 0 auto;
+			position: relative;
+
+			> .ruler {
+				position: relative;
+				border-top: 1px solid #000000;
+				margin: -2px 0 0 0;
+			}
+		}
+	}
+}
+
+
+

@@ -1,0 +1,16 @@
+<h3 *ngIf="results.length === 0">{{ 'basics.common.changeStatus.workflowRunning' | platformTranslate }}</h3>
+
+<div *ngIf="results.length > 0" class="flex-element">
+	<div class="margin-full-md">
+		<h3>{{ 'basics.common.changeStatus.reportTitle' | platformTranslate }}</h3>
+	</div>
+
+	<div class="flex-box information">
+		<div *ngIf="results.length > 0" class="filler flex-box flex-column flex-element" [ngClass]="'cid_' + gridConfig.uuid">
+			<ui-common-grid [configuration]="gridConfig" [items]="results"
+			                class="flex-basis-auto"></ui-common-grid>
+		</div>
+	</div>
+
+</div>
+

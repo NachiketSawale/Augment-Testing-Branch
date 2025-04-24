@@ -1,0 +1,95 @@
+﻿{
+  "usermanagement": {
+    "user": {
+      "dialogTitleUser":"Auswahl des Benutzers",
+      "moduleInfoNameUsermanagementUser":"Benutzer",
+      "entityGUID": "GUID",
+      "userName": "Name",
+      "userDescription": "Beschreibung",
+      "userLogonName": "Anmeldename",
+      "userLastLogin": "Letzte Anmeldung",
+      "userPasswordHash": "Passwort-Hash",
+      "userPasswordSalt": "Passwort-Salt",
+      "userDomainSID": "Domäne SID",
+      "userSynchronizeDate": "Synchronisations Datum",
+      "userEmail": "E-Mail",
+      "userIntegratedAccess": "Integrierter Zugang",
+      "userState": "Status",
+      "userExplicitAccess": "Expliziter Zugang",
+      "userIsExternal": "Ist Extern",
+      "userPasswordExpiration": "Password Ablauf",
+      "accessGroupFK": "Gruppe",
+      "userContainerTitle": "Benutzer",
+      "user2GroupContainerTitle": "Benutzer in Gruppe",
+      "usermanagementUserDetailsContainerTitle": "Benutzer Details",
+      "userPassword": "Passwort",
+      "userConfirmPassword": "Passwort bestätigen",
+      "stateEnabled": "Aktiviert",
+      "stateDisabled": "Deaktiviert",
+      "stateMarkedForDeletion": "Zum Löschen markiert",
+      "validateConfirmPassword": "Passwörter sind nicht identisch",
+      "entityUser": "Benutzer",
+      "enterPassword": "Passwort eingeben",
+      "enterPasswordConfirmation": "Passwort bestätigen",
+      "userImport": {
+        "headerText": "Benutzer Importieren",
+        "selected": "Ausgewählt",
+        "disable": "Ist Deaktiviert",
+        "name": "Name",
+        "loginName": "Anmeldename",
+        "domainSid": "Domäne SID",
+        "adsUsers": "Benutzer in Active Directory",
+        "adsUsersSelected": "Ausgewählte Benutzer",
+        "importButton": "Importieren",
+        "infoBodyText": "Synchronisation erfolgreich !",
+        "infoDialogHeader": "Active Directory Benutzer Import"
+      },
+      "userSync": {
+        "headerText": "Benutzer Synchronisieren",
+        "syncronize": "Synchronisieren",
+        "state": "Status",
+        "adsUsersSync":"Zu synchronisierende Benutzer",
+        "infoBodyText": "Synchronisation erfolgreich !",
+        "infoDialogHeader": "Active Directory Benutzer Synchronisation",
+        "noUserPath":"Kein AD Benutzer Pfad vorhanden."
+      },
+      "adsConfig":{
+        "infoBodyText": "Speichern erfolgreich !",
+        "infoBodyTextGroupError":"Gruppenpfad ungültig.",
+        "infoBodyTextUserError":"Benutzerpfad ungültig.",
+        "infoBodyTextGroupAndUserError":"Gruppen & Benutzerpfad ungültig.",
+        "infoDialogHeader": "Active Directory Einstellungen",
+        "adTaskInfo":"AD Aufgabenplanung erfolgreich gespeichert !"
+      },
+      "adButtons":{
+        "adConfig":"AD Einstellungen & Aufgabenplanung",
+        "groupImport":"AD Benutzer importieren",
+        "adDisco":"Verbindung zu AD trennen",
+        "groupSync":"Benutzer synchronisieren"
+      },
+      "logContainer": {
+        "logContainerTitle": "Aufgabenplanung",
+        "jobstate": "Job Status",
+        "starttime": "Start Zeit",
+        "exstarttime": "Ausführung Startzeit",
+        "exendtime": "Ausführung Endzeit",
+        "log": "Log-Meldung",
+        "showLogFileTitle":"AD Aufgabenplanung Log",
+        "refresh":"Aktualisieren"
+      },
+      "stateValues":{
+        "waiting":"Wartend",
+        "starting":"Beginnend",
+        "running":"Laufend",
+        "stopped":"Gestoppt",
+        "finished":"Abgeschlossen",
+        "repetitive":"Wiederholend"
+      },
+      "wizards":{
+        "unlinkSuccessfull":"Verknüpfung Portalbenutzer erfolgreich aufgehoben !",
+        "noContactSelected":"Kein(e) Kontakt(e) ausgewählt !",
+        "noUserSelected":"Kein(e) Benutzer(e) ausgewählt  !"
+      }
+    }
+  }
+}

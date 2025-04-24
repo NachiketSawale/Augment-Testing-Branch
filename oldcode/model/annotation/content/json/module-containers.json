@@ -1,0 +1,130 @@
+﻿[
+	{
+		"id": "model.annotation.annotationList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.modelAnnotationListTitle",
+		"controller": "modelAnnotationListController",
+		"uuid": "0a5454bc99c24a539dc1264262096b8c"
+	},
+	{
+		"id": "model.annotation.annotationDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.modelAnnotationDetailTitle",
+		"controller": "modelAnnotationDetailController",
+		"uuid": "67e8894374e74eb29664b1182253323c",
+		"permission": "0a5454bc99c24a539dc1264262096b8c"
+	},
+	{
+		"id": "model.annotation.annotationRemark",
+		"template": "model.annotation/partials/model-annotation-remark-partial.html",
+		"title": "model.annotation.modelAnnotationRemarkTitle",
+		"controller": "modelAnnotationRemarkController",
+		"uuid": "9d3d8137b25b465bb8c3c72b621ac0dd",
+		"permission": "0a5454bc99c24a539dc1264262096b8c"
+	},
+	{
+		"id": "model.annotation.referenceList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.referenceListTitle",
+		"controller": "modelAnnotationReferenceListController",
+		"uuid": "86d0e1fe63d24c1eb25c05a7ad470844"
+	},
+	{
+		"id": "model.annotation.referenceDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.referenceDetailTitle",
+		"controller": "modelAnnotationReferenceDetailController",
+		"uuid": "5ead9a293b23439e9a668298ed75d438",
+		"permission": "86d0e1fe63d24c1eb25c05a7ad470844"
+	},
+	{
+		"id": "model.annotation.annotationObjectLinkList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.annotationObjectLinkListTitle",
+		"controller": "modelAnnotationObjectLinkListController",
+		"uuid": "26110cbc14374f7895d1d7934efd0a63"
+	},
+	{
+		"id": "model.annotation.annotationObjectLinkDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.annotationObjectLinkDetailTitle",
+		"controller": "modelAnnotationObjectLinkDetailController",
+		"uuid": "de29ed7ffa5d415fb38138f7eda5922e",
+		"permission": "26110cbc14374f7895d1d7934efd0a63"
+	},
+	{
+		"id": "model.annotation.cameraList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.cameraListTitle",
+		"controller": "modelAnnotationCameraListController",
+		"uuid": "1278a2ca11f947bb8e02eab65e815a7d"
+	},
+	{
+		"id": "model.annotation.cameraDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.cameraDetailTitle",
+		"controller": "modelAnnotationCameraDetailController",
+		"uuid": "dfb06f32f92744358eee5d8b88496786",
+		"permission": "1278a2ca11f947bb8e02eab65e815a7d"
+	},
+	{
+		"id": "model.annotation.documentList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.documentListTitle",
+		"controller": "modelAnnotationDocumentListController",
+		"uuid": "437ca6a2a0c64fe79f90ec3f9b3dc3f0"
+	},
+	{
+		"id": "model.annotation.documentDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.documentDetailTitle",
+		"controller": "modelAnnotationDocumentDetailController",
+		"uuid": "ac73e76de2924220a46956319d4d424c",
+		"permission": "437ca6a2a0c64fe79f90ec3f9b3dc3f0"
+	},
+	{
+		"id": "model.annotation.comment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "526ee9d12d2e47dea2255f8a1e925221",
+		"commentQualifier": "model.annotation.comment",
+		"parentService": "modelAnnotationDataService",
+		"configServiceName": "modelAnnotationCommentConfigService"
+	},
+	{
+		"id": "model.annotation.markerList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.markerListTitle",
+		"controller": "modelAnnotationMarkerListController",
+		"uuid": "cf264c9dbb51466cb147e1a7f7f5d888"
+	},
+	{
+		"id": "model.annotation.snapshot",
+		"template": "model.annotation/partials/model-annotation-snapshot-partial.html",
+		"title": "model.annotation.snapshotTitle",
+		"controller": "modelAnnotationSnapshotController",
+		"uuid": "a537e66e4a6f471da1e10d10fa06b1ac",
+		"permission": "26110cbc14374f7895d1d7934efd0a63"
+	},
+	{
+		"id": "model.annotation.markerDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.markerDetailTitle",
+		"controller": "modelAnnotationMarkerDetailController",
+		"uuid": "b162c7c601ce4c6da794e49140ace8a7",
+		"permission": "cf264c9dbb51466cb147e1a7f7f5d888"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.title",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "d7bb075997478318bdbcd9fa1bc92262",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService"
+	}
+]

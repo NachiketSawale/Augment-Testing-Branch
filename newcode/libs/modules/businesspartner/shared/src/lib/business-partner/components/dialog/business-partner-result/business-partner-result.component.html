@@ -1,0 +1,42 @@
+<div id="ui-layout-r" class="fullheight">
+	<as-split direction="vertical">
+		<ng-container *ngFor="let config of [mainConfig,subsidiaryConfig,contactConfig,guarantorConfig]">
+			<ng-container *ngIf="config.showContainer">
+				<as-split-area [size]="config.size" style="overflow-y:hidden !important;">
+					<ng-container [ngTemplateOutlet]="customGridTemplate" [ngTemplateOutletContext]="{
+                    gridConfig: config.gridConfig,
+                    uuid: config.gridConfig.uuid,
+                    title: config.title,
+                    onSelectionChanged: config.onSelectionChanged }">
+					</ng-container>
+				</as-split-area>
+			</ng-container>
+		</ng-container>
+	</as-split>
+	<div class="checkbox spaceToUp" *ngIf="scope.setting.showCopyBidder">
+		<label>
+			<input type="checkbox" name="CopyBidder"
+			       [(ngModel)]="scope.setting.CheckBidderCopy"> {{ 'businesspartner.main.bidderCopyNote' | platformTranslate }}
+		</label>
+	</div>
+</div>
+
+<ng-template #customGridTemplate let-title="title" let-gridConfig="gridConfig" let-uuid="uuid"
+             let-onSelectionChanged="onSelectionChanged">
+	<div class="filler flex-element flex-box flex-column resultArea overflow-hidden">
+		<!--         todo toolbar is temporarily invalid-->
+		<div class="toolbar justify-content-between">
+			<h4 class="title fix ellipsis font-bold" title=" {{title|platformTranslate}}"> {{ title|platformTranslate }}</h4>
+			<ui-common-menu-list [menu]="menu"></ui-common-menu-list>
+		</div>
+		<div class="fullheight" style="padding:8px;" [ngClass]="'cid_' + uuid">
+			<ui-common-grid class="flex-element"
+			                [configuration]="gridConfig"
+			                (selectionChanged)="onSelectionChanged($event)"
+			></ui-common-grid>
+		</div>
+	</div>
+</ng-template>
+
+
+

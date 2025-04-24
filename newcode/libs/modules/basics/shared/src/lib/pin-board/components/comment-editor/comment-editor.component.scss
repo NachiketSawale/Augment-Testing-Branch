@@ -1,0 +1,43 @@
+.block-image {
+	margin-right: 3px;
+}
+.status-icons {
+	margin-right: 3px;
+}
+
+.statusPanel input[type='radio'] {
+	margin: 5px;
+	vertical-align: text-top;
+}
+
+.statusPanel {
+	border-left: 1px solid #ccc;
+	padding: 2px;
+}
+
+.statusPanel fieldset div {
+	margin-top: 5px;
+}
+
+.statusPanel fieldset div label {
+	margin-left: 2px;
+}
+
+
+.comment-editor {
+	position: relative;
+	height: 80px;
+
+	.comment-text-area {
+		//@include form-control-focus();
+	}
+
+	.comment-toolbar {
+		width: 26px;
+		white-space: normal;
+	}
+
+	.comment-image {
+		height: 30px;
+	}
+}

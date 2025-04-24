@@ -1,0 +1,14 @@
+<div data-platform-kendo-splitter-adjust class="border-none" style="height: 200px;">
+    <div id="ui-layout-east" class="border-none" data-ng-controller="estimateMainModifyResourceFieldsController">
+        <div class="pane-l flex-element flex-box flex-column subview-container" style="height: inherit">
+            <platform-Grid data="gridData"></platform-Grid>
+            <div cloud-common-overlay data-loading="isLoading"></div>
+        </div>
+    </div>
+    <div id="ui-layout-west" data-ng-controller="estimateMainModifyResourceFieldsValuesController">
+        <div class="pane-r flex-element flex-box flex-column subview-container" style="height: inherit">
+            <platform-Grid data="gridData"></platform-Grid>
+            <div cloud-common-overlay data-loading="isLoading"></div>
+        </div>
+    </div>
+</div>

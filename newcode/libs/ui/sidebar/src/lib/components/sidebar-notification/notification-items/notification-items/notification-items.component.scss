@@ -1,0 +1,40 @@
+.notification-details {
+	flex-wrap: wrap;
+	padding: 0;
+ }
+
+ .notification-details span {
+	flex: 1;
+	// padding-right: 10px;
+ }
+
+ .title {
+	font-size: 16px;
+}
+
+ .accordion-item {
+	position: relative;
+}
+
+.rw {
+	transition: background-color 0.2s ease-in, opacity 0.2s ease-in;
+	width: 100%;
+	padding: 6px 0;
+	border-bottom: 1px solid #bebebe;
+	text-align: left;
+}
+
+.rw-content {
+	padding-left: 4px;
+}
+
+.flex-box {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ .notification-status{
+	width: 15px;
+	height: 15px;
+	padding-left: 0px;
+ }

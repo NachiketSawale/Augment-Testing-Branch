@@ -1,0 +1,547 @@
+﻿(function (angular) {
+	'use strict';
+	/* jshint -W072 */ // many parameters because of dependency injection
+
+	var estimateMainModule = 'estimate.main';
+	var estimateProjectModule = 'estimate.project';
+	var estimateRuleModule = 'estimate.rule';
+	var cloudCommonModule = 'cloud.common';
+	var basicsCostCodesModule = 'basics.costcodes';
+	var basicsMaterialModule = 'basics.material';
+	var estimateParamModule = 'estimate.parameter';
+	var modelEvaluationModule = 'model.evaluation';
+	var modelViewerModule = 'model.viewer';
+	var modelWdeViewerModule = 'model.wdeviewer';
+	var modelSimulationModule = 'model.simulation';
+	var procurementPackageModule = 'procurement.package';
+
+	var salesBidModule = 'sales.bid';
+	var salesCommonModule = 'sales.common';
+	var projectMainModule = 'project.main';
+	var modelMainModule = 'model.main';
+	var basicsCommonModule = 'basics.common';
+	var basicsCustomizeModule = 'basics.customize';
+	var constructionSystemMainModule = 'constructionsystem.main';
+	var projectStructuresModule = 'project.structures';
+	var procurementStructureModule = 'basics.procurementstructure';
+	var companyModule = 'basics.company';
+	var procurementCommonModule = 'procurement.common';
+	var procurementRequisitionModule = 'procurement.requisition';
+	var basicsProcurementconfiguration = 'basics.procurementconfiguration';
+	var boqMainModule = 'boq.main';
+	var procurementCommon = 'procurement.common';
+	var basicsAssetMaster = 'basics.assetmaster';
+	var basicsCostGroups = 'basics.costgroups';
+	var qtoMainModule = 'qto.main';
+	var controllingStructureModule = 'controlling.structure';
+	const procurementRfqModule = 'procurement.rfq';
+
+	/* jshint -W072 */ // many parameters because of dependency injection
+	/* jshint -W106 */ // Variable name is according usage in translation json
+	angular.module(procurementPackageModule).service('procurementPackageTranslationService', ['$q', 'platformUIBaseTranslationService',
+		function ($q, platformUIBaseTranslationService) {
+
+			var estimateMainTranslations = {
+				translationInfos: {
+					'extraModules': [procurementPackageModule,estimateMainModule, estimateProjectModule, cloudCommonModule, basicsCostCodesModule, basicsMaterialModule,
+						estimateRuleModule, estimateParamModule,salesBidModule, salesCommonModule, projectMainModule, modelMainModule, modelViewerModule, modelWdeViewerModule,
+						basicsCommonModule, basicsCustomizeModule, modelSimulationModule, constructionSystemMainModule, projectStructuresModule,procurementStructureModule,
+						companyModule, procurementCommonModule, procurementRequisitionModule,basicsProcurementconfiguration, boqMainModule, procurementCommon, basicsAssetMaster, basicsCostGroups,
+						modelEvaluationModule, qtoMainModule,controllingStructureModule,procurementRfqModule],
+					'extraWords': {
+						moduleName: {'location': procurementPackageModule, 'identifier': 'moduleName', 'initial': 'package'},
+						HeaderGroupHeader: {'location': procurementPackageModule, 'identifier': 'entityGroup', 'initial': 'Group'},
+						projectAddressGroup: {location: projectMainModule, identifier: 'projectAddressGroup', initial: 'Project Address'},
+						Requisition: {'location': procurementPackageModule, 'identifier': 'entityRequisition.group', 'initial': 'Requisition'},
+						RfQ: {'location': procurementPackageModule, 'identifier': 'entityRfQ.group', 'initial': 'RfQ'},
+						Quote: {'location': procurementPackageModule, 'identifier': 'entityQuote.group', 'initial': 'Quote'},
+						Contract: {'location': procurementPackageModule, 'identifier': 'entityContract.group', 'initial': 'Contract'},
+
+						ExternalResponsible: {'location': procurementPackageModule, 'identifier': 'externalResponsible.group', 'initial': 'External Responsible'},
+
+						Performance: {'location': procurementPackageModule, 'identifier': 'entityPerformance.group', 'initial': 'Performance'},
+						Event: {'location': procurementPackageModule, 'identifier': 'entityEvent.group', 'initial': 'Event'},
+						HeaderGroupUserDefinedFields: {'location': procurementPackageModule, 'identifier': 'entityUserDefined', 'initial': 'UserDefined'},
+						ProjectFk: {'location': cloudCommonModule, 'identifier': 'entityProjectNo', 'initial': 'ProjectNo'},
+						ProjectStatusFk: {'location': procurementPackageModule, 'identifier': 'projectStatus', 'initial': 'Project Status'},
+						CompanyFk: {'location': cloudCommonModule, 'identifier': 'entityCompany', 'initial': 'Company'},
+						ComCurrencyCode: {'location': procurementPackageModule, 'identifier': 'ComCurrencyCode', 'initial': 'Company Currency'},
+						ComCurrencyDes: {'location': procurementPackageModule, 'identifier': 'entityComCurrencyDes', 'initial': 'Company Currency Description'},
+						PackageStatusFk: {'location': cloudCommonModule, 'identifier': 'entityState', 'initial': 'State'},
+						StructureFk: {'location': basicsCommonModule, 'identifier': 'entityPrcStructureFk', 'initial': 'Procurement Structure'},
+						ConfigurationFk: {'location': procurementPackageModule, 'identifier': 'entityConfiguration', 'initial': 'Configuration'},
+						PrcContractTypeFk: {location: basicsProcurementconfiguration, identifier: 'configuration.prccontracttypeFk', initial: 'Contract Type'},
+						Code: {'location': cloudCommonModule, 'identifier': 'entityCode', 'initial': 'Code'},
+						Description: {'location': cloudCommonModule, 'identifier': 'entityDescription', 'initial': 'description'},
+						TaxCodeFk: {'location': cloudCommonModule, 'identifier': 'entityTaxCode', 'initial': 'TaxCode'},
+						CurrencyFk: {'location': cloudCommonModule, 'identifier': 'entityCurrency', 'initial': 'Currency'},
+						ExchangeRate: {'location': cloudCommonModule, 'identifier': 'entityRate', 'initial': 'entityRate'},
+						PlannedStart: {'location': procurementPackageModule, 'identifier': 'entityPlannedStart', 'initial': 'Planned Start'},
+						PlannedEnd: {'location': procurementPackageModule, 'identifier': 'entityPlannedEnd', 'initial': 'Planned End'},
+						ActualStart: {'location': procurementPackageModule, 'identifier': 'entityActualStart', 'initial': 'Actual Start'},
+						ActualEnd: {'location': procurementPackageModule, 'identifier': 'entityActualEnd', 'initial': 'Actual End'},
+						PackageTypeFk: {'location': procurementPackageModule, 'identifier': 'entityPackageType', 'initial': 'PackageType'},
+						ClerkPrcFk: {'location': cloudCommonModule, 'identifier': 'entityResponsible', 'initial': 'Responsible'},
+						ClerkReqFk: {'location': cloudCommonModule, 'identifier': 'entityRequisitionOwner', 'initial': 'Requisition Owner'},
+						Remark: {'location': cloudCommonModule, 'identifier': 'entityRemark', 'initial': 'Remark'},
+						Remark2: {'location': procurementPackageModule, 'identifier': 'entityRemark2', 'initial': 'Remark2'},
+						Remark3: {'location': procurementPackageModule, 'identifier': 'entityRemark3', 'initial': 'Remark3'},
+						ActivityFk: {'location': procurementPackageModule, 'identifier': 'entityActivity', 'initial': 'Activity'},
+						AssetMasterFk: { location: estimateMainModule, identifier: 'mdcAssetMasterFk', initial: 'Asset Master'},
+						ScheduleFk: {'location': procurementPackageModule, 'identifier': 'entitySchedule', 'initial': 'Schedule'},
+						Userdefined1: {'location': cloudCommonModule, 'identifier': 'entityUserDefined', 'initial': 'Userdefined1', param: {'p_0': '1'}},
+						Userdefined2: {'location': cloudCommonModule, 'identifier': 'entityUserDefined', 'initial': 'Userdefined2', param: {'p_0': '2'}},
+						Userdefined3: {'location': cloudCommonModule, 'identifier': 'entityUserDefined', 'initial': 'Userdefined3', param: {'p_0': '3'}},
+						Userdefined4: {'location': cloudCommonModule, 'identifier': 'entityUserDefined', 'initial': 'Userdefined4', param: {'p_0': '4'}},
+						Userdefined5: {'location': cloudCommonModule, 'identifier': 'entityUserDefined', 'initial': 'Userdefined5', param: {'p_0': '5'}},
+						RequisitionCode: {'location': procurementPackageModule, 'identifier': 'entityRequisition.code', 'initial': 'Requisition Code'},
+						RequisitionDescription: {'location': procurementPackageModule, 'identifier': 'entityRequisition.description', 'initial': 'Requisition Description'},
+						RequisitionStatus: {'location': procurementPackageModule, 'identifier': 'entityRequisition.status', 'initial': 'Requisition Status'},
+						RfqCode: {'location': procurementPackageModule, 'identifier': 'entityRfQ.code', 'initial': 'RfQ Code'},
+						RfqDescription: {'location': procurementPackageModule, 'identifier': 'entityRfQ.description', 'initial': 'RfQ Description'},
+						RfqStatus: {'location': procurementPackageModule, 'identifier': 'entityRfQ.status', 'initial': 'RfQ Status'},
+						ContractCode: {'location': procurementPackageModule, 'identifier': 'entityContract.code', 'initial': 'Contract Code'},
+						ContractDescription: {'location': procurementPackageModule, 'identifier': 'entityContract.description', 'initial': 'Contract Description'},
+						BusinessPartnerName: {'location': procurementPackageModule, 'identifier': 'entityContract.businessPartnerName', 'initial': 'Business Partner Name'},
+						BusinessPartnerSubsidiaryName: {'location': procurementPackageModule, 'identifier': 'entityContract.subsidiaryName', 'initial': 'Subsidiary Name'},
+						SupplierNumber: {'location': procurementPackageModule, 'identifier': 'entityContract.supplierNumber', 'initial': 'Supplier Number'},
+						BusinessPartnerFk: {'location': cloudCommonModule, 'identifier': 'entityBusinessPartner', 'initial': 'Business Partner'},
+						SubsidiaryFk: {'location': cloudCommonModule, 'identifier': 'entitySubsidiary', 'initial': 'Subsidiary'},
+						SupplierFk: {'location': cloudCommonModule, 'identifier': 'entitySupplier', 'initial': 'Supplier'},
+						ContractStatus: {'location': procurementPackageModule, 'identifier': 'entityContract.status', 'initial': 'Contract Status'},
+						ReqHeaderFk: { location: procurementPackageModule, identifier: 'entityReqCode', initial: 'Comment'},
+
+						CountryFk: {location: cloudCommonModule, identifier: 'entityCountry', initial: 'Country'},
+						RegionFk: {location: projectMainModule, identifier: 'entityRegion', initial: 'Region'},
+						TelephoneNumberFk: {location: cloudCommonModule, identifier: 'TelephoneDialogPhoneNumber', initial: 'Telephone Number'},
+						TelephoneTelefaxFk: {location: cloudCommonModule, identifier: 'fax', initial: 'Telephone Telefax'},
+						TelephoneMobileFk: {location: procurementCommonModule, identifier: 'contactMobile', initial: 'Telephone Mobil'},
+						Email: {location: cloudCommonModule, identifier: 'email', initial: 'Email'},
+
+						BaselinePath: {location: procurementPackageModule, identifier: 'baselinePath', initial: 'Baseline Path'},
+						BaselineUpdate: {location: procurementPackageModule, identifier: 'baselineUpdate', initial: 'Baseline Update'},
+						BaselinePhase: {location: procurementPackageModule, identifier: 'baselinePhase', initial: 'Baseline Phase'},
+						BaselineUpdateStatus: {location: procurementPackageModule, identifier: 'baselineUpdateStatus', initial: 'Baseline Update Status'},
+
+
+						PrcEventTypeFk: {location: procurementStructureModule, identifier: 'eventType', initial: 'eventType'},
+						StartCalculated: {location: procurementPackageModule, identifier: 'event.startCalculated', initial: 'startCalculated'},
+						EndCalculated: {location: procurementPackageModule, identifier: 'event.endCalculated', initial: 'endCalculated'},
+						StartOverwrite: {location: procurementPackageModule, identifier: 'event.startOverwrite', initial: 'startOverwrite'},
+						EndOverwrite: {location: procurementPackageModule, identifier: 'event.endOverwrite', initial: 'endOverwrite'},
+						StartActual: {location: procurementPackageModule, identifier: 'event.startActual', initial: 'startActual'},
+						EndActual: {location: procurementPackageModule, identifier: 'event.endActual', initial: 'endActual'},
+						StartRelevant: {location: procurementPackageModule, identifier: 'event.startRelevant', initial: 'startRelevant'},
+						EndRelevant: {location: procurementPackageModule, identifier: 'event.endRelevant', initial: 'endRelevant'},
+
+						DescriptionInfo: {location: cloudCommonModule, identifier: 'entityDescription', initial: 'Description'},
+						MdcLineItemContextFk: {location: procurementPackageModule, 'identifier': 'entityMdcLineItemContextFk', 'initial': 'Mdc LineItem Context'},
+
+						Status: {location: procurementPackageModule, identifier: 'import.status', initial: 'Status'},
+
+						userDefText: { location: cloudCommonModule, identifier: 'UserdefTexts', initial: 'User Defined Text' },
+
+						ProjectNo: {location: estimateMainModule, identifier: 'projectNo', initial: 'Project-Number'},
+						ProjectName: {location: estimateMainModule, identifier: 'projectName', initial: 'Project-Name'},
+						EstimationCode: { location: estimateMainModule, identifier: 'entityEstimationHeader', initial: 'Estimate Code' },
+						EstimationDescription: { location: estimateMainModule, identifier: 'entityEstimationDesc', initial: 'Estimate Desc.' },
+
+						Id:{ location: estimateMainModule, identifier: 'id', initial: 'Id' },
+						Info:{ location: estimateMainModule, identifier: 'info', initial: 'Info' },
+						Rule:{location: estimateRuleModule, identifier: 'rules', initial: 'Rules' },
+						Param:{location: estimateParamModule, identifier: 'params', initial: 'Params' },
+
+						Filter:{location: estimateMainModule, identifier: 'filter', initial: 'Filter' },
+
+						Reference: { location: cloudCommonModule, identifier: 'entityReference', initial: 'Reference' },
+						BriefInfo: { location: cloudCommonModule, identifier: 'entityBriefInfo', initial: 'Outline Specification' },
+
+						BasUomFk: { location: cloudCommonModule, identifier: 'entityUoM', initial: 'UoM' },
+						BasCurrencyFk: { location: cloudCommonModule, identifier: 'entityCurrency', initial: 'Currency' },
+						BasUomTargetFk:{ location: estimateMainModule, identifier: 'basUomTargetFk', initial: 'UoM Target' },
+
+						UoMFk: { location: cloudCommonModule, identifier: 'entityUoM', initial: 'UoM' },
+						UomFk: { location: cloudCommonModule, identifier: 'entityUoM', initial: 'UoM' },
+						QuantityUoMFk: { location: estimateMainModule, identifier: 'quantityUoM', initial: 'UoM' },
+
+						TotalOf: { location: estimateMainModule, identifier: 'totalOf', initial: 'Total of' },
+						Total: { location: estimateMainModule, identifier: 'total', initial: 'Total' },
+						CurUoM: { location: estimateMainModule, identifier: 'curOrUoM', initial: 'Cur/UoM' },
+						Estimate: { location: estimateMainModule, identifier: 'estimate', initial: 'Estimate' },
+						DateAwardDeadline: {location: procurementPackageModule, identifier: 'dateAwardDeadline', initial: 'Award Deadline'},
+						DateRequested: {location: procurementPackageModule, identifier: 'dateRequested', initial: 'Publication Date'},
+
+						// quantiyAndFactors
+						QuantityDetail:{ location: estimateMainModule, identifier: 'quantityDetail', initial: 'Quantity Detail' },
+						Quantity:{ location: cloudCommonModule, identifier: 'entityQuantity', initial: 'Quantity' },
+						QuantityTarget:{ location: estimateMainModule, identifier: 'quantityTarget', initial: 'Quantity Target' },
+						QuantityTargetDetail:{ location: estimateMainModule, identifier: 'quantityTargetDetail', initial: 'Quantity Target Detail' },
+						WqQuantityTarget:{ location: estimateMainModule, identifier: 'wqQuantityTarget', initial: ' Wq Quantity Item' },
+						QuantityUnitTarget:{ location: estimateMainModule, identifier: 'quantityUnitTarget', initial: 'QuantityUnitTarget' },
+						QuantityTotal:{ location: estimateMainModule, identifier: 'quantityTotal', initial: 'QuantityTotal' },
+						QuantityFactorDetail1:{ location: estimateMainModule, identifier: 'quantityFactorDetail1', initial: 'QuantityFactorDetail1' },
+						QuantityFactor1:{ location: estimateMainModule, identifier: 'quantityFactor1', initial: 'QuantityFactor1' },
+						QuantityFactorDetail2:{ location: estimateMainModule, identifier: 'quantityFactorDetail2', initial: 'QuantityFactorDetail2' },
+						QuantityFactor2:{ location: estimateMainModule, identifier: 'quantityFactor2', initial: 'QuantityFactor2' },
+						QuantityFactor3:{ location: estimateMainModule, identifier: 'quantityFactor3', initial: 'QuantityFactor3' },
+						QuantityFactor4:{ location: estimateMainModule, identifier: 'quantityFactor4', initial: 'QuantityFactor4' },
+						QuantityFactorCc:{ location: estimateMainModule, identifier: 'quantityFactorCc', initial: 'QuantityFactorCc' },
+						ProductivityFactorDetail:{ location: estimateMainModule, identifier: 'productivityFactorDetail', initial: 'ProductivityFactorDetail' },
+						ProductivityFactor:{ location: estimateMainModule, identifier: 'productivityFactor', initial: 'ProductivityFactor' },
+						QuantityReal:{ location: estimateMainModule, identifier: 'quantityReal', initial: 'QuantityReal' },
+						QuantityInternal:{ location: estimateMainModule, identifier: 'quantityInternal', initial: 'QuantityInternal' },
+						QuantityOriginal:{ location: estimateMainModule, identifier: 'quantityOriginal', initial: 'QuantityOriginal' },
+						EfficiencyFactorDetail1:{ location: estimateMainModule, identifier: 'efficiencyFactorDetail1', initial: 'EfficiencyFactorDetail1' },
+						EfficiencyFactor1:{ location: estimateMainModule, identifier: 'efficiencyFactor1', initial: 'EfficiencyFactor1' },
+						EfficiencyFactorDetail2:{ location: estimateMainModule, identifier: 'efficiencyFactorDetail2', initial: 'EfficiencyFactorDetail2' },
+						EfficiencyFactor2:{ location: estimateMainModule, identifier: 'efficiencyFactor2', initial: 'EfficiencyFactor2' },
+
+						// costFactors
+						CostFactorDetail1:{ location: estimateMainModule, identifier: 'costFactorDetail1', initial: 'CostFactorDetail1' },
+						CostFactor1:{ location: estimateMainModule, identifier: 'costFactor1', initial: 'CostFactor1' },
+						CostFactorDetail2:{ location: estimateMainModule, identifier: 'costFactorDetail2', initial: 'CostFactorDetail2' },
+						CostFactor2:{ location: estimateMainModule, identifier: 'costFactor2', initial: 'CostFactor2' },
+						CostFactorCc:{ location: estimateMainModule, identifier: 'costFactorCc', initial: 'CostFactorCc' },
+
+						MdcControllingUnitFk:{ location: estimateMainModule, identifier: 'mdcControllingUnitFk', initial: 'Controlling Unit' },
+						BoqRootRef: { location: estimateMainModule, identifier: 'boqRootRef', initial: 'BoQ Root Item Ref. No' },
+						BoqHeaderFk:{ location: estimateMainModule, identifier: 'boqHeaderFk', initial: 'BoQ' },
+						BoqItemFk:{ location: estimateMainModule, identifier: 'boqItemFk', initial: 'BoqItem'},
+						PsdActivitySchedule:{ location: estimateMainModule, identifier: 'activitySchedule', initial: 'Activity Schedule' },
+						PsdActivityFk:{ location: estimateMainModule, identifier: 'psdActivityFk', initial: 'PsdActivity' },
+						LicCostGroup1Fk:{ location: estimateMainModule, identifier: 'licCostGroup1Fk', initial: 'LicCostGroup1' },
+						LicCostGroup2Fk:{ location: estimateMainModule, identifier: 'licCostGroup2Fk', initial: 'LicCostGroup2' },
+						LicCostGroup3Fk:{ location: estimateMainModule, identifier: 'licCostGroup3Fk', initial: 'LicCostGroup3' },
+						LicCostGroup4Fk:{ location: estimateMainModule, identifier: 'licCostGroup4Fk', initial: 'LicCostGroup4' },
+						LicCostGroup5Fk:{ location: estimateMainModule, identifier: 'licCostGroup5Fk', initial: 'LicCostGroup5' },
+
+						PrjCostGroup1Fk:{ location: estimateMainModule, identifier: 'prjCostGroup1Fk', initial: 'PrjCostGroup1' },
+						PrjCostGroup2Fk:{ location: estimateMainModule, identifier: 'prjCostGroup2Fk', initial: 'PrjCostGroup2' },
+						PrjCostGroup3Fk:{ location: estimateMainModule, identifier: 'prjCostGroup3Fk', initial: 'PrjCostGroup3' },
+						PrjCostGroup4Fk:{ location: estimateMainModule, identifier: 'prjCostGroup4Fk', initial: 'PrjCostGroup4' },
+						PrjCostGroup5Fk:{ location: estimateMainModule, identifier: 'prjCostGroup5Fk', initial: 'PrjCostGroup5' },
+
+						MdcWorkCategoryFk:{ location: estimateMainModule, identifier: 'mdcWorkCategoryFk', initial: 'MdcWorkCategory' },
+						MdcAssetMasterFk:{ location: estimateMainModule, identifier: 'mdcAssetMasterFk', initial: 'MdcAssetMaster' },
+
+						PrjLocationFk:{ location: estimateMainModule, identifier: 'prjLocationFk', initial: 'PrjLocation' },
+
+						UserDefined1: { location: cloudCommonModule, identifier: 'entityUserDefined', param: { p_0: '1' }, initial: 'User Defined 1' },
+						UserDefined2: { location: cloudCommonModule, identifier: 'entityUserDefined', param: { p_0: '2' }, initial: 'User Defined 2' },
+						UserDefined3: { location: cloudCommonModule, identifier: 'entityUserDefined', param: { p_0: '3' }, initial: 'User Defined 3' },
+						UserDefined4: { location: cloudCommonModule, identifier: 'entityUserDefined', param: { p_0: '4' }, initial: 'User Defined 4' },
+						UserDefined5: { location: cloudCommonModule, identifier: 'entityUserDefined', param: { p_0: '5' }, initial: 'User Defined 5' },
+
+						UserDefinedDate1: { location: cloudCommonModule, identifier: 'entityUserDefinedDate', param: { p_0: '1' }, initial: 'User Defined Date 1' },
+						UserDefinedDate2: { location: cloudCommonModule, identifier: 'entityUserDefinedDate', param: { p_0: '2' }, initial: 'User Defined Date 2' },
+						UserDefinedDate3: { location: cloudCommonModule, identifier: 'entityUserDefinedDate', param: { p_0: '3' }, initial: 'User Defined Date 3' },
+						UserDefinedDate4: { location: cloudCommonModule, identifier: 'entityUserDefinedDate', param: { p_0: '4' }, initial: 'User Defined Date 4' },
+						UserDefinedDate5: { location: cloudCommonModule, identifier: 'entityUserDefinedDate', param: { p_0: '5' }, initial: 'User Defined Date 5' },
+
+						// flags
+						IsLumpsum:{ location: estimateMainModule, identifier: 'isLumpSum', initial: 'Is LumpSum' },
+						IsDisabled:{ location: estimateMainModule, identifier: 'isDisabled', initial: 'IsDisabled' },
+						IsGc:{ location: estimateMainModule, identifier: 'isGc', initial: 'General Cost'},
+
+						// costAndHours
+						CostUnit:{ location: estimateMainModule, identifier: 'costUnit', initial: 'CostUnit' },
+						CostUnitTarget:{ location: estimateMainModule, identifier: 'costUnitTarget', initial: 'CostUnitTarget' },
+						CostTotal:{ location: estimateMainModule, identifier: 'costTotal', initial: 'CostTotal' },
+						CostUnitSubItem:{ location: estimateMainModule, identifier: 'costUnitSubItem', initial: 'CostUnitSubItem' },
+						CostUnitLineItem:{ location: estimateMainModule, identifier: 'costUnitLineItem', initial: 'CostUnitLineItem' },
+						HoursUnitSubItem:{ location: estimateMainModule, identifier: 'hoursUnitSubItem', initial: 'HoursUnitSubItem' },
+						HoursUnitLineItem:{ location: estimateMainModule, identifier: 'hoursUnitLineItem', initial: 'HoursUnitLineItem' },
+						CostUnitOriginal:{ location: estimateMainModule, identifier: 'costUnitOriginal', initial: 'CostUnitOriginal' },
+						HourFactor:{ location: estimateMainModule, identifier: 'hourFactor', initial: 'HourFactor' },
+						HoursUnit:{ location: estimateMainModule, identifier: 'hoursUnit', initial: 'HoursUnit' },
+						HoursUnitTarget:{ location: estimateMainModule, identifier: 'hoursUnitTarget', initial: 'HoursUnitTarget' },
+						HoursTotal:{ location: estimateMainModule, identifier: 'hoursTotal', initial: 'HoursTotal' },
+
+						EstCostRiskFk:{ location: estimateMainModule, identifier: 'estCostRiskFk', initial: 'estCostRisk' },
+						EstHeaderFk:{ location: estimateMainModule, identifier: 'estHeaderFk', initial: 'EstHeader' },
+						EstLineItemFk:{ location: estimateMainModule, identifier: 'estLineItemFk', initial: 'Line Item Ref.' },
+						EstAssemblyFk:{ location: estimateMainModule, identifier: 'estAssemblyFk', initial: 'Assembly Template' },
+						EstResourceFk:{ location: estimateMainModule, identifier: 'estResourceFk', initial: 'EstResource' },
+						EstResourceTypeFk:{ location: estimateMainModule, identifier: 'estResourceTypeFk', initial: 'Resource Type' },
+						EstResourceTypeFkExtend:{ location: estimateMainModule, identifier: 'estResourceTypeFk', initial: 'Resource Type' },
+						MdcCostCodeFk:{ location: estimateMainModule, identifier: 'mdcCostCodeFk', initial: 'MdcCostCode' },
+						MdcMaterialFk:{ location: estimateMainModule, identifier: 'mdcMaterialFk', initial: 'MdcMaterial' },
+						PrcPackageFk:{ location: estimateMainModule, identifier: 'prcPackageFk', initial: 'PrcPackage' },
+						PrcStructureFk:{ location: estimateMainModule, identifier: 'prcStructureFk', initial: 'PrcStructure' },
+
+						EstQtyRelBoqFk:{ location: estimateMainModule, identifier: 'estQtyRelBoq', initial: 'Boq Qty Relation' },
+						EstQtyRelActFk:{ location: estimateMainModule, identifier: 'estQtyRelAct', initial: 'Act Qty Relation' },
+						EstQtyRelGtuFk:{ location: estimateMainModule, identifier: 'estQtyRelGtu', initial: 'Ctu Qty Relation' },
+						EstQtyTelAotFk:{ location: estimateMainModule, identifier: 'estQtyRelAot', initial: 'Aot Qty Relation' },
+						Co2SourceTotal:{ location: estimateMainModule, identifier: 'totalContainerCo2SourceTotal', initial: 'CO2/Kg (Source) Total' },
+						Co2ProjectTotal:{ location: estimateMainModule, identifier: 'totalContainerCo2ProjectTotal', initial: 'CO2/Kg (Project) Total' },
+						Co2Source:{location: basicsCommonModule, identifier: 'sustainabilty.entityCo2Source', initial: 'CO2/kg (Source)'},
+						Co2Project:{location: basicsCommonModule, identifier: 'sustainabilty.entityCo2Project', initial: 'CO2/kg (Project)'},
+						Co2TotalVariance:{location: basicsCommonModule, identifier: 'sustainabilty.entityCo2TotalVariance', initial: 'CO2 Total Variance'},
+
+						CosInstanceCode:{ location: estimateMainModule, identifier: 'cosInstanceCode', initial: 'COS Instance C' },
+						CosInstanceDescription:{ location: estimateMainModule, identifier: 'cosInstanceDescription', initial: 'COS Instance Desc' },
+
+						CosMasterHeaderCode:{ location: constructionSystemMainModule, identifier: 'masterHeaderCode', initial: 'Master Header Code' },
+						CosMasterHeaderDescription:{ location: constructionSystemMainModule, identifier: 'masterHeaderDescription', initial: 'Master Header Description' },
+
+						CommentText:{ location: estimateMainModule, identifier: 'comment', initial: 'Comment' },
+
+						IsRate:{ location: estimateMainModule, identifier: 'isRate', initial: 'Fix' },
+						IsLabour:{ location: estimateMainModule, identifier: 'isLabour', initial: 'Labour' },
+						PrjChangeFk : { location: estimateMainModule, identifier: 'prjChange', initial: 'Project Change'},
+
+						MdlModelFk : { location: modelMainModule, identifier: 'entityModel', initial: 'Model'},
+						MdlObjectFk : { location: modelMainModule, identifier: 'entityObject', initial: 'Object'},
+						ContainerFk : { location: modelMainModule, identifier: 'entityContainer', initial: 'Container'},
+
+						EntCostUnit:{ location: estimateMainModule, identifier: 'entCostUnit', initial: 'Ent CostUnit' },
+						EntCostUnitTarget:{ location: estimateMainModule, identifier: 'entCostUnitTarget', initial: 'Ent CostUnitTarget' },
+						EntCostTotal : { location: estimateMainModule, identifier: 'entCostTotal', initial: 'Ent CostTotal'},
+						EntHoursUnit:{ location: estimateMainModule, identifier: 'entHoursUnit', initial: 'Ent HoursUnit' },
+						EntHoursUnitTarget:{ location: estimateMainModule, identifier: 'entHoursUnitTarget', initial: 'EntHoursUnitTarget' },
+						EntHoursTotal : { location: estimateMainModule, identifier: 'entHoursTotal', initial: 'EntHoursTotal'},
+
+						DruCostUnit:{ location: estimateMainModule, identifier: 'druCostUnit', initial: 'Dru CostUnit' },
+						DruCostUnitTarget:{ location: estimateMainModule, identifier: 'druCostUnitTarget', initial: 'Dru CostUnitTarget' },
+						DruCostTotal : { location: estimateMainModule, identifier: 'druCostTotal', initial: 'Dru CostTotal'},
+						DruHoursUnit:{ location: estimateMainModule, identifier: 'druHoursUnit', initial: 'Dru HoursUnit' },
+						DruHoursUnitTarget:{ location: estimateMainModule, identifier: 'druHoursUnitTarget', initial: 'DruHoursUnitTarget' },
+						DruHoursTotal : { location: estimateMainModule, identifier: 'druHoursTotal', initial: 'DruHoursTotal'},
+
+						DirCostUnit:{ location: estimateMainModule, identifier: 'dirCostUnit', initial: 'Dir CostUnit' },
+						DirCostUnitTarget:{ location: estimateMainModule, identifier: 'dirCostUnitTarget', initial: 'Dir CostUnitTarget' },
+						DirCostTotal : { location: estimateMainModule, identifier: 'dirCostTotal', initial: 'Dir CostTotal'},
+						DirHoursUnit:{ location: estimateMainModule, identifier: 'dirHoursUnit', initial: 'Dir HoursUnit' },
+						DirHoursUnitTarget:{ location: estimateMainModule, identifier: 'dirHoursUnitTarget', initial: 'DirHoursUnitTarget' },
+						DirHoursTotal : { location: estimateMainModule, identifier: 'dirHoursTotal', initial: 'DirHoursTotal'},
+
+						IndCostUnit:{ location: estimateMainModule, identifier: 'indCostUnit', initial: 'Ind CostUnit' },
+						IndCostUnitTarget:{ location: estimateMainModule, identifier: 'indCostUnitTarget', initial: 'Ind CostUnitTarget' },
+						IndCostTotal : { location: estimateMainModule, identifier: 'indCostTotal', initial: 'Ind CostTotal'},
+						IndHoursUnit:{ location: estimateMainModule, identifier: 'indHoursUnit', initial: 'Ind HoursUnit' },
+						IndHoursUnitTarget:{ location: estimateMainModule, identifier: 'indHoursUnitTarget', initial: 'IndHoursUnitTarget' },
+						IndHoursTotal : { location: estimateMainModule, identifier: 'indHoursTotal', initial: 'IndHoursTotal'},
+						GrandTotal:{ location: estimateMainModule, identifier: 'grandTotal', initial: 'GrandTotal'},
+						RuleType:{ location: estimateMainModule, identifier: 'type', initial: 'Type' },
+						RuleCode:{ location: estimateMainModule, identifier: 'ruleCode', initial: 'Rule Code' },
+						RuleDescription : { location: estimateMainModule, identifier: 'ruleDesc', initial: 'Rule Description'},
+						EvalSequenceFk:{location: estimateRuleModule, identifier: 'evaluationSequence', initial: 'Evaluation Sequence'},
+						ElementCode:{ location: estimateMainModule, identifier: 'elemCode', initial: 'Element Code' },
+						ElementDescription : { location: estimateMainModule, identifier: 'elemDesc', initial: 'Element Description'},
+
+						IsIndirectCost :{location: estimateMainModule, identifier : 'isIndirectCost', initial:'Indirect Cost'},
+						Sorting :{location: cloudCommonModule, identifier: 'entitySorting', initial: 'Sorting'},
+						EstTypeFk :{location: estimateMainModule, identifier: 'estType', initial: 'Estimate Type'},
+						EstStatusFk: {location: cloudCommonModule, identifier: 'entityStatus', initial: 'Status'},
+						FromDate :{location: estimateMainModule, identifier: 'fromDate', initial: 'From Date'},
+						ToDate :{location: estimateMainModule, identifier: 'toDate', initial: 'To Date'},
+
+						// resource summary
+						EstimatePrice:{ location: estimateMainModule, identifier: 'estimatePrice', initial: 'Estimate Price' },
+						AdjustPrice:{ location: estimateMainModule, identifier: 'adjustPrice', initial: 'Adjust Price' },
+						QuantitySummary:{ location: estimateMainModule, identifier: 'quantitySummary', initial: 'Quantity Summary' },
+						CostSummary:{ location: estimateMainModule, identifier: 'costSummary', initial: 'Cost Summary' },
+						AdjQuantitySummary:{ location: estimateMainModule, identifier: 'adjQuantitySummary', initial: 'Adjust Quantity Summary' },
+						AdjCostSummary:{ location: estimateMainModule, identifier: 'adjCostSummary', initial: 'Adjust Cost Summary' },
+						EstimateCostUnit:{ location: estimateMainModule, identifier: 'estimateCostUnit', initial: 'Estimate Cost/unit' },
+						AdjustCostUnit:{ location: estimateMainModule, identifier: 'adjustCostUnit', initial: 'Adjust Cost/unit' },
+						DescriptionInfo1:{ location: estimateMainModule, identifier: 'descriptionInfo1', initial: 'Additional Description' },
+						DetailsStack:{ location: estimateMainModule, identifier: 'detailsStack', initial: 'Details Stack' },
+						// LineItemCode:{ location: estimateMainModule, identifier: 'lineItemCode', initial: 'Line Item Code' },
+						LineItemDescriptionInfo:{ location: estimateMainModule, identifier: 'lineItemDes', initial: 'Line Item Description' },
+						AssemblyCode:{ location: estimateMainModule, identifier: 'assemblyTemplateCode', initial: 'Assembly Template Code' },
+						AssemblyDescriptionInfo:{ location: estimateMainModule, identifier: 'assemblyTemplateDes', initial: 'Assembly Template Description' },
+
+						// below taken for estimate.resource too
+						references : {location: estimateMainModule, identifier: 'references', initial: 'References' },
+						ruleAndParam : {location: estimateMainModule, identifier: 'ruleAndParam', initial: 'Rule/Parameter' },
+						itemQuantity : {location: estimateMainModule, identifier: 'itemQuantity', initial: 'Item Quantity' },
+						quantityRelation : {location: estimateMainModule, identifier: 'quantityRelation', initial: 'Quantity Relation' },
+						quantiyAndFactors : {location: estimateMainModule, identifier: 'quantityAndFactors', initial: 'Quantiy/Factors' },
+						costFactors : {location: estimateMainModule, identifier: 'costFactors', initial: 'Cost Factors' },
+						costAndHours : {location: estimateMainModule, identifier: 'costAndHours', initial: 'Cost/Hours' },
+						directIndCost : {location: estimateMainModule, identifier: 'directIndCost', initial: 'Direct/Indirect Cost' },
+						flags : {location: estimateMainModule, identifier: 'flags', initial: 'Flags' },
+						assignments : {location: estimateMainModule, identifier: 'assignments', initial: 'Assignments' },
+						sortCodes : {location: estimateMainModule, identifier: 'sortCodes', initial: 'Sort Codes' },
+						packageAndCos : {location: estimateMainModule, identifier: 'packageAndCos', initial: 'Package/COS' },
+						duration : {location: estimateMainModule, identifier: 'duration', initial: 'Duration' },
+						ruleInfo:{location: estimateMainModule, identifier: 'ruleInfo', initial: 'Rules' },
+						package:{location: cloudCommonModule, identifier: 'entityPackage', initial: 'Package' },
+						comment :{ location: estimateMainModule, identifier: 'comment', initial: 'Comment' },
+
+						CosMatchText: { location: estimateMainModule, identifier: 'cosMatchText', initial: 'COS Match Text'},
+						EstCostTypeFk: { location: basicsCostCodesModule, identifier: 'costType', initial: 'Cost Type' },
+						QuantityTypeFk: { location: estimateMainModule, identifier: 'quantityType', initial: 'Quantity Type'},
+						EstResourceFlagFk: { location: estimateMainModule, identifier: 'resourceFlag', initial: 'Resource Flag'},
+						Date: { location: estimateMainModule, identifier: 'date', initial: 'Date'},
+						PrjCharacter : {location: boqMainModule, identifier: 'PrjCharacter', initial: 'Project Characteristic' },
+						WorkContent : {location: boqMainModule, identifier: 'WorkContent', initial: 'Work Content' },
+						BoqItemFlagFk:{location: estimateMainModule, identifier: 'boqItemFlagFk', initial: 'BoQ Item Flag'},
+						Hint:{location: estimateMainModule, identifier: 'hint', initial: 'Copy Source'},
+						Budget:{location: estimateMainModule, identifier: 'budget', initial: 'Budget'},
+						IsNoMarkup:{location: estimateMainModule, identifier: 'isNoMarkup', initial: 'No Markup'},
+						IsDisabledPrc:{location: estimateMainModule, identifier: 'isDisabledPrc', initial: 'Disabled Prc'},
+						IsGeneratedPrc:{location: estimateMainModule, identifier: 'isGeneratedPrc', initial: 'Generated Prc'},
+						BudgetUnit:{location: estimateMainModule, identifier: 'budgetUnit', initial: 'Budget/Unit'},
+						IsFixedBudget:{location: estimateMainModule, identifier: 'isFixedBudget', initial: 'Fix Budget'},
+						BudgetDifference:{location: estimateMainModule, identifier: 'budgetDiff', initial: 'Budget Difference'},
+						Checked:{location: estimateMainModule, identifier: 'checked', initial: 'Checked'},
+						Color:{location: estimateMainModule, identifier: 'color', initial: 'Color'},
+						IsOptional:{location: estimateMainModule, identifier: 'estIsOptional', initial: 'Optional'},
+						IsExecute:{location: estimateMainModule, identifier: 'lineItemSelStatement.isExecute', initial: 'Select'},
+						WicCatFk:{location: estimateMainModule, identifier: 'wicCatFk', initial: 'WIC Group Ref.No.'},
+						LoggingMessage:{location: estimateMainModule, identifier: 'loggingMessage', initial: 'Last Execution History'},
+						UnitRateStrQty:{location: estimateMainModule, identifier: 'unitRateStrQty', initial: 'Unit Rate/Structure Quantity'},
+						StructureQty:{location: estimateMainModule, identifier: 'structureQty', initial: 'Structure Quantity'},
+						StructureUom:{location: estimateMainModule, identifier: 'structureUom', initial: 'Structure UoM'},
+						SelectStatement: {location: estimateMainModule, identifier: 'lineItemSelStatement.selectStatement', initial: 'Select Statement'},
+						WicItemFk: {location: estimateMainModule, identifier: 'lineItemSelStatement.wicItemRefNo', initial: 'WIC Item Ref. No.'},
+						WicHeaderItemFk :{ location: estimateMainModule, identifier: 'wicBoqHeaderFk', initial: 'WIC BoQ -Root Item ref.No'},
+						BoqLineTypeFk: { location: boqMainModule, identifier: 'BoqLineTypeFk', initial: 'BoQ Line Type' },
+						BoqItemReferenceFk: { location: boqMainModule, identifier: 'BoqItemReferenceFk', initial: 'Reference to' },
+						BoqItemReferenceDescription: { location: boqMainModule, identifier: 'BoqItemReferenceDescription', initial: 'Reference to Description' },
+						BoqItemReferenceDesignDescription: { location: boqMainModule, identifier: 'BoqItemReferenceDesignDescription', initial: 'Reference to Design Description' },
+						PrcItemEvaluationFk: { location: boqMainModule, identifier: 'PrcItemEvaluationFk', initial: 'Procurement Item Evaluation' },
+						PrcStructureDescription: { location: boqMainModule, identifier: 'PrcStructureDescription', initial: 'Procurement Structure Description' },
+						MdcTaxCodeFk: { location: cloudCommonModule, identifier: 'entityTaxCode', initial: 'Tax Code' },
+						TaxCodeDescription: { location: cloudCommonModule, identifier: 'entityTaxCodeDescription', initial: 'Tax Code Description' },
+						BpdAgreementFk: { location: boqMainModule, identifier: 'BpdAgreementFk', initial: 'Agreement' },
+						BasItemTypeFk: { location: boqMainModule, identifier: 'BasItemTypeFk', initial: 'Item Type Stand/Opt' },
+						BasItemType2Fk: { location: boqMainModule, identifier: 'BasItemType2Fk', initial: 'Item Type Base/Alt' },
+						ControllingUnitDescription: { location: cloudCommonModule, identifier: 'entityControllingUnitDesc', initial: 'Controlling Unit Description' },
+						LicCostGroup1Description: { location: boqMainModule, identifier: 'costGroup1Description', initial: 'Cost Group 1 Description' },
+						LicCostGroup2Description: { location: boqMainModule, identifier: 'costGroup2Description', initial: 'Cost Group 2 Description' },
+						LicCostGroup3Description: { location: boqMainModule, identifier: 'costGroup3Description', initial: 'Cost Group 3 Description' },
+						LicCostGroup4Description: { location: boqMainModule, identifier: 'costGroup4Description', initial: 'Cost Group 4 Description' },
+						LicCostGroup5Description: { location: boqMainModule, identifier: 'costGroup5Description', initial: 'Cost Group 5 Description' },
+						PrjCostGroup1Description: { location: estimateMainModule, identifier: 'prjCostGroup1Description', initial: 'Project Cost Group 1 Description' },
+						PrjCostGroup2Description: { location: estimateMainModule, identifier: 'prjCostGroup2Description', initial: 'Project Cost Group 2 Description' },
+						PrjCostGroup3Description: { location: estimateMainModule, identifier: 'prjCostGroup3Description', initial: 'Project Cost Group 3 Description' },
+						PrjCostGroup4Description: { location: estimateMainModule, identifier: 'prjCostGroup4Description', initial: 'Project Cost Group 4 Description' },
+						PrjCostGroup5Description: { location: estimateMainModule, identifier: 'prjCostGroup5Description', initial: 'Project Cost Group 5 Description' },
+
+						// spec property
+						PrcPackage2HeaderFk:{ location: estimateMainModule, identifier: 'prcPackage2HeaderFk', initial: 'PrcPackage2HeaderFk' },
+						PrjChangeStatusFk : { location: estimateMainModule, identifier: 'prjChangeStatus', initial: 'Project Change Status'},
+
+						IsActive: {location: projectMainModule, identifier: 'entityIsActive', initial: 'Is Active'},
+						LgmJobFk: {location: estimateProjectModule, identifier: 'lgmJobFk', initial: 'Job'},
+						IsControlling: {location: estimateProjectModule, identifier: 'isControlling', initial: 'Is Controlling'},
+						AdvancedAllowance :{location: estimateMainModule, identifier : 'advancedAllowance', initial:'Advanced Allowance'},
+
+						SortCode01Fk: { location: projectStructuresModule, identifier: 'sortCode01', initial: 'Sort Code 1'},
+						SortCode02Fk: { location: projectStructuresModule, identifier: 'sortCode02', initial: 'Sort Code 2'},
+						SortCode03Fk: { location: projectStructuresModule, identifier: 'sortCode03', initial: 'Sort Code 3'},
+						SortCode04Fk: { location: projectStructuresModule, identifier: 'sortCode04', initial: 'Sort Code 4'},
+						SortCode05Fk: { location: projectStructuresModule, identifier: 'sortCode05', initial: 'Sort Code 5'},
+						SortCode06Fk: { location: projectStructuresModule, identifier: 'sortCode06', initial: 'Sort Code 6'},
+						SortCode07Fk: { location: projectStructuresModule, identifier: 'sortCode07', initial: 'Sort Code 7'},
+						SortCode08Fk: { location: projectStructuresModule, identifier: 'sortCode08', initial: 'Sort Code 8'},
+						SortCode09Fk: { location: projectStructuresModule, identifier: 'sortCode09', initial: 'Sort Code 9'},
+						SortCode10Fk: { location: projectStructuresModule, identifier: 'sortCode10', initial: 'Sort Code 10'},
+
+						EndDate:{location: companyModule, identifier: 'entityEndDate', initial: 'Period End Date'},
+						PercentOfTime: {location: basicsCommonModule, identifier: 'percentOfTime', initial: 'Percent Of Time'},
+						PercentOfCost: {location: basicsCommonModule, identifier: 'percentOfCost', initial: 'Percent Of Cost'},
+						CalcCumCost: {location: basicsCommonModule, identifier: 'calcCumCost', initial: 'Calculated Cumulative Cost'},
+						CalcPeriodCost: {location: basicsCommonModule, identifier: 'calcPeriodCost', initial: 'Calculated Period Cost'},
+						CalcCumCash: {location: basicsCommonModule, identifier: 'calcCumCash', initial: 'Calculated Cumulative Cash'},
+						CalcPeriodCash: {location: basicsCommonModule, identifier: 'calcPeriodCash', initial: 'Calculated Period Cash'},
+						CumCost: {location: basicsCommonModule, identifier: 'cumCost', initial: 'Cumulative Cost'},
+						PeriodCost: {location: basicsCommonModule, identifier: 'periodCost', initial: 'Period Cost'},
+						CumCash: {location: basicsCommonModule, identifier: 'cumCash', initial: 'Cumulative Cash'},
+						PeriodCash: {location: basicsCommonModule, identifier: 'periodCash', initial: 'Period Cash'},
+						ActPeriodCost: {location: basicsCommonModule, identifier: 'actPeriodCost', initial: 'Actual Period Cost'},
+						ActPeriodCash: {location: basicsCommonModule, identifier: 'actPeriodCash', initial: 'Actual Period Cash'},
+						TotalLeadTime: {location: procurementCommonModule, identifier: 'totalLeadTime', initial: 'Total Lead Time'},
+						AddressEntity: {location: cloudCommonModule, identifier: 'entityDeliveryAddress', initial: 'entityDeliveryAddress'},
+						PrcItemMaterialCode: {location: procurementCommonModule, identifier: 'prcItemMaterialNo', initial: 'Material No.'},
+						PrcItemDescription1: {location: procurementCommonModule, identifier: 'prcItemDescription1', initial: 'Description 1'},
+						PrcItemFk: {location: procurementCommonModule, identifier: 'prcItemMaterial', initial: 'Material'},
+						IsContracted:{location: procurementPackageModule, identifier: 'isContracted', initial: 'Is Contracted'},
+						PrcItemAssignmentFk:{location: procurementPackageModule, identifier: 'PrcItemAssignmentBaseItem', initial: 'Base Item'},
+						PrcItemDescription: {location: procurementCommonModule, identifier: 'prcItemDescription', initial: 'Item Description'},
+						LineItemCode: {
+							location: procurementPackageModule, identifier: 'itemAssignment.lineItemCode', initial: 'Line Item Code'
+						},
+						LineItemDescription: {
+							location: procurementPackageModule, identifier: 'itemAssignment.lineItemDescription', initial: 'Line Item Description'
+						},
+						BoqHeaderReference: {
+							location: estimateMainModule, identifier: 'boqRootRef', initial: 'BoQ-Root Item Ref.No'
+						},
+						StatusOfLineItemAssignedToPackage: {
+							location: procurementPackageModule, identifier: 'generated', initial: 'Generated'
+						},
+						BoqItemReference: {location: estimateMainModule, identifier: 'boqItemFk', initial: 'BoQ-Item Ref.No'},
+						Brief: {location: cloudCommonModule, identifier: 'entityBrief', initial: 'Brief'},
+						PriceMaterial: {location: procurementCommon, identifier: 'entityMaterialPrice', initial: 'Material Price'},
+						QuantityMaterial: {location: procurementCommon, identifier: 'entityMaterialQuantity', initial: 'Material Quantity'},
+						DateEffective:{location: basicsCommonModule, identifier: 'dateEffective', initial: 'Date Effective'},
+						DateDelivery:{location: basicsCommonModule, identifier: 'dateDelivered', initial: 'Date Delivered'},
+						BpdVatGroupFk: {location: procurementCommonModule, identifier: 'entityVatGroup', initial: 'Vat Group'},
+						BoqWicCatFk: {location: procurementPackageModule, identifier: 'entityBoqWicCatFk', initial: 'WIC Group'},
+						MdcMaterialCatalogFk: {location: basicsMaterialModule, identifier: 'materialCatalog', initial: 'Material Catalog'},
+						PrjBoqFk: {location: procurementCommonModule, identifier: 'entityPrjBoqFk', initial: 'Project BoQ'},
+						PrcPackageBoqFk: {location: procurementPackageModule,identifier: 'entityPrcPackageBoqFk',initial: 'Package'},
+						PrjProjectFk: {location: procurementPackageModule, identifier: 'entityProject', initial: 'Project'},
+						CopyType: {location: procurementCommonModule, identifier: 'entityCopyType', initial: 'Copy Type'},
+						CopyTypeWicBoq: {location: procurementCommonModule, identifier: 'copyTypeWicBoq', initial: 'WIC BoQ'},
+						CopyTypePrjBoq: {location: procurementCommonModule,identifier: 'copyTypePrjBoq',initial: 'Project BoQ'},
+						CopyTypePacBoq: {location: procurementCommonModule, identifier: 'copyTypePacBoq', initial: 'Package BoQ'},
+						CopyTypeMaterial: {location: procurementCommonModule, identifier: 'copyTypeMaterial', initial: 'Material'},
+						OverallDiscount: {location: procurementCommonModule,identifier: 'entityOverallDiscount',initial: 'Overall Discount'},
+						OverallDiscountOc: {location: procurementCommonModule, identifier: 'entityOverallDiscountOc', initial: 'Overall Discount (OC) '},
+						OverallDiscountPercent: {location: procurementCommonModule, identifier: 'entityOverallDiscountPercent', initial: 'Overall Discount Percent'},
+						TextInfo: {location: procurementCommonModule, identifier: 'entityTextInfo', initial: 'Text Info'},
+						DeadlineDate: {location: cloudCommonModule, identifier: 'entityDeadline', initial: 'Deadline'},
+						DeadlineTime: {location: cloudCommonModule, identifier: 'entityTime', initial: 'Time'},
+						SubmissionRequirement: {location: procurementCommonModule, identifier: 'submissionRequirement', initial: 'Submission Requirements'},
+						PrcCopyModeFk: {location: procurementPackageModule, identifier: 'entityPrcCopyModeFk', initial: 'Copy Mode'},
+						SalesTaxMethodFk: {location: procurementCommonModule, identifier: 'entitySalesTaxMethodFk', initial: 'Sales Tax Method'},
+						ConHeaderFk: {location: procurementPackageModule, identifier: 'entityConHeaderFk', initial: 'Procurement Contract'},
+						ConBoqHeaderFk: {location: procurementCommonModule, identifier: 'entityConBoqHeaderFk', initial: 'Contract BoQ'},
+						Visibility: {location: procurementCommonModule, identifier: 'visibility', initial: 'Visibility'},
+						PackageBoqHeaderFk: {location: procurementCommonModule, identifier: 'entityPackageBoqHeaderFk', initial: 'Package BoQ'},
+						PackageAssignments:{location: cloudCommonModule, identifier: 'entityPackage', initial: 'Package' },
+						BpdContactFk: {
+							location: procurementCommonModule, identifier: 'contactFirstName', initial: 'Contact First Name'
+						},
+						BpdContactRoleFk: {
+							location: procurementCommonModule, identifier: 'entityContactRole', initial: 'Contact Role'
+						},
+						BpName1: {
+							location: cloudCommonModule, identifier: 'entityBusinessPartnerName1', initial: 'Business Partner Name1'
+						},
+						ExternalCode: { location: boqMainModule, identifier: 'ExternalCode', initial: 'External Code' },
+					}
+				}
+			};
+
+			var translationService = {
+				// overloading
+				// TODO: check whether we need to overload that function :)
+				getTranslationInformation: function getTranslationInformation(key) {
+					var information = translationService.words[key];
+					if (angular.isUndefined(information) || (information === null)) {
+						// Remove prefix from key that's supposed to be separated by a dot and check again.
+						key = key.substring(key.indexOf('.') + 1);
+						information = translationService.words[key];
+					}
+					return information;
+				}
+			};
+
+			platformUIBaseTranslationService.call(this, [estimateMainTranslations], translationService);
+
+			// for container information service use
+			this.loadTranslations = function loadTranslations() {
+				return $q.when(false);
+			};
+		}
+
+	]);
+
+})(angular);

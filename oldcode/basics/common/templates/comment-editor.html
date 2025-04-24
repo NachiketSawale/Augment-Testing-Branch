@@ -1,0 +1,42 @@
+<style>
+	.statusPanel input[type='radio'] {
+		margin: 5px;
+		vertical-align: text-top;
+	}
+
+	.statusPanel {
+		border-left: 1px solid #ccc;
+		padding: 2px;
+	}
+
+	.statusPanel fieldset div {
+		margin-top: 5px;
+	}
+
+	.statusPanel fieldset div label {
+		margin-left: 2px;
+	}
+
+
+</style>
+
+<div class="comment-editor form-control">
+	<div class="comment-text-area input-group-content selectable" contenteditable="{{isEditable()}}" data-ng-keydown="onKeyDown($event)"
+	     data-ng-click="onClick($event)" data-ng-readonly="isReadOnly()" style="overflow-y: scroll; display: inline-block;"></div>
+
+	<div data-ng-show="statusOptions" class="statusPanel overflow">
+		<div data-domain-control data-domain="radio" data-config="config" data-options="statusOptions" data-model="statusOptions.viewValue"></div>
+	</div>
+
+	<div class="comment-toolbar input-group-btn" data-ng-hide="statusOptions" data-ng-mousedown="onMouseDown($event)">
+		<button class="btn btn-default comment-link-btn control-icons ico-link" title="{{'basics.common.link' | translate}}"
+		        data-ng-click="insertLink()" data-ng-disabled="isDisabled()"></button>
+		<button class="btn btn-default comment-image-btn control-icons ico-camera" title="{{'basics.common.image' | translate}}"
+		        data-ng-click="insertImage($event)" data-ng-disabled="isDisabled()"></button>
+		<button class="btn btn-default comment-emotion-btn control-icons ico-emoticon-add" title="{{'basics.common.emotion' | translate}}"
+		        data-ng-click="insertEmotion()" data-ng-disabled="isDisabled()"></button>
+	</div>
+</div>
+<div class="comment-error" data-ng-show="invalid()">
+	{{ "cloud.common.validationErrorComment" | translate }} {{ maxLength }}.
+</div>

@@ -1,0 +1,66 @@
+﻿{
+	"productionplanning": {
+		"formulaconfiguration": {
+			"entityFormula": "Formula",
+			"entityFormulaVersion": "Formula Version",
+			"entityFormulaInstance": "Formula Instance",
+			"CommentText": "Comment Text",
+			"FormulaVersion": "Formula Version",
+			"formula": {
+				"listTitle": "Formula",
+				"detailTitle": "Formula Details"
+			},
+			"version": {
+				"listTitle": "Formula: Version",
+				"changeStatus": "Release",
+				"copyVersion": "Copy Version"
+			},
+			"script" : {
+				"title": "Formula Version: Script",
+				"toolbar":{
+					"validate": "Validate"
+				},
+				"validated": "The script is valid",
+				"isreadonly": "The '{{propName}}' is readonly.",
+				"isundefined": "The '{{propName}}.{{prop}}' is not defined."
+			},
+			"instance": {
+				"listTitle": "Formula: Instance"
+			},
+			"parametervalue": {
+				"listTitle": "Formula: Parameter Value"
+			},
+			"ppsParameter": {
+				"Value": "Value",
+				"listTitle": "Formula: Parameter",
+				"parameterEntity": "PPS Parameter",
+				"variableName": "Variable Name",
+				"ppsFormulaVersionFk": "Formula Version",
+				"basDisplayDomainFk": "Display Domain",
+				"recalculation": "Recalculation",
+				"recalculate": {
+					"dialogTitle": "Select Product(s)",
+					"switchcheckbox": "Check All/Uncheck All"
+				}
+			},
+			"plannedQuantity": {
+				"boqHeader": "BoQ Header",
+				"estHeader": "Estimate Header",
+				"sourceType": "Source Type",
+				"source": "Source",
+				"PpsPlannedQuantityTypeFk": "Quantity Type",
+				"target": "Result",
+				"estLineItemSearchDialogTitle": "Estimate Line Item Search Dialog",
+				"estResourceSearchDialogTitle": "Estimate Resource Search Dialog",
+				"entityPlannedQuantity": "Planned Quantity",
+				"mdcProductDescriptionFk": "Material Product Template",
+				"formulaParameter": "Formula Parameter",
+				"sourceCode1": "Source Code1",
+				"sourceCode2": "Source Code2",
+				"sourceCode3": "Source Code3",
+				"internalPrice": "Internal Price",
+				"externalPrice": "External Price"
+			}
+		}
+	}
+}

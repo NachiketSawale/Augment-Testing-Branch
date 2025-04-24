@@ -1,0 +1,30 @@
+<div class="flex-box flex-element overflow-hidden" id="wde-splitter">
+	<div class="wde-sidebar" data-ng-hide="ctrl.settings.hideSidebar">
+		<div style="height: 100%;overflow: auto;" data-model-wde-viewer-tree-view data-items="layers" data-options="treeOptions"></div>
+	</div>
+	<div class="comment-sidebar" data-ng-if="ctrl.settings.showCommentSidebar">
+		<div style="height: 100%;overflow: auto;" data-model-wde-viewer-comment-view data-items="commentItems"></div>
+	</div>
+
+	<div class="{{ 'flex-box relative-container overflow-hidden' + (ctrl.settings.hideSidebar?' flex-element':'') }}" id="canvas-container">
+		        <canvas id="canvas" class="flex-box flex-element overflow-hidden" tabindex="-1" style="outline: none"
+		                data-model-wde-viewer-context-menu="contextMenuItems"
+		                data-on-context-menu-destroy="onContextMenuDestroy()"
+		                data-ng-mouseenter="onMouseEnter($event)"
+		                data-ng-mouseleave="onMouseLeave($event)"
+		                data-ng-click="onMouseEnter($event)"
+		                data-ng-keydown="onKeyDown($event)">
+		        </canvas>
+		<div data-cloud-common-overlay data-info2="loadingInfo" data-loading="isLoading || isCanceling"></div>
+		<!--        <div style="position: absolute;right: 10px;bottom: 10px;color: white"data-ng-hide="ctrl.settings.hidePosition">-->
+		<!--            x: <span data-ng-bind="position.x | modelWdeViewerPositionFilter" style="margin-right: 10px"></span>-->
+		<!--            y: <span data-ng-bind="position.y | modelWdeViewerPositionFilter"></span>-->
+		<!--        </div>-->
+		<div data-ng-show="ctrl.settings.showMarker" class="fullwidth" style="height: 30px;position:absolute;bottom: 0;" data-model-wde-viewer-marker></div>
+
+		<div data-ng-show="showLegend" data-model-wde-viewer-legend-view class="border-all" style="position:absolute;top: 0;left:0;background-color: #ffffffe6;border-color: gainsboro;"></div>
+
+		<div style="position:absolute;bottom: 0;left:0;background-color: #ffffffe6;border-color: gainsboro;">ige - {{ version }}</div>
+	</div>
+</div>
+<div data-basics-common-white-board data-show="modelInfo" data-info="modelInfo"></div>

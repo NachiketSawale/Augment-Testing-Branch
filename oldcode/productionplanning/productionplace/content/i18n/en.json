@@ -1,0 +1,45 @@
+﻿{
+	"productionplanning": {
+		"productionplace": {
+			"entityProductionPlace": "Production Place",
+			"entityPpsMaintenance": "Maintenance",
+			"childrenEntityName": "Production Place Canvas",
+			"childrenProdPlaceListTitle": "Production Place: Production Places",
+			"listTitle": "Production Places",
+			"detailTitle": "Production Place Detail",
+			"positionX": "PositionX",
+			"positionY": "PositionY",
+			"positionZ": "PositionZ",
+			"planningBoardTitle": "Planning Board",
+			"maintenance": {
+				"startDate": "Start Date",
+				"endDate": "End Date",
+				"listTitle": "Maintenance",
+				"detailTitle": "Maintenance Detail"
+			},
+			"additionalFilter": {
+				"siteFilterListTitle": "Site Filter"
+			},
+			"intersectingSequences": "Intersecting Sequences",
+			"integrateSequence": "Integrate Sequence",
+			"newSequence": "New Sequence",
+			"deleteFormworkPhaseDeniedMessage": "Selected formwork cannot be deleted. There are still phases related to this formwork",
+			"deactivateDateshiftForPhases": "Move Products independently",
+			"wizard": {
+				"wizardGroupName": "Group Name",
+				"enableTitle": "Enable Production Place",
+				"disableTitle": "Disable Production Place",
+				"enableDisableDone": "The field 'Active' of the Production Place ({{place}}) has been changed.<br>",
+				"alreadyEnabled": "Production Place ({{place}}) is already enabled.",
+				"alreadyDisabled": "Production Place ({{place}}) is already disabled."
+			},
+			"product" : "Product",
+			"formwork": "Formwork",
+			"productEventTitle": "Production Place: Product Events",
+			"customTagConfig": {
+				"ppsHeader": "Production Planning"
+			}
+
+		}
+	}
+}

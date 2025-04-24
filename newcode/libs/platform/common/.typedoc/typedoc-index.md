@@ -1,0 +1,1 @@
+This module provides the basic infrastructure for the application as well as common utilities.

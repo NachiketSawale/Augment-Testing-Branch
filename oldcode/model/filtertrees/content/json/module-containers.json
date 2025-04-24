@@ -1,0 +1,10 @@
+[
+	{
+		"id": "model-filtertrees-ifctree-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.filtertrees.modelObjectIFCTreeListTitle",
+		"controller": "modelFiltertreesIFCTreeListController",
+		"uuid": "722a80284d6843a19d4ec83f5183cbaa"
+	}
+	
+]

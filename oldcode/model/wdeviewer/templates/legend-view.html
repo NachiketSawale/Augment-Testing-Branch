@@ -1,0 +1,9 @@
+<div style="overflow: auto;">
+	<ul style="display: table;border-spacing: 4px;">
+		<li data-ng-repeat="legend in legends" style="display: table-row;">
+			<span data-ng-style="{paddingLeft: '16px', background: legend.color, display: 'table-cell'}"></span>
+			<span data-ng-bind="legend.name | modelWdeViewerTrimFilter:20" style="display: table-cell;"></span>
+			<span data-ng-bind="legend | modelWdeViewerLegendFilter" style="text-align: right;display: table-cell;"></span>
+		</li>
+	</ul>
+</div>

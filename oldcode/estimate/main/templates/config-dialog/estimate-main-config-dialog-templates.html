@@ -1,0 +1,131 @@
+<script type="text/ng-template" id="estimate-main-est-upp2-costcode-detail.html">
+    <div id="uppcostcodedetail" style="min-width: 100%;" ng-controller="estimateMainEstUpp2CostcodeDetailController">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-box flex-column">
+            <div data-platform-grid class="subview-container" data="gridData"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-est-structure-config-detail.html">
+    <div ng-controller="estimateMainEstStructureDetailController">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-box flex-column subview-container" style="height: 160px;">
+            <div data-platform-grid data="gridData"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-est-rule-config-detail.html">
+    <div ng-controller="estimateMainEstRuleDetailController">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-box flex-column subview-container" style="height: 160px;">
+            <div data-platform-grid data="gridData"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-cost-code-assignment-details.html">
+    <div data-ng-controller="estimateMainCostCodeAssignmentDetailController">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-box flex-column subview-container" style="height:160px;">
+            <div data-platform-grid data="gridData"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-rule-params-details.html">
+    <div data-ng-controller="estimateMainRuleParamsDetailController">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-box flex-column subview-container" style="height:160px;">
+            <div data-platform-grid data="gridData"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-totals-config-details.html">
+    <div data-ng-controller="estimateMainTotalsConfigDetailController">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-box flex-column subview-container" style="height:160px;">
+            <div data-platform-grid data="gridData"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-column-config-details.html">
+    <div data-ng-controller="estimateMainColumnConfigDetailController">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-box flex-column subview-container" style="height:160px;">
+            <div data-platform-grid data="gridData"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-column-config-dialog-modal.html">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <!--<section class="modal-body">-->
+    <section class="modal-body" style="height: 560px;">
+        <div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+        <div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem"></div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled" data-ng-click="modalOptions.ok()">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</script>
+
+<script type="text/ng-template" id="estimate-main-cost-budget-assign-details.html">
+    <div data-ng-controller="estimateMainCostBudgetAssignDetailController" class="filler">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div data-platform-grid class="subview-container" style="height:160px;" data="gridData"></div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="estimate-main-root-assignment-dialog-modal.html">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <!--<section class="modal-body">-->
+    <section class="modal-body" style="height: 560px;">
+        <div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem"></div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled" data-ng-click="modalOptions.ok()">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</script>
+
+<script type="text/ng-template" id="estimate-main-rounding-config-detail.html">
+	<div data-ng-controller="estimateMainRoundingConfigDetailController">
+		<div class="toolbar">
+			<div data-platform-menu-list data-list="tools"></div>
+		</div>
+		<div class="flex-box flex-column subview-container">
+			<div data-platform-grid data="gridData"></div>
+		</div>
+	</div>
+</script>

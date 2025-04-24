@@ -1,0 +1,32 @@
+{
+	"basics": {
+		"payment": {
+			"detailPaymentTitle": "Payment Term Details",
+			"listPaymentTitle": "Payment Terms",
+
+			"netDays": "Net Days",
+			"DiscountPercent": "Discount Percent",
+			"CalculationType": "Calculation Type",
+			"DayOfMonth": "Day Of Month",
+			"PrintDescriptionInfo": "Print Description Info",
+			"PrintTextDescriptionInfo": "Print Text Description Info",
+			"DiscountDays": "Discount Days",
+
+			"payment": "Payment Term",
+			"PaymentTranslation": "Translation",
+			"codefinance":"Code (Finance)",
+			"entityIsDateInvoiced": "Is Date Invoiced",
+			"entityIsLive": "Active",
+			"disablePaymentTermDone": "Payment Term {{paym}} is disabled successfully",
+			"enablePaymentTermDone": "Payment Term {{paym}} is enabled successfully",
+			"paymentTermAlreadyEnabled": "Payment Term {{paym}} is already enabled",
+			"paymentTermAlreadyDisabled": "Payment Term {{paym}} is already disabled",
+			"enablePaymentTermTitle": "Enable Payment Term",
+			"disablePaymentTermTitle": "Disable Payment Term",
+
+			"entityMonth": "Month",
+			"isDefaultCreditor": "Is Default Creditor",
+			"isDefaultDebtor": "Is Default Debtor"
+		}
+	}
+}

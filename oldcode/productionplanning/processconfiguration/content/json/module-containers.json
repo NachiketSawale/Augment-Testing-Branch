@@ -1,0 +1,50 @@
+[
+	{
+		"id": "productionplanning.processconfiguration.processtemplate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.processconfiguration.processTemplate.listTitle",
+		"controller": "productionplanningProcessConfigurationProcessTemplateListController",
+		"uuid": "3ed965bcbec84a29811bd0d8bd79598c",
+		"permission": "3ed965bcbec84a29811bd0d8bd79598c"
+	},
+	{
+		"id": "productionplanning.processconfiguration.processtemplate.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.processconfiguration.processTemplate.detailTitle",
+		"controller": "productionplanningProcessConfigurationProcessTemplateDetailController",
+		"uuid": "080b54384d40404597ed4be6e66250e3",
+		"permission": "3ed965bcbec84a29811bd0d8bd79598c"
+	},
+	{
+		"id": "productionplanning.processconfiguration.phasetemplate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.processconfiguration.phaseTemplate.ListTitle",
+		"controller": "ppsProcessConfigurationPhaseTemplateListController",
+		"uuid": "95c04d6098ee4917a511048567bd06f6",
+		"permission": "71b79353b3084571b7b450a492a7fd56"
+	},
+	{
+		"id": "productionplanning.processconfiguration.phasetemplate.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.processconfiguration.phaseTemplate.detailTitle",
+		"controller": "ppsProcessConfigurationPhaseTemplateDetailController",
+		"uuid": "16109c4d63794f86812d51fbfe8eaedb",
+		"permission": "71b79353b3084571b7b450a492a7fd56"
+	},
+	{
+		"id": "productionplanning.eventconfiguration.phasereqtemplate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.processconfiguration.phasereqtemplate.listTitle",
+		"controller": "phaseReqTemplateListController",
+		"uuid": "e15dcf861fdc40a4a9c277201fbfe424",
+		"permission": "e15dcf861fdc40a4a9c277201fbfe424"
+	},
+	{
+		"id": "productionplanning.eventconfiguration.phasereqtemplate.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.processconfiguration.phasereqtemplate.detailTitle",
+		"controller": "phaseReqTemplateDetailController",
+		"uuid": "ca54a429c4d44e11b51e54ffa81eb75b",
+		"permission": "e15dcf861fdc40a4a9c277201fbfe424"
+	}
+]

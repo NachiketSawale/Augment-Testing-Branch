@@ -1,0 +1,25 @@
+<div data-ng-controller="basicsMaterialImportRecordsController">
+	<header class="modal-header main-color"
+			data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<div class="fullheight">
+			<div class="fullheight" style="overflow-y: auto">
+				<div data-platform-alert data-error="error"></div>
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="import.fileName" readonly="readonly">
+                    <span class="input-group-btn">
+                        <button id="importFileBtn" class="btn btn-default tlb-icons ico-upload" data-ng-disabled="import.isDisabled"></button>
+                    </span>
+                </div>
+                <!--<div data-basics-common-upload-progress-bar data-options="progressBarOptions"></div>-->
+            </div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="importMaterial()" data-ng-disabled="import.disableImport()">{{::'basics.material.import.importBtnTxt' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="showInfo()" data-ng-disabled="import.disableInfo()">{{::'basics.common.taskBar.info' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="close()" data-ng-disabled="import.isDisabled"> {{::'basics.common.button.close' | translate}}</button>
+	</footer>
+	<div cloud-common-overlay data-loading="isLoading"></div>
+</div>

@@ -1,0 +1,20 @@
+<div class="platform-form-group">
+
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">{{modalOptions.nodeLabel | translate}}</label>
+
+		<div class="platform-form-col">
+			<input class="form-control"
+			       value="{{::modalOptions.entity.path}}" readonly="true"/>
+		</div>
+	</div>
+
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">{{modalOptions.newLabel | translate}}</label>
+
+		<div class="platform-form-col">
+			<input class="form-control" placeholder="{{modalOptions.namePlaceHolder | translate}}" data-ng-model="modalOptions.entity.name"/>
+		</div>
+
+	</div>
+</div>

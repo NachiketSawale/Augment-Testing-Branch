@@ -1,0 +1,28 @@
+div.update-Package-page {
+	padding: 5px 0px;
+	display: flex;
+	float: none;
+
+	.col-md-8 div {
+		display: inline-block;
+	}
+
+	.gridContainer {
+		min-height: 70px;
+	}
+
+	ui-common-domain-control-host {
+		vertical-align: middle;
+		margin: 0px;
+	}
+
+	.platform-form-label {
+		vertical-align: middle;
+	}
+
+	.profile-lookup {
+		margin-left: 28px;
+		width: 400px;
+	}
+}
+

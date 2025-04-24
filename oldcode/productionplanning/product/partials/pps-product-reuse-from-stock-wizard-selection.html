@@ -1,0 +1,22 @@
+<div data-ng-controller="productionplanningProductReuseFromStockWizardSelectionController" ng-cloak class="filler">
+	<section ng-cloak class="modal-body flex-box flex-column">
+		<div>
+			<div style="margin-left: -10px" data-platform-form data-form-options="filterFormOptions"
+			     data-entity="filterEntity"></div>
+			<div class="input-group">
+				<input type="text" data-ng-model="filterEntity.searchValue" data-ng-keydown="onSearchInputKeydown($event)"
+				       class="form-control" autofocus/>
+				<span class="input-group-btn" style="...">
+				    <button class="btn btn-default input-sm btn-search tlb-icons ico-search"
+				            data-ng-click="search()" title="search"></button>
+			    </span>
+			</div>
+		</div>
+
+		<p style="background-color: #dcdcdc;padding: 5px; margin: 0px;" class="font-bold">
+			{{'productionplanning.product.wizard.products'| translate}}
+		</p>
+		<div class="lookup-grid flex-basis-auto grid-container flex-element" data-platform-grid data="grid"></div>
+
+	</section>
+</div>

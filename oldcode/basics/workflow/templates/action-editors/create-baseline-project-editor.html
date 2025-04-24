@@ -1,0 +1,63 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.template' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.template" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.costcode' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.costCode" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.commodity' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.commodity" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="radiolist-container">
+			<div data-radiolistctrl displayMember="description" ng-model="input.editorMode"
+			     on-selection-changed="onRadioGroupOptChanged(value)" options="input.radioGroupOpt"
+			     valueMember="value"></div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row" data-ng-show="input.editorMode === 1">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.project' | translate }}</label>
+				<div class="platform-form-col">
+					<div class="fullwidth" data-basics-lookup-data-project-project-dialog
+					     data-config="project.selectConfig" data-ng-model="project.select" disabled="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-show="input.editorMode === 2">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.projectDocu.project' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="project.script" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div basics-workflow-project-output-container data-ng-model="action" data-output-config="{{'ProjectId'}}"></div>
+
+
+
+

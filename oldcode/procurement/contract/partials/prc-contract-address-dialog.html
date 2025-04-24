@@ -1,0 +1,48 @@
+<div>
+	<header class="modal-header main-color ng-scope">
+		<h2 class="modal-title ng-binding">{{gridTitle}}</h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="close()" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image="" data-sprite="control-wh-icons" data-image="ico-close" class="block-image ng-isolate-scope">
+				<use href="cloud.style/content/images/control-wh-icons.svg#ico-close"></use>
+			</svg>
+		</button>
+	</header>
+	<section class="modal-body">
+		<div class="input-group form-control">
+			<input type="text" data-ng-model="searchValue" class="form-control ng-pristine ng-valid ng-empty ng-touched" data-ng-keydown="onSearchInputKeydown($event, searchValue)" style="">
+			<span class="input-group-btn" style="margin-left: -1px;">
+			    <button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="search(searchValue)" title="search"></button>
+		    </span>
+		</div>
+		<div class="lookup-grid-container">
+			<div class="subview-header toolbar">
+				<h2 class="title fix ng-binding" title="Advanced Criteria">Advanced Criteria</h2>
+			</div>
+			<div class="fullheight" style="margin: 5px;">
+				<div data-platform-form-container data-form-container-options="formContainerOptions" entity="currentItem" class="fullheight">
+				</div>
+			</div>
+		</div>
+		<div class="lookup-grid-container">
+		<div class="subview-header toolbar" data-platform-collapsable-list
+		     data-ng-model="tools">
+			<h2 class="title fix">{{'cloud.common.searchResults'|translate}} </h2>
+
+			<div data-platform-menu-list data-list="tools"
+			     data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+		</div>
+		<div class="flex-box flex-column flex-element subview-content overflow-hidden">
+			<div class="border-all lookup-grid flex-basis-auto" data-platform-grid
+			     data="grid"></div>
+		</div>
+		</div>
+	</section>
+	<footer class="modal-footer ng-scope">
+		<button type="button" data-ng-disabled="OKBtnDisabled()" class="btn btn-default" data-ng-click="ok()">
+			{{::actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="close()">
+			{{::cancelButtonText}}
+		</button>
+	</footer>
+</div>

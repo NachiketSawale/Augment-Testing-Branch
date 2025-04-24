@@ -1,0 +1,4223 @@
+{
+	"constructionsystem": {
+		"master": {
+			"tab": {
+				"tabHeader": "Header",
+				"tabItem": "Item",
+				"tabScript": "Script"
+			},
+			"powerbiView": "PowerBI Viewer",
+			"helpContainerTitle": "Help",
+			"powerBIElements": "Power BI Workspaces,Dashboards and Reports",
+			"details": "WIC Boq Items cannot be found",
+			"ImportError": "Errors Log",
+			"TotalRecords": "Total Records",
+			"Warning": "Import failed!No suitable data was found int the selected file",
+			"Import5DContent": "5D Content Import",
+			"Import5DContentField": "Import 5D Content",
+			"toolButtonLanguage": "Select Language",
+			"groupGridContainerTitle": "Construction System Group",
+			"groupFormContainerTitle": "Construction System Group Detail",
+			"headerGridContainerTitle": "Construction System Masters",
+			"headerFormContainerTitle": "Construction System Master Detail",
+			"parameterGridContainerTitle": "Parameters",
+			"parameterFormContainerTitle": "Parameter Detail",
+			"globalParameterGridContainerTitle": "Global Parameters",
+			"globalParameterFormContainerTitle": "Global Parameters Detail",
+			"globalParameterValueGridContainerTitle": "Global Parameter Values",
+			"globalParameterValueFormContainerTitle": "Global Parameter Value Details",
+			"scriptContainerTitle": "Script",
+			"scriptValidationContainerTitle": "Validation Script",
+			"outputContainerTitle": "Script Result - Output",
+			"lineItemContainerTitle": "Script Result - Line Items",
+			"resourceContainerTitle": "Script Result - Resources",
+			"entityMatchCode": "Match Code",
+			"entityGroup": "Group",
+			"entityLicCostGroupFk": "Cost Group {{p_0}}",
+			"entityBasFormFk": "Form",
+			"entitycostGroup1Description": "Cost Group1 Description",
+			"entitycostGroup2Description": "Cost Group2 Description",
+			"entitycostGroup3Description": "Cost Group3 Description",
+			"entitycostGroup4Description": "Cost Group4 Description",
+			"entitycostGroup5Description": "Cost Group5 Description",
+			"assemblyGridContainerTitle": "Assembly Assignment",
+			"assemblyResourceGridContainerTitle": "Assembly Resource",
+			"assemblyFormContainerTitle": "Assembly Assignment Detail",
+			"entitycostGroup": "Cost Group",
+			"entityCosInsHeaderFk": "Cos Instance Header",
+			"CosParameterGroupFk": "Group",
+			"entityParameterTypeFk": "Type",
+			"entityUomFk": "UoM",
+			"entityUomText": "UoM Description",
+			"entityVariableName": "Variable Name",
+			"entityDefaultTypeFk": "Default Type",
+			"entityPropertyName": "Property Name",
+			"entityQuantityQuery": "Quantity Query",
+			"entityDefaultValue": "Default Value",
+			"entityQuantityQueryInfoDescription": "Quantity Query",
+			"entityFormFieldFk": "Form Field",
+			"entitySorting": "Sorting",
+			"entityIsLookup": "Is Lookup",
+			"entityAggregateType": "Aggregate Type",
+			"entityAggregateNoneType": "None",
+			"entityAggregateSumType": "Sum",
+			"entityAggregateMinType": "Min",
+			"entityAggregateMaxType": "Max",
+			"entityAggregateAverageType": "Average",
+			"entityMdcControllingGroupFk": "Controlling Group",
+			"entityMdcControllingGroupDescription": "Controlling Group Description",
+			"entityMdcControllingGroupDetailFk": "Controlling Group Detail",
+			"entityMdcControllingGroupDetailDescription": "Controlling Group Detail Description",
+			"controllingGroupGridContainerTitle": "Controlling Groups",
+			"controllingGroupFormContainerTitle": "Controlling Group Detail",
+			"activityTemplateGridContainerTitle": "Activity Template",
+			"activityTemplateFormContainerTitle": "Activity Template Detail",
+			"entityActivityTemplateFk": "Activity Template Code",
+			"parameterGroupGridContainerTitle": "Parameter Groups",
+			"parameterGroupFormContainerTitle": "Parameter Groups Detail",
+			"parameterValueGridContainerTitle": "Parameter Values",
+			"parameterValueFormContainerTitle": "Parameter Values Detail",
+			"disableDone": "Construction System {{code}} is disabled successfully. Please save the record to make this changes permanent.",
+			"alreadyDisabled": "Construction System {{code}} is already disabled",
+			"enableDone": "Construction System {{code}} is enabled successfully. Please save the record to make this changes permanent.",
+			"alreadyEnabled": "Construction System {{code}} is already enabled",
+			"wicGridContainerTitle": "Work Item Assignments",
+			"wicFormContainerTitle": "Work Item Assignments Detail",
+			"context": "Context",
+			"parameter": "Parameter",
+			"entityProjectFk": "Project",
+			"entityScheduleFk": "Schedule",
+			"entityPropertyValueBool": "value bool",
+			"entityPropertyValueLong": "value long",
+			"entityPropertyValueNumber": "value number",
+			"entityPropertyValueText": "value text",
+			"entityPropertyValueDate": "value date",
+			"entityIsDefault": "IsDefault",
+			"entityIsNegative": "IsNegative",
+			"testInputFormContainerTitle": "Test Input",
+			"testInputGridContainerTitle": "Test Input Grid",
+			"taskBarExecute": "Execute",
+			"taskBarUpdate": "Update",
+			"taskBarEdit": "Edit Form",
+			"entityName": "Name",
+			"entityValue": "Value",
+			"entityCosGlobalParamGroupFk": "Global Parameter Group Code",
+			"entityCosGlobalParamGroupDes": "Global Parameter Group Description",
+			"entityEstLineItemFk": "Assembly Code",
+			"entityEstLineItemDescription": "Assembly Description",
+			"entityEstAssemblyCatFk": "Assembly Category Code",
+			"entityEstAssemblyCatDescription": "Assembly Category Description",
+			"entityBoqItemFk": "BoQ Item Reference",
+			"entityBoqWicCatBoqFk": "WIC Code",
+			"boqLookup": "Work Item Assignments Lookup",
+			"entityBoqHeaderFk": "BoQ Header",
+			"entityEstHeaderFk": "Estimate Header",
+			"entityActivityTemplateDescription": "Activity Template Description",
+			"boqItemBrief": "BoQ Item Description",
+			"entityBoqWicCatDescription": "WIC Description",
+			"entityFilter": "Select",
+			"entityIsDistinctInstances": "Is Distinct Instances",
+			"templateGridContainerTitle": "Templates",
+			"templateFormContainerTitle": "Template Detail",
+			"entityTemplateFk": "Template",
+			"parameter2TemplateGridContainerTitle": "Parameter Templates",
+			"quantityQueryEditorContainerTitle": "Quantity Query Editor",
+			"parameter2TemplateQuantityQueryEditorContainerTitle": "Parameter Template Quantity Query Eidtor",
+			"parameter2TemplateFormContainerTitle": "Parameter Template Detail",
+			"dialog": {
+				"deleteOtherModuleTitle": "Warning Message"
+			},
+			"validationTypeAndValueTitle": "Parameter Type Changing Confirmation",
+			"validationTypeAndValueContent": "The parameter type '{{value0}}' changes to '{{value1}}' will clear the parameter Values,continue?",
+			"filterObjectsTestInfo": "Please select a construction system master and a construction system instance header at first.",
+			"filterError": "The Selection Statement is error, please check it!",
+			"filterColumn": "Filter",
+			"placeholder": "input your filter here!",
+			"entityCosParameterGroupFk": "Parameter Group",
+			"filterObjectBySelectionStatment": "Filter objects by Selection Statment",
+			"templateDefSaveTitle": "Save Template: Please Enter Location And Template Name",
+			"templateDefSaveNameLabel": "Template Name",
+			"templateDefSaveNamePlaceHolder": "template name",
+			"templateDefConfirmDeleteTitle": "Delete Template",
+			"templateDefConfirmDeleteBody": "Do you really want to delete the template '{{p1}}'?",
+			"templateDefDefaultTemplateName": "New Template",
+			"masterSelectionStatementContainerTitle": "Selection Statement (Construction System Masters)",
+			"templateSelectionStatementContainerTitle": "Selection Statement (Templates)",
+			"mustBeUniqueInSameLevel": "{{fieldName}} must be unique at root level or if they are directly under same parent node.",
+			"globalParameter": "Global Parameter",
+			"2dObjectTemplateGridContainerTitle": "2D Object Template",
+			"2dObjectTemplateFormContainerTitle": "2D Object Template Detail",
+			"2dObjectTemplatePropertyGridContainerTitle": "2D Object Template Property",
+			"2dObjectTemplatePropertyFormContainerTitle": "2D Object Template Property Detail",
+			"2dObjectTemplate2TemplateGridContainerTitle": "Template 2D Object Template",
+			"2dObjectTemplate2TemplateFormContainerTitle": "Template 2D Object Template Detail",
+			"2dObjectTemplateProperty2TemplateGridContainerTitle": "Template 2D Object Template Property",
+			"2dObjectTemplateProperty2TemplateFormContainerTitle": "Template 2D Object Template Property Detail",
+			"entityIsComposite": "Is Composite",
+			"entityDimensionType": "Dimension Type",
+			"entityHeight": "Height",
+			"entityOffset": "Offset",
+			"entityMultiplier": "Multiplier",
+			"entityPositiveColor": "Positive Color",
+			"entityMdlObjectTexturePos": "Positive Texture",
+			"entityNegativeColor": "Negative Color",
+			"entityMdlObjectTextureNeg": "Negative Texture",
+			"entityLicCostroup1": "Cost Group 1",
+			"entityLicCostroup2": "Cost Group 2",
+			"entityLicCostroup3": "Cost Group 3",
+			"entityLicCostroup4": "Cost Group 4",
+			"entityLicCostroup5": "Cost Group 5",
+			"color": "Color",
+			"costGroup": "Cost Group",
+			"entityProperty": "Attribute",
+			"entityFormula": "Formula",
+			"productivityFactorDetail": "Productivity Factor Detail",
+			"productivityFactor": "Productivity Factor",
+			"efficiencyFactorDetail1": "Efficiency Factor Detail 1",
+			"efficiencyFactor1": "Efficiency Factor 1",
+			"efficiencyFactorDetail2": "Efficiency Factor Detail 2",
+			"efficiencyFactor2": "Efficiency Factor 2",
+			"quantityFactorDetail1": "Quantity Factor Detail 1",
+			"quantityFactorDetail2": "Quantity Factor Detail 2",
+			"quantityFactor1": "QuantityFactor1",
+			"quantityFactor2": "Quantity Factor 2",
+			"quantityFactor3": "Quantity Factor 3",
+			"quantityFactor4": "Quantity Factor 4",
+			"quantityFactorCc": "Quantity Factor Cc",
+			"script": {
+				"log": {
+					"!doc": "",
+					"error": {
+						"!doc": "fn(error: string) -> !this BasLogInstance"
+					},
+					"warn": {
+						"!doc": "fn(warning: string) -> !this BasLogInstance"
+					},
+					"info": {
+						"!doc": "fn(info: string) -> !this BasLogInstance"
+					},
+					"dir": {
+						"!doc": "fn(obj: +Object) -> !this BasLogInstance"
+					}
+				},
+				"lookup": {
+					"!doc": "",
+					"licCostGroup1": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"licCostGroup2": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"licCostGroup3": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"licCostGroup4": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"licCostGroup5": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"prjCostGroup1": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"prjCostGroup2": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"prjCostGroup3": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"prjCostGroup4": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"prjCostGroup5": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"prcPackage": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"uom": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"currency": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"assetMaster": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"costRisk": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"location": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"activity": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"boq": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"assembly": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"costCode": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"divisionType": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"costType": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"resourceFlag": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					},
+					"material": {
+						"!doc": "+BasSelectorInstance BasLookupInstance"
+					}
+				},
+				"BasSelectorInstance": {
+					"!doc": "",
+					"prototype": {
+						"equal": {
+							"!doc": "fn(property: string, value: Object) -> +BasSelectorInstance BasSelectorInstance"
+						},
+						"contains": {
+							"!doc": "fn(property: string, value: Object) -> +BasSelectorInstance BasSelectorInstance"
+						},
+						"where": {
+							"!doc": "fn(query: string) -> +BasSelectorInstance BasSelectorInstance"
+						},
+						"select": {
+							"!doc": "fn() -> +ObjectInstance BasSelectorInstance"
+						},
+						"selectMany": {
+							"!doc": "fn() -> [ObjectInstance] BasSelectorInstance"
+						}
+					}
+				},
+				"BoqSplitQuantityInstance": {
+					"!doc": "Boq item split quantity entity instance",
+					"prototype": {
+						"getBoqHeader": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setBoqHeader": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getBoqItem": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setBoqItem": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getId": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"getQuantity": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setQuantity": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getQuantityAdj": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setQuantityAdj": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getLicCostGroup1": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup1": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup1ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getLicCostGroup2": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup2": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup2ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getLicCostGroup3": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup3": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup3ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getLicCostGroup4": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup4": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup4ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getLicCostGroup5": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup5": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setLicCostGroup5ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getPrjCostGroup1": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup1": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup1ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getPrjCostGroup2": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup2": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup2ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getPrjCostGroup3": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup3": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup3ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getPrjCostGroup4": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup4": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup4ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getPrjCostGroup5": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup5": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setPrjCostGroup5ByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getPrjLocation": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setPrjLocation": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setPrjLocationByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getPrcStructure": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setPrcStructure": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setPrcStructureByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getControllingUnit": {
+							"!doc": "fn() -> number BoqSplitQuantityInstance"
+						},
+						"setControllingUnit": {
+							"!doc": "fn(value: number) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"setControllingUnitByCode": {
+							"!doc": "fn(code: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						},
+						"getCommentText": {
+							"!doc": "fn() -> string BoqSplitQuantityInstance"
+						},
+						"setCommentText": {
+							"!doc": "fn(value: string) -> +BoqSplitQuantityInstance BoqSplitQuantityInstance"
+						}
+					}
+				},
+				"ActivityRelationshipInstance": {
+					"!doc": "Activity Relationship entity instance",
+					"prototype": {
+						"getRelationKind": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"getParentActivity": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"getChildActivity": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"getSchedule": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"getChildSchedule": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"getIsCritical": {
+							"!doc": "fn() -> bool ActivityRelationshipInstance"
+						},
+						"setIsCritical": {
+							"!doc": "fn(value: bool) -> +ActivityRelationshipInstance ActivityRelationshipInstance"
+						},
+						"getUseCalendar": {
+							"!doc": "fn() -> bool ActivityRelationshipInstance"
+						},
+						"setUseCalendar": {
+							"!doc": "fn(value: bool) -> +ActivityRelationshipInstance ActivityRelationshipInstance"
+						},
+						"getFixLagTime": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"setFixLagTime": {
+							"!doc": "fn(value: number) -> +ActivityRelationshipInstance ActivityRelationshipInstance"
+						},
+						"getFixLagPercent": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"setFixLagPercent": {
+							"!doc": "fn(value: number) -> +ActivityRelationshipInstance ActivityRelationshipInstance"
+						},
+						"getVarLagTime": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"setVarLagTime": {
+							"!doc": "fn(value: number) -> +ActivityRelationshipInstance ActivityRelationshipInstance"
+						},
+						"getVarLagPercent": {
+							"!doc": "fn() -> number ActivityRelationshipInstance"
+						},
+						"setVarLagPercent": {
+							"!doc": "fn(value: number) -> +ActivityRelationshipInstance ActivityRelationshipInstance"
+						}
+					}
+				},
+				"BoqTextConfigurationInstance": {
+					"!doc": "Boq text configuration entity",
+					"prototype": {
+						"createSubTextConfiguration": {
+							"!doc": "fn(data: IDictionary`2) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"findTextConfiguration": {
+							"!doc": "fn(description: string) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getId": {
+							"!doc": "fn() -> number BoqTextConfigurationInstance"
+						},
+						"getBoqTextConfiguration": {
+							"!doc": "fn() -> number BoqTextConfigurationInstance"
+						},
+						"setBoqTextConfiguration": {
+							"!doc": "fn(value: number) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getBoqHeader": {
+							"!doc": "fn() -> number BoqTextConfigurationInstance"
+						},
+						"setBoqHeader": {
+							"!doc": "fn(value: number) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getBoqItem": {
+							"!doc": "fn() -> number BoqTextConfigurationInstance"
+						},
+						"setBoqItem": {
+							"!doc": "fn(value: number) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getConfigType": {
+							"!doc": "fn() -> number BoqTextConfigurationInstance"
+						},
+						"setConfigType": {
+							"!doc": "fn(value: number) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getConfigCaption": {
+							"!doc": "fn() -> string BoqTextConfigurationInstance"
+						},
+						"setConfigCaption": {
+							"!doc": "fn(value: string) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getConfigBody": {
+							"!doc": "fn() -> string BoqTextConfigurationInstance"
+						},
+						"setConfigBody": {
+							"!doc": "fn(value: string) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getConfigTail": {
+							"!doc": "fn() -> string BoqTextConfigurationInstance"
+						},
+						"setConfigTail": {
+							"!doc": "fn(value: string) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getIsoutput": {
+							"!doc": "fn() -> bool BoqTextConfigurationInstance"
+						},
+						"setIsoutput": {
+							"!doc": "fn(value: bool) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getRemark": {
+							"!doc": "fn() -> string BoqTextConfigurationInstance"
+						},
+						"setRemark": {
+							"!doc": "fn(value: string) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						},
+						"getSorting": {
+							"!doc": "fn() -> number BoqTextConfigurationInstance"
+						},
+						"setSorting": {
+							"!doc": "fn(value: number) -> +BoqTextConfigurationInstance BoqTextConfigurationInstance"
+						}
+					}
+				},
+				"CosBoqItemInstance": {
+					"!doc": "Boq item entity instance",
+					"prototype": {
+						"createSplitQuantity": {
+							"!doc": "fn() -> +BoqSplitQuantityInstance CosBoqItemInstance"
+						},
+						"clearSplitQuantity": {
+							"!doc": "fn() -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"createTextConfiguration": {
+							"!doc": "fn(type: string, data: IDictionary`2) -> +BoqTextConfigurationInstance CosBoqItemInstance"
+						},
+						"setTextConfigSplit": {
+							"!doc": "fn(code: string) -> +Void CosBoqItemInstance"
+						},
+						"setTextConfigCombination": {
+							"!doc": "fn(code: string) -> +Void CosBoqItemInstance"
+						},
+						"setTextConfigNumbering": {
+							"!doc": "fn(code: string) -> +Void CosBoqItemInstance"
+						},
+						"getWicItemPath": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setWicItemPath": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getWicNumber": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setWicNumber": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrjCharacter": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setPrjCharacter": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getWorkContent": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setWorkContent": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getBoqHeader": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getId": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItem": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqLineType": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getItemType": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getItemType2": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemBasis": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemReference": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqDivisionType": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getReference": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setReference": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getExternalCode": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setExternalCode": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getReference2": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setReference2": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getBrief": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setBrief": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getSpecification": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setSpecification": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getSpecificationTr": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getSpecificationChanged": {
+							"!doc": "fn() -> +Nullable`1 CosBoqItemInstance"
+						},
+						"getBlobs": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBlobsSpecification": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getClobs": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getQuantityAdj": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setQuantityAdj": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getFactorDetail": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setFactorDetail": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getFactor": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setFactor": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getSurchargePercent": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setSurchargePercent": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getQuantity": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setQuantity": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUom": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUom": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setUomByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getExternalUom": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setExternalUom": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getCost": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setCost": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getCostOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setCostOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getCorrection": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setCorrection": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getCorrectionOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setCorrectionOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsUrb": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsUrb": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb1": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb1": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb1Oc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb1Oc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb2": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb2": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb2Oc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb2Oc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb3": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb3": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb3Oc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb3Oc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb4": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb4": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb4Oc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb4Oc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb5": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb5": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb5Oc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb5Oc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb6": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb6": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUrb6Oc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUrb6Oc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUnitRateFrom": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUnitRateFrom": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUnitRateFromOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUnitRateFromOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUnitRateTo": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUnitRateTo": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUnitRateToOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setUnitRateToOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getHoursUnit": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setHoursUnit": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getHours": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setHours": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrice": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrice": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPriceOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPriceOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountPercent": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscountPercent": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountedUnitprice": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscountedUnitprice": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountedUnitpriceOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscountedUnitpriceOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountedPrice": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscountedPrice": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getLumpsumPrice": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setLumpsumPrice": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getLumpsumPriceOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setLumpsumPriceOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountedPriceOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscountedPriceOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscount": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscount": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscountOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountText": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setDiscountText": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountPercentIt": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setDiscountPercentIt": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getDiscountTextTr": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getFinalprice": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setFinalprice": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getFinalpriceOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setFinalpriceOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsDisabled": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsDisabled": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getFinaldiscount": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setFinaldiscount": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getFinaldiscountOc": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setFinaldiscountOc": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsTextitem": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsTextitem": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsNotApplicable": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsNotApplicable": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsKeyitem": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsKeyitem": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsLumpsum": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsLumpsum": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsSurcharged": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsSurcharged": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsFixed": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsFixed": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsFreeQuantity": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsFreeQuantity": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsFixedPrice": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsFixedPrice": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsLeadDescription": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsLeadDescription": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsNoMarkup": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsNoMarkup": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsCostItem": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsCostItem": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsNoLeadQuantity": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsNoLeadQuantity": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getIsUrFromSd": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsUrFromSd": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getAAN": {
+							"!doc": "fn() -> +Nullable`1 CosBoqItemInstance"
+						},
+						"getIsDaywork": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setIsDaywork": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getAGN": {
+							"!doc": "fn() -> +Nullable`1 CosBoqItemInstance"
+						},
+						"getCommentContractor": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setCommentContractor": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getCommentClient": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setCommentClient": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getTransactionId": {
+							"!doc": "fn() -> +Int64 CosBoqItemInstance"
+						},
+						"getDesignDescriptionNo": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setDesignDescriptionNo": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getOrdinalNo": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setOrdinalNo": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPercentComplete": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPercentComplete": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getContributionPercent": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setContributionPercent": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getApprox": {
+							"!doc": "fn() -> bool CosBoqItemInstance"
+						},
+						"setApprox": {
+							"!doc": "fn(value: bool) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getItemStatus": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getPrjLocation": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrjLocation": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setPrjLocationByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrjStructure": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrjStructure": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getBudgetCode": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setBudgetCode": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getAssetMaster": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setAssetMaster": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getClassification": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setClassification": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getWorkCategory": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setWorkCategory": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getMaterial": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setMaterial": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getCostCode": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setCostCode": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getBoqItemWicBoq": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemWicItem": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemPrjBoq": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemPrjItem": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemBidBoq": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemBidItem": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemOrdBoq": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemOrdItem": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemBilBoq": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemBilItem": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getUserdefined1": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setUserdefined1": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUserdefined2": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setUserdefined2": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUserdefined3": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setUserdefined3": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getBpdAgreement": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setBpdAgreement": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getControllingUnit": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setControllingUnit": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setControllingUnitByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUserdefined4": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setUserdefined4": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getUserdefined5": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setUserdefined5": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getTaxCode": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setTaxCode": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getBoqCharacterContentPrj": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqCharacterContentWork": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"getBoqItemFlag": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setBoqItemFlag": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrcItemEvaluation": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrcItemEvaluation": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrcStructure": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrcStructure": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setPrcStructureByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getLicCostGroup1": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setLicCostGroup1": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setLicCostGroup1ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getLicCostGroup2": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setLicCostGroup2": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setLicCostGroup2ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getLicCostGroup3": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setLicCostGroup3": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setLicCostGroup3ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getLicCostGroup4": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setLicCostGroup4": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setLicCostGroup4ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getLicCostGroup5": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setLicCostGroup5": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setLicCostGroup5ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrjCostGroup1": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrjCostGroup1": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setPrjCostGroup1ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrjCostGroup2": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrjCostGroup2": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setPrjCostGroup2ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrjCostGroup3": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrjCostGroup3": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setPrjCostGroup3ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrjCostGroup4": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrjCostGroup4": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setPrjCostGroup4ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getPrjCostGroup5": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setPrjCostGroup5": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"setPrjCostGroup5ByCode": {
+							"!doc": "fn(code: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getStlno": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setStlno": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getRuleFormula": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setRuleFormula": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getRuleFormulaDesc": {
+							"!doc": "fn() -> string CosBoqItemInstance"
+						},
+						"setRuleFormulaDesc": {
+							"!doc": "fn(value: string) -> +CosBoqItemInstance CosBoqItemInstance"
+						},
+						"getItemType85": {
+							"!doc": "fn() -> number CosBoqItemInstance"
+						},
+						"setItemType85": {
+							"!doc": "fn(value: number) -> +CosBoqItemInstance CosBoqItemInstance"
+						}
+					}
+				},
+				"cos": {
+					"!doc": "",
+					"id": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"header": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"code": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"description": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"commentText": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"isChecked": {
+						"!doc": "bool CosInstanceInstance"
+					},
+					"controllingUnit": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"location": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectCostGroup1": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectCostGroup2": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectCostGroup3": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectCostGroup4": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectCostGroup5": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"licCostGroup1": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"setLicCostGroup1ByCode": {
+						"!doc": "fn(code: string) -> +CosInstanceInstance CosInstanceInstance"
+					},
+					"licCostGroup2": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"setLicCostGroup2ByCode": {
+						"!doc": "fn(code: string) -> +CosInstanceInstance CosInstanceInstance"
+					},
+					"licCostGroup3": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"setLicCostGroup3ByCode": {
+						"!doc": "fn(code: string) -> +CosInstanceInstance CosInstanceInstance"
+					},
+					"licCostGroup4": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"setLicCostGroup4ByCode": {
+						"!doc": "fn(code: string) -> +CosInstanceInstance CosInstanceInstance"
+					},
+					"licCostGroup5": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"setLicCostGroup5ByCode": {
+						"!doc": "fn(code: string) -> +CosInstanceInstance CosInstanceInstance"
+					},
+					"formData": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"userDefined1": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"cosTemplate": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"userDefined2": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"userDefined3": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"userDefined4": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"userDefined5": {
+						"!doc": "string CosInstanceInstance"
+					},
+					"projectSortCode01": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode02": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode03": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode04": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode05": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode06": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode07": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode08": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode09": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"projectSortCode10": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"boqHeader": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"boqItem": {
+						"!doc": "number CosInstanceInstance"
+					},
+					"status": {
+						"!doc": "+Int16 CosInstanceInstance"
+					}
+				},
+				"CosGroupInstance": {
+					"!doc": "",
+					"prototype": {
+						"sum": {
+							"!doc": "fn(property: string, alias: string) -> +Double CosGroupInstance"
+						},
+						"max": {
+							"!doc": "fn(property: string, alias: string) -> +Double CosGroupInstance"
+						},
+						"min": {
+							"!doc": "fn(property: string, alias: string) -> +Double CosGroupInstance"
+						},
+						"average": {
+							"!doc": "fn(property: string, alias: string) -> +Double CosGroupInstance"
+						},
+						"count": {
+							"!doc": "fn() -> number CosGroupInstance"
+						},
+						"countObjects": {
+							"!doc": "fn() -> number CosGroupInstance"
+						},
+						"toObjects": {
+							"!doc": "fn() -> [MdlObjectInstance] CosGroupInstance"
+						},
+						"toGroups": {
+							"!doc": "fn() -> [+CosGroupInstance] CosGroupInstance"
+						},
+						"groupByValue": {
+							"!doc": "fn() -> +CosGroupInstance CosGroupInstance"
+						},
+						"propertyName": {
+							"!doc": "string CosGroupInstance"
+						},
+						"group": {
+							"!doc": "+ObjectInstance CosGroupInstance"
+						},
+						"objects": {
+							"!doc": "[JsObjectInstance] CosGroupInstance"
+						}
+					}
+				},
+				"CosGroupsInstance": {
+					"!doc": "",
+					"prototype": {
+						"sum": {
+							"!doc": "fn(property: string, alias: string) -> +CosGroupsInstance CosGroupsInstance"
+						},
+						"max": {
+							"!doc": "fn(property: string, alias: string) -> +CosGroupsInstance CosGroupsInstance"
+						},
+						"min": {
+							"!doc": "fn(property: string, alias: string) -> +CosGroupsInstance CosGroupsInstance"
+						},
+						"average": {
+							"!doc": "fn(property: string, alias: string) -> +CosGroupsInstance CosGroupsInstance"
+						},
+						"count": {
+							"!doc": "fn() -> +CosGroupsInstance CosGroupsInstance"
+						},
+						"toArray": {
+							"!doc": "fn() -> [+CosGroupInstance] CosGroupsInstance"
+						},
+						"groupByValue": {
+							"!doc": "fn() -> +CosGroupsInstance CosGroupsInstance"
+						}
+					}
+				},
+				"CosObjectsInstance": {
+					"!doc": "",
+					"prototype": {
+						"filter": {
+							"!doc": "fn(filterString: string) -> [MdlObjectInstance] CosObjectsInstance"
+						},
+						"restore": {
+							"!doc": "fn() -> [MdlObjectInstance] CosObjectsInstance"
+						},
+						"foreach": {
+							"!doc": "fn() -> +iterator CosObjectsInstance"
+						},
+						"groupBy": {
+							"!doc": "fn(properties: ?) -> +CosGroupsInstance CosObjectsInstance"
+						},
+						"groupByProperty": {
+							"!doc": "fn(propertyName: string, ignoreCase: bool) -> +CosGroupsInstance CosObjectsInstance"
+						},
+						"sum": {
+							"!doc": "fn(property: string) -> +Double CosObjectsInstance"
+						},
+						"max": {
+							"!doc": "fn(property: string) -> +Double CosObjectsInstance"
+						},
+						"min": {
+							"!doc": "fn(property: string) -> +Double CosObjectsInstance"
+						},
+						"average": {
+							"!doc": "fn(property: string) -> +Double CosObjectsInstance"
+						},
+						"count": {
+							"!doc": "fn() -> number CosObjectsInstance"
+						},
+						"toArray": {
+							"!doc": "fn() -> [MdlObjectInstance] CosObjectsInstance"
+						},
+						"filterOptions": {
+							"!doc": "+ObjectFilterOptionsInstance CosObjectsInstance"
+						}
+					}
+				},
+				"exports": {
+					"!doc": "",
+					"create": {
+						"!doc": "fn() -> +CosExportsInstance CosExportsInstance"
+					},
+					"share": {
+						"!doc": "fn(value: bool) -> bool CosExportsInstance"
+					}
+				},
+				"cosHeader": {
+					"!doc": "",
+					"id": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"lineItemContext": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"rubricCategory": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"code": {
+						"!doc": "string CosHeaderInstance"
+					},
+					"reference": {
+						"!doc": "string CosHeaderInstance"
+					},
+					"cosGroup": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"cosType": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"matchCode": {
+						"!doc": "string CosHeaderInstance"
+					},
+					"commentText": {
+						"!doc": "string CosHeaderInstance"
+					},
+					"selectStatement": {
+						"!doc": "string CosHeaderInstance"
+					},
+					"isLive": {
+						"!doc": "bool CosHeaderInstance"
+					},
+					"structure": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"isDistinctInstances": {
+						"!doc": "bool CosHeaderInstance"
+					},
+					"licCostGroup1": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"setLicCostGroup1ByCode": {
+						"!doc": "fn(code: string) -> +CosHeaderInstance CosHeaderInstance"
+					},
+					"licCostGroup2": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"setLicCostGroup2ByCode": {
+						"!doc": "fn(code: string) -> +CosHeaderInstance CosHeaderInstance"
+					},
+					"licCostGroup3": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"setLicCostGroup3ByCode": {
+						"!doc": "fn(code: string) -> +CosHeaderInstance CosHeaderInstance"
+					},
+					"licCostGroup4": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"setLicCostGroup4ByCode": {
+						"!doc": "fn(code: string) -> +CosHeaderInstance CosHeaderInstance"
+					},
+					"licCostGroup5": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"setLicCostGroup5ByCode": {
+						"!doc": "fn(code: string) -> +CosHeaderInstance CosHeaderInstance"
+					},
+					"form": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"formData": {
+						"!doc": "number CosHeaderInstance"
+					},
+					"description": {
+						"!doc": "string CosHeaderInstance"
+					}
+				},
+				"context": {
+					"!doc": "Construction System Context",
+					"wrapObjects": {
+						"!doc": "fn(modelObjectInstances: [Object]) -> +CosObjectsInstance CosContextInstance"
+					},
+					"autoReference": {
+						"!doc": "fn(value: bool) -> bool CosContextInstance"
+					},
+					"countAssignObject": {
+						"!doc": "fn() -> number CosContextInstance"
+					},
+					"autoAssignObject": {
+						"!doc": "fn(value: bool) -> bool CosContextInstance"
+					},
+					"createLineItem": {
+						"!doc": "fn(alias: ?) -> +EstLineItemInstance CosContextInstance"
+					},
+					"createLineItemByCode": {
+						"!doc": "fn(cosCode: ?, alias: ?) -> +EstLineItemInstance CosContextInstance"
+					},
+					"createLineItemByRef": {
+						"!doc": "fn(estCode: ?, alias: ?) -> +EstLineItemInstance CosContextInstance"
+					},
+					"executeSQL": {
+						"!doc": "fn(parameters: ?) -> [sql] CosContextInstance"
+					},
+					"callCS": {
+						"!doc": "fn(code: string) -> +CosExportsInstance CosContextInstance"
+					},
+					"forEachObject": {
+						"!doc": "fn() -> +iterator CosContextInstance"
+					},
+					"forEachCompositeObject": {
+						"!doc": "fn() -> +iterator CosContextInstance"
+					},
+					"createPredecessorById": {
+						"!doc": "fn(activity: number, relationkind: number) -> +ActivityRelationshipInstance CosContextInstance"
+					},
+					"createPredecessorByCode": {
+						"!doc": "fn(activity: ?, relationkind: number) -> +ActivityRelationshipInstance CosContextInstance"
+					},
+					"createSuccessorById": {
+						"!doc": "fn(activity: number, relationkind: number) -> +ActivityRelationshipInstance CosContextInstance"
+					},
+					"createSuccessorByCode": {
+						"!doc": "fn(activity: ?, relationkind: number) -> +ActivityRelationshipInstance CosContextInstance"
+					},
+					"createActivityByCode": {
+						"!doc": "fn(templateCode: ?, location: ?, description: ?) -> +PsdActivityInstance2 CosContextInstance"
+					},
+					"createActivityByRef": {
+						"!doc": "fn(templateRef: ?, location: ?, description: ?) -> +PsdActivityInstance2 CosContextInstance"
+					},
+					"getParameter": {
+						"!doc": "fn(variableName: string) -> +CosParameterInstance CosContextInstance"
+					},
+					"assignedObjects": {
+						"!doc": "+CosObjectsInstance CosContextInstance"
+					},
+					"assignedCompositeObjects": {
+						"!doc": "+CosObjectsInstance CosContextInstance"
+					},
+					"createBoqByCode": {
+						"!doc": "fn(code: string, comparison?: object) -> +CosBoqItemInstance CosContextDecorator"
+					},
+					"createBoqByRef": {
+						"!doc": "fn(wic: string, header: string, reference: string, comparison?: object) -> +CosBoqItemInstance CosContextDecorator"
+					},
+					"assignedBoQ": {
+						"!doc": "+CosBoqItemInstance CosContextDecorator"
+					}
+				},
+				"CosParameterInstance": {
+					"!doc": "",
+					"prototype": {
+						"queryUom": {
+							"!doc": "fn() -> string CosParameterInstance"
+						},
+						"lookupDescription": {
+							"!doc": "string CosParameterInstance"
+						},
+						"valueDetail": {
+							"!doc": "string CosParameterInstance"
+						},
+						"id": {
+							"!doc": "number CosParameterInstance"
+						},
+						"header": {
+							"!doc": "number CosParameterInstance"
+						},
+						"parameterGroup": {
+							"!doc": "number CosParameterInstance"
+						},
+						"parameterType": {
+							"!doc": "number CosParameterInstance"
+						},
+						"uom": {
+							"!doc": "number CosParameterInstance"
+						},
+						"defaultType": {
+							"!doc": "number CosParameterInstance"
+						},
+						"propertyName": {
+							"!doc": "string CosParameterInstance"
+						},
+						"defaultValue": {
+							"!doc": "string CosParameterInstance"
+						},
+						"formField": {
+							"!doc": "number CosParameterInstance"
+						},
+						"sorting": {
+							"!doc": "number CosParameterInstance"
+						},
+						"description": {
+							"!doc": "string CosParameterInstance"
+						},
+						"variableName": {
+							"!doc": "string CosParameterInstance"
+						},
+						"isLookup": {
+							"!doc": "bool CosParameterInstance"
+						},
+						"aggregateType": {
+							"!doc": "number CosParameterInstance"
+						},
+						"quantityQuery": {
+							"!doc": "string CosParameterInstance"
+						}
+					}
+				},
+				"ObjectFilterOptionsInstance": {
+					"!doc": "",
+					"prototype": {
+						"precision": {
+							"!doc": "number ObjectFilterOptionsInstance"
+						},
+						"round": {
+							"!doc": "bool ObjectFilterOptionsInstance"
+						}
+					}
+				},
+				"EstLineItemInstance": {
+					"!doc": "",
+					"prototype": {
+						"isBase": {
+							"!doc": "fn() -> bool EstLineItemInstance"
+						},
+						"setBoqByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"assignObjects": {
+							"!doc": "fn(modelObjects: [Object]) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"assignObjectProperties": {
+							"!doc": "fn(propertyObjectArray: [Object]) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"assignBoQ": {
+							"!doc": "fn(code: ?) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setCostRisk": {
+							"!doc": "fn(description: ?) -> !this EstLineItemInstance"
+						},
+						"getCostRisk": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"getAdvancedAllowance": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"getParameter": {
+							"!doc": "fn(code: ?, level: ?) -> +EstParameterInstance EstLineItemInstance"
+						},
+						"getParameters": {
+							"!doc": "fn(parameterLevel: ?) -> [+EstParameterInstance] EstLineItemInstance"
+						},
+						"getParameterCodes": {
+							"!doc": "fn(parameterLevel: ?) -> [string] EstLineItemInstance"
+						},
+						"hasParameter": {
+							"!doc": "fn(code: ?, level: ?) -> bool EstLineItemInstance"
+						},
+						"setQuantity": {
+							"!doc": "fn(value: number, uom: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setQuantityItem": {
+							"!doc": "fn(Value: ?, UoM: ?) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getLineItemQuantity": {
+							"!doc": "fn(quantityType: ?) -> [+EstLineItemQuantityInstance] EstLineItemInstance"
+						},
+						"setQtyRelActByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setQtyRelBoqByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setQtyRelGtuByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setQtyTelAotByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setCharacteristic": {
+							"!doc": "fn(key: string, value: Object) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setCharacteristic2": {
+							"!doc": "fn(key: string, value: Object) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setCosMatchText": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"createCostCode": {
+							"!doc": "fn(code: ?) -> +EstResourceInstance EstLineItemInstance"
+						},
+						"createMaterial": {
+							"!doc": "fn(code: ?, materialCatalogCode: ?) -> +EstResourceInstance EstLineItemInstance"
+						},
+						"createPlant": {
+							"!doc": "fn(code: ?) -> +EstResourceInstance EstLineItemInstance"
+						},
+						"createAssembly": {
+							"!doc": "fn(code: ?, AssemblyCatCode: ?) -> +EstResourceInstance EstLineItemInstance"
+						},
+						"createSubItem": {
+							"!doc": "fn(code: ?) -> +EstResourceInstance EstLineItemInstance"
+						},
+						"getResource": {
+							"!doc": "Obsolete, please using getResourceByCode instead"
+						},
+						"removeResource": {
+							"!doc": "Obsolete, please using removeResourceByCode instead"
+						},
+						"getResources": {
+							"!doc": "fn() -> [+EstResourceInstance] EstLineItemInstance"
+						},
+						"getResourceByCode": {
+							"!doc": "fn(code: string) -> +EstResourceInstance EstLineItemInstance"
+						},
+						"removeResourceByCode": {
+							"!doc": "fn(code: string) -> +EstResourceInstance EstLineItemInstance"
+						},
+						"getResourcesByMajorCostCode": {
+							"!doc": "fn(majorCostcode: string) -> [+EstResourceInstance] EstLineItemInstance"
+						},
+						"getProject": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getProjectNo": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"getProjectName": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"getEstimationCode": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"getEstimationDescription": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setEstimationDescription": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosInstanceCode": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setCosInstanceCode": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosInstanceDescription": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setCosInstanceDescription": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosMasterHeaderId": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setCosMasterHeaderId": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosMasterHeaderCode": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setCosMasterHeaderCode": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosMasterHeaderDescription": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setCosMasterHeaderDescription": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getHeader": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getId": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getHeaderAssembly": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getLineItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"assignActivityByModelLocation": {
+							"!doc": "fn(activityTemplateCode: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getAssemblyCat": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getAssembly": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"assignActivity": {
+							"!doc": "fn(code: ?) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getLineItemType": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getCode": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"getDescription": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setDescription": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getQuantityDetailsItem": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setQuantityDetailsItem": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getUomItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setUomItem": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setUomItemByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityDetail": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setQuantityDetail": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantity": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getUom": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setUom": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setUomByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityFactorDetail1": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setQuantityFactorDetail1": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityFactor1": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQuantityFactor1": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityFactorDetail2": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setQuantityFactorDetail2": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityFactor2": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQuantityFactor2": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityFactor3": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQuantityFactor3": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityFactor4": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQuantityFactor4": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getProductivityFactorDetail": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setProductivityFactorDetail": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getProductivityFactor": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setProductivityFactor": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getQuantityUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getQuantityTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getCostUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getEntCostUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDruCostUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDirCostUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getIndCostUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getCostFactorDetail1": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setCostFactorDetail1": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCostFactor1": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setCostFactor1": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCostFactorDetail2": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setCostFactorDetail2": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCostFactor2": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setCostFactor2": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCostUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getEntCostUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDruCostUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDirCostUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getIndCostUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getCostTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getEntCostTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDruCostTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDirCostTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getIndCostTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getQtyRelBoq": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQtyRelBoq": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getEntHoursUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDruHoursUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDirHoursUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getIndHoursUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getQtyRelAct": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQtyRelAct": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getEntHoursUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDruHoursUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDirHoursUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getIndHoursUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getQtyRelGtu": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQtyRelGtu": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getEntHoursTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDruHoursTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getDirHoursTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getIndHoursTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getQtyTelAot": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setQtyTelAot": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getHoursUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getHoursUnitItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getHoursTotal": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getControllingUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setControllingUnit": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setControllingUnitByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getBoqHeader": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"assignControllingUnit": {
+							"!doc": "fn(code: ?) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getBoqItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setBoqItem": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getActivity": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setActivity": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setActivityByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getLicCostGroup1": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setLicCostGroup1": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setLicCostGroup1ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getLicCostGroup2": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setLicCostGroup2": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setLicCostGroup2ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getLicCostGroup3": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setLicCostGroup3": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setLicCostGroup3ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getLicCostGroup4": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setLicCostGroup4": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setLicCostGroup4ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getLicCostGroup5": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setLicCostGroup5": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setLicCostGroup5ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrjCostGroup1": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrjCostGroup1": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrjCostGroup1ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrjCostGroup2": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrjCostGroup2": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrjCostGroup2ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrjCostGroup3": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrjCostGroup3": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrjCostGroup3ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrjCostGroup4": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrjCostGroup4": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrjCostGroup4ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrjCostGroup5": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrjCostGroup5": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrjCostGroup5ByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getWorkCategory": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setWorkCategory": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getAssetMaster": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setAssetMaster": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrjLocation": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrjLocation": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrjLocationByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrcPackage": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrcPackage": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrcPackage2Header": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrcPackage2Header": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getUserDefined1": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setUserDefined1": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getUserDefined2": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setUserDefined2": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getUserDefined3": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setUserDefined3": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getUserDefined4": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setUserDefined4": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getUserDefined5": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setUserDefined5": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getIsLumpsum": {
+							"!doc": "fn() -> bool EstLineItemInstance"
+						},
+						"setIsLumpsum": {
+							"!doc": "fn(value: bool) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getIsDisabled": {
+							"!doc": "fn() -> bool EstLineItemInstance"
+						},
+						"setIsDisabled": {
+							"!doc": "fn(value: bool) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCommentText": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setCommentText": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getIsGC": {
+							"!doc": "fn() -> bool EstLineItemInstance"
+						},
+						"setIsGC": {
+							"!doc": "fn(value: bool) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrcStructure": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrcStructure": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrcStructureByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosInsHeader": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setCosInsHeader": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosInstance": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setCosInstance": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getPrjChange": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setPrjChange": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setPrjChangeByCode": {
+							"!doc": "fn(code: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getFromDate": {
+							"!doc": "fn() -> +Nullable`1 EstLineItemInstance"
+						},
+						"setFromDate": {
+							"!doc": "fn(value: Nullable`1) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getToDate": {
+							"!doc": "fn() -> +Nullable`1 EstLineItemInstance"
+						},
+						"setToDate": {
+							"!doc": "fn(value: Nullable`1) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCostCode": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getMaterial": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"getSortCode01": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode01": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode01ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode02": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode02": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode02ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode03": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode03": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode03ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode04": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode04": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode04ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode05": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode05": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode05ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode06": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode06": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode06ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode07": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode07": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode07ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode08": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode08": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode08ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode09": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode09": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode09ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getSortCode10": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setSortCode10": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setSortCode10ByCode": {
+							"!doc": "fn(code: string, description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"getOrdHeader": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setOrdHeader": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getHint": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"setHint": {
+							"!doc": "fn(value: string) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getBudget": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setBudget": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getIsNoMarkup": {
+							"!doc": "fn() -> bool EstLineItemInstance"
+						},
+						"setIsNoMarkup": {
+							"!doc": "fn(value: bool) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getBudgetUnit": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setBudgetUnit": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getIsFixedBudget": {
+							"!doc": "fn() -> bool EstLineItemInstance"
+						},
+						"setIsFixedBudget": {
+							"!doc": "fn(value: bool) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getIsOptional": {
+							"!doc": "fn() -> bool EstLineItemInstance"
+						},
+						"setIsOptional": {
+							"!doc": "fn(value: bool) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getLgmJob": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setLgmJob": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getCosMatchText": {
+							"!doc": "fn() -> string EstLineItemInstance"
+						},
+						"getWicBoqHeader": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setWicBoqHeader": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getWicBoqItem": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setWicBoqItem": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"getBoqWicCat": {
+							"!doc": "fn() -> number EstLineItemInstance"
+						},
+						"setBoqWicCat": {
+							"!doc": "fn(value: number) -> +EstLineItemInstance EstLineItemInstance"
+						},
+						"setBoQ": {
+							"!doc": "fn(boqItem: Object) -> +EstLineItemInstance EstLineItemDecorator"
+						},
+						"setSortCode01ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode02ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode03ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode04ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode05ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode06ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode07ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode08ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode09ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"setSortCode10ByDescription": {
+							"!doc": "fn(description: string) -> +EstLineItemInstance CosLineItemDecorator"
+						},
+						"assignPackage": {
+							"!doc": "fn(structureCode: ?) -> +EstLineItemInstance PrcLineItemDecorator"
+						}
+					}
+				},
+				"EstResourceInstance": {
+					"!doc": "",
+					"prototype": {
+						"isCostCode": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"isMaterial": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"isAssembly": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"isPlant": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"isSubItem": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"getCostType": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setCostType": {
+							"!doc": "fn(code: ?) -> !this EstResourceInstance"
+						},
+						"getResourceFlag": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setResourceFlag": {
+							"!doc": "fn(code: ?) -> !this EstResourceInstance"
+						},
+						"createCostCode": {
+							"!doc": "fn(code: ?) -> +EstResourceInstance EstResourceInstance"
+						},
+						"createMaterial": {
+							"!doc": "fn(code: ?, materialCatalogCode: ?) -> +EstResourceInstance EstResourceInstance"
+						},
+						"createPlant": {
+							"!doc": "fn(code: ?) -> +EstResourceInstance EstResourceInstance"
+						},
+						"createAssembly": {
+							"!doc": "fn(code: ?, AssemblyCatCode: ?) -> +EstResourceInstance EstResourceInstance"
+						},
+						"createSubItem": {
+							"!doc": "fn(code: ?) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getResource": {
+							"!doc": "Obsolete, please using getResourceByCode instead"
+						},
+						"removeResource": {
+							"!doc": "Obsolete, please using removeResourceByCode instead"
+						},
+						"getResources": {
+							"!doc": "fn() -> [+EstResourceInstance] EstResourceInstance"
+						},
+						"getResourceByCode": {
+							"!doc": "fn(code: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"removeResourceByCode": {
+							"!doc": "fn(code: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getResourcesByMajorCostCode": {
+							"!doc": "fn(majorCostcode: string) -> [+EstResourceInstance] EstResourceInstance"
+						},
+						"getRuleType": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setRuleType": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getEvalSequence": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setEvalSequence": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getElementCode": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setElementCode": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getElementDescription": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setElementDescription": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getRuleCode": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setRuleCode": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getRuleDescription": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setRuleDescription": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getPrcStructure": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setPrcStructure": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"setPrcStructureByCode": {
+							"!doc": "fn(code: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getIsRate": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"setIsRate": {
+							"!doc": "fn(value: bool) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getId": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getResourceType": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setResourceType": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getCostCode": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getMaterial": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getHeaderAssembly": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getAssembly": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getCode": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"getDescription": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setDescription": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantityDetail": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setQuantityDetail": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantity": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setQuantity": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getUom": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getQuantityFactorDetail1": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setQuantityFactorDetail1": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantityFactor1": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setQuantityFactor1": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantityFactorDetail2": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setQuantityFactorDetail2": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantityFactor2": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setQuantityFactor2": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantityFactor3": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setQuantityFactor3": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantityFactor4": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setQuantityFactor4": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getProductivityFactorDetail": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setProductivityFactorDetail": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getProductivityFactor": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setProductivityFactor": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getEfficiencyFactorDetail1": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setEfficiencyFactorDetail1": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getEfficiencyFactor1": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setEfficiencyFactor1": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getEfficiencyFactorDetail2": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setEfficiencyFactorDetail2": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getEfficiencyFactor2": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setEfficiencyFactor2": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getQuantityFactorCc": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getQuantityReal": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getQuantityInternal": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getQuantityUnitTarget": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getQuantityTotal": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getCostUnit": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setCostUnit": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getCurrency": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getCostFactorDetail1": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setCostFactorDetail1": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getCostFactor1": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setCostFactor1": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getCostFactorDetail2": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setCostFactorDetail2": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getCostFactor2": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setCostFactor2": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getCostFactorCc": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getCostUnitSubItem": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getCostUnitLineItem": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getCostUnitTarget": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getCostTotal": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getHoursUnit": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setHoursUnit": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getHoursUnitSubItem": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getHoursUnitLineItem": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getHoursUnitTarget": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getHoursTotal": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"getIsLumpsum": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"setIsLumpsum": {
+							"!doc": "fn(value: bool) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getIsDisabled": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"setIsDisabled": {
+							"!doc": "fn(value: bool) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getCommentText": {
+							"!doc": "fn() -> string EstResourceInstance"
+						},
+						"setCommentText": {
+							"!doc": "fn(value: string) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getIsIndirectCost": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"setIsIndirectCost": {
+							"!doc": "fn(value: bool) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getPrcPackage": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setPrcPackage": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getPrcPackage2Header": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setPrcPackage2Header": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getSorting": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setSorting": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getAssemblyType": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setAssemblyType": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getBudget": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setBudget": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getResResource": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setResResource": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getIsDisabledPrc": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"setIsDisabledPrc": {
+							"!doc": "fn(value: bool) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getIsGeneratedPrc": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"setIsGeneratedPrc": {
+							"!doc": "fn(value: bool) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getBudgetUnit": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setBudgetUnit": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getIsFixedBudget": {
+							"!doc": "fn() -> bool EstResourceInstance"
+						},
+						"setIsFixedBudget": {
+							"!doc": "fn(value: bool) -> +EstResourceInstance EstResourceInstance"
+						},
+						"getLgmJob": {
+							"!doc": "fn() -> number EstResourceInstance"
+						},
+						"setLgmJob": {
+							"!doc": "fn(value: number) -> +EstResourceInstance EstResourceInstance"
+						},
+						"assignPackage": {
+							"!doc": "fn(structureCode: ?) -> +EstResourceInstance PrcResourceDecorator"
+						}
+					}
+				},
+				"UoM": {
+					"!doc": "",
+					"convert": {
+						"!doc": "fn(number: ?, fromUoM: ?, toUoM: ?) -> number UoMConversionInstance"
+					}
+				},
+				"estimate": {
+					"!doc": "",
+					"getParameter": {
+						"!doc": "fn(code: ?) -> number EstEstimateInstance"
+					}
+				},
+				"modelObject": {
+					"!doc": "",
+					"ownsProperty": {
+						"!doc": "fn(property: string) -> bool MdlObjectInstance"
+					},
+					"getProperty": {
+						"!doc": "fn(property: string) -> +Object MdlObjectInstance"
+					},
+					"getUom": {
+						"!doc": "fn(property: string) -> string MdlObjectInstance"
+					},
+					"getPropertyItems": {
+						"!doc": "fn() -> [+MdlPropertyInstance] MdlObjectInstance"
+					},
+					"getChildren": {
+						"!doc": "fn() -> [+MdlObjectInstance] MdlObjectInstance"
+					},
+					"getParent": {
+						"!doc": "fn() -> +MdlObjectInstance MdlObjectInstance"
+					},
+					"properties": {
+						"!doc": "+MdlPropertiesInstance MdlObjectInstance"
+					},
+					"id": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"container": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"model": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"description": {
+						"!doc": "string MdlObjectInstance"
+					},
+					"meshId": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"cpiId": {
+						"!doc": "string MdlObjectInstance"
+					},
+					"isNegative": {
+						"!doc": "bool MdlObjectInstance"
+					},
+					"cadIdInt": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"object": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"isComposite": {
+						"!doc": "bool MdlObjectInstance"
+					},
+					"isDeleted": {
+						"!doc": "bool MdlObjectInstance"
+					},
+					"controllingUnit": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"projectLocation": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"projectCostGroup1": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"projectCostGroup2": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"projectCostGroup3": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"projectCostGroup4": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"projectCostGroup5": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"lineItemCostGroup1": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"lineItemCostGroup2": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"lineItemCostGroup3": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"lineItemCostGroup4": {
+						"!doc": "number MdlObjectInstance"
+					},
+					"lineItemCostGroup5": {
+						"!doc": "number MdlObjectInstance"
+					}
+				},
+				"MdlPropertiesInstance": {
+					"!doc": "",
+					"prototype": {
+						"contains": {
+							"!doc": "fn(name: string, ignoreCase: bool) -> +MdlPropertyInstance MdlPropertiesInstance"
+						},
+						"startsWith": {
+							"!doc": "fn(name: string, ignoreCase: bool) -> +MdlPropertyInstance MdlPropertiesInstance"
+						},
+						"endsWith": {
+							"!doc": "fn(name: string, ignoreCase: bool) -> +MdlPropertyInstance MdlPropertiesInstance"
+						},
+						"match": {
+							"!doc": "fn(pattern: string) -> +MdlPropertyInstance MdlPropertiesInstance"
+						}
+					}
+				},
+				"MdlPropertyInstance": {
+					"!doc": "",
+					"prototype": {
+						"getValue": {
+							"!doc": "fn() -> +Object MdlPropertyInstance"
+						},
+						"hasValue": {
+							"!doc": "fn() -> bool MdlPropertyInstance"
+						},
+						"id": {
+							"!doc": "number MdlPropertyInstance"
+						},
+						"model": {
+							"!doc": "number MdlPropertyInstance"
+						},
+						"object": {
+							"!doc": "number MdlPropertyInstance"
+						},
+						"propertyValueBool": {
+							"!doc": "bool MdlPropertyInstance"
+						},
+						"uoM": {
+							"!doc": "number MdlPropertyInstance"
+						},
+						"propertyValueLong": {
+							"!doc": "number MdlPropertyInstance"
+						},
+						"propertyValueNumber": {
+							"!doc": "number MdlPropertyInstance"
+						},
+						"propertyValueText": {
+							"!doc": "string MdlPropertyInstance"
+						},
+						"propertyValueDate": {
+							"!doc": "+Date MdlPropertyInstance"
+						},
+						"container": {
+							"!doc": "number MdlPropertyInstance"
+						}
+					}
+				},
+				"model": {
+					"!doc": "",
+					"id": {
+						"!doc": "number MdlModelInstance"
+					},
+					"status": {
+						"!doc": "number MdlModelInstance"
+					},
+					"isComposite": {
+						"!doc": "bool MdlModelInstance"
+					},
+					"code": {
+						"!doc": "string MdlModelInstance"
+					},
+					"description": {
+						"!doc": "string MdlModelInstance"
+					},
+					"project": {
+						"!doc": "number MdlModelInstance"
+					},
+					"lod": {
+						"!doc": "number MdlModelInstance"
+					},
+					"type": {
+						"!doc": "number MdlModelInstance"
+					},
+					"commentText": {
+						"!doc": "string MdlModelInstance"
+					},
+					"remark": {
+						"!doc": "string MdlModelInstance"
+					},
+					"isLive": {
+						"!doc": "bool MdlModelInstance"
+					},
+					"schedule": {
+						"!doc": "number MdlModelInstance"
+					},
+					"estimateHeader": {
+						"!doc": "number MdlModelInstance"
+					},
+					"cadApp": {
+						"!doc": "string MdlModelInstance"
+					},
+					"cadFileName": {
+						"!doc": "string MdlModelInstance"
+					}
+				},
+				"project": {
+					"!doc": "",
+					"getCharacteristic": {
+						"!doc": "fn(code: string) -> +Object PrjProjectInstance"
+					},
+					"status": {
+						"!doc": "+PrjStatusInstance PrjProjectInstance"
+					},
+					"id": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"type": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"projectNo": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"projectIndex": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"projectName": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"projectName2": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"currency": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"company": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"clerk": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"startDate": {
+						"!doc": "+Date PrjProjectInstance"
+					},
+					"endDate": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"mainProject": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"projectMain": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"isLive": {
+						"!doc": "bool PrjProjectInstance"
+					},
+					"isTemplate": {
+						"!doc": "bool PrjProjectInstance"
+					},
+					"rubricCategory": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"group": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"businessUnit": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"contractType": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"contractNo": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"businessPartner": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"subsidiary": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"contact": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"customer": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"paymentTermPa": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"paymentTermFi": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"billingSchema": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"customerGroup": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"realEstate": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"address": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"telephoneNumber": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"telephoneTelefax": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"telephoneMobil": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"email": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"country": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"region": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"dateReceipt": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"closingDatetime": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"closingLocation": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"plannedAwardDate": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"tenderDate": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"publicationDate": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"tenderRemark": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"wIC": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"callOffNo": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"callOffDate": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"callOffRemark": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"projectDescription": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"remark": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"projectPath": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"projectDocPath": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"searchPattern": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"handoverDate": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"warrentyStart": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"warrentyEnd": {
+						"!doc": "+Nullable`1 PrjProjectInstance"
+					},
+					"warrentyRemark": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"classification": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"workCategory": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"assetMaster": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"projectContext": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"budgetCode": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"matchcode": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"calendar": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"companyResponsible": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"internetWebCam": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"distance": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"overnight": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"projectIndexAlpha": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"controllingUnitTemplate": {
+						"!doc": "number PrjProjectInstance"
+					},
+					"userdefined1": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"userdefined2": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"userdefined3": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"userdefined4": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"userdefined5": {
+						"!doc": "string PrjProjectInstance"
+					},
+					"checkPermission": {
+						"!doc": "bool PrjProjectInstance"
+					}
+				},
+				"PrjStatusInstance": {
+					"!doc": "",
+					"prototype": {
+						"id": {
+							"!doc": "id PrjStatusInstance"
+						},
+						"basRubricCategoryFk": {
+							"!doc": "basRubricCategoryFk PrjStatusInstance"
+						},
+						"isOptionalDownwards": {
+							"!doc": "isOptionalDownwards PrjStatusInstance"
+						},
+						"isOptionalUpwards": {
+							"!doc": "isOptionalUpwards PrjStatusInstance"
+						},
+						"isDefault": {
+							"!doc": "isDefault PrjStatusInstance"
+						},
+						"icon": {
+							"!doc": "icon PrjStatusInstance"
+						}
+					}
+				},
+				"PsdActivityInstance2": {
+					"!doc": "",
+					"prototype": {
+						"getPackageId": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setPackageId": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPackageCode": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setPackageCode": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPackageDesc": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setPackageDesc": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getHasReports": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setHasReports": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getIsAssignedToEstimate": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setIsAssignedToEstimate": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getId": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"getProject": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"getActivityType": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setActivityType": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setActivityTypeByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getBaseline": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"getCode": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"getDescription": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setDescription": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getParentActivity": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setParentActivity": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getSchedule": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"getCompany": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setCompany": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getBaseActivity": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setBaseActivity": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getActivityTemplate": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setActivityTemplate": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setActivityTemplateByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getControllingUnit": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setControllingUnit": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getCalendar": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setCalendar": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getAllowModify": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setAllowModify": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getSpecification": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setSpecification": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getActivityState": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setActivityState": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getSchedulingMethod": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setSchedulingMethod": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getSubSchedule": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setSubSchedule": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getLocation": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setLocation": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getLocationSpecification": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setLocationSpecification": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getActivityPresentation": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setActivityPresentation": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getChartPresentation": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setChartPresentation": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPlannedStart": {
+							"!doc": "fn() -> +Date PsdActivityInstance2"
+						},
+						"setPlannedStart": {
+							"!doc": "fn(value: Date) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPlannedFinish": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setPlannedFinish": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getConstraintType": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setConstraintType": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getConstraintDate": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setConstraintDate": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getActualStart": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setActualStart": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getActualFinish": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setActualFinish": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getExecutionStarted": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setExecutionStarted": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getActualDuration": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setActualDuration": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getCurrentStart": {
+							"!doc": "fn() -> +Date PsdActivityInstance2"
+						},
+						"setCurrentStart": {
+							"!doc": "fn(value: Date) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getCurrentFinish": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setCurrentFinish": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getCurrentDuration": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setCurrentDuration": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getExecutionFinished": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setExecutionFinished": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPlannedDuration": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setPlannedDuration": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getEarliestStart": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setEarliestStart": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getLatestStart": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setLatestStart": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getEarliestFinish": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setEarliestFinish": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getLatestFinish": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setLatestFinish": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getTotalFloatTime": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setTotalFloatTime": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getFreeFloatTime": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setFreeFloatTime": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getResourceFactor": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setResourceFactor": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPerformanceFactor": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setPerformanceFactor": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPerformanceRule": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setPerformanceRule": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPerf1UoM": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setPerf1UoM": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setPerf1UoMByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPerf2UoM": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setPerf2UoM": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setPerf2UoMByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getTaskType": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setTaskType": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setTaskTypeByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getWork": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setWork": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getQuantityUoM": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setQuantityUoM": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setQuantityUoMByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getQuantity": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setQuantity": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getProgressReportMethod": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setProgressReportMethod": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getBas3dVisualizationType": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setBas3dVisualizationType": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getSCurve": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setSCurve": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getPrcStructure": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setPrcStructure": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setPrcStructureByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getEventType": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setEventType": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"setEventTypeByCode": {
+							"!doc": "fn(code: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getIsCritical": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setIsCritical": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getIsLive": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setIsLive": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getIsDirty": {
+							"!doc": "fn() -> bool PsdActivityInstance2"
+						},
+						"setIsDirty": {
+							"!doc": "fn(value: bool) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getNote": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setNote": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText01": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText01": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText02": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText02": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText03": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText03": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText04": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText04": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText05": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText05": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText06": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText06": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText07": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText07": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText08": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText08": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText09": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText09": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedText10": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setUserDefinedText10": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber01": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber01": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber02": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber02": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber03": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber03": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber04": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber04": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber05": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber05": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber06": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber06": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber07": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber07": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber08": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber08": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber09": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber09": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedNumber10": {
+							"!doc": "fn() -> number PsdActivityInstance2"
+						},
+						"setUserDefinedNumber10": {
+							"!doc": "fn(value: number) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate01": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate01": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate02": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate02": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate03": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate03": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate04": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate04": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate05": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate05": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate06": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate06": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate07": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate07": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate08": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate08": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate09": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate09": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getSearchPattern": {
+							"!doc": "fn() -> string PsdActivityInstance2"
+						},
+						"setSearchPattern": {
+							"!doc": "fn(value: string) -> +PsdActivityInstance2 PsdActivityInstance2"
+						},
+						"getUserDefinedDate10": {
+							"!doc": "fn() -> +Nullable`1 PsdActivityInstance2"
+						},
+						"setUserDefinedDate10": {
+							"!doc": "fn(value: Nullable`1) -> +PsdActivityInstance2 PsdActivityInstance2"
+						}
+					}
+				}
+			},
+			"uniqueInSameGroupRoot": "The Code should be unique in same group root.",
+			"controllingUnitTemplate": "Controlling Unit Template",
+			"lineItemAssignObjectsContainerTitle": "Script Result (Assigned Objects)",
+			"updateParameterTemplates": "Update Parameter Templates",
+			"pleaseSelectTemplates": "Please select a template at least.",
+			"finishUpdateParameterTemplates": "Finish updating parameter templates.",
+			"chgOptionGridContainerTitle": "Change Option",
+			"entityIsCopyLineItems": "Is Copy Line Items",
+			"entityIsMergeLineItems": "Is Merge Line Items",
+			"entityIsChange": "Is Change",
+			"formulaToolTipTitle": "Usage of formula field:",
+			"formulaToolTipTitle1": "1. (Mandatory) Must enter at least one of the below inner property of 2D object (case sensitive):",
+			"formulaToolTipTitle2": "2. Support simple formula syntax, e.g. (area-offset)*2",
+			"globalParamGroupTitle": "Global Parameter Group",
+			"globalParamGroupDetail": "Global Parameter Group Detail",
+			"newDefaultScript": "validator.check('result', result !== '', 'The result should not be empty'); \nvalidator.check('result', result !== 0, 'The result should not be 0');"
+		}
+	}
+}

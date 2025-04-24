@@ -1,0 +1,64 @@
+{
+	"basics": {
+		"characteristic": {
+			"entityCharacteristicTypeFk": "Type",
+			"entityDefaultValue": "Default Value",
+			"entitySelected": "Selected",
+			"entityGroup": "Group",
+			"entitySection": "Section",
+			"entityValueText": "Value",
+			"entityCode": "Code",
+			"entityChecked": "Selected",
+			"entityGroupFk": "GroupID",
+			"entityIndexHeaderFk": "Index Header",
+			"entityIsReadonly": "Readonly",
+			"entityChainedCharacteristicFk": "Chained Characteristics",
+			"defaultContainerTitle": "Characteristics",
+			"recordsAffectedMsg":"record(s) will be affected ...",
+			"successMessage": "Record(s) successfully added/updated ...",
+			"title": {
+				"characteristicGroups": "Characteristic Groups",
+				"characteristicSections": "Characteristic Sections",
+				"characteristics": "Characteristics",
+				"characteristicDetail": "Characteristic Detail",
+				"discreteValues": "Discrete Values",
+				"remark": "Remark",
+				"usedInCompany": "Used In Company",
+				"automaticAssignment": "Automatic Assignment",
+				"characteristicGroupDetail": "Characteristic Group Detail",
+				"discreteValueDetail": "Discrete Value Detail",
+				"characteristicSectionDetail": "Characteristic Section Detail",
+				"bulkEditorPopup": "Set multiple Characteristics",
+				"chainCharacteristic": "Chained Characteristics"
+			},
+			"tab": {
+				"groups": "Characteristic Groups",
+				"characteristics": "Characteristics"
+			},
+			"header": {
+				"codeLookup": "Code lookup"
+			},
+			"section": {
+				"Project": "Project",
+				"BusinessPartner": "Business Partner",
+				"Contact": "Contact",
+				"Clerk": "Clerk",
+				"Certificate": "Certificate",
+				"Requisition": "Requisition",
+				"Quote": "Quote",
+				"Contract": "Contract",
+				"ProcurementStructure": "Procurement Structure",
+				"CostCodes": "Cost Codes",
+				"ControllingUnit": "Controlling Unit",
+				"Scheduling": "Scheduling",
+				"ActivityTemplate": "Activity Template",
+				"Company": "Company",
+				"MaterialCatalog": "Material Catalog",
+				"Material": "Material",
+				"ProcurementPackage": "Procurement Package",
+				"RfQ": "Request for Quote"
+			},
+			"notSupportMultiple": "Binding to multiple is not supported, Please select only one item."
+		}
+	}
+}

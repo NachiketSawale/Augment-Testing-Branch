@@ -1,0 +1,138 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+            </span>
+		</div>
+
+		<div class="platform-form-group">
+			<!--Receiver-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.receiverId' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.receiverId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<!--Subject-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.subject' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.subject" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<!--Body-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.body' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div class="filler" data-ng-model="input.body" data-options="bodyOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<!--Start-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.startTime' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.start" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<!--End-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.endTime' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.end" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<!--Importance-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.importance' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-entity="input"
+					     data-model="input.importance"
+					     data-options="importanceSelectOptions" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<!--Sensitivity-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.sensitivity' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-entity="input"
+					     data-model="input.sensitivity"
+					     data-options="sensitivitySelectOptions" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<!--Reminder Minutes Before Start-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.reminderMinutes'
+				| translate}}</label>
+				<div class="platform-form-col">
+					<div data-domain="integer" data-domain-control data-entity="input"
+					     data-model="input.reminderMinutes" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<!--Is Reminder on-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.isReminderOn' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-change="changeIsReminderOn()" data-domain="boolean" data-domain-control
+					     data-entity="input" data-model="input.isReminderOn" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<!--is HTML-->
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.mail.isHtml' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div data-change="changeHtml()" data-domain="boolean" data-domain-control
+					     data-entity="input" data-model="input.isHTML"
+					     readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+            </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.calendarEvent.result' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.result" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

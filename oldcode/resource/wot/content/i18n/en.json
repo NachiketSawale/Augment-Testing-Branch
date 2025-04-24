@@ -1,0 +1,18 @@
+﻿{
+	"resource": {
+		"wot": {
+			"workOperationTypeListTitle": "Operation Types",
+			"workOperationTypeDetailTitle": "Operation Type Details",
+			"operationPlantTypeListTitle": "Plant Types",
+			"operationPlantTypeDetailTitle": "Plant Type Details",
+			"isHire": "Is Hire",
+			"entityWorkOperationTypeFk": "Work Operation Type",
+			"workOperationPlantTypeEntity": "Plant Type",
+			"entityReservationstatusStartFk": "Start Reservation Status",
+			"isTimekeepingDefault": "Is Timekeeping Default",
+			"isMinorEquipment": "Is Minor Equipment",
+			"hasLoadingCosts": "Has Loading Costs",
+			"isEstimate": "Is Estimate"
+		}
+	}
+}

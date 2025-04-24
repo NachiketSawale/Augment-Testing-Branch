@@ -1,0 +1,23 @@
+<h3 class="estimate-material-scope">{{'estimate.main.updateMaterialPackageWizard.selectEstimateScope' | translate}}</h3>
+<div class="margin-left-ld">
+	<div class="radio spaceToUp">
+		<label for="estimateResultSet_3" class="margin-left-md">
+			<input type="radio" name="selectMaterialScope" id="estimateResultSet_3"  value="2" ng-disabled="noLineItemSelected" data-ng-checked="entireEstimateValue==2" data-ng-click="onResult(2)">
+			{{'estimate.main.createMaterialPackageWizard.selectedLineItem' | translate}}
+		</label>
+	</div>
+	<div class="radio spaceToUp">
+		<label for="estimateResultSet_1" class="margin-left-md">
+			<input type="radio" name="selectMaterialScope" id="estimateResultSet_1"  value="1" data-ng-checked="entireEstimateValue==1" data-ng-click="onResult(1)">
+			{{'estimate.main.createMaterialPackageWizard.currentResultSet' | translate}}
+		</label>
+	</div>
+	<div class="radio spaceToUp">
+		<label for="entireEstimate_2" class="margin-left-md">
+			<input type="radio" name="selectMaterialScope" id="entireEstimate_2"  value="0"  data-ng-checked="entireEstimateValue==0" data-ng-click="onResult(0)">
+			{{'estimate.main.createMaterialPackageWizard.entireEstimate' | translate}}
+		</label>
+	</div>
+</div>
+
+

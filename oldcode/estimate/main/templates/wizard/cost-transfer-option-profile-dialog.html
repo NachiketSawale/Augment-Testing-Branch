@@ -1,0 +1,46 @@
+<div ng-controller="costTransferOptionProfileDialogController" class="modal-wrapper" style="overflow-y:hidden;">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body">
+        <div style="padding:0px 10px;display: flex;flex-direction:column;flex:1;">
+            <div class="row">
+                <div class="col-md-12 platform-form-row">
+                    <label class="col-sm-3" style="padding:5px 0px 0px;">{{'basics.common.fieldSelector.uniqueFields.selectCostType' | translate}}</label>
+                    <div class="col-sm-3" >
+                        <input type="checkbox" id="isDirectCost"  data-ng-model="isDirectCost" value="isDirectCost" data-ng-checked="isDirectCost==true" data-ng-click="onModeResult('DirectCost')">
+                        <label>{{'basics.common.fieldSelector.uniqueFields.directCost'| translate}}</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="checkbox"  id="isIndirectCost"  data-ng-model="isIndirectCost" value="isIndirectCost" data-ng-checked="isIndirectCost==true" data-ng-click="onModeResult('IndirectCost')">
+                        <label>{{'basics.common.fieldSelector.uniqueFields.indirectCost'| translate}}</label>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <input type="checkbox"  id="isMarkUpCost"  data-ng-model="isMarkUpCost" value="isMarkUpCost" data-ng-checked="isMarkUpCost==true" data-ng-click="onModeResult('isMarkUpCost')">
+                        <label>{{'estimate.main.isMarkUpCost'| translate}}</label>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+                <div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+                    <h2 class="title fix" title="{{'cloud.common.searchResults' | translate}}">{{'estimate.main.createMaterialPackageWizard.costCode' | translate}}</h2>
+                    <div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+                </div>
+
+                <div class="flex-element flex-box flex-column subview-container gridContainer">
+                    <platform-grid data="gridData"></platform-grid>
+                </div>
+        </div>
+
+        <div>
+            <br/>
+            <h3 class="platform-form-label">{{'basics.common.fieldSelector.uniqueFields.labelNote' | translate}}</h3>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type = "button" class = "btn btn-default"  data-ng-click="ok()">{{'basics.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="cancel()">{{'basics.common.cancel' | translate}}</button>
+    </footer>
+</div>

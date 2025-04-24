@@ -1,0 +1,41 @@
+<div class="platform-form-group ">
+<div class="estimate-material-scope platform-form-row">
+<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.selectMaterialAndCcScope' | translate}}</label>
+ <div class="platform-form-col">
+        <ul>
+            <li class="radio spaceToUp"><input type="radio" name="selectMaterialScope" id="estimateResultSet_3"  value="2" ng-disabled="noLineItemSelected" data-ng-checked="entireEstimateValue==2" data-ng-click="onResult(2)"> <label for="estimateResultSet_3">{{'estimate.main.createMaterialPackageWizard.selectedLineItem' | translate}}</label> </li>
+            <li class="radio spaceToUp"><input type="radio" name="selectMaterialScope" id="estimateResultSet_1"  value="1" data-ng-checked="entireEstimateValue==1" data-ng-click="onResult(1)"> <label for="estimateResultSet_1">{{'estimate.main.createMaterialPackageWizard.currentResultSet' | translate}}</label> </li>
+            <li class="radio spaceToUp"><input type="radio" name="selectMaterialScope" id="entireEstimate_2"  value="0"  data-ng-checked="entireEstimateValue==0" data-ng-click="onResult(0)"> <label for="entireEstimate_2">{{'estimate.main.createMaterialPackageWizard.entireEstimate' | translate}}</label> </li>
+        </ul>
+ </div>
+</div>
+<br/>
+<div class="estimate-select-criteria platform-form-row">
+    <label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.criteriaSectionToCreatePackage'| translate}}</label>
+    <div class="platform-form-col">
+       <div data-domain-control data-domain="select" data-ng-model="selectedItem" data-options="selections" data-change="onSelectChanged(selectedItem)"></div>
+    </div>
+</div>
+<div class="estimate-select-criteria platform-form-row">
+	<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.dissolveReferenceLineItemLabel'| translate}}</label>
+	<div class="platform-form-col">
+		<input type="checkbox" style="margin:0px;vertical-align: middle;" data-ng-checked="isSelectedReferenceLineItem" data-ng-model="isSelectedReferenceLineItem" data-ng-change="onSelectedReferenceLineItem(isSelectedReferenceLineItem)"/>
+		{{'estimate.main.createMaterialPackageWizard.dissolveReferenceNote' | translate}}
+	</div>
+</div>
+	<div class="estimate-select-criteria platform-form-row">
+		<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.multiPackageAssignmentModelLabel'| translate}}</label>
+		<div class="platform-form-col">
+			<input type="checkbox" style="margin:0px;vertical-align: middle;" data-ng-checked="isSelectMultiPackageAssignmentModel" data-ng-model="isSelectMultiPackageAssignmentModel" data-ng-change="onSelectedMultiPackageAssignmentModel(isSelectMultiPackageAssignmentModel)"/>
+			{{'estimate.main.createMaterialPackageWizard.multiPackageAssignmentModelNote' | translate}}
+		</div>
+	</div>
+	<div class="estimate-select-criteria platform-form-row" ng-if="selectedItem=='Material & Cost Code'">
+		<label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.skipSelectionPageLabel'| translate}}</label>
+		<div class="platform-form-col">
+			<input type="checkbox" style="margin:0px;vertical-align: middle;" data-ng-checked="isAllResultTobeChosen" data-ng-model="isAllResultTobeChosen" data-ng-change="onSelectedAllResultTobeChosen(isAllResultTobeChosen)"/>
+			{{'estimate.main.createMaterialPackageWizard.skipSelectionPageNote' | translate}}
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,42 @@
+<div class="modal-wrapper" data-ng-controller="basicsCommonAddressGeolocationConvertController">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+
+	<section class="modal-body fullheight">
+		<div class="address-body flex-box ">
+			<div class="fullheight address-input flex-element">
+				<div class="checkbox spaceToUp" style="margin-bottom:4px;">
+					<label>
+						<input type="checkbox" data-ng-model="currentItem.convertOnlyEmpty">
+						{{:: 'basics.common.geographicLocationInfo.convertOnlyEmpty' | translate }}
+					</label>
+				</div>
+				<div class="flex-box flex-column flex-element fullheight">
+					<platform-Grid data="gridData"></platform-Grid>
+				</div>
+			</div>
+			<div class="address-map flex-element flex-box flex-column" data-ng-show="showMap">
+				<div class="flex-element flex-box flex-column" data-basics-common-map
+				     data-entity="currentItem.addresses" data-basics-common-map-readonly-handler></div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="settings()">
+			{{::'basics.common.settings' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="toggleMap()">
+			{{::'cloud.common.addressDialogMap' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="ok()">
+			{{ getOkText() | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="cancel()" data-ng-hide="currentItem.convertIsStart">
+			{{::'basics.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>
+
+

@@ -1,0 +1,14 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+
+	<div class="searchresultpad flex-element flex-box flex-column">
+		<div class="flex-element flex-box flex-column gridframe relative-container subview-container">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+	</div>
+
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isSelected" data-ng-click="crefoOption.onOk()" translate="cloud.common.ok"></button>
+</footer>

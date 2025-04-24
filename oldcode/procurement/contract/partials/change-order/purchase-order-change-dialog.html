@@ -1,0 +1,29 @@
+
+<div data-ng-controller="procurementChangeOrderController" class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div data-ng-show="isRuingWorkFlow" class="flex-element">
+            <div class="margin-full-md">
+                <h3>{{modalOptions.text.runingMessage}}</h3>
+            </div>
+        </div>
+        <div class="platform-form-group" data-ng-show="!isRuingWorkFlow" >
+            <!--<div class="platform-form-row" data-ng-repeat="item in modalOptions.chkItems">-->
+                <!--<div class="platform-form-col" style="margin-left:60px;">-->
+                    <!--<input type="checkbox"  name="validateScope" value="item.value" data-ng-click="modalOptions.setAction(item.value)" data-ng-checked="item.isChecked">-->
+                    <!--<span style="margin-left: 10px; position: relative; top: -4px">{{item.text}}</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div data-platform-form-container data-form-container-options="modalOptions.changeOrderItemsContainerOptions" entity="options.currentContract" ></div>
+            <div data-platform-form-container data-form-container-options="modalOptions.changeOrderDeliverySchedulesContainerOptions" entity="options.currentContract" ></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isRuingWorkFlow">
+            {{modalOptions.text.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.text.closeButtonText}}
+        </button>
+    </footer>
+</div>

@@ -1,0 +1,18 @@
+﻿
+<div id="bill-to-setting-box" style="height:auto;width:100%;overflow: auto;overflow-y: hidden;margin-bottom: 5px;margin-top: 4px;">
+	<div class="platform-form-row form-group" style="margin-bottom: 4px;position:relative; display: flex; flex-direction: column; gap: 10px;">
+		<!-- Container quantityItemBase -->
+		<div style="display: flex; align-items: center; gap: 1px;">
+			<label class="platform-form-label text-left" style="width: auto; min-width: 150px;">{{::quantityItemBase}}</label>
+			<input type="checkbox" class="domain-type-boolean form-control text-right" data-ng-model="currentItem.quantityItemBase" data-entity="currentItem" ng-disabled="QuantityItemBaseReadOnly" ng-change="handleQuantityItemBaseChange(currentItem.quantityItemBase, 'quantityItemBase')">
+		</div>
+		<!-- Container percentageBased -->
+		<div style="display: flex; align-items: center; gap: 1px;">
+			<label class="platform-form-label text-left" style="width: auto; min-width: 150px;">{{::percentageBased}}</label>
+			<input type="checkbox" class="domain-type-boolean form-control text-right" data-ng-model="currentItem.percentage" data-entity="currentItem" ng-disabled="PercentageBasedReadOnly" ng-change="handlePercentageBasedChange(currentItem.percentage, 'percentageBased')">
+		</div>
+	</div>
+</div>
+<platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+<div cloud-common-overlay data-info2="loadingText" data-loading="isLoading"></div>
+<platform-statusbar data-ng-if="statusBarVisible" style="height: 25px;width: 100%;" data-current-page=" currentPage" data-options="statusbarOptions" data-on-pagechange="onPageChanged(args)"></platform-statusbar>

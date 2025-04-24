@@ -1,0 +1,11 @@
+<div>
+	<div class="toolbar justify-content-between">
+		 <div class="toolbar justify-content-end">
+		 <ui-common-menu-list [menu]="toolbarData!"></ui-common-menu-list>
+	</div>
+</div>
+<div  class="flex-box flex-column flex-element subview-content relative-container overflow-hidden">
+	<ui-common-grid [configuration]="gridConfig"
+		 class="lookup-grid flex-basis-auto" (selectionChanged)="selectionChanged($event)" (valueChanged)="valueChanged($event)"></ui-common-grid>
+</div>
+</div>

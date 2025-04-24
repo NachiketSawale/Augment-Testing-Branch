@@ -1,0 +1,9 @@
+<header class="modal-header" data-ng-include="modalOptions.headerTemplateUrl"></header>
+<section class="modal-body">
+    <div class="flex-box flex-element" data-model="message">{{ message }}</div>
+</section>
+<footer class="modal-footer">
+    <div>
+        <button type="button" class="btn btn-default" data-ng-click="$close(false)"> {{ 'cloud.common.ok' | translate  }}</button>
+    </div>
+</footer>

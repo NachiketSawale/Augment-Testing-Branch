@@ -1,0 +1,20 @@
+<div class="margin-top-ld">{{'scheduling.main.barInformation.summary' | translate}}</div>
+<div class="flex-box">
+	<div class="flex-element">
+		<!--<div scheduling-main-activity-lookup-directive data-ng-model="modela" data-entity="modelb"></div>-->
+		<span data-domain-control data-domain="select" data-options="activityLookupOptions"
+		      data-model="entity4" data-change="entity4Changed(item, prevItem)"></span>
+	</div>
+	<div class="flex-element margin-left-ld">
+		<span data-domain-control data-domain="select" data-options="activityLookupOptions"
+		      data-ng-model="entity5" data-change="entity5Changed(item, prevItem)"></span>
+	</div>
+	<div class="flex-element margin-left-ld">
+		<span data-domain-control data-domain="select" data-options="activityLookupOptions"
+		      data-ng-model="entity6" data-change="entity6Changed(item, prevItem)"></span>
+	</div>
+</div>
+<div class="platform-form-group">
+	<div data-domain-control data-domain="boolean" data-model="showBarInformation" data-options="barinfoOptions"
+	     data-change="changeShowBarInformation()"></div>
+</div>

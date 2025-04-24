@@ -1,0 +1,23 @@
+<script type="text/ng-template" id="cloud.desktop/inquiry-notify-button.html">
+	<button type="button" ##disabled## class="##cssClass##"
+	        title="##title##" data-ng-click="##fn##" ##currentButtonId## ##attr## ##model##
+	        data-cloud-desktop-inquiry-notify-button>
+
+		<svg data-cloud-desktop-svg-image data-sprite="##svgSprite##" data-image="##svgImage##"></svg>
+	</button>
+</script>
+
+<script type="text/ng-template" id="cloud.desktop/inquiryItem.html">
+	<li class="flex-box rw">
+		<ul class="flex-element rw-deletable-content">
+			<li class="title">$$name$$</li>
+			<button data-ng-click="clickFn($$id$$)" class="btn btn-default control-icons ico-close"
+			        title="{{::'cloud.desktop.inquiry.deleteitem'|translate}}">
+			</button>
+			<li>$$description$$</li>
+		</ul>
+	</li>
+</script>
+
+
+

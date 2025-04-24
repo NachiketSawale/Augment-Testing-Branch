@@ -1,0 +1,69 @@
+<script type="text/ng-template" id="rowButtons.html">
+    <div>
+        <p class="ms-commodity-row-price"><span data-ticket-system-show-price>{{getEstimatePriceInfo()}}</span>[<span data-ticket-system-show-price>{{getListPriceInfo()}}</span>]{{entity.Currency}} </p>
+        <p class="ms-commodity-row-price">/{{::getUom()}}</p>
+    </div>
+    <div data-procurement-ticket-system-cart-quantity-input
+         data-ng-model="entity.Requirequantity"
+         data-uom="entity.PriceUnitUomInfo">
+    </div>
+    <div class="ms-commodity-row-cart-empty">
+        <a href data-ng-click="externalScope.addToCart(entity)" class="{{entity.IsAdded?'ico-cart-full':'ico-cart-empty'}} control-wh-icons block-image"></a>
+    </div>
+    <div class="ms-commodity-row-cart-empty" style="background-color: grey;margin-right: 12px;" data-ng-show="entity.PriceLists.length>1" title="{{ getPriceListTitle(entity) }}">
+        <a href data-ng-click="togglePriceList($event, entity)" class="{{entity.MaterialPriceListFk==null?'ico-pricelist':'ico-pricelist-select'}} control-wh-icons block-image"></a>
+    </div>
+    <div class="ms-commodity-row-cart-empty" style="background-color: grey;margin-right: 12px;" data-ng-show="entity.IsFromFC" title="{{ 'basics.material.frameworkCatalog.from' | translate }}">
+        <a href class="control-wh-icons ico-framework-agreement block-image"></a>
+    </div>
+    <div class="ms-commodity-row-cart-empty" style="background-color: grey;margin-right: 12px;" data-ng-show="entity.AlternativeList.length>=1">
+        <a href data-ng-click="toggleAlternativeList($event, entity)" class="control-wh-icons ico-alternative block-image"></a>
+    </div>
+</script>
+
+<script type="text/ng-template" id="cartCount.html">
+    <a href class="ms-sv-cart-item-count" data-ng-click="$parent.gotoCart()">
+        <i class="block-image control-icons" ng-class="$parent.cartService.cartSummary.cartCount > 0 ? 'ico-cart-full':'ico-cart-empty'"></i>
+        <span data-ng-bind="$parent.cartService.cartSummary.cartCount"></span>
+    </a>
+</script>
+
+<script type="text/ng-template" id="cartRowButtons.html">
+    <div>
+    <p class="ms-commodity-row-price"><label class="ms-row-label ">{{$parent.htmlTranslate.costPrice}}:</label> <span data-ticket-system-show-price>{{::getCostInfo()}}</span>[<span data-ticket-system-show-price>{{::getListPriceInfo()}}</span>] {{::entity.Currency}} </p>
+    <p class="ms-commodity-row-unituom"><label class="ms-row-label">{{$parent.htmlTranslate.uomPrice}}:</label>/{{::getUom()}}</p>
+    </div>
+    <div class="ms-commodity-row-cart-delete">
+        <a href data-ng-click="$parent.cartService.delete(entity.Id)">
+            <i class="block-image control-wh-icons ico-cart-item-delete"></i>
+        </a>
+    </div>
+    <div class="ms-commodity-row-quantity">
+    <label class="ms-row-label">{{$parent.htmlTranslate.quantity}}:</label>
+    <div data-procurement-ticket-system-cart-quantity-input
+         data-ng-model="entity.Requirequantity"
+         data-uom="entity.PriceUnitUomInfo"
+         data-ng-change="$parent.cartService.update(entity)">
+    </div>
+     </div>
+    <div class="ms-commodity-row-delivery ts-cart-item-delivery" data-ng-if="entity.deliveryOptionShow">
+        <label class="ms-row-label">{{$parent.$parent.htmlTranslate.deliveryOption}} :</label>
+        {{entity.deliverys}} {{::entity.Currency}}
+    </div>
+    <div class="ts-cart-item-subtotal">
+        <label class="ng-binding ms-row-label">{{$parent.htmlTranslate.subTotal}}:</label>
+        <!--<label class="ng-binding">{{((entity.EstimatePrice)*entity.Requirequantity/entity.PriceUnit*entity.FactorPriceUnit/entity.ExchangeRate).toFixed(2)}}</label>-->
+        <label><span data-ticket-system-show-price>{{entity.subTotal}}</span>
+        {{entity.Currency}}</label>
+    </div>
+</script>
+
+<script type="text/ng-template" id="addAll.html">
+    <span>
+        ({{data.matchedCount}}) -
+        <a class="ts-add-all"
+           data-ng-click="externalScope.addAllToCart()"
+           data-ng-bind="'procurement.ticketsystem.htmlTranslate.addAll' | translate">
+        </a>
+    </span>
+</script>

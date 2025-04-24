@@ -1,0 +1,16 @@
+<div data-ng-controller="basicsCommonBusinesspartnerPortalDialogController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="modal-wrapper subview-container">
+			<div data-platform-grid data-data="gridData"></div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isOkDisabled">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

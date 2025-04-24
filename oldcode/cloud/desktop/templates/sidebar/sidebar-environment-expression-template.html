@@ -1,0 +1,19 @@
+<script type="text/ng-template" id="sidebar-environment-variables">
+	<div data-ng-bind="getEnvironmentModel()" class="environment-label"></div>
+	<button data-ng-repeat="item in environmentExpressions"
+			class="btn btn-default"
+			data-ng-class="{'active': getEnvironmentModel() === item[options.displayMember]}"
+			data-ng-click="options.onSelect(item)">
+		<div class="settings-input" ng-show="item.showInput">
+			<input type="number" class="form-control text-input" data-ng-model="item.value" ng-show="item.showInput" data-ng-keydown="onKeyDown($event, item)" data-ng-click="onInputClick($event)"/>
+			<div class="tick-icon" ng-show="item.showInput" data-ng-click="onSave(item)">
+				<div class="control-icons ico-tick block-image"></div>
+			</div>
+			<div class="delete-icon" ng-show="item.showInput" data-ng-click="onCancel($event, item)">
+				<div class="control-icons ico-input-delete block-image"></div>
+			</div>
+		</div>
+		<label ng-show="!item.showInput">{{item[options.displayMember]}}</label>
+		<svg ng-show="item[options.displayMember].startsWith('+/-') && !item.showInput && options.editMode" data-cloud-desktop-svg-image class="block-image" data-sprite="tlb-icons" data-image="ico-settings" data-ng-click="onSettingsClick($event, item)"></svg>
+	</button>
+</script>

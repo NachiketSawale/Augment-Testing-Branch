@@ -1,0 +1,38 @@
+<div data-ng-controller="basicsCommonMapSettingsDialogController">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{'basics.common.map.mapSettings' | translate}}</h2>
+	</header>
+	<section class="modal-body">
+		<div class="platform-form-group">
+			<div class="platform-form-row form-group" data-ng-show="defaultSettingShown">
+				<label class="platform-form-label">{{'basics.common.map.showDefault' | translate}}</label>
+				<div class="platform-form-col">
+					<input class="form-control" type="checkbox" data-ng-model="showByDefault"/>
+				</div>
+			</div>
+			<div class="platform-form-row form-group">
+				<label class="platform-form-label">{{'basics.common.map.mapProvider' | translate}}</label>
+				<div class="platform-form-col">
+					<select class="form-control" data-ng-model="provider">
+						<option>baidu</option>
+						<option>bingv8</option>
+						<!--<option>bing</option>--> <!--replace with bingv8-->
+						<option>google</option>
+						<option>openstreet</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="onOk()">
+			{{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

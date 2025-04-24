@@ -1,0 +1,28 @@
+<div class="wizard-wrapper wizard-dialog "
+     data-ng-controller="basicsCompanyCopyCompanyContainerController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div ng-switch="selectStep.number" class="modal-wrapper">
+            <div ng-switch-when="0" class=" fullheight">
+                <ng-include src="'basics.company/partials/copy-company-basic.html'"></ng-include>
+            </div>
+            <div ng-switch-when="1" class=" fullheight">
+                <ng-include src="'basics.company/partials/copy-company-second.html'"></ng-include>
+            </div>
+        </div>
+    </section>
+    <div class="modal-footer">
+	    <button data-ng-disabled="selectStep.disallowBack" data-ng-hide="selectStep.disallowBack" type="button"
+	            class="btn btn-default" data-ng-click="wizardCommands.goToPrevious()"
+	            data-ng-bind="wzStrings.back()"></button>
+	    <button data-ng-disabled="disabledNext()" data-ng-hide="selectStep.disallowNext" type="button"
+	            class="btn btn-default" data-ng-click="wizardCommands.goToNext()"
+	            data-ng-bind="wzStrings.next" ></button>
+	    <button data-ng-disabled="disabledFinsh()" data-ng-hide="!selectStep.canFinish" type="button"
+                class="btn btn-default" data-ng-click="wizardCommands.finish()"
+                data-ng-bind="wzStrings.finish"></button>
+        <button data-ng-disabled="selectStep.disallowCancel" data-ng-hide="selectStep.disallowCancel" type="button"
+                data-ng-click="$close(false)" class="btn btn-default" data-ng-bind="wzStrings.cancel"></button>
+    </div>
+    <div data-cloud-common-overlay data-loading="isReadying"></div>
+</div>

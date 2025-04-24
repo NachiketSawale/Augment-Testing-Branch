@@ -1,0 +1,17 @@
+<div data-ng-controller="procurementCommonCreateModuleDialogController">
+	<header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+	<div>
+		<section class="modal-body">
+			<div data-platform-form-container data-form-container-options="formContainerOptions"
+				 entity="currentItem"></div>
+		</section>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isDisabled">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

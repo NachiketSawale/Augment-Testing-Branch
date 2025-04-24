@@ -1,0 +1,97 @@
+<div class="flex-box">
+    <div class="flex-element margin-full-md">
+        <h3 class="font-bold"> {{'usermanagement.main.dialog.header1'|translate}}</h3>
+	    <ul class="list-group">
+        <li>
+            <div data-domain-control data-domain="boolean" data-model="settings.syncAdUser"
+                 data-options="settings.syncAdUserOpt"></div>
+        </li>
+        <li>
+	        <ul class="subgroup">
+		        <li>
+	            <div data-domain-control data-domain="boolean" data-model="settings.importEnabledOnly"
+	                 data-options="settings.importEnabledOnlyOpt"></div>
+		         </li>
+		        <li>
+					<div class="flex-box flex-align-center">
+						<label class="margin-right-ld">{{'usermanagement.main.dialog.upnNameFilter' | translate}}</label>
+						<div data-domain-control data-domain="description" data-model="settings.upnNameFilter"></div>
+					</div>
+		        </li>
+	        </ul>
+        </li>
+        <li>
+            <div data-domain-control data-domain="boolean" data-model="settings.syncAdGroup"
+                 data-options="settings.syncAdGroupOpt"></div>
+        </li>
+        <li>
+            <div data-domain-control data-domain="boolean" data-model="settings.addAdUser"
+                 data-options="settings.addAdUserOpt" style="margin-left: 20px;"></div>
+        </li>
+	    </ul>
+    </div>
+
+    <div class="flex-element margin-full-md">
+        <h3 class="font-bold"> {{'usermanagement.main.dialog.header2'|translate}}</h3>
+	    <ul class="list-group">
+        <li>
+            <div data-domain-control data-domain="boolean" data-model="settings.activated"
+                 data-options="settings.activatedOpt"></div>
+        </li>
+
+        <li>
+				<ul class="subgroup">
+					<li>
+		            <div class="radio spaceToUp">
+		                <label>
+		                    <input type="radio" ng-model="settings.daily" data-ng-disabled="modalOptions.canSetDateTime()" value="nonrep">
+		                    {{'usermanagement.main.dialog.nonrep' | translate}}
+		                </label>
+		            </div>
+					</li>
+					<li>
+		            <div class="radio spaceToUp">
+		                <label>
+		                    <input type="radio" ng-model="settings.daily" data-ng-disabled="modalOptions.canSetDateTime()" value="true">
+		                    {{'usermanagement.main.dialog.daily' | translate}}
+		                </label>
+		            </div>
+					</li>
+					<li>
+		            <div class="radio spaceToUp">
+		                <label>
+		                    <input type="radio" ng-model="settings.daily" data-ng-disabled="modalOptions.canSetDateTime()" value="weekly">
+		                    {{'usermanagement.main.dialog.weekly' | translate}}
+		                </label>
+		            </div>
+					</li>
+					<li class="margin-bottom-ld">
+			        <div class="flex-box flex-align-center margin-top-ld margin-bottom-ld">
+				        <label class="margin-right-ld">{{'usermanagement.main.dialog.date' | translate}}</label>
+				        <div data-domain-control data-domain="datetime" data-model="settings.date" data-readonly="modalOptions.canSetDateTime()" class="margin-left-md"></div>
+			        </div>
+					</li>
+					<li>
+                  <h4 class="font-bold margin-top-ld"> {{'usermanagement.main.dialog.headerCleanupOption'|translate}}</h4>
+					</li>
+					<li class="margin-none">
+		            <div class="flex-box flex-column">
+			            <div class="flex-element">
+		                <div class="platform-form-group">
+		                    <div class="platform-form-row">
+		                        <label class="platform-form-label" style="padding-right: 16px;">{{'usermanagement.main.dialog.keepDuration' | translate}}</label>
+		                        <div data-domain-control data-domain="integer" data-readonly="modalOptions.canSetDateTime() || settings.daily==='nonrep'" data-model="settings.keepDuration" class="margin-left-md_"></div>
+		                    </div>
+		                    <div class="platform-form-row">
+		                        <label class="platform-form-label" style="padding-right: 16px;">{{'usermanagement.main.dialog.keepCount' | translate}}</label>
+		                        <div data-domain-control data-domain="integer" data-readonly="modalOptions.canSetDateTime() || settings.daily==='nonrep'" data-model="settings.keepCount" class="margin-left-md_"></div>
+		                    </div>
+		                </div>
+			            </div>
+		            </div>
+					</li>
+				</ul>
+        </li>
+	    </ul>
+	</div>
+</div>

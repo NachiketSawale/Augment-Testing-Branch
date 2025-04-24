@@ -1,0 +1,37 @@
+.entity-filter-result-pagination {
+	height: 22px;
+	line-height: 22px;
+	display: flex;
+	justify-content: space-between;
+	background-color: #dcdcdc;
+	padding: 0 8px;
+
+	.page-size-info > span:first-child {
+		padding: 0 8px 0 0;
+	}
+
+	.page-size-info .ico-down {
+		background-position: 6px;
+	}
+
+	.page-size-info button {
+		display: flex;
+		justify-content: space-around;
+		height: 20px;
+		padding: 0;
+		line-height: 20px;
+		width: 60px;
+		box-sizing: border-box;
+		margin-top: 1px;
+	}
+
+	.pagination-group-btn {
+		display: flex;
+
+		button {
+			height: 22px;
+			width: 22px;
+			background-size: 16px;
+		}
+	}
+}

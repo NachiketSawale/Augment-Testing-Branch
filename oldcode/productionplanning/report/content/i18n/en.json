@@ -1,0 +1,53 @@
+{
+  "productionplanning": {
+    "report": {
+      "entityReport": "Mounting Report",
+      "entityTimeSheet":"Report: TimeSheet",
+      "entityReport2Product":"Report: Product",
+      "entityReport2CostCode":"Report: CostCode",
+      "formDataLisTitle": "Report: Form Data",
+      "report": {
+        "listTitle": "Reports",
+        "detailTitle": "Report Detail",
+        "dialogTitle": "Assign Mounting Report",
+        "StartTime": "Start Time",
+        "EndTime": "End Time"
+      },
+      "report2product": {
+        "listTitle": "Report: Products",
+        "productFk": "Product",
+        "productDescription": "Description"
+      },
+      "timesheet": {
+        "listTitle": "Report: TimeSheets",
+        "detailTitle": "Report: TimeSheet Detail",
+        "AutoCreate": "Auto Create",
+        "HadBreak": "Had Break",
+        "BreakTime": "Break Time",
+        "Sick": "Sick",
+        "TimeOff": "TimeOff",
+        "Vacation": "Vacation",
+        "OverNight": "Over Night",
+        "Driver": "Driver",
+        "Leader": "Leader",
+        "Doctor": "Doctor",
+        "AddInfo": "Additional Information",
+        "PoolResources": "Pool Resources"
+      },
+      "report2costcode": {
+        "listTitle": "Report: Cost Codes",
+        "detailTitle": "Report: Cost Code Detail"
+      },
+      "document": {
+        "reportDocumentListTitle": "Report Documents",
+        "revision": {
+          "listTitle": "Report Document: Revisions"
+        }
+      },
+      "wizard": {
+        "changeReportStatus": "Change Report Status"
+      },
+      "productFilterTitle": "Product Filter"
+    }
+  }
+}

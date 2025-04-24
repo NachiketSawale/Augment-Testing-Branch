@@ -1,0 +1,7 @@
+<button class="entity-filter" #host [class]="'entity-filter-' + definition.Id" (click)="openFilter()" [disabled]="definition.Readonly">
+	<span class="filter-column">{{ scope.getFilterLabel(definition) }}</span>
+	<span class="filter-condition" *ngIf="getCondition() !== ''">{{ getCondition() | platformTranslate }}</span>
+	<span class="filter-value" *ngIf="getValue() !== ''" [title]="getValue()">{{ getValue() }}</span>
+	<span class="filter-number" *ngIf="getNumber() > 1">{{ getNumber() }}</span>
+	<span class="btn filter-btn control-icons ico-close" (click)="removeFilter()" *ngIf="!definition.Readonly"></span>
+</button>

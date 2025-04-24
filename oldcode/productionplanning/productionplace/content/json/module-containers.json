@@ -1,0 +1,76 @@
+[
+	{
+		"id": "productionplanning.productionplace.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.productionplace.listTitle",
+		"controller": "ppsProductionPlaceListController",
+		"uuid": "7347596478124456a18f0e78983aa34c",
+		"permission": "7347596478124456a18f0e78983aa34c"
+	}, {
+		 "id": "productionplanning.productionplace.detail",
+		 "template": "app/components/base/form-detail-partial.html",
+		 "title": "productionplanning.productionplace.detailTitle",
+		 "controller": "ppsProductionPlaceDetailController",
+		 "uuid": "c90b8ae405594dfa92b543efbab6918e",
+		 "permission": "7347596478124456a18f0e78983aa34c"
+	},
+	{
+		"id": "productionplanning.productionplace.planningboard",
+		"template": "app/components/planningboard/templates/platform-planning-board-template.html",
+		"title": "productionplanning.productionplace.planningBoardTitle",
+		"controller": "ppsProductionPlacePlanningBoardController",
+		"uuid": "3dee881400914baa92d596e210c7e4bd",
+		"permission": "f10baf3f63a04d6a9b4b51514ebde160",
+		"subcontainers": [{
+			"uuid": "6d8e4e43773441338fa40a32a46c7cdf"
+		},
+		{
+			"uuid": "b1810df3bf3a4ef88991ecf863f6db08"
+		}]
+	},
+	{
+		"id": "productionplanning.productionplace.site.filter.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.productionplace.additionalFilter.siteFilterListTitle",
+		"controller": "ppsProductionplaceSiteFilterController",
+		"uuid": "8bed2c3d3a1644308ba428f78f2229e6",
+		"permission": "7347596478124456a18f0e78983aa34c"
+	},
+	{
+		"id": "productionplanning.productionplace.maintenance.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.productionplace.maintenance.listTitle",
+		"controller": "ppsMaintenanceListController",
+		"uuid": "5b884ca39c5c4c6f873a4875be65b0e5",
+		"permission": "20de8c60413d4504a7cf103f2dcda476"
+	},
+	{
+		"id": "productionplanning.productionplace.maintenance.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.productionplace.maintenance.detailTitle",
+		"controller": "ppsProductionPlaceDetailController",
+		"uuid": "361eade4e402458c851bf96fd0dcdc55",
+		"permission": "20de8c60413d4504a7cf103f2dcda476"
+	},
+	{
+		"id": "EditAssignment",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "Edit Assignment",
+		"controller": "platformPlanningBoardEditAssignmentDialogController",
+		"uuid": "2860df783e894efcbfd0fa5c8cbef024",
+		"permission": "71b79353b3084571b7b450a492a7fd56"
+	},
+	{
+		"id": "productionplanning.common.event.itemEventProductTitle",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.productionplace.productEventTitle",
+		"controller": "productionplanningCommonEventListController",
+		"currentModule": "productionplanning.productionplace.entityProductionPlace",
+		"parentService": "productionplanningCommonProductItemDataService",
+		"foreignKey": "ProductFk",
+		"parentFilterProperty": "PpsProductFk",
+		"uuid": "fde309107aaf43d78ec1b8b16f726364",
+		"permission": "b51857fedc364b9f87102fcb6988bf7b"
+	}
+
+]

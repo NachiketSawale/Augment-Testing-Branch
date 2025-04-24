@@ -1,0 +1,972 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import {
+	EstimateMainContextService, EstimateMainResourceType, EstimateResourceBaseDataService, IEstResourceResponseEntity,
+
+	LineItemBaseComplete,
+	ResourceBaseComplete
+} from '@libs/estimate/shared';
+import { IEstLineItemEntity } from '@libs/estimate/interfaces';
+import { inject, Injectable } from '@angular/core';
+import { EstimateMainService } from '../../containers/line-item/estimate-main-line-item-data.service';
+import {
+	IEstResourceEntity, IEstimateCreationData
+} from '@libs/estimate/interfaces';
+import * as _ from 'lodash';
+import { EstimateMainCommonService } from '../../services/common/estimate-main-common.service';
+import { CollectionHelper, IIdentificationData, PlatformTranslateService } from '@libs/platform/common';
+import { IDialogResult, UiCommonMessageBoxService } from '@libs/ui/common';
+import {
+	IEstResourceCharacteristicEntity
+} from '@libs/estimate/interfaces';
+import { ICharacteristicDataEntity } from '@libs/basics/interfaces';
+import {
+	IDataServiceEndPointOptions,
+	IDataServiceOptions,
+	IDataServiceRoleOptions,
+	ServiceRole
+} from '@libs/platform/data-access';
+import { EstimateMainResourceProcessService } from './estimate-main-resource-process.service';
+
+//import { IEstAssemblyCatEntity } from '@libs/basics/shared';
+
+/**
+ * A service responsible for handling resource data related to estimate main.
+ * Extends the AssemblyResourceBaseDataService with specific functionality for resource entities.
+ */
+@Injectable({ providedIn: 'root' })
+export class EstimateMainResourceService extends EstimateResourceBaseDataService<IEstResourceEntity, ResourceBaseComplete, IEstLineItemEntity, LineItemBaseComplete> {
+
+	private deleteFromDrag = false;
+	private readonly gridId = 'bedd392f0e2a44c8a294df34b1f9ce44';
+	private readonly messageBoxService = inject(UiCommonMessageBoxService);
+	private readonly translate = inject(PlatformTranslateService);
+	private readonly estimateMainContextService = inject(EstimateMainContextService);
+	private readonly estimateMainCommonService = inject(EstimateMainCommonService);
+	private readonly estimateMainResourceProcessor : EstimateMainResourceProcessService;
+
+	//TODO: filter
+	// private filters = [
+	// 	{
+	// 		key: 'estimate-main-resources-assembly-type-filter',
+	// 		fn: (item : IEstAssemblyCatEntity, entity: IEstResourceEntity) => { // item = assembly category
+	// 			if (entity.EstResourceTypeFk === 4 && entity.EstAssemblyTypeFk) { // only assembly and composite assemblies
+	// 				let isTheSameAssemblyType = item.EstAssemblyTypeFk === entity.EstAssemblyTypeFk;
+	// 				if (isTheSameAssemblyType) {
+	// 					return true;
+	// 				}
+	// 				if (item.AssemblyCatChildren) {
+	// 					item.IsTemp = true; // Item is added only for reference, but not used in search filters
+	// 					const childAssemblyTypes: boolean[] =[];
+	// 					this.checkChildAssemblyCatType(item,entity,childAssemblyTypes);
+	// 					return childAssemblyTypes.length >= 1;
+	// 				}
+	// 				// Assembly type does not match
+	// 				return false;
+	// 			}
+	// 			// General assemblies : A
+	// 			return true;
+	// 		}
+	// 	},
+	// 	{
+	// 		key: 'estimate-main-resources-cost-type-filter',
+	// 		fn: (item) => {
+	// 			return item.MdcContextFk === this.estimateMainCommonService.getCompanyContextFk();
+	// 		}
+	// 	}
+	// ];
+
+	/**
+	 * Creates an instance of EstimateMainService.
+	 *
+	 * @param estimateMainService The service for estimate.
+	 */
+	public constructor(private estimateMainService: EstimateMainService) {
+		const dataServiceOptions: IDataServiceOptions<IEstResourceEntity> = {
+			apiUrl: 'estimate/main/resource',
+			readInfo: <IDataServiceEndPointOptions>{
+				endPoint: 'tree',
+				usePost: true,
+				prepareParam: (ident: IIdentificationData) => {
+					// Prepare read params based on parent selection
+					const selected = this.getSelectedParent();
+					return selected ? { estHeaderFk: selected.EstHeaderFk, estLineItemFk: selected.Id } : {};
+				}
+			},
+			updateInfo: <IDataServiceEndPointOptions>{
+				endPoint: 'update',
+				usePost: true
+			},
+			roleInfo: <IDataServiceRoleOptions<IEstResourceEntity>>{
+				role: ServiceRole.Node,
+				itemName: 'EstResource',
+				parent: estimateMainService
+			}
+		};
+		super(estimateMainService, dataServiceOptions);
+		this.estimateMainResourceProcessor = new EstimateMainResourceProcessService(this);
+		this.processor.addProcessor(this.estimateMainResourceProcessor);
+	}
+
+	/**
+	 * process resource
+	 * @param resource
+	 */
+	public process(resource: IEstResourceEntity) {
+		this.processor.getProcessors().forEach(proc => {
+			proc.process(resource);
+		});
+	}
+
+	public override canCreate(): boolean {
+		return this.canCreateResource();
+	}
+
+	public override canCreateChild(): boolean {
+		const selectedLineItem = this.getSelectedParent();
+		const selectedRes = this.getSelectedEntity();
+		// if resource is generated by rule, can not add child
+		if (selectedRes && selectedRes.EstRuleSourceFk) {
+			return false;
+		}
+		return ((this.canCreateResource() && !(selectedRes && selectedRes.EstResourceTypeFk !== EstimateMainResourceType.SubItem))) && !(selectedLineItem && selectedLineItem.EstRuleSourceFk);
+	}
+
+	public override canDelete(): boolean {
+		return this.canCreateResource();
+	}
+
+	/**
+	 * Creates or updates a ResourceBaseComplete entity from a given IEstResourceEntity.
+	 *
+	 * @param modified The modified IEstResourceEntity or null for a new entity.
+	 * @returns The created or updated ResourceBaseComplete entity.
+	 */
+	public override createUpdateEntity(modified: IEstResourceEntity | null): ResourceBaseComplete {
+		return new ResourceBaseComplete(modified);
+	}
+
+	public override create(): Promise<IEstResourceEntity> {
+		//TODO:<estimateMainResourceCharacteristicsService> missing
+		// $injector.get('estimateMainResourceCharacteristicsService').setDefaultColsToGrid().then(function () {
+		// 	defer.resolve(baseOnCreateItem(null, serviceContainer.data));
+		// });
+		return new Promise<IEstResourceEntity>(resolve => {
+			resolve(super.create());
+		});
+	}
+
+	/**
+	 * equal to updateDone
+	 * @param updated
+	 */
+	public override takeOverUpdated(updated: LineItemBaseComplete): void {
+		if (updated.EstResourceToSave && updated.EstResourceToSave.length) {
+			const resources = updated.EstResourceToSave.filter(e => e.EstResource).map(e => e.EstResource) as IEstResourceEntity[];
+			if (resources) {
+				//TODO: this equal to handleUpdateDone
+				this.updateEntities(resources);
+				this.estimateMainResourceImageProcessor.processItems(this.flattenResources(this.getList()));
+				//TODO: not sure why need this
+				//serviceContainer.data.itemListOriginal = angular.copy(itemListOriginal);
+			}
+		}
+		if (updated.EstResourceToDelete && updated.EstResourceToDelete.length) {
+			this.remove(updated.EstResourceToDelete);
+		}
+	}
+
+	public override takeOverUpdatedChildEntities(updated: ResourceBaseComplete): void {
+		//const b = updated.EstResource;
+	}
+
+	public override delete(entities: IEstResourceEntity[] | IEstResourceEntity): void {
+		const resourcesToDelete: IEstResourceEntity[] = [];
+		if (entities instanceof Array) {
+			resourcesToDelete.push(...entities);
+		} else {
+			resourcesToDelete.push(entities);
+		}
+		this.deleteEntities(resourcesToDelete);
+	}
+
+	public override registerByMethod(): boolean {
+		return true;
+	}
+
+	public override registerNodeModificationsToParentUpdate(parentUpdate: LineItemBaseComplete, modified: ResourceBaseComplete[], deleted: IEstResourceEntity[]): void {
+		if (modified && modified.length) {
+			parentUpdate.EstResourceToSave = modified;
+		}
+		if (deleted && deleted.length) {
+			parentUpdate.EstResourceToDelete = deleted;
+		}
+	}
+
+	/**
+	 * calculate lineItem and resource, and mark their as modified
+	 * @param resources
+	 * @param isRef
+	 */
+	public calcLineItemAndResources(resources: IEstResourceEntity[], isRef: boolean = false) {
+		const selectedLineItem = this.getSelectedParent();
+		if (selectedLineItem) {
+			this.estimateMainCommonService.calculateLineItemAndResources(selectedLineItem, resources);
+			this.estimateMainService.setModified(selectedLineItem);
+			resources.forEach(res => {
+				if (!isRef) {
+					this.markResourceAsModified(res);
+				}
+			});
+		}
+
+		//TODO: not sure whether this is fixed in new angular
+		// fix defect 90413, Activating grouping function, any modifications would not showing on the Line item immediately
+		// let estimateMainGridId = '681223e37d524ce0b9bfa2294e18d650';
+		// let grid = platformGridAPI.grids.element('id', estimateMainGridId);
+		//
+		// let gridDatas = grid.dataView.getRows();
+		//
+		// let gridDataToChange = isRef ? gridDatas :_.find(gridDatas, {__group : true});
+		// if(gridDataToChange){
+		// 	let changed = false;
+		// 	for(let index = 0; index < gridDatas.length; index++){
+		// 		let gridData=gridDatas[index];
+		// 		if( selectedLineItem) {
+		// 			if(gridData.Id === selectedLineItem.Id ) {
+		// 				changed = true;
+		// 			}
+		// 		}
+		// 	}
+		//
+		// 	setTimeout(function () {
+		// 		if(changed){
+		// 			estimateMainService.gridRefresh();
+		// 		}
+		//
+		// 	}, 0);
+		// }
+	}
+
+	/**
+	 * set list to resource
+	 * @param data
+	 * @param isReadOnly
+	 */
+	public override setList(data: IEstResourceEntity[], isReadOnly: boolean = false) {
+		data = data ? data : [];
+		//TODO: <cloudCommonGridService> missing
+		//cloudCommonGridService.sortTree(data, 'Sorting', 'EstResources');
+		const firstLevelResources = data.filter(e => e.EstResourceFk === null);
+		super.setList(firstLevelResources);
+		this.estimateMainResourceImageProcessor.processItems(data);
+		const flatResList = this.flatList();
+		this.estimateMainResourceProcessor.processItems(flatResList);
+		if (isReadOnly) {
+			this.estimateMainResourceProcessor.readOnly(flatResList, !!isReadOnly);
+		} else {
+			const resourcesGeneratedByRule = flatResList.filter(item => {
+				return item.EstRuleSourceFk;
+			});
+			if(resourcesGeneratedByRule && resourcesGeneratedByRule.length){
+				this.estimateMainResourceProcessor.readOnly(resourcesGeneratedByRule, true);
+			}
+		}
+	}
+
+	/**
+	 * set list to resource and fire the listLoaded event
+	 * @param resList
+	 * @param isReadOnly
+	 */
+	public updateList(resList: IEstResourceEntity[], isReadOnly: boolean = false) {
+		this.setList(resList, isReadOnly);
+		//TODO: listLoaded event
+		//serviceContainer.data.listLoaded.fire();
+	}
+
+	/**
+	 * add assembly resource to entity list
+	 * @param lineItem
+	 * @param assemblyResources
+	 * @param parentResource
+	 */
+	public resolveResourceFromAssembly(lineItem: IEstLineItemEntity, assemblyResources: IEstResourceEntity[], parentResource: IEstResourceEntity) {
+		const materialIdList: number[] = [];
+		assemblyResources.forEach((item) => {
+			item.IsDisabled = parentResource ? parentResource.IsDisabled : item.IsDisabled;
+			item.IsDisabledPrc = parentResource ? parentResource.IsDisabledPrc : item.IsDisabledPrc;
+			if (item.EstResourceTypeFk === EstimateMainResourceType.Material && item.MdcMaterialFk) {
+				materialIdList.push(item.MdcMaterialFk);
+			}
+			if (parentResource) {
+				parentResource.HasChildren = true;
+				this.appendTo(item, parentResource);
+				item.EstResourceFk = parentResource.Id;
+			} else {
+				this.append(item);
+			}
+			this.handleAssemblyResource(lineItem, item);
+			this.markResourceAsModified(item);
+		});
+
+		//TODO:<estimateMainPrjMaterialLookupService> missing
+		// estimateMainPrjMaterialLookupService.loadPrjMaterial();
+		// estimateMainPrjMaterialLookupService.getBaseMaterials(materialIdList).then(function (data) {
+		// 	let mdcCC = basicsLookupdataLookupDescriptorService.getData('estcostcodeslist');
+		// 	angular.forEach(data, function (item) {
+		// 		estimateMainPrjMaterialLookupService.addPrjMaterial(item);
+		// 		if (item.MdcCostCodeFk !== null) {
+		// 			let mdcCostCode = _.find(mdcCC, {Id: item.MdcCostCodeFk});
+		// 			if (mdcCostCode) {
+		// 				estimateMainCommonService.addPrjCostCodes(mdcCostCode);
+		// 			}
+		// 		}
+		// 	});
+		// });
+		this.process(parentResource);
+
+		//TODO: waiting for listLoaded
+		//serviceContainer.data.listLoaded.fire();
+	}
+
+	/**
+	 * Copy function is used in drag drop service
+	 * Insert item at the same level where dropped
+	 * @param lineItem
+	 * @param assemblyIds
+	 * @param isDrag
+	 */
+	public copyAssembliesToEstResource(lineItem: IEstLineItemEntity, assemblyIds: number[], isDrag: boolean) {
+		const selectedResource = this.getSelectedEntity();
+		if (!selectedResource) {
+			return;
+		}
+		const postData = {
+			MainItemId: lineItem.Id,
+			ItemIds: assemblyIds,
+			ResourceType: 4, // Assembly
+			JobId: this.getJobFkWhenCopyAssembly(),
+			IsDrag: isDrag
+		};
+		this.getAssemblyResourcesRequest(postData).then((data) => {
+			const resAssemblyCharacteristics = data.resourcesAssembliesCharacteristics || [];
+
+			// union assembly-resource-characteristics and estimate-resource-characteristics
+			let resCharacteristics = data.resourcesCharacteristics || [];
+			_.forEach(resAssemblyCharacteristics, function(resAssemblyCharacteristic) {
+				_.remove(resCharacteristics, { CharacteristicFk: resAssemblyCharacteristic.CharacteristicFk });
+			});
+			resCharacteristics = resCharacteristics.concat(resAssemblyCharacteristics);
+
+			// Follow this order to process tree resources
+			const resourceTrees = data.resources || []; // Array of tree resources
+			this.buildNodeInfo(selectedResource, resourceTrees);
+			this.setAssemblyResourcesTreeToContainerData(resourceTrees, null, selectedResource);
+
+			// Lastly calculate totals and validate sub items
+			this.calculateResolvedAssembliesAndValidateSubItemsCode(lineItem);
+
+			// Assign characteristics
+			// Characteristic require a resource to be selected, for Copy function we select the first resource
+			//TODO: serviceContainer.data.selectedItem = _.first(resourceTrees);
+			this.setResourceCharacteristics(resCharacteristics);
+			//TODO: service.deselect();
+
+			// Process resources along with res-characteristics dynamic columns
+			this.processResolvedItems(resourceTrees);
+
+			//TODO: <estimateMainResourceDynamicUserDefinedColumnService> missing
+			// let estimateMainResourceDynamicUserDefinedColumnService = $injector.get('estimateMainResourceDynamicUserDefinedColumnService');
+			// estimateMainResourceDynamicUserDefinedColumnService.processNewResourceTrees(resourceTrees, lineItem);
+
+			//TODO: service.gridRefresh();
+
+			//TODO: <estimateMainResourceProcessor> missing
+			//estimateMainResourceProcessor.setDisabledChildrenReadOnly(serviceContainer.service.getList());
+
+			this.estimateMainService.setModified(lineItem);
+			//TODO: estimateMainService.gridRefresh();
+		});
+	}
+
+	public moveAssembliesToEstResource(lineItem: IEstLineItemEntity, assemblyIds: number[], addToSubItem: boolean, isDrag: boolean) {
+		const selectedResource = this.getSelectedEntity();
+		if (!selectedResource) {
+			return;
+		}
+		const subItemToAssign = addToSubItem ? selectedResource : null;
+
+		const postData = {
+			MainItemId: lineItem.Id,
+			ItemIds: assemblyIds,
+			ResourceType: 4, // Assembly
+			JobId: this.getLgmJobId(this.getSelectedEntity()),
+			IsDrag: isDrag
+		};
+		this.getAssemblyResourcesRequest(postData).then((data) => {
+			const resourceTrees = data.resources || []; // Array of tree resources
+
+			const resAssemblyCharacteristics = data.resourcesAssembliesCharacteristics || [];
+
+			// union assembly-resource-characteristics and estimate-resource-characteristics
+			let resCharacteristics = data.resourcesCharacteristics || [];
+			_.forEach(resAssemblyCharacteristics, function(resAssemblyCharacteristic) {
+				_.remove(resCharacteristics, { CharacteristicFk: resAssemblyCharacteristic.CharacteristicFk });
+			});
+			resCharacteristics = resCharacteristics.concat(resAssemblyCharacteristics);
+
+			// Follow this order to process tree resources
+			this.buildNodeInfo(selectedResource, resourceTrees, subItemToAssign);
+			this.setAssemblyResourcesTreeToContainerData(resourceTrees, subItemToAssign);
+
+			// Attach user defined price value to resource
+			//TODO: UserDefinedcolsOfResource is not defined now
+			// if(_.isArray(data.UserDefinedcolsOfResource)){
+			// 	setUserDefinedColToResource(lineItem, resourceTrees, data.UserDefinedcolsOfResource);
+			// }
+
+			// Lastly calculate totals and validate sub items
+			this.calculateResolvedAssembliesAndValidateSubItemsCode(lineItem);
+
+			// Assign characteristics
+			// Characteristic require a resource to be selected, this is internal selection and does not trigger any other event
+			//TODO:
+			// if (!selectedResource) {
+			// 	serviceContainer.data.selectedItem = _.first(resourceTrees);
+			// }
+			this.setResourceCharacteristics(resCharacteristics);
+			//service.deselect();
+
+			// Process resources along with res-characteristics dynamic columns
+			this.processResolvedItems(resourceTrees);
+
+			//service.gridRefresh();
+			this.estimateMainService.setModified(lineItem);
+			//estimateMainService.gridRefresh();
+		});
+	}
+
+	// Resolve assembly function
+	public getAssemblyResourcesRequest(customPostData: object) {
+		const postData = {
+			HeaderFk: this.estimateMainContextService.getSelectedEstHeaderId(),
+			// AssemblyIds: assemblyIds, //Set customPostData to send assemblyIds
+			SectionId: 33,
+			ProjectId: this.estimateMainContextService.getSelectedProjectId()
+		};
+		const requestData = { ...postData, ...customPostData };
+		return new Promise<IEstResourceCharacteristicEntity>(resolve => {
+			this.http.post<IEstResourceCharacteristicEntity>(this.configurationService.webApiBaseUrl + 'estimate/main/resource/getresourcestolineitem', requestData).subscribe(data => {
+				const resources = data.resources;
+				if (resources && resources.length) {
+					this.processResolvedItems(resources);
+					const selectedItem = this.getSelectedEntity();
+					if (selectedItem) {
+						const filteredList = _.filter(this.getList(), { 'EstResourceFk': selectedItem.EstResourceFk });
+						if (filteredList && filteredList.length) {
+							const maxItem = _.maxBy(filteredList, 'Sorting');
+							if (maxItem) {
+								const newSortingNumber = selectedItem.Sorting === maxItem.Sorting ? selectedItem.Sorting : maxItem.Sorting + 1;
+								this.estimateMainGenerateSortingService.assignSorting(resources, newSortingNumber.toString());
+							}
+						}
+					}
+				}
+				resolve(data);
+			});
+		});
+	}
+
+	public processResolvedItems(resources: IEstResourceEntity[]) {
+		//TODO: <platformDataServiceDataProcessorExtension> missing
+		// let platformDataServiceDataProcessorExtension = $injector.get('platformDataServiceDataProcessorExtension');
+		// _.forEach(resources, function (item) {
+		// 	platformDataServiceDataProcessorExtension.doProcessItem(item, serviceContainer.data);
+		// 	if (item.HasChildren) {
+		// 		processResolvedItems(item.EstResources);
+		// 	}
+		//
+		// 	// set the search materials to resource
+		// 	if (item.EstResourceTypeFk === 2 && materialLookupSelectedItems) {
+		// 		let material = _.find(materialLookupSelectedItems, {'Id': item.MdcMaterialFk});
+		// 		if (material) {
+		// 			this.estimateMainCommonService.setSelectedCodeItem(null, item, true, material);
+		// 		}
+		// 	}
+		// });
+		//
+		// materialLookupSelectedItems = null;
+	}
+
+	/**
+	 * get LgmJobId of resource, go through its parent and lineItem
+	 * @param resource
+	 */
+	public getLgmJobId(resource: IEstResourceEntity | null): number | null {
+		if (!resource) {
+			return null;
+		}
+		if (resource.LgmJobFk) {
+			return resource.LgmJobFk;
+		}
+		let parent = this.parentOf(resource);
+		while (parent) {
+			if (parent.LgmJobFk) {
+				return parent.LgmJobFk;
+			}
+			parent = this.parentOf(parent);
+		}
+		const lineItems = this.estimateMainService.getList();
+		let lineItem: IEstLineItemEntity | null = null;
+		if (lineItems && lineItems.length > 0) {
+			lineItem = lineItems.find(e => e.Id === resource.EstLineItemFk && e.EstHeaderFk === resource.EstHeaderFk) || null;
+		}
+		return this.estimateMainService.getLineItemJobId(lineItem);
+	}
+
+	protected canCreateResource(): boolean {
+		const selectedLineItem = this.getSelectedParent();
+
+		//TODO: CombinedLineItem should move to indepence service
+		// let selectedCombinedLineItem = selectedLineItem;
+		//
+		// if (selectedCombinedLineItem && selectedCombinedLineItem.CombinedLineItemsSimple !== null) {
+		// 	selectedLineItem = selectedCombinedLineItem.CombinedLineItemsSimple[0];
+		// }
+
+		// LineItem Reference
+		if (selectedLineItem && selectedLineItem.EstLineItemFk) {
+			return false;
+		}
+
+		// COMPOUND ASSEMBLY TYPES
+		const selectedRes = this.getSelectedEntity();
+		if (selectedRes && selectedRes.EstResourceTypeFk === EstimateMainResourceType.Assembly && selectedRes.EstAssemblyTypeFk) {
+			if (selectedRes.RuleCode) {
+				return false;
+			}
+			return !this.isParentCompositeResource(selectedRes);
+		}
+		if (selectedRes && this.isParentCompositeResource(selectedRes)) {
+			return false;
+		}
+		if (selectedRes && selectedRes.EstRuleSourceFk && selectedRes.EstResourceFk) {
+			return false;
+		}
+
+		if (selectedRes !== null) {
+			return this.isParentPlantTypeResource(selectedRes);
+		}
+
+		return !(selectedLineItem && selectedLineItem.EstLineItemFk) && !(selectedLineItem && selectedLineItem.EstRuleSourceFk);
+	}
+
+	/**
+	 * Handles the loaded data after a successful load operation.
+	 * Extracts the resource entities from the loaded object and returns them as an array.
+	 *
+	 * @param loaded The loaded object containing the resource data.
+	 * @returns An array of IEstResourceEntity extracted from the loaded object.
+	 */
+	protected override onLoadSucceeded(loaded: object): IEstResourceEntity[] {
+		if (loaded) {
+			return this.incorporateDataRead(loaded as IEstResourceResponseEntity);
+			//return _.get(loaded, 'dtos', []);
+		}
+		return [];
+	}
+
+	/**
+	 * Provides the payload for loading data.
+	 * This payload includes information about the selected parent entity.
+	 *
+	 * @returns An object containing the payload for data loading.
+	 * @throws An error if there is no selected parent entity.
+	 */
+	protected override provideLoadPayload(): object {
+		const parentSelection = this.getSelectedParent();
+		if (parentSelection) {
+			const selectedProject = this.estimateMainContextService.getSelectedProjectInfo();
+			return {
+				estLineItemFk: parentSelection.Id,
+				estHeaderFk: parentSelection.EstHeaderFk,
+				currentLineItem: parentSelection,
+				projectId: this.estimateMainContextService.getProjectId(),
+				projectCurrencyFk: selectedProject ? selectedProject.ProjectCurrency : null
+			};
+		} else {
+			throw new Error('There should be a selected parent catalog to load the scope detail price condition data');
+		}
+	}
+
+	protected override provideCreatePayload(): object {
+		const selectedItem = this.getSelectedParent();
+		const selectedResourceItem = this.getSelectedEntity();
+		const creationData = {} as IEstimateCreationData;
+		creationData.projectId = this.estimateMainContextService.getSelectedProjectId();
+		if (selectedResourceItem && selectedResourceItem.Id > 0) {
+			if(selectedResourceItem.EstResourceTypeFk === EstimateMainResourceType.SubItem){
+				creationData.resourceItemId = selectedResourceItem.Id;
+			}
+			creationData.estHeaderFk = selectedResourceItem.EstHeaderFk;
+			creationData.estLineItemFk = selectedResourceItem.EstLineItemFk;
+			creationData.Currency1Fk = selectedResourceItem.Currency1Fk;
+			creationData.Currency2Fk = selectedResourceItem.Currency2Fk;
+			if (selectedResourceItem.EstResourceTypeFk === EstimateMainResourceType.SubItem && creationData.parent) {
+				creationData.IsDisabled = creationData.parent.IsDisabled;
+			}
+		} else if (selectedItem && selectedItem.Id > 0) {
+			creationData.estHeaderFk = selectedItem.EstHeaderFk;
+			creationData.estLineItemFk = selectedItem.Id;
+			creationData.Currency1Fk = selectedItem.Currency1Fk;
+			creationData.Currency2Fk = selectedItem.Currency2Fk;
+		}
+		if (selectedResourceItem) {
+			creationData.sortNo = this.estimateMainGenerateSortingService.generateSorting(selectedResourceItem, this.getList(), creationData);
+		}
+		return creationData;
+	}
+
+	protected override onCreateSucceeded?(created: object): IEstResourceEntity {
+		const newData = created as IEstResourceEntity;
+		const lineItem = this.getSelectedParent();
+		if (lineItem && lineItem.Id) {
+			this.setIndirectCost([newData], lineItem.IsGc);
+			newData.PrcStructureFk = lineItem.PrcStructureFk;
+			newData.parentJobFk = lineItem.parentJobFk;
+		}
+		this.setResourceCurrency(newData);
+		this.calculateCurrencies(newData);
+		this.setChildResourceDisabled(newData);
+
+		this.estimateMainCommonService.resetLookupItem();
+		// we add default characteristics with default values to the new item
+		//TODO: waiting for <estimateMainCommonService>/<appendCharactiricColumnData>
+		//this.estimateMainCommonService.appendCharactiricColumnData(getCharDefaults(), service, [newData], true);
+
+		// add empty user defined column value to new item.
+		//TODO: <estimateMainResourceDynamicUserDefinedColumnService> missing
+		// let estimateMainResourceDynamicUserDefinedColumnService = $injector.get('estimateMainResourceDynamicUserDefinedColumnService');
+		// estimateMainResourceDynamicUserDefinedColumnService.attachEmptyDataToColumn(newData);
+
+		return newData;
+	}
+
+	/**
+	 * delete resources
+	 * @param entities
+	 * @param skipDialog
+	 * @protected
+	 */
+	protected deleteEntities(entities: IEstResourceEntity[], skipDialog: boolean = false) {
+		if (!skipDialog) {
+			const parameterData: { LineItemFk: number, ResourceFk: number }[] = [];
+			this.getResourceDeleteEntities(entities, parameterData);
+			this.http.post<boolean>(this.configurationService.webApiBaseUrl + 'procurement/common/prcitemassignment/ValidPackageByEstimateLineItems', parameterData).subscribe(response => {
+				if (response) {
+					this.messageBoxService.showMsgBox({
+						headerText: this.translate.instant('platform.dialogs.deleteSelection.headerText'),
+						bodyText: this.translate.instant('estimate.main.deleteResourceDialogBody'),
+						iconClass: 'ico-warning',
+						id: this.gridId,
+						dontShowAgain: true
+					});
+				} else {
+					this.messageBoxService.deleteSelectionDialog({
+						dontShowAgain: true,
+						id: this.gridId
+					})?.then((dialogResult: IDialogResult) => {
+						if (dialogResult.closingButtonId === 'yes') {
+							this.handleAAColumnReadOnly(entities);
+							super.delete(entities);
+							this.onDeleteDone(entities);
+						}
+					});
+				}
+			});
+		} else {
+			super.delete(entities);
+			this.onDeleteDone(entities);
+		}
+	}
+
+	protected getResourceDeleteEntities(entities: IEstResourceEntity[], parameterData: {
+		LineItemFk: number,
+		ResourceFk: number
+	}[]) {
+		entities.forEach((item) => {
+			parameterData.push({
+				LineItemFk: item.EstLineItemFk,
+				ResourceFk: item.Id
+			});
+			if (item.HasChildren && item.EstResources) {
+				this.getResourceDeleteEntities(item.EstResources, parameterData);
+			}
+		});
+	}
+
+	protected handleAAColumnReadOnly(entities: IEstResourceEntity[]) {
+		const estLineItem = this.getSelectedParent();
+		if (estLineItem && estLineItem.AdvancedAllowance !== 0) {
+			const resources = this.getList();
+			const AAResources = _.filter(resources, (resource) => {
+				return this.isAdvancedAllowanceCostCode(resource);
+			});
+			const DeleteAAResources = _.filter(entities, (resource) => {
+				return this.isAdvancedAllowanceCostCode(resource);
+			});
+			if (AAResources.length && DeleteAAResources.length && AAResources.length === DeleteAAResources.length) {
+				estLineItem.AdvancedAllUnit = 0;
+				estLineItem.AdvancedAllUnitItem = 0;
+				estLineItem.AdvancedAll = 0;
+				if (estLineItem.IsNoMarkup || estLineItem.IsOptional || estLineItem.IsGc) {
+					this.estimateMainService.setAAReadonly(true, estLineItem);
+				} else {
+					this.estimateMainService.setAAReadonly(false, estLineItem);
+				}
+			}
+		}
+	}
+
+	protected isAdvancedAllowanceCostCode(resource: IEstResourceEntity) {
+		const advancedAllowanceCostCodeFk = this.estimateMainContextService.getAdvancedAllowanceCc();
+		if (!advancedAllowanceCostCodeFk) {
+			return false;
+		}
+		return (resource.EstResourceTypeFk === EstimateMainResourceType.Assembly || resource.EstResourceTypeFk === EstimateMainResourceType.CostCode) && resource.MdcCostCodeFk === advancedAllowanceCostCodeFk;
+	}
+
+	protected setChildResourceDisabled(resItem: IEstResourceEntity) {
+		this.estimateMainResourceProcessor.setChildResourceDisabled(resItem);
+	}
+
+	protected setIndirectCost(resources: IEstResourceEntity[], isIndirectCost: boolean = false) {
+		this.estimateMainResourceProcessor.setIndirectCost(resources, isIndirectCost);
+	}
+
+	/**
+	 * calculate the currency of resource
+	 * @param res
+	 * @protected
+	 */
+	protected calculateCurrencies(res: IEstResourceEntity) {
+		const estHeader = this.estimateMainContextService.getSelectedEstHeaderItem();
+		if (estHeader) {
+			res.CostExchangeRate1 = (estHeader.ExchangeRate1 ?? 1) * res.CostTotal;
+			res.CostExchangeRate2 = (estHeader.ExchangeRate2 ?? 1) * res.CostTotal;
+			res.ForeignBudget1 = (estHeader.ExchangeRate1 ?? 1) * res.Budget;
+			res.ForeignBudget2 = (estHeader.ExchangeRate2 ?? 1) * res.Budget;
+		}
+	}
+
+	private incorporateDataRead(readData: IEstResourceResponseEntity): IEstResourceEntity[] {
+		//isLoading = false;
+		// load user defined column value
+		//TODO: <estimateMainResourceDynamicUserDefinedColumnService> is missing
+		// let estimateMainResourceDynamicUserDefinedColumnService = $injector.get('estimateMainResourceDynamicUserDefinedColumnService');
+		// if(readData && readData.dynamicColumns && _.isArray(readData.dynamicColumns.ResoruceUDPs) && readData.dynamicColumns.ResoruceUDPs.length > 0){
+		// 	estimateMainResourceDynamicUserDefinedColumnService.attachUpdatedValueToColumn(readData.dtos, readData.dynamicColumns.ResoruceUDPs, false);
+		// }
+
+		if (readData && readData.LineItem) {
+			// readonly the resources of reference lineItem
+			if (_.isNumber(readData.LineItem.EstLineItemFk)) {
+				this.setResourcesReadonly(this.flattenResources(readData.dtos));
+			}
+		}
+		this.estimateMainContextService.isUpdateDataByParameter = false;
+		// we add default characteristics and existing characteristics to the result list and update the grid columns
+		//TODO: <estimateMainResourceCharacteristicsService> is missing
+		//$injector.get('estimateMainResourceCharacteristicsService').setDynamicColumnsLayout(readData);
+		this.setResourceCurrencies(readData.dtos);
+		this.setDataOriginal(readData);
+		//TODO: this it use for fill the lookup cache, may not need anymore
+		//this.setLookupData(readData.dtos);
+		//TODO: may not need
+		//service.sortTree(readData.dtos);
+
+		_.forEach(readData.dtos, (item) => {
+			item.PackageAssignmentsBak = item.PackageAssignments;
+			this.estimateMainCommonService.translateCommentCol(item);
+			if (item.EstResources && item.EstResources.length > 0) {
+				_.forEach(item.EstResources, (res) => {
+					this.estimateMainCommonService.translateCommentCol(res);
+				});
+			}
+		});
+
+		//TODO: <basicsLookupdataLookupDescriptorService> missing
+		//basicsLookupdataLookupDescriptorService.updateData('estresource4itemassignment', readData.dtos);
+		//TODO: <estimateMainCostUnitManageService> missing
+		//$injector.get('estimateMainCostUnitManageService').setEnableEstResourceCostUnitAdvanceEditing(readData.EnableEstResourceCostUnitAdvanceEditing);
+
+		// let lineItem = this.getSelectedParent();
+		// this.setResourcesBusinessPartnerName(lineItem, readData.dtos).then(() => {
+		// 	let selectResIds = lastSelectedResource ?  _.map(lastSelectedResource, 'Id') : null;
+		// 	let handleResult = serviceContainer.data.handleReadSucceeded(readData.dtos, data);
+		//
+		// 	let platformGridAPI = $injector.get('platformGridAPI');
+		// 	let gridId = service.getGridId();
+		// 	if (gridId && platformGridAPI.grids.exist(gridId)) {
+		// 		let grid = platformGridAPI.grids.element('id', gridId);
+		// 		if (grid && grid.dataView) {
+		// 			if (readData.AllowDefaultExpansionOfEstimateResources) {
+		// 				grid.dataView.expandAllNodes(gridId);
+		// 			} else if (!readData.AllowDefaultExpansionOfEstimateResources) {
+		// 				grid.dataView.collapseAllNodes(gridId);
+		// 			}
+		// 		}
+		// 	}
+		//
+		// 	if(!!selectResIds && selectResIds.length > 0){
+		// 		service.setSelectedEntities(_.filter(readData.dtos, function (item){ return selectResIds.indexOf(item.Id) >= 0; }));
+		// 		lastSelectedResource = null;
+		// 	}
+		//
+		// 	estimateMainResourceDynamicUserDefinedColumnService.updateColumnsReadOnlyStats(data.getList());
+		//
+		// 	estimateMainResourceProcessor.setDisabledChildrenReadOnly(service.getList());
+		//
+		// 	let flatResList = [];
+		// 	cloudCommonGridService.flatten(readData.dtos, flatResList, 'EstResources');
+		// 	this.estimateMainCommonService.checkDetailFormat(flatResList, service);
+		// });
+
+		return readData.dtos;
+	}
+
+	private setResourcesBusinessPartnerName(lineItem: IEstLineItemEntity, resources: IEstResourceEntity[]): Promise<void> {
+		return Promise.resolve();
+	}
+
+	private flattenResources(resourceTree: IEstResourceEntity[]) {
+		return CollectionHelper.Flatten(resourceTree, this.childrenOf);
+	}
+
+	private setResourcesReadonly(resources: IEstResourceEntity[]) {
+		this.estimateMainResourceProcessor.readOnly(resources, true);
+	}
+
+	private setDataOriginal(readData: IEstResourceResponseEntity) {
+		const itemListOriginal = this.flattenResources(readData.dtos);
+		this.estimateMainResourceImageProcessor.processItems(itemListOriginal);
+		_.forEach(itemListOriginal, function(item) {
+			item.parentJobFk = readData.parentJobFk;
+		});
+		const currentLineItem = this.getSelectedParent();
+		if (currentLineItem) {
+			currentLineItem.parentJobFk = readData.parentJobFk;
+		}
+		//TODO: not sure what it want to do
+		//serviceContainer.data.itemListOriginal = angular.copy(itemListOriginal);
+	}
+
+	private onDeleteDone(entities: IEstResourceEntity[]) {
+		// Remove dynamic columns //This should be places here or it will throw error to delete resource columns
+		//TODO: <estimateMainResourceCharacteristicsService> is missing
+		//$injector.get('estimateMainResourceCharacteristicsService').deleteDynColumns(deleteParams.entities);
+
+		const selectedLineItem = this.getSelectedParent();
+		if (selectedLineItem) {
+			if (!this.deleteFromDrag) {  // here no need calculate lineItem if delete the resource from  assign assembly ( drag/drop assembly ,change assembly , change assembly by bulk editor)
+				this.estimateMainCommonService.calculateExtendColumnValuesOfLineItem(selectedLineItem, this.getList());
+				this.calcLineItemAndResources(this.getList());
+			}
+			this.estimateMainService.setModified(selectedLineItem);
+
+			//TODO: <estimateMainResourceValidationService> is missing
+			//$injector.get('estimateMainResourceValidationService').validateSubItemsUniqueCodeFromAssembly(service.getTree());
+
+			// remove the user defined column value of deleted resource
+			//let estimateMainResourceDynamicUserDefinedColumnService = $injector.get('estimateMainResourceDynamicUserDefinedColumnService');
+			//estimateMainResourceDynamicUserDefinedColumnService.handleEntitiesDeleted(deleteParams.entities, selectedLineItem, service.getTree());
+
+			//service.gridRefresh(); // Refresh UI to clear validation marks
+		}
+	}
+
+	private handleAssemblyResource(lineItem: IEstLineItemEntity, resItem: IEstResourceEntity) {
+		// assign to selected line item
+		if (lineItem) {
+			resItem.EstLineItemFk = lineItem.Id;
+			resItem.EstHeaderFk = lineItem.EstHeaderFk;
+		}
+
+		if (resItem.EstResourceTypeFk === EstimateMainResourceType.CostCode) {
+			//TODO: <basicsLookupdataLookupDescriptorService> missing
+			// let mdcCC = basicsLookupdataLookupDescriptorService.getData('estcostcodeslist');
+			// let item = _.find(mdcCC, {Id: resItem.MdcCostCodeFk});
+			// if (item) {
+			// 	this.estimateMainCommonService.addPrjCostCodes(item);
+			// }
+		}
+
+		this.process(resItem);
+		const children = this.childrenOf(resItem);
+		if (children && children.length) {
+			children.forEach(child => {
+				this.handleAssemblyResource(lineItem, child);
+			});
+		}
+	}
+
+	private calculateResolvedAssembliesAndValidateSubItemsCode(lineItem: IEstLineItemEntity, selectedResource: IEstResourceEntity | null = null) {
+		// calculate totals
+		const resourceList = this.getList();
+		// This can ben null. (e.g. Create new line item, or remove all resources previously)
+		if (selectedResource) {
+			if (selectedResource.IsDisabled || selectedResource.IsDisabledPrc) {
+				this.estimateMainCommonService.calculateResource(selectedResource, lineItem, resourceList);
+			}
+		}
+		this.estimateMainCommonService.calculateLineItemAndResources(lineItem, resourceList);
+		// Reset cost unit for sub items and omit re-calculated cost unit value
+		if (selectedResource) {
+			selectedResource.CostUnitOriginal = selectedResource.CostUnit;
+		}
+	}
+
+	/**
+	 * Set Resource Characteristics Data To resource characteristic container and assign to dynamic columns in resource container
+	 * @param resCharacteristics
+	 * @private
+	 */
+	private setResourceCharacteristics(resCharacteristics: ICharacteristicDataEntity[]) {
+		//TODO: <estimateMainResourceCharacteristicsService> missing
+		// let resObjectGroups = _.groupBy(resCharacteristics, 'ObjectFk');
+		// let estimateMainResourceCharacteristicsService = $injector.get('estimateMainResourceCharacteristicsService');
+		// _.forEach(resObjectGroups, function (chars, entityId) {
+		// 	let entity = service.getItemById(parseInt(entityId));
+		// 	if(oldNewResourceMapping[parseInt(entityId)] && !entity){
+		// 		entity = service.getItemById(parseInt(oldNewResourceMapping[parseInt(entityId)]));
+		// 		_.forEach(chars, function(charEntity){
+		// 			charEntity.ObjectFk = parseInt(oldNewResourceMapping[parseInt(entityId)]);
+		// 		});
+		// 	}
+		// 	estimateMainResourceCharacteristicsService.assignCharsToEntity(chars, entity);
+		// });
+	}
+
+	// private checkChildAssemblyCatType(assemblyCatItem: IEstAssemblyCatEntity, entity: IEstResourceEntity, childAssemblyTypes: boolean[]){
+	// 	if(assemblyCatItem.AssemblyCatChildren){
+	// 		assemblyCatItem.AssemblyCatChildren.forEach((item) => {
+	// 			let isTheSameAssemblyType = item.EstAssemblyTypeFk === entity.EstAssemblyTypeFk;
+	// 			if(isTheSameAssemblyType){
+	// 				childAssemblyTypes.push(isTheSameAssemblyType);
+	// 			}
+	// 			this.checkChildAssemblyCatType(item,entity,childAssemblyTypes);
+	// 		});
+	// 	}
+	// 	return _.size(childAssemblyTypes);
+	// }
+
+	// (drag + Ctrl) related assemblies to estimate resource
+	private getJobFkWhenCopyAssembly() {
+		const resourceSelected = this.getSelectedEntity();
+		const parentOfResourceSelected = resourceSelected && resourceSelected.EstResourceFk ? this.parentOf(resourceSelected) : null;
+		return this.getLgmJobId(parentOfResourceSelected);
+	}
+}

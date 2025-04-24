@@ -1,0 +1,32 @@
+
+<header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+<section class="modal-body">
+    <div data-platform-alert data-error="error" class="fullwidth"></div>
+    <div data-platform-form-container data-form-container-options="containerOptions" class="margin-bottom-ld"></div>
+    <div ng-show="hasChangeOrder()" class="alert alert-info">
+        {{'procurement.pricecomparison.wizard.create.contract.note' | translate}}
+    </div>
+	<div style="margin-top: 10px;">
+		<label style="margin-left: 10px;"><input data-ng-model="modalOptions.isFilterEvaluated" name="price" data-ng-change="priceRadioChg(1)" ng-value="1" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.IsFilterEvaluated' | translate}}</label>
+		<label style="margin-left: 10px;"><input data-ng-model="modalOptions.isFilterEvaluated" name="price" data-ng-change="priceRadioChg(2)" ng-value="2" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItems' | translate}}</label>
+		<label style="margin-left: 10px;"><input data-ng-model="modalOptions.isFilterEvaluated" name="price" data-ng-change="priceRadioChg(3)" ng-value="3" style="vertical-align: bottom;margin-right: 5px;" type="radio"/>{{'procurement.common.wizard.isEvaluatedItemsPrice' | translate}}</label>
+	</div>
+	<div style="margin:8px 0 8px 0;" ng-if="hasContractItem">{{'procurement.common.wizard.IsContractNote' | translate}}</div>
+</section>
+<footer class="modal-footer">
+    <div class="custom-group">
+        <span>
+            <label>{{htmlTranslate.reqTotal}} (</label>
+            <label data-ng-bind="reqTotal.count"></label>
+            <label> {{htmlTranslate.items}}) = </label>
+            <label data-ng-bind="reqTotal.total"></label>
+        </span>
+    </div>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="okBtnStatus">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>
+<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>

@@ -1,0 +1,13 @@
+
+<header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+<section class="modal-body">
+    <div data-platform-form-container data-form-container-options="containerOptions"></div>
+</section>
+<footer class="modal-footer" style="height: 100px">
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

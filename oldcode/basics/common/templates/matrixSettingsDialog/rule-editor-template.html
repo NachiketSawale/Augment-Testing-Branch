@@ -1,0 +1,130 @@
+<style>
+	/* Standard is 40px */
+	.rule textarea {
+		height: 28px;
+	}
+
+	.rule .domain-type-email {
+		padding: 5px 6px 2px;
+	}
+</style>
+<script type="text/ng-template" id="editorTreeTemplate.html">
+	<!--a Group -->
+	<div class="rule-group flex-box " ng-if="data.ConditiontypeFk === 1">
+
+		<div basics-common-rule-editor-condition-group-link></div>
+
+		<div class="toolbar flex-basis-auto fullwidth">
+
+			<div ng-if="hierarchy" class="flex-box flex-align-center font-bold margin-left-ld">Condition Group:</div>
+
+			<div ng-if="hierarchy" class="lookup-wrapper title">
+				<div data-domain-control
+				     data-domain="select"
+				     data-model="data.OperatorFk"
+				     data-readonly="{{!editable}}"
+				     data-options="getGroupOperatorSelectorOptions()"></div>
+			</div>
+
+			<ul class="tools flex-element flex-end" data-ng-if="editable">
+				<li>
+					<button ng-if="hierarchy" ng-click="addGroup(data)"
+					        class="control-icons ico-criteria-new2 block-image"
+					        title="{{::'basics.common.ruleEditor.addGroupToolTip'|translate}}"></button>
+				</li>
+				<li>
+					<button class="control-icons ico-criterion-new" ng-click="addRule(data)"
+					        title="{{::'basics.common.ruleEditor.addRuleToolTip'|translate}}"></button>
+				</li>
+				<li>
+					<button class="tlb-icons ico-rec-delete" ng-click="remove(data)"
+					        title="{{::'basics.common.ruleEditor.delGroupToolTip'|translate}}"></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--a Rule -->
+	<div class="rule flex-box" ng-if="data.ConditiontypeFk === 2">
+
+		<div title="{{getMissingPinningContext(data)}}" ng-if="data.valid === false && !readOnly" class="input-group-btn margin-right-md">
+			<div class="btn btn-default invalid-cell"></div>
+		</div>
+
+		<div basics-common-rule-editor-condition-link></div>
+
+		<div basics-common-field-selector-editor
+		     class="flex-element first-operand-selector"
+		     data-entity="data"
+		     data-model="createFirstOperandAccessor()"
+		     data-readonly="!editable"
+		     data-graph-provider-fn="createSchemaGraphProvider"
+		     data-color-info="getColorInfo(data)"></div>
+
+		<div data-ng-if="isFirstOperandReady(data)"
+		     class="rule-condition-operator-selector flex-element">
+			<div data-domain-control
+			     data-domain="select"
+			     data-model="data.OperatorFk"
+			     data-readonly="{{!editable}}"
+			     data-options="operatorSelectorOptions"></div>
+		</div>
+
+		<div class="columns flex-element"
+		     data-ng-repeat="operand in getOtherOperands(data) track by operand.Id"
+		     data-ng-if="isFirstOperandReady(data)">
+			<div data-basics-common-rule-operand-editor
+			     data-operand="operand"
+			     data-model="data.Operands[$index + 1]"
+			     data-entity="data"
+			     data-rule-editor-manager="ruleEditorManager"
+			     data-editable="editable"
+			     data-ng-show="isOperandVisible(data, operand)"></div>
+		</div>
+
+		<div class="input-group-btn margin-left-md" data-ng-if="editable">
+			<button class="btn btn-default control-icons ico-input-delete" ng-click="remove(data)"
+			        title="{{::'basics.common.ruleEditor.delRuleToolTip'|translate}}"></button>
+		</div>
+	</div>
+
+	<!--when group-->
+	<div class="rule-container" ng-repeat="data in data.Children"
+	     ng-class="{'subview-container': data.ConditiontypeFk === 1}" ng-include="'editorTreeTemplate.html'"></div>
+</script>
+
+<div class="rule-editor margin-none">
+	<div cloud-common-overlay data-loading="isLoading"></div>
+	<div data-ng-if="selectedEntityID === -1">Please select or create a {{entityName}}.</div>
+
+	<!-- if doesnt exist a rule/condition -->
+	<div data-ng-show="isEmpty(ruleDefinition) && hierarchy">
+		<button class="btn btn-default createMainGroup" ng-click="addMainGroup()">
+			<img data-ng-src="{{path+'cloud.style/content/images/control-icons.svg#ico-criteria-new2'}}"
+			     class="block-image"/>
+			<span>{{::platform.bulkEditor.createRules}}</span>
+		</button>
+	</div>
+
+	<div class="rule-container subview-container" ng-repeat="data in ruleDefinition">
+		<!-- the top level rule group holds the context -->
+		<div data-ng-show="!isEmpty(data.Context.SubEntities)">
+			<div basics-common-rule-context-subentities-editor>
+				<div class="form-group" style="margin:5px;">
+					<div>{{::'basics.common.fieldSelector.subentity.list' | translate}}:</div>
+					<div class="flex-box" ng-repeat="contextEntity in data.Context.SubEntities">
+						<label>
+							<button type="button" class="btn btn-colorpicker {{::getColorInfo(contextEntity)}}"></button>
+						</label>
+						<label class="flex-element" title="{{getLongDisplayName(contextEntity)}}">{{getLabel(contextEntity)}}</label>
+						<div class="input-group-btn">
+							<button class="btn btn-default border-none control-icons ico-input-delete" ng-click="removeContext(contextEntity)" title="{{::'basics.common.fieldSelector.subentity.delete'|translate}}"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- new node -->
+		<div ng-include="'editorTreeTemplate.html'"></div>
+	</div>
+</div>

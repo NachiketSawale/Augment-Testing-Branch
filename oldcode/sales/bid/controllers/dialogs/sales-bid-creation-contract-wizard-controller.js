@@ -31,7 +31,8 @@
 				Description: bidEntity.DescriptionInfo.Translated,
 				ProjectFk: bidEntity.ProjectFk,      // for later usage in mainContractFilter
 				BillToFk: null,
-				ChangeOrderFk: null
+				ChangeOrderFk: null,
+				Code: ''
 			};
 			var filterKey = 'sales-bid-rubric-category-by-order-confirmation-filter';
 			var mainContractFilterKey = 'sales-bid-create-contract-wizard-main-contract-filter';
@@ -108,6 +109,9 @@
 				if ((_.isNil($scope.entity.OrdHeaderFk) && mainContractCfg.required) ||
 					(_.isNil($scope.entity.ChangeOrderFk) && changeOrderCfg.required) ||
 					_.isNil($scope.entity.RubricCategoryFk)) {
+					return true;
+				}
+				else if(($scope.generateType === 'update') && ($scope.entity.Code === '')) {
 					return true;
 				}
 				return false;

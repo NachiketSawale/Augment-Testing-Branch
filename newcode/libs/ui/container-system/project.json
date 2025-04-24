@@ -1,0 +1,20 @@
+{
+	"name": "ui-container-system",
+	"$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/ui/container-system/src",
+	"prefix": "itwo40",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/ui/container-system"],
+			"options": {
+				"jestConfig": "libs/ui/container-system/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

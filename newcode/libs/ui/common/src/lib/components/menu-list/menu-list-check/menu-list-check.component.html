@@ -1,0 +1,4 @@
+<button type="button" [disabled]="isDisabled(menuItem)" [ngClass]="getCssClass(menuItem)" [title]="getTitle(menuItem)" [name]="menuItem.id" (click)="executeItemAction(menuItem)">
+	<svg *ngIf="menuItem.svgSprite && menuItem.svgImage" uiCommonSvgimage [attr.sprite]="menuItem.svgSprite" [svgImage]="menuItem.svgImage"></svg>
+	<span *ngIf="showTitles" [innerHTML]="getTitle(menuItem)"></span>
+</button>

@@ -1,0 +1,16 @@
+﻿{
+	"basics": {
+		"controllingcostcodes": {
+			"controllingCostCode": "Controlling Cost Code",
+			"controllingCostCodeDescription": "Controlling Cost Code Description",
+			"controllingCostCodes": "Controlling Cost Codes",
+			"controllingCostCodesDetails": "Controlling Cost Codes Details",
+			"assignToCostCodeTitle": "Assign Controlling Cost Code to Cost Code",
+			"assignToChildCostCodes": "Assign controlling cost code to child cost codes also",
+			"overwriteControllingCostCode": "Overwrite existing controlling cost code assignment (if applicable)",
+			"preserveSelection": "Always use this options in this session",
+			"confirmDeleteTitle": "Confirm Delete",
+			"confirmDeleteBody": "This will delete selected controlling cost codes, it's children and their cost code assignments. Are you sure you want to continue?"
+		}
+	}
+}

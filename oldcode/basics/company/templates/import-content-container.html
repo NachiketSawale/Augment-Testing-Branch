@@ -1,0 +1,48 @@
+<div class="wizard-wrapper wizard-dialog "
+     data-ng-controller="basicsCompanyImportContentContainerController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal"
+                data-ng-click="$parent.$close(!!selectedStep.stepDefinition.disallowCancel)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+                 class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{ title + ' - ' + selectStep.title + ' ( ' + (selectStep.number+1) + ' / ' +
+            steps.length + ' )'}}</h2>
+    </header>
+    <section class="modal-body">
+        <div ng-switch="selectStep.number" class="modal-wrapper">
+            <div ng-switch-when="0" class=" fullheight">
+                <ng-include src="'basics.company/partials/import-basic-settings.html'"></ng-include>
+            </div>
+            <div ng-switch-when="1" class=" fullheight">
+                <ng-include src="'basics.company/partials/import-content-selection.html'"></ng-include>
+            </div>
+            <div ng-switch-when="2" class=" fullheight">
+                <ng-include src="'basics.company/partials/import-content-result.html'"></ng-include>
+            </div>
+        </div>
+    </section>
+    <div class="modal-footer">
+        <button data-ng-disabled="selectStep.disallowBack" data-ng-hide="selectStep.disallowBack" type="button"
+                class="btn btn-default" data-ng-click="wizardCommands.goToPrevious()"
+                data-ng-bind="wzStrings.back()"></button>
+        <button data-ng-disabled="selectStep.disallowNext" data-ng-hide="selectStep.disallowNext" type="button"
+                class="btn btn-default" data-ng-click="wizardCommands.goToNext()"
+                data-ng-bind="wzStrings.next"></button>
+        <button data-ng-disabled="!selectStep.canFinish" data-ng-hide="!selectStep.canFinish" type="button"
+                class="btn btn-default" data-ng-click="wizardCommands.finish()"
+                data-ng-bind="wzStrings.finish"></button>
+        <button data-ng-disabled="selectStep.disallowCancel" data-ng-hide="selectStep.disallowCancel" type="button"
+                data-ng-click="$close(false)" class="btn btn-default" data-ng-bind="wzStrings.cancel"></button>
+
+        <button data-ng-disabled="!selectStep.enableAbort" data-ng-show="selectStep.showAbort" type="button"
+                data-ng-click="wizardCommands.abort()" class="btn btn-default" data-ng-bind="wzStrings.abort();"></button>
+
+        <button data-ng-disabled="!selectStep.enableRestart" data-ng-show="selectStep.showRestart" type="button"
+                data-ng-click="wizardCommands.restart()" class="btn btn-default" data-ng-bind="wzStrings.restart();"></button>
+
+        <button data-ng-disabled="selectStep.disallowClose" data-ng-hide="selectStep.disallowClose" type="button"
+                data-ng-click="$close(false)" class="btn btn-default" data-ng-bind="wzStrings.close"></button>
+    </div>
+    <div data-cloud-common-overlay data-loading="isReadying"></div>
+</div>

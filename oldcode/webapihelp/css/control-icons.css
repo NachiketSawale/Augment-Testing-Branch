@@ -1,0 +1,17 @@
+.control-icons {
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.control-icons.ico-comp-businessunit {
+	background-image: url(../images/control-icons.svg#ico-comp-businessunit); }
+.control-icons.ico-comp-businessunit-d {
+	background-image: url(../images/control-icons.svg#ico-comp-businessunit-d); }
+.control-icons.ico-comp-profitcenter {
+	background-image: url(../images/control-icons.svg#ico-comp-profitcenter); }
+.control-icons.ico-comp-profitcenter-d {
+	background-image: url(../images/control-icons.svg#ico-comp-profitcenter-d); }
+
+.control-icons.ico-comp-root {
+	background-image: url(../images/control-icons.svg#ico-comp-root); }
+.control-icons.ico-comp-root-d {
+	background-image: url(../images/control-icons.svg#ico-comp-root-d); }

@@ -1,0 +1,14 @@
+<div class="filter">
+	<div class="fullheight container-fluid">
+		<!-- TODO update it after data-platform-alert ready -->
+		<!--<div data-platform-alert data-error="error"></div>-->
+		<div class="input-group">
+			<input type="text" class="form-control" readonly="readonly" [ngModel]="importData.fileName">
+			<span class="input-group-btn">
+				<button class="btn btn-default tlb-icons ico-upload" [disabled]="isLoading" (click)="upload()"></button>
+			</span>
+		</div>
+		<!--<div data-basics-common-upload-progress-bar data-options="progressBarOptions"></div>-->
+	</div>
+</div>
+<ui-common-loading [loading]="isLoading"></ui-common-loading>

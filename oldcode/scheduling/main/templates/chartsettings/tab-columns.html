@@ -1,0 +1,33 @@
+<div class="flex-element flex-box flex-column ganttVersion subview-container">
+	<section class="modal-body">
+	    <div class="flex-element flex-box flex-basis-auto grid-layout-wrapper" >
+		    <div class="flex-element flex-box flex-column subview-container">
+	            <div class="toolbar">
+	                <h3 class="title font-bold">{{'platform.grid.availableColumns' | translate}}</h3>
+	            </div>
+	            <div class="flex-element flex-box flex-column subview-content">
+	                <platform-Grid data="availableGridData"></platform-Grid>
+	            </div>
+	        </div>
+	        <div class="middle-container vert-hori-center flex-column">
+	            <button class="btn btn-default control-icons ico-ar1-right1" data-ng-click="moveItem('right', true)" data-ng-disabled="isAvailablePartToVisibleDisabled"></button>
+	            <button class="btn btn-default control-icons ico-ar1-right2" data-ng-click="moveItem('allright')"></button>
+	            <button class="btn btn-default control-icons ico-ar1-left1" data-ng-click="moveItem('left', true)" data-ng-disabled="isVisiblePartToAvailableDisabled"></button>
+	            <button class="btn btn-default control-icons ico-ar1-left2" data-ng-click="moveItem('allleft')"></button>
+	        </div>
+	        <div class="flex-element flex-box flex-column">
+	            <div class="flex-element flex-box flex-column subview-container">
+	                <div class="toolbar">
+	                    <h3 class="title font-bold">{{'platform.grid.visibleColumns' | translate}}</h3>
+	                    <div data-platform-menu-list data-list="tools"></div>
+	                </div>
+	                <div class="flex-element flex-box flex-column subview-content">
+	                    <platform-Grid data="visibleGridData"></platform-Grid>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+		<div data-domain-control data-domain="boolean" data-model="settings.showTable"
+		     data-options="settings.showTableOpt" data-change="settings.changeShowTable()"></div>
+	</section>
+</div>

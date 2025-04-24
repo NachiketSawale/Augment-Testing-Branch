@@ -1,0 +1,91 @@
+// Variables
+$color-primary: #3789cc;
+$color-secondary: #333;
+$color-background: #f5f5f5;
+$color-border: #dcdcdc;
+$color-disabled: #e0e0e0;
+$color-hover: #cde3f3;
+$height-standard: 30px;
+$padding-standard: 8px;
+$margin-standard: 8px;
+$line-height-standard: 30px;
+$border-radius-circle: 100%;
+$icon-size: 16px;
+
+// Mixins
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin button-style($bg-color, $border-color) {
+	background-color: $bg-color;
+	border: solid 1px $border-color;
+	color: $color-secondary;
+}
+
+// Styles
+.entity-filter {
+	height: $height-standard !important;
+	box-sizing: content-box;
+	line-height: $line-height-standard !important;
+	@include flex-center;
+	@include button-style($color-background, $color-border);
+	margin: 0 $margin-standard 10px 0;
+	max-width: 300px;
+
+	.filter-column {
+		white-space: nowrap;
+		margin-left: $padding-standard;
+		flex: 0 0 auto;
+	}
+
+	.filter-condition {
+		font-weight: bold;
+		margin: 0 4px;
+		flex: 0 0 auto;
+	}
+
+	.filter-value {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.filter-number {
+		background: $color-primary;
+		color: white;
+		border-radius: $border-radius-circle;
+		height: $icon-size;
+		width: $icon-size;
+		line-height: $icon-size;
+		flex: 0 0 auto;
+		margin-left: 4px;
+	}
+
+	.btn {
+		color: $color-primary;
+	}
+
+	.filter-btn {
+		width: $icon-size;
+		height: $icon-size;
+		flex: 0 0 auto;
+		padding: 0;
+		margin-left: $padding-standard;
+		background-size: $icon-size $icon-size;
+		background-position: center;
+
+		&:last-child {
+			width: $height-standard;
+			height: $height-standard;
+			box-sizing: content-box;
+			border-left: 1px solid $color-border;
+		}
+	}
+
+	.filter-text {
+		padding-left: $padding-standard;
+	}
+}

@@ -1,0 +1,22 @@
+<div data-ng-controller="procurementPackageImportDialogController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <div>
+        <section class="modal-body">
+            <div data-platform-alert data-error="error"></div>
+            <div style="height: 100%;width:100%">
+                <div data-platform-form-container data-form-container-options="formContainerOptions"
+                     entity="currentItem" class="fullheight"></div>
+            </div>
+        </section>
+    </div>
+    <footer class="modal-footer">
+        <button data-ng-disabled="modalOptions.OKBtnRequirement" type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading"
+         data-info2="modalOptions.loadingInfo"></div>
+</div>

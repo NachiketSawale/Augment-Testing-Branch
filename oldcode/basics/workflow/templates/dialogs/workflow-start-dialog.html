@@ -1,0 +1,12 @@
+<section class="modal-body" data-ng-controller="basicsWorkflowStartWorkflowController">
+	<div class="platform-form-group">
+		{{entityInfo.entityName}}
+		<div ng-repeat="name in entityInfo.IdPropertyNames" class="platform-form-row">
+			<label class="platform-form-label">{{entityInfo.entityName}} {{name}}</label>
+			<div class="platform-form-col">
+				<span data-domain="integer" data-domain-control data-model="identification[name]"
+				      suppress-debounce="true"></span>
+			</div>
+		</div>
+	</div>
+</section>

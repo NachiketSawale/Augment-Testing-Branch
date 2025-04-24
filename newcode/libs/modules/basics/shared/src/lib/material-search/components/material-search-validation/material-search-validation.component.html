@@ -1,0 +1,4 @@
+<div *ngFor="let item of validations"
+     [innerText]="item.ErrorContent"
+     [class]="'alert ' + ['alert-info', 'alert-warning', 'alert-danger'][item.MessageType-1]">
+</div>

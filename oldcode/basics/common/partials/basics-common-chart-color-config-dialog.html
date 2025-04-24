@@ -1,0 +1,41 @@
+<div data-ng-controller="chartColorConfigDialogController" >
+	<header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+	<section class="modal-body">
+		<div class="platform-form-group">
+
+			<div class="platform-form-row">
+				<label class="platform-form-label ng-binding" style="min-width: 80px;">Max</label>
+				<div class="platform-form-col">
+					<input type="color"
+					       data-ng-model="maxValue"
+					       data-domain="color"
+					       class="ng-pristine ng-valid ng-empty ng-touched" style="">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label ng-binding" style="min-width: 80px;">Min</label>
+				<div class="platform-form-col">
+					<input type="color"
+					       data-ng-model="minValue"
+					       data-domain="color"
+					       class="ng-pristine ng-valid ng-empty ng-touched" style="">
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label ng-binding" style="min-width: 80px;">Average</label>
+				<div class="platform-form-col">
+					<input type="color"
+					       data-ng-model="avgValue"
+					       data-domain="color"
+					       class="ng-pristine ng-valid ng-empty ng-touched" style="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button"  class="btn btn-default" data-ng-click="modalOptions.onOK()"> {{'cloud.common.ok' | translate}}</button>
+		<button type="button"  class="btn btn-default" data-ng-click="modalOptions.onReset()"> {{'basics.common.reset' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}</button>
+	</footer>
+</div>

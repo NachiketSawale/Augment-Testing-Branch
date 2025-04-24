@@ -1,0 +1,160 @@
+@import 'variables';
+@import 'mixins';
+#mainContent {
+	@include size(100%, 100%); //after flexing, remove it
+	flex: 1;
+	position: relative;
+	> div {
+		@include size(100%, 100%);
+		@include flexbox-container($direction: column);
+		position:absolute;
+	}
+	#mainbar {
+		@include flexbox-container();
+		background-color: $color-bar3;
+		height: $mainbar-height;
+		border-bottom: 1px solid $color-border;
+		#navbar {
+			height: $mainbar-height;
+			padding:$padding-small-vertical 0 0 $padding-small-horizontal;
+			vertical-align: middle;
+			float: left;
+			.navbar-btn {
+				@include square($tabbar-button-width);
+				line-height: $size-line-height-computed;
+				margin: 0;
+				svg {
+					@include size(30px, 30px);
+					background-size: 30px;
+					--icon-main-color: $color-icon-grey;
+				}
+			}
+		}
+		+ div {
+			flex: 1;
+			position: relative;
+		}
+	}
+	#main-tabs {
+		@include flexbox-container($flex: 1);
+		height: $mainbar-height;
+		::ng-deep {
+			#tabbar {
+				float: left;
+				margin-left: 10px;
+				height: 33px;
+				// a div container that contains the tabs
+				> .tabs {
+					padding-top: 3px;
+					// a single tab
+					> .tab {
+						height: 31px;
+						float: left;
+						//active tab
+						&.active {
+							background-color: $color-tab-activ;
+							> .tab-wrapper {
+								border-color: $color-bar-border;
+								//button to open the tab dropdown
+								.tab-dropdown {
+									visibility: visible;
+									&:hover {
+										background-color: $color-grid-selection;
+									}
+								}
+								.divider {
+									visibility: visible;
+								}
+							}
+						}
+						//Tab hover
+						&:hover:not(.active) .tab-wrapper {
+							background-color: $color-tab-selected;
+							height: 31px;
+						}
+						> .tab-wrapper {
+							display: inline-flex;
+							border-top: 4px solid transparent;
+							cursor: pointer;
+							height: $tab-height;
+							> span {
+								padding: 0 $padding-tab-horizontal;
+								line-height: $tabbar-button-height;
+							}
+							.dropdown-menu {
+								margin-top: -1px;
+							}
+							//button to open the tab dropdown
+							.tab-dropdown {
+								width: $tabbar-button-width;
+								visibility: hidden;
+								height: $tabbar-button-height;
+								background-size: $size-icon $size-icon;
+								> img {
+									height: 24px;
+									margin-top: -1px;
+								}
+							}
+							> .divider {
+								visibility: hidden;
+								width: 1px;
+								cursor: default;
+								background: linear-gradient(to bottom, rgba(0,0,0,0) 10%,rgba(206,206,206,0.5) 25%, #bebebe,rgba(206,206,206,0.5) 75%,rgba(0,0,0,0) 90%);
+							}
+						}
+						&.highlight {
+							&:hover > .tab-wrapper {
+								height: $tab-height;
+							}
+							&.active {
+								.tab-wrapper {
+									border-color: $teal-3;
+									background-color: $color-tab-activ;
+								}
+								&:hover > .tab-wrapper {
+									background-color: transparent;
+								}
+							}
+							&:hover > .tab-wrapper {
+								background-color: darken($teal-7, 10%);
+							}
+							> .tab-wrapper {
+								background-color: $teal-7;
+							}
+						}
+						&.gray-out {
+							> .tab-wrapper {
+								background-color: transparent;
+								> span {
+									color: #999 !important;
+								}
+							}
+						}
+						&.disabled, &.disabled:hover {
+							> .tab-wrapper {
+								background-color: transparent;
+								cursor: default;
+								> span {
+									color: #999 !important;
+								}
+							}
+						}
+					}
+				}
+				+ .tabbar-buttons {
+					display: inline-flex;
+					button {
+						@include size(28px, 100%);
+						background-size: 16px 16px;
+					}
+				}
+			}
+		}
+	}
+	.tab-content {
+		@include size(100%, 100%);
+		padding: 10px;
+		position: absolute;
+		background-color: $color-body-background;
+	}
+}

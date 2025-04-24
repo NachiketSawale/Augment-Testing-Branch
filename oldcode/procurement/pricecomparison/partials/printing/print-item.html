@@ -1,0 +1,36 @@
+<div data-ng-controller="procurementPricecomparisonPrcItemController">
+    <div class="platform-lg platform-form-group">
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="padding-left:10px;">
+                <div class="lg-6">
+                    <div data-ng-controller="procurementPricecomparisonPrcBoqItemTypeController">
+                        <div class="panel panel-default ">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="platform-form-group-header-text">{{'procurement.pricecomparison.itemItemTypeConfigTitle'| translate}}</span>
+                                </h4>
+                            </div>
+                            <div class="flex-box flex-column" style="height: 200px;">
+                                <platform-grid data="gridData"></platform-grid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg-6">
+                    <div data-ng-controller="procurementPricecomparisonPrcBoqItemType2Controller">
+                        <div class="panel panel-default ">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="platform-form-group-header-text">{{'procurement.pricecomparison.itemItemType2ConfigTitle'| translate}}</span>
+                                </h4>
+                            </div>
+                            <div class="flex-box flex-column" style="height: 200px;">
+                                <platform-grid data="gridData2"></platform-grid>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

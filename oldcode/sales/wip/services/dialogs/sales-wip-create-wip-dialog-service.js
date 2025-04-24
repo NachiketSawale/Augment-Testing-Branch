@@ -154,7 +154,11 @@
 					ProjectFk: null,
 					ContractTypeFk: 0,
 					updateWith: 1,
-					TypeFk: 0
+					TypeFk: 0,
+					PerformedFrom : null,
+					PerformedTo : null,
+					CollectiveWIP: false,
+					IsCollectiveWIP: false,
 				};
 
 				if (_.isObject(dataItem)) {
@@ -470,7 +474,8 @@
 				var contractId = initDataItem.OrdHeaderFk;
 				if (contractId > 0) {
 					var defer = $q.defer();
-					$http.get(globals.webApiBaseUrl + 'sales/contract/relatedcontracts?contractId=' + contractId).then(function (response) {
+					var route = initDataItem.IsCollectiveWIP ? 'contractsforcollectivewip' : 'relatedcontracts';
+					$http.get(globals.webApiBaseUrl + 'sales/contract/' + route + '?contractId=' + contractId).then(function (response) {
 						initDataItem.gridContracts = response.data;
 						_.each(initDataItem.gridContracts, $injector.get('SalesContractDocumentTypeProcessor').processItem);
 						defer.resolve(response.data);
@@ -549,7 +554,7 @@
 							gid: 'baseGroup',
 							attributes: [
 								'ordheaderfk', 'previouswipfk', 'rubriccategoryfk', 'code', 'description', 'companyresponsiblefk',
-								'clerkfk', 'projectfk', 'contracttypefk', 'performedfrom', 'performedto', 'typefk', 'previousbillfk'
+								'clerkfk', 'projectfk', 'contracttypefk', 'performedfrom', 'performedto', 'typefk', 'previousbillfk','collectivewip'
 							]
 						}
 					],
@@ -886,6 +891,16 @@
 							type: 'dateutc',
 							visible:true,
 							sortOrder: 15
+						},
+						{
+							gid: 'baseGroup',
+							rid: 'collectivewip',
+							label: 'CollectiveWIP',
+							label$tr$: 'sales.contract.wizardCWCreateWipContractsCollectiveWIPOption',
+							model: 'CollectiveWIP',
+							type: 'boolean',
+							visible:true,
+							sortOrder: 1
 						}
 					]
 				};
@@ -958,13 +973,15 @@
 				if (_.some(_.values(_.get(dataItem, '__rt$data.errors')))) {
 					return false;
 				}
-
+				const isValidPerformedDates = dataItem.PerformedFrom <= dataItem.PerformedTo;
+				let gridContracts = initDataItem.gridContracts;
 				// is valid?
 				return dataItem.RubricCategoryFk !== 0 && dataItem.RubricCategoryFk !== null &&
 					dataItem.ProjectFk !== null && dataItem.ProjectFk !== 0 &&
 					dataItem.ClerkFk !== null && dataItem.ClerkFk !== 0 &&
 					dataItem.ContractTypeFk !== null && dataItem.ContractTypeFk !== 0 &&
-					dataItem.OrdHeaderFk !== null && dataItem.OrdHeaderFk !== 0;
+					dataItem.OrdHeaderFk !== null && dataItem.OrdHeaderFk !== 0
+					&& isValidPerformedDates && gridContracts.length !== 0;
 			};
 			service.showDialog = function createWip(onCreateFn, isUpdateWizard, readOnlyRows, unvisibleRows, purposeType) {
 

@@ -1,0 +1,24 @@
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">{{modalOptions.areaLabelText}}</label>
+
+		<div class="platform-form-col">
+			<select class="form-control" data-ng-model="modalOptions.value.selectedItem" data-ng-options="item.description for item in modalOptions.areaItems"
+			        data-ng-change="modalOptions.selectedItemChanged(modalOptions.value.selectedItem)"
+					  >
+			</select>
+		</div>
+	</div>
+
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">{{modalOptions.nameLabelText}}</label>
+
+		<div class="platform-form-col">
+			<div class="form-control" data-domain-control data-domain="inputselect" data-model="modalOptions.value.watchListName"
+			     placeholder="{{modalOptions.namePlaceHolder}}"
+			     data-options="modalOptions.watchlistNameOptions"
+			     data-mandatory="true" style="box-shadow: inherit;">
+			</div>
+		</div>
+	</div>
+</div>

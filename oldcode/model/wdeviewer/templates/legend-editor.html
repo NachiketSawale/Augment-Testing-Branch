@@ -1,0 +1,64 @@
+<style type="text/css">
+	.legend-editor {
+		padding-left: 30px;
+		padding-right: 30px;
+		border: 1px solid #dcdcdc;
+		border-radius: 3px;
+	}
+
+	.legend-editor legend {
+		margin-left: 1px;
+		width: auto;
+		background-color: #fff;
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	.legend-editor .margin-y {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.legend-editor .btn-list {
+		text-align: center;
+	}
+
+	.legend-editor textarea {
+		width: 100%;
+		height: 60px;
+		resize: none;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		padding: 4px;
+	}
+
+	.legend-editor .btn-list .btn {
+		background-color: #e1e1e1;
+		border: 1px solid #b5b5b5;
+		margin-left: 5px;
+		font-size: 13px;
+		font-weight: bold;
+	}
+</style>
+
+<fieldset class="legend-editor">
+	<legend data-ng-bind="config.title"></legend>
+
+	<div class="row margin-y btn-list">
+        <span class="btn-list-group" data-ng-repeat="group in config.groups">
+            <button class="btn btn-default" data-ng-repeat="item in group.items" data-ng-bind="item.code" data-ng-click="select(item)" title="{{ item.title }}"></button>
+        </span>
+	</div>
+
+	<div class="row margin-y">
+		<div class="col-md-4" data-ng-bind="'model.wdeviewer.section.left' | translate"></div>
+		<div class="col-md-4" data-ng-bind="'model.wdeviewer.section.center' | translate"></div>
+		<div class="col-md-4" data-ng-bind="'model.wdeviewer.section.right' | translate"></div>
+	</div>
+
+	<div class="row margin-y">
+		<div class="col-md-4"><textarea data-ng-model="entity.left" data-ng-focus="focus('left')"></textarea></div>
+		<div class="col-md-4"><textarea data-ng-model="entity.center" data-ng-focus="focus('center')"></textarea></div>
+		<div class="col-md-4"><textarea data-ng-model="entity.right" data-ng-focus="focus('right')"></textarea></div>
+	</div>
+</fieldset>

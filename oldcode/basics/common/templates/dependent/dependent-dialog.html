@@ -1,0 +1,20 @@
+<div data-ng-controller="basicsCommonDependentController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="icon-message ng-scope">
+			<div class="icon tlb-icons {{::options.iconClass}}"></div>
+			<div class="message ng-binding"><p data-ng-bind-html="::options.bodyText"></p></div>
+		</div>
+		<div class="flex-element flex-box flex-column subview-content" data-ng-hide="!isShowDependantData">
+			<platform-grid data="gridData"></platform-grid>
+			<div cloud-common-overlay data-loading="dialogLoading" data-info="options.loadingInfo"></div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="options.showDependantData()" data-ng-hide="!options.showDependantDataButton" data-ng-bind="options.dependantDataBtnText">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="options.oK()" data-ng-bind="options.yesBtnText" data-ng-hide="!options.showYesButton">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="options.cancel()" data-ng-bind="options.noBtnText" data-ng-hide="!options.showNoButton"></button>
+	</footer>
+</div>

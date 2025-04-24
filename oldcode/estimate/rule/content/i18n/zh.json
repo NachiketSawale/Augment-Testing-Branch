@@ -1,0 +1,23 @@
+{
+  "estimate": {
+    "rule": {
+      "estimateRule": "Estimate Rule Master",
+      "estimateRuleParameter": "Estimate Rule Parameter",
+      "estimateRuleScript": "Estimate Rule Script",
+      "estimateComboRule" : "Project Estimate Rule",
+      "evaluationSequence":"Evaluation Sequence",
+
+      "detailEstimateComboRule" : "Project Estimate Rule Details",
+      "detailEstimateRule" : "Estimate Rule Details",
+      "detailEstimateRuleParameter" : "Estimate Rule Parameter Details",
+      "detailEstimateRuleScript" : "Estimate Rule Script Details",
+
+      "estParameterGroupFk" : "Estimate Parameter Group",
+      "valueDetail": "Value Detail",
+      "defaultValue": "Default Value",
+
+      "ruleContainer": "Estimate Rules",
+      "rules": "Rules"
+    }
+  }
+}

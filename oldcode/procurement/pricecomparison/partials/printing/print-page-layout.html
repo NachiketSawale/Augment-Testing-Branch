@@ -1,0 +1,39 @@
+<section class="modal-body" data-ng-controller="procurementPriceComparisonPrintPageLayoutController">
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{settings.paperSize.paperSizeText}}</label>
+            <div class="platform-form-col">
+                <span class="form-control" data-domain-control data-domain="select"
+                      data-model="settings.paperSize.selectedValue" data-options="settings.paperSize.options" data-change="settings.paperSize.onChange()">
+                </span>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <label class="platform-form-label" style="padding-top: 8px;">{{'procurement.pricecomparison.printing.pageOrientation' | translate}}</label>
+
+            <div class="platform-form-col">
+                <div class="radio spaceToUp" style="padding-top: 0;">
+                    <label class="platform-form-label">
+                        <input type="radio"
+                               name="radioGroup"
+                               value="1"
+                               data-ng-model="settings.orientation.selectedValue"
+                               ng-click="settings.orientation.onSelectChanged(settings.orientation.selectedValue)"/>
+                        {{'procurement.pricecomparison.printing.pagePortrait' | translate}}
+                    </label>
+                </div>
+                <div class="radio spaceToUp" style="padding-top: 0;">
+                    <label class="platform-form-label">
+                        <input type="radio"
+                               name="radioGroup"
+                               value="2"
+                               data-ng-model="settings.orientation.selectedValue"
+                               ng-click="settings.orientation.onSelectChanged(settings.orientation.selectedValue)"/>
+                        {{'procurement.pricecomparison.printing.pageLandscape' | translate}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

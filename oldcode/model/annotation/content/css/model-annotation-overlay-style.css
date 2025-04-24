@@ -1,0 +1,15 @@
+.annotation-icons .interactive-icon {
+	pointer-events: all;
+	cursor: pointer;
+	fill: transparent;
+}
+
+.layer.annotation-callouts > .annotation {
+	pointer-events: all;
+	cursor: pointer;
+}
+
+.annotation-callouts-overly {
+	pointer-events: all;
+	cursor: pointer;
+}

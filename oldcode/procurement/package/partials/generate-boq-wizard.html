@@ -1,0 +1,24 @@
+﻿<div ng-controller="procurementPackageWizardGenerateBoqController">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div data-platform-alert data-error="error"></div>
+		<div class="modal-body flex-box">
+			<div class="icon-message">
+				<div class="tlb-icons icon {{ modalOptions.iconClass }}"></div>
+				<div class="message" data-ng-bind-html="modalOptions.bodyText"></div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div data-platform-grid class="subview-container" data="gridData"></div>
+			</div>
+		</div>
+		<!-- Loading -->
+		<div data-cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="modalOptions.OKBtnRequirement" data-ng-click="modalOptions.ok()" data-ng-bind="modalOptions.okBtnText"></button>
+		<button type="button" class="btn btn-default" data-ng-disabled="modalOptions.CancelBtnRequirement" data-ng-click="modalOptions.cancel()" data-ng-bind="modalOptions.cancelBtnText"></button>
+	</footer>
+</div>

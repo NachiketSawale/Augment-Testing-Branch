@@ -1,0 +1,42 @@
+<div class="toolbar">
+	<div class="title"><span translate="cloud.desktop.watchlist.titlelist"></span></div> <!--({{taskSidebar.listConfig.filter.count}})</div>-->
+
+	<ul class="tools">
+		<li class="sublist">
+			<ul class="radio-group">
+				<li>
+					<button type="button" class="tlb-icons ico-pin-clear"
+					        ng-hide="!watchListSidebar.canClearStandardWatchList()"
+					        data-ng-click="watchListSidebar.clearStandardWatchList()"
+					        title="{{::'cloud.desktop.watchlist.deletedefaultlist'|translate }}">
+					</button>
+				</li>
+				<li>
+					<button type="button" class="tlb-icons ico-refresh"
+					        data-ng-click="watchListSidebar.refreshWatchLists()"
+					        title="{{::'cloud.desktop.watchlist.refresh'|translate }}">
+					</button>
+				</li>
+
+			</ul>
+	</ul>
+</div>
+
+
+<div data-cloud-Common-Overlay data-loading="watchListSidebar.loading"></div>
+<div class="content-inner flex-box flex-column">
+	<div data-basics-common-white-board data-show="watchListSidebar.nowatchlists" class="top" data-info="::'cloud.desktop.watchlist.nowatchlistcontent' | translate"></div>
+
+	<ul platform-grouped-accordion-list-directive
+	    data-group-template="watchListSidebar.groupTemplate"
+	    data-item-template="watchListSidebar.itemTemplate"
+	    data-grouped-list="watchListSidebar.listConfig.items"
+	    data-toggle-click-fn="watchListSidebar.onToogleWatchListGroup"
+	    data-child-property="'subitems'"
+	    data-key-property="'id'"
+	    data-click-fn="watchListSidebar.onClickWatchListsItem"
+	    class="scroll-padding flex-element overflow panel-group"
+	    data-grouped-list-cfg="watchListSidebar.listConfig">
+	</ul>
+
+</div>

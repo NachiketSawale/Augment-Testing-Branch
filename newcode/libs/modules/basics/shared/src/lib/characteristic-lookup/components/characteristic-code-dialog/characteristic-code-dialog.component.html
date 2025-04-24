@@ -1,0 +1,18 @@
+<div class="characteristic-code-lookup">
+	<div class="filler modal-wrapper">
+	   <as-split [direction]="splitter.direction" unit="percent">
+	      <as-split-area [size]="splitter.areaSizes[0]">
+		      <div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + parentGridConfig.uuid">
+			      <ui-common-grid [configuration]="parentGridConfig" (selectionChanged)="onParentChanged($event)"></ui-common-grid>
+		      </div>
+	      </as-split-area>
+	      <as-split-area [size]="splitter.areaSizes[1]">
+			  <div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + gridConfig.uuid">
+				  <ui-common-grid [configuration]="gridConfig" (selectionChanged)="handleSelectionChanged($event)"></ui-common-grid>
+			  </div>
+	      </as-split-area>
+	   </as-split>
+		<!-- Loading -->
+		<ui-common-loading [loading]="isLoading"></ui-common-loading>
+	</div>
+</div>

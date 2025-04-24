@@ -1,0 +1,47 @@
+[
+	{
+		"id": "project.droppoints.droppointheader.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.main.projectListTitle",
+		"controller": "projectDropPointsAreaListController",
+		"uuid": "3a0dc5aa130e4d95af119b5c76ef47f8"
+	},
+	{
+		"id": "project.droppoints.droppointheader.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.droppoints.dropPointProjectDetail",
+		"controller": "projectDropPointsDropAreaDetailController",
+		"uuid": "44050882a8e14d9386fe79f4fadd0192",
+		"permission": "3a0dc5aa130e4d95af119b5c76ef47f8"
+	},
+	{
+		"id": "project.droppoints.droppoint.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.droppoints.dropPointList",
+		"controller": "projectDropPointsDropPointListController",
+		"uuid": "21b52f02742f4796a8e165d8ead4f9d5"
+	},
+	{
+		"id": "project.droppoints.droppoint.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.droppoints.dropPointDetail",
+		"controller": "projectDropPointsDropPointDetailController",
+		"uuid": "b485c4cb24344d54aef27530cc7d7563",
+		"permission": "21b52f02742f4796a8e165d8ead4f9d5"
+	},
+	{
+		"id": "project.droppoints.droppointarticles.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.droppoints.dropPointArticlesList",
+		"controller": "projectDropPointsDropPointArticlesListController",
+		"uuid": "0b2fbc87a2c644a8b84c1fac7174b06b"
+	},
+	{
+		"id": "project.droppoints.droppointarticles.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.droppoints.dropPointArticlesDetail",
+		"controller": "projectDropPointsDropPointArticlesDetailController",
+		"uuid": "eea4f9c32c8b4560b09f926350aa28c8",
+		"permission": "0b2fbc87a2c644a8b84c1fac7174b06b"
+	}
+]

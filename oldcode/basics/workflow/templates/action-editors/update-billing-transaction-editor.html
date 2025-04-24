@@ -1,0 +1,102 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.billNo' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.BillNo" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.billingId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.BillingId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.isSuccess' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.IsSuccess" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.isCanceled' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.IsCanceled" data-options="codeMirrorOptions"
+						 data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.returnValue' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.ReturnValue" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.documentNo' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.DocumentNo" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.assetNo' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.AssetNo" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.bilTransactionIds' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.BilTransactionIds" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.outputResult' | translate }}
+				</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.Result" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

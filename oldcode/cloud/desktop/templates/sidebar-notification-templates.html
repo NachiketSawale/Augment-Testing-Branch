@@ -1,0 +1,53 @@
+<script id="cloud.desktop/itemTemplate.html" type="text/ng-template">
+	<div class="notifications row nopadding">
+		<div class="notification-container row">
+			<div class="notification-status row col-sm-1">
+				<svg class="w-100" data-cloud-desktop-svg-image data-sprite="status-icons" data-image="$$Icon$$" data-replace></svg>
+			</div>
+			<div class="notification-details nopadding row col-sm-10">
+				<div class="col-sm-12 title nopadding">
+					$$Name$$
+					<span style="color:red" data-ng-if="$$IsUnseen$$">New</span>
+				</div>
+				<div class="col-sm-12 status nopadding">
+					$$NotificationStatus$$
+				</div>
+				<div class="col-sm-12 audit-details nopadding">
+					<span>$$CurrentAction$$</span> |
+					<span>$$StartedAt$$</span> |
+					<span>$$User$$</span>
+				</div>
+				<button class="col-sm-12 show-report-btn btn btn-default"
+				data-ng-if="$$IsReport$$"
+				data-ng-click="clickFn.showReport($$Id$$)"
+				data-ng-disabled="!$$AdditionalReferencesEntity.Completed$$">
+					{{clickFn.getTranslatedValue('cloud.desktop.sidebarNotification.showReportBtnTitle')}}
+					<!-- Show Report -->
+				</button>
+				<div class="col-sm-12 additional-details-container" data-ng-if=$$IsAdditionalDetails$$>
+					<div ng-bind-html="clickFn.showAdditionalDetails($$Id$$)">
+					</div>
+				</div>
+			</div>
+
+			<div class="notification-close col-sm-1">
+				<button class="control-icons ico-close" data-ng-click="clickFn.removeNotification($$Id$$)"
+				data-ng-attr-title="$$ 'cloud.desktop.formConfigCloseBnt' | translate $$" title="Remove Notification"></button>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="cloud.desktop/groupItem.html" type="text/ng-template">
+	<li class="panel panel-primary">
+		<button class="panel-heading" data-ng-click="invert( '$$key$$' )">
+			<h4 class="panel-title">$$name$$
+				($$count$$)
+			</h4>
+			<div class="panel-toggle-img control-icons $$icoClass$$ "></div>
+		</button>
+		<ul class="panel-body">
+			##items##
+		</ul>
+	</li>
+</script>

@@ -1,0 +1,35 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body" data-platform-form-adjust-label>
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <div class="checkbox spaceToUp lg-10 md-10" style="margin-left: 30px;">
+                <label class="platform-form-label">
+                    <input type="checkbox"
+                           name="profileStatus"
+                           data-ng-checked="modalOptions.isGenericProfile"
+                           data-ng-click="modalOptions.isGenericProfile=true;modalOptions.isRfqProfile=false"
+                           data-ng-model="modalOptions.isGenericProfile"/>
+                    {{modalOptions.genericProfileText}}
+                </label>
+            </div>
+
+            <div class="checkbox spaceToUp lg-10 md-10" style="margin-left: 30px;">
+                <label class="platform-form-label">
+                    <input type="checkbox"
+                           name="profileStatus"
+                           data-ng-checked="modalOptions.isRfqProfile"
+                           data-ng-click="modalOptions.isRfqProfile=true;modalOptions.isGenericProfile=false"
+                           data-ng-model="modalOptions.isRfqProfile"/>
+                    {{modalOptions.rfqProfileText}}
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer flex-box flex-row">
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.next(modalOptions.isGenericProfile)">
+        {{modalOptions.nextStep}}
+    </button>
+</footer>
+<div cloud-common-overlay data-loading="isLoading"></div>

@@ -1,0 +1,14 @@
+<div data-ng-controller="basicsMaterialcatalogSyncCatalogBasicSetController">
+<div class="platform-form-group">
+    <div class="platform-form-row">
+        <label class="platform-form-label">{{inputLabel}}</label>
+        <div class="platform-form-col"><input type="text" data-ng-model="data.companyCodes"  class="form-control" placeholder="<enter company code, for example:A,B>"></div>
+    </div>
+    <div class="platform-form-row">
+        <div class="platform-form-label">{{'cloud.desktop.settingsUserDataLang' | translate }}</div>
+        <div class="platform-form-col">
+            <div basics-company-import-content-language-lookup data-read-only="true" data-disabled="false" data-ng-model="data.language"></div>
+        </div>
+    </div>
+</div>
+</div>

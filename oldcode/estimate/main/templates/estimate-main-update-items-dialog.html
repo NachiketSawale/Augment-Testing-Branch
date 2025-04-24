@@ -1,0 +1,34 @@
+<div data-ng-controller="estimateMainUpdateItemsController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="fullheight">
+	        <div data-ng-show="isShowOptionalWarning" class="fullwidth container-fluid ribalert  alert-dismissable ng-isolate-scope alert-info" data-ng-class="alertclass" style="padding: 15px;border: 1px solid transparent;">
+		        <div class="row">
+			        <div class="col-xs-12 rib-alert-col1">
+                            <span class="ng-binding">
+	                            <div data-ng-bind-html="trustAsHtml(optionalWarning)"></div>
+                            </span>
+			        </div>
+		        </div>
+	        </div>
+            <div class="fullheight" style="overflow-y: auto">
+                <div>
+                    <div data-platform-form-container data-form-container-options="formContainerOptions"
+                         entity="dataItem"
+                         class="fullheight"></div>
+                </div>
+                <div class="alert-warning" style="text-align: center; padding: 5px" ng-show="getLineItemQtyTotalInfo.show">
+                    {{getLineItemQtyTotalInfo.message}}
+                </div>
+            </div>
+            <platform-Grid data-ng-show="isShowOptionalWarning" data="optionalGridData"></platform-Grid>
+
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="isDisable()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' |
+            translate}}
+        </button>
+    </footer>
+</div>

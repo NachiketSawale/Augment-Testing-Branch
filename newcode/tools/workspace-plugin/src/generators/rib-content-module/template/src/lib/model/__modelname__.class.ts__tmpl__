@@ -1,0 +1,13 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import {ContainerModuleInfoBase} from "@ui-container-system/model/container-module-info-base.class";
+import {ContainerDefinition} from "@ui-container-system/model/container-definition.class";
+
+export class ModuleInfo extends ContainerModuleInfoBase {
+	private readonly uiContainers: ContainerDefinition[] = [];
+	public get containers(): ContainerDefinition[] {
+		return this.uiContainers;
+	}
+}

@@ -1,0 +1,39 @@
+// Reset an entire region via CSS
+@mixin reset-box-sizing {
+	&,
+	*,
+	*:before,
+	*:after {
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+}
+
+// Placeholder text
+@mixin placeholder($color: $color-input-placeholder) {
+	&::-moz-placeholder {
+		color: $color; // Firefox
+		font-style: italic;
+		//opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526
+		opacity: .5;
+	}
+
+	// Safari and Chrome
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-style: italic;
+		opacity: .5;
+	}
+}
+
+@mixin disabledReadonlyProps($color: $color-input-bg-disabled) {
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] & {
+		cursor: default;
+		background-color: $color;
+		opacity: 1; // iOS fix for unreadable disabled content
+	}
+}
+

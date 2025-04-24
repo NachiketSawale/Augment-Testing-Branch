@@ -1,0 +1,75 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+	<div class="flex-element flex-box flex-box">
+		<div class="flex-box flex-column" style="width: 180px;">
+			<div class="toolbar">
+				<h2 class="subtitlepad title fix">{{::'businesspartner.main.crefodlg.searchcriteria' | translate }} </h2>
+			</div>
+
+
+			<!-- key enter only handled for the edit fields, this ensures only on event when search button pressed itself -->
+			<div class="flex-element overflow" data-cloud-desktop-on-key-enter="crefoOption.onSearch">
+				<div class="margin-top-ld">
+					<div id="onCrefoStartFocus" data-domain-control data-domain="description" data-model="crefoOption.searchParams.query" data-placeholder="{{::'businesspartner.main.crefodlg.searchquery'|translate }}" data-autofocus="50"></div>
+				</div>
+				<div class="margin-top-ld">
+					<div data-domain-control data-domain="description" data-model="crefoOption.searchParams.name" data-placeholder="{{::'businesspartner.main.crefodlg.searchname'|translate }}"></div>
+				</div>
+				<div class="margin-top-ld">
+					<div data-domain-control data-domain="description" data-model="crefoOption.searchParams.location" data-placeholder="{{::'businesspartner.main.crefodlg.searchlocation'|translate }}"></div>
+				</div>
+				<div class="margin-top-ld">
+					<div data-domain-control data-domain="description" data-model="crefoOption.searchParams.street" data-placeholder="{{::'businesspartner.main.crefodlg.searchstreet'|translate }}"></div>
+				</div>
+				<div class="margin-top-ld">
+					<div data-domain-control data-domain="description" data-regex="^\d*$" data-model="crefoOption.searchParams.zipcode" data-placeholder="{{::'businesspartner.main.crefodlg.searchzipcode'|translate }}"></div>
+				</div>
+				<div class="margin-top-ld">
+					<div data-domain-control data-domain="description" data-regex="^[+-\d]*$" data-model="crefoOption.searchParams.areacode" data-placeholder="{{::'businesspartner.main.crefodlg.searchareacode'|translate }}"></div>
+				</div>
+				<div class="margin-top-ld">
+					<div data-domain-control data-domain="description" data-regex="^[+-\d]*$" data-model="crefoOption.searchParams.phoneno" data-placeholder="{{::'businesspartner.main.crefodlg.searchphone'|translate }}"></div>
+				</div>
+				<hl></hl>
+			</div>
+
+			<div class="margin-top-ld">
+				<div class="platform-form-group">
+					<div data-domain-control data-domain="boolean"
+					     data-model="crefoOption.keepfilter" data-options="crefoOption.keepFilterChk"></div>
+				</div>
+				<div class="flex-box">
+					<button id="onExecuteStartFocus" type="button" class="btn btn-default btn-return flex-element" data-ng-disabled="crefoOption.loading" data-ng-click="crefoOption.onSearch()">
+						{{::'businesspartner.main.crefodlg.searchstartbtn' | translate }}
+					</button>
+					<button type="button" class="btn btn-default flex-element margin-left-ld" data-ng-disabled="crefoOption.loading" data-ng-click="crefoOption.onClear()">{{::'businesspartner.main.crefodlg.searchclearbtn' | translate }}</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="flex-element flex-box flex-column margin-left-ld">
+			<div data-platform-alarm-overlay data-config="alarmConfig"></div>
+			<div class="toolbar">
+				<h2 class="subtitlepad title fix">{{::'businesspartner.main.crefodlg.searchresult' | translate }}{{crefoOption.recordCount()}}</h2>
+				<div data-platform-menu-list data-list="beserveTools"></div>
+			</div>
+
+			<div class="flex-element flex-box flex-column subview-container relative-container subview-content">
+
+				<platform-Grid data="gridData"></platform-Grid>
+
+				<div cloud-common-overlay data-loading="crefoOption.loading" data-info2="crefoOption.searchStarted"></div>
+				<div data-basics-common-white-board data-show="crefoOption.noresult && !crefoOption.resultMessage" data-info="crefoOption.searchIdle"></div>
+				<div data-basics-common-white-board data-show="crefoOption.resultMessage" data-info="crefoOption.resultMessage"></div>
+			</div>
+		</div>
+	</div>
+
+
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="!crefoOption.canApply()" data-ng-click="crefoOption.onOk()">{{::'cloud.common.apply' | translate}}</button>
+	<button type="button" class="btn btn-default" data-ng-click="crefoOption.onCancel()">{{::'cloud.common.cancel' | translate}}</button>
+</footer>

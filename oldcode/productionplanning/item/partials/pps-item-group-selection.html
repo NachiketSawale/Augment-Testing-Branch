@@ -1,0 +1,36 @@
+<div ng-controller="productionplanningItemGroupSelectionController">
+    <section class="modal-body">
+        <!-- selectedItem -->
+        <div style="height: 200px; float: left; margin-left: 1%;"
+             class="flex-box flex-column lookup-grid-container subview-container">
+            <div class="subview-header toolbar">
+                <h3 class="font-bold title fix">{{'productionplanning.item.listTitle' |
+                    translate}}</h3>
+            </div>
+            <div style="" class="flex-element flex-box flex-column overflow-hidden">
+                <div class="flex-basis-auto" data-platform-grid
+                     data="gridOptions.itemGrid">
+                </div>
+            </div>
+        </div>
+
+        <!-- creationForm -->
+        <div style="margin-left: 1%; height: 120px; float: left; margin-top: 5px; margin-bottom: 5px" data-platform-form data-form-options="formOptions"
+             data-entity="formOptions.selectionEntity"></div>
+
+        <!-- eventSequence -->
+        <div style="height: 200px; float: left; margin-left: 1%;%"
+             class="flex-box flex-column lookup-grid-container subview-container">
+            <div class="subview-header toolbar">
+                <h3 class="font-bold title fix">{{'productionplanning.item.wizard.itemGroup.eventSeqTitle' |
+                    translate}}</h3>
+            </div>
+            <div class="flex-element flex-box flex-column overflow-hidden">
+                <div style="" class="flex-basis-auto" data-platform-grid
+                     data="gridOptions.eventGrid">
+                </div>
+            </div>
+            <div cloud-common-overlay data-loading="isBusy"></div>
+        </div>
+    </section>
+</div>

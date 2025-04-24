@@ -1,0 +1,21 @@
+<svg style="width: 100%">
+    <g class="timebar">
+        <g class="master">
+            <g class="background layer"></g>
+            <g class="past layer"></g>
+            <g class="brush layer"></g>
+            <g class="today layer"></g>
+            <g class="axis layer"></g>
+            <g class="thumb layer"></g>
+        </g>
+        <g class="detail">
+            <g class="past layer"></g>
+            <g class="today layer"></g>
+            <g class="axis layer"></g>
+            <g class="thumb layer"></g>
+            <g class="interaction layer">
+                <rect width="100%" stroke="none" fill="transparent"/>
+            </g>
+        </g>
+    </g>
+</svg>

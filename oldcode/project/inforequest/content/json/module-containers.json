@@ -1,0 +1,240 @@
+[
+  {
+    "id": "rfi-requests",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.inforequest.infoRequestListTitle",
+    "controller": "projectInfoRequestListController",
+    "uuid": "281de48b068c443c9b7c62a7f51ac45f"
+  },
+  {
+    "id": "rfi-requestdetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "project.inforequest.infoRequestDetailTitle",
+    "controller": "projectInfoRequestDetailController",
+    "uuid": "8b9c47c94f0b4077beaaab998c399048",
+    "permission": "281de48b068c443c9b7c62a7f51ac45f"
+  },
+  {
+    "id": "rfi-contributions",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "defect.main.commentContainerTitle",
+    "controller": "basicsCommonCommentController",
+    "uuid": "65becece765a419099b148c803a116f5",
+    "commentQualifier": "project.main.rfi-contributions",
+    "parentService": "projectInfoRequestDataService",
+    "configServiceName": "projectInfoRequestContributionConfigService"
+  },
+  {
+    "id": "rfi-relevanttos",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.inforequest.relevantToListTitle",
+    "controller": "projectInfoRequestRelevantToListController",
+    "uuid": "55f24a16454c4b8ab9fbf2e4fe2e90e6"
+  },
+  {
+    "id": "rfi-relevanttodetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "project.inforequest.relevantToDetailTitle",
+    "controller": "projectInfoRequestRelevantToDetailController",
+    "uuid": "a5779e8fa1d543febfdf92832d44a9e8",
+    "permission": "55f24a16454c4b8ab9fbf2e4fe2e90e6"
+  },
+  {
+    "include": "model.viewer/content/json/viewer-containers.json"
+  },
+  {
+    "id": "rfi.documents.project.document.grid",
+    "template": "documents.project/partials/documentgridView.html",
+    "title": "cloud.common.documentsProject",
+    "controller": "documentsProjectDocumentController",
+    "uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "rfi.documents.project.revision.grid",
+    "template": "documents.project/partials/documentGridRevisionView.html",
+    "title": "cloud.common.documentsRevision",
+    "controller": "documentsProjectDocumentRevisionController",
+    "uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "rfi.documents.project.document.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsProjectForm",
+    "controller": "documentsProjectDocumentDetailController",
+    "uuid": "8BB802CB31B84625A8848D370142B95C",
+    "permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "rfi.documents.project.revision.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsRevisionDetail",
+    "controller": "documentsProjectDocumentRevisionDetailController",
+    "uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+    "permission": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "project.main.documents.project.document.history.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentsProjectHistory",
+    "controller": "documentsProjectDocumentHistoryController",
+    "uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+  },
+  {
+    "id": "rfi-powerbi-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.inforequest.powerBIElements",
+    "controller": "projectInfoRequestPowerBiController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ad61",
+    "permission": "39d0d1c6753b49029b3c953165f8ceb7"
+  },
+  {
+    "id": "rfi-powerbi-view-container",
+    "template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+    "title": "project.inforequest.powerbiView",
+    "controller": "projectInfoRequestPowerbiViewController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ad60",
+    "permission": "39d0d1c6753b49029b3c953165f8ceb7"
+  },
+  {
+    "id": "procurement.contract.documents.project.modelobject.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentAssignObject",
+    "controller": "documentsProjectModelObjectController",
+    "uuid": "7BACDAB1A06B439895ACBA767E42205E"
+  },
+  {
+    "id": "procurement.contract.documents.project.modelobject.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentAssignObjectFormTitle",
+    "controller": "documentsProjectModelObjectDetailController",
+    "uuid": "ee68ae76fefe4b758c282594a1746480",
+    "permission": "7BACDAB1A06B439895ACBA767E42205E"
+  },
+  {
+    "id": "rfi-externallist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.inforequest.inforequest2ExternalGridTitle",
+    "controller": "projectInfoRequest2ExternalListController",
+    "uuid": "52a1f2237b1f476995cc9e78b79e9a68"
+  },
+  {
+    "id": "rfi-externaldetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "project.inforequest.inforequest2ExternalDetailTitle",
+    "controller": "projectInfoRequest2ExternalDetailController",
+    "uuid": "a22ab80151dc4a8f8f0914cc2e550811",
+    "permission": "52a1f2237b1f476995cc9e78b79e9a68"
+  },
+  {
+    "id": "model.wdeviewer.ige",
+    "template": "model.wdeviewer/partials/ige-partial.html",
+    "title": "model.wdeviewer.title",
+    "controller": "modelWdeViewerIgeController",
+    "uuid": "a7aa21739e2c514b052d2e7961f3e9f5",
+    "permission": "7b1f2a36a94245ecb03dd964e79d2254",
+    "dimensionService": "projectInfoRequestIgeDimensionService"
+  },
+  {
+    "id": "model.annotation.annotationObjectLinkList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.annotation.annotationObjectLinkListTitle",
+    "controller": "modelAnnotationObjectLinkListController",
+    "uuid": "26110cbc14374f7895d1d7934efd0a63",
+    "depAnnoDataServiceName": "projectInfoRequestModelAnnoObjectLinkDataService"
+  },
+  {
+    "id": "model.annotation.annotationObjectLinkDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.annotation.annotationObjectLinkDetailTitle",
+    "controller": "modelAnnotationObjectLinkDetailController",
+    "uuid": "de29ed7ffa5d415fb38138f7eda5922e",
+    "permission": "26110cbc14374f7895d1d7934efd0a63",
+    "depAnnoDataServiceName": "projectInfoRequestModelAnnoObjectLinkDataService"
+  },
+  {
+    "id": "model.annotation.cameraList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.annotation.cameraListTitle",
+    "controller": "modelAnnotationCameraListController",
+    "uuid": "1278a2ca11f947bb8e02eab65e815a7d",
+    "depAnnoDataServiceName": "projectInfoRequestModelAnnoCameraDataService"
+  },
+  {
+    "id": "model.annotation.cameraDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.annotation.cameraDetailTitle",
+    "controller": "modelAnnotationCameraDetailController",
+    "uuid": "dfb06f32f92744358eee5d8b88496786",
+    "permission": "1278a2ca11f947bb8e02eab65e815a7d",
+    "depAnnoDataServiceName": "projectInfoRequestModelAnnoCameraDataService"
+  },
+  {
+    "id": "model.annotation.markerList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.annotation.markerListTitle",
+    "controller": "modelAnnotationMarkerListController",
+    "uuid": "cf264c9dbb51466cb147e1a7f7f5d888",
+    "depAnnoDataServiceName": "projectInfoRequestModelAnnoMarkerDataService"
+  },
+  {
+    "id": "model.annotation.markerDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.annotation.markerDetailTitle",
+    "controller": "modelAnnotationMarkerDetailController",
+    "uuid": "b162c7c601ce4c6da794e49140ace8a7",
+    "permission": "cf264c9dbb51466cb147e1a7f7f5d888",
+    "depAnnoDataServiceName": "projectInfoRequestModelAnnoMarkerDataService"
+  },
+  {
+    "id": "project.inforequest.remark",
+    "template": "project.inforequest/templates/project-inforequest-remark-partial.html",
+    "title": "cloud.common.entityRemark",
+    "uuid": "44df982b9d1c4c54871865ddf6334766",
+    "permission": "281de48b068c443c9b7c62a7f51ac45f",
+    "controller": "projectInfoRequestRemarkController"
+  },
+  {
+    "id": "rfi-reference",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.inforequest.referenceListTitle",
+    "controller": "projectInfoRequestReferenceToListController",
+    "uuid": "251358b08bbf48cdb9ed586711fbabb1"
+  },
+  {
+    "id": "rfi-referencedetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "project.inforequest.referenceDetailTitle",
+    "controller": "projectInfoRequestRelevantToDetailController",
+    "uuid": "6a7b8a7849e74634afc484437d30ab60",
+    "permission": "251358b08bbf48cdb9ed586711fbabb1"
+  },
+  {
+    "id": "platform.generic.structure",
+    "template": "app/components/grid/generic-structure/generic-container.html",
+    "title": "project.inforequest.structureContainerTitle",
+    "uuid": "5603e2ce43604de8876760c34d8cb59f",
+    "controller": "platformGenericStructureController",
+    "mainService": "projectInfoRequestDataService",
+    "enableCaching": "true",
+    "configurationService": "projectInfoRequestStructureConfigService",
+    "permission": "281de48b068c443c9b7c62a7f51ac45f"
+  },
+	{
+		"id": "rfi-change",
+		"template": "app/components/base/grid-partial.html",
+		"title": "change.main.listChangeTitle",
+		"controller": "projectInfoRequestChangeListController",
+		"uuid": "e4d3d8b0003644d49277d2283714b396",
+		"permission": "f86aa473785b4625adcabc18dfde57ac",
+		"isReadonly": true
+	},
+	{
+		"id": "rfi-defect",
+		"template": "app/components/base/grid-partial.html",
+		"title": "defect.main.defectGridTitle",
+		"controller": "projectInfoRequestDefectListController",
+		"uuid": "535602d9d4ac4955b280670b0414406e",
+		"permission": "01a52cc968494eacace7669fb996bc72",
+		"isReadonly": true
+	}
+]

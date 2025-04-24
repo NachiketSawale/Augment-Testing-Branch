@@ -1,0 +1,15 @@
+<div data-ng-controller="changeRubricFromTemplateWizardController" class="modal-wrapper overflow-hidden">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<h3>{{options.body.bodyTitle}}</h3>
+
+		<div data-platform-form-container data-form-container-options="formContainerOptions"
+		     entity="currentItem" class="fullheight" data-ng-readonly="false"></div>
+	</section>
+	<footer class="modal-footer">
+		<button data-ng-disabled="isDisabled" type="button" class="btn btn-default" data-ng-click="options.onOK()" data-ng-bind="options.okBtnText">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="options.onCancel()" data-ng-bind="modalOptions.cancelBtnText"></button>
+	</footer>
+
+</div>

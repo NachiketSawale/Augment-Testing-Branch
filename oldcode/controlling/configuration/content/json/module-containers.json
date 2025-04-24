@@ -1,0 +1,43 @@
+﻿[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.configuration.ConfColumnDefinitionTitle",
+		"controller": "controllingConfigurationColumnDefinitionListController",
+		"uuid": "7417c99b19084beba2d45605f91cad6f"
+	},{
+		"id": "2",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.configuration.ConfFormulaDefinitionTitle",
+		"controller": "controllingConfigurationFormulaDefinitionListController",
+		"uuid": "22eb0d23d560466a8521c81745f40405"
+	},{
+		"id": "3",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "5b685541fdd946038b00d660a0718f01",
+		"permission": "7417c99b19084beba2d45605f91cad6f"
+	},{
+		"id": "4",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.configuration.chartConfigContainerTitle",
+		"controller": "controllingConfigChartConfigListController",
+		"uuid": "133fb23194294d81880B101a473b908f"
+	},{
+		"id": "5",
+		"template": "controlling.configuration/templates/formula-svg-image.html",
+		"title": "controlling.configuration.formulaImageTitle",
+		"controller": "controllingConfigurationFormulaImageController",
+		"uuid": "133fb23194294d81880B101a473b9085",
+		"permission": "22eb0d23d560466a8521c81745f40405"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "controlling.configuration.versionCompareTitle",
+		"controller": "controllingConfigVersionCompareListController",
+		"uuid": "9ce52c418bf94bfda6c6414e8e9a169d",
+		"permission": "7417c99b19084beba2d45605f91cad6f"
+	}
+]

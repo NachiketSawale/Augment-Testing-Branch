@@ -1,0 +1,18 @@
+<header class="modal-header main-color">
+    <h2 class="modal-title">{{ 'cloud.common.infoBoxHeader' | translate }}</h2>
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)"
+            aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+    </button>
+</header>
+
+<section class="modal-body" style="height: 100px;">
+    <div class="wait-overlay" data-ng-hide="state.isLoading"><div class="box"><div data-ng-bind="state.loadingInfo"></div></div></div>
+    <div cloud-common-overlay data-loading="state.isLoading" data-info2="state.loadingInfo"></div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled()" data-ng-click="$close(true)">
+        {{'cloud.common.ok' | translate}}
+    </button>
+</footer>

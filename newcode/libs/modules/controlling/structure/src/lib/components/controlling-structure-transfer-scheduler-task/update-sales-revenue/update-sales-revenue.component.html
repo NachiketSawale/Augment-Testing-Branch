@@ -1,0 +1,30 @@
+<ul class="list-group">
+    <li>
+        <div class="checkbox spaceToUp">
+            <label>
+                <input type="checkbox" [(ngModel)]="entity.updateRevenue" (change)="onCheckUpdateRevenue()" [disabled]="entity.isUpdateRevenueDisabled" />
+                {{ 'controlling.structure.updateRevenue' | platformTranslate }}
+            </label>
+        </div>
+    </li>
+    <li>
+        <ul class="subgroup">
+            <li>
+                <div class="radio spaceToUp">
+                    <label>
+                        <input type="radio" id="SCHEDULE" name="updateRevenueFrom" [(ngModel)]="entity.revenueUpdateFrom" value="1" [disabled]="!entity.updateRevenue || !entity.isActive" />
+                        {{ 'controlling.structure.distributeByCost' | platformTranslate }}
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="radio spaceToUp">
+                    <label>
+                        <input type="radio" id="WIP" name="updateRevenueFrom" [(ngModel)]="entity.revenueUpdateFrom" value="2" [disabled]="!entity.updateRevenue || !entity.isActive" />
+                        {{ 'controlling.structure.distributeByBudget' | platformTranslate }}
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>

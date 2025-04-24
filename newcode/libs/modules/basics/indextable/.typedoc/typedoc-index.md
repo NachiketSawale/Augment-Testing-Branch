@@ -1,0 +1,1 @@
+This is the indextable area of the basics indextable module.

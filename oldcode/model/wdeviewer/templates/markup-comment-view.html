@@ -1,0 +1,49 @@
+<style type="text/css">
+
+	.list-view li {
+		cursor: pointer;
+		border: none;
+		padding: 6px 9px;
+		background-color: #ddd;
+	}
+
+	.list-view li:hover {
+		background-color: #aaa;
+	}
+
+	.list-view .comment-select {
+		color: #ffffff;
+		background: #428bca !important;
+	}
+
+	.list-view .dropdown-menu {
+		min-width: 0;
+	}
+
+	.list-view input[type="checkbox"] {
+		vertical-align: middle;
+		margin-top: initial;
+		margin-right: 4px;
+	}
+</style>
+
+<div class="list-view">
+	<ul>
+		<!--<li>
+			 <div><input type="checkbox" data-ng-model="isAllSelect" data-ng-click="showAllMarkup(isAllSelect)">Show all markup</div>
+		</li>-->
+		<li data-ng-repeat="comment in commentItems" class="{{ comment.isSelect?'comment-select':'' }}">
+			<div>
+				<input type="checkbox" data-ng-model="comment.IsShow" data-ng-click="markupShowEvent(comment)" >
+				<span data-ng-click="select(comment)">{{ comment.Clerk }} - {{comment.UpdateTime}}</span>
+				<div style="float: right;">
+					<!--<button type="button" class="tlb-icons ico-goto" data-ng-disabled="comment.isDisableGoto" title="go to {{comment.ModuleName}}" data-ng-click="gotoMarkupModule(comment)" style="height: 20px;width: 20px"/>-->
+					<button type="button" class="tlb-icons ico-delete" title="delete Markup" data-ng-click="deleteMarkup(comment)" style="height: 20px;width: 20px"/>
+				</div>
+			</div>
+			<div data-ng-show="comment.isSelect">
+				<textarea data-ng-model="comment.Content" class="form-control" data-ng-blur="commentBlur(comment)"></textarea>
+			</div>
+		</li>
+	</ul>
+</div>

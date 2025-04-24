@@ -1,0 +1,18 @@
+[
+	{
+		"title": "How to use",
+		"file": "howToUse.md"
+	},
+	{
+		"title": "Cookbook",
+		"file": "cookbook.md"
+	},
+	{
+		"title": "iTWO Styleguides",
+		"file": "iTWO_Styleguides.md"
+	},
+	{
+		"title": "Team Organisation",
+		"file": "TeamOrganisation.md"
+	}
+]

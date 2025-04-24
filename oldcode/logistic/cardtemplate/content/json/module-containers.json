@@ -1,0 +1,69 @@
+[
+  {
+    "id": "logistic.cardtemplate.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateListTitle",
+    "controller": "logisticCardTemplateListController",
+    "uuid": "e0fffc91d92b4bdda85c9f39679f417c"
+  },
+  {
+    "id": "logistic.cardtemplate.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateDetailTitle",
+    "controller": "logisticCardTemplateDetailController",
+    "uuid": "29cad0ea85ce4611b194e118fb0c350f",
+    "permission": "e0fffc91d92b4bdda85c9f39679f417c"
+  },
+  {
+    "id": "logistic.cardtemplate.activity.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateActivityListTitle",
+    "controller": "logisticCardTemplateActivityListController",
+    "uuid": "0df6e4b981e146648d61eced666a6619"
+  },
+  {
+    "id": "logistic.cardtemplate.activity.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateActivityDetailTitle",
+    "controller": "logisticCardTemplateActivityDetailController",
+    "uuid": "ef003b81dcd2411a8bad42476fb2bf87",
+    "permission": "0df6e4b981e146648d61eced666a6619"
+  },
+  {
+    "id": "logistic.cardtemplate.record.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateRecordListTitle",
+    "controller": "logisticCardTemplateRecordListController",
+    "uuid": "8614a7a865cb43628c4056226bf5ca52"
+  },
+  {
+    "id": "logistic.cardtemplate.record.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateRecordDetailTitle",
+    "controller": "logisticCardTemplateRecordDetailController",
+    "uuid": "c392eb6e54564b0da8a27a4e67876ea2",
+    "permission": "8614a7a865cb43628c4056226bf5ca52"
+  },
+  {
+    "id": "resource-maintenance-translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "25f9f55bcedb4093bf7c907d1b6c596c"
+  },
+  {
+    "id": "logistic.cardtemplate.document.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateDocumentListTitle",
+    "controller": "logisticCardTemplateDocumentListController",
+    "uuid": "da8c50f95eab426ea365f50e28794eb6"
+  },
+  {
+    "id": "logistic.cardtemplate.document.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.cardtemplate.cardTemplateDocumentDetailTitle",
+    "controller": "logisticCardTemplateDocumentDetailController",
+    "uuid": "125101fddb83457a95064b25bb7ff6d0",
+    "permission": "da8c50f95eab426ea365f50e28794eb6"
+  }
+]

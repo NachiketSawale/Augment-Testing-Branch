@@ -1,0 +1,32 @@
+{
+	"productionplanning": {
+		"cadimportconfig": {
+			"listViewTitle": "CAD Import Configurations",
+			"detailViewTitle": "CAD Import Configuration Details",
+			"entityTitle": "CAD Import Configuration",
+			"importerKind": "Importer Kind",
+			"baseDirectory": "Base Directory",
+			"matchPattern": "Match Pattern",
+			"matchPatternType": "Pattern Type",
+			"importConfig": "Import Configuration",
+			"summary": "Summary",
+			"validation": {
+				"listViewTitle": "CAD Import Validations",
+				"detailViewTitle": "CAD Import Validation Details",
+				"entityTitle": "CAD Import Validation",
+				"ruleId": "Rule",
+				"messageLevel": "Message Level",
+				"warning": "Warning",
+				"error": "Error",
+				"parameter": "Parameter"
+			},
+			"importerKinds": {
+				"autoDetect": "Auto-Detect importer",
+				"kst": "KST importer",
+				"xAds": "xADS importer",
+				"uniOnly": "UNI-only importer",
+				"csv": "CSV importer-Conewago"
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+<div data-ng-controller="basicsCommonChangeStatusMultipleDialogController" class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body overflow" style="height:600px;">
+		<div class="modal-wrapper" data-ng-hide="showHistory">
+			<div class="margin-full-md">
+				<h3>{{::modalOptions.groupInfo}}</h3>
+			</div>
+			<div data-ng-show="isChangingStatus" class="flex-element">
+				<div class="margin-full-md">
+					<h3>{{::modalOptions.runningMessage}}</h3>
+				</div>
+
+			</div>
+
+			<div data-ng-show="!isChangingStatus" class="flex-element flex-basis-auto">
+				<div data-basics-commom-change-status-editor data-options="options"></div>
+			</div>
+			<div data-ng-if="!isChangingStatus">
+				<h3>{{ 'basics.common.changeStatus.remark' | translate }}</h3>
+				<!--<span  class="form-control" data-domain-control data-domain="remark" data-model="statusRemark" data-options="commentOptions"  data-model-options="{ updateOn: 'blur', debounce: { default: 2000, blur: 0} }"></span>-->
+				<span class="form-control" data-domain-control data-domain="remark" data-model="data.remark"></span>
+			</div>
+		</div>
+		<div data-basics-commom-change-status-history data-options="options" data-ng-if="showHistory" class="modal-wrapper" style="height: 350px;"></div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-show="!isChangingStatus" data-ng-disabled="modalOptions.disableOk()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

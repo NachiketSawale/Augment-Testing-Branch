@@ -1,0 +1,9 @@
+{
+  "companyCode": "904",
+  "searchRequest": {
+    "pageSize": 2147483647,
+    "pageNumber": 0,
+    "useCurrentClient": true,
+    "filter": "{\"operator\":\"and\",\"criterions\":[{\"operator\":\"contains\",\"attribute\":\"DescriptionInfo\",\"value1\":\"a\"}]}"
+  }
+}

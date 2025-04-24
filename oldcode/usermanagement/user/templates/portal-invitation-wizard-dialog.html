@@ -1,0 +1,42 @@
+<div data-ng-controller="portalInvitationWizardDialogController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	
+	<section class="modal-body">
+		
+		<div class=flex-element">
+			<div class="modal-dialog primary">
+				<div class="flex-box">
+					
+					<div class="flex-element right-side">
+						
+						<b class="text-justify" ng-bind-html="invitationOptions.invitationInfoText"></b>
+						
+						<section>
+							<div data-cloud-common-overlay data-loading="invitationOptions.loading" data-info2="invitationOptions.loadingInfo"></div>
+							
+							<div class="platform-form-group">
+								
+								<div data-platform-label-text data-label="text.platform.portal.contactName" data-forid="contactName" data-model="dlgData.contact.contactFullName" readonly></div>
+								<div data-platform-label-text data-label="text.platform.portal.email" data-forid="email" data-model="dlgData.contact.email" readonly></div>
+								<div data-platform-label-text data-label="text.platform.portal.bpdName" data-forid="bpdName" data-model="dlgData.contact.bpdFullName" readonly></div>
+								<div data-platform-label-text data-label="text.platform.portal.bpdAddress" data-forid="bpdAddress" data-model="dlgData.contact.bpdAddress" readonly></div>
+								<div data-platform-label-select data-label="text.platform.portal.accessGroup" data-forid="accessGroup" data-isrequired
+								     data-model="dlgData.FrmPortalUserGroupFk" data-options="portalAccessGroupOptions" data-onchange="onChangePortalAccessGroup()"></div>
+								<div data-platform-label-check-box data-label="text.platform.portal.confirmlabel" data-forid="finishedinfo" data-text="text.platform.portal.finishedinfo" data-model="dlgData.finishedinfo" readonly></div>
+							</div>
+						
+						</section>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	
+	</section>
+	
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()">{{::'cloud.common.cancel'|translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-disabled="!invitationOptions.canOk()" data-ng-click="onOk()">{{::'cloud.common.ok'|translate}}</button>
+	</footer>
+
+</div>

@@ -1,0 +1,17 @@
+﻿{
+	"productionplanning": {
+		"formwork": {
+			"listTitle": "Formworks",
+			"detailTitle": "Formwork Details",
+			"phaseListTitle": "Formwork: Phases",
+			"phaseDetailTitle": "Formwork: Phases Detail",
+			"productListTitle": "Formwork: Products",
+			"productDetailTitle": "Formwork: Products Detail",
+			"entityFormwork": "Formwork",
+			"productionGroup": "Production",
+			"formworkType": "Type",
+			"process": "Process",
+			"productionPlace": "Production Place"
+		}
+	}
+}

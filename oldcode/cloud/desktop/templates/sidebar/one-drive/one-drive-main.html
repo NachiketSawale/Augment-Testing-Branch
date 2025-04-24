@@ -1,0 +1,4 @@
+﻿<div class="fullheight flex-box flex-column " data-ng-controller="cloudDesktopOneDriveMainController">
+    <div data-ng-if="!isAuthenticated" data-ng-include="loginView" class="fullheight"></div>
+    <div data-ng-if="isAuthenticated" data-ng-include="fileExplorerView" class="fullheight"></div>
+</div>

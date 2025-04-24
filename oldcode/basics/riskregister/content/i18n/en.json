@@ -1,0 +1,30 @@
+{
+  "basics": {
+    "riskregister": {
+      "riskEventsGridTitle": "Risk Events",
+      "riskEventsDetailGridTitle": "Risk Events Details",
+      "assignedResoursesGridTitle": "Assigned Resources",
+      "moduleDisplayNameRiskRegisters": "Risk Registers",
+      "addResources": "Assign Resources",
+      "resourceShortKey": "Resource Type",
+      "impact": "Impact",
+      "lowImpactTest": "Low Impact Input",
+      "highImpactTest": "High Impact Input",
+      "centralimpact": "Central Impact",
+      "distributiontype": "Distribution Type",
+      "lowimpact": "Low Impact",
+      "highimpact": "High Impact",
+      "probriskoccur": "Probability of Risk Occurance %",
+      "seed": "Seed",
+      "lowimpacttest": "Low Impact Input",
+      "highimpacttest": "High Impact Input",
+      "lowimpactdetail": "Low Impact Input",
+      "highimpactdetail": "High Impact Input",
+      "iterations": "Iterations",
+      "weightedValue": "Weighted Value",
+      "importRisksToEstimate": "Import Risks To Estimate",
+      "risks": "Risks",
+      "estResourceTypeFk": "Resource Type"
+    }
+  }
+}

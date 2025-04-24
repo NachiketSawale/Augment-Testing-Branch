@@ -1,0 +1,99 @@
+<!-- Single Entry Configuration Display -->
+<div id="single-config" ng-show="singleConfigVisible">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.groupsPath' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="text" data-model="adSettings.adsPaths.groupsPath"
+				     data-placeholder="{{'usermanagement.main.dialog.ldapGroupPathInfo' | translate}}" data-regex="^[^<>+]*$">
+				</div>
+
+
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.usersPath' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="text" data-model="adSettings.adsPaths.usersPath"
+				     data-placeholder="{{'usermanagement.main.dialog.ldapUserPathInfo' | translate}}" data-regex="^[^<>+]*$">
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.ldapSampleLabel' | translate}}</label>
+			<label class="platform-form-col" ng-bind-html="modalOptions.ldapUrl"></label>
+			<!--		<label class="platform-form-col" ng-bind-html="modalOptions.ldapUrl">{{'usermanagement.main.dialog.ldapUrl' | translate}}</label>-->
+
+		</div>
+		<div class="platform-form-row">
+			<label class="platform-form-label">&nbsp;</label>
+			<div class="platform-form-col control-directive" data-platform-btn-form-control data-options="modalOptions.validateOptions"></div>
+		</div>
+
+		<div class="platform-form-row">
+			<hr class="platform-form-label">
+			<hr class="platform-form-col">
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.useAuthentication' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="boolean" data-model="adSettings.authInfo.useAuthentication"
+				     data-options="adSettings.authInfo.useAuthentication"></div>
+			</div>
+		</div>
+
+		<div ng-if="adSettings.authInfo.useAuthentication" class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.username' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="description" data-model="adSettings.authInfo.username"
+				     data-placeholder="{{'usermanagement.main.dialog.enterUsername' | translate}}"></div>
+			</div>
+		</div>
+
+		<div ng-if="adSettings.authInfo.useAuthentication" class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.password' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="password" data-model="adSettings.authInfo.password" autocomplete="new-password"
+				     data-placeholder="{{'usermanagement.main.dialog.enterPassword' | translate}}"></div>
+			</div>
+
+		</div>
+
+		<div class="platform-form-row">
+			<hr class="platform-form-label">
+			<hr class="platform-form-col">
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.showPreValidation' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="boolean" data-model="adSettings.showPreValidation"></div>
+			</div>
+		</div>
+
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{'usermanagement.main.dialog.useSecureConnection' | translate}}</label>
+			<div class="platform-form-col">
+				<div data-domain-control data-domain="boolean" data-model="adSettings.useSecureConnection"></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- Multiple Entries Configuration Display-->
+<div id="multi-config" ng-show="multiConfigVisible">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<label class="platform-form-label"></label>
+			<div class="platform-form-col">
+				<p>{{'usermanagement.main.dialog.msgMultipleConfigurations' | translate}}</p>
+				<button id="navigate-button" type="button" class="btn btn-default" ng-click="navigateToCustomizingModule()">
+					{{'usermanagement.main.dialog.btnMultipleConfigurations' | translate}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

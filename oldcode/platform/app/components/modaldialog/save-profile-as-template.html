@@ -1,0 +1,31 @@
+<form name="saveProfileAsForm" class="platform-form">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<div>
+		<div class="modal-body">
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label ng-binding">{{modalOptions.areaLabelText}}</label>
+					<div class="platform-form-col">
+						<select class="form-control" data-ng-model="modalOptions.value.selectedArea" data-ng-options="item.description for item in modalOptions.areaItems"></select>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label ng-binding">{{modalOptions.nameLabelText}}</label>
+					<div class="platform-form-col">
+						<input class="form-control" name="inputProfileName" type="text" data-ng-model="modalOptions.value.textProfileName" data-ng-pattern="" placeholder="{{ modalOptions.bodyText }}" required>
+						<!--<span class="error" ng-show="saveProfileAsForm.inputProfileName.$error.pattern">Input does not match the expected value!</span>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" ng-disabled="saveProfileAsForm.$invalid">
+			{{modalOptions.okBtnText}}
+		</button>
+
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.cancelBtnText}}
+		</button>
+	</footer>
+</form>

@@ -1,0 +1,12 @@
+export { IWorkTimeModelDtlEntity } from './entities/work-time-model-dtl-entity.interface';
+export { IWorkTimeModelEntity } from './entities/work-time-model-entity.interface';
+export { IWorkTimeDerivationEntity } from './entities/work-time-derivation-entity.interface';
+export { IWorkTimeModelDayEntity } from './entities/work-time-model-day-entity.interface';
+export { ITimeSymbol2WorkTimeModelEntity } from './entities/time-symbol-2work-time-model-entity.interface';
+export { IWorkTimeModelCompleteEntity } from './entities/work-time-model-complete-entity.interface';
+export { IWorkTimeModelDtlEntityGenerated } from './entities/work-time-model-dtl-entity-generated.interface';
+export { IWorkTimeModelEntityGenerated } from './entities/work-time-model-entity-generated.interface';
+export { IWorkTimeDerivationEntityGenerated } from './entities/work-time-derivation-entity-generated.interface';
+export { IWorkTimeModelDayEntityGenerated } from './entities/work-time-model-day-entity-generated.interface';
+export { ITimeSymbol2WorkTimeModelEntityGenerated } from './entities/time-symbol-2work-time-model-entity-generated.interface';
+export { IWorkTimeModelCompleteEntityGenerated } from './entities/work-time-model-complete-entity-generated.interface';

@@ -1,0 +1,89 @@
+<div data-ng-controller="transportplanningTransportReturnResourcesRouteSettingController" ng-cloak class="filler">
+    <fieldset data-ng-show="!forUnplanned"
+              style="padding:2px;border:1px solid #dcdcdc;border-radius:3px;margin-bottom:10px;">
+        <legend class="font-bold title fix" style="margin-left:3px;width:auto;background-color:#fff;font-size:13px;">
+            {{'transportplanning.transport.wizard.model'| translate}}
+        </legend>
+        <ul style="padding:4px 5px 6px">
+            <li class="platform-form-group" style="display:inline">
+                <input id="createNew" type="radio" value="1" data-ng-checked="model==='1'" data-ng-model="model"
+                       data-ng-click="onCreateNew(this)">
+                <label for="createNew">{{'transportplanning.transport.wizard.createNew'| translate}}</label>
+            </li>
+            <li class="platform-form-group" style="display:inline;margin-left: 100px">
+                <input id="updateExist" type="radio" value="2" data-ng-checked="model==='2'" data-ng-model="model"
+                       data-ng-click="onUpdateExist(this)">
+                <label for="updateExist">{{'transportplanning.transport.wizard.selectExisted'| translate}}</label>
+            </li>
+        </ul>
+    </fieldset>
+
+    <div data-ng-show="model==='1'" class="filler flex-box flex-column ">
+        <div style="margin-left: -10px" class="flex-element" data-platform-form
+             data-form-options="routeFormOptions"
+             data-entity="routeEntity"></div>
+    </div>
+
+    <div data-ng-show="model==='2'" class="filler flex-box flex-column ">
+        <div>
+            <div style="margin-left: -10px" data-platform-form data-form-options="filterFormOptions"
+                 data-entity="filterEntity"></div>
+            <div data-ng-show="forUnplanned" class="platform-form-col" style="margin-left: 60px">
+                <ul>
+                    <li class="platform-form-group" style="display:inline;margin-right: 100px"
+                        ng-repeat="dateFilter in dateFilters">
+                        <input id="{{'id'+$index}}" type="radio" value="{{dateFilter.value}}"
+                               data-ng-checked="$parent.dateFilter===dateFilter.value"
+                               data-ng-model="$parent.dateFilter"
+                               data-ng-click="onDateFilterChecked(this)">
+                        <label for="{{'id'+$index}}">{{dateFilter.text| translate}}</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="input-group">
+                <input type="text" data-ng-model="searchValue"
+                       data-ng-keydown="onSearchInputKeydown($event)"
+                       class="form-control" autofocus/>
+                <span class="input-group-btn">
+			        <button class="btn btn-default input-sm btn-search tlb-icons ico-search"
+                            data-ng-click="search()" title="search"></button>
+		    </span>
+            </div>
+        </div>
+        <div data-ng-if="enabledPaging()">
+            <div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+                <div class="form-control flex-align-center" style="border: none;">
+                    <div class="input-group-content" data-ng-bind="getPageText()"></div>
+                </div>
+
+                <span class="input-group-btn">
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageUp()}"
+                        data-ng-disabled="isLoading||!canPageUp()"
+                        data-ng-click="pageUp()" style="border: none;"><span class="control-icons ico-previous"></span></button>
+
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageDown()}"
+                        data-ng-disabled="isLoading||!canPageDown()"
+                        data-ng-click="pageDown()" style="border: none;"><span class="control-icons ico-next"></span></button>
+			</span>
+            </div>
+        </div>
+        <div class="flex-box flex-column flex-element subview-container lookup-grid-container">
+            <div class="subview-header toolbar">
+                <h3 class="font-bold title fix">{{'transportplanning.transport.routeListTitle' | translate}}</h3>
+                <div data-platform-menu-list data-list="gridOptions.routeGrid.tools"></div>
+            </div>
+            <div class="flex-element flex-box flex-column overflow-hidden">
+                <div style="height: 240px" class="flex-basis-auto" data-platform-grid
+                     data="gridOptions.routeGrid"></div>
+            </div>
+        </div>
+        <div style="margin-left: -10px" data-platform-form data-form-options="formOptions"
+             data-entity="routeEntity"></div>
+        <div cloud-common-overlay data-loading="isLoading"></div>
+        <div ng-if="currentStep===2 && model==='2'" transportplanning-transport-trigger-grid-div
+             grids="[gridOptions.routeGrid.state]"></div>
+    </div>
+
+</div>

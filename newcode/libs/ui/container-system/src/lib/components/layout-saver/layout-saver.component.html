@@ -1,0 +1,57 @@
+<!-- TODO: This is Modal Dialog Body section  -->
+<div class="platform-form-group">
+    <div class="platform-form-row">
+        <label class="platform-form-label ng-binding">{{labels.savelocation | platformTranslate}}</label>
+
+        <div class="platform-form-col">
+            <select class="form-control" id="dropdown" [(ngModel)]="selections.selectedType"
+                (change)="selectedTypeChanged()">
+                <option *ngFor="let type of viewTypeList" [ngValue]="type[1]">{{type[1].name |
+                    platformTranslate}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <label class="platform-form-label ng-binding">{{labels.viewname | platformTranslate}}</label>
+        <div class="platform-form-col">
+            <select class="form-control overflow" size="5" [(ngModel)]="selections.selectedView"
+                (change)="selectedViewChanged()" id="viewChanged">
+                <option *ngFor="let view of displayedViews" [ngValue]="view">{{view.dialogName}}</option>
+
+            </select>
+        </div>
+    </div>
+	<div class="platform-form-row" *ngIf="showSaveFilterInput">
+		<label class="platform-form-label ng-binding">{{labels.assignSidebarFilter | platformTranslate}}</label>
+		<div class="platform-form-col">
+			<!--	TODO: grouping-->
+			<select
+			     [(ngModel)]="selections.selectedFilter"
+			     class="enhanced" [ngStyle]="{'disabled':disableInput}"
+			     (change)="onFilterChanged()">
+				<option *ngFor="let filter of selections.filterDefs.items" [ngValue]="filter">{{filter.displayName}}</option>
+			</select>
+		</div>
+	</div>
+    <div class="platform-form-row">
+        <label class="platform-form-label ng-binding">{{labels.loadModuleStart | platformTranslate}}</label>
+        <div class="platform-form-col">
+            <input type="checkbox" class="form-control" [checked]="selections.loadDataModuleStart"
+                [(ngModel)]="selections.loadDataModuleStart" [disabled]="disableInput" />
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <label class="platform-form-label ng-binding">{{labels.loadTabChanged | platformTranslate}}</label>
+        <div class="platform-form-col">
+            <input type="checkbox" class="form-control" [(ngModel)]="selections.loadDataTabChanged"
+                [disabled]="disableInput" />
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <label class="platform-form-label ng-binding">{{labels.savename | platformTranslate}}</label>
+        <div class="platform-form-col">
+            <input type="text" class="form-control" id="viewName" [(ngModel)]="viewName" [disabled]="disableInput" />
+        </div>
+    </div>
+</div>

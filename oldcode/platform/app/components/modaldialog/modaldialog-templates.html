@@ -1,0 +1,66 @@
+<script type="text/ng-template" id="modaldialog/modaldialog-template.html">
+	<header class="modal-header main-color" data-ng-include="modalOptions.headerTemplateUrl"></header>
+
+	<div class="modal-body flex-box" data-ng-include="modalOptions.bodyTemplateUrl" data-ng-class="{ 'flex-column': modalOptions.bodyFlexColumn }"></div>
+
+	<footer class="modal-footer" data-ng-include="modalOptions.footerTemplateUrl"></footer>
+</script>
+
+<script type="text/ng-template" id="modaldialog/modaldialog-header-template.html">
+	<span class="modal-title font-bold" data-ng-bind="(modalOptions.headerText || modalTitle)"></span>
+	<button class="db close" data-dismiss="modal" data-ng-click="modalOptions.cancel()">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+</script>
+
+<script type="text/ng-template" id="modaldialog/modaldialog-body-template.html">
+	<div class="icon-message">
+		<div class="icon tlb-icons {{ modalOptions.iconClass }}"></div>
+		<div class="message" data-ng-bind-html="modalOptions.bodyText"></div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="modaldialog/modaldialog-footer-template.html">
+	<div class="custom-btn-group">%%customButtons%%</div>
+	<button ng-if="modalOptions.isShown('ok')" class="ok btn"
+	        data-ng-class="(modalOptions.defaultButton === 'ok') ? 'btn-return' : 'btn-default'"
+	        data-ng-click="modalOptions.ok()"
+	        data-ng-disabled="modalOptions.isDisabled('ok')">
+		{{modalOptions.okBtnText}}
+	</button>
+
+	<button ng-if="modalOptions.isShown('yes')" class="btn"
+	        data-ng-class="(modalOptions.defaultButton === 'yes') ? 'btn-return' : 'btn-default'"
+	        data-ng-click="modalOptions.yes()"
+	        data-ng-disabled="modalOptions.isDisabled('yes')">
+		{{modalOptions.yesBtnText}}
+	</button>
+
+	<button ng-if="modalOptions.isShown('no')" class="btn"
+	        data-ng-class="(modalOptions.defaultButton === 'no') ? 'btn-return' : 'btn-default'"
+	        data-ng-click="modalOptions.no()"
+	        data-ng-disabled="modalOptions.isDisabled('no')">
+		{{modalOptions.noBtnText}}
+	</button>
+
+	<button ng-if="modalOptions.isShown('ignore')" class="btn "
+	        data-ng-class="(modalOptions.defaultButton === 'ignore') ? 'btn-return' : 'btn-default'"
+	        data-ng-click="modalOptions.ignore()"
+	        data-ng-disabled="modalOptions.isDisabled('ignore')">
+		{{modalOptions.ignoreBtnText}}
+	</button>
+
+	<button ng-if="modalOptions.isShown('cancel')" class="cancel btn"
+	        data-ng-class="(modalOptions.defaultButton === 'cancel') ? 'btn-return' : 'btn-default'"
+	        data-ng-click="modalOptions.cancel()"
+	        data-ng-disabled="modalOptions.isDisabled('cancel')">
+		{{modalOptions.cancelBtnText}}
+	</button>
+
+	<button ng-if="modalOptions.isShown('retry')" class="btn"
+	        data-ng-class="(modalOptions.defaultButton === 'retry') ? 'btn-return' : 'btn-default'"
+	        data-ng-click="modalOptions.retry()"
+	        data-ng-disabled="modalOptions.isDisabled('retry')">
+		{{modalOptions.retryBtnText}}
+	</button>
+</script>

@@ -1,0 +1,22 @@
+<style>
+	.has-border {
+		border: 1px solid #dcdcdc;
+	}
+</style>
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body">
+	<div class="subview-header toolbar">
+		<h3 class="font-bold title fix">{{'cloud.common.searchResults' | translate}}</h3>
+		<div data-platform-menu-list data-list="grid.tools"></div>
+	</div>
+	<div class="lookup-grid flex-basis-auto grid-container flex-element has-border" data-platform-grid data="grid"></div>
+</section>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>

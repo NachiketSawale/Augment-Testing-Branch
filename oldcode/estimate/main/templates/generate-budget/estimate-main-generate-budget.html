@@ -1,0 +1,23 @@
+<div data-ng-controller="estimateMainGenerateBudgetController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="fullheight">
+			<div class="fullheight" style="overflow-y: auto">
+				<div>
+					<div data-platform-form-container data-form-container-options="formContainerOptions"
+						  entity="dataItem" class="fullheight"></div>
+				</div>
+			</div>
+
+			<label style="padding: 0 0 0 15px;">
+				{{'estimate.main.generateBudgetNoteText' | translate}}
+			</label>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-show="IsWithStandardAllowanceBtn" data-ng-click="showStandardAllowanceOption()"> {{'estimate.main.withStandardAllowance' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-disabled="isDisable()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

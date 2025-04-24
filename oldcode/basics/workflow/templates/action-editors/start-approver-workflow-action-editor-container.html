@@ -1,0 +1,107 @@
+<div data-platform-form-adjust-label>
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="inputOpen">
+			<div data-accordion-heading>
+				<span
+					class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+				<span class="platform-form-group-header">
+           	 	<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            	<div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+				</span>
+			</div>
+			<div class="platform-form-group">
+				<!-- Generic Wizard  Lookup-->
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.useCaseConfig' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.useCaseConfig' | translate }}', 'width':300}"
+						class="platform-form-label">{{'basics.workflow.action.customEditor.useCaseConfig' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-basics-lookup-data-by-custom-data-service-grid-less
+						     data-ng-model="useCaseUUid.value" disabled="codeMirrorOptions.readOnly"
+						     options="lookupOptionsGenericWizard"></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.entityId' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.entityIdTooltipCaption' | translate }}', 'width':300}" class="platform-form-label">{{'basics.workflow.action.customEditor.entityId' | translate
+						}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="mainEntityId.value" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+				<!-- Workflow  Template  Lookup-->
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.approverWorkflow' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.approverWorkflowTemplateTooltipCaption' | translate }}', 'width':300}" class="platform-form-label">{{'basics.workflow.action.customEditor.approverWorkflow' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-basics-lookup-data-by-custom-data-service-grid-less
+						     data-ng-model="workflowTemplateId.value" disabled="codeMirrorOptions.readOnly"
+						     options="lookupOptionsWorkflowTemplate"></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.classifiedNumber' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.classifiedNumberTooltipCaption' | translate }}', 'width':300}"
+						class="platform-form-label">{{'basics.workflow.action.customEditor.classifiedNumber' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="classifiedNumber.value" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.classifiedDate' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.classifiedDateTooltipCaption' | translate }}', 'width':300}"
+						class="platform-form-label">{{'basics.workflow.action.customEditor.classifiedDate' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="classifiedDate.value" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.classifiedAmount' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.classifiedAmountTooltipCaption' | translate }}', 'width':300}"
+						class="platform-form-label">{{'basics.workflow.action.customEditor.classifiedAmount' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="classifiedAmount.value" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.classifiedText' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.classifiedTextTooltipCaption' | translate }}', 'width':300}"
+						class="platform-form-label">{{'basics.workflow.action.customEditor.classifiedText' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="classifiedText.value" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="outputOpen">
+			<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+				<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+			</div>
+
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.aproverInfo' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.aproverInfo' | translate }}', 'width':300}"  class="platform-form-label">{{'basics.workflow.action.customEditor.aproverInfo' | translate
+						}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="result.value" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.configErrors' | translate }}','caption':'{{::'basics.workflow.action.customEditor.startWorkflowApproverAction.configErrors' | translate }}', 'width':300}"  class="platform-form-label">{{'basics.workflow.action.customEditor.configErrors' | translate
+						}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="configErrors.value" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

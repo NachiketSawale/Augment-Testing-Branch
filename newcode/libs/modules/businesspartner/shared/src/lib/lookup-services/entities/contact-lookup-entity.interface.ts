@@ -1,0 +1,75 @@
+import { IEntityBase, IEntityIdentification } from '@libs/platform/common';
+
+/**
+ * @deprecated will be removed later, use the new {@link IContactLookupEntity} in businesspartner\interfaces instead.
+ */
+export interface IContactLookupEntity extends IEntityBase, IEntityIdentification {
+	 Id: number;
+	 BusinessPartnerFk: number;
+	 FirstName?: string | null;
+	 FamilyName?: string | null;
+	 ContactRoleFk?: number | null;
+	 Title?: string | null;
+	 Telephone1fk?: number | null;
+	 TelephonePattern?: string | null;
+	 Telephone1?: string | null;
+	 Telephone2fk?: number | null;
+	 Telephone2Pattern?: string | null;
+	 Telephone2?: string | null;
+	 Telephone3fk?: number | null;
+	 TelefaxPattern?: string | null;
+	 Mobile?: string | null;
+	 Mobilefk?: number | null;
+	 MobilePattern?: string | null;
+	 PrivateTelephone?: string | null;
+	 TelephonePrivatePattern?: string | null;
+	 Telefax?: string | null;
+	 Internet?: string | null;
+	 Email?: string | null;
+	 SubsidiaryFk?: number | null;
+	 Description?: string | null;
+	 AddressFk?: number | null;
+	 AddressLine?: string | null;
+	 SearchPattern?: string | null;
+	 IsLive: boolean;
+	 CompanyFk: number;
+	 BpName1?: string | null;
+	 BasTitleFk?: number | null;
+	 Initials?: string | null;
+	 BasClerkResponsibleFk?: number | null;
+	 Pronunciation?: string | null;
+	 BasCountryFk?: number | null;
+	 BpdContactTimelinessFk?: number | null;
+	 BpdContactOriginFk?: number | null;
+	 BpdContactAbcFk?: number | null;
+	 Birthdate?: Date | null;
+	 BasTelephonePrivatFk?: number | null;
+	 Nickname?: string | null;
+	 PartnerName?: string | null;
+	 Children?: string | null;
+	 Remark?: string | null;
+	 BasCommunicationchannelFk?: number | null;
+	 UserName?: string | null;
+	 LastLogin?: Date | null;
+	 WrongAttempts: number;
+	 FrmUserextproviderFk?: number | null;
+	 IsDefault: boolean;
+	 BasEncryptionTypeFk: number;
+	 BasLanguageFk?: number | null;
+	 EmailPrivat?: string | null;
+	 IsAnonymized: boolean;
+	 FullName?: string | null;
+	 Provider?: string | null;
+	 ProviderId?: string | null;
+	 ProviderFamilyName?: string | null;
+	 ProviderEmail?: string | null;
+	 ProviderAddress?: string | null;
+	 ProviderComment?: string | null;
+	 PortalUserGroupFk: number;
+	 PortalUserGroupName?: string | null;
+	 LogonName?: string | null;
+	 IdentityProviderName?: string | null;
+	 State?: number | null;
+	 Statement?: string | null;
+	 SetInactiveDate?: Date | null;
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "logistic.sundrygroup.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.sundrygroup.listSundryServiceGroupTitle",
+    "controller": "logisticSundryServiceGroupListController",
+    "uuid": "c89773b5e5b342339203a99d29c07c09"
+  },
+  {
+    "id": "logistic.sundrygroup.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.sundrygroup.detailSundryServiceGroupTitle",
+    "controller": "logisticSundryServiceGroupDetailController",
+    "uuid": "5702f80f88aa494db2bddec1d42c05d9",
+    "permission": "c89773b5e5b342339203a99d29c07c09"
+  },
+  {
+    "id": "logistic.sundrygroup.account.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.sundrygroup.listSundryServiceGroupAccountTitle",
+    "controller": "logisticSundryServiceGroupAccountListController",
+    "uuid": "c2b21e2891ad4162aa6adebc111623d5"
+  },
+  {
+    "id": "logistic.sundrygroup.account.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.sundrygroup.detailSundryServiceGroupAccountTitle",
+    "controller": "logisticSundryServiceGroupAccountDetailController",
+    "uuid": "6ffe2a8357dd4782b8d9abea6680326e",
+    "permission": "c2b21e2891ad4162aa6adebc111623d5"
+  },
+  {
+    "id": "logistic.sundrygroup.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "7d9123130ed4437cba136e05a0911a06"
+  },
+	{
+		"id": "logistic.sundrygroup.taxcode.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.sundrygroup.taxCodeList",
+		"controller": "logisticSundryGroupTaxCodeListController",
+		"uuid": "53ee04a365cc4110a06e44c00d39ddf9"
+	},
+	{
+		"id": "logistic.sundrygroup.taxcode.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.sundrygroup.taxCodeDetail",
+		"controller": "logisticSundryGroupTaxCodeDetailController",
+		"uuid": "0a1129006edb4425a610dd413a853a10",
+		"permission": "53ee04a365cc4110a06e44c00d39ddf9"
+	}
+]

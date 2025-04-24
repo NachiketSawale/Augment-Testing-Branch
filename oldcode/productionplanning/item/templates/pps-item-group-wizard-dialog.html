@@ -1,0 +1,21 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section class="modal-body">
+    <div ng-cloak data-ng-include="steps[0].url" data-ng-show="currentStep===(0+1)" class="filler"
+         data-ng-if="steps[0].isInitialized" ></div>
+    <div ng-cloak data-ng-include="steps[1].url" data-ng-show="currentStep===(1+1)" class="filler"
+         data-ng-if="steps[1].isInitialized" ></div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="modalOptions.isPreviousDisabled()"
+            data-ng-click="modalOptions.handlePrevious()">
+        {{'cloud.common.previousStep' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="modalOptions.isNextDisabled()"
+            data-ng-click="modalOptions.handleNext()">
+        {{currentStep === totalStep ? ('platform.wizard.stepFinish' | translate):('cloud.common.nextStep'|translate)}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

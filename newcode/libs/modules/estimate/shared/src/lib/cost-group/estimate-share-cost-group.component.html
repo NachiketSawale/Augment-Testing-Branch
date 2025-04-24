@@ -1,0 +1,29 @@
+<div class="flex-box flex-column flex-element filler relative-container">
+  <div *ngIf="mainCategoryList.length>0" class="generic-struct">
+    <div class="group-items slick-groupby" data-ng-show ="isShowInfo">
+      <div class="group-placeholder" >
+        <div *ngFor="let item of mainCategoryList" class="grouped-item">
+          <span>{{item.Code}}</span>
+          <button class="btn control-icons ico-input-delete" (click)="removeFilter(item.Id)"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <as-split #split [direction]="splitter.direction" unit="percent">
+    <as-split-area [size]="splitter.areaSizes[0]">
+
+      <div class='form-container'>
+          <ui-common-accordion (opened)='isOpen'  (selected)="onSelectedPaent($event)"  [data]="data"></ui-common-accordion>
+      </div>
+
+    </as-split-area>
+
+    <as-split-area [size]="splitter.areaSizes[1]">
+      <div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden" [ngClass]="'cid_' + config.uuid">
+        <ui-common-grid [configuration]="config" (selectionChanged)="onSelectionChanged($event)" [items]='costGroups'></ui-common-grid>
+<!--        <ui-common-loading [loading]="loading"></ui-common-loading>-->
+      </div>
+    </as-split-area>
+  </as-split>
+
+</div>

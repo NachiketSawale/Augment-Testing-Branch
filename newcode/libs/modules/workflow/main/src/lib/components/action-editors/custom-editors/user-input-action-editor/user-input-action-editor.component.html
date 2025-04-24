@@ -1,0 +1,6 @@
+<ui-common-form [formConfig]="formConfig" [entity]="workflowAction"></ui-common-form>
+
+<div class="flex-element flex-box flex-column overflow-auto fullheight" [ngClass]="'cid_' + gridConfig.uuid">
+	<ui-common-grid class="flex-element" [configuration]="gridConfig"
+		(selectionChanged)="selectionChanged($event)"></ui-common-grid>
+</div>

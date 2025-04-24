@@ -1,0 +1,43 @@
+{
+	"basics": {
+		"costgroups": {
+			"moduleName": "Gliederung {{p_0}}",
+			"tabs": {
+				"tabTitle1": "Gliederung1",
+				"tabTitle2": "Gliederung2",
+				"tabTitle3": "Gliederung3",
+				"tabTitle4": "Gliederung4",
+				"tabTitle5": "Gliederung5"
+			},
+			"containers": {
+			},
+			"codeUniqueError": "Der Schlüssel muss eindeutig sein",
+			"costGroup": {
+				"costGroupTitle1": "Gliederung1",
+				"costGroupTitle2": "Gliederung2",
+				"costGroupTitle3": "Gliederung3",
+				"costGroupTitle4": "Gliederung4",
+				"costGroupTitle5": "Gliederung5",
+				"uomDescription": "ME Beschreibung"
+			},
+			"detail": {
+				"detailTitle1": "Gliederung1 Detail",
+				"detailTitle2": "Gliederung2 Detail",
+				"detailTitle3": "Gliederung3 Detail",
+				"detailTitle4": "Gliederung4 Detail",
+				"detailTitle5": "Gliederung5 Detail",
+				"header": "Detail"
+			},
+			"translation": {
+				"translationTitle1": "Gliederung1 Übersetzung",
+				"translationTitle2": "Gliederung2 Übersetzung",
+				"translationTitle3": "Gliederung3 Übersetzung",
+				"translationTitle4": "Gliederung4 Übersetzung",
+				"translationTitle5": "Gliederung5 Übersetzung"
+			},
+			"bkpImport": "Import BKP",
+			"bkpType": "Typ",
+			"bkpVersion": "Version"
+		}
+	}
+}

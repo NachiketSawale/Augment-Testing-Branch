@@ -1,0 +1,27 @@
+<style>
+	#material-lookup-dialog footer button {
+		height: 32px;
+		margin-left: 8px;
+	}
+</style>
+<div id="material-lookup-dialog" data-ng-controller="basicsMaterialLookupController" class="modal-wrapper fullheight">
+    <header class="modal-header" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body overflow-hidden">
+	    <basics-material-filter-view data-ng-if="requiredDataReady" class="fullheight" search-view-options="searchViewOptions"></basics-material-filter-view>
+    </section>
+    <footer class="modal-footer">
+        <div class="custom-group">
+
+            <label class="ms-checkbox-multi-select" data-ng-show="filterOnlyMainContract">
+                <input type="checkbox" data-ng-model="enableOnlyMainContract" data-ng-change="updateEnableOnlyMainContract()">
+                {{ 'procurement.common.filterOnlyMainContract' | translate }}
+            </label>
+        </div>
+	    <button type="button" class="btn btn-brand plain" data-ng-click="onOK()">
+            {{::htmlTranslate.okBtn}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()">
+            {{::htmlTranslate.cancelBtn}}
+        </button>
+    </footer>
+</div>

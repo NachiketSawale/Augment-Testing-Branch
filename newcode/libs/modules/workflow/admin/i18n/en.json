@@ -1,0 +1,84 @@
+{
+	"basics": {
+		"workflowAdministration": {
+			"moduleName": "Workflow Administration",
+			"context": {
+				"containerHeader": "Instance Context"
+			},
+			"instance": {
+				"treeContainerHeader": "Workflow Instance Tree",
+				"containerHeader": "Workflow Instance",
+				"template": "Template",
+				"templateVersion": "Template Version",
+				"escalate": "Escalate",
+				"kill": "Kill",
+				"confirmKill": "Are you sure to Kill the selected Workflow Instance(s)?",
+				"headerKill": "Confirm Workflow Instance(s) Kill?",
+				"status": {
+					"none": "None",
+					"running": "Running",
+					"finished": "Finished",
+					"escalate": "Escalate",
+					"waiting": "Waiting",
+					"failed": "Failed",
+					"killed": "Killed",
+					"validationError": "Validation Error"
+				},
+				"moduleName": "Module Name",
+				"company": "Company",
+				"project": "Project",
+				"entity": "Entity"
+			},
+			"common": {
+				"endTime": "End Time",
+				"maxEndTime": "Latest End Time",
+				"duration": "Duration",
+				"clerk": "Clerk",
+				"result": "Result",
+				"startTime": "Start Time"
+			},
+			"action": {
+				"containerHeader": "Action Instance",
+				"overdueClientActionFilter": "Get all Overdue ClientActions",
+				"context": {
+					"containerHeader": "Action Instance Context"
+				},
+				"isRunning": "Is Running",
+				"escalation": {
+					"header": "Escalation is not possible.",
+					"noActionSelected": "No Action is selected!",
+					"actionIsNotRunning": "The Action is allready finished."
+				},
+				"Userdefined1": "UserDefined1",
+				"Userdefined2": "UserDefined2",
+				"Userdefined3": "UserDefined3",
+				"Userdefined4": "UserDefined4",
+				"Userdefined5": "UserDefined5",
+				"UserDefinedMoney1": "UserDefinedMoney1",
+				"UserDefinedMoney2": "UserDefinedMoney2",
+				"UserDefinedMoney3": "UserDefinedMoney3",
+				"UserDefinedMoney4": "UserDefinedMoney4",
+				"UserDefinedMoney5": "UserDefinedMoney5",
+				"UserDefinedDate1": "UserDefinedDate1",
+				"UserDefinedDate2": "UserDefinedDate2",
+				"UserDefinedDate3": "UserDefinedDate3",
+				"UserDefinedDate4": "UserDefinedDate4",
+				"UserDefinedDate5": "UserDefinedDate5"
+			},
+			"clientAction": {
+				"progressedBy": "Progressed by",
+				"containerHeader": "Client Actions"
+			},
+			"approver": {
+				"containerHeader": "Workflow Approvers",
+				"approverDecision": "Approver Decision",
+				"comment": "Comment",
+				"evaluationLevel": "Evaluation Level",
+				"evaluatedOn": "Evaluation Date",
+				"dueDate": "Duedate",
+				"clerkRole": "Clerk Role",
+				"clerkFk": "Clerk"
+			}
+		}
+	}
+}

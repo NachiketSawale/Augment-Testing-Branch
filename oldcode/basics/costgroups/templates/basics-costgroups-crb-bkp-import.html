@@ -1,0 +1,18 @@
+<section class="modal-body">
+	<div data-ng-controller="basicsCostgroupsBkpImportController">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.costgroups.bkpType' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-domain-control data-domain="select" class="form-control" data-change="onSelectedOptionChanged()" data-options="typeOptions" data-model="selectedType"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal-wrapper margin-top-ld">
+			<div class="modal-wrapper grid-wrapper_ subview-container">
+				<platform-Grid data="gridData" />
+			</div>
+		</div>
+	</div>
+</section>

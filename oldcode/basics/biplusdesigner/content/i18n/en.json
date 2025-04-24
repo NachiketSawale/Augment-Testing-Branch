@@ -1,0 +1,48 @@
+{
+	"basics": {
+		"biplusdesigner": {
+			"dashboard": {
+				"parameterContainerTitle": "Parameters",
+				"parameterDetailsContainerTitle": "Parameters Detail"
+			},
+			"dashboard2GroupContainerTitle": "Dashboard in Group",
+			"dashboard2GroupDetailsContainerTitle": "Dashboard in Group Detail",
+			"designerContainerTitle": "Dashboard Designer",
+			"dashboardContainerTitle": "Dashboards",
+			"dashboardDetailsContainerTitle": "Dashboard Detail",
+			"entityExternalName": "External Name",
+			"entityExternalId": "External Id",
+			"entityBasDashboardTypeFk": "Dashboard Type",
+			"entityIsVisible": "Is Visible",
+			"entityIsAvailable": "Is Available",
+			"entityIsActive": "Is Active",
+			"entityHasTranslation": "Has Translation",
+			"entityDataSource": "Data Source",
+			"entityVisibility": "Visibility",
+			"entityBasDashboardFk": "Dashboard",
+			"entityName": "Name",
+			"toolbarSyncBtn": "Sync Dashboard",
+			"import": {
+				"btnExecuteImport": "Import",
+				"btnCancel": "Close",
+				"successText": "Dashboards and Parameters imported successfully. The following modifications took place.",
+				"errorText" : "Import Failed!!",
+				"instructionsText": "The dashboards and parameter definitions updates in the datapine server are not tracked automatically. To perform the synchronization with the datapine server, please click Import.",
+				"warningText": "Items can be inserted, updated or deleted. The process may take a while to be finished depending on the number of import items.",
+				"loadingMessage": "Import in progress",
+				"dialogTitle": "Import Dashboards"
+			},
+			"syscontextNull": " ",
+			"syscontextCompany": "Company",
+			"syscontextProfitCenter": "Profit Center",
+			"syscontextProject": "Project",
+			"syscontextMainEntityId": "Main Entity Id",
+			"syscontextMainEntityIdArray": "Main Entity Ids",
+			"syscontextUserId": "User Id",
+			"syscontextUserName": "User Name",
+			"syscontextUserDescription": "User Description",
+			"syscontextSelectedMainEntities": "Selected Main Entity Ids",
+			"DashboardGroupFk": "Dashboard Group Name"
+		}
+	}
+}

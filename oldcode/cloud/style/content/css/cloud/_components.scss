@@ -1,0 +1,119 @@
+/*-------------------------------------------------------------------------------
+	 Components - Styles for UI Components (_components.scss)
+  -------------------------------------------------------------------------------*/
+
+//action select button style
+//platform-action-select-btn
+.action-select-btn {
+	@include status-styles(none);
+	//&:hover {
+	//background-color: #bbcddb;
+	// }
+}
+
+.help-info {
+	padding-left: $padding-small-horizontal;
+	padding-right: $padding-small-horizontal;
+	background: $color-button-background;
+	&:hover {
+		svg {
+			--icon-color-1 : var(--icon-hover-color);
+		}
+	}
+	svg {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.help-content-frame {
+	padding-left: $padding-xxlarge-horizontal;
+	padding-right: $padding-xxlarge-horizontal;
+	padding-bottom: $padding-xxlarge-horizontal;
+	width: 600px;
+}
+
+/*----------------------------------------
+	Feedback Component
+  ----------------------------------------*/
+
+.feedback-progress-bar {
+	width: 100%;
+	background-color: $color-grey-light;
+	box-shadow: none;
+	height: 6px;
+	margin-bottom: $padding-large-horizontal;
+	margin-right: $padding-xlarge-horizontal;
+	border-radius: 15px;
+}
+
+.feedback-progress {
+	width: 0%;
+	height: 100%;
+	background-color: $color-blue-2;
+	transition: width 0.3s ease;
+	border-radius: 15px;
+
+	&.complete {
+		background-color: #3c763d;
+	}
+
+	&.error {
+		background-color: $color-red;
+	}
+}
+
+.errorText {
+	color: $color-red;
+}
+
+.completeText {
+	color: #3c763d;
+}
+
+.feedback {
+	min-width: 350px;
+	max-width: 350px;
+}
+
+.feedback-ico {
+	@include square($size-large-icon);
+	display: inline-block;
+	background-size: $size-large-icon;
+}
+
+.feedback-close {
+	width: 20px;
+	height: 20px;
+}
+
+// START - Throbber progress control
+.loader {
+	width: 50px;
+	aspect-ratio: 1;
+	display: grid;
+	border-radius: 50%;
+	background:
+		linear-gradient(0deg ,rgb(0 103 177/50%) 30%,#0000 0 70%,rgb(0 103 177/100%) 0) 50%/8% 100%,
+		linear-gradient(90deg,rgb(0 103 177/25%) 30%,#0000 0 70%,rgb(0 103 177/75%) 0) 50%/100% 8%;
+	background-repeat: no-repeat;
+	animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+	content: "";
+	grid-area: 1/1;
+	border-radius: 50%;
+	background: inherit;
+	opacity: 0.915;
+	transform: rotate(30deg);
+}
+.loader::after {
+	opacity: 0.83;
+	transform: rotate(60deg);
+}
+@keyframes l23 {
+	100% {transform: rotate(1turn)}
+}
+
+// END

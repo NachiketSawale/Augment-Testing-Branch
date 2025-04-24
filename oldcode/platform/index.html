@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>RIB 4.0</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="cloud.style/content/images/app/rib-logo.ico"/>
+	<noscript>Your browser does not support JavaScript!</noscript>
+	<script type="text/javascript">
+		if (window.location.pathname.lastIndexOf("/") !== window.location.pathname.length - 1) {
+			window.location.pathname += "/";
+		} else {
+			const href = '<base href="' + window.location.pathname + '"/>';
+			document.write(href);
+		}
+	</script>
+	<link type="text/css" rel="stylesheet" href="_bundle/cloud-min.css?t=1743505090069"/>
+	<link type="text/css" rel="stylesheet" href="_bundle/modules-min.css?t=1743505090069"/>
+</head>
+<body>
+<div data-ng-controller="platformController" style="height: 100%">
+	<div id="appContainer" data-ui-view></div>
+</div>
+
+<script type="module" src="esm-loader.js?t=1743505090069"></script>
+<script type="text/javascript" src="config.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/lib-min01.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/lib-min02.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/app-min.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/modules-min01.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/modules-min02.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/modules-min03.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/modules-min04.js?t=1743505090069"></script>
+<script type="text/javascript" src="_bundle/modules-min05.js?t=1743505090069"></script>
+
+<script type="text/javascript">
+	function loadCSS(filename) {
+		var link = document.createElement("link");
+		link.type = "text/css";
+		link.rel = "stylesheet";
+		link.href = filename + globals.timestamp;
+		document.getElementsByTagName("head")[0].appendChild(link);
+	}
+
+	// Chrome, Safari ≥ 3, Opera ≥ 14
+	var isWebkit = "WebkitAppearance" in document.documentElement.style;
+
+	// Chrome, Opera ≥ 14, Android 4.0.4
+	var isChromium = !!window.chrome;
+
+	if (isChromium || isWebkit) {
+		loadCSS("_bundle/app-webkit-min.css");
+	}
+
+	// Touch device detection
+	var isTouch =
+		"ontouchstart" in window || // works on most browsers
+		navigator.maxTouchPoints; // works on IE10/11 and Surface
+
+	if (isTouch) {
+		loadCSS("_bundle/app-touch-min.css");
+	}
+	// rei@17.5.22 predefined languages required for initial loading with valid available languages
+	globals.uilanguagessimple = [
+		{
+			"Id": 1,
+			"Sorting": 10,
+			"Description": "English",
+			"Language": "en",
+			"Culture": "en-gb"
+		},
+		{
+			"Id": 3,
+			"Sorting": 10,
+			"Description": "English (US)",
+			"Language": "en-us",
+			"Culture": "en-us"
+		},
+		{
+			"Id": 2,
+			"Sorting": 20,
+			"Description": "German",
+			"Language": "de",
+			"Culture": "de-de"
+		},
+		{
+			"Id": 24,
+			"Sorting": 20,
+			"Description": "German (Swiss)",
+			"Language": "de-ch",
+			"Culture": "de-ch"
+		},
+		{
+			"Id": 4,
+			"Sorting": 40,
+			"Description": "Spanish",
+			"Language": "es",
+			"Culture": "es-es"
+		},
+		{
+			"Id": 5,
+			"Sorting": 50,
+			"Description": "Finnish",
+			"Language": "fi",
+			"Culture": "fi-fi"
+		},
+		{
+			"Id": 6,
+			"Sorting": 60,
+			"Description": "French",
+			"Language": "fr",
+			"Culture": "fr-fr"
+		},
+		{
+			"Id": 25,
+			"Sorting": 60,
+			"Description": "French (Swiss)",
+			"Language": "fr-ch",
+			"Culture": "fr-ch"
+		},
+		{
+			"Id": 7,
+			"Sorting": 70,
+			"Description": "Dutch",
+			"Language": "nl",
+			"Culture": "nl-nl"
+		},
+		{
+			"Id": 8,
+			"Sorting": 80,
+			"Description": "Russian",
+			"Language": "ru",
+			"Culture": "ru-ru"
+		},
+		{
+			"Id": 9,
+			"Sorting": 90,
+			"Description": "Chinese",
+			"Language": "zh",
+			"Culture": "zh-cn"
+		},
+		{
+			"Id": 23,
+			"Sorting": 90,
+			"Description": "Chinese (Traditional)",
+			"Language": "zh-hant",
+			"Culture": "zh-hant"
+		},
+		{
+			"Id": 10,
+			"Sorting": 100,
+			"Description": "Italian",
+			"Language": "it",
+			"Culture": "it-it"
+		},
+		{
+			"Id": 26,
+			"Sorting": 100,
+			"Description": "Italian (Swiss)",
+			"Language": "it-ch",
+			"Culture": "it-ch"
+		},
+		{
+			"Id": 11,
+			"Sorting": 110,
+			"Description": "Czech",
+			"Language": "cs",
+			"Culture": "cs-cz"
+		},
+		{
+			"Id": 12,
+			"Sorting": 120,
+			"Description": "Polish",
+			"Language": "pl",
+			"Culture": "pl-pl"
+		},
+		{
+			"Id": 13,
+			"Sorting": 130,
+			"Description": "Swedish",
+			"Language": "sv",
+			"Culture": "sv-se"
+		},
+		{
+			"Id": 14,
+			"Sorting": 140,
+			"Description": "Norwegian",
+			"Language": "nb",
+			"Culture": "nb-no"
+		},
+		{
+			"Id": 15,
+			"Sorting": 150,
+			"Description": "Lithuanian",
+			"Language": "lt",
+			"Culture": "lt-lt"
+		},
+		{
+			"Id": 16,
+			"Sorting": 160,
+			"Description": "Japanese",
+			"Language": "ja",
+			"Culture": "ja-jp"
+		},
+		{
+			"Id": 17,
+			"Sorting": 170,
+			"Description": "Portuguese",
+			"Language": "pt",
+			"Culture": "pt-pt"
+		},
+		{
+			"Id": 18,
+			"Sorting": 180,
+			"Description": "Danish",
+			"Language": "da",
+			"Culture": "da-dk"
+		},
+		{
+			"Id": 19,
+			"Sorting": 190,
+			"Description": "Korean",
+			"Language": "ko",
+			"Culture": "ko-kr"
+		},
+		{
+			"Id": 20,
+			"Sorting": 200,
+			"Description": "Vietnamese",
+			"Language": "vi",
+			"Culture": "vi-vn"
+		},
+		{
+			"Id": 21,
+			"Sorting": 210,
+			"Description": "Thai",
+			"Language": "th",
+			"Culture": "th-th"
+		},
+		{
+			"Id": 22,
+			"Sorting": 220,
+			"Description": "Indonesian",
+			"Language": "id",
+			"Culture": "id-id"
+		}
+	];
+</script>
+</body>
+</html>

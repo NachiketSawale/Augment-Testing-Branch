@@ -1,0 +1,24 @@
+{
+    "basics":{
+        "indextable":
+        {
+            "indexHeaderTitle" :"Index Header",
+            "indexHeaderDetails": "Index Header Detail",
+            "indexDetailTitle": "Index Detail",
+            "indexDetailDetails": "Index Detail Details",
+            "entityTranslation":"Translation",
+            "userDefined1" : "UserDefined1",
+            "userDefined2" : "UserDefined2",
+            "userDefined3" : "UserDefined3",
+            "userDefined4" : "UserDefined4",
+            "userDefined5" : "UserDefined5",
+            "date" : "Date",
+            "quantity" : "Value",
+            "code" : "Code",
+            "commentText": "Comment",
+            "errors":{
+                "uniqCode" : "Code should be unique"
+            }
+         }
+    }
+}

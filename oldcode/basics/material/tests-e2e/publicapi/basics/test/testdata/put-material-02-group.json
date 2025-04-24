@@ -1,0 +1,5497 @@
+﻿{
+	"CompanyCode": "GUANGDONG2017001",
+	"MaterialCatalogCode": "广东二类地区材料信息价",
+	"Groups": [
+		{
+			"Code": "1",
+			"CatalogCode": "",
+			"CodeParent": "",
+			"DescriptionInfo": {
+				"Description": "人工"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "1.1",
+			"CatalogCode": "",
+			"CodeParent": "1",
+			"DescriptionInfo": {
+				"Description": "定额人工"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "1.2",
+			"CatalogCode": "",
+			"CodeParent": "1",
+			"DescriptionInfo": {
+				"Description": "其他人工"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "黑色及有色金属"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.1",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "黑色金属"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.2",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "钢筋"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.3",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "钢丝"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.4",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "钢丝绳"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.5",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "钢铰线、钢丝束"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.6",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "圆钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.7",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "方钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.8",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "扁钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.9",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "六角钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.10",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "工字钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.11",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "槽钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.12",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "角钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.14",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "其它型钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.15",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "钢板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.16",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "钢带"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.17",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "钢轨及钢轨配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.18",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铜板材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.19",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铜棒材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.20",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铜线材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.21",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铝板（带）材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.23",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铝线材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.24",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铝型材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.25",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铝合金建筑型材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.26",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "铅材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.27",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "锌材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.28",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "其它金属"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.29",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "金属材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.30",
+			"CatalogCode": "",
+			"CodeParent": "2.1",
+			"DescriptionInfo": {
+				"Description": "加工件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "橡胶、塑料及非金属"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.1",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "橡胶"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.2",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "橡胶板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.3",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "橡胶条/带"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.4",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "橡胶圈"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.5",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "其它橡胶材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.6",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "塑料薄膜、布"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.7",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "塑料板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.8",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "塑料带"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.9",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "塑料棒"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.10",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "有机玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.11",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "其它塑料材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.12",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "石墨碳素制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.13",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "玻璃钢"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.14",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "棉毛及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.15",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "丝麻及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.16",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "化纤及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.17",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "草及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.2.18",
+			"CatalogCode": "",
+			"CodeParent": "2.2",
+			"DescriptionInfo": {
+				"Description": "其它非金属材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "五金制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.1",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "铆钉"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.2",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "螺钉"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.3",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "螺栓"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.4",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "膨胀螺栓"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.5",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "螺母"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.6",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "螺柱"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.7",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "垫圈"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.8",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "挡圈"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.9",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "销"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.10",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "键"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.11",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "砂轮"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.13",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "涂附磨具与磨料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.14",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "焊条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.15",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "焊丝"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.16",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "焊剂、焊粉"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.17",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "钎料及钎剂"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.18",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "普通钉类"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.19",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "轴承"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.20",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "网、丝布"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.21",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "铁丝"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.22",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "铁件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.23",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "钢筋接头、锚具及钢筋保护帽"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.24",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "小五金"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.25",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "低值易耗品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.3.26",
+			"CatalogCode": "",
+			"CodeParent": "2.3",
+			"DescriptionInfo": {
+				"Description": "其它五金件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "水泥、砖瓦灰砂石及混凝土制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.1",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "水泥"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.2",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "砂轮"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.3",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "石子"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.4",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "轻骨料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.5",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "灰、粉、土等掺合填充料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.6",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "石料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.7",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "砌砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.8",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "砌块"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.9",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "瓦"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.10",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "混凝土、砂浆外加剂"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.11",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "水泥及混凝土预制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.4.12",
+			"CatalogCode": "",
+			"CodeParent": "2.4",
+			"DescriptionInfo": {
+				"Description": "钢筋混凝土预制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "木、竹材及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.1",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "原木"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.2",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "锯材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.3",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "胶合板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.4",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "纤维板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.5",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "细木工板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.6",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "空心木板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.7",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "刨花板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.8",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "其它人造木板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.10",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "木制台类及货架"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.11",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "其它木制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.12",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "竹材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.13",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "竹板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.5.14",
+			"CatalogCode": "",
+			"CodeParent": "2.5",
+			"DescriptionInfo": {
+				"Description": "竹制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "玻璃、陶瓷及面砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.1",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "平板玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.3",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "钢化玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.5",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "夹层玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.6",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "中空玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.7",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "镀膜玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.8",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "工艺装饰玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.9",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "镭射玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.10",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "特种玻璃"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.12",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "玻璃砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.13",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "玻璃马赛克"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.14",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "玻璃镜"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.15",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "玻璃制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.16",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "陶瓷内墙砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.17",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "陶瓷外墙砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.18",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "陶瓷地砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.19",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "陶瓷马赛克"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.6.20",
+			"CatalogCode": "",
+			"CodeParent": "2.6",
+			"DescriptionInfo": {
+				"Description": "特种陶瓷砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "装饰石材及地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.1",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "装饰石材及地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.2",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "天然石板材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.3",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "人造石板材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.6",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "文化石及麻石材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.7",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "其它装饰石材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.8",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "石材制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.9",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "石材装饰辅助用料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.10",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "实木地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.11",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "软木地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.12",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "竹地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.13",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "塑料地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.14",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "橡胶地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.15",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "复合地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.7.16",
+			"CatalogCode": "",
+			"CodeParent": "2.7",
+			"DescriptionInfo": {
+				"Description": "活动地板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "墙面、天棚装饰及屋面材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.1",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "石膏装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.2",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "竹木装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.3",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "金属装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.4",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "矿物棉装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.5",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "塑料装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.6",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "复合装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.7",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "铝塑复合板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.9",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "珍珠岩装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.10",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "硅酸钙装饰板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.12",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "轻质复合樯板、屋面板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.14",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "轻钢龙骨"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.15",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "龙骨配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.16",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "铝合金龙骨"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.18",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "格栅、格片/挂片"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.8.19",
+			"CatalogCode": "",
+			"CodeParent": "2.8",
+			"DescriptionInfo": {
+				"Description": "隔断及筒形天棚"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "门窗制品及门窗五金"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.1",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "木门窗"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.2",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "钢门窗"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.6",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "塑钢、塑料门窗"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.9",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "纱门、纱窗"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.11",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "卷帘"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.12",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "其它门窗"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.13",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "门、窗帘及其配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.14",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "门窗锁类"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.15",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "门窗五金"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.9.16",
+			"CatalogCode": "",
+			"CodeParent": "2.9",
+			"DescriptionInfo": {
+				"Description": "木墙五金配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "装饰线条、装饰件、栏杆、扶手及其它"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.2",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "木质装饰线条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.3",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "金属装饰线条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.4",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "石材装饰线条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.5",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "石膏装饰线条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.6",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "塑料装饰线条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.7",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "复合材料装饰线条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.8",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "其它装饰线条"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.9",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "栏杆、栏板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.10",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "扶手"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.11",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "壁纸"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.12",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "贴墙布"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.15",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "地毯、挂毯及门毡"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.10.16",
+			"CatalogCode": "",
+			"CodeParent": "2.10",
+			"DescriptionInfo": {
+				"Description": "其它装饰材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "涂料及防腐防水材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.1",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "建筑涂料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.2",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "功能性涂料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.3",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "木器涂料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.4",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "金属涂料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.5",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "道路、桥梁涂料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.6",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "通用涂料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.7",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "油料、树脂"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.8",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "颜料、填料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.9",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "涂料辅助材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.10",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "耐酸砖、板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.11",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "沥青"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.12",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "防水卷材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.13",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "防水油膏、剂、粉、胶类"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.14",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "止水材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.11.15",
+			"CatalogCode": "",
+			"CodeParent": "2.11",
+			"DescriptionInfo": {
+				"Description": "其他防腐防水材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "油品、化工原料及胶粘材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.1",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "油品、化工原料及胶粘材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.2",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "燃料油"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.3",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "溶剂油、绝缘油"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.4",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "润滑油"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.5",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "润滑脂、蜡"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.6",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "其它油品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.7",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "无机化工原料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.8",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "有机化工原料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.9",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "化工剂类"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.10",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "化工填料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.11",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "工业气体"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.12",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "胶粘剂"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.12.13",
+			"CatalogCode": "",
+			"CodeParent": "2.12",
+			"DescriptionInfo": {
+				"Description": "胶粘制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "绝热、耐火材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.2",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "石棉及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.3",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "岩棉及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.4",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "矿渣棉及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.5",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "玻璃棉及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.6",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "膨胀珍珠岩及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.8",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "泡沫橡胶（塑料）及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.9",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "泡沫玻璃及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.10",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "硅藻土及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.11",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "电伴热带/缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.12",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "其它绝热材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.13",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "粘土质耐火砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.14",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "硅质耐火砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.15",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "铝制耐火砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.16",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "镁质耐火砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.17",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "刚玉砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.18",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "其它耐火砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.19",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "耐火泥、砂、石"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.20",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "不定形耐火材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.21",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "耐火纤维及其制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.22",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "耐火粉、骨料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.13.23",
+			"CatalogCode": "",
+			"CodeParent": "2.13",
+			"DescriptionInfo": {
+				"Description": "其他耐火材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "管材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.1",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "焊接钢管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.2",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "镀锌钢管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.3",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "不锈钢管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.4",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "无缝钢管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.5",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "异型钢管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.6",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "铸铁管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.7",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "铝管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.8",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "铜管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.9",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "金属软管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.10",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "金属波纹管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.11",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "塑料管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.12",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "异形塑料管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.13",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "橡胶管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.14",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "玻璃钢管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.15",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "玻璃管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.16",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "陶瓷（土）管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.17",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "水泥、混凝土管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.18",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "复合管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.14.19",
+			"CatalogCode": "",
+			"CodeParent": "2.14",
+			"DescriptionInfo": {
+				"Description": "其它管材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.1",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "管件及管道用器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.2",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "可锻铸铁螺纹管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.3",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "镀锌管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.4",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "铸铁给水、燃气管管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.5",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "铸铁排水管管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.6",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "钢板卷管管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.7",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "不锈钢管管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.8",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "铜管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.9",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "其它材质管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.10",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "管接头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.11",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "塑料与复合管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.12",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "塑料给水、燃气管管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.13",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "塑料排水管管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.14",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "过滤器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.15",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "视镜"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.16",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "管卡、管箍"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.17",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "管道支吊架"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.18",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "管道补偿器及软接头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.15.19",
+			"CatalogCode": "",
+			"CodeParent": "2.15",
+			"DescriptionInfo": {
+				"Description": "其余管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "阀门"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.1",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "阀门"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.2",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "截止阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.3",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "闸阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.4",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "球阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.6",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "止回阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.7",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "安全阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.8",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "调节阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.9",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "疏水阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.10",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "旋塞阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.11",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "减压阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.13",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "水位控制阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.14",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "浮球阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.15",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "塑料阀门"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.16.17",
+			"CatalogCode": "",
+			"CodeParent": "2.16",
+			"DescriptionInfo": {
+				"Description": "阀门专用附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.1",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.2",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "钢制法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.3",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "不锈钢法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.4",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "铸铁法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.5",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "铜法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.6",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "塑料法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.7",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "其它法兰"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.8",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "盲板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.9",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "金属垫片"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.17.10",
+			"CatalogCode": "",
+			"CodeParent": "2.17",
+			"DescriptionInfo": {
+				"Description": "非金属垫片"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "洁具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.1",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "浴缸、浴盘"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.2",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "净身盆、器（妇洗盆）"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.3",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "沐浴器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.4",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "沐浴间、沐浴屏"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.5",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "洗脸盆、洗手盆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.6",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "洗涤盆、化验盆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.7",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "大便器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.8",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "小便器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.9",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "卫生器具用水箱"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.10",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "烘手器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.11",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "其它卫生洁具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.12",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "水嘴、水龙头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.13",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "排水栓、地漏"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.14",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "存水湾、检查口"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.15",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "地面扫除口、下水口"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.16",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "洁具专用阀门"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.17",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "洁具专用开关件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.18",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "洁具专用配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.19",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "消毒器、消毒锅"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.20",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "饮水器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.21",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "厨用隔油器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.22",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "抽水缸"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.23",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "调压装置"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.18.24",
+			"CatalogCode": "",
+			"CodeParent": "2.18",
+			"DescriptionInfo": {
+				"Description": "燃气管道专用附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "水暧及通几空调器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.1",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "散热器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.2",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "铸铁散热器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.3",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "钢制散热器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.5",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "散热器专用配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.6",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "集气罐"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.7",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "集热器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.8",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "除污器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.11",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "风机盘管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.12",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "风口"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.13",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "散流器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.14",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "风管、风道"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.15",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "风帽"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.16",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "罩类"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.17",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "风口过滤器、过滤网"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.18",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "调节阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.19",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "消声器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.20",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "静压箱"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.19.21",
+			"CatalogCode": "",
+			"CodeParent": "2.19",
+			"DescriptionInfo": {
+				"Description": "其它通风空调器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "消防"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.2",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "灭火器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.3",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "消火栓、消火栓箱"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.4",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "消防水泵接合器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.5",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "消防箱、柜"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.6",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "泡沫发生器、比例混合器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.7",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "水流指示器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.9",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "消防喷头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.10",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "软管卷盘、水龙带及接扣"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.11",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "选择阀"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.12",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "分水器、集水器、滤水器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.13",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "隔膜式气压水罐"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.14",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "报警器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.15",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "其它报警器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.20.16",
+			"CatalogCode": "",
+			"CodeParent": "2.20",
+			"DescriptionInfo": {
+				"Description": "其他消防器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.1",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "仪表及自动化控制"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.2",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "水表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.3",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "燃气表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.4",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "电度表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.5",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "电工测量仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.6",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "温度测量仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.7",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "压力仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.8",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "差压、流量仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.10",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "物位检测仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.11",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "显示仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.12",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "物性检测仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.13",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "工业计算机器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.14",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "仪表接头、堵头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.15",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "仪表专用阀门"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.16",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "取源部件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.21.17",
+			"CatalogCode": "",
+			"CodeParent": "2.21",
+			"DescriptionInfo": {
+				"Description": "其它仪表及自控器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "灯具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.1",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "灯具、光源"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.2",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "光源"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.7",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "标志、应急灯"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.9",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "厂矿、场馆用灯"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.10",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "灯头、灯座、灯罩"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.11",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "灯架"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.13",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "启辉器、镇流器、触发器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.22.15",
+			"CatalogCode": "",
+			"CodeParent": "2.22",
+			"DescriptionInfo": {
+				"Description": "其它灯具及附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.1",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "开关、插座"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.3",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "板把开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.4",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "电子感应开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.5",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "调整面板开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.6",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "门铃、门铃开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.7",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "按钮开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.8",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "其它控制开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.9",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "面板、边框、盖板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.10",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "电源插座"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.11",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "刮须插座"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.23.12",
+			"CatalogCode": "",
+			"CodeParent": "2.23",
+			"DescriptionInfo": {
+				"Description": "电源插头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "保险、绝缘材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.1",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "熔断器、熔断丝"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.2",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "保险器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.3",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "避雷器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.5",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "高压绝缘子"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.6",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "低压绝缘子"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.7",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "绝缘穿墙套管、瓷套管"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.8",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "瓷绝缘散材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.9",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "绝缘布、绝缘带"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.10",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "绝缘板、绝缘箔"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.11",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "绝缘棒"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.24.12",
+			"CatalogCode": "",
+			"CodeParent": "2.24",
+			"DescriptionInfo": {
+				"Description": "其余绝缘材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "电线电缆及光纤光缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.1",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "电线电缆及光纤光缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.2",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "裸电线"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.3",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "电气装备用电线电缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.4",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "电力电缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.6",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "长途通信电缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.8",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "信号电线电缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.9",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "计算机用电缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.10",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "特种电缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.25.11",
+			"CatalogCode": "",
+			"CodeParent": "2.25",
+			"DescriptionInfo": {
+				"Description": "其它电线电缆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "电气线路敷设材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.1",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "电缆桥架"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.2",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "桥架连接件及附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.3",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "线槽及其连接件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.5",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "电线、电缆套管及其管件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.6",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "电缆头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.7",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "接线端子"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.8",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "接线盒（箱）"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.9",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "母线金具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.10",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "线路金具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.11",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "电杆、塔"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.12",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "杆塔固定件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.13",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "杆塔支撑横担及附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.14",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "线路连接附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.26.15",
+			"CatalogCode": "",
+			"CodeParent": "2.26",
+			"DescriptionInfo": {
+				"Description": "其他线路敷设材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.27",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "弱电及信息类器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.27.1",
+			"CatalogCode": "",
+			"CodeParent": "2.27",
+			"DescriptionInfo": {
+				"Description": "安防报警、出入口控制器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.27.5",
+			"CatalogCode": "",
+			"CodeParent": "2.27",
+			"DescriptionInfo": {
+				"Description": "广播线路、移动通信器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.27.6",
+			"CatalogCode": "",
+			"CodeParent": "2.27",
+			"DescriptionInfo": {
+				"Description": "有线电视、卫星电视器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.27.7",
+			"CatalogCode": "",
+			"CodeParent": "2.27",
+			"DescriptionInfo": {
+				"Description": "信息插座插头器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.28",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "仿古建筑材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.28.2",
+			"CatalogCode": "",
+			"CodeParent": "2.28",
+			"DescriptionInfo": {
+				"Description": "琉璃瓦件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.28.3",
+			"CatalogCode": "",
+			"CodeParent": "2.28",
+			"DescriptionInfo": {
+				"Description": "琉璃人、兽材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.28.5",
+			"CatalogCode": "",
+			"CodeParent": "2.28",
+			"DescriptionInfo": {
+				"Description": "粘土砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.28.6",
+			"CatalogCode": "",
+			"CodeParent": "2.28",
+			"DescriptionInfo": {
+				"Description": "粘土瓦件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.28.8",
+			"CatalogCode": "",
+			"CodeParent": "2.28",
+			"DescriptionInfo": {
+				"Description": "仿古油饰、彩画材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.28.9",
+			"CatalogCode": "",
+			"CodeParent": "2.28",
+			"DescriptionInfo": {
+				"Description": "裱糊工程材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "园林绿化"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.1",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "乔木"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.2",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "灌木"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.3",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "藤本植物"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.4",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "地被植物"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.5",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "棕榈植物"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.7",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "草本花卉"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.8",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "水生花卉"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.11",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "园艺资材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.29.12",
+			"CatalogCode": "",
+			"CodeParent": "2.29",
+			"DescriptionInfo": {
+				"Description": "浇水喷头"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "成型构件及加工件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.1",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "钢结构制作件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.2",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "铸铁及铁构件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.3",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "压力容器构件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.5",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "水箱"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.7",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "木质加工件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.8",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "机械设备安装用加工件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.9",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "装置设备附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.30.10",
+			"CatalogCode": "",
+			"CodeParent": "2.30",
+			"DescriptionInfo": {
+				"Description": "其它成型制品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "密封、电极及劳保用品等其它材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.1",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "密封材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.2",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "电极材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.3",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "火工材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.4",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "无损探伤用耗材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.5",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "纸、笔"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.6",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "劳保用品"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.7",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "零星施工用料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.8",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "水电汽、煤炭"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.31.9",
+			"CatalogCode": "",
+			"CodeParent": "2.31",
+			"DescriptionInfo": {
+				"Description": "号牌、铭牌"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "周转材料及工器具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.2",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "模板"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.3",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "模板附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.4",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "脚手架及其配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.5",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "围护、运输类周转材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.6",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "胎具、模具类周转材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.7",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "其余周转材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.8",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "手动起重工具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.9",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "测量工具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.11",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "实验室用工器具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.12",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "磨具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.32.13",
+			"CatalogCode": "",
+			"CodeParent": "2.32",
+			"DescriptionInfo": {
+				"Description": "其它工器具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "道路桥梁专用材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.1",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "道路桥梁专用材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.2",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "道路管进、沟、槽等构件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.3",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "土工格栅"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.4",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "路面砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.5",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "路面天然石构件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.6",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "广场砖"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.7",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "隔离装置"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.33.8",
+			"CatalogCode": "",
+			"CodeParent": "2.33",
+			"DescriptionInfo": {
+				"Description": "交通（安全）标志"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "通风空调设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.2",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "空调器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.5",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "空气幕"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.6",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "空气加热、冷却器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.8",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "净化过滤设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.9",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "其它空调器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.10",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "通风机"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.13",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "台扇、落地扇"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.34.14",
+			"CatalogCode": "",
+			"CodeParent": "2.34",
+			"DescriptionInfo": {
+				"Description": "其它通风器材"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.35",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "泵、供水设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.35.1",
+			"CatalogCode": "",
+			"CodeParent": "2.35",
+			"DescriptionInfo": {
+				"Description": "泵、供水设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.35.8",
+			"CatalogCode": "",
+			"CodeParent": "2.35",
+			"DescriptionInfo": {
+				"Description": "泵专用配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.36",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "热水、采暖锅炉设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.36.2",
+			"CatalogCode": "",
+			"CodeParent": "2.36",
+			"DescriptionInfo": {
+				"Description": "热水器、开水炉"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.36.3",
+			"CatalogCode": "",
+			"CodeParent": "2.36",
+			"DescriptionInfo": {
+				"Description": "沸水器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.36.4",
+			"CatalogCode": "",
+			"CodeParent": "2.36",
+			"DescriptionInfo": {
+				"Description": "冷热水混合器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.36.6",
+			"CatalogCode": "",
+			"CodeParent": "2.36",
+			"DescriptionInfo": {
+				"Description": "采暖炉"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.36.7",
+			"CatalogCode": "",
+			"CodeParent": "2.36",
+			"DescriptionInfo": {
+				"Description": "其它水暖设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.37",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "水处理及环保设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.37.1",
+			"CatalogCode": "",
+			"CodeParent": "2.37",
+			"DescriptionInfo": {
+				"Description": "水软化设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.37.2",
+			"CatalogCode": "",
+			"CodeParent": "2.37",
+			"DescriptionInfo": {
+				"Description": "过滤设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.37.3",
+			"CatalogCode": "",
+			"CodeParent": "2.37",
+			"DescriptionInfo": {
+				"Description": "曝气设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.37.5",
+			"CatalogCode": "",
+			"CodeParent": "2.37",
+			"DescriptionInfo": {
+				"Description": "除尘设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.38",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "厨房设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.38.1",
+			"CatalogCode": "",
+			"CodeParent": "2.38",
+			"DescriptionInfo": {
+				"Description": "灶具"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "电气设备及附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.4",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "配电箱"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.5",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "配电开关"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.6",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "断路器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.8",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "调压器、稳压器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.9",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "电抗器、电容器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.10",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "接触器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.11",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "起动器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.12",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "电气控制器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.13",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "继电器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.14",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "电阻器、分流器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.15",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "电磁器件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.16",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "蓄电池及附件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.17",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "变压器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.39.19",
+			"CatalogCode": "",
+			"CodeParent": "2.39",
+			"DescriptionInfo": {
+				"Description": "其它电气设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.40",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "电梯"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.40.2",
+			"CatalogCode": "",
+			"CodeParent": "2.40",
+			"DescriptionInfo": {
+				"Description": "电梯机械配件"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.40.3",
+			"CatalogCode": "",
+			"CodeParent": "2.40",
+			"DescriptionInfo": {
+				"Description": "电梯电气装置"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.41",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "安防及建筑智能化设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.41.4",
+			"CatalogCode": "",
+			"CodeParent": "2.41",
+			"DescriptionInfo": {
+				"Description": "电视监控设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.41.13",
+			"CatalogCode": "",
+			"CodeParent": "2.41",
+			"DescriptionInfo": {
+				"Description": "有线电视系统"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "砼、砂浆及其它配合比材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.1",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "水泥砂浆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.2",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "石灰砂浆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.3",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "混合砂浆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.4",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "特种砂浆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.5",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "其它砂浆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.6",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "灰浆、水泥浆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.7",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "石子浆"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.8",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "胶泥、脂、油"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.9",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "水泥混凝土"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.10",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "轻质水泥混凝土"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.11",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "沥青混凝土"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.12",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "特种混凝土"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.13",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "灰土垫层"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.14",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "多合土垫层"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.42.15",
+			"CatalogCode": "",
+			"CodeParent": "2.42",
+			"DescriptionInfo": {
+				"Description": "其它垫层材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "工程检测仪器仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.1",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "工程测绘仪器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.2",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "电源"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.3",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "电工测量仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.4",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "信号发生器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.5",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "功率计、场强仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.6",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "元器件测试仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.7",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "频率、时间测试仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.8",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "光电测试仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.9",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "通信测试仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.10",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "衰减器"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.12",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "示波器、扫频仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.13",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "测振仪、频谱仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.14",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "声振测量仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.15",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "噪声、杂音仪表、辐射计"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.16",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "相位计、抖晃仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.17",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "信号、逻辑分析仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.18",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "雷达测试仪"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.19",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "电缆测试仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.20",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "计算机仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.21",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "电视仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.22",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "电力仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.23",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "自动化仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.24",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "石油专用仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.43.25",
+			"CatalogCode": "",
+			"CodeParent": "2.43",
+			"DescriptionInfo": {
+				"Description": "其它工程仪器仪表"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3",
+			"CatalogCode": "",
+			"CodeParent": "",
+			"DescriptionInfo": {
+				"Description": "机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.1",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "挖掘机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.2",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "桩工和钻孔机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.3",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "混凝土和灰浆机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.4",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "铲土和水平运输机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.5",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "起重和垂直运输机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.6",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "压实和路面机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.7",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "清洗筛选和装修机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.8",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "钢筋和预应力机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.9",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "加工机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.10",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "木工机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.11",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "切割和打磨机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.12",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "焊接机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.13",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "冷却和热处理机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.14",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "无损探伤机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.15",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "环卫机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.16",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "破碎和凿岩机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.17",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "钻探和地下工程机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.18",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "园林和高空作业机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.19",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "电气线路机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.20",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "潜水和水面作业机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.21",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "动力和泵类机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.22",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "其它工程机械"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "3.23",
+			"CatalogCode": "",
+			"CodeParent": "3",
+			"DescriptionInfo": {
+				"Description": "单独计算的费用"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "4",
+			"CatalogCode": "",
+			"CodeParent": "",
+			"DescriptionInfo": {
+				"Description": "其它主材设备"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "6",
+			"CatalogCode": "",
+			"CodeParent": "",
+			"DescriptionInfo": {
+				"Description": "其它"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2",
+			"CatalogCode": "",
+			"CodeParent": "",
+			"DescriptionInfo": {
+				"Description": "材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.44",
+			"CatalogCode": "",
+			"CodeParent": "2",
+			"DescriptionInfo": {
+				"Description": "其他材料"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "5",
+			"CatalogCode": "",
+			"CodeParent": "",
+			"DescriptionInfo": {
+				"Description": "管理费"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.1.1",
+			"CatalogCode": "",
+			"CodeParent": "2.1.1",
+			"DescriptionInfo": {
+				"Description": "黑色金属（材料）"
+			},
+			"PrcStructure": ""
+		},
+		{
+			"Code": "2.1.1.2",
+			"CatalogCode": "",
+			"CodeParent": "2.1.1",
+			"DescriptionInfo": {
+				"Description": "黑色金属（主材）"
+			},
+			"PrcStructure": ""
+		}
+	]
+}
+  

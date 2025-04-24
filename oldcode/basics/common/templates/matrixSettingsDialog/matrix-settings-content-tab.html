@@ -1,0 +1,68 @@
+<div data-ng-controller="basicsCommonMatrixCellDefinitionController">
+	<div class="flex-box margin-full-sm">
+		<div class="flex-element vert-hori-center">
+			<div class="size-sm text-center" data-ng-model="cellDefinition.Columnwidth01"
+			     model-options="{debounce:100}"
+			     domain-control domain="integer"></div>
+		</div>
+		<div class="flex-element vert-hori-center">
+			<div class="size-sm text-center"
+			     data-ng-model="cellDefinition.Columnwidth02"
+			     model-options="{debounce:100}"
+			     max domain-control domain="integer"></div>
+		</div>
+		<div class="flex-element vert-hori-center ">
+			<div class="size-sm text-center"
+			     data-ng-model="cellDefinition.Columnwidth03"
+			     model-options="{debounce:100}"
+			     domain-control domain="integer"></div>
+		</div>
+		<div class="form-control size-sm cell-opacity vert-hori-center">{{sumPixelValues(cellDefinition.Columnwidth01, cellDefinition.Columnwidth02, cellDefinition.Columnwidth03)}}px</div>
+	</div>
+
+	<div class="flex-box">
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth01 < 1 || cellDefinition.Rowheight01 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier11"></div>
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth02 < 1 || cellDefinition.Rowheight01 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier12"></div>
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth03 < 1 || cellDefinition.Rowheight01 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier13"></div>
+		<div data-ng-model="cellDefinition.Rowheight01" class="margin-full-sm size-sm" domain-control
+		     model-options="{debounce:100}" domain="integer"></div>
+	</div>
+
+	<div class="flex-box">
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth01 < 1 || cellDefinition.Rowheight02 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier21"></div>
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth02 < 1 || cellDefinition.Rowheight02 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier22"></div>
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth03 < 1 || cellDefinition.Rowheight02 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier23"></div>
+		<div data-ng-model="cellDefinition.Rowheight02" class="margin-full-sm size-sm" domain-control
+		     model-options="{debounce:100}" domain="integer"></div>
+	</div>
+
+	<div class="flex-box">
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth01 < 1 || cellDefinition.Rowheight03 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier31"></div>
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth02 < 1 || cellDefinition.Rowheight03 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier32"></div>
+		<div ng-class="{'cell-opacity': cellDefinition.Columnwidth03 < 1 || cellDefinition.Rowheight03 < 1}"
+		     class="flex-element margin-full-sm" basics-common-column-lookup
+		     data-ng-model="cellDefinition.PropertyIdentifier33"></div>
+		<div data-ng-model="cellDefinition.Rowheight03" class="size-sm margin-full-sm" domain-control
+		     model-options="{debounce:100}" domain="integer"></div>
+	</div>
+
+	<div class="flex-box flex-end">
+		<div class="form-control size-sm vert-hori-center cell-opacity margin-full-sm">{{sumPixelValues(cellDefinition.Rowheight01, cellDefinition.Rowheight02, cellDefinition.Rowheight03)}}px</div>
+	</div>
+</div>

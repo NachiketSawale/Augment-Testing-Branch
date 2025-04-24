@@ -1,0 +1,40 @@
+<form data-cloud-Desktop-On-Key-Enter="modalOptions.ok">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<div>
+		<section class="modal-body">
+			<div class="platform-form-group">
+
+				<div class="platform-form-row">
+					<label class="platform-form-label ng-binding">{{modalOptions.areaLabelText}}</label>
+
+					<div class="platform-form-col">
+						<select class="form-control" data-ng-model="modalOptions.selectedItem" data-ng-options="item.description for item in modalOptions.areaItems"
+						        data-ng-change="modalOptions.selectedItemChanged()">
+						</select>
+					</div>
+				</div>
+
+				<div class="platform-form-row">
+					<label class="platform-form-label ng-binding">{{modalOptions.nameLabelText}}</label>
+
+					<div class="platform-form-col">
+						<!--<input class="form-control" ng-model="modalOptions.filterName" data-ng-change="inputChanged()" data-ng-disabled="disableInput"/>-->
+						<input type="text" class="form-control" placeholder="{{modalOptions.namePlaceHolder}}" data-ng-model="modalOptions.filterName"/>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="!modalOptions.isValid()" data-ng-click="modalOptions.ok()">
+			{{modalOptions.actionBtnText}}
+		</button>
+		<button type="button" class="cancel btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{modalOptions.cancelBtnText}}
+		</button>
+	</footer>
+</form>

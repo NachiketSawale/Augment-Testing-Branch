@@ -1,0 +1,760 @@
+<script id="workflow-notification-button.html" type="text/ng-template">
+	<button type="button" ##disabled## class="##cssClass##"
+	        title="##title##" data-ng-click="##fn##" ##currentButtonId## ##attr## ##model##
+	        basics-workflow-notification-button>
+
+		<svg data-cloud-desktop-svg-image data-sprite="##svgSprite##"
+		     data-image="##svgImage##"></svg>
+	</button>
+</script>
+
+<script id="workflow-import-button.html" type="text/ng-template">
+	<button id="importButton" type="button" class="tlb-icons ico-upload"
+	        title="{{'basics.workflow.version.upload' |translate}}" data-ng-click="importClick()">
+		<span>{{::'basics.workflow.version.upload' | translate}}</span>
+	</button>
+	<input class="workflowImportField" type="file" style="display:none" ng-model="fileName"/>
+</script>
+
+<script id="workflow-button.html" type="text/ng-template">
+	<button type="button" ##disabled## class="##cssClass##"
+	        title="##title##" data-ng-click="##fn##" ##currentButtonId## ##attr## ##model##>
+		<svg data-cloud-desktop-svg-image data-sprite="##svgSprite##"
+		     data-image="##svgImage##"></svg>
+	</button>
+</script>
+
+<script id="basics.workflow/taskItem.html" type="text/ng-template">
+	<li>
+		<button data-ng-click="clickFn({{Id}})" class="panel-item rw">
+			<ul class="rw-content">
+				<li class="title">{{Description}}</li>
+				<li>{{Comment}}</li>
+				<li>{{StartedFormated}}
+					<img src="{{LifeTimeIcon}}" class="iconbox" style="width: 16px; height: 16px">
+					<img src="{{PrioIcon}}" class="iconbox" style="width: 16px; height: 16px">
+					<img src="{{OwnerIcon}}" class="iconbox" style="width: 16px; height: 16px">
+				</li>
+			</ul>
+		</button>
+	</li>
+</script>
+
+<script id="basics.workflow/workflowItem.html" type="text/ng-template">
+	<li>
+		<button data-ng-click="clickFn({{Id}})" class="panel-item rw">
+			<ul class="rw-content">
+				<li class="title">{{Description}}</li>
+				<li>{{CommentText}}</li>
+				<li>{{Entity}}</li>
+			</ul>
+		</button>
+	</li>
+</script>
+
+<script id="basics.workflow/groupItem.html" type="text/ng-template">
+	<li class="panel panel-primary">
+		<button class="panel-heading" data-ng-click="invert( '{{key}}' )">
+			<h4 class="panel-title">{{name}} ({{count}})</h4>
+			<div class="panel-toggle-img control-icons {{icoClass}} "></div>
+		</button>
+		<ul class="panel-body">
+			##items##
+		</ul>
+	</li>
+</script>
+
+<script id="basics.workflow/clientActionDialog.html" type="text/ng-template">
+	<div cloud-desktop-on-key-enter="onOk" blur-on-enter="true">
+	<header class="modal-header main-color">
+		<h2 class="modal-title" data-ng-bind-html="modalOptions.headerText"></h2>
+		<!--        <h3 data-ng-bind="modalOptions.subHeaderText"></h3>-->
+		<!-- Defect #111848 - The user input UI is messy.becasue of Sub-Title heading-->
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="onCancel()"
+		        aria-hidden="true" style="background: none;">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-minimized3"
+			     class="block-image"></svg>
+		</button>
+	</header>
+
+	<div data-ng-if="task.Action.HideFooter" data-basics-workflow-task-detail-directive data-ng-model="task"
+	     class="workflow-task-detail-wrapper"></div>
+
+	<section data-ng-if="!task.Action.HideFooter" class="modal-body">
+		<h3 data-ng-bind-html="modalOptions.subHeaderText"></h3>
+		<div data-basics-workflow-task-detail-directive data-ng-model="task"></div>
+	</section>
+
+	<footer data-ng-if="!task.Action.HideFooter" class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onStop()"
+		        data-ng-if="modalOptions.showCloseButton">
+			{{::'cloud.common.stop' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"
+		        data-ng-if="modalOptions.showCancelButton">
+			{{::'cloud.common.cancel' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="onOk()">
+			{{::'cloud.common.ok' | translate}}
+		</button>
+	</footer>
+	</div>
+</script>
+
+<script id="basics.workflow/userInputAction.html" type="text/ng-template">
+	<div class="userinputWrapper">
+		<div data-ng-repeat="i in config track by $index">
+			<span class="form-control" data-domain-control data-domain="i.type" class="form-control"
+			      data-model="value[i.Context]" data-change="changed(value)" data-options="i.options"></span>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/commentBox.html" type="text/ng-template">
+	<div class="platform-form-group">
+		<div ng-repeat="item in commentList | orderBy:'date' track by $index" class="platform-form-group">
+			<div class="platform-form-row">
+				<b>{{item.clerk.Description}}</b>
+			</div>
+			<div data-ng-repeat="c in item.comment.split('<br>')">
+				<div data-ng-if="c!== undefined" class="platform-form-row">
+					{{c}}
+				</div>
+			</div>
+			<div class="platform-form-row">{{item.date | date: 'short' }}</div>
+			<hr>
+		</div>
+		<div class="platform-form-row">
+			<span class="form-control" data-domain-control data-domain="remark" class="form-control"
+			      data-ng-model="comment"></span>
+		</div>
+		<div class="platform-form-row btn-group flex-box">
+			<button type="button" class="btn btn-default flex-element" data-ng-click="add()">Add</button>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/sidebarList.html" type="text/ng-template">
+	<div class="toolbar">
+		<div class="title">{{headerTemplate}}</div>
+		<ul class="tools">
+			<li class="sublist">
+				<ul class="radio-group">
+					<li>
+						<button type="button"
+						        class="tlb-icons ico-refresh"
+						        data-ng-click="ctrl.refresh()"
+						        title="{{ ::'cloud.common.toolbarRefresh' | translate }}">
+						</button>
+					</li>
+					<li>
+						<button type="button"
+						        class="tlb-icons ico-search"
+						        data-ng-class="{active: ctrl.showFilter}"
+						        data-ng-click="ctrl.showFilter = !ctrl.showFilter">
+						</button>
+					</li>
+					<li>
+						<button type="button"
+						        class="tlb-icons ico-groups"
+						        data-ng-class="{active: ctrl.showGroupTask}"
+						        data-ng-click="ctrl.changeGroupFilter()">
+						</button>
+					</li>
+					<li>
+						<button type="button"
+						        class="tlb-icons ico-settings"
+						        data-ng-class="{active: ctrl.showSettings}"
+						        data-ng-click="ctrl.showSettings = !ctrl.showSettings">
+						</button>
+					</li>
+				</ul>
+		</ul>
+	</div>
+
+	<div class="content-inner flex-box flex-column">
+		<div data-ng-if="ctrl.showFilter" class="input-group form-control showgroups">
+			<input type="text" data-ng-model="ctrl.listConfig.filter.value" class="input-group-content"
+			       placeholder="Filter" ng-keypress="($event.which === 13)?ctrl.refresh():0">
+
+			<span class="input-group-btn">
+					<button class="btn btn-default control-icons ico-input-delete btndeactive"
+					        data-ng-click="ctrl.clearSearch()"></button>
+
+					<button class="btn btn-default tlb-icons ico-search" data-ng-click="ctrl.refresh()"></button>
+				</span>
+		</div>
+
+		<div data-ng-if="ctrl.showSettings" class="showgroups">
+			<div data-domain-control data-domain="select" data-model="ctrl.listConfig.grouping"
+			     data-change="ctrl.updateView()" data-options="ctrl.grouping.options"></div>
+
+			<div class="margin-top-ld">
+				<div data-domain-control data-domain="select" data-model="ctrl.listConfig.sort"
+				     data-change="ctrl.updateView()" data-options="ctrl.sorting.options"></div>
+			</div>
+		</div>
+
+		<div data-cloud-common-overlay data-loading="ctrl.taskListIsLoading"></div>
+		<ul data-ng-if="!ctrl.listConfig.isGrouped" data-platform-item-list-directive
+		    data-list="ctrl.taskList" data-item-template="ctrl.itemTemplate"
+		    data-click-fn="ctrl.detailFn.switchListDetail"
+		    class="scroll-padding flex-element overflow flex-basis-auto"></ul>
+		<ul data-ng-if="ctrl.listConfig.isGrouped" data-platform-grouped-item-list-directive
+		    data-grouped-list="ctrl.taskList" data-item-template="ctrl.itemTemplate"
+		    data-group-template="ctrl.groupTemplate" data-child-property="'childs'"
+		    data-click-fn="ctrl.detailFn.switchListDetail"
+		    class="scroll-padding flex-element panel-group overflow flex-basis-auto"></ul>
+	</div>
+</script>
+
+<script id="basics.workflow/TermsConditionDialog.html" type="text/ng-template">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{task.Description}}</h2>
+		<h3 class="modal-title">{{task.Comment}}</h3>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="onCancel()"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+			     class="block-image"></svg>
+		</button>
+	</header>
+
+	<section class="modal-body">
+		<h3>{{task.Comment}}</h3>
+		<div data-basics-workflow-task-detail-directive data-ng-model="task"></div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()">
+			{{::'cloud.common.cancel' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="onOk()" data-ng-disabled="CheckTermsConditions()">
+			{{::'cloud.common.ok' | translate}}
+		</button>
+	</footer>
+</script>
+
+<script id="basics.workflow/approver-action.html" type="text/ng-template">
+	<div class="platform-form-row" style="margin:10px">
+		<div class="platform-form-row" data-approve-simple-filter-directive></div>
+	</div>
+	<div class="platform-form-row" style="margin-top:20px">
+		<label class="platform-form-label" style="margin: 5px;">{{::'basics.workflow.approve.apprCount' | translate}}
+		</label>
+		<input id="nodeCount" type="text" ng-init="Context.ApprovalUserInfo.ApprovalClerkSelection.NodeCount=3"
+		       ng-model="Context.ApprovalUserInfo.ApprovalClerkSelection.NodeCount"
+		       ng-keypress="OnApprKeyPressCount($event)" ng-keyup="OnApprKeyUp($event)" ng-change="OnApprChange()"/>
+		<button class="btn btn-default ng-binding" ng-click="OnApprAddCount()" style="height: 22px; width: 25px">
+			+
+		</button>
+		<button class="btn btn-default ng-binding" ng-click="OnApprMinusCount()" style="height: 22px; width: 25px">-
+		</button>
+	</div>
+	<div style="overflow-y: scroll; height:250px;  ">
+		<div id='div_approve' class="platform-form-row" style="margin: 10px;">
+		</div>
+	</div>
+	<br>
+	<div class="platform-form-row">
+		<label class="platform-form-label" style="margin: 5px;">
+			{{::'basics.workflow.approve.ccCount' | translate}}
+		</label>
+		<input type="text" ng-init="Context.ApprovalUserInfo.CcSelection.NodeCount=3"
+		       ng-model="Context.ApprovalUserInfo.CcSelection.NodeCount"
+		       ng-keypress="OnCcKeyPressCount($event)" ng-keyup="OnCcKeyUp($event)" ng-change="OnCcChange()"/>
+		<button class="btn btn-default ng-binding" ng-click="OnCcAddCount()" style="height: 22px;width: 25px">
+			+
+		</button>
+		<button class="btn btn-default ng-binding" ng-click="OnCcMinusCount()" style="height: 22px;width: 25px">-
+		</button>
+	</div>
+	<div style="overflow-y: scroll; height:250px; ">
+		<div id='div_cc' class="platform-form-row" style="margin: 10px;">
+		</div>
+	</div>
+
+	<footer class="modal-footer ">
+		<div ng-include="'basics.workflow/reassign-task.html'"></div>
+		<button type="button" class="btn btn-default ng-binding" data-ng-click="onOk()">
+			OK
+		</button>
+		<button type="button" class="btn btn-default ng-binding" data-ng-click="onCancel()">
+			Cancel
+		</button>
+
+	</footer>
+</script>
+
+<script id="basics.workflow/approver-level-action.html" type="text/ng-template">
+	<div id="Level{{approve_level}}">
+		<div class="platform-form-row" style="display: inline-table;margin: 10px;">
+			<input type="text" value="{{'basics.workflow.approve.apprLevel' | translate}}{{node_level}}:" style="width:115px;display: inline-block;
+				vertical-align:top; padding-top: 2px; margin-right: 5px;"/>
+			<div class="platform-form-col" style="width:150px; display:inline-block; vertical-align: top"
+			     data-ng-init="filterTypeConfig = { descriptionMember:'Description', lookupOptions: { showClearButton:true}};">
+				<div class="lg-4 md-4"
+				     data-ng-model="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.SelectionType"
+				     data-ng-init="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.SelectionType=0"
+				     data-entity="Context" data-options="filterTypeConfig"
+				     basics-clerk-clerk-filter-type-for-workflow-combobox>
+				</div>
+			</div>
+			<div class="platform-form-row"
+			     data-ng-show="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.SelectionType === 2">
+				<div class="platform-form-col" data-ng-init="
+					companyConfig = {lookupDirective:'basics-company-company-for-workflow-lookup',
+									descriptionMember:'CompanyName', lookupOptions: {showClearButton:true}};">
+					<div class="lg-4 md-4"
+					     data-ng-model="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.SelectedId"
+					     data-entity="Context" data-options="companyConfig" data-basics-lookupdata-lookup-composite>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-col" style=" display: inline-block; vertical-align: center">
+			<input type="checkbox"
+			       ng-model="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.IsRole"
+			       ng-init="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.IsRole=true"
+			       data-entity="Context" style="vertical-align:middle; margin-top: 5px;"/>{{'basics.workflow.approve.roleBased'
+		| translate}}
+		</div>
+		<div class="platform-form-col"
+		     style="width: 175px;display: inline-block;vertical-align: top; margin-left: 10px;margin-top:10px"
+		     data-ng-show="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.IsRole===false">
+			<div class="control-directive" data-basics-lookupdata-lookup-composite
+			     data-options="currentItem.clerk"
+			     data-entity="currentItem"
+			     data-ng-model="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.Clerks">
+			</div>
+		</div>
+		<div class="platform-form-col"
+		     style="width: 175px;display: inline-block;vertical-align: top; margin-left: 10px;margin-top:10px"
+		     data-ng-show="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.IsRole===true">
+			<div class="control-directive" data-basics-lookupdata-lookup-composite
+			     data-options="currentItem.clerkRole"
+			     data-entity="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}"
+			     data-ng-model="Context.ApprovalUserInfo.ApprovalClerkSelection.Nodes{{approve_level}}.Role2Clerks">
+			</div>
+		</div>
+		<div style="border-top:solid 1px  darkgray;margin-top:5px "/>
+	</div>
+</script>
+
+<script id="basics.workflow/cc-level-action.html" type="text/ng-template">
+	<div id="Cc{{approve_level}}">
+		<div class="platform-form-row" style="display: inline-table;margin: 10px;">
+			<input type="text" value="{{'basics.workflow.approve.apprLevel' | translate}}{{node_level}}:" style="width:115px;display: inline-block;
+				vertical-align:top; padding-top: 2px; margin-right: 5px;"/>
+			<div class="platform-form-col" style="width:150px; display:inline-block; vertical-align: top"
+			     data-ng-init="filterTypeConfig = { descriptionMember:'Description', lookupOptions: { showClearButton:true}};">
+				<div class="lg-4 md-4"
+				     data-ng-model="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.SelectionType"
+				     data-ng-init="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.SelectionType=0"
+				     data-entity="Context" data-options="filterTypeConfig"
+				     basics-clerk-clerk-filter-type-for-workflow-combobox>
+				</div>
+			</div>
+			<div class="platform-form-row"
+			     data-ng-show="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.SelectionType === 2">
+				<div class="platform-form-col" data-ng-init="
+					companyConfig = {lookupDirective:'basics-company-company-for-workflow-lookup',
+									descriptionMember:'CompanyName', lookupOptions: {showClearButton:true}};">
+					<div class="lg-4 md-4"
+					     data-ng-model="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.SelectedId"
+					     data-entity="Context" data-options="companyConfig" data-basics-lookupdata-lookup-composite>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-col" style=" display: inline-block; vertical-align: center">
+			<input type="checkbox" ng-model="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.IsRole"
+			       ng-init="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.IsRole=true"
+			       data-entity="Context"
+			       style="vertical-align:middle; margin-top: 5px;"/>{{::'basics.workflow.approve.roleBased'
+		| translate}}
+		</div>
+		<div class="platform-form-col"
+		     style="width: 175px;display: inline-block;vertical-align: top; margin-left: 10px;margin-top:10px"
+		     data-ng-show="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.IsRole===false">
+			<div class="control-directive" data-basics-lookupdata-lookup-composite
+			     data-options="currentItem.clerk"
+			     data-entity="currentItem"
+			     data-ng-model="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.Clerks">
+			</div>
+		</div>
+		<div class="platform-form-col"
+		     style="width: 175px;display: inline-block;vertical-align: top; margin-left: 10px;margin-top:10px"
+		     data-ng-show="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.IsRole===true">
+			<div class="control-directive" data-basics-lookupdata-lookup-composite
+			     data-options="currentItem.clerkRole"
+			     data-entity="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}"
+			     data-ng-model="Context.ApprovalUserInfo.CcSelection.Nodes{{approve_level}}.Role2Clerks">
+			</div>
+		</div>
+		<div style="border-top:solid 1px  darkgray;margin-top:5px "/>
+	</div>
+</script>
+
+<script id="basics.workflow/transaction-pes-ui.html" type="text/ng-template">
+	<div style="margin:10px;position: relative;">
+		<div class="input-group date">
+			<span class='platform-form-col'
+			      style="width:250px;margin-right: 15px; padding-top:5px ">{{::'basics.workflow.transaction.selectDate' | translate}}</span>
+			<div data-domain-control data-domain="date" style="width: 100%;"
+			     data-ng-model="selectedDate" class="flex-element" class="margin-left-md" data-entity="Context"
+			     data-enterstop="true" data-tabstop="true"></div>
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="search();"
+			        style="height: 28px;width:150px;">
+				{{'basics.workflow.transaction.selectSearch' | translate}}
+			</button>
+		</div>
+		<div class="platform-form-row" style="margin-top: 10px">
+			<span><h3>{{::'basics.workflow.transaction.filterLabel' | translate}}</h3></span>
+		</div>
+		<div class="platform-form-row" style="margin-top: 10px; overflow: auto;height:500px  ">
+			<table class="table" style="width:800px; ">
+				<thead>
+				<tr>
+					<th>{{::'basics.accountingJournals.entityTradingYear' | translate}}</th>
+					<th>{{::'basics.accountingJournals.entityTransactionTypeDescription' | translate}}</th>
+					<th>{{::'basics.accountingJournals.entityTransactionTypeAbbreviation' | translate}}</th>
+					<th>{{::'basics.accountingJournals.entityPostingDate' | translate}}</th>
+					<th>{{::'basics.accountingJournals.entityTradingPeriodStartDate' | translate}}</th>
+					<th>{{::'basics.accountingJournals.entityTradingPeriodEndDate' | translate}}</th>
+					<th>{{::'basics.accountingJournals.entityDescription' | translate}}</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr data-ng-repeat="info in Context.TransactionHeaderInfo">
+					<td><span data-ng-bind="info.TradingYear"></span></td>
+					<td><span data-ng-bind="info.DescriptionInfo.Translated"></span></td>
+					<td><span data-ng-bind="info.TypeAbbreviation"></span></td>
+					<td><span data-ng-bind="info.PostingDate | date : 'MM/dd/yyyy'"></span></td>
+					<td><span data-ng-bind="info.StartDate | date : 'MM/dd/yyyy'"></span></td>
+					<td><span data-ng-bind="info.EndDate | date : 'MM/dd/yyyy'"></span></td>
+					<td><span data-ng-bind="info.Description"></span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<footer class="modal-footer ">
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="onOk()">
+				{{::'cloud.common.ok' | translate}}
+			</button>
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="onCancel()">
+				{{::'cloud.common.cancel' | translate}}
+			</button>
+
+		</footer>
+		<div data-cloud-common-overlay data-loading="isLoading"></div>
+	</div>
+</script>
+
+<script id="basics.workflow/transaction-inv-ui.html" type="text/ng-template">
+	<div style="margin:10px;position: relative;">
+		<div class="input-group date">
+			<span class='platform-form-col'
+			      style="width:250px;margin-right: 15px; padding-top:5px ">{{::'basics.workflow.transaction.selectDate' | translate}}</span>
+			<div data-domain-control data-domain="date" style="width: 100%;"
+			     data-ng-model="selectedDate" class="flex-element" class="margin-left-md" data-entity="Context"
+			     data-enterstop="true" data-tabstop="true"></div>
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="search();"
+			        style="height: 28px;width:150px;">
+				{{::'basics.workflow.transaction.selectSearch' | translate}}
+			</button>
+		</div>
+		<div class="platform-form-row" style="margin-top: 10px">
+			<span><h3>{{::'basics.workflow.transaction.filterLabel' | translate}}</h3></span>
+		</div>
+		<div class="platform-form-row" style="margin-top: 10px; overflow: auto;height:500px  ">
+			<table class="table" style="width:800px; ">
+				<thead>
+				<tr>
+					<th>{{::'procurement.invoice.header.code' | translate}}</th>
+					<th>{{::'procurement.invoice.header.description' | translate}}</th>
+					<th>{{::'procurement.invoice.header.datePosted' | translate}}</th>
+					<th>{{::'procurement.invoice.header.dateInvoiced' | translate}}</th>
+					<th>{{::'procurement.invoice.header.dateReceived' | translate}}</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr data-ng-repeat="info in Context.TransactionHeaderInfo">
+					<td><span data-ng-bind="info.Code"></span></td>
+					<td><span data-ng-bind="info.Description"></span></td>
+					<td><span data-ng-bind="info.DatePosted | date : 'MM/dd/yyyy'"></span></td>
+					<td><span data-ng-bind="info.DateInvoiced | date : 'MM/dd/yyyy'"></span></td>
+					<td><span data-ng-bind="info.DateReceived | date : 'MM/dd/yyyy'"></span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<footer class="modal-footer ">
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="onOk()">
+				{{::'cloud.common.ok' | translate}}
+			</button>
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="onCancel()">
+				{{::'cloud.common.cancel' | translate}}
+			</button>
+
+		</footer>
+		<div data-cloud-common-overlay data-loading="isLoading"></div>
+	</div>
+</script>
+
+<script id="basics.workflow/approve-header-ui.html" type="text/ng-template">
+	<!-- head div -->
+<div id="Alevel{{approve_level}}">
+	<div class="platform-form-group" style="padding-bottom:0px;">
+		<div class="platform-form-row radiolist-container">
+			<label class="platform-form-label pull-left"
+				style="padding-left:2px">{{::'basics.workflow.action.customEditor.level' | translate}} {{approve_level}}
+				{{::'basics.workflow.action.customEditor.approval' | translate}}:</label>
+			<div class="domain-type-boolean form-control pull-left"
+				style="width: auto;margin-left: 10px;background-color: transparent;">
+				<input type="checkbox" data-ng-model="input.Approvers.Level{{approve_level}}.isParallel"
+					data-ng-change="onParallelChanged({{approve_level}})" data-domain="boolean"
+					data-options="isParallelOptions" id="isParallel">
+				<label for="isParallel" class="ng-binding">IsParallel</label>
+			</div>
+
+			<button data-lookup-show="input.Approvers.Level{{approve_level}}.isParallel" class="tlb-icons ico-rec-new"
+				ng-click="OnApprAddItem({{approve_level}})" style="float:right;margin-top: 6px;margin-right: 8px">
+				<img class="block-image" data-ng-src="{{path+'cloud.style/content/images/tlb-icons.svg#ico-rec-new'}}" />
+			</button>
+
+		</div>
+	</div>
+
+	<!-- role or clerk Id -->
+	<div id="itemNode{{approve_level}}">
+
+	</div>
+</div>
+</script>
+
+<script id="basics.workflow/approve-role-item-ui.html" type="text/ng-template">
+	<div class="platform-form-group" id="input.Approvers.Level{{approve_level}}.Node{{node_count}}"
+	     ng-if="input.Approvers.Level{{approve_level}}.Nodes[{{node_count}}].itemId !== null">
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{::'basics.workflow.action.customEditor.clerkRole' | translate }}</label>
+			<div class="platform-form-col input-group">
+				<div data-basics-role-for-workflow-dialog
+				     data-ng-model="input.Approvers.Level{{approve_level}}.Nodes[{{node_count}}].itemId"
+				     data-change="onSelectChanged()" data-options="basicRoleLookUpConfig.lookupOptions"
+				     disabled="codeMirrorOptions.readOnly" class="fullwidth"></div>
+			</div>
+			<span class="platform-form-col input-group-btn">
+                <button class="btn btn-default control-icons ico-input-delete"
+                        ng-click="deleteRole('{{approve_level}}','input.Approvers.Level{{approve_level}}.Node{{node_count}}', '{{node_count}}')"
+                        data-ng-disabled="!canDeleteButton('{{approve_level}}')" style="border-left: none;"></button>
+
+            </span>
+
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/approve-clerk-item-ui.html" type="text/ng-template">
+	<div class="platform-form-group" id="input.Approvers.Level{{approve_level}}.Clerk{{node_count}}">
+		<div class="platform-form-row">
+			<label class="platform-form-label">{{::'basics.workflow.action.customEditor.clerkId' | translate }}</label>
+			<div class="platform-form-col">
+				<div data-cloud-clerk-clerk-dialog
+				     data-ng-model="input.Approvers.Level{{approve_level}}.Nodes[{{node_count}}].itemId"
+				     data-change="onSelectChanged()" data-options="clerkLookUpConfig.lookupOptions"
+				     disabled="codeMirrorOptions.readOnly" class="fullwidth"></div>
+			</div>
+		</div>
+	</div>
+
+</script>
+
+<script id="basics.workflow/multi-select.html" type="text/ng-template">
+	<div data-ng-controller="basicsWorkflowMultiSelectDialogController">
+		<section>
+			<div class="overflow-hidden">
+				<div data-basics-workflow-module-multi-select style="max-width: 580px" ng-Model="##model##"></div>
+			</div>
+		</section>
+	</div>
+</script>
+<script id="basics.workflow/download-log.html" type="text/ng-template">
+	<div>
+		<section class="modal-body flex-box flex-column">
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{ codeTitle }}</label>
+					<div class="platform-form-col">
+						<input class="form-control lg-3 md-3 " data-ng-model="gridOptions.Code" readonly="readonly" data-ng-disabled="true" ng-if="EntityList.length===0"/>
+						<select class="form-control lg-3 md-3" data-ng-model="gridOptions.Code" data-ng-change="search()" ng-if="EntityList.length>0">
+							<option ng-repeat="opt in EntityList" value="{{opt.Code}}">{{opt.Code}}
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'cloud.common.entityCompanyCode' | translate }}</label>
+					<div class="platform-form-col">
+						<input class="form-control lg-3 md-3  input-group-content" data-ng-model="gridOptions.CompanyCode" readonly="readonly"  data-ng-disabled="true"/>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'cloud.common.entityProjectNo' | translate }}</label>
+					<div class="platform-form-col">
+						<input class="form-control lg-3 md-3 " data-ng-model="gridOptions.ProjectNo" readonly="readonly" data-ng-disabled="true"/>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.common.updateCashFlowProjection.startDate' | translate }}</label>
+					<div class="platform-form-col">
+						<div class="form-control" data-domain-control data-domain="date" data-ng-model="gridOptions.StartDate" data-change="validateStartDate()">
+						</div>
+						<div class="invalid-cell invalid-form ng-binding ng-scope" data-ng-if="startDateHasError" style="padding-top: 10px;background-position-y: 10px;">{{dateError}}</div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.common.updateCashFlowProjection.endDate' | translate }}</label>
+					<div class="platform-form-col">
+						<div class="form-control lg-3 md-3" data-domain-control data-domain="date" data-ng-model="gridOptions.EndDate" data-change="validateEndDate()">
+						</div>
+						<div class="invalid-cell invalid-form ng-binding ng-scope" data-ng-if="endDateHasError" style="padding-top: 10px;background-position-y: 10px;">{{dateError}}</div>
+					</div>
+				</div>
+			</div>
+			<div style="width:100%;">
+				<div style="width:100%;" class="flex-box flex-column lookup-grid-container subview-container">
+					<div class="subview-header toolbar">
+						<h3 class="font-bold title fix">{{'cloud.common.logs' | translate}}</h3>
+						<div data-platform-menu-list data-list="gridOptions.locationGrid.tools"></div>
+					</div>
+					<div class="flex-box flex-column subview-container" style="height:auto;width : auto">
+						<div class="flex-basis-auto" data-platform-grid data="gridOptions.locationGrid">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="modal-footer ">
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="onOk()">
+				OK
+			</button>
+			<button type="button" class="btn btn-default ng-binding" data-ng-click="onCancel()">
+				Cancel
+			</button>
+		</footer>
+	</div>
+</script>
+
+<script id="basics.workflow/reassign-task.html" type="text/ng-template">
+	<div data-ng-if="task.allowReassign && task.isPopup" class="platform-form-group re-assign-popup-container">
+		<div class="platform-form-row re-assign">
+			<label class="platform-form-label re-assign-label">{{'basics.workflow.modalDialogs.clerk' | translate }}</label>
+			<div data-change="change" class="clerk" data-cloud-clerk-clerk-dialog data-ng-if="!isReadOnly" data-ng-model="task.selectedClerkId" data-options="task.clerkLookUpConfig.lookupOptions" readonly="isReadOnly"></div>
+			<label class="platform-form-label" data-ng-bind="task.selectedClerkId" data-ng-if="isReadOnly"></label>
+		</div>
+		<button type="button" class="btn btn-default re-assign-btn" data-ng-disabled="task.selectedClerkId === undefined || task.selectedClerkId === 0 || task.selectedClerkId === null" data-ng-click="task.reassignTaskOwner(task.Id,task.selectedClerkId,$parent.onCancel)" >{{ ::'basics.workflow.modalDialogs.Reassign' | translate }}</button>
+	</div>
+</script>
+
+<script id="basics.workflow/sidebar/reassign-task.html" type="text/ng-template">
+	<div data-ng-if="taskSidebar.selectedItem.allowReassign" class="platform-form-group re-assign-sidebar-container">
+		<div class="re-assign-sidebar-label">
+			{{'basics.workflow.sidebar.ReassignToClerk' | translate }}
+		</div>
+
+		<div class="d-flex flex-row re-assign-sidebar-content justify-content-around">
+			<div class="platform-form-row re-assign">
+				<label class="platform-form-label re-assign-label">{{'basics.workflow.modalDialogs.clerk' | translate }}</label>
+				<div data-change="change" class="clerk" data-cloud-clerk-clerk-dialog data-ng-if="!isReadOnly" data-ng-model="taskSidebar.selectedItem.selectedClerkId" data-options="taskSidebar.selectedItem.clerkLookUpConfig.lookupOptions" readonly="isReadOnly"></div>
+				<label class="platform-form-label" data-ng-bind="taskSidebar.selectedItem.selectedClerkId" data-ng-if="isReadOnly"></label>
+			</div>
+			<button type="button" class="btn btn-default re-assign-btn" data-ng-disabled="taskSidebar.selectedItem.selectedClerkId === undefined || taskSidebar.selectedItem.selectedClerkId === 0 || taskSidebar.selectedItem.selectedClerkId === null" data-ng-click="taskSidebar.selectedItem.reassignTaskOwner(taskSidebar.selectedItem.Id,taskSidebar.selectedItem.selectedClerkId,taskSidebar.reassignTaskOwnerCallback)" >{{ ::'basics.workflow.modalDialogs.Reassign' | translate }}</button>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/sidebar/assign-task.html" type="text/ng-template">
+	<div data-ng-if="taskSidebar.selectedItem.allowNewTaskAssign" class="platform-form-group re-assign-sidebar-container">
+		<div class="re-assign-sidebar-label">
+			{{'basics.workflow.sidebar.AssignNewTaskToClerk' | translate }}
+		</div>
+		<div style="display: flex;align-items: center;margin: 5px 0 5px 0;">
+			<label for="returnToSender">{{'basics.workflow.sidebar.ReassignToSender' | translate}}</label>
+			<input type="checkbox" id="returnToSender" ng-model="taskSidebar.selectedItem.returnToSender" style="margin: 0px 0px 0px 10px;">
+		</div>
+		<div class="d-flex flex-row re-assign-sidebar-content justify-content-around">
+			<div class="platform-form-row re-assign">
+				<label class="platform-form-label re-assign-label">{{'basics.workflow.modalDialogs.clerk' | translate }}</label>
+				<div data-change="change" class="clerk" data-cloud-clerk-clerk-dialog data-ng-if="!isReadOnly" data-ng-model="taskSidebar.selectedItem.selectedReassignClerkId" data-options="taskSidebar.selectedItem.clerkLookUpConfig.lookupOptions" readonly="isReadOnly"></div>
+				<label class="platform-form-label" data-ng-bind="taskSidebar.selectedItem.selectedReassignClerkId" data-ng-if="isReadOnly"></label>
+			</div>
+			<button type="button" class="btn btn-default re-assign-btn" data-ng-disabled="taskSidebar.selectedItem.selectedReassignClerkId === undefined || taskSidebar.selectedItem.selectedReassignClerkId === 0 || taskSidebar.selectedItem.selectedReassignClerkId === null" data-ng-click="taskSidebar.selectedItem.createNewTaskForClerk(taskSidebar.selectedItem, taskSidebar.selectedItem.selectedReassignClerkId, taskSidebar.reassignTaskOwnerCallback)" >{{ ::'basics.workflow.modalDialogs.Assign' | translate }}</button>
+		</div>
+	</div>
+</script>
+
+<script id="basics.workflow/contractRejectionDialog.html" type="text/ng-template">
+<div>
+	<header class="modal-header main-color" style="padding-left:16px">
+		<h2 class="modal-title" data-ng-bind-html="modalOptions.headerText"></h2>
+
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)"
+		        aria-hidden="true" style="background: none;">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+			     class="block-image"></svg>
+		</button>
+	</header>
+	<section style="padding:0px 16px 0px 16px">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.approver.currentLevel' | translate }}
+				</div>
+				<div class="platform-form-col" style="padding-top: 6px;padding-left: 14px;">
+					{{currentEvaluationLevel}}
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.approver.approverLevels' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-ng-model="selectedEvalutionLevel"
+						  data-options="evaluationLevels"
+						  data-change="evalutationDropdownChange(selectedEvalutionLevel)"
+						  readonly="false"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.approver.rejectToClerk' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div contract-rejection-multi-select-container options="clerks"
+						  data-ng-model="selectedClerks">
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.approver.approverComment' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-domain="text" data-domain-control data-ng-model="rejectionComment" readonly="false"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer data-ng-if="!task.Action.HideFooter" class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="reject(selectedEvalutionLevel, rejectionComment)">
+			{{'cloud.common.ok' | translate}}
+		</button>
+	</footer>
+	</div>
+</script>
+
+<script id="basics.workflow/contract-multi-select.html" type="text/ng-template">
+	<div data-ng-controller="basicsWorkflowMultiSelectDialogController">
+		<section>
+			<div class="overflow-hidden">
+				<div contract-rejection-multi-select style="max-width: 580px" ng-Model="##model##"></div>
+			</div>
+		</section>
+	</div>
+</script>

@@ -1,0 +1,89 @@
+{
+	"usermanagement": {
+		"group": {
+			"groupGUID": "GUID",
+			"groupName": "Name",
+			"groupDomainSID": "Domain SID",
+			"groupSynchronizeDate": "Synchronization Date",
+			"groupEmail": "E-Mail",
+			"accessGroupFK": "Group",
+			"moduleInfoNameUsermanagementGroup": "Group",
+			"clientFK": "Company",
+			"accessRoleFK": "Role",
+			"groupContainerTitle": "Groups",
+			"user2GroupContainerTitle": "Users in Group",
+			"group2RoleContainerTitle": "Company and Role Assignment",
+			"userFK": "Users",
+			"urlPassword": "Url Password",
+			"entityCompanyName": "Company Name",
+			"groupDescription": "Description",
+			"basicData": "Basic Data",
+			"validateName": "Name is not unique",
+			"entityUserName": "Name",
+			"entityUserLogonName": "Logon Name",
+			"entityUserProviderUniqueIdentifier": "Provider Unique Identifier",
+			"users": "Users",
+			"groups": "Groups",
+			"roles": "Roles",
+			"clerk": "Clerk",
+			"company": "Company",
+			"customizing": "Customizing",
+			"identityProvider": "Identity Provider",
+			"groupImport": {
+				"headerText": "Import Groups",
+				"importButton": "Import",
+				"selected": "Selected",
+				"name": "Name",
+				"description": "Description",
+				"domainSid": "Domain SID",
+				"adsGroups": "Groups in Active Directory",
+				"createAssign": "Create/Assign users for the selected groups",
+				"infoBodyText": "Synchronization successful !",
+				"infoDialogHeader": "Active Directory Groups Import"
+			},
+			"dialogTitleGroup": "Access Group Selection",
+			"groupSync": {
+				"headerText": "Synchronize Groups",
+				"syncronize": "Synchronize",
+				"state": "State",
+				"adsGroupsSync": "Groups to synchronize",
+				"infoBodyText": "Synchronization successful !",
+				"infoDialogHeader": "Active Directory Groups Synchronization",
+				"createAssign": "Create/Assign users for groups to synchronize",
+				"noGroupPath": "No AD Group Path available."
+			},
+			"adsConfig": {
+				"infoBodyText": "Save successful !",
+				"infoBodyTextGroupError": "Group Path invalid.",
+				"infoBodyTextUserError": "User Path invalid.",
+				"infoBodyTextGroupAndUserError": "Group & user path invalid.",
+				"infoDialogHeader": "Active Directory Configuration",
+				"adTaskInfo": "AD Scheduler Task saved successful !"
+			},
+			"adButtons": {
+				"adConfig": "AD Configuration & Scheduler Task",
+				"groupImport": "Import AD Group",
+				"adDisco": "Disconnect from AD",
+				"groupSync": "Synchronize AD Group"
+			},
+			"logContainer": {
+				"logContainerTitle": "Scheduler Logs",
+				"jobstate": "Job State",
+				"starttime": "Start Time",
+				"exstarttime": "Execution Start Time",
+				"exendtime": "Execution End Time",
+				"log": "Logging Message",
+				"showLogFileTitle": "AD Scheduler Log",
+				"refresh": "Refresh"
+			},
+			"stateValues": {
+				"waiting": "Waiting",
+				"starting": "Starting",
+				"running": "Running",
+				"stopped": "Stopped",
+				"finished": "Finished",
+				"repetitive": "Repetitive"
+			}
+		}
+	}
+}

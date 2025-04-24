@@ -1,0 +1,39 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.currency.HomeCurrency",
+		"controller": "basicsCurrencyListController",
+		"uuid":"125895cc6f2e11e4b116123b93f75cba"
+	},
+	{
+		"id": "2",
+		"template": "basics.currency/partials/currency-detail.html",
+		"title": "basics.currency.CurrencyDetails",
+		"controller": "basicsCurrencyDetailController",
+		"uuid":"1151f532821247d1aeb031ae87df515c",
+		"permission":"125895cc6f2e11e4b116123b93f75cba"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.currency.CurrencyConversion",
+		"controller": "basicsCurrencyConversionListController",
+		"uuid":"674b21f399c4441f89c28ebc12995341"
+
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.currency.ExchangeRates",
+		"controller": "basicsCurrencyRateListController",
+		"uuid":"5ca9addb22d7457c877e4bc7ae38ee7c"
+	},
+	{
+		"id": "5",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "basics.currency.CurrencyTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid":"66ed1e3c6f2e11e4b116123b93f75cba"
+	}
+]

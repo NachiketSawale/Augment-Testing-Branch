@@ -1,0 +1,157 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+				<div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div data-accordion data-close-others="false">
+			<div data-accordion-group data-is-open="htmlOpen">
+				<div data-accordion-heading>
+					<span class="platform-form-group-header-text">{{'basics.workflow.action.html.containerHeader' | translate}}</span>
+
+					<span class="platform-form-group-header">
+						<div class="toggleImg control-icons ico-up" data-ng-show="htmlOpen"></div>
+						<div class="toggleImg control-icons ico-down" data-ng-show="!htmlOpen"></div>
+					</span>
+				</div>
+				<div class="platform-form-group">
+					<!-- HTML -->
+					<div class="platform-form-row">
+						<div class="platform-form-col">
+							<div class="filler" data-ng-model="html.value" data-options="codeMirrorOptionsMulti" data-script-editor-directive></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-accordion data-close-others="false">
+			<div data-accordion-group data-is-open="scriptOpen">
+				<div data-accordion-heading>
+					<span class="platform-form-group-header-text">{{'basics.workflow.action.script.containerHeader' | translate}}</span>
+
+					<span class="platform-form-group-header">
+						<div class="toggleImg control-icons ico-up" data-ng-show="scriptOpen"></div>
+						<div class="toggleImg control-icons ico-down" data-ng-show="!scriptOpen"></div>
+					</span>
+				</div>
+				<div class="platform-form-group">
+					<!-- Script -->
+					<div class="platform-form-row">
+						<div class="platform-form-col">
+							<div class="filler" data-ng-model="script.value" data-options="codeMirrorOptionsMultiJavascript" data-script-editor-directive></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Radio-->
+		<div class="radiolist-container">
+			<div data-radiolistctrl displayMember="description" ng-model="input.editorMode" on-selection-changed="onRadioGroupOptChanged(value)" options="input.radioGroupOpt" valueMember="value"></div>
+		</div>
+
+		<!---->
+		<div class="platform-form-group">
+			<!--Input-in-Context-->
+			<div class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.context' | translate }}','caption':'{{::'basics.workflow.action.customEditor.contextTooltipCaption' | translate }}', 'width':300}" class="platform-form-label"
+					>{{'basics.workflow.action.customEditor.context' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.context.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<!--Title-->
+			<div class="platform-form-row">
+				<label
+					custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.extendedUser.extendedTitle' | translate  }}','caption':'{{::'basics.workflow.action.customEditor.extendedUser.extendedTitleTooltipCaption' | translate }}', 'width':300}"
+					class="platform-form-label"
+					>{{'basics.workflow.action.customEditor.extendedUser.extendedTitle' | translate }}</label
+				>
+				<div class="platform-form-col">
+					<div data-ng-model="title.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<!--Subtitle-->
+			<div class="platform-form-row">
+				<label
+					custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.extendedUser.extendedSubtitle' | translate  }}','caption':'{{::'basics.workflow.action.customEditor.extendedUser.extendedSubtitleTooltipCaption' | translate }}', 'width':300}"
+					class="platform-form-label"
+					>{{'basics.workflow.action.customEditor.extendedUser.extendedSubtitle' | translate }}</label
+				>
+				<div class="platform-form-col">
+					<div data-ng-model="subtitle.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<!--DialogConfig-->
+			<div class="platform-form-row">
+				<label
+					custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.extendedUser.extendedDialogConfig' | translate  }}','caption':'{{::'basics.workflow.action.customEditor.extendedUser.extendedDialogConfigTooltipCaption' | translate }}', 'width':300}"
+					class="platform-form-label"
+					>{{'basics.workflow.action.customEditor.extendedUser.extendedDialogConfig' | translate }}</label
+				>
+				<div class="platform-form-col">
+					<div data-ng-model="dialogConfig.value" data-options="codeMirrorOptionsDialogConfig" data-script-editor-directive style="height: auto"></div>
+				</div>
+			</div>
+			<!---->
+		</div>
+		<!---->
+
+		<div class="platform-form-group">
+			<div class="platform-form-row" data-ng-if="input.editorMode === 1">
+				<div data-change="changeCheckbox('isPopUp')" data-domain="boolean" data-domain-control data-ng-model="isPopUpCheckbox" data-options="isPopUpOptions" readonly="codeMirrorOptions.readOnly"></div>
+			</div>
+
+			<div class="platform-form-row" data-ng-if="input.editorMode === 1">
+				<div data-change="changeCheckbox('evaluateProxy')" data-domain="boolean" data-domain-control data-ng-model="EvaluateProxyCheckbox" data-options="EvaluateProxyOptions" readonly="codeMirrorOptions.readOnly"></div>
+			</div>
+
+			<div class="platform-form-row" data-ng-if="input.editorMode === 1">
+				<div data-change="changeCheckbox('disableRefresh')" data-domain="boolean" data-domain-control data-ng-model="DisableRefreshCheckbox" data-options="DisableRefreshOptions" readonly="codeMirrorOptions.readOnly"></div>
+			</div>
+
+			<div class="platform-form-row" data-ng-if="input.editorMode === 1">
+				<div data-change="changeCheckbox('allowReassign')" data-domain="boolean" data-domain-control data-ng-model="AllowReassignCheckbox" data-options="AllowReassignOptions" readonly="codeMirrorOptions.readOnly"></div>
+			</div>
+
+			<div class="platform-form-row" data-ng-if="input.editorMode === 2">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.isPopUp' | translate }}','caption':'{{::'basics.workflow.action.customEditor.isPopUpTooltipCaption' | translate }}', 'width':300}" class="platform-form-label"
+					>{{'basics.workflow.action.customEditor.isPopUp' | translate }}</label
+				>
+				<div class="platform-form-col">
+					<div data-ng-model="isPopUp.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!---->
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+				<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.context' | translate }}','caption':'{{::'basics.workflow.action.customEditor.contextOutputTooltipCaption' | translate }}', 'width':300}" class="platform-form-label"
+					>{{'basics.workflow.action.customEditor.context' | translate }}</label
+				>
+				<div class="platform-form-col">
+					<div data-ng-model="context.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

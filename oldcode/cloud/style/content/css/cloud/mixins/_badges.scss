@@ -1,0 +1,47 @@
+@mixin badge($height: auto, $font-size: 10px, $color: $color-primary-fore, $background-color: $badge-bg, $border-radius: 40px, $close-btn-size: 0, $close-btn-hori-pos: 0) {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 100%;
+	min-width: 10px;
+	padding: 0 4px;
+	cursor: pointer;
+	height: $height;
+	font-size: $font-size;
+	color: $color;
+	background-color: $background-color;
+	border-radius: $border-radius;
+	border: 0.5px solid $color;
+
+	&:not(:disabled):hover {
+		background-color: $background-color !important;
+	}
+
+	.close-btn {
+		@include square($close-btn-size);
+		position: absolute;
+		right: $close-btn-hori-pos;
+		top: 50%;
+		transform: translateY(-50%);
+
+		&:before,
+		&:after {
+			position: absolute;
+			content: ' ';
+			height: $close-btn-size;
+			width: 1px;
+			background-color: $color;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+
+	}
+
+}

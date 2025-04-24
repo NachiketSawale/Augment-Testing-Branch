@@ -1,0 +1,21 @@
+<div class="checkbox spaceToUp">
+	<label>
+		<input type="checkbox" [(ngModel)]="entity.SelLineItemScope.FixedPriceLineItems"
+		       [value]="entity.SelLineItemScope.FixedPriceLineItems" />
+		{{'estimate.main.backwardCalculation.fixedPriceLineItems' | platformTranslate}}
+	</label>
+</div>
+<div class="checkbox spaceToUp">
+	<label>
+		<input type="checkbox" [(ngModel)]="entity.SelLineItemScope.LineItemsAllowance"
+		       [value]="entity.SelLineItemScope.LineItemsAllowance" />
+		{{'estimate.main.backwardCalculation.lineItemsAllowance' | platformTranslate}}
+	</label>
+</div>
+<div class="checkbox spaceToUp">
+	<label>
+		<input type="checkbox" [(ngModel)]="entity.SelLineItemScope.LineItemsMarkup"
+		       [value]="entity.SelLineItemScope.LineItemsMarkup" />
+		{{'estimate.main.backwardCalculation.lineItemsMarkup' | platformTranslate}}
+	</label>
+</div>

@@ -1,0 +1,53 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body" data-platform-form-adjust-label>
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <label class="platform-form-label ng-binding">{{modalOptions.locationText}}</label>
+            <div class="platform-form-col">
+                <select class="form-control"
+                        data-ng-model="locationOptions.selectedItem"
+                        data-ng-options="location.name for location in locationOptions.items"
+                        data-ng-change="locationOptions.onSelectChanged()">
+                </select>
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <label class="platform-form-label ng-binding">{{modalOptions.availableProfilesText}}</label>
+            <div class="platform-form-col">
+                <select class="form-control overflow" size="5"
+                        data-ng-model="profileOptions.selectedItem"
+                        data-ng-options="profile.dialogName for profile in profileOptions.items"
+                        data-ng-change="profileOptions.onSelectChanged()">
+                    <option data-ng-show="profileOptions.isShowTitle"></option>
+                </select>
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <label class="platform-form-label ng-binding">{{modalOptions.saveProfileNameText}}</label>
+
+            <div class="platform-form-col">
+                <input class="form-control" data-ng-model="profileOptions.profileName" enter-key-pressed="modalOptions.ok"/>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer flex-box flex-row">
+    <button type="button" class="btn btn-default pull-left" data-ng-click="modalOptions.delete()"
+            data-ng-disabled="buttonOptions.disableDelete()">
+        {{modalOptions.deleteButtonText}}
+    </button>
+    <button type="button" class="btn btn-default pull-left" data-ng-click="modalOptions.default()"
+            data-ng-disabled="buttonOptions.disableDefault()">
+        {{modalOptions.defaultButtonText}}
+    </button>
+    <span style="flex: 1; min-width: 50px;"></span>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+            data-ng-disabled="buttonOptions.disableOkay()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>
+<div cloud-common-overlay data-loading="isLoading"></div>

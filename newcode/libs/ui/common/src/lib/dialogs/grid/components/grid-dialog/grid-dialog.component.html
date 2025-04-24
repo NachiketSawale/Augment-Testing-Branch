@@ -1,0 +1,19 @@
+<div class="flex-element flex-box flex-column subview-container">
+	<div *ngIf="tools" class="toolbar" style="height: 30px;">
+		<h3 *ngIf="title" class="title font-bold">{{ title | platformTranslate }}</h3>
+		<div class="tool-space"></div>
+		<ui-common-menu-list 
+			class="tool-pos"
+			[menu]="tools" 
+			[context]="context">
+		</ui-common-menu-list>
+	</div>
+	<div class="flex-element flex-box flex-column subview-content">
+		<ui-common-grid
+			#gridElement 
+			[configuration]="config"
+			(selectionChanged)="onSelectionChanged($event)"
+			(valueChanged)="onValueChanged($event)">
+		</ui-common-grid>
+	</div>
+</div>

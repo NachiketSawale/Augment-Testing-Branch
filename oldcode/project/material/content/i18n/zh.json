@@ -1,0 +1,20 @@
+﻿{
+  "project": {
+    "material": {
+      "prjEstimatePrice":"估价（项目）",
+      "prjRetailPrice":"零售价格（项目）",
+      "prjListPrice":"定价（项目）",
+      "prjCharges":"运费（项目）",
+      "prjDiscount":"折扣（项目）",
+      "prjPriceUnit":"单价（项目）",
+      "prjPriceExtra":"附加费用（项目）",
+      "prjCost":"Cost(Project)",
+      "prjFactorPriceUnit":"Factor Price Unit(Project)",
+      "prjBasUomPriceUnitFk":"Uom PriceUnit(Project)",
+      "prjPrcPriceConditionFk":"Prc Price Condition(Project)",
+      "prjMdcMaterialDiscountGroupFk":"材料折扣组（项目）",
+      "prjMdcTaxCodeFk":"税务代码（项目）",
+      "prjComment":"注释（项目）"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+	"project": {
+		"location": {
+			"location": "Location",
+			"detailContainerTitle": "Location Details",
+			"listContainerTitle": "Locations",
+			"taskBarDeleteLoc": "Delete Location",
+			"taskBarNewLoc": "New Location",
+			"entityIsShownInChart": "Is shown in chart",
+			"taskBarNewSubLoc": "New Sub-Location",
+			"downgradeLocation":"Indent Location",
+		 	"upgradeLocation":"Outdent Location",
+			"locQuantity":"Quantity Factor",
+			"externalCode": "External Code",
+			"importFromBaseline": "Import Location-Xml from Baseline",
+			"importOf40Format": "Import Location-Xml from 4.0",
+			"exportIn40Format": "Export Location-Xml from 4.0",
+			"importLocationsWrongFileType": "Import from Baseline requires a Xml-file"
+		}
+	}
+}

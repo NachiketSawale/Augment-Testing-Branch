@@ -1,0 +1,31 @@
+<div data-ng-controller="ppsDrawingPreviewDialogController">
+    <header class="modal-header main-color" >
+	    <span class="modal-title font-bold" data-ng-bind="(modalOptions.headerText || modalTitle)"></span>
+	    <button class="db close" data-dismiss="modal" data-ng-click="$close(false)">
+		    <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	    </button>
+    </header>
+    <section class="modal-body">
+        <div class="subview-header toolbar">
+            <h3 class="font-bold title fix">{{'productionplanning.drawing.overview' | translate }}</h3>
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-element flex-box flex-column subview-container">
+            <div class="lookup-grid flex-basis-auto" data-platform-grid
+                 data="gridOptions.previewGrid"></div>
+        </div>
+        <div cloud-common-overlay data-loading="isBusy" data-info2="progressInfo"></div>
+    </section>
+    <footer class="modal-footer">
+        <span class="custom-group" style="color: red" data-ng-bind="noteForUpstreamItem"></span>
+        <button type="button" class="btn btn-default" data-ng-disabled="disableRefresh()" data-ng-click="onRefresh()">
+            {{'basics.common.button.refresh' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="disableApply()" data-ng-click="onApply()">
+            {{'cloud.common.apply' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="$close(false)">
+            {{'cloud.common.close' | translate}}
+        </button>
+    </footer>
+</div>

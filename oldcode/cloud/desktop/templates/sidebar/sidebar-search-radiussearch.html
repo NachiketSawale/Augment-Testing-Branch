@@ -1,0 +1,36 @@
+<div class="relative-container" data-ng-if="searchOptions.filterRequest.includeRadiusSearch!=null">
+
+
+
+	<div class="margin-top-ld"></div>
+
+	<div data-domain-control data-domain="select" data-model="location.RadiusParameters.radiusMode"
+		data-options="locationOptions.locationSelectOptions">
+	</div>
+
+	<div class="margin-top-ld"></div>
+
+
+	<div data-ng-if="location.RadiusParameters.radiusMode === 'RadiusMode'">
+		<div data-basics-common-location-dialog data-ng-model="location.RadiusParameters.addressInformation"
+			data-options="radius.addressOptions" data-entity="radius.entity"
+			data-config="locationOptions.addressLookupOptions">
+		</div>
+		<div class="margin-top-ld"></div>
+		<div data-domain-control data-domain="select" data-model="location.RadiusParameters.radiusId"
+			data-options="locationOptions.distanceSelectOptions">
+		</div>
+	</div>
+
+	<div data-ng-if="location.RadiusParameters.radiusMode === 'RegionalMode'">
+
+		<div basics-lookupdata-country-combobox data-ng-model="location.RadiusParameters.regionId"
+			data-config="location.RadiusParameters.regionId" data-options="locationOptions.regionLookupOptions"></div>
+
+		<div class="margin-top-ld"></div>
+		<div data-domain-control data-domain="description" data-model="location.RadiusParameters.regionInput">
+		</div>
+
+		<div data-ng-show="searchOptions.filterInfo.isPending" class="cell-opacity container-overlay margin-none"></div>
+	</div>
+</div>

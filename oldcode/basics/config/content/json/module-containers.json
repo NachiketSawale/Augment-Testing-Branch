@@ -1,0 +1,246 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.moduleContainerTitle",
+		"controller": "basicsConfigListController",
+		"uuid": "f2c8a4e8330946069c54ee75a4f40db1"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.tabsContainerTitle",
+		"controller": "basicsConfigTabListController",
+		"uuid": "ece7368917db45a3865fe3b2fafbb3ec"
+	},
+	{
+		"id": "3",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "cloud.common.languageColHeader_ContainerTitle",
+		"title$": "Language",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "a7ab957df5c5442c9fb44512d0dad2ce"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.reportGroupContainerTitle",
+		"controller": "basicsConfigReportGroupListController",
+		"uuid": "04825f8e8f24445ca2a49fd140daafff"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.config.reportGroupDetailsContainerTitle",
+		"controller": "basicsConfigReportGroupDetailController",
+		"uuid": "81340775ba344a6f98b60ec9403460bf",
+		"permission": "04825f8e8f24445ca2a49fd140daafff"
+	},
+	{
+		"id": "11",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.reportXGroupContainerTitle",
+		"controller": "basicsConfigReportXGroupListController",
+		"uuid": "85481d36739a495289e0e4a824d23e88"
+	},
+	{
+		"id": "12",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.wizardGroupContainerTitle",
+		"controller": "basicsConfigWizardGroupListController",
+		"uuid": "3f448dee55f8455e99292d5ecf1f0721"
+	},
+	{
+		"id": "13",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.wizardXGroupContainerTitle",
+		"controller": "basicsConfigWizardXGroupListController",
+		"uuid": "93237273a35e4aa18ba61c2d182e4661"
+	},
+	{
+		"id": "14",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.wizardXGroupPValuesContainerTitle",
+		"controller": "basicsConfigWizardXGroupPValueListController",
+		"uuid": "1ffb1f2589264df18745ba1f89cace0a"
+	},
+	{
+		"id": "15",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.genWizardInstanceListContainerTitle",
+		"controller": "basicsConfigGenericWizardInstanceListController",
+		"uuid": "7C1DA2158B9443E483EACD6CB64AEA5E"
+	},
+	{
+		"id": "16",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.config.genWizardInstanceDetailContainerTitle",
+		"controller": "basicsConfigGenericWizardInstanceDetailController",
+		"uuid": "6120EEA99E1745F7A72430C2400336FF",
+		"permission": "7C1DA2158B9443E483EACD6CB64AEA5E"
+	},
+	{
+		"id": "17",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.genWizardStepListContainerTitle",
+		"controller": "basicsConfigGenericWizardStepListController",
+		"uuid": "4A4450D578644C8D88E8A669133D77C8"
+	},
+	{
+		"id": "18",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.config.genWizardStepDetailContainerTitle",
+		"controller": "basicsConfigGenericWizardStepDetailController",
+		"uuid": "EAD02071C4C943C19DA857B574493BB8",
+		"permission": "4A4450D578644C8D88E8A669133D77C8"
+	},
+	{
+		"id": "19",
+		"template": "app/components/base/grid-file-partial.html",
+		"title": "basics.config.genWizardContainerListContainerTitle",
+		"controller": "basicsConfigGenericWizardContainerListController",
+		"uuid": "80F2EC7BF665413F916A0AEE614B9439"
+	},
+	{
+		"id": "20",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.config.genWizardContainerDetailContainerTitle",
+		"controller": "basicsConfigGenericWizardContainerDetailController",
+		"uuid": "EBA7B7E61EA74CC9916E43BB60B11405",
+		"permission": "80F2EC7BF665413F916A0AEE614B9439"
+	},
+	{
+		"id": "21",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.genWizardContainerPropertyListContainerTitle",
+		"controller": "basicsConfigGenericWizardContainerPropertyListController",
+		"uuid": "13ABBFA2E08D4796816C56A635046E9C"
+	},
+	{
+		"id": "22",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.config.genWizardContainerPropertyDetailContainerTitle",
+		"controller": "basicsConfigGenericWizardContainerPropertyDetailController",
+		"uuid": "F93DBABB4F7D4C3FA2C73457605FA3E7",
+		"permission": "13ABBFA2E08D4796816C56A635046E9C"
+	},
+	{
+		"id": "23",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.genWizardInstanceParameterListContainerTitle",
+		"controller": "basicsConfigGenericWizardInstanceParameterListController",
+		"uuid": "F13BB99ECC7E4E05B9C821C50D7E8FEB"
+	},
+	{
+		"id": "24",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.config.genWizardInstanceParameterDetailContainerTitle",
+		"controller": "basicsConfigGenericWizardInstanceParameterDetailController",
+		"uuid": "7A587CB1C0C048088EEF6EDCFCC5DE3C",
+		"permission": "F13BB99ECC7E4E05B9C821C50D7E8FEB"
+	},
+	{
+		"id": "25",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.genWizardStepScriptListContainerTitle",
+		"controller": "basicsConfigGenericWizardStepScriptListController",
+		"uuid": "25F58B6C3BC5451794724582FCC1EEC8"
+	},
+	{
+		"id": "26",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.config.genWizardStepScriptDetailContainerTitle",
+		"controller": "basicsConfigGenericWizardStepScriptDetailController",
+		"uuid": "0E6CE2D0D1A7450A8787ED86964F86D7",
+		"permission": "25F58B6C3BC5451794724582FCC1EEC8"
+	},
+	{
+		"id": "27",
+		"template": "app/components/base/code-mirror.html",
+		"title": "basics.config.ScriptingContainer",
+		"uuid": "51fe7014d66847b7b3c50ee3113919df",
+		"permission": "25F58B6C3BC5451794724582FCC1EEC8",
+		"controller": "basicsConfigScriptContainerController"
+	},
+	{
+		"id": "basics.config.auditcontainer.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.AuditTrailContainerTitle",
+		"controller": "basicsConfigAuditContainerListController",
+		"uuid": "857230b201f343e4bf4b499ba6361d43",
+		"permission": "a3416418eed24b3fa1fc439172c61320"
+	},
+	{
+		"id": "basics.config.auditcolumns.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.AuditTrailColumnTitle",
+		"controller": "basicsConfigAuditColumnListController",
+		"uuid": "70ce60e7961149d5ba537fb1eae45c7a",
+		"permission": "a3416418eed24b3fa1fc439172c61320"
+	},
+	{
+		"id": "28",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.mcTwoQnAContainerTitle",
+		"controller": "basicsConfigMcTwoQnAListController",
+		"uuid": "27043f3b2c6d482fb1b16365a6abb13a"
+	},
+	{
+		"id": "29",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.moduleViews.moduleViewsContainerTitle",
+		"controller": "basicsConfigModuleViewListController",
+		"uuid": "20602942ac6d4761bd5425d1d376fd69"
+	},
+	{
+		"id": "basics.config.dataconfig",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.dataConfigurationTitle",
+		"controller": "basicsConfigDataConfigurationController",
+		"uuid": "10f3abb8b42b4f3cbb0de788ee83696f"
+	},
+	{
+		"id": "basics.config.dashboard2module.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.dashboardToModuleContainerTitle",
+		"controller": "basicsConfigDashboardXModuleListController",
+		"uuid": "1335624453284e4d93437faf3da0af71",
+		"moduleBlacklist": [
+			"basics.config",
+			"basics.customize",
+			"basics.dependentdata",
+			"basics.efbsheets",
+			"basics.materiallookup",
+			"basics.scurve",
+			"boq.main",
+			"cloud.boq",
+			"cloud.masterdatacontext",
+			"cloud.uom"
+		]
+	},
+	{
+		"id": "30",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.navbarSystemContainerTitle",
+		"controller": "basicsConfigNavbarSystemListController",
+		"uuid": "504957d15b8e405d86608fd06294d197",
+		"permission": "ed4dcf0163594a208772a701f1cb6ac3"
+	},
+	{
+		"id": "32",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.commandbarSystemContainerTitle",
+		"controller": "basicsConfigCommandbarSystemListController",
+		"uuid": "52a8e4755b2f43c983087066418240ad",
+		"permission": "885522b2b0204f278ecd6ff6a6033723"
+	},
+	{
+		"id": "33",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.config.genWizardNamingParameterContainerTitle",
+		"controller": "basicsConfigGenericWizardNamingParameterListController",
+		"uuid": "d99853b4587b464c9c131a81900695f8"
+	}
+]
+
+

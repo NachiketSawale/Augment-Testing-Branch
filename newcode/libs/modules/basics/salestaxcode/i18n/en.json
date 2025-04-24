@@ -1,0 +1,17 @@
+﻿{
+	"basics": {
+		"salestaxcode": {
+			"entitySalesTaxCodeTitle": "US Sales Tax Code",
+			"entitySalesTaxCodeDetailTitle": "US Sales Tax Code Details",
+			"entitySalesTaxMatrixTitle": "Sales Tax Code Matrixs",
+			"entitySalesTaxMatrixDetailTitle": "Sales Tax Code Matrix Details",
+			"entitySalesTaxCodeDescription": "Sales Tax Group description",
+			"taxPercent": "Tax Percent",
+			"reference": "Reference",
+			"salesTaxGroup": "Sales Tax Group",
+			"salesTaxGroupDes": "Sales Tax Group Description",
+			"uniqCode": "The Code should be unique",
+			"calculationOrder": "Calculation Order"
+		}
+	}
+}

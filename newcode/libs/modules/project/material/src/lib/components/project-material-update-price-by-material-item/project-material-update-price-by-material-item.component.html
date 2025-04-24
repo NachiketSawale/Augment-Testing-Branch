@@ -1,0 +1,42 @@
+<div class="">
+    <h3 class="margin-top-ld">{{'project.main.updatePriceFromCatalogWizard.prjMaterialNote' | platformTranslate}}</h3>
+    <div class="subview-content" style="height: 300px; overflow: auto">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"
+                 data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+        </div>
+        <ui-common-grid class="flex-element" [configuration]="materialConfig" (selectionChanged)="selectionChanged($event)"></ui-common-grid>
+        <div class="statusbar">
+            <div class="right-side flex-element flex-box flex-align-center">
+                <!-- go to first page -->
+                <button class="btn tlb-icons ico-rec-first item block-image" (click)="getFirstPage()"
+                        [disabled]="!canFirstOrPrevPage()"></button>
+
+                <!-- go to previous page -->
+                <button class="btn control-icons ico-previous item block-image" (click)="getPrevPage()"
+                        [disabled]="!canFirstOrPrevPage()"></button>
+
+                <span class="item ellipsis">
+										{{getPageText()}}
+									</span>
+                <!-- go to next page -->
+                <button class="btn control-icons ico-next item block-image" (click)="getNextPage()"
+                        [disabled]="!canLastOrNextPage()"></button>
+
+                <!-- go to last page -->
+                <button class="btn tlb-icons ico-rec-last item block-image" (click)="getLastPage()"
+                        [disabled]="!canLastOrNextPage()"></button>
+            </div>
+        </div>
+    </div>
+    <h3 class="margin-top-ld">{{'project.main.updatePriceFromCatalogWizard.materialPriceListNote' | platformTranslate}}</h3>
+    <div class="subview-content" style="height: 200px; overflow: auto">
+        <div class="toolbar">
+            <div data-platform-menu-list data-list="tools"
+                 data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+        </div>
+        <ui-common-grid class="flex-element" [configuration]="priceListConfig"></ui-common-grid>
+    </div>
+    <h3 class="margin-top-ld">{{'project.main.updatePriceFromCatalogWizard.noModifiedProjectMaterialSelectedDetail' | platformTranslate}}</h3>
+    <!--	<div class="branch-container platformgrid f3b7569b3ba344768005d7b4a24f62c1" filter-Business-Partner-Subsidiary style="height:calc(100% - 24px)"></div>-->
+</div>

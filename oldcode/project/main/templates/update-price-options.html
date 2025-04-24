@@ -1,0 +1,48 @@
+<div class="platform-form-group">
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+            <div>
+                <label>
+                    {{'project.main.updatePriceFromCatalogWizard.updatePriceOptionPageLabel' | translate}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="platform-form-row">
+        <div class="platform-form-col">
+
+            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                <label>
+                    <input type="radio" name="supplierSelect" value="fromCatalog" data-ng-disabled="!canUpdateFromCatalog"
+                           data-ng-model="optionPage.radioSelect"/>{{options.body.fromMaterialCatalog}}
+                </label>
+	            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+		            <label>
+			            <input type="radio" name="catalogSelect" value="byMaterialItem" data-ng-disabled="!canUpdateFromCatalog"
+			                   data-ng-model="optionPage.catalogSelect"/>{{options.body.byMaterialItem}}
+		            </label>
+	            </div>
+	            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+		            <label>
+			            <input type="radio" name="catalogSelect" value="byMaterialCatalog" data-ng-disabled="!canUpdateFromCatalog"
+			                   data-ng-model="optionPage.catalogSelect"/>{{options.body.byMaterialCatalog}}
+		            </label>
+	            </div>
+            </div>
+
+            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                <label>
+                   <input type="radio" name="supplierSelect" value="fromQuote"
+                       data-ng-model="optionPage.radioSelect"/>{{options.body.fromQuote}}
+                </label>
+            </div>
+
+            <div class="radio spaceToUp lg-2 md-2 col-lg-offset-1 col-md-offset-1">
+                <label>
+                    <input type="radio" name="supplierSelect" value="fromContract"
+                           data-ng-model="optionPage.radioSelect"/>{{options.body.fromContract}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

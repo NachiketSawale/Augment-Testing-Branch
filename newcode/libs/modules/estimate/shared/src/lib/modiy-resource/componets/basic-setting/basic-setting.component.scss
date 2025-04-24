@@ -1,0 +1,36 @@
+.basic-setting-container {
+	display: flex;
+	vert-align: top;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+
+.basic-setting-container-left {
+	padding-top: 5px;
+	width: 160px;
+}
+
+.basic-setting-container-right {
+	padding-top: 5px;
+	flex-grow: 1;
+}
+
+.basic-setting-container-right-l {
+	display: inline-block;
+	width: 30%;
+}
+
+.basic-setting-container-right-r {
+	display: inline-block;
+	width: 70%;
+}
+
+.basic-setting-Grid{
+	border: 1px #ccc solid;
+}
+
+.basic-setting-select{
+	border: 1px #ccc solid;
+	height: 28px;
+	width: 90%;
+}

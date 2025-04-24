@@ -1,0 +1,16 @@
+{
+  "boq": {
+    "wic": {
+      "detailWicGroupContainerTitle": "Details TLK Gruppen",
+      "wicGroupListTitle": "TLK Gruppen",
+      "wicCatBoqListTitle": "TLK Kataloge",
+      "wicTab": "TLK",
+      "basicData": "Grunddaten",
+      "MdcMaterialCatalogFk": "TLK Framework",
+      "AccessRightDescriptorName": "Zugriffsrecht Name",
+      "wicGroupClerkDetailTitle": "Sachbearbeiter (Berechtigung) Details",
+      "wicGroupClerkListTitle": "Sachbearbeiter (Berechtigungen)",
+      "CopyTemplateOnly": "Nur Vorlage kopieren"
+    }
+  }
+}

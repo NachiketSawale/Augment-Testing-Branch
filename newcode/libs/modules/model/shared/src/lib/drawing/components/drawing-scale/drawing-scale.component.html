@@ -1,0 +1,11 @@
+<div class="flex-box" *ngIf="!context.layoutConfig.isImperial">
+    <input type="number" class="flex-element form-control" id="drawingDistance" [(ngModel)]="context.layoutConfig.drawingDistance" />
+    <div style="font-weight: bolder;padding-top: 4px;vertical-align: middle;text-align: center;width: 10px;">:</div>
+    <input type="number" class="flex-element form-control" id="actualDistance" [(ngModel)]="context.layoutConfig.actualDistance" />
+</div>
+
+<div class="flex-box" *ngIf="context.layoutConfig.isImperial">
+    <ui-common-lookup-input class="flex-element form-control" [(value)]="context.layoutConfig.drawingDistance" [dataService]="leftImperialService" (selectedItemChanged)="handleLeftImperialChange()"></ui-common-lookup-input>
+    <div style="font-weight: bolder;padding-top: 4px;vertical-align: middle;text-align: center;width: 10px;">:</div>
+    <ui-common-lookup-input class="flex-element form-control" [(value)]="context.layoutConfig.actualDistance" [dataService]="rightImperialService"></ui-common-lookup-input>
+</div>

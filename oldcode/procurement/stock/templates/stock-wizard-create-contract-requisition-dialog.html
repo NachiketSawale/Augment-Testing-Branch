@@ -1,0 +1,35 @@
+<div class="modal-wrapper">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-disable="isLoading" data-ng-click="$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title" data-ng-bind="modalOptions.headerText"></h2>
+    </header>
+
+    <section class="modal-body">
+        <div class="alert alert-warning">
+            <button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{ modalOptions.createMessage }}
+        </div>
+        <div class="platform-form-row form-group">
+            <input type="radio" name="method" data-ng-model="modalOptions.createMehtod" data-ng-click="modalOptions.clickMehtod()" value="1" style="vertical-align:text-bottom;margin: 2px 0;" />
+            {{::modalOptions.createByBasicData}}
+        </div>
+        <div class="platform-form-row form-group">
+            <input type="radio" name="method" data-ng-model="modalOptions.createMehtod" data-ng-click="modalOptions.clickMehtod()" value="2" style="vertical-align:text-bottom;margin: 2px 0;" />
+            {{::modalOptions.createByBusinessPartner}}
+        </div>
+    </section>
+
+    <footer class="modal-footer" data-ng-switch="modalOptions.step">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+            {{::'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+</div>

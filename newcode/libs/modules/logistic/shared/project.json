@@ -1,0 +1,20 @@
+{
+	"name": "modules-logistic-shared",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/logistic/shared/src",
+	"prefix": "itwo40",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/logistic/shared"],
+			"options": {
+				"jestConfig": "libs/modules/logistic/shared/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	}
+}

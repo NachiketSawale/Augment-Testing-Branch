@@ -1,0 +1,55 @@
+<div data-ng-controller="qtoMainCreateWipDialogController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="fullheight">
+            <div class="fullheight" style="overflow-y: auto">
+                <div>
+                    <div class="platform-lg" data-ng-if="isForQto()">
+                        <div class="ng-scope">
+                            <div>
+                                <div data-platform-alert data-error="assignError"></div>
+                                <div data-platform-alert data-error="qtoLineValidationError"></div>
+                                <div data-platform-alert data-error="qtoScopeError"></div>
+                            </div>
+                            <div class="platform-form-group ng-scope">
+
+                                <div class="platform-form-row form-group" data-ng-hide="HiddenQtoScope">
+                                    <label class="platform-form-label">{{'qto.main.wizard.QtoScope' | translate}}</label>
+                                    <div class="platform-form-col">
+                                        <ul>
+                                            <li><input type="radio" name="selectQtoScope" id="QtoScope_1"  value="1" data-ng-checked="QtoScope==1" data-ng-click="onQtoScopeChange(1)"> <label for="QtoScope_1">{{'qto.main.wizard.HighlightedQto' | translate}}</label> </li>
+                                            <li><input type="radio" name="selectQtoScope" id="QtoScope_2"  value="2" data-ng-checked="QtoScope==2" data-ng-click="onQtoScopeChange(2)"> <label for="QtoScope_2">{{'qto.main.wizard.ResultSet' | translate}}</label> </li>
+                                            <li><input type="radio" name="selectQtoScope" id="QtoScope_3"  value="3"  data-ng-checked="QtoScope==3" data-ng-click="onQtoScopeChange(3)"> <label for="QtoScope_3">{{'qto.main.wizard.EntireQto' | translate}}</label> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="platform-form-row form-group">
+                                    <label class="platform-form-label" style="min-width: 134px;">{{'qto.main.wizard.create.wip.generteType' | translate}}</label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty" >
+                                            <input type="radio" name="CreateType" id="CreateType1" value="1" ng-checked="true" ng-click="onSelectionChanged('1')" />
+                                            <label for="CreateType1" style="vertical-align: 3px;" class="ng-binding ng-scope"> {{'qto.main.wizard.create.wip.create' | translate}}</label>&nbsp;&nbsp;
+                                            <input type="radio" name="CreateType" id="CreateType2" value="2" ng-click="onSelectionChanged('2')" >
+                                            <label for="CreateType2" style="vertical-align: 3px;" class="ng-binding ng-scope"> {{'qto.main.wizard.create.wip.update' | translate}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-platform-form-container data-form-container-options="formContainerOptions"
+                         entity="dataItem"
+                         class="fullheight"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+	     <button type="button" class="btn btn-default" data-ng-click="onPrevious()"> {{'basics.common.button.previousStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-disabled="hasErrors()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' |
+            translate}}
+        </button>
+    </footer>
+</div>

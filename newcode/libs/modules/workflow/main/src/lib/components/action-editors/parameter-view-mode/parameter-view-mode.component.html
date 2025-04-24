@@ -1,0 +1,17 @@
+<ng-container *ngIf="isInitialized">
+	<ui-common-domain-control-host [fieldType]="fieldType.Radio" [controlContext]="controlContext" [options]="radioItemSource"></ui-common-domain-control-host>
+	<ng-template ngFor let-editorViewConfig [ngForOf]="editorViewConfigs">
+		<ng-container *ngTemplateOutlet="controlContext.value === parameterViewType.Standard ? standardView: expertView; context:{editorViewConfig: editorViewConfig}"></ng-container>
+	</ng-template>
+</ng-container>
+
+<ng-template #standardView let-standardViewConfig="editorViewConfig">
+	<div [ngSwitch] = "standardViewConfig.standardViewFieldType">
+		<workflow-main-parameter-grid-view *ngSwitchCase="standardViewFieldTypes.Grid" [editorViewConfig]="standardViewConfig"></workflow-main-parameter-grid-view>
+		<ui-common-form *ngSwitchDefault [entity]="standardViewConfig.entity" [formConfig]="standardViewConfig.formConfig"></ui-common-form>
+	</div>
+</ng-template>
+
+<ng-template #expertView let-expertViewConfig="editorViewConfig">
+	<ui-common-form [entity]="expertViewConfig.entity" [formConfig]="expertViewConfig.expertViewFormConfig"></ui-common-form>
+</ng-template>

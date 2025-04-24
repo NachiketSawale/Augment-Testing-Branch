@@ -1,0 +1,25 @@
+{
+  "usermanagement": {
+    "group": {
+      "groupGUID": "GUID",
+      "groupName":"Name",
+      "groupDomainSID":"Domain SID",
+      "groupSynchronizeDate":"Synchronize Date",
+      "groupEmail":"E-Mail",
+      "accessGroupFK":"Group",
+      "moduleInfoNameUsermanagementGroup":"Group",
+      "clientFK":"Company",
+      "accessRoleFK":"Role",
+      "groupContainerTitle":"Groups",
+      "user2GroupContainerTitle":"Users in Group",
+      "group2RoleContainerTitle":"Group to Role",
+      "userFK":"Users",
+      "entityCompanyName":"Company",
+      "groupDescription":"Description",
+      "basicData":"Basic Data",
+      "validateName":"Name is not unique",
+      "entityUserName":"Name",
+      "entityUserLogonName":"Logon Name"
+    }
+  }
+}

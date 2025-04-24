@@ -1,0 +1,3 @@
+<ul>
+	<li *ngFor="let wz of wizards"><button [textContent]="wz.name | platformTranslate" (click)="runWizard(wz)"></button></li>
+</ul>

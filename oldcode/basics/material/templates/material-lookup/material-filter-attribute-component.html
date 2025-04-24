@@ -1,0 +1,18 @@
+<style>
+	.material-filter-attribute ul {
+		height: calc(100% - 55px);
+	}
+</style>
+<div class="generic-popup material-filter-attribute overflow-hidden">
+	<div class="input-group form-control">
+		<input type="text" class="input-group-content" placeholder="{{ 'basics.material.lookup.search' | translate }}" data-ng-model="input.userInput" data-ng-change="search()">
+	</div>
+
+	<ul class="popup-list">
+		<li data-ng-repeat="item in attributes" data-ng-bind="item" data-ng-click="select(item)"></li>
+	</ul>
+
+	<div class="ms-commodity-attributes-item flex-box" style="justify-content: center;border-bottom: none;" data-ng-if="showMoreAttribute">
+		<div data-basics-material-load-more data-load="showMore()"></div>
+	</div>
+</div>

@@ -1,0 +1,779 @@
+{
+	"Id": 1,
+	"TemplateVersion": 1,
+	"Status": 1,
+	"Comment": "",
+	"Helptext": null,
+	"Context": "",
+	"WorkflowAction": {
+		"id": 1,
+		"code": "",
+		"description": "Start",
+		"documentList": null,
+		"actionTypeId": 1,
+		"actionId": "0",
+		"priorityId": 1,
+		"transitions": [
+			{
+				"id": 65220,
+				"parameter": null,
+				"workflowAction": {
+					"id": 30708,
+					"code": "",
+					"description": "Read data from start context",
+					"documentList": [],
+					"actionTypeId": 5,
+					"actionId": "409ed310344011e5a151feff819cdc9f",
+					"userId": "",
+					"lifeTime": 1,
+					"transitions": [
+						{
+							"id": 85281,
+							"parameter": null,
+							"workflowAction": {
+								"id": 44492,
+								"code": "",
+								"description": "Prepare Configuaration",
+								"documentList": [],
+								"actionTypeId": 5,
+								"actionId": "409ed310344011e5a151feff819cdc9f",
+								"userId": "",
+								"input": [
+									{
+										"id": 116354,
+										"key": "Script",
+										"value": "Context.currentStep = 0;\n\nContext.stepConfig = [];\nContext.StartContext = [];\nContext.InvCopy = true;\nContext.StatusRemark = '';\n\nvar item;\nfor(var i = 0; i < Context.StepDefinition.length; i++){\n    item = Context.StepDefinition[i];\n    if (!item.hasOwnProperty('clerk')) {\n        item.clerk = getClerk(Context.Entity.ProjectFk, item.role.Id).Id;\n    }\n    if(!item.rule || item.rule.length ===0){\n        Context.stepConfig.push(item);\n    }else{\n        if (Function('return ' + item.rule + ';')(Context)) {\n            Context.stepConfig.push(item);\n        }\n    }\n}\nContext.currentStepConfig = Context.stepConfig[0];\n\nfunction getClerk(projectId, roleId) {\n    var clerk = ActionUtil.ExecuteAction('31fe96461fcb4067b188074320727245', {\n        ProjectId: projectId,\n        ClerkRoleId: roleId\n    });\n    if(!clerk){\n        clerk = {Id: 1};\n    }else{\n        clerk = clerk.ProjectClerk;\n    }\n\n    return clerk;\n}\n\n\n\n\n"
+									},
+									{
+										"id": 126528,
+										"key": "Context",
+										"value": ""
+									}
+								],
+								"output": [
+									{
+										"id": 109833,
+										"key": "Context",
+										"value": ""
+									}
+								],
+								"lifeTime": 1,
+								"transitions": [
+									{
+										"id": 35116,
+										"parameter": null,
+										"workflowAction": {
+											"id": 33110,
+											"code": "",
+											"description": "General preparation",
+											"documentList": [],
+											"actionTypeId": 5,
+											"actionId": "409ed310344011e5a151feff819cdc9f",
+											"userId": "",
+											"lifeTime": 1,
+											"transitions": [
+												{
+													"id": 82795,
+													"parameter": null,
+													"workflowAction": {
+														"id": 67794,
+														"code": "CHANGESTATUS",
+														"description": "Change Status",
+														"documentList": [],
+														"actionTypeId": 4,
+														"actionId": "5F6E595C0BF6412694D9C40AD66621DF",
+														"userId": "",
+														"input": [
+															{
+																"id": 70270,
+																"key": "StatusName",
+																"value": "{{Context.EntityName}}"
+															},
+															{
+																"id": 111132,
+																"key": "ObjectId",
+																"value": "{{Context.Entity.Id}}"
+															},
+															{
+																"id": 86620,
+																"key": "NewStatusId",
+																"value": "{{Context.currentStepConfig.status.Id}}"
+															},
+															{
+																"id": 92611,
+																"key": "ProjectId",
+																"value": 0
+															},
+															{
+																"id": 101972,
+																"key": "Remark",
+																"value": "{{Context.Remark}}"
+															},
+															{
+																"id": 88356,
+																"key": "IgnoreAccessRight",
+																"value": ""
+															},
+															{
+																"id": 112675,
+																"key": "ObjectPk1",
+																"value": ""
+															},
+															{
+																"id": 117345,
+																"key": "ObjectPk2",
+																"value": ""
+															}
+														],
+														"output": [
+															{
+																"id": 122341,
+																"key": "NewStatusId",
+																"value": ""
+															},
+															{
+																"id": 69365,
+																"key": "Remark",
+																"value": ""
+															}
+														],
+														"lifeTime": 1,
+														"transitions": [
+															{
+																"id": 11974,
+																"parameter": null,
+																"workflowAction": {
+																	"id": 91237,
+																	"code": "PREPARETASK",
+																	"description": "Prepare Task",
+																	"documentList": [],
+																	"actionTypeId": 5,
+																	"actionId": "409ed310344011e5a151feff819cdc9f",
+																	"userId": "",
+																	"input": [
+																		{
+																			"id": 90299,
+																			"key": "Script",
+																			"value": "Context.Exception = null;\nContext.Remark = '';\n\nfunction getClerk(projectId, roleId) {\n    var clerk = ActionUtil.ExecuteAction('31fe96461fcb4067b188074320727245', {\n        ProjectId: projectId,\n        ClerkRoleId: roleId\n    });\n    if(!clerk){\n        clerk = {Id: 1};\n    }else{\n        clerk = clerk.ProjectClerk;\n    }\n\n    return clerk;\n}\n\ntry{\n    if (!Context.currentStepConfig.hasOwnProperty('clerk')) {\n        Context.currentStepConfig.clerk = getClerk(Context.Entity.ProjectFk, Context.currentStepConfig.role.Id).Id;\n    }\n    if (isNaN(Context.currentStepConfig.clerk)) {\n        Context.currentStepConfig.clerk = Function('return ' + Context.currentStepConfig.clerk + ';')(Context);\n    }\n}catch(ex){}\n\n\n\nContext.Entity = ActionUtil.ExecuteAction('7fd3d8bc9e77497399849816d295e615', {\n    EntityName: 'E148524050DA474FBAC64A01CE1D204E',\n    Id: Context.Entity.Id\n}).EntityProperty;\n\n\n\n\nvar configFn = {\n\n};\n\nif (Context.currentStepConfig.hasOwnProperty('beforeFn') && Context.currentStepConfig.beforeFn != null && configFn.hasOwnProperty(Context.currentStepConfig.beforeFn)) {\n    configFn[Context.currentStepConfig.beforeFn](Context);\n}\n\n\n"
+																		},
+																		{
+																			"id": 88345,
+																			"key": "Context",
+																			"value": ""
+																		}
+																	],
+																	"output": [
+																		{
+																			"id": 70435,
+																			"key": "Context",
+																			"value": ""
+																		}
+																	],
+																	"lifeTime": 1,
+																	"transitions": [
+																		{
+																			"id": 13049,
+																			"parameter": null,
+																			"workflowAction": {
+																				"id": 77489,
+																				"code": "TASK",
+																				"description": "Task",
+																				"documentList": [],
+																				"actionTypeId": 6,
+																				"actionId": "00000000000000000000000000000000",
+																				"userId": "",
+																				"input": [
+																					{
+																						"id": 67500,
+																						"key": "Config",
+																						"value": "[{\"description\":\"Title\",\"type\":\"title\",\"options\":{\"displayText\":\"Approvement\"}},{\"description\":\"Subtitle\",\"type\":\"subtitle\",\"options\":{\"displayText\":\"Do you want to approve the following {{Context.EntityName}}:  {{Context.Entity.Code}} - {{Context.Entity.Description}}\"}},{\"description\":\"\",\"type\":\"select\",\"context\":\"Context.Path\",\"options\":{\"items\":[{\"dM_dM\":\"Approve\",\"vM_vM\":\"Approve\"},{\"dM_dM\":\"Reject\",\"vM_vM\":\"Reject\"}],\"displayMember\":\"dM_dM\",\"valueMember\":\"vM_vM\"}},{\"description\":\"\",\"type\":\"label\",\"context\":null,\"options\":{\"displayText\":\"Remark\"}},{\"description\":\"\",\"type\":\"remark\",\"context\":\"Context.Remark\"}]"
+																					},
+																					{
+																						"id": 88802,
+																						"key": "IsPopUp",
+																						"value": ""
+																					},
+																					{
+																						"id": 121316,
+																						"key": "EscalationDisabled",
+																						"value": "true"
+																					},
+																					{
+																						"id": 112141,
+																						"key": "Context",
+																						"value": ""
+																					}
+																				],
+																				"output": [
+																					{
+																						"id": 75810,
+																						"key": "Context",
+																						"value": ""
+																					}
+																				],
+																				"lifeTime": 1,
+																				"transitions": [
+																					{
+																						"id": 94159,
+																						"parameter": null,
+																						"workflowAction": {
+																							"id": 45202,
+																							"code": "",
+																							"description": "Finish Task",
+																							"documentList": [],
+																							"actionTypeId": 5,
+																							"actionId": "409ed310344011e5a151feff819cdc9f",
+																							"userId": "",
+																							"input": [
+																								{
+																									"id": 99575,
+																									"key": "Script",
+																									"value": "function simpleReplace(myString) {\n    myString = myString.replace(/\\:/g, '։');\n    myString = myString.replace(/\\;/g, ';');\n    myString = myString.replace(/\\\"/g, '＂');\n    myString = myString.replace(/\\'/g, '՚');\n    return myString;\n}\n\nfunction htmlReplace(myString) {\n    myString = _.escape(myString);\n    return simpleReplace(myString);\n}\n\nfunction getClerk(projectId, roleId) {\n    var clerk = ActionUtil.ExecuteAction('31fe96461fcb4067b188074320727245', {\n        ProjectId: projectId,\n        ClerkRoleId: roleId\n    }).ProjectClerk;\n\n    return clerk;\n}\n\nfunction addRemarkToHistory(clerk, remark) {\n    Context.RemarkHistory.push(\n        {\n            UserId: Context.UserId,\n            UserDescription: clerk,\n            Date: new Date(),\n            Remark: remark\n        }\n    );\n}\n\n\n\nvar afterFnConfig = {\n    \n};\n\nif (Context.currentStepConfig.afterFn !== null && afterFnConfig.hasOwnProperty(Context.currentStepConfig.afterFn)) {\n    afterFnConfig[Context.currentStepConfig.afterFn](Context);\n}\n"
+																								},
+																								{
+																									"id": 92862,
+																									"key": "Context",
+																									"value": ""
+																								}
+																							],
+																							"output": [
+																								{
+																									"id": 96356,
+																									"key": "Context",
+																									"value": ""
+																								}
+																							],
+																							"lifeTime": 1,
+																							"transitions": [
+																								{
+																									"id": 62162,
+																									"parameter": null,
+																									"workflowAction": {
+																										"id": 20024,
+																										"code": "SELECTPAHT",
+																										"description": "Select Path",
+																										"documentList": [],
+																										"actionTypeId": 3,
+																										"actionId": "d02b52ff5e0943d2936e1eb00d7ce2de",
+																										"userId": "",
+																										"input": [
+																											{
+																												"id": 115746,
+																												"key": "Formula",
+																												"value": "Context.Path ? Context.Path : 'x'"
+																											},
+																											{
+																												"id": 79904,
+																												"key": "Context",
+																												"value": ""
+																											}
+																										],
+																										"output": [
+																											{
+																												"id": 65608,
+																												"key": "Result",
+																												"value": ""
+																											}
+																										],
+																										"lifeTime": 0,
+																										"transitions": [
+																											{
+																												"id": 78295,
+																												"parameter": "Approve",
+																												"workflowAction": {
+																													"id": 76410,
+																													"code": "",
+																													"description": "Find next Step",
+																													"documentList": [],
+																													"actionTypeId": 5,
+																													"actionId": "409ed310344011e5a151feff819cdc9f",
+																													"userId": "",
+																													"input": [
+																														{
+																															"id": 91488,
+																															"key": "Script",
+																															"value": "Context.Exception = null;\n\nfunction simpleReplace(myString) {\n    if (!myString) {\n        return '';\n    }\n    myString = myString.replace(/\\:/g, '։');\n    myString = myString.replace(/\\;/g, ';');\n    myString = myString.replace(/\\\"/g, '＂');\n    myString = myString.replace(/\\'/g, '՚');\n    return myString;\n}\n\nfunction getNextStep(config, step, context) {\n    var result = null;\n    var filteredConfig = _.filter(config, function (item) {\n        if (item.hasOwnProperty('stepRule')) {\n            return Function('return ' + item.stepRule + ';')(context);\n        } else {\n            return true;\n        }\n    });\n    Context.filteredConfig = filteredConfig;\n    filteredConfig = _.sortBy(filteredConfig, ['pos']);\n    for (var i = 0; i < filteredConfig.length; i++) {\n        if (step <= filteredConfig[i].pos) {\n            result = filteredConfig[i];\n            break;\n        }\n    }\n    return result;\n}\n\nContext.currentStepConfig = getNextStep(Context.stepConfig, Context.currentStepConfig.pos + 1, Context);\nContext.Path = null;\n"
+																														},
+																														{
+																															"id": 74572,
+																															"key": "Context",
+																															"value": ""
+																														}
+																													],
+																													"output": [
+																														{
+																															"id": 83874,
+																															"key": "Context",
+																															"value": ""
+																														}
+																													],
+																													"lifeTime": 1,
+																													"transitions": [
+																														{
+																															"id": 77293,
+																															"parameter": null,
+																															"workflowAction": {
+																																"id": 94135,
+																																"code": "",
+																																"description": "More Stpes?",
+																																"documentList": [],
+																																"actionTypeId": 3,
+																																"actionId": "d02b52ff5e0943d2936e1eb00d7ce2de",
+																																"userId": "",
+																																"input": [
+																																	{
+																																		"id": 70899,
+																																		"key": "Formula",
+																																		"value": "Context.currentStepConfig !== null"
+																																	},
+																																	{
+																																		"id": 128577,
+																																		"key": "Context",
+																																		"value": ""
+																																	}
+																																],
+																																"output": [
+																																	{
+																																		"id": 75539,
+																																		"key": "Result",
+																																		"value": ""
+																																	}
+																																],
+																																"lifeTime": 1,
+																																"transitions": [
+																																	{
+																																		"id": 33700,
+																																		"parameter": "False",
+																																		"workflowAction": {
+																																			"id": 31100,
+																																			"code": "",
+																																			"description": "Change Status",
+																																			"documentList": [],
+																																			"actionTypeId": 4,
+																																			"actionId": "5F6E595C0BF6412694D9C40AD66621DF",
+																																			"userId": "",
+																																			"input": [
+																																				{
+																																					"id": 70270,
+																																					"key": "StatusName",
+																																					"value": "{{Context.EntityName}}"
+																																				},
+																																				{
+																																					"id": 111132,
+																																					"key": "ObjectId",
+																																					"value": "{{Context.Entity.Id}}"
+																																				},
+																																				{
+																																					"id": 86620,
+																																					"key": "NewStatusId",
+																																					"value": "{{Context.ApproveStatus}}"
+																																				},
+																																				{
+																																					"id": 92611,
+																																					"key": "ProjectId",
+																																					"value": 0
+																																				},
+																																				{
+																																					"id": 101972,
+																																					"key": "Remark",
+																																					"value": "{{Context.Remark}}"
+																																				},
+																																				{
+																																					"id": 88356,
+																																					"key": "IgnoreAccessRight",
+																																					"value": ""
+																																				},
+																																				{
+																																					"id": 112675,
+																																					"key": "ObjectPk1",
+																																					"value": ""
+																																				},
+																																				{
+																																					"id": 117345,
+																																					"key": "ObjectPk2",
+																																					"value": ""
+																																				}
+																																			],
+																																			"output": [
+																																				{
+																																					"id": 122341,
+																																					"key": "NewStatusId",
+																																					"value": ""
+																																				},
+																																				{
+																																					"id": 69365,
+																																					"key": "Remark",
+																																					"value": ""
+																																				}
+																																			],
+																																			"lifeTime": 1,
+																																			"transitions": [
+																																				{
+																																					"id": 21992,
+																																					"parameter": null,
+																																					"workflowAction": {
+																																						"id": 69090,
+																																						"code": "",
+																																						"description": "End",
+																																						"documentList": [],
+																																						"actionTypeId": 2,
+																																						"actionId": null,
+																																						"userId": "",
+																																						"input": [],
+																																						"output": [],
+																																						"lifeTime": 1,
+																																						"transitions": [],
+																																						"options": []
+																																					}
+																																				}
+																																			],
+																																			"options": [
+																																				{
+																																					"id": null,
+																																					"parameter": null
+																																				}
+																																			]
+																																		}
+																																	},
+																																	{
+																																		"id": 77966,
+																																		"parameter": "True",
+																																		"workflowAction": {
+																																			"id": 49445,
+																																			"code": "",
+																																			"description": "Prepare next Task",
+																																			"documentList": [],
+																																			"actionTypeId": 10,
+																																			"actionId": "E0000000000000000000000000000000",
+																																			"userId": "",
+																																			"input": [
+																																				{
+																																					"id": 119807,
+																																					"key": "Code",
+																																					"value": "CHANGESTATUS"
+																																				}
+																																			],
+																																			"output": [],
+																																			"lifeTime": 1,
+																																			"transitions": [
+																																				{
+																																					"id": 93942,
+																																					"parameter": "",
+																																					"workflowAction": {
+																																						"id": 86778,
+																																						"code": "",
+																																						"description": "End",
+																																						"documentList": [],
+																																						"actionTypeId": 2,
+																																						"actionId": null,
+																																						"userId": "",
+																																						"input": [],
+																																						"output": [],
+																																						"lifeTime": 1,
+																																						"transitions": [],
+																																						"options": []
+																																					}
+																																				}
+																																			],
+																																			"options": [
+																																				{
+																																					"id": "",
+																																					"parameter": ""
+																																				}
+																																			]
+																																		}
+																																	}
+																																],
+																																"options": [
+																																	{
+																																		"id": "False",
+																																		"parameter": "False"
+																																	},
+																																	{
+																																		"id": "True",
+																																		"parameter": "True"
+																																	}
+																																],
+																																"level": 1810
+																															}
+																														}
+																													],
+																													"options": [
+																														{
+																															"id": null,
+																															"parameter": null
+																														}
+																													]
+																												}
+																											},
+																											{
+																												"id": 65677,
+																												"parameter": "Reject",
+																												"workflowAction": {
+																													"id": 64735,
+																													"code": "",
+																													"description": "Change Status",
+																													"documentList": [],
+																													"actionTypeId": 4,
+																													"actionId": "5F6E595C0BF6412694D9C40AD66621DF",
+																													"userId": "",
+																													"input": [
+																														{
+																															"id": 113378,
+																															"key": "StatusName",
+																															"value": "{{Context.EntityName}}"
+																														},
+																														{
+																															"id": 79000,
+																															"key": "ObjectId",
+																															"value": "{{Context.Entity.Id}}"
+																														},
+																														{
+																															"id": 121179,
+																															"key": "NewStatusId",
+																															"value": "{{Context.RejectStatus}}"
+																														},
+																														{
+																															"id": 65937,
+																															"key": "ProjectId",
+																															"value": 0
+																														},
+																														{
+																															"id": 92750,
+																															"key": "Remark",
+																															"value": "{{Context.Remark}}"
+																														},
+																														{
+																															"id": 106891,
+																															"key": "IgnoreAccessRight",
+																															"value": ""
+																														},
+																														{
+																															"id": 70080,
+																															"key": "ObjectPk1",
+																															"value": ""
+																														},
+																														{
+																															"id": 127936,
+																															"key": "ObjectPk2",
+																															"value": ""
+																														}
+																													],
+																													"output": [
+																														{
+																															"id": 97228,
+																															"key": "NewStatusId",
+																															"value": ""
+																														},
+																														{
+																															"id": 104265,
+																															"key": "Remark",
+																															"value": ""
+																														}
+																													],
+																													"lifeTime": 1,
+																													"transitions": [
+																														{
+																															"id": 29402,
+																															"parameter": null,
+																															"workflowAction": {
+																																"id": 12837,
+																																"code": "",
+																																"description": "End",
+																																"documentList": [],
+																																"actionTypeId": 2,
+																																"actionId": null,
+																																"userId": "",
+																																"input": [],
+																																"output": [],
+																																"lifeTime": 1,
+																																"transitions": [],
+																																"options": []
+																															}
+																														}
+																													],
+																													"options": [
+																														{
+																															"id": null,
+																															"parameter": null
+																														}
+																													]
+																												}
+																											},
+																											{
+																												"id": 89753,
+																												"parameter": "x",
+																												"workflowAction": {
+																													"id": 10840,
+																													"code": "",
+																													"description": "Go back",
+																													"documentList": [],
+																													"actionTypeId": 10,
+																													"actionId": "E0000000000000000000000000000000",
+																													"userId": "",
+																													"input": [
+																														{
+																															"id": 97084,
+																															"key": "Code",
+																															"value": "TASK"
+																														}
+																													],
+																													"output": [],
+																													"lifeTime": 1,
+																													"transitions": [
+																														{
+																															"id": 48844,
+																															"parameter": null,
+																															"workflowAction": {
+																																"id": 60389,
+																																"code": "",
+																																"description": "End",
+																																"documentList": [],
+																																"actionTypeId": 2,
+																																"actionId": null,
+																																"userId": "",
+																																"input": [],
+																																"output": [],
+																																"lifeTime": 1,
+																																"transitions": [],
+																																"options": []
+																															}
+																														}
+																													],
+																													"options": [
+																														{
+																															"id": null,
+																															"parameter": null
+																														}
+																													]
+																												}
+																											}
+																										],
+																										"options": [
+																											{
+																												"id": "Approve",
+																												"parameter": "Approve"
+																											},
+																											{
+																												"id": "Reject",
+																												"parameter": "Reject"
+																											},
+																											{
+																												"id": "x",
+																												"parameter": "x"
+																											}
+																										],
+																										"level": 1450
+																									}
+																								}
+																							],
+																							"options": [
+																								{
+																									"id": null,
+																									"parameter": null
+																								}
+																							]
+																						}
+																					}
+																				],
+																				"options": [
+																					{
+																						"id": null,
+																						"parameter": null
+																					}
+																				]
+																			}
+																		}
+																	],
+																	"options": [
+																		{
+																			"id": null,
+																			"parameter": null
+																		}
+																	]
+																}
+															}
+														],
+														"options": []
+													}
+												}
+											],
+											"input": [
+												{
+													"id": 103444,
+													"key": "Script",
+													"value": ""
+												},
+												{
+													"id": 72306,
+													"key": "Context",
+													"value": ""
+												}
+											],
+											"output": [
+												{
+													"id": 72358,
+													"key": "Context",
+													"value": ""
+												}
+											]
+										}
+									}
+								],
+								"options": [
+									{
+										"id": null,
+										"parameter": null
+									}
+								]
+							}
+						}
+					],
+					"input": [
+						{
+							"id": 116755,
+							"key": "Script",
+							"value": "_.replace(Context.StepDefinition,'\\\"', '\"');"
+						},
+						{
+							"id": 107218,
+							"key": "Context",
+							"value": ""
+						}
+					],
+					"output": [
+						{
+							"id": 95329,
+							"key": "Context",
+							"value": ""
+						}
+					]
+				}
+			}
+		]
+	},
+	"WorkflowTemplateId": 1,
+	"ValidFrom": null,
+	"ValidTo": null,
+	"RevisionDate": null,
+	"RevisionClerkId": null,
+	"Lifetime": 0,
+	"WorkflowTemplate": null,
+	"WorkflowInstanceEntities": [],
+	"ClerkEntity": null,
+	"InsertedBy": 1,
+	"InsertedAt": "",
+	"UpdatedBy": 1,
+	"UpdatedAt": "",
+	"Version": 1,
+	"Description": "",
+	"CommentText": null,
+	"KindId": 1,
+	"TypeId": 1,
+	"EntityId": "",
+	"OwnerId": null,
+	"KeyUserId": null,
+	"CompanyId": null,
+	"SubscribedEvents": [],
+	"StatusMatrix": []
+}

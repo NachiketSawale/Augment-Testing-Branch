@@ -1,0 +1,16 @@
+.entity-filter-search-field-list {
+	padding: 6px;
+
+	li {
+		margin: 4px 0;
+
+		&.selected {
+			color: #3789cc;
+		}
+	}
+
+	.list-container {
+		max-height: 420px;
+		overflow: auto;
+	}
+}

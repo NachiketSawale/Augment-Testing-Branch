@@ -1,0 +1,20 @@
+<section class="flex-box flex-column flex-element subview-content" data-hsqe-checklist-template-group-container>
+    <div class="input-group">
+        <input type="text" data-ng-model="searchOptions.searchValue" class="form-control"
+               data-ng-keydown="searchOptions.onSearchInputKeyDown($event, searchOptions.searchValue)">
+        <span class="input-group-btn">
+            <button class="btn btn-default input-sm btn-search"
+                    data-ng-click="searchOptions.search(searchOptions.searchValue)">
+                <i class="block-image tlb-icons ico-search"></i>
+            </button>
+        </span>
+    </div>
+    <div id="hsqeCheckListTemplateGroupSplitter" data-platform-kendo-splitter-adjust class="margin-top-ld fullheight">
+        <div data-basics-lookupdata-lookup-grid data-options="gridOptions.parent"></div>
+        <div class="flex-element relative-container">
+            <div class="filler-absolute" data-ng-controller="checkListTemplateListController">
+                <platform-grid class="border-all" data="gridData" data-platform-dragdrop-component="ddTarget"></platform-grid>
+            </div>
+        </div>
+    </div>
+</section>

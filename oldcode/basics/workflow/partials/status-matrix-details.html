@@ -1,0 +1,39 @@
+<div class="flex-element overflow"
+     data-ng-repeat="table in myArray">
+	<span data-ng-bind="table.TableName"></span>
+	<table class="table">
+		<thead>
+		<tr>
+			<th>FromStatus</th>
+			<th>ToStatus</th>
+			<th>StatusComment</th>
+			<th>AccessRightDescription</th>
+			<th>RoleValidation</th>
+			<th>IsBeforeStatus</th>
+			<th>IsMandatory</th>
+			<th>Clerk</th>
+			<th>ClerkDescription</th>
+			<th>ClerkCode</th>
+			<th>IsLive</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr data-ng-repeat="column in table.StatusList">
+			<td><span data-ng-bind="column.FromStatus" readonly="true"></span></td>
+			<td><span data-ng-bind="column.ToStatus" readonly="true"></span></td>
+			<td><span data-ng-bind="column.StatusComment" readonly="true"></span></td>
+			<td><span data-ng-bind="column.AccessRightDescription" readonly="true"></span></td>
+			<td><span data-domain="boolean" data-domain-control data-model="column.RoleValidation"
+			          readonly="true"></span></td>
+			<td><span data-domain="boolean" data-domain-control data-model="column.IsBeforeStatus"
+			          readonly="true"></span></td>
+			<td><span data-domain="boolean" data-domain-control data-model="column.IsMandatory" readonly="true"></span>
+			</td>
+			<td><span data-ng-bind="column.Clerk" readonly="true"></span></td>
+			<td><span data-ng-bind="column.ClerkDescription" readonly="true"></span></td>
+			<td><span data-ng-bind="column.ClerkCode" readonly="true"></span></td>
+			<td><span data-domain="boolean" data-domain-control data-model="column.IsLive" readonly="true"></span></td>
+		</tr>
+		</tbody>
+	</table>
+</div>

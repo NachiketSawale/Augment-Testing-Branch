@@ -1,0 +1,61 @@
+<script type="text/ng-template" id="estimate-main-risk-register.html">
+<div data-ng-controller="estimateMainRiskRegisterModalController">
+    <div class="toolbar">
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div class="flex-box flex-column subview-container" style="height:160px;">
+        <div data-platform-grid data="gridData"></div>
+    </div>
+</div>
+</script>
+
+<script type="text/ng-template">
+
+</script>
+
+<script type="text/ng-template">
+
+</script>
+
+<script type="text/ng-template">
+
+</script>
+
+<script type="text/ng-template" id="estimate-main-risk-impact.html">
+<div data-ng-controller="estimateMainRiskEventsImpactController" >
+
+</div>
+
+</script>
+
+<script type="text/ng-template" id="estimate-main-risk-calculator-result.html">
+    <div data-ng-controller="basicsRiskCalculatorController">
+        <!--<d-risk id="my_dataviz" chart-data="points"></d-risk>-->
+    </div>
+
+</script>
+
+<<script type="text/ng-template" id="estimate-main-risk-calculator-dialog-modal.html">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+    </header>
+
+    <!--<section class="modal-body">-->
+    <section class="modal-body" style="height: 560px;">
+        <div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem"></div>
+
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-ng-click="modalOptions.calculate()">{{'estimate.main.tempCalculate' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled" data-ng-click="modalOptions.ok()">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</script>

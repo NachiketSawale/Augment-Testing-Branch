@@ -1,0 +1,11 @@
+<div data-ng-controller="ppsCommonFormController">
+    <div class="alert alert-warning" data-ng-if="showWarning">
+        <button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{ warning }}
+    </div>
+    <div data-platform-form-container data-form-container-options="formContainerOptions"
+         data-entity="modalOptions.value" class="flex-element flex-basis-auto"></div>
+    <div cloud-common-overlay data-loading="modalOptions.isLoading"></div>
+</div>

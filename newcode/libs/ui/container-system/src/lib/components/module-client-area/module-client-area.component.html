@@ -1,0 +1,29 @@
+<div id="mainContent">
+	<div main-view>
+		<div id="mainbar">
+			<ui-container-system-navbar
+				[navBar]="navBar" id="navbar" class="toolbar-wh-icons"
+			></ui-container-system-navbar>
+			<ui-container-system-module-tab-bar
+				id="main-tabs"
+				[containers]="containers"
+				[layout]="containerLayout"
+				(layoutChange)="applyLayout($event)"
+				[tabs]="tabs"
+				[activeTabId]="activeTab.Id"
+				(tabChanged)="tabChanged($event)"
+				(tabClosed)="goToDesktop()"
+				(viewChange)="viewChanged($event)"
+			></ui-container-system-module-tab-bar>
+		</div>
+		<div>
+			<div class="tab-content">
+				<ui-container-system-layout-host
+					[containers]="containers"
+					[containerLayout]="containerLayout"
+					(layoutChanged)="layoutChanged($event)"
+				></ui-container-system-layout-host>
+			</div>
+		</div>
+	</div>
+</div>

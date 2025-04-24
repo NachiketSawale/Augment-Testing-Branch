@@ -1,0 +1,21 @@
+<div id="assemblytemplateSplitter" data-platform-kendo-splitter-adjust class="flex-element fullheight"
+     style="min-height: 300px">
+	<div id="ui-layout-west" class="fullheight" data-ng-controller="basicsCommonContainerDialogParentGridContainerController">
+		<div class="subview-header toolbar">
+			<h3 class="title font-bold">{{getDialogConfig().custom.parentContainer.title | translate}}</h3>
+		</div>
+		<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+			<div class="lookup-grid flex-basis-auto" data-platform-grid data="gridData"></div>
+			<div cloud-common-overlay data-loading="isLoading"></div>
+		</div>
+	</div>
+	<div id="ui-layout-east" class="fullheight" data-ng-controller="basicsCommonContainerDialogChildGridContainerController">
+		<div class="subview-header toolbar">
+			<h3 class="title font-bold">{{getDialogConfig().custom.childContainer.title | translate}}</h3>
+		</div>
+		<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+			<div class="lookup-grid flex-basis-auto" data-platform-grid data="gridData"></div>
+			<div cloud-common-overlay data-loading="isLoading"></div>
+		</div>
+	</div>
+</div>

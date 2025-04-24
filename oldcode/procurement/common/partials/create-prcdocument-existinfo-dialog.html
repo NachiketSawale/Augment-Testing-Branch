@@ -1,0 +1,18 @@
+<div ng-controller="uploadPrcDocumentRecordsExistController" class="modal-wrapper">
+    <header class="modal-header main-color">
+        <span class="modal-title font-bold" data-ng-bind="(modalOptions.headerText || modalTitle)"></span>
+    </header>
+    <section class="modal-body">
+        <div>{{'basics.common.uploadDocument.duplicateTips' | translate}} </div>
+        <div class="flex-column" style="height: 200px;">
+            <platform-Grid data="errorListData"></platform-Grid>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="hasErrors()" data-ng-click="onOK()"> {{'basics.common.uploadDocument.uploadBtn' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.uploadDocument.IgnoreBtn' |
+            translate}}
+        </button>
+    </footer>
+</div>

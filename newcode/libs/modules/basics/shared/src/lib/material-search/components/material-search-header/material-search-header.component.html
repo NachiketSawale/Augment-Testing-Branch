@@ -1,0 +1,31 @@
+<div class="flex-box flex-element">
+	<div class="ms-sv-revert-button">
+		<a (click)="scope.revert()" class="ms-sv-revert-button-img tlb-icons ico-discard"></a>
+	</div>
+
+	<button class="button bg-color-bar1 control-icons ico-down category-dropdown ellipsis_" (click)="showMaterialStructures()" #btn_Structure>{{ scope.lookupTitle | platformTranslate }}</button>
+
+	<div class="flex-element flex-box flex-column ms-sv-search-div">
+		<div class="ms-sv-search-input">
+			<input #userInput class="ms-sv-search-button-text" type="text" [(ngModel)]="scope.request.SearchText" data-autofocus="600"
+			       placeholder="Insert search term" style="border-radius: 0;"/>
+
+			<!--        <platform-search-control data-ng-if="showSearchSetting" class="ms-sv-search-button-text" style="margin-left: -2px;padding-left: 0;"-->
+			<!--                                 data-ng-model="searchCtrlModel"-->
+			<!--                                 data-options="searchCtrlOptions"-->
+			<!--                                 class="flex-box margin-ld-top"></platform-search-control>-->
+
+			<div class="ms-sv-search-button">
+				<button (click)="scope.search()" class="ms-sv-search-button-img tlb-icons ico-search"></button>
+			</div>
+
+			<select class="ms-sv-select-option" [(ngModel)]="scope.request.SortOption" (ngModelChange)="scope.sort()">
+				<option *ngFor="let sortOption of scope.sortOptions" [value]="sortOption.value">{{ sortOption.description | platformTranslate }}</option>
+			</select>
+
+			<div *ngIf="scope.searchOptions && scope.searchOptions.shoppingCartComponent">
+				<div *ngComponentOutlet="scope.searchOptions.shoppingCartComponent;injector:scope.subInjector;"></div>
+			</div>
+		</div>
+	</div>
+</div>

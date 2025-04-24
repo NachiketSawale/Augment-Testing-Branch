@@ -1,0 +1,14 @@
+<div data-ng-controller="matrixFontController">
+	<div class="toolbar toolbar-icons">
+		<div data-platform-menu-list data-list="tools"></div>
+	</div>
+	<div>
+		<div class="flex-box flex-column subview-container" style="height: 200px;">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+
+		<div basics-common-rule-editor data-rule-editor-manager="manager" data-ng-show="selectedEntityID > -1" data-hierarchy="true" data-read-only="true" data-rule-definition="ruleDefinition" class="filler"></div>
+
+		<div data-basics-common-white-board data-show="showInfoOverlay" data-info="::'platform.bulkEditor.createDescriptionFonts' | translate"></div>
+	</div>
+</div>

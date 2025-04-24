@@ -1,0 +1,15 @@
+{
+	"project": {
+		"location": {
+			"location": "Ort",
+			"detailContainerTitle": "Ort Details",
+			"listContainerTitle": "Orte",
+			"taskBarDeleteLoc": "Ort Löschen",
+			"taskBarNewLoc": "Neuer Ort",
+			"entityIsShownInChart": "!Is shown in chart",
+			"taskBarNewSubLoc": "Neuer Unter-Ort",
+		  	"downgradeLocation":"Ort Runterstufen",
+		    "upgradeLocation":"Ort Hochstufen"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<div class="platform-form-group" data-ng-controller="basicsWorkflowScriptPreviewDialog">
+	<div>
+		<h2 class="title fix">{{"basics.workflow.modalDialogs.fileName" | translate}}:
+			{{::modalOptions.dataItem.fileName}}</h2>
+		<h2 class="title fix">{{"basics.workflow.modalDialogs.filePath" | translate}}:
+			{{::modalOptions.dataItem.filePath}}</h2>
+	</div>
+	</br>
+	<div>
+		<div class="flex-box flex-column flex-element relative-container overflow filler" data-ng-model="modalOptions.dataItem.scriptText"
+		     data-options="input.codeMirrorOptions" data-script-editor-directive></div>
+	</div>
+</div>

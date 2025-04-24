@@ -1,0 +1,18 @@
+<div data-ng-controller="controllingProjectControlsResetDataController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="fullheight">
+			<div class="fullheight" style="overflow-y: auto">
+				<div>
+					<div data-platform-form-container data-form-container-options="formContainerOptions"
+						  entity="dataItem" class="fullheight"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="isDisable()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

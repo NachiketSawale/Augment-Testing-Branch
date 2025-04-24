@@ -1,0 +1,13 @@
+<ui-common-popup>
+	<div content class="entity-filter-profile">
+		<div class="save-as">{{ 'basics.material.lookup.filter.saveAs' | platformTranslate }}</div>
+
+		<ui-common-domain-control-host class="name" [(value)]="currentProfile.FilterName" [fieldType]="FieldType.Description" [options]="filterNameOptions"></ui-common-domain-control-host>
+
+		<ui-common-domain-control-host [fieldType]="FieldType.Radio" [(value)]="currentProfile.AccessLevel" [options]="accessLevelOptions"></ui-common-domain-control-host>
+
+		<div class="border-top">
+			<button class="btn pull-right" [disabled]="!currentProfile.FilterName" (click)="save()">{{ 'basics.material.lookup.filter.saveAction' | platformTranslate }}</button>
+		</div>
+	</div>
+</ui-common-popup>

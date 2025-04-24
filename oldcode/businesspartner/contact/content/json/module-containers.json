@@ -1,0 +1,168 @@
+[
+	{
+		"id": "businesspartner.contact.contactgrid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.contactGridContainerTitle",
+		"controller": "businessPartnerContactListController",
+		"uuid": "a4f91b1ed487410ba6edf1d40709a9f7",
+		"permission": "73b6280b180149a09f3a97f142bfc3dc"
+	},
+	{
+		"id": "businesspartner.contact.contactform",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.contactFormContainerTitle",
+		"controller": "businesspartnerContactFormController",
+		"uuid": "b732f04ccaa24375a410dbff7f294f70",
+		"permission": "73b6280b180149a09f3a97f142bfc3dc"
+	},
+	{
+		"id": "businesspartner.contact.contactphoto",
+		"template": "basics.common/partials/photo-view.html",
+		"title": "businesspartner.main.contactPhotoContainerTitle",
+		"controller": "businesspartnerContactPhotoController",
+		"uuid": "3ebfcfaeb4e540aab045a863c9d0e170",
+		"permission": "3d4ec8d837f049eda2e7d92e051d9351"
+	},
+	{
+		"id": "businesspartner.contact.privatecomment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.privateCommentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "fb458f707ab341888cba09af594078d4",
+		"permission": "fb458f707ab341888cba09af594078d4",
+		"commentQualifier": "businesspartner.contact.contactprivatecomment",
+		"parentService": "businesspartnerContactDataService",
+		"commentEntity": "BusinessPartnerPrivateCommentToSave"
+	},
+	{
+		"id": "businesspartner.contact.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "a072433d39d6459f8ffae73e4ec7026f",
+		"controller": "",
+		"sectionId": "3",
+		"mainService": "businesspartnerContactDataService"
+	},
+	{
+		"id": "businesspartner.contact.contactformdata",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.contactFormData",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "cec5d23918cc46b099cab6931db2b408",
+		"permission": "791481c3c29d4e7ca10030977895ff83",
+		"rubricId": 2,
+		"mainService": "businesspartnerContactDataService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "businesspartner.contact.clerkgrid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.contact.entityClerk",
+		"controller": "basicsCommonClerkListController",
+		"uuid": "75af61c378494d838df091d217d8eb30",
+		"clerkQualifier": "businesspartner.contact.clerk",
+		"parentService": "businesspartnerContactDataService"
+	},
+	{
+		"id": "businesspartner.contact.clerkform",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.main.contact.entityClerkForm",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "482a021367f24d129930afbd1e8e1f18",
+		"clerkQualifier": "businesspartner.contact.clerk",
+		"parentService": "businesspartnerContactDataService",
+		"permission": "75af61c378494d838df091d217d8eb30"
+	},
+	{
+		"id": "businesspartner.contact2Companygrid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.contact.contact2CompanyGridContainerTitle",
+		"controller": "businessPartnerContact2CompanyListController",
+		"uuid": "da4c051edadb4ed9a10c6ace6a114572"
+	},
+	{
+	"id": "businesspartner.contact2CompanyDetail",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "businesspartner.contact.contact2CompanyFormContainerTitle",
+	"controller": "businessPartnerContact2CompanyFormController",
+	"uuid": "c122d2c9aef34308889249e7870d5232",
+		"permission": "da4c051edadb4ed9a10c6ace6a114572"
+	},
+	{
+		"id": "businesspartner.contact.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "businesspartner.contact.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "businesspartner.contact.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "businesspartner.contact.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "businesspartner.contact.businesspartnerassignmentgrid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.contact.businessPartnerAssignment.grid",
+		"controller": "businesspartnerContact2BpAssignmentListController",
+		"uuid": "373ccc35eca3489d96c121cb0d23ed04",
+		"permission": "b50fb90120804075b294e8378dd1be40"
+	},
+	{
+		"id": "businesspartner.contact.businesspartnerassignmentform",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.contact.businessPartnerAssignment.detail",
+		"controller": "businesspartnerContact2BpAssignmentFormController",
+		"uuid": "896b30a924a74844a90bfaac0d932a7b",
+		"permission": "b50fb90120804075b294e8378dd1be40"
+	},
+	{
+		"id": "businesspartner.contact.externalrole",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.contact.extRoleGridContainerTitle",
+		"controller": "businessPartnerContactExtRoleListController",
+		"uuid": "8237f196f2fe42e8beb95667ef040119"
+	},
+	{
+		"id": "businesspartner.contact.externalrole.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.contact.extRoleDetailContainerTitle",
+		"controller": "businessPartnerContactExtRoleDetailController",
+		"uuid": "62deafd634394d6d822b0bff9c7b87a3",
+		"permission": "8237f196f2fe42e8beb95667ef040119"
+	},
+	{
+		"id": "businesspartner.contact.contact2external",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.contact.contact2ExternalGridContainerTitle",
+		"controller": "businessPartnerContact2ExternalListController",
+		"uuid": "c8904e45965e41e5b2825b63c661dcaf",
+		"permission": "5f94846fb7794244909f181e6ca7640c"
+	},
+	{
+		"id": "businesspartner.contact.contact2external.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.contact.contact2ExternalDetailContainerTitle",
+		"controller": "businessPartnerContact2ExternalFormController",
+		"uuid": "ddcddcacde1a4598a681a5ef06002d49",
+		"permission": "5f94846fb7794244909f181e6ca7640c"
+	}
+]

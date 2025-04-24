@@ -1,0 +1,15 @@
+<div class="modal-wrapper subview-content">
+    <div class="row">
+        <div class="col-md-12" data-platform-form data-form-options="quoteStatus" entity="currentItem"></div>
+    </div>
+    <div class="input-group form-control">
+        <input id="GoogleSearchInput" type="text" class="input-group-content" width="600px"
+               data-ng-model="currentItem.pattern"
+               placeholder="{{'cloud.desktop.sdGoogleSearchFilter' | translate}}">
+    </div>
+    <div class="toolbar"><div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div></div>
+    <div class="modal-wrapper subview-container grid-wrapper">
+        <platform-Grid data="updatePricesFromQuote"></platform-Grid>
+    </div>
+</div>
+

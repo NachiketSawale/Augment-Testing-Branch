@@ -1,0 +1,311 @@
+[
+	{
+		"id": "logistic.header.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.headerListTitle",
+		"controller": "logisticDispatchingHeaderListController",
+		"uuid": "ccd5c52d5e4d45b4aba1a3f53d1f6b6a"
+	},
+	{
+		"id": "logistic.header.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.headerDetailTitle",
+		"controller": "logisticDispatchingHeaderDetailController",
+		"uuid": "28414b3c79034bda912b932190054920",
+		"permission": "ccd5c52d5e4d45b4aba1a3f53d1f6b6a"
+	},
+	{
+		"id": "logistic.record.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.recordListTitle",
+		"controller": "logisticDispatchingRecordListController",
+		"uuid": "2aba47e0b663449e8cd86d5e6258e417"
+	},
+	{
+		"id": "logistic.record.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.recordDetailTitle",
+		"controller": "logisticDispatchingRecordDetailController",
+		"uuid": "029196d1c6e54602847114fa1f1ddccd",
+		"permission": "2aba47e0b663449e8cd86d5e6258e417"
+	},
+	{
+		"id": "logistic.notesettled.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.noteSettledListTitle",
+		"controller": "logisticDispatchingNoteSettledListController",
+		"uuid": "e71d60628bda47aa87290aa609fbd1ef"
+	},
+	{
+		"id": "logistic.notesettled.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.noteSettledDetailTitle",
+		"controller": "logisticDispatchingNoteSettledDetailController",
+		"uuid": "c08a0c8e08f24cd2bc8db520d277e4dc",
+		"permission": "e71d60628bda47aa87290aa609fbd1ef"
+	},
+	{
+		"id": "logistic.dispatching.document.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.dispatchDocumentListTitle",
+		"controller": "logisticDispatchingDocumentListController",
+		"uuid": "8905e348c2d44a1fa31f1e69f380adec"
+	},
+	{
+		"id": "logistic.dispatching.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.dispatchDocumentDetailTitle",
+		"controller": "logisticDispatchingDocumentDetailController",
+		"uuid": "71571ef0220e480ca04797f054fde1f2",
+		"permission": "8905e348c2d44a1fa31f1e69f380adec"
+	},
+	{
+		"id": "logistic.dispatching.comment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "f68370052d6a4c0fbf47594012cd764c",
+		"commentQualifier": "logistic.dispatching.comment",
+		"parentService": "logisticDispatchingHeaderDataService",
+		"configServiceName": "logisticDispatchingPinBoardConfigService"
+	},
+	{
+		"id": "logistic.dispatching.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "626f2e46f5a8436f8e94d6660fffa5e6",
+		"controller": "",
+		"sectionId": "41",
+		"mainService": "logisticDispatchingHeaderDataService"
+	},
+	{
+		"id": "logistic.dispatching.jobmaterialstock",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "logistic.dispatching.jobMaterialStockSource",
+		"controller": "logisticDispatchingSourceWindowController",
+		"uuid": "8d60e6fa3fdc41a7aaa6ca81ab8b0fe4",
+		"permission": "8d60e6fa3fdc41a7aaa6ca81ab8b0fe4",
+		"filter": "stockFk"
+	},
+	{
+		"id": "logistic.dispatching.jobplantstock",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "logistic.dispatching.jobPlantStockSource",
+		"controller": "logisticDispatchingSourceWindowController",
+		"uuid": "155bda0056214e40b0223f3e569cd71a",
+		"permission": "155bda0056214e40b0223f3e569cd71a",
+		"filter": [
+			"jobFk",
+			"workOperationTypeFk"
+		]
+	},
+	{
+		"id": "logistic.dispatching.linkage.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.linkageListTitle",
+		"controller": "logisticDispatchingLinkageListController",
+		"uuid": "c581784ef4234a629b1a6b0af272e416"
+	},
+	{
+		"id": "logistic.dispatching.linkage.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.linkageDetailTitle",
+		"controller": "logisticDispatchingLinkageDetailController",
+		"uuid": "c69c924b42d24ad9a82e1c15e6d97f02",
+		"permission": "c581784ef4234a629b1a6b0af272e416"
+	},
+	{
+		"id": "logistic.dispatching.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "logistic.dispatching.documents.project.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "logistic.dispatching.deliveryAddressRemark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "logistic.job.deliveryAddressRemark",
+		"uuid": "9d1cc2a68a9f4fe9a4ce3aa4c962c859",
+		"controller": "logisticDispatchingDeliveryAddressRemarkController"
+	},
+	{
+		"id": "logistic.dispatching.article",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.superiorDetailTitle",
+		"uuid": "bf58f66d23ff4b04ba452aeff4d74a6b",
+		"controller": "logisticDispatchingRecordArticleDetailController",
+		"permission": "2aba47e0b663449e8cd86d5e6258e417"
+	},
+	{
+		"id": "logistic.dispatching.jobCardAsSource",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "logistic.dispatching.jobCardSource",
+		"controller": "logisticDispatchingSourceWindowController",
+		"uuid": "b486266f86984782963b773b98fcad29",
+		"permission": "b486266f86984782963b773b98fcad29",
+		"filter": [
+			"jobFk"
+		]
+	},
+	{
+		"id": "logistic.dispatching.plantLocationReceiving.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.plantLocationReceivingListTitle",
+		"controller": "logisticPlantLocationReceivingListController",
+		"uuid": "310e1b7ca2f94feba6d8732b38c8374d",
+		"permission": "432068179c654b419d3d42d7153d10f8"
+	},
+	{
+		"id": "logistic.dispatching.plantLocationReceiving.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.plantLocationReceivingDetailTitle",
+		"controller": "logisticPlantLocationReceivingDetailController",
+		"uuid": "df910222f1144c129903771f8a9ed8ef",
+		"permission": "432068179c654b419d3d42d7153d10f8"
+	},
+	{
+		"id": "logistic.dispatching.plantLocationPerforming.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.plantLocationPerformingListTitle",
+		"controller": "logisticPlantLocationPerformingListController",
+		"uuid": "38a19e0b6649476a8484c35bee2b0803",
+		"permission": "432068179c654b419d3d42d7153d10f8"
+	},
+	{
+		"id": "logistic.dispatching.plantLocationPerforming.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.plantLocationPerformingDetailTitle",
+		"controller": "logisticPlantLocationPerformingDetailController",
+		"uuid": "80c969bbf91a4dc89c2c3a9ba5645a03",
+		"permission": "432068179c654b419d3d42d7153d10f8"
+	},
+	{
+		"id": "logistic.dispatching.deliveryRemark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "logistic.dispatching.deliveryRemark",
+		"uuid": "39c3db4339a2499e809212af0d438dd9",
+		"controller": "logisticDispatchingDeliveryRemarkController",
+		"permission": "ccd5c52d5e4d45b4aba1a3f53d1f6b6a"
+	},
+	{
+		"id": "logistic.card.remark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "cloud.common.entityRemark",
+		"uuid": "02d4a4ac196141d59d878815d50542d9",
+		"controller": "logisticDispatchingRemarkController",
+		"permission": "ccd5c52d5e4d45b4aba1a3f53d1f6b6a"
+	},
+	{
+		"id": "logistic.dispatching.dispatchheader.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.ContainerUserformDefaultTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "fe0c44a4e88b11eb9a030242ac130003",
+		"rubricId": 34,
+		"mainService": "logisticDispatchingHeaderDataService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "logistic.dispatching.receivingjob.comment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "logistic.dispatching.receivingJobCommentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "f7a4c2016e614d21834c50e44c6a65dd",
+		"commentQualifier": "logistic.job.comment",
+		"parentService": "logisticDispatchingHeaderDataService",
+		"configServiceName": "logisticDispatchingReceivingJobPinBoardConfigService"
+	},
+	{
+		"id": "logistic.dispatching.requisitionItem.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.requisitionItemTitle",
+		"controller": "logisticDispatchingRequisitionItemViewListController",
+		"uuid": "4262b2464d744610ad69a30f4ee182dc"
+	},
+	{
+		"id": "logistic.dispatching.requisitionItem.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.requisitionItemDetailTitle",
+		"controller": "logisticDispatchingRequisitionItemViewDetailController",
+		"uuid": "fbec00a620c24d96ac392a3a260a314f",
+		"permission": "4262b2464d744610ad69a30f4ee182dc"
+	},
+	{
+		"id": "logistic.dispatching.header2Requisition.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.dispatchHeaderRequisitionListTitle",
+		"controller": "logisticDispatchingHeaderRequisitionListController",
+		"uuid": "5b0a0644da9245058c4ab36d46f418fc"
+	},
+	{
+		"id": "logistic.dispatching.header2Requisition.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.dispatchHeaderRequisitionDetailTitle",
+		"controller": "logisticDispatchingHeaderRequisitionDetailController",
+		"uuid": "4757ca2faa614e59934611e2193cae95",
+		"permission": "5b0a0644da9245058c4ab36d46f418fc"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "e52ec7513c0a4a7180664871d855bf1b",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "logistic.notedelivery.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.noteDeliveryListTitle",
+		"controller": "logisticDispatchingNoteDeliveryListController",
+		"uuid": "a0b755b3d58140bb81660ec5d31b0904"
+	},
+	{
+		"id": "logistic.notedelivery.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.noteDeliveryDetailTitle",
+		"controller": "logisticDispatchingNoteDeliveryDetailController",
+		"uuid": "2721620dec7f4c64bd5641dabc87b4b4",
+		"permission": "a0b755b3d58140bb81660ec5d31b0904"
+	},
+	{
+		"id": "logistic.dispatching.loadingInfo.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.loadingInfoListTitle",
+		"controller": "logisticDispatchLoadingInfoListController",
+		"uuid": "642ef917134447A097bd7aec8f59979e"
+	},
+	{
+		"id": "logistic.dispatching.loadingInfo.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.loadingInfoDetailTitle",
+		"controller": "logisticDispatchLoadingInfoDetailController",
+		"uuid": "da4c7efade4f4713bb323e8bae7a20a8",
+		"permission": "642ef917134447A097bd7aec8f59979e"
+	},
+	{
+		"id": "logistic.dispatching.weightInfo.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.dispatching.weightInfoListTitle",
+		"controller": "logisticDispatchWeightInfoListController",
+		"uuid": "037f3f5b216e445f94d7f388296b04c9"
+	},
+	{
+		"id": "logistic.dispatching.weightInfo.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.dispatching.weightInfoDetailTitle",
+		"controller": "logisticDispatchWeightInfoDetailController",
+		"uuid": "6bc53b650de7400f8565366b862274c9",
+		"permission": "037f3f5b216e445f94d7f388296b04c9"
+	}
+]

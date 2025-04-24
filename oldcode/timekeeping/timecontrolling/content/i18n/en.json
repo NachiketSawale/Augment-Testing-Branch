@@ -1,0 +1,13 @@
+﻿{
+	"timekeeping": {
+		"timecontrolling": {
+			"reportListTitle": "Employee Report Validations",
+			"reportDetailTitle": "Employee Report Validation Details",
+			"reportEntity": "Employee Report",
+			"wizardCalculateOvertime": "Calculate Overtime",
+			"wizardCalculateDerivations": "Calculate Derivations",
+			"entityBreak": "Report Break",
+			"entityReportVerification": "ReportVerification"
+		}
+	}
+}

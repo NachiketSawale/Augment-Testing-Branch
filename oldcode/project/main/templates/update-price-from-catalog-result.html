@@ -1,0 +1,43 @@
+<div class="">
+    <h3 class="margin-top-ld">{{modalOptions.body.fromCatalogPrjMaterialNote}}</h3>
+    <div class="subview-content" style="height: 300px;" data-ng-controller="projectMainUpdatePriceFromCatalogPrjMaterialGridController">
+	    <div class="toolbar">
+		    <div data-platform-menu-list data-list="tools"
+		         data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+	    </div>
+	    <platform-Grid data="gridData"></platform-Grid>
+	    <div class="statusbar">
+		    <div class="right-side flex-element flex-box flex-align-center">
+			    <!-- go to first page -->
+			    <button class="btn tlb-icons ico-rec-first item block-image" data-ng-click="getFirstPage()"
+			            data-ng-disabled="isLoading||!canFirstPage()"></button>
+
+			    <!-- go to previous page -->
+			    <button class="btn control-icons ico-previous item block-image" data-ng-click="getPrevPage()"
+			            data-ng-disabled="isLoading||!canPrevPage()"></button>
+
+			    <span class="item ellipsis">
+										{{getPageText()}}
+									</span>
+			    <!-- go to next page -->
+			    <button class="btn control-icons ico-next item block-image" data-ng-click="getNextPage()"
+			            data-ng-disabled="isLoading||!canNextPage()"></button>
+
+			    <!-- go to last page -->
+			    <button class="btn tlb-icons ico-rec-last item block-image" data-ng-click="getLastPage()"
+			            data-ng-disabled="isLoading||!canLastPage()"></button>
+		    </div>
+	    </div>
+    </div>
+
+    <h3 class="margin-top-ld">{{modalOptions.body.fromCatalogMatPriceListNote}}</h3>
+    <div class="subview-content" style="height: 200px;" data-ng-controller="projectMainUpdatePriceFromCatalogMatPriceListGridController">
+	    <div class="toolbar">
+		    <div data-platform-menu-list data-list="tools"
+		         data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+	    </div>
+        <platform-Grid data="gridData"></platform-Grid>
+    </div>
+
+<!--	<div class="branch-container platformgrid f3b7569b3ba344768005d7b4a24f62c1" filter-Business-Partner-Subsidiary style="height:calc(100% - 24px)"></div>-->
+</div>

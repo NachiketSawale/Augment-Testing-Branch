@@ -1,0 +1,280 @@
+/*-------------------------------------------------------------------------------
+	 Text Angular (_textangular.scss)
+	 this File is depricated and will be removed as soon as the the new editor is implemented.
+  -------------------------------------------------------------------------------*/
+#taHtmlElement, #taTextElement {
+	height: 91.5%;
+	overflow-y: scroll;
+	position: relative;
+}
+
+.bar-btn-dropdown {
+	padding: 0;
+	border: none;
+
+	.dropdown-menu > li > button .fa-check {
+		position: absolute;
+		left: 5px;
+		top: 50%;
+		margin-top: -5px;
+		font-size: 14px;
+	}
+}
+
+.flex-box .wysiwyg-editor {
+	flex: 1;
+}
+
+// RichTextEditor
+.wysiwyg-editor {
+	display: flex;
+	flex-direction: column;
+
+	.item-list-content {
+		display: flex;
+	}
+
+	.toolbar-resize-wrapper {
+		.secondary {
+			display: none;
+		}
+		&.show {
+			border: solid 1px #ff00ff;
+
+			.secondary {
+				display: block;
+				position: absolute;
+				top: 30px;
+				right: 0;
+				width: 200px;
+			}
+		}
+	}
+
+	&.layout1 {
+		.wysiwyg-toolbar {
+			border: solid 1px $color-input-border;
+			margin-bottom: $padding-base-vertical;
+		}
+
+		.wysiwyg-textarea {
+			@extend .vert-hori-center;
+			border: solid 1px $color-input-border;
+			min-height: 100px;
+		}
+	}
+}
+
+.wysiwyg-toolbar {
+	height: $wysiwyg-toolbar-size;
+	//line-height: $wysiwyg-toolbar-size;
+	border-bottom: 1px solid $color-bar1;
+	overflow: hidden; // temporally for presendation
+
+	li {
+		&.more {
+			margin-left: auto;
+
+			button {
+				width: 30px;
+			}
+		}
+	}
+
+	button:not(.dropdown-toggle) {
+		width: 30px;
+		border: 0;
+		position: relative;
+
+		span {
+			display: none;
+		}
+	}
+
+	> .btn-group {
+
+		&.btn-group-hover {
+			&:hover {
+				background-color: $color-hover;
+			}
+		}
+	}
+
+	.color-picker {
+		min-width: 100% !important;
+		max-width: 100% !important;
+		margin: 0;
+	}
+
+	.wysiwyg-fontlabel {
+		width: 30px;
+		text-align: center;
+		font-size: 16px;
+	}
+
+	.color-picker-wrapper {
+
+		.domain-type-color {
+			position: absolute;
+			top: 0;
+			opacity: 0;
+			height: 28px;
+			width: 100%;
+			border: none;
+
+			.input-group {
+				width: 100%;
+			}
+
+			.input-group-content {
+				display: none;
+			}
+
+			button {
+				width: 30px;
+				height: 28px;
+				border-width: 0px;
+			}
+		}
+	}
+
+	button {
+		height: $wysiwyg-toolbar-size;
+
+		&.dropdown-toggle:not(.ico-menu) {
+			width: 37px;
+			background-position: 7px;
+
+			&.img {
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.wysiwyg.tb-table-fn-list {
+	$border: thin solid rgb(233, 233, 233);
+	position: absolute;
+	width: 120px;
+	border: $border;
+	background-color: white;
+	cursor: pointer;
+	li:hover {
+		background-color: #bbcddb;
+	}
+	li.border-bottom {
+		border-bottom: $border;
+	}
+	>li {
+		padding:3px 3px 3px 15px;
+	}
+	.tb-table-insert .icon {
+		left: 2px;
+	}
+	.tb-table-delete-cell .icon {
+		right: 3px;
+	}
+	form.tb-table-init-input {
+		display: none;
+		position: absolute;
+		left: 120px;
+		width: 210px;
+		top: 0;
+		border: $border;
+		background-color: white;
+		select {
+			width: 40px;
+			height: 1.5em;
+			margin-right: 5px;
+		}
+	}
+	ul.tb-table-delete-list{
+		display: none;
+		position: absolute;
+		left: 120px;
+		top: 0;
+		width: 130px;
+		border: $border;
+		background-color: white;
+		li {
+			padding:3px 3px 3px 8px;
+		}
+	}
+	.icon {
+		position: absolute;
+		top: 4px;
+	}
+	.item-disabled {
+		color: #a0a0a0;
+		cursor: default;
+	}
+}
+
+.wysiwyg-textarea {
+	flex: 1;
+	height: 100%;
+	overflow: auto;
+	outline: none;
+	padding: $padding-large-vertical;
+	user-select: text;
+
+	p {
+		margin-bottom: 10px;
+		text-indent: 0 !important;
+
+	}
+	ol {
+		@extend %ol-native;
+	}
+
+	ul {
+		@extend %ul-native;
+	}
+
+	pre {
+		padding: $padding-large-vertical;
+		background-color: #f5f5f5;
+		border: solid 1px $color-input-border;
+		border-radius: $padding-base-vertical;
+	}
+
+	blockquote {
+		padding: $padding-xlarge-vertical $padding-xxlarge-horizontal;
+		margin: 0 0 $padding-xxlarge-vertical;
+		font-size: 17.5px;
+		border-left: 5px solid #eee;
+	}
+
+	.imageMarkup {
+		max-width: 100%;
+		padding: 8px;
+		display: inline-block !important;
+	}
+
+	.ui-wrapper {
+		position: relative !important;
+	}
+
+	.tb-table-cell{
+		width: 200px;
+		height: 20px;
+		min-width: 100px;
+		min-height: 15px;
+		border: solid 1px rgba(99, 99, 99, .8);
+	}
+}
+
+//used?
+.setImage{
+	width: 300px;
+	height:300px;
+}
+
+// temp style from dimi
+.wysiwyg-select {
+	height: 20px;
+	margin-bottom: 4px;
+	border: 0;
+}

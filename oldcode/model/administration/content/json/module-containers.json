@@ -1,0 +1,281 @@
+[
+	{
+		"id": "model.administration.staticHlSchemeList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.staticHlSchemeListTitle",
+		"controller": "modelAdministrationStaticHlSchemeListController",
+		"uuid": "a77d13ea33784bbcb9f21e9ed7fb3ff2"
+	},
+	{
+		"id": "model.administration.staticHlSchemeDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.staticHlSchemeDetailTitle",
+		"controller": "modelAdministrationStaticHlSchemeDetailController",
+		"uuid": "1aa62e964ad34df6a9eb71484a0188fb",
+		"permission": "a77d13ea33784bbcb9f21e9ed7fb3ff2"
+	},
+	{
+		"id": "model.administration.staticHlItemList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.staticHlItemListTitle",
+		"controller": "modelAdministrationStaticHlItemListController",
+		"uuid": "325a35cc5b0c4c2184d3f5eb72c58f5a"
+	},
+	{
+		"id": "model.administration.staticHlItemDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.staticHlItemDetailTitle",
+		"controller": "modelAdministrationStaticHlItemDetailController",
+		"uuid": "61f6e953a2a046e89df4b252e7b4b988",
+		"permission": "325a35cc5b0c4c2184d3f5eb72c58f5a"
+	},
+	{
+		"id": "model.administration.dynHlSchemeList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.dynHlSchemeListTitle",
+		"controller": "modelAdministrationDynHlSchemeListController",
+		"uuid": "f7f839f32f4a47d8ab550a998421b17f"
+	},
+	{
+		"id": "model.administration.dynHlSchemeDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.dynHlSchemeDetailTitle",
+		"controller": "modelAdministrationDynHlSchemeDetailController",
+		"uuid": "227e5eab5efe472086262160515c91bb",
+		"permission": "f7f839f32f4a47d8ab550a998421b17f"
+	},
+	{
+		"id": "model.administration.dynHlItemList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.dynHlItemListTitle",
+		"controller": "modelAdministrationDynHlItemListController",
+		"uuid": "ebd51626b3ff4f8689e1fed61bf6a49e"
+	},
+	{
+		"id": "model.administration.dynHlItemDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.dynHlItemDetailTitle",
+		"controller": "modelAdministrationDynHlItemDetailController",
+		"uuid": "18cc3cc979c24f7390607c9e45df177c",
+		"permission": "ebd51626b3ff4f8689e1fed61bf6a49e"
+	},
+	{
+		"id": "model.administration.filterStateInfo",
+		"template": "app/components/base/text-partial.html",
+		"title": "model.administration.filterStateInfoTitle",
+		"controller": "modelAdministrationFilterStateInfoController",
+		"uuid": "70272edc6016496587b8ea84b20cf441",
+		"permission": "325a35cc5b0c4c2184d3f5eb72c58f5a"
+	},
+	{
+		"id": "model.administration.dataTreeList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.dataTree.dataTreeListTitle",
+		"controller": "modelAdministrationDataTreeListController",
+		"uuid": "373d22dca21440bda308ff6e85f81a85"
+	},
+	{
+		"id": "model.administration.dataTreeDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.dataTree.dataTreeDetailTitle",
+		"controller": "modelAdministrationDataTreeDetailController",
+		"uuid": "f04423524cb94bd1a76330c348f8e1b8",
+		"permission": "373d22dca21440bda308ff6e85f81a85"
+	},
+	{
+		"id": "model.administration.dataTreeLevelList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.dataTree.dataTreeLevelListTitle",
+		"controller": "modelAdministrationDataTreeLevelListController",
+		"uuid": "f97ebbe0f8594fe686c78899cbb3c59b"
+	},
+	{
+		"id": "model.administration.dataTreeLevelDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.dataTree.dataTreeLevelDetailTitle",
+		"controller": "modelAdministrationDataTreeLevelDetailController",
+		"uuid": "ff23c6d3aea74dbcbeb0e3122b368be1",
+		"permission": "f97ebbe0f8594fe686c78899cbb3c59b"
+	},
+	{
+		"id": "model.administration.dataTreeNodeList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.dataTree.dataTreeNodeListTitle",
+		"controller": "modelAdministrationDataTreeNodeListController",
+		"uuid": "beb34f7d5c704610870cba1be748cc34"
+	},
+	{
+		"id": "model.administration.dataTreeNodeDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.dataTree.dataTreeNodeDetailTitle",
+		"controller": "modelAdministrationDataTreeNodeDetailController",
+		"uuid": "19a6a6b9816e49d99141986d8880fb39",
+		"permission": "beb34f7d5c704610870cba1be748cc34"
+	},
+	{
+		"id": "model.administration.dataTree2ModelList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.dataTree.dataTree2ModelListTitle",
+		"controller": "modelAdministrationDataTree2ModelListController",
+		"uuid": "710cd16529f6429fa457d207481adc26"
+	},
+	{
+		"id": "model.administration.dataTree2ModelDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.dataTree.dataTree2ModelDetailTitle",
+		"controller": "modelAdministrationDataTree2ModelDetailController",
+		"uuid": "27d6e2162efc40208eb9cebda2deec00",
+		"permission": "710cd16529f6429fa457d207481adc26"
+	},
+	{
+		"id": "model.administration.blackListList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.blackListListTitle",
+		"controller": "modelAdministrationBlackListListController",
+		"uuid": "51db6299be4f4d3097919ef4492b0cdc",
+		"permission": "e669db59cf314255a84f02c276ce224c"
+	},
+	{
+		"id": "model.administration.blackListDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.blackListDetailTitle",
+		"controller": "modelAdministrationBlackListDetailController",
+		"uuid": "3af9713a684b449aafe617272ba68ac9",
+		"permission": "e669db59cf314255a84f02c276ce224c"
+	},
+	{
+		"id": "model.administration.propertyKeyList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.propertyKeys.propertyKeyListTitle",
+		"controller": "modelAdministrationPropertyKeyListController",
+		"uuid": "f3dd6a81c5e14fddbe2f1b0b8cf05340"
+	},
+	{
+		"id": "model.administration.propertyKeyDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.propertyKeys.propertyKeyDetailTitle",
+		"controller": "modelAdministrationPropertyKeyDetailController",
+		"uuid": "9889fc35cb8640ba9b59f0c8c663698f",
+		"permission": "f3dd6a81c5e14fddbe2f1b0b8cf05340"
+	},
+	{
+		"id": "model.administration.propertyKeyTagList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.propertyKeys.propertyKeyTagListTitle",
+		"controller": "modelAdministrationPropertyKeyTagListController",
+		"uuid": "7cfd83a5ad6b4a988250819559936199"
+	},
+	{
+		"id": "model.administration.propertyKeyTagDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.propertyKeys.propertyKeyTagDetailTitle",
+		"controller": "modelAdministrationPropertyKeyTagDetailController",
+		"uuid": "3630b32c31c7492681c5c79e76af90a9",
+		"permission": "7cfd83a5ad6b4a988250819559936199"
+	},
+	{
+		"id": "model.administration.propertyKeyTagCategoryList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.propertyKeys.propertyKeyTagCategoryListTitle",
+		"controller": "modelAdministrationPropertyKeyTagCategoryListController",
+		"uuid": "e7bee8d36e8f475b9812eb0d21696c49"
+	},
+	{
+		"id": "model.administration.propertyKeyTagCategoryDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.propertyKeys.propertyKeyTagCategoryDetailTitle",
+		"controller": "modelAdministrationPropertyKeyTagCategoryDetailController",
+		"uuid": "f0b70206735642cab5472cc4f5620c65",
+		"permission": "e7bee8d36e8f475b9812eb0d21696c49"
+	},
+	{
+		"id": "model.administration.viewerSettingsList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.viewerSettingsListTitle",
+		"controller": "modelAdministrationViewerSettingsListController",
+		"uuid": "f7d7913423cc4bf2824e8f13449ec482"
+	},
+	{
+		"id": "model.administration.viewerSettingsDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.viewerSettingsDetailTitle",
+		"controller": "modelAdministrationViewerSettingsDetailController",
+		"uuid": "befa2d4aad3e40e28202f6d7e4df293b",
+		"permission": "f7d7913423cc4bf2824e8f13449ec482"
+	},
+	{
+		"id": "model.administration.importProfilesList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.modelImport.importProfileListTitle",
+		"controller": "modelAdministrationModelImportProfileListController",
+		"uuid": "aa55f4fd2cbd43f69bead3e4a5cd454f"
+	},
+	{
+		"id": "model.administration.importProfilesDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.modelImport.importProfileDetailTitle",
+		"controller": "modelAdministrationModelImportProfileDetailController",
+		"uuid": "225eae28ec104a3fa0c8b6210948fbf2",
+		"permission": "aa55f4fd2cbd43f69bead3e4a5cd454f"
+	},
+	{
+		"id": "model.administration.importPkRulesList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.modelImport.importPkRuleListTitle",
+		"controller": "modelAdministrationModelImportPropertyKeyRuleListController",
+		"uuid": "d0bad362f2c34cec9a1bf934d064ff89"
+	},
+	{
+		"id": "model.administration.importPkRulesDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.modelImport.importPkRuleDetailTitle",
+		"controller": "modelAdministrationModelImportPropertyKeyRuleDetailController",
+		"uuid": "f21727ad8b4b4b5b9b22330d600fb3fb",
+		"permission": "d0bad362f2c34cec9a1bf934d064ff89"
+	},
+	{
+		"id": "model-administration-model-import-property-processor-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.importPropertyProcessorListTitle",
+		"controller": "modelAdministrationModelImportPropertyProcessorListController",
+		"uuid": "2744eda347844751ad0a61950b4ad6cf"
+	},
+	{
+		"id": "model-administration-model-import-property-processor-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.importPropertyProcessorDetailTitle",
+		"controller": "modelAdministrationModelImportPropertyProcessorDetailController",
+		"uuid": "44f7428f27c94325ba46d1c2357f5ee7",
+		"permission": "2744eda347844751ad0a61950b4ad6cf"
+	},
+	{
+		"id": "model.administration.dataFilterTreeTemplateList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.filterTreeTemplate.filterTreeTemplateListTitle",
+		"controller": "modelAdministrationDataFilterTreeTemplateListController",
+		"uuid": "e5801f5433724277babcc584015775a1"
+	},
+	{
+		"id": "model.administration.dataFilterTreeTemplateDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.filterTreeTemplate.filterTreeTemplateDetailTitle",
+		"controller": "modelAdministrationDataFilterTreeTemplateDetailController",
+		"uuid": "d5e4452554d14a598da94cb3ed1cf7d0",
+		"permission": "e5801f5433724277babcc584015775a1"
+	},
+	{
+		"id": "model.administration.dataFilterTreeNodeTemplateList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.administration.filterTreeTemplate.filterTreeNodeTemplateListTitle",
+		"controller": "modelAdministrationDataFilterTreeNodeTemplateListController",
+		"uuid": "9d4324768ea240a59b0f68e56eaa4f08"
+	},
+	{
+		"id": "model.administration.dataFilterTreeNodeTemplateDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.administration.filterTreeTemplate.filterTreeNodeTemplateDetailTitle",
+		"controller": "modelAdministrationDataFilterTreeNodeTemplateDetailController",
+		"uuid": "f9711d08b2e842bc9175a47dbbb0205d",
+		"permission": "9d4324768ea240a59b0f68e56eaa4f08"
+	}
+]

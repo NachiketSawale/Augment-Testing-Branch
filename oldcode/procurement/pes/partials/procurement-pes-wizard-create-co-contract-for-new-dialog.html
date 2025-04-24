@@ -1,0 +1,68 @@
+<div>
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<div>
+		<section class="modal-body">
+			<div class="platform-form-row">
+				<h3 class="margin-top-ld">{{modalOptions.body.title}}</h3>
+				<div class="platform-form-col">
+					<div class="toolbar">
+						<div data-platform-menu-list data-list="tools"></div>
+					</div>
+					<platform-grid data="gridData"></platform-grid>
+				</div>
+			</div>
+
+			<div class="platform-form-group">
+				<div class="platform-form-row" data-ng-if="!isLinkFrameworkContract">
+					<div class="platform-form-label" style="width:28%;">
+						{{::projectChangeText}}
+					</div>
+					<div class="platform-form-col" style="width:72%;">
+						<div data-project-change-dialog="" data-ng-model="entity.projectChange" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
+						     data-entity="entity" data-options="projectChangeOptions" data-config="projectChangeConfig">
+						</div>
+					</div>
+
+				</div>
+
+				<div class="platform-form-row" >
+					<div class="platform-form-label" style="width:28%;">
+						{{::contractStatusText}}
+					</div>
+					<div class="platform-form-col" style="width:72%;">
+						<div procurement-contract-header-status-combobox="" data-ng-model="entity.contractStatus" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"
+						     data-entity="entity" data-options="contractStatusOptions">
+						</div>
+					</div>
+
+				</div>
+				<div class="platform-form-row">
+					<div class="platform-form-label" style="width:28%;">
+						{{::fieldChangeOrderContractDesc}}
+					</div>
+					<div class="platform-form-col" style="width:72%;">
+						<input type="text" data-ng-model="entity.changeOrderContractDesc" class="form-control"
+						       title="changeOrderContractDesc"/>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="modal-footer ">
+		<div class="custom-btn-group platform-form-group "  data-ng-show="!entity.contractStatus">
+			<div class="platform-form-row">
+				<span  class="platform-form-cel invalid-cell invalid-form">{{ 'procurement.pes.noConStatusWarning' | translate }}</span>
+			</div>
+
+		</div>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="modalOptions.okBtnDisabled()">
+			{{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="progress.isCreating" data-info="progress.info"></div>
+</div>

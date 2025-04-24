@@ -1,0 +1,6 @@
+<div ng-if="messages" class="container-info">
+	<div class="info-row" data-ng-repeat="message in messages">
+		<span class="info-title" data-ng-if="message.titleKey">{{ message.titleKey | translate}}:</span>
+		<span class="info-message" data-ng-if="message.messageKey" data-translate="{{message.messageKey}}"></span>
+	</div>
+</div>

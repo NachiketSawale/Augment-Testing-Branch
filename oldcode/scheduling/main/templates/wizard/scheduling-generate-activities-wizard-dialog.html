@@ -1,0 +1,32 @@
+<div data-ng-controller="schedulingGenerateActivitiesWizardDialogController" class="modal-wrapper">
+    <header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+        <tabset class="tabsWrapper">
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled" ng-click="modalOptions.onTabSelect(tab)">
+                <div data-ng-include="tab.content"></div>
+            </tab>
+        </tabset>
+    </section>
+    <footer class="modal-footer">
+	    <div class="custom-btn-group"></div>
+            <button class="btn btn-default ok" data-ng-click="onOK()" data-ng-disabled="isDisable()"> {{'cloud.common.ok' | translate}}
+            </button>
+            <button class="btn btn-default cancel" data-ng-click="onCancel()"> {{'cloud.common.cancel' | translate}}
+            </button>
+    </footer>
+</div>
+
+<!--
+<footer class="modal-footer">
+    <button type="button"  data-ng-if="modalOptions.reset" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.reset()">
+        {{modalOptions.resetButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>-->

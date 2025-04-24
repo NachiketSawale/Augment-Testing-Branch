@@ -1,0 +1,15 @@
+{
+	"basics": {
+		"export": {
+			"entitySubContainers": "Container hinzufügen",
+			"entityExcelProfile": "Excel Profil",
+			"justifyPropertyNames": "Sonderzeichen in den Spaltennamen entfernen",
+			"excelProfile": "Excel Profil",
+			"excelProfileContextFree": "Freies Excel",
+			"excelProfileContextBidder": "Bieter",
+			"excelProfileContextPlanner": "Planer",
+			"excelProfileContextPes": "Leistungsermittlung",
+			"excelProfileContextMaterial": "Material"
+		}
+	}
+}

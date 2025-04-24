@@ -1,0 +1,17 @@
+﻿<div class="flex-box flex-element flex-column margin-full-sm">
+	<div class="img-view-dialog">
+		<div class="toolbar flex-box img-view-tool">
+			<span class="flex-box flex-element" style="justify-content: flex-end;">
+				<button class="tlb-icons ico-txt-rotate-left" title="Rotate Left" ng-click="rotateLeft()"></button>
+				<button class="tlb-icons ico-txt-rotate-right" title="Rotate Right" ng-click="rotateRight()"></button>
+				<button class="tlb-icons ico-zoom-fit" title="Reset View" ng-click="resetView()"></button>
+				<button class="tlb-icons ico-zoom-in" title="Zoom In" ng-click="zoomIn()"></button>
+				<button class="tlb-icons ico-zoom-out" title="Zoom Out" ng-click="zoomOut()"></button>
+			</span>
+			<h2 class="title img-view-title" data-ng-bind="fileInfo.name"></h2>
+		</div>
+		<div class="img-view-content" ng-class="{ loadingImg : true  }">
+			<iframe credentialless class="dialog-img" id="imgIframe" sandbox=""/>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+{
+  "usermanagement": {
+    "right": {
+      "roleContainerTitle": "Roles",
+      "rightName":"Name",
+      "rightIsUserRole":"Is User Role",
+      "rightDescription":"Description",
+      "accessRoleFK":"Role",
+      "moduleInfoNameUsermanagementRight":"Role",
+      "roleXRoleContainerTitle":"Role to Role",
+      "rightContainerTitle":"Rights",
+      "structureName":"Name",
+      "descriptorDescription":"Description",
+      "rightAccessRight":"Right",
+      "rightRead":"R",
+      "toolTipRead":"Read",
+      "rightWrite":"W",
+      "toolTipWrite":"Write",
+      "rightDelete":"D",
+      "toolTipDelete":"Delete",
+      "rightCreate":"C",
+      "toolTipCreate":"Create",
+      "rightExecute":"E",
+      "toolTipExecute":"Execute",
+      "rightReadDeny":"RD",
+      "toolTipReadDeny":"Read Deny",
+      "rightWriteDeny":"WD",
+      "toolTipWriteDeny":"Write Deny",
+      "rightDeleteDeny":"DD",
+      "toolTipDeleteDeny":"Delete Deny",
+      "rightCreateDeny":"CD",
+      "toolTipCreateDeny":"Create Deny",
+      "rightExecuteDeny":"ED",
+      "toolTipExecuteDeny":"Execute Deny",
+      "usermanagementRightDetailsContainerTitle":"Right Details",
+      "dialogTitleDescriptorStructure":"Select Rights",
+      "validateName":"Name is not unique",
+      "dialogDescriptorStructure": {
+        "selected": "Selected",
+        "name": "Name",
+        "description": "Description"
+      }
+    }
+  }
+}

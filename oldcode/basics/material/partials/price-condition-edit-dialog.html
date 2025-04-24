@@ -1,0 +1,42 @@
+﻿<!-- <div class="platform-form-container" sub-view-container id="pane-0">-->
+    <div data-ng-controller="basicsMaterialPriceConditionController">
+        <header class="modal-header main-color">
+            <button type="button" class="close db" data-dismiss="modal"
+                    aria-hidden="true" data-ng-click="onCancel()">
+                <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+            </button>
+            <h2 class="modal-title">{{'basics.material.record.priceConditionTitle' | translate}}</h2>
+        </header>
+
+        <div data-platform-alert data-error="error"></div>
+
+        <section class="modal-body">
+            <div class="form-group">
+                <div data-basics-material-price-condition-simple-combobox data-ng-model="value"
+                     data-options="lookupOptions" data-ng-change="priceConditionChanged()"></div>
+            </div>
+            <div cloud-common-overlay data-loading="service.isLoading"></div>
+            <div class="lookup-grid-container overflow-hidden">
+                <platform-grid data="gridData"></platform-Grid>
+            </div>
+            <div class="text-right margin-top-ld">
+                <span> Total : {{ service.total | number:2 }}</span><span style="margin-left: 20px;">Total (Currency) : {{ service.totalOc | number:2 }}</span>
+            </div>
+        </section>
+
+        <footer class="modal-footer">
+            <button type="button" class="btn btn-default left-button" data-ng-disabled="service.isLoading" data-ng-click="createItem()">
+                {{'cloud.common.toolbarInsert' | translate}}
+            </button>
+            <button type="button" class="btn btn-default left-button" data-ng-disabled="service.isLoading || isDiabledDelete()" data-ng-click="deleteItem()">
+                {{'cloud.common.toolbarDelete' | translate}}
+            </button>
+
+            <button type="button" class="btn btn-default" data-ng-disabled="hasEmptyType" data-ng-click="onOK()"> {{'cloud.common.ok' | translate}}
+            </button>
+            <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'cloud.common.cancel' |
+                translate}}
+            </button>
+        </footer>
+    </div>
+<!--</div>-->

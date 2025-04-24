@@ -1,0 +1,423 @@
+[
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.activities",
+    "controller": "schedulingMainActivityListController",
+    "uuid": "13120439d96c47369c5c24a2df29238d"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.activitydetails",
+    "controller": "schedulingMainActivityDetailController",
+    "uuid": "0b1f0e40da664e4a8081fe8fa6111403",
+    "permission": "13120439d96c47369c5c24a2df29238d"
+  },
+  {
+    "id": "5",
+    "template": "scheduling.main/partials/lineofbalance.html",
+    "title": "scheduling.main.lob",
+    "uuid": "5eb1a96fefdf49c4b47ca21ba14ba2b0",
+    "controller": "schedulingMainLobController"
+  },
+  {
+    "id": "6",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.hierachicalActivities",
+    "controller": "schedulingMainActivityHierarchicalListController",
+    "uuid": "0fcbaf8c89ac4493b58695cfa9f104e2"
+  },
+  {
+    "id": "7",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.listRelationship",
+    "controller": "schedulingMainRelationshipListController",
+    "uuid": "d8fe0df4c85241048abea198a699595a"
+  },
+  {
+    "id": "8",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.progressReport",
+    "controller": "schedulingMainProgressReportListController",
+    "uuid": "04cbfbacb07c4fba922a9f2b91206657"
+  },
+  {
+    "id": "26",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.detailProgressReportTitle",
+    "controller": "schedulingMainProgressReportDetailController",
+    "uuid": "27c823ef3d0a4fe3b38d43957b5c86d6",
+    "permission": "04cbfbacb07c4fba922a9f2b91206657"
+  },
+  {
+    "id": "9",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.clerk.listClerkTitle",
+    "controller": "schedulingMainClerkListController",
+    "uuid": "cdb0ea3d378846ab81bde1020e62f32f"
+  },
+  {
+    "id": "10",
+    "template": "scheduling.main/partials/ganttgrid.html",
+    "title": "scheduling.main.ganttGridTitle",
+    "controller": "schedulingMainActivityListControllerGantt",
+    "uuid": "98239ba315374530a1e28ad333c6a7ee"
+  },
+  {
+    "id": "11",
+    "template": "scheduling.main/partials/gantttreegrid.html",
+    "title": "scheduling.main.ganttTreeGridTitle",
+    "controller": "schedulingMainActivityHierarchicalListControllerGantt",
+    "uuid": "3a1a26c46b9e4e35af5ad60fd2f49679"
+  },
+  {
+    "id": "12",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.clerk.detailClerkTitle",
+    "controller": "schedulingMainClerkDetailController",
+    "uuid": "13c7ff9d5fb24b96a2274507fa453422",
+    "permission": "cdb0ea3d378846ab81bde1020e62f32f"
+  },
+  {
+    "id": "13",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.detailRelationshipTitle",
+    "controller": "schedulingMainRelationshipDetailController",
+    "uuid": "800651ed2f844b2592e39bea7df6ab69",
+    "permission": "d8fe0df4c85241048abea198a699595a"
+  },
+  {
+    "id": "14",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.eventListTitle",
+    "controller": "schedulingMainEventListController",
+    "uuid": "578f759af73e4a6aa22089975d3889ac"
+  },
+  {
+    "id": "15",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.eventDetailTitle",
+    "controller": "schedulingMainEventDetailController",
+    "uuid": "e006376f2dba4a8d97d6bab94f1e36e0",
+    "permission": "578f759af73e4a6aa22089975d3889ac"
+  },
+  {
+    "id": "scheduling.main.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "c4f6e415194d44d49b995d4f2f4e8a69",
+    "controller": "",
+    "sectionId": "12",
+    "mainService": "schedulingMainService"
+  },
+  {
+    "id": "17",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.baselineListTitle",
+    "controller": "schedulingMainBaseLineListController",
+    "uuid": "f6b1110d6e2249a7ba25c8a0d9c27a82"
+  },
+  {
+    "id": "scheduling.main.activitybaselinecmp.listcontainer",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.detailActivityBaseLineCmpListTitle",
+    "controller": "schedulingMainActivityBaseLineComparisonListController",
+    "uuid": "de783a504a284f64aba8c473a95d0262",
+    "permission": "5fc7ccd1f42f4aa7b8b2edeb2bde9d96"
+  },
+  {
+    "id": "27",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.detailBaseLineTitle",
+    "controller": "schedulingMainBaseLineDetailController",
+    "uuid": "991140e3e8864074821a60ef3d8286a6",
+    "permission": "f6b1110d6e2249a7ba25c8a0d9c27a82"
+  },
+  {
+    "id": "scheduling.main.activitybaselinecmp.container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.detailActivityBaseLineCmpTitle",
+    "controller": "schedulingMainActivityBaseLineComparisonDetailController",
+    "uuid": "07901a0ddc2347698eb076c09cf8160d",
+    "permission": "5fc7ccd1f42f4aa7b8b2edeb2bde9d96"
+  },
+  {
+    "id": "18",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.entityLineItemProgress",
+    "controller": "schedulingMainLineItemProgressListController",
+    "uuid": "5c2a4c1d66c5438981aa934f449e1d4d"
+  },
+  {
+    "id": "28",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.detailLineItemProgressTitle",
+    "controller": "schedulingMainLineItemProgressDetailController",
+    "uuid": "7DCAA269EC3F4BAC8059B6C2AF97BAE2",
+    "permission": "5c2a4c1d66c5438981aa934f449e1d4d"
+  },
+  {
+    "id": "21",
+    "template": "app/components/base/matrix-partial.html",
+    "title": "scheduling.main.activityLocationMatrix",
+    "controller": "schedulingMainActivityLocationMatrixController",
+    "uuid": "04e41e123ba0489f83b648c2c713ce20",
+    "permission": "13120439d96c47369c5c24a2df29238d"
+  },
+  {
+    "id": "22",
+    "template": "documents.project/partials/documentgridView.html",
+    "title": "cloud.common.documentsProject",
+    "controller": "documentsProjectDocumentController",
+    "uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "23",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsProjectForm",
+    "controller": "documentsProjectDocumentDetailController",
+    "uuid": "8BB802CB31B84625A8848D370142B95C",
+    "permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "24",
+    "template": "documents.project/partials/documentGridRevisionView.html",
+    "title": "cloud.common.documentsRevision",
+    "controller": "documentsProjectDocumentRevisionController",
+    "uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "25",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsRevisionDetail",
+    "controller": "documentsProjectDocumentRevisionDetailController",
+    "uuid": "ddb6e1e7e8c242eb8d9ff8284cf1edb1",
+    "permission": "684f4cdc782b495e9e4be8e4a303d693"
+  },
+  {
+    "id": "project.main.documents.project.document.history.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentsProjectHistory",
+    "controller": "documentsProjectDocumentHistoryController",
+    "uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+  },
+  {
+    "id": "30",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.listPredecessorTitle",
+    "controller": "schedulingMainPredecessorListController",
+    "uuid": "e4a4e97657ef4068bdf1367afca01375"
+  },
+  {
+    "id": "31",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.detailPredecessorTitle",
+    "controller": "schedulingMainPredecessorDetailController",
+    "uuid": "e65b9fddd0a7404c9cbf6c111e1dac81",
+    "permission": "e4a4e97657ef4068bdf1367afca01375"
+  },
+  {
+    "include": "model.viewer/content/json/viewer-containers.json"
+  },
+  {
+    "id": "4cbbc13ef72f49808cd693bdca839846",
+    "template": "app/components/sourcecontainer/source-list.html",
+    "title": "scheduling.main.sourceActivityTitle",
+    "controller": "schedulingMainSourceWindowController",
+    "uuid": "4cbbc13ef72f49808cd693bdca839846",
+    "permission": "13120439d96c47369c5c24a2df29238d",
+    "filter": ["projectFk", "scheduleFk", "relationFk"]
+  },
+  {
+    "id": "026c24f15a944a27980437ab4dc85b58",
+    "template": "app/components/sourcecontainer/source-list.html",
+    "title": "scheduling.main.sourceActivityTemplateTitle",
+    "controller": "schedulingMainSourceWindowController",
+    "uuid": "026c24f15a944a27980437ab4dc85b58",
+    "permission": "afecde4a08404395855258b70652d04d",
+    "filter": ["templateGroupFk", "relationFk"]
+  },
+  {
+    "id": "scheduling.main.simulatedGanttVis",
+    "template": "app/components/datavis/templates/datavis.html",
+    "title": "scheduling.main.simulatedGantt.title",
+    "controller": "schedulingMainSimulatedGanttVisController",
+    "uuid": "a7482dd41cd44ece9f554d028d7f518f"
+  },
+  {
+  "id": "scheduling.main.event-overviewlist",
+  "template": "app/components/base/grid-partial.html",
+  "title": "scheduling.main.eventOverviewListTitle",
+  "controller": "schedulingMainEventOverviewListController",
+  "uuid": "c8f5680d634941bdaa5be432ae25c082",
+    "permission": "578f759af73e4a6aa22089975d3889ac"
+  },
+  {
+    "id": "scheduling.main.event-overviewdetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.eventOverviewDetailTitle",
+    "controller": "schedulingMainEventOverviewDetailController",
+    "uuid": "5bbf12317b5747a798ba710de91985e7",
+    "permission": "578f759af73e4a6aa22089975d3889ac"
+  },
+	{
+		"id": "scheduling.main.object-base-simulation-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "scheduling.main.objectBaseSimulationListTitle",
+		"controller": "schedulingMainObjectBaseSimulationListController",
+		"uuid": "6f697738e6c64b698aa61a0713670dd6"
+
+	},
+	{
+		"id": "scheduling.main.event-overviewdetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "scheduling.main.eventOverviewDetailTitle",
+		"controller": "schedulingMainObjectBaseSimulationDetailController",
+		"uuid": "9577dd42ec074b6cafa01dfd2608a99d",
+		"permission": "6f697738e6c64b698aa61a0713670dd6"
+	},
+
+  {
+    "id": "scheduling.main.comment",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "scheduling.main.commentContainerTitle",
+    "controller":"basicsCommonCommentController",
+    "uuid": "d91a3f89b55843a596cfc82d63247d5a",
+    "commentQualifier": "scheduling.main.comment",
+    "parentService": "schedulingMainService",
+    "commentEntity": "ActivityCommentsToSave"
+  },
+  {
+    "id": "scheduling.main.hammock.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.hammockListTitle",
+    "uuid": "221f0cc18f014d608cfb9acef1de4bb5",
+    "controller": "schedulingMainHammockListController"
+  },
+  {
+    "id": "scheduling.main.hammock.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.hammockDetailTitle",
+    "controller": "schedulingMainHammockDetailController",
+    "uuid": "d0cfd4e89e634a4fb99c8a14c6fa057e",
+    "permission": "221f0cc18f014d608cfb9acef1de4bb5"
+  },
+  {
+    "id": "estimate.main.simulationChartCostCode",
+    "template": "app/components/datavis/templates/datavis.html",
+    "title": "estimate.main.simulationChart.containerTitle",
+    "uuid": "528680507d384fc08cc5c0426ad64a48",
+    "controller": "estimateMainCostCodeChartController",
+    "sectionId": 34,
+    "permission": "a919c5302c1a4a8c975726f2466ca52d"
+  },
+  {
+    "id": "scheduling.main.observation.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.observationListTitle",
+    "controller": "schedulingMainObservationListController",
+    "uuid": "f49169c661b34fe8b73e41b4481de43c"
+  },
+  {
+    "id": "scheduling.main.observation.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.observationDetailTitle",
+    "controller": "schedulingMainObservationDetailController",
+    "uuid": "862d78af1fc44012bacc390290715b4a",
+    "permission": "f49169c661b34fe8b73e41b4481de43c"
+  },
+  {
+    "id": "scheduling-main-powerbi-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.powerBIElements",
+    "controller": "schedulingMainPowerBiListController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ac69",
+    "permission": "f49169c661b34fe8b73e41b4481de43c"
+  }
+,
+  {
+    "id": "scheduling-main-powerbi-view-container",
+    "template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+    "title": "scheduling.main.powerbiView",
+    "controller": "schedulingMainPowerbiViewController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ac70",
+    "permission": "f49169c661b34fe8b73e41b4481de43c"
+  },
+  {
+    "id": "scheduling.main.activityFormData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.ContainerUserformDefaultTitle",
+    "controller": "basicsUserFormFormDataController",
+    "uuid": "6a63919c451e414b8be60b7da81854a7",
+    "rubricId": 32,
+    "mainService": "schedulingMainService",
+    "permission": "13120439d96c47369c5c24a2df29238d"
+  },
+  {
+    "id": "procurement.contract.documents.project.modelobject.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentAssignObject",
+    "controller": "documentsProjectModelObjectController",
+    "uuid": "7BACDAB1A06B439895ACBA767E42205E"
+  },
+  {
+    "id": "procurement.contract.documents.project.modelobject.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentAssignObjectFormTitle",
+    "controller": "documentsProjectModelObjectDetailController",
+    "uuid": "ee68ae76fefe4b758c282594a1746480",
+    "permission": "7BACDAB1A06B439895ACBA767E42205E"
+  },
+  {
+    "id": "scheduling.main.baseline.predecessor.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.baselinePredessorListTitle",
+    "controller": "schedulingMainBaselinePredecessorListController",
+    "uuid": "b5857e47c4bb44a79e8ea946cefd4b03",
+    "permission": "e4a4e97657ef4068bdf1367afca01375"
+  },
+  {
+    "id": "scheduling.main.baseline.predecessor.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.baselinePredessorDetailTitle",
+    "controller": "schedulingMainBaselinePredecessorDetailController",
+    "uuid": "b3348b12da874668adc078dab2a88c47",
+    "permission": "e4a4e97657ef4068bdf1367afca01375"
+  },
+  {
+    "id": "scheduling.main.baseline.successor.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.main.baselineSuccessorListTitle",
+    "controller": "schedulingMainBaselineSuccessorListController",
+    "uuid": "0510f6cc64d24047b5413d20aa1d5b02",
+    "permission": "e4a4e97657ef4068bdf1367afca01375"
+  },
+  {
+    "id": "scheduling.main.baseline.successor.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.main.baselineSuccessorDetailTitle",
+    "controller": "schedulingMainBaselineSuccessorDetailController",
+    "uuid": "c2e38a3877c942349772b5d34d81d543",
+    "permission": "e4a4e97657ef4068bdf1367afca01375"
+  },
+	{
+		"id": "scheduling.main.baseline.activity.grid",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "scheduling.main.sourceActivityByBaselineTitle",
+		"controller": "schedulingMainSourceWindowController",
+		"uuid": "e1ff9fbf38cc451b9e9582574de353dd",
+		"permission": "afecde4a08404395855258b70652d04d",
+		"filter": ["baselineFk"]
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "49742B0CD51440D3AEF02D2C3CEE9999",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

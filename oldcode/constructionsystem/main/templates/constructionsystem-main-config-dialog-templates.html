@@ -1,0 +1,32 @@
+<script type="text/ng-template" id="constructionsystem-main-column-config-details.html">
+<div data-ng-controller="constructionsystemMainColumnConfigDetalController">
+    <div class="toolbar">
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div class="flex-box flex-column subview-container" style="height:160px;">
+        <div data-platform-grid data="gridData"></div>
+    </div>
+</div>
+</script>
+<script type="text/ng-template" id="constructionsystem-main-column-config-dialog-modal.html">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+	    <button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close()"
+	            aria-hidden="true">
+		    <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	    </button>
+    </header>
+
+    <!--<section class="modal-body">-->
+    <section class="modal-body" style="height: 560px;">
+        <div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem"></div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled" data-ng-click="modalOptions.ok()">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</script>

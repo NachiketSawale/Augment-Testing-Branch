@@ -1,0 +1,91 @@
+<div data-ng-show="!isESV2">
+	<h2>Data Dictionary Info (Internal Use only)</h2>
+	<div class="margin-top-ld">Name:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.dt.name" data-readonly="translationOptions.data.columnNameReadOnly"></div>
+
+	<div class="margin-top-ld">Path:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.dt.nameWithPath" data-readonly="true"></div>
+
+	<div class="margin-top-ld">ColId / Columnname:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.filterColIdColName" data-readonly="true"></div>
+
+	<div class="margin-top-ld">TabId / RelationTabId:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.tabIdRefTabId" data-readonly="true"></div>
+
+	<div class="margin-top-ld">Kind:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.kind" data-readonly="true"></div>
+
+	<div class="margin-top-ld">SearchPattern:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.search" data-readonly="true"></div>
+
+	<div class="margin-top-ld">RelationName:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.mc.relationNameFk" data-readonly="true"></div>
+
+	<div class="margin-top-ld">
+		<button class="btn btn-link" data-ng-click="translationOptions.data.openiTWO40Master()" title="Start iTWO4.0 Master Translation (opens new Window)">Open Master Translation</button>
+		<button class="btn btn-link" data-ng-click="translationOptions.data.ddRefresh()" title="Refresh Data Dictionary Cache ({{translationOptions.data.cacheReloadedOn}})">Refresh Data Dictionary Cache ({{translationOptions.data.cacheReloadedOn}})</button>
+	</div>
+</div>
+
+<div data-ng-show="!!isESV2">
+
+	<h2>Data Dictionary Info (Internal Use only)</h2>
+	<div class="margin-top-ld">Name:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.dt.Name" data-readonly="translationOptions.data.columnNameReadOnly" change="translationOptions.data.updateEntityOnChange(translationOptions.data.dt)"></div>
+
+	<div class="margin-top-ld">Path:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.dt.nameWithPath" data-readonly="true"></div>
+
+	<div class="margin-top-ld">ColId / Columnname:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.filterColIdColName" data-readonly="true"></div>
+
+	<div class="margin-top-ld">TabId / RelationTabId:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.tabIdRefTabId" data-readonly="true"></div>
+
+	<div class="margin-top-ld">Kind:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.kind" data-readonly="true"></div>
+
+	<div class="margin-top-ld">SearchPattern:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.search" data-readonly="true"></div>
+
+	<div class="margin-top-ld">RelationName:</div>
+	<div data-domain-control data-domain="description" data-model="translationOptions.data.mc.relationNameFk" data-readonly="true"></div>
+
+	<div class="platform-form-row form-group" style="display: flex; margin-bottom: 0px">
+		<div class="platform-form-col">
+			<div data-domain-control data-domain="boolean" data-model="translationOptions.data.dt.IsFilterAttribute" readonly="translationOptions.data.dt.isReference || translationOptions.data.dt.UiTypeId === 'lookup'" change="translationOptions.data.isFilterAttributeChanged(translationOptions.data.dt)"></div>
+		</div>
+		<label class="platform-form-label">Is Filter Attribute</label>
+	</div>
+
+	<div class="platform-form-row form-group" style="display: flex; margin-bottom: 0px">
+		<div class="platform-form-col">
+			<div data-domain-control data-domain="boolean" data-model="translationOptions.data.dt.isLookupTable" readonly="translationOptions.data.dt.UiTypeId !== 'lookup' && !translationOptions.data.dt.isReference" change="translationOptions.data.updateEntityOnChange(translationOptions.data.dt)"></div>
+		</div>
+		<label class="platform-form-label">Is Lookup Table</label>
+	</div>
+
+	<div class="margin-top-ld">
+		<button class="btn btn-default" data-ng-click="translationOptions.data.saveTranslation(translationOptions.data.dt)" title="Saves changes in this field in iTWO4.0 Master Translation">Save In Master Translation</button>
+	</div>
+
+	<div class="margin-top-ld">
+		<button class="btn btn-default" data-ng-click="translationOptions.data.ddRefresh()" title="Refresh Data Dictionary Cache ({{translationOptions.data.cacheReloadedOn}})">Refresh Data Dictionary Cache ({{translationOptions.data.cacheReloadedOn}})</button>
+	</div>
+
+</div>
+
+<!-- code from Release 2.1.3  -->
+<!--<div class="flex-element platform-form-group">-->
+	<!--<div data-platform-label-text data-label="'Name'" data-forid="Name" data-model="options.data.dt.name" readonly></div>-->
+	<!--<div data-platform-label-text data-label="'Path'" data-forid="Path" data-model="options.data.dt.nameWithPath" readonly></div>-->
+	<!--<div data-platform-label-text data-label="'ColId / Columnname'" data-forid="ColId" data-model="options.data.filterColIdColName" readonly></div>-->
+	<!--<div data-platform-label-text data-label="'TabId / RelationTabId'" data-forid="TabId" data-model="options.data.tabIdRefTabId" readonly></div>-->
+	<!--<div data-platform-label-text data-label="'Kind'" data-forid="Kind" data-model="options.data.kind" readonly></div>-->
+	<!--<div data-platform-label-text data-label="'SearchPattern'" data-forid="SearchPattern" data-model="options.data.search" readonly></div>-->
+	<!--<div data-platform-label-text data-label="'RelationName'" data-forid="RelationName" data-model="options.data.mc.relationNameFk" readonly></div>-->
+<!--</div>-->
+<!--<div style="margin-top: 10px;">-->
+	<!--<button class="btn btn-link" data-ng-click="options.data.openiTWO40Master()">Start iTWO4.0 Master Translation (opens new Window)</button>-->
+	<!--<button class="btn btn-link" data-ng-click="options.data.ddRefresh()">Refresh Data Dictionary Cache ({{options.data.cacheReloadedOn}})</button>-->
+<!--</div>-->

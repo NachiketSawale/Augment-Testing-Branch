@@ -1,0 +1,139 @@
+/*
+Our custom Media objects(Bootstrap Component)
+*/
+
+.media {
+	position: relative;
+	border-top: solid $border-width-default $color-border;
+	margin-top: 0;
+	padding: $padding-large-vertical 0;
+	zoom: 1;
+
+	.media {
+		margin-left: $padding-xlarge-horizontal;
+		padding-bottom: 0px;
+		margin-top: $padding-large-vertical;
+	}
+
+	.media-body{
+		zoom: 1;
+
+		.message-header {
+			flex: 1;
+			padding-right: 25px; //spacing to actionbutton
+
+			.title {
+				@extend .h4;
+			}
+		}
+
+		.message-body{
+			word-wrap: break-word;
+			margin-top: $padding-small-vertical;
+			min-height: 33px;
+
+			.comment-image {
+				max-height: 150px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.action-btn {
+		position: absolute;
+		top: 0;
+		right: 1px;
+	}
+
+	.circle {
+		@include circle(50px);
+	}
+
+	.media-btn {
+		margin-left: 15px;
+	}
+}
+
+.comment-viewer {
+	position: relative;
+	overflow: auto;
+
+	.comment-view{
+		user-select: initial;
+		overflow: auto;
+	}
+
+	.comment-footer {
+		justify-content: center;
+		min-height: 44px;
+	}
+
+	.comment-editor {
+		position: relative;
+		height: 80px;
+
+		.comment-text-area {
+			@include form-control-focus();
+		}
+
+		.comment-toolbar {
+			width: 26px;
+			white-space: normal;
+		}
+
+		.comment-image {
+			height: 30px;
+		}
+	}
+
+	.comment-btn {
+		width: 60px;
+		margin: 10px;
+	}
+
+	.emotion-item {
+		padding: 5px 10px;
+	}
+
+	.emotion-item:hover {
+		background-color: #8daac2;
+	}
+
+	.emotion-item-space{
+		padding: 5px 10px;
+	}
+
+	.ng-invalid-comment{
+		.form-control {
+			border-color: rgba(255, 0, 0, 0.5);
+		}
+	}
+
+	.comment-error {
+		color: red;
+		padding: 2px;
+	}
+}
+
+.wysiwyg-border {
+	border: solid 1px #c0c0c0;
+}
+
+.wysiwyg-height {
+	height: 60px;
+}
+
+.emotion {
+	@include square(30px);
+}
+
+.emotionWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 123px;
+}
+
+
+
+
+

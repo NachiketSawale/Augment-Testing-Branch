@@ -1,0 +1,20 @@
+{
+	"name": "modules-workflow-admin",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/workflow/admin/src",
+	"prefix": "itwo40",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/workflow/admin"],
+			"options": {
+				"jestConfig": "libs/modules/workflow/admin/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

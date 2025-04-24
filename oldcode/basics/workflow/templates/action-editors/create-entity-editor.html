@@ -1,0 +1,64 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="radiolist-container">
+			<div data-ng-model="input.editorMode" data-radiolistctrl displayMember="description"
+			     on-selection-changed="onRadioGroupOptChanged(value)" options="radioGroupOpt"
+			     valueMember="value"></div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row" data-ng-show="input.editorMode == 1">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.entityName' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-model="input.entityId"
+					     data-options="selectOptions" readonly="codeMirrorOptions.readOnly"></div>
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-show="input.editorMode == 2">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.entityId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.entityId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputSaveObject' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.entityProperty" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

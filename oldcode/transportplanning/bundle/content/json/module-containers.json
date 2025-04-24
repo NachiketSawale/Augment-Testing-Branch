@@ -1,0 +1,133 @@
+[
+  {
+    "id": "transportplanning.bundle.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.bundle.listBundleTitle",
+    "controller": "transportplanningBundleGridController",
+    "uuid": "95a65610f91042a5bb8995be789c2f15",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de"
+  },
+  {
+    "id": "transportplanning.bundle.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "transportplanning.bundle.detailsBundleTitle",
+    "controller": "transportplanningBundleDetailsController",
+    "uuid": "1145ec1dabcd41b79568c44afdb0f3e0",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de"
+  },
+  {
+    "id": "productionplanning.common.event.bundleList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.bundleEventTitle",
+    "controller": "productionplanningCommonEventListController",
+    "currentModule": "transportplanning.bundle.event",
+    "parentService": "transportplanningBundleMainService",
+    "foreignKey": "TrsProductBundleFk",
+    "uuid": "e73c63c80cbb44e7985a19c350405c5b",
+    "permission": "5d32c2debd3646ab8ef0457135d35624"
+  },
+  {
+    "id": "transportplanning.bundle.productList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.product.bundleProductTitle",
+    "controller": "productionplanningCommonProductBundleListController",
+    "uuid": "d8c96cdc54a840bfb7651c3228f19887",
+    "permission": "d8c96cdc54a840bfb7651c3228f19887"
+  },
+  {
+    "id": "transportplanning.bundle.productDetails",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.common.product.bundleProductDetailTitle",
+    "controller": "productionplanningCommonProductBundleDetailController",
+    "uuid": "1d2b2bf19d0d44b88539ccu58db79d18",
+    "permission": "d8c96cdc54a840bfb7651c3228f19887"
+  },
+  {
+    "id": "productionplanning.common.event.productList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.bundleProductEventTitle",
+    "controller": "productionplanningCommonEventListController",
+    "currentModule": "transportplanning.bundle.product.event",
+    "parentService": "productionplanningCommonProductBundleDataService",
+    "foreignKey": "ProductFk",
+    "uuid": "30f34f65c4054f6591d586173bdb9cb0",
+    "permission": "5d32c2debd3646ab8ef0457135d35624"
+  },
+  {
+    "id": "transportplanning.bundle.resourceReservationList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.bundle.resource.reservation.listTitle",
+    "controller": "transportplanningBundleResourceReservationListController",
+    "uuid": "de53437040114c7288c516873abc8480",
+    "permission": "6540965b6c84450aa1da41fd1c870a47"
+  },
+  {
+    "id": "transportplanning.bundle.document.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.bundle.document.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "transportplanningBundleMainServicePpsDocumentDataService",
+    "parentService": "transportplanningBundleMainService",
+    "foreignKey": "TrsProductBundleFk",
+    "uuid": "37b3dfb699784439870a4fc62aea515d",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "transportplanning.bundle.document.revision.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.bundle.document.revision.listTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "470548fed53b4e79a3850d12af5fe78f",
+    "parentUuid": "transportplanningBundleMainServicePpsDocumentDataService",
+    "grandfathertService": "transportplanningBundleMainService",
+    "foreignKey": "TrsProductBundleFk",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "transportplanning.bundle.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "transportplanning.bundle.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "96f5cf010264456888ca1fcda1bca0bf",
+    "wizardDisabled": "true"
+  },
+  {
+    "id": "transportplanning.bundle.product.costgroup.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.ppsProductCostGroupListTitle",
+    "controller": "ppsCommonCostGroupListController",
+    "costGroupService": "trsBundleProductCostGroupService",
+    "uuid": "12vhyf94asdcvf134y967dgaf25t5cty",
+    "permission": "5d32c2debd3646ab8ef0457135d35624"
+  },
+  {
+    "id": "productionplanning.bundle.costgroup.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.bundleEventCostGroupTitle",
+    "controller": "ppsCommonCostGroupListController",
+    "costGroupService": "trsBundleCostGroupService",
+    "uuid": "ddvhyf94asdcvf17ty967dddf25t5cty",
+    "permission": "5d32c2debd3646ab8ef0457135d35624"
+  },
+	{
+		"id": "productionplanning.product.transporthistory.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "transportplanning.bundle.transportHistoryListTitle",
+		"controller": "ppsCommonProductTransportHistoryListController",
+		"uuid": "c4c482138d2644dabe597a0bd08e71d3",
+		"permission": "8ea8679532ee44869df8dd9e3ae629de",
+		"parentService": "transportplanningBundleMainService",
+		"endRead": "forbundle",
+		"parentFilter": "bundleId"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "a41260f554134cb2bccedd8ace0fe86d",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

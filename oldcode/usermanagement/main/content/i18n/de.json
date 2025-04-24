@@ -1,0 +1,44 @@
+{
+  "usermanagement": {
+    "main": {
+      "dialog": {
+        "adConfig": "Active Directory & Aufgabenkonfiguration",
+        "tab-adConfig": "Active Directory Einstellungen",
+        "tab-scheduleConfig": "Neue Aufgabe planen",
+        "groupsPath": "Gruppenpfad",
+        "usersPath": "Benutzerpfad",
+        "activated": "Anlegen",
+        "autoDelete": "Automatisch löschen",
+        "addAdUser": " Benutzer hinzufügen/zuordnen",
+        "syncAdUser": "Benutzer synchronisieren",
+        "syncAdGroup": "Gruppen synchronisieren",
+        "daily": "Täglich",
+        "weekly": "Wöchentlich",
+        "nonrep":"Einmalig",
+        "header1": "Aufgabenkonfiguration",
+        "header2": "Aufgabenplanung",
+        "date": "Datum: ",
+        "time": "Uhrzeit: ",
+        "username": "Benutzername",
+        "password": "Kennwort",
+        "useAuthentication": "LDAP Authentifizierung",
+        "ldapSampleLabel": "LDAP Url Syntax",
+        "ldapUrl": "Url:&emsp;LDAP://[ldapservername[:port]/][OU=Groups,OU=Germany,OU=RIBAG,DC=rib-softwarec,DC=com]<br>i.e.:&emsp;LDAP://rib-s-dc01.rib-software.com:389/OU=Groups,OU=Germany,OU=RIBAG,DC=rib-software,DC=com<br>",
+        "ldapGroupPathInfo":"Bitte LDAP Gruppen Pfad einfügen ...",
+        "ldapUserPathInfo":"Bitte LDAP Benutzer Pfad einfügen ...",
+        "enterUsername": "Bitte hier LDAP Server Benutzername",
+        "enterPassword": "Bitte hier LDAP Server Kennwort"
+      },
+      "adsConfig":{
+        "infoBodyText": "Speichern des Konfigurationsdaten erfolgreich!",
+        "authenticationError":"LDAP Anmeldedaten fehlerhaft. Nicht gespeichert!",
+        "infoBodyTextGroupError":"Gruppenpfad ungültig. Nicht gespeichert!",
+        "infoBodyTextUserError":"Benutzerpfad ungültig. Nicht gespeichert!",
+        "infoBodyTextGroupAndUserError":"Gruppen & Benutzerpfad ungültig. Nicht gespeichert!",
+        "infoDialogHeader": "Active Directory Einstellungen",
+        "adTaskInfo":"AD Aufgabenplanung erfolgreich gespeichert !",
+        "usernamepasswordErr": "Benutzername und Kennwort dürfen nicht leer sein und sie müssen gültig sein. Wenn Sie den Benutzernamen ändern, dann müssen Sie auch das Kennword neu eingeben"
+      }
+    }
+  }
+}

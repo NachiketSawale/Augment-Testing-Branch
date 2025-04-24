@@ -1,0 +1,4 @@
+<div class="content" data-ng-controller="basicsReportingSidebarController as reportingSidebar">
+	<div data-ng-include="'basics.reporting/templates/reporting-sidebar-list.html'" data-ng-if="reportingSidebar.showList" class="flex-element flex-box flex-column overflow"></div>
+	<div data-ng-include="'basics.reporting/templates/reporting-sidebar-parameter.html'" data-ng-if="!reportingSidebar.showList" class="flex-element flex-box flex-column overflow"></div>
+</div>

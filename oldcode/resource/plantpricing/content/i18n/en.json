@@ -1,0 +1,15 @@
+{
+  "resource": {
+    "plantpricing": {
+      "pricelistTypeDetailTitle": "Plant Pricelist Type Details",
+      "pricelistTypeEntity": "Plant Pricelist Type",
+      "pricelistTypeListTitle": "Plant Pricelist Types",
+      "pricelistDetailTitle": "Plant Pricelist Details",
+      "pricelistEntity": "Plant Pricelist",
+      "pricelistListTitle": "Plant Pricelists",
+      "estPricelistDetailTitle": "Estimate Plant Pricelist Details",
+      "estPricelistEntity": "Estimate Plant Pricelist",
+      "estPricelistListTitle": "Estimate Plant Pricelists"
+	 }
+  }
+}

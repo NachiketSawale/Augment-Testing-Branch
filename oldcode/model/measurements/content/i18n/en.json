@@ -1,0 +1,46 @@
+﻿{
+	"model": {
+		"measurements": {
+			"modelMeasurementEntityName": "Model Measurement",
+			"modelMeasurementListTitle": "Measurements",
+			"modelMeasurementDetailTitle": "Measurement Details",
+			"modelMeasurementPointListTitle": "Measurement Point",
+			"modelMeasurementPointDetailTitle": "Measurement Point Details",
+			"modelMeasurementGroupListTitle": "Measurement Group",
+			"modelMeasurementGroupDetailTitle": "Measurement Group Details",
+			"measurementgroupfk": "Measurement Group",
+			"code": "Code",
+			"color": "Color",
+			"type": "Type",
+			"value": "Value",
+			"measurementfk": "Measurement",
+			"project": "Project",
+			"visible": "Visible",
+			"save": "Save Measurement",
+			"distance": "Distance",
+			"perimeter": "Perimeter",
+			"area": "Area",
+			"volume": "Volume",
+			"posx": "Position X",
+			"posy": "Position Y",
+			"posz": "Position Z",
+			"modes": {
+				"distance": "Measure a distance",
+				"perimeter": "Measure a perimeter",
+				"area": "Measure an area",
+				"volume": "Measure a volume",
+				"xy": "X/Y Displacement",
+				"z": "Z Displacement"
+			},
+			"lengthFormat": "{{meters}} m",
+			"areaFormat": "{{meters}} m²",
+			"volumeFormat": "{{meters}} m³",
+			"quickCreate": {
+				"title": "Create Measurement"
+			},
+			"filterColumn": "Filter",
+			"measurementLookupTitle": "Select Measurement",
+			"uom": "Unit of Measurement"
+		}
+	}
+}

@@ -1,0 +1,81 @@
+@use 'sass:math' as math;
+
+//
+// ***** Do not touch this file, if you are not the responsible screen designer
+//
+//-------------------------------------------------------------------------------
+//	 Core
+//-------------------------------------------------------------------------------
+@import "cloud/variables-new";
+@import "cloud/variables";
+@import "cloud/functions";
+@import "cloud/templates";
+@import "bootstrap/mixins";
+@import "cloud/normalize";
+@import "cloud/reset";
+@import "cloud/mixins";
+//-------------------------------------------------------------------------------
+//	 Generals
+//-------------------------------------------------------------------------------
+@import "cloud/general";
+@import "cloud/html";
+@import "cloud/bootstrab-overwrites";
+//-------------------------------------------------------------------------------
+//	 Mainframe
+//-------------------------------------------------------------------------------
+@import "cloud/mainframe";
+@import "cloud/header";
+@import "cloud/commandbar";
+@import "cloud/sidebar";
+@import "cloud/modalpopup";
+//obsolete?
+@import "cloud/loadingbar";
+@import "cloud/dragdrop";
+@import "cloud/layout";
+@import "cloud/portal";
+//-------------------------------------------------------------------------------
+//	 Controls
+//  -------------------------------------------------------------------------------
+@import "cloud/forms";
+@import "cloud/controls";
+@import "cloud/components";
+@import "cloud/desktoptiles";
+@import "cloud/container";
+@import "cloud/menu";
+@import "cloud/tabbar";
+@import "cloud/splitter";
+@import "cloud/grid";
+@import "cloud/textangular";
+@import "cloud/formatter";
+@import "cloud/dropdown";
+@import "cloud/contextmenu";
+@import "cloud/input-groups";
+@import "cloud/adress";
+@import "cloud/lookup";
+@import "cloud/desktopmainlist";
+@import "cloud/tree";
+@import "cloud/colorpicker";
+@import "cloud/imageviewer";
+@import "cloud/layoutmanager";
+@import "cloud/commentviewer";
+@import "cloud/workflow";
+@import "cloud/leaflet";
+@import "cloud/pagination";
+@import "cloud/panels";
+@import "cloud/select2";
+@import "cloud/codemirror";
+@import "cloud/datavis";
+@import "cloud/model";
+@import "cloud/process-steps";
+@import "cloud/slider";
+@import "cloud/upload-progress-bar";
+@import "cloud/planningboard";
+@import "cloud/editor";
+@import "cloud/badges";
+//-------------------------------------------------------------------------------
+// Other
+//  -------------------------------------------------------------------------------
+@import "cloud/colors";
+@import "cloud/common";
+@import "cloud/script";
+@import "cloud/container-layout";

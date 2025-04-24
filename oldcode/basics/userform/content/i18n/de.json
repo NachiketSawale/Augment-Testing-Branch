@@ -1,0 +1,33 @@
+{
+  "basics": {
+    "userform": {
+      "entityId": "ID",
+      "entityValidFrom": "Gültig von",
+      "entityValidTo": "Gültig bis",
+      "entityRubricFk": "Rubrik",
+      "entityWindowParameter": "Window Optionen",
+      "entityHtmlTemplateFileName": "Html Vorlage",
+      "noFormSelectedInfo": "Selektieren Sie zuerst ein Formblatt",
+      "noRubricSelectedInfo": "Selektieren Sie zuerst eine gültige Rubrik",
+      "overrideFieldListHeader": "Warnung",
+      "overrideFieldList": "Wollen Sie die bestehende Liste überschreiben ?",
+      "formListTitle": "Formblatt Liste",
+      "formDetailsTitle": "Formblatt Detail",
+      "formFieldListTitle": "Felderliste",
+      "entityFieldName": "Feldname",
+      "entityVisibleName": "Feldname (alias)",
+      "entityFieldType": "!Field Type",
+      "entitySqlQuery": "SQL Abfrage",
+      "entityDataSource": "Datenquelle",
+      "entityLookupQualifier": "Lookup Quelle",
+      "entityProcessingType": "Verarbeitung",
+      "entityWorkflowTemplateFk": "Trigger Workflow",
+      "Error_SqlQueryDoesNotFulfillAllSpecifications": "Geben Sie eine gültige SQL Abfrage ein (z.B. 'SELECT field FROM table WHERE id=@id')",
+      "defaultContainerTitle": "Formulardaten",
+      "newWindow": "!New Window",
+      "popWindow": "!Popup Window",
+      "tab": "!This Tab",
+      "editBy": "!Edit by"
+    }
+  }
+}

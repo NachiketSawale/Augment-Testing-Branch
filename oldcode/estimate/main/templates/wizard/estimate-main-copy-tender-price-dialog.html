@@ -1,0 +1,71 @@
+<div data-ng-controller="estimateMainCopyTenderPriceDialogController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<div>
+		<section class="modal-body">
+			<div style="height: 100%;width:100%">
+				<!-- div data-platform-alert data-error="error"></div-->
+				<!-- div data-platform-form-container data-form-container-options="formContainerOptions" entity="currentItem" class="fullheight"></div-->
+				<!-- div cloud-common-overlay data-loading="isLoading"></div-->
+				<!-- div ng-bind="errorDetail" data-ng-show="isFailed" class="alert alert-danger"  role="alert"></div-->
+				<ul class="list-group">
+					<li>
+						<div class="checkbox spaceToUp">
+							<label>
+								<input type="checkbox" name="copyTenderPriceToBoqItem" data-ng-model="currentItem.copyTenderPriceToBoqItem"
+								       ng-disabled="false" data-ng-change="copyTenderPriceToBoqItemChange()"/>
+								{{'estimate.main.copyTenderPriceToBoqItem' | translate}}
+							</label>
+						</div>
+					</li>
+					<li>
+						<ul class="subgroup">
+							<li>
+								<div class="radio spaceToUp">
+									<label>
+										<input type="checkbox" name="copyAQQuantityToBoqItem" data-ng-model="currentItem.copyAQQuantityToBoqItem"
+										       data-ng-disabled="!currentItem.copyTenderPriceToBoqItem"/>
+										{{'estimate.main.copyAQQuantityToBoqItem' | translate}}
+									</label>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="checkbox spaceToUp">
+							<label>
+								<input type="checkbox" name="copyTenderPriceToLineItem" data-ng-model="currentItem.copyTenderPriceToLineItem"
+								       ng-disabled="false" data-ng-change="copyTenderPriceToLineItemChange()"/>
+								{{'estimate.main.copyTenderPriceToLineItem' | translate}}
+							</label>
+						</div>
+					</li>
+					<li>
+						<ul class="subgroup">
+							<li>
+								<div class="radio spaceToUp">
+									<label>
+										<input type="checkbox" name="notCheckFixedPriceFlag" data-ng-model="currentItem.notCheckFixedPriceFlag"
+										       data-ng-disabled="!currentItem.copyTenderPriceToLineItem"/>
+										{{'estimate.main.notCheckFixedPriceFlag' | translate}}
+									</label>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isOkDisabled">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>
+
+
+

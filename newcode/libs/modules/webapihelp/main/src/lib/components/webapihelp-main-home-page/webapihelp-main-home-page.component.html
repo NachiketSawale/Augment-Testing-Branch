@@ -1,0 +1,14 @@
+<webapihelp-main-leftmenu (newCssStyle)="changeClass($event)"
+    (searchValue)="receivedSearchContent($event)"></webapihelp-main-leftmenu>
+
+<div [ngClass]="swaggerContentWidth">
+
+    <webapihelp-main-header (searchData)="receivedSearchContent($event)" [leftMenuSerachedValue]='searchedContent'
+        (setReloadFlag)="reloadFlagEvent($event)"></webapihelp-main-header>
+
+    <webapihelp-main-swagger-content [searchData]="searchedContent" (resetReloadFlag)="reloadFlagEvent($event)">
+    </webapihelp-main-swagger-content>
+
+    <webapihelp-main-scroll-to-top></webapihelp-main-scroll-to-top>
+
+</div>

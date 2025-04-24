@@ -1,0 +1,16 @@
+<div data-ng-controller="procurementPackageImportResultController">
+    <header class="modal-header main-color" data-ng-include="modalOptions.headerTemplateUrl"></header>
+    <section class="modal-body">
+        <div data-platform-alert data-error="error"></div>
+        <div>
+            <div>
+                <div data-platform-grid class="subview-container" data="gridData"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div>
+            <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{modalOptions.cancelBtnText | translate}}</button>
+        </div>
+    </footer>
+</div>

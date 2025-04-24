@@ -1,0 +1,40 @@
+<div data-ng-controller="procurementSaveNewVersionDialogController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<div class="platform-form-container">
+		<div class="platform-form-group" style="padding: 10px 10px 10px 50px">
+			<div class="platform-form-row form-group">
+				<h4>
+					{{'procurement.pricecomparison.saveNewVersionInfo' | translate}}
+				</h4>
+			</div>
+			<div style="padding-left:40px;padding-top:5px;">
+				<div class="platform-form-row form-group">
+					<div class="radio spaceToUp">
+						<label>
+							<input type="radio" data-ng-checked="true" ng-model="modalOptions.model.saveNewVersionSelect" name="saveNewVersionSelect" value="saveModified"/>
+							{{'procurement.pricecomparison.onlySaveModified' | translate}}
+						</label>
+					</div>
+				</div>
+				<div class="platform-form-row form-group">
+					<div class="radio spaceToUp">
+						<label>
+							<input type="radio" ng-model="modalOptions.model.saveNewVersionSelect" name="saveNewVersionSelect" value="saveAll"/>
+							{{'procurement.pricecomparison.saveAllQuote' | translate}}
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="modal-footer">
+		<button ng-if="modalOptions.isShown('ok')" class="ok btn" data-ng-class="(modalOptions.defaultButton === 'ok') ? 'btn-return' : 'btn-default'" data-ng-click="modalOptions.ok()"
+		        data-ng-disabled="modalOptions.isDisabled('ok')">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button ng-if="modalOptions.isShown('cancel')" class="cancel btn" data-ng-class="(modalOptions.defaultButton === 'cancel') ? 'btn-return' : 'btn-default'" data-ng-click="modalOptions.cancel()"
+		        data-ng-disabled="modalOptions.isDisabled('cancel')">
+			{{modalOptions.cancelButtonText}}
+		</button>
+	</footer>
+</div>

@@ -1,0 +1,30 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "action": {
+        "question": "Question",
+        "hint": "Hint",
+        "context": "Context",
+        "isOptional": "Optional"
+      },
+      "configuration": "Configuration",
+      "configurationTitle": "Configuration",
+      "entityChatbotConfigurationCode": "Code",
+      "entityChatbotConfigurationDescription": "Description",
+      "entityChatbotConfigurationIslive": "Is Live",
+      "entityChatbotConfigurationNlpAppId": "LUIS App",
+      "entityChatbotConfigurationNlpCulture": "Culture",
+      "entityChatbotConfigurationNlpName": "NLP Model Name",
+      "entityChatbotConfigurationUpdatedAt": "Updated At",
+      "entityChatbotHeaderLanguageFK": "Language",
+      "entityChatbotHeaderModuleId": "Rubric",
+      "entityChatbotWf2intentIntent": "Intent",
+      "entityChatbotWf2intentWfeTpFk": "Entity Workflow",
+      "wf2intentTitle": "Workflow&Intent Mapping ",
+      "headerTitle": "Header",
+      "entityChatbotHeaderIsGeneral": "Is General",
+      "uniqueValueErrorMessage": "Code must be unique!",
+      "entityChatbotConfigurationNlpActiveVersion": "ActiveVersion"
+    }
+  }
+}

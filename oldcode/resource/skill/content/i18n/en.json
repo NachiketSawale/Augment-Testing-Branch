@@ -1,0 +1,15 @@
+﻿{
+	"resource": {
+		"skill": {
+			"skillListTitle": "Skills",
+			"skillDetailTitle": "Skill Details",
+			"skillChainListTitle": "Skill Chains",
+			"skillChainDetailTitle": "Skill Chain Details",
+			"resourceSkillEntity": "Skill",
+			"resourceSkillChainEntity": "Skill Chain",
+			"chainedSkill": "Chained Skill",
+			"isMandatory": "Is Hard Skill",
+			"TypeFk": "Resource Type"
+		}
+	}
+}

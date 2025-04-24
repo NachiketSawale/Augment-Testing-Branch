@@ -1,0 +1,99 @@
+<div data-ng-controller="ProcurementPesCreateInvoiceController" class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div data-ng-switch="modalOptions.step">
+            <div data-ng-switch-when="step1">
+                <div class="alert alert-warning" data-ng-show="stepOneShowMessage">
+                    <button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ modalOptions.cannotCreateMessage }}
+                </div>
+                <div class="platform-form-row form-group">
+                    <input type="radio" name="method" data-ng-model="modalOptions.createMehtod" value="one2one" style="vertical-align:text-bottom;margin: 2px 0;" data-ng-disabled="stepOneNextDisabled">
+                    {{::modalOptions.createInvoiceForOnePes}}
+                </div>
+                <div class="platform-form-row form-group">
+                    <input type="radio" name="method" data-ng-model="modalOptions.createMehtod" value="one2samecontract" style="vertical-align:text-bottom;margin: 2px 0;" data-ng-disabled="stepOneNextDisabled">
+                    {{::modalOptions.createInvoiceForSameContract}}
+                </div>
+                <div class="platform-form-row form-group">
+                    <input type="radio" name="method" data-ng-model="modalOptions.createMehtod" value="one2all" style="vertical-align:text-bottom;margin: 2px 0;" data-ng-disabled="stepOneNextDisabled">
+                    {{::modalOptions.createInvoiceForAllPes}}
+                </div>
+            </div>
+            <div data-ng-switch-when="step2">
+                <section class="modal-body">
+                    <div class="alert alert-warning">
+                        <button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{ modalOptions.message }}
+                        <span data-ng-if="currentItem.vatGroupMessage !== null">
+                            <br/>
+                            {{ currentItem.vatGroupMessage[0] }}
+                            <br/>
+                            {{ currentItem.vatGroupMessage[1] }}
+                        </span>
+                    </div>
+                    <div style="height: 100%;">
+                        <div class="fullheight" style="overflow-y: auto">
+                            <div data-platform-form-container data-form-container-options="formContainerOptions" entity="currentItem" class="fullheight">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div data-ng-switch-when="step3">
+                <section class="modal-body" style="min-height: 60px;">
+                    <div cloud-common-overlay data-loading="isLoading"></div>
+                    <div data-ng-show="createFailDetailShow" role="alert" style="overflow-y:auto;margin:0;">
+                        <div data-ng-repeat="d in createFailDetail">
+                            <div ng-bind="d"></div>
+                        </div>
+                    </div>
+                    <div data-ng-show="createSuccessDetailShow" role="alert" style="overflow-y:auto;display: flex;">
+	                    <div class="icon tlb-icons ico-info" style="width: 40px;height: 40px;"></div>
+                        <div style="margin: 3px 0px 0px 16px" data-ng-repeat="info in createSuccessDetail track by $index">
+                            <div ng-bind="info.msgFirst"></div>
+	                        <div ng-bind="info.msgSecond"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <div data-ng-switch="modalOptions.step">
+        <footer class="modal-footer" data-ng-switch-when="step1">
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.next()" data-ng-disabled="stepOneNextDisabled">
+                {{::modalOptions.nextButtonText}}
+            </button>
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+                {{::modalOptions.cancelButtonText}}
+            </button>
+        </footer>
+        <footer class="modal-footer" data-ng-switch-when="step2">
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.back()"  data-ng-disabled="previousItemDisabled" >
+                {{::modalOptions.previousButtonText}}
+            </button>
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.next()" data-ng-disabled="nextItemDisabled">
+                {{::modalOptions.nextButtonText}}
+            </button>
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="hasErrors()" data-ng-hide="isSuccessed||isFailed">
+                {{::modalOptions.actionButtonText}}
+            </button>
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+                {{::modalOptions.cancelButtonText}}
+            </button>
+        </footer>
+        <footer class="modal-footer" data-ng-switch-when="step3">
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.goToInvoice()" data-ng-hide="!isSuccessed">
+                {{::modalOptions.goToButtonText}}
+            </button>
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+                {{::modalOptions.closeButtonText}}
+            </button>
+        </footer>
+    </div>
+</div>

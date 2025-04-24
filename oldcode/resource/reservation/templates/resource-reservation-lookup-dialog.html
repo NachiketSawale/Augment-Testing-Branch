@@ -1,0 +1,21 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body flex-box flex-column">
+    <div data-platform-form data-form-options="formOptions" data-entity="request"></div>
+    <div ng-controller="resourceReservationLookupController" class="flex-box flex-column subview-container flex-element">
+        <platform-Grid data="gridData"></platform-Grid>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disableRefreshButton" data-ng-click="modalOptions.refresh()">
+        {{modalOptions.refreshButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disableOkButton" data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

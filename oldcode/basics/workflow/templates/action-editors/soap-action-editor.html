@@ -1,0 +1,85 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="inputopen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!inputopen"></div>
+            </span>
+		</div>
+
+		<div class="platform-form-group">
+			<!--Block for Url-->
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.url' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.url" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<!-- Block for Action-->
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.action' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.action" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<!-- Block for Content-->
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.content' | translate}}</div>
+				<div class="platform-form-col">
+					<div class="filler" data-ng-model="input.content"
+					     data-options="codeMirrorOptionsContent" data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<!-- Block for Options-->
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.options' | translate}}</div>
+				<div class="platform-form-col">
+					<div class="filler" data-ng-model="input.options"
+					     data-options="codeMirrorOptionsContent" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputClientPost' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.response" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputClientPostStatus' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.responseStatus" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

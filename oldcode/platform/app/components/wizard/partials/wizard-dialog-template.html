@@ -1,0 +1,19 @@
+<div class="wizard-wrapper wizard-dialog wizard-dialog-1" data-ng-controller="platformWizardDialogController">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{wizard.title + (wizard.title ? ' - ' : '') + getCurrentStepNumber() + ' / ' +
+		getTotalStepCount() + ' ' + getCurrentStepTitle()}}</h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(!!selectedStep.stepDefinition.disallowCancel)"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+	<section class="modal-body">
+		<div data-platform-wizard-dialog-body class="wizard-dialog-body"></div>
+	</section>
+	<div class="modal-footer">
+		<button data-ng-disabled="currentStep.disallowBack || (getCurrentStepNumber() === 1)" type="button" class="btn btn-default" data-ng-click="wizardCommands.goToPrevious()" data-ng-bind="wzStrings.back"></button>
+		<button data-ng-disabled="currentStep.disallowNext || (getCurrentStepNumber() === getEnabledSteps().length)" type="button" class="btn btn-default" data-ng-click="wizardCommands.goToNext()" data-ng-bind="wzStrings.next"></button>
+		<button data-ng-disabled="!currentStep.canFinish" type="button" class="btn btn-default" data-ng-click="wizardCommands.finish()" data-ng-bind="wzStrings.finish"></button>
+		<button data-ng-disabled="currentStep.disallowCancel" type="button" data-ng-click="$close(false)" class="btn btn-default" data-ng-bind="wzStrings.cancel"></button>
+	</div>
+</div>

@@ -1,0 +1,320 @@
+<script type="text/ng-template" id="lookup-input.html">
+    <div class="input-group lookup-container">
+        $$imageHtmlHolder$$
+        <input type="text" class="$$inputStyleHolder$$"
+               data-ng-model="$$modelHolder$$"
+               data-ng-model-options="{ updateOn: 'default' }"
+               data-ng-readonly="settings.readOnly || settings.disableInput || ngReadonly"
+               data-ng-keydown="onKeydown($event)"
+               data-ng-change="onChange($$modelHolder$$)"
+               data-ng-blur="onBlur($event)"
+               data-ng-disabled="settings.disableInput || settings.disabled" $$validationHolder$$ />
+
+        <span class="input-group-btn" data-ng-hide="settings.readOnly || ngReadonly">
+            <button btn-clear class="btn btn-default control-icons ico-input-delete $$buttonStyleHolder$$"
+                    data-lookup-show="settings.showClearButton"
+                    data-ng-disabled="settings.disabled || settings.disableButton"
+                    data-ng-click="clearValue($event)">
+            </button>
+            <button btn-edit class="btn btn-default $$buttonStyleHolder$$"
+                    data-lookup-show="settings.showEditButton"
+                    data-ng-disabled="settings.disabled || settings.disableButton"
+                    data-ng-click="editValue($event)">
+                $$editIconHolder$$
+            </button>
+            $$buttonsHtmlHolder$$
+        </span>
+    </div>
+</script>
+
+<script type="text/ng-template" id="input-image.html">
+    <span class="lookup-img-box" data-ng-bind-html="displayImageHtml()"></span>
+</script>
+
+<script type="text/ng-template" id="input-buttons.html">
+    <button class="btn btn-default $$buttonStyleHolder$$"
+            data-ng-repeat="button in options.buttons"
+            data-ng-disabled="!button.canExecute()"
+            data-ng-click="button.execute($event)">
+        <img class="block-image" data-ng-src="{{ ::button.img }}" />
+    </button>
+</script>
+
+<script type="text/ng-template" id="lookup-composite.html">
+    <div class="lg-4 md-4" $$directiveHolder$$ $$entityHolder$$ $$configHolder$$ $$disabledHolder$$ $$readonlyHolder$$ $$resultHolder$$ data-options="lookupOptions"></div>
+    <!-- Change because of the Navigator button(layout bug). Add navigator-button to composite-last-item-container  -->
+    <div class="lg-8 md-8 form-control composite-last-item">
+        <input class="input-group-content" data-ng-model="description" readonly />
+    </div>
+</script>
+
+<script type="text/ng-template" id="lookup.html">
+    <div data-basics-lookupdata-lookup-input-base data-platform-control-validation data-options="lookupOptions"
+         $$entityHolder$$ $$disabledHolder$$ $$configHolder$$ $$readonlyHolder$$ $$resultHolder$$>
+    </div>
+</script>
+
+<script type="text/ng-template" id="tree-control-lookup.html">
+    <div treecontrol class="tree-classic"
+         tree-model="dataForTheTree"
+         options="treeOptions"
+         order-by="{{ treeOptions.orderBy }}"
+         on-selection="onSelection(node)"
+         selected-node="selectedNode"
+         expanded-nodes="treeOptions.expandedNodes">
+    <span data-ng-mouseenter="onFocus(node)">
+         <span style="vertical-align: middle; display: inline-block" class="sm control-icons" ng_class="::classByType(node)"> </span>
+        <label ng_bind="getDisplayText(node)"></label>
+    </span>
+    </div>
+</script>
+
+<script type="text/ng-template" id="grid-dialog-lookup.html">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{ settings.title.name | translate }}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+
+    <section class="modal-body">
+       <div class="input-group form-control">
+          <input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="onSearchInputKeydown($event, searchValue)" />
+		    <span class="input-group-btn" style="margin-left: -1px;">
+			    <button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="onSearch(searchValue)" title="search"></button>
+		    </span>
+        </div>
+        <div data-ng-if="enabledPaging()">
+            <div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+                <div class="form-control flex-align-center" style="border: none;">
+                    <div class="input-group-content" data-ng-bind="getPageText()"></div>
+                </div>
+
+                <span class="input-group-btn">
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageUp()}"
+                        data-ng-disabled="isLoading||!canPageUp()"
+                        data-ng-click="pageUp()" style="border: none;"><span class="control-icons ico-previous"></span></button>
+
+				<button class="btn btn-default"
+                        data-ng-class="{btndeactive:!canPageDown()}"
+                        data-ng-disabled="isLoading||!canPageDown()"
+                        data-ng-click="pageDown()" style="border: none;"><span class="control-icons ico-next"></span></button>
+			</span>
+            </div>
+        </div>
+		 <div data-ng-if="settings.formContainerOptions.formOptions.configure" class="lookup-grid-container overflow-hidden">
+			 <div class="subview-header toolbar">
+				 <h2 class="title fix" title="{{settings.formContainerOptions.title | translate}}">{{settings.formContainerOptions.title | translate}}</h2>
+			 </div>
+			 <div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden">
+				 <div data-platform-form-container data-form-container-options="settings.formContainerOptions" data-entity="formData" class="flex-element flex-basis-auto" style="max-height: 200px;"></div>
+			 </div>
+		 </div>
+        <div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+            <div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+                <h2 class="title fix" title="{{'cloud.common.searchResults' | translate}}">{{'cloud.common.searchResults' | translate}}</h2>
+                <div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+            </div>
+            <div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden">
+                <div class="lookup-grid" data-platform-grid data="grid"></div>
+            </div>
+            <div data-cloud-common-overlay data-loading="isLoading"></div>
+        </div>
+        <div data-ng-show="alerts && alerts.length">
+            <div class="lookup-alert {{::alert.css}}" data-ng-repeat="alert in alerts">
+                <span data-ng-bind="alert.title"></span>: <span data-ng-bind="alert.message"></span>
+            </div>
+        </div>
+
+		 <div class="platform-form-row">
+			 <br/>
+			 <label class="platform-form-label" data-ng-show="settings.gridOptions.showNote">{{'basics.common.noteMsg'| translate}}</label>
+		 </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="refresh(true)">
+            {{'basics.common.button.refresh' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="okBtnDisabled()" data-ng-click="close(true)">
+            {{'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="close(false)">
+            {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+</script>
+
+<script type="text/ng-template" id="combo-popup-lookup.html">
+    <ol class="combo-canvas flex-element" style="position:relative;margin: 2px;" data-ng-mousedown="onMouseDown($event)">
+        <li class="lookup-item {{ getSelectedClass(item) }}"
+            data-ng-repeat="item in canvasData"
+            data-ng-click="onItemClick(item)"
+            data-ng-mouseenter="onMouseEnter(item)"
+            data-ng-style="getStyle(item)"
+            data-ng-bind-html="getItemHtml(item)">
+        </li>
+    </ol>
+    <div data-cloud-common-overlay data-loading="isLoading"></div>
+</script>
+
+<script type="text/ng-template" id="grid-popup-lookup.html">
+    <div class="flex-box flex-column flex-element">
+        <div data-platform-grid data="grid"></div>
+        <div data-cloud-common-overlay data-loading="isLoading"></div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="lookup-popup-footer.html">
+    <div class="popup-tlb">
+        <button class="control-icons ico-refresh" data-ng-click="refresh()" data-ng-disabled="isLoading" title="{{::settings.buttonTitles.refresh | translate}}"></button>
+        <span data-ng-show="settings.dataView.dataPage.enabled">
+            <button class="control-icons ico-previous" data-ng-click="pageUp()" data-ng-disabled="!canPageUp()" title="{{::settings.buttonTitles.prev | translate}}"></button>
+            <span data-ng-bind="getPageText()"></span>
+            <button class="control-icons ico-next" data-ng-click="pageDown()" data-ng-disabled="!canPageDown()" title="{{::settings.buttonTitles.next | translate}}"></button>
+        </span>
+    </div>
+</script>
+
+<script type="text/ng-template" id="cell-buttons.html">
+    <button title="{{ ::button.title | translate }}" class="btn btn-default" data-ng-repeat="button in options.buttons" data-ng-disabled="!button.canExecute()" data-ng-click="button.execute($event, editValue)">
+        <img class="block-image" data-ng-src="{{ ::button.img }}" />
+    </button>
+</script>
+
+<script type="text/ng-template" id="form-buttons.html">
+    <button class="btn btn-default input-sm"
+            data-ng-repeat="button in options.buttons"
+            data-ng-disabled="!button.canExecute()"
+            data-ng-click="button.execute($event, editValue)"
+            title="{{ ::button.title | translate }}">
+        <img class="block-image" data-ng-src="{{ ::button.img }}" />
+    </button>
+</script>
+
+<script type="text/ng-template" id="cell-ext-buttons.html">
+    <button data-ng-repeat="button in options.extButtons" class="btn btn-default {{::button.class}}" title="{{ ::button.title | translate }}"
+            data-ng-disabled="!button.canExecute()" data-ng-click="button.execute($event, editValue)" data-ng-style="button.style">
+    </button>
+</script>
+
+<script type="text/ng-template" id="form-ext-buttons.html">
+    <button class="btn btn-default input-sm {{::button.class}}" title = "{{::button.title | translate }}"
+            data-ng-repeat="button in options.extButtons"
+            data-ng-disabled="!button.canExecute()"
+            data-ng-click="button.execute($event, editValue)"
+            data-ng-style="button.style">
+    </button>
+</script>
+
+<script type="text/ng-template" id="lookup-general.html">
+    <div class="input-group lookup-container $$inputGroupStyleHolder$$" data-ng-click="handleInputGroupClick($event)">
+        $$inputGroupContentHolder$$
+        <span class="input-group-btn" data-ng-hide="settings.readOnly || ngReadonly">
+            <button btn-clear class="btn btn-default control-icons ico-input-delete $$btnStyleHolder$$"
+                    data-lookup-show="settings.showClearButton"
+                    data-ng-disabled="settings.disabled || settings.disableButton"
+                    data-ng-click="clearValue($event)" title="{{ ::settings.buttonTitles.clear | translate }}">
+            </button>
+            <button btn-edit class="btn btn-default $$btnStyleHolder$$"
+                    data-lookup-show="settings.showEditButton"
+                    data-ng-disabled="settings.disabled || settings.disableButton"
+                    data-ng-click="editValue($event)" title="{{ ::settings.buttonTitles.edit | translate }}">
+                $$editIconHolder$$
+            </button>
+            <button btn-add class="btn btn-default control-icons ico-input-add"
+                                data-lookup-show="settings.showAddButton && !(settings.readOnly || ngReadonly) && (!settings.hasCheckedAddPermission ? settings.checkAddPermission() : settings.hasAddPermission)"
+                                data-ng-disabled="settings.disabled || settings.disableButton"
+                                data-ng-click="addValue($event)" title="{{ ::settings.buttonTitles.add | translate }}">
+            </button>
+            <button btn-detail class="btn btn-default control-icons ico-grip"
+                                data-lookup-show="settings.showDetailButton"
+                                data-ng-disabled="settings.disabled || settings.disableButton"
+                                data-ng-click="showDetail($event)" title="{{ ::settings.buttonTitles.showDetail | translate }}">
+            </button>
+            $$buttonsHtmlHolder$$
+        </span>
+        <span class="input-group-btn">
+            $$extButtonsHtmlHolder$$
+        </span>
+    </div>
+</script>
+
+<script type="text/ng-template" id="input-group-content-default.html">
+    <input type="text" class="$$inputStyleHolder$$ input-group-content"
+           data-ng-model="$$modelHolder$$"
+           data-ng-model-options="{ updateOn: 'default' }"
+           data-ng-readonly="settings.readOnly || settings.disableInput || settings.disabled || ngReadonly"
+           data-ng-keydown="onKeydown($event)"
+           data-ng-change="onChange($$modelHolder$$)"
+           data-ng-focus="onFocus($event)"
+           data-ng-blur="onBlur($event)"
+           $$validationHolder$$ $$placeholder$$ $$restrictHolder$$ />
+</script>
+
+<script type="text/ng-template" id="input-group-content-custom.html">
+    <div class="input-group-content" tabindex="-1" data-ng-bind-html="getCustomHtml()" data-ng-keydown="onKeydown($event)"></div>
+</script>
+
+<script type="text/ng-template" id="input-group-content-multiple.html">
+    <div class="flex-box flex-element overflow-hidden" tabindex="-1" data-basics-lookup-data-lookup-input-multiple></div>
+</script>
+
+<script type="text/ng-template" id="input-multiple.html">
+    <div class="flex-element multiple-container">
+        <span data-ng-repeat="current in selectedItems track by $index" class="multiple-item">
+            <span data-ng-bind="getLabel(current)" class="multiple-label"></span>
+            <button  class="btn control-icons ico-input-delete" data-ng-click="deleteItem(current)" data-ng-hide="settings.readOnly || settings.disableInput || ngReadonly"></button>
+        </span>
+        <input class="border-none search-box" data-ng-model="searchText" data-ng-keydown="onKeydown($event)"
+               data-ng-keyup="onKeyup($event)"
+               data-ng-change="onChange(searchText)"
+               data-ng-hide="settings.readOnly || settings.disableInput || ngReadonly"/>
+    </div>
+</script>
+
+<style type="text/css">
+    .multiple-container
+    {
+        padding-left: 4px;
+    }
+
+    .multiple-item
+    {
+        display: inline-block;
+        line-height: 16px;
+        padding: 0 2px;
+    }
+
+    .multiple-label
+    {
+       text-decoration-line: underline;
+    }
+
+    .search-box
+    {
+        outline: none;
+        line-height: 28px;
+        min-width: 18px;
+        padding-left: 4px;
+    }
+</style>
+
+<script type="text/ng-template" id="virtual-list.html">
+    <ol class="combo-canvas flex-element" style="position:relative;margin: 2px;" data-ng-mousedown="onMouseDown($event)">
+        <li class="lookup-item {{ getSelectedClass(item) }}"
+            data-ng-repeat="item in renderList"
+            data-ng-click="onItemClick(item)"
+            data-ng-mouseenter="onMouseEnter(item)"
+            data-ng-style="getStyle(item)"
+            data-ng-bind-html="getItemHtml(item)">
+        </li>
+    </ol>
+</script>
+
+<script type="text/ng-template" id="list-view.html">
+    <div class="flex-box flex-element" data-basics-lookupdata-virtual-list data-list="list" data-options="settings"></div>
+    <div data-cloud-common-overlay data-loading="isLoading"></div>
+</script>

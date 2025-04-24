@@ -1,0 +1,63 @@
+<div class="filler" data-ng-controller="basicsWorkflowSelectDialog">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="radiolist-container ng-pristine ng-untouched ng-valid ng-isolate-scope radio-list ng-not-empty">
+				<div class="radio {{item.cssClass}}" ng-repeat="item in input.typeRadioGroupOpt">
+					<label class="ng-binding" for="{{item.value}}">
+						<input class="ng-pristine ng-untouched ng-valid ng-not-empty" id="{{item.value}}" name="typeSelectedRadioGroup" ng-click="onTypeSelectedChanged(item.value)"
+						       ng-disabled="readonly"
+						       ng-model="input.typeSelectedMode"
+						       ng-value="item.value" type="radio"
+						       value="item.value">
+						{{item.description}}
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="radiolist-container" data-ng-model="input.editorMode" data-on-selection-changed="onRadioGroupOptChanged(value)"
+			     data-options="input.radioGroupOpt" data-radiolistctrl>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group margin-top-ld" data-ng-show="input.editorMode === 1">
+		<div class="platform-form-row">
+			<div class="platform-form-col border-all">
+				<div class="toolbar">
+					<h3 class="title">{{'basics.workflow.modalDialogs.selectItems' | translate}}</h3>
+					<div data-list="tools" data-platform-menu-list></div>
+				</div>
+
+				<div class="flex-box filler">
+					<platform-Grid class="no-header" data="gridData"></platform-Grid>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="platform-form-group margin-top-ld" data-ng-show="input.editorMode === 2">
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'cloud.common.displayMember' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-domain="description" data-domain-control data-model="input.displayMemberScriptValue"></div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'cloud.common.valueMember' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-ng-model="input.valueMemberScriptValue" data-options="input.codeMirrorOptions"
+				     data-script-editor-directive></div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'cloud.common.items' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-ng-model="input.itemsScriptValue" data-options="input.codeMirrorOptions"
+				     data-script-editor-directive></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<!--
+<div estimate-source-line-items-kendo-splitter data-options="mainSplitter" class="flex-element">
+	<div id="ui-layout-top">
+		<div data-platform-form-container data-form-container-options="formContainerOptions"
+		     data-entity="currentItem" class="flex-element">
+		</div>
+	</div>
+	<div id="ui-layout-bottom">
+		<div ng-switch="currentItem.EstimateFilterType" class="fullheight flex-box flex-column">
+			<div ng-switch-when="1" class="fullheight flex-box flex-column">
+				<div estimate-main-copy-source-line-item-directive class="pane-b flex-element border-none flex-box flex-column"></div>
+			</div>
+			<div ng-switch-when="2" class="fullheight flex-box flex-column">
+				<div estimate-main-copy-source-assemblies-directive class="pane-b flex-element border-none flex-box flex-column"></div>
+			</div>
+		</div>
+	</div>
+</div>-->
+<div data-split-container class="border-none" data-option='{"orientation": "vertical"}'>
+	<div data-split-container-view data-option='{ "collapsible": true, "size": "30%" }' id="28a2d392950b42979137f21abc3aca05">
+		<div data-ng-controller="estimateMainCopySourceFilterController" class="fullheight">
+			<div data-platform-form-container data-form-container-options="formContainerOptions"
+			     data-entity="currentItem" class="flex-element">
+			</div>
+		</div>
+	</div>
+	<div id="ui-layout-bottom">
+		<div ng-switch="currentItem.EstimateFilterType" class="fullheight flex-box flex-column">
+			<div ng-switch-when="1" class="fullheight flex-box flex-column">
+				<div estimate-main-copy-source-line-item-directive class="pane-b flex-element border-none flex-box flex-column"></div>
+			</div>
+			<div ng-switch-when="2" class="fullheight flex-box flex-column">
+				<div estimate-main-copy-source-assemblies-directive class="pane-b flex-element border-none flex-box flex-column"></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html class="k-webkit k-webkit55">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=11">
+	<title>RIB 4.0</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="images/rib-logo.ico">
+	<link href="css/app-icons.css" rel="stylesheet"/>
+	<link href="css/control-icons.css" rel="stylesheet"/>
+	<link href="css/tree-control-attribute.css" rel="stylesheet"/>
+	<link href="css/bootstrap.css" rel="stylesheet"/>
+	<link href="css/cloud.css" rel="stylesheet"/>
+</head>
+<body>
+<div style="height: 100%;">
+	<div id="appContainer">
+
+		<div class="commonBackdrop" id="companyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		     aria-hidden="true">
+			<div class="modal-dialog primary" id="companyForm" style="width: 650px;">
+				<div class="modal-content">
+					<header class="modal-header">
+						<div class="app-icons ico-rib-logo-text productLogo" title="RIB 4.0"></div>
+						<div class="itwo40-logo app-icons ico-itwo40-logo-wh pull-right"></div>
+					</header>
+
+					<section class="modal-body">
+						<div class="wait-overlay login-form-loading" style="display: none;">
+							<div class="box">
+								<div class="spinner-lg"></div>
+							</div>
+						</div>
+						<div>
+
+							<h3 class="section-header">Please choose a company and your access role.</h3>
+
+							<div class="platform-form-group">
+								<div class="platform-form-row">
+									<span class="platform-form-label">Company</span>
+									<div class="platform-form-col">
+										<div id="company-scroller" class="form-control" style="min-height: 100px; height: auto;">
+											<div id="company-tree" treecontrol class="tree-classic">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<span class="platform-form-label">Role</span>
+									<div class="platform-form-col company-roles">
+
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<span class="platform-form-label">Data Language</span>
+									<div class="platform-form-col data-language">
+
+									</div>
+								</div>
+							</div>
+							<div class="pane-b">
+								<h3></h3>
+							</div>
+						</div>
+						<div class="processingInfo">
+							<span></span>
+						</div>
+						<hr>
+					</section>
+
+					<footer class="modal-footer">
+						<button id="btncontinues" type="button" class="btn btn-primary" disabled="disabled">
+							Continue
+						</button>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script src="../config.js"></script>
+<script src="./config.js"></script>
+<script src="./js/lib/jquery-3.7.1.js"></script>
+<script src="./js/utility.js"></script>
+<script src="./js/jq-ext.js"></script>
+<script src="./js/auth-service.js"></script>
+<script src="./js/company.js"></script>
+</body>
+</html>

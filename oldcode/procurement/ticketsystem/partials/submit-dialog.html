@@ -1,0 +1,45 @@
+<div data-ng-controller="procurementTicketsystemSubmitDialogController">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close()"
+		        aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+		<h2 class="modal-title" data-ng-bind="modalOptions.headerText"></h2>
+	</header>
+	<div>
+		<section class="modal-body">
+			<div class="fullheight">
+				<div class="fullheight" style="overflow-y: auto">
+					<div data-platform-alert data-error="error"></div>
+					<div data-platform-form data-form-options="formOptions" data-entity="submitcart"></div>
+					<div class="platform-form-group">
+						<div class="platform-form-row"> <!--data-ng-show="showCreateReqOrConBySupplier()"-->
+							<input type="checkbox" data-ng-disabled="disableCreateReqOrConBySupplier()" data-ng-model="submitcart.CreateReqOrConBySupplier">
+							<label class="platform-form-label">Create separate requisition or contract by each material supplier</label>
+						</div>
+						<div class="platform-form-row" data-ng-show="showCreateSeparateContractForEachItem()">
+							<input type="checkbox" data-ng-model="submitcart.CreateSeparateContractForEachItem">
+							<label class="platform-form-label">Create separate contract for each material</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="refreshDeliverDate()" data-ng-disabled="isSubmitting"
+				data-ng-bind="modalOptions.refreshButtonText"> <!-- data-ng-show="showRefreshBtn()"-->
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isSubmitting"
+		        data-ng-bind="modalOptions.actionButtonText">
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()" data-ng-disabled="isSubmitting"
+		        data-ng-bind="modalOptions.closeButtonText">
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="companyOptions.loadingInfo"></div>
+</div>
+
+
+
+

@@ -1,0 +1,30 @@
+<script type="text/ng-template" id="project-navigator/project-navigator-tree-node-template.html">
+	<div class="navielement projectname tree-accordion-header flex-box" basics-common-project-navigator-tree-context-menu data-title="@@nodetitletext@@">
+			<div class="nodetoggleimg header-collapse control-icons ico-arrow-down"></div>
+			<div class="nodetoggle header-body flex-element">
+				<div class="nodeimg" ng-if="@@shownodeimg@@">
+					<svg data-cloud-desktop-svg-image data-sprite="app-small-icons" data-image="@@nodeimgicon@@" data-color="@@nodeimgiconcolor@@" class="filler"></svg>
+				</div>
+				<button class="@@buttonclass@@ nodetitle @@datatype@@" data-ng-click="@@navigateOnClick@@" title="@@nodetooltiptext@@"
+				        data-on-filter="@@filterfn@@"
+				        style="cursor:@@cursorstyle@@;">
+					@@nodetitletext@@</button>
+				@@favButton@@
+			</div>
+	</div>
+<ng-transclude class="transclude-element"></ng-transclude>
+</script>
+
+<script type="text/ng-template" id="project-navigator/project-navigator-tree-leaf-template.html">
+	<button class="flex-box rw @@datatype@@" basics-common-project-navigator-tree-context-menu data-ng-click= "@@ngclick@@">
+		<ul class="flex-element rw-content">
+			<li class="onClickLeave title" title="@@leaftitle@@">@@leaftitle@@</li>
+		</ul>
+	</button>
+</script>
+
+<script type="text/ng-template" id="project-navigator/project-navigator-tree-context-menu-template.html">
+	<div class="popup-content fullwidth" platform-navigate-list-items>
+		<div data-platform-menu-list data-list="contextMenuItems" data-init-once data-popup ></div>
+	</div>
+</script>

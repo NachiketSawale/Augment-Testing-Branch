@@ -1,0 +1,60 @@
+<div class="modal-wrapper" ng-controller="procurementPesCreateDeltaPesWizardController">
+
+    <header class="modal-header main-color"
+         data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+
+    <section  class="modal-body">
+        <!--form-->
+        <div class="platform-form-group platform-lg" style="overflow: hidden; margin: 10px 0 20px;">
+            <div class="platform-form-row" style="height: 1.2em;">
+                <div style="display: inline-block; width: 55%; margin-right: 4%;">
+                    <label class="platform-form-label">{{'procurement.pes.matPriceListLabel' | translate}}</label>
+                    <div class="platform-form-col">
+                        <!--class="lg-12 md-12"-->
+                        <div basics-lookupdata-simple
+                             data-ng-model="models.mdcPriceListEntity.Id"
+                             data-entity="models.mdcPriceListEntity"
+                             data-options="lookupOptions.materialPriceList" >
+                        </div>
+                    </div>
+                </div>
+                <div style="display: inline-block; width: 25%; margin-right: 1%;">
+                    <label class="platform-form-label">{{'procurement.pes.validDateLabel' | translate}}</label>
+                    <div class="platform-form-col">
+                        <div class="form-control ng-not-empty" data-domain-control
+                             data-domain="date"
+                             data-ng-model="models.validDate"
+                             data-options="lookupOptions.validDateOptions"></div>
+                    </div>
+                </div>
+                <div style="display: inline-block; width: 12%; float: right; text-align: right;">
+                    <!--<div class="platform-form-col">-->
+                        <button type="button" class="btn btn-default"  data-ng-click="methods.reloadPesItem()" data-ng-disabled="okBtnDisabled()">
+                            {{'cloud.common.reload' | translate}}
+                        </button>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-wrapper subview-container">
+            <platform-grid data="pesItemGridOption"></platform-grid>
+        </div>
+
+        <div style="height: 1.2em; line-height: 1.2em; color: darkred; margin-righ: 10px; margin-left: 10px; box-sizing: border-box;">
+        <span>
+            {{models.noteStr | translate}}
+        </span>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default"  data-ng-click="methods.create()" data-ng-disabled="methods.okBtnDisabled()">
+            {{'cloud.common.buttonCreate' | translate}}
+        </button>
+        <button type="button" class="btn btn-default"  data-ng-click="$close()">
+            {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="models.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

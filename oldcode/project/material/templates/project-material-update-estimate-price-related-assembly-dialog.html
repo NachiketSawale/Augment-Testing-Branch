@@ -1,0 +1,26 @@
+<header class="modal-header" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="icon-message">
+				<div class="tlb-icons icon ico-info"></div>
+				<div class="message" >{{'project.material.updateRelatedAssemblies'| translate}}</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isDisable()" data-ng-click="onClick(true)"> {{'basics.common.yes' | translate}}</button>
+	<button type="button" class="btn btn-default" data-ng-click="onClick(false)"> {{'basics.common.no' | translate}}
+	</button>
+</footer>
+<footer class="modal-footer-deactivate-option" style="">
+	<div class="checkbox">
+		<label class="ng-binding">
+			<input type="checkbox" data-ng-model="doNotAskAgain" data-ng-click = "onChange(doNotAskAgain)" class="ng-pristine ng-untouched ng-valid ng-empty">
+			&nbsp;&nbsp;{{'project.material.doNotAskAgain' | translate }}
+		</label>
+	</div>
+</footer>

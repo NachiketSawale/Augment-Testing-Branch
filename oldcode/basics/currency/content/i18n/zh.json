@@ -1,0 +1,27 @@
+﻿{
+	"basics": {
+		"currency": {
+			"Id":"编号",
+			"Currency": "货币",
+			"SortBy":"排序",
+			"IsDefault":"默认",
+			"ConversionPrecision":"转换精度",
+			"DisplayPrecision":"显示精度",
+			"DecimalsRoundTo":"保留小数位",
+			"DecimalsShow":"显示小数",
+			"RateType":"汇率类型",
+			"RateDate":"汇率时间",
+			"ForeignCurrency":"外币",
+			"ForeignCurrencyName":"外币名称",
+			"Basis":"基础",
+			"HomeCurrency":"本位币",
+		  	"HomeCurrencyName":"本位币名称",
+			"CurrencyDetails":"货币明细",
+			"CurrencyConversion":"货币转换",
+			"ExchangeRates":"汇率",
+			"CurrencyTranslation":"货币翻译",
+			"currencyHomeFk":"本位币外键",
+			"currencyRateTypeFk":"汇率类型"
+		}
+	}
+}

@@ -1,0 +1,115 @@
+<div class="modal-wrapper" ng-controller="procurementCommonCreateWicFromBoqController">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'" >
+    </header>
+    <section class="modal-body">
+
+        <div class="platform-form-group">
+
+            <!--it is for qtn_header.-->
+            <!--select quote-->
+            <div class="platform-form-row platform-lg" data-ng-if="modalOptions.isShowQtnLookup">
+                <div class="platform-form-label">
+                    <div style="margin-top: 12px;">
+                        {{'procurement.common.selectQuote' | translate}}
+                    </div>
+                </div>
+                <div class="platform-form-col">
+                    <div class="control-directive"  data-basics-lookupdata-lookup-composite
+                         data-options="lookupOptions.quote"
+                         data-entity="currentItem"
+                         data-ng-model="currentItem.QtnHeaderFk"
+                         data-ng-change="customOptions.quoteChange()"
+                         data-dirty="true"
+                         style="margin-top: 12px;">
+                    </div>
+                </div>
+            </div>
+            <!--it is for source boq.-->
+            <!---->
+            <div class="platform-form-row platform-lg">
+                <div class="platform-form-label">
+                    <div style="margin-top: 15px;">
+                        {{ 'boq.main.boqLookup' | translate}} <!--Source BoQ-->
+                    </div>
+                </div>
+                <div class="platform-form-col">
+                    <div class="control-directive"  data-basics-lookupdata-lookup-composite
+                         data-options="lookupOptions.sourceBoq"
+                         data-entity="currentItem"
+                         data-ng-model="currentItem.BoQItemFk"
+                         data-config="fieldConfigs.sourceBoq"
+                         style="margin-top: 15px;">
+                    </div>
+                </div>
+            </div>
+            <!-- Wic Group Lookup -->
+            <div class="platform-form-row platform-lg">
+                <div class="platform-form-label">
+                    <div style="margin-top: 15px;">
+                        {{ 'procurement.common.targetWICGroup' | translate}}<!--Target WIC Group-->
+                    </div>
+                </div>
+                <div class="platform-form-col">
+                    <div class="control-directive"  data-basics-lookupdata-lookup-composite
+                         data-options="lookupOptions.wicGroup"
+                         data-entity="currentItem"
+                         data-ng-model="currentItem.WicGroupFk"
+                         data-diry="true"
+                         style="margin-top: 15px; ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--add wic boq here-->
+        <!-- grid data is wic boqs-->
+        <div class="flex-box flex-column fullheight" style="margin-top: 10px;">
+            <div data-platform-grid class="subview-container" data="wicBoqGrid" ></div>
+        </div>
+        <div class="platform-form-group">
+            <!--boq.main.Reference-->
+            <div class="platform-form-row platform-lg">
+                <div class="platform-form-label">
+                    <div style="margin-top: 20px;">
+                        {{ 'boq.main.Reference' | translate}}<!--Target WIC Group-->
+                    </div>
+                </div>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="code" data-ng-model="currentItem.boqRef" data-entity="currentItem" data-diry="true"
+                         style="margin-top: 20px; "></div>
+                </div>
+            </div>
+            <!--boq.main.BriefInfo-->
+            <div class="platform-form-row platform-lg">
+                <div class="platform-form-label">
+                    <div style="margin-top: 20px;">
+                        {{ 'boq.main.BriefInfo' | translate}}<!--Target WIC Group-->
+                    </div>
+                </div>
+                <div class="platform-form-col">
+                    <div data-domain-control data-domain="description" data-ng-model="currentItem.boqOutlineSpec" data-entity="currentItem" data-diry="true"
+                         style="margin-top: 20px; "></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+	    <button type="button" class="btn btn-default" data-ng-disabled="updateBtnDisabled" ng-click="customOptions.updateBtn()">
+		    {{ 'procurement.common.updateWicFromBoq.updateBtn' | translate}} <!--update -->
+	    </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="customOptions.okBtnDisabled()" ng-click="customOptions.ok()">
+            {{ 'procurement.common.createBtn' | translate}} <!--Create -->
+        </button>
+        <button type="button" class="btn btn-default" ng-click="modalOptions.cancel()">
+            {{ 'basics.common.cancel' | translate}}<!--Cancel-->
+        </button>
+    </footer>
+    <!--It should be translated. createWicBoqNote-->
+    <!--Note: If identicle WIC Catalog reference # is not existed, create new, else update.-->
+    <!--<div style="padding: 0 10px 10px 5px;">-->
+        <!--<span>-->
+            <!--{{'procurement.pricecomparison.createWicBoqNote' | translate}}-->
+        <!--</span>-->
+    <!--</div>-->
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

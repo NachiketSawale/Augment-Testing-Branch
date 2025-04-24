@@ -1,0 +1,20 @@
+<div data-ng-controller="procurementPriceComparisonUpdateEstimateWizardController">
+    <header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+
+    <section class="modal-body">
+        <div data-platform-alert data-error="error" class="fullwidth"></div>
+        <div data-platform-form-container data-form-container-options="containerOptions" class="modal-wrapper"></div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default"
+                data-ng-click="modalOptions.ok()"
+                data-ng-disabled="modalOptions.isBtnOkDisabled">{{modalOptions.btnOkText}}
+        </button>
+        <button type="button" class="btn btn-default"
+                data-ng-click="modalOptions.close()">{{modalOptions.btnCancelText}}
+        </button>
+    </footer>
+
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

@@ -1,0 +1,65 @@
+[
+	{
+		"id": "basics.biplusdesigner.dashboard",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.biplusdesigner.dashboardContainerTitle",
+		"controller": "basicsBiPlusDesignerDashboardController",
+		"uuid": "2ec68681903544bfbe5f159382a61d70"
+	},
+	{
+		"id": "basics.biplusdesigner.dashboard.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.biplusdesigner.dashboardDetailsContainerTitle",
+		"controller": "basicsBiPlusDesignerDashboardDetailController",
+		"uuid": "73cc6ab1dc674c8089578abdccdd89b5",
+		"permission": "2ec68681903544bfbe5f159382a61d70"
+	},
+	{
+		"id": "basics.biplusdesigner.dashboard2group",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.biplusdesigner.dashboard2GroupContainerTitle",
+		"controller": "basicsBiPlusDesignerDashboard2GroupController",
+		"uuid": "0bd93cbf33c248d481f96cde91861050"
+	},
+	{
+		"id": "basics.biplusdesigner.dashboard2group.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.biplusdesigner.dashboard2GroupDetailsContainerTitle",
+		"controller": "basicsBiPlusDesignerDashboard2GroupDetailController",
+		"uuid": "e52463c9c6844e94a642457cf4c84bb4",
+		"permission": "0bd93cbf33c248d481f96cde91861050"
+	},
+	{
+		"id": "basics.biplusdesigner.dashboard.parameter",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.biplusdesigner.dashboard.parameterContainerTitle",
+		"controller": "basicsBiPlusDesignerDashboardParameterController",
+		"uuid": "562d8db017364b9e94bb2c4a96d49f2e"
+	},
+	{
+		"id": "basics.biplusdesigner.dashboard.parameter.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.biplusdesigner.dashboard.parameterDetailsContainerTitle",
+		"controller": "basicsBiPlusDesignerDashboardParameterDetailController",
+		"uuid": "afec89cadec84869927ca3491058ff8c",
+		"permission": "562d8db017364b9e94bb2c4a96d49f2e"
+	},
+	{
+		"id": "basics.biplusdesigner.translation",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "f7ca02861e84401eb5feda297653b98e",
+		"permission": "f7ca02861e84401eb5feda297653b98e"
+	},
+	{
+		"id": "basics.biplusdesigner.designer",
+		"template": "app/components/datapine/platform-datapine.html",
+		"title": "basics.biplusdesigner.designerContainerTitle",
+		"controller": "",
+		"uuid": "54d412d4bd54444b9f9d93cc2e69b182",
+		"dashboard": {
+			"platform": "BI"
+		}
+	}
+]

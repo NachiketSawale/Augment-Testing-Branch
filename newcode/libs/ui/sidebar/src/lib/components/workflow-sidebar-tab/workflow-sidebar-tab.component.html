@@ -1,0 +1,45 @@
+<div class="content" [ngSwitch]="viewState()">
+
+	<div *ngSwitchCase="workflowSidebarSwitchEnum.WorkflowDetailView">
+		<ui-sidebar-workflow-detail-view [item]="selectedWorkflow"></ui-sidebar-workflow-detail-view>
+	</div>
+
+	<div *ngSwitchCase="workflowSidebarSwitchEnum.EntityPinView">
+		<ui-sidebar-workflow-tab-pin></ui-sidebar-workflow-tab-pin>
+	</div>
+
+	<div *ngSwitchCase="workflowSidebarSwitchEnum.DefaultView"
+		class="flex-element flex-basis-auto flex-box flex-column fullheight">
+		<div>
+			<ui-sidebar-title [toolbarData]="toolbarData"
+				[title]="'cloud.desktop.sdCmdBarWorkflow' | platformTranslate "></ui-sidebar-title>
+		</div>
+
+		<div class="margin-top-ld margin-bottom-ld" *ngIf="isSearchVisible">
+			<input type="text" [(ngModel)]="searchString" #input (input)="filter()" id="searchmodule"
+				class="form-control" placeholder="{{ 'cloud.common.taskBarSearch' | platformTranslate }}" />
+		</div>
+
+		<div *ngIf="isBtnClicked">
+			<div class="lookups">
+				<ui-common-lookup-input [(value)]="groupSetting" [dataService]="groupSettingService"
+					(valueChange)="groupSettingChanged()"></ui-common-lookup-input>
+			</div>
+			<div class="lookups">
+				<ui-common-lookup-input [(value)]="sortSetting" [dataService]="sortSettingService"
+					(valueChange)="sortSettingChanged()"></ui-common-lookup-input>
+			</div>
+		</div>
+
+		<div *ngIf="asyncInProgress" class="wait-overlay">
+			<div class="box">
+				<div class="spinner-lg"></div>
+			</div>
+		</div>
+		<div *ngIf="!asyncInProgress">
+			<ui-common-accordion style="overflow-y: auto;" (selected)="onSelected($event)"
+				[data]="templateAccordionData"></ui-common-accordion>
+		</div>
+	</div>
+
+</div>

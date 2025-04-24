@@ -1,0 +1,7 @@
+<span class="input-group">
+	<span domain-control class="form-control" ng-model="entity.rule.DescriptorDesc" readonly="true" data-domain="description"></span>
+	<span class="input-group-btn accessRightButtonGroup">
+		<button ng-click="delete()" ng-if="entity.rule.AccessrightDescriptorFk" class="btn btn-default tlb-icons ico-delete"></button>
+		<button ng-click="create()" ng-if="entity.rule.Id && !entity.rule.AccessrightDescriptorFk" class="btn btn-default tlb-icons ico-new"></button>
+	</span>
+</span>

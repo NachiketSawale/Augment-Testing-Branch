@@ -1,0 +1,22 @@
+﻿<script type="text/ng-template" id="upload-progress-bar.html">
+	<div ng-repeat="item in itemsSource">
+		<div class="upd-info-view" ng-class="options.widthStyle" ng-show="showItem(item)">
+			<div class="upd-selection-image-row" ng-show="showSelectionStatus() || showCancelButton(item)">
+				<img class="upd-selection-image" src="cloud.style/content/images/control-icons.svg#ico-tick" ng-show="showSelectImage(item)"/>
+			</div>
+			<div>
+				<div class="upd-file-name" ng-show="showFileName()" ng-bind="item.uploadOptions.fileInfo.fileName"></div>
+				<div class="upd-cancel-button-image"><img src="cloud.style/content/images/tlb-icons.svg#ico-upload-cancel" ng-click="onCancel(item)" ng-show="showCancelButton(item)" title="{{cancelButtonTooltip}}"/></div>
+			</div>
+			<div class="upd-upload-status-rest-upload-time-row">
+				<div class="upd-upload-status" ng-show="showUploadStatus()" ng-bind="item.status"></div>
+				<div class="upd-rest-upload-time" ng-show="showRestUploadTime()" ng-bind="showRemainingTime(item)"></div>
+			</div>
+			<div class="progress upd-progress-bar">
+				<div class="progress-bar" role="progressbar" aria-valuemin=" 0" aria-valuemax="100" style="width:{{item.percentage}}%">
+					<span ng-bind="item.percentage + '%'"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>

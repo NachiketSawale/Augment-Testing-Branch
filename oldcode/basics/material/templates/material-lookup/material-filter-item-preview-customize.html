@@ -1,0 +1,31 @@
+<style>
+	.material-preview-customize .platform-form-row {
+		display: flex;
+	}
+	.material-preview-customize .input-group-btn {
+		border-left: 0;
+	}
+</style>
+
+<div class="material-preview-customize sortable-container flex-element overflow fullheight flex-box flex-column" data-ng-controller="basicsMaterialFilterItemPreviewCustomizeController">
+	<div data-as-sortable="dropHandler" data-ng-model="selectedOptions" class="subview-content fullheight">
+		<div data-ng-repeat="option in selectedOptions" data-as-sortable-item class="platform-form-group">
+               <span as-sortable-item-handle class="flex-box flex-element platform-form-row">
+                  <span class="input-group-addon dragzone control-icons ico-grip"></span>
+	               <div class="input-group flex-box cursor-pointer fullwidth">
+		               <div data-domain-control
+		                    class="ellipsis"
+		                    data-domain="select"
+		                    data-options="itemOptions"
+		                    data-change="onSelectedChanged()"
+		                    data-model="option.key">
+		               </div>
+			            <span data-ng-if="option.selected" class="margin-none input-group-btn form-control flex-element">
+								<button class="btn control-icons ico-input-delete" ng-click="removeOption(option)">
+				            </button>
+							</span>
+	               </div>
+					</span>
+		</div>
+	</div>
+</div>

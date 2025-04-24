@@ -1,0 +1,254 @@
+﻿{
+	"basics": {
+		"common": {
+			"Quantity": "!Quantity",
+			"entityAddress": "地址",
+			"commentContainerTitle": "留言板",
+			"privateCommentContainerTitle": "!Private Comment",
+			"deleteDialogTitle": "确认删除",
+			"questionDeleteImageHeaderText": "删除图片",
+			"questionDeleteImageBodyText": "您确定要删除这张图片吗？",
+			"questionDeleteProfile": "您确定要删除文档 '{{p1}}'吗？",
+			"remain": "保持",
+			"cancel": "取消",
+			"ok": "确定",
+			"recipient": "接收人",
+			"sender": "发送人",
+			"email": {
+				"headerText": "发送邮件",
+				"success": "发送邮件成功",
+				"fail": "发送邮件失败"
+			},
+			"fax": {
+				"headerText": "发送传真",
+				"success": "发送传真成功！",
+				"fail": "发送传真失败！"
+			},
+			"emailAccount": "邮箱帐号",
+			"emailAccountFormatInfo": "邮箱帐号格式无效！",
+			"emailEnterAccount": "输入邮箱帐号",
+			"wizardDialog": {
+				"title": {
+					"sendEmail": "发送邮件",
+					"sendFax": "发送传真",
+					"businesspartnerPortal": "商业伙伴接口"
+				},
+				"information": {
+					"sendEmailSuccess": "发送邮件成功！",
+					"sendEmailFail": "发送邮件失败！",
+					"sendFaxSuccess": "发送传真成功！",
+					"sendFaxFail": "发送传真失败！"
+				},
+				"gridEntity": {
+					"doesSend": "已发送"
+				}
+			},
+			"validation": {
+				"correctValidationErrors": "请更正错误：",
+				"validationWizard": "验证向导",
+				"uniqueValueErrorMessage": "{{object}}应该唯一。"
+			},
+			"changeStatus": {
+				"headerText": "状态变更",
+				"workflowRunning": "正在运行状态变更流程",
+				"workflowInfo": "流程： '{{p1}}'\n状态： {{p2}}\n",
+				"workflowError": "错误: {{p1}}",
+				"from": "从",
+				"to": "到",
+				"remark": "备注",
+				"changedAt": "更改时间",
+				"changedBy": "更改人",
+				"Running": "运行中",
+				"Finished": "结束",
+				"Escalate": "升级",
+				"Waiting": "等等",
+				"Failed": "失败"
+			},
+			"poChange": {
+				"ChangeType": "变更类型",
+				"UpdateDate": "更新时间",
+				"itemsData": "数据记录",
+				"itemNo": "物料编号",
+				"rollback": "回滚",
+				"rollbackResult": "回滚结果：",
+				"rollbackSuccess": "回滚数据成功",
+				"rollbackFailed": "回滚数据失败",
+				"workflowRunning": "正在执行采购订单变更流程……",
+				"controller": {
+					"modalQuestion": {
+						"headerTextKey": "是/否",
+						"bodyTextKey": "你确定要更改采购订单吗？"
+					},
+					"modalInfo": {
+						"headerTextKey": "消息",
+						"bodyTextKey": "数据验证失败或无数据变更",
+						"CancelPOMeg": "采购订单已经被取消，不能更改!",
+						"DeliveryDateMeg": "新的交付日期必须大于旧的交付日期！",
+						"DeliveryAddressCountryMeg": "不能修改交付地址的国家！"
+					},
+					"modalOptions": {
+						"chkItems": {
+							"DecreaseQty": "减少数量",
+							"DeliveryDate": "交付日期",
+							"DeliveryAddress": "交付地址",
+							"CancelPO": "取消采购订单"
+						}
+					},
+					"dDformConfig": {
+						"groups": {
+							"dDChange": "交付日期",
+							"dAChange": "交付地址",
+							"cPOChange": "减少数量"
+						},
+						"rows": {
+							"TotalPrice": "总价",
+							"ExpressFree": "快运",
+							"PremiumFreight": "超额运费",
+							"OldDate": "旧交付日期",
+							"NewDate": "新交付日期",
+							"OldAddress": "旧交付地址",
+							"NewAddress": "新交付地址"
+						}
+					}
+				},
+				"services": {
+					"modalInfo": {
+						"headerText": "消息",
+						"bodyText": "这个状态不允许打开该向导！",
+						"bodyTextRB": "只有被拒绝变更过的合同才能回滚！"
+					},
+					"modalQuestion": {
+						"bodyText": "你确定要回滚采购订单的更改吗？"
+					},
+					"exeErrorMsg": "执行采购订单变更流程失败！",
+					"exeRBErrorMsg": "回滚变更采购订单失败！",
+					"errorHeaderText": "错误"
+				}
+			},
+			"updateCashFlowProjection": {
+				"headerText": "!Update Cash Flow Projection",
+				"refreshBtnText": "!Refresh",
+				"updateProjectionErrorMsg": "!Update Cash Flow Projection Failed",
+				"updateFailedTitle": "!Update Cash Flow Projection Failed",
+				"deleteAndRecreateText": "!The change of S-curve, StartWork or EndWork will cause all the exist cash projection details delete and recreate,are you sure?",
+				"overValueErrorMessage": "!The value cannot larger than total cost",
+				"sCurve": "!S-Curve",
+				"totalCost": "!Total Cost",
+				"startDate": "!Start Date",
+				"endDate": "!End Date",
+				"onlyLinearAdjustment": "!Only Linear Adjustment"
+			},
+			"toolbarChangePicture": "更改图片",
+			"toolbarDeletePicture": "删除图片",
+			"button": {
+				"inquiryData": "查询数据",
+				"requestData": "请求数据",
+				"send": "发送",
+				"close": "关闭",
+				"ok": "确定",
+				"cancel": "取消",
+				"previousStep": "上一步",
+				"nextStep": "下一步",
+				"save": "保存",
+				"saveAs": "另存为",
+				"simulate": "模拟",
+				"history": "历史",
+				"back": "返回",
+				"execute": "!Execute",
+				"proceed": "继续",
+				"refresh": "刷新"
+			},
+			"settings": "设置",
+			"entitySended": "已发送",
+			"map": {
+				"addressNotFound": "注意：在地图中未找到地址",
+				"iconPickLocation": "选择地点",
+				"iconExpandMap": "展开地图"
+			},
+			"dialog": {
+				"saveProfile": {
+					"labelAccessLevel": "存取级别",
+					"labelProfileName": "文档名称",
+					"placeholderProfileName": "请插入新的文档名称"
+				}
+			},
+			"procurementDialog": {
+				"Title": "验证出错消息",
+				"FactorZeroDescription": "{{Itemno}}的'Factor'列的值为0",
+				"PriceUnitZeroDescription": "{{Itemno}}的'Price Unit'列的值为0"
+			},
+			"upload": {
+				"errorHeaderText": {
+					"uploadFileError": "上传文件错误"
+				},
+				"errorMessage": {
+					"fileSizeUndefined": "文件大小未定义！",
+					"fileSizeOverflow": "文件大小({{p1}}{{p2}})超出了最大允许值({{p3}}{{p4}})."
+				},
+				"button": {
+					"downloadCaption": "下载",
+					"cancelUploadCaption": "取消上传",
+					"uploadCaption": "上传"
+				},
+				"copyToClipboard": "复制到剪贴板"
+			},
+			"preview": {
+				"button": {
+					"previewCaption": "!Preview"
+				}
+			},
+			"matrixSettingsDialogHeader": "!!Matrix Display Settings",
+			"matrixSettingsDialog": {
+				"createRules": "创建规则",
+				"createDescriptionFonts": "!!No fonts colours available",
+				"createDescriptionBackground": "!!No background colours available"
+			},
+			"Description": "名称",
+			"Colour": "颜色",
+			"taskBar": {
+				"error": "!Error",
+				"warning": "!Warning",
+				"info": "!Information",
+				"findNext": "!Find Next",
+				"findPrev": "!Find Previous",
+				"replace": "!Replace",
+				"replaceAll": "!Replace All",
+				"clearSearch": "!Clear Search",
+				"jumpToLine": "!Jump To Line",
+				"shortcuts": "!Shortcuts",
+				"undo": "Undo",
+				"redo": "Redo",
+				"jumpToDef": "Jump To Definition",
+				"jumpBack": "Jump Back",
+				"renameVariable": "Rename Variable",
+				"showTypeDoc": "Show Document",
+				"codeFold": "Fold",
+				"codeUnfold": "Unfold",
+				"comment": "Toggle Comment",
+				"indent": "Indent",
+				"format": "Format"
+			},
+			"percentOfTime": "!Percent Of Time",
+			"percentOfCost": "!Percent Of Cost",
+			"calcCumCost": "!Calculated Cumulative Cost",
+			"calcPeriodCost": "!Calculated Period Cost",
+			"calcCumCash": "!Calculated Cumulative Cash",
+			"calcPeriodCash": "!Calculated Period Cash",
+			"cumCost": "!Cumulative Cost",
+			"periodCost": "!Period Cost",
+			"cumCash": "!Cumulative Cash",
+			"periodCash": "!Period Cash",
+			"actPeriodCost": "!Actual Period Cost",
+			"actPeriodCash": "!Actual Period Cash",
+			"cashFlowForecastGridTitle": "!Cash Flow Forecast",
+			"entityPrcStructureFk": "采购结构",
+			"alert": {
+				"info": "!Note",
+				"danger": "!Error",
+				"success": "!Success",
+				"warning": "!Warning"
+			},
+			"dateEffective": "有效日期"
+		}
+	}
+}

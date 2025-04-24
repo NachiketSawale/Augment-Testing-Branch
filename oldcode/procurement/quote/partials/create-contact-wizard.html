@@ -1,0 +1,15 @@
+<div ng-controller="procurementQuoteCreateContactWizardController" class="modal-wrapper subview-container">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<div class="fullheight">
+			<div data-platform-form data-form-options="formOptions" data-entity="currentItem"></div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="save()" data-ng-disabled="!canSave()"> {{::'basics.common.button.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{::'basics.common.button.cancel' | translate}}</button>
+	</footer>
+	<div cloud-common-overlay data-loading="modalOptions.isProcessing" data-info2="modalOptions.processInfo"></div>
+</div>

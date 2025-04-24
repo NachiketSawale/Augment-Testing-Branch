@@ -1,0 +1,19 @@
+{
+	"name": "modules-timekeeping-timecontrolling",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/timekeeping/timecontrolling/src",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/modules/timekeeping/timecontrolling/jest.config.ts"
+			}
+		}
+	},
+	"tags": []
+}

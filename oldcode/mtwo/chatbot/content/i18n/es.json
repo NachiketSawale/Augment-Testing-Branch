@@ -1,0 +1,21 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "Configuración",
+      "configurationTitle": "Configuración",
+      "entityChatbotConfigurationCode": "Código",
+      "entityChatbotConfigurationDescription": "Descripción",
+      "entityChatbotConfigurationIslive": "Activo",
+      "entityChatbotConfigurationNlpAppId": "ID App PLN",
+      "entityChatbotConfigurationNlpCulture": "Cultura PLN",
+      "entityChatbotConfigurationNlpName": "Nombre del modelo PLN",
+      "entityChatbotConfigurationUpdatedAt": "Actualizado el",
+      "entityChatbotHeaderLanguageFK": "Idioma",
+      "entityChatbotHeaderModuleId": "ID del módulo",
+      "entityChatbotWf2intentIntent": "Intención de la entidad",
+      "entityChatbotWf2intentWfeTpFk": "Flujo de trabajo de la entidad",
+      "wf2intentTitle": "Flujo de trabajo y asignación de intenciones",
+      "headerTitle": "Encabezado"
+    }
+  }
+}

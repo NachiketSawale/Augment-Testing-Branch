@@ -1,0 +1,73 @@
+[
+  {
+    "id": "resource-certificate-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.certificate.certificateListTitle",
+    "controller": "resourceCertificateListController",
+    "uuid": "ddfd93ac951e42f0bb947a847121a79a"
+  },
+  {
+    "id": "resource-certificate-details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.certificate.certificateDetailTitle",
+    "controller": "resourceCertificateDetailController",
+    "uuid": "424d4d840861440489a0bfdfc71d04a1",
+    "permission": "ddfd93ac951e42f0bb947a847121a79a"
+  },
+  {
+    "id": "resource-certificate-doc-list",
+    "template": "basics.common/partials/header-zip-checkbox-documents-view.html",
+    "title": "resource.certificate.resourceCertificateDocumentListTitle",
+    "controller": "resourceCertificateDocumentListController",
+    "uuid": "3b4a2a670db2438da5deb4b9782547b5"
+  },
+  {
+    "id": "resource-certificate-doc-details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.certificate.resourceCertificateDocumentDetailTitle",
+    "controller": "resourceCertificateDocumentDetailController",
+    "uuid": "dd6a8c4970bd4f4fb46a6114c68ccd95",
+    "permission": "3b4a2a670db2438da5deb4b9782547b5"
+  },
+  {
+    "id": "resource-certificated-plant-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.certificate.resourceCertificatedPlantListTitle",
+    "controller": "resourceCertificatedPlantListController",
+    "uuid": "43d1291116b641858c78ad23732e4e60"
+  },
+  {
+    "id": "resource-certificated-plant-details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.certificate.resourceCertificatedPlantDetailTitle",
+    "controller": "resourceCertificatedPlantDetailController",
+    "uuid": "055f01dd049d4ae3a1f00ff58444e176",
+    "permission": "43d1291116b641858c78ad23732e4e60"
+  },
+  {
+    "id": "resource-type-translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "c354126f74754bbaade2b918d09b1f01"
+  },
+  {
+    "id": "resource.certificate.characteristic",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "7cd94188d15e45aea816296e28fcbf1b",
+    "controller": "",
+    "sectionId": 58,
+    "mainService": "resourceCertificateDataService"
+  },
+  {
+    "id": "model.wdeviewer.ige",
+    "template": "model.wdeviewer/partials/ige-partial.html",
+    "title": "model.wdeviewer.pdfTitle",
+    "controller": "modelWdeViewerIgeController",
+    "uuid": "79814642d1ff4bce8fb428a379d4134f",
+    "permission": "7b1f2a36a94245ecb03dd964e79d2254",
+    "dimensionService": "modelWdeViewerReadonlyDimensionService",
+    "defaultMode": "document"
+  }
+]

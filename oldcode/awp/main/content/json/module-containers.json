@@ -1,0 +1,27 @@
+[
+	{
+		"id": "awp.main.project",
+		"template": "app/components/base/grid-partial.html",
+		"title": "awp.main.projects",
+		"controller": "awpProjectMainListController",
+		"uuid": "d5665cb64a6a4d21b6df4b57e1f0d171",
+		"permission": "021C5211C099469BB35DCF68E6AEBEC7"
+	},
+	{
+		"id": "platform.generic.package.structure.lineItem",
+		"template": "controlling.projectcontrols/templates/dashboard/controlling-projectcontrols-dashboard-container.html",
+		"title": "awp.main.packageStructureLineItem",
+		"uuid": "8b36cd77592842d8a683d0bf26896b36",
+		"controller": "awpPackageStructureLineItemController",
+		"mainService": "awpPackageStructureLineItemService",
+		"configurationService": "awpPackageStructureLineItemUIService"
+	},
+	{
+		"id": "awp.main.service.packages",
+		"template": "app/components/base/grid-partial.html",
+		"title": "awp.main.servicePackages",
+		"controller": "awpMainServicePackagesController",
+		"uuid": "953ec05769e14d6b87b324041e9048b0",
+		"permission": "021C5211C099469BB35DCF68E6AEBEC7"
+	}
+]

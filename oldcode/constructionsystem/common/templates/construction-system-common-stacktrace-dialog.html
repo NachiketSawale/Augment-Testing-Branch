@@ -1,0 +1,9 @@
+<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body selectable">
+	<div data-ng-bind="description" style="white-space: pre-line;"></div>
+</section>
+<footer class="modal-footer">
+    <div>
+        <button type="button" class="btn btn-default" data-ng-click="$close(false)"> {{ 'cloud.common.ok' | translate  }}</button>
+    </div>
+</footer>

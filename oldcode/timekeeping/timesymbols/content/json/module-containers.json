@@ -1,0 +1,54 @@
+[
+	{
+		"id": "timekeeping.timesymbols.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.timesymbols.timeSymbolListTitle",
+		"controller": "timekeepingTimeSymbolsListController",
+		"uuid": "4e5bc29fd0a3407b8f2e7c0c224b578c"
+	},
+	{
+		"id": "timekeeping.timesymbols.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.timesymbols.timeSymbolDetailTitle",
+		"controller": "timekeepingTimeSymbolsDetailController",
+		"uuid": "9d1103ff3dfb42ceae45f0991605761c",
+		"permission": "4e5bc29fd0a3407b8f2e7c0c224b578c"
+	},
+	{
+		"id": "timekeeping.timesymbols.translation",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "308ed008e88d440eaf3e5b81c96b8d26"
+	},
+	{
+		"id": "timekeeping.timesymbolaccounts.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.timesymbols.timeSymbolAccountListTitle",
+		"controller": "timekeepingTimeSymbolsAccountListController",
+		"uuid": "f1f173225e0040d8bfd114c90f359e09"
+	},
+	{
+		"id": "timekeeping.timesymbolaccounts.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.timesymbols.timeSymbolAccountDetailTitle",
+		"controller": "timekeepingTimeSymbolsAccountDetailController",
+		"uuid": "24979528559e40cf9cfcd22d9e7cc393",
+		"permission": "f1f173225e0040d8bfd114c90f359e09"
+	},
+	{
+		"id": "timekeeping.timesymbol2group.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.timesymbols.timeSymbol2GroupListTitle",
+		"controller": "timekeepingTimeSymbols2GroupListController",
+		"uuid": "535fb8d5c72e47d0b34bc50cf3d03798"
+	},
+	{
+		"id": "timekeeping.timesymbol2group.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.timesymbols.timeSymbol2GroupDetailTitle",
+		"controller": "timekeepingTimeSymbols2GroupDetailController",
+		"uuid": "609d6bbd14914574b5e8e173548a2bde",
+		"permission": "535fb8d5c72e47d0b34bc50cf3d03798"
+	}
+]

@@ -1,0 +1,13 @@
+{
+	"productName" : "RIB 4.0",
+	"productversion" : "24.2",
+	"buildversion" : "24.2",
+	"productdate" : "2024-07-03T00:00:00",
+	"installationdate" : "2024-07-03T00:00:01",
+	"_productLogoUrl" : "cloud.style/content/images/app/rib-logo.svg",
+	"_productLogoPrimaryUrl" : "app-icons ico-rib-logo-text",
+	"identityBaseUrl" : "https://apps-int.itwo40.eu/itwo40/identityserver600/core",
+	"oidcLogLevel": "Debug",
+	"serverBaseUrl": "https://apps-int.itwo40.eu/itwo40/daily/services/",
+	"_i18nCustom" : false
+}

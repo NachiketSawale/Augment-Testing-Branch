@@ -1,0 +1,21 @@
+<div class="ms-sv-container-title">
+    <span [innerText]="'basics.material.materialSearchLookup.htmlTranslate.searchResults' | platformTranslate"></span>
+</div>
+<div class="row ms-sv-commodity-result-pane">
+    <!--Internet Material Catalog Errors-->
+    <div class="alert alert-warning"
+         style="margin-top: 10px;margin-bottom: 10px;padding: 10px;"
+         *ngFor="let error of scope.response.errors">
+        {{ ('basics.material.materialSearchLookup.htmlTranslate.catError' | platformTranslate) + ' "' + error.Catalog + '"!' }}
+        <button class="btn" (click)="showError(error)" [innerText]="'basics.material.materialSearchLookup.htmlTranslate.showCatError' | platformTranslate"></button>
+    </div>
+
+    <!--Material Items-->
+    <div style="display: flex; flex-direction: column;">
+        <basics-shared-material-search-item
+                [scope]="scope"
+                [dataItem]="item"
+                *ngFor="let item of scope.response.items">
+        </basics-shared-material-search-item>
+    </div>
+</div>

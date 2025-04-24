@@ -1,0 +1,23 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body">
+<!--	<p style="background-color: #dcdcdc;padding: 5px; margin: 0px;" >-->
+<!--		{{'productionplanning.drawing.quantityAssignment.quantitySelection.prompt'| translate}}-->
+<!--	</p>-->
+	<div class="subview-header toolbar">
+		<h3 class="font-bold title fix">{{'productionplanning.drawing.quantityAssignment.plannedQtyGridTitle' | translate}}</h3>
+		<div data-platform-menu-list data-list="grid.tools"></div>
+	</div>
+	<div class="lookup-grid flex-basis-auto grid-container flex-element" data-platform-grid data="grid"></div>
+<!--	<p style="padding: 5px; margin: 0px;">-->
+<!--		{{'productionplanning.drawing.quantityAssignment.quantitySelection.prompt'| translate}}-->
+<!--	</p>-->
+</section>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>

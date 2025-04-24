@@ -1,0 +1,35 @@
+<div class="toolbar">
+	<button type="button"
+	        class="tlb-icons ico-previous pull-left"
+	        data-ng-click="watchListSidebar.onReturnWatchListViewClick()">
+	</button>
+	<div class="title relative-container">
+		<span data-translate="cloud.desktop.watchlist.titledetails"></span>
+		<span>({{watchListSidebar.detailWatchList.itemCount}})</span>
+	</div>
+
+	<ul class="tools">
+		<li class="sublist">
+		   <button type="button" class="tlb-icons ico-refresh"
+			        data-ng-click="watchListSidebar.refreshWatchListItems()"
+			        title="{{::'cloud.desktop.watchlist.refreshitems'|translate }}">
+			</button>
+		</li>
+	</ul>
+</div>
+
+<div data-cloud-Common-Overlay data-loading="watchListSidebar.loading"></div>
+
+<div id="watchlistname" data-domain-control data-domain="description" data-model="watchListSidebar.detailWatchList.name"
+     data-change="watchListSidebar.onWatchListNameChange()"
+     data-readonly="!watchListSidebar.detailEditable"
+     data-mandatory="true"
+     class="margin-top-ld form-control">
+</div>
+
+<div class="content-inner margin-top-ld">
+	<ul data-platform-item-list-directive data-dollarbinding="true"
+	    data-list="watchListSidebar.watchListItems" data-item-template="watchListSidebar.detailItemsTemplate"
+	    data-click-fn="watchListSidebar.onClickWatchListItem" class="scroll-padding flex-element overflow">
+	</ul>
+</div>

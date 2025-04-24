@@ -1,0 +1,34 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body" style="margin-top: -10px">
+	<div data-trs-kendo-splitter class="modal-wrapper border-none" option="{panes: [ { collapsible: true, size: '35%' },{ collapsible: true, size: '65%' }],orientation:'horizontal'}">
+		<div class="modal-wrapper border-none flex-box flex-column lookup-grid-container subview-container">
+			<div class="subview-header toolbar">
+				<h3 class="font-bold title fix">{{'productionplanning.item.wizard.actualTimeRecording.perActionAreasGridTitle' | translate}}</h3>
+			</div>
+			<div class="flex-element flex-box flex-column overflow-hidden">
+				<div class="flex-basis-auto" data-platform-grid style="margin-bottom: 9px"
+				     data="gridOptions.perActionAreasGrid"></div>
+				<div cloud-common-overlay data-loading="isLoadingPerActionAreasData"></div>
+			</div>
+		</div>
+		<div class="modal-wrapper border-none flex-box flex-column lookup-grid-container subview-container">
+			<div class="subview-header toolbar">
+				<h3 class="font-bold title fix">{{'productionplanning.item.products.productsGroup' | translate}}</h3>
+			</div>
+			<div class="flex-element flex-box flex-column overflow-hidden">
+				<div class="flex-basis-auto" data-platform-grid style="margin-bottom: 9px"
+				     data="gridOptions.productsGrid"></div>
+				<div cloud-common-overlay data-loading="isLoadingProductsData"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>

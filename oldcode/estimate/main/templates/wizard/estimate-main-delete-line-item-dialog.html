@@ -1,0 +1,36 @@
+<!--<header class="modal-header main-color">
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+			aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+	<h2 class="modal-title">{{'estimate.main.confirmDeleteTitle'|translate}} </h2>
+</header>-->
+<header class="modal-header" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+	<div class="fullheight">
+		<div class="fullheight" style="overflow-y: auto">
+			<div>
+				<div class="platform-form-group">
+					<div class="platform-form-row">
+						<div style="width:100%;">
+							{{'estimate.main.confirmDeleteLineItems'| translate}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="width:100%;">
+				<input type="checkbox" data-ng-model="doNotAsk" data-ng-click = "onChange(doNotAsk)"/>
+				{{'estimate.main.doNotAskAgain' | translate}}
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isDisable()" data-ng-click="onOK()"> {{'basics.common.ok' | translate}}</button>
+	<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'basics.common.cancel' |
+		translate}}
+	</button>
+</footer>
+

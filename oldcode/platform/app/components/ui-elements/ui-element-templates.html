@@ -1,0 +1,13 @@
+<script type="text/ng-template" id="ui-component/action-select-template.html">
+	<div class="ui-element action-select-btn">
+		<button type="button" data-ng-disabled="isDisabled('btn')"
+		        class="action" data-ng-class="activeAction.iconClass"
+		        title="{{ activeAction.caption }}" data-ng-click="activeActionFnWrapper(this, activeAction.id, $event)">
+					<span data-ng-show="activeAction.showCaption" data-ng-bind="activeAction.caption"></span>
+		</button>
+
+		<button type="button" data-ng-disabled="isDisabled('dropdwn')" class="actions dropdown-toggle"
+		        data-ng-click="openDropDown($event)">
+		</button>
+	</div>
+</script>

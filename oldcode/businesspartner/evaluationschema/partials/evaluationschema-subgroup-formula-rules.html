@@ -1,0 +1,49 @@
+<div>
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div style="padding: 20px;">
+            <ul class="flex-element overflow panel-group">
+                <li class="panel panel-primary">
+                    <h2>{{'businesspartner.evaluationschema.basicsCalculation' | translate}}</h2>
+                    <ul class="panel-body">
+                        <li>
+                            <h4 style="font-weight: normal;">{{'businesspartner.evaluationschema.sampleText' | translate}}:</h4>
+                            <ul class="panel-body">
+                                <li>(#1.1 + #2.3)/2 => (#GroupsSorting1.SubgroupsSorting1 + #GroupsSorting2.SubgroupsSorting3)/2</li>
+                                <li>(#1.1 + #2.3)/2, means the points should be caluclated based on the line1 and line2. #1 is the sorting.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="panel panel-primary">
+                    <h2>{{'businesspartner.evaluationschema.formulaSQL' | translate}}</h2>
+                    <ul class="panel-body">
+                        <li>
+                            <h4 style="font-weight: normal;">{{'businesspartner.evaluationschema.parameter' | translate}}: ({{'businesspartner.evaluationschema.parameterNote' | translate}})</h4>
+                            <ul class="panel-body">
+                                <li>@BPId</li>
+                                <li>@SchemaId</li>
+                                <li>@BpdSubsidiaryId</li>
+                                <li>@ClerkPrcId</li>
+                                <li>@ClerkReqId</li>
+                                <li>@Contact1Id</li>
+                                <li>@Contact2Id</li>
+                                <li>@ProjectId</li>
+                                <li>@QuoteId</li>
+                                <li>@ContractId</li>
+                                <li>@InvoiceId</li>
+                            </ul>
+                            <h4 style="font-weight: normal;">{{'businesspartner.evaluationschema.resultText' | translate}}: ({{'businesspartner.evaluationschema.resultNote' | translate}})</h4>
+                            <h4 style="font-weight: normal;">{{'businesspartner.evaluationschema.sampleText' | translate}} => SELECT COUNT(*) FROM BPD_SUBSIDIARY WHERE BPD_BUSINESS_PARTNER_FK = @BPId</h4>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"> {{'cloud.common.ok' |
+            translate}}
+        </button>
+    </footer>
+</div>

@@ -1,0 +1,61 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" data-ng-model="entity.updatePlannedQty" data-ng-disabled="entity.isUpdateLineItemQuantityDisabled" value="{{entity.updatePlannedQty}}" />
+				{{'controlling.structure.updatePlannedQty' | translate}}
+			</label>
+		</div>
+	</li>
+
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" data-ng-model="entity.updateInstalledQty" data-ng-click="onCheckUpdateInstalledQty()" data-ng-disabled="entity.isUpdateLineItemQuantityDisabled" value="{{entity.updateInstalledQty}}" />
+				{{'controlling.structure.updateInstalledQty' | translate}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<div class="radio spaceToUp">
+					<label>
+						<input type="radio" id="SCHEDULE" name="updateFrom" data-ng-model="entity.insQtyUpdateFrom" value="1"
+						       data-ng-disabled="!entity.updateInstalledQty || !entity.isActive"/>
+						{{'controlling.structure.fromSchedule' | translate}}
+					</label>
+				</div>
+			</li>
+
+			<li>
+				<div class="radio spaceToUp">
+					<label>
+						<input type="radio" id="WIP" name="updateFrom" data-ng-model="entity.insQtyUpdateFrom" value="2"
+						       data-ng-disabled="!entity.updateInstalledQty || !entity.isActive"/>
+						{{'controlling.structure.fromWip' | translate}}
+					</label>
+				</div>
+			</li>
+		</ul>
+	</li>
+
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" data-ng-model="entity.updateBillingQty" data-ng-disabled="entity.isUpdateLineItemQuantityDisabled" value="{{entity.updateBillingQty}}" />
+				{{'controlling.structure.updateBillingQty' | translate}}
+			</label>
+		</div>
+	</li>
+
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" data-ng-model="entity.updateForecastingPlannedQty" data-ng-disabled="entity.isUpdateLineItemQuantityDisabled" value="{{entity.updateForecastingPlannedQty}}" />
+				{{'controlling.structure.updateForecastingPlannedQty' | translate}}
+			</label>
+		</div>
+	</li>
+</ul>
+

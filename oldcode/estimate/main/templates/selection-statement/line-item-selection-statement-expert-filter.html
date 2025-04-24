@@ -1,0 +1,55 @@
+<div class="filler">
+    <div class="filler flex-box flex-column" style="position: relative;height:100%;">
+        <div class="platform-form-group" style="    border-spacing: 0;padding-bottom: 5px;">
+            <div class="platform-form-row">
+                <div class="input-group form-control">
+                    <div data-dropdown-select2
+                         data-model="searchOptions.selectedItemId"
+                         data-info="filderdefcontrol"
+                         data-change="searchOptions.selectionChanged()"
+                         data-options="searchOptions.dropboxOptions"
+                         data-use-deep-watch="true"
+                         data-template-Result="searchOptions.dropboxOptions.templateResult"
+                         data-template-Selection="searchOptions.dropboxOptions.templateResult"
+                         data-matchfunction="default">
+                    </div>
+                    <span class="input-group-btn ">
+                        <button class="btn btn-default control-icons ico-refresh" type="button"
+                                data-ng-click="searchOptions.onRefreshFilter()">
+                        </button>
+                        <button class="btn btn-default control-icons ico-input-delete2" type="button"
+                                data-ng-attr-title="{{searchOptions.onDeleteFilterBtnText}}"
+                                data-ng-disabled="!searchOptions.canSaveOrDeleteFilter()"
+                                data-ng-click="searchOptions.onDeleteFilter()">
+                        </button>
+                        <button class="btn btn-default tlb-icons ico-save" type="button"
+                                data-ng-attr-title="{{searchOptions.onSaveFilterBtnText}}"
+                                data-ng-disabled="!searchOptions.canSaveOrDeleteFilter()"
+                                data-ng-click="searchOptions.onSaveFilter()">
+                        </button>
+                        <button class="btn btn-default tlb-icons ico-save-as" type="button"
+                                data-ng-attr-title="{{searchOptions.onSaveAsFilterBtnText}}"
+                                data-ng-disabled="!searchOptions.filterRequest.pattern"
+                                data-ng-click="searchOptions.onSaveAsFilter()">
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="flex-element relative-container">
+            <div type="text" class="filler-absolute CodeMirror" style="overflow: hidden;"
+                 data-estimate-main-sel-statement-filter-editor
+                 data-ng-model="searchOptions.filterRequest.pattern"
+                 data-readonly="!searchOptions.active"
+                 data-entity="searchOptions.filterRequest.selectedItem"
+                 data-on-blur="searchOptions.onSaveAsSelectionStatement()"
+                 data-options="options">
+            </div>
+        </div>
+
+        <div data-cos-common-disable-overlay data-show="!searchOptions.active"
+             data-info="searchOptions.canNotEditMsg" data-active="searchOptions.active">
+        </div>
+    </div>
+    <div data-cloud-common-overlay data-loading="searchOptions.filterDataLoading"></div>
+</div>

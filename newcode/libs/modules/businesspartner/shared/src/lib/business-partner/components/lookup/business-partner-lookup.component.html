@@ -1,0 +1,16 @@
+<div class="businessPartner-dialog">
+	<div class="filler modal-wrapper">
+		<as-split class="flex-element border-none" direction="horizontal">
+			<as-split-area [size]="30">
+				<businesspartner-shared-business-partner-search
+					[scope]="scope"></businesspartner-shared-business-partner-search>
+			</as-split-area>
+			<as-split-area [size]="70">
+				<businesspartner-shared-business-partner-result
+					[scope]="scope"></businesspartner-shared-business-partner-result>
+			</as-split-area>
+		</as-split>
+		<!-- Loading -->
+		<ui-common-loading [loading]="scope.loading"></ui-common-loading>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<ng-container *ngIf="!hideTitle">
+	<ng-container *ngIf="isEscapeHTML; else htmlHeader">
+		<h2>{{dynamicDisplayText | platformTranslate}}</h2>
+	</ng-container>
+	<ng-template #htmlHeader>
+		<header>
+			<span [innerHTML]="dynamicDisplayText"></span>
+		</header>
+	</ng-template>
+</ng-container>
+
+
+<ui-common-form [formConfig]="formConfig" [entity]="currentContext"></ui-common-form>

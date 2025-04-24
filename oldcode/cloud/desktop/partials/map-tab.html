@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Address Map</title>
+    <script type="text/javascript" src="//ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
+    <script type="text/javascript">
+        var global = window;
+        global.init = function () {
+            Microsoft.Maps.loadModule('Microsoft.Maps.Overlays.Style', {
+                callback: function () {
+                    var map = new Microsoft.Maps.Map(document.body, {
+                        credentials: global.mapKey,
+                        mapTypeId: Microsoft.Maps.MapTypeId.road,
+                        zoom: 16,
+                        showScalebar: true,
+                        enableSearchLogo: false,
+                        enableClickableLogo: false,
+                        customizeOverlays: true,
+                        showBreadcrumb: true
+                    });
+
+                    if (global.address && global.address.Latitude != null && global.address.Longitude != null) {
+                        var center = new Microsoft.Maps.Location(global.address.Latitude, global.address.Longitude);
+
+                        var pin = new Microsoft.Maps.Pushpin(center, {
+                            text: '1'
+                        });
+
+                        var pinInfo = new Microsoft.Maps.Infobox(center, {
+                            width: 180,
+                            height: 60,
+                            description: global.address.Address,
+                            offset: new Microsoft.Maps.Point(0, 15)
+                        });
+
+                        map.entities.push(pin);
+                        map.entities.push(pinInfo);
+                        map.setView({center: center});
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+
+<body onload="init()">
+</body>
+</html>

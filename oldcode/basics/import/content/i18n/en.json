@@ -1,0 +1,61 @@
+{
+  "basics": {
+    "import": {
+      "entityProfileName": "Profile Name",
+      "headerPreviewresult": "Preview Result",
+      "entityImportFormat": "Import Format",
+      "headerFieldmappings": "Field Mappings",
+      "entityUserProfile": "User Profile",
+      "entityMappingName": "Source Field",
+      "entityDestinationField": "Destination Field",
+      "header": {
+        "saveImportDefinition": "Save Import Definition"
+      },
+      "entityDefaultValue": "Default Value",
+      "entityNewValue": "New Value",
+      "fieldNewValue": "New",
+	  "fieldCurrentValue": "Current",
+      "rowNum": "Row No.",
+      "headerFileSelection": "Import File",
+      "entityIsImportPriceAfterTax": "Import price after tax",
+      "headerEditimport": "Edit Import",
+      "fieldOldValue": "Old",
+      "entityExcelSheetName": "Sheet Name",
+      "entityLanguage2Id": "Alternate Language",
+      "entitySelected": "Selected",
+      "headerDoubletFindMethods": "Choose unique validation fields",
+      "entityImportResult": "Result",
+      "entityDoubletFindMethods": "Identify duplicate by comparing",
+      "button": {
+        "mappingProposal": "Mapping prop."
+      },
+      "status": "Status",
+      "message": {
+        "importSuccessful": "Import was successful",
+        "importFailed": "Import Failed. See status column for details",
+        "noMainEntitySelected": "Please select a related main entity first!"
+      },
+      "entityExcelProfile": "Excel Profile",
+      "importResult": "Result Description",
+      "headerImportsettings": "Import settings",
+      "entityFile2Import": "File to import",
+      "selectExcelFile": "Please select excel file",
+      "importProtocol":"Import protocol for",
+
+		 "Code": "Code",
+		 "Description" : "Description",
+		 "Uom" : "UoM(import)",
+		 "BasUom" : "UoM(verify)",
+		 "Reference2": "Reference No.2",
+		 "OutlineSpecification": "Outline Specification",
+		 "UoM": "UoM",
+		 "Quantity": "Quantity",
+		 "UnitRate": "Unit Rate",
+		 "FinalPrice": "Final Price",
+		 "MergeSame": "Merge resource if reference is same",
+		 "MergeAll": "Add all resources as new",
+		 "MergeOption": "Merge Option",
+		 "Resource": "Resource"
+    }
+  }
+}

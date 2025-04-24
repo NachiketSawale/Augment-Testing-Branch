@@ -1,0 +1,16 @@
+﻿{
+	"controlling": {
+		"generalcontractor": {
+			"ActualCost": "Istkosten",
+			"ActualsWithoutContract": "Istwerte ohne Vertrag",
+			"Additional": "Zusätzliche Kosten",
+			"BasicCost": "Grundkosten",
+			"BasicCostCO": "Grundkosten CO",
+			"Budget": "Budget",
+			"Code": "Schlüssel",
+			"Contract": "Vertrag",
+			"CostControlTitle": "Kostenkontrolle",
+			"Result": "Ergebnis"
+		}
+	}
+}

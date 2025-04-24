@@ -1,0 +1,39 @@
+<div class="image-filter-container" (click)="$event.stopPropagation()">
+    <div class="image-filter-header" (click)="toggleDropdown($event)">
+        <ng-container *ngIf="selectedOption; else placeholderTpl">
+            <div class="selected-option" *ngIf="selectedOption">
+                <span class="filterDefdropboxIconsLeft control-icons {{selectedOption!.IconCss}}">{{ selectedOption!.DisplayName }}</span>
+            </div>
+        </ng-container>
+
+        <ng-template #placeholderTpl>
+            <span class="placeholder"></span>
+        </ng-template>
+
+        <span class="arrow" [class.up]="isOpen" [class.down]="!isOpen"></span>
+    </div>
+    <div class="image-filter-dropdown" *ngIf="isOpen">
+        <!-- Search input -->
+        <div class="image-filter-search">
+            <input
+                    type="text"
+                    (input)="onSearchInput($event)"
+                    [value]="searchQuery">
+            <button class="clear-search" *ngIf="searchQuery" (click)="clearSearch()">
+                &times;
+            </button>
+        </div>
+        <!-- Options list -->
+        <div class="image-filter-options-container">
+            <div *ngFor="let option of filteredOptions"
+                 class="image-filter-option"
+                 [class.selected]="option.Id === selectedValue"
+                 (click)="selectOption(option.Id)">
+                <span class="filterDefdropboxIconsLeft control-icons {{option.IconCss}}">{{ option.DisplayName }}</span>
+            </div>
+            <div *ngIf="filteredOptions.length === 0" class="no-results">
+                {{'constructionsystem.common.noResultsFound' |  platformTranslate}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div data-ng-controller="procurementPackageSendtoYtwoController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <div>
+        <section class="modal-body">
+            <div style="height: 100%;width:100%">
+                <div data-platform-form-container data-form-container-options="formContainerOptions"
+                     entity="currentItem" class="fullheight"></div>
+            </div>
+            <div class="panel-heading" style="background-color: #f5f5f5">
+                <h4 class="panel-title">
+                    <span class="platform-form-group-header-text ng-binding ng-scope">{{modalOptions.bodyText}}</span>
+                </h4>
+            </div>
+            <div>
+                <div class="searchresultpad flex-element flex-box flex-column">
+                    <div class="flex-element flex-box flex-column gridframe relative-container subview-container">
+                        <platform-Grid data="gridData"></platform-Grid>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isDisabled">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

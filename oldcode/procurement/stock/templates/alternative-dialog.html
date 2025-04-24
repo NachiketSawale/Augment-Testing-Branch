@@ -1,0 +1,19 @@
+<div class="modal-wrapper" data-ng-controller="procurementStockAlternativeDialogController">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{modalOptions.headerText}} : {{modalOptions.code}}-{{modalOptions.description}}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+        <div class="modal-wrapper subview-container">
+            <div class="toolbar"><div data-platform-menu-list data-list="tools"></div></div>
+            <div data-platform-grid data-data="gridData"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

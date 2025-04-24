@@ -1,0 +1,1 @@
+This is the materialcatalog area of the basics materialcatalog module.

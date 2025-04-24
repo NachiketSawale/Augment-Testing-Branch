@@ -1,0 +1,128 @@
+{
+	"platform": {
+		"cancelBtn": "Peruuta",
+		"containerContentNotShown": "Käyttöluvan puuttumisesta johtuen, säiliön sisältöä ei näytetä!",
+		"deleteConfirm": "Haluatko poistaa nykyisen valinnan?",
+		"deleteConfirmHeader": "Poista vahvistus",
+		"error": {
+			"errormsgCode": "Virhekoodi: {{code}}",
+			"errormsgCodeMsg": "Virhekoodi: {{code}}<br>Viesti: {{msg}}",
+			"errormsgCodeMsgDetail": "Virhekoodi: {{code}}<br>Viesti: {{msg}}<br>Tiedot: {{detail}}"
+		},
+		"exception": "Poikkeus",
+		"formAbout": "Tietoja '{{p1}}'",
+		"formConfigAllowEnterNavigation": "Salli navigoinnin aloitus",
+		"formConfigCancelBnt": "Peruuta",
+		"formConfigCloseBnt": "Peruuta",
+		"formConfigCustomerLabelName": "Tarran nimen mukautus",
+		"formConfigDialogTitle": "Mukauta muoto",
+		"formConfigLabelName": "Tarran nimi",
+		"formConfigMoveDownBnt": "Siirrä alas",
+		"formConfigMoveUpBnt": "Siirrä ylös",
+		"formConfigOKBnt": "OK",
+		"formConfigRestoreBnt": "Palauta",
+		"formConfigVisibility": "Näkyvyys",
+		"formSettings": "Asetukset",
+		"gridDropPanel": "Pudota sarakeotsikko tähän ryhmittääksesi sarakkeen mukaan.",
+		"gridMarkerHeader": "Suodatin",
+		"gridTreeHeader": "Rakenne",
+		"ignoreBtn": "Ohita",
+		"latestview": "Viimeisin näkymä",
+		"layoutsystem": {
+			"edit": "Muokkaa näkymää",
+			"export": "Poista näkymät",
+			"import": "Tuo näkymät",
+			"roleviews": "Roolinäkymät",
+			"save": "Tallenna näkymä",
+			"systemviews": "Järjestelmänäkymät",
+			"userviews": "Käyttäjän näkymä"
+		},
+		"loginBusyMessage": "Kirjautuminen käynnissä... Odota!",
+		"loginButton": "Sisäänkirj",
+		"loginEnterPassword": "Anna salasana",
+		"loginEnterUsername": "syötä käyttäjänimi",
+		"loginFailedMessage": "Sisäänkirjautuminen epäonnistui! Yritä uudelleen...",
+		"loginLanguage": "Kieli",
+		"loginLanguageEnglish": "English",
+		"loginLanguageEnglishUS": "English (US)",
+		"loginLanguageGerman": "Deutsch",
+		"loginLanguageGermanDE": "Deutsch (DE)",
+		"loginLanguageSpanish": "Español",
+		"loginPassword": "Salasana",
+		"loginSuccessfulMessage": "Kirjautuminen onnistui Jatka Lataamista, odota hetki...",
+		"loginUsername": "Käyttäjätunnus",
+		"loginViaFacebook": "Kirjaudu Facebookilla",
+		"loginViaMicrosoftAccount": "Kirjaudu sisään Microsoft-tilillä",
+		"longTextContainer": {
+			"container": "Säilö",
+			"field": "Kenttä"
+		},
+		"navOptionsMenu": "Vaihtoehtovalikko",
+		"newMessage": "Uusi viesti",
+		"noBtn": "ei",
+		"okBtn": "OK",
+		"overwriteInherited": "Korvaa peritty arvo",
+		"refreshConfirm": "Muutoksia havaittiin Haluatko tallentaa ennen uudelleenlataamista?",
+		"refreshConfirmHeader": "Päivitä vahvistus",
+		"retryBtn": "Yritä uudelleen",
+		"searchPanelPlaceholder": "Hakusana",
+		"searchPanelString": "Hakusana",
+		"yesBtn": "Kyllä",
+		"dragdrop": {
+			"anyData": "Tiedot"
+		},
+		"inputControls": {
+			"boolean": "Totuusarvo",
+			"code": "Koodi",
+			"email": "Sähköposti",
+			"integer": "Kok.luku",
+			"money": "Raha",
+			"percent": "Prosentti"
+		},
+		"masterdetail": {
+			"filterTemplate": "Hakusana"
+		},
+		"wizard": {
+			"back": "Palaa",
+			"finish": "Lopeta",
+			"next": "Seuraava",
+			"stepFinish": "Lopeta",
+			"isIncluded": "Sisältyy"
+		},
+		"hours": "Tunnit",
+		"summary": "Kooste",
+		"bulkEditor": {
+			"save": "Tallenna",
+			"details": "Tiedot",
+			"records": "Tallenteet",
+			"Colour": "Väri",
+			"compareEnd": "Loppuarvo",
+			"Icon": "Kuvake"
+		},
+		"wysiwygEditor": {
+			"bold": "Lihavoitu",
+			"code": "Koodi",
+			"font": "Fontti",
+			"italic": "Kursiivi",
+			"underline": "Alleviivaa"
+		},
+		"formContainer": {
+			"collapseall": "Pienennä kaikki",
+			"discard": "Hylkää",
+			"expandall": "Laajenna kaikki",
+			"last": "Viimeinen",
+			"next": "Seuraava",
+			"previous": "Edellinen",
+			"refresh": "Päivitä",
+			"save": "Tallenna",
+			"search": "Haku",
+			"settings": "Asetukset"
+		},
+		"gridContainer": {
+			"configDialogTitle": "Ruudukon ulkoasu"
+		},
+		"listselection": {
+			"selected": "Valittu"
+		}
+	}
+}

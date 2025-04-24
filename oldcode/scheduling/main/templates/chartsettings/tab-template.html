@@ -1,0 +1,60 @@
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{'scheduling.main.chart-settings.templateName' | translate}}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="inputselect"
+				     data-model="selections.template"
+				     data-model-options="{ updateOn: 'blur'}" data-options="templatenameOpt"
+				     data-change="templatenameChanged(item, prevItem)">
+				</div>
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default tlb-icons ico-goto-item"
+					       style="border-left: none;"></button>
+					<button type="button" class="btn btn-default tlb-icons ico-delete"
+					        data-ng-click="templategroup.delete()" data-ng-disabled="!templategroup.canDelete()"></button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="flex-box flex-column margin-top-ld" style="height:100%;">
+	<data-platform-grid data="templateGrid"></data-platform-grid>
+</div>
+<div class="platform-form-group margin-top-ld">
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">{{'scheduling.main.chart-settings.Bar-type' | translate}}</label>
+		<div class="platform-form-col">
+			<div class="flex-box more-elements">
+				<div class="flex-element">
+					<div data-domain-control data-domain="imageselect"
+					     data-options="iconstartOpt"
+					     data-model="selections.iconstart"
+					     data-change="selections.iconstartChanged(selections.iconstart)">
+					</div>
+				</div>
+				<div class="flex-element">
+					<div data-domain-control data-domain="imageselect"
+					     data-model="selections.bar"
+					     data-options="barOpt" class="img-40-20"
+					     data-change="selectedBarChanged(selections.bar)">
+					</div>
+				</div>
+				<div class="flex-element">
+					<div data-domain-control data-domain="imageselect"
+					     data-options="iconendOpt"
+					     data-model="selections.iconend"
+					     data-change="selections.iconendChanged(selections.iconend)">
+					</div>
+				</div>
+				<div class="flex-element">
+					<div data-domain-control data-domain="imageselect"
+					     data-options="colorOpt"
+					     data-model="selections.color" class="img-40-20"
+					     data-change="selectedColorChanged(selections.color)"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

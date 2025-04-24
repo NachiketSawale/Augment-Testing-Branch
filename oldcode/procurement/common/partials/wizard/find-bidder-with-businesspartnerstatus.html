@@ -1,0 +1,45 @@
+<ul class="list-group">
+    <li>
+        <div class="checkbox spaceToUp">
+            <label>
+	            <input type="checkbox" name="businesspartnerStatusCheckBox" class="e2e-businesspartnerstatus-isActive"
+	                   data-ng-model="businesspartnerstatus.isActive"/>
+	                  {{businesspartnerstatus.header}}
+            </label>
+        </div>
+    </li>
+    <li>
+        <ul class="subgroup">
+            <li>
+                <div business-Partner-Business-Status-Combobox
+                     data-ng-model='businesspartnerstatus.statusFk'
+                     data-config="businesspartnerstatus.codeLookupConfig"
+                     data-entity="businesspartnerstatus"
+                     data-options="lookupOptions"></div> <!--style="padding-right: 0"-->
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul class="list-group">
+    <li>
+        <div class="checkbox spaceToUp">
+            <label>
+                <input type="checkbox" name="businesspartnerStatus2CheckBox" class="e2e-businesspartnerstatus2-isActive"
+                       data-ng-model="businesspartnerstatus2.isActive"/>
+                {{businesspartnerstatus2.header}}
+            </label>
+        </div>
+    </li>
+    <li>
+        <ul class="subgroup">
+            <li>
+                <div business-Partner-Business-Status2-Combobox
+                     data-ng-model='businesspartnerstatus2.statusFk'
+                     data-config="businesspartnerstatus2.codeLookupConfig"
+                     data-entity="businesspartnerstatus2"
+                     data-options="lookupOptions"></div> <!--style="padding-right: 0"-->
+            </li>
+        </ul>
+    </li>
+</ul>
+

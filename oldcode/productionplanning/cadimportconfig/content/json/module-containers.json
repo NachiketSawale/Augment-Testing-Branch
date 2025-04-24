@@ -1,0 +1,44 @@
+[
+  {
+    "id": "productionplanning.engineering.cadImportConfig.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.cadimportconfig.listViewTitle",
+    "controller": "ppsEngineeringCadImportConfigListController",
+    "uuid": "66yh4c988b634bf4hfb9bff0d6dfb111",
+    "permission": "66yh4c988b634bf4hfb9bff0d6dfb111"
+  },
+  {
+    "id": "productionplanning.engineering.cadImportConfig.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.cadimportconfig.detailViewTitle",
+    "controller": "ppsEngineeringCadImportConfigDetailController",
+    "uuid": "66yh4c988b634bf4hfb9bff0d6dfb112",
+    "permission": "66yh4c988b634bf4hfb9bff0d6dfb111"
+  },
+  {
+    "id": "productionplanning.engineering.cadImportValidation.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.cadimportconfig.validation.listViewTitle",
+    "controller": "ppsEngineeringCadValidationListController",
+    "uuid": "77yh4c988b634bf4hfb9bff0d6dfb112",
+    "permission": "66yh4c988b634bf4hfb9bff0d6dfb111"
+  },
+  {
+    "id": "productionplanning.engineering.cadImportConfig.Blob",
+    "template": "productionplanning.common/templates/pps-specification-plain-container.html",
+    "title": "productionplanning.cadimportconfig.importConfig",
+    "controller": "productionplanningDrawingClobController",
+    "moduleName": "productionplanning.cadimportconfig",
+    "uuid": "88yh4c988b634bf4hfb9bff0d6dfb112",
+    "permission": "66yh4c988b634bf4hfb9bff0d6dfb111"
+  },
+  {
+    "id": "productionplanning.engineering.cadImportValidation.Blob",
+    "template": "productionplanning.common/templates/pps-specification-plain-container.html",
+    "title": "productionplanning.cadimportconfig.validation.parameter",
+    "controller": "productionplanningDrawingClobController",
+    "moduleName": "productionplanning.cadimportconfig",
+    "uuid": "99yh4c988b634bf4hfb9bff0d6dfb112",
+    "permission": "66yh4c988b634bf4hfb9bff0d6dfb111"
+  }
+]

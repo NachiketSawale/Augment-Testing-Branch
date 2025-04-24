@@ -1,0 +1,20 @@
+{
+  "cloud": {
+    "uitesting": {
+      "listUITestingTitle": "Test Schnittstelle Slickgrid",
+      "uiTestingTitle": "Benutzer Schnittstelle Test Module",
+      "entityBoolean": "Boolean",
+      "entityNumeric": "Numeric",
+      "entityDescription": "Description",
+      "entityDatetime": "DateTime",
+      "entityDate": "Date",
+      "entityTime": "Time",
+      "entityLookup": "Lookup",
+      "entityColor": "Color",
+      "entityUrl": "Url",
+      "entityEmail": "Email",
+      "entityImage": "Image",
+      "entityPhone": "Phone"
+    }
+  }
+}

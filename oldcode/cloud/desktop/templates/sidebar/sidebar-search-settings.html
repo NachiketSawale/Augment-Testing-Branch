@@ -1,0 +1,38 @@
+﻿<div data-ng-controller="cloudDesktopSearchSettingsController">
+	<label class="subTitle margin-top-ld" data-ng-bind="translate.cloud.desktop.sdSettingsHeader"></label>
+
+		<form name="settingsSearch" class="margin-top-ld platform-form-group">
+
+		<div data-ng-if="recordPerPageDataFetched">
+			<label data-ng-bind="translate.cloud.desktop.sdSettingsPageInfoLabel"></label>
+			<div id="searchPageSize" data-domain-control data-domain="integer" data-options="{infoText:'{{infoTextMaxPageSize}}'}" data-model="settingsOptions.filterRequest.pageSize" data-mandatory="true"></div>
+		</div>
+
+		<div data-ng-if="settingsOptions.showHelpDeskServiceParameter">
+			<label class="subTitle" data-ng-bind="translate.cloud.desktop.sdSettingSupportLabel"></label>
+
+			<div class="filteroptions">
+				<div class="margin-top-ld" data-ng-if="settingsOptions.filterRequest.restoreEntities != null">
+					<div data-domain-control data-domain="boolean" data-model="settingsOptions.filterRequest.restoreEntities" data-options="settingsOptions.restoreEntitiesChk">
+					</div>
+				</div>
+
+				<div class="margin-top-ld">
+					<div data-domain-control data-domain="boolean" data-model="settingsOptions.filterRequest.withExecutionHints" data-options="settingsOptions.withExecutionHintsChk"
+					     data-change="settingsOptions.withExecutionHintsChk.changeChk()">
+					</div>
+				</div>
+			</div>
+
+<!--			<div class="topmargin sidebar-panel overflow-hidden" data-ng-if="settingsOptions.filterRequest.withExecutionHints">-->
+			<div class="topmargin" data-ng-if="settingsOptions.filterRequest.withExecutionHints">
+				<label data-ng_bind="settingsOptions.executionHintLabel"></label>
+				<div class="sidebar-panel-body">
+					<textarea class="textareafull fullwidth" data-ng-bind="settingsOptions.filterInfo.executionInfo"
+							  style="height: 100px;" readonly="readonly"></textarea>
+				</div>
+			</div>
+		</div>
+
+	</form>
+</div>

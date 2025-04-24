@@ -1,0 +1,22 @@
+<div class="filler flex-box flex-column subview-container">
+	<div *ngIf="searchService" class="input-group form-control search-bar">
+		<input type="text" class="input-group-content" [(ngModel)]="searchService.searchText" (keydown)="onKeyDown($event)"/>
+		<span class="input-group-btn">
+			 <button class="btn btn-default tlb-icons ico-search" (click)="searchService.search()"></button>
+		</span>
+	</div>
+
+	<as-split #split [direction]="splitter.direction" unit="percent">
+		<as-split-area [size]="splitter.areaSizes[0]" [uiCommonResizeObserver]="resizeOptions">
+			<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + parentGridConfig.uuid">
+				<ui-common-grid #parentGridHost [configuration]="parentGridConfig" (selectionChanged)="onParentChanged($event)"></ui-common-grid>
+			</div>
+		</as-split-area>
+
+		<as-split-area [size]="splitter.areaSizes[1]">
+			<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + config.uuid">
+				<ui-common-grid #gridHost [configuration]="config" (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+			</div>
+		</as-split-area>
+	</as-split>
+</div>

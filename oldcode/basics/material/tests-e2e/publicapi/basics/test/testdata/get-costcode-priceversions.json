@@ -1,0 +1,9 @@
+{
+  "searchRequest": {
+    "filter": " {\"operator\": \"and\",\"criterions\": [{ \"operator\": \"contains\", \"attribute\": \"DescriptionInfo\", \"value1\":  \"11\"} ]}",
+    "pageNumber": 111,
+    "pageSize": 20,
+    "includeNonActiveItems": false
+  },
+  "companyCode": "901"
+}

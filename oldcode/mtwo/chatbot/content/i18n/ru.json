@@ -1,0 +1,14 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "Конфигурация",
+      "configurationTitle": "Конфигурация",
+      "entityChatbotConfigurationCode": "Код",
+      "entityChatbotConfigurationDescription": "Описание",
+      "entityChatbotConfigurationIslive": "Активно",
+      "entityChatbotConfigurationUpdatedAt": "Дата обновления",
+      "entityChatbotHeaderLanguageFK": "Язык",
+      "headerTitle": "Заголовок"
+    }
+  }
+}

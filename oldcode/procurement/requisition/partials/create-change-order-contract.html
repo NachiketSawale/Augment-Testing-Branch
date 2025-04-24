@@ -1,0 +1,58 @@
+<div class="modal-wrapper" ng-controller="requisitionWizardCreateChangeOrderContractController">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{initOptions.headerText | translate}}</h2>
+		<button class="close db" data-dismiss="modal" data-ng-click="$close(false)" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+	</header>
+	<section class="modal-body">
+		<div class="modal-wrapper">
+			<div class="platform-form-group platform-lg" style="margin-bottom: 1em">
+				<div class="platform-form-row">
+
+					<div class="platform-form-col">
+						<div class="lg-11 md-11" style="">
+							{{'procurement.requisition.contract.selectOneBaseContract' | translate}}
+						</div>
+					</div>
+				</div>
+				<div class="modal-wrapper subview-container grid-wrapper">
+					<platform-Grid data="itemsCofig" style="height:200px;"></platform-Grid>
+				</div>
+			</div>
+			<div class="platform-form-group platform-lg">
+				<div class="platform-form-row" data-ng-show="hasVariants()">
+					<label class="platform-form-label">{{'procurement.requisition.wizard.contract.isCreateFromVariants' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-domain="boolean" data-domain-control
+						     data-entity="entity"
+						     data-model="variantOptions.isCreateFromVariants"
+						     data-ng-model="variantOptions.isCreateFromVariants"
+						     data-change="isCreateFromVariantsChanged()">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="platform-form-group platform-lg">
+				<div class="platform-form-row" data-ng-show="variantOptions.isCreateFromVariants">
+					<div class="platform-form-col">
+						<div class="flex-element flex-box flex-column subview-container gridContainer" style="min-height: 100px;">
+							<div data-platform-grid data-data="variantGridData"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- note -->
+			<div ng-if="variantOptions.doesVariantsSelectedHasDuplicateContent">
+				<label style="color: red;">{{'procurement.common.wizard.createContract.hasDuplicateContentInVariantMessage' | translate}}</label>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button class="btn btn-default" data-ng-click="OK()" data-ng-disabled="OKButtonIsDisabled()">{{"cloud.common.ok" | translate}}</button>
+		<button class="btn btn-default" data-ng-click="$close(false)">{{"cloud.common.cancel" | translate}}</button>
+	</footer>
+
+	<div cloud-common-overlay data-loading="initOptions.dialogLoading" data-info="initialOptions.loadingInfo"></div>
+</div>

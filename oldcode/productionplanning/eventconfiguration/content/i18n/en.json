@@ -1,0 +1,46 @@
+{
+  "productionplanning": {
+    "eventconfiguration": {
+      "entityEventSequence": "Event Sequence Config",
+      "entityEventTemplate": "Event Template",
+      "entityResult": "Result",
+      "eventSequence": {
+        "listTitle": "Event Sequence Configs",
+        "detailTitle": "Event Sequence Config Detail",
+        "eventSeqConfigFk": "Parent Config",
+        "seqEventSplitFromFk": "Split From",
+        "seqEventSplitToFk": "Split To",
+        "isTemplate": "Is Template",
+        "quantityFrom": "Quantity From",
+        "quantityTo": "Quantity To",
+        "splitAfterQuantity": "Split After Quantity",
+        "splitDayOffset": "Split Day Offset",
+        "mounting": "Is Mounting",
+        "reproductionEng": "Reproduction for Engineer",
+        "reproduction": "Reproduction",
+        "certificateGroup": "Certificate",
+        "ceActive": "CE Active",
+        "ceField1": "CE Field1",
+        "ceField2": "CE Field2",
+        "ceField3": "CE Field3",
+			"ceField4": "CE Field4",
+        "ppsCreationGroup": "Planning Unit Creation",
+        "queryGroup": "Query Parameters",
+        "automaticGroup": "Automatic Split"
+      },
+      "eventTemplate": {
+        "listTitle": "Event Templates",
+        "detailTitle": "Event Template Detail",
+        "sequenceOrder": "Sequence Order",
+        "duration": "Duration",
+        "leadTime": "Lead Time",
+        "relationKind": "Relation Kind",
+        "minTime": "Min Time"
+      },
+      "additionalFilter": {
+        "siteFilterListTitle": "Site Filter List",
+        "materialGroupFilterListTitle": "Material-Group Filter List"
+      }
+    }
+  }
+}

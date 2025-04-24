@@ -1,0 +1,20 @@
+<div data-ng-controller="procurementRequisitionItemBoqSaveDialogController">
+	<section class="modal-body">
+		<div class="platform-form-row">
+			<div class="radio spaceToUp col-lg-offset-1">
+				<label>
+					<input type="radio" name="onlyRequisition" data-ng-model="modalOptions.model.onlyRequisition" data-ng-checked="modalOptions.model.onlyRequisition==='true'" data-ng-click="isOnlyRequisition()">
+					{{modalOptions.text.onlyRequisition}}
+				</label>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="radio spaceToUp col-lg-offset-1">
+				<label>
+					<input type="radio" name="requisitionAndAllQuotes" data-ng-model="modalOptions.model.requisitionAndAllQuotes" data-ng-checked="modalOptions.model.requisitionAndAllQuotes==='true'" data-ng-click="isRequisitionAndAllQuotes()">
+					{{modalOptions.text.requisitionAndAllQuotes}}
+				</label>
+			</div>
+		</div>
+	</section>
+</div>

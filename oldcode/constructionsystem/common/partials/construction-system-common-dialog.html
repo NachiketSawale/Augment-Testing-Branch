@@ -1,0 +1,8 @@
+<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+    <div data-basics-common-json-viewer class="flex-box flex-element" data-text="description"></div>
+</section>
+<footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="$close(false)"> {{ 'cloud.common.ok' | translate  }}</button>
+        <button class="btn btn-default" data-ng-click="modalOptions.print()">{{'constructionsystem.common.printButton' | translate}}</button>
+</footer>

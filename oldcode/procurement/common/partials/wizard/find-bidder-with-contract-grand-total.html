@@ -1,0 +1,32 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" name="contractGrandTotalCheckBox" class="e2e-contractGrandTotal-isActive"
+				       data-ng-model="contractGrandTotal.isActive"/>
+				{{contractGrandTotal.header}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<div class="lg-6 md-6">
+					<select class="form-control e2e-contractGrandTotal-selectedOp" data-ng-disabled="!contractGrandTotal.isActive"
+					        data-ng-model="contractGrandTotal.selectedOp"
+					        ng-options="o.description for o in contractGrandTotal.operators track by o.id"
+					        data-ng-disabled="!contractGrandTotal.isActive"></select>
+				</div>
+
+				<input type="text" data-ng-model="contractGrandTotal.total" min="0"
+				       class="form-control lg-6 md-6 e2e-contractGrandTotal-total"
+				       data-ng-pattern-restrict="^(([-+]?(\d{0,7})([.,]\d{3}){0,7}([.,]\d{0,7}))|([-+]?\d{0,12})([.,]\d{0,7})?)$"s
+				       data-ng-disabled="!contractGrandTotal.isActive" />
+			</li>
+			<li>
+				<input type="checkbox" data-ng-model="contractGrandTotal.isFilterByStructure" data-ng-disabled="!contractGrandTotal.isActive" class="e2e-contractGrandTotal-isFilterByStructure" />
+				{{contractGrandTotal.considerProcurementStructure}}
+			</li>
+		</ul>
+	</li>
+</ul>

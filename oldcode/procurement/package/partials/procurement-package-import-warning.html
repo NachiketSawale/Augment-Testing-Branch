@@ -1,0 +1,15 @@
+<div data-ng-controller="procurementPackageImportWarningGridController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div style="overflow: auto">
+            <platform-Grid data="gridData"></platform-Grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div >
+            <button type="button" class="btn btn-default"
+                    data-ng-click="modalOptions.onAccept()"> {{modalOptions.footer.Accept}}
+            </button>
+        </div>
+    </footer>
+</div>

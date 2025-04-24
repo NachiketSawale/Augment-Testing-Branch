@@ -1,0 +1,14 @@
+﻿{
+  "scheduling": {
+    "schedule": {
+      "listTitle": "计划",
+      "detailTitle": "计划明细",
+      "entityPsdScheduleTypeFk": "计划类型",
+      "entitySchedule": "计划",
+      "entityText": "文本",
+      "entityIsActive":"活动",
+      "entityTimeline": "时间线",
+      "entityDetailTimeline":"时间线明细"
+    }
+  }
+}

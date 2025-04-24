@@ -1,0 +1,1 @@
+This is the characteristic area of the basics main module.

@@ -1,0 +1,37 @@
+{
+	"resource": {
+		"certificate": {
+			"certificateListTitle": "Certificates",
+			"certificateDetailTitle": "Certificate Details",
+			"resourceCertificateDocumentListTitle": "Certificate Documents",
+			"resourceCertificateDocumentDetailTitle": "Certificate Document Details",
+			"resourceCertificatedPlantListTitle": "Certificated Plants",
+			"resourceCertificatedPlantDetailTitle": "Certificated Plant Details",
+			"resourceCertificateEntity": "Plant Certificate",
+			"resourceCertificateDocumentEntity": "Plant Certificate Document",
+			"resourceCertificatedPlantEntity": "Certificated Plant",
+			"contactInfo": "Contact Information",
+			"changeStatus": "Change Status",
+			"entityBarcode": "Barcode",
+			"entityFileArchiveDoc": "Document Original File Name",
+			"entityComment": "Comments",
+			"entityRemark": "Remarks",
+			"entityUserDefinedText01": "Text 1",
+			"entityUserDefinedText02": "Text 2",
+			"entityUserDefinedText03": "Text 3",
+			"entityUserDefinedText04": "Text 4",
+			"entityUserDefinedText05": "Text 5",
+			"entityUserDefinedDate01": "Date 1",
+			"entityUserDefinedDate02": "Date 2",
+			"entityUserDefinedDate03": "Date 3",
+			"entityUserDefinedDate04": "Date 4",
+			"entityUserDefinedDate05": "Date 5",
+			"entityUserDefinedNumber01": "Number 1",
+			"entityUserDefinedNumber02": "Number 2",
+			"entityUserDefinedNumber03": "Number 3",
+			"entityUserDefinedNumber04": "Number 4",
+			"entityUserDefinedNumber05": "Number 5",
+			"equipmentPlant": "Plant"
+		}
+	}
+}

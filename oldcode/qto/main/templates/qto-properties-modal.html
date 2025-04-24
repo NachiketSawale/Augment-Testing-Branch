@@ -1,0 +1,136 @@
+<div data-ng-controller="qtoMainPropertiesController">
+<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+	<div class="fullheight">
+<!--		<div data-platform-form-container data-form-container-options="formContainerOptions" entity="dataItem"></div>-->
+
+		<div data-accordion="" data-close-others="false" class="ng-scope">
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" ng-click="toggleOpen('qtoConfig')">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{'qto.main.qtoConfig' | translate}}:</span>
+								<span class="platform-form-group-header ng-scope">
+									<div class="toggleImg control-icons ico-up" data-ng-class="showQtoConfigGroup ? 'ico-up' : 'ico-down'"></div>
+									</span>
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse collapse" style="height: 0;" collapse="!showQtoConfigGroup">
+						<div class="panel-body">
+							<div class="platform-form-group">
+
+								<!-------------------------------qto comment---------------------------------------->
+
+								<div class="platform-form-row">
+									<label class="platform-form-label">{{'qto.main.commentFrom' | translate}}</label>
+
+									<div class="platform-form-col">
+										<div class="platform-form-row">
+											<input type="checkbox" data-ng-model="dataItem.QtoConfigDto.CommentSystemLevel" data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-empty"
+												   data-ng-disabled="dataItem.hasQtoDetal"
+												   ng-change="commentFromChange('CommentSystemLevel')" >
+											<span>&nbsp;&nbsp;&nbsp;{{'qto.main.qtoConfigSystem' | translate}}</span>
+										</div>
+
+										<div class="platform-form-row">
+											<input type="checkbox" data-ng-model="dataItem.QtoConfigDto.CommentRubricLevel" data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-empty"
+												   data-ng-disabled="dataItem.hasQtoDetal"
+												   ng-change="commentFromChange('CommentRubricLevel')" >
+											<span>&nbsp;&nbsp;&nbsp;{{'qto.main.qtoConfigQtoRubric' | translate}}</span>
+										</div>
+
+										<div class="platform-form-row">
+											<input type="checkbox" data-ng-model="dataItem.QtoConfigDto.CommentPrjLevel" data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-empty"
+												   data-ng-disabled="dataItem.hasQtoDetal"
+												   ng-change="commentFromChange('CommentPrjLevel')">
+											<span>&nbsp;&nbsp;&nbsp;{{'qto.main.qtoConfigPrj' | translate}}</span>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" ng-click="toggleOpen('addressRanges')">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{'qto.main.addressRanges' | translate}}:</span>
+								<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" data-ng-class="showAddressRanageGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse collapse" style="height: 0;" collapse="!showAddressRanageGroup">
+						<div class="panel-body">
+							<div class="platform-form-group">
+
+								<!-------------------------------Dialog---------------------------------------->
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="width:15%;">
+										<span class="desc-col">{{'qto.main.isDialog' | translate}}</span>
+									</div>
+									<div class="platform-form-col" style="width:85%;">
+										<span class="image-col"><input type="checkbox" data-ng-disabled ="isONormQto()"  data-ng-click="change('Dialog')" ng-model="dataItem.QtoAddressRangeDialogDto.IsActive"></span>
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="width:15%;vertical-align:top; padding-top: 5px; margin-right: 5px;">{{'qto.main.DialogConfigDetail' | translate}}</div>
+									<div class="platform-form-col" style="width:85%;">
+										<div ng-controller="qtoAddressRangeDialogDetailController">
+										<div class="toolbar">
+											<div data-platform-menu-list data-list="tools"></div>
+										</div>
+										<div class="flex-box flex-column subview-container" style="height: 300px;">
+											<div data-platform-grid data="gridData"></div>
+										</div>
+									</div>
+									</div>
+								</div>
+								<!-------------------------------import---------------------------------------->
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="width:15%;">
+										<span class="desc-col">{{'qto.main.isImport' | translate}}</span>
+									</div>
+									<div class="platform-form-col" style="width:85%;">
+										<span class="image-col"><input type="checkbox"  data-ng-disabled ="isONormQto()"  data-ng-click="change('Import')" ng-model="dataItem.QtoAddressRangeImportDto.IsActive"></span>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="width:15%;vertical-align:top; padding-top: 5px; margin-right: 5px;">{{'qto.main.ImportConfigDetail' | translate}}</div>
+									<div class="platform-form-col" style="width:85%;">
+										<div ng-controller="qtoAddressRangeImportDetailController">
+											<div class="toolbar">
+												<div data-platform-menu-list data-list="tools"></div>
+											</div>
+											<div class="flex-box flex-column subview-container" style="height: 300px;">
+												<div data-platform-grid data="gridData"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div >
+	</div>
+</section>
+<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="disableOk" data-ng-click="onOK()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="disableCancel" data-ng-click="onCancel()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>
+</div>

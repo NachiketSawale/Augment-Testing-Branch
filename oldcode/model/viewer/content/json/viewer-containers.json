@@ -1,0 +1,134 @@
+[
+	{
+		"id": "model.viewer.hoops",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "bb1fddaed89d46c2b674fe612e1321c3",
+		"defaultView": "Iso",
+		"permission": "7ac2a568c32e4a16a2b4106db572133d"
+	},
+	{
+		"id": "model.viewer.hoops-2",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "f76c791a7c874e0ea53dc395a1b5a3d1",
+		"defaultView": "ReverseIso",
+		"permission": "9275c055a1e14f82a37831cd0f68c40f"
+	},
+	{
+		"id": "model.viewer.hoops-3",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "726cdbd5379541ebaebce29f5b2a2499",
+		"defaultView": "Left",
+		"permission": "a272cac0ae67421eb9976bf6392f80a7"
+	},
+	{
+		"id": "model.viewer.hoops-4",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "85ddf15bb095446a93aa1ff7feb77b99",
+		"defaultView": "Top",
+		"permission": "097de59303a8453680bdc61d350365fd"
+	},
+	{
+		"id": "model-main-viewpoint-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.main.viewpointList",
+		"controller": "modelMainViewpointListController",
+		"uuid": "17c46d111cd44732827332315ea206ed",
+		"depAnnoDataServiceName": "modelAnnotationViewpointDataService"
+	},
+	{
+		"id": "model-main-viewpoint-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.main.viewpointDetails",
+		"controller": "modelMainViewpointDetailController",
+		"uuid": "10b630738b584731a275fa5dbdf225a3",
+		"permission": "17c46d111cd44732827332315ea206ed",
+		"depAnnoDataServiceName": "modelAnnotationViewpointDataService"
+	},
+	{
+		"id": "model.main.objectInfoList",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "model.main.objectInfo.list",
+		"controller": "modelMainObjectInfoListController",
+		"uuid": "da5481eabd71482dbca12c4260eec5bf",
+		"permission": "36abc91df46f4129a78cc26fe79a6fdc"
+	},
+	{
+		"id": "model.main.objectInfoDetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.main.objectInfo.details",
+		"controller": "modelMainObjectInfoDetailController",
+		"uuid": "086b1d0b9d4e4bc6a80ffddaa668ada7",
+		"permission": "36abc91df46f4129a78cc26fe79a6fdc"
+	},
+	{
+		"id": "model.main.viewerLegendList",
+		"template": "app/components/base/grid-partial-overlay.html",
+		"title": "model.main.viewerLegend.list",
+		"controller": "modelMainViewerLegendListController",
+		"uuid": "3b5c28631ef44bb293ee05475a9a9513"
+	},
+	{
+		"id": "model.main.viewerLegendDetails",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.main.viewerLegend.details",
+		"controller": "modelMainViewerLegendDetailController",
+		"uuid": "d12461a0826a45f1ab76f53203b48ec6",
+		"permission": "3b5c28631ef44bb293ee05475a9a9513"
+	},
+	{
+		"id": "model.simulation.cockpit",
+		"template": "model.simulation/partials/model-simulation-cockpit-template.html",
+		"title": "model.simulation.cockpitTitle",
+		"controller": "modelSimulationCockpitController",
+		"uuid": "447c8cb06ac3490bbb87e744e4373cae",
+		"permission": "a919c5302c1a4a8c975726f2466ca52d"
+	},
+	{
+		"id": "model.evaluation.rulesetList",
+		"template": "model.evaluation/partials/ruleset-list-partial.html",
+		"title": "model.evaluation.rulesetListTitleEverywhere",
+		"controller": "modelEvaluationRulesetListController",
+		"uuid": "63e957df0af245a19f9608ac9beced3b",
+		"permission": "0fe1504979b947e68234ecd04c799af8"
+	},
+	{
+		"id": "model.evaluation.rulesetDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.evaluation.rulesetDetailTitleEverywhere",
+		"controller": "modelEvaluationRulesetDetailController",
+		"uuid": "5488706fc0b047cc94029e502ecd2bfe",
+		"permission": "0fe1504979b947e68234ecd04c799af8"
+	},
+	{
+		"id": "model.evaluation.ruleList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.evaluation.ruleListTitleEverywhere",
+		"controller": "modelEvaluationRuleListController",
+		"uuid": "3a0e7703abd140febba420db01e72c88",
+		"permission": "3e58fcde812847c89942f3d365dc2d9b"
+	},
+	{
+		"id": "model.evaluation.ruleDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.evaluation.ruleDetailTitleEverywhere",
+		"controller": "modelEvaluationRuleDetailController",
+		"uuid": "5a4d078143764838ac5d8e7dcfa5ca9b",
+		"permission": "3e58fcde812847c89942f3d365dc2d9b"
+	},
+	{
+		"id": "model.evaluation.ruleEditor",
+		"template": "model.evaluation/partials/rule-editor-partial.html",
+		"title": "model.evaluation.ruleEditorTitleEverywhere",
+		"controller": "modelEvaluationRuleEditorController",
+		"uuid": "15f94335f80e4d5a88dcd044f9e48336",
+		"permission": "3e58fcde812847c89942f3d365dc2d9b"
+	}
+]

@@ -1,0 +1,133 @@
+<!-- template for the standard login dialog at beginning of the app -->
+<style data-cloud-desktop-custom-login-css></style>
+<div class="login-sso flex-element" data-ng-class="{ 'embedded': embedded }" aria-hidden="true">
+	<div id="loginModal" class="modal-dialog primary" style="width: 650px;">
+
+		<form method="post" autocomplete="{{loginOptions.autoComplete}}" class="filler">
+			<input ng-if="loginOptions.isAutoCompleteOff()" autocomplete="off" name="hidden" type="text" style="display:none;">
+			<div class="modal-content relative-container" style="opacity: 0.94; min-height: 270px;">
+				<div cloud-common-overlay data-loading="loginOptions.loading" data-info="loginOptions.loadingInfo"></div>
+
+				<header class="modal-header">
+					<div class="{{::productLogoPrimary}} productLogo" title="{{::productName}}"></div>
+					<div class="itwo40-logo company-login-logo"></div>
+				</header>
+
+				<section class="modal-body">
+					<div class="flex-box">
+						<!-- explicit  login enable ??? -->
+						<div ng-if="identityprovider.stdLogin()" class="flex-box flex-column margin-right-ld flex-2-element">
+
+							<div class="flex-element flex-basis-auto">
+								<div class="platform-form-group">
+
+									<div class="platform-form-row">
+										<label for="username" class="platform-form-label" title="{{text.platform.loginUsername}}">
+											{{text.platform.loginUsername}}
+										</label>
+
+										<div class="platform-form-col">
+											<input type="text" required data-ng-model="loginData.username" id="username"
+											       name="username" autocomplete="{{loginOptions.autoComplete}}" autocapitalize="off"
+											       placeholder="<{{text.platform.loginEnterUsername}}>" autofocus
+											       class="form-control">
+										</div>
+									</div>
+									<div class="platform-form-row">
+										<label for="password" class="platform-form-label" title="{{text.platform.loginPassword}}">
+											{{text.platform.loginPassword}}
+										</label>
+
+										<!-- to deactivate the auto logon see ALM 121394 -->
+										<div class="platform-form-col">
+											<input class="form-control" type="password" required data-ng-model="loginData.password"
+											       id="password" name="password" autocomplete="{{loginOptions.autoComplete}}"
+											       placeholder="<{{text.platform.loginEnterPassword}}>">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer" style="padding: 16px 0 0; min-height: auto;">
+								<button id="loginbutton" class="btn btn-default" data-ng-click="login()"
+								        ng-bind="text.platform.loginButton" data-ng-disabled="!canLogon()"></button>
+							</div>
+						</div>
+
+						<!-- idp login enable ??? -->
+						<div data-ng-if="identityprovider.idpLogin()" class="flex-element"
+						     data-ng-class="{'idpLogin': identityprovider.stdLogin()}">
+
+							<div data-ng-if="identityprovider.stdLogin()">
+								{{'platform.loginWithIdentityprovider' | translate}}
+							</div>
+							<div data-ng-if="!identityprovider.stdLogin()">
+								{{'platform.loginWithoutIdentityprovider' | translate}}
+							</div>
+
+							<div class="platform-form-group">
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="flex-box">
+											<button type="button" class="btn btn-default flex-element text-left"
+											        title="{{text.platform.loginViaAad}}"
+											        data-ng-if="identityprovider.standard.azuread"
+											        data-ng-click=" idplogin('ext:azuread')">
+												<i class="block-image control-icons ico-azure"></i>
+												<span class="">{{text.platform.loginViaAad}}</span>
+											</button>
+
+											<button class="btn btn-default btn-square-28 border-left-none"
+											        title="{{text.platform.logoffromAad}}"
+											        data-ng-click="idplogoff('ext:azuread')"
+											        data-ng-if="(identityprovider.standard.azuread)">
+												<i class="control-icons ico-sign-out block-image"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row" data-ng-if="identityprovider.standard.wsfed">
+									<div class="platform-form-col">
+										<div class="flex-box">
+											<button type="button" class="btn btn-default flex-element text-left"
+											        title="{{text.platform.loginViaAdfs}}"
+											        data-ng-click=" idplogin('ext:adfs')">
+												<i class="block-image control-icons ico-social-media-adfs"></i>
+												<span class="">{{text.platform.loginViaAdfs}}</span>
+											</button>
+
+											<button class="btn btn-default btn-square-28 border-left-none"
+											        title="{{text.platform.logoffromAdfs}}"
+											        data-ng-click="idplogoff('ext:adfs')"
+											        data-ng-if="identityprovider.standard.wsfedlogouturl">
+												<i class="block-image control-icons ico-sign-out"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div data-ng-if="loginDisabledForFaultyLogin" class="margin-top-xxld padding-full-sm alert-danger">
+						{{getLoginWaitHint()}}
+					</div>
+					<!--<div data-ng-if="feedback.show" class="errorbox" data-ng-class="feedback.alertClass" data-ng-bind-html="feedback.message"></div>-->
+					<div data-ng-if="feedback.show" class="margin-top-xxld padding-full-sm"
+					     data-ng-class="feedback.alertClass" data-ng-bind-html="feedback.message"></div>
+					<div data-ng-if="lastIpdErrorOccured"
+					     class="alert-danger margin-top-xxld padding-full-sm hide-after-10sec selectable"
+					     data-ng-bind-html="lastIpdErrorOccured"></div>
+
+				</section>
+
+				<div class="container-footer flex-box margin-top-ld ">
+
+					<div id="versioninfo" class="text-left flex-element">{{version}}</div>
+
+					<div imprint-legal-notice-container></div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

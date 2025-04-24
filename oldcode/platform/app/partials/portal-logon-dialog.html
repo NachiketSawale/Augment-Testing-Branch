@@ -1,0 +1,110 @@
+<style data-cloud-desktop-custom-login-css></style>
+<div class="login-portal flex-element">
+	<div class="modal-dialog primary flex-box">
+		<div class="flex-box flex-column left-side main-color">
+			<div class="{{::productLogoPrimary}} productLogo" title="{{::productName}}"></div>
+
+			<div class="container-footer flex-box">
+				<div class="text-left flex-element copyright">© 2023 RIB Software GmbH</div>
+			</div>
+		</div>
+
+		<div class="flex-element right-side">
+			<div data-cloud-common-overlay data-loading="dialogOptions.loading" data-info2="dialogOptions.loadingInfo"></div>
+
+			<div class="flex-box header flex-align-center">
+				<div class="flex-element flex-box flex-align-center margin-left-ld header-label">Portal</div>
+				<div class="company-login-logo"></div>
+			</div>
+
+			<p class="text-justify" data-ng-if="dialogOptions.idpError" data-ng-bind-html="dialogOptions.idpErrorMessage"></p>
+			<p class="text-justify" data-ng-if="dialogOptions.invitation" data-ng-bind-html="dialogOptions.invitationGreeting"></p>
+			<p class="text-justify" data-ng-if="!(dialogOptions.invitation)" data-ng-bind-html="dialogOptions.standardGreeting"></p>
+
+			<div class="btn-group-link" data-ng-hide="dialogOptions.idpsDisabled">
+				<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="{{text.platform.loginViaTwitter}}"
+				        data-ng-show="identityprovider.portal.twitter" data-ng-click=" idplogin('ext:twitter')">
+					<i class="fa fa-twitter block-image text-center"></i>
+					<span class="margin-left-ld flex-element">{{text.platform.loginViaTwitter}}</span>
+					<i class="control-icons ico-ar1-right1 block-image"></i>
+				</button>
+				<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="{{text.platform.loginViaFacebook}}"
+				        data-ng-show="identityprovider.portal.facebook" data-ng-click=" idplogin('ext:facebook')">
+					<i class="fa fa-facebook block-image text-center"></i>
+					<span class="margin-left-ld flex-element">{{text.platform.loginViaFacebook}}</span>
+					<i class="control-icons ico-ar1-right1 block-image"></i>
+				</button>
+				<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="{{text.platform.loginViaMicrosoftAccount}}"
+				        data-ng-show="identityprovider.portal.msaccount" data-ng-click=" idplogin('ext:msaccount')">
+					<i class="fa fa-windows block-image text-center"></i>
+					<span class="margin-left-ld flex-element">{{text.platform.loginViaMicrosoftAccount}}</span>
+					<i class="control-icons ico-ar1-right1 block-image"></i>
+				</button>
+
+				<div class="flex-box" data-ng-if="identityprovider.portal.azuread && identityprovider.portal.usePortalIdp">
+					<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="Azure AD /Office 365"
+					        data-ng-click="idplogin('ext:azureadp')">
+						<i class="block-image control-icons ico-azure"></i>
+						<span class="margin-left-ld flex-element">{{text.platform.loginViaAad}}</span>
+						<i class="control-icons ico-ar1-right1 block-image"></i>
+					</button>
+					<button class="btn btn-default margin-top-ld btn-square-28 border-left-none" title="{{text.platform.logoffromAad}}"
+					        style="height: 36px;"
+					        data-ng-click="idplogoff('ext:azureadp')">
+						<i class="control-icons ico-sign-out block-image"></i>
+					</button>
+				</div>
+				<div class="flex-box" data-ng-if="identityprovider.portal.azuread && !identityprovider.portal.usePortalIdp">
+					<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="Azure AD /Office 365"
+					        data-ng-click=" idplogin('ext:azuread')">
+						<i class="block-image control-icons ico-azure"></i>
+						<span class="margin-left-ld flex-element">{{text.platform.loginViaAad}}</span>
+						<i class="control-icons ico-ar1-right1 block-image"></i>
+					</button>
+					<button class="btn btn-default margin-top-ld btn-square-28 border-left-none" title="{{text.platform.logoffromAad}}"
+					        style="height: 36px;"
+					        data-ng-click="idplogoff('ext:azuread')">
+						<i class="control-icons ico-sign-out block-image"></i>
+					</button>
+				</div>
+
+				<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="{{text.platform.loginViaGoogle}}"
+				        data-ng-show="identityprovider.portal.google" data-ng-click=" idplogin('ext:google')">
+					<i class="fa fa-google-plus block-image text-center"></i>
+					<span class="margin-left-ld flex-element">{{text.platform.loginViaGoogle}}</span>
+					<i class="control-icons ico-ar1-right1 block-image"></i>
+				</button>
+				<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="{{text.platform.loginViaAdfs}}"
+				        data-ng-show="identityprovider.portal.wsfederation" data-ng-click=" idplogin('ext:adfs')">
+					<i class="block-image control-icons ico-social-media-adfs"></i>
+					<span class="margin-left-ld flex-element">{{text.platform.loginViaAdfs}}</span>
+					<i class="control-icons ico-ar1-right1 block-image"></i>
+				</button>
+
+				<div class="flex-box" data-ng-if="identityprovider.portal.openidconnect">
+					<button class="btn btn-default text-left margin-top-ld flex-box flex-align-center btn-lg fullwidth" title="{{text.platform.loginViaOpenId}}"
+					        data-ng-click=" idplogin('ext:oidc')">
+						<i class="block-image control-icons ico-social-media-openid"></i>
+						<span class="margin-left-ld flex-element">{{identityprovider.portal.caption.openidconnect || text.platform.loginViaOpenId}}</span>
+						<i class="control-icons ico-ar1-right1 block-image"></i>
+					</button>
+					<button data-ng-if="identityprovider.portal.idplogouturl"
+					        class="btn btn-default margin-top-ld btn-square-28 border-left-none"
+					        title="{{text.platform.logoffIdpProviderButton}}"
+					        style="height: 36px;"
+					        data-ng-click="idplogoff('ext:oidc')">
+						<i class="control-icons ico-sign-out block-image"></i>
+					</button>
+				</div>
+
+			</div>
+
+
+			<div class="container-footer flex-box">
+				<div data-platform-language-selection></div>
+				<div data-imprint-legal-notice-container></div>
+			</div>
+
+		</div>
+	</div>
+</div>

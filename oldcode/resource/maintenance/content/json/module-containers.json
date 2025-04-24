@@ -1,0 +1,39 @@
+[
+  {
+    "id": "resource-maintenance-schema-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.maintenance.schemaListTitle",
+    "controller": "resourceMaintenanceSchemaListController",
+    "uuid": "3218a6cca2b4415ea455785bbe633285"
+  },
+  {
+    "id": "resource-maintenance-schema-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.maintenance.schemaDetailTitle",
+    "controller": "resourceMaintenanceSchemaDetailController",
+    "uuid": "7f8efe8f35b34937aaf023d76ae30172",
+    "permission": "3218a6cca2b4415ea455785bbe633285"
+  },
+  {
+    "id": "resource-maintenance-record-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.maintenance.schemaRecordListTitle",
+    "controller": "resourceMaintenanceSchemaRecordListController",
+    "uuid": "1dad2033d1b24f4bac55849d549b9c52"
+  },
+  {
+    "id": "resource-maintenance-record-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.maintenance.schemaRecordDetailTitle",
+    "controller": "resourceMaintenanceSchemaRecordDetailController",
+    "uuid": "03987f82b6b141f8b4481c4f52697c83",
+    "permission": "1dad2033d1b24f4bac55849d549b9c52"
+  },
+  {
+    "id": "resource-maintenance-translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "ef8504d1ed1647aaa47c2672a940010d"
+  }
+]

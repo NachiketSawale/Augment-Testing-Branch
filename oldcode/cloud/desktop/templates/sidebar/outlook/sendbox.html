@@ -1,0 +1,219 @@
+<style>
+	.sidebar-outlook-send-box .email-receiver {
+		width: 50px;
+		height: 28px;
+		cursor: default;
+	}
+
+	.sidebar-outlook-send-box .receivers {
+		padding: 8px 4px;
+		border: 1px solid #ccc;
+	}
+
+	.sidebar-outlook-send-box .subject-label {
+		padding-top: 6px !important;
+	}
+
+	.sidebar-outlook-send-box ul.tools {
+		order: inherit;
+	}
+
+	.sidebar-outlook-send-box .toolbar {
+		padding-bottom: 8px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.sidebar-outlook-send-box .multiple-item {
+		display: inline-block;
+		line-height: 24px;
+		margin-right: 8px;
+	}
+
+	.sidebar-outlook-send-box .attach-item {
+		border-color: #ccc;
+		padding: 0 24px 0 4px;
+		line-height: 28px;
+		height: 30px;
+		position: relative;
+		display: inline-block;
+		margin-top: 8px;
+		margin-right: 8px;
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+	.sidebar-outlook-send-box .attach-item label {
+		overflow: hidden;
+		word-break: keep-all;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.sidebar-outlook-send-box .attach-item button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 16px;
+		height: 100%;
+	}
+
+	.sidebar-outlook-send-box .platform-form-group {
+		border-bottom: 1px solid #ccc;
+	}
+
+	.sidebar-outlook-send-box .subject-value {
+		padding-left: 0 !important;
+	}
+
+	.sidebar-outlook-send-box .content-inner {
+		overflow: hidden;
+		padding-top: 8px;
+	}
+
+	.sidebar-outlook-send-box .content-scrollable {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	/* Override default */
+	.sidebar-outlook-send-box .ql-toolbar {
+		border-left: none;
+		border-right: none;
+	}
+
+	.sidebar-outlook-send-box .ql-container {
+		border: none;
+	}
+
+	.sidebar-outlook-send-box .ql-editor {
+		padding: 8px 0 0 0 !important;
+		min-height: 300px;
+	}
+
+	.sidebar-outlook-send-box .ng-quill-div {
+		height: auto !important;
+	}
+
+	.sidebar-outlook-send-box .ql-clipboard table td, .sidebar-outlook-send-box .ql-editor table td {
+		border: initial;
+		padding: initial;
+		height: initial;
+	}
+</style>
+<style id="ctrl-outlook-custom-style">
+
+</style>
+<div class="fullheight sidebar-outlook-send-box" data-ng-controller="cloudDesktopOutlookSendboxController">
+	<div class="content-inner fullheight flex-box flex-column">
+		<div class="fullheight flex-box flex-column" data-platform-dragdrop-component="ddTarget">
+			<div class="content-fixed">
+				<div class="flex-box flex-row toolbar">
+					<ul class="tools">
+						<li>
+							<button type="button" class="tlb-icons ico-save2" data-ng-disabled="isSaveDisabled()" data-ng-click="save()" title="{{'cloud.desktop.outlook.save' | translate}}">
+								<span>{{'cloud.desktop.outlook.save' | translate}}</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="tlb-icons ico-mail-outlook" data-ng-disabled="isSaveDisabled()" data-ng-click="saveAndOpen()" title="{{'cloud.desktop.outlook.openInOutlook' | translate}}">
+								<span>{{'cloud.desktop.outlook.openInOutlook' | translate}}</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="tlb-icons ico-delete2" data-ng-click="delete()" title="{{'cloud.desktop.outlook.delete' | translate}}">
+								<span>{{'cloud.desktop.outlook.delete' | translate}}</span>
+							</button>
+						</li>
+						<li data-ng-show="false">
+							<button type="button" class="control-icons ico-input-delete" data-ng-click="closeView()" title="{{'cloud.desktop.outlook.close' | translate}}">
+								<span>{{'cloud.desktop.outlook.close' | translate}}</span>
+							</button>
+						</li>
+					</ul>
+					<div class="fullwidth">
+						<h3 class="fullheight vert-hori-center font-bold">{{'cloud.desktop.outlook.newMsg' | translate}}</h3>
+					</div>
+					<ul class="tools">
+						<li>
+							<button type="button" class="control-icons ico-send" data-ng-disabled="isSendDisabled()" data-ng-click="send()" title="{{'cloud.desktop.outlook.send' | translate}}">
+								<span>{{'cloud.desktop.outlook.send' | translate}}</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="fullheight flex-box flex-column content-scrollable">
+				<div class="platform-form-group" data-ng-class="{'border-none' : sendRequest.message.attachments.length === 0}">
+					<div class="platform-form-row">
+						<label class="platform-form-label">
+							<button class="btn btn-default email-receiver" type="button">{{'cloud.desktop.outlook.to' | translate}}</button>
+						</label>
+						<div class="platform-form-col">
+							<div class="control-directive to" data-cloud-desktop-outlook-recipient-dialog
+							     data-ng-model="toOptions.entity.Id"
+							     data-options="toOptions.lookupOptions"
+							     data-entity="toOptions.entity"
+							     data-config="toOptions.config"
+							     data-disabled="toOptions.lookupOptions.disabled">
+							</div>
+							<div class="receivers margin-top-overlap" data-ng-if="toOptions.items.length > 0">
+								<div class="flex-element">
+				            <span class="multiple-item" data-ng-repeat="item in toOptions.items">
+					            <span class="multiple-label" title="{{item.email}}">{{item.displayName}}</span>
+					            <button class="btn control-icons ico-input-delete" data-ng-click="removeToRecipient(item)"></button>
+				            </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<label class="platform-form-label">
+							<button class="btn btn-default email-receiver" type="button">{{'cloud.desktop.outlook.cc' | translate}}</button>
+						</label>
+						<div class="platform-form-col">
+							<div class="control-directive cc" data-cloud-desktop-outlook-recipient-dialog
+							     data-ng-model="ccOptions.entity.Id"
+							     data-options="ccOptions.lookupOptions"
+							     data-entity="ccOptions.entity"
+							     data-config="ccOptions.config"
+							     data-disabled="ccOptions.lookupOptions.disabled">
+							</div>
+							<div class="receivers margin-top-overlap" data-ng-if="ccOptions.items.length > 0">
+								<div class="flex-element">
+				            <span class="multiple-item" data-ng-repeat="item in ccOptions.items">
+					            <span class="multiple-label" title="{{item.email}}">{{item.displayName}}</span>
+					            <button class="btn control-icons ico-input-delete" data-ng-click="removeCcRecipient(item)"></button>
+				            </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<label class="platform-form-label subject-label">{{'cloud.desktop.outlook.subject' | translate}}</label>
+						<div class="platform-form-col">
+							<div class="input-group">
+								<input class="subject-value border-none" data-domain-control data-domain="description" data-config="subjectConfig" data-ng-model="sendRequest.message.subject" data-max-length="255"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="margin-bottom-ld" data-ng-if="sendRequest.message.attachments.length > 0">
+				<span class="attach-item border-all" data-ng-repeat="attach in sendRequest.message.attachments track by $index">
+					<label title="{{attach.name}}"><span data-ng-mouseenter="onMouseEnterAttachment(attach)" data-ng-mousedown="onMouseDownAttachment(attach)">{{attach.name}}</span></label>
+					<button class="btn control-icons ico-input-delete" data-ng-click="removeFile($index)"></button>
+				</span>
+				</div>
+				<div class="fullheight" data-ng-mousedown="onMouseDown()">
+					<platform-Editor
+						data-textarea-id="{{editor.name}}"
+						data-textarea-name="{{editor.name}}"
+						data-textarea-height="100%"
+						data-textarea-required
+						data-ng-model="sendRequest.message.body.content"
+						data-enable-bootstrap-title="true"
+						data-textarea-editable="editor.editable"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

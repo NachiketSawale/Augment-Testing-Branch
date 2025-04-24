@@ -1,0 +1,18 @@
+<style type="text/css">
+    .alternative-source-label
+    {
+        background-color: #e6e6e6;
+        padding: 6px 4px;
+        margin: 4px;
+        border-radius: 4px;
+        color: #333;
+        display: inline-block;
+    }
+</style>
+
+<a class="alternative-source-label"
+   target="_blank"
+   href="{{ ::item.Url }}"
+   data-ng-repeat="item in list"
+   data-ng-bind="item.Description">
+</a>

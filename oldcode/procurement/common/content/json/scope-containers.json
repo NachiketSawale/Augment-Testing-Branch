@@ -1,0 +1,63 @@
+[
+    {
+      "id": "procurement.common.item.scope.list",
+      "template": "app/components/base/grid-partial.html",
+      "title": "basics.material.scope.listTitle",
+      "controller": "prcItemScopeListController",
+      "uuid": "1becbb65bdc0df7696b73b1800b5534f",
+      "permission": "8c48edd24720b38b1c94bc3b9d14926b"
+    },
+    {
+      "id": "procurement.common.item.scope.form",
+      "template": "app/components/base/form-detail-partial.html",
+      "title": "basics.material.scope.formTitle",
+      "controller": "prcItemScopeDetailController",
+      "uuid": "0d1766fa375e251caae7d2fd3e13058c",
+      "permission": "8c48edd24720b38b1c94bc3b9d14926b"
+    },
+    {
+      "id": "procurement.common.item.scope.detail.list",
+      "template": "app/components/base/grid-partial.html",
+      "title": "basics.material.scopeDetail.listTitle",
+      "controller": "prcItemScopeDetailListController",
+      "uuid": "38f5473d49816e82acfe96be709fb81e"
+    },
+    {
+      "id": "procurement.common.item.scope.detail.form",
+      "template": "app/components/base/form-detail-partial.html",
+      "title": "basics.material.scopeDetail.formTitle",
+      "controller": "prcItemScopeDetailDetailController",
+      "uuid": "cf86b67e70e1b83cac761a106f4fa68b",
+      "permission": "38f5473d49816e82acfe96be709fb81e"
+    },
+    {
+      "id": "procurement.common.item.scope.detail.priceCondition",
+      "template": "basics.material/partials/price-condition-partial.html",
+      "title": "basics.material.scopeDetail.priceConditionTitle",
+      "controller": "basicsMaterialPriceConditionController",
+      "uuid": "a85ddb8363189b7eb48ad7e09b01885e",
+      "dataService": "prcItemScopeDetailPriceConditionDataService",
+      "getService": true
+    },
+    {
+      "id": "procurement.common.item.scope.detail.itemText",
+      "template": "procurement.common/partials/scope-itemtext-view-new.html",
+      "title": "basics.material.scopeDetail.itemTextTitle",
+      "controller": "basicsMaterialScopeItemTextController",
+      "uuid": "5d8bb73681edf2dc2760b5f5895189c8",
+      "dataService": "prcItemScopeItemTextDataService",
+      "uiService": "prcItemScopeItemTextUIStandardService",
+      "getService": true
+    },
+    {
+      "id": "procurement.common.item.scope.detail.itemPlainText",
+      "template": "procurement.common/partials/scope-item-plaintext-html-container.html",
+      "title": "basics.material.scopeDetail.itemPlainTextTitle",
+      "controller": "basicsMaterialScopeItemTextController",
+      "uuid": "4f0d5c4a310956f35789b31fe8eafcd1",
+      "permission": "5d8bb73681edf2dc2760b5f5895189c8",
+      "dataService": "prcItemScopeItemTextDataService",
+      "uiService": "prcItemScopeItemTextUIStandardService",
+      "getService": true
+    }
+]

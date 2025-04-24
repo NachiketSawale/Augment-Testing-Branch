@@ -1,0 +1,18 @@
+[
+	{
+		"id": "productionplanning.formworktype.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.formworktype.listTitle",
+		"controller": "productionplanningFormworktypeListController",
+		"uuid": "1fe7157e2d6b494a9ca312d4e74b38d5",
+		"permission": "1fe7157e2d6b494a9ca312d4e74b38d5"
+	},
+	{
+		"id": "productionplanning.formworktype.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.formworktype.detailTitle",
+		"controller": "productionplanningFormworktypeDetailController",
+		"uuid": "2441a13936c84120bfeb0cca18f93d34",
+		"permission": "1fe7157e2d6b494a9ca312d4e74b38d5"
+	}
+]

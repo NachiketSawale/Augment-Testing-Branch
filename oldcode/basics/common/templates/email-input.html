@@ -1,0 +1,20 @@
+<div data-ng-switch="lookupDisplayColumn">
+	<div data-ng-switch-when="false" class="input-group" ng-class="getClass()">
+		<input type="text" class="input-group-content ng-pristine" data-ng-model="DisplayEmail" data-ng-value="entity[field]" data-ng-model-options="isForm() ? { updateOn: 'default blur', debounce:{default: 2000, blur: 0}}: { updateOn: 'default blur'}"
+		       data-ng-readonly="readOnly(entity)" data-ng-change="onChange(DisplayEmail)" data-platform-select-on-focus data-platform-control-validation data-config="$parent.config"
+		       data-ng-pattern-restrict data-enterstop="true" data-tabstop="true" data-domain="email" data-entity="entity" style>
+		<span class="input-group-btn">
+			<button class="btn btn-default control-icons ico-mail-noicon-1" data-ng-click="mailTo()" data-ng-show="isShowEmailButton()"></button>
+		</span>
+	</div>
+	<div data-ng-switch-when="true" class="input-group" ng-class="getClass()">
+		<input type="text" class="input-group-content ng-pristine" data-ng-model="DisplayEmail" data-ng-model-options="{ updateOn: 'default' }"
+		       data-ng-readonly="true" data-ng-change="onChange(entity[field])" data-platform-select-on-focus data-platform-control-validation
+		       data-ng-pattern-restrict data-enterstop="true" data-tabstop="true" data-domain="email" data-entity="entity" style>
+		<span class="input-group-btn">
+			<button class="btn btn-default control-icons ico-mail-noicon-1" data-ng-click="mailTo()" data-ng-show="isShowEmailButton()"></button>
+		</span>
+	</div>
+</div>
+
+

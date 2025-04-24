@@ -1,0 +1,175 @@
+{
+  "transportplanning": {
+    "requisition": {
+      "listRequisitionTitle": "Transport Requisition",
+      "detailsRequisitionTitle": "Transport Requisition Details",
+      "notificationListTitle": "Transport Requisition: Notifications",
+      "entityTranslation": "Translation",
+      "entityRequisition": "Transport Requisition",
+      "entityRequisitionDesc": "Transport Requisition Description",
+      "entityRequisitionStatus": "Transport Requisition Status",
+      "entityRequisitionDate": "Transport Requisition Date",
+      "entityTrsMrqStatus": "Material Requisition Status",
+      "entityEventTypeFk": "Requisition Type",
+      "bindings": "Bindings",
+      "entitySite": "Handled By",
+      "dateOnly": "Grouping Date",
+      "timeOnly": "Planned Time",
+      "planTime": "Planned Time",
+      "requistionJobSketch": "Transport Requisition Job Delivery Address Sketch",
+      "jobAddress": "Job-Address",
+      "currentlocationjobfk" : "Current Location Job",
+      "detail": {
+        "statistics": {
+          "title": "Statistics",
+          "entityProductsCount": "Products Count",
+          "entityGoodsInfo": "Goods Info",
+          "entityProductsWeightSum": "Products Weight Sum",
+          "entityProductsAreaSum": "Products Area Sum",
+          "entityProductsHeightSum": "Products Height Sum",
+          "entityProductsMaxLength": "Products Max Length",
+          "entityProductsMaxWidth": "Products Max Width"
+        }
+      },
+      "createLink": "Link Existing",
+      "upstreamItemByJob": {
+        "listTitle": "Transportable Upstream Items by Job"
+      },
+      "bundle": {
+        "listTitle": "Requisition: Bundles",
+        "detailsBundleTitle": "Requisition: Bundle Details",
+        "dialogTitle": "Select Bundles for Transport Requisition",
+        "document": {
+          "listTitle": "Requisition Bundle: Documents",
+          "revision": {
+            "listTitle": "Requisition Bundle Document: Revisions"
+          }
+        }
+      },
+      "unassignedBundle": {
+        "listTitle": "Requisition: Unassigned Bundles",
+        "ppsdocument": {
+          "listTitle": "Unassigned Bundle: Documents"
+        }
+      },
+      "toBeAssigned": {
+        "trsGoodTreeTitle": "Tree Unassigned Transport Goods",
+        "trsGoodListTitle": "List Unassigned Transport Goods",
+        "listTitle": "Requisition: Unassigned Bundles/Products/UpstreamItems",
+        "bundleOrProduct": "Bundle/Product"
+      },
+      "resource": {
+        "requisition": {
+          "listTitle": "Resource Requisitions",
+          "dialogTitle": "Select Resource Requisitions",
+          "entity": "Resource Requisition"
+        },
+        "reservation": {
+          "listTitle": "Resource Reservations"
+        }
+      },
+      "wizard": {
+        "wizardCreateTransport": "Create Transport",
+        "notify2SetStatusWizardParamValue": "To change status, please set value for wizard parameter",
+        "wizardParameter_RequisitionStatus2Set": "RequisitionStatus2Set",
+        "changeRequisitionStatus": "Change requisition status",
+        "wizardGroupname1": "Groupname",
+        "enableRequisitionTitle": "Enable Requisition",
+        "disableRequisitionTitle": "Disable Requisition",
+        "enableDisableRequisitionDone": "The field 'Is Live' of the Requisition ({{item}}) has been changed.<br>",
+        "requisitionAlreadyEnabled": "Requisition ({{item}}) is already enabled",
+        "requisitionAlreadyDisabled": "Requisition ({{item}}) is already disable",
+        "forbidMultiOperation": "Not allow operating multiple requisitions",
+        "forbidden": "Forbidden",
+        "createTrsRouteFromTrsReq": "Create Transport From Transport Requisition",
+        "intervalHour": "Interval Hours",
+        "errorStatus": " status is not allow to create ROUTE.",
+        "addGoods2TrsRoute": "Add Goods To Transport Route",
+        "createTrsRouteSuccess": "Create transport route({{code}}) successfully!",
+        "reqSubItemEntity": "Entity",
+        "synchronize": "Synchronize",
+        "pkgCode": "Package-Code",
+        "pkgDesc": "Package-Description",
+        "pkgQuantity": "Package-Quantity",
+        "routeCode": "Route-Code",
+        "routeDescription": "Route-Description",
+        "reqItemEntityDesc": "Entity-Description",
+        "returnRequisitionCreation": "Return Requisition Creation",
+        "selectResource": "Select Resource",
+        "createRequisition": "Create Requisition",
+        "goToRoute": "Go to Route"
+      },
+      "matrequisition": {
+        "listTitle": "Material Requisitions",
+        "detailsTitle": "Material Requisition Details",
+        "wizard": {
+          "changeMatRequisitionStatus": "Change material requisition status",
+          "wizardGroupname1": "Groupname"
+        }
+      },
+      "isLive": "IsLive",
+      "structure": "Transport Requisitions Structure",
+      "synchronizeDialog": {
+        "dialogTitle": "Transport-Requisition Synchronize to Transport-Package",
+        "noSelectedError": "No Trasnport-Requisition Selected",
+        "noRouteError": "No Route created for selected Requisition"
+      },
+      "lookupDialog": "Assign Transport Requisition",
+      "trsGoods": {
+        "entity": "Transport Good",
+        "listTitle": "Transport Goods",
+        "detailTitle": "Transport Goods Details",
+        "goodsType": "Good Type",
+        "good": "Good",
+        "goodDescription": "Good Description",
+        "filterTitle": "Transport Goods",
+        "transportInformation": "Transport Information",
+        "onTime": "On Time",
+        "planningState": "Planning State",
+        "isPickup": "Is Pickup",
+        "isDelivery": "Is Delivery",
+        "both": "Both",
+        "pkgsQuantity": "Planned Quantity",
+        "minPkgsStatus": "Package Min Status",
+        "maxPkgsStatus": "Package Max Status",
+        "dialogTitle": "Date Changed",
+        "dialogBody": "Do you want the change be applied to all goods?<br>If not a new requisition will be created.",
+        "isCancelled": "Is Cancelled",
+        "assignFromUR": "Assigned from Upstream Requirement",
+        "descriptionsOfProducts": "Descriptions of Products",
+        "productTemplateCodes": "Product Templates",
+        "productTemplateDescriptions": "Product Template Descriptions",
+        "addGoodsForSelectedModelObjects": "Add Goods For Selected Model Objects",
+		  "deleteProductMsg": "The product is already planned on future transports. Are you sure to remove it?",
+		  "deleteProductsMsg" : "The {{products}} are already planned on future transports. Are you sure you want to remove it?",
+		  "delete": "Delete"
+      },
+      "pickup": "Pickup",
+      "pickupIcon": "Pickup Icon",
+      "isPickup": "Is Pickup",
+      "isNotPickup": "Is Not Pickup",
+      "req2clerk": {
+        "trsreq2clerkListTitle": "Transport Requisition Clerks",
+        "entityReq2Clerk": "Requisition Clerk"
+      },
+      "logListTitle": "Transport Requisition: Logs",
+      "logPinboardTitle": "Transport Requisition: Logs (Pinboard)",
+      "assignTrsGoods": "Assign Transport Goods",
+      "job": {
+        "deliveryAddressRemark": "Transport Requisition Job Delivery Address Remark"
+      },
+      "maxWeight": "Max Weight",
+      "assignedBundlesAreOverweight": "Assigned Bundles are overweight!",
+      "errors" : {
+        "errorMaxWeightInput": "The Max Weight of Requistion must be greater than 0",
+		  "uniqCode": "The Code should be unique"
+      },
+      "pinDocumentLookupContainer": "Pin Documents",
+      "documentLookupTitle": "Document Lookup",
+      "pdfViewer": {
+        "recordSelections": "Record Selections",
+        "linkMarkupToTrsReq": "Link selected Markups to selected Transport Requisition"
+      }
+    }
+  }
+}

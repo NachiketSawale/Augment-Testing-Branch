@@ -1,0 +1,90 @@
+{
+	"resource": {
+		"requisition": {
+			"entityRequisition": "Requisition",
+			"requisitionListTitle": "Requisitions",
+			"requisitionDetailTitle": "Requisition Details",
+			"entityRequestedFrom": "Requested From",
+			"entityRequestedTo": "Requested To",
+			"lookupAssignActivity": "Assign Activity",
+			"entityPpsEvent": "PPS Event",
+			"entityTrsRequisitionFk": "Transport Requisition",
+			"entityRequisitionFk": "Requisition",
+			"entityJob": "Job",
+			"entityJobPreferred": "Preferred Performing Job",
+			"entityProjectStockFk": "Project Stock",
+			"entityProjectStockfk": "Project Stock",
+			"entityJobSite": "Job Site",
+			"entityPreferredResourceSite": " Preferred Resource Site",
+			"entityStock": "Stock",
+			"entityIsLinkedFixToReservation": "Linked to reservation",
+			"lookupAssignRequisition": "Assign Requisition",
+			"refreshButtonText": "Refresh",
+			"entityReservedFrom": "Reserved From",
+			"entityReservedTo": "Reserved To",
+			"entityPreferredResource": "Preferred Resource",
+			"requiredSkillListTitle": "Required Skills",
+			"requiredSkillDetailTitle": "Required Skill Details",
+			"requiredSkillEntity": "Required Skill",
+			"requisitionItemListTitle": "Requisition Item",
+			"requisitionItemDetailTitle": "Requisition Item Details",
+			"entityDispatcherGroupFk": "Dispatcher Group",
+			"titelreservematerialandstock": "Reserve Material And Stock",
+			"successfullycreated": "Successfully Created",
+			"stockDetailTitle": "Stock Detail",
+			"stockListTitle": "Stock List",
+			"requisitionDocumentListTitle": "Requisition Documents",
+			"requisitionDocumentDetailTitle": "Requisition Document Details",
+			"entityBarcode": "Barcode",
+			"entityCompany": "Company",
+			"dispatchingWizard": {
+				"entityRubric": "Rubric Category",
+				"entityCode": "Code",
+				"entityDescription": "Description",
+				"entityPerformingJob": "Performing Job",
+				"entityReceivingJob": "Receiving Job",
+				"titelCreateDispatchingForMaterialReservation": "Create Dispatching for Material Reservation",
+				"errorMsgNoRequisition": "No Material Reservation is existing for this Requisition or some of the selected requisitions",
+				"errorMsgNoMaterial": "No Material or Resource is existing for this requisition or some of the selected requisitions",
+				"errorMsgNoPlantResourcePart": "There isn't existing any resource part of type plant for this requisition or some of the selected requisitions",
+				"wizardTranslation": "Create Dispatching for Material Reservation",
+				"WorkoperationTypeFk": "Workoperation Type",
+				"entityDateEffective": "Date Effective",
+				"finishedMsg": "Created Dispatch Note: {0}"
+			},
+			"entityJobGroup": "Job Group",
+			"resrequisitiontype": "Requisition Type",
+			"resourcerequisitiongroup": "Res-Requisition Group",
+			"resrequisitiionpriority": "Res-Requisition Priority",
+			"ClerkownerFk": "Clerk Owner",
+			"ClerkresponsibleFk": "Clerk Responsible",
+			"ReservationId": "Reservation Id",
+			"RequisitionFk": "Requisition",
+			"entityDescription": "Description",
+			"structureContainerTitle": "Requisition Structure",
+			"changeRequisitionStatusWizard": {
+				"title": "Change Requisition Status"
+			},
+			"url": "Url",
+			"entityCode": "Code",
+			"entityRubricCategoryFk": "Rubric Category",
+			"changeRequisitionRequestedDateWzd": {
+				"title" : "Changing Requested Date",
+				"inputSection": {
+					"title" : "Inputs",
+					"selectionsGroup": "Selections",
+					"inputsGroup" : "Inputs",
+					"entityNewStartDate": "New Start Date",
+					"entityOldStartDate": "Previous Start Date"
+				},
+				"proccessingSection": {
+					"title" : "Proccessing..."
+				},
+				"completition": {
+					"title" : "Finished",
+					"message": "{0} Requested Dates of Requisition(s) changed!"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<div data-ng-controller="documentsProjectFileHandlerController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body material-lookup-modal-body">
+        <div class="overflow-hidden">
+            <div data-platform-alert data-error="error"></div>
+            <div data-platform-form data-form-options="modalOptions.body.formOptionsSingle"
+                 data-entity="fileUploadEntity"></div>
+            <div data-basics-common-upload-progress-bar data-options="progressBarOptions"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.footer.onOK('single')">{{::modalOptions.footer.okBtn}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.footer.onCancel()">
+            {{::modalOptions.footer.cancelBtn}}
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.loading.dialogLoading"
+         data-info="modalOptions.loading.loadingInfo"></div>
+</div>

@@ -1,0 +1,24 @@
+<div class="content">
+	<ui-sidebar-title [title]="'cloud.desktop.sdCmdBarQuickstart' | platformTranslate "></ui-sidebar-title>
+	<!-- Overlay is mocked will be replaced by overlay component -->
+	<div *ngIf="asyncInProgress" class="wait-overlay">
+		<div class="box">
+			<div class="spinner-lg"></div>
+		</div>
+	</div>
+	<div class="content-inner flex-box flex-column quickstart-items">
+		<div class="margin-top-ld margin-bottom-ld">
+			<input type="text" autocomplete="off" id="searchmodule" class="form-control" [(ngModel)]="searchString"
+				placeholder="{{ 'cloud.desktop.sdCmdBarSearch' | platformTranslate }}" #input
+				(input)="search(input.value)" />
+		</div>
+
+		<div *ngIf="pageAccordionData.length">
+			<ui-common-accordion [data]="pageAccordionData" (opened)="onPanelOpen($event)"
+				(closed)="onPanelClosed($event)" (selected)="onPanelSelected($event)"></ui-common-accordion>
+		</div>
+		<div *ngIf="!pageAccordionData.length">
+			<ui-common-accordion [data]="moduleAccordionData" (opened)="onPanelOpen($event)" (closed)="onPanelClosed($event)" (selected)="onPanelSelected($event)"></ui-common-accordion>
+		</div>
+	</div>
+</div>

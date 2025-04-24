@@ -1,0 +1,16 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-flat-partial.html",
+		"title": "",
+		"controller": "",
+		"uuid": "8be44a25f0414a79be68d267e943dfbb"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "",
+		"controller": "",
+		"uuid": "65b490c7b74b4f29ae54e315d4f3304d"
+	}
+]

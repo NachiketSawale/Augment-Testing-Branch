@@ -1,0 +1,26 @@
+<div class="planningboardSplitterRoot" id="planningboardSplitter">
+	<div id="ui-layout-west">
+		<div class="filterPlaceholder">&nbsp;</div>
+		<div ng-controller="platformPlanningBoardSupplierGridController" class="planningboard-grid">
+			<platform-grid ng-if="gridConfigReady" data-platform-dragdrop-component="ddTarget" data="supplierGridData"></platform-grid>
+		</div>
+	</div>
+	<div id="ui-layout-center">
+		<div id="pane-c" class="flex-element centerPane">
+			<div data-ng-controller="platformPlanningBoardAssignmentController">
+				<div style="display: flex" class="filterContainer">
+					<div class="filterPrevNextButtons" data-platform-filter-input-buttons-directive></div>
+					<div class="filterInput" data-platform-filter-input-directive></div></div>
+				<div data-platform-planning-board-directive></div>
+			</div>
+			<div data-basics-common-white-board data-show="overlayInfo" data-info="overlayInfo"></div>
+			<div cloud-common-overlay data-loading="showLoadingOverlay"></div>
+		</div>
+	</div>
+	<div id="ui-layout-east">
+		<div class="filterPlaceholder">&nbsp;</div>
+		<div ng-controller="platformPlanningBoardDemandGridController" class="planningboard-grid">
+			<platform-grid data-platform-dragdrop-component="ddTarget" ng-if="demandGridData" data="demandGridData"></platform-grid>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,130 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'ActiveDirectoryTenant' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.activeDirectoryTenant" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'ActiveDirectoryClientAppId' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.activeDirectoryClientAppId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'ActiveDirectoryResource' | translate }}
+				</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.activeDirectoryResource" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<!--GroupA radio selection for Username and UserPassword or ClientSecret-->
+		<div>
+			<div class="radiolist-container">
+				<div class="radio spaceToUp pull-left">
+					<label>
+						<input name="radioGroupA" ng-click="onRadioGroupOptChangedUserNamePassword('1', 'editorModeContent')" ng-model="input.editorModeContent" ng-value="1"
+						       type="radio">
+						{{'UserNamePassword' | translate }}
+					</label>
+				</div>
+				<div class="radio spaceToUp pull-left margin-left-ld">
+					<label>
+						<input name="radioGroupA" ng-click="onRadioGroupOptChangedUserNamePassword('2', 'editorModeContent')" ng-model="input.editorModeContent" ng-value="2"
+						       type="radio">
+						{{'ClientSecret' | translate }}
+					</label>
+				</div>
+			</div>
+			<div data-ng-show="input.editorModeContent === '1'">
+				<div class="platform-form-group">
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{'UserName' | translate
+							}}</label>
+						<div class="platform-form-col">
+							<div class="filler" data-ng-model="input.userName"
+							     data-options="contentOptions" data-script-editor-directive></div>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{'UserPassword' | translate
+							}}</label>
+						<div class="platform-form-col">
+							<div class="filler" data-ng-model="input.userPassword"
+							     data-options="contentOptions" data-script-editor-directive></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-ng-show="input.editorModeContent === '2'">
+				<div class="platform-form-group">
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{'ClientSecret' |
+						translate }}</label>
+						<div class="platform-form-col">
+							<div class="filler" data-ng-model="input.clientSecret"
+							     data-options="contentOptions" data-script-editor-directive></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--div basics-workflow-radio-list-container></div-->
+	</div>
+</div>
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+         </span>
+		</div>
+
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'AccessTokenType' | translate }}
+			</div>
+			<div class="platform-form-col">
+				<div data-ng-model="output.accessTokenType" data-options="codeMirrorOptions"
+				     data-script-editor-directive></div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'AccessToken' | translate }}
+			</div>
+			<div class="platform-form-col">
+				<div data-ng-model="output.accessToken" data-options="codeMirrorOptions"
+				     data-script-editor-directive></div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'AuthenticationResult' | translate }}
+			</div>
+			<div class="platform-form-col">
+				<div data-ng-model="output.authenticationResult" data-options="codeMirrorOptions"
+				     data-script-editor-directive></div>
+			</div>
+		</div>
+	</div>
+</div>

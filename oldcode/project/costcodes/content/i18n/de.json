@@ -1,0 +1,20 @@
+{
+	"project": {
+		"costcodes": {
+            "rate":"Kurs(Projekt)",
+            "dayWorkRate":"Regiepreis(Projekt)",
+            "uoM":"ME(Projekt)",
+            "costType":"!Cost Type(Project)",
+            "currency":"Währung(Projekt)",
+            "factorCosts":"Faktor(Projektkosten)",
+            "factorQuantity":"Faktor (Projektmenge)",
+            "realFactorCosts":"Effektiv Faktor (Projektkosten)",
+            "realFactorQuantity":"Effektiv Faktor(Projektmenge)",
+            "isLabour":"Lohn (Projekt)",
+            "isRate":"Wechselkurs(Projekt)",
+            "isDefault":"Standard(Projekt)",
+            "remark":"Bemerkung(Projekt)",
+            "lgmJobFk":"Auftrag"
+		}
+	}
+}

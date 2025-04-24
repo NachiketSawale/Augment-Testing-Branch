@@ -1,0 +1,261 @@
+[
+	{
+		"combo": "alt+=",
+		"description": "",
+		"callbackId": "expandnode",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "alt+shift+=",
+		"description": "",
+		"callbackId": "expandall",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "alt+k",
+		"callbackId": "toggleCheatSheet",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"description": "cloud.common.showHideMenu"
+	},
+	{
+		"combo": "ctrl+alt+n",
+		"description": "cloud.common.toolbarInsert",
+		"callbackId": "create",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Alt+N"
+	},
+	{
+		"combo": "ctrl+alt+d",
+		"description": "cloud.common.toolbarInsertSub",
+		"callbackId": "createChild",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Alt+D"
+	},
+	{
+		"combo": "ctrl+del",
+		"description": "cloud.common.toolbarDelete",
+		"callbackId": "delete",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Del"
+	},
+	{
+		"combo": "alt+plus",
+		"description": "cloud.common.toolbarExpand",
+		"callbackId": "expandnode",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "alt+-",
+		"description": "cloud.common.toolbarCollapse",
+		"callbackId": "collapsenode",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "alt+shift+plus",
+		"description": "cloud.common.toolbarExpandAll",
+		"callbackId": "expandall",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Alt+Shift+Plus"
+	},
+	{
+		"combo": "alt+shift+-",
+		"description": "cloud.common.toolbarCollapseAll",
+		"callbackId": "collapseall",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Alt+Shift+Minus"
+	},
+	{
+		"combo": "ctrl+alt+f",
+		"description": "cloud.common.taskBarSearch",
+		"callbackId": "gridSearchAll",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Alt+F"
+	},
+	{
+		"combo": "ctrl+shift+f",
+		"description": "cloud.common.taskBarColumnFilter",
+		"callbackId": "gridSearchColumn",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Shift+F"
+	},
+	{
+		"combo": "ctrl+m",
+		"description": "cloud.common.maximizeMinimize",
+		"callbackId": "maxmin",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+M"
+	},
+	{
+		"combo": "alt+w",
+		"description": "cloud.common.Navigator.goTo",
+		"callbackId": "goto",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "ALT + W"
+	},
+	{
+		"combo": "alt+l",
+		"description": "cloud.desktop.mainMenuLogout",
+		"callbackId": "logout"
+	},
+	{
+		"combo": "alt+h",
+		"description": "cloud.common.home",
+		"callbackId": "home"
+	},
+	{
+		"combo": "ctrl+alt+w",
+		"description": "cloud.common.watchesInfo",
+		"callbackId": "watchesInfo"
+	},
+	{
+		"combo": "ctrl+r",
+		"description": "cloud.desktop.navBarRefreshDesc",
+		"callbackId": "refresh",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "ctrl+alt+r",
+		"description": "cloud.desktop.navBarRefreshSelDesc",
+		"callbackId": "refreshSelection",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "alt+right",
+		"description": "cloud.common.focusForward",
+		"callbackId": "focusForward",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "alt+left",
+		"description": "cloud.common.focusBackward",
+		"callbackId": "focusBackward",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "ctrl+alt+right",
+		"description": "cloud.common.focusTabForward",
+		"callbackId": "focusTabForward",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "ctrl+alt+left",
+		"description": "cloud.common.focusTabBackward",
+		"callbackId": "focusTabBackward",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "esc",
+		"callbackId": "closeCheatSheet",
+		"description": "cloud.common.closeCheatSheet"
+	},
+	{
+		"combo": "alt+down",
+		"description": "cloud.desktop.navBarGoToNextDesc",
+		"callbackId": "goToNext",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "alt+up",
+		"description": "cloud.desktop.navBarGoToPrevDesc",
+		"callbackId": "goToPrevious",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	},
+	{
+		"combo": "ctrl+space",
+		"description": "platform.containerOverlay.shortcutDescription",
+		"callbackId": "openContainerOverlay",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		]
+	}
+]

@@ -1,0 +1,20 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { ModulePreloadInfoBase } from "@platform-common/model/module-management/module-preload-info-base.class";
+import { ISubModuleRouteInfo } from "@platform-common/model/module-management/sub-module-route-info.interface";
+
+export class ModulePreloadInfo extends ModulePreloadInfoBase {
+
+    /**
+	 * Returns some information on routes to all sub-modules in the module.
+	 * @protected
+	 *
+	 * @return {Array<ISubModuleRouteInfo>} An array of objects that provides some information about the sub-module routes.
+	 */
+	protected override getRouteInfos(): ISubModuleRouteInfo[] {
+		const subModuleRouteInfo: ISubModuleRouteInfo[] = [];
+		return subModuleRouteInfo;
+	}
+}

@@ -1,0 +1,67 @@
+.datavis .modelChangeSetSummary text.temporary {
+    opacity: 0;
+}
+.datavis .modelChangeSetSummary text.title {
+    fill: #333;
+    text-anchor: end;
+    dominant-baseline: ideographic;
+}
+.datavis .modelChangeSetSummary line.titleSep {
+    stroke: #333;
+    stroke-width: 2px;
+    z-index: 100;
+}
+.datavis .modelChangeSetSummary .bar.unchanged {
+    fill: #dcdcdc;
+}
+.datavis .modelChangeSetSummary .bar.changed {
+    fill: #7b95d1;
+}
+.datavis .modelChangeSetSummary .bar.propChanged {
+    fill: #bac8e7;
+}
+.datavis .modelChangeSetSummary .bar.changed {
+    fill: #7b95d1;
+}
+.datavis .modelChangeSetSummary .bar.only1 {
+    fill: #f26762;
+}
+.datavis .modelChangeSetSummary .thinbar.total1 {
+    fill: #f26762;
+}
+.datavis .modelChangeSetSummary .bar.only2 {
+    fill: #8ae3da;
+}
+.datavis .modelChangeSetSummary .thinbar.total2 {
+    fill: #8ae3da;
+}
+.datavis .modelChangeSetSummary text.total {
+    fill: #333;
+    dominant-baseline: ideographic;
+}
+.datavis .modelChangeSetSummary text.total.normalPosition {
+    text-anchor: end;
+}
+.datavis .modelChangeSetSummary text.total.shiftedPosition {
+    text-anchor: start;
+}
+.datavis .modelChangeSetSummary .modelProp {
+    fill: #dcdcdc;
+}
+.datavis .modelChangeSetSummary .modelProp.hasChanged {
+    fill: #7b95d1;
+}
+.datavis .modelChangeSetSummary .description text {
+    fill: #333;
+    dominant-baseline: central;
+    text-anchor: middle;
+}
+.datavis .modelChangeSetSummary .description text .model1 {
+    fill: #f26762;
+}
+.datavis .modelChangeSetSummary .description text .model2 {
+    fill: #8ae3da;
+}
+.datavis .modelChangeSetSummary rect.hovered {
+    fill: #f4e57e !important;
+}

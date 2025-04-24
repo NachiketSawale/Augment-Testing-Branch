@@ -1,0 +1,357 @@
+<div class="platform-lg">
+	<div class="ng-scope">
+		<div class="ng-scope">
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="toggleOpen(0)">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'estimate.main.priceAdjust.area' | platformTranslate }}</span>
+								<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" [class]="showAreaGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse" [hidden]="!showAreaGroup">
+						<div class="panel-body">
+							<table>
+								<tr>
+									<td>
+										<div class="platform-form-group">
+											<div class="row">
+												<ui-common-form [formConfig]="formConfiguration" [entity]="modifyOption"></ui-common-form>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ng-scope">
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="toggleOpen(1)">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'estimate.main.priceAdjust.generate' | platformTranslate }}</span>
+								<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" [class]="showGenerateGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse" [hidden]="!showGenerateGroup">
+						<div class="panel-body">
+							<table>
+								<tr>
+									<td>
+										<div class="platform-form-group">
+											<div class="platform-form-row">
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="radio" name="SelectedAreaType" [(ngModel)]="modifyOption.SelectAreaType" [value]="1" (keydown.enter)="stopEnter($event)">
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td colspan="3">
+										<div class="platform-form-group">
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.prices' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.Prices" [disabled]="readOnlyOption.SelectAreaType(1)" (keydown.enter)="stopEnter($event)"
+														       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td style="width: 10%;"></td>
+									<td>
+										<div class="platform-form-group">
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.baseUnitRate' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.estimatePriceOnly' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="radio" name="BaseUnitRateType" [(ngModel)]="modifyOption.BaseUnitRateType" [value]="1" [disabled]="readOnlyOption.BaseUnitRateType()" (ngModelChange)="baseUnitRateTypeChange()"
+														       (keydown.enter)="stopEnter($event)">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.adjustPriceOnly' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="radio" name="BaseUnitRateType" [(ngModel)]="modifyOption.BaseUnitRateType" [value]="2" [disabled]="readOnlyOption.BaseUnitRateType()" (ngModelChange)="baseUnitRateTypeChange()"
+														       (keydown.enter)="stopEnter($event)">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.adjustOrEstPrice' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="radio" name="BaseUnitRateType" [(ngModel)]="modifyOption.BaseUnitRateType" [value]="3" [disabled]="readOnlyOption.BaseUnitRateType()" (ngModelChange)="baseUnitRateTypeChange()"
+														       (keydown.enter)="stopEnter($event)">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.tenderPriceOnly' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="radio" name="BaseUnitRateType" [(ngModel)]="modifyOption.BaseUnitRateType" [value]="4" [disabled]="readOnlyOption.BaseUnitRateType()" (ngModelChange)="baseUnitRateTypeChange()"
+														       (keydown.enter)="stopEnter($event)">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<div class="platform-form-col" style="height: 28px;"></div>
+											</div>
+
+										</div>
+									</td>
+									<td style="width: 20%;"></td>
+									<td>
+										<div class="platform-form-group">
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.targetUnitRate' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.factor' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<input class="form-control text-right domain-type-factor form-control"
+													       [(ngModel)]="modifyOption.Factor" style="width: 150px; padding-right:3px"
+													       data-ng-pattern-restrict="(^[+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.]{0,1}\d+)*)([,\.][\d]{0,3})$)"
+													       [disabled]="readOnlyOption.BaseUnitRateType()"
+													       (blur)="factorChange('Factor')" (keydown.enter)="stopEnter($event)"/>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.adjustPrices' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="radio" name="TargetUnitRateType" [(ngModel)]="modifyOption.TargetUnitRateType" [value]="1" [disabled]="readOnlyOption.priceAdjust()" (keydown.enter)="stopEnter($event)">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.tenderPrices' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="radio" name="TargetUnitRateType" [(ngModel)]="modifyOption.TargetUnitRateType" [value]="2" [disabled]="readOnlyOption.BaseUnitRateType()" (keydown.enter)="stopEnter($event)">
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.overwriteExistPrices' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.OverwriteExistPrices" [disabled]="readOnlyOption.BaseUnitRateType()" (keydown.enter)="stopEnter($event)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.addComment' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.AddComment"
+														       [disabled]="readOnlyOption.AddComment()" (keydown.enter)="stopEnter($event)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td colspan="3">
+										<div class="platform-form-group">
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.aqFromWqQuantity' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.AqFromWqQuantity"
+														       (keydown.enter)="stopEnter($event)"
+														       [disabled]="readOnlyOption.SelectAreaType(1)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.aqWq' | platformTranslate }} &nbsp;</label>
+												<div class="platform-form-col">
+													<input class="form-control text-right domain-type-factor form-control"
+													       [(ngModel)]="modifyOption.AqDivWq" style="padding-right: 3px"
+													       data-ng-pattern-restrict="(^[+-]?\d*$)|(^(?:[+-]?[\d]*(?:[,\.]{0,1}\d+)*)([,\.][\d]{0,3})$)"
+													       [disabled]="readOnlyOption.AqDivWq()"
+													       (blur)="factorChange('AqDivWq')" (keydown.enter)="stopEnter($event)"/>
+												</div>
+											</div>
+
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ng-scope">
+			<div class="panel-group">
+				<div class="panel panel-default ng-scope ng-isolate-scope">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" (click)="toggleOpen(2)">
+								<span class="platform-form-group-header-text ng-binding ng-scope">{{ 'estimate.main.priceAdjust.reset' | platformTranslate }}</span>
+								<span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up" [class]="showResetGroup ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+							</a>
+						</h4>
+					</div>
+					<div class="panel-collapse collapse in" style="height: auto;" [hidden]="!showResetGroup">
+						<div class="panel-body">
+							<table style="width:100%; border-style: none">
+								<tr>
+									<td style=" vertical-align: top;width: 10%;">
+										<div class="platform-form-group">
+											<div class="platform-form-row">
+												<div class="platform-form-col">
+													<input type="radio" name="SelectedAreaType" [(ngModel)]="modifyOption.SelectAreaType" [value]="2"
+													       (keydown.enter)="stopEnter($event)">
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="platform-form-group">
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.delAdjustPrices' | platformTranslate }} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.DelAdjustPrices"
+														       [disabled]="readOnlyOption.SelectAreaType(2)"
+														       (keydown.enter)="stopEnter($event)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.delTenderPrices' | platformTranslate }} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.DelTenderPrices"
+														       [disabled]="readOnlyOption.SelectAreaType(2)"
+														       (keydown.enter)="stopEnter($event)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.delFixedPriceFlag' | platformTranslate }} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.DelFixedPriceFlag"
+														       [disabled]="readOnlyOption.SelectAreaType(2)"
+														       (keydown.enter)="stopEnter($event)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.resetAqToWqQuantity' | platformTranslate }} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.ResetAqToWqQuantity"
+														       [disabled]="readOnlyOption.ResetAqFromWq()"
+														       (keydown.enter)="stopEnter($event)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.resetAqFromBoqWq' | platformTranslate }}</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.ResetAqFromBoqAqQuantity"
+														       (keydown.enter)="stopEnter($event)"
+														       [disabled]="readOnlyOption.ResetAqFromBoqAq()"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+													</div>
+												</div>
+											</div>
+
+											<div class="platform-form-row">
+												<label class="platform-form-label">{{ 'estimate.main.priceAdjust.delComment' | platformTranslate }} &nbsp;&nbsp;&nbsp;&nbsp;</label>
+												<div class="platform-form-col">
+													<div class="domain-type-boolean form-control ng-scope">
+														<input type="checkbox" [(ngModel)]="modifyOption.DelComment"
+														       [disabled]="readOnlyOption.SelectAreaType(2)"
+														       (keydown.enter)="stopEnter($event)"
+														       class="ng-pristine ng-untouched ng-valid ng-not-empty"/>
+
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+

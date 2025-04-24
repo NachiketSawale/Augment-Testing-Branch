@@ -1,0 +1,142 @@
+<div data-platform-form-adjust-label>
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="inputOpen">
+			<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+				<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+			</div>
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.objectId' | translate }}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="model.objectId" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.remark' | translate }}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="model.remark" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Status Name -->
+			<div>
+				<div class="radiolist-container">
+					<div class="radio spaceToUp pull-left">
+						<label>
+							<input name="radioGroupA" ng-click="onRadioGroupOptChanged('1', 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+							       ng-value="1" type="radio">
+							{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+						</label>
+					</div>
+					<div class="radio spaceToUp pull-left margin-left-ld">
+						<label>
+							<input name="radioGroupA" ng-click="onRadioGroupOptChanged('2', 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+							       ng-value="2" type="radio">
+							{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="platform-form-group" data-ng-show="input.editorMode === 1">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.statusName' | translate }}</label>
+					<div class="platform-form-col">
+						<div data-change="config.changeStatus()" data-domain="select" data-domain-control
+						     data-model="model.name" data-options="selectOptions" readonly="codeMirrorOptions.readOnly"></div>
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-group" data-ng-show="input.editorMode === 2">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.statusName' | translate }}</label>
+					<div class="platform-form-col">
+						<div data-ng-model-options="{ debounce: 2000 }" data-ng-model="model.name" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- New- Status  -->
+			<!--<div>
+				<div class="radiolist-container">
+					<div class="radio spaceToUp pull-left">
+						<label>
+							<input name="radioGroupC" ng-click="onRadioGroupOptChanged('1', 'editorModeNew')" ng-disabled="readonly" ng-model="input.editorModeNew"
+									 ng-value="1" type="radio">
+							{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+						</label>
+					</div>
+					<div class="radio spaceToUp pull-left margin-left-ld">
+						<label>
+							<input name="radioGroupC" ng-click="onRadioGroupOptChanged('2', 'editorModeNew')" ng-disabled="readonly" ng-model="input.editorModeNew"
+									 ng-value="2" type="radio">
+							{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+						</label>
+					</div>
+				</div>
+			</div>-->
+
+			<div class="platform-form-group" data-ng-show="input.editorMode === 1">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.newStatus' | translate }}</label>
+					<div class="platform-form-col">
+						<div data-domain="select" data-domain-control data-entity="model.name"
+						     data-model="model.statusId" data-options="selectOptionsStatusId" readonly="codeMirrorOptions.readOnly"></div>
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-group" data-ng-show="input.editorMode === 2">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.newStatusId' | translate
+						}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="model.statusIdCode" data-options="codeMirrorOptions"
+						     data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-group" data-ng-show="input.showCheckValidate">
+				<div data-change="changeCheckbox()" data-domain="boolean" data-domain-control
+				     data-model="model.checkValidate"
+				     data-options="checkValidate"
+				     readonly="codeMirrorOptions.readOnly"></div>
+			</div>
+
+			<div class="platform-form-group" data-ng-show="input.showRunDependentWorkflow">
+				<div data-change="changeCheckbox()" data-domain="boolean" data-domain-control
+				     data-model="model.runDependentWorkflow"
+				     data-options="runDependentWorkflow"
+				     readonly="codeMirrorOptions.readOnly"></div>
+			</div>
+		</div>
+	</div>
+
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="outputOpen">
+			<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+				<span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+			</div>
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputChangeStatus' | translate
+						}}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="output.status" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

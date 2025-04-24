@@ -1,0 +1,24 @@
+.entity-filter-result-view {
+	height: calc(100% - 42px);
+
+	.entity-filter-result-split-box {
+		border-color: #DCDCDC;
+	}
+
+	.entity-filter-result-view-pane {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-color: #DCDCDC;
+	}
+
+	.entity-filter-result-view-left {
+		bottom: 22px;
+
+		.toolbar:first-child {
+			background-color: white;
+		}
+	}
+}

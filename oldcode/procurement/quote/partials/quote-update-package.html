@@ -1,0 +1,30 @@
+<div data-ng-controller="procurementQuoteUpdatePackageController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="platform-form-row">
+            <div class="radio spaceToUp col-lg-offset-2">
+                <label>
+                    <input type="radio" name="overwrite" data-ng-checked="true" value=1 data-ng-model=" modalOptions.model.updatePackage">{{translateTemplate.updatePrice}}
+                </label>
+            </div>
+
+        </div>
+        <div class="platform-form-row">
+            <div class="radio spaceToUp col-lg-offset-2">
+                <label>
+                    <input type="radio" name="overwrite" value=2 data-ng-model=" modalOptions.model.updatePackage">{{translateTemplate.updateQuantitiesAndPrice}}
+                </label>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button ng-if="modalOptions.isShown('ok')" class="ok btn" data-ng-class="(modalOptions.defaultButton === 'ok') ? 'btn-return' : 'btn-default'" data-ng-click="modalOptions.ok()"
+                data-ng-disabled="modalOptions.isDisabled('ok')">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button ng-if="modalOptions.isShown('cancel')" class="cancel btn" data-ng-class="(modalOptions.defaultButton === 'cancel') ? 'btn-return' : 'btn-default'" data-ng-click="modalOptions.cancel()"
+                data-ng-disabled="modalOptions.isDisabled('cancel')">
+            {{modalOptions.cancelButtonText}}
+        </button>
+    </footer>
+</div>

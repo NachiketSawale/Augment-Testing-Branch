@@ -1,0 +1,24 @@
+<ui-common-popup>
+	<div content class="generic-popup">
+		<div class="input-group form-control">
+			<input
+				type="text"
+				class="input-group-content"
+				placeholder="{{ 'basics.material.lookup.search' | platformTranslate }}"
+				[(ngModel)]="userInput"
+			/>
+		</div>
+
+		<ul class="popup-list" style="border-bottom: solid 1px silver">
+			<li *ngFor="let pinnedItem of pinnedItems; trackBy: trackById" (click)="select(pinnedItem)">
+				{{ scope.getFilterLabel(pinnedItem) }}
+			</li>
+		</ul>
+
+		<ul class="popup-list">
+			<li *ngFor="let item of items; trackBy: trackById" (click)="select(item)">
+				{{ scope.getFilterLabel(item) }}
+			</li>
+		</ul>
+	</div>
+</ui-common-popup>

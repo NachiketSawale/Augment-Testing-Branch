@@ -1,0 +1,28 @@
+{
+	"procurement": {
+		"txinterface": {
+			"entityFormSatz": "Forms"
+			,"importPopupTitle": "Publish RfQ"
+			,"exportPopupTitle": "Import Bidder Quote"
+			,"error":
+			{
+				"RfqMustHaveExactOneRequisition": "A Rfq must have exact one Requisition!"
+				,"RfqMustHaveAtLeastOneBoQ": "A Rfq must have at least one BoQ!"
+				,"NoBidderQuotesAvailable": "No bidder quotes are available!"
+			},
+			"message": {
+				"importSuccessful": "RfQ successful published.",
+				"exportSuccessful": "Bidder quotes successfully imported."
+			}
+			,"BidderNo": "Bidder No."
+			,"AVAID": "AVAID"
+			,"BidderName": "Bidder Name"
+			,"BidderStreet": "Bidder Street"
+			,"BidderPCode": "Bidder ZIP"
+			,"BidderCity": "Bidder City"
+			,"DocumentType": "Document Type"
+			,"DocumentDate": "Document Date",
+			"ActivityStreamContainerTitle": "iTWO tx Activity Stream"
+		}
+	}
+}

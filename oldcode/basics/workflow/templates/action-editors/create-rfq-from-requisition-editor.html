@@ -1,0 +1,72 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.requisitionId' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.ReqHeaderId" data-options="codeMirrorOptions2requisitionId"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.autoCopyBidder' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<!-- <div data-script-editor-directive data-ng-model="model.AutoCopyBidder" data-options="codeMirrorOptions2autoCopyBidder"></div> -->
+					<div data-change="changeCheckbox()" data-domain="boolean" data-domain-control
+					     data-model="isAutoCopyBidderCheckbox"
+					     data-options="AutoCopyBidder"
+					     readonly="codeMirrorOptions2autoCopyBidder.readOnly"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.bpIds' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.BusinessPartnerIds" data-options="codeMirrorOptions2bpIds"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.contactIds' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.ContactIds" data-options="codeMirrorOptions2contactIds"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputResult' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.Result" data-options="codeMirrorOptions2result"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

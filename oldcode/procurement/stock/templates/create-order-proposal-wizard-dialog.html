@@ -1,0 +1,22 @@
+<div data-ng-controller="procurementStockCreateOrderProposalWizardController" class="wizard-wrapper wizard-dialog modal-wrapper overflow-hidden">
+
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+        <h3>{{options.body.bodyTitle}}</h3>
+        <div class="modal-wrapper">
+            <div data-platform-form-container data-form-container-options="formContainerOptions"
+                 entity="currentItem" class="fullheight" data-ng-readonly="false"></div>
+        </div>
+        <div data-platform-wizard-dialog-body class="flex-box flex-column margin-top-ld"  ng-show = "getTotalStepCount() > 1"></div>
+    </section>
+    <footer class="modal-footer">
+        <span ng-if="getCurrentStepNumber() !== 1" >
+            <button ng-show = "getCurrentStepNumber() !== 1" type="button" class="btn btn-default" data-ng-click="previousStep()">{{::'basics.common.button.previousStep' | translate}}</button>
+        </span>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()" ng-disabled = "getCurrentStepNumber() >= getTotalStepCount()" >{{::'basics.common.button.nextStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="saveStep()" data-ng-disabled="isDisabled">{{::'basics.common.button.ok' | translate}}</button>
+        <button data-ng-disabled="currentStep.disallowCancel"  type="button" data-ng-click="modalOptions.cancel()" class="btn btn-default" >{{::'platform.cancelBtn' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="options.dialogLoading" data-info="options.loadingInfo"></div>
+</div>

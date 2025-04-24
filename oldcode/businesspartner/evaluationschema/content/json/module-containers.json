@@ -1,0 +1,99 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.evaluationschema.headerGridContainerTitle",
+		"controller": "businesspartnerEvaluationschemaHeaderController",
+		"uuid": "6003E88EB8734DA693F6FBB8DBEE621E"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.evaluationschema.headerFormContainerTitle",
+		"controller": "businesspartnerEvaluationschemaHeaderDetailController",
+		"uuid": "EA75E48752624F3389ECC286EDE0F763",
+		"permission": "6003E88EB8734DA693F6FBB8DBEE621E"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.evaluationschema.iconGridContainerTitle",
+		"controller": "businesspartnerEvaluationschemaIconController",
+		"uuid": "85E27C1F72D041F38215EE8478CE6EA3"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.evaluationschema.iconFormContainerTitle",
+		"controller": "businesspartnerEvaluationschemaIconDetailController",
+		"uuid": "FF3D3400CC6949DCB9D55E09C6762062",
+		"permission": "85E27C1F72D041F38215EE8478CE6EA3"
+	},
+	{
+		"id": "5",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.languageColHeader_ContainerTitle",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "F2593FD36EA84742B249F2B798FB9C30"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.evaluationschema.title.groups",
+		"controller": "businessPartnerEvaluationSchemaGroupController",
+		"uuid": "D6320711B95D403199AD36BCC9B2BE12"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.evaluationschema.title.groupDetail",
+		"controller": "businessPartnerEvaluationSchemaGroupDetailController",
+		"uuid": "F89D0A40D28D475481656124683F757C",
+		"permission": "D6320711B95D403199AD36BCC9B2BE12"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.evaluationschema.title.groupIcons",
+		"controller": "businessPartnerEvaluationSchemaGroupIconController",
+		"uuid": "25B798025AE0458EB34A5249101C428C"
+	},
+	{
+		"id": "9",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.evaluationschema.title.groupIconDetail",
+		"controller": "businessPartnerEvaluationSchemaGroupIconDetailController",
+		"uuid": "84B6893D227C42C2BA2275B15EF12C78",
+		"permission": "25B798025AE0458EB34A5249101C428C"
+	},
+	{
+		"id": "10",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.evaluationschema.title.items",
+		"controller": "businessPartnerEvaluationSchemaItemController",
+		"uuid": "C57FBC4EB15844D0A29B6361BC131941"
+	},
+	{
+		"id": "11",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.evaluationschema.title.itemDetail",
+		"controller": "businessPartnerEvaluationSchemaItemDetailController",
+		"uuid": "55C26AA6A9834F57B3089439CA49A6A6",
+		"permission": "C57FBC4EB15844D0A29B6361BC131941"
+	},
+	{
+		"id": "12",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.evaluationschema.title.subgroups",
+		"controller": "businessPartnerEvaluationSchemaSubgroupController",
+		"uuid": "D252A6F857A84387A1E20ABBC7DB588B"
+	},
+	{
+		"id": "13",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "businesspartner.evaluationschema.title.subgroupDetail",
+		"controller": "businessPartnerEvaluationSchemaSubgroupDetailController",
+		"uuid": "8D56FFA82E6144379648CF32D1A6D856",
+		"permission": "D252A6F857A84387A1E20ABBC7DB588B"
+	}
+]

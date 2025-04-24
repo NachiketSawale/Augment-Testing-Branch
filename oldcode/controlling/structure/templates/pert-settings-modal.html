@@ -1,0 +1,36 @@
+<header class="modal-header main-color">
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close()"
+            aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+    </button>
+    <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+</header>
+<section class="modal-body">
+    <div class="platform-form-group">
+        <!-- TODO: if dialog complexity rises, use the following directive
+        <div data-platform-form data-form-options="formOptions" entity="currentItem"></div>
+         -->
+        <div class="platform-form-row">
+            <label class="platform-form-label" for="pertSettingsSizeWidth">Width</label>
+
+            <div class="platform-form-col">
+                <input id="pertSettingsSizeWidth" class="form-control cell-right" type="number" ng-model="size.width"/>
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <label class="platform-form-label" for="pertSettingsSizeHeight">Height</label>
+
+            <div class="platform-form-col">
+                <input id="pertSettingsSizeHeight" class="form-control cell-right" type="number" ng-model="size.height"/>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

@@ -1,0 +1,15 @@
+/**
+ * Created by rei on 27.07.2015.
+ */
+{
+	"language": "pt",
+	"culture": "pt-pt",
+	"base": "en",
+	"translation": {
+		"en": "Inglés",
+		"de": "Alemão",
+		"fr": "Francês",
+		"pt": "Português",
+		"es": "Espanhol"
+	}
+}

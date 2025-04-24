@@ -1,0 +1,13 @@
+<div data-ng-controller="estimateMainLineItemSelectionStatementResultReportController" class="flex-element flex-box flex-column flex-basis-auto overflow-hidden">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+        <div data-platform-form-container data-form-container-options="formContainerOptions" entity="dataItem" class="flex-element flex-basis-auto"></div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default ok" data-ng-click="onOK()"
+                data-ng-disabled="modalOptions.isDisabled('ok')"> {{'cloud.common.ok' | translate}}
+        </button>
+    </footer>
+</div>

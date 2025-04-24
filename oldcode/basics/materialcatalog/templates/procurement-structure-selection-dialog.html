@@ -1,0 +1,27 @@
+<header class="modal-header main-color">
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)" aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+	<h2 class="modal-title">{{title}}</h2>
+</header>
+
+<section class="modal-body">
+	<div class="input-group">
+		<input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="search(searchValue,$event)" />
+		<span class="input-group-btn">
+			<button class="btn btn-default input-sm" data-ng-click="search(searchValue)">
+				<i class="block-image tlb-icons ico-search"></i>
+			</button>
+		</span>
+	</div>
+
+	<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden" style="border:solid 1px gainsboro; margin-top: 10px;">
+		<platform-grid data="gridData"  class="lookup-grid flex-basis-auto"></platform-grid>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button class="btn btn-default" data-ng-repeat="button in buttons" data-ng-disabled="button.disabled()" data-ng-click="button.execute($event)">
+		{{button.context$tr$ | translate}}
+	</button>
+</footer>

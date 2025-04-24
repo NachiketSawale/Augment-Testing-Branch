@@ -1,0 +1,13 @@
+<ui-common-popup>
+	<div content class="entity-filter-saved-filters">
+		<div class="generic-popup" *ngFor="let filterGroup of filterGroups">
+			<div class="filter-header border-bottom" (click)="toggle(filterGroup)">
+				{{ filterGroup.header | platformTranslate }}
+				<button class="filter-btn btn tlb-icons" [ngClass]="{'ico-tree-collapse': filterGroup.collapsed, 'ico-tree-expand': !filterGroup.collapsed}"></button>
+			</div>
+			<ul class="popup-list" *ngIf="!filterGroup.collapsed">
+				<li *ngFor="let profile of filterGroup.profiles" (click)="select(profile)">{{ profile.FilterName }}</li>
+			</ul>
+		</div>
+	</div>
+</ui-common-popup>

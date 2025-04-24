@@ -1,0 +1,77 @@
+[
+  {
+    "id": "transportplanning.package.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.package.listPackageTitle",
+    "controller": "transportplanningPackageListController",
+    "uuid": "9ade398dbcba41c79a9806e8250c49e6"
+  },
+  {
+    "id": "transportplanning.package.details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "transportplanning.package.detailsPackageTitle",
+    "controller": "transportplanningPackageDetailsController",
+    "uuid": "6c185b145a70424c8675c4bbee3a46cc",
+    "permission": "9ade398dbcba41c79a9806e8250c49e6"
+  },
+  {
+    "id":"transportplanning.package.event.list",
+    "template":"app/components/base/grid-partial.html",
+    "title":"transportplanning.package.eventListTitle",
+    "controller":"productionplanningCommonEventListController",
+    "currentModule": "transportplanning.package.event",
+    "parentService": "transportplanningPackageMainService",
+    "foreignKey": "TrsPackageFk",
+    "uuid":"fb45491e56d64efc9a5d01a3763fa561",
+    "permission":"5d32c2debd3646ab8ef0457135d35624"
+  },
+  {
+    "id": "transportplanning.package.document.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.package.document.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "transportplanning.package.document.grid",
+    "parentService": "transportplanningPackageMainService",
+    "foreignKey": "TrsPackageFk",
+    "uuid": "a88b9bea40f1449aae7908582701686e",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "transportplanning.package.document.revision.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.package.document.revision.listTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "4f183121967746b285ea361e691bf586",
+    "parentUuid": "transportplanning.package.document.grid",
+    "grandfathertService": "transportplanningPackageMainService",
+    "foreignKey": "TrsPackageFk",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "transportplanning.package.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "transportplanning.package.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "311ff7bb157947568ce1d33aca8d3650",
+    "wizardDisabled": "true"
+  },
+  {
+    "id": "transportplanning.package.costgroup.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.package.eventCostGroupListTitle",
+    "controller": "ppsCommonCostGroupListController",
+    "costGroupService": "trsPackageCostGroupService",
+    "uuid": "olghyf94asdcvf17ty967dgdfg5t5cty",
+    "permission": "5d32c2debd3646ab8ef0457135d35624"
+  },
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "c5fc074dfaba45adabc4e26a2a8724c0",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

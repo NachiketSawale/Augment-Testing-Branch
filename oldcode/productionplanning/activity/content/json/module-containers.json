@@ -1,0 +1,348 @@
+[
+  {
+    "id": "productionplanning.activity.activity.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.activity.listTitle",
+    "controller": "productionplanningActivityActivityListController",
+    "uuid": "0fabc9f2d6a946b1bd5517bb7229e10a",
+    "permission": "3a37c9d82f4e45c28ccd650f1fd2bc1f"
+  },
+  {
+    "id": "productionplanning.activity.activity.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.activity.activity.detailTitle",
+    "controller": "productionplanningActivityActivityDetailController",
+    "uuid": "3f4268ef496c4878ac95b92e9cce4220",
+    "permission": "3a37c9d82f4e45c28ccd650f1fd2bc1f"
+  },
+  {
+    "id": "productionplanning.activity.report.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.report.report.listTitle",
+    "controller": "productionplanningActivityReportListController",
+    "uuid": "1435d4d81ed6429bb7cdcfb80ff39f2b",
+    "permission": "518268e717e2413a8107c970919eea85"
+  },
+  {
+    "id": "productionplanning.activity.report.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.report.report.detailTitle",
+    "controller": "productionplanningActivityReportDetailController",
+    "uuid": "1eb2dcf5d64c4932a8dccb6428ef5520",
+    "permission": "518268e717e2413a8107c970919eea85"
+  },
+  {
+    "id": "productionplanning.activity.report2product.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.report.report2product.listTitle",
+    "controller": "productionplanningActivityReport2ProductListController",
+    "uuid": "d747e68bb9544804bf5a908b714315ce",
+    "permission": "5dad005fa09b4e2eaf64da8707ec8fe4"
+  },
+  {
+    "id": "productionplanning.activity.timesheet.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.report.timesheet.listTitle",
+    "controller": "productionplanningActivityTimeSheetListController",
+    "uuid": "8bf99dd93c304cc682180dfe164dbab1",
+    "permission": "abc1d3cdf7584125aa6e6ce9a7f90a88"
+  },
+  {
+    "id": "productionplanning.activity.report2costcode.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.report.report2costcode.listTitle",
+    "controller": "productionplanningActivityReport2CostCodeListController",
+    "uuid": "23161089944840db9321870d77073c74",
+    "permission": "7e0d8fd7651a436fa6d4102c11c0b29c"
+  },
+  {
+    "id": "productionplanning.activity.trsRequisition.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.trsRequisition.ListTitle",
+    "controller": "productionplanningActivityTrsRequisitionListController",
+    "uuid": "5195d2ff48d64096a06f44b285781567",
+    "permission": "aaec6786820141e19c4b6febc691652b",
+    "permissionReference":"c9ab062b470a455b91e5aee998a44752"
+  },
+  {
+    "id": "productionplanning.activity.ppsdocument.documentListForUnassignedBundle",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.document.unassignedBundleListTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanningActivityUnassignedBundleDataServicePpsDocumentDataService",
+    "parentService": "productionplanningActivityUnassignedBundleDataService",
+    "foreignKey": "UnassignedBundleFk",
+    "uuid": "252806a92151458fbfa60c935cfad521",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf",
+    "isReadonly": true    
+  },
+  {
+    "id": "productionplanning.activity.requisition.bundle.document.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.document.trsRequisitionBundleListTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanningActivityTrsRequisitionBundleDataServicePpsDocumentDataService",
+    "parentService": "productionplanningActivityTrsRequisitionBundleDataService",
+    "foreignKey": "TrsProductBundleFk",
+    "uuid": "af8d3dff96204f7aac4bebda830faf37",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.activity.ppsdocument.documentListForActivity",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.document.activityDocumentListTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.activity.document.activity",
+    "parentService": "productionplanningActivityActivityDataService",
+    "foreignKey": "MntActivityFk",
+    "uuid": "5b47acd752be4c3ab57f6c8dc697e58e",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.mounting.activity.ppsdocument.revision.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.document.revision.activityListTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "da0310aa56e04c3ba7575851f258e934",
+    "parentUuid": "productionplanning.activity.document.activity",
+    "grandfathertService": "productionplanningActivityActivityDataService",
+    "foreignKey": "MntActivityFk",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.activity.ppsdocument.documentListForActivityItems",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.document.activityItemsDocumentListTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.activity.document.activity2",
+    "parentService": "productionplanningActivityActivityDataService",
+    "foreignKey": "ActivityItemsDocument",
+    "uuid": "be5a72af35584da79a9b728a0ee15e8f",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf",
+    "isReadonly": true
+  },
+  {
+    "id": "productionplanning.mounting.activity.item.ppsdocument.revision.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.document.revision.itemListTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "4d0f6043e0004d13a7307c3951680ee9",
+    "parentUuid": "productionplanning.activity.document.activity2",
+    "grandfathertService": "productionplanningActivityActivityDataService",
+    "foreignKey": "ActivityItemsDocument",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf",
+    "isReadonly": true
+  },
+  {
+    "id": "productionplanning.activity.ppsdocument.documentListForReport",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.report.document.reportDocumentListTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.activity.document.report",
+    "parentGUID": "1435d4d81ed6429bb7cdcfb80ff39f2b",
+    "containerInfo": "productionplanningActivityContainerInformationService",
+    "foreignKey": "MntReportFk",
+    "uuid": "d5a681d984b34849bfeee5c873c6625a",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.mounting.report.ppsdocument.revision.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.report.document.revision.listTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "378efb021f9e44c1a93aea2105bee10b",
+    "parentUuid": "productionplanning.activity.document.report",
+    "grandParentGUID": "1435d4d81ed6429bb7cdcfb80ff39f2b",
+    "containerInfo": "productionplanningActivityContainerInformationService",
+    "foreignKey": "MntReportFk",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.activity.resRequisitionList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.resRequisition.ListTitle",
+    "controller": "productionplanningActivityResRequisitionListController",
+    "uuid": "e3a318e9bf3b4f38a0424d16174415fb",
+    "permission": "291a21ca7ab94d549d2d0c541ec09f5d"
+  },
+  {
+    "id": "productionplanning.activity.requisitionResRequisitionList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.trsRequisition.resRequisitonListTitle",
+    "controller": "productionplanningActivityResRequisitionForTrsRequisitionListController",
+    "uuid": "9ddb621ff9d941234f21adc21d755fcc",
+    "permission": "291a21ca7ab94d549d2d0c541ec09f5d"
+  },
+  {
+    "id": "productionplanning.activity.bundle.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.activity.bundleListTitle",
+    "controller": "transportplanningBundleSubviewController",
+    "uuid": "c6b1b36cd9ee4df3b1572b05fff8a5e9",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de",
+    "containerType": "Readonly"
+  },
+  {
+    "id": "productionplanning.activity.matrequisition.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.trsRequisition.matRequisitionListTitle",
+    "controller": "transportplanningRequisitionMatRequisitionListController",
+    "moduleName": "productionplanning.activity",
+    "uuid": "2219ffe26d694ed9ad9f02bdb5c3f1e0",
+    "permission": "318c8b9af84c4cb38086f897aa853d71"
+  },
+  {
+    "id": "productionplanning.activity.requisition.bundle.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.trsRequisition.bundleListTitle",
+    "controller": "transportplanningBundleSubviewController",
+    "uuid": "9bde56ae4eb14c75aef90c70da4603a7",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de",
+    "containerType": "Reference"
+  },
+  {
+    "id": "productionplanning.activity.unassignedBundle.grid",
+    "template": "transportplanning.bundle/partials/source-list.html",
+    "title": "productionplanning.activity.bundle.listTitle",
+    "controller": "transportplanningBundleSubviewController",
+    "uuid": "b70cb2a2923f4b34af82fbea35f8725d",
+    "permission": "8ea8679532ee44869df8dd9e3ae629de",
+    "containerType": "Unassigned",
+    "filter": ["projectId", "siteId", "jobId", "drawingId", "puId", "notAssignedFlags",
+      "EarliestStart",
+      "LatestFinish"]
+  },
+  {
+    "id": "productionplanning.activity.unassignedBundle.product.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.bundle.product.listTitle",
+    "controller": "productionplanningActivityUnassignedBundleProductListController",
+    "uuid": "17aa3e9e12c04e92a351bfdfa2b17530",
+    "permission": "5d32c2debd3646ab8ef0457135d35624"
+  },
+  {
+    "id": "productionplanning.activity.activityResourceList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.activity.activity.resourceListTitle",
+    "controller": "productionplanningActivityResourceForActivityListController",
+    "uuid": "0579fab6065b4c49b2a4ac2936327336",
+    "permission": "1046a3bd867147feb794bdb60a805eca"
+  },
+  {
+    "id": "productionplanning.activity.planningboard",
+    "template": "app/components/planningboard/templates/platform-planning-board-template.html",
+    "title": "productionplanning.mounting.planningBoardTitle",
+    "controller": "productionplanningActivityPlanningBoardController",
+    "uuid": "3fe6fe947a1a4c008bdecd9b09e95197",
+    "permission": "3a37c9d82f4e45c28ccd650f1fd2bc1f",
+    "subcontainers": [{
+      "uuid": "f3df4308aa5a40e38206c092b7ded287"
+    },
+    {
+      "uuid": "5435fe6bf21e49cfbc70cbfce08c6fdf"
+    }]
+  },
+  {
+    "id": "productionplanning.activity.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "964e16bab90f497a9ebcf1e80c70ff7c",
+    "wizardDisabled": "true"
+  },
+  {
+    "id": "productionplanning.activity.ppsitem.filter.list",
+    "template": "app/components/base/grid-partial-overlay.html",
+    "title": "productionplanning.activity.additionalFilter.ppsItemFilterListTitle",
+    "controller": "productionplanningActivityPpsItemFilterListController",
+    "uuid": "c6ec7c97d4164c8890619d4671570b20",
+    "permission": "5907fffe0f9b44588254c79a70ba3af1"
+  },
+  {
+    "id": "productionplanning.activity.prjlocation.filter.list",
+    "template": "app/components/base/grid-partial-overlay.html",
+    "title": "productionplanning.activity.additionalFilter.prjLocationFilterListTitle",
+    "controller": "productionplanningActivityPrjLocationFilterListController",
+    "uuid": "893f58afd5a6410593b5bf3f82f166a9",
+    "permission": "3a37c9d82f4e45c28ccd650f1fd2bc1f"
+  },
+  {
+    "id": "productionplanning.activity.ctrlunit.filter.list",
+    "template": "app/components/base/grid-partial-overlay.html",
+    "title": "productionplanning.activity.additionalFilter.ctrlUnitFilterListTitle",
+    "controller": "productionplanningActivityControllingUnitFilterListController",
+    "uuid": "deb83b37e23d4f5394c0b2cdae9627dd",
+    "permission": "681223e37d524ce0b9bfa2294e18d650"
+  },
+  {
+    "id": "productionplanning.activity.psdActivity.filter.list",
+    "template": "app/components/base/grid-partial-overlay.html",
+    "title": "productionplanning.activity.additionalFilter.psdActivityFilterListTitle",
+    "controller": "productionplanningActivityPsdActivityFilterListController",
+    "uuid": "666245f8edff491f8ca115ef23b35fad",
+    "permission": "13120439d96c47369c5c24a2df29238d"
+  },
+  {
+    "id": "productionplanning.activity.dispatcher.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.dispatcherListTitle",
+    "controller": "productionplanningCommonDispatcherListController",
+    "moduleName": "productionplanning.activity",
+    "uuid": "7d166959271d4a24a99ca57c1748cd92",
+    "permission": "73689e2842f6436b9465ff71d79aea80"
+  },
+  {
+    "id": "productionplanning.activity.costgroup.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.costgroupListTitle",
+    "controller": "ppsCommonCostGroupListController",
+    "costGroupService": "ppsActivityCostGroupService",
+    "uuid": "5g026f94a1f54817ty96704af26a5cgj",
+    "permission": "3a37c9d82f4e45c28ccd650f1fd2bc1f"
+  },
+  {
+    "id": "productionplanning.activity.trsGood.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "transportplanning.requisition.trsGoods.listTitle",
+    "controller": "transportplanningRequisitionTrsGoodsListController",
+    "moduleName": "productionplanning.activity",
+    "uuid": "ff8a5a1e201242ab8c837cf1a50e9932",
+    "permission": "aaec6786820141e19c4b6febc691652b"
+  },
+  {
+    "id": "productionplanning.activity.trsGood.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "transportplanning.requisition.trsGoods.detailTitle",
+    "controller": "transportplanningRequisitionTrsGoodsDetailController",
+    "moduleName": "productionplanning.activity",
+    "uuid": "ef8a5a1e201242ab8c837cf1a50e9932",
+    "permission": "aaec6786820141e19c4b6febc691652b"
+  },
+	{
+		"id": "productionplanning.mounting.model.viewer.hoops",
+		"template": "model.viewer/partials/model-viewer-hoops-template.html",
+		"title": "model.viewer.hoops.title",
+		"controller": "modelViewerHoopsController",
+		"uuid": "05d08e98413a4f5983aaa1c53d37b15e",
+		"defaultView": "Iso",
+		"permission": "7ac2a568c32e4a16a2b4106db572133d"
+	},
+	{
+		"id": "model.simulation.cockpit",
+		"template": "model.simulation/partials/model-simulation-cockpit-template.html",
+		"title": "model.simulation.cockpitTitle",
+		"controller": "modelSimulationCockpitController",
+		"uuid": "80d868c4055f46348d86bce88390bf45",
+		"permission": "a919c5302c1a4a8c975726f2466ca52d"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "6572e48e56554fcdb477c7798d93c97a",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

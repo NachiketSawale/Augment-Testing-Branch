@@ -1,0 +1,60 @@
+#toolbarViewer {
+	overflow:hidden;
+}
+
+#scaleSelectContainer {
+	margin-top:4px;
+	min-width:140px !important;
+	margin-right:10px;
+	display: block !important;
+}
+
+#scaleSelect {
+	padding: 0 2px;
+	cursor:pointer;
+	min-width:calc(100% + 22px) !important;
+	height:22px;
+}
+
+html[dir='ltr'] .innerCenter {
+	right:calc(-50% - 35px); /* 35px zusätzlichen Platz für das Annotation-Icon */
+}
+
+@media (max-width: 580px) {
+	html[dir='ltr']  #download {
+		display:none; /* ggf. Download-Button ausblenden, damit die Zoomauswahl trotz Annotation noch passt */
+	}
+}
+
+#pageNumberLabel, #numPages {
+	margin-top:5px;
+}
+
+#pageNumber {
+	margin-top:5px;
+}
+
+#zoomIn, #zoomOut {
+	height:24px;
+	margin-top:1px;
+}
+
+#zoomIn:before, #zoomOut:before {
+	top: 3px;
+}
+
+#download {
+	margin-right:3px;
+}
+
+#openFile, #print, #secondaryToolbarToggle, #viewBookmark, .toolbarButtonSpacer {
+	display:none !important;
+}
+
+.verticalToolbarSeparator.hiddenSmallView {
+	display:none;
+}
+
+.toolbarButton {
+	cursor:pointer;
+}

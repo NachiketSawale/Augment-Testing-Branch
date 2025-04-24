@@ -1,0 +1,53 @@
+<div class="content" data-ng-controller="cloudDesktopInquirySidebarController as inquirySidebar">
+	<div class="toolbar">
+		<div class="title"><span translate="cloud.desktop.inquiry.header"></span>({{inquirySidebar.itemList.length||0}})</div>
+		<ul class="tools">
+			<li class="sublist">
+				<ul class="radio-group">
+					<li>
+						<!--class="tlb-icons ico-news nobottomborder"-->
+						<button type="button" title="{{::'cloud.desktop.inquiry.addselected'|translate}}"
+						        class="tlb-icons ico-add-selected"
+						        data-ng-click="inquirySidebar.onAddSelected()" data-ng-disabled="!inquirySidebar.canAddSelected()">
+						</button>
+					</li>
+					<li>
+						<button type="button" title="{{::'cloud.desktop.inquiry.addallselected'|translate}}"
+						        class="tlb-icons ico-add-all"
+						        data-ng-click="inquirySidebar.onAddAll()" data-ng-disabled="!inquirySidebar.canAddAll()">
+							<!--data-ng-class="{active: taskSidebar.showFilter}"-->
+						</button>
+					</li>
+					<li>
+						<button type="button" title="{{::'cloud.desktop.inquiry.deleteall'|translate}}" data-ng-disabled="!inquirySidebar.canDeleteAll()"
+						        class="tlb-icons ico-delete-all"
+						        data-ng-click="inquirySidebar.onDeleteAll()">
+						</button>
+					</li>
+				</ul>
+		</ul>
+	</div>
+
+	<div class="content-inner flex-box flex-column overflow-hidden">
+		<div data-cloud-Common-Overlay data-loading="inquirySidebar.resultInfo.show()" data-info2="inquirySidebar.resultInfo.msg"></div>
+
+		<div class="sidebar-panel overflow-hidden">
+			<div class="sidebar-panel-body flex-element">
+				<ul data-platform-item-list-directive data-dollarbinding="true"
+				    data-list="inquirySidebar.itemList" data-item-template="inquirySidebar.itemTemplate"
+				    data-click-fn="inquirySidebar.onItemDelete" class="scroll-padding flex-element overflow" style="cursor: default;"></ul>
+			</div>
+
+			<div class="sidebar-panel-footer flex-box">
+				<button class="btn btn-default flex-element" data-ng-click="inquirySidebar.onCancelInquiry()" data-ng-disabled="!inquirySidebar.canCancelInquiry()"
+				        title="{{::'cloud.desktop.inquiry.canceltitle'|translate}}">
+					{{::'cloud.desktop.inquiry.cancel'|translate}}
+				</button>
+				<button class="btn btn-default flex-element margin-left-ld" data-ng-click="inquirySidebar.onSaveCloseInquiry()" data-ng-disabled="!inquirySidebar.canSaveCloseInquiry()"
+				        title="{{::'cloud.desktop.inquiry.saveclosetitle'|translate}}">
+					{{::'cloud.desktop.inquiry.saveclose'|translate}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,255 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainUnitTitle",
+		"controller": "objectMainUnitListController",
+		"uuid": "f863261368cb4f2c90224df8b9847afe"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainUnitTitle",
+		"controller": "objectMainUnitDetailController",
+		"uuid": "3d333462cfc848cb95e79b82e718101a",
+		"permission": "f863261368cb4f2c90224df8b9847afe"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainUnitAreaTitle",
+		"controller": "objectMainUnitAreaListController",
+		"uuid": "283a88b5a04a423d938180b0774c3040"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainUnitAreaTitle",
+		"controller": "objectMainUnitAreaDetailController",
+		"uuid": "1f1e8da2c5a54d4e83ba29cadf13fcd2",
+		"permission": "283a88b5a04a423d938180b0774c3040"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainUnitPriceTitle",
+		"controller": "objectMainUnitPriceListController",
+		"uuid": "f288176f4614422f95e33d79dee8dba5"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainUnitPriceTitle",
+		"controller": "objectMainUnitPriceDetailController",
+		"uuid": "f73af0eec7524ed7824884e67b003c7f",
+		"permission": "f288176f4614422f95e33d79dee8dba5"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainDocumentTitle",
+		"controller": "objectMainDocumentListController",
+		"uuid": "0fe9e5cff36745768670d19df28dfe9f"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainDocumentTitle",
+		"controller": "objectMainDocumentDetailController",
+		"uuid": "916d6a951ca640808cfe0b80d634b20b",
+		"permission": "0fe9e5cff36745768670d19df28dfe9f"
+	},
+	{
+		"id": "9",
+		"template": "app/components/base/partials/image-partial.html",
+		"title": "object.main.embedPhotoHeader",
+		"controller": "objectMainPhotoController",
+		"uuid": "f86f7eb6dfc54753875ab41db67797d4",
+		"wizardDisabled": "true",
+		"permission": "e175af97563843b9925adcd0b60e8d3b"
+	},
+	{
+		"id": "10",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainProspectDocumentTitle",
+		"controller": "objectMainProspectDocumentListController",
+		"uuid": "2bdfd213a302401c88fbff8bc80df3c5"
+	},
+	{
+		"id": "11",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainProspectDocumentTitle",
+		"controller": "objectMainProspectDocumentDetailController",
+		"uuid": "7c50d259385e4567afad3544e9047df4",
+		"permission": "2bdfd213a302401c88fbff8bc80df3c5"
+	},
+	{
+		"id": "12",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainProspectActivityTitle",
+		"controller": "objectMainProspectActivityListController",
+		"uuid": "5ce1540a85eb4de0b13ddbd7b7ab09cf"
+	},
+	{
+		"id": "13",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainProspectActivityTitle",
+		"controller": "objectMainProspectActivityDetailController",
+		"uuid": "3c4e746e02154eca9f1e8f8fc832d702",
+		"permission": "5ce1540a85eb4de0b13ddbd7b7ab09cf"
+	},
+	{
+		"id": "14",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainProspectChangeTitle",
+		"controller": "objectMainProspectChangeListController",
+		"uuid": "47c8300404b9436282791d79db6d9cb6"
+	},
+	{
+		"id": "16",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainProspectChangeTitle",
+		"controller": "objectMainProspectChangeDetailController",
+		"uuid": "de707626032f4bd3bc6e6edeee75dccc",
+		"permission": "47c8300404b9436282791d79db6d9cb6"
+	},
+	{
+		"id": "17",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainProspectTitle",
+		"controller": "objectMainProspectListController",
+		"uuid": "98e77e63a57443f096284f2ee00e8f66"
+	},
+	{
+		"id": "18",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainProspectTitle",
+		"controller": "objectMainProspectDetailController",
+		"uuid": "3ed83dc6e18f4565855eff19902418fb",
+		"permission": "98e77e63a57443f096284f2ee00e8f66"
+	},
+	{
+		"id": "19",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainUnitPhotoTitle",
+		"controller": "objectMainUnitPhotoListController",
+		"uuid": "e175af97563843b9925adcd0b60e8d3b"
+	},
+	{
+		"id": "20",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainUnitPhotoTitle",
+		"controller": "objectMainUnitPhotoDetailController",
+		"uuid": "42e90f3cbc2f41afb9d46268d11a3bbe",
+		"permission": "e175af97563843b9925adcd0b60e8d3b"
+	},
+	{
+		"id": "21",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "object.main.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "6adaad4de3d44c0fa7732378f6de68cb",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "object.main.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "e800bb0931ec4593a9742b901cff6bf4"
+	},
+	{
+		"id": "project.main.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "74341ef85a8e4643b14a64d46ec82472",
+		"permission": "e800bb0931ec4593a9742b901cff6bf4"
+	},
+	{
+		"id": "22",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMainUnit2ObjUnitTitle",
+		"controller": "objectMainUnit2ObjUnitListController",
+		"uuid": "687b0fd5315f47e8a109715375f2596a"
+	},
+	{
+		"id": "23",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMainUnit2ObjUnitTitle",
+		"controller": "objectMainUnit2ObjUnitDetailController",
+		"uuid": "c05eef6a46bf479391bd129480faf3de",
+		"permission": "687b0fd5315f47e8a109715375f2596a"
+	},
+	{
+		"id": "24",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.listObjectMeterTypeReadingTitle",
+		"controller": "objectMainMeterTypeReadingListController",
+		"uuid": "2bb446f7ffa94d679d8ea9e7005d6431"
+	},
+	{
+		"id": "25",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.detailObjectMeterTypeReadingTitle",
+		"controller": "objectMainMeterTypeReadingDetailController",
+		"uuid": "fe7f54b726f442488eec07c925cf152f",
+		"permission": "2bb446f7ffa94d679d8ea9e7005d6431"
+	},
+	{
+		"id": "resource.equipment-group.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "c42358caed2a40c1966c3f9988448a24",
+		"controller": "",
+		"sectionId": "36",
+		"mainService": "objectMainUnitService"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentAssignObject",
+		"controller": "documentsProjectModelObjectController",
+		"uuid": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentAssignObjectFormTitle",
+		"controller": "documentsProjectModelObjectDetailController",
+		"uuid": "ee68ae76fefe4b758c282594a1746480",
+		"permission": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "object.main.unitInstallment.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "object.main.unitInstallmentListTitle",
+		"controller": "objectMainUnitInstallmentListController",
+		"uuid": "47048c5b099c46288cb3d85b3c656f8f"
+	},
+	{
+		"id": "object.main.unitInstallment.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "object.main.unitInstallmentDetailTitle",
+		"controller": "objectMainUnitInstallmentDetailsController",
+		"uuid": "97d3218a1f574c0491a3a917064ac912",
+		"permission": "47048c5b099c46288cb3d85b3c656f8f"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "cc5ecaa680d744c4965c7365688004ac",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

@@ -1,0 +1,26 @@
+<div data-ng-controller="boqMainGaebImportWizardController" class="modal-wrapper">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+
+        <div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+
+        <div ng-switch="currentStep.number" class="modal-wrapper">
+            <div ng-switch-when="0">
+                <ng-include src="'boq.main/templates/boq-gaeb-import-wizard-step-select-file.html'"></ng-include>
+            </div>
+            <div ng-switch-when="1">
+                <ng-include src="'boq.main/templates/boq-gaeb-import-wizard-step-partialimport.html'"></ng-include>
+            </div>
+            <div ng-switch-when="2">
+                <ng-include src="'boq.main/templates/boq-gaeb-import-wizard-step-gaebinfo.html'"></ng-include>
+            </div>
+
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="previousStep()" data-ng-disabled="!canExecutePreviousButton()"> {{::'basics.common.button.previousStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()" data-ng-disabled="!canExecuteNextButton()"> {{getButtonText()}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+    </footer>
+</div>
+

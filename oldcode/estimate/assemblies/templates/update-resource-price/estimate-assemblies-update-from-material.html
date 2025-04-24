@@ -1,0 +1,17 @@
+<div class="flex-element flex-box flex-column filler">
+    <div class="row" data-ng-show="showPriceListRetrievalOption()">
+        <div class="col-md-12" data-platform-form data-form-options="priceListRetrievalOptions" entity="currentRetrievalOption"> </div>
+    </div>
+    <platform-grid data="updatePricesFromMaterial"></platform-grid>
+    <div data-ng-show="showPriceListRetrievalOption()">
+        <div class="col-md-12">
+            <label>{{body.note}}</label>
+        </div>
+        <div class="col-md-12">
+            <label>{{body.noteForUpdateFromPriceVersion1}}</label>
+        </div>
+        <div class="col-md-12">
+            <label>{{body.noteForUpdateFromPriceVersion2}}</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿{
+  "basics": {
+    "bank": {
+        "tabHeader": "标签Header",
+	    "BasCountryFk": "国家",
+	    "Sortcode": "排序码",
+	    "BankName": "银行名称",
+	    "Street": "街道",
+	    "City": "城市",
+	    "Bic": "BIC",
+	    "Zipcode": "邮政编码",
+	    "detailBankTitle": "银行明细",
+		"listBankTitle": "银行",
+		"entityBank": "银行",
+	    "bankDescription": "银行是一个金融机构"
+    }
+  }
+}

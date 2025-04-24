@@ -1,0 +1,92 @@
+[
+  {
+    "id": "timekeeping.recording.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.recording.recordingListTitle",
+    "controller": "timekeepingRecordingListController",
+    "uuid": "1682021f88cb489c9edb67fd77ba0500"
+  },
+  {
+    "id": "timekeeping.recording.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.recording.recordingDetailTitle",
+    "controller": "timekeepingRecordingDetailController",
+    "uuid": "e252166b26c249da88abd3165e45e651",
+    "permission": "1682021f88cb489c9edb67fd77ba0500"
+  },
+  {
+    "id": "timekeeping.recording.sheet.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.recording.recordingSheetListTitle",
+    "controller": "timekeepingRecordingSheetListController",
+    "uuid": "a99560462228495790fa8a2cb66f3fe3"
+  },
+  {
+    "id": "timekeeping.recording.sheet.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.recording.recordingSheetDetailTitle",
+    "controller": "timekeepingRecordingSheetDetailController",
+    "uuid": "bc3f46599d584250baa1b35db1c361ad",
+    "permission": "a99560462228495790fa8a2cb66f3fe3"
+  },
+  {
+    "id": "timekeeping.recording.report.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.recording.recordingReportListTitle",
+    "controller": "timekeepingRecordingReportListController",
+    "uuid": "f78bcdebfebc494392a7759e48e6b0ed"
+  },
+  {
+    "id": "timekeeping.recording.report.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.recording.recordingReportDetailTitle",
+    "controller": "timekeepingRecordingReportDetailController",
+    "uuid": "9e6540d3c380465cb8e8c7afa0a2a98a",
+    "permission": "f78bcdebfebc494392a7759e48e6b0ed"
+  },
+  {
+    "id": "timekeeping.recording.result.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.recording.recordingResultListTitle",
+    "controller": "timekeepingRecordingResultListController",
+    "uuid": "d8ee0744ffac416a871546728e6e82bb"
+  },
+  {
+    "id": "timekeeping.recording.result.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.recording.recordingResultDetailTitle",
+    "controller": "timekeepingRecordingResultDetailController",
+    "uuid": "d4c21ec117cd4795aa6604ae56fea840",
+    "permission": "d8ee0744ffac416a871546728e6e82bb"
+  },
+	{
+		"id": "timekeeping.recording.break.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.recording.recordingBreakListTitle",
+		"controller": "timekeepingRecordingBreakListController",
+		"uuid": "5d34ff4e0bf347e3976e6ef2079bf91d"
+	},
+	{
+		"id": "timekeeping.recording.break.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.recording.recordingBreakDetailTitle",
+		"controller": "timekeepingRecordingBreakDetailController",
+		"uuid": "39574ea27504449187506297fbd24e10",
+		"permission": "5d34ff4e0bf347e3976e6ef2079bf91d"
+	},
+	{
+		"id": "timekeeping.recording.report.verification.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.recording.recordingReportVerificationListTitle",
+		"controller": "timekeepingReportVerificationListController",
+		"uuid": "2deddcc178a84cfebdfa8d7a094032bf"
+	},
+	{
+		"id": "timekeeping.recording.report.verification.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.recording.recordingReportVerificationDetailTitle",
+		"controller": "timekeepingReportVerificationDetailController",
+		"uuid": "67045a0fa32d41fe92d0083d5997c49c",
+		"permission": "2deddcc178a84cfebdfa8d7a094032bf"
+	}
+]

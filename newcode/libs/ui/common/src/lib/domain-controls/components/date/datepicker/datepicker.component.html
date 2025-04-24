@@ -1,0 +1,13 @@
+<mat-card>
+	<mat-calendar #calendar [selected]="selectedDate" [startAt]="start" [minDate]="min" (selectedChange)="onSelect()">
+	</mat-calendar>
+	<footer>
+		<mat-button-toggle id="todayBtn" (click)="goToday()" title="Today">
+			<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="today"></mat-icon>
+		</mat-button-toggle>
+
+		<mat-button-toggle id="deleteBtn" (click)="deleteDate()" title="Remove">
+			<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+		</mat-button-toggle>
+	</footer>
+</mat-card>

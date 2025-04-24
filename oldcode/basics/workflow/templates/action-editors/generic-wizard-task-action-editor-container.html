@@ -1,0 +1,96 @@
+<div data-platform-form-adjust-label>
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="inputOpen">
+			<div data-accordion-heading>
+				<span class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+				<span class="platform-form-group-header">
+					<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+					<div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+				</span>
+			</div>
+			<div class="platform-form-group">
+				<!-- Generic Wizard  Lookup-->
+				<div class="platform-form-row">
+					<label
+						custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.genericWizard' | translate}}','caption':'{{::'basics.workflow.action.customEditor.genericWizardTooltipCaption' | translate}}','width':300}"
+						class="platform-form-label"
+						>{{'basics.workflow.action.customEditor.genericWizard' | translate}}</label
+					>
+					<div class="platform-form-col">
+						<div data-basics-lookup-data-by-custom-data-service-grid-less data-ng-model="genericWizardInstanceId.value" disabled="codeMirrorOptions.readOnly" options="lookupOptionsGenericWizard"></div>
+					</div>
+				</div>
+
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.entityId' | translate}}','caption':'{{::'basics.workflow.action.customEditor.entityIdTooltipCaption' | translate}}', 'width':300}" class="platform-form-label"
+						>{{'basics.workflow.action.customEditor.entityId' | translate}}</label
+					>
+					<div class="platform-form-col">
+						<div data-ng-model="entity.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.context' | translate}}','caption':'{{::'basics.workflow.action.customEditor.contextTooltipCaption' | translate}}', 'width':300}" class="platform-form-label"
+						>{{'basics.workflow.action.customEditor.context' | translate}}</label
+					>
+					<div class="platform-form-col">
+						<div data-ng-model="context.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+				<!-- Workflow  Template  Lookup-->
+				<div class="platform-form-row">
+					<label
+						custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.workflowTemplateId' | translate}}','caption':'{{::'basics.workflow.action.customEditor.workflowTemplateIdTooltipCaption' | translate}}', 'width':300}"
+						class="platform-form-label"
+						>{{'basics.workflow.action.customEditor.workflowTemplateId' | translate}}</label
+					>
+					<div class="platform-form-col">
+						<div data-basics-lookup-data-by-custom-data-service-grid-less data-ng-model="workflowTemplateId.value" disabled="codeMirrorOptions.readOnly" options="lookupOptionsWorkflowTemplate"></div>
+					</div>
+				</div>
+
+				<div class="platform-form-group">
+					<div class="platform-form-row">
+						<div data-domain="boolean" data-domain-control data-ng-model="isPopUp.value" data-options="isPopUpOptions" readonly="codeMirrorOptions.readOnly"></div>
+					</div>
+
+					<div class="platform-form-row">
+						<div data-domain="boolean" data-domain-control data-ng-model="EvaluateProxy.value" data-options="EvaluateProxyOptions" readonly="codeMirrorOptions.readOnly" data-change="changeCheckbox()"></div>
+					</div>
+
+					<div class="platform-form-row">
+						<div data-domain="boolean" data-domain-control data-ng-model="DisableRefresh.value" data-options="DisableRefreshOptions" readonly="codeMirrorOptions.readOnly" data-change="changeCheckbox()"></div>
+					</div>
+
+					<div class="platform-form-row">
+						<div data-domain="boolean" data-domain-control data-ng-model="AllowReassign.value" data-options="AllowReassignOptions" readonly="codeMirrorOptions.readOnly" data-change="changeCheckbox()"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="outputOpen">
+			<div data-accordion-heading>
+				<span class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+				<span class="platform-form-group-header">
+					<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+					<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+				</span>
+			</div>
+
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label
+						custom-tooltip="{'title':'{{::'basics.workflow.action.customEditor.wizardResult' | translate }}','caption':'{{::'basics.workflow.action.customEditor.wizardResultTooltipCaption' | translate }}', 'width':300}"
+						class="platform-form-label"
+						>{{'basics.workflow.action.customEditor.wizardResult' | translate }}</label
+					>
+					<div class="platform-form-col">
+						<div data-ng-model="outputContext.value" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

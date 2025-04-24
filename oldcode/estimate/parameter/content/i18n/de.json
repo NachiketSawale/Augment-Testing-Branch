@@ -1,0 +1,11 @@
+{
+  "estimate": {
+    "parameter": {
+      "prjParamContainer":"Projekt Parameter",
+      "defaultValue":"Standardwert",
+      "valueDetail":"Detailwert",
+      "params":"Parameter",
+      "assignedStructure" : "Assigned Structure"
+    }
+  }
+}

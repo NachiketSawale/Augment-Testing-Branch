@@ -1,0 +1,19 @@
+{
+	"name": "modules-documents-preload",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/documents/preload/src",
+	"prefix": "documents-preload",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": [
+				"{workspaceRoot}/coverage/{projectRoot}"
+			],
+			"options": {
+				"jestConfig": "libs/modules/documents/preload/jest.config.ts"
+			}
+		}
+	}
+}

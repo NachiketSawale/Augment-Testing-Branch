@@ -1,0 +1,23 @@
+<section class="overlay-wrapper" data-ng-class="[{'flex-box': options.imagePosRight}, options.cssClass]">
+	<aside>
+		<header>
+			<h4 data-ng-bind-html="options.title"></h4>
+		</header>
+		<main>
+			<div class="image" data-ng-if="options.image && !options.imagePosRight" data-ng-class="options.imageCssClass">
+				<img data-ng-src="{{options.image}}"/>
+			</div>
+
+			<div class="description selectable" data-ng-bind-html="options.caption"></div>
+
+			<div data-ng-if="options.urls">
+				<a data-ng-repeat="lnk in options.urls" data-ng-href="{{lnk.url}}" target="_blank" class="lnk" data-ng-click="options.clickEvent($event)">
+					{{lnk.label}}
+				</a>
+			</div>
+		</main>
+	</aside>
+	<aside class="image" data-ng-if="options.image && options.imagePosRight">
+		<img data-ng-src="{{options.image}}"/>
+	</aside>
+</section>

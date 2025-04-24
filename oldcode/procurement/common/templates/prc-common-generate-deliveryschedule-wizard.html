@@ -1,0 +1,145 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+    <div style="padding:0 10px">
+        <div ng-switch="currentStep.number" class="modal-wrapper">
+            <div ng-switch-when="0">
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div style="width:100%;">
+                            {{'procurement.common.wizard.generateDeliverySchedule.chooseitems'| translate}}
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-group">
+                    <div data-platform-grid style="border: 1px solid #ABABAB; min-height: 200px; "
+                         data-data="gridData"></div>
+                </div>
+                <br>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-label" style="width:14%;">
+                            {{'procurement.common.wizard.generateDeliverySchedule.descriptionPrefix'| translate}}
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+                            <input type="text" data-ng-model="modalOptions.descriptionPrefix" class="form-control"
+                                   title="descriptionPrefix"/>
+                        </div>
+                        <div class="platform-form-label" style="width:14%; padding-left:25px">
+                            {{'procurement.common.wizard.generateDeliverySchedule.repeat'| translate}}
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+                            <select class="form-control lg-5 md-5"
+                                    data-ng-model="modalOptions.repeat"
+                                    data-ng-change="repeatOptionChanged()">
+                                <option ng-repeat="opt in modalOptions.repeatOption" value="{{opt.id}}">{{opt.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-label" style="width:14%;">
+                            {{'basics.company.entityStartDate'| translate}}
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+                            <div class="form-control" data-domain-control data-domain="dateutc"
+                                 readonly="modalOptionsIsDisable.startDate"
+                                 data-change="startDateChanged()"
+                                 data-ng-model="modalOptions.startDate"></div>
+                        </div>
+                        <div class="platform-form-label" style="width:14%; padding-left:25px">
+                            {{'procurement.common.wizard.generateDeliverySchedule.occurence'| translate}}
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+                            <div class="input-group form-control">
+                                <input class="input-group-content" data-platform-numeric-converter
+                                       data-ng-model="modalOptions.occurence"
+                                       data-ng-disabled="modalOptionsIsDisable.occurence"
+                                       data-domain="integer" title="occurence"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-label" style="width:14%;">
+                            {{'basics.company.entityEndDate'| translate}}
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+                            <div class="form-control" data-domain-control data-domain="dateutc" disabled="disabled"
+                                 readonly="modalOptionsIsDisable.endDate"
+                                 data-change="endDateChanged()"
+                                 data-ng-model="modalOptions.endDate"></div>
+                        </div>
+                        <div class="platform-form-label" style="width:14%; padding-left:25px">
+                            {{'procurement.common.wizard.generateDeliverySchedule.timeRequired'| translate}}
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+                            <div class="form-control" data-domain-control data-domain="timeutc" disabled="disabled"
+                                 readonly="modalOptionsIsDisable.timeRequired"
+                                 data-ng-model="modalOptions.timeRequired"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-label" style="width:14%;">
+
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+                            <div class="invalid-cell invalid-form" data-ng-if="modalOptionsError.rt$hasError()"
+                                 data-ng-bind="modalOptionsError.rt$errorText"></div>
+                        </div>
+                        <div class="platform-form-label" style="width:14%; padding-left:25px">
+
+                        </div>
+                        <div class="platform-form-col" style="width:36%;">
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="platform-form-group">
+                    <div class="checkbox spaceToUp lg-3 md-3">
+                        <label>
+                            <input type="checkbox" data-ng-model="modalOptions.roundUpQuantity">{{'procurement.common.wizard.generateDeliverySchedule.roundUpQuantity'
+                            |translate}}
+                        </label>
+                    </div>
+                </div>
+                <br>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div style="width:100%;">
+                            {{'procurement.common.wizard.generateDeliverySchedule.note'| translate}}
+                        </div>
+                        <div style="width:100%;margin-left:20px;">
+                            {{'procurement.common.wizard.generateDeliverySchedule.note1'| translate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-switch-when="1" class="modal-wrapper">
+                <div class="platform-form-group">
+                    <div class="platform-form-group-header-text" style="font-weight: bold;">
+                        {{ 'procurement.common.wizard.generateDeliverySchedule.message' | translate }}
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default"
+            data-ng-repeat="button in currentStep.buttons"
+            data-ng-bind="button.label | translate"
+            data-ng-disabled="button.disable && button.disable()"
+            data-ng-click="button.action()">
+    </button>
+</footer>
+<div cloud-common-overlay data-loading="isLoading"></div>

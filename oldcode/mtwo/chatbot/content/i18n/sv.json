@@ -1,0 +1,13 @@
+﻿{
+  "mtwo": {
+    "chatbot": {
+      "configuration": "Konfiguration",
+      "configurationTitle": "Konfiguration",
+      "entityChatbotConfigurationDescription": "Beskrivning",
+      "entityChatbotConfigurationIslive": "Är aktiv",
+      "entityChatbotConfigurationUpdatedAt": "Uppdaterad den",
+      "entityChatbotHeaderLanguageFK": "Språk",
+      "headerTitle": "Rubrik"
+    }
+  }
+}

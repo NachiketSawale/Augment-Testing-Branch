@@ -1,0 +1,40 @@
+<header class="modal-header main-color">
+	<h2 class="modal-title">{{ 'basics.common.conflict.resolveConflicts' | translate }}</h2>
+</header>
+
+<section class="modal-body">
+	<div>
+		<p>
+			{{'basics.common.conflict.conflictResolveHint' | translate}}
+		</p>
+	</div>
+	<div class="flex-box flex-column flex-element filler">
+		<div id="conflictGridKendoSplit" data-platform-kendo-splitter-adjust class="flex-box filler" option="{panes: [ { collapsible: true, size: '15%' },{ collapsible: true, size: '85%' }],orientation:'horizontal'}">
+			<div id="ui-layout-east" class="flex-element">
+				<div platform-action-item-list data-set-link="initActionItemsLinks(link)" class="margin-full-md"></div>
+			</div>
+			<div id="ui-layout-west" class="flex-element">
+				<div class="toolbar">
+					<div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+				</div>
+				<div ng-repeat="gridData in gridDatas" ng-show="isActiveTab($index)">
+					<platform-Grid data="gridData"></platform-Grid>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<p style="color: red;margin: 20px 0px">
+			{{operateHint}}
+		</p>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="false" data-ng-click="close(true)">
+		{{'basics.common.conflict.confirm' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="false" data-ng-click="close(false)">
+		{{'basics.common.conflict.reload' | translate}}
+	</button>
+</footer>

@@ -1,0 +1,55 @@
+<div class="notification-sidebar-container content" data-ng-controller="cloudDesktopNotificationController as notifBarCtrl">
+	<div class="toolbar">
+		<div class="title"><span data-ng-bind="notifBarCtrl.headline"></span></div>
+		<ul class="tools">
+			<li class="sublist">
+				<ul class="radio-group">
+					<li>
+						<div class="dropdown">
+							<button class="tlb-icons ico-delete2" data-ng-click="notifBarCtrl.removeNotification()" data-ng-attr-title="{{ 'cloud.desktop.formConfigClearBnt' | translate }}" title="Remove Notification"></button>
+							<button class="tlb-icons ico-settings" title="Group & Sorting Settings" data-ng-class="{active: notifBarCtrl.showSort}" data-ng-click="notifBarCtrl.showSettings = !notifBarCtrl.showSettings" type="button"></button>
+						</div>
+					</li>
+					<li>
+						<button class="tlb-icons ico-refresh" data-ng-click="notifBarCtrl.refresh()" title="{{ 'cloud.common.toolbarRefresh' | translate }}" type="button"></button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content-inner">
+		<div class="showgroups" data-ng-if="notifBarCtrl.showSettings">
+			<div class="heading">Group &amp; Sorting Setting</div>
+			<div data-change="notifBarCtrl.selectGroup()" data-domain="select" data-domain-control data-model="notifBarCtrl.listConfig.group" data-options="notifBarCtrl.grouping.options"></div>
+
+			<div class="margin-top-ld">
+				<div data-change="notifBarCtrl.selectSort()" data-domain="select" data-domain-control data-model="notifBarCtrl.listConfig.sort" data-options="notifBarCtrl.sorting.options"></div>
+			</div>
+		</div>
+
+		<scroll-tabs-directive tabs="notifBarCtrl.steps" click-function="changeTab" options="notifBarCtrl.tabOptions"> </scroll-tabs-directive>
+
+		<ul
+			class="scroll-padding flex-element overflow flex-basis-auto"
+			data-ng-if="!notifBarCtrl.listConfig.isGrouped"
+			data-click-fn="notifBarCtrl.functionsInAccordion"
+			data-item-template="notifBarCtrl.itemTemplate"
+			data-list="selectedNotifications"
+			data-dollarbinding = "true"
+			data-platform-item-list-directive
+		></ul>
+
+		<ul
+			class="scroll-padding flex-element panel-group overflow flex-basis-auto"
+			data-ng-if="notifBarCtrl.listConfig.isGrouped"
+			data-click-fn="notifBarCtrl.functionsInAccordion"
+			data-child-property="'childs'"
+			data-group-template="notifBarCtrl.groupTemplate"
+			data-item-template="notifBarCtrl.itemTemplate"
+			data-grouped-list="selectedNotifications"
+			data-dollarbinding = "true"
+			data-platform-grouped-item-list-directive
+		></ul>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+<div id="material-filter-result-view" class="flex-element">
+	<div *ngIf="isDataReady" class="fullheight fullwidth flex-box flex-column">
+		<basics-shared-material-filter-result-toolbar [output]="scope.output"></basics-shared-material-filter-result-toolbar>
+		<as-split class="flex-element border-none" direction="horizontal" (onSplitterChangeSize)="onSplitterChangeSize($event)">
+			<as-split-area [size]="100 - previewPanelSize" class="relative-container">
+				<div id="material-filter-result-view-left" class="material-filter-result-view-pane fullheight flex-box flex-column border-left border-right">
+					<div class="toolbar"></div>
+					<div class="flex-element">
+						<basics-shared-material-filter-result-grid
+							[scope]="scope"
+							(selectionChanged)="onSelectionChanged($event)">
+						</basics-shared-material-filter-result-grid>
+					</div>
+					<basics-shared-material-filter-result-pagination></basics-shared-material-filter-result-pagination>
+				</div>
+			</as-split-area>
+			<as-split-area [size]="previewPanelSize">
+				<div id="material-filter-result-view-right" class="material-filter-result-view-pane fullheight flex-box flex-column border-left border-right border-bottom">
+					<basics-shared-material-filter-result-preview [previewItem]="previewItem"></basics-shared-material-filter-result-preview>
+				</div>
+			</as-split-area>
+		</as-split>
+	</div>
+</div>

@@ -1,0 +1,6 @@
+<div data-ng-controller="reportParametersListController" container-id="'coverLetter'">
+	<h1>{{::'basics.workflow.sendRfQEmailBody.subject' | translate}}</h1>
+	<input data-ng-if="!!emailContext.subject" data-domain-control data-domain="description" data-ng-model="emailContext.subject" data-placeholder="{{::subjectPlaceholder}}" data-max-length="255">
+	<h1 class="margin-top-xxld">{{'basics.workflow.sendRfQEmailBody.coverLetterEMailBody' | translate}}</h1>
+	<report-parameters-list-directive list="coverLetterList"></report-parameters-list-directive>
+</div>

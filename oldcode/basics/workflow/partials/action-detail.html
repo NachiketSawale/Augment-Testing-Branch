@@ -1,0 +1,624 @@
+<div class="flex-box flex-column flex-element overflow" data-ng-switch="actionDetailType">
+	<div class="flex-box flex-column flex-element" data-ng-switch-when="0">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.actionType' | translate }}</label>
+				<div class="platform-form-col">
+					<span data-ng-bind="action.actionType"></span>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.action' | translate }}</label>
+				<div class="platform-form-col">
+					<span data-ng-bind="action.action"></span>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.code' | translate }}</label>
+				<div class="platform-form-col">
+                    <span class="form-control" data-change="change" data-domain="code"
+                          data-domain-control data-model="action.code" readonly="isReadOnly"></span>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.description' | translate }}</label>
+				<div class="platform-form-col">
+					<div class="form-control" data-change="change" data-domain="description"
+					     data-script-editor-directive 
+					     data-ng-model="action.description" readonly="isReadOnly"
+					     data-options="codeMirrorOptionsDescription"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.comment' | translate }}</label>
+				<div class="platform-form-col">
+					<div class="form-control" data-change="change" data-ng-model="action.comment"
+					     data-options="codeMirrorOptions" data-script-editor-directive readonly="isReadOnly"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label"
+				       custom-tooltip="{'title':'{{::'basics.workflow.action.detail.executeCondition' | translate }}','caption':'{{::'basics.workflow.action.detail.executeConditionToolTipContent' | translate }}', 'width':300}">{{'basics.workflow.action.detail.executeCondition' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.executeCondition"
+					     data-options="codeMirrorOptionsMultiline" style="height: auto"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.result' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.result"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined1' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined2' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined3' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined4' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined5' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney1' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney2' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney3' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney4' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney5' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate1' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate2' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate3' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate4' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate5' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.lifeTime' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-domain="integer" data-domain-control
+					     data-ng-model="action.lifeTime" readonly="isReadOnly"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex-box flex-column flex-element" data-ng-switch-when="1">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.code' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.code"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.description' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div class="form-control" data-change="change" data-domain="description"
+					     data-script-editor-directive 
+					     data-ng-model="action.description" readonly="isReadOnly"
+					     data-options="codeMirrorOptionsDescription"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.comment' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.comment"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.result' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.result"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex-box flex-column flex-element" data-ng-switch-when="2">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.parameter' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.parameter"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.description' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div class="form-control" data-change="change" data-domain="description"
+					     data-script-editor-directive 
+					     data-ng-model="action.description" readonly="isReadOnly"
+					     data-options="codeMirrorOptionsDescription"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.comment' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.comment"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.result' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.result"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined1' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined2' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined3' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined4' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined5' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney1' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney2' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney3' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney4' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney5' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate1' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate2' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate3' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate4' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate5' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex-element overflow" data-ng-switch-when="3">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.actionType' | translate }}</label>
+				<div class="platform-form-col">
+					<span class="text" data-ng-bind="action.actionType"></span>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.action' | translate }}</label>
+				<div class="platform-form-col">
+					<span class="text" data-ng-bind="action.action"></span>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.code' | translate }}</label>
+				<div class="platform-form-col">
+                    <span class="form-control" class="form-control" data-change="change" data-domain="code"
+                          data-domain-control data-model="action.code" readonly="isReadOnly"></span>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.description' | translate }}</label>
+				<div class="platform-form-col">
+					<div class="form-control" data-change="change" data-domain="description"
+					     data-script-editor-directive 
+					     data-ng-model="action.description" readonly="isReadOnly"
+					     data-options="codeMirrorOptionsDescription"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.comment' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.comment"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label"
+				       custom-tooltip="{'title':'{{::'basics.workflow.action.detail.executeCondition' | translate }}','caption':'{{::'basics.workflow.action.detail.executeConditionToolTipContent' | translate }}', 'width':300}">{{'basics.workflow.action.detail.executeCondition' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.executeCondition"
+					     data-options="codeMirrorOptionsMultiline" style="height:auto"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.result' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.result"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined1' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined2' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined3' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined4' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefined5' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefined5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney1' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney2' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney3' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney4' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedMoney5' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedMoney5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate1' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate1"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate2' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate2"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate3' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate3"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate4' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate4"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userDefinedDate5' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userDefinedDate5"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.lifeTime' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-domain="integer" data-domain-control
+					     data-ng-model="action.lifeTime" readonly="isReadOnly"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.endTime' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.endTime"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.businessPartner' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.bpId"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+		<div class="radiolist-container">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input ng-model="radioList.editorMode" type="radio"
+					       value="default">{{'basics.workflow.modalDialogs.defaultRadio' | translate}}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input ng-model="radioList.editorMode" type="radio"
+					       value="expert">{{'basics.workflow.modalDialogs.expertRadio' | translate}}
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row" data-ng-if="radioList.editorMode == 'default'">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userId' | translate }}</label>
+				<div data-change="change" data-cloud-clerk-clerk-dialog data-ng-if="!isReadOnly"
+				     data-ng-model="action.userId" data-options="clerkLookUpConfig.lookupOptions"
+				     readonly="isReadOnly"></div>
+				<label class="platform-form-label" data-ng-bind="action.userId" data-ng-if="isReadOnly"></label>
+			</div>
+			<div class="platform-form-row" data-ng-if="radioList.editorMode == 'expert'">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.userId' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.userId"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="radiolist-container">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input ng-model="radioList.editorModePrio" type="radio"
+					       value="default">{{'basics.workflow.modalDialogs.defaultRadio' | translate}}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input ng-model="radioList.editorModePrio" type="radio"
+					       value="expert">{{'basics.workflow.modalDialogs.expertRadio' | translate}}
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row" data-ng-if="radioList.editorModePrio == 'default'">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.priority' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-config="selectConfig" data-domain="select"
+					     data-domain-control
+					     data-model="action.priorityId" data-options="priorityOptions" readonly="isReadOnly"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-if="radioList.editorModePrio == 'expert'">
+				<label class="platform-form-label">{{'basics.workflow.action.detail.priority' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-change="change" data-ng-model="action.priorityId"
+					     data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

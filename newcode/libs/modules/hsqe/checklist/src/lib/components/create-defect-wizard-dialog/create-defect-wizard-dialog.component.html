@@ -1,0 +1,12 @@
+<section class="modal-body">
+    <div class="platform-form-group platform-lg">
+        <div class="platform-form-row">
+            <label class="platform-form-label">
+                {{'hsqe.checklist.header.PrjProject' | platformTranslate }}
+            </label>
+            <ui-common-lookup-input [dataService]="projectSharedLookupService"
+                                    [(value)]="createDefectOption.projectFk"
+                                    [options]="projectLookupOptions"></ui-common-lookup-input>
+        </div>
+    </div>
+</section>

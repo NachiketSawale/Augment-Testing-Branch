@@ -1,0 +1,23 @@
+<ul style="margin-left: 130px;">
+    <li>
+        <input type="radio" name="updateOrCreate"
+               id="sales_bid_create_update_wizard_1"
+               value="1"
+               data-ng-model="formOptionsBasicSettings.salesBidCreateUpdateWizardUpdateOrCreate"
+               data-ng-click="chooseUpdateOrCreate('1');" >
+        <label for="sales_bid_create_update_wizard_1" style="vertical-align: 3px;">
+            {{'estimate.main.bidCreationWizardCreateBid' | translate}}
+        </label>
+    </li>
+    <li>
+        <input type="radio" name="updateOrCreate"
+               id="sales_bid_create_update_wizard_2"
+               value="2"
+               data-ng-model="formOptionsBasicSettings.salesBidCreateUpdateWizardUpdateOrCreate"
+               data-ng-click="chooseUpdateOrCreate('2');" >
+        <label for="sales_bid_create_update_wizard_2" style="vertical-align: 3px;">
+            {{'estimate.main.bidCreationWizardUpdateBid' | translate}}
+        </label>
+    </li>
+</ul>
+<div data-platform-form data-form-options="formOptionsBasicSettings" entity="entity"></div>

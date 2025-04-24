@@ -1,0 +1,14 @@
+<div class="flex-element flex-box flex-column overflow-auto fullheight">
+	<fieldset class="margin-top-ld">
+		<div>
+			<ui-common-form [formConfig]="formConfig" [entity]="logisticActionItemTypeSelected"></ui-common-form>
+		</div>
+	</fieldset>
+	<fieldset class="margin-top-ld">
+		<div class="flex-box flex-column flex-element subview-content">
+			<ui-common-grid [configuration]="configuration" (selectionChanged)="selectionChanged($event)">
+			</ui-common-grid>
+		</div>
+	</fieldset>
+</div>
+

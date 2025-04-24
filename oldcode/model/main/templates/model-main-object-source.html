@@ -1,0 +1,41 @@
+<script type="text/ng-template" id="model-main-object-source-selector.html">
+    <div class="radio spaceToUp">
+        <label>
+            <input type="radio" name="rgObjectSource" id="rgObjectSource-minc" data-ng-model="selectedMode.id" value="minc" data-ng-disabled="readonly">
+            {{labels.minc}}
+        </label>
+    </div>
+    <div class="radio spaceToUp">
+        <label>
+            <input type="radio" name="rgObjectSource" id="rgObjectSource-l" data-ng-model="selectedMode.id" value="l" data-ng-disabled="readonly">
+            {{labels.l}}
+        </label>
+    </div>
+    <div class="radio spaceToUp">
+        <label>
+            <input type="radio" name="rgObjectSource" id="rgObjectSource-custom" data-ng-model="selectedMode.id" value="custom" data-ng-disabled="readonly">
+            {{labels.custom}}
+        </label>
+        <a href="" class="margin-left-ld" data-ng-bind="::labels.customEdit" data-ng-click="editCustomSource()"></a>
+    </div>
+</script>
+
+<div data-ng-if="!allowCollapse">
+    <div data-ng-include="'model-main-object-source-selector.html'"></div>
+</div>
+<div data-ng-if="allowCollapse">
+    <div data-accordion data-close-others="false">
+        <div data-accordion-group data-is-open="isOpen">
+            <div data-accordion-heading>
+                <span class="platform-form-group-header-text" data-ng-bind="::labels.title"></span>
+
+                <span class="platform-form-group-header">
+                <div data-ng-show="isOpen" class="toggleImg control-icons ico-up"></div>
+                <div data-ng-show="!isOpen" class="toggleImg control-icons ico-down"></div>
+			</span>
+            </div>
+
+            <div data-ng-include="'model-main-object-source-selector.html'"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+<!--Alternative Sources-->
+<div class="row" *ngIf="scope.response.alternativeSources && scope.response.alternativeSources.length">
+    <basics-shared-material-search-collapse [title]="scope.translations.alternativeSource">
+        <a class="alternative-source-label" target="_blank" *ngFor="let item of scope.response.alternativeSources" [href]="item.Url" [innerText]="item.Description"></a>
+    </basics-shared-material-search-collapse>
+</div>
+<!--Filter-->
+<div class="row">
+    <basics-shared-material-search-collapse [title]="scope.translations.filter">
+        <ul class="ms-commodity-checkbox-list col-sm-offset-1">
+            <li>
+                <input type="checkbox" class="ms-icon-img attribute-icon" [(ngModel)]="scope.request.FilterByFramework" (ngModelChange)="scope.filterFramework()" />
+                <span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.frameworkCatalog.filter" | platformTranslate }}</span>
+            </li>
+        </ul>
+    </basics-shared-material-search-collapse>
+</div>
+<!--Catalog-->
+<div class="row" *ngIf="scope.response.categories && scope.response.categories.length">
+    <basics-shared-material-search-collapse [title]="scope.translations.category">
+        <ul class="ms-commodity-checkbox-list col-sm-offset-1">
+            <li class="relative-container" *ngFor="let item of scope.response.categories">
+                <input type="checkbox"  class="ms-icon-img attribute-icon" [(ngModel)]="item.checked" (ngModelChange)="scope.filterCatalog()" />
+                <span class="ms-commodity-attributes-checkbox-label" [innerText]="item.DescriptionInfo.Translated"></span>
+                <span class="catalog-icons-container">
+                    <span *ngIf="item.PriceVersions.length" class="catalog-price-version-container">
+                        <a class="dropdown-toggle control-icons block-image"
+                           [title]="getPriceVersionTitle(item)"
+                           [class]="item.MaterialPriceVersionFk?'ico-pricelist-select':'ico-pricelist'"
+                           data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"
+                                [class]="item.MaterialPriceVersionFk === priceVersion.Id ? 'selected': ''"
+                                *ngFor="let priceVersion of getPriceVersionList(item)">
+                                <button (click)="selectPriceVersion(item, priceVersion.Id)">
+                                    {{ priceVersion.DescriptionInfo.Translated }}
+                                </button>
+                            </li>
+                        </ul>
+                    </span>
+                    <a *ngIf="item.IsFrameworkCatalog" [title]="'basics.material.frameworkCatalog.title' | platformTranslate" class="control-icons ico-framework-agreement block-image float-end"></a>
+                </span>
+            </li>
+        </ul>
+    </basics-shared-material-search-collapse>
+</div>
+<!--Structure-->
+<div class="row" *ngIf="scope.response.structures && scope.response.structures.length">
+    <basics-shared-material-search-collapse [title]="scope.translations.structure">
+        <basics-shared-material-search-collapse [title]="getStructuresHeaderText">
+            <ul class="col-sm-offset-1">
+                <li class="structure-item-label" *ngFor="let item of getStructuresList">
+                    <a (click)="scope.navigate(item.Id)">{{item.Code}}({{item.MatrialCount}})</a>
+                </li>
+            </ul>
+        </basics-shared-material-search-collapse>
+    </basics-shared-material-search-collapse>
+</div>
+<!--Attributes-->
+<div class="row" *ngIf="scope.response.matchedCount > 0">
+    <basics-shared-material-search-collapse [title]="scope.translations.attributes">
+        <!--Attributes uom-->
+        <div class="ms-commodity-attributes-item" *ngIf="scope.response.uoms && scope.response.uoms.length">
+            <basics-shared-material-search-collapse [title]="scope.translations.uom">
+                <ul class="ms-commodity-checkbox-list col-sm-offset-1">
+                    <li *ngFor="let item of scope.response.uoms">
+                        <input type="checkbox" class="ms-icon-img attribute-icon" [(ngModel)]="item.Checked" (ngModelChange)="scope.filterUom()"/>
+                        <span class="ms-commodity-attributes-checkbox-label">{{ item.DescriptionInfo.Description }}</span>
+                    </li>
+                </ul>
+            </basics-shared-material-search-collapse>
+        </div>
+        <!--Attributes price-->
+        <div class="ms-commodity-attributes-item" *ngIf="scope.response.price && scope.response.price.Max !== 0">
+            <basics-shared-material-search-collapse [title]="scope.translations.price">
+                <basics-shared-material-search-price-slider [price]="scope.response.price"
+                                                            (filterPrice)="scope.filterPrice()">
+                </basics-shared-material-search-price-slider>
+            </basics-shared-material-search-collapse>
+        </div>
+        <!--Attributes co2sources-->
+        <div class="ms-commodity-attributes-item" *ngIf="scope.response.co2sources && scope.response.co2sources.length">
+            <basics-shared-material-search-collapse [title]="scope.translations.co2SourceName">
+                <ul class="ms-commodity-checkbox-list col-sm-offset-1">
+                    <li *ngFor="let item of scope.response.co2sources">
+                        <input type="checkbox" class="ms-icon-img attribute-icon" [(ngModel)]="item.Checked" (ngModelChange)="scope.filterCo2SourceName()"/>
+                        <span class="ms-commodity-attributes-checkbox-label">{{ item.DescriptionInfo.Description }}</span>
+                    </li>
+                </ul>
+            </basics-shared-material-search-collapse>
+        </div>
+        <!--Attributes co2project-->
+        <div class="ms-commodity-attributes-item" *ngIf="scope.response.co2project && scope.response.co2project.Max !== 0">
+            <basics-shared-material-search-collapse [title]="scope.translations.co2Project">
+                <basics-shared-material-search-price-slider [price]="scope.response.co2project"
+                                                            (filterPrice)="scope.filterCo2Project()">
+                </basics-shared-material-search-price-slider>
+            </basics-shared-material-search-collapse>
+        </div>
+        <!--Attributes co2source-->
+        <div class="ms-commodity-attributes-item" *ngIf="scope.response.co2source && scope.response.co2source.Max !== 0">
+            <basics-shared-material-search-collapse [title]="scope.translations.co2Source">
+                <basics-shared-material-search-price-slider [price]="scope.response.co2source"
+                                                            (filterPrice)="scope.filterCo2Source()">
+                </basics-shared-material-search-price-slider>
+            </basics-shared-material-search-collapse>
+        </div>
+        <!--Attributes load-->
+        <div class="ms-commodity-attributes-item" *ngIf="(scope.response.attributes && scope.response.attributes.length) || scope.request.AttributeFilters">
+            <basics-shared-material-search-load-attribute [attributes]="scope.response.attributes"
+                                                          [finish]="scope.response.attributesFinished"
+                                                          (loadMore)="scope.loadMoreAttribute($event)"
+                                                          (filterAttribute)="scope.filterAttribute($event)">
+            </basics-shared-material-search-load-attribute>
+        </div>
+    </basics-shared-material-search-collapse>
+</div>
+<!--Material Type-->
+<div class="row" *ngIf="scope.response.categories && scope.response.categories.length">
+    <basics-shared-material-search-collapse [title]="scope.translations.materialType">
+        <ul class="ms-commodity-checkbox-list col-sm-offset-1">
+            <li *ngFor="let data of scope.materialTypeDatas">
+                <input type="checkbox" class="ms-icon-img attribute-icon" [(ngModel)]="scope.request.MaterialTypeFilter[data.type]" (ngModelChange)="scope.filterMaterialType()"/>
+                <span class="ms-commodity-attributes-checkbox-label">{{data.label | platformTranslate}}</span>
+            </li>
+        </ul>
+    </basics-shared-material-search-collapse>
+</div>

@@ -1,0 +1,15 @@
+﻿{
+	"project": {
+		"location": {
+			"location": "位置",
+			"detailContainerTitle": "位置明细",
+			"listContainerTitle": "位置",
+			"taskBarDeleteLoc": "删除",
+			"taskBarNewLoc": "新建",
+			"entityIsShownInChart": "!Is shown in chart",
+			"taskBarNewSubLoc": "新建子项",
+			"downgradeLocation":"缩进",
+		 	"upgradeLocation":"减少缩进"
+		}
+	}
+}

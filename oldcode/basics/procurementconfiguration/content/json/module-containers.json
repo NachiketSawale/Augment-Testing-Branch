@@ -1,0 +1,175 @@
+[
+  {
+    "id": "basics.procurementconfiguration.configheader.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.headerGridTitle",
+    "controller": "basicsProcurementConfigHeaderGridController",
+    "uuid": "FCD50B078FF54A9287562DAD42BB7814"
+  },
+  {
+    "id": "basics.procurementconfiguration.configheader.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.procurementconfiguration.headerFormTitle",
+    "controller": "basicsProcurementConfigHeaderDetailController",
+    "uuid": "25992130429440059BCD098B0797B4C8",
+    "permission": "FCD50B078FF54A9287562DAD42BB7814"
+  },
+  {
+    "id": "basics.procurementconfiguration.configuration.grid",
+    "template": "basics.procurementconfiguration/partials/basic-procurement-configuration-detail.html",
+    "title": "basics.procurementconfiguration.configurationGridTitle",
+    "controller": "basicsProcurementConfigurationDetailMainController",
+    "uuid": "ECF49AEE59834853B0F78EE871676E38"
+  },
+  {
+    "id": "basics.procurementconfiguration.configuration.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.procurementconfiguration.configurationFormTitle",
+    "controller": "basicsProcurementConfigurationFormController",
+    "uuid": "BA750EEF60E24B74808B5FDD6B49E2A7",
+    "permission": "ECF49AEE59834853B0F78EE871676E38"
+  },
+  {
+    "id": "basics.procurementconfiguration.config2bschema.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.billingSchemaGridTitle",
+    "controller": "basicsProcurementConfig2BSchemaGridController",
+    "uuid": "89CA77704B914A36B8FFD6DBBD806035"
+  },
+  {
+    "id": "basics.procurementconfiguration.config2bschema.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.procurementconfiguration.billingSchemaDetailTitle",
+    "controller": "basicsProcurementConfig2BSchemaDetailController",
+    "uuid": "CBB3297C6A9340B686D7989F0FCA18CE",
+    "permission": "89CA77704B914A36B8FFD6DBBD806035"
+  },
+  {
+    "id": "basics.procurementconfiguration.config2strategy.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.strategyGridTitle",
+    "controller": "basicsProcurementConfig2StrategyGridController",
+    "uuid": "BD5E5BCFDA44437884C0905A8384E9F3"
+  },
+  {
+    "id": "basics.procurementconfiguration.config2strategy.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.procurementconfiguration.strategyDetailTitle",
+    "controller": "basicsProcurementConfig2StrategyDetailController",
+    "uuid": "9D4C9E3ED27D484E91BE6384D932F226",
+    "permission": "BD5E5BCFDA44437884C0905A8384E9F3"
+  },
+  {
+    "id": "basics.procurementconfiguration.configprctotalType.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.totalTypeGridTitle",
+    "controller": "basicsProcurementConfigPrcTotalTypeGridController",
+    "uuid": "469E2A7EA19049FDA4D5E19424B81CBE"
+  },
+  {
+    "id":"basics.procurementconfiguration.configprctotalType.detail",
+    "template":"app/components/base/form-detail-partial.html",
+    "title":"basics.procurementconfiguration.totalTypeFormTitle",
+    "controller":"basicsProcurementConfigPrcTotalTypeDetailController",
+    "uuid":"F4F2F0F7DA824E5E883BDBEA3E3A1BAE",
+    "permission": "469E2A7EA19049FDA4D5E19424B81CBE"
+  },
+  {
+    "id": "basics.procurementconfiguration.config2header.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.headerTextGridTitle",
+    "controller": "basicsProcurementConfig2HeaderTextGridController",
+    "uuid": "A4E168215D9345968544B5362A5B8836"
+  },
+  {
+    "id": "basics.procurementconfiguration.config2itemText.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.itemTextGridTitle",
+    "controller": "basicsProcurementConfig2ItemTextGridController",
+    "uuid": "F0460BDDC3D64FC39A8FAFC4ADEA2C70"
+  },
+  {
+    "id": "basics.procurementconfiguration.config2tab.grid",
+    "template": "basics.procurementconfiguration/partials/basic-procurement-configuration-2tab.html",
+    "title": "basics.procurementconfiguration.tabGridTitle",
+    "controller": "basicsProcurementConfiguration2TabMainController",
+    "uuid": "5F7E832F7FAD4A5FBBB29340F8B7A22E"
+  },
+  {
+    "id": "basics.procurementconfiguration.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "4FA5088900D944A5A8EC9B9B95DA3682"
+  },
+  {
+    "id": "basics.procurementconfiguration.characteristic",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "f18e9e9e0e014596b586b9aa5a736c38",
+    "controller": "",
+    "sectionId": "32",
+    "mainService":"basicsProcurementConfigurationDataService",
+    "permission": "c3aff3a8709446c78ee23ef72967d81a"
+  },
+  {
+    "id": "basics.procurementstructure.characteristic2.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "basics.common.characteristic2.title",
+    "uuid": "6aea681373e24c1bb13682a56cdb7553",
+    "controller": "",
+    "sectionId": "55",
+    "mainService": "basicsProcurementConfigurationDataService"
+  },
+  {
+    "id": "basics.procurementconfiguration.rfqCoverLetterOrEamilBody.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.rfqCoverLetterOrEamilBody",
+    "uuid": "c6bf65718cfc4f6693802ed76b00a503",
+    "controller": "basicsPrcConfigRfqCoverLetterOrEamilBodyController"
+  },
+  {
+    "id": "basics.procurementconfiguration.rfqReports.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.rfqReports",
+    "uuid": "85df95d7d06e4ae4b80a5e8d36fa5054",
+    "controller": "basicsProcurementConfigurationRfqReportsController"
+  },
+  {
+    "id": "basics.procurementconfiguration.rfqDocument.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.rfqdocuments",
+    "uuid": "55649966e0a64adcb2e2118d33f9587b",
+    "controller": "basicsProcurementConfigurationRfqDocuementsController"
+  },
+  {
+    "id": "basics.procurementconfiguration.rfqDataFormat.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.rfqDataFormat",
+    "uuid": "ed447940563d4102aa19a7b80eb80b15",
+    "controller": "basicsProcurementConfigurationRfqDataFormatController"
+  },
+  {
+    "id": "basics.procurementconfiguration.conapproval.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.procurementconfiguration.conApprovalGridTitle",
+    "controller": "basPrcConfig2ConApprovalGridController",
+    "uuid": "82741e02ee8e4aa6825be937c9b7765f"
+  },
+  {
+    "id":"basics.procurementconfiguration.conapproval.detail",
+    "template":"app/components/base/form-detail-partial.html",
+    "title":"basics.procurementconfiguration.conApprovalDetailTitle",
+    "controller":"basPrcConfig2ConApprovalDetailController",
+    "uuid":"07db0663d70a4faf8935f20781dc890d",
+    "permission": "82741e02ee8e4aa6825be937c9b7765f"
+  },
+	{
+		"id": "basics.procurementconfiguration.configuration.script",
+		"template": "basics.procurementconfiguration/partials/basic-procurement-configuration-narrative-script.html",
+		"title": "basics.procurementconfiguration.scriptTitle",
+		"controller": "basicsProcurementConfigurationNarrativeScriptController",
+		"uuid": "c240d6a29d84adc9b57907d5a345c517",
+		"permission": "ECF49AEE59834853B0F78EE871676E38"
+	}
+]

@@ -1,0 +1,39 @@
+{
+	"controlling": {
+		"configuration": {
+			"_unused": "dummy entry, to be removed",
+			"ConfColumnDefinitionTitle": "Column Definition",
+			"ConfFormulaDefinitionTitle": "Formula Definition",
+			"Code": "Code",
+			"Description": "Description",
+			"Formula": "Formula",
+			"IsDefault": "Is Default",
+			"IsEditable": "Is Editable",
+			"BasContrColumnTypeFk": "Type",
+			"title": "Controlling Configuration",
+			"ConfColumnDefinitionDetailTitle": "Column Definition Detail",
+			"ConfFormulaDefinitionDetailTitle": "Formula Definition Detail",
+			"chartConfigContainerTitle": "Chart Configuration",
+			"action": "Check Config",
+			"chartType": "Chart Type",
+			"isDefault1": "Is Default for Chart1",
+			"isDefault2": "Is Default for Chart2",
+			"noDefaultChartColumn": "The Chart Container must at least consist of one default setting for Chart",
+			"openChartDialog": "Open Chart config dialog",
+			"isVisible": "Visible in Project Controls",
+			"codeRepeated": "The Code shouldn't be repeated",
+			"codeFormat": "The code should only includes 'A~Z' or '0~9' or '_', and must start with 'A~Z' OR '_' ",
+			"descriptionRepeated": "The Description shouldn't be repeated",
+			"formulaRepeated": "The Formula shouldn't be repeated",
+			"wrongOrSelfCode": "These codes do not exist or refer to the formula itself: ",
+			"canotUseType": "This type of data cannot be repeated",
+			"formulaError": "This type of formula only can type in number",
+			"formulaError1": "This type of formula shouldn't only type in number",
+			"cycleReference": "Cyclic Dependence:",
+			"noRelativeFormula": "There is no Formula refers to this record",
+			"noDefault4CurrFormula": "This type Formula must at least consist of one default setting",
+			"noChartSelected": "There is no chart item be selected!",
+			"noDataFound": "No any chart data found"
+		}
+	}
+}

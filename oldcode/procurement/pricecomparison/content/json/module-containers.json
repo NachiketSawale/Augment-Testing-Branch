@@ -1,0 +1,172 @@
+[
+  {
+    "id": "procurement-pricecomparison-header-grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.rfq.headerGridTitle",
+    "controller": "procurementPriceComparisonListController",
+    "uuid": "1ec440875e364e8684f0ad25f0d94510",
+    "permission": "1ec440875e364e8684f0ad25f0d94510"
+  },
+  {
+    "id": "procurement-pricecomparison-header-form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.rfq.headerFormTitle",
+    "controller": "procurementPriceComparisonDetailController",
+    "uuid": "f9b0a5b7e1724150abc418ea83b507db",
+    "permission": "1ec440875e364e8684f0ad25f0d94510"
+  },
+  {
+    "id": "procurement-pricecomparison-item",
+    "template": "procurement.pricecomparison/templates/compare-grid-partial.html",
+    "title": "procurement.pricecomparison.priceCompareTitle",
+    "controller": "procurementPriceComparisonItemController",
+    "uuid": "ef496d027ad34b1f8fe282b1d6692ded",
+    "permission": "ef496d027ad34b1f8fe282b1d6692ded"
+  },
+  {
+    "id": "procurement-pricecomparison-boq",
+    "template": "procurement.pricecomparison/templates/compare-grid-partial.html",
+    "title": "procurement.pricecomparison.priceComparisonBoqTitle",
+    "controller": "procurementPriceComparisonBoqController",
+    "uuid": "8b9a53f0a1144c03b8447a99f7b38448",
+    "permission": "8b9a53f0a1144c03b8447a99f7b38448"
+  },
+  {
+    "id": "procurement-pricecomparison-chart",
+    "template": "procurement.pricecomparison/partials/price-comparison-chart.html",
+    "title": "procurement.pricecomparison.chartContainerTitle",
+    "controller": "procurementPriceComparisonChartController",
+    "uuid": "6bcab11f26ff463ba79a2168a25274ca",
+    "permission": "6bcab11f26ff463ba79a2168a25274ca"
+  },
+  {
+    "id": "procurement-pricecomparison-business-partner",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.businessPartner",
+    "controller": "procurementPriceComparisonBusinessPartnerListController",
+    "uuid": "3cd46e140a734f07abb2238b4fa1d934",
+    "permission": "75dcd826c28746bf9b8bbbf80a1168e8"
+  },
+  {
+    "id": "procurement.pricecomparison.businesspartner.evaluationstructure",
+    "template": "businesspartner.main/partials/evaluatoin-chart-grid.html",
+    "title": "basics.common.evaluation.businessPartnerEvaluationStructure",
+    "controller": "commonBusinessPartnerBusinessPartnerEvaluationNewController",
+    "uuid": "f9785c16b06f449b8f3474593ad971d5",
+    "permission": "953895e120714ab4b6d7283c2fc50e14",
+    "configService": "procurementPriceComparisonBusinessPartnerEvaluationAdaptorService"
+  },
+  {
+    "id": "basics.material.priceCondition",
+    "template": "basics.material/partials/price-condition-partial.html",
+    "title": "basics.material.record.priceConditionTitle",
+    "controller": "procurementPriceComparisonPriceConditionController",
+    "uuid": "377fd9f4705b404290cd0b68e1101211",
+    "dataService": "procurementPriceComparisonPriceConditionService"
+  },
+  {
+    "id": "boq.main.pricecondition.container",
+    "template": "boq.main/templates/price-condition-edit-dialog.html",
+    "title": "boq.main.PriceCondition",
+    "controller": "procurementPriceComparisonBoqPriceConditionController",
+    "dataService": "procurementPriceComparisonBoqPriceConditionService",
+    "uuid": "5551ee1109804df9946371a6455b8c5a",
+    "permission": "CECF39C2E1554D51BF40F78CA04698FB"
+  },
+  {
+    "id": "procurement.quote.header.plainText",
+    "template": "procurement.common/partials/common-item-plaintext-html-container.html",
+    "title": "procurement.common.headerText.prcHeaderPlainTextContainerTitle",
+    "controller": "procurementPriceComparisonHeaderPlainTextController",
+    "uuid": "e1903833f81d44d6b8a7fc36e7ec0d6d"
+  },
+  {
+    "id": "procurement.quote.itemPlainTitle",
+    "template": "procurement.common/partials/common-item-plaintext-html-container.html",
+    "title": "procurement.common.itemText.itemPlainTitle",
+    "controller": "procurementPriceComparisonItemPlainTextController",
+    "uuid": "34ff190da0784259895064f2dcafce64"
+  },
+  {
+    "id": "procurement.pricecomparison.quote.evaluationstructure",
+    "template": "businesspartner.main/partials/evaluatoin-chart-grid.html",
+    "title": "basics.common.evaluation.quoteEvaluation",
+    "controller": "commonBusinessPartnerBusinessPartnerEvaluationNewController",
+    "uuid": "367c0031930d45d9a84cd866326702bc",
+    "permission": "953895e120714ab4b6d7283c2fc50e14",
+    "configService": "procurementPriceComparisonQuoteEvaluationAdaptorService"
+  },
+  {
+    "id": "procurement.quote.billingschemalist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.quote.billingSchemaContainer",
+    "controller": "basicsBillingSchemaCommonListController",
+    "uuid": "5627df6ded4242e48ae56e5163320a53",
+    "permission": "5627df6ded4242e48ae56e5163320a53",
+    "billingSchemaQualifier": "procurement.quote.billingschmema",
+    "parentService": "procurementPriceComparisonItemService",
+    "dataService": "priceComparisonBillingSchemaService",
+    "interrupterServiceName": "priceComparisonBillingSchemaAdapterService"
+  },
+  {
+    "id": "procurement.pricecomparison.historical.price.for.item",
+    "template": "basics.common/templates/historical/common-historical-price-for-item.html",
+    "title": "basics.common.historicalPrice.historicalPriceForItemContainerTitle",
+    "controller": "commonHistoricalPriceForItemController",
+    "configService": "priceComparisonHistoricalPriceForItemService",
+    "uuid": "1499239c009b4f33b7821484657c02d1",
+    "permission": "1499239c009b4f33b7821484657c02d1"
+  },
+  {
+    "id": "procurement.pricecomparison.historical.price.for.boq",
+    "template": "basics.common/templates/historical/common-historical-price-for-boq.html",
+    "title": "basics.common.historicalPrice.historicalPriceForBoqContainerTitle",
+    "controller": "commonHistoricalPriceForBoqController",
+    "configService": "priceComparisonHistoricalPriceForBoqService",
+    "uuid": "172486b45b33427ba20571eba35eecd5",
+    "permission": "172486b45b33427ba20571eba35eecd5"
+  },
+  {
+    "id": "procurement.pricecomparison.comment",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "basics.common.commentContainerTitle",
+    "controller": "basicsCommonCommentController",
+    "uuid": "b8e86c031eb14f2fab15066d37fcdaf1",
+    "commentQualifier": "procurement.pricecomparison.comment",
+    "parentService": "procurementPriceComparisonMainService"
+  },
+  {
+    "id": "procurement-pricecomparison-powerbi-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.pricecomparison.powerBIElements",
+    "controller": "procurementPriceComparisonMainPowerBiListController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ac63",
+    "permission": "e669db59cf314255a84f02c276ce224c"
+  },
+  {
+    "id": "procurement-pricecomparison-powerbi-view-container",
+    "template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+    "title": "procurement.pricecomparison.powerbiView",
+    "controller": "procurementPriceComparisonMainPowerbiViewController",
+    "uuid": "1013a209ba7144f18d8d93e5b533ac64",
+    "permission": "e669db59cf314255a84f02c276ce224c"
+  },
+  {
+    "id":"procurement-pricecomparison-simple-pricecomparison",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.pricecomparison.simpleComparison",
+    "controller": "procurementPriceComparisonQuoteByRequestListController",
+    "uuid": "deb620733c7e494b8f4d261c4aa01c6b",
+    "permission": "1ec440875e364e8684f0ad25f0d94510"
+  },
+  {
+    "id": "procurement.rfq.formFormData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.ContainerUserformDefaultTitle",
+    "controller": "basicsUserFormFormDataController",
+    "uuid": "e9d2975ba1c843668eab2edacf1fc1bb",
+    "rubricId": 24,
+    "isReadonly": true,
+    "mainService": "procurementPriceComparisonMainService"
+  }
+]

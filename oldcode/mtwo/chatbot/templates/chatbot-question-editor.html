@@ -1,0 +1,20 @@
+<link rel="stylesheet"
+	  href="cloud.Desktop/content/css/chat-bot/chat-bot.css">
+<section data-ng-hide="!parameterInvalid">
+	<h1>Parameter Error<p></h1>
+	<h3>Workflow Client Action wrong configured</h3>
+	<h2><b>Error:</b>&ensp;</h2>
+	<h3 data-ng-bind-html="parameterInvalidInfo.error"></h3>
+	<br>
+	<h2>Please fix issues and try again!</h2>
+</section>
+<section data-ng-hide="parameterInvalid">
+
+	<div class="platform-form-group chatbot-question-group">
+		<div data-platform-label-text data-label="data.question"  data-model="data.answer" data-onchange="onChangeSendEmail()"></div>
+		<div data-platform-label-text data-forid="hint" data-model="data.hint" readonly></div>
+	</div>
+	<br>
+
+    </section>
+    </div>

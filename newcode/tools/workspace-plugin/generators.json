@@ -1,0 +1,49 @@
+{
+	"generators": {
+		"component": {
+			"implementation": "./src/generators/component",
+			"schema": "./src/generators/component/schema.json",
+			"description": "Generator component"
+		},
+		"pipe": {
+			"implementation": "./src/generators/pipe",
+			"schema": "./src/generators/pipe/schema.json",
+			"description": "Generator pipe"
+		},
+		"rib-class": {
+			"implementation": "./src/generators/rib-class",
+			"schema": "./src/generators/rib-class/schema.json",
+			"description": "Generator rib-class"
+		},
+		"rib-container": {
+			"implementation": "./src/generators/rib-container",
+			"schema": "./src/generators/rib-container/schema.json",
+			"description": "Generator rib-container"
+		},
+		"rib-content-module": {
+			"implementation": "./src/generators/rib-content-module",
+			"schema": "./src/generators/rib-content-module/schema.json",
+			"description": "Generator rib-content-module"
+		},
+		"rib-enum": {
+			"implementation": "./src/generators/rib-enum",
+			"schema": "./src/generators/rib-enum/schema.json",
+			"description": "Generator rib-enum"
+		},
+		"rib-interface": {
+			"implementation": "./src/generators/rib-interface",
+			"schema": "./src/generators/rib-interface/schema.json",
+			"description": "Generator rib-interface"
+		},
+		"rib-preload-module": {
+			"implementation": "./src/generators/rib-preload-module",
+			"schema": "./src/generators/rib-preload-module/schema.json",
+			"description": "Generator rib-preload-module"
+		},
+		"service": {
+			"implementation": "./src/generators/service",
+			"schema": "./src/generators/service/schema.json",
+			"description": "Generator service"
+		}
+	}
+}

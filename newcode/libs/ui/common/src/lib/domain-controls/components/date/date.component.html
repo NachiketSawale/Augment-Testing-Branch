@@ -1,0 +1,6 @@
+<div class="input-group date form-control">
+    <input class="input-group-content datepickerinput" #dateInput [(ngModel)]="controlContext.value "
+        (change)="onInputDate()">
+    <span class="input-group-btn"><button (click)="openDialog()" class="btn btn-default"><span
+                class="glyphicon-calendar glyphicon"></span></button></span>
+</div>

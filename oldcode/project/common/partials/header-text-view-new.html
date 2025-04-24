@@ -1,0 +1,32 @@
+<div data-platform-alert data-error="error"></div>
+<div class="flex-box flex-column flex-element filler">
+	<div data-platform-kendo-splitter-adjust class="flex-element"
+	     option="{panes: [ { collapsible: true, size: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}">
+
+		<div id="ui-layout-west" class="flex-box flex-column">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+		<div id="ui-layout-east">
+			<platform-Editor textarea-id="headerTextEditor" textarea-class=""
+			                 textarea-name="textareaHeaderText"
+			                 textarea-height="100%"
+			                 textarea-required
+			                 data-ng-model="currentItem.ContentString"
+			                 data-ng-change="onChange()"
+			                 enable-bootstrap-title="true"
+			                 textarea-editable="textareaEditable"
+			                 data-editoroptions="editoroptions"/>
+			<!-- <wysiwyg textarea-id="headerTextEditor" textarea-class=""
+						 textarea-name="textareaHeaderText"
+						 textarea-height="100%"
+						 textarea-required
+						 ng-model="currentItem.ContentString"
+						 data-ng-change="dirty()"
+						 enable-bootstrap-title="true"
+						 textarea-editable="textareaEditable"
+						 editoroptions="editoroptions">
+			 </wysiwyg>-->
+		</div>
+	</div>
+</div>
+<div cloud-common-overlay data-loading="containerLoading" data-info="loadingInfo"></div>

@@ -1,0 +1,24 @@
+
+<div class="informationInner">
+    <div class="flex-element">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Token Percentage Used:</th>
+                <th>Feature Name:</th>
+                <th>State:</th>
+                <th>Extended State:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="item in dialog.modalOptions.dataItem">
+                <td data-ng-bind-html="item.Usage"></td>
+                <td data-ng-bind-html="item.name"></td>
+                <td data-ng-bind-html="item.state"></td>
+                <td data-ng-bind-html="item.extendedState"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

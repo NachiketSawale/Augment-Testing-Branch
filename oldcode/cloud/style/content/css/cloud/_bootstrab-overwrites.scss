@@ -1,0 +1,26 @@
+/*-------------------------------------------------------------------------------
+	 Bootstrab Overwrites (_bootstrab-overwrites.scss)
+  -------------------------------------------------------------------------------*/
+
+#commandBar button, button.btn-main {
+	@include status-styles($color-main-hover, lighten);
+
+	&.highlight {
+		@include status-styles($color-highlight-main-hover, lighten);
+		background-color: $color-highlight-main;
+	}
+}
+
+// shadow for dropdown menus
+.btn-group.open .dropdown-toggle {
+	box-shadow: none;
+}
+
+.glyphicon {
+	top: 3px;
+	line-height: 0.9;
+}
+
+.modal-body {
+	resize: none;
+}

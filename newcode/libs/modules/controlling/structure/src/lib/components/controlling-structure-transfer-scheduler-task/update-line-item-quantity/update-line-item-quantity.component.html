@@ -1,0 +1,58 @@
+<ul class="list-group">
+    <li>
+        <div class="checkbox spaceToUp">
+            <label>
+                <input type="checkbox" [(ngModel)]="entity.updatePlannedQty" [disabled]="entity.isUpdateLineItemQuantityDisabled" [value]="entity.updatePlannedQty" />
+                {{ 'controlling.structure.updatePlannedQty' | platformTranslate }}
+            </label>
+        </div>
+    </li>
+
+    <li>
+        <div class="checkbox spaceToUp">
+            <label>
+                <input type="checkbox" [(ngModel)]="entity.updateInstalledQty" (change)="onCheckUpdateInstalledQty()" [disabled]="entity.isUpdateLineItemQuantityDisabled" [value]="entity.updateInstalledQty" />
+                {{ 'controlling.structure.updateInstalledQty' | platformTranslate }}
+            </label>
+        </div>
+    </li>
+    <li>
+        <ul class="subgroup">
+            <li>
+                <div class="radio spaceToUp">
+                    <label>
+                        <input type="radio" id="SCHEDULE" name="updateFrom" [(ngModel)]="entity.insQtyUpdateFrom" value="1" [disabled]="!entity.updateInstalledQty || !entity.isActive" />
+                        {{ 'controlling.structure.fromSchedule' | platformTranslate }}
+                    </label>
+                </div>
+            </li>
+
+            <li>
+                <div class="radio spaceToUp">
+                    <label>
+                        <input type="radio" id="WIP" name="updateFrom" [(ngModel)]="entity.insQtyUpdateFrom" value="2" [disabled]="!entity.updateInstalledQty || !entity.isActive" />
+                        {{ 'controlling.structure.fromWip' | platformTranslate }}
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <div class="checkbox spaceToUp">
+            <label>
+                <input type="checkbox" [(ngModel)]="entity.updateBillingQty" [disabled]="entity.isUpdateLineItemQuantityDisabled" [value]="entity.updateBillingQty" />
+                {{ 'controlling.structure.updateBillingQty' | platformTranslate }}
+            </label>
+        </div>
+    </li>
+
+    <li>
+        <div class="checkbox spaceToUp">
+            <label>
+                <input type="checkbox" [(ngModel)]="entity.updateForecastingPlannedQty" [disabled]="entity.isUpdateLineItemQuantityDisabled" [value]="entity.updateForecastingPlannedQty" />
+                {{ 'controlling.structure.updateForecastingPlannedQty' | platformTranslate }}
+            </label>
+        </div>
+    </li>
+</ul>

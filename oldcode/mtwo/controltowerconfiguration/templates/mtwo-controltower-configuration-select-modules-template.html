@@ -1,0 +1,23 @@
+<header class="modal-header">
+	<h2 class="modal-title">{{title}}</h2>
+	<button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)" aria-hidden="true">
+		<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+	</button>
+</header>
+<section class="modal-body">
+	<div class="input-group form-control">
+		<input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="search(searchValue,$event)"/>
+		<span class="input-group-btn">
+				<button class="btn btn-default input-sm tlb-icons ico-search" data-ng-click="search(searchValue)">
+            </button>
+			</span>
+	</div>
+	<div class="flex-box flex-column flex-element lookup-grid-container overflow-hidden">
+		<platform-grid class="lookup-grid" data="gridData"></platform-grid>
+	</div>
+</section>
+<footer class="modal-footer">
+	<button class="btn btn-default" data-ng-repeat="button in buttons" data-ng-disabled="button.disabled()" data-ng-click="button.execute($event)">
+		{{button.context$tr$ | translate}}
+	</button>
+</footer>

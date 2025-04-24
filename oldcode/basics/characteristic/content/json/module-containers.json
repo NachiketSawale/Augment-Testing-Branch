@@ -1,0 +1,97 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.characteristic.title.characteristicGroups",
+		"controller": "basicsCharacteristicGroupListController",
+		"uuid": "5E5CFB298FFF4205ADAB8FB696AC91EC"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.characteristic.title.characteristicSectionDetail",
+		"controller": "basicsCharacteristicSectionDetailController",
+		"uuid": "0D48F09CF87A496CA0A1766819DD62E7",
+		"permission": "49CB8879815B4BE88C8D6EDE1EB52AD0"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.characteristic.title.characteristics",
+		"controller": "basicsCharacteristicCharacteristicController",
+		"uuid": "2565A90A68984456BB7A62D701271A9F"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.characteristic.title.characteristicDetail",
+		"controller": "basicsCharacteristicCharacteristicDetailController",
+		"uuid": "A5F523F960624768AE9E31A28E378DC8",
+		"permission": "2565A90A68984456BB7A62D701271A9F"
+	},
+	{
+		"id": "5",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.characteristic.title.discreteValues",
+		"controller": "basicsCharacteristicDiscreteValueController",
+		"uuid": "CF5649D049F44340B93768232E4A911E"
+	},
+	{
+		"id": "6",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.characteristic.title.remark",
+		"controller": "basicsCharacteristicCharacteristicRemarkController",
+		"uuid": "0DFFAFD00DBD4DF7A6F82CF507A9376C"
+	},
+	{
+		"id": "7",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.characteristic.title.usedInCompany",
+		"controller": "basicsCharacteristicUsedInCompanyController",
+		"uuid": "4307455A185A4D1D84DA91ECEC793EBB"
+	},
+	{
+		"id": "8",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.characteristic.title.characteristicSections",
+		"controller": "basicsCharacteristicSectionController",
+		"uuid": "49CB8879815B4BE88C8D6EDE1EB52AD0"
+	},
+	{
+		"id": "9",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.characteristic.title.automaticAssignment",
+		"controller": "basicsCharacteristicAutomaticAssignmentController",
+		"uuid": "26CC2D8AFD3B433DAA2532B9D7F59A29"
+	},
+	{
+		"id": "10",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.characteristic.title.characteristicGroupDetail",
+		"controller": "basicsCharacteristicGroupTreeDetailController",
+		"uuid": "7F2DD4CCA7284D4B9870E1AB25F21534",
+		"permission": "5E5CFB298FFF4205ADAB8FB696AC91EC"
+	},
+	{
+		"id": "11",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.characteristic.title.discreteValueDetail",
+		"controller": "basicsCharacteristicDiscreteValueDetailController",
+		"uuid": "11FDD68F0D3948749FDF3AC6F1972401",
+		"permission": "CF5649D049F44340B93768232E4A911E"
+	},
+	{
+		"id": "12",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.languageColHeader_ContainerTitle",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "984F63B8D8EF438E8590613E38DA3AB2"
+	},
+	{
+		"id": "basicsCharacteristicChainCharacteristicContainer",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.characteristic.title.chainCharacteristic",
+		"controller": "basicsCharacteristicChainCharacteristicController",
+		"uuid": "faa9574b109f4b19a156ac9f5b1eda63"
+	}
+]

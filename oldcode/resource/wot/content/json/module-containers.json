@@ -1,0 +1,39 @@
+[
+  {
+    "id": "resource-work-operation-type-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.wot.workOperationTypeListTitle",
+    "controller": "resourceWotWorkOperationTypeListController",
+    "uuid": "5c10bdee259d4d9d87fd84a396183093"
+  },
+  {
+    "id": "resource-work-operation-type-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.wot.workOperationTypeDetailTitle",
+    "controller": "resourceWotWorkOperationTypeDetailController",
+    "uuid": "8c9b09fc5ce34a468e28cfaa40ece637",
+    "permission": "5c10bdee259d4d9d87fd84a396183093"
+  },
+  {
+    "id": "resource-operation-plant-type-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.wot.operationPlantTypeListTitle",
+    "controller": "resourceWotOperationPlantTypeListController",
+    "uuid": "8bf3d2a2d03a4ae99aab2ad090c77a53"
+  },
+  {
+    "id": "resource-operation-plant-type-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.wot.operationPlantTypeDetailTitle",
+    "controller": "resourceWotOperationPlantTypeDetailController",
+    "uuid": "84f1b6d1a8d44840a5c13965dd32e411",
+    "permission": "8bf3d2a2d03a4ae99aab2ad090c77a53"
+  },
+  {
+    "id": "resource-work-operation-type-translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "e7696f8f1fcf41fb90c31d5470a21bd8"
+  }
+]

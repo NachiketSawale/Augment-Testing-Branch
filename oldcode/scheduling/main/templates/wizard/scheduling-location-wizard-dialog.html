@@ -1,0 +1,18 @@
+<div data-ng-controller="schedulingLocationWizardDialogController">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <tabset class="tabsWrapper">
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled"
+                 ng-click="onTabSelect(tab)">
+
+                <div data-ng-include="tab.content"></div>
+            </tab>
+        </tabset>
+    </section>
+    <footer class="modal-footer">
+	    <div class="custom-btn-group"></div>
+	    <button type="button" class="btn btn-default" data-ng-click="onOK()"> {{'cloud.common.ok' | translate}}</button>
+	    <button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>
+

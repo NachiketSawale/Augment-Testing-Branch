@@ -1,0 +1,20 @@
+<style>
+	.sidebar-outlook-login .login-main {
+		border-bottom: 1px solid #bebebe;
+		display: flex;
+		padding: 10px 0;
+	}
+
+	.sidebar-outlook-login .ico-onedrive-icon {
+		width: 40px;
+		height: 40px;
+	}
+</style>
+<div class="fullheight sidebar-outlook-login" data-ng-controller="cloudDesktopOutlookLoginController">
+	<div class="content-inner fullheight flex-box flex-column">
+		<div class="login-main">
+			<i class="control-icons ico-send-email ico-onedrive-icon"></i>
+			<span class="flex-element flex-box flex-align-center margin-left-ld cursor-pointer btn-link" ng-click="login()">{{'cloud.desktop.outlook.login' | translate}}</span>
+		</div>
+	</div>
+</div>

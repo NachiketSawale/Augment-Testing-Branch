@@ -1,0 +1,16 @@
+<div class="ms-sv-category-tree">
+    <div>
+        <a href="" data-ng-hide="categoryItems.Id===-1"
+           data-ng-bind="categoryItems.name+' ('+categoryItems.showCount+')'"></a>
+        <a class="ms-sv-category-tree-back" href="" data-ng-click="treeOpen = !treeOpen">
+            <i class="block-image control-icons" ng-class="treeOpen?'ico-minus':'ico-plus'"></i>
+        </a>
+    </div>
+    <ul class="col-sm-offset-1" data-ng-show="treeOpen">
+        <li data-ng-repeat="item in categoryItems.children" style="  word-break: break-all;">
+            <a href="" data-ng-click="commodityCategory.ExpendClick(item.Id)">
+                {{::item.name}}({{::item.showCount}})
+            </a>
+        </li>
+    </ul>
+</div>

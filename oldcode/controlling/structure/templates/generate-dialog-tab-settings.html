@@ -1,0 +1,33 @@
+<div data-ng-controller="controllingStructureGenerateWizardTabSettingsController" class="modal-wrapper overflow">
+    <div class="platform-form-group">
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'basics.customize.template' | translate}}</label>
+
+            <div class="platform-form-col">
+                <div class="form-control" data-domain-control data-domain="select"
+                     data-model="codeTemplates.current"
+                     data-model-options="{ updateOn: 'blur'}" data-options="codeTemplateOptions">
+                </div>
+
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <label class="platform-form-label">{{'basics.customize.code' | translate}}</label>
+                        <div class="platform-form-col">
+                            <input class="form-control" data-ng-model="codeTemplates.current.Codetemplate"
+                                   ng-attr-title="{{codeTemplateOptions.tooltip | translate}}"/>
+                        </div>
+                    </div>
+
+                    <!-- Assignments -->
+                    <div data-ng-repeat="n in ['01','02','03','04','05','06','07','08','09','10']" class="platform-form-row">
+                        <label class="platform-form-label">{{getAssignmentLabels(n)}}</label>
+                        <div class="platform-form-col">
+                            <div class="form-control" data-domain-control data-domain="description"
+                                 data-model="codeTemplates.current['Assignment'+n]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

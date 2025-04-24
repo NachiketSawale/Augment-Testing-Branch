@@ -1,0 +1,21 @@
+{
+  "basics": {
+    "assetmaster": {
+      "moduleName": "Anlagenstamm",
+      "assetMasterTitle":"!Assign Asset Master",
+      "tabs": {
+        "assetmaster": "Anlagenstamm"
+      },
+      "views": {
+        "assetmaster": "Anlagenstamm"
+      },
+      "containers": {
+        "grid": "Anlagenstamm",
+        "detail": "Anlagenstamm Detail"
+      },
+      "errors" : {
+        "codeUnique" : "{{p_0}} existiert bereits"
+      }
+    }
+  }
+}

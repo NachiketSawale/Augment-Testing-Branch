@@ -1,0 +1,20 @@
+<div class="flex-element flex-box flex-column overflow-auto fullheight">
+	<fieldset>
+		<legend>Business Partners</legend>
+		<div class="flex-box flex-column flex-element subview-content">
+			<ui-common-grid
+				[configuration]="configuration"
+				(selectionChanged)="selectionChanged($event)"
+			>
+			</ui-common-grid>
+		</div>
+	</fieldset>
+	<fieldset class="margin-top-ld">
+		<legend>Business Partner Detail</legend>
+		<div>
+			<ui-common-form [formConfig]="formConfig" [entity]="selectedItem"></ui-common-form>
+		</div>
+		<hr class="border-bottom">
+		<pre>{{selectedItem | json}}</pre>
+	</fieldset>
+</div>

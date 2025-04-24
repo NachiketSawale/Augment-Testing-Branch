@@ -1,0 +1,13 @@
+<div class="form-control flex-column material-filter-preview-documents-box">
+	<div *ngFor="let doc of documentList">
+		<a *ngIf="!!doc.FileArchiveDocFk"
+		   class="material-filter-preview-document hasFile"
+		   (click)="previewDocument(doc)">
+			{{ doc.Description }}
+		</a>
+		<span *ngIf="!doc.FileArchiveDocFk"
+		      class="material-filter-preview-document">
+			{{ doc.Description }}
+		</span>
+	</div>
+</div>

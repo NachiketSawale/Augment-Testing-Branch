@@ -1,0 +1,72 @@
+[
+  {
+    "id": "model-map-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.map.list",
+    "controller": "modelMapListController",
+    "uuid": "b3283ad1a7424388b03ca5a47fa09d15"
+  },
+  {
+    "id": "model-map-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.map.detail",
+    "controller": "modelMapDetailController",
+    "uuid": "5b2eda413a434857848e70df9ba397f9",
+    "permission": "b3283ad1a7424388b03ca5a47fa09d15"
+  },
+  {
+    "id": "model-map-area-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.map.area.list",
+    "controller": "modelMapAreaListController",
+    "uuid": "a8a7ae07b8834324bcc2cee437170d2a",
+    "permission": "a278dd3b0f874c069d02e528978a59bb"
+  },
+  {
+    "id": "model-map-area-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.map.area.detail",
+    "controller": "modelMapAreaDetailController",
+    "uuid": "86480935d53747df8974e5341d9aabb2",
+    "permission": "a278dd3b0f874c069d02e528978a59bb"
+  },
+  {
+    "id": "model-map-level-list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.map.level.list",
+    "controller": "modelMapLevelListController",
+    "uuid": "0286f5d963784449a6b145acb4676fe6",
+    "permission": "8fe0a05f213e493190af7d61669e1621"
+  },
+  {
+    "id": "model-map-level-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.map.level.detail",
+    "controller": "modelMapLevelDetailController",
+    "uuid": "795b9b8a7d824f90a0e86802378e3924",
+    "permission": "8fe0a05f213e493190af7d61669e1621"
+  },
+  {
+    "id": "model-map-polygon-list",
+    "template": "model.map/partials/model-map-polygon-alignment-partial.html",
+    "title": "model.map.polygon.list",
+    "controller": "modelMapPolygonListController",
+    "uuid": "87476328055e41ceb232ab1f82a54e8f",
+    "permission": "ea2e40038d9743479523fd3d3155495d"
+  },
+  {
+    "id": "model-map-polygon-detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.map.polygon.detail",
+    "controller": "modelMapPolygonDetailController",
+    "uuid": "12fe6a7a85af40ed8ce3125a3bef7442",
+    "permission": "ea2e40038d9743479523fd3d3155495d"
+  },
+  {
+    "id": "model-map-alignment",
+    "template": "model.map/partials/model-map-alignment-partial.html",
+    "title": "model.map.alignment",
+    "controller": "modelMapAlignmentController",
+    "uuid": "5d25b8efa50749e8a89baf5550450a1b"
+  }
+]

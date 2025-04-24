@@ -1,0 +1,177 @@
+[
+	{
+		"id": "logistic.card.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardListTitle",
+		"controller": "logisticCardListController",
+		"uuid": "05fd352d74ef4f5aa179d259e056c367"
+	},
+	{
+		"id": "logistic.card.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.cardDetailTitle",
+		"controller": "logisticCardDetailController",
+		"uuid": "b3cd04f14e0d4c37a17255d3315f2e0e",
+		"permission": "05fd352d74ef4f5aa179d259e056c367"
+	},
+	{
+		"id": "logistic.card.activity.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardActivityListTitle",
+		"controller": "logisticCardActivityListController",
+		"uuid": "8a2db2fa260e476a8928c2a56791b277"
+	},
+	{
+		"id": "logistic.card.activity.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.cardActivityDetailTitle",
+		"controller": "logisticCardActivityDetailController",
+		"uuid": "c3354dae2f434cd183862f01c2bb039b",
+		"permission": "8a2db2fa260e476a8928c2a56791b277"
+	},
+	{
+		"id": "logistic.card.record.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardRecordListTitle",
+		"controller": "logisticCardRecordListController",
+		"uuid": "1e6832ec58314f4bb772e0986f110d33"
+	},
+	{
+		"id": "logistic.card.record.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.cardRecordDetailTitle",
+		"controller": "logisticCardRecordDetailController",
+		"uuid": "35eb529cbbc04fbaac20073663522425",
+		"permission": "1e6832ec58314f4bb772e0986f110d33"
+	},
+	{
+		"id": "logistic.card.remark",
+		"template": "app/components/remark/single-remark-container.html",
+		"title": "cloud.common.entityRemark",
+		"uuid": "9bfaa01af6254c799f2b878286395eb7",
+		"controller": "logisticCardRemarkController"
+	},
+	{
+		"id": "logistic.card.document.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardDocumentListTitle",
+		"controller": "logisticCardDocumentListController",
+		"uuid": "7e1c27a578c1483386e2594f24bab0bc"
+	},
+	{
+		"id": "logistic.card.document.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.cardDocumentDetailTitle",
+		"controller": "logisticCardDocumentDetailController",
+		"uuid": "4e3220847fe74ca6a726677f31ed9f05",
+		"permission": "7e1c27a578c1483386e2594f24bab0bc"
+	},
+	{
+		"id": "logistic.card.work.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardWorkListTitle",
+		"controller": "logisticCardWorkListController",
+		"uuid": "fc5cb34f5ec74473bdd9de8083d61037"
+	},
+	{
+		"id": "logistic.card.work.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.cardWorkDetailTitle",
+		"controller": "logisticCardWorkDetailController",
+		"uuid": "2b6ca1c9b58d48d397d1ae04d3725bb5",
+		"permission": "fc5cb34f5ec74473bdd9de8083d61037"
+	},
+	{
+		"id": "logistic.card.activity.characteristic.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "logistic.card.activityCharacteristicsContainerTitle",
+		"uuid": "a807ecc8fdb047bd9ce4d3a32e8e7ca2",
+		"controller": "",
+		"sectionId": "53",
+		"mainService": "logisticCardActivityDataService"
+	},
+	{
+		"id": "logistic.card.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.ContainerUserformDefaultTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "b8faa20ce88111eb9a030242ac130003",
+		"rubricId": 37,
+		"mainService": "logisticCardDataService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "logistic.card.work.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardWorkListTitle",
+		"controller": "logisticCardWorkListController",
+		"uuid": "fc5cb34f5ec74473bdd9de8083d61037"
+	},
+	{
+		"id": "logistic.card.clerk.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardActivityClerkListTitle",
+		"controller": "logisticCardActivityClerkListController",
+		"uuid": "ecc6bbcf8be84e5e84e6ed2b2a2497a7"
+	},
+	{
+		"id": "logistic.card.clerk.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.cardActivityClerkDetailTitle",
+		"controller": "logisticCardActivityClerkDetailController",
+		"uuid": "B51C43904B6E4FD8A1A40DBD2830D47D",
+		"permission": "ecc6bbcf8be84e5e84e6ed2b2a2497a7"
+	},
+	{
+		"id": "logistic.card.plantcompatiblematerial.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.cardPlantCompatibleMaterialListTitle",
+		"controller": "logisticCardPlantCompatibleMaterialListController",
+		"uuid": "47693dc497464c16ba9df74576724959",
+		"permission": "26b70d12f6134c08af7f3b173dd76c37"
+	},
+	{
+		"id": "logistic.card.plantcompatiblematerial.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.cardPlantCompatibleMaterialDetailTitle",
+		"controller": "logisticCardPlantCompatibleMaterialDetailController",
+		"uuid": "517e4033147a40bd8e2975297c9443e0",
+		"permission": "26b70d12f6134c08af7f3b173dd76c37"
+	},
+	{
+		"id": "logistic.card.plant.location.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.card.plantLocationListTitle",
+		"controller": "logisticCardPlantLocationListController",
+		"uuid": "137f38660a3540918ba4a4bdbe8e9937"
+	},
+	{
+		"id": "logistic.card.plant.location.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.card.plantLocationDetailTitle",
+		"controller": "logisticCardPlantLocationDetailController",
+		"uuid": "774745f45578491b88ed55b9b9d1a6bd",
+		"permission": "137f38660a3540918ba4a4bdbe8e9937"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "c25d5626aea248adbc1d0be37d6d475b",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "app/components/grid/generic-structure/generic-container.html",
+		"title": "logistic.card.structureContainerTitle",
+		"uuid": "679dfb2e047c49c9ace5ffa30f888d11",
+		"controller": "platformGenericStructureController",
+		"mainService": "logisticCardDataService",
+		"enableCaching": "true",
+		"configurationService": "logisticCardStructureConfigService",
+		"permission": "05fd352d74ef4f5aa179d259e056c367"
+	}
+]

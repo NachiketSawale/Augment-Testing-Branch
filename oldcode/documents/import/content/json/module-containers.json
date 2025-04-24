@@ -1,0 +1,23 @@
+[
+  {
+    "id": "documents.import.orphan",
+    "template": "app/components/base/grid-partial.html",
+    "title": "documents.import.headertitle",
+    "controller": "documentImportOrphanController",
+    "uuid": "6880A128218D40CFB161194F4AC696DA"
+  },
+  {
+    "id": "documents.import.job",
+    "template": "app/components/base/grid-partial.html",
+    "title": "documents.import.importTask",
+    "controller": "documentsImportJobListController",
+    "uuid": "9800A128218R4098B160294F4AC696DA"
+  },
+  {
+    "id": "documents.import.result",
+    "template": "app/components/base/grid-partial.html",
+    "title": "documents.import.result",
+    "controller": "documentsImportResultController",
+    "uuid": "FA4119C484E7423082CF6D6F3596ABF4"
+  }
+]

@@ -1,0 +1,39 @@
+<div class="flex-element flex-box flex-column flex-basis-auto overflow-hidden">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+
+    <section class="modal-body">
+        <div class="modal-wrapper">
+            <div data-platform-form-container data-form-container-options="formContainerOptions" entity="dataItem"
+                 class="flex-element flex-basis-auto"></div>
+            <div data-ng-show="alerts && alerts.length">
+                <div class="lookup-alert {{::alert.css}}" data-ng-repeat="alert in alerts">
+                    <span data-ng-bind="alert.title"></span>: <span data-ng-bind="alert.message"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="filler flex-box flex-column subview-container lookup-grid-container">
+            <div class="subview-header toolbar">
+                <h3 class="font-bold title fix">{{preliminaryItemGrid.title | translate}}</h3>
+            </div>
+            <div class="flex-element flex-box flex-column overflow-hidden">
+                <div class="lookup-grid flex-basis-auto" data-platform-grid data="preliminaryItemGrid"></div>
+            </div>
+        </div>
+    </section>
+    <div cloud-common-overlay data-loading="isBusy" data-info2="progressInfo"></div>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" ng-if="calculationBtn" data-ng-click="calculationBtn.action()"
+                data-ng-disabled="modalOptions.isDisabled('custom1')">
+            {{calculationBtn.label}}
+        </button>
+        <button type="button" class="btn btn-default ok" ng-if="showOkButton" data-ng-click="onOK()"
+                data-ng-disabled="modalOptions.isDisabled('ok')"> {{'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default cancel" ng-if="showCancelButton" data-ng-click="onCancel()"
+                data-ng-disabled="modalOptions.isDisabled('cancel')"> {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+</div>

@@ -1,0 +1,9 @@
+<div class="content" data-ng-controller="basicsWorkflowSidebarController as workflowSidebar">
+
+	<div class="flex-box flex-column fullheight"
+	     data-ng-if="workflowSidebar.list" data-ng-include="'basics.workflow/templates/workflowSidebar/workflow-list.html'"></div>
+
+	<div class="flex-box flex-element flex-column"
+	     data-ng-if="workflowSidebar.detail" data-ng-include="'basics.workflow/templates/workflowSidebar/workflow-detail.html'"></div>
+
+</div>

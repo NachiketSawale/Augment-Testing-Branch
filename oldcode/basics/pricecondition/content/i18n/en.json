@@ -1,0 +1,24 @@
+{
+  "basics": {
+    "pricecondition": {
+      "moduleName": "Price Condition",
+      "entityValue":"Value",
+      "entityPriceCondition": "Price Condition Type",
+      "entityPriceConditionDescription": "Price Condition Type Description",
+      "entityIsActivated": "Is Activated",
+      "priceConditionGridTitle":"Price Condition",
+      "priceConditionFormTitle":"Price Condition Form",
+      "priceConditionDetailGridTitle":"Price Condition Details",
+      "priceConditionDetailFormTitle":"Price Condition Details Form",
+      "priceConditionDescriptionUniqueError": "The description should be unique",
+      "tabs": {
+        "main": "Price Conditions"
+      },
+      "entityCommentText": "Comment Text",
+      "remarkinfo": "Remark",
+      "headerParamTitle": "Price Condition Values",
+      "entityFormula": "Formula",
+      "formulaText": "Formula Text"
+    }
+  }
+}

@@ -1,0 +1,1102 @@
+/*-------------------------------------------------------------------------------
+	 Sidebar (_sidebar.scss)
+  -------------------------------------------------------------------------------*/
+$sidebar-toolbar-height: 34px;
+$sidebar-toolbar-button-size: 30px;
+$sidebar-width: 380px;
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: $size-commandbar-width;
+	height: 100%;
+	top: 0;
+	//z-index: 10;
+	z-index: 900;
+
+	&.pinned {
+		position: static;
+		height: auto;
+	}
+
+	.panel-title {
+		color: $color-text-light;
+	}
+
+	.maximize {
+		width: 760px !important;
+	}
+
+	//skype-container
+	.skype-content {
+		.login-main {
+			display: flex;
+			padding: 10px 0;
+			border-bottom: 1px solid #bebebe;
+		}
+
+		.skype-chat-button {
+			border-left: solid 1px #ccc;
+			padding: 0 4px;
+			cursor: pointer;
+			position: relative;
+
+			.badge {
+				background-color: #B12704;
+				min-width: 30px;
+				margin-left: 4px;
+			}
+
+			.me-status-dropdown {
+				position: absolute;
+				right: 0px;
+				top: 34px;
+				z-index: 10;
+				background-color: #fff;
+				border: 1px solid #ccc;
+
+				.contact-item {
+					height: 40px;
+					padding: 0 4px;
+
+					&:hover {
+						background-color: #bbcddb;
+					}
+
+					&.delete-conversation {
+						padding-top: 6px;
+						border-top: 1px solid #ccc;
+					}
+
+					.image {
+						width: 30px;
+						margin-right: 4px;
+
+						.img-circle {
+							max-height: 30px;
+							margin-right: 4px;
+						}
+					}
+
+					span.ellipsis {
+						margin-right: 10px;
+					}
+
+					.ico-input-delete {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+		}
+
+		.skype-main {
+			.contact-item {
+				height: 52px;
+				padding: $padding-medium-vertical 0;
+
+				div.image {
+					@include square(40px);
+					z-index: 1000;
+					margin-right: $padding-xlarge-horizontal;
+				}
+
+				&:not(.none-hover):hover {
+					background-color: $color-hover;
+				}
+				&.active {
+					background-color: $color-hover;
+				}
+			}
+
+			.chat-button {
+				background-image: url(../images/skype/chatbutton_24px.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				height: 35px;
+			}
+
+			.me-status-icon {
+				bottom: -2px !important;
+				right: -2px !important;
+			}
+
+			.me-status:after {
+				content: '';
+				border: 5px solid $color-primary-fore;
+				border-top: 5px solid #000;
+				margin: 6px 0 0 3px;
+				vertical-align: middle;
+				float: right;
+			}
+
+			.me-status-dropdown {
+				position: absolute;
+				z-index: 10;
+				background-color: $color-body-background;
+				left: 0px;
+				border: 1px solid $color-input-border;
+			}
+
+			.me-status-dropdown-item {
+				border: none !important;
+
+				&:hover {
+					cursor: pointer;
+					background-color: $color-rib;
+					color: $color-primary-fore;
+				}
+			}
+
+			.tab-header {
+				line-height: 30px;
+				height: 30px;
+			}
+
+			.list-group-item {
+				border: none;
+				padding: 8px 15px;
+
+				&:hover {
+					cursor: pointer;
+					background-color: $color-rib;
+					color: $color-primary-fore;
+				}
+			}
+
+			.photo {
+				max-height: 40px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.status {
+				@include square(16px);
+				display: inline-block;
+				border-radius: 8px;
+				position: absolute;
+			}
+		}
+
+		.skype-chat {
+			/*conversation part*/
+			.swxContent,
+			.swxContent swx-navigation,
+			.fragmentsContainer,
+			.fragmentsContainer div.fragment,
+			.fragmentsContainer div.fragment .conversationControl {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+			}
+
+			&.swx {
+				.callScreen--maximizeCallScreen {
+					flex: 1;
+				}
+				.container {
+					width: 100%;
+				}
+			}
+
+			.fragmentsContainer div.fragment .tile {
+				background-color: inherit;
+				opacity: 1;
+				float: none;
+				height: auto;
+
+				&:hover {
+					outline: none;
+				}
+			}
+
+			.chat .conversation .message {
+				margin-top: 0.5em !important;
+			}
+		}
+	}
+
+
+	.one-drive-content {
+
+		.login-main {
+			display: flex;
+			padding: 10px 0;
+			border-bottom: 1px solid #bebebe;
+		}
+
+		.one-drive-context-menu{
+
+			position:absolute;
+			z-index:999;
+			min-width: 13em;
+			max-width: 26em;
+			padding:.25em 0;
+			border: 1px solid #bebebe;
+			background: white;
+
+			-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5);
+			-moz-box-shadow: 0 2px 5px rgba(0,0,0,.5);
+			-o-box-shadow: 0 2px 5px rgba(0,0,0,.5);
+			box-shadow: 0 2px 5px rgba(0,0,0,.5);
+
+			ul {
+				margin: 0;
+			}
+
+			.context-menu-item {
+				user-select: none;
+				padding: 5px;
+				border:none;
+
+				&:hover {
+					cursor: pointer;
+					background-color: $color-rib;
+					color: $color-primary-fore;
+				}
+
+				&.disabled {
+					background-color: #eee;
+					color: #777;
+					cursor: not-allowed;
+				}
+			}
+
+			.context-menu-item[data-show="true"]{
+				display: block;
+			}
+
+			.context-menu-item[data-show="false"]{
+				display: none;
+			}
+
+			.context-menu-separator {
+				padding: 0;
+				margin: .35em 0;
+				border-bottom: 1px solid #e6e6e6;
+			}
+
+			.glyphicon {
+				top: 0;
+				line-height: 1;
+			}
+
+		}
+	}
+
+	// unused? I guess it was only a temporary workaround
+	//.flex-box.flex-column {
+	//	height: 100%;
+	//}
+
+	.content-inner {
+		flex: 1 auto;
+		overflow-y: auto;
+		//no scroll on the x-site
+		overflow-x: hidden;
+		position: relative;
+
+		&.form {
+			> *:first-child {
+				@extend .margin-full-lg;
+			}
+		}
+
+		> .scroll-padding {
+			padding-right: $padding-medium-horizontal;
+		}
+
+		.input-group + ul {
+			@extend .margin-top-ld;
+		}
+
+		//.input-group + .input-group {
+		//	@extend .margin-top-ld;
+		//}
+
+		.form-control + .form-control {
+			@extend .margin-top-ld;
+		}
+
+		> .accordion {
+			padding-top: $padding-medium-horizontal;
+		}
+
+		.subTitle {
+			@extend .margin-top-ld;
+			font-size: 13pt;
+			border-bottom: solid 1px $color-input-border;
+			padding-bottom: $padding-base-vertical;
+			width: 100%;
+		}
+
+		.text-right {
+			.btn-default {
+				width: 100px;
+				margin: $padding-large-vertical 0;
+			}
+		}
+
+		//special solution for d and reports without icon in accordion header
+		.panel-primary .panel-heading {
+			.ico-report00, .ico-wizard00 {
+				width: 0;
+			}
+		}
+
+		//#81771	Sidebar Enhanced Search | Problem with scrolling
+		&.sidebar-enhanced {
+			overflow: hidden;
+			margin-bottom: 45px;
+
+			.searchWrapper {
+				overflow: auto;
+				height: 100%;
+				margin: 0;
+				padding-top: 10px;
+			}
+		}
+	}
+
+	.content-wrapper {
+		flex: 1;
+		//		box-shadow: -4px 4px 5px #cacaca inset);
+		background-color: $color-body-background;
+		border-color: $color-grey-dark;
+		border-left-style: solid;
+		border-left-width: $border-width-default;
+		display: none; /* this is for the sliding effect to initially make the sidebar hidden */
+		width: $sidebar-width;
+		box-sizing: border-box;
+		position: relative;
+
+		&.selected {
+			display: block;
+			border-width: $border-width-default;
+		}
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 $padding-base-vertical 0;
+		padding: 0 $padding-medium-horizontal;
+		height: 100%;
+
+		.btnGroup {
+			@extend .margin-top-ld;
+		}
+
+		> div {
+			overflow-y: auto;
+		}
+	}
+
+	.sidebar-content {
+		padding: 0;
+
+		.toolbar {
+			align-items: center;
+			height: 64px;
+			min-height: 64px;
+			padding: 0 20px;
+
+			h1 {
+				margin-right: 16px;
+			}
+
+			button {
+				@include square(32px);
+				margin: 0;
+				vertical-align: middle;
+				background-size: 24px 24px;
+			}
+
+			.ui-header-sidebar-navigator-menu {
+				display: flex;
+				button {
+					@include status-styles(none);
+					@include list-of-icons(32px, 32px, 24px, iconHover);
+					text-indent: inherit;
+				}
+			}
+		}
+
+		.content-inner {
+			padding: 0 20px;
+
+			&.sidebar-project-navigator {
+				.container-overlay {
+					.text-left {
+						margin: 0 20px;
+					}
+				}
+			}
+
+			.content-title {
+				display: flex;
+				align-items: flex-end;
+				height: 40px;
+			}
+		}
+	}
+
+	.toolbar {
+		box-sizing: content-box;
+		background: none;
+		border-bottom: 2px solid $color-text-light;
+		height: $sidebar-toolbar-height;
+		min-height: $sidebar-toolbar-height;
+
+		> .title {
+			@extend .font-bold;
+			font-size: 12pt;
+			line-height: $sidebar-toolbar-height;
+			margin-left: 0;
+			flex: 1;
+		}
+
+		> [data-platform-menu-list] {
+			display: none;
+		}
+
+		button {
+			margin-top: $padding-small-vertical;
+		}
+
+		.action-select-btn {
+			button {
+				margin: 0;
+			}
+		}
+	}
+
+	.rw {
+		@extend .rwd;
+		@include status-styles($color-hover, darken);
+	}
+
+	.rwd {
+		width: 100%;
+		padding: $padding-medium-vertical 0;
+		border-bottom: $border-width-default solid $color-bar-border;
+		text-align: left;
+
+		&.lg {
+			height: 45px;
+		}
+
+		&[class*="ico-"] {
+			background-size: $size-large-icon $size-large-icon;
+			background-position: $padding-small-horizontal 50%;
+			padding-left: $padding-base-vertical + 28px;
+		}
+
+		&.last-section {
+			border-bottom-style: double;
+			border-bottom-width: 3px;
+		}
+
+		.title {
+			font-size: 12pt;
+		}
+
+		.icon {
+			width: 20px;
+			margin: 0 $padding-base-horizontal 0 $padding-small-horizontal;
+		}
+	}
+
+	.rw-content, .rwd-content {
+		padding-left: 8px;
+		position: relative;
+
+		&.highlight {
+			padding-left: $padding-base-vertical;
+			border-left: 4px solid;
+		}
+	}
+
+	.rw-deletable-content {
+		$size-delete-button: 24px;
+		@extend .rw-content;
+		padding-right: $size-delete-button + 2px;
+
+		button {
+			width: $size-delete-button;
+			height: $size-delete-button;
+			background-size: $size-icon;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border: none;
+			background-color: transparent;
+
+			&:hover {
+				background-image: url(../images/control-red-icons.svg#ico-close);
+			}
+		}
+	}
+
+	.searchWrapper {
+		position: relative;
+		margin: $padding-large-horizontal 0;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+
+		.search-button {
+			position: fixed;
+			bottom: 5px;
+			width: 364px !important;
+		}
+
+		.enhanced {
+			.select2-container {
+				flex: 1;
+
+				.filterDefdropboxIconsLeft {
+					max-width: 187px;
+				}
+			}
+		}
+
+		.input-group.first .select2-selection__rendered {
+			width: 199px;
+		}
+
+		.recordInfoText {
+			border: solid 1px $color-input-border;
+			border-top: none;
+
+			> div {
+				border: none;
+				box-shadow: none;
+			}
+			> span > button {
+				border: none;
+			}
+		}
+
+		.regionLabel {
+			font-size: 13pt;
+			border-bottom: solid 1px $color-input-border;
+			margin-top: 11px;
+			padding-bottom: 4px;
+			width: 100%;
+		}
+
+		.filteroptions > div {
+			height: 26px;
+			line-height: 30px;
+		}
+
+		.btn.ico-search {
+			background-size: 16px 16px;
+		}
+
+		.btn.middle, .btn.ico-search {
+			width: 40px;
+		}
+
+		.btnGroup {
+			button:nth-child(2) {
+				margin: 0 $padding-medium-horizontal;
+			}
+		}
+
+		.select2-selection.select2-selection--single {
+			border-right: none;
+		}
+
+		.hierarchic-box {
+			ul {
+				// unecessary?
+				//margin-top: 20px;
+			}
+		}
+
+		/* use in search form */
+		.searchform-desc {
+			//margin-top: 20px; --> evtl. sidebar-panel-body -> first div get a margin-top: 16px
+			border-bottom: solid 1px $color-input-border;
+			padding-bottom: 10px;
+		}
+
+		.rule-editor {
+			margin: 0 0 0 -10px !important;
+			border: none;
+			.subview-container {
+				margin-bottom: -1px !important;
+				margin-right: 0 !important;
+				min-width: 250px;
+			}
+			.rule-container {
+				overflow: inherit;
+				border: none;
+				margin-right: 0px;
+
+				.toolbar {
+					background-color: $color-border;
+					border-bottom: none;
+
+					.lookup-wrapper {
+						padding: 0;
+					}
+					.form-control {
+						box-shadow: none;
+					}
+					.input-group {
+						height: 100%;
+
+						.input-group-content {
+							height: 100%;
+							display: flex;
+							padding: 0;
+							align-items: center;
+							padding-left: 10px;
+
+							&:after {
+								content: " ";
+								display: block;
+								width: 0;
+								height: 0;
+								border-top: 4px solid $color-text;
+								border-right: 4px solid transparent;
+								border-left: 4px solid transparent;
+								position: absolute;
+								right: 2px;
+								top: 45%;
+							}
+						}
+						.input-group-btn {
+							display: none;
+						}
+					}
+				}
+				.toolbar > *:first-child {
+					display: none;
+				}
+				.rule {
+					flex-wrap: wrap;
+
+					> .first-operand-selector {
+						order: -2;
+						flex-basis: 80%;
+					}
+					.rule-condition-operator-selector, > .columns {
+						margin-top: -1px;
+						order: 0;
+						flex-basis: 100%;
+					}
+					> .input-group-btn {
+						order: -1;
+						margin-left: -1px;
+						button {
+							width: 28px;
+						}
+					}
+					.rule-condition-operator-selector, .rule-operand-editor {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		.interactionContainer {
+			border-bottom: solid 1px $color-input-border;
+			flex-wrap: wrap;
+		}
+
+		@extend %sidebar-tabs;
+
+		.environment-expressions {
+			//display: flex;
+			//flex-wrap: wrap;
+
+			.environment-label {
+				flex: 0 0 100%;
+				line-height: 30px;
+			}
+
+			button.btn {
+				outline: none;
+				color: $color-text;
+				background-color: $color-border;
+				border-radius: 25px;
+				padding: 4px 11px;
+				margin: 2px 5px 2px 0;
+				border: 0;
+				height: 30px;
+				&:hover {
+					color: $color-primary-fore;
+					background-color: $color-main-hover;
+					svg {
+						--icon-color-1 : var(--icon-main-color);
+					}
+				}
+				&.active {
+					color: $color-primary-fore;
+					background-color: $color-rib;
+					box-shadow: none;
+					svg {
+						--icon-color-1 : var(--icon-main-color);
+					}
+				}
+				svg {
+					margin-bottom: 1px;
+					margin-left: 3px;
+				}
+			}
+
+			.settings-input {
+				border: 0;
+				display: grid;
+				grid-template-columns: 1fr;
+
+				input::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+
+				/* Firefox */
+				input[type=number] {
+					-moz-appearance: textfield;
+				}
+			}
+
+			.text-input {
+				grid-row-start: 1;
+				grid-column-start: 1;
+				height: 20px;
+				width: 83px;
+				border: none;
+				outline: none;
+				padding: 0px 45px 0px 5px;
+				vertical-align: middle;
+			}
+
+			.tick-icon {
+				grid-row-start: 1;
+				grid-column-start: 1;
+				justify-self: end;
+				vertical-align: middle;
+				cursor: pointer;
+				padding: 2px 2px 0px 2px;
+				margin-right: 20px;
+				&:hover {
+					background: $color-hover;
+				}
+			}
+
+			.delete-icon {
+				grid-row-start: 1;
+				grid-column-start: 1;
+				justify-self: end;
+				vertical-align: middle;
+				cursor: pointer;
+				padding: 2px 2px 0px 2px;
+				&:hover {
+					background: $color-hover;
+				}
+			}
+
+			label {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.platform-form-group .platform-form-row .platform-form-label {
+		//e.g. workflow
+		padding-top: 0px;
+	}
+
+	.showgroups {
+		margin-top: $padding-large-vertical;
+		margin-bottom: $padding-large-vertical;
+	}
+
+	//slide from left to right container. e.g.: skype-container
+	.slide-wrapper {
+		&.on .slide {
+			transition: 250ms;
+			left: 0px;
+		}
+
+		.slide {
+			position: absolute;
+			top: 0px;
+			left: -100%;
+			width: 100%;
+
+			height: 52px;
+			background: #DBDBDB;
+			transition: 250ms;
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			button {
+				height: 30px;
+				width: 30px;
+				background-size: 16px 16px;
+				margin-right: 16px;
+				border: solid 1px #707070;
+			}
+		}
+	}
+}
+
+.filterDefdropboxIconsLeft {
+	@extend .ellipsis;
+	background-position: left !important;
+	padding-left: 21px;
+}
+
+.lastObjectItem {
+	display: flex;
+}
+
+.sidebar-panel {
+	margin-top: $padding-large-vertical;
+	margin-bottom: $padding-xxlarge-vertical;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.sidebar-panel-heading {}
+
+	.sidebar-panel-title-bar {
+		background-color: $color-bar1;
+		height: $panel-primary-heading-height;
+		display: flex;
+		width: 100%;
+		padding-left: $padding-medium-horizontal;
+
+		> span[class*="ico-"] {
+			min-width: $size-large-icon;
+			height: auto;
+			background-size: $size-large-icon $size-large-icon;
+			display: inline-block;
+
+			// first element after icon
+			&+ * {
+				margin-left: $padding-base-horizontal;
+			}
+		}
+
+		> img, svg {
+			width: $size-large-icon;
+			height: $panel-primary-heading-height;
+
+			// first element after icon
+			&+ * {
+				margin-left: $padding-base-horizontal;
+			}
+		}
+
+		> button {
+			box-sizing: content-box;
+			vertical-align: middle;
+			height: auto;
+			width: $tabbar-button-width;
+			text-indent: -9999em;
+			background-size: $size-icon;
+		}
+	}
+
+	.sidebar-panel-title {
+		@extend .ellipsis;
+		line-height: $panel-primary-heading-height;
+		padding-right: $padding-base-horizontal;
+		flex: 1;
+	}
+
+	.sidebar-panel-heading + .sidebar-panel-body {
+		border-top: 1px solid $color-bar-border;
+		margin-top: $padding-large-vertical;
+		padding-top: $padding-large-vertical;
+	}
+
+	.sidebar-panel-body + .sidebar-panel-footer {
+		border-top: 1px solid $color-bar-border;
+		padding-top: $padding-xxlarge-vertical;
+		margin-top: $padding-large-vertical;
+	}
+
+	.sidebar-panel-body {
+		overflow: auto;
+	}
+}
+
+.ico-skype {
+	background-image: url(../images/skype/Skypeicon_trans_24px.png);
+}
+
+.sidebar-content-width {
+	width: 285px;
+}
+
+.search-form-wizard-step3 {
+
+	.description {
+		height: 28px;
+
+		.form-control {
+			border: none;
+			border-left: solid 1px $color-input-border;
+		}
+	}
+
+	.text {
+		width: 200px;
+	}
+
+	.availableContainer {
+		@extend .flex-element;
+		@extend .subview-container;
+		@extend .flex-box;
+		@extend .flex-column;
+		@extend .overflow;
+
+		&.minHeight {
+			min-height: 100px;
+		}
+
+		button {
+			min-height: 28px;
+			text-align: left;
+		}
+	}
+}
+
+.search-form-wizard-step2 {
+	.list-container-primary {
+		.small {
+			border-bottom: none;
+		}
+	}
+}
+
+.search-form-wizard-step4 {
+	.interactionContainer {
+		border-bottom: solid 1px $color-input-border;
+		flex-wrap: wrap;
+	}
+
+	@extend %sidebar-tabs;
+
+	.environment-expressions {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: unset !important;
+
+		.environment-label {
+			flex: 0 0 100%;
+			line-height: 30px;
+		}
+
+		button.btn {
+			color: $color-text;
+			background-color: $color-border;
+			border-radius: 25px;
+			padding: 5px 11px;
+			margin: 2.5px 5px 2.5px 0;
+			border: 0;
+			&:hover {
+				color: $color-hover;
+				background-color: $color-main-hover;
+			}
+			&.active {
+				color: $color-primary-fore;
+				background-color: $color-rib;
+			}
+		}
+	}
+}
+
+.sortable-grip-icon {
+	width: 24px;
+	height: 30px;
+	margin-top: $padding-large-vertical;
+	background-size: $size-icon $size-icon;
+
+	&+.flex-element {
+		width: 90%;
+	}
+}
+
+%sidebar-tabs {
+	.tabsWrapper {
+		&.tabsWrapper-without-border {
+			.tab-content {
+				padding-top: 10px;
+			}
+		}
+
+		&.singleTab {
+			.nav.nav-tabs {
+				display: none;
+			}
+
+			.tab-content {
+				padding: 0;
+			}
+		}
+
+		.nav.nav-tabs {
+			display: flex;
+
+			> li {
+				margin-right: 2px;
+				text-align: center;
+				flex: 1;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&.active {
+					> a {
+						border-bottom: 2px solid $color-rib;
+					}
+				}
+
+				> a {
+					border: 0;
+					border-bottom: 2px solid $color-input-border;
+				}
+			}
+		}
+	}
+}
+
+.sidebar-project-content {
+	.toolbar {
+		border-bottom-width: 1px;
+		button {
+			&:hover {
+				background-color: $color-hover2;
+			}
+		}
+	}
+}
+
+.navigator-menu {
+	li:not(.title-wrapper) {
+		&:hover {
+			background-color: $color-hover2 !important;
+		}
+
+		button {
+			&:hover {
+				background-color: transparent !important;
+			}
+		}
+	}
+}

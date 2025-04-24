@@ -1,0 +1,116 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+			<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+			<div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.oneDrive.archiveIds' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.archiveIds" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div data-change="changeCheckbox()" data-domain="boolean" data-domain-control
+				data-model="model.isGenerateShareLink"
+				data-options="isGenerateShareLink"></div>
+		</div>
+
+		<div data-ng-show="model.isGenerateShareLink">
+			<div  class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.oneDrive.accessRight' | translate
+						}}</label>
+					<div class="platform-form-col">
+						<div class="radiolist-container" style="margin-top: 0px">
+							<div data-radiolistctrl displayMember="description" ng-model="input.accessRightMode"
+								on-selection-changed="onRadioGroupOptChanged(value, 'accessRightMode')" options="input.accessRightRadioGroupOpt"
+								valueMember="value"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Generate Share Link -->
+			<div data-ng-show="input.accessRightMode == 3">
+				<div>
+					<div class="radiolist-container">
+						<div class="radio spaceToUp pull-left">
+							<label>
+								<input name="radioGroupA" ng-click="onRadioGroupOptChanged(1, 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+									ng-value="1" type="radio">
+								{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+							</label>
+						</div>
+						<div class="radio spaceToUp pull-left margin-left-ld">
+							<label>
+								<input name="radioGroupA" ng-click="onRadioGroupOptChanged(2, 'editorMode')" ng-disabled="readonly" ng-model="input.editorMode"
+									ng-value="2" type="radio">
+								{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div basics-workflow-resize-grid-directive data-ng-show="input.editorMode==1">
+					<div class="toolbar margin-top-ld">
+						<h2 class="title fix">{{'basics.workflow.action.customEditor.oneDrive.people' | translate }}</h2>
+						<div data-list="tools" data-platform-menu-list data-platform-refresh-on="tools.version"
+							ng-if="codeMirrorOptions.readOnly !== true"></div>
+					</div>
+					<div class="flex-element flex-box flex-column subview-container" style="min-height: 130px;">
+						<platform-Grid data="gridData"></platform-Grid>
+					</div>
+				</div>
+				<div data-ng-show="input.editorMode==2">
+					<div class="platform-form-group">
+						<div class="platform-form-row">
+							<label class="platform-form-label">{{'basics.workflow.action.customEditor.oneDrive.people' | translate
+								}}</label>
+							<div class="platform-form-col">
+								<div data-ng-model="input.peoples" data-options="codeMirrorOptions" data-script-editor-directive></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="platform-form-group">
+				<div data-change="changeCheckbox()" data-domain="boolean" data-domain-control
+					data-model="model.allowEditing"
+					data-options="allowEdit"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+			<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+			<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+		</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.oneDrive.outputOneDrive' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.result" data-options="codeMirrorOptions"
+						data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

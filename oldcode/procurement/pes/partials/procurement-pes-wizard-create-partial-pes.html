@@ -1,0 +1,66 @@
+<div class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body" style="padding: 20px;">
+        <div class="platform-form-row">
+            <span>{{'procurement.pes.newContractItemsFound' | translate}}</span>
+            <div class="panel panel-default" style="margin-top: 8px;">
+                <div class="flex-box flex-column">
+                    <platform-grid data="itemGridData" style="height:170px;"></platform-grid>
+                </div>
+            </div>
+        </div>
+        <div class="platform-form-row">
+            <span>{{'procurement.pes.createPesOptions' | translate}}</span>
+            <div class="flex-box flex-row" style="padding:0 0 6px 30px;">
+                <div class="checkbox spaceToUp">
+                    <label class="platform-form-label" style="min-width: 87px; position: relative;"> {{'procurement.pes.createPesOptionsNew'
+                        | translate}}<input type="radio" name="grp-create-options"
+                                            data-ng-model="createOptions.selectedValue"
+                                            data-ng-change="createOptionChanged()"
+                                            data-ng-model-options="{debounce: { default: 0, blur: 0}}"
+                                            data-ng-value="1" style="top:0;"></label>
+						 <label class="platform-form-label" style="min-width: 87px; position: relative; margin-left: 6px;"> {{'procurement.pes.createFromVariance' | translate}}
+						    <input type="radio" name="grp-create-source"
+						                     data-ng-model="createOptions.selectedSource"
+						                     data-ng-change="createSourceChanged()"
+						                     data-ng-model-options="{debounce: { default: 0, blur: 0}}"
+						                     data-ng-value="1" style="top:0;">
+						 </label>
+						 <label class="platform-form-label" style="min-width: 87px; position: relative; margin-left: 6px;"> {{'procurement.pes.createFromConsolidatedContract' | translate}}
+						    <input type="radio" name="grp-create-source"
+						           data-ng-model="createOptions.selectedSource"
+						           data-ng-change="createSourceChanged()"
+						           data-ng-model-options="{debounce: { default: 0, blur: 0}}"
+						           data-ng-value="2" style="top:0;"
+						           data-ng-disabled="isDisableFromConsolidatedContract">
+						</label>
+                </div>
+            </div>
+            <div class="flex-box flex-row" style="padding:0 0 6px 30px;">
+                <div class="checkbox spaceToUp">
+                    <label class="platform-form-label" style="min-width: 87px;"> {{'procurement.pes.createPesOptionsUpdate'
+                        | translate}}<input type="radio" name="grp-create-options"
+                                            data-ng-model="createOptions.selectedValue"
+                                            data-ng-model-options="{debounce: { default: 0, blur: 0}}"
+                                            data-ng-change="createOptionChanged()"
+                                            data-ng-value="2"></label>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="flex-box flex-column">
+                    <platform-grid data="pesGridData" style="height:140px;"></platform-grid>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+            {{'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="isProcessing"></div>
+</div>

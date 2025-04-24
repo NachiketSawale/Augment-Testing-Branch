@@ -1,0 +1,58 @@
+<style type="text/css">
+    .script-template{
+        height: 32px;
+    }
+
+    .script-template .input-group-btn{
+        margin-left: -1px;
+    }
+
+    .script-template .btn{
+        margin-left: -1px;
+    }
+</style>
+
+
+<div class="script-template">
+    <div class="input-group form-control">
+        <div data-dropdown-select2
+             data-model="searchOptions.selectedItemId"
+             data-info="filderdefcontrol"
+             data-change="searchOptions.selectionChanged()"
+             data-options="searchOptions.dropboxOptions"
+             data-use-deep-watch="true"
+             data-template-result="searchOptions.dropboxOptions.templateResult"
+             data-template-selection="searchOptions.dropboxOptions.templateResult"
+             data-matchfunction="default">
+        </div>
+        <span class="input-group-btn">
+            <button class="btn btn-default control-icons ico-input-delete2" type="button"
+                    data-ng-attr-title="{{searchOptions.onDeleteFilterBtnText}}"
+                    data-ng-disabled="!searchOptions.canSaveOrDeleteFilter()"
+                    data-ng-click="searchOptions.onDeleteFilter()">
+            </button>
+            <button class="btn btn-default tlb-icons ico-save" type="button"
+                    data-ng-attr-title="{{searchOptions.onSaveFilterBtnText}}"
+                    data-ng-disabled="!searchOptions.canSaveOrDeleteFilter()"
+                    data-ng-click="searchOptions.onSaveFilter()">
+            </button>
+            <button class="btn btn-default tlb-icons ico-save-as" type="button"
+                    data-ng-attr-title="{{searchOptions.onSaveAsFilterBtnText}}"
+                    data-ng-disabled="!searchOptions.canSaveFilterAs()"
+                    data-ng-click="searchOptions.onSaveAsFilter()">
+            </button>
+        </span>
+    </div>
+</div>
+
+<div class="flex-box flex-element" style="height: 100px;"
+     data-basics-common-script-editor
+     data-readonly="service.readonly"
+     data-ng-model="service.currentItem.ScriptData"
+     data-ng-change="service.onDataChange()"
+     data-entity="service.currentItem"
+     data-on-init="onInit(cm,vm)"
+     data-options="options">
+</div>
+
+<div data-cloud-common-overlay data-loading="isLoading"></div>

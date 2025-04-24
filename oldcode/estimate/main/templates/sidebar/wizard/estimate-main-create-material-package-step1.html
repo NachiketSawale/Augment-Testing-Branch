@@ -1,0 +1,60 @@
+<div class="platform-form-group">
+        <div class="col-sm-12 platform-form-row">
+            <label  data-ng-class="(selectedItem=='Cost Code'||selectedItem=='Material & Cost Code') ? 'col-sm-3' : 'col-sm-4'" style="padding:5px 0px 0px;">{{selectCriteriaName}}</label>
+            <div data-ng-class="selectedItem=='Cost Code' ? 'col-sm-3' : 'col-sm-4'"  ng-if="selectedItem!='Material & Cost Code'" class="radio spaceToUp" style="padding-left:0px;">
+                <input type="radio"  name="mode" value="2" data-ng-checked="modeFlg==2" data-ng-click="onModeResult(2)"><label>{{'estimate.main.createMaterialPackageWizard.inclusiveMode'| translate}}</label>
+            </div>
+            <div data-ng-class="selectedItem=='Cost Code' ? 'col-sm-3' : 'col-sm-4'" ng-if="selectedItem!='Material & Cost Code'" class="radio spaceToUp" style="padding-left:0px;">
+                <input type="radio"  name="mode" value="1" data-ng-checked="modeFlg==1" data-ng-click="onModeResult(1)"><label>{{'estimate.main.createMaterialPackageWizard.distinctMode'| translate}}</label>
+            </div>
+
+            <div data-ng-class="selectedItem=='Material & Cost Code' ? 'col-sm-9' : 'col-sm-3'"  ng-if="selectedItem=='Material & Cost Code'||selectedItem=='Cost Code'" style="text-align: right;padding:0px;">
+	            <div ng-if="selectedItem=='Material & Cost Code'" class="col-sm-3" style="padding:0px 5px;">
+		            <input type="checkbox" style="vertical-align: middle;" data-ng-checked="includeMaterial" data-ng-model="includeMaterial" data-ng-change="onIncludeMaterial(includeMaterial)"/>
+		            <label style="vertical-align: middle;" >{{'estimate.main.createMaterialPackageWizard.material'| translate}}</label>
+	            </div>
+	            <div ng-if="selectedItem=='Material & Cost Code'"  class="col-sm-3" style="padding:0px 5px;">
+		            <input type="checkbox" style="vertical-align: middle;" data-ng-checked="includeDirectCost" data-ng-model="includeDirectCost" data-ng-change="onIncludeDirectCost(includeDirectCost)"/>
+		            <label style="vertical-align: middle;" >{{'estimate.main.createMaterialPackageWizard.includeDirectCost'| translate}}</label>
+	            </div>
+	            <div ng-if="selectedItem=='Material & Cost Code'"  class="col-sm-3" style="padding:0px 5px;">
+		            <input type="checkbox" style="vertical-align: middle;" data-ng-checked="includeInDirectCost" data-ng-model="includeInDirectCost" data-ng-change="onIncludeInDirectCost(includeInDirectCost)"/>
+		            <label style="vertical-align: middle;" >{{'estimate.main.createMaterialPackageWizard.includeInDirectCost'| translate}}</label>
+	            </div>
+                <div  data-ng-class="selectedItem=='Material & Cost Code' ? 'col-sm-3' : 'col-sm-12'"style="padding:0px;">
+	                <input type="checkbox" style="vertical-align: middle;" data-ng-checked="includeMarkUpCostFlg" data-ng-model="includeMarkUpCostFlg" data-ng-change="onIncludeMarkUpCost(includeMarkUpCostFlg)"/>
+	                <label style="vertical-align: middle;" >{{'estimate.main.createMaterialPackageWizard.includeMarkUpCost'| translate}}</label>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="toolbar" ng-if="selectedItem=='Material & Cost Code'">
+    <div data-platform-menu-list data-list="tools"></div>
+ </div>
+
+<div class="flex-element flex-box flex-column subview-container gridContainer" style="min-height: 100px;margin-top:8px;">
+        <platform-Grid data="selectItemForPackage" style="height:425px;"></platform-Grid>
+ </div>
+
+ <div style="padding-top:8px;">
+        <label style="float:left;width:40px;" ng-if="selectedItem!='Material & Cost Code'">
+            {{'estimate.main.createMaterialPackageWizard.note'| translate}}:
+        </label>
+
+        <ol style="margin-left:45px;list-style:none;">
+            <li ng-if="selectedItem!='Material & Cost Code'&&modeFlg==2">
+                {{'estimate.main.createMaterialPackageWizard.note1'| translate}}
+            </li>
+			 <li ng-if="selectedItem!='Material & Cost Code'&&modeFlg==1">
+                {{'estimate.main.createMaterialPackageWizard.noteDistinct'| translate}}
+            </li>
+
+            <li ng-if="selectedItem=='Procurement Structure'">{{'estimate.main.createMaterialPackageWizard.note3'| translate}} </li>
+            <li ng-if="selectedItem=='Cost Code'">{{'estimate.main.createMaterialPackageWizard.note2'| translate}} </li>
+            <li ng-if="selectedItem=='Cost Code'||selectedItem=='Procurement Structure'" class="platform-form-group checkbox spaceToUp">
+                <input type="checkbox" data-ng-disabled="rootLevelDisable"  data-ng-checked="rootLevelFlg" data-ng-model="rootLevelFlg"  data-ng-change="onRootLevelFlg(rootLevelFlg)"/>
+                <label class="platform-form-label">{{'estimate.main.createMaterialPackageWizard.rootLevel'| translate}}</label>
+            </li>
+        </ol>
+</div>

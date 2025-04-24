@@ -1,0 +1,82 @@
+<style>
+	.alert img {
+		width: 14px;
+		height: 14px;
+		-webkit-background-size: 14px;
+		background-size: 14px;
+		margin-right: 4px;
+	}
+
+	.alert-cos {
+		padding: 4px;
+		margin-bottom: 4px;
+	}
+
+	.spaceToRight {
+		margin-right: 10px;
+	}
+</style>
+
+
+<div class="wizard-wrapper wizard-dialog modal-wrapper"
+	 data-ng-controller="constructionSystemProjectChangeModelController">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal"
+				data-ng-click="$parent.$close(!!selectedStep.stepDefinition.disallowCancel)"
+				aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+				 class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{wizard.title + (wizard.title ? ' - ' : '') + getCurrentStepNumber() + ' / ' +
+			getTotalStepCount() + ' ' + getCurrentStepTitle()}}</h2>
+	</header>
+	<section class="modal-body">
+
+		<div class="alert alert-info alert-cos" data-ng-show="currentStep.messages.length">
+			<ul>
+				<li data-ng-repeat="message in currentStep.messages"
+					data-ng-bind-html="message">
+				</li>
+			</ul>
+		</div>
+		<div ng-switch="currentStep.number" class="modal-wrapper">
+			<div ng-switch-when="1">
+				<div class="toolbar">
+					<div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+				</div>
+				<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden"
+					 style="border:solid 1px gainsboro; margin-top: 10px;">
+					<platform-grid data="gridData" class="lookup-grid flex-basis-auto"></platform-grid>
+				</div>
+				<br>
+				<div class="checkbox spaceToUp lg-3 md-3">
+					<!--execute selection statement-->
+					<p>
+						<div><label><input type="checkbox" data-ng-model="applySelectionStatement" data-ng-change="onOptionChange('applySelectionStatement', applySelectionStatement)">{{'constructionsystem.project.execSelectionStatement' | translate}}</label></div>
+						<div style="padding-left: 20px;color: red;">({{ 'constructionsystem.project.execSelectionStatementHint' | translate }})</div>
+					</p>
+					<!--execute cos evaluation and calculation	-->
+					<p><label><input type="checkbox" data-ng-model="applyCalculation" data-ng-change="onOptionChange('applyCalculation', applyCalculation);!applyCalculation?(applyEstimate=false):null;">{{'constructionsystem.project.execCalculation' | translate}}</label></p>
+					<!--apply line item -->
+					<p><label><input type="checkbox" data-ng-model="applyEstimate" data-ng-change="onOptionChange('applyEstimate', applyEstimate);applyEstimate?(applyCalculation=true):null;">{{'model.viewer.changeModelWz.applyEstimate' | translate}}</label></p>
+				</div>
+				<br>
+			</div>
+			<div ng-switch-when="2">
+				<ng-include src="'constructionsystem.project/templates/change-model-step-template.html'"></ng-include>
+			</div>
+		</div>
+		<div data-platform-wizard-dialog-body></div>
+	</section>
+
+	<div class="modal-footer">
+		<button data-ng-disabled="currentStep.disallowBack" type="button" class="btn btn-default"
+				data-ng-click="wizardCommands.goToPrevious()" data-ng-bind="wzStrings.back"></button>
+		<button data-ng-disabled="currentStep.disallowNext" type="button" class="btn btn-default"
+				data-ng-click="wizardCommands.goToNext()" data-ng-bind="wzStrings.next"></button>
+		<button data-ng-disabled="!currentStep.canFinish" type="button" class="btn btn-default"
+				data-ng-click="wizardCommands.finish()" data-ng-bind="wzStrings.finish"></button>
+		<button data-ng-disabled="currentStep.disallowCancel" type="button" data-ng-click="$close(false)"
+				class="btn btn-default" data-ng-bind="wzStrings.cancel"></button>
+	</div>
+</div>

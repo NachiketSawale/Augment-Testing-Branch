@@ -1,0 +1,16 @@
+<div class="ms-sv-category-navigate-block">
+    <div class="ms-sv-category-navigate-map" [class]="structures.length === 0 ? 'ms-sv-category-navigate-map-isLast' : ''">
+        <i class="block-image tlb-icons ico-search" style="margin: -5px 6px 0 0;"></i>
+        <a (click)="scope.navigate()">{{scope.request.SearchText || ('basics.material.materialSearchLookup.htmlTranslate.all' | platformTranslate)}}</a>
+    </div>
+</div>
+
+<div class="ms-sv-category-navigate-block" *ngFor="let item of structures; index as i; trackBy: structureTracyBy">
+    <div class="ms-sv-category-navigate-map-point" [class]="i === structures.length - 1 ? 'ms-sv-category-navigate-map-isLast-point' : ''"></div>
+    <div class="ms-sv-category-navigate-map" [class]="i === structures.length - 1 ? 'ms-sv-category-navigate-map-isLast' : ''">
+        <a (click)="scope.navigate(item.Id)">{{item.Code}}</a>
+        <button class="control-icons ico-close" style="width: 12px;height: 12px;" (click)="scope.navigate()"></button>
+    </div>
+</div>
+
+<!--<button (click)="scope.navigate(49)">test</button>-->

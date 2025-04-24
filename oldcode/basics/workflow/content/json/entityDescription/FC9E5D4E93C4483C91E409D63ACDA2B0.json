@@ -1,0 +1,27 @@
+{
+	"Entity": {
+		"Id": "",
+		"Code": "",
+		"DescriptionInfo": {
+			"Description": "",
+			"DescriptionTr": "",
+			"DescriptionModified": "",
+			"Translated": "",
+			"VersionTr": "",
+			"Modified": "",
+			"OtherLanguages": ""
+		},
+		"Remark": "",
+		"CommentText": "",
+		"Project": "",
+		"ScheduleType": "",
+		"AllowModify": "",
+		"TargetStart": "",
+		"TargetEnd": "",
+		"PerformanceSheet": "",
+		"ProgressReportingMethod": "",
+		"Calendar": "",
+		"IsLocationMandatory": "",
+		"IsLive": ""
+	}
+}

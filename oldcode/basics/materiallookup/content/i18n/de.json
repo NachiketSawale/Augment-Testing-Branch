@@ -1,0 +1,19 @@
+{
+  "basics": {
+    "materiallookup": {
+      "moduleName": "Material Lookup",
+      "tab": {
+        "search": "Suche"
+      },
+      "view": {
+        "commoditySearch": "Artikelsuche"
+      },
+      "dialog": {
+        "header": "!Select Material",
+        "success": "!Material selected has been imported to Baseline! You can safely close this window now!",
+        "error": "!Save material fail. Please try again",
+        "multipleSubmit": "!Current material lookup session has expired! You should close this window now!"
+      }
+    }
+  }
+}

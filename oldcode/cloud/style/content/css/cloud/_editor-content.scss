@@ -1,0 +1,63 @@
+/*-------------------------------------------------------------------------------
+	 Content Area of the WYSIWYG Editor (_editor-content.scss)
+  -------------------------------------------------------------------------------*/
+//This are not root rules, because the following is imported in a existing rule
+
+// devExpress report designer don't support:
+//    - padding
+
+p {
+	margin: 0;
+	text-indent: 0;
+	padding: 0;
+}
+
+ol, ul {
+	padding: 0;
+	margin: 1em 1em 1em 1.6em;
+
+	//li:not(.ql-direction-rtl) {
+	//	padding-left: 0;
+	//}
+}
+
+li:not(.ql-direction-rtl):before {
+	//margin-left: -0.6em;
+}
+
+pre {
+	padding: $padding-large-vertical;
+	background-color: #f5f5f5;
+	border: solid 1px $color-input-border;
+	border-radius: $padding-base-vertical;
+}
+
+blockquote {
+	padding: $padding-xlarge-vertical $padding-xxlarge-horizontal;
+	margin: 0 0 $padding-xxlarge-vertical;
+	font-size: 17.5px;
+	border-left: 5px solid #eee;
+}
+
+sub {
+	bottom: -2px;
+	vertical-align: sub;
+	line-height: 100%;
+}
+
+sup {
+	top: 0;
+	vertical-align: super;
+	line-height: 100%;
+}
+
+// Table extention
+table {
+	width: 100%;
+	border-collapse: collapse;
+	td {
+		border: 1px solid $color-border2;
+		padding: 5px;
+		height: 25px;
+	}
+}

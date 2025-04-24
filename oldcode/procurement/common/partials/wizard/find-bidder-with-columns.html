@@ -1,0 +1,22 @@
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div class="checkbox spaceToUp lg-3 md-3">
+				<label>
+					<input type="checkbox" name="columnsCheckBox" data-ng-model="columns.isActive"/>
+					{{columns.header}}
+				</label>
+			</div>
+			<div class="lg-4 md-4 ">
+				<div find-bidder-with-column-option data-read-only="true" ng-model="columns.selectedcOp"></div>
+			</div>
+			<div class="lg-1 md-1 platform-form-label">
+				{{columns.description}}
+			</div>
+			<div class="lg-4 md-4">
+				<div find-bidder-with-mode-option data-read-only="true" ng-model="columns.selectedmOp"
+					 data-ng-disabled="!columns.isActive || columns.selectedcOp === '0'"></div>
+			</div>
+		</div>
+	</div>
+</div>

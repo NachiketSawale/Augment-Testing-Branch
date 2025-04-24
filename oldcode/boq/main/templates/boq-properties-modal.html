@@ -1,0 +1,26 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body" style="height: 700px;">
+	<div class="fullheight">
+		<div data-platform-alert data-error="error"></div>
+		<div data-platform-form data-form-options="formOptions" entity="currentItem"></div>
+	</div>
+</section>
+<footer class="modal-footer">
+	<div class="custom-btn-group" ng-hide="modalOptions.hideCopyOptionsButton()">
+		<button type="button" class="btn btn-default" data-ng-disabled="disableCopyOptionsButton()" data-ng-click="modalOptions.editCopyOptions()">
+			{{modalOptions.editCopyOptionsButtonText}}
+		</button>
+	</div>
+	<div class="custom-btn-group" ng-hide="modalOptions.hideRoundingConfigButton()">
+		<button type="button" class="btn btn-default" data-ng-disabled="disableRoundingConfigButton()" data-ng-click="modalOptions.editRoundingConfig()">
+			{{modalOptions.editRoundingConfigButtonText}}
+		</button>
+	</div>
+	<button type="button" class="btn btn-default" data-ng-disabled="disableOk" data-ng-click="modalOptions.ok()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="disableCancel" data-ng-click="modalOptions.cancel()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>

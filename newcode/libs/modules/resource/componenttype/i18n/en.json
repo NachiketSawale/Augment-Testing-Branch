@@ -1,0 +1,15 @@
+{
+	"resource": {
+		"componenttype": {
+			"componentTypeListTitle": "Component Types",
+			"componentTypeDetailTitle": "Component Type Details",
+			"entityIsBaseComponent": "Base Component",
+			"characteristics": "Characteristics",
+			"entityComponentType": "Component Type",
+			"IsBaseComponent": "Is Base Component",
+			"IsDefault": "Is Default",
+			"Sorting": "Sorting",
+			"entityIsLive": "Active"
+		}
+	}
+}

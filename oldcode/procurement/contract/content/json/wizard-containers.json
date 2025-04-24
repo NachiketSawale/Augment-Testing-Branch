@@ -1,0 +1,41 @@
+[
+	{
+		"id": "procurement.contract.generic.wizard.comment",
+		"template": "basics.common/partials/generic-wizard-comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonGenericWizardCommentController",
+		"uuid": "54dbff34150c4db09300d900d521baf0",
+		"configService": "procurementContractGenericWizardCommentConfiService",
+		"permission": "454c582d76004d37a9975728c9444bc1"
+	},
+	{
+		"id": "procurement.contract.confirmWizard.businessPartners",
+		"template": "app/components/base/grid-partial.html",
+		"title": "businesspartner.main.headerGridContainerTitle",
+		"uuid": "931850b088e64590a395b0eb21e5f4dc"
+	},
+	{
+		"id": "procurement.contract.confirmWizard.coverLetter",
+		"template": "app/components/base/partials/procurement-rfq-bidder-wizard-coverletter-partial.html",
+		"title": "procurement.rfq.rfqBidderWizard.coverLetterTitle",
+		"uuid": "55bc306e62014bb6aa03336eb58d8c51"
+	},
+	{
+		"id": "procurement.contract.confirmWizard.reports",
+		"template": "app/components/base/partials/procurement-rfq-bidder-wizard-reports-partial.html",
+		"title": "procurement.rfq.rfqBidderWizard.reportsTitle",
+		"uuid": "8777043964bd45caab4f58af28a6a0b7"
+	},
+	{
+		"id": "procurement.contract.confirmWizard.projectDocuments",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.confirmWizard.projectDocuments",
+		"uuid": "9fe6a21dfcca4747b817480e059db4d0"
+	},
+	{
+		"id": "procurement.contract.confirmWizard.contractDocuments",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.contract.confirmWizard.contractDocuments",
+		"uuid": "3473623dccd04ef7ad14a2cf18e74eb5"
+	}
+]

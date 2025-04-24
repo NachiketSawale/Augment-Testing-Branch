@@ -1,0 +1,42 @@
+<div data-ng-controller="estimateProjectEstimateCreationWizardController" class="wizard-wrapper wizard-dialog modal-wrapper overflow-hidden">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="close()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{selectStep.name}}</h2>
+    </header>
+    <section class="modal-body">
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+        <div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+        <div ng-switch="selectStep.number" class="modal-wrapper">
+            <div ng-switch-when="0">
+                <ng-include src="'estimate.project/templates/sidebar/wizard/estimate-project-estimate-creation-step0.html'"></ng-include>
+            </div>
+            <div ng-switch-when="1">
+                <ng-include src="'estimate.project/templates/sidebar/wizard/estimate-project-estimate-creation-step1.html'"></ng-include>
+            </div>
+            <div ng-switch-when="2">
+                <ng-include src="'estimate.project/templates/sidebar/wizard/estimate-project-estimate-creation-step2.html'"></ng-include>
+            </div>
+            <div ng-switch-when="3">
+                <ng-include src="'estimate.project/templates/sidebar/wizard/estimate-project-estimate-creation-step3.html'"></ng-include>
+            </div>
+            <div ng-switch-when="4">
+                <ng-include src="'estimate.project/templates/sidebar/wizard/estimate-project-estimate-creation-step4.html'"></ng-include>
+            </div>
+        </div>
+            </div>
+        <div class="platform-form-row">
+        <div data-platform-wizard-dialog-body style="padding-top:0px; height: 70px;"></div>
+        </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="previousStep()" data-ng-disabled="isFirstStep()" data-ng-hide="isFirstStep()"> {{::'basics.common.button.previousStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()" data-ng-disabled="!canExecuteNextButton()"> {{::'basics.common.button.nextStep' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="close()" data-ng-disabled="!canCancel()"> {{::'basics.common.button.cancel' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="execute()" data-ng-disabled="!canExecute()">{{::'estimate.project.saveAndClose' | translate}}</button>
+    </footer>
+</div>

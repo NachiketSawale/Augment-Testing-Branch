@@ -1,0 +1,155 @@
+[
+  {
+    "id": "resource.master.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.master.listMasterTitle",
+    "controller": "resourceMasterListController",
+    "uuid": "1046a3bd867147feb794bdb60a805eca"
+  },
+  {
+    "id": "resource.master.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.master.detailMasterTitle",
+    "controller": "resourceMasterDetailController",
+    "uuid": "d9391c21eaac4fb7b5db3178af56bdaa",
+    "permission": "1046a3bd867147feb794bdb60a805eca"
+  },
+  {
+    "id": "resource.master.pool.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.master.listPoolTitle",
+    "controller": "resourceMasterPoolListController",
+		"parentService": "resourceMasterMainService",
+    "uuid": "29278b487bd2434f8781b5929d9534cf"
+  },
+  {
+    "id": "resource.master.pool.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.master.detailPoolTitle",
+    "controller": "resourceMasterPoolDetailController",
+    "parentService": "resourceMasterMainService",
+    "uuid": "dde848354d474e529b937de53400357f",
+    "permission": "29278b487bd2434f8781b5929d9534cf"
+  },
+  {
+    "id": "resource.master.photo",
+    "template": "basics.common/partials/photo-view.html",
+    "title": "resource.master.photoContainerTitle",
+    "controller": "resourceMasterMainPhotoController",
+    "uuid": "3467f2642146437c94710b964f0c59cb"
+  },
+  {
+    "id": "resource.master.comment",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "basics.common.commentContainerTitle",
+    "controller": "basicsCommonCommentController",
+    "uuid": "19c2a8a3346b40fda7364c2f3dda7f2e",
+    "commentQualifier": "resource.master.comment",
+    "parentService": "resourceMasterMainService",
+    "permission": "19c2a8a3346b40fda7364c2f3dda7f2e"
+  },
+  {
+    "id": "resource.master.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "766992dd001b4c2aa739c35d222186f9"
+  },
+  {
+    "id": "resource.master.requiredSkills",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.master.requiredSkillListTitle",
+    "controller": "resourceMasterRequiredSkillListController",
+    "uuid": "485827a79a4b41b5aa8db9f323810cd2"
+  },
+  {
+    "id": "resource.master.requiredSkills.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.master.requiredSkillDetailTitle",
+    "controller": "resourceMasterRequiredSkillDetailController",
+    "uuid": "0fe7865b879b4dc0a9b2c8f88dd71484",
+    "permission": "485827a79a4b41b5aa8db9f323810cd2"
+  },
+  {
+    "id": "resource.master.providedSkills",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.master.providedSkillListTitle",
+    "controller": "resourceMasterProvidedSkillListController",
+    "uuid": "9a9a8a01924849b484a03d3a85b67d82"
+  },
+  {
+    "id": "resource.master.providedSkills.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.master.providedSkillDetailTitle",
+    "controller": "resourceMasterProvidedSkillDetailController",
+    "uuid": "ff80c868f7b4469bba84cdf800afbb56",
+    "permission": "9a9a8a01924849b484a03d3a85b67d82"
+  },
+  {
+    "id": "resource.master.resourceParts",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.master.resourcePartListTitle",
+    "controller": "resourceMasterPartListController",
+    "uuid": "dd7c02126a9c4654bb7d99ece8af7caa"
+  },
+  {
+    "id": "resource.master.resourceParts.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.master.resourcePartDetailTitle",
+    "controller": "resourceMasterPartDetailController",
+    "uuid": "bb8ddc00f77c4535ada29aa2fd3b21d7",
+    "permission": "dd7c02126a9c4654bb7d99ece8af7caa"
+  },
+  {
+  "id": "resource.master.providedSkillDocuments",
+  "template": "basics.common/partials/header-zip-checkbox-documents-view.html",
+  "title": "resource.master.providedSkillDocumentListTitle",
+  "controller": "resourceMasterProvidedSkillDocumentListController",
+  "uuid": "b832581c91aa4418925c5cd9c575ab4f"
+  },
+  {
+    "id": "resource.master.providedSkillDocuments.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.master.providedSkillDocumentDetailTitle",
+    "controller": "resourceMasterProvidedSkillDocumentDetailController",
+    "uuid": "21410313fb30413b840798cf7ec5b452",
+    "permission": "b832581c91aa4418925c5cd9c575ab4f"
+  },
+  {
+    "id": "resource.master.data.contexts",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.master.masterDataContextListTitle",
+    "controller": "resourceMasterDataContextListController",
+    "uuid": "37f6e0ad6d0f4f50acbd4b74d294ebdd",
+    "permission": "1046a3bd867147feb794bdb60a805eca"
+  },
+  {
+    "id": "resource.master.data.contexts.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.master.masterDataContextDetailTitle",
+    "controller": "resourceMasterDataContextDetailController",
+    "uuid": "05193fdb6814494ba4553ccdd6c7279e",
+    "permission": "1046a3bd867147feb794bdb60a805eca"
+  },
+  {
+    "id": "platform.generic.structure",
+    "template": "app/components/grid/generic-structure/generic-container.html",
+    "title": "resource.master.structureContainerTitle",
+    "uuid": "5b34f068269911ec96210242ac130002",
+    "controller": "platformGenericStructureController",
+    "mainService": "resourceMasterMainService",
+    "enableCaching": "true",
+    "configurationService": "resourceMasterStructureConfigService",
+    "permission": "1046a3bd867147feb794bdb60a805eca"
+  },
+   {
+  "id": "resource.master.formFormData",
+  "template": "app/components/base/grid-partial.html",
+  "title": "cloud.common.ContainerUserformDefaultTitle",
+  "controller": "basicsUserFormFormDataController",
+  "uuid": "1504ECB43A12464E8F7024E9B18B5D62",
+  "rubricId": 72,
+  "mainService": "resourceMasterMainService",
+  "statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+}
+]

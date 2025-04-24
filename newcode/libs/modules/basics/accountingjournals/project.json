@@ -1,0 +1,31 @@
+{
+	"name": "modules-basics-accountingjournals",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/basics/accountingjournals/src",
+	"prefix": "basics-accountingjournals",
+	"tags": [],
+	"projectType": "library",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/modules/basics/accountingjournals/jest.config.ts",
+				"passWithNoTests": true
+			},
+			"configurations": {
+				"ci": {
+					"ci": true,
+					"codeCoverage": true
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nx/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["libs/modules/basics/accountingjournals/**/*.ts", "libs/modules/basics/accountingjournals/**/*.html"]
+			}
+		}
+	}
+}

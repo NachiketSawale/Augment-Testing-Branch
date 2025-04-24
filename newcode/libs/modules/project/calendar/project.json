@@ -1,0 +1,20 @@
+{
+	"name": "modules-project-calendar",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/project/calendar/src",
+	"prefix": "project-calendar",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/project/calendar"],
+			"options": {
+				"jestConfig": "libs/modules/project/calendar/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

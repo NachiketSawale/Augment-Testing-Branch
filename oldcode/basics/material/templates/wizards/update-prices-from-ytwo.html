@@ -1,0 +1,17 @@
+<div data-ng-controller="basicsMaterialUpdateMaterialPricesFromYtwoController" class="modal-wrapper">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$close()"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+    </header>
+    <section class="modal-body">
+        <platform-grid data="gridData"></platform-grid>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="update()" data-ng-disabled="!canUpdate()"> {{modalOptions.updateBtn}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$close()"> {{::'basics.common.button.cancel' | translate}}</button>
+    </footer>
+    <div cloud-common-overlay data-loading="isLoading"></div>
+</div>

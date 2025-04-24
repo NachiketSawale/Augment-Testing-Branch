@@ -1,0 +1,29 @@
+<div class="modal-wrapper master-detail-dialog" data-ng-controller="platformMasterDetailDialogController">
+	<div data-platform-kendo-splitter-adjust class="modal-wrapper border-none"
+	     option="{panes: [ { collapsible: true, min: '25%' },{ collapsible: true, size: '75%' }],orientation:'horizontal'}">
+
+		<div class="modal-wrapper" data-platform-dynamic-controller="formController">
+			<div class="pane-l master-list flex-box flex-column flex-element overflow-hidden">
+				<div class="toolbar">
+					<div data-platform-menu-list data-list="tools"></div>
+				</div>
+
+				<input type="text" placeholder="{{searchSettings.searchPlaceholder}}" data-ng-if="searchSettings.isSearchActive" data-ng-model="searchSettings.searchTerm" class="form-control"/>
+
+				<div class="flex-element flex-box flex-column overflow-hidden">
+					<ul class="master-list-contents flex-element overflow">
+						<li data-ng-repeat="item in displayedItems">
+							<button class="master-item" data-ng-disabled="isDisabled(item)" data-ng-click="selectItem(item)" data-ng-class="[{selected: item === selectedItem}, item.cssClass]"><span data-ng-bind="item[nameProperty]"></span></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="modal-wrapper">
+			<div class="modal-wrapper pane-r overflow">
+				<div data-cloud-common-overlay data-loading="dataLoading" data-info2="dataLoadingInfo"></div>
+				<div data-platform-master-detail-dialog-form class=" flex-element"></div>
+			</div>
+		</div>
+	</div>
+</div>

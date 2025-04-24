@@ -1,0 +1,143 @@
+<div data-ng-controller="filterBusinessPartnerDialogController" id="businessPartnerDIV">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body" style="padding: 20px 40px 20px 16px;">
+		<!--		<div class="alert alert-success text-center" ng-bind-html="alert.message"-->
+		<!--		     data-ng-show="alert.show"></div>-->
+		<div class="icon-message ng-scope">
+			<div data-ng-show="alert.showBp" class="icon tlb-icons ico-info"></div>
+			<div ng-bind-html="alert.message" data-ng-show="alert.show"></div>
+		</div>
+		<div data-ng-switch="modalOptions.step" class="fullheight modal-wrapper">
+			<div class="filler modal-wrapper" data-ng-switch-when="step1">
+				<div data-platform-kendo-splitter-adjust
+				     class="flex-element border-none"
+				     option="{panes: [ { collapsible: true, size: '22%', min:'375px' },{ collapsible: true, size: '78%' }],orientation:'horizontal'}">
+					<div id="ui-layout-l" class="pane-l flex-box flex-column flex-element">
+						<div class="flex-box flex-column fullheight overflow-hidden" style="margin-bottom: 0;">
+							<div class="flex-element overflow" style="padding: 10px;">
+								<div data-platform-alert data-error="error" class="fullwidth"></div>
+								<h4>
+									{{'businesspartner.main.businessPartnerDialog.searchString' | translate}}</h4>
+
+								<business-partner-search-control data-ng-model="myModel"
+								                                 data-options="myOptions"
+								                                 class="flex-box margin-ld-top"></business-partner-search-control>
+								<br/>
+								<h4>{{'businesspartner.main.businessPartnerDialog.advancedCriteria' | translate}}</h4>
+								<div>
+									<div class="platform-form-group platform-lg" data-find-bidder-wizard
+									     data-find-bidder-setting="findBidderSetting"></div>
+								</div>
+							</div>
+							<div class="input-group-btn margin-top-ld" style="align-self: flex-end;">
+								<button class="btn btn-default input-sm btn-search tlb-icons ico-search" style="width: 140px;"
+								        data-ng-click="onSearch(myModel.searchstring)" title="search"></button>
+							</div>
+						</div>
+					</div>
+
+					<div id="ui-layout-r"
+					     class="pane-r flex-box flex-column flex-element flex-basis-auto border-box_">
+						<div data-businesspartner-kendo-splitter-adjust-extend class="flex-box flex-column filler flex-element" data-ng-class="!IsWizardForCreateReq && !wizardForCreateRfQFromPackage ? '' : 'overflow'"
+						     option="panesOption" style="padding:8px 0;">
+							<div class="lookup-grid-container modal-wrapper margin-none">
+								<!-- data-ng-style="{ 'height' : IsShowContracts ? (IsShowBranch ? '30%' : '60%') : (IsShowBranch ? '50%' : '10%') }">-->
+
+								<div class="subview-header toolbar" data-platform-collapsable-list
+								     data-ng-model="tools">
+									<h4 class="title fix">{{'basics.common.fieldSelector.searchResults' |
+									translate}}</h4>
+									<div data-platform-menu-list data-list="tools"
+									     data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+								</div>
+								<div class="flex-box flex-column flex-element subview-content relative-container"
+								     data-ng-style="{ 'height' : IsShowContracts ? (IsShowBranch ? '30%' : '60%') : (IsShowBranch ? '50%' : '10%') }">
+									<div class="lookup-grid flex-basis-auto" data-platform-grid data="grid"></div>
+								</div>
+								<div data-cloud-common-overlay data-loading="isLoading"></div>
+								<div class="statusbar">
+									<div class="right-side flex-element flex-box flex-align-center">
+										<!-- go to first page -->
+										<button class="btn tlb-icons ico-rec-first item block-image" data-ng-click="getFirstPage()"
+										        data-ng-disabled="isLoading||!canFirstPage()"></button>
+
+										<!-- go to previous page -->
+										<button class="btn control-icons ico-previous item block-image" data-ng-click="getPrevPage()"
+										        data-ng-disabled="isLoading||!canPrevPage()"></button>
+
+										<span class="item ellipsis">
+									{{getPageText()}}
+								</span>
+										<!-- go to next page -->
+										<button class="btn control-icons ico-next item block-image" data-ng-click="getNextPage()"
+										        data-ng-disabled="isLoading||!canNextPage()"></button>
+
+										<!-- go to last page -->
+										<button class="btn tlb-icons ico-rec-last item block-image" data-ng-click="getLastPage()"
+										        data-ng-disabled="isLoading||!canLastPage()"></button>
+									</div>
+								</div>
+
+							</div>
+
+							<!-- Branch directive -->
+							<div data-ng-if="IsShowBranch" style="border: solid 1px #dcdcdc;">
+								<!--<div  style="height:170px; padding-top: 10px;"  data-ng-if="IsShowBranch">-->
+								<div class="branch-container platformgrid f3b7569b3ba344768005d7b4a24f62c1" filter-Business-Partner-Subsidiary style="height:calc(100% - 24px)"></div>
+							</div>
+
+							<!-- contacts directive -->
+							<div data-ng-if="IsShowContracts" style="border: solid 1px #dcdcdc;">
+								<!--<div data-ng-if="IsShowContracts" style="height:170px; padding-top: 12px;">-->
+								<div class="contact-container platformgrid 015039777D6F4A1CA0BF9EEC6E9D244E" filter-business-partner-contact style="height:calc(100% - 24px)"></div>
+							</div>
+
+							<!-- guarantor directive -->
+							<div data-ng-if="showGuarantor" style="border: solid 1px #dcdcdc;">
+								<!--<div data-ng-if="showGuarantor" style="height:230px; padding-top: 12px;">-->
+								<div class="guarantor-container" filter-business-partner-guarantor style="height:calc(100% - 24px)">
+								</div>
+
+							</div>
+
+						</div>
+						<div data-ng-hide="!IsWizardForCreateReq && !wizardForCreateRfQFromPackage" style="margin-top: 5px;">
+							<label>
+								<input type="checkbox" style="vertical-align: bottom"
+								       data-ng-model="modalOptions.checkbidderCopy"/>
+								{{modalOptions.bidderCopyNote}}
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="margin-top: 10px;" ng-if="hasContractItem">{{'procurement.common.wizard.IsContractNote' | translate}}</div>
+	</section>
+	<footer class="modal-footer">
+		<div data-ng-switch="modalOptions.step">
+			<div data-ng-switch-when="step1">
+				<button class="btn btn-default" data-ng-click="modalOptions.onPass()"
+				        data-ng-hide="!IsWizardForCreateReq && !wizardForCreateRfQFromPackage" style="display:inline-block;">
+					{{::modalOptions.passButtonText}}
+				</button>
+				<button type="button" class="btn btn-default" data-ng-disabled="!modalOptions.isValid() || isLoading"
+				        data-ng-click="modalOptions.ok()" style="display:inline-block;">
+					{{modalOptions.actionButtonText}}
+				</button>
+				<button type="button" class="btn btn-default" data-ng-disabled="requirement"
+				        data-ng-click="modalOptions.cancel()" style="display:inline-block;">
+					{{modalOptions.closeButtonText}}
+				</button>
+			</div>
+			<div data-ng-switch-when="step2" style="display: flex;">
+				<button type="button" class="btn btn-default"
+				        title="{{modalOptions.navigateTitle}}" ng-click="modalOptions.onNavigate()">{{modalOptions.navigateTitle}}
+				</button>
+				<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+					{{'cloud.common.close' | translate}}
+				</button>
+			</div>
+		</div>
+	</footer>
+</div>

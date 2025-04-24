@@ -1,0 +1,23 @@
+<div data-platform-alert data-error="error"></div>
+<div data-split-container class="border-none" data-option='{"orientation": "horizontal"}'>
+    <div data-split-container-view data-option='{ "collapsible": true, "size": "20%" }'
+         id="7f5d1185f23e4adabbb4cce183d3a8e2" class="flex-element relative-container">
+        <div class="fullheight" data-ng-controller="procurementCommonSplitTextPanelController">
+            <platform-Grid class="border-all flex-box flex-column" data="gridData"/>
+        </div>
+    </div>
+    <div data-split-container-view data-option='{ "collapsible": true, "size": "80%" }'
+         id="75cdb9f6a4df459e8325f7f481550eeb" class="flex-element relative-container">
+        <div class="fullheight" data-ng-controller="procurementCommonSplitTextPanelController">
+            <div basics-common-html-editor data-entity="currentItem"
+                 data-on-change="onChange()"
+                 data-editable="textareaEditable"
+                 data-name="textareaItemText"
+                 data-editor-options="editoroptions"
+                 data-field="ContentString"
+                 style="height: 100%">
+            </div>
+        </div>
+    </div>
+</div>
+<div cloud-common-overlay data-loading="containerLoading" data-info="loadingInfo"></div>

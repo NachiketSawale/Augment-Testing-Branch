@@ -1,0 +1,16 @@
+<section class="modal-body">
+    <div [ngSwitch]="currentStep" class="" style="height: 95%;">
+        <div *ngSwitchCase="'fromQuote'" class="fullheight">
+            <project-material-update-price-from-quote  [optionItem]="optionItem"></project-material-update-price-from-quote>
+        </div>
+        <div *ngSwitchCase="'fromContract'" class="fullheight">
+            <project-material-update-price-from-contract [optionItem]="optionItem"></project-material-update-price-from-contract>
+        </div>
+        <div *ngSwitchCase="'byMaterialItem'" class="fullheight">
+            <project-material-update-price-by-material-item></project-material-update-price-by-material-item>
+        </div>
+        <div *ngSwitchCase="'byMaterialCatalog'" class="fullheight">
+            <project-material-update-price-by-material-catalog></project-material-update-price-by-material-catalog>
+        </div>
+    </div>
+</section>

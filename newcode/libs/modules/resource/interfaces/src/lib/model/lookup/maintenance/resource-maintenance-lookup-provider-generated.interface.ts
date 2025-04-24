@@ -1,0 +1,40 @@
+/*
+ * $Id$
+ * Copyright(c) RIB Software GmbH
+ */
+
+import { IResourceMaintenanceLookupProvider } from './resource-maintenance-lookup-provider.interface';
+import { LazyInjectionToken } from '@libs/platform/common';
+import { ICommonLookupOptions, TypedConcreteFieldOverload } from '@libs/ui/common';
+
+export interface IResourceMaintenanceLookupProviderGenerated {
+	/**
+	* Generates a lookup field overload definition to pick a MaintenanceSchema.
+	* 
+	* @param options The options to apply to the lookup
+	* 
+	* @returns The lookup field overload.
+	*/
+	provideMaintenanceSchemaLookupOverload<T extends object>(options?: ICommonLookupOptions): TypedConcreteFieldOverload<T>;
+	/**
+	* Generates a lookup field overload definition to read a MaintenanceSchema.
+	* 
+	* @returns The lookup field overload.
+	*/
+	provideMaintenanceSchemaReadonlyLookupOverload<T extends object>(options?: ICommonLookupOptions): TypedConcreteFieldOverload<T>;
+	/**
+	* Generates a lookup field overload definition to pick a MaintenanceSchemaRecord.
+	* 
+	* @param options The options to apply to the lookup
+	* 
+	* @returns The lookup field overload.
+	*/
+	provideMaintenanceSchemaRecordLookupOverload<T extends object>(options?: ICommonLookupOptions): TypedConcreteFieldOverload<T>;
+	/**
+	* Generates a lookup field overload definition to read a MaintenanceSchemaRecord.
+	* 
+	* @returns The lookup field overload.
+	*/
+	provideMaintenanceSchemaRecordReadonlyLookupOverload<T extends object>(options?: ICommonLookupOptions): TypedConcreteFieldOverload<T>;
+}
+export const RESOURCE_MAINTENANCE_LOOKUP_PROVIDER_TOKEN = new LazyInjectionToken<IResourceMaintenanceLookupProvider>('resource.maintenance.LookupProvider');

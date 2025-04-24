@@ -1,0 +1,51 @@
+{
+  "basics": {
+    "workflowAdministration": {
+      "moduleName": "Workflow Verwaltung",
+      "context": {
+        "containerHeader": "Instanzen Kontext"
+      },
+      "instance": {
+        "containerHeader": "Workflow Instanz",
+        "escalate": "Eskalieren",
+        "kill": "Kill",
+        "status": {
+          "none": "None",
+          "running": "Running",
+          "finished": "Finished",
+          "escalate": "Escalate",
+          "waiting": "Waiting",
+          "failed": "Failed",
+          "killed": "Killed"
+        },
+        "moduleName": "Modul Name",
+        "clerk": "Sachbearbeiter",
+        "result": "Ergebnis",
+        "company": "Mandant",
+        "project": "Projekt",
+        "entity": "Datenobjekt",
+        "endTime": "Enddatum",
+        "startTime": "Startdatum"
+      },
+      "common": {
+        "duration": "Dauer",
+        "maxEndTime": "Späteste Fertigstellung"
+      },
+      "action": {
+        "containerHeader": "Aktion Instanz",
+        "overdueClientActionFilter": "Alle überfälligen Aufgaben anzeigen",
+        "context": {
+          "containerHeader": "Aktion Instanz Kontext"
+        }
+      },
+      "escalation": {
+        "header": "Eskalation ist nicht möglich.",
+        "noActionSelected": "Es ist keine Aktion ausgewählt.",
+        "actionIsNotRunning": "Die Aktion ist bereits beendet."
+      },
+      "clientAction":{
+        "containerHeader": "Client Aktion"
+      }
+    }
+  }
+}

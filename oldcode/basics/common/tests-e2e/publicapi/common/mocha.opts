@@ -1,0 +1,25 @@
+./common/globals.js
+
+./common/login.js
+
+./basics/test/uom.spec.js
+
+./basics/test/materialcatalog.spec.js
+
+./basics/test/material-discount-group.spec.js
+
+./basics/test/material-group.spec.js
+
+./basics/test/material-record.spec.js
+
+./boq/test/wiccatalog.spec.js
+
+./boq/test/wicboq.spec.js
+
+./boq/test/wicboqitem.spec.js
+
+--reporter spec
+--recursive
+--growl
+--ui bdd
+--use_strict

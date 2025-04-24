@@ -1,0 +1,19 @@
+{
+	"name": "modules-scheduling-schedule",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/scheduling/schedule/src",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/modules/scheduling/schedule/jest.config.ts"
+			}
+		}
+	},
+	"tags": []
+}

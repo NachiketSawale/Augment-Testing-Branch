@@ -1,0 +1,63 @@
+﻿[
+	{
+		"botServices": [
+			{
+				"name": "rib-bot-reg",
+				"directlineSecret": "lIPvTzwMP88.cwA.8f4.rm6XnzVCUoHlvT7A9Yi0QTJFCe2xf5lA7CzDVM1Xew4"
+			},
+			{
+				"name": "ytwo",
+				"directlineSecret": "BG8MW95BsuE.cwA.--E.H04_l7GY1nvHlDkyUBkE214HB-PjKzRBrSit8MNlhTA"
+			},
+			{
+				"name": "iTWOWorld",
+				"directlineSecret": "ebNWKqZAWBA.cwA.yf8.ryLowtJ3X5RK-ER2YpaTKyzeKmsucGYvj7uuvg4vpOg"
+			}
+		],
+		"crisSetting": {
+			"cristModels": [
+				{
+					"endPointId": "cabb1722-538b-4cf0-8c73-3f1b105fe88c",
+					"language": "en-us"
+				},
+				{
+					"endPointId": "94c04b63-8df3-4a59-98ff-0faadb5c637f",
+					"language": "zh-cn"
+				}
+			],
+			"speechKey": "eacaa95b135e4413914d30988d8a34d9"
+		},
+		"name": "eastasia"
+	},
+	{
+		"botServices": [
+			{
+				"name": "rib-mctwo-de",
+				"directlineSecret": "aNoM1wIpt70.Niaxa39cgcRBjFGCyjAqSrvTwEza-zflevNJOE2BfzY"
+			}
+		],
+		"crisSetting": {
+			"cristModels": [
+				{
+					"endPointId":"73084535-ad20-4c59-ac2a-2d74e78fa717",
+					"language":"en-us"
+				},
+				{
+					"endPointId":"79b5330b-7ad8-4098-988c-011fcca3b689",
+					"language":"de-de"
+				}
+			],
+			"speechKey": "62b4475059774ed1ab28734b3eea0531"
+		},
+		"name": "westeurope"
+	},
+	{
+		"botServices": [
+			{
+				"name": "mctwo_sg_bot",
+				"directlineSecret": "9JfmkQ5m48A.IzR1pS37f09wOgDNrgw0paVhxETExxzLTplV86wqB7M"
+			}
+		],
+		"name": "southeastasia"
+	}
+]

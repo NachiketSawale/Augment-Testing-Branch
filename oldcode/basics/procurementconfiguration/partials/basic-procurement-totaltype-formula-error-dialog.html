@@ -1,0 +1,18 @@
+<div data-ng-controller="procurementConfigurationTotalTypeFormulaErrorController">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{::modalOptions.header.title}}</h2>
+    </header>
+    <section class="modal-body">
+        <h3>{{::modalOptions.body.title}}</h3>
+        <div class="modal-body">
+            <div data-ng-repeat="item in modalOptions.body.detail">{{item.index + "."+item.content +";"}}</div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div >
+            <button type="button" class="btn btn-default"
+                    data-ng-click="modalOptions.onOK()"> {{modalOptions.footer.ok}}
+            </button>
+        </div>
+    </footer>
+</div>

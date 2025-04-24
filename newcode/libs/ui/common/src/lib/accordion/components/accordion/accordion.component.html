@@ -1,0 +1,3 @@
+<mat-accordion [multi]="config.multi" [displayMode]="'flat'">
+	<ui-common-accordion-tree [data]="data" [config]="config" (opened)="onPanelOpened($event)" (closed)="onPanelClosed($event)" (selected)="onItemClick($event)"></ui-common-accordion-tree>
+</mat-accordion>

@@ -1,0 +1,37 @@
+<div class="content fullheight">
+	<div class="toolbar" *ngIf="(markupService.currentMarkups && markupService.currentMarkups.length > 0)">
+		<ul class="tools flex-box flex-column flex-element">
+			<li class="sublist">
+				<ul class="radio-group">
+					<li class="flex-box flex-element">
+						<button type="button" class="tlb-icons ico-rec-delete"
+						        (click)="deleteAllMarker()"
+						        title="{{ 'model.wdeviewer.deleteAllAnnotation' | platformTranslate }}">
+						</button>
+					</li>
+					<li class="flex-end">
+						<button type="button" class="control-icons ico-close"
+						        (click)="closeView()"
+						        title="{{ 'cloud.common.close' | platformTranslate }}">
+						</button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content-inner popup-content flex-box flex-auto markup-record">
+		<ul class="margin-full-sm">
+			<li *ngFor="let comment of markupService.currentMarkups" [ngClass]="comment.IsSelect ? 'comment-select active' : ''" [ngStyle]="comment.IsFocus ? { 'border-style': 'groove', 'display': 'block' } : { 'display': 'block' }">
+				<div (click)="select(comment)" [title]="comment.Description" class="nav-tabs pane-rc cursor-pointer">
+					<span>{{ comment.Clerk }} - {{ comment.UpdateTime }}</span>
+					<button type="button" class="tlb-icons ico-delete markup-delete" [title]="'model.wdeviewer.deleteAnnotation' | platformTranslate" (click)="deleteMarkup(comment)">
+					</button>
+				</div>
+				<div *ngIf="comment.IsSelect">
+					<!--<markup-comment-viewer></markup-comment-viewer>-->
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

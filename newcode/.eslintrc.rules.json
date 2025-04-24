@@ -1,0 +1,118 @@
+{
+	"root": true,
+	"ignorePatterns": [
+		"**/slick-grid/*"
+	],
+	"plugins": [
+		"@nrwl/nx",
+		"angular-file-naming"
+	],
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"extends": ["plugin:@nrwl/nx/typescript"],
+			"rules": {
+			}
+		},
+		{
+			"files": ["*.js", "*.jsx"],
+			"extends": ["plugin:@nrwl/nx/javascript"],
+			"rules": {}
+		},
+		{
+			"files": ["*.html"],
+			"extends": ["plugin:@nrwl/nx/angular-template"],
+			"rules": {}
+		},
+		{
+			"files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+			"rules": {
+				"@nrwl/nx/enforce-module-boundaries": [
+					"error",
+					{
+						"enforceBuildableLibDependency": true,
+						"allow": [],
+						"depConstraints": [
+							{
+								"sourceTag": "*",
+								"onlyDependOnLibsWithTags": ["*"]
+							}
+						]
+					}
+				],
+				"@typescript-eslint/no-inferrable-types":  "off",
+				"@typescript-eslint/member-ordering": "off",
+				"@typescript-eslint/no-empty-function": [
+					"warn",
+					{
+						"allow": [
+							"methods",
+							"generatorMethods",
+							"getters",
+							"setters",
+							"asyncMethods"
+						]
+					}
+				],
+				"@typescript-eslint/no-empty-interface": "off",
+				"@angular-eslint/no-empty-lifecycle-method": "warn",
+				"no-empty": "error",
+				"@typescript-eslint/no-explicit-any": "error",
+				"angular-file-naming/component-filename-suffix": "error",
+				"angular-file-naming/directive-filename-suffix": "error",
+				"angular-file-naming/module-filename-suffix": "error",
+				"angular-file-naming/pipe-filename-suffix": "error",
+				"angular-file-naming/service-filename-suffix": "error",
+				"curly": "error",
+				"brace-style": "error",
+				"no-mixed-spaces-and-tabs": [
+					"error",
+					"smart-tabs"
+				],
+				"no-array-constructor": "error",
+				"no-new-object": "error",
+				"no-new-wrappers": "error",
+				"quotes": [
+					"error",
+					"single",
+					{
+						"allowTemplateLiterals": false
+					}
+				],
+				"@typescript-eslint/explicit-member-accessibility": [
+					"error",
+					{
+						"accessibility": "explicit"
+					}
+				],
+				"semi": [
+					"error",
+					"always"
+				],
+				"@typescript-eslint/no-unused-vars": [
+					"error",
+					{
+						"args": "none"
+					}
+				]
+			}
+		},
+		{
+			"files": [
+				"*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx",
+				"*.stories.ts", "*.stories.tsx", "*.stories.js", "*.stories.jsx",
+				"*.cy.ts", "*.cy.tsx", "*.cy.js", "*.cy.jsx"
+			],
+			"rules": {
+				"angular-file-naming/component-filename-suffix": "off",
+				"angular-file-naming/directive-filename-suffix": "off",
+				"angular-file-naming/module-filename-suffix": "off",
+				"angular-file-naming/pipe-filename-suffix": "off",
+				"angular-file-naming/service-filename-suffix": "off",
+                "@typescript-eslint/no-empty-function": "off",
+                "@angular-eslint/no-empty-lifecycle-method": "off",
+				"@typescript-eslint/no-unused-vars": "off"
+            }
+		}
+	]
+}

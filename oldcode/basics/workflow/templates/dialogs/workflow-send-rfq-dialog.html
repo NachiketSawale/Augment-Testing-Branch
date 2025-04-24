@@ -1,0 +1,118 @@
+<section class="modal-body" data-ng-controller="basicsWorkflowSendRfqDialog">
+	<div class="flex-element two-side-row-1">
+
+		<div class="left margin-full-md overflow">
+			<h1>{{'basics.workflow.sendRfQDialog.currentConfiguartion' | translate}}</h1>
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-ng-click="selectTab(0)"
+						   href="javascript:void(0)">{{'basics.workflow.sendRfQDialog.selectedBidders' | translate}}</a>
+						<span class="badge badge-rib-color margin-left-md"
+						      data-ng-bind="info.selectedBidder.length"></span>
+					</h2>
+				</li>
+
+				<li class="list-group-item" data-ng-repeat="bidder in info.selectedBidder">
+					<span data-ng-bind="bidder.CompanyName"></span>
+				</li>
+			</ul>
+
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-ng-click="selectTab(1)"
+						   href="javascript:void(0)">{{'basics.workflow.sendRfQDialog.coverLetter' | translate}}</a>
+					</h2>
+				</li>
+
+				<li class="list-group-item">
+					<span data-ng-bind="info.selectedCoverLetter.TemplateName"></span>
+				</li>
+			</ul>
+
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-ng-click="selectTab(2)"
+						   href="javascript:void(0)">{{'basics.workflow.sendRfQDialog.dataFormat' | translate}}</a>
+					</h2>
+				</li>
+
+				<li class="list-group-item">
+					<span data-ng-bind="info.selectedDataFormat.Description"></span>
+				</li>
+			</ul>
+
+
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-ng-click="selectTab(3)"
+						   href="javascript:void(0)">{{'basics.workflow.sendRfQDialog.Reports' | translate}}</a>
+						<span class="badge badge-rib-color margin-left-md"
+						      data-ng-bind="info.selectedReportsAll.length"></span>
+					</h2>
+				</li>
+
+				<li class="list-group-item" style="padding-bottom: 0;">
+					{{'basics.workflow.sendRfQDialog.mandatoryReports' | translate}}
+					<ul data-ng-repeat="mReport in info.selectedMandetoryReports">
+						<li class="list-group-item"><span data-ng-bind="mReport.TemplateName"></span></li>
+					</ul>
+				</li>
+				<li class="list-group-item" style="padding-bottom: 0;">
+					{{'basics.workflow.sendRfQDialog.additionalSelectedReports' | translate}}
+					<ul>
+						<ul data-ng-repeat="report in info.selectedReports">
+							<li class="list-group-item"><span data-ng-bind="report.TemplateName"></span></li>
+						</ul>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-ng-click="selectTab(4)"
+						   href="javascript:void(0)">{{'basics.workflow.sendRfQDialog.documents' | translate}}</a>
+						<span class="badge badge-rib-color margin-left-md"
+						      data-ng-bind="info.selectedDokuments.length"></span>
+					</h2>
+				</li>
+
+				<li class="list-group-item" style="padding-bottom: 0;">
+					{{'basics.workflow.sendRfQDialog.projectDocuments' | translate}}
+					<ul data-ng-repeat="doc in info.selectedProjectDocs">
+						<li class="list-group-item"><span data-ng-bind="doc.OriginFileName"></span></li>
+					</ul>
+				</li>
+				<li class="list-group-item" style="padding-bottom: 0;">
+					{{'basics.workflow.sendRfQDialog.reQDocuments' | translate}}
+					<ul data-ng-repeat="doc in info.selectedReQDocs">
+						<li class="list-group-item"><span data-ng-bind="doc.OriginFileName"></span></li>
+					</ul>
+				</li>
+				<li class="list-group-item" style="padding-bottom: 0;">
+					{{'basics.workflow.sendRfQDialog.rfQDocuments' | translate}}
+					<ul data-ng-repeat="doc in info.selectedRfQDocs">
+						<li class="list-group-item"><span data-ng-bind="doc.OriginFileName"></span></li>
+					</ul>
+				</li>
+			</ul>
+
+
+		</div>
+
+		<div class="right margin-full-md overflow">
+			<tabset class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex">
+				<tab active="tab.active" disabled="tab.disabled" heading="{{tab.title}}" ng-click="modalOptions.onTabSelect(tab)"
+				     ng-repeat="tab in tabs">
+					<div data-ng-include="tab.content"></div>
+				</tab>
+			</tabset>
+		</div>
+	</div>
+</section>
+

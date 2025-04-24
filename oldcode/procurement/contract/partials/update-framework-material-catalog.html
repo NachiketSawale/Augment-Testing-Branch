@@ -1,0 +1,47 @@
+<div data-ng-controller="updateFrameworkMaterialCatalogController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<div data-ng-switch="step">
+		<section data-ng-switch-when="step1" class="modal-body">
+			<div cloud-common-overlay data-loading="isLoading"></div>
+
+			<div>
+				<div style="margin-left: 10px;margin-top: 10px;height: 52px;">
+					<div class="radio">
+						<label data-ng-click="typeChange('create')">
+							<input type="radio" name="type" data-ng-model="type" value="create">{{::'procurement.contract.updateFrameworkMaterialCatalog.newCatalog' | translate}}
+						</label>
+					</div>
+					<div class="radio" style="margin-top: 10px;">
+						<label style="display: inline-block; margin-right: 10px;" data-ng-click="typeChange('update')">
+							<input type="radio" name="type" data-ng-model="type" value="update">{{::'procurement.contract.updateFrameworkMaterialCatalog.existedCatalog' | translate}}
+						</label>
+					</div>
+				</div>
+
+
+				<div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem" class="fullheight" data-ng-readonly="false" style="margin-right: 8px;margin-top: -5px;"></div>
+
+			</div>
+		</section>
+
+		<section data-ng-switch-when="step2" class="modal-body" style="padding: 20px;">
+			<div class="icon-message ng-scope">
+				<div class="icon tlb-icons {{iconStyle}}"></div>
+				<div class="message">{{::successText}}</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="okBtnDisable()" data-ng-click="ok()" data-ng-if="step==='step1'">
+			{{::'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" title="go to material catalog" data-ng-click="goToMaterialCatalog()" data-ng-if="step==='step2'">
+			{{::'cloud.common.Navigator.goTo' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{::'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

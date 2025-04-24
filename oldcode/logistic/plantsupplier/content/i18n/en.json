@@ -1,0 +1,29 @@
+{
+	"logistic": {
+		"plantsupplier": {
+			"plantsupplierListTitle": "Plant Supplier",
+			"plantsupplierDetailTitle": "Plant Supplier Details",
+			"entityControllingUnit": "Controlling Unit",
+			"entityJobFk": "Job",
+			"rubriccategory": "Rubric Category",
+			"entityCode": "Code",
+			"entityDescription": "Description",
+			"entityPrjStockFk": "Stock",
+			"entityIsActive": "IsActive",
+			"plantSupplyItemListTitle": "Plant Supply Items",
+			"plantSupplyItemDetailTitle": "Plant Supply Item Details",
+			"entityConsumptionDate": "Consumption Date",
+			"entityMaterialFk": "Material",
+			"entityPlantFk": "Plant",
+			"entityQuantity": "Quantity",
+			"entityPrice": "Price",
+			"entityExternalId": "External ID",
+			"entityPlantSupItemStatFk": "Item Status",
+			"plantsupplyitemstatus": "Plant Supply Item Status",
+			"entityIsSettled": "Is Settled",
+			"performingControllingUnit": "Performing Controlling Unit",
+			"supplierJob": "Supplier Job",
+			"plantLogisticJob": "Plant Logistic Job"
+		}
+	}
+}

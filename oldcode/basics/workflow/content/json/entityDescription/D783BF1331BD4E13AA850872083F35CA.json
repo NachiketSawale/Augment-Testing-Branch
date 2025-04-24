@@ -1,0 +1,27 @@
+{
+	"Entity": {
+		"Id": 117,
+		"Code": "FR017-EXEC",
+		"DescriptionInfo": {
+			"Description": "Execution Plan Cinema Stuttgart",
+			"DescriptionTr": null,
+			"DescriptionModified": false,
+			"Translated": "Execution Plan Cinema Stuttgart",
+			"VersionTr": 0,
+			"Modified": false,
+			"OtherLanguages": null
+		},
+		"Remark": null,
+		"CommentText": null,
+		"Project": 1640,
+		"ScheduleType": null,
+		"AllowModify": false,
+		"TargetStart": null,
+		"TargetEnd": null,
+		"PerformanceSheet": null,
+		"ProgressReportingMethod": null,
+		"Calendar": 1,
+		"IsLocationMandatory": false,
+		"IsLive": true
+	}
+}

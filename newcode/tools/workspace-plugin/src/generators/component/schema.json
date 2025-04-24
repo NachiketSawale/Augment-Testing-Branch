@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/schema",
+	"cli": "nx",
+	"$id": "component-git",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string",
+			"description": "Library name",
+			"$default": {
+				"$source": "argv",
+				"index": 0
+			}
+		},
+		"project": {
+			"type": "string",
+			"description": "Project Name",
+			"$default": {
+				"$source": "project"
+			}
+		},
+		"style": {
+			"description": "The file extension or preprocessor to use for style files, or 'none' to skip generating the style file.",
+			"type": "string",
+			"default": "scss",
+			"enum": ["css", "scss", "sass", "less", "none"],
+			"x-user-analytics": 5
+		},
+
+		"nostory": {
+			"type": "boolean",
+			"description": "Decides whether to include story file or not",
+			"default": false
+		}
+	},
+	"required": ["name", "project"]
+}

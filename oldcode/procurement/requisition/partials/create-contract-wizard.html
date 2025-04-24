@@ -1,0 +1,54 @@
+<div data-ng-controller="procurementRequisitionWizardCreateContractController">
+
+    <header class="modal-header main-color" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+        <div data-ng-include="'dialog/modaldialog-topdescription-template.html'"></div>
+
+        <h3>{{modalOptions.bodyTitle}} </h3>
+
+        <div data-platform-alert data-error="error" class="fullwidth"></div>
+
+        <div data-ng-switch="modalOptions.step" class="fullheight">
+            <div data-ng-switch-when="step1">
+                <div class="platform-lg">
+                    <div data-find-bidder-wizard data-find-bidder-setting="findBidderSetting"></div>
+                </div>
+            </div>
+            <div data-ng-switch-when="step2" class="overflow-hidden">
+                <div class="pane-b flex-box" style="height: 500px;" data-ng-controller="procurementRequisitionCreateContractWizardBusinessPartnerController">
+                    <platform-Grid data="gridData"></platform-Grid>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <div data-ng-switch="modalOptions.step">
+            <div data-ng-switch-when="step1">
+                <button type="button" class="btn btn-default"
+                        data-ng-click="modalOptions.onNext()"
+                        data-ng-disabled="modalOptions.btnNextStatus">{{modalOptions.btnSearchText}}
+                </button>
+                <button type="button" class="btn btn-default"
+                        data-ng-click="modalOptions.onCancel()">{{modalOptions.btnCancelText}}
+                </button>
+            </div>
+            <div data-ng-switch-when="step2">
+                <button type="button" class="btn btn-default"
+                        data-ng-click="modalOptions.onBack()"
+                        data-ng-show="modalOptions.searchOrChooseSupplierStatus">{{modalOptions.btnBackText}}
+                </button>
+                <button type="button" class="btn btn-default"
+                        data-ng-click="modalOptions.onOK()"
+                        data-ng-disabled=modalOptions.btnOkStatus> {{modalOptions.btnOkText}}
+                </button>
+                <button type="button" class="btn btn-default"
+                        data-ng-click="modalOptions.onCancel()">{{modalOptions.btnCancelText}}
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

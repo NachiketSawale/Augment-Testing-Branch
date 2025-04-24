@@ -1,0 +1,38 @@
+{
+	"basics": {
+		"audittrail": {
+			"entityDbActionType": "Action",
+			"entityObjectFk": "Object ID",
+			"entityIdUpdated": "Entity ID",
+			"entityOldValue": "Old Value",
+			"entityNewValue": "New Value",
+			"entityUserName": "Name",
+			"entityColumn": "Column",
+			"entityContainer": "Container",
+			"title": "Audit trail",
+			"FilterToday": "Today",
+			"FilterYesterday": "Yesterday",
+			"FilterLast7Days": "Last 7 Days",
+			"FilterLast30Days": "Last 30 Days",
+			"FilterCustom": "Custom",
+			"date": "Date",
+			"container": "Container",
+			"containerAll": "All",
+			"containerBP": "Business Partner",
+			"containerContacts": "Contacts",
+			"action": "Action",
+			"actionAll": "All",
+			"actionDeleted": "Deleted",
+			"actionModified": "Modified",
+			"columns": "Columns",
+			"all": "All",
+			"user": "User",
+			"period": "Period",
+			"mainEntity": "Main Entity",
+			"mainEntityCheckbox": "Show changes only for this element",
+			"splitterLeftSideTitle": "Filter",
+			"splitterRightSideTitle": "Changes",
+			"Search": "Search"
+		}
+	}
+}

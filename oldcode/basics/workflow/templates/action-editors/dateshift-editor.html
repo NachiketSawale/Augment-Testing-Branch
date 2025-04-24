@@ -1,0 +1,112 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+			<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+			<div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.dateShift.eventId' | translate}}
+					<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.EventId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.dateShift.isFullShift' | translate}}
+				</label>
+				<div class="platform-form-col">
+					<div data-domain="boolean" data-domain-control data-model="model.IsFullShift"
+					     data-options="codeMirrorOptions"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.dateShift.mode' | translate }}
+					<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-model="model.DateShiftMode"
+					     data-options="selectOptions"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.dateShift.dateType' | translate }}
+					<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control data-model="model.DateType"
+					     data-options="selectOptionsDateType"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" ng-show="model.DateType === 'startDate'">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.dateShift.startDate' | translate }}
+					<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div data-domain="datetimeutc" data-domain-control data-model="model.StartDate"
+					     data-options="codeMirrorOptions"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" ng-show="model.DateType === 'endDate'">
+				<label class="platform-form-label">
+					{{'basics.workflow.action.customEditor.dateShift.endDate' | translate }}
+					<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div data-domain="datetimeutc" data-domain-control data-model="model.EndDate"
+					     data-options="codeMirrorOptions"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.dateShift.logReasonGroup' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-entity="model" data-form-options="formOptionsForLogReasonGroup" data-platform-form></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.dateShift.updateReason' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-entity="model" data-form-options="formOptionsForLogReason" data-platform-form></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.dateShift.updateRemark' | translate }}</label>
+				<div class="platform-form-col">
+					<textarea data-ng-trim="false" data-ng-model="model.Remark" class="domain-type-remark form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" data-enterstop="true" data-tabstop="true" data-domain="remark"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+				<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputResult' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.Result" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,66 @@
+<div>
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <div>
+        <section class="modal-body">
+            <div class="filler">
+                <div class="fullheight">
+                    <div class="platform-form-container">
+                        <form class="platform-form platform-lg">
+                            <div class="platform-form-group" style="padding-right: 1em; margin-bottom: 1.5em;">
+                                {{'procurement.pes.boqCreationDialog.autoCreateBoqTip' | translate}}
+                            </div>
+                            <div class="platform-form-group">
+                                <!-- Structure Code Lookup-->
+                                <div class="platform-form-row form-group" data-ng-show="canStructureShow">
+                                    <label class="platform-form-label">{{'cloud.common.entityStructureCode' | translate}}<span class="required-cell"></span></label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.prcStructure"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.PrcStructureFk"
+                                             data-ng-model="currentItem.PrcStructureFk"
+                                             data-config="fieldConfig.prcStructure"></div>
+                                    </div>
+                                </div>
+                                <!-- Tax Code Lookup -->
+                                <div class="platform-form-row form-group" data-ng-show="canTaxCodeShow">
+                                    <label class="platform-form-label">{{'cloud.common.entityTaxCode' | translate}}<span class="required-cell"></span></label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.taxCode"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.MdcTaxCodeFk"
+                                             data-ng-model="currentItem.MdcTaxCodeFk"
+                                             data-config="fieldConfig.taxCode"></div>
+                                    </div>
+                                </div>
+                                <!-- Controlling Unit Lookup -->
+                                    <div class="platform-form-row form-group" data-ng-show="canControllingUnitShow">
+                                    <label class="platform-form-label">{{'cloud.common.entityControllingUnitCode' | translate}}<span class="required-cell"></span></label>
+                                    <div class="platform-form-col">
+                                        <div class="control-directive" basics-lookupdata-lookup-composite
+                                             data-options="lookupOptions.controllingUnit"
+                                             data-entity="currentItem"
+                                             data-model="currentItem.ControllingUnitFk"
+                                             data-ng-model="currentItem.ControllingUnitFk"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="modalOptions.okBtnDisabledForAutoCreate()">
+            {{'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+
+</div>

@@ -1,0 +1,409 @@
+{
+  "materialPriceVersions": [
+    {
+      "Companys": ["006","002","EX03"],
+      "descriptionInfo": {
+        "description": "material V12",
+        "otherLanguages":  [
+          {
+            "culture" : "ch",
+            "description": "test rib"
+          },
+          {
+            "culture" : "de",
+            "description": "VVVV derib"
+          }
+
+        ]
+      },
+
+      "validFrom": "2017-05-20T00:00:00",
+      "validTo": "2017-07-20T00:00:00",
+      "dataDate": "2017-05-25T00:00:00",
+      "weighting": 213,
+      "PriceList": "test",
+      "materialCatalog":"002"
+    },
+    {
+      "Companys": ["006","002","EX03"],
+      "descriptionInfo": {
+        "description": "material v22",
+        "otherLanguages":  [
+          {
+            "culture" : "ch",
+            "description": "VVVV ch123456"
+          }
+        ]
+      },
+
+      "validFrom": "2017-05-20T00:00:00",
+      "validTo": "2017-07-20T00:00:00",
+      "dataDate": "2017-05-25T00:00:00",
+      "weighting": 2423,
+      "PriceList": "test",
+      "materialCatalog":"010"
+    },
+    {
+      "Companys": ["006","002","EX03"],
+      "descriptionInfo": {
+        "description": "material v23",
+        "otherLanguages":  [
+          {
+            "culture" : "ch",
+            "description": "VVVVV ch123456"
+          }
+        ]
+      },
+
+      "validFrom": "2017-05-20T00:00:00",
+      "validTo": "2017-07-20T00:00:00",
+      "dataDate": "2017-05-25T00:00:00",
+      "weighting": 2423,
+      "PriceList": "test",
+      "materialCatalog":"F01"
+    },
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v24",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v25",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v26",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v27",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material 8",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v29",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v231",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v232",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v233",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v234",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v235",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v236",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v237",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v238",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v239",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v2311",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v2312",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	},
+	{
+	  "Companys": ["006","002","EX03"],
+	  "descriptionInfo": {
+		"description": "material v2313",
+		"otherLanguages":  [
+		  {
+			"culture" : "ch",
+			"description": "VVVVV ch123456"
+		  }
+		]
+	  },
+
+	  "validFrom": "2017-05-20T00:00:00",
+	  "validTo": "2017-07-20T00:00:00",
+	  "dataDate": "2017-05-25T00:00:00",
+	  "weighting": 2423,
+	  "PriceList": "test",
+	  "materialCatalog":"F01"
+	}
+  ],
+  "CompanyCode": "901"
+}

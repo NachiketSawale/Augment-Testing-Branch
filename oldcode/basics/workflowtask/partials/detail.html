@@ -1,0 +1,22 @@
+<div style="overflow: auto">
+<h1 data-ng-if="currentTask" data-ng-bind="currentTask.Title"></h1>
+    <h2 data-ng-if="currentTask" data-ng-bind="currentTask.SubTitle"></h2>
+    <hr data-ng-if="currentTask" />
+    <div data-ng-if="currentTask" data-basics-workflow-task-detail-directive data-ng-model="currentTask" class="flex-box flex-row flex-element" style="
+    overflow: scroll;" ></div>
+
+    <div data-ng-if="currentTask && !currentTask.Action.HideFooter" class="sidebar-panel-footer">
+        <div class="btn-group flex-box">
+            <button type="button" class="btn btn-default flex-element"
+                    data-ng-disabled="currentTask.Readonly || disableEscalteButton(currentTask)"
+                    data-ng-click="onBreak(currentTask)">{{"basics.workflow.escalate" |
+                translate}}
+            </button>
+            <button type="button" class="btn btn-default flex-element"
+                    data-ng-disabled="currentTask.Readonly"
+                    data-ng-click="onOk(currentTask)">{{"cloud.common.ok" | translate}}
+            </button>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.ms-sv-container-title {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+}
+
+.ms-sv-container-title > span {
+  font-size: 16px;
+  color: #0067b1;
+  font-weight: normal;
+}
+
+.ms-sv-collapse-content {
+  padding-top: 5px;
+  .ms-sv-container-title > span {
+    color: #333;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+.ms-sv-attribute-show-hide {
+  float: right;
+}

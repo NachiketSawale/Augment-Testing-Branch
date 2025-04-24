@@ -1,0 +1,31 @@
+﻿{
+  "basics": {
+    "userform": {
+      "entityId": "编号",
+      "entityValidFrom": "Valid From",
+      "entityValidTo": "Valid To",
+      "entityRubricFk": "Rubric",
+      "entityWindowParameter": "窗口选项",
+      "entityHtmlTemplateFileName": "Html模板",
+      "noFormSelectedInfo": "请先选择表单",
+      "noRubricSelectedInfo": "请先选择有效的rubric",
+      "overrideFieldListHeader": "警告",
+      "overrideFieldList": "将会重写当前的字段列表，是否继续？",
+      "formListTitle": "表单列表",
+      "formDetailsTitle": "表单明细",
+      "formFieldListTitle": "字段列表",
+      "entityFieldName": "字段名",
+      "entityVisibleName": "Visiblename",
+      "entityFieldType": "!Field Type",
+      "entitySqlQuery": "SQL查询",
+      "entityDataSource": "数据源",
+      "entityProcessingType": "处理类型",
+      "Error_SqlQueryDoesNotFulfillAllSpecifications": "请输入有效的SQL查询语句（例如'SELECT field FROM table WHERE id=@id'）",
+      "defaultContainerTitle": "表单数据",
+      "newWindow": "新窗口",
+      "popWindow": "弹出窗",
+      "tab": "此标签",
+      "editBy": "编辑方式"
+    }
+  }
+}

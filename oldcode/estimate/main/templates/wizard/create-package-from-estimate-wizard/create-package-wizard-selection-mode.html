@@ -1,0 +1,11 @@
+<div class="col-sm-12 platform-form-row">
+    <label class="col-sm-4" style="padding:5px 0px 0px;">{{ titleLabel | translate}}:</label>
+    <div class="radio spaceToUp col-sm-4">
+        <input type="radio" name="mode" value="2" data-ng-checked="entity.modeFlg==2" data-ng-disabled="isInclusiveModeReadonly"
+               data-ng-click="onModeResult(2)"><label>{{'estimate.main.createMaterialPackageWizard.inclusiveMode' | translate}}</label>
+    </div>
+    <div class="radio spaceToUp col-sm-4">
+        <input type="radio" name="mode" value="1" data-ng-checked="entity.modeFlg==1"
+               data-ng-click="onModeResult(1)"><label>{{'estimate.main.createMaterialPackageWizard.distinctMode' | translate}}</label>
+    </div>
+</div>

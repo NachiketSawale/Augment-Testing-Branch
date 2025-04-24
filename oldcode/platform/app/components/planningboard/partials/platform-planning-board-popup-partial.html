@@ -1,0 +1,26 @@
+<section class="modal-body overflow">
+	<div class="modal-wrapper">
+		<div class="flex-box flex-row">
+			<h3>{{pbPopup.headline}}</h3>
+		</div>
+		<div class="flex-box flex-row">
+			<h6>{{pbPopup.from}} - {{pbPopup.to}}</h6>
+		</div>
+		<div ng-class="{'margin-top-xld': $first}" class="flex-box flex-column margin-top-ld" ng-if="pbPopup.items"
+			ng-repeat="item in pbPopup.items">
+			<div class="flex-box flex-row">
+				<div class="margin-right-ld" ng-if="item.color" style="width: 17px"
+					ng-style="{'background-color': item.color}"></div>
+				<div ng-style="{'margin-top': isSumAggrigationPopup ? '-6px':'0px' }" class="flex-element"
+					ng-class="{'font-bold':isSumAggrigationPopup}"> {{item.label}} </div>
+				<div ng-style="{'margin-top': isSumAggrigationPopup ? '-6px':'0px' }" class="flex-element"
+					ng-if="item.value"> : {{item.value}} </div>
+			</div>
+		</div>
+
+		<div class="flex-box flex-row" ng-if="pbPopup.sumItem">
+			<div class="flex-element font-bold">{{pbPopup.sumItem.label}}</div>
+			<div class="flex-element font-bold">{{pbPopup.sumItem.value}}</div>
+		</div>
+	</div>
+</section>

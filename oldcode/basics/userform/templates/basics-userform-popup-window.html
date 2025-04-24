@@ -1,0 +1,12 @@
+<div class="flex-box flex-column flex-element">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body" style="height: 95%; width: 100%;">
+        <div class="flex-box flex-column flex-element filler subview-content" style="height: 100%; width: 100%;position:relative;">
+            <iframe credentialless id="user_form_assign_parameter_frame_pupop" name="user_form_assign_parameter_frame_pupop" style="border:none;height: 100%;width: 100%;"></iframe>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" id="userForm_popup_saveBtn" class="btn btn-default" data-ng-disabled="isOkBtnDisabled" data-ng-click="modalOptions.ok()">{{::'basics.common.button.save' | translate}}</button>
+        <button type="button" id="userForm_popup_cancelBtn" class="btn btn-default" data-ng-click="modalOptions.cancel(false)"> {{::'basics.common.button.cancel' | translate}}</button>
+    </footer>
+</div>

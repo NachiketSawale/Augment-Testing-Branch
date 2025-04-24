@@ -1,0 +1,39 @@
+.accordion-item {
+    position: relative;
+
+    .rw {
+        transition: background-color 0.2s ease-in, opacity 0.2s ease-in;
+        width: 100%;
+        padding: 6px 0;
+        border-bottom: 1px solid #bebebe;
+        text-align: left;
+    }
+
+    .rw-content {
+        padding-left: 4px;
+    }
+
+    .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+       
+        button {
+            width: 30px;
+            height: 30px;
+            background-size: 16px;
+           
+        }
+
+    }
+
+}
+
+.accordion-item:hover .right {
+display: flex;
+}
+
+.tree-accordion-item {
+width: 100%;
+}

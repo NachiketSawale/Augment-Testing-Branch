@@ -1,0 +1,5 @@
+<tabset class="tabsWrapper">
+	<tab data-ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+		<div data-ng-show="tab.active" data-platform-form-container data-form-container-options="tab.formContainerOptions" entity="tab.settings" class="fullheight"></div>
+	</tab>
+</tabset>

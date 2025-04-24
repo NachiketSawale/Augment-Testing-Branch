@@ -1,0 +1,106 @@
+html { font-family: sans-serif; }
+body { margin: 2em 2em; }
+form .group { margin-bottom: 0.5em; }
+form .group label { text-align: left; display: inline-block; vertical-align: middle; width: 10em; margin: 0.2em 1em 0.2em 0; }
+.tile { border-top: 1px solid #ccc; margin-top: 0em; }
+.formblock { margin-top: 1em; margin-bottom: 1em; }
+.picture { margin-top: 0.10em; margin-bottom: 0.1em; }
+.controls { border-top: 1px solid #ccc; margin-left: 0em; margin-top: 1em; }
+h1 { display: block; font-size: 2em; margin-top: 0.3em; margin-bottom: 0.1em; font-weight: bold; }
+.button {
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+	font-size: 100%;
+	padding: 0.5em 1em;
+	color: #444;
+	background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+	border: none;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+.button:hover,
+.button:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.button:focus { outline: 0; }
+.button-active,
+.button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000\9;
+}
+.button-primary,
+.button-selected
+{
+    background-color: rgb(0, 120, 231); color: #fff;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="url"],
+form input[type="date"],
+form input[type="month"],
+form input[type="time"],
+form input[type="datetime"],
+form input[type="datetime-local"],
+form input[type="week"],
+form input[type="number"],
+form input[type="search"],
+form input[type="tel"],
+form input[type="color"],
+form select,
+form textarea {
+	width: 24em;
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 0px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form input[type="url"]:focus,
+form input[type="date"]:focus,
+form input[type="month"]:focus,
+form input[type="time"]:focus,
+form input[type="datetime"]:focus,
+form input[type="datetime-local"]:focus,
+form input[type="week"]:focus,
+form input[type="number"]:focus,
+form input[type="search"]:focus,
+form input[type="tel"]:focus,
+form input[type="color"]:focus,
+form select:focus,
+form textarea:focus {
+    outline: 0; border-color: #129FEA;
+}
+form input:focus:invalid,
+form textarea:focus:invalid,
+form select:focus:invalid {
+    color: #b94a48;
+    border-color: #e9322d;
+}
+form input[type="file"]:focus:invalid:focus,
+form input[type="radio"]:focus:invalid:focus,
+form input[type="checkbox"]:focus:invalid:focus { outline-color: #e9322d; }
+form select { border: 1px solid #ccc; background-color: white; }
+form select[multiple] { height: auto; }

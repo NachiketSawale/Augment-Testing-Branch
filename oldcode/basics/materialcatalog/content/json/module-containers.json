@@ -1,0 +1,181 @@
+[
+  {
+    "id": "basics.materialcatalog.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.grid",
+    "controller": "basicsMaterialCatalogGridController",
+    "uuid": "DF77F013B424438AA053518CBACAFB01"
+  },
+  {
+    "id": "basics.materialcatalog.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.form",
+    "controller": "basicsMaterialCatalogDetailController",
+    "uuid": "E2F671C7F8A44E37809DC4D76B1B1617",
+    "permission": "DF77F013B424438AA053518CBACAFB01"
+  },
+  {
+    "id": "basics.materialcatalog.discountgroup.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.discountGroup",
+    "controller": "basicsMaterialCatalogDiscountGroupController",
+    "uuid": "B39602EC8D7B4A82A5F311BFFC79D3CE"
+  },
+  {
+    "id": "basics.materialcatalog.discountgroup.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.discountGroupDetail",
+    "controller": "basicsMaterialCatalogDiscountGroupDetailController",
+    "uuid": "79412E5126744A1B9F9E0A69ABB2682D",
+    "permission": "B39602EC8D7B4A82A5F311BFFC79D3CE"
+  },
+  {
+    "id": "basics.materialcatalog.group.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.group",
+    "controller": "basicsMaterialCatalogMaterialGroupController",
+    "uuid": "23485E272689454C91C109BECA46972E"
+  },
+  {
+    "id": "basics.materialcatalog.group.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.groupDetail",
+    "controller": "basicsMaterialCatalogMaterialGroupDetailController",
+    "uuid": "AA40536DF33E41659960EEE10756F8BB",
+    "permission": "23485E272689454C91C109BECA46972E"
+  },
+  {
+    "id": "basics.materialcatalog.groupchar.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.groupChar",
+    "controller": "basicsMaterialCatalogGroupCharController",
+    "uuid": "90F037F0E67A46BE90EB130ECB0B4FC6"
+  },
+  {
+    "id": "basics.materialcatalog.groupchar.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.groupCharDetail",
+    "controller": "basicsMaterialCatalogGroupCharDetailController",
+    "uuid": "D933BE681F6A43D19C81E83DD628DC7B",
+    "permission": "90F037F0E67A46BE90EB130ECB0B4FC6"
+  },
+  {
+    "id": "basics.materialcatalog.groupcharval",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.groupCharval",
+    "controller": "basicsMaterialCatalogGroupCharValController",
+    "uuid": "AABFF409DD4241A689B9F5BDC3C2B83A"
+  },
+  {
+    "id": "basics.materialcatalog.groupcharval.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.materialcatalog.HeadTitle.groupCharvalDetail",
+    "controller": "basicsMaterialCatalogGroupCharValDetailController",
+    "uuid": "3717EFA7CDD7416BBFD44B33FB89C7B2",
+    "permission": "AABFF409DD4241A689B9F5BDC3C2B83A"
+  },
+  {
+    "id": "basics.materialcatalog.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "303D9D5565314A398AF3E38AA825140B"
+  },
+  {
+    "id": "basics.materialcatalog.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "c22f79fb3d5641e38714267f9af3e672",
+    "controller": "",
+    "sectionId": "15",
+    "mainService":"basicsMaterialCatalogService"
+  },
+  {
+    "id": "basics.materialcatalog.documents.project.document.grid",
+    "template": "documents.project/partials/documentgridView.html",
+    "title": "cloud.common.documentsProject",
+    "controller": "documentsProjectDocumentController",
+    "uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "basics.materialcatalog.documents.project.revision.grid",
+    "template": "documents.project/partials/documentGridRevisionView.html",
+    "title": "cloud.common.documentsRevision",
+    "controller": "documentsProjectDocumentRevisionController",
+    "uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "basics.materialcatalog.documents.project.document.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsProjectForm",
+    "controller": "documentsProjectDocumentDetailController",
+    "uuid": "8BB802CB31B84625A8848D370142B95C",
+    "permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "basics.materialcatalog.documents.project.revision.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentsRevisionDetail",
+    "controller": "documentsProjectDocumentRevisionDetailController",
+    "uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+    "permission": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "project.main.documents.project.document.history.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentsProjectHistory",
+    "controller": "documentsProjectDocumentHistoryController",
+    "uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+  },
+  {
+    "id": "basics.materialcatalog.terms.conditions",
+    "template": "basics.materialcatalog/partials/terms-conditions-view.html",
+    "title": "basics.materialcatalog.termsAndConditions",
+    "controller": "basicsMaterialCatalogTermsConditionsController",
+    "uuid": "2CB780B98FC546D788271F25E003BF1A"
+  },
+  {
+    "id": "basics.materialcatalog.price.versions",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.priceVersions",
+    "controller": "basicsMaterialCatalogPriceVersionController",
+    "uuid": "3689be8afa314258af208f52a267ffcc"
+  },
+  {
+    "id": "basics.materialcatalog.price.versions.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.materialcatalog.priceVersionDetail",
+    "controller": "basicsMaterialCatalogPriceVersionDetailController",
+    "uuid": "c69805ec77924333b3014d95c229f5a7",
+    "permission": "3689be8afa314258af208f52a267ffcc"
+  },
+  {
+    "id": "basics.materialcatalog.priceVerion.company.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.priceVersionToCompanyTitle",
+    "controller": "basicsMaterialCatalogPriceVersion2CompanyControllerNew",
+    "uuid": "ca6906238266404285ede149c192b27b"
+  },
+  {
+    "id": "basics.materialcatalog.catalogtocompanys.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.materialcatalog.catToCompanysTitle",
+    "controller": "basicsMaterialCatalogCatToCompaniesController",
+    "uuid": "327f778df36d4c0181bfe3c3935121f7"
+  },
+  {
+    "id": "procurement.contract.documents.project.modelobject.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.documentAssignObject",
+    "controller": "documentsProjectModelObjectController",
+    "uuid": "7BACDAB1A06B439895ACBA767E42205E"
+  },
+  {
+    "id": "procurement.contract.documents.project.modelobject.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "cloud.common.documentAssignObjectFormTitle",
+    "controller": "documentsProjectModelObjectDetailController",
+    "uuid": "ee68ae76fefe4b758c282594a1746480",
+    "permission": "7BACDAB1A06B439895ACBA767E42205E"
+  }
+]

@@ -1,0 +1,24 @@
+﻿{
+	"timekeeping": {
+		"layout": {
+			"userInterfaceLayoutEntityName": "User Interface Layout",
+			"userInterfaceLayoutListTitle": "User Interface Layout List",
+			"userInterfaceLayoutDetailTitle": "User Interface Layout Detail",
+			"inputPhaseGroupListTitle": "Input Phase Groups",
+			"inputPhaseGroupDetailTitle": "Input Phase Group Details",
+			"inputPhaseListTitle": "Input Phases",
+			"inputPhaseDetailTitle": "Input Phase Details",
+			"timeSymbolListTitle": "Time Symbols",
+			"timeSymbolDetailTitle": "Time Symbol Details",
+			"minCount": "Minimum Count",
+			"maxCount": "Maximum Count",
+			"durationMode": "Duration Mode",
+			"timeSymbolUi": "Time Symbol Representation",
+			"inputChainMode": "Chaining Mode",
+			"modificationFactor": "Modification Factor",
+			"modificationDelta": "Modification Delta",
+			"chainedTimeSymbol": "Chained Time Symbol",
+			"timekeepingLayoutInputPhaseGroupEntity": "Input Phase Groups"
+		}
+	}
+}

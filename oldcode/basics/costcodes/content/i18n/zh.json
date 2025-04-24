@@ -1,0 +1,35 @@
+﻿{
+	"basics": {
+		"costcodes": {
+			"description2":"深入描述",
+			"costCodeTypes":"成本类型",
+			"costType":"!Cost Type",
+			"abcClassification": "Abc分类",
+			"costCodePortions":"成本配分",
+			"costGroupPortions":"成本组别分配",
+			"uoM":"UoM",
+			"currency":"币种",
+			"factorCosts":"因素(成本)",
+			"factorQuantity":"因素(数量)",
+			"realFactorCosts":"真实因素(成本)",
+			"realFactorQuantity":"其实因素(数量)",
+			"rate":"市场价",
+			"dayWorkRate":"DW/T+M价",
+			"isLabour": "人工成本代码",
+			"isRate": "固定单价",
+			"costCodes":"成本代码",
+			"costCodesDetails":"成本代码明细",
+			"costCodesTranslation":"成本代码翻译",
+		  	"assignments":"分配",
+		  	"translation":"翻译",
+            "prcStructure":"采购结构",
+			"moduleDisplayNameCostCodes":"Basics CostCodes",
+			"checked":"checked",
+			"company":"Used In Company",
+			"companyName":"Company Name",
+			"prcStructureDescription":"Procurement Structure Description",
+			"resType":"Resource Type",
+			"resourceContext":"Resource Context"
+		}
+	}
+}

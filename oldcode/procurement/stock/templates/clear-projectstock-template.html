@@ -1,0 +1,63 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+	<h2>{{'procurement.stock.wizard.Attention' | translate}}</h2>
+	<p>{{'procurement.stock.wizard.AttentionContent' | translate}}
+		<br>{{'procurement.stock.wizard.AttentionContent1' | translate}}</p>
+
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="inputOpen">
+			<div data-accordion-heading>
+				<span>{{'procurement.stock.moduleName' | translate}}</span>
+				<div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+			</div>
+			<div>
+				<div class="platform-form-group platform-lg">
+					<div data-platform-grid class="subview-container" data="gridData"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="inputOpen">
+			<div data-accordion-heading>
+				<span>{{'procurement.stock.wizard.ClearSetting' | translate}}</span>
+				<div class="toggleImg control-icons" data-ng-class="inputOpen ? 'ico-up' : 'ico-down'"></div>
+			</div>
+			<div>
+				<div class="platform-form-group platform-lg">
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{'procurement.stock.wizard.TransactionDate' | translate}}</label>
+						<div class="platform-form-col">
+							<div class="form-control" data-domain-control data-domain="dateutc"
+							     data-ng-model="context.TransactionDate"></div>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{'procurement.stock.wizard.TransactionType' | translate}}</label>
+
+						<div class="platform-form-col">
+							<div data-ng-model="context.TransactionTypeId"
+							     data-entity="context"
+							     data-options="config.TransactionType"
+							     procument-pes-stock-transactiontype-lookup-diaglog>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div cloud-common-overlay data-loading="isLoading" data-info="loadingInfo"></div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default"
+	        data-ng-repeat="button in currentStep.buttons"
+	        data-ng-bind="button.label | translate"
+	        data-ng-disabled="button.disable && button.disable()"
+	        data-ng-click="button.action()">
+	</button>
+</footer>

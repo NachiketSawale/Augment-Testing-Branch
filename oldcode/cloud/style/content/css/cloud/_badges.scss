@@ -1,0 +1,72 @@
+//
+// Badges
+// --------------------------------------------------
+
+
+// Base class
+.badge {
+	display: inline-block;
+	min-width: 10px;
+	padding: 3px 7px;
+	font-size: $size-font-small;
+	color: $color-primary-fore;
+	line-height: 1;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-align: center;
+	background-color: $badge-bg;
+	border-radius: $badge-border-radius;
+
+	// Empty badges collapse automatically (not available in IE8)
+	&:empty {
+		display: none;
+	}
+
+	&.badge-rib-color {
+		//used in workflow send rfq dialog
+		min-width: 26px;
+		border-radius: 5px;
+		padding: 3px;
+		background-color: $color-rib;
+	}
+
+	// Quick fix for badges in buttons
+	.btn & {
+		position: relative;
+		top: -1px;
+	}
+	.btn-xs & {
+		top: 0;
+		padding: 1px 5px;
+	}
+
+	// [converter] extracted a& to a.badge
+
+	// Account for badges in navs
+	a.list-group-item.active > &,
+	.nav-pills > .active > a > & {
+		color: $color-link;
+		background-color: $color-primary-fore;
+	}
+	.nav-pills > li > a > & {
+		margin-left: 3px;
+	}
+}
+
+// Hover state, but only for links
+a.badge {
+	&:hover,
+	&:focus {
+		color: $color-link;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+.badge-info {
+	@include badge(20px, 10px, #0067b1, #f1f7fa, 40px, 8px, 5px);
+
+	&.action {
+		padding-right: 16px;
+	}
+}

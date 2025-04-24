@@ -1,0 +1,51 @@
+<header class="modal-header main-color">
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="modalOptions.close()" aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+    </button>
+    <h2 class="modal-title">{{ modalOptions.headerText }}</h2>
+</header>
+<section class="modal-body">
+    <div class="input-group form-control margin-bottom-ld exclude-resize">
+        <input type="text" data-ng-model="searchValue" class="input-group-content"
+               data-ng-keydown="onSearchInputKeydown($event, searchValue)"/>
+        <span class="input-group-btn">
+			   <button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="search(searchValue)"></button>
+		  </span>
+    </div>
+
+    <div id="assemblytemplateSplitter" data-platform-kendo-splitter-adjust class="modal-wrapper border-none">
+        <div id="ui-layout-east" class="modal-wrapper border-none" data-ng-controller="estimateMainResGroupDialogLookupController">
+            <div class="pane-l flex-element flex-box flex-column subview-container">
+                <platform-Grid data="gridData"></platform-Grid>
+                <div cloud-common-overlay data-loading="isLoading"></div>
+            </div>
+        </div>
+        <div id="ui-layout-west" class="modal-wrapper" data-ng-controller="estimateMainResResourceDialogLookupController">
+            <div class="pane-r flex-element flex-box flex-column subview-container">
+                <platform-Grid data="gridData"></platform-Grid>
+                <div cloud-common-overlay data-loading="isLoading"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <div class="custom-group">
+        <label class="ms-checkbox-multi-select" data-ng-show="settings.gridOptions.multiSelect">
+            <input type="checkbox" data-ng-model="enableMultiSelection" data-ng-click="modalOptions.onMultipleSelection(enableMultiSelection)">
+            {{ 'estimate.main.resourceAssemblyPopupMultipleSelection' | translate }} -
+            {{ enableMultiSelection ? modalOptions.selectedItems.length : 0 }}
+            {{ 'estimate.main.resourceAssemblyPopupItemsSelected' | translate }}
+        </label>
+    </div>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.refresh()">
+        {{modalOptions.refreshButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disableOkButton"
+            data-ng-click="modalOptions.ok()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

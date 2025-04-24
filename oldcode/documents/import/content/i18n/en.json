@@ -1,0 +1,39 @@
+{
+  "documents":{
+    "import":{
+      "headertitle":"Document Import",
+      "entityBarCode":"BarCode",
+      "entityCommentText":"Comment Text",
+      "entityFileArchiveDoc":"Origin File Name",
+      "wizard":{
+        "documentsImport":"Documents Import",
+        "assignmentAgain":"Try assignment again",
+        "importDialogHeaderText":"Documents Import",
+        "importDialogTitleText":"Select Files",
+        "checkboxHeaderText":"Select",
+        "generic": "Generic Wizard"
+      },
+      "errorMessage":"Error Message",
+      "loggingMessage":"LoggingMessage",
+      "importTask":"Import Document Task",
+      "jobState":"Job State",
+      "startTime":"Start Time",
+      "endTime":"End Time",
+      "progressValue":"Progress Value",
+      "deleteAllReImportTask":"Delete out useless Task",
+      "deleteOne":"Only Delete Selected",
+      "documentImport":"Import Documents From Xml",
+      "assignment":"Assignment",
+      "result":"Import Logging",
+      "importStatus":"Import Status",
+      "barCode":"BarCode",
+      "xmlName":"Xml Name(s)",
+      "file":"File Name",
+      "warningMessage":"Warning Message",
+      "next":"Next Record",
+      "pre":"Previous Record",
+      "description":"Description",
+      "error":"Error Message"
+    }
+  }
+}

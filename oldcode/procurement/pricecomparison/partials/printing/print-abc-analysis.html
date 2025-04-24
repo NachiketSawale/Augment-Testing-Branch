@@ -1,0 +1,122 @@
+<fieldset style="border:1px solid #dcdcdc;border-radius:3px;min-height: 240px;">
+    <div class="platform-lg platform-form-group" style="padding-top: 30px;padding-left: 40px;"
+         data-ng-controller="printAbcAnalysisController">
+        <div class="platform-form-row">
+            <div class="platform-form-col">
+                <div class="lg-4">
+                    <label class="platform-form-label"  style="font-weight: bold">{{'procurement.pricecomparison.printing.baseTotal'| translate}}</label>
+                    <div class="platform-form-col">
+                        <span class="form-control" data-domain-control data-domain="select"
+                              data-model="settings.filterBasis.selectedValue"
+                              data-options="settings.filterBasis.options" data-change="settings.filterBasis.onChange()">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-offset-1 col-md-offset-1 lg-7">
+                    <div class="lg-12">
+                        <label class="platform-form-label" style="font-weight: bold">{{'procurement.pricecomparison.printing.printCriteria'| translate}}</label>
+                    </div>
+
+                    <div class="lg-12">
+                        <div class="lg-6">
+                            <div class="radio spaceToUp">
+                                <label class="platform-form-label" style="white-space: normal;">
+                                    <input type="radio"
+                                           name="criteriaGroup"
+                                           value="1"
+                                           data-ng-model="settings.criteria.selectedValue"
+                                           ng-click="settings.criteria.onSelectChanged(settings.criteria.selectedValue)"/>
+                                    {{'procurement.pricecomparison.printing.printAll'| translate}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg-12">
+                        <div class="lg-6">
+                            <div class="radio spaceToUp">
+                                <label class="platform-form-label" style="white-space: normal;">
+                                    <input type="radio"
+                                           name="criteriaGroup"
+                                           value="2"
+                                           data-ng-model="settings.criteria.selectedValue"
+                                           ng-click="settings.criteria.onSelectChanged(settings.criteria.selectedValue)"/>
+                                    {{'procurement.pricecomparison.printing.printUntil' | translate}}
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="lg-6" style="margin-top: 4px;">
+                            <div style="display: inline;">
+                                <div data-domain-control data-domain="percent" title="TotalPercent"
+                                     data-model="settings.criteria.totalPercent"
+                                     data-ng-model="settings.criteria.totalPercent" data-ng-value="settings.criteria.totalPercent"
+                                     style="width: 50px; height: 24px; vertical-align: bottom;display: inline;text-align: left!important;"
+                                     data-change="settings.filterBasis.onChange()">
+                                </div>
+                            </div>
+                            <span>{{'procurement.pricecomparison.printing.totalBoq'| translate}}</span>
+                        </div>
+                    </div>
+
+                    <div class="lg-12">
+                        <div class="lg-6">
+                            <div class="radio spaceToUp">
+                                <label class="platform-form-label" style="white-space: normal;">
+                                    <input type="radio"
+                                           name="criteriaGroup"
+                                           value="3"
+                                           data-ng-model="settings.criteria.selectedValue"
+                                           ng-click="settings.criteria.onSelectChanged(settings.criteria.selectedValue)"/>
+                                    {{'procurement.pricecomparison.printing.printAtLeast' | translate}}
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="lg-6" style="margin-top: 4px;">
+                            <div style="display: inline;">
+                                <div data-domain-control data-domain="percent" title="SinglePercent"
+                                     data-model="settings.criteria.singlePercent"
+                                     data-ng-model="settings.criteria.singlePercent" data-ng-value="settings.criteria.singlePercent"
+                                     style="width: 50px; height: 24px;vertical-align: bottom;display: inline;text-align: left!important;"
+                                     data-change="settings.filterBasis.onChange()">
+                                </div>
+                            </div>
+                            <span>{{'procurement.pricecomparison.printing.totalBoq'| translate}}</span>
+                        </div>
+                    </div>
+
+                    <div class="lg-12">
+                        <div class="lg-6">
+                            <div class="radio spaceToUp">
+                                <label class="platform-form-label" style="white-space: normal;">
+                                    <input type="radio"
+                                           name="criteriaGroup"
+                                           value="4"
+                                           data-ng-model="settings.criteria.selectedValue"
+                                           ng-click="settings.criteria.onSelectChanged(settings.criteria.selectedValue)"/>
+                                    {{'procurement.pricecomparison.printing.printAtLeast' | translate}}
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="lg-6" style="margin-top: 4px;">
+                            <div style="display: inline;">
+                                <div data-domain-control data-domain="percent" title="Amount"
+                                     data-model="settings.criteria.amount"
+                                     data-ng-model="settings.criteria.amount" data-ng-value="settings.criteria.Amount"
+                                     style="width: 80px; height: 24px; vertical-align: bottom;display: inline;text-align: left!important;"
+                                     data-change="settings.filterBasis.onChange()">
+                                </div>
+                            </div>
+                            <span>{{'procurement.pricecomparison.printing.amount'| translate}}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</fieldset>

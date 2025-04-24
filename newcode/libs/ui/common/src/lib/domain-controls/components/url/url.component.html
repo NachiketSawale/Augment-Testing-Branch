@@ -1,0 +1,14 @@
+<div class="form-control">
+	<input type="url" debounceChanged [attr.id]="controlContext.fieldId" [attr.name]="controlContext.fieldId"
+		[placeholder]="urlExample"
+		[disabled]="controlContext.readonly" class="input-group-content" [formControl]="urlString"
+		[(ngModel)]="controlContext.value"/>
+	<div class="input-group-btn">
+		<button (click)="openUrl($event)" target="_blank"
+			class="btn btn-default control-icons ico-domain-url" [class.disabled]="isNavigationDisabled()"></button>
+	</div>
+</div>
+<span class="invalid-cell invalid-form"
+	*ngIf="hasError()">
+	{{errorMessage	| platformTranslate : { example: urlExample } }}
+</span>

@@ -1,0 +1,7 @@
+.map-polygon-wrapper .map-polygon-overlay {
+	position: absolute;
+	top:0;
+	left:0;
+	background-color: transparent;
+	z-index: 1;
+}

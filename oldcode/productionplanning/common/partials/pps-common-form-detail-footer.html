@@ -1,0 +1,20 @@
+<button ng-if="modalOptions.isShown('applyAll')" class="applyAll btn"
+        data-ng-class="(modalOptions.defaultButton === 'applyAll') ? 'btn-return' : 'btn-default'"
+        data-ng-click="modalOptions.applyAll()"
+        data-ng-disabled="modalOptions.isDisabled('applyAll')" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+	{{modalOptions.applyAllBtnText}}
+</button>
+
+<button ng-if="modalOptions.isShown('ok')" class="ok btn"
+        data-ng-class="(modalOptions.defaultButton === 'ok') ? 'btn-return' : 'btn-default'"
+        data-ng-click="modalOptions.ok()"
+        data-ng-disabled="modalOptions.isDisabled('ok')" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+	{{modalOptions.okBtnText}}
+</button>
+
+<button ng-if="modalOptions.isShown('cancel')" class="cancel btn"
+        data-ng-class="(modalOptions.defaultButton === 'cancel') ? 'btn-return' : 'btn-default'"
+        data-ng-click="modalOptions.cancel()"
+        data-ng-disabled="modalOptions.isDisabled('cancel')" data-ng-mousemove="modalOptions.btnMouseMoveHandler($event)">
+	{{modalOptions.cancelBtnText}}
+</button>

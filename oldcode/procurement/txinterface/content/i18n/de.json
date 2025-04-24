@@ -1,0 +1,28 @@
+{
+	"procurement": {
+		"txinterface": {
+			"entityFormSatz": "Formularsatz"
+			,"importPopupTitle": "Anfrage veröffentlichen"
+			,"exportPopupTitle": "Bieterangebote importieren"
+			,"error":
+			{
+				"RfqMustHaveExactOneRequisition": "Eine Anfrage mit mehreren oder keinem Bedarf wird von der iTWO tx Plattform nicht unterstützt!"
+				,"RfqMustHaveAtLeastOneBoQ": "Eine Anfrage mit mehreren oder keinem LV wird von der iTWO tx Plattform nicht unterstützt!"
+				,"NoBidderQuotesAvailable": "Es sind keine Bieterangebote vorhanden!"
+			},
+			"message": {
+				"importSuccessful": "Die Anfrage wurde erfolgreich veröffentlicht.",
+				"exportSuccessful": "Die ausgewählten Bietenangebote wurden erfolgreich importiert."
+			}
+			,"BidderNo": "Bieter Nr."
+			,"AVAID": "AVAID"
+			,"BidderName": "Bieter Name"
+			,"BidderStreet": "Bieter Straße"
+			,"BidderPCode": "Bieter Plz"
+			,"BidderCity": "Bieter Ort"
+			,"DocumentType": "Dokumententyp"
+			,"DocumentDate": "Dokumentendatum",
+			"ActivityStreamContainerTitle": "iTWO tx Activity Stream"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+<div class="entity-filter-result-pagination">
+	<div class="page-size-info flex-box">
+		<span>{{'basics.shared.resultsPerPage' | platformTranslate}}</span>
+		<ng-container *ngIf="hasPageSizeList; else pageSizeSpanHtml">
+			<button #btnPageSize class="btn btn-default" (click)="togglePageSizeList()">
+				<span class="btn-fulltext-text" [title]="pageInfo.PageSize">{{ pageInfo.PageSize }}</span>
+				<span class="btn-fulltext-ico control-icons ico-down"></span>
+			</button>
+		</ng-container>
+		<ng-template #pageSizeSpanHtml>
+			<span>{{ pageInfo.PageSize }}</span>
+		</ng-template>
+	</div>
+	<div *ngIf="pageInfo.EntitiesFound" class="pagination-group-btn">
+		<button class="tlb-icons ico-rec-first" [disabled]="!backwardEnabled" (click)="first()"></button>
+		<button class="control-icons ico-previous" [disabled]="!backwardEnabled" (click)="prev()"></button>
+		<span>{{ getPageInfoText }}</span>
+		<button class="control-icons ico-next" [disabled]="!forwardEnabled" (click)="next()"></button>
+		<button class="tlb-icons ico-rec-last" [disabled]="!forwardEnabled" (click)="last()"></button>
+	</div>
+</div>

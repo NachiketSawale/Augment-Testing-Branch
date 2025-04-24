@@ -1,0 +1,13 @@
+<ui-common-popup>
+	<div content class="combo-viewport flex-element">
+		<ui-common-grid
+			[configuration]="configuration"
+			(selectionChanged)="selectionChanged($event)"
+		>
+		</ui-common-grid>
+		<ui-common-loading [loading]="loading"></ui-common-loading>
+	</div>
+	<div footer class="popup-tlb">
+		<button class="control-icons ico-refresh" title="Refresh" (click)="refresh()" [disabled]="loading"></button>
+	</div>
+</ui-common-popup>

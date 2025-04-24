@@ -1,0 +1,32 @@
+[
+	{
+		"id": "logistic.plantsupplier.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.plantsupplier.plantsupplierListTitle",
+		"controller": "logisticPlantSupplierListController",
+		"uuid": "e3d637f3ac74405d9b1bb6ad9e657533"
+	},
+	{
+		"id": "logistic.plantsupplier.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.plantsupplier.plantsupplierDetailTitle",
+		"controller": "logisticPlantSupplierDetailController",
+		"uuid": "ab47bC6a89d94ff5b6099ba32c4a584c",
+		"permission": "e3d637f3ac74405d9b1bb6ad9e657533"
+	},
+	{
+		"id": "logistic.plantsupplier.item.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.plantsupplier.plantSupplyItemListTitle",
+		"controller": "logisticPlantSupplyItemListController",
+		"uuid": "6b48b5efc7074d6b970212972b484139"
+	},
+	{
+		"id": "logistic.plantsupplier.item.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.plantsupplier.plantSupplyItemDetailTitle",
+		"controller": "logisticPlantSupplyItemDetailController",
+		"uuid": "5f1bee9c5ae844889ab4b40d47535a12",
+		"permission": "6b48b5efc7074d6b970212972b484139"
+	}
+]

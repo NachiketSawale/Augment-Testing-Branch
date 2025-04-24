@@ -1,0 +1,1 @@
+This is the payment area of the basics payment module.

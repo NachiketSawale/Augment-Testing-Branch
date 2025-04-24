@@ -1,0 +1,40 @@
+<div class="input-group form-control">
+    <input #input type="text" [(ngModel)]="userInput" class="form-control" (keydown)="handleUserInput($event)" />
+    <span class="input-group-btn" style="margin-left: -1px;">
+       <button class="btn btn-default input-sm btn-search tlb-icons ico-search" (click)="search(userInput)" title="search"></button>
+    </span>
+</div>
+<div *ngIf="lookupFacade.paging.enabled">
+    <div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+        <div class="form-control flex-align-center" style="border: none;">
+            <div class="input-group-content" [innerText]="lookupFacade.paging.getPageInfo()"></div>
+        </div>
+        <span class="input-group-btn">
+            <button class="btn btn-default" [disabled]="!lookupFacade.paging.canPrev()" (click)="loadPreviousPage()" style="border: none;">
+                <span class="control-icons ico-previous"></span>
+            </button>
+            <button class="btn btn-default" [disabled]="!lookupFacade.paging.canNext()" (click)="loadNextPage()" style="border: none;">
+                <span class="control-icons ico-next"></span>
+            </button>
+        </span>
+    </div>
+</div>
+<ui-common-grid-dialog-search-form
+	*ngIf="searchForm && searchForm.visible !== false"
+	[config]="searchForm"
+	[entity]="lookupContext.entity"
+></ui-common-grid-dialog-search-form>
+<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden" style="width: 600px;">
+    <div class="subview-header toolbar">
+        <h2 class="title fix" title="{{'cloud.common.searchResults' | platformTranslate}}">{{'cloud.common.searchResults' | platformTranslate}}</h2>
+    </div>
+    <div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden" [ngClass]="'cid_' + uuid">
+        <ui-common-grid [configuration]="gridConfig" (selectionChanged)="handleSelectionChanged($event)"></ui-common-grid>
+        <ui-common-loading [loading]="isLoading"></ui-common-loading>
+    </div>
+</div>
+<div *ngIf="alerts && alerts.length>0">
+    <div class="lookup-alert" [class]="alert.cssClass" *ngFor="let alert of alerts">
+        <span [innerText]="alert.title | platformTranslate"></span>: <span [innerText]="alert.message | platformTranslate"></span>
+    </div>
+</div>

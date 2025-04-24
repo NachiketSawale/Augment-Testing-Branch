@@ -1,0 +1,20 @@
+<div data-ng-controller="documentsProjectFileDefaultPreviewProgramController" class="flex-element flex-box flex-column fullheight">
+    <header class="modal-header main-color"
+            data-ng-include="'modaldialog/modaldialog-header-template.html'">
+    </header>
+    <section class="modal-body flex-element fullheight">
+        <div class="flex-box flex-column fullheight">
+            <platform-grid data="gridData"></platform-grid>
+        </div>
+    </section>
+    <footer class="modal-footer">
+	    <div class="custom-group">
+		    <label class="ms-checkbox-multi-select">
+			    <input type="checkbox" data-ng-model="isThisTab">
+			    {{ 'basics.common.document.isThisTab' | translate }}
+		    </label>
+	    </div>
+        <button type="button" class="btn btn-default" data-ng-click="onOK()">{{::'cloud.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

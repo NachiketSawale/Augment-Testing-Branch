@@ -1,0 +1,12 @@
+.dropdown-menu-open {
+	display: block !important;
+	box-shadow: none;
+	margin-right: 10px;
+}
+
+.sidebar-icon {
+	margin-left: 0px;
+	margin-bottom: 235px;
+	margin-top: 0px;
+	margin-right: 0px;
+}

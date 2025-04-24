@@ -1,0 +1,12 @@
+<div class="flex-box flex-column flex-element">
+	<div class="dialog-container">
+		<label for="location-dropdown">{{'cloud.desktop.searchFormWizard.step3.labelLocation' | platformTranslate}}</label>
+		<select [(ngModel)]="dialogValues.locationValue" id="location-dropdown" class="input-type">
+			<option *ngFor="let option of locationOptions" [value]="option">{{option}}</option>
+		</select>
+	</div>
+	<div class="dialog-container">
+		<label for="text-input">{{'cloud.desktop.taskList.groupOrSortingSettingnameLabelText' | platformTranslate}}</label>
+		<input placeholder="New setting name" [(ngModel)]="dialogValues.settingName" type="text" id="text-input" class="input-type">
+	</div>
+</div>

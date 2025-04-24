@@ -1,0 +1,14 @@
+<div ng-controller="estimateMainModifyResourceSpecifyResourceController">
+    <div class="flex-box">
+        <div class="flex-element" style="margin-top: 1px;">
+            <div data-platform-form data-form-options="formOptionsSpectifyType" entity="entity"></div>
+        </div>
+
+        <div class="flex-element margin-left-ld">
+            <div data-platform-form data-form-options="formOptionsSpectifyLookup" entity="entity"></div>
+        </div>
+    </div>
+    <div class="flex-box" data-ng-if="entity.isShowJob">
+        <div data-platform-form data-form-options="formOptionsJobLookup" entity="entity"></div>
+    </div>
+</div>

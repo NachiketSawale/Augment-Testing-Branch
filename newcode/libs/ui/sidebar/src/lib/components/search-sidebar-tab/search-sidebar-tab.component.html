@@ -1,0 +1,14 @@
+<div class="content">
+	<div>
+		<ui-sidebar-title [toolbarData]="searchOptions.toolBarDefs"
+			[title]="'cloud.desktop.sdCmdBarSearch' | platformTranslate "></ui-sidebar-title>
+	</div>
+
+	<div class="content-inner">
+		<div class="searchWrapper">
+			<div *ngIf="searchOptions.searchType === 'google'">
+				<ui-sidebar-simple-search></ui-sidebar-simple-search>
+			</div>
+		</div>
+	</div>
+</div>

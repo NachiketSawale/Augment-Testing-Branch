@@ -1,0 +1,10 @@
+/* removes the following additional pages as there are already shown in other places, e.g. getting started */
+/* howToUse.md -> getting started */
+#additional-pages a[href*="how-to-use"] {
+	display: none !important;
+}
+/* menu title */
+nav .homepage > img {
+	margin-right: 6px;
+	width: 30px;
+}

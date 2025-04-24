@@ -1,0 +1,29 @@
+<div ng-controller="procurementCommonTextReplacementDialogController">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<h3 class="margin-top-ld">{{modalOptions.beforeReplacement}}</h3>
+		<div class="wysiwyg-editor filler" style="border: 1px solid #1c2e3f">
+			<textarea id="headerTextAreaBeforeReplace" name="headerTextAreaBeforeReplace" class="k-content-frame" data-ng-model="data.source"
+			          data-ng-readonly="true" style="padding-left:2px;height:250px">
+			</textarea>
+		</div>
+		<h3 class="margin-top-ld">{{modalOptions.afterReplacement}}</h3>
+		<div class="wysiwyg-editor filler" style="border: 1px solid #1c2e3f">
+			<textarea id="headerTextAreaAfterReplace" name="headerTextAreaAfterReplace" class="k-content-frame" data-ng-model="data.replaced"
+			          data-ng-readonly="true" style="padding-left:2px;height: 250px">
+			</textarea>
+		</div>
+		<h4 class="margin-top-ld">{{modalOptions.note}}</h4>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+			{{modalOptions.replaceBtn}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="progress.isReplacing" data-info="progress.info"></div>
+</div>

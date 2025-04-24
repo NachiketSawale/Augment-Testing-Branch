@@ -1,0 +1,115 @@
+// Placeholder for background-icons to move the text away from the border, so that the icon has place
+@mixin icon-placeholder-left($padding-left: $padding-medium-horizontal, $icon-size: $size-icon) {
+	//             space to left element + icon-size + space to following elements
+	padding-left: ($padding-left + $icon-size + $padding-small-horizontal);
+	background-position: $padding-left center;
+
+	background-size: $size-icon $size-icon;
+}
+
+//css like a tollbar
+@mixin container-bar-variant($color) {
+	background-color: $color;
+	display: flex;
+	justify-content: center;
+	border-bottom: $border-width-default solid  $color-border;
+	height: $toolbar-height;
+
+	button {
+		height: $toolbar-height;
+		width: $tabbar-button-width;
+		background-size: $size-icon $size-icon;
+
+		&.border-right {
+			border-right: $border-width-default solid $color-body-background;
+		}
+
+		&.border-left {
+			border-left: $border-width-default solid $color-body-background;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+
+		&.wrapper {
+			width: inherit;
+			padding: 0 $padding-large-horizontal;
+		}
+	}
+}
+
+@mixin img-overlay($top, $right, $bottom, $left) {
+	@include container-position($top, $right, $bottom, $left);
+	pointer-events: none;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px white, 1px -1px 1px white, -1px 1px 1px white, -1px -1px 1px white;
+}
+
+@mixin container-position($top, $right, $bottom, $left, $transformX: 0%, $transformY: 0%) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	transform: translate($transformX, $transformY);
+}
+
+@mixin special-grid-styles() {
+	.slick-cell {
+		&:before {
+			/* none batchcopy function in dialog grids */
+			background-color: transparent !important;
+			border: none !important;
+		}
+		&:hover {
+			button {
+				&.navigator-button {
+					display: inline;
+				}
+			}
+		}
+	}
+}
+
+@mixin list-of-icons($width, $height, $backgroundSize, $hover: backgroundHover) {
+	@include size($width, $height);
+	vertical-align: middle;
+	background-size: $backgroundSize $backgroundSize;
+
+	@if $hover == iconHover {
+		background: none;
+
+		svg {
+			--icon-color-1: #555;
+			--icon-color-8: #555;
+			@include square($backgroundSize);
+		}
+
+		&:hover {
+			color: #005fa3;
+			background: none;
+			* {
+				color: #005fa3;
+				--icon-color-1: #005fa3;
+				--icon-color-8: #005fa3;
+				cursor: pointer;
+
+				&::before,
+				&::after {
+					background-color: #005fa3;
+				}
+			}
+		}
+
+		&.active {
+			color: #004a7f;
+			background: none;
+			* {
+				color: #004a7f;
+				--icon-color-1: #004a7f;
+				--icon-color-8: #004a7f;
+			}
+		}
+	}
+}

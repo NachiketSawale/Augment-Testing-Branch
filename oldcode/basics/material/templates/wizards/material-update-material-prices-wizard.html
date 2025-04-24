@@ -1,0 +1,257 @@
+<div class="modal-wrapper" data-ng-controller="basicsMaterialUpdateMaterialPricesWizardController" >
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{initialOptions.titleText}}</h2>
+        <button class="close db" data-dismiss="modal" data-ng-click="$close(false)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body" ng-if="initialOptions.step ===1" style="margin-top: 1em;">
+        <div class="platform-form-label">
+            <h5>{{'basics.material.updatePriceWizard.materialScope' | translate}}</h5>
+        </div>
+        <div class="platform-form-row" style="padding-left: 5em;">
+            <div class="platform-form-label">
+                <label>
+                    <input type="radio"
+                           data-name="updateOption"
+                           data-ng-value= 'initialOptions.radioValue.selectedMaterial'
+                           data-ng-model="initialOptions.radioOption"
+                           data-ng-disabled="!initialOptions.selectedCatalogId" />
+                    {{'basics.material.updatePriceWizard.highlightedMaterial' | translate}}
+                </label>
+            </div>
+            <div class="platform-form-label">
+                <label>
+                    <input type="radio"
+                           data-name="updateOption"
+                           data-ng-value='initialOptions.radioValue.material'
+                           data-ng-model="initialOptions.radioOption"
+                           data-ng-disabled="!initialOptions.setCatalogId" />
+                    {{'basics.material.updatePriceWizard.materialResultSet' | translate}}
+                </label>
+            </div>
+            <div class="platform-form-label">
+                <label>
+                    <input type="radio"
+                           data-name="updateOption"
+                           data-ng-value='initialOptions.radioValue.catalog'
+                           data-ng-model="initialOptions.radioOption"
+                           data-ng-disabled="!initialOptions.catalogId"/>
+                    {{'basics.material.updatePriceWizard.highlightedCatalog' | translate}}
+                </label>
+            </div>
+        </div>
+        <div class="platform-form-row" style="margin-top: 2em; color: darkred"
+             ng-if="(initialOptions.radioOption === 1 || initialOptions.radioOption === 2) && initialOptions.isNotFromSameCatalog === true">
+            {{'basics.material.updatePriceWizard.refineSelection' | translate}}
+        </div>
+        <div class="platform-form-row" style="margin-top: 2em; color: darkred"
+             ng-if="initialOptions.catalogIsInternet === true && initialOptions.isNotFromSameCatalog === false">
+            {{'basics.material.updatePriceWizard.cannotUpdateInternetMaterial' | translate}}
+        </div>
+    </section>
+    <section class="modal-body" ng-if="initialOptions.step ===2" style="padding-left: 1em;">
+        <div class="platform-form-group platform-lg" style="margin: .3em auto 0.1em">
+            <div class="platform-form-row">
+                <div class="lg-1 md-1" style="width: 5%;max-width: 5em;">
+                    <div class="platform-form-label">
+                        {{initialOptions.fromLabel}}:
+                    </div>
+                </div>
+                <div class="lg-1 md-1" style="max-width: 8em; width: 9%;">
+                    <div class="checkbox spaceToUp" style="max-width: 6.5em;  padding-right: .3em">
+                        <label>
+                            <input type="checkbox"
+                                   name="quoteStatus"
+                                   data-ng-model="currentItem.isCheckQuote" style="margin-top: .1em">
+                            {{initialOptions.quotationLabel}}
+                        </label>
+                    </div>
+                </div>
+                <div class="lg-3 md-3" style="width: 26.4%;">
+                    <div basics-material-quote-status-combobox
+                             data-ng-model='currentItem.quoteStatusFk'></div>
+                </div>
+                <div class="lg-6 md-6" style="padding-right: 0;">
+                    <div style="width: 100%; overflow: hidden;">
+                        <div class="lg-1 md-1" style="max-width: 3.5em; margin-left: 1.5em;">
+                            <div class="platform-form-label">
+                                {{initialOptions.startLabel}}
+                            </div>
+                        </div>
+                        <div class="lg-4 md-4">
+                            <div data-domain-control class="form-control"
+                                 data-domain="dateutc"
+                                 data-entity="currentItem"
+                                 data-ng-model="currentItem.quoteStartDate"
+                                 data-model="currentItem.quoteStartDate"
+                                 data-config="entityConfigs.quoteStartConfig"
+                                 data-dirty="true">
+                            </div>
+                            <!--<div ng-class="entityConfigs.quoteDateConfig.rt$hasError() ? 'invalid-cell invalid-form' : ''"-->
+                                 <!--data-ng-bind="entityConfigs.quoteDateConfig.rt$errorText(1)"></div>-->
+                        </div>
+                        <div class="lg-1 md-1" style="max-width: 2.5em; margin-left: 1.5em">
+                            <div class="platform-form-label">
+                                {{initialOptions.endLabel}}
+                            </div>
+                        </div>
+                        <div class="lg-4 md-4">
+                            <div class="form-control" data-domain-control
+                                 data-domain="dateutc"
+                                 data-entity="currentItem"
+                                 data-ng-model="currentItem.quoteEndDate"
+                                 data-model="currentItem.quoteEndDate"
+                                 data-config="entityConfigs.quoteEndDateConfig"
+                                 data-dirty="true">
+                            </div>
+                            <!--<div ng-class="entityConfigs.quoteDateConfig.rt$hasError() ? 'invalid-cell invalid-form' : ''"-->
+                                 <!--data-ng-bind="entityConfigs.quoteDateConfig.rt$errorText(2)"></div>-->
+                        </div>
+                    </div>
+                    <div ng-class="entityConfigs.quoteDateConfig.rt$hasError() ? 'invalid-cell invalid-form' : ''"
+                         data-ng-bind="entityConfigs.quoteDateConfig.rt$errorText()" style="width: 80%; height: 1.3em;margin-left: 11%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="platform-form-group platform-lg" style="margin: 0 auto .1em">
+            <div class="platform-form-row">
+                <div class="lg-1 md-1" style="width: 5%;max-width: 5em;">
+                    &nbsp;
+                </div>
+                <div class="lg-1 md-1" style="max-width: 8em; width: 9%;">
+                    <div class="checkbox spaceToUp" style="max-width: 6.5em;  padding-right: .3em">
+                        <label>
+                            <input type="checkbox"
+                                   name="contractStatus"
+                                   data-ng-model="currentItem.isCheckContract">
+                            {{initialOptions.contractLabel}}
+                        </label>
+                    </div>
+                </div>
+                <div class="lg-3 md-3" style="width: 26.4%;">
+                    <div basics-material-Contract-Status-Combobox
+                             data-ng-model = 'currentItem.contractStatusFk'></div> <!--style="padding-right: 0"-->
+                </div>
+                <div class="lg-6 md-6" style="padding-right: 0;">
+                    <div style="width: 100%; overflow: hidden;">
+                        <div class="lg-1 md-1" style="max-width: 3.5em; margin-left: 1.5em">
+                            <div class="platform-form-label">
+                                {{initialOptions.startLabel}}
+                            </div>
+                        </div>
+                        <div class="lg-4 md-4">
+                            <div data-domain-control class="form-control"
+                                 data-domain="dateutc"
+                                 data-ng-model="currentItem.contractStartDate"
+                                 data-entity="currentItem"
+                                 data-config="entityConfigs.contractStartConfig"
+                                 data-dirty="true">
+                            </div>
+                            <!--<div class="invalid-cell invalid-form"-->
+                                 <!--data-ng-if="entityConfigs.contractDateConfig.rt$hasError()"-->
+                                 <!--data-ng-bind="entityConfigs.contractDateConfig.rt$errorText(1)"></div>-->
+                        </div>
+                        <div class="lg-1 md-1" style="max-width: 2.5em; margin-left: 1.5em">
+                            <div class="platform-form-label">
+                                {{initialOptions.endLabel}}
+                            </div>
+                        </div>
+                        <div class="lg-4 md-4">
+                            <div class="form-control" data-domain-control
+                                 data-domain="dateutc"
+                                 data-ng-model="currentItem.contractEndDate"
+                                 data-entity="currentItem"
+                                 data-config="entityConfigs.contractEndConfig"
+                                 data-dirty="true">
+                            </div>
+                            <!--<div class="invalid-cell invalid-form"-->
+                                 <!--data-ng-if="entityConfigs.contractDateConfig.rt$hasError()"-->
+                                 <!--data-ng-bind="entityConfigs.contractDateConfig.rt$errorText(2)"></div>-->
+                        </div>
+                    </div>
+                    <div ng-class="entityConfigs.contractDateConfig.rt$hasError() ? 'invalid-cell invalid-form' : ''"
+                        data-ng-bind="entityConfigs.contractDateConfig.rt$errorText()" style="width: 80%; height: 1.3em; margin-left: 11%;"></div>
+                </div>
+                <div class="lg-1 md-1" style="margin-top: -.2em;">
+                    <button class="btn btn-default lg-12 md-12" data-ng-click="initialOptions.search()" data-ng-disabled="!canSearch()" style="padding: 4px; height: 2.5em">{{"cloud.common.searchButton" | translate}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="platform-form-group platform-lg" style="margin: 0 auto 1em;">
+            <div class="platform-form-row">
+                <div class="lg-1 md-1" style="width: 5%;max-width: 5em;">
+                    &nbsp;
+                </div>
+                <div class="lg-1 md-1" style="max-width: 8em; width: 9%;">
+                    <div class="platform-form-label" >
+                        {{ 'cloud.common.businessPartner' | translate}}
+                    </div>
+                </div>
+                <div class="lg-3 md-3" style="width: 26.4%;">
+                    <div business-partner-main-optional-business-partner-dialog
+                         data-ng-model="currentItem.businessPartnerId"
+                         data-dirty="true" >
+                    </div>
+                </div>
+                <div class="lg-6 md-6">
+                    <div class="lg-1 md-1" style="max-width: 3.5em; margin-left: 1.5em">
+                        <div class="platform-form-label" >
+                            {{'cloud.common.entityProject' | translate}}
+                        </div>
+                    </div>
+                    <div class="lg-9 md-9" style="padding-right: 0;">
+                        <div class="control-directive"
+                             data-basics-lookupdata-lookup-composite
+                             data-ng-model="currentItem.projectId"
+                             data-options="lookupOptions.project"
+                             data-dirty="true" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper subview-container grid-wrapper">
+            <platform-Grid data="priceItemsGridConfig"></platform-Grid>
+        </div>
+    </section>
+    <footer class="modal-footer" ng-if="initialOptions.step===1">
+        <div class="platform-lg">
+            <button class="btn btn-default" data-ng-click="initialOptions.nextStep()" data-ng-disabled="!!initialOptions.catalogIsInternet || !!initialOptions.isNotFromSameCatalog" style="display: inline-block;">{{"cloud.common.nextStep" | translate}}</button>
+            <button class="btn btn-default" data-ng-click="$close(false)" style="display: inline-block;">{{"cloud.common.cancel" | translate}}</button>
+        </div>
+    </footer>
+    <footer class="modal-footer" ng-if="initialOptions.step === 2" style="height: 6.5em;">
+        <div class="platform-form-group platform-lg" style="mar-top: .6em;">
+            <div class="platform-form-row">
+                <div class="lg-5 md-5" style="width: 44%; margin-right: 17%;">
+                    <div class="platform-lg">
+                        <div class="lg-3 md-3" style="width: 21%;">
+                            <div class="platform-form-label">
+                                {{initialOptions.updateInsertToLabel}}:
+                            </div>
+                        </div>
+                        <div class="lg-9 md-9" style="width: 79%;">
+                            <div basics-Material-Price-Version-Combobox
+                                 data-entity="currentItem"
+                                 data-ng-model="currentItem.priceVersionFk">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg-2 md-2" style="width: 13%;">
+                    <button class="btn btn-default" data-ng-click="initialOptions.preStep()">{{"cloud.common.previousStep" | translate}}</button>
+                </div>
+
+                <div class="lg-2 md-2" style="width: 13%;">
+                    <button class="btn btn-default" data-ng-click="initialOptions.updateInsert()" data-ng-disabled="!canUpdateOrInsert()">{{ "basics.material.updatePriceWizard.updateOrInsertButton" | translate}}</button>
+                </div>
+
+                <div class="lg-2 md-2" style="width: 13%;">
+                    <button class="btn btn-default" data-ng-click="$close(false)">{{"cloud.common.cancel" | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div cloud-common-overlay data-loading="initialOptions.dialogLoading" data-info="initialOptions.loadingInfo"></div>
+</div>

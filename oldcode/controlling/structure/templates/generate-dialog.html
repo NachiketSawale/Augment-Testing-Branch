@@ -1,0 +1,23 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+<section class="modal-body">
+	<tabset class="tabsWrapper scroll">
+		<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled"
+			 ng-click="onTabSelect(tab)">
+			<div data-ng-include="tab.content"></div>
+		</tab>
+	</tabset>
+</section>
+
+<footer class="modal-footer">
+	<button type="button"  data-ng-if="modalOptions.reset" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.reset()">
+		{{modalOptions.resetButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disableOk()" data-ng-click="modalOptions.ok()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>

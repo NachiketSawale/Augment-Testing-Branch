@@ -1,0 +1,38 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.billingschema.billingSchemaListContainerTitle",
+		"controller": "basicsBillingSchemaListController",
+		"uuid": "0DE5C7C7D34D45A7A0EB39172FBD3796"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-text-partial.html",
+		"title": "basics.billingschema.entityRemark",
+		"controller": "basicsBillingSchemaRemarkController",
+		"uuid": "CCEA3F4F554C4892B4DE13F702DCC47D"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.billingschema.billingSchemaDetailContainerTitle",
+		"controller": "basicsBillingSchemaDetailController",
+		"uuid": "5D010AE2CB5E4C96BC77DA8044069022",
+		"permission": "0DE5C7C7D34D45A7A0EB39172FBD3796"
+	},
+	{
+		"id": "4",
+		"template": "basics.billingschema/partials/basics-billingschema-billing-schema-detail.html",
+		"title": "basics.billingschema.billingSchemaDetailListContainerTitle",
+		"controller": "basicsBillingSchemaBillingSchemaDetailMainController",
+		"uuid": "1971E3F3E88D434BB5276C0CC07F2E01"
+	},
+	{
+		"id": "5",
+		"template": "cloud.common/partials/languagegridView.html",
+		"title": "cloud.common.entityTranslation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "8A2267364C8147D68C38553A8652AED4"
+	}
+]

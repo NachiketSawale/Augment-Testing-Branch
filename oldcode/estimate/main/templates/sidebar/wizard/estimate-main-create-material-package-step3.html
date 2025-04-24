@@ -1,0 +1,17 @@
+<div data-ng-controller="estimateMainCreateMaterialPackageResultController">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{'estimate.main.createMaterialPackageWizard.packageAssignmentResult'| translate}}</h2>
+    </header>
+    <section class="modal-body">
+        <div data-ng-include="'dialog/modaldialog-topdescription-template.html'"></div>
+
+        <div class="flex-element flex-box flex-column filler subview-container">
+            <platform-Grid data="packageAssignmentResult"></platform-Grid>
+        </div>
+    </section>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" title="{{title}}" ng-click="navigate()">{{title}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="nextStep()">{{'cloud.common.ok' | translate}}</button>
+    </div>
+</div>
+

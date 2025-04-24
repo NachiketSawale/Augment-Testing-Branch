@@ -1,0 +1,8 @@
+{
+	"basics": {
+		"export": {
+		  	"entitySubContainers": "包含",
+			"entityExportFormat": "导出格式"
+		}
+	}
+}

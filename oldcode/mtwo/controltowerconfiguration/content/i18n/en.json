@@ -1,0 +1,50 @@
+﻿{
+  "mtwo": {
+	"controltowerconfiguration": {
+			"moduleAssignment": "Module Assignments",
+			"moduleName": "Dashboard Configuration",
+			"PowerBIAccount": "Power BI Accounts",
+			"PowerBIDetails": "Power BI Account Details",
+			"PowerBIElements": "Power BI Workspaces,Dashboards and Reports",
+			"PowerBIClerk": "Clerk Permissions",
+			"powerbiClerkList": "Clerk (Authorizations)",
+			"Id":"Id",
+			"Name":"Name",
+			"Description":"Description",
+			"Logonname":"Account Name",
+			"Password":"Password",
+			"Clientid":"ClientId",
+			"Resourceurl":"Resource Url",
+			"Authurl":"Authorization Url",
+			"Apiurl":"Api Url",
+			"Accesslevel":"Access Level",
+			"Embedurl":"Embed Url",
+			"ItemId":"ItemId",
+			"Refresh":"Download Dashboards and Reports from Power BI service",
+			"availableFeatures" : "Available Features",
+			"BasClerkRoleFk":"Clerk Role",
+			"BasClerkFk":"Clerk",
+			"Validfrom":"Valid From",
+			"Validto":"Valid To",
+			"CommentText":"Comment Text",
+			"IsLive":"Is Live",
+			"azureadIntegrated": "Azure AD Integrated",
+		   "selectModule": "select Module",
+			"errorDialog": {
+			"ErrorInfo": {
+				"header": "Logon Power BI Service Error message!",
+				"UserNoFound":"The PowerBI Account does not exist.",
+				"ErrPwd":"Password is incorrect.",
+				"ErrClientID":"The ClientId of PowerBI is incorrect.",
+				"ErrNetwork":"Unable to connect to the Power BI service.",
+				"ErrOther":"Unknown Error!",
+				"ErrURL":"Authorization Url is incorrect.",
+				"ErrAuth":"One or more WorkSpaces are unauthorized."
+			}
+			},
+			"error": {
+				"uniqueCode": "Code should be unique"
+			}
+	}
+  }
+}

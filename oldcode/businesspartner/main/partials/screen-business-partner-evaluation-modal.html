@@ -1,0 +1,43 @@
+﻿<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section>
+	<div class="toolbar">
+		<div data-platform-menu-list data-list="tools" data-platform-collapsable-list data-ng-model="tools"></div>
+	</div>
+	<div data-platform-alert data-error="error"></div>
+</section>
+<section class="modal-body flex-element">
+	<style type="text/css">
+		div.splitBox {
+			padding: 1px;
+			position: relative;
+		}
+	</style>
+	<div>
+		<!--solve problem: when opening lookup dialog, $('div[modal-window]').find('input:first').focus() will be called then the form will scroll up to the top-->
+		<input type="hidden"/>
+	</div>
+	<div data-trs-kendo-splitter class="modal-wrapper"
+	     option="{panes: [ { collapsible: true, size: '65%' },{ collapsible: true, size: '35%', collapsed: true }],orientation:'vertical'}">
+		<div class="splitBox modal-wrapper flex-element">
+			<!-- print-button on the toolbar need 'cid_containerUUID' class="filler"  id="ui-layout-west" -->
+			<div data-platform-form-container data-form-container-options="formContainerOptions" entity="currentItem" class="flex-element flex-basis-auto"></div>
+		</div>
+		<div class="splitBox modal-wrapper flex-element" ng-controller="businessPartnerMainEvaluationClerkCommonController">
+			<!-- print-button on the toolbar need 'cid_containerUUID' class="filler"  id="ui-layout-west" -->
+			<div data-platform-form-container data-form-container-options="formContainerOptions" entity="data" class="flex-element flex-basis-auto"></div>
+		</div>
+	</div>
+</section>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-click="openUserForm()">
+		{{'businesspartner.main.evaluationUserFormBtnText' | translate}}
+	</button>
+
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.ok()">
+		{{modalOptions.actionButtonText}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.close()">
+		{{modalOptions.closeButtonText}}
+	</button>
+</footer>

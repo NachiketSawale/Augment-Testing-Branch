@@ -1,0 +1,23 @@
+<div class="col-md-12 row header">
+	<div class="col-md-12 row" style="padding-bottom: 7px; padding-top: 7px;">
+		<div class="col-md-3 col">{{'productionplanning.common.wizard.loadSequence.from' | translate}}: </div>
+		<div class="col-md-9 col">
+			{{ modalOptions.value.modelFrom.format('dddd L') }}
+		</div>
+	</div>
+	<div class="col-md-12 row" style="padding-bottom: 7px; padding-top: 7px;">
+		<div class="col-md-3 col">{{'productionplanning.common.wizard.loadSequence.to' | translate}}: </div>
+		<div class="col-md-9 col">
+			{{ modalOptions.value.modelTo.format('dddd L') }}
+		</div>
+	</div>
+
+	<div class="col-md-12 row">
+		<div data-platform-datetime-handler
+		     data-platform-datetime-converter
+		     data-options="{ disablePopup: true, showClear: false }"
+		     data-domain="dateutc"
+		     data-ng-model="modalOptions.value.modelTo"
+		     data-ng-change="modalOptions.value.onChangeDate(modalOptions.value.modelFrom, modalOptions.value.modelTo)"></div>
+	</div>
+</div>

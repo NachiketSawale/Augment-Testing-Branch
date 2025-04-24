@@ -1,0 +1,33 @@
+﻿[
+  {
+    "id": "basics-riskregister-list-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.riskregister.riskEventsGridTitle",
+    "controller": "basicsRiskRegisterListController",
+    "uuid": "ddc60d28b5534e0e920dcf7bd1744419"
+  },
+  {
+    "id": "basics-riskregister-detail-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.riskregister.riskEventsDetailGridTitle",
+    "controller": "basicsRiskRegisterDetailController",
+    "uuid": "8a712bee96984861be1a53ebb69e5097",
+    "permission": "ddc60d28b5534e0e920dcf7bd1744419"
+  },
+  {
+    "id": "basics-risk-register-assigned-resources-container",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.riskregister.assignedResoursesGridTitle",
+    "controller": "basicsRiskRegisterResourcesListController",
+    "uuid": "202eae863efc4c1f9a2cd4d685e346b7",
+    "permission": "ddc60d28b5534e0e920dcf7bd1744419"
+  },
+  {
+    "id": "basics-risk-register-impact-detail-container",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.riskregister.impact",
+    "controller": "basicsRiskRegisterImpactDetailController",
+    "uuid": "9137d9ad073e4b6a9f2211472f25e903",
+    "permission": "ddc60d28b5534e0e920dcf7bd1744419"
+  }
+]

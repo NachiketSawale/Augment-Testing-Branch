@@ -1,0 +1,56 @@
+<div class="platform-lg platform-form-group">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div class="lg-6 ellipsis">
+				{{'basics.common.historicalPrice.boqLabel' | translate}} : {{ getBoqLabel() }}
+			</div>
+			<div class="lg-6 ellipsis">
+				{{'basics.common.historicalPrice.priceRange' | translate}} : {{ priceRange }}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="platform-lg platform-form-group">
+	<div class="platform-form-row">
+		<div class="platform-form-col">
+			<div class="lg-6">
+				<div class="lg-4 checkbox spaceToUp">
+					<label class="ellipsis" style="padding: 0;">{{'basics.common.historicalPrice.searchFromLabel' | translate}} :</label>
+				</div>
+				<div class="lg-4 checkbox spaceToUp">
+					<label class="ellipsis">
+						<input data-ng-disabled="formDisabled" data-ng-model="searchForm.queryFromQuotation" data-ng-change="search()" type="checkbox"/>
+						{{'basics.common.historicalPrice.quotation' | translate}}
+					</label>
+				</div>
+				<div class="lg-4 checkbox spaceToUp">
+					<label class="ellipsis">
+						<input data-ng-disabled="formDisabled" data-ng-model="searchForm.queryFromContract" data-ng-change="search()" type="checkbox"/>
+						{{'basics.common.historicalPrice.contract' | translate}}
+					</label>
+				</div>
+			</div>
+			<div class="lg-6 form-group platform-form-row composite-last-item">
+				<div class="lg-4">
+					<div data-readonly="formDisabled" data-domain-control data-domain="date"
+					     placeholder="{{'basics.common.changeStatus.from' | translate}}"
+					     data-ng-model="searchForm.startDate" class="flex-element" class="margin-left-md" data-entity="searchForm" data-enterstop="true" data-tabstop="true"></div>
+				</div>
+				<div class="lg-4">
+					<div data-readonly="formDisabled" data-domain-control data-domain="date"
+					     placeholder="{{'basics.common.changeStatus.to' | translate}}"
+					     data-ng-model="searchForm.endDate" class="flex-element" class="margin-left-md" data-entity="searchForm" data-enterstop="true" data-tabstop="true"></div>
+				</div>
+				<div class="lg-4 text-right form-group platform-form-row composite-last-item">
+					<button data-ng-disabled="searchForm.rt$hasError()" data-ng-click="search()" type="button" style="width:100%;"
+					        class="btn btn-default ellipsis">{{'basics.common.historicalPrice.searchBtnText' | translate}}
+					</button>
+				</div>
+				<div class="col-lg-offset-1" ng-class="searchForm.rt$hasError() ? 'invalid-cell invalid-form' : ''"
+				     data-ng-bind="searchForm.rt$errorText()" style="padding-top: 5px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<platform-grid data="gridData"></platform-grid>
+<div cloud-common-overlay data-loading="isLoading"></div>

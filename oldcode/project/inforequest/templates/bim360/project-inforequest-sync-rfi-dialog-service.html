@@ -1,0 +1,68 @@
+<div data-ng-controller="projectInfoRequestBim360Controller" class="modal-wrapper">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{modalOptions.header.title}}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+        <div class="platform-form-group ">
+            <table class="tableWidth">
+                <tr>
+                    <td class="tdWidth15"><label class="platform-form-label">{{modalOptions.body.projectNameText}}</label></td>
+                    <td class="tdWidth40"><div class="lg-4 md-4" data-defect-main1-bim360-projects-lookup-dialog data-ng-model="selectedItem.ProjectNo" data-entity="selectedItem"></div></td>
+                    <td><div class="trMargin form-control"><input type="text" class="input-group-content lg-8 md-8" data-ng-model="selectedItem.projectName" data-entity="selectedItem" readonly /></div></td>
+                </tr>
+                <tr>
+                    <td class="tdWidth15"><label class="platform-form-label">{{modalOptions.body.filterStatusText}}</label></td>
+                    <td class="tdWidth40"><div class="lg-4 md-4" data-project-infor-bim360-rfi-status-lookup-dialog data-ng-model="dlgOptions.filterStatus" data-entity="dlgOptions"></div></td>
+                    <td>
+                        <div style="text-align: right">
+                            <input type="checkbox" name="cbShowImported" style="vertical-align: bottom" value="0" data-ng-model="dlgOptions.showImported" data-entity="dlgOptions"/>
+                            <label class="platform-form-label" style="margin-right: 2px;">{{modalOptions.body.cbShowImportedText}}</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="platform-form-group ">
+            <div class="platform-form-row" >
+                <div class="input-group form-control">
+                    <input type="text" data-ng-model="dlgOptions.searchText" class="input-group-content" data-entity="dlgOptions"/>
+                    <span class="input-group-btn" style="margin-left: -1px;">
+                        <button class="btn btn-default input-sm btn-search tlb-icons ico-search" title="{{modalOptions.footer.btnLoadDefects}}" data-ng-click="modalOptions.loadRFIs()"  data-ng-disabled="dlgOptions.searchBtnDisabled"></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h3 class="pane-t pane-b">{{modalOptions.body.chooseDefectText}} </h3>
+        <div class="modal-wrapper subview-container">
+            <div data-platform-grid data-data="gridData"></div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+
+        <div class="verticalAlignCenter" style="position: absolute;left: 10px;">
+            <input type="checkbox" name="cbImportDocument" style="vertical-align: bottom" value="1" data-ng-model="dlgOptions.importDocument" data-entity="dlgOptions" />
+            <label class="platform-form-label">{{modalOptions.body.cbImportDocumentText}}</label>
+        </div>
+
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="dlgOptions.OKBtnDisabled">
+            {{modalOptions.footer.btnOk}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{modalOptions.footer.btnCancel}}
+        </button>
+    </footer>
+
+    <div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>
+<style>
+    .trMargin {margin: 2px 2px;}
+    .tableWidth {width: 100%;}
+    .tdWidth15 {width: 15%;}
+    .tdWidth40 {width: 40%;}
+    .verticalAlignCenter {vertical-align: center;}
+</style>

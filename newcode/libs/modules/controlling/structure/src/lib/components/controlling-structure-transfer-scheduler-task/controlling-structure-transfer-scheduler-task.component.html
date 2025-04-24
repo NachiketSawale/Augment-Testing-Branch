@@ -1,0 +1,83 @@
+<div class="platform-lg">
+
+    <div class="ng-scope">
+        <div class="ng-scope">
+            <div class="panel-group">
+                <div class="panel panel-default ng-scope ng-isolate-scope">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" (click)="toggleOpen(1)">
+                                <span class="platform-form-group-header-text ng-binding ng-scope">{{ 'controlling.structure.transferSchedulerTaskWizard.groupTitle1' | platformTranslate }}</span>
+                                <span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up"
+                                          [class]="showGrid ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse" [hidden]="!showGrid">
+                        <div class="panel-body">
+                            <div class="toolbar justify-content-between">
+                                <div class="toolbar justify-content-end">
+                                    <ui-common-menu-list [menu]="toolbarData!"></ui-common-menu-list>
+                                </div>
+                            </div>
+                            <ui-common-grid [configuration]="gridConfiguration" [items]="items"
+                                            (selectionChanged)="onCurrentJobSelectChange($event)"></ui-common-grid>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ng-scope">
+        <div class="panel-group">
+            <div class="panel panel-default ng-scope ng-isolate-scope">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" (click)="toggleOpen(0)">
+                            <span class="platform-form-group-header-text ng-binding ng-scope">{{ 'controlling.structure.basicSettings' | platformTranslate }}</span>
+                            <span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up"
+                                          [class]="showForm ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse" [hidden]="!showForm">
+                    <div class="panel-body">
+                        <ui-common-form [formConfig]="formConfiguration" [entity]="dataItem"></ui-common-form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ng-scope">
+        <div class="panel-group">
+            <div class="panel panel-default ng-scope ng-isolate-scope">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" (click)="toggleOpen(0)">
+                            <span class="platform-form-group-header-text ng-binding ng-scope">{{ 'controlling.structure.basicSettings' | platformTranslate }}</span>
+                            <span class="platform-form-group-header ng-scope">
+                                     <div class="toggleImg control-icons ico-up"
+                                          [class]="showForm ? 'ico-up' : 'ico-down'"></div>
+                                  </span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse" [hidden]="!showForm">
+                    <div class="panel-body">
+                        <ui-common-form [formConfig]="parameterFormConfiguration" [entity]="parameterDataItem"></ui-common-form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

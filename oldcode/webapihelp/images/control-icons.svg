@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>:root>svg{display:none}:root>svg:target{display:block}</style>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-tree-collapse" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.001 3v9l4.5-4.5-4.5-4.5" fill="#616161" fill-rule="nonzero"/>
+    </svg>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-tree-expand" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.001 11l6-6v6h-6" fill="#616161" fill-rule="nonzero"/>
+    </svg>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-comp-businessunit" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.001 14h1v-1h-1v1zm0-7v1h1V7h-1zm0 5V9h-1V6h1V3h1v3h1v1h2v1h-2v1h-1v3h1v1h2v1h-2v1h-3v-3h1z"
+              fill="#616161"/>
+        <path d="M5.001 6h11v3h-11V6M5.001 12h11v3h-11v-3M.001 0h11v3h-11V0" fill="#3f7ab7" fill-rule="nonzero"/>
+    </svg>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-comp-businessunit-d" xmlns="http://www.w3.org/2000/svg">
+        <path d="M.001 0h11v3h-11V0" fill="#3f7ab7" fill-rule="nonzero"/>
+        <path d="M2.001 5.993c.173.001.347.004.52.007a.508.508 0 0 1 .48.48l.011.52h1.989v1H3.019c-.003.18-.009.359-.019.539a.506.506 0 0 1-.479.46l-.52.012v2.982c.173.001.347.004.52.007a.508.508 0 0 1 .48.48l.011.52h1.989v1H3.019c-.003.18-.009.359-.019.539a.508.508 0 0 1-.479.46c-.686.014-1.374.04-2.059-.001a.507.507 0 0 1-.46-.479c-.014-.686-.04-1.373.001-2.058a.534.534 0 0 1 .036-.153A.508.508 0 0 1 .482 12c.173-.003.346-.006.519-.007V9.018c-.18-.003-.36-.009-.539-.02a.507.507 0 0 1-.46-.479c-.014-.686-.04-1.373.001-2.058A.507.507 0 0 1 .482 6c.173-.003.346-.006.519-.007V3h1v2.993zm0 7.007h-1v1h1v-1zm0-6h-1v1h1V7z"
+              fill="#616161"/>
+        <path d="M11.001 6a5 5 0 1 1 0 10 5 5 0 0 1 0-10" fill="#cc4c33" fill-rule="nonzero"/>
+        <path d="M8.001 10h6v2h-6v-2" fill="#fff" fill-rule="nonzero"/>
+    </svg>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-comp-profitcenter" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.001 9h1V8h-1v1zm-1-2h3v1h2v1h-2v1h-3V7z" fill="#616161"/>
+        <path d="M7.001 1h6l3 3v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2" fill="#3f7ab7" fill-rule="nonzero"/>
+        <path d="M7.001 2h5v3h3v8a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1" fill="#fff" fill-rule="nonzero"/>
+    </svg>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-comp-profitcenter-d" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.501 16V1.501l6.5-.001 3.5 2.5v3" fill="#fff" fill-rule="nonzero"/>
+        <path d="M12.053 1.003c.045.007.057.007.101.021.05.016.093.041.138.069l3.5 2.5c.036.029.047.035.079.07a.51.51 0 0 1 .119.232c.01.046.009.058.011.105v3h-1V4.257L11.841 2l-5.84.001V16h-1V1.501l.003-.052a.501.501 0 0 1 .497-.448c2.184 0 4.371-.111 6.552.002z"
+              fill="#3f7ab7" fill-rule="nonzero"/>
+        <path d="M3.019 9c-.003.18-.009.359-.019.539a.508.508 0 0 1-.479.46c-.686.014-1.374.04-2.059-.001a.507.507 0 0 1-.461-.479c-.013-.686-.039-1.373.002-2.058a.534.534 0 0 1 .036-.153A.508.508 0 0 1 .481 7c.68-.013 1.36-.013 2.04 0a.509.509 0 0 1 .48.48l.011.52h1.989v1H3.019zM2.001 8h-1v1h1V8z"
+              fill="#616161"/>
+        <path d="M11.001 6a5 5 0 1 1 0 10 5 5 0 0 1 0-10" fill="#cc4c33" fill-rule="nonzero"/>
+        <path d="M8.001 10h6v2h-6v-2" fill="#fff" fill-rule="nonzero"/>
+        <path d="M6.001 15h1v1h-1v-1" fill="#3f7ab7" fill-rule="nonzero"/>
+    </svg>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-comp-root" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.001 7l1-1h12l1 1v7h-14V7M1.001 5V2h5l2 2h7v1h-14" fill="#3f7ab7" fill-rule="nonzero"/>
+    </svg>
+    <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" viewBox="0 0 16 16"
+         id="ico-comp-root-d" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.001 6a5 5 0 1 1 0 10 5 5 0 0 1 0-10" fill="#cc4c33" fill-rule="nonzero"/>
+        <path d="M8.001 10h6v2h-6v-2" fill="#fff" fill-rule="nonzero"/>
+        <path d="M5.604 14H1.001V7l1-1h5.683a5.99 5.99 0 0 0-2.683 5c0 1.093.8 3 .603 3zM8.001 4h7v1h-14V2h5l2 2z"
+              fill="#3f7ab7"/>
+    </svg>
+</svg>

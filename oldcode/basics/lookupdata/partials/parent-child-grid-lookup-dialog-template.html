@@ -1,0 +1,31 @@
+<header>
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+</header>
+
+<section class="modal-body">
+    <div class="input-group form-control">
+        <input type="text" data-ng-model="modalOptions.searchValue" class="form-control"
+               data-ng-keydown="modalOptions.onSearchInputKeyDown($event, modalOptions.searchValue)">
+        <span class="input-group-btn">
+			<button class="btn btn-default input-sm btn-search" data-ng-click="modalOptions.search(modalOptions.searchValue)">
+                <i class="block-image tlb-icons ico-search"></i>
+            </button>
+		</span>
+    </div>
+    <div id="commonLookupDirectiveTemplateSplitter" data-platform-kendo-splitter-adjust class="margin-top-ld">
+        <div id="ui-layout-east" data-basics-lookupdata-lookup-grid data-options="gridOptions.parent"></div>
+        <div id="ui-layout-west" data-basics-lookupdata-lookup-grid data-options="gridOptions.child"></div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.refresh()">
+        {{'basics.common.button.refresh' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disable()" data-ng-click="modalOptions.ok()">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

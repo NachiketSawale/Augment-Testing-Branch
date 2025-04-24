@@ -1,0 +1,24 @@
+<div ng-if="promiseMaterial && promiseProcurement" class="ticket-categories">
+	<div class="categories-wrapper">
+		<div class="inner-wrapper" data-basics-material-content-height-adjust>
+			<div class="category-tree">
+				<ul class="overflow">
+					<li data-ng-repeat="mainCat in mainCategoryList" data-ng-class="{ 'selected': mainCat.active }">
+						<button data-ng-click="selectMainCategory(mainCat)" data-ng-dblclick="onOK()" class="flex-box">
+							<span class="flex-element">{{mainCat.name}}</span>
+							<i class="block-image control-icons ico-tree-collapse"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+
+			<!-- directive for the hierarchy -->
+			<div platform-tree-enhancement-directive data="selectedCategory.structure" ng-model="categorySelect" class="category-tree" doubleclick="onOK()" itemclick="onChildClick()"></div>
+		</div>
+	</div>
+
+	<div class="flex-box flex-end margin-full-lg">
+			<button class="btn btn-default ms-sv-cart-item-count pull-right border-none" data-ng-click="onOK()" style="margin-right: 5px;">{{ 'basics.common.ok' | translate }}</button>
+			<button class="btn btn-default ms-sv-cart-item-count pull-right border-none" data-ng-click="onCancel()">{{ 'basics.common.cancel' | translate }}</button>
+	</div>
+</div>

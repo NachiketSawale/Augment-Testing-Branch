@@ -1,0 +1,15 @@
+<!--<ui-common-image-view [isMultiple]="true" [items]="getBlobContent()" [selectedIndex]="currentIndex" (selectedIndexChanged)="getCurrentIndex($event)"></ui-common-image-view>-->
+<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + containerDefinition.uuid">
+    <img
+            [src]="file.src">
+    <!--        [style.maxWidth]="getCurrentDimensions().width"-->
+    <!--        [style.maxHeight]="getCurrentDimensions().height">-->
+
+    <div *ngIf="file.src !== null && options.hasCommentTextField" class="comment">
+        <input class="comment-input" type="text" debounceChanged
+           [attr.maxLength]="255"
+           [ngModel]="currentCommentText"
+           [disabled]="!canCommentEdit()"
+           (ngModelChange)="onCommentChange($event)"/>
+    </div>
+</div>

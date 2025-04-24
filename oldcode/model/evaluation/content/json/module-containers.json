@@ -1,0 +1,59 @@
+[
+  {
+    "id": "model.evaluation.rulesetList",
+    "template": "model.evaluation/partials/ruleset-list-partial.html",
+    "title": "model.evaluation.rulesetListTitle",
+    "controller": "modelEvaluationRulesetListController",
+    "uuid": "0fe1504979b947e68234ecd04c799af8",
+    "isMasterContainer": true
+  },
+  {
+    "id": "model.evaluation.rulesetDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.evaluation.rulesetDetailTitle",
+    "controller": "modelEvaluationRulesetDetailController",
+    "uuid": "2189edcf60884fceb7a062c5774c3698",
+    "permission": "0fe1504979b947e68234ecd04c799af8",
+    "isMasterContainer": true
+  },
+  {
+    "id": "model.evaluation.ruleset2ModuleList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.evaluation.ruleset2ModuleListTitle",
+    "controller": "modelEvaluationRuleset2ModuleListController",
+    "uuid": "f1be1ca07e074f74a92e5bdde74af0b1"
+  },
+  {
+    "id": "model.evaluation.ruleset2ModuleDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.evaluation.ruleset2ModuleDetailTitle",
+    "controller": "modelEvaluationRuleset2ModuleDetailController",
+    "uuid": "34a949c6c1b24e8d9e7101e3546abe56",
+    "permission": "f1be1ca07e074f74a92e5bdde74af0b1"
+  },
+  {
+    "id": "model.evaluation.ruleList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "model.evaluation.ruleListTitle",
+    "controller": "modelEvaluationRuleListController",
+    "uuid": "3e58fcde812847c89942f3d365dc2d9b",
+    "isMasterContainer": true
+  },
+  {
+    "id": "model.evaluation.ruleDetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "model.evaluation.ruleDetailTitle",
+    "controller": "modelEvaluationRuleDetailController",
+    "uuid": "ac2d8e9322e941278dc95068d8a9c5eb",
+    "permission": "3e58fcde812847c89942f3d365dc2d9b",
+    "isMasterContainer": true
+  },
+  {
+    "id": "model.evaluation.ruleEditor",
+    "template": "model.evaluation/partials/rule-editor-partial.html",
+    "title": "model.evaluation.ruleEditorTitle",
+    "controller": "modelEvaluationRuleEditorController",
+    "uuid": "15f94335f80e4d5a88dcd044f9e48336",
+    "permission": "3e58fcde812847c89942f3d365dc2d9b"
+  }
+]

@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<title>RIB 4.0 API Download PDF</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="images/rib-logo.ico">
+
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #e2e0e0;
+			color: #666;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		div.state {
+			position: absolute;
+			text-align: center;
+			width: 680px;
+			height: 80px;
+			left: 50%;
+			margin-left: -340px;
+			top: 50%;
+			margin-top: -40px;
+			font-size: 16px;
+			font-weight: bold;
+			box-shadow: 0 0 20px #a7a7a7;
+			border-radius: 40px;
+			line-height: 80px;
+			border: 2px solid #fff;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+
+		div.state .bar {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			border-radius: 40px;
+
+			left: -100%;
+			transition: left 0.2s;
+		}
+
+		div.state .bar.processing {
+			background-color: #84b590;
+			box-shadow: 0 0 20px #de9663;
+			animation: blinking 1s linear infinite;
+		}
+
+		div.state .bar.failed {
+			background-color: #debf9b;
+		}
+
+		div.state .bar.complete {
+			background-color: #d0d0d0;
+		}
+
+		div.state span.text {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			top: 0;
+			left: 0;
+		}
+
+		@keyframes blinking {
+			from {
+				box-shadow: 0 0 20px #d0d0d0;
+			}
+			to {
+				box-shadow: 0 0 20px #a7a7a7;
+			}
+		}
+
+	</style>
+	<script src="../config.js"></script>
+	<script src="./config.js"></script>
+	<script src="./js/lib/jquery-3.7.1.js"></script>
+	<script src="./js/utility.js"></script>
+	<script src="./js/auth-service.js"></script>
+</head>
+<body>
+<div id="ui-stator" class="state">
+	<div class="bar"></div>
+	<span class="text">Preparing ...</span>
+
+</div>
+<form method="post">
+	<input type="hidden" name="exportToken" value="">
+	<input type="hidden" name="securityToken" value="">
+</form>
+<script type="text/javascript">
+
+	$(document).ready(function () {
+
+		let stateTypes = {
+			Unknown: 0,
+			NotFound: 1,
+			Processing: 2,
+			Ready: 3,
+			Failed: 4
+		};
+
+		let exportResults = {
+			failed: 'failed',
+			complete: 'complete',
+			processing: 'processing'
+		};
+
+		let downloadHelper = {
+			_initializeURL: '',
+			_downloadURL: '',
+			_authorizeURL: '',
+			_checkURL: '',
+			_searchFilter: '',
+			http: {
+				get: function (url) {
+					return $.ajax({
+						type: 'GET',
+						url: url,
+						headers: {
+							'Client-Context': authService.getClientContext(true),
+							'Authorization': authService.getAuthorization()
+						}
+					});
+				},
+				post: function (url, data, options) {
+					let ajaxOptions = $.extend({
+						type: 'POST',
+						url: url,
+						data: (options && !options.processData) ? data : JSON.stringify(data),
+						headers: {
+							'Client-Context': authService.getClientContext(true),
+							'Authorization': authService.getAuthorization()
+						}
+					}, options);
+
+					if (!options || options.contentType !== false) {
+						ajaxOptions.headers['Content-Type'] = 'application/json;charset=UTF-8';
+					}
+
+					return $.ajax(ajaxOptions);
+				}
+			},
+			ready: function (callback) {
+
+				let urls = utility.resolveUrl();
+
+				this._searchFilter = decodeURIComponent(window.location.search);
+				this._initializeURL = urls.webApiBaseUrl + 'cloud/help/export/initialize';
+				this._downloadURL = urls.webApiBaseUrl + 'cloud/help/export/download';
+				this._authorizeURL = urls.webApiBaseUrl + 'cloud/help/export/authorize';
+				this._checkURL = urls.webApiBaseUrl + 'cloud/help/export/check';
+
+				callback && callback();
+			},
+			initialize: function (securityToken) {
+				return this.http.post(this._initializeURL, {
+					SearchFilter: this._searchFilter,
+					SecurityToken: securityToken
+				}).then(function (info) {
+					return info;
+				});
+			},
+			authorize: function () {
+				return this.http.get(this._authorizeURL).then(function (response) {
+					return response;
+				});
+			},
+			check: function (exportToken) {
+				return this.http.post(this._checkURL, {
+					exportToken: exportToken,
+					SearchFilter: this._searchFilter,
+				}).then(function (response) {
+					return response;
+				});
+			},
+			download: function (securityToken, exportToken) {
+				let formData = new FormData();
+				formData.append('exportToken', exportToken);
+				formData.append('securityToken', securityToken)
+
+				this.http.post(this._downloadURL, formData, {
+					processData: false,
+					contentType: false
+				}).then((response) => {
+					if (response['Success']) {
+						showResult('The download has started, please check your browser.', 100, exportResults.complete);
+						window.location.href = response['Url'];
+					} else {
+						showResult(response['Message'], 100, exportResults.failed);
+					}
+				});
+			}
+		};
+
+		function startDownload(exportToken) {
+			downloadHelper.authorize().then(function (securityToken) {
+				downloadHelper.download(securityToken, exportToken);
+			});
+		}
+
+		function startCheck(exportToken) {
+			downloadHelper.check(exportToken).then(function (state) {
+				switch (state.State) {
+					case stateTypes.Unknown:
+					case stateTypes.Processing:
+						if (state.State === stateTypes.Processing) {
+							showResult('Preparing ' + state.Progress.toFixed(2) + '% ...', state.Progress, exportResults.processing);
+						}
+						window.setTimeout(function () {
+							startCheck(exportToken);
+						}, 3000);
+						break;
+					case stateTypes.Ready:
+						startDownload(exportToken);
+						break;
+					default:
+						showResult(state.Message, 100, exportResults.failed);
+						break;
+				}
+			});
+		}
+
+		function startRun() {
+			showResult('Preparing 1%...', 1, exportResults.processing);
+
+			downloadHelper.ready(function () {
+				downloadHelper.authorize().then(function (securityToken) {
+					return downloadHelper.initialize(securityToken).then(function (info) {
+						if (info.IsSuccess) {
+							if (info.State.State === stateTypes.Ready) {
+								startDownload(info['ExportToken']);
+							} else {
+								startCheck(info['ExportToken'])
+							}
+						} else {
+							showResult(info.Message, 100, exportResults.failed);
+						}
+					}).fail(function (reason) {
+						showResult(reason, 100, exportResults.failed);
+					});
+				}).fail(function (reason) {
+					showResult(reason, 100, exportResults.failed);
+				});
+
+			});
+		}
+
+		function showResult(message, progress, mType) {
+			let stator = $('#ui-stator');
+			stator.find('div.bar').removeClass([exportResults.failed, exportResults.complete, exportResults.processing].join(' ')).addClass(mType).css({left: '-' + (100 - progress) + '%'});
+			stator.find('span.text').html(message);
+		}
+
+		function doUnauthorized() {
+			const url = encodeURIComponent(window.location.href);
+			showResult('<a href="login.html?url=' + url + '">Click Here To Login ...</a>', 100, exportResults.failed)
+		}
+
+		showResult('Preparing 1% ...', 1, exportResults.processing);
+		authService.ready().then(() => {
+			if (authService.isLogon()) {
+				showResult('Preparing 2% ...', 2, exportResults.processing);
+				authService.getUserInfo().then(() => {
+					showResult('Preparing 3% ...', 3, exportResults.processing);
+					startRun();
+					authService.startRefreshTokenSchedule();
+				}).fail(() => {
+					doUnauthorized();
+				});
+			} else {
+				doUnauthorized();
+			}
+		});
+
+	});
+</script>
+</body>
+</html>

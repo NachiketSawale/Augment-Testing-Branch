@@ -1,0 +1,71 @@
+<div data-ng-controller="constructionSystemMainApplyLineItemToEstimateWizardController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+<!--		<h5>{{modalOptions.text.bodyText}}</h5>-->
+		<div class="platform-form-group">
+			<div class="radio spaceToUp col-lg-offset-1">
+				<label>
+					<input type="radio" name="overwrite" data-ng-model="modalOptions.model.isUpdate" data-ng-checked="modalOptions.model.isUpdate==='true'" data-ng-click="isUpdate()">{{modalOptions.text.update}}
+				</label>
+			</div>
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<div class="checkbox spaceToUp col-lg-offset-2">
+						<label>
+							<input type="checkbox" name="keepResourcePackageAssignment" data-ng-model="modalOptions.model.keepResourcePackageAssignment"
+							       data-ng-disabled="modalOptions.isDisableKeepResPkgAssignment()">{{modalOptions.text.keepResourcePackageAssignment}}
+						</label>
+					</div>
+					<div class="checkbox spaceToUp col-lg-offset-2">
+						<label>
+							<input type="checkbox" name="doNotUpdateResIfCosResIsNull" data-ng-model="modalOptions.model.doNotUpdateResIfCosResIsNull"
+							       data-ng-disabled="modalOptions.isDisableDoNotUpdateResIfCosResIsNull()">{{modalOptions.text.doNotUpdateResIfCosResIsNull}}
+						</label>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<div class="checkbox spaceToUp col-lg-offset-1">
+						<label>
+							<input type="checkbox" name="updateQuantity" data-ng-model="modalOptions.model.updateQuantity" data-ng-disabled="modalOptions.isDisable()" data-ng-click="modalOptions.updateQuantityOnly()">{{modalOptions.text.updateQuantity}}
+						</label>
+					</div>
+				</div>
+				<div class="platform-form-group">
+					<div class="checkbox spaceToUp col-lg-offset-1">
+						<label>
+							<input type="checkbox" name="updatePrice" data-ng-model="modalOptions.model.updatePrice" data-ng-disabled="modalOptions.isDisable()" data-ng-click="modalOptions.updatePriceOnly()">{{modalOptions.text.updatePrice}}
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="radio spaceToUp col-lg-offset-1">
+				<label>
+					<input type="radio" name="overwrite" data-ng-model="modalOptions.model.overwrite" data-ng-checked="modalOptions.model.overwrite==='true'" data-ng-click="isOverwrite()">{{modalOptions.text.overwriteAll}}
+				</label>
+			</div>
+		</div>
+		<div class="platform-form-row" style="margin-top: 10px;">
+			<div style="width: 9%;float: left;vertical-align: top;"><h5>{{modalOptions.text.note}}</h5></div>
+			<div style="width: 91%;float: right;">
+				<h5 style="vertical-align: top;">
+					{{modalOptions.text.noteText1}}
+				</h5>
+				<h5 style="height: 30px;vertical-align: top;">
+						{{modalOptions.text.noteText2}}
+				</h5>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button ng-if="modalOptions.isShown('ok')" class="ok btn" data-ng-class="(modalOptions.defaultButton === 'ok') ? 'btn-return' : 'btn-default'" data-ng-click="modalOptions.ok()"
+		        data-ng-disabled="modalOptions.isDisabled('ok')">
+			{{modalOptions.okBtnText}}
+		</button>
+		<button ng-if="modalOptions.isShown('cancel')" class="cancel btn" data-ng-class="(modalOptions.defaultButton === 'cancel') ? 'btn-return' : 'btn-default'" data-ng-click="modalOptions.cancel()"
+		        data-ng-disabled="modalOptions.isDisabled('cancel')">
+			{{modalOptions.cancelBtnText}}
+		</button>
+	</footer>
+</div>

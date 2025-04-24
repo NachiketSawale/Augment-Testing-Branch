@@ -1,0 +1,9 @@
+<div style="clear:both;"></div>
+<div class="flex-box flex-element image-viewer-content" data-ng-mouseenter="editable=true"
+     data-ng-mouseleave="editable=false" data-ng-class="{'border-container': entity.Blob}">
+	<carousel class="flex-box flex-element image-viewer-carousel">
+		<slide>
+			<img data-ng-hide="!entity.Blob" data-ng-src="data:image/png;base64,{{entity.Blob}}" alt=" "  />
+		</slide>
+	</carousel>
+</div>

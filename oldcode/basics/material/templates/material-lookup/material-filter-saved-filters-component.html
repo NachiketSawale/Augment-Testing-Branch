@@ -1,0 +1,40 @@
+<style>
+	.material-filter-saved-filters {
+		padding: 4px 16px;
+	}
+
+	.material-filter-saved-filters .btn {
+		color: #3789cc;
+	}
+
+	.material-filter-saved-filters .filter-header {
+		font-weight: bold;
+		cursor: pointer;
+		margin-top: 10px;
+		height: 32px;
+		line-height: 32px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-color: #dcdcdc;
+	}
+
+	.material-filter-saved-filters .filter-btn {
+		float: right;
+		width: 20px;
+		height: 20px;
+	}
+</style>
+
+
+<div class="material-filter-saved-filters">
+	<div class="generic-popup" data-ng-repeat="group in filterGroups">
+		<div class="filter-header border-bottom margin-none" data-ng-click="group.collapsed = !group.collapsed">
+			{{ group.header | translate }}
+			<button class="filter-btn btn tlb-icons" data-ng-class="{'ico-tree-collapse': group.collapsed, 'ico-tree-expand': !group.collapsed}"></button>
+		</div>
+		<ul class="popup-list" data-ng-hide="group.collapsed">
+			<li class="margin-none" data-ng-repeat="profile in group.profiles" data-ng-click="select(profile)">{{ profile.FilterName }}</li>
+		</ul>
+	</div>
+</div>

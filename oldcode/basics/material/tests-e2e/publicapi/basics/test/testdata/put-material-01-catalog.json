@@ -1,0 +1,140 @@
+﻿{
+	"CompanyCode": "GUANGDONG2017001",
+	"CanOverwrite": true,
+	"Catalogs": [
+		{
+			"Code": "1",
+			"DescriptionInfo": {
+				"Description": "人工"
+			},
+			"ValidFrom": "",
+			"ValidTo": "",
+			"VersionDate": "",
+			"BusinessPartner": "",
+			"Subsidiary": "",
+			"Supplier": "",
+			"PaymentTerm": "",
+			"InCoterm": "",
+			"RubricCategory": "",
+			"MaterialCatalogType": "Neutral Material",
+			"IsNeutral": false,
+			"IsTicketSystem": false,
+			"Clerk": ""
+		},
+		{
+			"Code": "3",
+			"DescriptionInfo": {
+				"Description": "机械"
+			},
+			"ValidFrom": "",
+			"ValidTo": "",
+			"VersionDate": "",
+			"BusinessPartner": "",
+			"Subsidiary": "",
+			"Supplier": "",
+			"PaymentTerm": "",
+			"InCoterm": "",
+			"RubricCategory": "",
+			"MaterialCatalogType": "Neutral Material",
+			"IsNeutral": false,
+			"IsTicketSystem": false,
+			"Clerk": ""
+		},
+		{
+			"Code": "4",
+			"DescriptionInfo": {
+				"Description": "其它主材设备"
+			},
+			"ValidFrom": "",
+			"ValidTo": "",
+			"VersionDate": "",
+			"BusinessPartner": "",
+			"Subsidiary": "",
+			"Supplier": "",
+			"PaymentTerm": "",
+			"InCoterm": "",
+			"RubricCategory": "",
+			"MaterialCatalogType": "Neutral Material",
+			"IsNeutral": false,
+			"IsTicketSystem": false,
+			"Clerk": ""
+		},
+		{
+			"Code": "6",
+			"DescriptionInfo": {
+				"Description": "其它"
+			},
+			"ValidFrom": "",
+			"ValidTo": "",
+			"VersionDate": "",
+			"BusinessPartner": "",
+			"Subsidiary": "",
+			"Supplier": "",
+			"PaymentTerm": "",
+			"InCoterm": "",
+			"RubricCategory": "",
+			"MaterialCatalogType": "Neutral Material",
+			"IsNeutral": false,
+			"IsTicketSystem": false,
+			"Clerk": ""
+		},
+		{
+			"Code": "2",
+			"DescriptionInfo": {
+				"Description": "材料"
+			},
+			"ValidFrom": "",
+			"ValidTo": "",
+			"VersionDate": "",
+			"BusinessPartner": "",
+			"Subsidiary": "",
+			"Supplier": "",
+			"PaymentTerm": "",
+			"InCoterm": "",
+			"RubricCategory": "",
+			"MaterialCatalogType": "Neutral Material",
+			"IsNeutral": false,
+			"IsTicketSystem": false,
+			"Clerk": ""
+		},
+		{
+			"Code": "5",
+			"DescriptionInfo": {
+				"Description": "管理费"
+			},
+			"ValidFrom": "",
+			"ValidTo": "",
+			"VersionDate": "",
+			"BusinessPartner": "",
+			"Subsidiary": "",
+			"Supplier": "",
+			"PaymentTerm": "",
+			"InCoterm": "",
+			"RubricCategory": "",
+			"MaterialCatalogType": "Neutral Material",
+			"IsNeutral": false,
+			"IsTicketSystem": false,
+			"Clerk": ""
+		},
+		{
+			"Code": "广东二类地区材料信息价",
+			"DescriptionInfo": {
+				"Description": "广东二类地区材料信息价"
+			},
+			"ValidFrom": "",
+			"ValidTo": "",
+			"VersionDate": "",
+			"BusinessPartner": "",
+			"Subsidiary": "",
+			"Supplier": "",
+			"PaymentTerm": "",
+			"InCoterm": "",
+			"RubricCategory": "",
+			"MaterialCatalogType": "Neutral Material",
+			"IsNeutral": false,
+			"IsTicketSystem": false,
+			"Clerk": ""
+		}
+	]
+}
+  

@@ -1,0 +1,19 @@
+<div ng-controller="transportplanningTransportCreateRouteSelectHeaderController">
+    <section>
+        <div class="flex-box flex-column flex-element subview-container lookup-grid-container">
+            <div class="subview-header toolbar">
+                <h3 class="font-bold title fix">{{'logistic.dispatching.headerListTitle' | translate}}</h3>
+                <div data-platform-menu-list data-list="gridOptions.headerGrid.tools"></div>
+            </div>
+            <div class="flex-element flex-box flex-column overflow-hidden">
+                <div style="height: 240px" class="flex-basis-auto" data-platform-grid
+                     data="gridOptions.headerGrid"></div>
+            </div>
+        </div>
+    </section>
+    <section ng-cloak class="modal-body flex-box flex-column">
+        <div style="margin-left: -10px" data-platform-form data-form-options="formOptions"
+             data-entity="formOptions.entity"></div>
+    </section>
+    <div cloud-common-overlay data-loading="isBusy"></div>
+</div>

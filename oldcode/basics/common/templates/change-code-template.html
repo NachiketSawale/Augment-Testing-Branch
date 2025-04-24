@@ -1,0 +1,16 @@
+<div class="modal-wrapper">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="fullheight">
+			<div>
+				<div data-platform-form data-form-options="configureOptions"
+				     entity="currentItem"></div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="ok btn btn-default" data-ng-click="okClicked()" translate="basics.common.button.ok"></button>
+		<button type="button" class="cancel btn btn-default" data-ng-click="close()" translate="basics.common.button.cancel"></button>
+	</footer>
+</div>
+<div cloud-common-overlay data-loading="isLoading"></div>

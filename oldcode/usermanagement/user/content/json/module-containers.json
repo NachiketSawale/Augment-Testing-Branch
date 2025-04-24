@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "template":"app/components/base/grid-partial.html",
+    "title": "usermanagement.user.userContainerTitle",
+    "controller": "usermanagementUserListController",
+    "uuid": "DFDD06A581624D11AB1E6AA1103E76E2"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "usermanagement.user.usermanagementUserDetailsContainerTitle",
+    "controller": "usermanagementUserDetailController",
+    "uuid": "FB4FB1A7754C4A69B6634AD9C98BCFF9",
+	"permission": "DFDD06A581624D11AB1E6AA1103E76E2"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "usermanagement.user.user2GroupContainerTitle",
+    "controller": "usermanagementUserXGroupListController",
+    "uuid": "156FF800CCEB41B9871A8DD89502FAAC"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/grid-partial.html",
+    "title": "usermanagement.user.logContainer.logContainerTitle",
+    "controller": "usermanagementUserLogController",
+    "uuid": "3782c1e6085d409ebc01122159c2e462"
+  },
+  {
+    "id": "5",
+    "template": "app/components/specificationcontainer/platform-specification-container.html",
+    "title": "usermanagement.user.emailFooterContainerTitle",
+    "controller": "usermanagementUserEmailFooterController",
+    "uuid": "a1ec5034d7e4423ea3d264a8fcd4e75f",
+    "permission": "dfdd06a581624d11ab1e6aa1103e76e2"
+  }
+]

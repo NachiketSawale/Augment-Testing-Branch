@@ -1,0 +1,7 @@
+<ui-common-form
+  #form
+  [entity]="entity"
+  [entityRuntimeData]="entityRuntimeInfo"
+  [formConfig]="formConfig"
+  (valueChanged)="valueChanged($event)"
+  [preventEditing]="isFormReadOnly"></ui-common-form>

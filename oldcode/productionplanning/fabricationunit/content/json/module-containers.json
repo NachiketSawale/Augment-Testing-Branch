@@ -1,0 +1,45 @@
+[
+	{
+		"id": "productionplanning.fabricationunit.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.fabricationunit.listTitle",
+		"controller": "ppsFabricationunitListController",
+		"uuid": "5dee0cf56ed04413939677ab8e4964fe",
+		"permission": "bca1c47dfd91434b8eaab67d4bb961bd"
+	},
+	{
+		"id": "productionplanning.fabricationunit.details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.fabricationunit.detailsTitle",
+		"controller": "ppsFabricationunitDetailController",
+		"uuid": "0547263004624c20b73a8a5922cca1fe",
+		"permission": "bca1c47dfd91434b8eaab67d4bb961bd"
+	},
+	{
+		"id": "productionplanning.fabricationunit.nesting.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.fabricationunit.nesting.listTitle",
+		"controller": "ppsNestingListController",
+		"uuid": "8F26CD9926514B0F9293ED8A98FCEE30",
+		"permission": "bca1c47dfd91434b8eaab67d4bb961bd"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "app/components/grid/generic-structure/generic-container.html",
+		"title": "productionplanning.fabricationunit.structureTitle",
+		"controller": "platformGenericStructureController",
+		"mainService": "ppsFabricationunitDataService",
+		"configurationService": "ppsFabricationunitStructureUIService",
+		"enableCaching": "true",
+		"uuid": "b6c46fe6f1784bf997a06dd7260ba6b2",
+		"permission": "bca1c47dfd91434b8eaab67d4bb961bd"
+	},
+	{
+		"id": "productionplanning.fabricationunit.site.filter",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.fabricationunit.siteFilterTitle",
+		"controller": "ppsFabricationunitSiteFilterController",
+		"uuid": "4ab2104c7bee4e379c22f3062e722063",
+		"permission": "bca1c47dfd91434b8eaab67d4bb961bd"
+	}
+]

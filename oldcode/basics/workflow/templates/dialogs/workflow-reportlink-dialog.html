@@ -1,0 +1,66 @@
+<div data-ng-controller="basicsWorkflowReportLinkDialog">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'basics.workflow.modalDialogs.linkName' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-ng-model="modalOptions.value.displayText" data-options="input.codeMirrorOptions"
+				     data-script-editor-directive>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="radiolist-container" data-ng-model="input.editorMode" data-on-selection-changed="onRadioGroupOptChanged(value)"
+			     data-options="input.radioGroupOpt" data-radiolistctrl>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-show="input.editorMode === 1">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.modalDialogs.report' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-basics-workflow-report-list-combobox data-ng-change="onReportChanged(input.reportValue)"
+					     data-ng-model="input.reportValue"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-col border-all">
+					<div class="toolbar">
+						<h3 class="title">{{'basics.workflow.modalDialogs.reportParameter' | translate}}</h3>
+						<div data-list="tools" data-platform-menu-list></div>
+					</div>
+					<div class="flex-box filler">
+						<platform-Grid data="gridData"></platform-Grid>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-show="input.editorMode === 2">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">Report</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.reportScriptValue" data-options="input.codeMirrorOptions"
+					     data-script-editor-directive>
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">Parameters</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.parametersScriptValue" data-options="input.codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,551 @@
+[
+  {
+    "id": "productionplanning.engineering.task.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.taskListTitle",
+    "controller": "productionplanningEngineeringTaskListController",
+    "uuid": "a9d9591baf2d4e58b5d21cd8a6048dd1",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.task.listByJob",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.taskListByJobTitle",
+    "controller": "productionplanningEngineeringTaskListByJobController",
+    "uuid": "13f03b23d6ca4c8a988b76aa889902c5",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.task.details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.engineering.taskDetailTitle",
+    "controller": "productionplanningEngineeringTaskDetailsController",
+    "uuid": "eaf809020ac948a0b5cbb05f6bd4ed13",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.productDescription.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.productdescriptionListTitle",
+    "controller": "productionplanningEngineeringProductDescriptionListController",
+    "uuid": "c14c16d0cab949eb96f10ab05bc2ccfe",
+    "permission": "4b3bf707e6ee44748685a142a57168b4"
+  },
+  {
+    "id": "productionplanning.engineering.drawing.productdescription.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.drawingProductDescriptionListTitle",
+    "controller": "productionplanningProducttemplateProductDescriptionListController",
+    "serviceOptions": {
+      "serviceName": "productionplanningEngineeringDrawingProductDescriptionDataService",
+      "parentService": "productionplanningEngineeringMainService",
+      "parentFilter": "engDrawingId",
+      "readOnly": true,
+      "usePostForRead": true,
+      "endRead": "listbyengdrawingofengtask"
+    },
+    "uuid": "b878e882da774551911b140e2c6cafea",
+    "permission": "4b3bf707e6ee44748685a142a57168b4"
+  },
+  {
+    "id": "productionplanning.engineering.productDescription.ppsdocument.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.productDescriptionDocumentListTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.engineering.productDescription.ppsdocument",
+    "parentService": "productionplanningEngineeringProductDescriptionDataService",
+    "foreignKey": "ProductDescriptionFk",
+    "uuid": "d5a5827ede5241d5ab21e5f3d9429829",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.engineering.productDescription.ppsdocument.revision.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.productDescriptionDocumentRevisionListTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "af8a5a1df29f42a6b86d1f990bada53a",
+    "parentUuid": "productionplanning.engineering.productDescription.ppsdocument",
+    "grandfathertService": "productionplanningEngineeringProductDescriptionDataService",
+    "foreignKey": "ProductDescriptionFk",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.engineering.ppsdocument.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.documentListTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.common.document.engineering",
+    "parentService": "productionplanningEngineeringMainService",
+    "foreignKey": "EngTaskFk",
+    "uuid": "054db6905e81420e9d848148e6bd1d2b",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.engineering.ppsdocument.revision.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.documentRevisionListTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "0629bbb864524d6ba3cb9abf9b7dc19c",
+    "parentUuid": "productionplanning.common.document.engineering",
+    "grandfathertService": "productionplanningEngineeringMainService",
+    "foreignKey": "EngTaskFk",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.engineering.resRequisition.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.resRequisitionListTitle",
+    "controller": "productionplanningCommonResRequisitionListController",
+    "serviceOptions": {
+      "entityNameTranslationID": "productionplanning.engineering.resRequisitionListTitle",
+      "serviceName": "ProductionplanningEngineeringResRequisitionDataService",
+      "parentServiceName": "productionplanningEngineeringMainService",
+      "dialogResRequisitionServiceName": "productionplanningActivityDialogResRequisitionListService"
+    },
+    "uuid": "d0c53c74153247fab30fc813f4c88b97",
+    "permission": "291a21ca7ab94d549d2d0c541ec09f5d"
+  },
+  {
+    "id": "productionplanning.engineering.resRequisitionReservation.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.resReservationListTitle",
+    "controller": "productionplanningCommonResRequisitionReservationListController",
+    "serviceOptions": {
+      "entityNameTranslationID": "productionplanning.engineering.resReservationListTitle",
+      "serviceName": "ProductionplanningEngineeringResReservationDataService",
+      "parentServiceName": "productionplanningEngineeringMainService"
+    },
+    "uuid": "d7be5214139949ab886be48f0bffc6b8",
+    "permission": "6540965b6c84450aa1da41fd1c870a47"
+  },
+  {
+    "id": "productionplanning.engineering.projectlocation.list",
+    "template": "app/components/base/grid-partial-overlay.html",
+    "title": "productionplanning.engineering.projectLocationListTitle",
+    "controller": "ppsCommonProjectLocationSideloadListController",
+    "mainService": "productionplanningEngineeringMainService",
+    "editable": true,
+    "filterType": "byJob",
+    "uuid": "a59ab35dbe5148c09013f5238706e942",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.psdActivity.list",
+    "template": "app/components/base/grid-partial-overlay.html",
+    "title": "productionplanning.engineering.psdActivityListTitle",
+    "controller": "productionplanningCommonPsdActivityFilterListController",
+    "mainService": "productionplanningEngineeringMainService",
+    "uuid": "589ea017a55046bf95d957076c8a50be",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.ctrlUnit.list",
+    "template": "app/components/base/grid-partial-overlay.html",
+    "title": "productionplanning.engineering.ctrlUnitListTitle",
+    "controller": "productionplanningCommonControllingUnitFilterListController",
+    "mainService": "productionplanningEngineeringMainService",
+    "uuid": "ddb676d112eb48a284dcb0b5d37f23b7",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.planningboard",
+    "template": "app/components/planningboard/templates/platform-planning-board-template.html",
+    "title": "productionplanning.engineering.planningBoardTitle",
+    "controller": "productionplanningEngineeringPlanningBoardController",
+    "uuid": "51440d12f85e490ba2b8b6e9b8969e7f",
+    "permission": "6540965b6c84450aa1da41fd1c870a47",
+    "subcontainers": [{
+      "uuid": "e86c43921f1b454eaad9b353fbb0678d"
+    },
+    {
+      "uuid": "e68bb97a4d134aadaf4a53ea0c198bc8"
+    }]
+  },
+  {
+    "id": "productionplanning.engineering.comment",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "basics.common.commentContainerTitle",
+    "controller": "basicsCommonCommentController",
+    "uuid": "f1ceee23c5774036a1cceee9a7b34590",
+    "commentQualifier": "productionplanning.engineering.comment",
+    "parentService": "productionplanningEngineeringMainService",
+    "permission": "f1ceee23c5774036a1cceee9a7b34590",
+	  "showLastComments": true
+  },
+  {
+    "id": "productionplanning.engineering.task.progress.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.progressListTitle",
+    "controller": "ppsEngineeringProgressController",
+    "uuid": "eb99e82ce92d4cf0976fc78616a9ba23",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1",
+    "serviceOptions": {
+      "parentService": "productionplanningEngineeringMainService",
+      "parentFilter": "engTaskId",
+      "endRead": "listByEngTask",
+      "containerType": "grid",
+      "getParentProjectIdFn": "getSelectedProjectId"
+    }
+  },
+  {
+    "id": "productionplanning.engineering.task.progress.details",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.engineering.progressDetailTitle",
+    "controller": "ppsEngineeringProgressController",
+    "uuid": "15072e46c7394fb9b829aa94f73a075e",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1",
+    "serviceOptions": {
+      "parentService": "productionplanningEngineeringMainService",
+      "parentFilter": "engTaskId",
+      "endRead": "listByEngTask",
+      "containerType": "details"
+    }
+  },
+  {
+    "id": "productionplanning.engineering.task.itemClerkList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.itemClerkListTitle",
+    "controller": "ppsEngineeringItemClerkListController",
+    "uuid": "a738f9b403554c5fa9ef3b7e7820dd31",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.project.businesspartner.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.main.listPrj2BpTitle",
+    "controller": "ppsCommonProjectBPController",
+    "moduleName": "productionplanning.engineering",
+    "uuid": "4c8866b319f74459994d1595a56fcc3e",
+    "permission": "B15A05E067094D3988F4626281C88E24"
+  },
+  {
+    "id": "productionplanning.engineering.project.businesspartner.contact.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.main.listPrj2BpContactTitle",
+    "controller": "ppsCommonProjectBPContactController",
+    "moduleName": "productionplanning.engineering",
+    "uuid": "59b000cdd4bf4vvfb4bc7D28ff8bf1c9",
+    "permission": "09B099CDD4BF4AAFB4BC7D28DD8BF1C9"
+  },
+  {
+    "id": "productionplanning.engineering.businesspartner.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.listBizPartnerTitle",
+    "controller": "ppsCommonBizPartnerController",
+    "moduleName": "productionplanning.engineering",
+    "uuid": "ebc3f90b8cf04ddaac0b78fd95df0af0",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.businesspartner.contact.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.listBizpPartnerContactTitle",
+    "controller": "ppsCommonBizPartnerContactController",
+    "moduleName": "productionplanning.engineering",
+    "uuid": "c2950440ad254e338ded260b788a8672",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.project.main.documents.project.document.grid",
+    "template": "documents.project/partials/documentgridView.html",
+    "title": "cloud.common.documentsProject",
+    "controller": "documentsProjectDocumentController",
+    "showOriginColumn": true,
+    "uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+  },
+  {
+    "id": "productionplanning.engineering.project.main.documents.project.revision.grid",
+    "template": "documents.project/partials/documentGridRevisionView.html",
+    "title": "cloud.common.documentsRevision",
+    "controller": "documentsProjectDocumentRevisionController",
+    "uuid": "994F4CDC7B6B495E9E4HJG74A303D603",
+    "permission": "684F4CDC782B495E9E4BE8E4A303D693"
+  },
+  {
+    "id": "productionplanning.engineering.costgroup.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.costgroupListTitle",
+    "controller": "ppsCommonCostGroupListController",
+    "costGroupService": "ppsEngineeringCostGroupService",
+    "uuid": "fh026f94a1ghvf17ty967dgaf26a5cgj",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.productionunit.comments",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "productionplanning.engineering.productionUnitPinBoardTitle",
+    "controller": "basicsCommonCommentController",
+    "uuid": "99e43886ebf64ca1a7d2ada51d12b6e3",
+    "permission": "15eef56b65344be3b563d99351a38341",
+    "commentQualifier": "productionplanning.item.comment",
+    "parentService": "productionplanningEngineeringPUPinBoardService",
+    "configServiceName": "productionplanningEngineeringPUPinBoardConfigService",
+	  "showLastComments": true
+  },
+  {
+    "id": "productionplanning.engineering.ppsitem.ppsupstreamitem.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.upstreamItem.listTitle",
+    "controller": "ppsItemUpstreamItemListController",
+    "uuid": "33edab57edgb492d84r2gv47e734fh8u",
+    "permission": "23edab57edgb492d84r2gv47e734fh8u",
+    "moduleName": "productionplanning.engineering",
+    "hasCopy": "true",
+    "hasFilter": "true"
+  },
+  {
+    "id": "productionplanning.engineering.ppsitem.ppssplitupstreamitem.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.splitUpstreamItem.listTitle",
+    "controller": "ppsItemUpstreamItemListController",
+    "uuid": "047ac127d3cc41fca3221b897c5bb93f",
+    "permission": "23edab57edgb492d84r2gv47e734fh8u",
+    "moduleName": "productionplanning.engineering"
+  },
+  {
+    "id": "productionplanning.engineering.ppsitem.ppsupstreamitem.material.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.ppsItem2MdcMaterial.listTitle",
+    "controller": "ppsItem2MdcMaterialListController",
+    "uuid": "yde4fbd7edsb345dfdr24v55e65ffgcu",
+    "permission": "sde4fbd7edsb345dfdr24v55e65ffgcu",
+    "moduleName": "productionplanning.engineering"
+  },
+  {
+    "id": "productionplanning.engineering.ppsitem.ppsupstreamitem.material.productDesc.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.ppsmaterial.productDescription.detailViewTitle",
+    "controller": "productionplanningPpsmaterialProductdescDetailController",
+    "uuid": "411110394b224dd392b69c5b60fe4e80",
+    "permission": "211110394b224dd392b69c5b60fe4e80",
+    "moduleName": "productionplanning.engineering"
+  },
+  {
+    "id": "productionplanning.engineering.ppsitem.ppsupstreamitem.material.productDesc.parameter.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.ppsmaterial.productDescParameter.listViewTitle",
+    "controller": "productionplanningPpsmaterialProductdescParameterListController",
+    "uuid": "5a0ff92d9fc74bc691845427bf566bd3",
+    "permission": "3a0ff92d9fc74bc691845427bf566bd3",
+    "moduleName": "productionplanning.engineering"
+  },
+	{
+		"id": "productionplanning.engineering.log.list",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "productionplanning.engineering.logListTitle",
+		"controller": "ppsCommonLogSourceWindowController",
+		"filter": [
+			"Date",
+			"ColumnName",
+			"PpsLogReasonFk"
+		],
+		"uuid": "4b68c4ca25c348058a3a0682bbc53e0e",
+		"permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+	},
+	{
+		"id": "productionplanning.engineering.log.pinboard",
+		"template": "productionplanning.common/partials/pps-common-log-pinboard-view.html",
+		"title": "productionplanning.engineering.logPinboardTitle",
+		"controller": "ppsCommonLogPinboardViewController",
+		"uuid": "45fd21c43796480c9498889bf775d5c0",
+		"permission": "a9d9591baf2d4e58b5d21cd8a6048dd1",
+		"endRead": "logsForEngTask?mainItemId=",
+		"commentQualifier": "productionplanning.engineering.manuallog",
+		"parentService": "productionplanningEngineeringMainService",
+		"configServiceName": "ppsCommonLogPinboardViewConfigService",
+		"translationService": "productionplanningEngineeringTranslationService",
+		"showLastComments": true
+	},
+  {
+    "id": "productionplanning.engineering.eventsequenceloglist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.event.eventSeqLogListTitle",
+    "controller": "ppsCommonEventSequenceLogListController",
+    "uuid": "ade76c38967846dea16b99b277d09def",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1",
+    "controllerOptions": {
+      "parentService": "productionplanningEngineeringMainService",
+      "translationService": "productionplanningEngineeringTranslationService"
+    }
+  },
+  {
+    "id": "productionplanning.engineering.detailerplanningboard",
+    "template": "app/components/planningboard/templates/platform-planning-board-template.html",
+    "title": "productionplanning.engineering.detailerPlanningBoardTitle",
+    "controller": "ppsEngDetailerPlanningBoardController",
+    "uuid": "1bd2af4a2d844fa09cf6eaf01f53b5e0",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.drawing.ppsdocument.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.document.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.engineering.drawing.ppsdocument",
+    "parentService": "productionplanningEngineeringMainService",
+    "foreignKey": "EngDrawingFk",
+    "idProperty": "EngDrawingFk",
+    "uuid": "99yh4c988b634bf4hfb9bff0d6dfb9ec",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.engineering.drawing.ppsdocument.revision.List",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.drawing.document.revision.listTitle",
+    "controller": "productionplanningCommonDocumentRevisionListController",
+    "uuid": "993e00364d78449d939ce179f158b535",
+    "parentUuid": "productionplanning.engineering.drawing.ppsdocument",
+    "grandfathertService": "productionplanningEngineeringMainService",
+    "foreignKey": "EngDrawingFk",
+    "idProperty": "EngDrawingFk",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.engineering.genericdocument.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.genericDocumentListTitle",
+    "controller": "ppsCommonGenericDocumentListController",
+    "serviceOptions": {
+      "module":"productionplanning.engineering",
+      "entityNameTranslationID": "productionplanning.engineering.genericDocumentListTitle",
+      "serviceName": "productionplanningEngineeringGenericDocumentDataService",
+	  "parentServiceName": "productionplanningEngineeringMainService",
+	  "url": "productionplanning/engineering/task/document/",
+	  "parentFilter": "taskId",
+	  "uploadServiceKey": "eng-task"
+    },
+    "uuid": "0fd5149f1e6542b2b8d04a5b19d8bc22",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.job.pinboard",
+    "template": "basics.common/partials/comment-view.html",
+    "title": "productionplanning.common.jobCommentContainerTitle",
+    "controller": "ppsCommonJobPinboardController",
+    "uuid": "f1e57832cde54380a4b0bd23991f19f9",
+    "commentQualifier": "logistic.job.comment",
+    "parentService": "productionplanningEngineeringMainService",
+    "configServiceName": "logisticJobPinBoardConfigService",
+    "permission": "f7a4c2016e614d21834c50e44c6a65dd",
+    "attributeName": "LgmJobFk",
+	  "showLastComments": true
+  },
+  {
+    "id": "productionplanning.engineering.gantt",
+    "template": "app/components/gantt/templates/simple-gantt.html",
+    "title": "productionplanning.item.gantt",
+    "controller": "ppsEngineeringGanttController",
+    "uuid": "54761c9e749540d7a065f8c81c208f90",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.ppsupstreamitemdocument.documentListForItem",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.upstreamItem.document.listTitle",
+    "controller": "productionplanningCommonDocumentListController",
+    "currentModule": "productionplanning.engineering.upstreamitem",
+    "parentGUID": "33edab57edgb492d84r2gv47e734fh8u",
+    "containerInfo": "productionplanningEngineeringContainerInformationService",
+    "foreignKey": "PpsItemFk",
+    "idProperty": "UpstreamResult",
+    "endRead": "listForUpstreamItem",
+    "selectedItemId": "Id",
+    "uuid": "a9d9591baf2d4e58b3221cd8a6048222",
+    "permission": "5640a72648e24f21bf3985624c4d0fdf"
+  },
+  {
+    "id": "productionplanning.engineering.formFormData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.formDataLisTitle",
+    "controller": "ppsItemCommonFormDataController",
+    "uuid": "0af7123b6e7e4ebb8ad1de7ce9851624",
+    "rubricId": 77,
+    "mainService": "productionplanningEngineeringMainService",
+    "statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.ppsitem.formFormData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.ppsItemFormDataLisTitle",
+    "controller": "ppsItemCommonFormDataController",
+    "uuid": "602cbe5b8f3843c791a1a0039aa12adf",
+    "rubricId": 84,
+    "mainService": "productionplanningEngineeringMainService",
+    "statusWizardGuid": "587cc46a2dc94ede90afec4137542f9d",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1",
+    "contextFk": "PPSItemFk"
+  },
+  {
+    "id": "productionplanning.engineering.project.formFormData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.projectFormDataLisTitle",
+    "controller": "ppsItemCommonFormDataController",
+    "uuid": "3b141abdfcdc476ebc000e5283e1c876",
+    "rubricId": 3,
+    "mainService": "productionplanningEngineeringMainService",
+    "statusWizardGuid": "7b0fb8993f56434f99368ec9875ee4fd",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1",
+    "contextFk": "ProjectId"
+  },
+  {
+    "id": "productionplanning.engineering.item.upstream.formFormData",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.upstreamFormDataLisTitle",
+    "controller": "ppsItemCommonFormDataController",
+    "uuid": "af9faccf5cd147208b9f37bbff1dfd71",
+    "rubricId": 86,
+    "mainService": "ppsUpstreamItemDataService",
+    "mainEntityService":"productionplanningEngineeringMainService",
+    "parentService": "productionplanningEngineeringMainService",
+    "serviceKey": "productionplanning.engineering.ppsitem.upstreamitem",
+    "moduleName": "productionplanning.engineering",
+    "ppsItemColumn": "PPSItemFk",
+    "statusWizardGuid": "2d1bababfa40410ca725cb16c4d77304",
+    "permission": "23edab57edgb492d84r2gv47e734fh8u"
+  },
+  {
+    "id": "productionplanning.engineering.engtask2clerk.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.engineering.engtask2clerkListTitle",
+    "controller": "ppsEngTask2ClerkListController",
+    "uuid": "ad6b8c6ce05b451d8d22cb2541237558",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.planningunit.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.item.listTitle",
+    "controller": "productionplanningEngineeringPpsItemListController",
+    "uuid": "286bb281a68e4ca19e7f6e333b4f97bc",
+    "permission": "a9d9591baf2d4e58b5d21cd8a6048dd1"
+  },
+  {
+    "id": "productionplanning.engineering.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "8cf6520de6114c88928ff900ede5504c",
+    "controller": "",
+    "sectionId": "70",
+    "mainService": "productionplanningEngineeringMainService"
+  },
+  {
+    "id": "productionplanning.engineering.characteristic2.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "basics.common.characteristic2.title",
+    "uuid": "96aa45a03042461d9ac85a4786595458",
+    "controller": "",
+    "sectionId": "71",
+    "mainService": "productionplanningEngineeringMainService"
+  },
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "93614550a5874136b9339c7714bb0d45",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

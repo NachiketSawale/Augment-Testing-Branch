@@ -1,0 +1,46 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="estimateMainCreateMaterialPackageWizardController">
+	<div cloud-common-overlay data-loading="isLoading"></div>
+    <header class="modal-header" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body" >
+        <div ng-switch="selectStep.number" class="modal-wrapper margin-bottom-ld fullheight" style="overflow-y:hidden;">
+            <div ng-switch-when="0" class="modal-wrapper fullheight">
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-create-material-package-step0.html'" class="modal-wrapper fullheight"></ng-include>
+            </div>
+            <div ng-switch-when="1" class="modal-wrapper fullheight" style="overflow-y:auto;overflow-x:hidden;padding:0px 10px;">
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-create-material-package-step1.html'" class="modal-wrapper fullheight"></ng-include>
+            </div>
+            <div ng-switch-when="2" class="modal-wrapper">
+                <ng-include src="'estimate.main/templates/sidebar/wizard/estimate-main-create-material-package-step2.html'" class="modal-wrapper"></ng-include>
+            </div>
+        </div>
+        <div data-platform-wizard-dialog-body class="flex-box flex-column" style="display:none;"></div>
+
+    </section>
+    <div class="modal-footer">
+	     <span ng-if="getCurrentStepNumber() == 3" class="package-option" >
+             <div package-option-profile-lookup data-ng-model="updateOptions.optionProfile" data-options="serviceoptions1" class="package-option-lookup"></div>
+        </span>
+        <span ng-if="getCurrentStepNumber() !== 1" >
+            <button ng-show = "getCurrentStepNumber() !== 1" type="button" class="btn btn-default" data-ng-click="previousStep()">{{::'basics.common.button.previousStep' | translate}}</button>
+        </span>
+        <button data-ng-disabled="!currentStep.canFinish"  ng-show = "getCurrentStepNumber() === 3" type="button" class="btn btn-default" data-ng-click="reset()" data-ng-bind="wzStrings.finish" style="margin-left: 5px;"></button>
+        <button type="button" class="btn btn-default"  data-ng-click="nextStep()" >{{getButtonText()}}</button>
+        <button data-ng-disabled="currentStep.disallowCancel"  type="button" data-ng-click="$close(false)" class="btn btn-default" >{{::'platform.cancelBtn' | translate}}</button>
+    </div>
+</div>
+<style>
+.modal-footer .package-option{
+   flex:1;
+	text-align:left;
+}
+.modal-footer .package-option .package-option-lookup{
+	max-width: 300px;
+}
+.modal-footer .package-option button.btn{
+	margin:0px;
+	padding:0px;
+	min-width:auto;
+	display:inline-block;
+}
+</style>
+

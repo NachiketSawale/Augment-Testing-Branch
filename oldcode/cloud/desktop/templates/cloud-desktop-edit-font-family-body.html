@@ -1,0 +1,23 @@
+<div class="platform-form-group">
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "platform.wysiwygEditor.settings.colFontFamily" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-suppress-debounce="true" data-domain="description" data-model="dialog.modalOptions.value.fontFamily"
+				     data-change="change"></div>
+
+				<div data-ng-if="!dialog.modalOptions.value.fontFamily"><div class="required-cell"></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label">{{ "platform.wysiwygEditor.settings.colDisplayName" | translate }}</label>
+		<div class="platform-form-col">
+			<div class="flex-box">
+				<div class="form-control" data-domain-control data-domain="description" data-ng-model="dialog.modalOptions.value.displayName"
+				     data-change="change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-platform-grid-dialog-body class="grid-container-wrapper"></div>

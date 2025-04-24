@@ -1,0 +1,18 @@
+{
+	"boq": {
+		"wic": {
+			"detailWicGroupContainerTitle": "Details WIC Groups",
+			"wicGroupListTitle": "WIC Groups",
+			"wicBoqListTitle": "WIC Catalogues",
+			"wicTab": "WIC",
+			"basicData": "Basic Data",
+			"MdcMaterialCatalogFk": "WIC Framework",
+			"AccessRightDescriptorName": "Access Right Name",
+			"wicGroupClerkDetailTitle": "Clerk (Authorization) Details",
+			"wicGroupClerkListTitle": "Clerk (Authorizations)",
+			"CopyTemplateOnly": "Copy Template Only",
+			"OrdHeaderFk": "Sales Contract",
+			"OrdHeaderDescription": "Sales Contract Description"
+		}
+	}
+}

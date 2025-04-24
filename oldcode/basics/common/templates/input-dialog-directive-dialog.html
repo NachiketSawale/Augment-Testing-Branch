@@ -1,0 +1,21 @@
+﻿<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section>
+	<div class="toolbar" data-ng-hide="!tools">
+		<div data-platform-menu-list data-list="tools"></div>
+	</div>
+	<div data-platform-alert data-error="error"></div>
+</section>
+<section class="modal-body">
+	<div style="height: 100%;">
+		<div class="fullheight" style="overflow-y: auto">
+			<div data-platform-form data-form-options="formOptions" data-entity="currentItem"></div>
+		</div>
+	</div>
+	<div style="margin:8px 0 8px 0;" ng-if="hasContractItem">{{'procurement.common.wizard.IsContractNote' | translate}}</div>
+</section>
+<footer class="modal-footer">
+	<div data-basics-common-address-message-directive data-entity="currentItem" style="flex:1; line-height: 30px;"></div>
+	<button class="btn btn-default" data-ng-repeat="button in buttons" data-ng-disabled="button.disabled()" data-ng-click="button.execute($event)">
+		{{button.context$tr$ | translate}}
+	</button>
+</footer>

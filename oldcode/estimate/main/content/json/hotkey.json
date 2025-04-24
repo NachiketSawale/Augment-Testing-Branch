@@ -1,0 +1,68 @@
+[
+	{
+		"combo": "ctrl+alt+u",
+		"description": "estimate.main.updateProjectBoq",
+		"callbackId": "updatePrjBoq",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Alt+U"
+	},
+	{
+		"combo": "ctrl+alt+n",
+		"description": "cloud.common.toolbarInsert",
+		"callbackId": "lineItemCreate",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+Alt+N"
+	},
+	{
+		"combo": "alt+l",
+		"description": "estimate.main.newLineItem",
+		"callbackId": "newLineItem",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Alt+L"
+	},
+	{
+		"combo": "alt+r",
+		"description": "estimate.main.newResource",
+		"callbackId": "newResource",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Alt+R"
+	},
+	{
+		"combo": "ctrl+g",
+		"description": "estimate.main.goToPrjBoQ",
+		"callbackId": "toBoq",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+G"
+	},
+	{
+		"combo": "alt+p",
+		"description": "estimate.main.newPackageItemAssignment",
+		"callbackId": "newPackageItemAssignment",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Alt+P"
+	}
+]

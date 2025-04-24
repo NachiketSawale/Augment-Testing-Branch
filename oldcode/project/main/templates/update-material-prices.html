@@ -1,0 +1,39 @@
+<div data-ng-controller="projectMainUpdateMaterialPricesWizardController" class="wizard-wrapper wizard-dialog"><!--modal-wrapper-->
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div ng-switch="currentStep" class="" style="height: 95%;">
+            <div ng-switch-when="optionPage" class="fullheight">
+                <ng-include src="'project.main/templates/update-price-options.html'"></ng-include>
+            </div>
+            <div ng-switch-when="quotePage" class="fullheight">
+                <ng-include src="'project.main/templates/update-prices-from-quote.html'"></ng-include>
+            </div>
+            <div ng-switch-when="contractPage" class="fullheight">
+                <ng-include src="'project.main/templates/update-prices-from-contract.html'"></ng-include>
+            </div>
+            <div ng-switch-when="catalogPage" class="fullheight">
+                <ng-include src="'project.main/templates/update-price-from-catalog-result.html'"></ng-include>
+            </div>
+            <div ng-switch-when="resultPage" class="fullheight">
+                <ng-include src="'project.main/templates/update-material-prices-result.html'"></ng-include>
+            </div>
+	        <div ng-switch-when="catalogMatrialPage" class="fullheight">
+		        <ng-include src="'project.main/templates/update-price-by-material-catalog.html'"></ng-include>
+	        </div>
+        </div>
+    </section>
+	<footer class="modal-footer" style="height: auto">
+		<div style="flex: 1" data-ng-hide="!showNote()">
+			<h3 class="margin-top-ld">{{modalOptions.body.fromCatalogUpdateNote}}</h3>
+			<h3 class="margin-top-ld">{{modalOptions.body.materialReadOnlyJobNote}}</h3>
+		</div>
+		<button type="button" class="btn btn-default" data-ng-click="searchProject()" data-ng-hide="!canSearch"> {{::'basics.common.button.search' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="moveStep('previous')" data-ng-disabled="isFirstStep()"> {{::'basics.common.button.previousStep' | translate}}</button>
+		<button type="button" class="btn btn-default" style="width:auto;" data-ng-click="updateAllWithBase()" data-ng-hide="!showUpdateAll()" data-ng-disabled="!canUpdateAllWithBase()">{{::'project.main.resetAllWithBasePriceBtnText' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="moveStep('next')" data-ng-disabled="!canNextStep"> {{nextButtonText}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+	</footer>
+    <!-- Loading -->
+    <div cloud-common-overlay data-loading="fromCatalog.isCalculatingEstimatePrice" data-info="project.main.updatePriceFromCatalogWizard.calculatingInfo"></div>
+    <div cloud-common-overlay data-loading="fromCatalog.isPriceListLoading" data-info="project.main.updatePriceFromCatalogWizard.loadingInfo"></div>
+</div>

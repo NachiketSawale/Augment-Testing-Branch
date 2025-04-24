@@ -1,0 +1,13 @@
+<div  data-ng-controller="controllingGeneralcontractorGeneratePackageResultController">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{'cloud.common.informationDialogHeader'| translate}}</h2>
+	</header>
+	<section class="modal-body">
+		<div class="flex-element" data-ng-bind="'{{message}}' | translate"></div>
+		<br/><br/><br/>
+	</section>
+	<div class="modal-footer">
+		<button type="button" class="btn navigator-button tlb-icons ico-goto" title="{{title}}"  data-ng-show = "true" ng-click="navigate()"></button>
+		<button type="button" class="btn btn-default"  data-ng-click="onOk()">{{'cloud.common.ok' | translate}}</button>
+	</div>
+</div>

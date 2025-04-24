@@ -1,0 +1,51 @@
+<div data-ng-controller="estimateMainLookupDialogController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="form-control input-group margin-bottom-ld exclude-resize">
+            <input type="text" data-ng-model="searchValue" class="input-group-content" data-ng-keydown="onSearchInputKeyDown($event, searchValue)" />
+            <span class="input-group-btn">
+            <button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="onSearch(searchValue)" data-ng-disabled="!isReady"></button>
+		</span>
+        </div>
+
+        <div id="assemblytemplateSplitter" data-platform-kendo-splitter-adjust class="modal-wrapper border-none">
+            <div id="ui-layout-east" class="modal-wrapper border-none" data-ng-controller="estimateMainLookupDialogAssemblycatController">
+                <div class="pane-l flex-element flex-box flex-column subview-container">
+                    <platform-Grid data="gridData"></platform-Grid>
+                    <div cloud-common-overlay data-loading="!isReady || isLoading"></div>
+                </div>
+            </div>
+            <div id="ui-layout-west" class="modal-wrapper" data-ng-controller="estimateMainLookupDialogAssemblyController">
+                <div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+                    <h2 class="title fix" title="{{'cloud.common.searchResults' | translate}}">{{'cloud.common.searchResults' | translate}}</h2>
+                    <div data-platform-menu-list data-list="tools" data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+                </div>
+                <div class="flex-box flex-column flex-element subview-content relative-container">
+                    <div class="lookup-grid flex-basis-auto" data-platform-grid data="gridData"></div>
+                </div>
+                <div cloud-common-overlay data-loading="!isReady || isLoading"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modal-footer" style="overflow: hidden; visibility: hidden;" data-ng-style="{visibility: isInit? 'visible': 'hidden'}">
+        <div class="custom-group">
+            <label class="ms-checkbox-multi-select" data-ng-show="settings.gridOptions.multiSelect">
+                <input type="checkbox" data-ng-model="enableMultiSelection">
+                {{ 'estimate.main.resourceAssemblyPopupMultipleSelection' | translate }} -
+                {{ enableMultiSelection ? modalOptions.selectedItems.length : 0 }}
+                {{ 'estimate.main.resourceAssemblyPopupItemsSelected' | translate }}
+            </label>
+        </div>
+        <button type="button" class="btn btn-default" data-ng-click="onRefresh()" data-ng-disabled="!isReady">
+            {{modalOptions.refreshButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-disabled="modalOptions.disableOkButton"
+                data-ng-click="onOk()">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="onClose()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

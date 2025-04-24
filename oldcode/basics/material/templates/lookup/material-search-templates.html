@@ -1,0 +1,432 @@
+﻿<script type="text/ng-template" id="searchView.html">
+	<div data-ng-show="!isPreview" class="flex-box flex-column flex-element subview-content filler relative-container">
+
+		<div><div class="flex-box">
+			<div class="ms-sv-revert-button">
+				<a href data-ng-click="revert()" class="ms-sv-revert-button-img tlb-icons ico-discard">
+				</a>
+			</div>
+			<button class="button bg-color-bar1 control-icons ico-down category-dropdown ellipsis_" data-ng-model="categorySelect" data-ng-click="onMaterialOption($event)" ng-bind="CategoryName" data-ng-attr-title="{{CategoryName}}" data-ng-disabled="searchFilter && searchFilter.MaterialCatalogId"></button>
+			<!--<div basics-material-ticket-system-dropdown-categories-directive ng-model="categorySelect" data-on-ok="refresh(categorySelect)" data-options="searchOptions"></div>-->
+			<!-- Search bar -->
+			<div class="flex-element flex-box flex-column ms-sv-search-div">
+				<div class="ms-sv-search-input">
+					<input data-ng-hide="showSearchSetting" class="ms-sv-search-button-text" type="text" ng-model="searchText" data-autofocus="600" data-ng-keydown="keyDown($event)"
+						   placeholder="{{::htmlTranslate.keyWord}}" style="border-radius: 0;" />
+
+					<platform-search-control data-ng-if="showSearchSetting" class="ms-sv-search-button-text" style="margin-left: -2px;padding-left: 0;"
+					                         data-ng-model="searchCtrlModel"
+					                         data-options="searchCtrlOptions"
+					                         class="flex-box margin-ld-top"></platform-search-control>
+
+					<div class="ms-sv-search-button">
+						<a href data-ng-click="refresh()" class="ms-sv-search-button-img tlb-icons ico-search">
+						</a>
+					</div>
+
+					<select class="ms-sv-select-option"
+					        data-ng-model="searchOptions.SortOption"
+							data-ng-change="sortOptionChange()"
+							data-ng-options="option.value as option.description for option in sortOptions">
+					</select>
+
+					$searchBarExtend$
+				</div>
+			</div>
+		</div></div>
+
+		<!-- Category navigation bar -->
+		<div data-basics-material-search-category-navigate
+			 data-ng-if="data.hasResult"
+			 data-search-text="searchOptions.SearchText"
+			 data-structure-id="getStructureId()"
+			 data-structures="data.structures"
+			 data-id-member="Id"
+			 data-on-navigate="onNavigate"
+			 class="ms-sv-category-navigate-row"></div>
+		<!-- Search result view -->
+		<div class="ms-sv-search-view fullheight" data-ng-if="data.hasResult">
+
+			<div class="row ms-sv-result-panel fullheight overflow">
+				<!-- Left panel (category and attribute filter)-->
+				<div class="col-md-3 ms-sv-result-panel-left fullheight overflow">
+					<!--Alternative Sources-->
+					<div class="row" data-ng-show="data.alternativeSources && data.alternativeSources.length">
+						<div class="ms-sv-container-title">
+							<span>{{::htmlTranslate.alternativeSource}}</span>
+							<span class="ms-sv-attribute-show-hide">
+								<a href="" data-ng-click="alternativeSourceShow=!alternativeSourceShow" class="control-icons block-image" ng-class="alternativeSourceShow ? 'ico-plus':'ico-minus'"></a>
+							</span>
+						</div>
+						<div data-basics-material-alternative-source
+							 data-list="data.alternativeSources"
+							 data-ng-show="!alternativeSourceShow"
+							 style="padding-top: 5px;"></div>
+					</div>
+					<!--Filter-->
+					<div class="row">
+						<div class="ms-sv-container-title">
+							<span>{{::htmlTranslate.filter}}</span>
+							<span class="ms-sv-attribute-show-hide">
+								<a href="" data-ng-click="filterShow=!filterShow" class="control-icons block-image" ng-class="filterShow ? 'ico-plus':'ico-minus'"></a>
+							</span>
+						</div>
+						<ul class="col-sm-offset-1" data-ng-show="!filterShow" style="padding-top: 5px;">
+							<li>
+								<span data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="onFrameworkFilter()" data-ng-model="searchOptions.FilterByFramework"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.frameworkCatalog.filter" | translate }}</span>
+							</li>
+						</ul>
+					</div>
+					<!--Catalog-->
+					<div class="row">
+						<div class="ms-sv-container-title">
+							<span>{{::htmlTranslate.category}}</span>
+							<span class="ms-sv-attribute-show-hide">
+								<a href="" data-ng-click="categoryShow=!categoryShow" class="control-icons block-image" ng-class="categoryShow ? 'ico-plus':'ico-minus'"></a>
+							</span>
+						</div>
+						<div data-basics-material-search-categories-filter
+							 data-filter-categories="data.categories"
+							 data-selected-categories="searchOptions.CategoryIdsFilter"
+							 data-filter-fn="onCategoryFilter"
+							 data-id-member="Id"
+							 data-ng-show="!categoryShow"
+							 style="padding-top: 5px;"></div>
+					</div>
+					<!--Structure-->
+					<div class="row">
+						<div class="ms-sv-container-title"><span>{{::htmlTranslate.structure}}</span></div>
+						<div data-basics-material-search-category-tree
+							 data-search-text="searchOptions.SearchText"
+							 data-structure-id="searchOptions.StructureId"
+							 data-structures="data.structures"
+							 data-id-member="Id"
+							 data-on-navigate="onNavigate">
+						</div>
+					</div>
+					<!--Attribute-->
+					<div class="row">
+						<div class="ms-sv-container-title">
+							<span>{{::htmlTranslate.attributes}}</span>
+							<span class="ms-sv-attribute-show-hide">
+                        <a href="" data-ng-click="attributeShow=!attributeShow" class="control-icons block-image" ng-class="attributeShow ? 'ico-plus':'ico-minus'">
+                        </a>
+							</span>
+						</div>
+
+
+						<div data-ng-show="!attributeShow">
+							<div class="ms-commodity-attributes-item" data-ng-if="data.uoms && data.uoms.length">
+								<div class="ms-commodity-attributes-title">
+									<span>{{::htmlTranslate.uom}}</span>
+									<span class="ms-commodity-attributes-expend">
+								      <a href="" data-ng-click="uomShow=!uomShow" class="control-icons block-image" ng-class="uomShow ? 'ico-minus':'ico-plus'">
+                              </a>
+                          </span>
+								</div>
+								<div data-basics-material-search-categories-filter
+									 data-filter-categories="data.uoms"
+									 data-selected-categories="searchOptions.UomIdsFilter"
+									 data-filter-fn="onUomFilter"
+									 data-id-member="Uom"
+									 data-ng-show="uomShow"
+									 style="padding-top: 5px;"></div>
+							</div>
+							<div class="ms-commodity-attributes-item" data-ng-if="data.price && data.price.options.max !== 0">
+								<div class="ms-commodity-attributes-title">
+									<span>{{::htmlTranslate.price}}</span>
+									<span class="ms-commodity-attributes-expend">
+                              <a href="" data-ng-click="priceShow=!priceShow" class="control-icons block-image" ng-class="priceShow ? 'ico-minus':'ico-plus'">
+                              </a>
+                          </span>
+								</div>
+								<div data-basics-material-material-price-slider
+									 data-ng-model="data.price.value"
+									 data-options="data.price.options"
+									 data-change="onPriceFilter()"
+									 data-ng-show="priceShow"
+									 style="padding: 30px 10px 20px 10px;"></div>
+							</div>
+							<div class="ms-commodity-attributes-item" data-ng-if="data.co2sources && data.co2sources.length">
+								<div class="ms-commodity-attributes-title">
+									<span>{{::htmlTranslate.co2SourceName}}</span>
+									<span class="ms-commodity-attributes-expend">
+								      <a href="" data-ng-click="co2sourceNameShow=!co2sourceNameShow" class="control-icons block-image" ng-class="co2sourceNameShow ? 'ico-minus':'ico-plus'">
+                              </a>
+                          </span>
+								</div>
+								<div data-basics-material-search-categories-filter
+								     data-filter-categories="data.co2sources"
+								     data-selected-categories="searchOptions.Co2SourceIdsFilter"
+								     data-filter-fn="onCo2SourceNameFilter"
+								     data-id-member="Id"
+								     data-ng-show="co2sourceNameShow"
+								     style="padding-top: 5px;"></div>
+							</div>
+							<div class="ms-commodity-attributes-item" data-ng-if="data.co2project && data.co2project.options.max !==0">
+								<div class="ms-commodity-attributes-title">
+									<span>{{::htmlTranslate.co2Project}}</span>
+									<span class="ms-commodity-attributes-expend">
+                              <a href="" data-ng-click="co2ProjectShow=!co2ProjectShow" class="control-icons block-image" ng-class="co2ProjectShow ? 'ico-minus':'ico-plus'">
+                              </a>
+                          </span>
+								</div>
+								<div data-basics-material-material-price-slider
+								     data-ng-model="data.co2project.value"
+								     data-options="data.co2project.options"
+								     data-change="onCo2ProjectFilter()"
+								     data-ng-show="co2ProjectShow"
+								     style="padding: 30px 10px 20px 10px;"></div>
+							</div>
+							<div class="ms-commodity-attributes-item" data-ng-if="data.co2source && data.co2source.options.max!==0">
+								<div class="ms-commodity-attributes-title">
+									<span>{{::htmlTranslate.co2Source}}</span>
+									<span class="ms-commodity-attributes-expend">
+                              <a href="" data-ng-click="co2SourceShow=!co2SourceShow" class="control-icons block-image" ng-class="co2SourceShow ? 'ico-minus':'ico-plus'">
+                              </a>
+                          </span>
+								</div>
+								<div data-basics-material-material-price-slider
+								     data-ng-model="data.co2source.value"
+								     data-options="data.co2source.options"
+								     data-change="onCo2SourceFilter()"
+								     data-ng-show="co2SourceShow"
+								     style="padding: 30px 10px 20px 10px;"></div>
+							</div>
+							<div data-basics-material-search-attributes-filter data-filter-attributes="data.attributes" data-context="data.attrContext"
+								 data-filter-fn="onPropertyFilter"
+								 data-load-more-fn="loadMoreAttribute"
+								 data-selected-attributes="searchOptions.AttributeFilters"
+								 data-more-attr="options.more" data-collapse-attr="options.collapse"></div>
+						</div>
+					</div>
+					<!--Material Type-->
+					<div class="row">
+						<div class="ms-sv-container-title">
+							<span>{{::htmlTranslate.materialType}}</span>
+							<span class="ms-sv-attribute-show-hide">
+								<a href="" data-ng-click="materialTypeShow=!materialTypeShow" class="control-icons block-image" ng-class="materialTypeShow ? 'ico-plus':'ico-minus'"></a>
+							</span>
+						</div>
+						<ul class="col-sm-offset-1" data-ng-show="!materialTypeShow" style="padding-top: 5px;">
+							<li>
+								<span data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="onMaterialTypeFilter('IsForEstimate')" data-ng-model="searchOptions.MaterialTypeFilter.IsForEstimate"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.materialTypeFilter.estimate" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="onMaterialTypeFilter('IsForProcurement')" data-ng-model="searchOptions.MaterialTypeFilter.IsForProcurement"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.materialTypeFilter.procurement" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="onMaterialTypeFilter('IsForRM')" data-ng-model="searchOptions.MaterialTypeFilter.IsForRM"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.materialTypeFilter.rm" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="onMaterialTypeFilter('IsForModel')" data-ng-model="searchOptions.MaterialTypeFilter.IsForModel"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.materialTypeFilter.model" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="onMaterialTypeFilter('IsForSales')" data-ng-model="searchOptions.MaterialTypeFilter.IsForSales"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.materialTypeFilter.sales" | translate }}</span>
+							</li>
+							<li>
+								<span data-platform-checkbox  class="ms-icon-img attribute-icon" data-ng-change="onMaterialTypeFilter('IsForLogistics')" data-ng-model="searchOptions.MaterialTypeFilter.IsForLogistics"></span>
+								<span class="ms-commodity-attributes-checkbox-label">{{ "basics.material.materialTypeFilter.logistics" | translate }}</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Right panel material result-->
+				<div class="col-md-9 ms-sv-result-panel-right fullheight overflow">
+					<div class="ms-sv-container-title">
+						<span>{{::htmlTranslate.searchResults}}</span>
+						$searchTitleExtend$
+					</div>
+					<div class="row ms-sv-commodity-result-pane">
+						<!--<div data-ng-repeat="group in data.groups">-->
+						<!--<div class="row ms-sv-commodity-group-title">{{ ::group.title }}</div>-->
+						<!--<div data-ng-repeat="materialEntity in group.items">-->
+						<!--<div data-basics-material-material-row-->
+						<!--data-entity="materialEntity"-->
+						<!--data-show-html-spec="false"-->
+						<!--data-button-panel="options.rowButtonPanelHtml"-->
+						<!--data-on-selected-changed="options.onSelectedChanged"-->
+						<!--data-on-row-double-click="options.onRowDoubleClick"-->
+						<!--data-on-preview="onPreview"-->
+						<!--data-external-scope="externalScope"-->
+						<!--&gt;</div>-->
+						<!--</div>-->
+						<!--</div>-->
+						<!--Internet Material Catalog Errors-->
+						<div class="alert alert-warning"
+							 style="margin-top: 10px;margin-bottom: 10px;padding: 10px;"
+							 data-ng-repeat="error in data.errors">
+							 {{ htmlTranslate.catError + ' "' + error.Catalog + '"!' }}
+							<button class="btn" data-ng-click="showError(error)" data-ng-bind="htmlTranslate.showCatError"></button>
+						</div>
+
+						<!--Material Items-->
+						<div data-ng-repeat="materialEntity in data.items">
+							<div data-basics-material-material-row
+								 data-entity="materialEntity"
+								 data-show-html-spec="false"
+								 data-button-panel="options.rowButtonPanelHtml"
+								 data-on-selected-changed="options.onSelectedChanged"
+								 data-on-row-double-click="options.onRowDoubleClick"
+								 data-on-preview="onPreview"
+								 data-external-scope="externalScope">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Paging bar -->
+		<div class="ms-sv-commodity-pagination" data-ng-if="data.hasResult">
+
+			<basics-material-filter-search-pagination
+				search-view-options="options">
+			</basics-material-filter-search-pagination>
+		</div>
+		<!-- Loading -->
+		<div cloud-common-overlay data-loading="data.progress.isLoading" data-info="data.progress.info"></div>
+	</div>
+	<div data-ng-if="isPreview" class="fullheight" style="display:flex;flex-direction: column;">
+		<!--back button-->
+		<div class="ms-sv-commodity-preview-navbar">
+			<button type="button" class="ms-sv-commodity-preview-back"
+					data-ng-click="previewBackClick()">
+				<span class="glyphicon glyphicon-chevron-left"></span>{{::htmlTranslate.back}}
+			</button>
+		</div>
+		<div class="ms-sv-search-view fullheight" >
+			<div class="ms-sv-commodity-preview-panel fullheight">
+				<!--Information-->
+				<div class="row">
+					<div class="ms-sv-container-title"><span>{{::htmlTranslate.information}}</span></div>
+					<div data-basics-material-material-row
+						 data-entity="previewItem"
+						 data-show-html-spec="true"
+						 data-button-panel="options.rowButtonPanelHtml"
+						 data-external-scope="externalScope"
+						 data-is-preview="isPreview">
+					</div>
+				</div>
+
+				<!--Specifications-->
+				<div class="row">
+					<div class="ms-sv-container-title"><span>{{::htmlTranslate.attributes}}</span></div>
+					<div data-basics-material-search-preview
+						 class="ms-sv-container-attributes ms-sv-border-bottom"></div>
+				</div>
+
+				<!--3D Model-->
+				<div class="row" ng-if="mdc3dShow">
+					<div class="ms-sv-container-title ms-sv-container-3d">
+						<span>3D Model</span>
+						<div class="toolbar" data-platform-collapsable-list data-ng-model="tools">
+							<div data-platform-menu-list data-list="tools" data-platform-refresh-on="tools.version"></div>
+						</div>
+					</div>
+					<div class="col-md-12 flex-box ms-sv-container-hoops"
+						 data-ng-controller="modelViewerHoopsController"
+						 data-basics-material-include="model.viewer/partials/model-viewer-hoops-template.html">
+					</div>
+				</div>
+
+				<!--Documents-->
+				<div class="row">
+					<div class="ms-sv-container-title"><span>{{::htmlTranslate.documents}}</span></div>
+					<div data-basics-material-document-preview
+						 class="ms-sv-container-documents ms-sv-border-bottom"></div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</script>
+
+
+<script type="text/ng-template" id="materialRow.html">
+	<div class="ms-commodity-row row" data-ng-class="{'ms-commodity-row-material-selected': entity.selected}"
+		 data-ng-click="rowClick(entity)" data-ng-dblclick="rowDoubleClick(entity)">
+		<div class="col-md-8 col-sm-7 col-xs-6" style="display: flex;">
+			<div data-ng-if="entity.BasBlobsFk" class="ms-commodity-row-img visible-md visible-lg visible-sm"
+			data-ng-class="entity.BasBlobsFk ? 'col-sm-4 col-md-3 col-lg-3' : ''" style="min-width:128px;">
+				<i data-ng-if="entity.HasRfaFile" class="ms-commodity-row-img-3d control-icons ico-3d"></i>
+				<img data-ng-src="{{entity.Image}}" alt="{{::entity.Code}}"/>
+			</div>
+			<div class="ms-commodity-row-description"
+			     data-ng-class="entity.BasBlobsFk ? 'col-xs-12 col-sm-8 col-md-9 col-lg-9' : 'fullwidth'">
+				<div>
+					<span class="ms-commodity-row-item-title cursor-pointer" title="{{::getMaterialDescription()}}"
+					   data-ng-click="onPreview(entity)">{{::getMaterialDescription()}}</span>
+				</div>
+				<div class="ms-commodity-row-description-supplier">
+					<span>{{::getSupplierInfo()}}</span>
+				</div>
+				<div data-ng-if="isPreview" class="ms-commodity-row-description-supplier" >
+					<span>{{leadTimeTitle}} : {{::getLeadTimes(entity)}}</span>
+				</div>
+				<div data-ng-if="isPreview" class="ms-commodity-row-description-supplier" >
+					<span>{{minQuantityTitle}}{{::getMinQuantityUom(entity)}} : {{::getMinQuantity(entity)}}</span>
+				</div>
+				<div class="ms-commodity-row-description-specification">
+					<span> $specification$</span>
+				</div>
+				<div class="ms-commodity-row-description-specification" data-ng-if="entity.deliveryShow&&!isPreview">
+					<span> {{$parent.$parent.htmlTranslate.standardDeliveryDate}} {{::getStandardDeliverDate()}}</span>
+				</div>
+				<div class="ms-commodity-row-delivery" data-ng-if="entity.deliveryShow&&!isPreview">
+					<div class="ms-commodity-row-delivery-title">{{$parent.$parent.htmlTranslate.deliveryOption}}</div>
+					<div class="ms-commodity-row-delivery-content">
+						 <div data-ng-repeat="priceCondition in entity.PriceConditions">
+					      <input type="checkbox" data-ng-click="$parent.$parent.$parent.onDelivery(entity,priceCondition)" ng-checked="{{priceCondition.IsActivated}}" />
+							 {{$parent.$parent.$parent.getDescription(priceCondition)}}  ({{priceCondition.TotalOc}}{{::entity.Currency}}){{$parent.$parent.$parent.htmlTranslate.deliveryDate}} {{::getDeliverDate()}}
+					     </div>
+						</div>
+				</div>
+				<div class="ms-commodity-row-description-co2project" data-ng-if="isPreview&&entity.Co2Project">
+					<span>{{co2ProjectTitle}} : {{ entity.Co2Project }}</span>
+				</div>
+				<div class="ms-commodity-row-description-co2project" data-ng-if="isPreview&&entity.Co2Source">
+					<span>{{co2SourceTitle}} : {{ entity.Co2Source }}</span>
+				</div>
+				<div class="ms-commodity-row-description-co2project" data-ng-if="isPreview&&entity.BasCo2SourceFk">
+					<span>{{co2SourceNameTitle}} : {{ entity.BasCo2SourceName }}</span>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-5 col-xs-6 ms-commodity-row-operation">
+			$buttonsPanel$
+		</div>
+	</div>
+</script>
+
+<script type="text/ng-template" id="rowButtonPanel.html">
+	<div>
+		<p class="ms-commodity-row-price"><span data-ticket-system-show-price  title="{{'basics.material.record.cost'| translate}}">{{getEstimatePriceInfo()}}</span>[<span data-ticket-system-show-price title="{{'basics.material.record.estimatePrice'| translate}}">{{getListPriceInfo()}}</span><span data-ticket-system-show-price title="{{'basics.material.record.dayworkRate'| translate}}" data-ng-if="externalScope.showDayworkRate()">/{{getDayworkRate()}}</span>]{{entity.Currency}} </p>
+		<p class="ms-commodity-row-price">/{{::getUom()}}</p>
+	</div>
+	<div class="ms-commodity-row-cart-empty" style="background-color: grey;margin-left: 12px;" data-ng-show="entity.PriceLists.length>1" title="{{ getPriceListTitle(entity) }}">
+		<a href data-ng-click="togglePriceList($event, entity)" class="{{entity.MaterialPriceListFk==null?'ico-pricelist':'ico-pricelist-select'}} control-wh-icons block-image"></a>
+	</div>
+	<div class="ms-commodity-row-cart-empty" style="background-color: grey;margin-left: 12px;" data-ng-show="entity.IsFromFC" title="{{ 'basics.material.frameworkCatalog.from' | translate }}">
+		<a href class="control-wh-icons ico-framework-agreement block-image"></a>
+	</div>
+	<div class="ms-commodity-row-cart-empty" style="background-color: grey;margin-left: 12px;" data-ng-show="entity.AlternativeList.length>=1">
+		<a href data-ng-click="toggleAlternativeList($event, entity)" class="control-wh-icons ico-alternative block-image"></a>
+	</div>
+</script>
+
+<script type="text/ng-template" id="material-popup-footer.html">
+	<footer class="modal-footer fullwidth">
+		<span class="flex-box input-group-btn">
+			<button type="button" class="btn btn-default" data-ng-click="onOK()" data-ng-disabled="isBtnDisabled">{{'cloud.common.ok' | translate}}</button>
+			<button type="button" class="btn btn-default" data-ng-click="onCancel()">{{'cloud.common.cancel' | translate}}</button>
+		</span>
+	</footer>
+</script>

@@ -1,0 +1,37 @@
+﻿{
+	"productionplanning": {
+		"fabricationunit": {
+			"fabricationUnit": "Fabrication Unit",
+			"listTitle": "Fabrication Units",
+			"detailsTitle": "Fabrication Unit Details",
+			"prodPlaceType": "Production Place Type",
+			"prodPlace": "Production Place",
+			"entityEventTypeFk": "Fabrication Unit Type",
+			"entityPpsStrandPatternFk": "Strand Pattern",
+			"structureTitle": "Fabrication Structure",
+			"siteFilterTitle": "Site Filter",
+			"enableWizard": "Enable Fabrication Unit",
+			"disableWizard": "Disable Fabrication Unit",
+			"wizard": {
+				"enableFabricationUnitCaption": "Enable Fabrication Unit",
+				"enableDisableFabricationUnitDone": "The field 'Active' of the Fabrication Unit {{fabi}} has been changed.<br>",
+				"fabricationUnitAlreadyEnabled": "Fabrication Unit ({{fabi}}) is already enabled",
+				"disableFabricationUnitCaption": "Disable Fabrication Unit",
+				"fabricationUnitAlreadyDisabled": "Fabrication Unit ({{fabi}}) is already disabled"
+			},
+			"nesting": {
+				"entityName": "Nesting",
+				"listTitle": "Nestings",
+				"rotation": "Rotation",
+				"slabNumber": "Slab Number",
+				"angleA": "AngleA",
+				"angleB": "AngleB",
+				"angleC": "AngleC"
+			},
+			"structure": {
+				"ppsItem": "Planning Unit",
+				"ppsHeader": "Planning Header"
+			}
+		}
+	}
+}

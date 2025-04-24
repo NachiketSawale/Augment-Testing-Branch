@@ -1,0 +1,94 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.costcodes.costCodes",
+    "controller": "basicsCostCodesListController",
+    "uuid": "CEEB3A8D7F3E41ABA9AA126C7A802F87"
+  },
+  {
+    "id": "2",
+    "template": "basics.costcodes/partials/costcodes-detail.html",
+    "title": "basics.costcodes.costCodesDetails",
+    "controller": "basicsCostCodesDetailController",
+    "uuid": "EF116AB75A4246BF98055F17833C6DB1",
+    "permission": "CEEB3A8D7F3E41ABA9AA126C7A802F87"
+  },
+  {
+    "id": "3",
+    "template": "cloud.common/partials/languagegridview.html",
+    "title": "basics.costcodes.translation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "70d04bf9abd64349a824f0f452ce0ac4"
+  },
+  {
+    "id": "basics.costcodes.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "dc72e4cf73694079a9856076bffe5731",
+    "controller": "",
+    "sectionId": "10",
+    "mainService": "basicsCostCodesMainService"
+  },
+  {
+    "id": "basics.costcodes.priceVerion.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.costcodes.priceVerion.grid.title",
+    "controller": "basicsCostCodesPriceVersionListController",
+    "uuid": "b0f893daa2e142489a24fb0e34546897"
+  },
+  {
+    "id": "basics.costcodes.priceVerion.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.costcodes.priceVerion.details.title",
+    "controller": "basicsCostCodesPriceVersionDetailController",
+    "uuid": "b4dce598c1d9439896381fa36c7a3b2d",
+    "permission": "b0f893daa2e142489a24fb0e34546897"
+  },
+  {
+    "id": "basics.costcodes.priceList.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.costcodes.priceList.grid.title",
+    "controller": "basicsCostCodesPriceVersionListRecordController",
+    "uuid": "bbc1b97341f84baf931f3d2bda0e7111"
+  },
+  {
+    "id": "basics.costcodes.priceList.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.costcodes.priceList.details.title",
+    "controller": "basicsCostCodesPriceVersionListRecordDetailController",
+    "uuid": "415a3fb901b2437a8634e5d2e44a3df6",
+    "permission": "bbc1b97341f84baf931f3d2bda0e7111"
+  },
+  {
+    "id": "basics.costcodes.company",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.costcodes.company",
+    "controller": "basicsCostCodesCompanyController",
+    "uuid": "5401b0a75aeb4a259f442a9f13b7dc1a",
+    "permission": "CEEB3A8D7F3E41ABA9AA126C7A802F87"
+  },
+  {
+    "id": "basics.costcodes.priceVerionToCompany",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.costcodes.priceVerionsToCompany.title",
+    "controller": "basicsCostCodesPriceVersionCompanyListController",
+    "uuid": "905c3e42678d4789918e6d9360c80cbc"
+  },
+  {
+    "id": "basics.costcodes.restype",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.costcodes.resType",
+    "controller": "basicsCostCodesResTypeController",
+    "uuid": "b2a5ef0b5b574a03935b31251ce33275",
+    "permission": "CEEB3A8D7F3E41ABA9AA126C7A802F87"
+  },
+	{
+		"id": "basics.costcodes.reference",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.costcodes.reference",
+		"controller": "basicsCostCodesReferencesController",
+		"uuid": "E2A2FF828A1C463C8D09329A7AC7B074",
+		"permission": "CEEB3A8D7F3E41ABA9AA126C7A802F87"
+	}
+]

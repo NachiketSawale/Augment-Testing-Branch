@@ -1,0 +1,34 @@
+<h1>{{'basics.workflow.sendRfQBidderSelection.bidderSelection' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQBidderSelection.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQBidderSelection.companyName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQBidderSelection.status' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQBidderSelection.contactFirstName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQBidderSelection.contactLastName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQBidderSelection.contactEMail' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQBidderSelection.cCSelect' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQBidderSelection.cCCompanyEMail' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="bidder in Context.BidderList">
+		<td>
+			<div data-domain="boolean" data-domain-control data-model="bidder.Selected"></div>
+		</td>
+		<td><span data-ng-bind="bidder.CompanyName"></span></td>
+		<td><span data-ng-bind="bidder.CompanyStatus"></span></td>
+		<td><span data-ng-bind="bidder.ContactFirstName"></span></td>
+		<td><span data-ng-bind="bidder.ContactLastName"></span></td>
+		<td><span data-ng-bind="bidder.ContactEMail"></span></td>
+		<td>
+			<div data-domain="boolean" data-domain-control data-model="bidder.CCSelected"></div>
+		</td>
+		<td><span data-ng-bind="bidder.CCEMail"></span></td>
+	</tr>
+	</tbody>
+</table>
+
+<h1>Settings</h1>
+<div data-domain="boolean" data-domain-control data-model="SendAsBCC" data-options="options"></div>

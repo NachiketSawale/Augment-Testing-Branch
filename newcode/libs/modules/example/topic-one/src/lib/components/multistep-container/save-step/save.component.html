@@ -1,0 +1,40 @@
+<div class="platform-form-group body dialogBody">
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">Location</label>
+		<div class="platform-form-col">
+			<select class="form-control" [(ngModel)]="selectedLocation" (change)="onLocationSelect()">
+				<option *ngFor="let option of location" [value]="option">
+					{{ option }}
+				</option>
+			</select>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">Available Views</label>
+		<div class="platform-form-col">
+			<select class="form-control overflow" size="5" [ngModel]="selectedView" (change)="onViewSelect()">
+				<option value="" *ngFor="let option of selectedViewArray" [value]="option">
+					{{ option }}
+				</option>
+			</select>
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label">Load Data at Module Start</label>
+		<div class="platform-form-col">
+			<input type="checkbox" class="form-control" data-ng-disabled="disableInput" />
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">Load Data at view Changed</label>
+		<div class="platform-form-col">
+			<input type="checkbox" class="form-control" ng-model="selections.loadDataTabChanged" data-ng-disabled="disableInput" />
+		</div>
+	</div>
+	<div class="platform-form-row">
+		<label class="platform-form-label ng-binding">View Name</label>
+		<div class="platform-form-col">
+			<input type="text" class="form-control" [ngModel]="selectedView" />
+		</div>
+	</div>
+</div>

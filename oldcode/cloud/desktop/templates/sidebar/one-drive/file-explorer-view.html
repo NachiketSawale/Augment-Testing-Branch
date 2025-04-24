@@ -1,0 +1,81 @@
+<div class="content one-drive-content" data-ng-controller="cloudDesktopOneDriveListController">
+	<div class="toolbar">
+		<div class="title">
+			{{::'cloud.desktop.oneDrive.title' | translate}}
+		</div>
+	</div>
+
+	<div class="content-inner_ flex-box flex-column fullheight">
+		<div class="flex-box flex-column fullheight">
+			<div style="padding: 5px 0;">
+                <span style="display: inline-block;font-weight: bold;">
+                    <span class="btn-link" ng-click="navigate('')">{{::'cloud.desktop.sdCmdBarOneDrive' |
+						translate}}</span>
+            	</span>
+                <span ng-repeat="path in paths" style="display: inline-block;font-weight: bold;margin-left: 3px;">
+                >   <span class="btn-link" ng-click="navigate(path.path)"> {{path.name}}</span>
+            	</span>
+			</div>
+			<!-- toolbar menu -->
+			<!--<div class="subview-header toolbar ng-pristine ng-untouched ng-valid ng-not-empty"-->
+				 <!--style="background-color:#dcdcdc;border-bottom:1px solid #dcdcdc;height:30px; min-height:30px;"-->
+				 <!--data-platform-collapsable-list="" data-ng-model="tools" style="">-->
+				<!--<div data-platform-menu-list="" data-list="tools" data-platform-refresh-on="tools.version"></div>-->
+			<!--</div>-->
+			<div class="flex-box flex-column flex-element fullheight one-drive-grid-container"
+				 platform-dragdrop-component="ddTarget">
+				<cloud-desktop-one-drive-grid class="fullheight" platform-dragdrop-component="ddTarget"
+								data="gridData"></cloud-desktop-one-drive-grid>
+			</div>
+		</div>
+
+		<div class="one-drive-context-menu" style="display: none;">
+			<ul class="list-group">
+				<li class="list-group-item context-menu-item context-menu-item-copy"
+					data-show="true" data-ng-click="executeCmd('copy');">
+					<i class="block-image glyphicon glyphicon-file"></i>
+					<span>{{::'cloud.desktop.oneDrive.toolBar.copy' | translate}}</span>
+				</li>
+				<li class="list-group-item context-menu-item context-menu-item-paste"
+					data-show="true" data-ng-click="executeCmd('paste');">
+					<i class="block-image glyphicon glyphicon-file"></i>
+					<span>{{::'cloud.desktop.oneDrive.toolBar.paste' | translate}}</span>
+				</li>
+
+				<li class="list-group-item context-menu-item context-menu-separator context-menu-item-g1"
+					data-show="true"></li>
+
+				<li class="list-group-item context-menu-item context-menu-item-delete"
+					data-show="true"  data-ng-click="executeCmd('delete');">
+					<i class="block-image glyphicon glyphicon-file"></i>
+					<span>{{::'cloud.desktop.oneDrive.toolBar.delete' | translate}}</span>
+				</li>
+
+
+				<li class="list-group-item context-menu-item context-menu-item-rename"
+					data-show="true"  data-ng-click="executeCmd('rename');">
+					<i class="block-image glyphicon glyphicon-file"></i>
+					<span>{{::'cloud.desktop.oneDrive.toolBar.rename' | translate}}</span>
+				</li>
+
+				<li class="list-group-item context-menu-item context-menu-separator  context-menu-item-g2"
+					data-show="true"></li>
+
+				<li class="list-group-item context-menu-item"  data-ng-click="executeCmd('newFolder');">
+					<i class="block-image glyphicon glyphicon-file"></i>
+					<span>{{::'cloud.desktop.oneDrive.toolBar.newFolder' | translate}}</span>
+				</li>
+
+				<li class="list-group-item context-menu-item context-menu-separator"></li>
+
+				<li class="list-group-item context-menu-item"  data-ng-click="executeCmd('properties');">
+					<i class="block-image glyphicon glyphicon-file"></i>
+					<span>{{::'cloud.desktop.oneDrive.toolBar.properties' | translate}}</span>
+				</li>
+			</ul>
+		</div>
+
+		<div data-cloud-common-overlay data-loading="isLoading"></div>
+	</div>
+</div>
+

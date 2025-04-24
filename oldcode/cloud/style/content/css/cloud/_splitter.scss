@@ -1,0 +1,236 @@
+/*-------------------------------------------------------------------------------
+	 kendo Splitter (_splitter.scss)
+  -------------------------------------------------------------------------------*/
+.tab-content {
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	position: absolute;
+	background-color: $color-body-background;
+}
+
+.subview-container {
+	.k-splitbar {
+		background-color: $color-splitbar-background !important;
+		margin: 0px;
+
+	}
+}
+
+#splitter {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	display: block;
+	visibility: visible;
+	overflow: hidden;
+	position: relative;
+
+	/* after new splitter design the padding distances within the containers disturb the style.
+	Therefor remove the content-paddings from splitter-container: */
+	#verticalLeft, .splitter-left-container, #pane1 #vertical {
+		//> div:not(.subview-container) {
+			> .k-splitbar {
+				width: calc(100% - 5px) !important;
+			}
+		//}
+
+	}
+
+	#verticalRight, .splitter-right-container, #pane2 #vertical {
+		> .k-splitbar {
+			margin-left: 5px;
+		}
+	}
+
+	#verticalCenter, #verticalLeft.splitter-middle-container {
+		> .k-splitbar {
+			width: calc(100% - 10px) !important;
+			margin-left: 5px;
+		}
+	}
+
+	#horizontalTop {
+		> .k-splitbar {
+			height: calc(100% - 5px) !important;
+		}
+	}
+
+	#horizontalBottom {
+		> .k-splitbar {
+			margin-top: 5px;
+		}
+	}
+}
+
+#horizontal {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	display: block;
+	visibility: visible;
+	overflow: hidden;
+}
+
+#vertical {
+	@extend #horizontal;
+	position: relative;
+}
+
+.kendo-splitbar {
+	border-width: 0;
+	z-index: 870;
+}
+
+.k-splitter {
+	.k-ghost-splitbar-horizontal, .k-splitbar-horizontal {
+		@extend .kendo-splitbar;
+		width: 8px;
+	}
+
+	.k-ghost-splitbar-vertical, .k-splitbar-vertical {
+		@extend .kendo-splitbar;
+		height: 8px;
+	}
+
+	.k-scrollable {
+		overflow: hidden;
+	}
+}
+
+.k-ghost-splitbar-vertical,
+.k-ghost-splitbar-horizontal {
+	color: #fff;
+	background-color: #c0c0c0;
+	border-color: #c0c0c0;
+}
+
+.k-splitbar {
+	background-color: $color-splitbar-background;
+
+	&.k-splitbar-draggable-vertical, &.k-splitbar-draggable-horizontal {
+		background-color: transparent;
+
+		&:hover {
+			background-color: #efefef;
+		}
+	}
+
+	&:hover {
+		background-color: $color-splitbar-background;
+	}
+}
+
+.k-icon-attr {
+	background-image: url(../../images/control-icons.svg#ico-kendo-arrow);
+	background-size: auto;
+	background-position: center;
+
+	&.k-resize-handle {
+		background-size: cover;
+	}
+}
+
+.k-splitbar-horizontal {
+	.k-icon {
+		@extend .k-icon-attr;
+		width: 8px;
+	}
+
+	div[class*= 'collapse'], div[class*= 'expand'] {
+		height: 8px;
+	}
+
+	.k-collapse-prev {
+		margin-top: -34px;
+	}
+
+	.k-resize-handle {
+		background-image: url(../../images/control-icons.svg#ico-kendo-v-handle);
+	}
+
+	.k-collapse-next {
+		margin-top: 26px;
+	}
+
+	.k-collapse-next, .k-expand-prev {
+		transform: rotate(180deg);
+	}
+}
+
+.k-splitbar-vertical {
+	.k-icon {
+		@extend .k-icon-attr;
+		height: 8px;
+	}
+
+	.k-collapse-next {
+		margin-left: 20px;
+	}
+
+	.k-collapse-prev {
+		margin-left: -41px;
+	}
+
+	.k-resize-handle {
+		background-image: url(../../images/control-icons.svg#ico-kendo-h-handle);
+	}
+
+	.k-collapse-prev, .k-expand-next {
+		transform: rotate(90deg);
+	}
+
+	.k-collapse-next, .k-expand-prev {
+		transform: rotate(270deg);
+	}
+}
+
+// deactivate shadow in focus state of all kendo controls
+.k-state-focused {
+	box-shadow: none;
+}
+
+#left-pane, #right-pane, #top-pane, #bottom-pane {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	display: block;
+	visibility: visible;
+	overflow: hidden;
+}
+
+.toppane-content {
+	height: 100%;
+	margin: 0;
+	padding: 0 0 2px 2px;
+	border: 0;
+	position: relative;
+}
+
+.bottompane-content {
+	height: 100%;
+	margin: 0;
+	padding: 2px 0 0 2px;
+	border: 0;
+	position: relative;
+}
+
+div.ui-view-left {
+	position: relative;
+	height: 100%;
+	margin-right: 2px;
+	background-color: $color-body-background;
+}
+
+div.ui-view-top, div.ui-view-bottom {
+	height: 100%;
+	margin: 0;
+	position: relative;
+	background-color: $color-body-background;
+}
+
+.k-pane {
+	border: 0;
+}

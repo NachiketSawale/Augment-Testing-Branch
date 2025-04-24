@@ -1,0 +1,15 @@
+<div class="flex-element modal-body" data-ng-controller="cloudTranslationCreateGlossaryDialogController">
+    <div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+    <div data-ng-hide="loading">
+        <div class="icon-message">
+            <div data-ng-hide="showGrid" class="icon tlb-icons ico-question"></div>
+            <div data-ng-show="showGrid" class="icon tlb-icons ico-info"></div>
+            <div ng-bind-html="infoText" class="message"></div>
+        </div>
+        <div data-ng-show="showGrid" class="flex-box flex-column subview-container grid-wrapper" style="height: 200px; margin-top: 10px;">
+            <platform-Grid data-data="gridData"></platform-Grid>
+        </div>
+    </div>
+    <p data-ng-show="loading" style="padding-top: 40px;"> </p>
+
+</div>

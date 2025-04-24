@@ -1,0 +1,39 @@
+<div class="entity-filter-result-view flex-element">
+	<div *ngIf="isDataReady" class="fullheight fullwidth flex-box flex-column">
+		<basics-shared-entity-filter-result-toolbar
+			[title]="getTitle()"
+			[toolBarSettingItems]="scope.resultViewOption.toolBarSettingItems">
+		</basics-shared-entity-filter-result-toolbar>
+		<as-split class="entity-filter-result-split-box flex-element border-left border-right" direction="horizontal" (onSplitterChangeSize)="onSplitterChangeSize($event)">
+			<as-split-area [size]="100 - previewPanelSize" class="relative-container" [uiCommonResizeObserver]="splitLeftResizeOption">
+				<div class="entity-filter-result-view-left entity-filter-result-view-pane fullheight flex-box flex-column border-right">
+					<div class="flex-element flex-box">
+						<basics-shared-entity-filter-result-grid
+							class="flex-box flex-column flex-element"
+							[output$]="scope.output$"
+							[itemsUpdated$]="scope.itemsUpdated$"
+							[containerResize]="splitterLeftResize"
+							[gridOption]="scope.resultViewOption.gridOption"
+							(selectionChanged)="onSelectionChanged($event)"
+							(doubleClick)="onDoubleClick($event)"
+							(headerCheckboxChanged)="onHeaderCheckboxChanged($event)">
+						</basics-shared-entity-filter-result-grid>
+					</div>
+					<basics-shared-entity-filter-result-pagination
+						[pageInfo]="pageInfo"
+						[executePaging]="scope.executePaging.bind(scope)">
+					</basics-shared-entity-filter-result-pagination>
+				</div>
+			</as-split-area>
+			<as-split-area [size]="previewPanelSize" class="relative-container">
+				<div class="entity-filter-result-view-right entity-filter-result-view-pane fullheight flex-box flex-column border-left border-bottom">
+					<basics-shared-entity-filter-result-preview
+						class="fullheight"
+						[previewItem]="previewItem"
+						[previewOption]="scope.resultViewOption.previewOption">
+					</basics-shared-entity-filter-result-preview>
+				</div>
+			</as-split-area>
+		</as-split>
+	</div>
+</div>

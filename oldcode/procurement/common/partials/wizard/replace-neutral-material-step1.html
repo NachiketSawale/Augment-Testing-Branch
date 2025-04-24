@@ -1,0 +1,64 @@
+<div class="platform-form-group ">
+    <div class="platform-form-row">
+        <label class="col-sm-2" style="padding:5px 0px 0px;">{{'procurement.common.wizard.replaceNeutralMaterial.scope'|
+            translate}}:</label>
+        <div class="col-sm-10">
+            <div><input type="radio" name="scopeName" value="0" data-ng-checked="resultFlg==0"
+                        data-ng-click="onResult(0)" ng-disabled="noMaterial"><label>{{'procurement.common.wizard.replaceNeutralMaterial.currentMaterial' | translate}}</label></div>
+            <div><input type="radio" name="scopeName" value="1" data-ng-checked="resultFlg==1"
+                        data-ng-click="onResult(1)"><label>{{currentScopeText}}</label></div>
+            <div><input type="radio" name="scopeName" value="2" data-ng-checked="resultFlg==2"
+                        data-ng-click="onResult(2)" ng-disabled="noProject"><label>{{allCurrentScopeText}}</label></div>
+        </div>
+    </div>
+    <br/>
+    <div class="platform-form-row">
+        <label class="col-sm-2" style="padding:5px 0px 0px;">{{'procurement.common.wizard.replaceNeutralMaterial.replaceFrom'|
+            translate}}:</label>
+        <div class="col-sm-10">
+            <ul>
+                <li><input type="radio" name="from" value="1" data-ng-checked="catalogFlg==1"
+                           data-ng-click="onCatalogResult(1)"><label>{{'procurement.common.wizard.replaceNeutralMaterial.allCatalog'|
+                    translate}}</label></li>
+                <li style="height:40px;">
+                    <span style="float:left;">
+                    <input type="radio" name="from" value="0" data-ng-checked="catalogFlg==0"
+                           data-ng-click="onCatalogResult(0)"><label>{{'procurement.common.wizard.replaceNeutralMaterial.SpecificCatalog'| translate}}</label>
+                    </span>
+                    <div ng-if="catalogFlg==0" style="display: inline-block;">
+                    <span style="float:left;margin-left:5px;" data-basics-material-material-catalog-lookup
+                          data-ng-model="entity.CodeFk" data-entity="entity" data-options="mmcLookupOptions">
+                    </span>
+                        <input type="text" style="float:left;margin-left:5px;width:250px;" class="form-control"
+                               data-ng-model="entity.DescriptionInfo.Description" data-entity="entity" readonly/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br/>
+    <div class="platform-form-row">
+        <label class="col-sm-2" style="padding:5px 0px 0px;">{{'procurement.common.wizard.replaceNeutralMaterial.tip1'|
+            translate}}:</label>
+        <div class="col-sm-10">
+            <div class="toolbar">
+                <div data-platform-menu-list data-list="tools"></div>
+            </div>
+            <platform-Grid data="replaceCriteriaResult"></platform-Grid>
+            <!--
+            <div><input type="checkbox" name="criteria" value="1"
+                       data-ng-checked="isCriteriaCheck(1)"
+                       data-ng-click="onCriteriaChooseChange(1)"><label>{{'procurement.common.wizard.replaceNeutralMaterial.byNeutralMaterialAssignment'|
+                translate}}</label></div>
+            <div><input type="checkbox" name="criteria" value="2"
+                       data-ng-checked="isCriteriaCheck(2)"
+                       data-ng-click="onCriteriaChooseChange(2)"><label>{{'procurement.common.wizard.replaceNeutralMaterial.byIdenticalMaterialCode'|
+                translate}}</label></div>
+            <div><input type="checkbox" name="criteria" value="3"
+                       data-ng-checked="isCriteriaCheck(3)"
+                       data-ng-click="onCriteriaChooseChange(3)"><label>{{'procurement.common.wizard.replaceNeutralMaterial.byProcurementStructure'|
+                translate}}</label></div>
+                -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div ng-controller="businessPartnerMainLegalFormDialogController" class="modal-wrapper subview-container">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<div class="modal-wrapper">
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<div class="col-md-12" data-platform-form data-form-options="selectionOptions" entity="item"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"> {{::'basics.common.button.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{::'basics.common.button.cancel' | translate}}</button>
+	</footer>
+</div>

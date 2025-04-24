@@ -1,0 +1,38 @@
+<section class="modal-body">
+    <div class="fullheight">
+        <div class="fullheight" >
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <label class="platform-form-label">{{'controlling.common.transferdatatobisExecutionReport.costDataRecord' | platformTranslate }}</label>
+                    <div class="platform-form-col">
+                        <input class="form-control lg-12 md-12 " [value]="totalRecords" readonly="readonly" />
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-group">
+                <h3 class="margin-top-ld">{{'platform.bulkEditor.logs' | platformTranslate }}</h3>
+                <div class="subview-content" >
+                    <ui-common-grid class="flex-element" [configuration]="RecordsLogConfig"></ui-common-grid>
+                </div>
+            </div>
+            <div class="platform-form-group" *ngIf="(WarningDetailConfig.items??[]).length>0">
+                <h3 class="margin-top-ld">{{'controlling.common.transferdatatobisExecutionReport.transferedAssignmentCheck' | platformTranslate }}</h3>
+                <div class="subview-content" >
+                    <ui-common-grid class="flex-element" [configuration]="WarningDetailConfig"></ui-common-grid>
+                </div>
+            </div>
+            <div class="platform-form-group" *ngIf="(QuantityCheckConfig.items??[]).length>0">
+                <h3 class="margin-top-ld">{{'controlling.common.transferdatatobisExecutionReport.transferedQuantityCheck' | platformTranslate }}</h3>
+                <div class="subview-content" >
+                    <ui-common-grid class="flex-element" [configuration]="QuantityCheckConfig"></ui-common-grid>
+                </div>
+            </div>
+            <div class="platform-form-group" *ngIf="(TotalCompareConfig.items??[]).length>0">
+                <h3 class="margin-top-ld">{{'controlling.common.transferdatatobisExecutionReport.transferedTotalComparison' | platformTranslate }}</h3>
+                <div class="subview-content" >
+                    <ui-common-grid class="flex-element" [configuration]="TotalCompareConfig"></ui-common-grid>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

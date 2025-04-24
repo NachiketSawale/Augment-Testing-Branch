@@ -1,0 +1,12 @@
+{
+	"controlling": {
+		"controllingunittemplate": {
+			"controllingunittemplateListTitle": "Controlling Unit Templates",
+			"controllingunittemplateDetailTitle": "Controlling Unit Template Details",
+			"controllingunitListTitle": "Controlling Units",
+			"controllinggroupListTitle": "Controlling Unit Groups",
+			"controllinggroupDetailTitle": "Controlling Unit Group Details",
+			"entityMdcContext": "Mdc Context"
+		}
+	}
+}

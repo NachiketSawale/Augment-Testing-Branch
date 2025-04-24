@@ -1,0 +1,62 @@
+<div class="flex-element" data-ng-controller="cloudTranslationLanguageSelectionDialogController">
+    <div data-cloud-common-overlay data-loading="loading" data-info2="dialog.modalOptions.value.spinnermsg"></div>
+
+    <div class="flex-box flex-element">
+        <div class="margin-top-xld" style="border-right: solid 1px #dcdcdc; padding-right: 10px">
+            <i class="block-image app-icons ico-tables btn-square-28" style="background-size: 56px;"></i>
+            <i class="block-image control-icons ico-arrow-right btn-square-28"></i>
+            <i class="block-image app-icons ico-translation btn-square-28" style="background-size: 56px;"></i>
+        </div>
+
+        <div class="flex-element margin-top-xld" data-ng-show="dialog.modalOptions.value.languageselection"
+             style="padding-left: 10px;">
+            <div class="flex-element">
+                <h3>{{dialog.modalOptions.value.step2Info}}</h3>
+                <div class="platform-form-group">
+                    <div class="platform-form-row" ng-repeat="info in dialog.modalOptions.value.infoList">
+                        <div class="platform-form-label">{{info.key}}</div>
+                        <div class="platform-form-col">
+                            <input type="text" class="form-control" readonly="readonly" ng-model="info.value">
+                        </div>
+                    </div>
+                    <div class="platform-form-row">
+                        <div class="platform-form-label">{{dialog.modalOptions.value.defaultLanguage}}</div>
+                        <div class="platform-form-col">
+                            <div class="checkbox">
+                                <label for="checkbox_default"><input id="checkbox_default" type="checkbox"
+                                                                     data-ng-model="dialog.modalOptions.value.englishResource.checked">
+                                    {{dialog.modalOptions.value.englishResource.text}} </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-form-row" data-ng-show="dialog.modalOptions.value.languageselection">
+                        <div class="platform-form-label">{{dialog.modalOptions.value.checkboxTitle}}</div>
+                        <div class="platform-form-col">
+                            <div data-platform-checkbox-list data-items="dialog.modalOptions.value.checkboxItems"
+                                 data-options="dialog.modalOptions.value.checkboxOptions"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="platform-form-group">
+                    <div class="platform-form-row">
+                        <div class="platform-form-col">
+                            <div class="checkbox">
+                                <label for="checkbox_reset"><input id="checkbox_reset" type="checkbox"
+                                                                   data-ng-model="dialog.modalOptions.value.resetChanged">
+                                    {{dialog.modalOptions.value.resetChangedTitle}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-info" style="padding: 5px;">{{dialog.modalOptions.value.messageUploadSuccess}}</div>
+            <div class="alert-info" style="padding: 5px;">{{dialog.modalOptions.value.messageButtonHints}}</div>
+            <div class="alert-warning" style="padding: 5px; margin-top: 5px;" data-ng-if="dialog.modalOptions.value.englishResource.checked" >{{dialog.modalOptions.value.messageEnglishSelected}}</div>
+        </div>
+
+    </div>
+
+
+</div>

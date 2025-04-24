@@ -1,0 +1,7 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+
+export class <%=className  %>{
+
+}

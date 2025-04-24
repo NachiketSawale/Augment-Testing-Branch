@@ -1,0 +1,19 @@
+{
+	"resource": {
+		"skill": {
+			"entitySkillType": "Skill Type",
+			"entitySkillGroup": "Skill Group",
+			"entityRemark": "Remark",
+			"entityIsLive": "Is Live",
+			"entityIsMandatory": "Is Hard Skill",
+			"entityIsDefault": "Is Default",
+			"entityType": "Resource Type",
+			"entityChainedSkill": "Chained Skill",
+			"skillListTitle": "Skill",
+			"skillDetailTitle": "Skill Details",
+			"skillChainListTitle": "Skill Chain",
+			"skillChainDetailTitle": "Skill Chain Details",
+			"resourceSkillEntity": "Skill"
+		}
+	}
+}

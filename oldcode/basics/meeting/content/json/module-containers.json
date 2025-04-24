@@ -1,0 +1,76 @@
+[
+	{
+		"id": "basics.meeting.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.meeting.entityMeetingTitle",
+		"controller": "basicsMeetingListController",
+		"uuid": "32e3c17bcd3f40d29772070f69e563c7"
+	},
+	{
+		"id": "basics.meeting.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.meeting.entityMeetingDetailTitle",
+		"controller": "basicsMeetingDetailController",
+		"uuid": "6457E5D68CA64A00A34D0E83E935773F",
+		"permission": "32e3c17bcd3f40d29772070f69e563c7"
+	},
+	{
+		"id": "basics.meeting.attendee.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.meeting.attendeeTitle",
+		"controller": "basicsMeetingAttendeeController",
+		"uuid": "58ed4703a9e242e8a2dae2e6a823a822"
+	},
+	{
+		"id": "basics.meeting.attendee.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.meeting.attendeeDetailTitle",
+		"controller": "basicsMeetingAttendeeDetailController",
+		"uuid": "bb7dd4434019422fba91ff89d53a5e7a",
+		"permission": "58ed4703a9e242e8a2dae2e6a823a822"
+	},
+	{
+		"id": "basics.meeting.document",
+		"template": "basics.meeting/partials/meeting-documents-view.html",
+		"title": "basics.meeting.documents.title",
+		"controller": "basicsMeetingDocumentsController",
+		"uuid": "4a764165f16f43b38cdd272bb51ed3a1"
+	},
+	{
+		"id": "basics.meeting.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.meeting.documents.detailTitle",
+		"controller": "basicsMeetingDocumentsDetailController",
+		"uuid": "258b33bab3cd46648116526f26d56a7c",
+		"permission": "4a764165f16f43b38cdd272bb51ed3a1"
+	},
+	{
+		"id": "basics.meeting.minutes",
+		"template": "basics.meeting/partials/basics-meeting-html-text-view.html",
+		"title": "basics.meeting.specification.title",
+		"controller": "basicsMeetingSpecificationController",
+		"uuid": "9d2776a8598f46519aa4bb277ebba63d"
+	},
+	{
+		"id": "platform.generic.structure",
+		"template": "app/components/grid/generic-structure/generic-container.html",
+		"title": "basics.meeting.groupingContainer",
+		"uuid": "9d16eb468eea443cbe8817a9800e3e95",
+		"controller": "platformGenericStructureController",
+		"mainService": "basicsMeetingMainService",
+		"configurationService": "basicsMeetingStandardConfigurationService"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "93ed37b60c0148f39a37346ac29f2c1f",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

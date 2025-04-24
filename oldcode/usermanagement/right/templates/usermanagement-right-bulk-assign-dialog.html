@@ -1,0 +1,45 @@
+<div class="flex-element flex-box flex-column modal-wrapper_" data-ng-controller="usermanagementRightBulkAssignDialogController">
+	<div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+
+	<div class="alert alert-info exclude-resize" >
+		{{resultInfo}}
+	</div>
+
+	<div class="flex-element flex-box flex-column">
+		<div data-platform-kendo-splitter-adjust class="flex-element flex-box flex-column border-none " option="{panes: [ { collapsible: true, size: '40%' },{ collapsible: true, size: '60%' }],orientation:'horizontal'}">
+			<div id="ui-layout-east" class="flex-element flex-box flex-column">
+				<div class="toolbar">
+					<h3 class="title font-bold">{{'usermanagement.right.dialogAssignRight.availableRights' | translate}}</h3>
+				</div>
+				<div class="flex-element flex-box flex-column subview-content">
+					<div class="input-group form-control">
+						<input type="text" data-ng-model="searchValue" class="form-control" data-ng-keydown="search(searchValue,$event)" />
+						<span class="input-group-btn">
+							<button class="btn btn-default input-sm tlb-icons ico-search" data-ng-click="search(searchValue)"></button>
+						</span>
+					</div>
+					<div class="flex-element flex-box flex-column subview-container grid-wrapper">
+						<platform-grid data="gridDataAvailable" style=""></platform-grid>
+					</div>
+				</div>
+			</div>
+
+			<div id="ui-layout-west" class="flex-element flex-box flex-column">
+				<div class="toolbar">
+					<h3 class="title font-bold">{{'usermanagement.right.dialogAssignRight.selectedRights' | translate}}</h3>
+				</div>
+				<div class="flex-element flex-box flex-column subview-content">
+					<div class="input-group form-control">
+						<input type="text" data-ng-model="searchValueSelected" class="form-control" data-ng-keydown="searchSelected(searchValueSelected,$event)" />
+						<span class="input-group-btn">
+							<button class="btn btn-default input-sm tlb-icons ico-search" data-ng-click="searchSelected(searchValueSelected)"></button>
+						</span>
+					</div>
+					<div class="flex-element flex-box flex-column subview-container grid-wrapper">
+						<platform-grid data="gridDataSelected" ></platform-grid>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

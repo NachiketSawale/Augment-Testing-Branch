@@ -1,0 +1,1 @@
+This module handles the authentication logic for the application.

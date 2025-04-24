@@ -1,0 +1,10 @@
+<div class="grid-container-wrapper">
+	<div data-ng-if="options.tools" class="toolbar left">
+		<div data-platform-menu-list data-list="options.tools"></div>
+	</div>
+
+	<div class="flex-box flex-column" data-ng-style="{'height': options.height}">
+		<platform-Grid data="{ state: gridId}" class="border-all auto-height" style="border-top: none;"></platform-Grid>
+	</div>
+</div>
+<div data-basics-common-white-board data-show="overlay.show" data-info="overlay.info" data-options="overlay.options" data-css="overlay.css + ' border'"></div>

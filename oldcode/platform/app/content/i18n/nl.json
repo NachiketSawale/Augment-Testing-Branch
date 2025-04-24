@@ -1,0 +1,204 @@
+{
+	"platform": {
+		"cancelBtn": "Annuleren",
+		"containerContentNotShown": "Wegens een gebrek aan rechten wordt de inhoud van de container niet weergegeven",
+		"deleteConfirm": "Wilt u de huidige selectie verwijderen?",
+		"deleteConfirmHeader": "Bevestiging verwijderen",
+		"error": {
+			"errormsgCode": "Foutcode: {{code}}",
+			"errormsgCodeMsg": "Foutcode: {{code}}<br>Bericht: {{msg}}",
+			"errormsgCodeMsgDetail": "Foutcode: {{code}}<br>Bericht: {{msg}}<br>Gegevens: {{detail}}"
+		},
+		"exception": "Uitzondering",
+		"formAbout": "Over '{{p1}}'",
+		"formConfigAllowEnterNavigation": "Navigatie toestaan",
+		"formConfigCancelBnt": "Annuleren",
+		"formConfigCloseBnt": "Annuleren",
+		"formConfigCustomerLabelName": "Aanpassen naam label ",
+		"formConfigDialogTitle": "Formulier aanpassen",
+		"formConfigLabelName": "Labelnaam",
+		"formConfigMoveDownBnt": "Naar beneden verplaatsen",
+		"formConfigMoveUpBnt": "Naar boven verplaatsen",
+		"formConfigOKBnt": "OK",
+		"formConfigRestoreBnt": "Herstellen",
+		"formConfigVisibility": "Zichtbaarheid",
+		"formSettings": "Instellingen",
+		"gridDropPanel": "Zet hier een kolomkop neer om te groeperen op de kolom",
+		"gridMarkerHeader": "Filter",
+		"gridTreeHeader": "Structuur",
+		"ignoreBtn": "Negeren",
+		"latestview": "Nieuwste weergave",
+		"layoutsystem": {
+			"edit": "Weergave aanpassen",
+			"export": "Weergaven exporteren",
+			"import": "Weergaven importeren",
+			"roleviews": "Rolweergaven",
+			"save": "Weergave opslaan",
+			"systemviews": "Systeemweergaven",
+			"userviews": "Gebruikersweergaven"
+		},
+		"loginBusyMessage": "Aanmelden bezig. Even geduld a.u.b.",
+		"loginButton": "Aanmelden",
+		"loginEnterPassword": "Voer wachtwoord in",
+		"loginEnterUsername": "Voer gebruikersnaam in",
+		"loginFailedMessage": "Aanmelden mislukt. Probeer het opnieuw",
+		"loginLanguage": "Taal",
+		"loginLanguageEnglish": "English",
+		"loginLanguageEnglishUS": "English (US)",
+		"loginLanguageGerman": "Deutsch",
+		"loginLanguageGermanDE": "Deutsch (DE)",
+		"loginLanguageSpanish": "Español",
+		"loginPassword": "Wachtwoord",
+		"loginSuccessfulMessage": "Aanmelden geslaagd. Laden. Even geduld a.u.b.",
+		"loginUsername": "Gebruikersnaam",
+		"loginViaFacebook": "Aanmelden met Facebook",
+		"loginViaMicrosoftAccount": "Aanmelden met Microsoft-account",
+		"loginViaTwitter": "Aanmelden met Twitter",
+		"longTextContainer": {
+			"container": "Container",
+			"field": "Veld"
+		},
+		"navOptionsMenu": "Optiemenu",
+		"newMessage": "Een nieuw bericht",
+		"noBtn": "Nee",
+		"okBtn": "OK",
+		"overwriteInherited": "Overerfde waarde overschrijven",
+		"refreshConfirm": "Er zijn veranderingen gedetecteerd. Wilt u opslaan voordat u herlaadt?",
+		"refreshConfirmHeader": "Bevestiging vernieuwen",
+		"retryBtn": "Opnieuw proberen",
+		"searchPanelPlaceholder": "Zoekterm",
+		"searchPanelString": "Zoekterm",
+		"yesBtn": "Ja",
+		"dragdrop": {
+			"anyData": "Gegevens",
+			"items": "{{count}} item(s)"
+		},
+		"inputControls": {
+			"boolean": "Booleaans",
+			"code": "Code",
+			"comment": "Meerregelige tekst (255)",
+			"dateutc": "Datum (UTC)",
+			"description": "Eénregelige tekst",
+			"email": "E-mail",
+			"exchangerate": "Float (5 cijfers)",
+			"factor": "Float (6 cijfers)",
+			"inputselect": "Combovak",
+			"integer": "Geheel getal",
+			"money": "Geld",
+			"percent": "Procent",
+			"quantity": "Float (3 cijfers)",
+			"remark": "Meerregelige tekst (2000)",
+			"select": "Keuzelijst"
+		},
+		"loginViaGoogle": "Aanmelden met Google",
+		"masterdetail": {
+			"add": "Voeg item toe",
+			"delete": "Verwijder item",
+			"filter": "Items filteren",
+			"filterTemplate": "Zoekterm"
+		},
+		"wizard": {
+			"back": "Terug",
+			"finish": "Voltooien",
+			"next": "Volgende",
+			"nextStep": "Volgende stap",
+			"stepFinish": "Voltooien",
+			"isIncluded": "Inbegrepen",
+			"listFilter": "Voer tekst in om de lijst te filteren"
+		},
+		"generatingMatrix": "Matrix wordt gegenereerd",
+		"hours": "Uren",
+		"loginWith": "Aanmelden met",
+		"minutes": "Minuten",
+		"niceNames": {
+			"codeDesc": "{{code}} ({{desc}})",
+			"id": "#{{id}}"
+		},
+		"processing": "Verwerken",
+		"removeTooltip": "Verwijderen",
+		"subordinated": "Ondergesteld",
+		"summary": "Samenvatting",
+		"todayTooltip": "Vandaag",
+		"bulkEditor": {
+			"configName": "nieuwe config naam",
+			"run": "Uitvoeren",
+			"save": "Bewaren",
+			"saveAndRun": "Opslaan en uitvoeren",
+			"changedRecords": "Gewijzigde records",
+			"changeReport": "Bulk editor - rapport wijzigen",
+			"details": "Details",
+			"logs": "Rapportlog",
+			"msgChangeError": "Kon {{property}} niet instellen op {{value}}. Oorzaak: {{validationErrorMsg}}",
+			"msgChangeSuccess": "Stel {{property}} in op: {{value}}",
+			"msgNewOldValueAreTheSame": "De waarde van {{property}} is al: {{value}}",
+			"msgPropertyIsReadonly": "Kon geen waarde instellen. {{property}} is alleenlezen",
+			"records": "Records",
+			"totalRecords": "Totaal aantal records",
+			"unchangedRecords": "Ongewijzigde records",
+			"Colour": "Kleur",
+			"compareEnd": "Eindwaarde",
+			"Icon": "Pictogram"
+		},
+		"wysiwygEditor": {
+			"bold": "Vet",
+			"centerJustify": "Centreren",
+			"code": "Code",
+			"font": "Lettertype",
+			"fontColor": "Lettertypekleur",
+			"fontSize": "Lettertypegrootte",
+			"highlightColor": "Markeerkleur",
+			"indent": "Inspringen",
+			"insertImage": "Voeg afbeelding in",
+			"italic": "Cursief",
+			"leftJustify": "Links centreren",
+			"link": "Link",
+			"orderedList": "Geordende lijst",
+			"outdent": "Uitspringen",
+			"paragraph": "Paragraaf",
+			"removeFormatting": "Opmaak verwijderen",
+			"rightJustify": "Rechts uitlijnen",
+			"strikeThrough": "Doorhalen",
+			"subscript": "Subscript",
+			"superscript": "Superscript",
+			"underline": "Onderstrepen",
+			"unlink": "Loskoppelen",
+			"unorderedList": "Ongeordende lijst",
+			"uploadFile": "Upload bestand"
+		},
+		"formContainer": {
+			"collapseall": "Alles inklappen",
+			"discard": "Afdanken",
+			"expandall": "Alles uitklappen",
+			"first": "Eerste",
+			"last": "Laatste",
+			"next": "Volgende",
+			"previous": "Vorige",
+			"print": "Afdrukken",
+			"refresh": "Verversen",
+			"save": "Bewaren",
+			"search": "Zoeken",
+			"settings": "Instellingen"
+		},
+		"gridContainer": {
+			"configDialogTitle": "Rasterlayout"
+		},
+		"grid": {
+			"availableColumns": "Beschikbare kolommen",
+			"visibleColumns": "Zichtbare kolommen"
+		},
+		"formattedUnits": {
+			"cubicMeters": {
+				"short": "{{value}}m³"
+			},
+			"meters": {
+				"short": "{{value}}m"
+			},
+			"squareMeters": {
+				"short": "{{value}}m²"
+			}
+		},
+		"listselection": {
+			"selected": "Geselecteerd"
+		}
+	}
+}

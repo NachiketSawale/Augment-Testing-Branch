@@ -1,0 +1,8 @@
+<div class="modal-wrapper">
+	<div *ngIf="currentTools" class="toolbar" style="display: flex; justify-content: flex-end">
+		<ui-common-toolbar [toolbarData]="currentTools"></ui-common-toolbar>
+	</div>
+	<div class="modal-wrapper grid-wrapper subview-container">
+		<ui-common-grid class="flex-element" [configuration]="configOption" (selectionChanged)="selectionChanged($event)" (valueChanged)="valueChanged($event)" ></ui-common-grid>
+	</div>
+</div>

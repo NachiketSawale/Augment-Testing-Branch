@@ -1,0 +1,11 @@
+<div class="pinItem">
+	<div class="pinId">
+		<span>{{injectedData.data.id}}</span>
+	</div>
+	<div class="pinInput" >
+		<input type="text" [textContent]="injectedData.data.title" [(ngModel)]="injectedData.data.title" (blur)="onBlur()">
+	</div>
+	<div class="pinDelete">
+		<button class="tlb-icons ico-rec-delete pinDeleteBtn" (click)="deleteItem()"></button>
+	</div>
+</div>

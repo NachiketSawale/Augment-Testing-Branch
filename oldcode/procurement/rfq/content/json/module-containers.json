@@ -1,0 +1,362 @@
+[
+	{
+		"id": "procurement-rfq-header-grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.headerGridTitle",
+		"controller": "procurementRfqListController",
+		"uuid": "037C70C17687481A88C726B1D1F82459"
+	},
+	{
+		"id": "procurement-rfq-header-form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.rfq.headerFormTitle",
+		"controller": "procurementRfqDetailController",
+		"uuid": "3C925CAC7A1C46CA88CECE88FE1EF481",
+		"permission": "037C70C17687481A88C726B1D1F82459"
+	},
+	{
+		"id": "procurement-rfq-total-grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.total.totalContainerGridTitle",
+		"controller": "procurementRfqTotalListController",
+		"uuid": "E85EEB08B0C245E69EF03DD841B568CA"
+	},
+	{
+		"id": "procurement-rfq-total-form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.total.totalContainerFormTitle",
+		"controller": "procurementRfqTotalDetailController",
+		"uuid": "688C5EBBA4B14C769E70C9D35FD573A1",
+		"permission": "E85EEB08B0C245E69EF03DD841B568CA"
+	},
+	{
+		"id": "procurement-rfq-businesspartner-grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.businessPartnerGridTitle",
+		"controller": "procurementRfqBusinessPartnerListController",
+		"uuid": "A2F96B998A304EECADBC246514C4089A"
+	},
+	{
+		"id": "procurement-rfq-businesspartner-form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.rfq.businessPartnerFormTitle",
+		"controller": "procurementRfqBusinessPartnerDetailController",
+		"uuid": "2B0438DBE5284193BE28B817623592EA",
+		"permission": "A2F96B998A304EECADBC246514C4089A"
+	},
+	{
+		"id": "procurement-rfq-requisition-grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.requisitionContainerGridTitle",
+		"controller": "procurementRfqRequisitionListController",
+		"uuid": "3DA6F959D8744A84BE2D78DAC89FFEEF"
+	},
+	{
+		"id": "procurement-rfq-requisition-form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.requisitionContainerFormTitle",
+		"controller": "procurementRfqRequisitionDetailController",
+		"uuid": "4E0F88CF3A074ABE96D1EE7F4C93AD0E",
+		"permission": "3DA6F959D8744A84BE2D78DAC89FFEEF"
+	},
+	{
+		"id": "procurement.rfq.characteristic",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "cloud.common.ContainerCharacteristicDefaultTitle",
+		"uuid": "DE7F382A4AD949F5BE04354B1D4323A4",
+		"controller": "",
+		"sectionId": "19",
+		"mainService": "procurementRfqMainService"
+	},
+	{
+		"id": "procurement.rfq.formFormData",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.ContainerUserformDefaultTitle",
+		"controller": "basicsUserFormFormDataController",
+		"uuid": "64BFB8A2501645CF873BDC33EC0DB7DA",
+		"rubricId": 24,
+		"mainService": "procurementRfqMainService",
+		"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+	},
+	{
+		"id": "procurement.rfq.entityApprovers",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.workflow.ContainerEntityApproversDefaultTitle.rfqApprovers",
+		"controller": "basicsWorkflowEntityApproverController",
+		"uuid": "861E8AEF7AA24B4584A4F68448569B9A",
+		"entityGUID": "91018790AFF14968B7D63B6150D1C46A",
+		"isReadonly": true,
+		"mainService": "procurementRfqMainService"
+	},
+	{
+		"id": "procurement.rfq.documents.project.document.grid",
+		"template": "documents.project/partials/documentgridView.html",
+		"title": "cloud.common.documentsProject",
+		"controller": "documentsProjectDocumentController",
+		"uuid": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "procurement.rfq.documents.project.revision.grid",
+		"template": "documents.project/partials/documentGridRevisionView.html",
+		"title": "cloud.common.documentsRevision",
+		"controller": "documentsProjectDocumentRevisionController",
+		"uuid": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "procurement.rfq.documents.project.document.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsProjectForm",
+		"controller": "documentsProjectDocumentDetailController",
+		"uuid": "8BB802CB31B84625A8848D370142B95C",
+		"permission": "4EAA47C530984B87853C6F2E4E4FC67E"
+	},
+	{
+		"id": "procurement.rfq.documents.project.revision.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentsRevisionDetail",
+		"controller": "documentsProjectDocumentRevisionDetailController",
+		"uuid": "D8BE3B30FED64AAB809B5DC7170E6219",
+		"permission": "684F4CDC782B495E9E4BE8E4A303D693"
+	},
+	{
+		"id": "project.main.documents.project.document.history.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentsProjectHistory",
+		"controller": "documentsProjectDocumentHistoryController",
+		"uuid": "39d0d1c6753b49029b3c953165f8ceb7"
+	},
+	{
+		"id": "procurement-txinterface-activity-stream",
+		"template": "procurement.txinterface/templates/procurement-txinterface-activity-stream.html",
+		"title": "cloud.common.ContainerTxActivityStreamTitle",
+		"controller": "procurementTxInterfaceActivityStreamController",
+		"uuid": "4aeacfe155754ccd9556b9dfcdf67ecf"
+	},
+	{
+		"id": "procurement.rfq.event.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.event.eventGridTitle",
+		"controller": "procurementPackageEventGridController",
+		"uuid": "A9920C855D49423ABE4F8EBA30ADBB7A",
+		"permission": "07946CB829634366B34547B3C5987B23"
+	},
+	{
+		"id": "procurement.rfq.event.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.event.eventFormTitle",
+		"controller": "procurementPackageEventFormController",
+		"uuid": "bda657aee53149f58291611402552cec",
+		"permission": "07946CB829634366B34547B3C5987B23"
+	},
+	{
+		"id": "procurement.common.rfq.document",
+		"template": "procurement.common/partials/prcdocument-view.html",
+		"title": "procurement.common.document.prcDocumentContainerGridTitle",
+		"controller": "procurementCommonDocumentListController",
+		"uuid": "522cf3266f4b49dd8fe4e6569a5845ae"
+	},
+	{
+		"id": "procurement.common.rfq.document.from",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.document.prcDocumentContainerFormTitle",
+		"controller": "procurementCommonDocumentDetailController",
+		"uuid": "791559b40609403f9d6939babc120ebc",
+		"permission": "522cf3266f4b49dd8fe4e6569a5845ae"
+	},
+	{
+		"include": "model.viewer/content/json/viewer-containers.json"
+	},
+	{
+		"id": "procurement.rfq.headerText.format",
+		"template": "procurement.common/partials/header-text-view-new.html",
+		"title": "procurement.common.headerText.prcHeaderTextContainerTitle",
+		"controller": "procurementRfqHeaderTextController",
+		"uuid": "70b733fa41445996bb780c34434d138c",
+		"textFormat": 1,
+		"moduleName": "procurement.rfq"
+	},
+	{
+		"id": "procurement.rfq.headerText.plain",
+		"template": "procurement.common/partials/common-header-plaintext-html-container.html",
+		"title": "procurement.common.headerText.prcHeaderPlainTextContainerTitle",
+		"controller": "procurementRfqHeaderTextController",
+		"uuid": "a56250d1729cc8620c8bd37ce1e538b4",
+		"textFormat": 2,
+		"moduleName": "procurement.rfq"
+	},
+	{
+		"id": "procurement.rfq.req.text",
+		"template": "procurement.common/partials/header-text-view-new.html",
+		"title": "procurement.rfq.reqHeaderTextFormTitle",
+		"controller": "procurementCommonHeaderTextController",
+		"uuid": "c1dbd8a1e0a44e0d846e1d191b3448f7",
+		"textFormat": 1,
+		"moduleName": "procurement.rfq.requisition"
+	},
+	{
+		"id": "procurement.rfq.req.plainText",
+		"template": "procurement.common/partials/common-header-plaintext-html-container.html",
+		"title": "procurement.rfq.reqHeaderPlainTextFormTitle",
+		"controller": "procurementCommonHeaderTextController",
+		"uuid": "c6829d21e3f9434fbe5979ea25d4f0fa",
+		"textFormat": 2,
+		"moduleName": "procurement.rfq.requisition"
+	},
+	{
+		"id": "procurement.common.rfq.sendhistory",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.prcRfqSendHistoryContainerGridTitle",
+		"controller": "procurementRfqSendHistoryListController",
+		"uuid": "dbfa5ff5cbb34fe4a7feba67a5360e81"
+	},
+	{
+		"id": "procurement.common.rfq.sendhistory.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.rfq.prcRfqSendHistoryContainerFormTitle",
+		"controller": "procurementRfqSendHistoryDetailController",
+		"uuid": "b28931fa0d0946048ef8bacfb8910403",
+		"permission": "dbfa5ff5cbb34fe4a7feba67a5360e81"
+	},
+	{
+		"id": "procurement.common.rfq.suggestedBidder.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.suggestedBidder.suggestedBidderContainerGridTitle",
+		"controller": "procurementCommonSuggestedBiddersListController",
+		"uuid": "35f46630f52f45b4877f2028716186f2"
+	},
+	{
+		"id": "procurement.common.rfq.suggestedBidder.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.suggestedBidder.suggestedBidderContainerFormTitle",
+		"controller": "procurementCommonSuggestedBiddersFormController",
+		"uuid": "8750652dd0e5460d81ec0757f63d8144",
+		"permission": "35f46630f52f45b4877f2028716186f2"
+	},
+	{
+		"id": "procurement.rfq.comment",
+		"template": "basics.common/partials/comment-view.html",
+		"title": "basics.common.commentContainerTitle",
+		"controller": "basicsCommonCommentController",
+		"uuid": "2254e4b546af4b01b60f7aea33005955",
+		"commentQualifier": "procurement.rfq.comment",
+		"parentService": "procurementRfqMainService"
+	},
+	{
+		"id": "documents.clerk.authorization.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.clerk.listPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkListController",
+		"clerkQualifier": "documents.project.clerk",
+		"uuid": "47620dd38c874f97b75ee3b6ce342666",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "documents.authorization.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.clerk.detailPrjDocumentClerkAuthTitle",
+		"controller": "basicsCommonClerkFormController",
+		"uuid": "7806e7a22b2142f8865ab189efe23c5a",
+		"permission": "47620dd38c874f97b75ee3b6ce342666",
+		"clerkQualifier": "documents.project.clerk",
+		"parentService": "documentsProjectDocumentDataService"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "cloud.common.documentAssignObject",
+		"controller": "documentsProjectModelObjectController",
+		"uuid": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "procurement.contract.documents.project.modelobject.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "cloud.common.documentAssignObjectFormTitle",
+		"controller": "documentsProjectModelObjectDetailController",
+		"uuid": "ee68ae76fefe4b758c282594a1746480",
+		"permission": "7BACDAB1A06B439895ACBA767E42205E"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "912c754c0082eef903514d25b94c1b75",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	},
+	{
+		"id": "procurement.rfq.characteristic2.container",
+		"template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+		"title": "basics.common.characteristic2.title",
+		"uuid": "1c3becc3aa1441748ad12b78eb59d94c",
+		"controller": "",
+		"sectionId": "52",
+		"mainService": "procurementRfqMainService"
+	},
+	{
+		"id": "procurement-rfq-businesspartner-contact-grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.rfq.rfqBusinessPartner2Contact.title",
+		"controller": "procurementRfqBusinessPartner2ContactListController",
+		"uuid": "d053e7c20a934b96854d612613ad5a69"
+	},
+	{
+		"id": "procurement-rfq-businesspartner-contact-form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.rfq.rfqBusinessPartner2Contact.detailTitle",
+		"controller": "procurementRfqBusinessPartner2ContactDetailController",
+		"uuid": "ea9dbcbba5104970a58142a5cce4e17f",
+		"permission": "d053e7c20a934b96854d612613ad5a69"
+	},
+	{
+		"id": "procurement.rfq.extbidder.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.common.extBidderGridTitle",
+		"controller": "procurementPackage2ExtBidderGridController",
+		"uuid": "7E919AC811204E439C03B192793CF473",
+		"permission": "DE4193FE7CAF4AA1BD69C0FCAAC8041D"
+	},
+	{
+		"id": "procurement.rfq.extbidder.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.common.extBidderFormTitle",
+		"controller": "procurementPackage2ExtBidderFormController",
+		"uuid": "03660E18A1D84AA7931A1619B9157869",
+		"permission": "DE4193FE7CAF4AA1BD69C0FCAAC8041D"
+	},
+	{
+		"id": "procurement.rfq.status.history.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.common.entityStatusHistoryTitle",
+		"controller": "basicsCommonStatusHistoryListController",
+		"uuid": "bcb8622d676944edb5f113fd524608b6",
+		"parentService": "procurementRfqMainService",
+		"StatusName": "rfq",
+		"DisplayMember": "Description",
+		"LookupTypeName": "rfqStatus"
+	},
+	{
+		"id": "procurement.rfq.meeting.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.meeting.entityMeetingTitle",
+		"controller": "rfqMeetingListController",
+		"uuid": "33673f7dab934a52b285775f96023f43"
+	},
+	{
+		"id": "procurement.rfq.extbidder2contact.Grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.package.extBidder2ContactGridTitle",
+		"controller": "packageExtBidder2ContactGridController",
+		"uuid": "8389911177CA4DCEB8813D482C487280",
+		"permission": "5FBD673B50874A02A9A63A81FB24909A"
+	},
+	{
+		"id": "procurement.rfq.extbidder2contact.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.package.extBidder2ContactFormTitle",
+		"controller": "packageExtBidder2ContactFormController",
+		"uuid": "5EB672B8F85A4D0FA10BAA466105216C",
+		"permission": "8389911177CA4DCEB8813D482C487280"
+	}
+]

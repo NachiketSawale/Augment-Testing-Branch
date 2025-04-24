@@ -1,0 +1,161 @@
+[
+  {
+    "id": "productionplanning.configuration.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.listTitle",
+    "controller": "productionplanningConfigurationListController",
+    "uuid": "2ad95d69c3b546428e425cb5f2d1a48a",
+    "permission": "2ad95d69c3b546428e425cb5f2d1a48a"
+  },
+  {
+    "id": "productionplanning.configuration.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.configuration.detailTitle",
+    "controller": "productionplanningConfigurationDetailController",
+    "uuid": "ba21f131ad6942aca156f453793ce867",
+    "permission": "2ad95d69c3b546428e425cb5f2d1a48a"
+  },
+  {
+    "id": "productionplanning.configuration.eventtype2restype.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.eventtype2restypeListTitle",
+    "controller": "productionplanningConfigurationEventtype2restypeListController",
+    "uuid": "1c25ab6bb66947b5b1303df7b608971b",
+    "permission": "1c25ab6bb66947b5b1303df7b608971b"
+  },
+  {
+    "id": "productionplanning.configuration.eventtype2restype.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.configuration.eventtype2restypeDetailTitle",
+    "controller": "productionplanningConfigurationEventtype2restypeDetailController",
+    "uuid": "ac4a4d7a57cd47f0a6f03e3c30de60fe",
+    "permission": "1c25ab6bb66947b5b1303df7b608971b"
+  },
+  {
+    "id": "productionplanning.configuration.engtype2eventtype.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.engtype2eventtypeListTitle",
+    "controller": "productionplanningConfigurationEngtype2eventtypeListController",
+    "uuid": "3c86eab96195490dae758aded1f0525b",
+    "permission": "3c86eab96195490dae758aded1f0525b"
+  },
+  {
+    "id": "productionplanning.configuration.engtype.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.engtypeListTitle",
+    "controller": "productionplanningConfigurationEngtypeListController",
+    "uuid": "40ad0cb374dd490f8abbceeccc89ac06",
+    "permission": "40ad0cb374dd490f8abbceeccc89ac06"
+  },
+  {
+    "id": "productionplanning.configuration.engtype.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.configuration.engtypeDetailTitle",
+    "controller": "productionplanningConfigurationEngtypeDetailController",
+    "uuid": "c9cb4cbaf3c44b6c98f01e943dd6d5d7",
+    "permission": "40ad0cb374dd490f8abbceeccc89ac06"
+  },
+  {
+    "id":"productionplanning.configuration.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "396a5945753b4ad7b1787bac084ed427",
+    "wizardDisabled": "true"
+  },
+  {
+    "id": "productionplanning.configuration.eventtypeslot.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.eventtypedateslotListTitle",
+    "controller": "productionplanningConfigurationEventTypeSlotListController",
+    "uuid": "645f9eef664f422b81ecfda68680d710",
+    "permission": "40ad0cb374dd490f8abbceeccc89ac06"
+  },
+  {
+    "id": "productionplanning.configuration.eventtypeqtyslot.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.eventtypeqtyslotListTitle",
+    "controller": "productionplanningConfigurationEventTypeQtySlotListController",
+    "uuid": "772dbc472e3e401cabfbcd97a5bf4db4",
+    "permission": "40ad0cb374dd490f8abbceeccc89ac06"
+  },
+  {
+    "id": "productionplanning.configuration.clerkroleslot.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.clerkroleslotListTitle",
+    "controller": "productionplanningConfigurationClerkRoleSlotListController",
+    "uuid": "52f5e3788e264d73acd0ea038972a68f",
+    "permission": "40ad0cb374dd490f8abbceeccc89ac06"
+  },{
+	"id": "productionplanning.configuration.plannedquantityslot.list",
+	"template": "app/components/base/grid-partial.html",
+	"title": "productionplanning.configuration.plannedQuantityslotListTitle",
+	"controller": "productionplanningConfigurationPlannedQuantitySlotListController",
+	"uuid": "5f58a961d5934674975057bd908319d2",
+	"permission": "5f58a961d5934674975057bd908319d2"
+},{
+  "id": "productionplanning.configuration.phasedateslot.list",
+  "template": "app/components/base/grid-partial.html",
+  "title": "productionplanning.configuration.phaseDateSlotListTitle",
+  "controller": "productionplanningConfigurationPhaseDateSlotListController",
+  "uuid": "6122e4411ec94e8f8b306d9b03d15ed0",
+  "permission": "6122e4411ec94e8f8b306d9b03d15ed0"
+},
+  {
+    "id": "productionplanning.configuration.logconfig.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.logConfigListTitle",
+    "controller": "ppsConfigurationLogConfigListController",
+    "uuid": "5e71417abff44ebea124741d1dc53c2d",
+    "permission": "a100e4aec51046658c4aebf4a49a593e"
+  },
+  {
+    "id": "productionplanning.configuration.ppsExternalConfigList",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.configuration.ppsExternalConfigListTitle",
+    "controller": "ppsExternalConfigurationListController",
+    "uuid": "2586f77873bc4b04a0f72e04aa9c9842",
+    "permission": "2ad95d69c3b546428e425cb5f2d1a48a"
+  },
+  {
+    "id": "productionplanning.configuration.ppsExternalConfigDetails",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.configuration.ppsExternalConfigDetailsTitle",
+    "controller": "ppsExternalConfigurationDetailController",
+    "uuid": "9feb6f94d59841328ab9a929d90469d6",
+    "permission": "2ad95d69c3b546428e425cb5f2d1a48a"
+  },
+  {
+    "id": "productionplanning.configuration.externalConfig.Clob",
+    "template": "productionplanning.common/templates/pps-specification-plain-container.html",
+    "title": "productionplanning.configuration.clobConfig",
+    "controller": "ppsExternalConfigClobController",
+    "moduleName": "productionplanning.configuration",
+    "uuid": "9fc93226ddf440339c88459d13645334",
+    "permission": "2ad95d69c3b546428e425cb5f2d1a48a"
+  },
+	{
+		"id": "productionplanning.configuration.ppsupstreamitemtemplate.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.configuration.upstreamItemTemplate.listTitle",
+		"controller": "productionplanningConfigurationUpstreamItemTemplateListController",
+		"uuid": "38d30f0611e34224ba6eafbe4367fa78",
+		"permission": "23edab57edgb492d84r2gv47e734fh8u"
+	},
+	{
+		"id": "productionplanning.configuration.ppsupstreamitemtemplate.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.configuration.upstreamItemTemplate.detailTitle",
+		"controller": "productionplanningConfigurationUpstreamItemTemplateDetailController",
+		"uuid": "86764a41d966479a97c161fb4823f100",
+		"permission": "23edab57edgb492d84r2gv47e734fh8u"
+	},
+  {
+    "id": "productionplanning.configuration.statusinheritedtriggering.container",
+    "template": "productionplanning.configuration/templates/status-inherited-triggering-container.html",
+    "title": "productionplanning.configuration.statusInheritedTriggering.listTitle",
+    "controller": "",
+    "uuid": "c7f7fe3076d34890bb8be428f7d28640",
+    "permission": "c34d2f7f73bc4989b811861e93ff5b69"
+  }
+]

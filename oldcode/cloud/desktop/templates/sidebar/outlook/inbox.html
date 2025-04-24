@@ -1,0 +1,124 @@
+<style>
+	.sidebar-outlook-in-box button.w-h-12 {
+		width: 12px;
+		height: 12px;
+	}
+
+	.sidebar-outlook-in-box button.w-h-16 {
+		width: 16px;
+		height: 16px;
+	}
+
+	.sidebar-outlook-in-box .rw-content.text-right {
+		width: 80px;
+	}
+
+	.sidebar-outlook-in-box .title label {
+		margin-right: 4px;
+	}
+
+	.sidebar-outlook-in-box .title label.draft {
+		color: red;
+	}
+
+	.sidebar-outlook-in-box .rw-content .disappeared {
+		visibility: hidden;
+	}
+
+	.sidebar-outlook-in-box .rw-content.appeared {
+		visibility: visible;
+	}
+
+	.sidebar-outlook-in-box .rw-content {
+		padding-left: 0;
+	}
+
+	.sidebar-outlook-in-box .rw-content .ico-attachment {
+		cursor: default;
+	}
+
+	.sidebar-outlook-in-box .panel-item .ico-goto,
+	.sidebar-outlook-in-box .panel-item .ico-mail-edit-sidebar,
+	.sidebar-outlook-in-box .panel-item .ico-mail-open-sidebar {
+		visibility: hidden;
+		margin-top: 4px;
+		margin-left: 4px;
+	}
+
+	.sidebar-outlook-in-box .panel-item:hover .ico-goto,
+	.sidebar-outlook-in-box .panel-item:hover .ico-mail-edit-sidebar,
+	.sidebar-outlook-in-box .panel-item:hover .ico-mail-open-sidebar {
+		visibility: visible;
+	}
+
+	.sidebar-outlook-in-box .rw-content .unread {
+		color: #0067b1;
+		font-weight: bold;
+	}
+
+	.sidebar-outlook-in-box .content-scrollable {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.sidebar-outlook-in-box .content-inner {
+		overflow: hidden;
+		padding-top: 8px;
+	}
+
+</style>
+<div class="fullheight sidebar-outlook-in-box" data-ng-controller="cloudDesktopOutlookInboxController">
+	<div class="content-inner fullheight flex-box flex-column">
+		<div class="fullheight flex-box flex-column">
+			<div class="content-fixed">
+				<div>
+					<span class="form-control"
+					      data-domain-control
+					      data-domain="select"
+					      data-options="selectOptions"
+					      data-model="entity"
+					      data-change="onFilterChanged()"
+					></span>
+				</div>
+				<div class="margin-top-ld text-right">
+					<span data-ng-show="isUnread">Unread;</span>
+					<span>By {{orderByField.description}}</span>
+					<button type="button" class="top fullheight btn control-icons ico-arrow-down w-h-12" data-ng-click="popupSortMenu($event)"></button>
+					<button type="button" title="{{getOrderDirectionTip()}}" class="top fullheight btn control-icons {{orderbyIcon}} margin-left-ld w-h-16" data-ng-click="changeOrderBy()"></button>
+				</div>
+			</div>
+			<div class="content-scrollable fullheight margin-top-ld">
+				<ul class="flex-element flex-basis-auto margin-top-ld">
+					<li data-ng-repeat="item in mails" data-ng-dblclick="openInSidebar(item)">
+						<div class="panel-item rw flex-box flex-element flex-row">
+							<ul class="rw-content fullwidth overflow-hidden">
+								<li class="title ellipsis">
+									<label class="draft" data-ng-show="item.isDraft">[Draft]</label>
+									<label data-ng-show="!item.isDraft">{{item.sender.emailAddress.name}}</label>
+									<label data-ng-if="item.isDraft" data-ng-repeat="to in item.toRecipients">{{to.emailAddress.name}};</label>
+								</li>
+								<li class="ellipsis {{!item.isRead ? 'unread' : ''}}">{{item.subject}}</li>
+								<li class="ellipsis">{{item.bodyPreview}}</li>
+							</ul>
+							<ul class="rw-content text-right margin-right-ld">
+								<li>
+									<button type="button" class="tlb-icons ico-attachment w-h-16 {{item.hasAttachments ? 'appeared' : 'disappeared'}}"></button>
+								</li>
+								<li data-ng-class="{'unread' : !item.isRead}">{{getReceivedDate(item)}}</li>
+								<li>
+									<button type="button" title="{{'cloud.desktop.outlook.edit' | translate}}" data-ng-if="item.isDraft" class="tlb-icons ico-mail-edit-sidebar w-h-16" data-ng-click="editInSidebar(item)"></button>
+									<button type="button" title="{{'cloud.desktop.outlook.detail' | translate}}" data-ng-if="!item.isDraft" class="tlb-icons ico-mail-open-sidebar w-h-16" data-ng-click="openInSidebar(item)"></button>
+									<button type="button" title="{{'cloud.desktop.outlook.goTo' | translate}}" class="tlb-icons ico-goto w-h-16" data-ng-click="openInOutlook(item)"></button>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="fullwidth text-center margin-top-ld margin-bottom-ld">
+					<p data-ng-show="mails.length===0">{{noEmailTip}}</p>
+					<a href="javascript:void(0);" data-ng-click="viewMore()" data-ng-show="isShowMore">{{'cloud.desktop.outlook.viewMore' | translate}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

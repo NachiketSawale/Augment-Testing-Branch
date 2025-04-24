@@ -1,0 +1,22 @@
+<div class="ms-commodity-row row"
+     [class]="isSelected()?'ms-commodity-row-material-selected':''"
+     (click)="select()"
+     (dblclick)="apply()">
+    <div class="col-md-8 col-sm-7 col-xs-6">
+        <basics-shared-material-item-description
+                [dataItem]="dataItem"
+                [showDetail]="scope.showDetail"
+                [itemOptions]="scope.searchOptions ? scope.searchOptions : undefined"
+                (goToDetail)="goToDetail()">
+        </basics-shared-material-item-description>
+    </div>
+    <div class="col-md-4 col-sm-5 col-xs-6">
+        <basics-shared-material-item-operation
+                [dataItem]="dataItem"
+                [showDetail]="scope.showDetail"
+                [showIcons]="showOperationIcons"
+                [itemOptions]="scope.searchOptions ? scope.searchOptions : undefined"
+                (updateMaterialPriceListFk)="handleUpdateMaterialPriceListFk($event)">
+        </basics-shared-material-item-operation>
+    </div>
+</div>

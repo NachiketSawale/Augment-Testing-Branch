@@ -1,0 +1,7 @@
+<div data-ng-controller="documentsProjectCxWizardController" class="modal-wrapper cxDialogWapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <div style="position:relative;">
+        <div cloud-common-overlay data-loading="cxloading"></div>
+        <iframe credentialless ng-src="{{cx.url}}" class="cx-wrapper fullwidth" ></iframe>
+    </div>
+</div>

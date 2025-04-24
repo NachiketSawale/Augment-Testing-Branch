@@ -1,0 +1,15 @@
+<div class="input-group form-control">
+
+    <div domain-control
+         class="form-control"
+         data-entity="entity"
+         data-ng-model="entity.ServerId"
+         readonly="false"
+         data-options="options"
+         data-domain="select"
+         data-platform-control-validation></div>
+
+    <div class="input-group-btn" ng-if="entity.ServerId !== entity.inheritedServer.Id">
+        <button ng-click="resetToDefault()" class="btn btn-default tlb-icons ico-set-to-default" title="{{btnTooltip}}"></button>
+    </div>
+</div>

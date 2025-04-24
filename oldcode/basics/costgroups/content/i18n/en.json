@@ -1,0 +1,59 @@
+{
+  "basics": {
+	"costgroups": {
+		"moduleName": "Cost Group{{p_0}}",
+		"tabs": {
+			"tabTitle1": "Cost Group1",
+			"tabTitle2": "Cost Group2",
+			"tabTitle3": "Cost Group3",
+			"tabTitle4": "Cost Group4",
+			"tabTitle5": "Cost Group5"
+		},
+		"containers": {
+		},
+		"codeUniqueError": "Code should be unique.",
+		"detail": {
+			"detailTitle1": "Cost Group1 Detail",
+			"detailTitle2": "Cost Group2 Detail",
+			"detailTitle3": "Cost Group3 Detail",
+			"detailTitle4": "Cost Group4 Detail",
+			"detailTitle5": "Cost Group5 Detail",
+			"header": "Detail"
+		},
+		"translation": {
+			"translationTitle1": "Cost Group1 Translation",
+			"translationTitle2": "Cost Group2 Translation",
+			"translationTitle3": "Cost Group3 Translation",
+			"translationTitle4": "Cost Group4 Translation",
+			"translationTitle5": "Cost Group5 Translation"
+		},
+		"bkpImport": "Import BKP",
+		"bkpType": "Type",
+		"bkpVersion": "Version",
+		"costGroupName": "Cost Group",
+		"code": "Code",
+		"crbSorting": "CRB Sorting",
+		"referenceQuantityCode": "Reference Quantity",
+		"listCostGroupTitle": "Cost Group",
+		"costGroupCatalogCode": "Cost Group Catalog Code",
+		"costGroupCatalogDesc": "Cost Group Catalog Description",
+		"costgroupcatalog": "Cost Group Catalog",
+		"detailCostGroupTitle": "Cost Group Details",
+		"listCostGroupCatalogTitle": "Cost Group Catalog",
+		"detailCostGroupCatalogTitle": "Cost Group Catalog Details",
+		"uniqCode": "The Code should be unique",
+		"enterpriseCostGroup": "Enterprise Cost Group",
+		"projectCostGroup": "Project Cost Group",
+		"filteringByCostGroup": "filtering by Cost Group",
+		"filterCostGroupContainerTitle": "Cost Group",
+		"ai": {
+			"original": "Original",
+			"suggested": "Suggested"
+		},
+		"enableDone": "Cost Group {{code}} has been enabled successfully. Please save the record to make this changes permanent.",
+		"disableDone": "Cost Group {{code}} has been disabled successfully. Please save the record to make this changes permanent.",
+		"alreadyDisabled": "Cost Group {{code}} is already disabled.",
+		"alreadyEnabled": "Cost Group {{code}} is already enabled."
+	}
+  }
+}

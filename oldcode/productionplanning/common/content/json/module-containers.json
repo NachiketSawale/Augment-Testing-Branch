@@ -1,0 +1,34 @@
+[
+  {
+    "id": "productionplanning.common.headerlist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.header.listHeaderTitle",
+    "controller": "productionplanningCommonHeaderListController",
+    "uuid": "c3edae3d673443b7badc9eee399ae880",
+    "permission": "c3edae3d673443b7badc9eee399ae880"
+  },
+  {
+    "id": "productionplanning.common.headerdetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.common.header.detailHeaderTitle",
+    "controller": "productionplanningCommonHeaderDetailController",
+    "uuid": "f1303857fa8e4e6bb88d73cebeefad17",
+    "permission": "c3edae3d673443b7badc9eee399ae880"
+  },
+  {
+    "id": "productionplanning.common.productlist",
+    "template": "app/components/base/grid-partial.html",
+    "title": "productionplanning.common.product.listProductTitle",
+    "controller": "productionplanningCommonProductListController",
+    "uuid": "70210ee234ef44af8e7e0e91d45186b2",
+    "permission": "70210ee234ef44af8e7e0e91d45186b2"
+  },
+  {
+    "id": "productionplanning.common.productdetail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "productionplanning.common.product.detailProductTitle",
+    "controller": "productionplanningCommonProductDetailController",
+    "uuid": "4b0f2a497b21410396eff9f7e8bf1ee9",
+    "permission": "70210ee234ef44af8e7e0e91d45186b2"
+  }
+]

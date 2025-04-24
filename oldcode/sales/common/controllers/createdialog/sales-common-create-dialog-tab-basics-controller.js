@@ -399,19 +399,20 @@
 						var updateWith = _.find(formConfig.rows, { model: 'updateWith' });
 						var Type = _.find(formConfig.rows, { model: 'TypeFk' });
 						var PreviousBill = _.find(formConfig.rows, { model: 'PreviousBillFk' });
-						var PerformedFrom = _.find(formConfig.rows, { model: 'PerformedFrom' });
-						var PerformedTo = _.find(formConfig.rows, { model: 'PerformedTo' });
-
 						updateWith.visible = false;
 						Type.visible = false;
 						PreviousBill.visible = false;
-						PerformedFrom.visible = false;
-						PerformedTo.visible = false;
 						// contracts grid
 						var gridOptions = _.get(_.find(formConfig.rows, {rid: 'contractsGrid'}), 'options');
 						$scope.$watch('dataItem.OrdHeaderFk', function (newOrdHeaderFk/* , oldOrdHeaderFk */) {
 							// set readonly state and reload grid
 							gridOptions.readonly = newOrdHeaderFk === null;
+							$scope.$broadcast('reloadGrid');
+						});
+						// if collective WIP
+						$scope.$watch('dataItem.CollectiveWIP', function (newIsCollectiveWip) {
+							let dialogService = $injector.get('salesWipCreateWipDialogService');
+							dialogService.getInitDataItem().IsCollectiveWIP  = $scope.dataItem.CollectiveWIP;
 							$scope.$broadcast('reloadGrid');
 						});
 						// end contract grid

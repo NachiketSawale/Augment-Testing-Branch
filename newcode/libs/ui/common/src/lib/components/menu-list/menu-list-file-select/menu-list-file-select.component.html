@@ -1,0 +1,6 @@
+<ng-template #toolbarItem let-fs="fileselect">
+	<button *ngIf="fs !== undefined" #clickElement [disabled]="isDisabled(menuItem)" [ngClass]="getCssClass(menuItem)" [title]="getTitle(menuItem)" [name]="menuItem.id" (click)="fs.click()">
+		<svg *ngIf="menuItem.svgSprite && menuItem.svgImage" uiCommonSvgimage [attr.sprite]="menuItem.svgSprite" [svgImage]="menuItem.svgImage"></svg>
+	</button>
+	<span *ngIf="fs === undefined">File select variable missing</span>
+</ng-template>

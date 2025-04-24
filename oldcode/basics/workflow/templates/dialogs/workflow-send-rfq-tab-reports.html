@@ -1,0 +1,44 @@
+<h1>{{'basics.workflow.sendRfQReports.mandatoryReports' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQReports.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQReports.templateName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQReports.description' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQReports.preview' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="report in Context.MandentoryReportList">
+		<td>
+			<div data-domain="boolean" data-domain-control data-model="report.Selected"></div>
+		</td>
+		<td><span data-ng-bind="report.TemplateName"></span></td>
+		<td><span data-ng-bind="report.Description"></span></td>
+		<td><i class="block-image control-icons ico-preview"></i></td>
+	</tr>
+	</tbody>
+</table>
+
+<h1>{{'basics.workflow.sendRfQReports.reportSelection' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQReports.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQReports.templateName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQReports.description' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQReports.preview' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="report in Context.ReportList">
+		<td>
+			<div data-domain="boolean" data-domain-control data-model="report.Selected"></div>
+		</td>
+		<td><span data-ng-bind="report.TemplateName"></span></td>
+		<td><span data-ng-bind="report.Description"></span></td>
+		<td><i class="block-image control-icons ico-preview" data-ng-click="openReport(report.Options)"></i></td>
+
+	</tr>
+	</tbody>
+</table>

@@ -1,0 +1,160 @@
+<style data-cloud-desktop-custom-login-css></style>
+<div class="login-portal flex-element">
+	<div class="modal-dialog primary">
+		<div data-cloud-common-overlay data-loading="dialogOptions.loading" data-info2="dialogOptions.loadingInfo"></div>
+
+		<div class="flex-box">
+			<div class="flex-box flex-column left-side main-color">
+				<div class="{{::productLogoPrimary}} productLogo" title="{{::productName}}"></div>
+				<div class="container-footer flex-box">
+					<div class="text-left flex-element copyright">© 2023 RIB Software GmbH</div>
+				</div>
+			</div>
+
+			<div class="flex-element right-side">
+				<div class="flex-box header">
+					<div class="flex-element flex-box flex-align-center margin-left-ld header-label">Portal</div>
+					<div class="company-login-logo"></div>
+				</div>
+
+				<div data-ng-if="!dialogOptions.isInvitation" >
+					<div data-ng-if="dialogOptions.registrationDone">
+						<div class="text-justify" ng-bind-html="dialogOptions.registrationMsg"></div>
+
+						<div class="btn-group-link" style="margin-bottom: 10px;">
+							<button id="backbutton1" class="btn btn-success text-right margin-top-ld flex-box flex-align-center pull-right" data-ng-click="onBackBtn()" title="{{text.platform.portal.backButton}}">
+								<i class="fa text-center"></i>
+								<span class="margin-left-ld flex-element">{{text.platform.portal.backButton}}</span>
+								<i class="block-image"></i>
+							</button>
+						</div>
+
+					</div>
+
+					<div data-ng-if="!dialogOptions.registrationDone">
+						<div class="text-justify" ng-bind-html="dialogOptions.registrationFillOutMsg">
+						</div>
+
+						<section>
+
+							<div style="padding-top: 15px;"><b>{{text.platform.portal.socialInfo}}</b></div>
+							<div class="platform-form-group">
+
+								<div data-platform-label-text-icon data-isrequired data-isreadonly="true"
+								     data-label="text.platform.portal.providerName" data-forid="username" data-model="dlgData.extProviderInfo.userNameFromProvider" providerclass="dialogOptions.providerclass">
+								</div>
+								<div data-platform-label-text-icon data-isrequired data-isreadonly="dialogOptions.emailReadonly"
+								     data-label="text.platform.portal.providerUserEmail" data-forid="email" data-model="dlgData.extProviderInfo.emailFromProvider" providerclass="dialogOptions.providerclass">
+								</div>
+
+								<div data-platform-label-text data-label="text.platform.portal.companyName" data-forid="companyName" data-model="dlgData.extProviderInfo.companyName" data-isrequired></div>
+								<div data-platform-label-text data-label="text.platform.portal.phone" data-forid="phone" data-model="dlgData.extProviderInfo.phone" data-isrequired></div>
+								<div data-platform-label-text data-label="text.platform.portal.street" data-forid="street" data-model="dlgData.extProviderInfo.street" data-isrequired></div>
+								<div data-platform-label-text data-label="text.platform.portal.zipCode" data-forid="zipCode" data-model="dlgData.extProviderInfo.zipCode" data-isrequired></div>
+								<div data-platform-label-text data-label="text.platform.portal.city" data-forid="city" data-model="dlgData.extProviderInfo.city" data-isrequired></div>
+
+								<div data-platform-label-select data-label="text.platform.portal.country" data-forid="country1" data-isrequired
+								     data-model="dlgData.extProviderInfo.countryFk" data-options="countryOptions" data-onchange="changeCountry()"></div>
+
+								<div data-platform-label-select data-label="text.platform.portal.clerk" data-forid="clerk1" data-isrequired
+								     data-model="dlgData.extProviderInfo.clerkFk" data-options="clerkOptions" data-onchange="changeClerk()"></div>
+
+								<div class="platform-form-row"><label for="remark1" class="platform-form-label" title="{{text.platform.portal.remark}}">{{text.platform.portal.remark}}</label>
+									<div class="platform-form-col"><textarea autofocus class="form-control" autocomplete=“on“
+									                                         id="remark1" name="remark" data-ng-model="dlgData.extProviderInfo.remark" placeholder="<{{text.platform.portal.remark}}>">
+							</textarea></div>
+								</div>
+
+							</div>
+						</section>
+
+						<div class="btn-group-link">
+							<button id="registerbutton1" class="btn btn-success text-right margin-left-ld margin-top-ld flex-box flex-align-center pull-right" data-ng-click="onRegisterBtn()" title="{{text.platform.portal.registerButton}}"
+							        data-ng-disabled="!dialogOptions.registerValid()">
+								<i class="fa text-center"></i>
+								<span class="margin-left-ld flex-element">{{text.platform.portal.registerButton}}</span>
+								<i class="block-image"></i>
+							</button>
+							<button id="backbutton2" class="btn btn-default text-right margin-top-ld flex-box flex-align-center pull-right" data-ng-click="onBackBtn()" title="{{text.platform.portal.backButton}}">
+								<i class="fa text-center"></i>
+								<span class="margin-left-ld flex-element">{{text.platform.portal.backButton}}</span>
+								<i class="block-image"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!--  Invitation Invitation Invitation Invitation Invitation Invitation Invitation Invitation Invitation Invitation -->
+				<div data-ng-if="dialogOptions.isInvitation">
+					<div data-ng-if="dialogOptions.registrationDone">
+						<div class="text-justify" ng-bind-html="dialogOptions.registrationMsg"></div>
+
+						<hr>
+						<div class="btn-group-link" style="margin-bottom: 10px;">
+							<button id="invbackbutton" class="btn btn-success text-right margin-top-ld flex-box flex-align-center pull-right" data-ng-click="onBackBtn()" title="{{text.platform.portal.backButton}}">
+								<i class="fa text-center"></i>
+								<span class="margin-left-ld flex-element">{{text.platform.portal.backButton}}</span>
+								<i class="block-image"></i>
+							</button>
+						</div>
+
+					</div>
+
+					<div data-ng-if="!dialogOptions.registrationDone">
+
+						<div class="text-justify" ng-bind-html="dialogOptions.registrationFillOutMsg">
+						</div>
+
+						<section>
+
+							<div style="padding-top: 15px;"><b>{{text.platform.portal.socialInfo}}</b></div>
+							<div class="platform-form-group">
+
+								<div data-platform-label-text-icon data-isrequired data-isreadonly="true"
+								     data-label="text.platform.portal.providerName" data-forid="username" data-model="dlgData.extProviderInfo.userNameFromProvider" providerclass="dialogOptions.providerclass">
+								</div>
+								<div data-platform-label-text-icon data-isrequired data-isreadonly="dialogOptions.emailReadonly"
+								     data-label="text.platform.portal.providerUserEmail" data-forid="email" data-model="dlgData.extProviderInfo.emailFromProvider" providerclass="dialogOptions.providerclass">
+								</div>
+								<div data-platform-label-text data-label="text.platform.portal.companyName" data-forid="companyName"
+								     data-model="contactBpdInfo.bpd.fullName" readonly></div>
+								<div data-platform-label-text data-label="text.platform.portal.bpdAddress" data-forid="companyAddress"
+								     data-model="contactBpdInfo.bpd.address" readonly></div>
+								<div data-platform-label-text data-label="text.platform.portal.phone" data-forid="phone"
+								     data-model="contactBpdInfo.contact.telephonePattern" readonly></div>
+								<div data-platform-label-select data-label="text.platform.portal.country" data-forid="country" data-readonly
+								     data-model="dlgData.extProviderInfo.countryFk" data-options="countryOptions" data-onchange="changeCountry()"></div>
+								<!-- rei@4.12.2020 disabled, not important for invitation
+								<div data-platform-label-select data-label="text.platform.portal.clerk" data-forid="clerk" data-isrequired
+									  data-model="dlgData.extProviderInfo.clerkFk" data-options="clerkOptions" data-onchange="changeClerk()"></div>
+								-->
+							</div>
+						</section>
+
+						<div class="btn-group-link">
+							<button id="invitationbutton" class="btn btn-success text-right margin-left-ld margin-top-ld flex-box flex-align-center pull-right" data-ng-click="onInvitationBtn()" title="{{text.platform.portal.registerButton}}"
+							        data-ng-disabled="!dialogOptions.registerValid()">
+								<i class="fa text-center"></i>
+								<span class="margin-left-ld flex-element">{{text.platform.portal.invitationButton}}</span>
+								<i class="block-image"></i>
+							</button>
+							<!-- rei@0.12.2020 disable #116268
+							<button id="backbutton3" class="btn btn-default text-right margin-top-ld flex-box flex-align-center pull-right" data-ng-click="onBackBtn()" title="{{text.platform.portal.backButton}}">
+								<i class="fa text-center"></i>
+								<span class="margin-left-ld flex-element">{{text.platform.portal.backButton}}</span>
+								<i class="block-image"></i>
+							</button>
+							-->
+						</div>
+
+					</div>
+				</div>
+
+				<div class="container-footer flex-box">
+					<div data-platform-language-selection></div>
+					<div imprint-legal-notice-container></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+(function () {
+	'use strict';
+	// eslint-disable-next-line no-redeclare,no-unused-vars
+	/* global angular,require,describe,beforeAll,jasmine,it,afterAll */
+
+	var assistance = {moduleConfig: require('./businesspartner-main-module-conf.js')};
+	var moduleContainerTest = require('rib-itwo40-e2e').moduleContainerTest;
+
+	describe(moduleContainerTest.moduleContainerTestTitle(assistance), function () {
+		beforeAll(function () {
+			moduleContainerTest.initialize(assistance, jasmine).then(function () {// jshint ignore: line
+				moduleContainerTest.openModuleBeforeTest(assistance);
+			});
+		});
+
+		it(moduleContainerTest.moduleContainerCanBeOpenedSpec(), function () {
+			moduleContainerTest.testModuleContainerCanBeOpened(assistance);
+		}, moduleContainerTest.getDurationTestModuleShouldBeOpen(assistance));
+
+		afterAll(function () {
+			moduleContainerTest.finalize(assistance);
+		});
+	});
+})();

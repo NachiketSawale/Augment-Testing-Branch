@@ -1,0 +1,39 @@
+[
+  {
+    "id": "logistic.sundryservice.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.sundryservice.listSundryServiceTitle",
+    "controller": "logisticSundryServiceListController",
+    "uuid": "3c3df5cc678f4ee4a2184555c39854c3"
+  },
+  {
+    "id": "logistic.sundryservice.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.sundryservice.detailSundryServiceTitle",
+    "controller": "logisticSundryServiceDetailController",
+    "uuid": "3e8ef5f3b7c741f486e60dd2bb1c564c",
+    "permission": "3c3df5cc678f4ee4a2184555c39854c3"
+  },
+  {
+    "id": "logistic.sundryservpricelist.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "logistic.sundryservice.listSundryServicePriceListTitle",
+    "controller": "logisticSundryServicePriceListListController",
+    "uuid": "014f9eb6e9cc4d8089bf7b7e1173d677"
+  },
+  {
+    "id": "logistic.sundryservpricelist.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "logistic.sundryservice.detailSundryServicePriceListTitle",
+    "controller": "logisticSundryServicePriceListDetailController",
+    "uuid": "1f0839eeedb741cc9cbeb6f00266c6f8",
+    "permission": "014f9eb6e9cc4d8089bf7b7e1173d677"
+  },
+  {
+    "id": "logistic.sundryservice.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "7c1e6b7291304cd3a95630b39c4a7f6d"
+  }
+]

@@ -1,0 +1,37 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="schedulingMainCreateResourceRequisitionWizardController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(!!selectedStep.stepDefinition.disallowCancel)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{wizard.title + (wizard.title ? ' - ' : '') + getCurrentStepNumber() + ' / ' +
+            getTotalStepCount()}}</h2>
+    </header>
+    <section class="modal-body" style="overflow-y:hidden;">
+        <div ng-switch="selectStep.number" class="modal-wrapper margin-bottom-ld fullheight" style="overflow-y:hidden;">
+            <div ng-switch-when="0" class="modal-wrapper fullheight">
+                <ng-include src="'scheduling.main/templates/wizard/scheduling-main-create-resource-requisition-step0.html'" class="modal-wrapper fullheight"></ng-include>
+            </div>
+            <div ng-switch-when="1" class="modal-wrapper fullheight" style="overflow-y:auto;overflow-x:hidden;">
+                <ng-include src="'scheduling.main/templates/wizard/scheduling-main-create-resource-requisition-step1.html'" class="modal-wrapper fullheight"></ng-include>
+            </div>
+            <div ng-switch-when="2" class="modal-wrapper">
+                <ng-include src="'scheduling.main/templates/wizard/scheduling-main-create-resource-requisition-step2'" class="modal-wrapper"></ng-include>
+            </div>
+            <div ng-switch-when="3" class="modal-wrapper">
+                <ng-include src="'scheduling.main/templates/wizard/scheduling-main-create-resource-requisition-step3'" class="modal-wrapper"></ng-include>
+            </div>
+        </div>
+        <div data-platform-wizard-dialog-body class="flex-box flex-column margin-top-ld" style="height: 70px;"></div>
+
+    </section>
+    <div class="modal-footer">
+        <span ng-if="getCurrentStepNumber() !== 1" >
+            <button ng-show = "getCurrentStepNumber() !== 1" type="button" class="btn btn-default" data-ng-click="previousStep()">{{::'basics.common.button.previousStep' | translate}}</button>
+        </span>
+        <button data-ng-disabled="!currentStep.canFinish"  ng-show = "getCurrentStepNumber() === 3" type="button" class="btn btn-default" data-ng-click="reset()" data-ng-bind="wzStrings.finish"></button>
+        <button type="button" class="btn btn-default"  data-ng-click="nextStep()" >{{getButtonText()}}</button>
+        <button data-ng-disabled="currentStep.disallowCancel"  type="button" data-ng-click="$close(false)" class="btn btn-default" >{{::'platform.cancelBtn' | translate}}</button>
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+﻿{
+	"basics": {
+		"payment": {
+			"detailPaymentTitle": "Payment Details",
+			"listPaymentTitle": "Payment Term",
+
+			"netDays": "Net Days",
+			"DiscountPercent": "Discount Percent",
+			"CalculationType": "Calculation Type",
+			"DayOfMonth": "Day Of Month",
+			"PrintDescriptionInfo": "Print Description Info",
+			"PrintTextDescriptionInfo": "Print Text Description Info",
+			"DiscountDays": "Discount Days",
+
+			"payment": "Payment Term",
+			"PaymentTranslation": "Translation"
+		}
+	}
+}

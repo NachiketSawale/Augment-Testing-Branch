@@ -1,0 +1,24 @@
+<header class="modal-header main-color"
+        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section>
+    <div class="toolbar">
+        <div data-platform-menu-list data-list="modalOptions.tools" data-platform-collapsable-list data-ng-model="modalOptions.tools"></div>
+    </div>
+</section>
+<section class="modal-body">
+    <div data-platform-form-container data-form-container-options="formContainerOptions" entity="currentItem" class="cid_{{containerUUID}}"></div>
+</section>
+<footer class="modal-footer">
+	<div class="flex-box flex-element flex-align-center" ng-if="modalOptions.insertNote"><span>{{modalOptions.insertNote}}</span></div>
+    <button type="button" class="btn btn-default"
+            data-ng-click="modalOptions.addToOneQuote()">{{modalOptions.btnAddToOneQuoteText}}
+    </button>
+    <button type="button" class="btn btn-default"
+            data-ng-click="modalOptions.addToAllQuotes()">{{modalOptions.btnAddToAllQuotesText}}
+    </button>
+    <button type="button" class="btn btn-default"
+            data-ng-click="modalOptions.cancel()">{{modalOptions.btnCancelText}}
+    </button>
+</footer>
+<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>

@@ -1,0 +1,27 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+    <div data-cloud-common-overlay loading="loadingOption.loading" data-info="loadingOption.info"></div>
+    <div class="toolbar">
+        <h3 class="font-bold title fix">{{'usermanagement.user.userSync.adsUsersSync'|translate}}</h3>
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div style="height: 330px;">
+        <div data-ng-if="avGridData">
+            <platform-Grid data="gridData" style="height: 330px;"></platform-Grid>
+        </div>
+        <div data-ng-if="!avGridData">
+            <div class="container-overlay">
+                {{'usermanagement.user.userSync.noUserPath'|translate}}
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="!modalOptions.canSync()"
+            data-ng-click="modalOptions.sync()">
+        {{modalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+        {{modalOptions.closeButtonText}}
+    </button>
+</footer>

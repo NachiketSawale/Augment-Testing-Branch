@@ -1,0 +1,20 @@
+<div data-accordion data-close-others="false" data-ng-show="true">
+	<style type="text/css">
+		div.panel-body {
+			padding: 0px 8px;
+		}
+	</style>
+	<div data-accordion-group data-is-open="entity.inputOpen">
+		<div data-accordion-heading>
+			<span>{{'cloud.common.Filter_FilterTitle_TXT'| translate}}</span>
+			<div class="toggleImg control-icons" data-ng-class="entity.inputOpen ? 'ico-up' : 'ico-down'"></div>
+		</div>
+		<div class="platform-form-group platform-lg">
+			<div data-platform-form data-form-options="formOptions" data-entity="entity" style="height:auto;"></div>
+		</div>
+	</div>
+</div>
+
+<div ng-controller="subcontroller" class="flex-box flex-column subview-container flex-element overflow">
+	<platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>
+</div>

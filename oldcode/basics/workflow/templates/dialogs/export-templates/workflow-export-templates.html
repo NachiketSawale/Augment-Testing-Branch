@@ -1,0 +1,91 @@
+<div class="flex-element two-side-row-1 fullheight" data-ng-controller="basicsWorkflowExportTemplatesController">
+	<div class="flex-element two-side-row-1">
+		<div class="left margin-full-md overflow" ui-tabs-button-trigger-directive>
+			<h1>{{'basics.workflow.exportZipWizard.header' | translate}}</h1>
+
+			<!--Template Selections-->
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-toggle="tab" href="#templatesSearch">
+							{{'basics.workflow.exportZipWizard.leftPanel.templateSelections' | translate}}</a>
+					</h2>
+				</li>
+
+				<li class="list-group-item" data-ng-repeat="selected in selectedTemplatedList">
+					<span data-ng-bind="selected.Description"></span>
+				</li>
+			</ul>
+
+			<!--Export Options-->
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-toggle="tab" href="#templatesOptions">
+							{{'basics.workflow.exportZipWizard.leftPanel.exportOptions' | translate}}</a>
+					</h2>
+				</li>
+
+				<li class="list-group-item" data-ng-if="exportOptions.statusMatrix">
+					<span data-ng-bind="statusMatrixOpt.labelText"></span>
+				</li>
+				<li class="list-group-item" data-ng-if="exportOptions.subscribedEvents">
+					<span data-ng-bind="subscribedEventsOpt.labelText"></span>
+				</li>
+				<li class="list-group-item" data-ng-if="exportOptions.versionContext">
+					<span data-ng-bind="versionContextOpt.labelText"></span>
+				</li>
+				<li class="list-group-item" data-ng-if="exportOptions.wizardDefinition">
+					<span data-ng-bind="wizardDefinitionOpt.labelText"></span>
+				</li>
+				<li class="list-group-item" data-ng-if="exportOptions.schedulerDefinition">
+					<span data-ng-bind="schedulerDefinitionOpt.labelText"></span>
+				</li>
+				<li class="list-group-item" data-ng-if="exportOptions.allVersions">
+					<span data-ng-bind="allVersionsOpt.labelText"></span>
+				</li>
+			</ul>
+
+			<ul class="list-group margin-top-xld">
+				<li class="list-group-item">
+					<h2>
+						<a data-toggle="tab" href="#templatesOptions">
+							{{'basics.workflow.exportZipWizard.leftPanel.exportFileName' | translate}}</a>
+					</h2>
+				</li>
+
+				<li class="list-group-item" data-ng-if="exportOptions.fileName">
+					<span data-ng-bind="exportOptions.fileName"></span>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="right margin-full-md">
+
+			<div class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex">
+
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#templatesSearch">{{'basics.workflow.exportZipWizard.searchTemplatesTab.header'
+					| translate}}</a></li>
+					<li><a data-toggle="tab" href="#templatesOptions">{{'basics.workflow.exportZipWizard.templateExportOptionsTab.header'
+					| translate}}</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="overflow tab-pane fade in active" id="templatesSearch">
+						<div
+							data-ng-include="'basics.workflow/templates/dialogs/export-templates/workflow-export-templates-search-tab.html'"></div>
+					</div>
+					<div class="overflow tab-pane fade" id="templatesOptions">
+						<div
+							data-ng-include="'basics.workflow/templates/dialogs/export-templates/workflow-export-templates-options-tab.html'"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div data-cloud-common-overlay data-config="{backdrop: false}" data-loading="waitSpinner"></div>
+</div>
+

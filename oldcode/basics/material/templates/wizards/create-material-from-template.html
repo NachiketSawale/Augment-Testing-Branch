@@ -1,0 +1,63 @@
+<div class="modal-wrapper" data-ng-controller="basicsMaterialCreateMaterialFromTemplateWizardController">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="col-sm-12 platform-form-group">
+        <div class="col-sm-4 platform-form-row">
+            <label class="platform-form-label">
+                {{'basics.material.record.materialCatalog' | translate}}
+            </label>
+            <div class="platform-form-col" data-basics-material-material-catalog-lookup
+                data-ng-model="entity.MaterialCatalogFk" data-entity="entity" data-options="mmcLookupOptions">
+            </div>
+        </div>
+        <div class="col-sm-4 platform-form-row">
+            <label class="platform-form-label">
+                {{'basics.material.record.materialTemplateType' | translate}}
+            </label>
+              <div class="platform-form-col" basics-material-material-temp-type-combobox
+                    data-ng-model="entity.TemplateTypeFk" data-entity="entity" data-options="ttcLookupOptions">
+          </div>
+        </div>
+        <div class="col-sm-4 platform-form-row">
+            <label class="platform-form-label">
+                {{'basics.material.createMaterialByTemplate.keywordSearch' | translate}}
+            </label>
+            <div class="platform-form-col">
+                <div class="form-control input-group margin-bottom-ld">
+            <input type="text" data-ng-model="entity.searchValue" class="input-group-content" data-ng-keydown="onSearchInputKeyDown($event, entity.searchValue)" />
+            <span class="input-group-btn">
+                <button class="btn btn-default input-sm btn-search tlb-icons ico-search" data-ng-click="onSearch(entity.searchValue)" ></button>
+		   </span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal-wrapper subview-container">
+            <div class="toolbar"><div data-platform-menu-list data-list="tools"></div></div>
+            <div data-platform-grid data-data="gridData"></div>
+        </div>
+        <div class="col-sm-12 platform-form-group">
+            <div class="col-sm-6 platform-form-row">
+             <label class="platform-form-label">{{'basics.material.createMaterialByTemplate.quantityOfCopy' | translate}}:</label>
+                <div class="platform-form-col">
+                    <input  class="form-control" data-domain="integer" data-platform-numeric-converter  data-ng-model="entity.Quantity" data-entity="entity" >
+                </div>
+            </div>
+            <div class="col-sm-6 platform-form-row">
+              <label class="platform-form-label">{{'basics.material.createMaterialByTemplate.inheritCode' | translate}}:</label>
+              <span class="platform-form-col"   basics-material-material-inherit-code-combobox
+                    data-ng-model="entity.InheritCodeFk" data-entity="entity" data-options="inheritCodeLookupOptions">
+          </span>
+            </div>
+        </div>
+
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="createMaterial()">
+            {{modalOptions.createButtonText}}
+        </button>
+        <button type="button" class="btn btn-default"  data-ng-click="$close(false)">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

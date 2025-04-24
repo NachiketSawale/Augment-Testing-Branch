@@ -1,0 +1,19 @@
+{
+	"basics": {
+		"country": {
+			"detailCountryTitle": "Land Details",
+			"detailCountryStateTitle": "Bundesland Details",
+			"listCountryTitle": "Länder",
+			"listCountryStateTitle": "Bundesländer",
+			"listCountryDescription": "Land Beschreibung",
+			"entityRecordState":"Bundesland erforderlich",
+			"entityAreaCode": "Vorwahl",
+			"entityISO3": "ISO3",
+			"entityAddressFormat": "Adressformat",
+			"entityCountryFk": "Landesstruktur",
+			"entityState": "Bundesland",
+			"entitySorting": "Sortierung",
+			"entityTranslation":"Übersetztung"
+		}
+	}
+}

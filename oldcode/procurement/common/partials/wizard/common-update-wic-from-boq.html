@@ -1,0 +1,110 @@
+<div class="modal-wrapper" ng-controller="procurementCommonUpdateWicFromBoqController">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+
+		<div class="platform-form-group">
+
+			<!--it is for qtn_header.-->
+			<!--select quote-->
+			<div class="platform-form-row platform-lg" data-ng-if="modalOptions.isShowQtnLookup">
+				<div class="platform-form-label">
+					<div style="margin-top: 12px;">
+						{{'procurement.common.selectQuote' | translate}}
+					</div>
+				</div>
+				<div class="platform-form-col">
+					<div class="control-directive" data-basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.quote"
+					     data-entity="currentItem"
+					     data-ng-model="currentItem.QtnHeaderFk"
+					     data-ng-change="customOptions.quoteChange()"
+					     data-dirty="true"
+					     style="margin-top: 12px;">
+					</div>
+				</div>
+			</div>
+			<!--it is for source boq.-->
+			<!---->
+			<div class="platform-form-row platform-lg">
+				<div class="platform-form-label">
+					<div style="margin-top: 15px;">
+						{{ 'boq.main.boqLookup' | translate}} <!--Source BoQ-->
+					</div>
+				</div>
+				<div class="platform-form-col">
+					<div class="control-directive" data-basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.sourceBoq"
+					     data-entity="currentItem"
+					     data-ng-model="currentItem.BoQItemFk"
+					     data-config="fieldConfigs.sourceBoq"
+					     readonly="true"
+					     style="margin-top: 15px;"
+					>
+					</div>
+				</div>
+			</div>
+			<!-- Wic Group Lookup -->
+			<div class="platform-form-row platform-lg">
+				<div class="platform-form-label">
+					<div style="margin-top: 15px;">
+						{{ 'procurement.common.targetWICGroup' | translate}}<!--Target WIC Group-->
+					</div>
+				</div>
+				<div class="platform-form-col">
+					<div class="control-directive" data-basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.wicGroup"
+					     data-entity="currentItem"
+					     data-ng-model="currentItem.WicGroupFk"
+					     data-diry="true"
+					     data-config="fieldConfigs.wicGroup"
+					     style="margin-top: 15px; "
+					     readonly="true">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row platform-lg">
+				<label class="platform-form-label">{{'procurement.common.updateWicFromBoq.unitRate' | translate}}</label>
+				<div class="platform-form-col input-group">
+					<input type="checkbox" name="unitRate" ng-model="requsetData.IsUnitRate"/>
+				</div>
+			</div>
+			<div class="platform-form-row platform-lg">
+				<label class="platform-form-label">{{'procurement.common.transaction.quantity' | translate}}</label>
+				<div class="platform-form-col input-group">
+					<input type="checkbox" name="Quantity" ng-model="requsetData.IsQuantity"/>
+				</div>
+			</div>
+			<div class="platform-form-row platform-lg">
+				<label class="platform-form-label">{{'procurement.common.accassign.BasUom' | translate}}</label>
+				<div class="platform-form-col input-group">
+					<input type="checkbox" name="Uom" ng-model="requsetData.IsUoM"/>
+				</div>
+			</div>
+			<div class="platform-form-row platform-lg">
+				<label class="platform-form-label">{{'procurement.common.updateWicFromBoq.itemTypeStand' | translate}}</label>
+				<div class="platform-form-col input-group">
+					<input type="checkbox" name="ItemTypeStand" ng-model="requsetData.IsItemTypeStand"/>
+				</div>
+			</div>
+			<div class="platform-form-row platform-lg">
+				<label class="platform-form-label">{{'procurement.common.updateWicFromBoq.itemTypeBase' | translate}}</label>
+				<div class="platform-form-col input-group">
+					<input type="checkbox" name="ItemTypeBase" ng-model="requsetData.IsItemTypeBase"/>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" ng-click="customOptions.updateBtn()">
+			{{ 'procurement.common.updateWicFromBoq.updateBtn' | translate}} <!--update -->
+		</button>
+		<button type="button" class="btn btn-default" ng-click="modalOptions.cancel()">
+			{{ 'basics.common.cancel' | translate}}<!--Cancel-->
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

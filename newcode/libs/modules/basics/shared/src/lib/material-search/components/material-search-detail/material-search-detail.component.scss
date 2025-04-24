@@ -1,0 +1,82 @@
+.ms-sv-commodity-preview-panel {
+  height: auto;
+  top: 0;
+  width: 100%;
+  .ms-commodity-row-description-specification {
+    height: auto !important;
+  }
+  .ms-sv-commodity-preview-navbar{
+
+  }
+}
+
+.ms-sv-commodity-preview-back {
+  background-color: #e6e6e6 !important;
+  border-radius: 5px !important;
+  color: #333333;
+  font-size: 16px;
+  padding: 0px 10px 0px 0px;
+  height: 30px;
+  width: auto;
+  span {
+    margin: 0px 10px 0px 10px;
+  }
+}
+
+.ms-sv-search-view {
+  overflow-y: auto;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.ms-sv-container-title {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+}
+
+.ms-sv-container-title > span {
+  font-size: 16px;
+  color: #0067b1;
+  font-weight: normal;
+}
+
+.ms-sv-commodity-preview-attribute-box {
+  min-height: 25px;
+  overflow: hidden;
+  margin-top: 5px;
+
+  .ms-sv-commodity-preview-attribute-property {
+    font-weight: 700;
+    float: left;
+  }
+
+  .ms-sv-commodity-preview-attribute-value {
+    float: left;
+  }
+}
+
+.ms-sv-commodity-preview-document-box {
+  overflow: hidden;
+  margin-top: 5px;
+  padding-left: 5px;
+
+  .ms-sv-commodity-preview-document-title {
+    cursor: pointer;
+    line-height: 25px;
+    font-size: 13px;
+    color: #0067b1;
+    text-decoration: underline;
+  }
+
+  .ms-sv-commodity-preview-document-content {
+    max-height: 500px;
+    margin-right: 10px;
+    overflow: auto;
+  }
+}

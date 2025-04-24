@@ -1,0 +1,113 @@
+{
+	"CompanyCode": "GUANGDONG2017001",
+	"CanOverWrite": true,
+	"EstRules": [
+		{
+			"Code": "C1.1",
+			"ParentCode": "C1",
+			"DescriptionInfo": {
+				"Description": "c1.1-desc",
+				"OtherLanguages": [
+					{
+						"Description": "de_c1.1-desc",
+						"Culture": "de"
+					}
+				]
+			},
+			"EvaluationSequence": "",
+			"RuleExecutionType": "",
+			"Sorting": "1",
+			"Icon": "1",
+			"Comment": "",
+			"Remark": "",
+			"EstRuleParameters": [
+				{
+					"Code": "P001",
+					"GroupCode": "10",
+					"DescriptionInfo": {
+						"Description": "p001-desc",
+						"OtherLanguages": [
+							{
+								"Description": "de-p001-desc",
+								"Culture": "de"
+							}
+						]
+					},
+					"Uom": "M3",
+					"ValueDetail": "",
+					"Sorting": "1",
+					"DefaultValue": "0"
+				}
+			],
+			"EstRuleScripts": [
+				{
+					"ScriptData": "aaaaa",
+					"TestInput": "bbbb",
+					"ValidateScriptData": "ccccc"
+				}
+			]
+		},
+		{
+			"Code": "C1",
+			"ParentCode": "",
+			"DescriptionInfo": {
+				"Description": "c1-desc",
+				"OtherLanguages": [
+					{
+						"Description": "de_c1-desc",
+						"Culture": "de"
+					}
+				]
+			},
+			"EvaluationSequence": "",
+			"RuleExecutionType": "",
+			"Sorting": "1",
+			"Icon": "1",
+			"Comment": "",
+			"Remark": "",
+			"EstRuleParameters": [
+				{
+					"Code": "P001",
+					"GroupCode": "10",
+					"DescriptionInfo": {
+						"Description": "p001-desc",
+						"OtherLanguages": [
+							{
+								"Description": "de-p001-desc",
+								"Culture": "de"
+							}
+						]
+					},
+					"Uom": "M3",
+					"ValueDetail": "",
+					"Sorting": "1",
+					"DefaultValue": "0"
+				},
+				{
+					"Code": "P002",
+					"GroupCode": "10",
+					"DescriptionInfo": {
+						"Description": "p002-desc",
+						"OtherLanguages": [
+							{
+								"Description": "de-p002-desc",
+								"Culture": "de"
+							}
+						]
+					},
+					"Uom": "M3",
+					"ValueDetail": "",
+					"Sorting": "1",
+					"DefaultValue": "0"
+				}
+			],
+			"EstRuleScripts": [
+				{
+					"ScriptData": "aaaaa",
+					"TestInput": "bbbb",
+					"ValidateScriptData": "ccccc"
+				}
+			]
+		}
+	]
+}

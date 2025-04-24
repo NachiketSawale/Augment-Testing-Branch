@@ -1,0 +1,41 @@
+﻿<script type="text/ng-template" id="basics-characteristic-code-popup.html">
+<div>
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <section class="modal-body">
+       <div data-platform-kendo-splitter-adjust
+            option="{panes: [ { collapsible: true, size: '30%' },{ collapsible: true, size: '70%' }],orientation:'horizontal'}">
+          <div id="ui-layout-east" data-ng-controller="basicsCharacteristicPopupGroupController">
+             <div id="company-scroller" class="overflow filler">
+                <div treecontrol class="tree-classic"
+                     data-tree-model="dataForTheTree"
+                     data-options="treeOptions"
+                     data-order-by="code"
+                     data-on-selection="onSelection(node)"
+                     data-on-node-dbl-click="onNodeDblClick(node)"
+                     data-selected-node="treeOptions.selectedNode"
+                     data-expanded-nodes="treeOptions.expandedNodes">
+                   <span style="" class="sm control-icons" data-ng_class="::classByType(node)"> </span>
+                   <span data-ng_bind="getDisplaytext(node)"></span>
+                </div>
+            </div>
+          </div>
+
+          <!--<div id="ui-layout-west" data-ng-controller="basicsCharacteristicPopupCodeController" data-ng-init="getControllerParams($$sectionId$$)" class="characteristicsGrid">-->
+          <div id="ui-layout-west" data-ng-controller="basicsCharacteristicPopupCodeController" class="characteristicsGrid">
+            <div class="flex-box flex-column filler">
+                <platform-Grid data="gridCodeData"></platform-Grid>
+                <div class="information" style="max-height: 70px;">{{entity.Remark}}</div>
+            </div>
+          </div>
+       </div>
+    </section>
+
+    <!--<footer class="modal-footer" data-ng-controller="basicsCharacteristicPopupController">-->
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.refresh()"> {{'basics.common.button.refresh' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"> {{'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>
+</script>

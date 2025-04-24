@@ -1,0 +1,78 @@
+<script type="text/ng-template" id="watchlist/accordion-group.html">
+	<li class="panel panel-primary">
+		<button class="panel-heading" data-ng-click="invert({{id}})" title="{{text}}">
+			<span class="{{groupIconClass}}"></span>
+			<h4 class="panel-title">{{text}}</h4>
+
+			<div class="panel-toggle-img control-icons {{toggleClass}}"></div>
+		</button>
+		<ul class="panel-body">
+			##items##
+		</ul>
+	</li>
+</script>
+
+<script type="text/ng-template" id="watchlist/list-items-submenu.html">
+	<li class="button-right-action">
+		<button data-ng-click="clickFn('onexecute',{{id}})" data-ng-class="{'selected': (groupedListCfg.showSelected && groupedListCfg.selectedId === {{id}})}" data-ng-disabled="{{disabled}}" class="left rw {{itemIcon}}">
+			<ul class="rw-content">
+				<li class="title">{{name}}({{itemCount}})</li>
+				<li>{{text}}</li>
+			</ul>
+		</button>
+		<div class="right">
+			<div data-cloud-desktop-watch-list-submenu data-watchlistid="{{id}}" data-hidestdwl="{{hideStdWl}}" class="flex-element flex-box flex-column fullheight"></div>
+			<div class="flex-element bottom {{isStdWlClass}}"></div>
+		</div>
+	</li>
+</script>
+
+<script type="text/ng-template" id="watchlist/submenu-itemslist.html">
+	<ul style="width: 160px;">
+		<li>
+			<button data-ng-click="clickFn('onedit',@@id@@)">
+				<i class="block-image control-icons ico-grid-edit"></i>
+				<span>{{ 'cloud.desktop.watchlist.ctxmenuedit' | translate }}</span>
+			</button>
+		</li>
+		<li>
+			<button data-ng-click="clickFn('ondelete',@@id@@)">
+				<i class="block-image control-icons ico-input-delete2"></i>
+				<span>{{ 'cloud.desktop.watchlist.ctxmenudelete' | translate }}</span>
+			</button>
+		</li>
+		@@stdwl@@
+	</ul>
+</script>
+<script type="text/ng-template" id="watchlist/submenu-itemstdwl.html">
+	<li>
+		<button data-ng-click="clickFn('onsetdefault',@@id@@)">
+			<i class="block-image control-icons ico-pin3"></i>
+			<span>{{ 'cloud.desktop.watchlist.ctxmenudefaultlist' | translate }}</span>
+		</button>
+	</li>
+
+</script>
+
+<!--D e t a i l   V i e w     D e t a i l   V i e w   D e t a i l   V i e w-->
+<!--detail view item -->
+<script type="text/ng-template" id="watchlist/watchlist-item.html">
+	<li class="button-right-action">
+		<button data-ng-click="clickFn('onshowitem',$$id$$)" class="left rw {{itemIcon}}">
+			<ul class="rw-content">
+				<li class="title">$$summary$$</li>
+				<li>$$firstDetail$$</li>
+			</ul>
+		</button>
+
+		<button data-ng-if="!!$$canDelete$$"
+		        data-ng-click="clickFn('ondelete',$$id$$)"
+		        class="btn control-icons ico-close right top"
+		        title="{{::'cloud.desktop.watchlist.deletewatchlistitem'|translate}}">
+		</button>
+	</li>
+</script>
+
+
+
+

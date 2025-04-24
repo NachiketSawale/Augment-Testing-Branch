@@ -1,0 +1,50 @@
+<div data-ng-controller="businesspartnerContactPortalUserManagementDialogController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class=flex-element">
+			<div class="modal-dialog primary">
+				<div class="flex-box">
+					<div class="flex-element right-side">
+						<b class="text-justify" ng-bind-html="infoText"></b>
+						<section>
+							<div data-cloud-common-overlay data-loading="modalOptions.loading" data-info2="modalOptions.loadingInfo"></div>
+							
+							<div class="platform-form-group">
+								<div data-platform-label-text data-label="'businesspartner.contact.contact' | translate" data-forid=" contact" data-model="selectedItem.Contact" readonly></div>
+								<div data-platform-label-text data-label="'cloud.common.entityBusinessPartner' | translate" data-forid="entityBusinessPartner" data-model="selectedItem.BusinessPartnerName1" readonly></div>
+								<div data-platform-label-text data-label="'businesspartner.main.provider' | translate" data-forid="provider" data-model="selectedItem.Provider" readonly></div>
+								<div data-platform-label-text data-label="'businesspartner.main.providerId' | translate" data-forid="providerId" data-model="selectedItem.ProviderId" readonly></div>
+								<div data-platform-label-text data-label="'businesspartner.main.providerEmail' | translate" data-forid="providerEmail" data-model="selectedItem.ProviderEmail" readonly></div>
+								<div data-platform-label-text data-label="'businesspartner.main.setInactiveDate' | translate" data-forid="setInactiveDate" data-model="selectedItem.SetInactiveDate" readonly></div>
+								<div data-platform-label-textarea data-label="'cloud.common.entityCommentText' | translate" data-forid="entityCommentText" data-model="selectedItem.ProviderComment"></div>
+								
+								<div data-platform-label-select data-label="'businesspartner.main.portalAccessGroup' | translate" data-forid="portalAccessGroup" data-isrequired
+								     data-model="selectedItem.PortalAccessGroup" data-options="selectedItem.portalUserGroupOptions" data-onchange="stateChangeAct()"></div>
+								
+								<div data-platform-label-select data-label="'businesspartner.main.state' | translate" data-forid="state" data-isrequired
+								     data-model="selectedItem.State" data-options="selectedItem.stateOptions" data-onchange="stateChangeAct()"></div>
+							
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+	
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="unlinkAct()" ng-disabled="disableUnlinkBtn">
+			{{::unlinkButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="okAct()" ng-disabled="disableOkBtn">
+			{{::okButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="closeAct()" ng-disabled="disableCancelBtn">
+			{{::closeButtonText}}
+		</button>
+	
+	</footer>
+
+</div>
+

@@ -1,0 +1,33 @@
+﻿{
+	"productName": "RIB 4.0",
+	"productversion": "5.1.0-2021-08-09",
+	"buildversion":  "5.1.x.x",
+	"productdate":  "2021-08-09T00:00:00",
+	"installationdate":  "2021-08-09T00:00:01",
+	"productLogoUrl": "cloud.style/content/images/app/rib-logo.svg",
+	"productLogoPrimaryUrl": "app-icons ico-rib-40-white",
+	"identityBaseUrl": "https://apps-int.itwo40.eu/itwo40/identityserver500/core/",
+	"i18nCustom": false,
+	"aad": {
+		"authority": "https://login.microsoftonline.com",
+		"tenant": "common",
+		"office365ClientId": "{your key here}",
+		"resource": {
+			"msGraph": "https://graph.microsoft.com",
+			"skype": "https://webdir.online.lync.com"
+		},
+		"officeViewerServerUrl": "https://view.officeapps.live.com"
+	},
+	"userlanePropertyId": "",
+	"showImpressumLink": false,
+	"showDataprotectionLink": false,
+	"errorOnUnhandledRejections": true,
+	"dashboard": {
+		"url": "https://itwobi-admin.itwo40.eu/mvc/organizations/Cl0ghYAnYtW6JXsOCCQNy2",
+		"ssoCallbackKey": "itwo40"
+	},
+	"devFeatureFlags": {
+		"lookupSearchPopup": true,
+		"searchTranslationDialog": false
+	}
+}

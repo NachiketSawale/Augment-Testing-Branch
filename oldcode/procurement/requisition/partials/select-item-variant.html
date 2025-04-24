@@ -1,0 +1,22 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="procurementRequisitionSelectItemVariantController">
+    <header class="modal-header">
+        <h2 class="modal-title">{{'procurement.requisition.variant.selectItemVariantTitle' | translate}}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body" style="overflow-y:hidden;">
+        <div class="modal-wrapper grid-wrapper subview-container">
+            <div class="toolbar">
+                <div data-platform-menu-list data-list="tools"></div>
+            </div>
+            <div class="flex-element flex-box flex-column subview-container gridContainer" style="min-height: 100px;margin-top:8px;">
+                <platform-Grid data="prcItemGridData"></platform-Grid>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="okClicked()">{{::'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

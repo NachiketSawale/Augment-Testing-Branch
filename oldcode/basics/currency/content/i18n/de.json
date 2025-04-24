@@ -1,0 +1,28 @@
+{
+	"basics": {
+		"currency": {
+			"Id": "Id",
+			"Currency": "Währung",
+			"SortBy": "Sortierung",
+			"IsDefault": "Standard",
+			"ConversionPrecision": "Umrechnungsgenauigkeit",
+			"DisplayPrecision": "Anzeigegenauigkeit",
+			"DecimalsRoundTo": "Nachkommastellen",
+			"DecimalsShow": "DecimalsShow",
+			"RateType": "Typ",
+			"RateDate": "Datum",
+			"ForeignCurrency": "Fremdwährung",
+			"ForeignCurrencyName": "Fremdwährungsname",
+			"Basis": "Basis",
+			"HomeCurrency": "Währung",
+			"HomeCurrencyName": "Währungsname",
+			"CurrencyDetails": "Währung Details",
+			"CurrencyConversion": "Währungumrechnung",
+			"ExchangeRates": "Umrechnungskurs",
+			"CurrencyTranslation": "Währung Übersetzung",
+			"currencyHomeFk": "Währung",
+			"currencyRateTypeFk": "Typ",
+			"RoundlogicTypeFk": "Rundungslogik Typ"
+		}
+	}
+}

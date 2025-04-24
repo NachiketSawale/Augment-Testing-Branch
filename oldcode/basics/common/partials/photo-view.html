@@ -1,0 +1,21 @@
+﻿<div data-platform-alert data-error="error"></div>
+<div class="flex-box flex-element image-viewer-content" data-ng-mouseenter="editable=true" data-ng-mouseleave="editable=false">
+	<carousel class="flex-box flex-element image-viewer-carousel" no-transition="true">
+		<slide ng-repeat="blob in blobData" active="blob.isActive">
+			<img data-basics-common-image-sizer
+			     data-ng-src="{{ getImage(blob) }}"
+			     data-entity="blob"/>
+		</slide>
+	</carousel>
+</div>
+
+<div data-ng-show="blobData.length>0">
+	<div data-domain-control
+	     data-domain="description"
+	     data-max-length="255"
+	     data-model="currentItem.CommentText"
+	     data-entity="currentItem"
+	     data-readonly="setReadonly()"
+	     data-change="valueChanged()">
+	</div>
+</div>

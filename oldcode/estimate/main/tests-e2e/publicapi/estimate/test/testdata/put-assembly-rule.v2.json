@@ -1,0 +1,16 @@
+{
+	"CompanyCode": "904",
+	"Assemblies": [
+		{
+			"AssemblyCatalogCode": "YZJ",
+			"AssemblyCode": "YZJ.000030",
+			"AssemblyRules":[
+				{
+					"RuleCode" : "FBFXHJ",
+					"CommentText" : "JUEST TEST",
+					"EvaluationSequence" : "5.Sequence",
+					"IsExecution" : true
+				}]
+		}
+	]
+}

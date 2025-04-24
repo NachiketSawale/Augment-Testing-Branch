@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<system.webServer>
+		<defaultDocument>
+			<files>
+				<remove value="Default.asp" />
+				<remove value="default.aspx" />
+				<remove value="Default.htm" />
+				<remove value="index.htm" />
+				<remove value="index.html" />
+				<remove value="iisstart.htm" />
+				<add value="portal.html" />
+			</files>
+		</defaultDocument>
+	</system.webServer>
+</configuration>

@@ -1,0 +1,174 @@
+<div class="modal-wrapper">
+		<div class="platform-form-group platform-lg">
+			<div cloud-common-overlay data-loading="isLoading"></div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'cloud.common.entityProjectName' | translate }}
+				</label>
+				<div class="platform-form-col">
+					<div data-ng-model="initOptions.dataModels.projectFk" data-ng-change="onProjectChange()"
+					     data-options="lookupOptions.projectConfig" data-entity="currentItem" data-basics-lookupdata-lookup-composite class="control-directive"
+					     data-config="fieldConfig.defaultConfig">
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-show='initOptions.isShowContract'>
+				<label class="platform-form-label">{{initOptions.contractText}}<span class="required-cell"></span></label>
+				<div class="platform-form-col">
+					<div class="control-directive" basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.contract"
+					     data-entity="currentItem"
+					     data-model="initOptions.dataModels.contractFk"
+					     data-ng-model="initOptions.dataModels.contractFk"
+					     data-config="fieldConfig.contract"
+					     ng-change="contractChange()"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-show='initOptions.isShowFrameWork'>
+				<label class="platform-form-label">{{'procurement.contract.conFrameworkMaterialCatalog' | translate }}<span class="required-cell"></span></label>
+				<div class="platform-form-col">
+					<div class="control-directive" basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.materialCatalog"
+					     data-entity="currentItem"
+					     data-model="initOptions.dataModels.MdcMaterialCatalogFk"
+					     data-ng-model="initOptions.dataModels.MdcMaterialCatalogFk"
+					     data-config="fieldConfig.materialCatalog"
+					     ng-change="materialCatalogChange()"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-show='initOptions.isShowFrameWork'>
+				<label class="platform-form-label">{{'procurement.common.entityFwBoqWicCatFk' | translate }}<span class="required-cell"></span></label>
+				<div class="platform-form-col">
+					<div class="control-directive" basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.boqWicCat"
+					     data-entity="currentItem"
+					     data-model="initOptions.dataModels.BoqWicCatFk"
+					     data-ng-model="initOptions.dataModels.BoqWicCatFk"
+					     data-config="fieldConfig.boqWicCat"
+					     ng-change="boqWicCatChange()"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-show='initOptions.isShowFrameWork'>
+				<label class="platform-form-label">{{'procurement.common.entityFwBoqWicCatBoqFk' | translate }}<span class="required-cell"></span></label>
+				<div class="platform-form-col">
+					<div class="control-directive" basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.boqWicCatBoq"
+					     data-entity="currentItem"
+					     data-model="initOptions.dataModels.boqWicCatBoqFk"
+					     data-ng-model="initOptions.dataModels.boqWicCatBoqFk"
+					     data-config="fieldConfig.boqWicCatBoq"
+					     ng-change="boqWicCatBoqChange()"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-show='initOptions.isShowPrjChange'>
+				<label class="platform-form-label">{{'procurement.package.wizard.contract.changeProject' | translate}}<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div class="control-directive" data-basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.projectChange"
+					     data-model="initOptions.dataModels.projectChange.Id"
+					     data-ng-model="initOptions.dataModels.projectChange.Id"
+					     data-config="fieldConfig.projectChangeConfig"
+					     data-entity="initOptions.dataModels.projectChange"
+					     >
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">
+					{{'cloud.common.entityCode' | translate }}<span class="required-cell"></span>
+				</label>
+				<div class="platform-form-col">
+					<div class="form-control flex-element" data-domain-control data-domain="code" data-readonly="initOptions.isReadonlyCode" data-model="initOptions.dataModels.code"
+					     data-change="change"></div>
+				</div>
+			</div>
+			<div class="platform-form-row form-group" data-ng-show='initOptions.isShowPurseOrder'>
+				<label class="platform-form-label" style="min-width:130px;padding-left:0px;">{{'procurement.common.prcConfigurationDescription'| translate}}<span class="required-cell"></span></label>
+				<div class="platform-form-col">
+					<div basics-configuration-configuration-combobox data-ng-model="initOptions.dataModels.configurationFk"
+					     data-options="{filterKey: 'prc-contract-configuration-filter'}"
+					     ng-change="configurationChange()"
+					     data-config="fieldConfig.defaultConfig"
+					     data-entity="initOptions.dataModels.configuration"
+					>
+					</div>
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-show='initOptions.isShowPurseOrder'>
+				<label class="platform-form-label">
+					{{'cloud.common.entityControllingUnitCode' | translate }}
+				</label>
+				<div class="platform-form-col">
+					<div data-ng-model="initOptions.dataModels.controllingUnitFk"
+					     data-options="lookupOptions.controllingUnit"
+					     data-basics-lookupdata-lookup-composite
+					     class="control-directive"
+					     data-config="fieldConfig.cuAndStrConfig">
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-show='initOptions.isShowPurseOrder'>
+				<label class="platform-form-label">{{'cloud.desktop.moduleDisplayNameProcurementStructure' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="control-directive" basics-lookupdata-lookup-composite
+					     data-options="lookupOptions.prcStructure"
+					     ng-change="prcStructureChange()"
+					     data-entity="currentItem"
+					     data-model="initOptions.dataModels.prcStructureFk"
+					     data-ng-model="initOptions.dataModels.prcStructureFk"
+					     data-config="fieldConfig.cuAndStrConfig"
+					></div>
+				</div>
+			</div>
+				<div class="platform-form-row" data-ng-show='!initOptions.isCallOffChangeOrder || initOptions.isShowFrameWork'>
+					<label class="platform-form-label">{{'cloud.common.entityBusinessPartner' | translate}}<span class="required-cell"></span></label>
+					<div class="platform-form-col">
+						<div data-filter-business-partner-dialog-lookup
+						     data-ng-model="initOptions.dataModels.businessPartner.Id"
+						     data-options="lookupOptions.businessPartner"
+						     data-entity="initOptions.dataModels.businessPartner"
+						     data-config="fieldConfig.defaultBpConfig">
+						</div>
+					</div>
+				</div>
+				<!--check it -->
+				<div class="platform-form-row" data-ng-show='!initOptions.isCallOffChangeOrder || initOptions.isShowFrameWork'>
+					<label class="platform-form-label">{{'procurement.contract.ConHeaderContact' | translate}}</label>
+					<div class="platform-form-col">
+						<div business-partner-main-contact-dialog
+						     data-ng-model="initOptions.dataModels.contact.Id"
+						     data-options="lookupOptions.contact"
+						     data-entity="entity"
+						     data-config="fieldConfig.contactConfig"
+						     data-cloud-desktop-on-key-enter="$parent.initOptions.onKeyEnter">
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-row" data-ng-show='!initOptions.isCallOffChangeOrder || initOptions.isShowFrameWork'>
+					<label class="platform-form-label">{{'cloud.common.entitySubsidiary' | translate}}</label>
+					<div class="platform-form-col">
+						<div data-business-partner-main-subsidiary-lookup
+						     data-ng-model="initOptions.dataModels.subsidiary.Id"
+						     data-options="lookupOptions.subsidiary"
+						     data-entity="entity"
+						     data-config="fieldConfig.byBpConfig">
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-row" data-ng-show='!initOptions.isCallOffChangeOrder || initOptions.isShowFrameWork'>
+					<label class="platform-form-label">{{'cloud.common.entitySupplierCode' | translate}}</label>
+					<div class="platform-form-col">
+						<div class="lg-5 md-5" data-business-partner-main-supplier-lookup
+						     data-ng-model="initOptions.dataModels.supplier.Id"
+						     data-options="lookupOptions.supplier"
+						     data-entity="entity"
+						     data-config="fieldConfig.byBpConfig">
+						</div>
+						<input class="form-control lg-7 md-7 "
+						       data-ng-model="initOptions.dataModels.supplier.Description" disabled/>
+					</div>
+				</div>
+		</div>
+</div>

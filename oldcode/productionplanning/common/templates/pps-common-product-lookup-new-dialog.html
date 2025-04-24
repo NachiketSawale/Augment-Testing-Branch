@@ -1,0 +1,53 @@
+<header class="modal-header main-color">
+    <button type="button" class="close db" data-dismiss="modal" data-ng-click="$close(false)"
+            aria-hidden="true">
+        <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+             class="block-image"></svg>
+    </button>
+    <h2 class="modal-title">{{ 'productionplanning.common.assignProduct' | translate }}</h2>
+</header>
+<section ng-cloak class="modal-body flex-column">
+    <div style="margin-left:-10px;" data-platform-form data-form-options="formOptions" data-entity="request">
+    </div>
+
+    <div class="input-group" style="height:28px;margin-bottom:5px">
+        <label class="platform-form-label" style="height:28px;margin:5px 3px 0 5px;min-width:85px">Status: </label>
+        <div style="margin-left:-5px;" data-dropdown-select2-tags multiple nosearch
+             data-on-changed="onValueListChanged"
+             data-model="formOptions.Status" data-options="dropboxOptions">
+        </div>
+    </div>
+
+    <div class="input-group" style="margin-top:3px">
+        <input class="form-control" type="text" data-ng-model="searchValue"
+               data-ng-keydown="onSearchInputKeydown($event, searchValue)"
+               data-ng-change="onSearchInput($event, searchValue)"/>
+        <span class="input-group-btn" style="margin-left: -1px;">
+			    <button class="btn btn-default input-sm btn-search tlb-icons ico-search"
+                        data-ng-click="search(searchValue, true)" title="search"></button>
+        </span>
+    </div>
+
+    <div class="filler flex-box flex-column subview-container lookup-grid-container">
+        <div class="subview-header toolbar">
+            <label class="platform-form-label" style="line-height: 30px;margin-left: 10px">{{'productionplanning.common.product.entity'
+                | translate}}</label>
+            <div data-platform-menu-list data-list="setting.tools"></div>
+        </div>
+        <div class="flex-element flex-box flex-column overflow-hidden">
+            <div class="lookup-grid flex-basis-auto" data-platform-grid data="grid"></div>
+        </div>
+    </div>
+</section>
+
+<footer class="modal-footer">
+    <button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="refresh(true)">
+        {{'basics.common.button.refresh' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="close(true)">
+        {{'cloud.common.ok' | translate}}
+    </button>
+    <button type="button" class="btn btn-default" data-ng-disabled=false data-ng-click="close(false)">
+        {{'cloud.common.cancel' | translate}}
+    </button>
+</footer>

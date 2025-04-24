@@ -1,0 +1,82 @@
+<style>
+	.container-border {
+		border: 1px solid #dcdcdc;
+	}
+</style>
+
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'">
+</header>
+<section ng-cloak class="modal-body" >
+	<div data-trs-kendo-splitter class="modal-wrapper border-none" data-option="layoutConfig.splitterDef1" data-custom-on-resize="resizeSplitter1">
+		<div data-trs-kendo-splitter class="modal-wrapper border-none" data-option="layoutConfig.splitterDef2" data-custom-on-resize="resizeSplitter2">
+			<div class="modal-wrapper flex-box flex-column  subview-container">
+				<div class="subview-header toolbar">
+					<h3 class="font-bold title fix">{{'productionplanning.drawing.quantityAssignment.plannedQtyGridTitle' | translate}}</h3>
+					<div data-platform-menu-list data-list="gridOptions.plannedQtyGrid.tools"></div>
+				</div>
+				<div class="flex-element flex-box flex-column overflow-hidden container-border">
+					<div class="flex-basis-auto" style="margin-bottom: 10px" data-platform-grid
+					     data="gridOptions.plannedQtyGrid"></div>
+					<div cloud-common-overlay data-loading="isLoadingPlannedQtyData"></div>
+				</div>
+			</div>
+
+			<div style="height: 100%; width: 100%; display: flex; flex-direction: column;">
+				<!--"tab content" of planned children grid-->
+				<div ng-if= "isActive(0)" class="subview-header toolbar">
+					<h3 class="font-bold title fix">{{'productionplanning.drawing.quantityAssignment.plannedQtyChildGridTitle' | translate}}</h3>
+					<div data-platform-menu-list data-list="gridOptions.plannedQtyChildGrid.tools"></div>
+				</div>
+				<platform-Grid ng-hide="!isActive(0)" data-data="gridOptions.plannedQtyChildGrid" style="border-left:1px solid #dcdcdc; border-right:1px solid #dcdcdc;"></platform-Grid>
+
+				<!--"tab content" of specification-->
+				<div ng-if= "isActive(1)" class="subview-header toolbar">
+					<h3 class="font-bold title fix">{{'cloud.common.EntitySpec' | translate}}</h3>
+				</div>
+				<div ng-if="isActive(1)" class="flex-element flex-box flex-column overflow-hidden">
+					<platform-editor textarea-name="specificationHtmlViewer"
+			                       textarea-height="100%"
+			                       textarea-required
+			                       ng-model="specification.Content"
+			                       textarea-editable="false"
+			                       show-toolbar="false">
+					</platform-editor>
+				</div>
+				<div ng-if="isActive(1)" cloud-common-overlay data-loading="isLoadingSpecification"></div>
+				<div class="subview-footer  ng-scope" style="flex-shrink: 0;">
+					<ul class="subview-tabs">
+						<li data-overflow="auto" class="subview-tab" data-ng-class="{active: isActive(0)}">
+							<button data-ng-click="onTabClicked(0);">{{'productionplanning.drawing.quantityAssignment.plannedQtyChildGridTitle' | translate}}</button>
+						</li>
+						<li data-overflow="auto"  class="subview-tab" data-ng-class="{active: isActive(1)}" >
+							<button data-ng-click="onTabClicked(1);">{{'cloud.common.EntitySpec' | translate}}</button>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="modal-wrapper border-none flex-box flex-column container-border subview-container">
+			<div class="subview-header toolbar">
+				<h3 class="font-bold title fix">{{'productionplanning.drawing.quantityAssignment.drwCompomentGridTitle' | translate}}</h3>
+				<div data-platform-menu-list data-list="gridOptions.drwComponentGrid.tools"></div>
+			</div>
+			<div class="flex-element flex-box flex-column overflow-hidden" style="border:1px solid #dcdcdc;">
+				<div class="flex-basis-auto" data-platform-grid style="margin-bottom: 9px"
+				     data="gridOptions.drwComponentGrid"></div>
+				<div cloud-common-overlay data-loading="isLoadingDrwCompData"></div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+		{{'cloud.common.ok' | translate}}
+	</button>
+	<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="modalOptions.cancel()">
+		{{'cloud.common.cancel' | translate}}
+	</button>
+</footer>

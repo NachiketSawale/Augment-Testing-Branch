@@ -1,0 +1,99 @@
+<style>
+	.boq-spec .wysiwyg-toolbar {
+		display: none;
+	}
+</style>
+
+<div data-platform-kendo-splitter-adjust class="flex-element border-none" option="{panes: [{ collapsible:true, size:'130px', min:'130px' },{ collapsible:false, size:'80%' }],orientation:'vertical'}">
+	<div class="pane-t modal-wrapper" data-ng-controller="boqMainProjectLookupController" style="overflow-y: auto;">
+		<div class="platform-form-group platform-lg">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'boq.main.copyFrom' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-domain-control data-domain="select"
+						  data-model="boqType.current" data-options="boqTypeOptions" data-change="boqTypeChanged(boqType.current)" data-readonly="boqTypeReadonly">
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-if="!isWicBoQ()">
+				<label class="platform-form-label">{{'boq.main.projectList' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="lg-4 md-4" data-boq-main-project-lookup-dialog data-ng-model="selectedProject.Id" data-config="config.selectConfig" data-options="projectLookupOptions"></div>
+					<input class="form-control lg-8 md-8" data-ng-model="selectedProject.ProjectName" readonly />
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-if="isWicBoQ()">
+				<label class="platform-form-label">{{'boq.main.wicGroup' | translate}}</label>
+				<div class="platform-form-col" data-ng-if="doShowWicGroupTree()">
+					<div class="lg-4 md-4" data-estimate-main-est-wic-group-lookup data-ng-model="selectedWicGroup.Id"
+						  data-options="wicGroupLookupOptions"
+						  data-entity="wicGroupEntity"></div>
+					<input class="form-control lg-8 md-8" data-ng-model="selectedWicGroup.DescriptionInfo.Translated" readonly />
+				</div>
+				<div class="platform-form-col" data-ng-if="!doShowWicGroupTree()">
+					<div class="lg-4 md-4" data-boq-main-flat-wic-group-lookup data-ng-model="selectedWicGroup.Id"
+						  data-options="wicGroupLookupOptions"
+						  data-entity="wicGroupEntity"></div>
+					<input class="form-control lg-8 md-8" data-ng-model="selectedWicGroup.DescriptionInfo.Translated" readonly />
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'boq.main.PrcStructureFk' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="lg-4 md-4" data-basics-procurementstructure-structure-dialog data-ng-model="selectedPrcStructure.Id"
+						  data-options="prcStructureLookupOptions"
+						  data-entity="prcStructureEntity"></div>
+					<input class="form-control lg-8 md-8" data-ng-model="selectedPrcStructure.DescriptionInfo.Translated" readonly />
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-controller="boqMainHeaderLookupController">
+				<label class="platform-form-label">{{'boq.main.boqHeaderSel' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="lg-4 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedBoqHeader.Id"
+						  data-options="lookupOptions"
+						  data-entity="entity"></div>
+					<input class="form-control lg-8 md-8" data-ng-model="selectedBoqHeader.Description" readonly />
+				</div>
+			</div>
+
+			<div class="platform-form-row" data-ng-if="isFromEstimateVisible()">
+				<label class="platform-form-label">{{'boq.main.fromEstimate' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="lg-4 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedFromEstimateHeader.Id"
+					     data-options="fromEstimateLookupOptions"
+					     data-entity="fromEstimateEntity"></div>
+					<input class="form-control lg-8 md-8" data-ng-model="selectedFromEstimateHeader.DescriptionInfo.Translated" readonly />
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-if="isToEstimateVisible()">
+				<label class="platform-form-label">{{'boq.main.toEstimate' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="lg-4 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedToEstimateHeader.Id"
+					     data-options="toEstimateLookupOptions"
+					     data-entity="toEstimateEntity"></div>
+					<input class="form-control lg-8 md-8" data-ng-model="selectedToEstimateHeader.DescriptionInfo.Translated" readonly />
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div data-platform-kendo-splitter-adjust class="pane-b flex-element border-none" option="{panes: [{ collapsible:false, min:'50%' },{ collapsible:true, size:'100px' }],orientation:'vertical'}">
+		<div class="pane-t" data-ng-controller="boqMainLookupController" data-platform-dragdrop-component="ddTarget">
+			<div class="flex-element relative-container filler-absolute">
+				<platform-Grid class="border-all" data="gridData"></platform-Grid>
+			</div>
+		</div>
+
+		<div class="pane-b" id="boqMainCopySourcePreviewController" data-ng-controller="boqMainCopySourcePreviewController">
+			<div class="flex-element flex-box flex-column fullheight">
+				<div class="flex-element flex-box flex-column" ng-show="isPlainText" style="overflow:auto">
+					<div ng-bind-html="preview" class="flex-element border-none"></div>
+				</div>
+				<div class="flex-element flex-box flex-column overflow-hidden boq-spec" ng-show="isHtmlText">
+					<platform-Editor textarea-name="previewtextarea" textarea-height="100%" textarea-required data-ng-model="preview" textarea-editable="false" data-show-toolbar="false"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

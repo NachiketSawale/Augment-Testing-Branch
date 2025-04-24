@@ -1,0 +1,80 @@
+{
+  "usermanagement": {
+    "group": {
+      "groupGUID": "GUID",
+      "groupName": "Name",
+      "groupDomainSID": "Domäne SID",
+      "groupSynchronizeDate": "Synchronisationsdatum",
+      "groupEmail":"E-Mail",
+      "accessGroupFK": "Gruppe",
+      "moduleInfoNameUsermanagementGroup":"Gruppe",
+      "clientFK": "Mandant",
+      "accessRoleFK": "Rolle",
+      "groupContainerTitle": "Gruppen",
+      "user2GroupContainerTitle": "Benutzer in Gruppe",
+      "group2RoleContainerTitle": "Mandanten und Rollenzuordnung",
+      "userFK": "Benutzer",
+      "entityCompanyName": "Mandantname",
+      "groupDescription": "Beschreibung",
+      "basicData": "Basisgruppe",
+      "validateName": "Name bereits vorhanden",
+      "entityUserName": "Name",
+      "entityUserLogonName": "Anmeldename",
+      "groupImport": {
+        "headerText": "Gruppen Importieren",
+        "importButton": "Importieren",
+        "selected": "Ausgewählt",
+        "name": "Name",
+        "description": "Beschreibung",
+        "domainSid": "Domäne SID",
+        "adsGroups": "Gruppen in Active Directory",
+        "createAssign": "Anlegen/Zuweisen der Benutzer für die ausgewählten Benutzergruppen",
+        "infoBodyText": "Synchronisation erfolgreich !",
+        "infoDialogHeader": "Active Directory Gruppen Import"
+      },
+      "dialogTitleGroup":"Auswahl der Berechtigungsgruppe",
+      "groupSync": {
+        "headerText": "Gruppen Synchronisieren",
+        "syncronize": "Synchronisieren",
+        "state": "Status",
+        "adsGroupsSync": "Zu synchronisierende Gruppen",
+        "infoBodyText": "Synchronisation erfolgreich !",
+        "infoDialogHeader": "Active Directory Gruppen Synchronisation",
+        "createAssign": "Anlegen/Zuweisen der Benutzer für zu synchronisierende Gruppen",
+        "noGroupPath":"Kein AD Gruppen Pfad vorhanden."
+      },
+      "adsConfig": {
+        "infoBodyText": "Speichern erfolgreich !",
+        "infoBodyTextGroupError":"Gruppenpfad ungültig.",
+        "infoBodyTextUserError":"Benutzerpfad ungültig.",
+        "infoBodyTextGroupAndUserError":"Gruppen & Benutzerpfad ungültig.",
+        "infoDialogHeader": "Active Directory Einstellungen",
+        "adTaskInfo":"AD Aufgabenplanung erfolgreich gespeichert !"
+      },
+      "adButtons": {
+        "adConfig": "AD Einstellungen & Aufgabenplanung",
+        "groupImport": "AD Gruppen importieren",
+        "adDisco": "Verbindung zu AD trennen",
+        "groupSync": "Gruppen synchronisieren"
+      },
+      "logContainer": {
+        "logContainerTitle": "Aufgabenplanung",
+        "jobstate": "Job Status",
+        "starttime": "Start Zeit",
+        "exstarttime": "Ausführung Startzeit",
+        "exendtime": "Ausführung Endzeit",
+        "log": "Log-Meldung",
+        "showLogFileTitle":"AD Aufgabenplanung Log",
+        "refresh":"Aktualisieren"
+      },
+      "stateValues":{
+        "waiting":"Wartend",
+        "starting":"Beginnend",
+        "running":"Laufend",
+        "stopped":"Gestoppt",
+        "finished":"Abgeschlossen",
+        "repetitive":"Wiederholend"
+      }
+    }
+  }
+}

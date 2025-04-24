@@ -1,0 +1,36 @@
+<div data-ng-controller="productionplanningAccountingRuleSetChildController"
+     style="width:40%;float: left;margin-top: 0px"
+     class="flex-box flex-column lookup-grid-container">
+    <div class="toolbar">
+        <h3 class="font-bold title fix">{{title}}</h3>
+        <div data-platform-menu-list data-list="tools"></div>
+    </div>
+    <div class="flex-element flex-box flex-column overflow-hidden">
+        <div class="flex-basis-auto" data-platform-grid
+             data="gridData"></div>
+    </div>
+</div>
+<div style="width:60%;float: left;margin-left: 5px" class="flex-box flex-column">
+    <div data-ng-controller="productionplanningAccountingRuleChildController" style="height: 50%;margin-top: 0px"
+         class="flex-box flex-column lookup-grid-container">
+        <div class="toolbar">
+            <h3 class="font-bold title fix">{{title}}</h3>
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-element flex-box flex-column overflow-hidden">
+            <div class="flex-basis-auto" data-platform-grid
+                 data="gridData"></div>
+        </div>
+    </div>
+    <div data-ng-controller="productionplanningAccountingRuleResultChildController" style="height: 50%;margin-top: 5px"
+         class="flex-box flex-column lookup-grid-container">
+        <div class="toolbar">
+            <h3 class="font-bold title fix">{{title}}</h3>
+            <div data-platform-menu-list data-list="tools"></div>
+        </div>
+        <div class="flex-element flex-box flex-column overflow-hidden">
+            <div class="flex-basis-auto" data-platform-grid
+                 data="gridData"></div>
+        </div>
+    </div>
+</div>

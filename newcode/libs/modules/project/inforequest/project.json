@@ -1,0 +1,20 @@
+{
+	"name": "modules-project-inforequest",
+	"$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/modules/project/inforequest/src",
+	"prefix": "project-inforequest",
+	"targets": {
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/libs/modules/project/inforequest"],
+			"options": {
+				"jestConfig": "libs/modules/project/inforequest/jest.config.ts"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": []
+}

@@ -1,0 +1,13 @@
+<div data-ng-controller="basicsCompanyImportContentResultController">
+    <div>
+        <div class="fullheight" style="text-align: right">
+          <span class="input-group-btn">
+              <button class="btn btn-default tlb-icons ico-download" data-ng-disabled="!downloadEnabled();" data-ng-click="downloadLog();" style="margin-right:2px;"></button>
+              <button id="currencyMappingSetting" class="btn btn-default tlb-icons ico-refresh" data-ng-click="refresh()"></button>
+          </span>
+        </div>
+    </div>
+    <div class="subview-content" id="grid-config">
+        <platform-Grid data="gridData"></platform-Grid>
+    </div>
+</div>

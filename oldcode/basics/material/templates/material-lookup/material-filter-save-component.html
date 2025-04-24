@@ -1,0 +1,55 @@
+<style>
+	.material-filter-save {
+		padding: 4px 16px;
+	}
+
+	.material-filter-save .save-as {
+		height: 32px;
+		line-height: 32px;
+		font-weight: 600;
+	}
+
+	.material-filter-save .btn {
+		color: #3789cc;
+	}
+
+	.material-filter-save .btn:disabled {
+		color: #c1c1c1;
+		opacity: unset;
+	}
+
+	.material-filter-save .radio {
+		display: inline-block;
+		margin: 0 16px 0 0;
+		height: 32px;
+		line-height: 32px;
+	}
+
+	.material-filter-save .radio label {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0 0 0 24px;
+	}
+
+	.material-filter-save .radio label span {
+		margin: 0;
+	}
+
+	.material-filter-save .name {
+		margin: 6px 0;
+	}
+</style>
+
+
+<div class="material-filter-save">
+	<div class="save-as">{{ 'basics.material.lookup.filter.saveAs' | translate }}</div>
+
+	<div data-domain-control class="name" data-domain="description" data-model="profile.FilterName" data-placeholder="{{ 'basics.material.lookup.filter.name' | translate }}"></div>
+
+	<simpleradio-control options="accessLevelOptions" data-ng-model="profile.AccessLevel"></simpleradio-control>
+
+	<div class="border-top">
+		<button class="btn pull-right" data-ng-disabled="!profile.FilterName" data-ng-click="save()">{{ 'basics.material.lookup.filter.saveAction' | translate }}</button>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "basics.materiallookup.view.commoditySearch",
+    "template": "basics.materiallookup/partials/search-view.html",
+    "title": "basics.materiallookup.view.commoditySearch",
+    "controller": "basicsMateriallookupExtendApiController",
+    "uuid": "03548B93842246859B85F3ACD0181FCD",
+    "permission": "A5AC5566D808464BA6D04EB58BB2B7FE"
+  }
+]

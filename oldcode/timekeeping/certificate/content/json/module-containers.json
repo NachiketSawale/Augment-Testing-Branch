@@ -1,0 +1,57 @@
+[
+	{
+		"id": "employee-certificate-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.certificate.certificateListTitle",
+		"controller": "timekeepingCertificateListController",
+		"uuid": "c9420131ec4a48a1a6524c4927252f47"
+	},
+	{
+		"id": "employee-certificate-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.certificate.certificateDetailTitle",
+		"controller": "timekeepingCertificateDetailController",
+		"uuid": "1c474c77cb944482833296349056c317",
+		"permission": "c9420131ec4a48a1a6524c4927252f47"
+	},
+	{
+		"id": "certified-employees-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.certificate.certifiedEmployeeListTitle",
+		"controller": "timekeepingCertifiedEmployeeListController",
+		"uuid": "e69fc5da946948f1abaa204629a91067"
+	},
+	{
+		"id": "certified-employees-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.certificate.certifiedEmployeeDetails",
+		"controller": "timekeepingCertifiedEmployeeDetailController",
+		"uuid": "2d585d88dc054491922176340016f112",
+		"permission": "e69fc5da946948f1abaa204629a91067"
+	},
+	{
+		"id": "employee-document-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "timekeeping.certificate.employeeDocumentListTitle",
+		"controller": "timekeepingCertificateEmployeeDocumentListController",
+		"uuid": "a68ac5da946948r1abaa204629a91048"
+	},
+	{
+		"id": "employee-document-details",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "timekeeping.certificate.employeeDocumentDetails",
+		"controller": "timekeepingCertificateEmployeeDocumentDetailController",
+		"uuid": "6e476e45fc076573698722593466n523",
+		"permission": "a68ac5da946948r1abaa204629a91048"
+	},
+	{
+		"id": "model.wdeviewer.ige",
+		"template": "model.wdeviewer/partials/ige-partial.html",
+		"title": "model.wdeviewer.pdfTitle",
+		"controller": "modelWdeViewerIgeController",
+		"uuid": "5e4580c6b40e44e3958feb22e7f3432d",
+		"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+		"dimensionService": "modelWdeViewerReadonlyDimensionService",
+		"defaultMode": "document"
+	}
+]

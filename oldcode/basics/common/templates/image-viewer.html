@@ -1,0 +1,13 @@
+﻿<div class="flex-box flex-element image-viewer-content" data-ng-mouseenter="editable=true" data-ng-mouseleave="editable=false">
+	<carousel class="flex-box flex-element image-viewer-carousel" no-transition="true">
+		<slide ng-repeat="item in data" active="item.isActive">
+			<img data-basics-common-image-sizer data-ng-src="{{ getImage(item) }}"/>
+		</slide>
+	</carousel>
+
+	<!--<div class="image-viewer-edit-container" data-ng-show="editable && showEditButton ">-->
+	<!--<button class="btn btn-default btn-sm image-viewer-btn image-viewer-edit" data-ng-click="add()">add</button>-->
+	<!--<button class="btn btn-default btn-sm image-viewer-btn image-viewer-edit" data-ng-click="change()">change</button>-->
+	<!--<button class="btn btn-default btn-sm image-viewer-btn image-viewer-edit" data-ng-click="delete()">delete</button>-->
+	<!--</div>-->
+</div>

@@ -1,0 +1,39 @@
+<div #container class="input-group form-control">
+	<input type="text" class="input-group-content" [value]="displayDescription" readonly>
+	<span class="input-group-btn">
+		<button #clearBtn class="btn btn-default"
+		        [class]="lookupOptions.clearButtonCss"
+		        [disabled]="lookupOptions.disabled || lookupOptions.disableButton"
+		        (click)="clearValue()"
+		        *ngIf="lookupOptions.showClearButton && !readonly"></button>
+
+		<ng-container *ngFor="let btn of lookupOptions.buttons || []">
+			<button *ngIf="!btn.hidden && (!readonly || btn.shownOnReadonly)" class="btn btn-default"
+			        [id]="btn.id"
+			        [class]="btn.css?.class"
+			        [style]="btn.css?.style"
+			        (click)="btn.execute()"
+			        [disabled]="btn.disabled || btn.isDisabled()"
+			        [innerHTML]="btn.content">
+			</button>
+		</ng-container>
+
+		<button #popupBtn class="btn btn-default"
+		        [class]="lookupOptions.popupButtonCss"
+		        [disabled]="lookupOptions.disabled || lookupOptions.disableButton"
+		        (click)="togglePopup()"
+		        *ngIf="lookupOptions.showPopupButton && lookupOptions.popupOptions && !readonly"></button>
+
+		<button #searchBtn class="btn btn-default"
+		        [class]="lookupOptions.searchButtonCss"
+		        [disabled]="lookupOptions.disabled || lookupOptions.disableButton"
+		        (click)="showSearchDialog()"
+		        *ngIf="lookupOptions.showSearchButton && lookupOptions.searchOptions && !readonly"></button>
+
+		<button #editBtn class="btn btn-default"
+		        [class]="lookupOptions.editButtonCss"
+		        [disabled]="lookupOptions.disabled || lookupOptions.disableButton"
+		        (click)="showEditDialog()"
+		        *ngIf="lookupOptions.showEditButton && lookupOptions.createOptions && !readonly"></button>
+</span>
+</div>

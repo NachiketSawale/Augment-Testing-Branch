@@ -1,0 +1,25 @@
+<header class="modal-header main-color">
+	<h2 class="modal-title">{{'basics.workflow.wizard.header' | translate}}</h2>
+	<button aria-hidden="true" class="close db" data-dismiss="modal" data-ng-click="onOk()"
+	        type="button">
+		<svg class="block-image" data-cloud-desktop-svg-image data-image="ico-close"
+		     data-sprite="control-wh-icons"></svg>
+	</button>
+</header>
+
+<div>
+	<section class="modal-body">
+		<h3>{{'basics.workflow.wizard.text' | translate}}</h3>
+		<div data-ng-repeat="item in message">
+			<span ng-hide="item.Id === undefined">{{item.Id}}: </span><span>{{item.message | translate}}</span><br>
+			<span>{{item.error }}</span>
+			<hr>
+		</div>
+	</section>
+</div>
+
+<footer class="modal-footer">
+	<button class="btn btn-default" data-ng-click="onOk()" type="button">
+		{{'cloud.common.ok' | translate}}
+	</button>
+</footer>

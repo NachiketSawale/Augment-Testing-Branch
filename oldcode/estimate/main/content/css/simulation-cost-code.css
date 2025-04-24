@@ -1,0 +1,7 @@
+.datavis .simulation-chart-marker{
+    stroke: green;
+}
+
+.simulation-chart-labels{
+    transform: translate(14px,20px);
+}

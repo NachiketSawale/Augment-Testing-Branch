@@ -1,0 +1,34 @@
+[
+	{
+		"id": "productionplanning.drawingtype.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.drawingtype.listTitle",
+		"controller": "productionPlanningDrawingTypeListController",
+		"uuid": "1f1a4316f0fc4c81a8c9a070b9de7009",
+		"permission": "1f1a4316f0fc4c81a8c9a070b9de7009"
+	},
+	{
+		"id": "productionplanning.drawingtype.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.drawingtype.detailTitle",
+		"controller": "productionPlanningDrawingTypeDetailController",
+		"uuid": "a5258fb9a56b465da880aacffe345158",
+		"permission": "1f1a4316f0fc4c81a8c9a070b9de7009"
+	},
+	{
+		"id": "productionplanning.drawingtype.skill.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.drawingtype.skill.listTitle",
+		"controller": "productionPlanningDrawingTypeSkillListController",
+		"uuid": "29468739bb844a8db199cdb937a33632",
+		"permission": "1f1a4316f0fc4c81a8c9a070b9de7009"
+	},
+	{
+		"id": "productionplanning.drawingtype.skill.form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.drawingtype.skill.detailTitle",
+		"controller": "productionPlanningDrawingTypeSkillDetailController",
+		"uuid": "bf7fe88155d740fba56d668f6ff0b5d7",
+		"permission": "1f1a4316f0fc4c81a8c9a070b9de7009"
+	}
+]

@@ -1,0 +1,52 @@
+﻿<div data-ng-controller="basicsCommonPurchaseOrderChangeDialogController" class="modal-wrapper">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{options.headerText}}</h2>
+	</header>
+	<section class="modal-body">
+		<div data-ng-show="isRuingWorkFlow" class="flex-element">
+			<div class="margin-full-md">
+				<h3>{{modalOptions.text.runingMessage}}</h3>
+			</div>
+		</div>
+		<div class="platform-form-group" data-ng-show="!isRuingWorkFlow">
+			<div class="platform-form-row" data-ng-repeat="item in modalOptions.chkItems">
+				<div class="platform-form-col" style="margin-left:60px;">
+					<input type="checkbox" name="validateScope" value="item.value" data-ng-click="modalOptions.setAction(item.value)" data-ng-checked="item.isChecked">
+					<span style="margin-left: 10px; position: relative; top: -4px">{{item.text}}</span>
+				</div>
+			</div>
+			<div data-platform-form-container data-form-container-options="modalOptions.cPOformContainerOptions" data-ng-hide="!modalOptions.isDecreaseQty" entity="options.currentItem"></div>
+			<div class="platform-form-row" data-ng-hide="!modalOptions.isDeliveryDate">
+				<label data-ng-hide="!options.currentItem.pfChecked" style="padding-left: 15px">
+					<input type="checkbox" data-ng-model="options.currentItem.IsChecked" data-ng-change="AdjustPremiumFreight()"/>
+					<span style="margin-left: 10px; position: relative; top: -4px">{{modalOptions.text.premiumFreight}}</span>
+				</label>
+				<label data-ng-hide="! options.currentItem.pfChecked" style="font-weight:bold;float: right;margin-left: 5px; position: relative; top: -4px">{{modalOptions.text.totalPrice}}<span> ({{data.homeCurrency}})</span><input
+					style="border:1px solid #eee;width: 85px;line-height:26px;margin-left: 5px; " type="text" data-ng-model="data.totalPrice" readonly></label>
+				<label data-ng-hide="! options.currentItem.pfChecked" style="font-weight:bold;float: right; position: relative; top: -4px">{{modalOptions.text.expressFree}}<span> ({{data.homeCurrency}})</span><input
+					style="margin-left: 5px;width: 85px;line-height: 26px;border:1px solid #eee" type="text" data-ng-model="data.expressFree" readonly></label>
+			</div>
+			<div data-platform-form-container data-form-container-options="modalOptions.dDformContainerOptionsPF" data-ng-hide="!modalOptions.isPF" entity="options.currentItem"></div>
+			<div data-platform-form-container data-form-container-options="modalOptions.dDformContainerOptions" data-ng-hide="!modalOptions.unPF" entity="options.currentItem"></div>
+			<div data-platform-form-container data-form-container-options="modalOptions.dDformContainerOptionsSelectedPF" data-ng-hide="!modalOptions.isSelectedPF" entity="options.currentItem"></div>
+			<div data-platform-form-container data-form-container-options="modalOptions.dDformContainerOptionsUnSelectedPF" data-ng-hide="!modalOptions.isUnSelectedPF" entity="options.currentItem"></div>
+			<div data-platform-form-container data-form-container-options="modalOptions.dAformContainerOptions" data-ng-hide="!modalOptions.isDeleveryAddress" entity="options.currentItem"></div>
+			<div>
+				<h3>{{ 'basics.common.changeStatus.remark' | translate }}</h3>
+				<!--<span  class="form-control" data-domain-control data-domain="remark" data-model="statusRemark" data-options="commentOptions"  data-model-options="{ updateOn: 'blur', debounce: { default: 2000, blur: 0} }"></span>-->
+				<span class="form-control" data-domain-control data-domain="remark" data-model="data.remark"></span>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isRuingWorkFlow">
+			{{modalOptions.text.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.text.closeButtonText}}
+		</button>
+	</footer>
+</div>

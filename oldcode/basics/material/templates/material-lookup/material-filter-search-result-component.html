@@ -1,0 +1,115 @@
+<style>
+	.material-filter-search-result {
+		height: calc(100% - 30px);
+		padding-top: 10px;
+	}
+
+	.material-filter-search-result #ui-layout-left {
+		border-right: 1px solid;
+	}
+
+	.material-filter-search-result .k-splitter {
+		border-bottom: none;
+	}
+
+	.material-filter-search-result .grid-toolbar {
+		flex-direction: row-reverse;
+	}
+
+	.material-filter-search-result .grid-toolbar button {
+		width: 16px;
+		height: 16px
+	}
+
+	.material-filter-search-result .grid-toolbar div {
+		border-left: 1px solid #dcdcdc;
+		line-height: 20px;
+		padding: 0 10px;
+		margin: 5px 0;
+	}
+
+	.material-filter-search-result .grid-toolbar div:last-child {
+		border: 0;
+	}
+
+	.material-filter-search-result .grid-toolbar select {
+		outline: 0;
+		width: 150px;
+		margin: 0 4px;
+	}
+
+	.material-filter-search-result .sort-by-desc {
+		padding-left: 4px;
+	}
+
+	.material-filter-search-result .grid-container .highlight {
+		background-color: #D4E6F2;
+	}
+
+	.material-filter-search-result .slick-header-column .checkbox-radio-box {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.material-filter-search-result .slick-header-column .checkbox-radio-box > label {
+		padding: 0;
+		width: 18px;
+		height: 18px;
+		color: transparent;
+	}
+
+	.material-filter-search-result .slick-header-column .checkbox-radio-box > label > input[type="checkbox"] {
+		left: unset;
+	}
+
+	.material-filter-search-no-result {
+		position: absolute;
+		top: 50%;
+		z-index: 99;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	.material-filter-search-no-result .no-result-title {
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 8px;
+		display: inline-block;
+	}
+
+	.material-filter-search-no-result .no-result-sub-title {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+</style>
+<div class="material-filter-search-result flex-box flex-column flex-element">
+	<basics-material-filter-search-result-toolbar default-display-fields="defaultDisplayFields" search-view-options="searchViewOptions" grid-id="gridData.state"></basics-material-filter-search-result-toolbar>
+	<div common-kendo-splitter-adjust-extend class="flex-element"
+	     option="{panes: [ { collapsible: true, size: '70%' },{ collapsible: true, size: '30%', collapsed: true }],orientation:'horizontal'}">
+		<div id="ui-layout-left" class="flex-box flex-column border-color-bar1" data-platform-context-menu data-context-items="rightClickTools">
+			<div class="toolbar grid-toolbar flex-box bg-light-grey-8">
+				<div data-ng-click="showSortByOptionsPopup($event)">
+					<span>{{'basics.material.lookup.sortBy' | translate}}</span>
+					<span class="sort-by-desc text-right" data-ng-bind="SortOptionDescription"></span>
+					<span class="btn control-icons ico-down sm"></span>
+				</div>
+				<div data-ng-show="canClone()">
+					<button class="tlb-icons ico-copy" data-ng-click="toolbarCopyItem.fn()" ng-attr-title="{{'basics.material.lookup.clone' | translate }}"></button>
+				</div>
+			</div>
+			<div data-ng-if="searchNoResult" class="material-filter-search-no-result">
+				<span class="no-result-title">{{'basics.material.lookup.noResultTitle' | translate}}</span>
+				<br>
+				<span class="no-result-sub-title">{{'basics.material.lookup.noResultSubTitle' | translate}}</span>
+			</div>
+			<platform-grid data="gridData"></platform-grid>
+			<basics-material-filter-search-pagination search-view-options="searchViewOptions"></basics-material-filter-search-pagination>
+		</div>
+		<div data-ng-attr-id="{{detailPanelId}}">
+			<basics-material-filter-item-preview search-view-options="searchViewOptions" selected-item-detail="selectedItemDetail"></basics-material-filter-item-preview>
+		</div>
+	</div>
+</div>

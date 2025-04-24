@@ -1,0 +1,59 @@
+<div class="input-group">
+	<input class="form-control" data-ng-keydown="onSearchInputKeydown($event, searchValue)" data-ng-model="searchValue"
+	       placeholder="search Templates" type="text"/>
+
+	<span class="input-group-btn" style="margin-left: -1px;">
+        <button class="btn btn-default input-sm btn-search tlb-icons ico-search"
+                data-ng-click="executeSearch(searchValue)" title="Search"></button>
+    </span>
+</div>
+
+<!--selected templates-->
+<div data-ng-show="selectedTemplatedList.length">
+	<h1 class="margin-top-ld">{{'basics.workflow.exportZipWizard.searchTemplatesTab.selectedTemplates' |
+	translate}}</h1>
+	<table class="table margin-top-ld">
+		<thead>
+		<tr>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.selectedTemplates' | translate}}</th>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.workflowTemplateID' | translate}}</th>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.description' | translate}}</th>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.comment' | translate}}</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr data-ng-if="selectedTemplate.checked" data-ng-repeat="selectedTemplate in selectedTemplatedList">
+			<td><input ng-change="changeRemoveItem(selectedTemplate)" ng-model="selectedTemplate.checked"
+			           type="checkbox">
+			</td>
+			<td><span data-ng-bind="selectedTemplate.Id"></span></td>
+			<td><span data-ng-bind="selectedTemplate.Description"></span></td>
+			<td><span data-ng-bind="selectedTemplate.CommentText"></span></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<!--Template List-->
+<div>
+	<h1 class="margin-top-ld" data-ng-show="selectedTemplatedList.length">
+		{{'basics.workflow.exportZipWizard.searchTemplatesTab.searchList' | translate}}</h1>
+	<table class="table margin-top-ld">
+		<thead>
+		<tr>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.selection' | translate}}</th>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.workflowTemplateID' | translate}}</th>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.description' | translate}}</th>
+			<th>{{'basics.workflow.exportZipWizard.searchTemplatesTab.comment' | translate}}</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr data-ng-if="!template.checked" data-ng-repeat="template in templateList">
+			<td><input ng-change="chnagecheckbox(template)" ng-model="template.checked" type="checkbox"></td>
+			<td><span data-ng-bind="template.Id"></span></td>
+			<td><span data-ng-bind="template.Description"></span></td>
+			<td><span data-ng-bind="template.CommentText"></span></td>
+		</tr>
+		</tbody>
+	</table>
+</div>

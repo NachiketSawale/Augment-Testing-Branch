@@ -1,0 +1,32 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.accountingJournals.accountingJournalsListContainerTitle",
+		"controller": "basicsAccountingJournalsListController",
+		"uuid": "008F7B6E76F14AD5B5B16365E2D11823"
+	},
+	{
+		"id": "2",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.accountingJournals.accountingJournalsDetailContainerTitle",
+		"controller": "basicsAccountingJournalsDetailController",
+		"uuid": "26EF760CD529457DA85FEADC241F16BB",
+		"permission": "008F7B6E76F14AD5B5B16365E2D11823"
+	},
+	{
+		"id": "3",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.accountingJournals.listTransactionTitle",
+		"controller": "basicsAccountingJournalsTransactionListController",
+		"uuid": "C11B5B707FF744CF9A8EDDD26633DB43"
+	},
+	{
+		"id": "4",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.accountingJournals.detailTransactionTitle",
+		"controller": "basicsAccountingJournalsTransactionDetailController",
+		"uuid": "1772FE6173C7471EB256E9FA08A054F6",
+		"permission": "C11B5B707FF744CF9A8EDDD26633DB43"
+	}
+]

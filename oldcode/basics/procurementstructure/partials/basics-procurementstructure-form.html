@@ -1,0 +1,13 @@
+<div data-platform-alert data-error="error"></div>
+<div class="flex-box flex-column flex-element filler">
+	<div data-platform-kendo-splitter-adjust class="filler flex-element"
+	     option="{panes: [ { collapsible: true, size: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}">
+
+		<div id="ui-layout-east" data-ng-controller="basicsProcurementStructureInterCompanyHeaderController" class="flex-box flex-column">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+		<div id="ui-layout-west" data-ng-controller="basicsProcurementStructureInterCompanyController" class="flex-box flex-column">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+	</div>
+</div>

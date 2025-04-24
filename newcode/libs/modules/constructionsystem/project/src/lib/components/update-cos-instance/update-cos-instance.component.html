@@ -1,0 +1,41 @@
+<section class="modal-body">
+	<div [ngSwitch]="multiDlg.currentStep.id" class="modal-wrapper">
+		<div *ngSwitchCase="'update'">
+			<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden"
+					 style="border:solid 1px gainsboro; margin-top: 10px;">
+				<ui-common-grid [configuration]='gridConfig' [items]='gridItems' ></ui-common-grid>
+			</div>
+			<div class="checkbox spaceToUp lg-3 md-3">
+				<div>
+					<div>
+						<label><input type="checkbox" [checked]="applySelectionStatement" (change)="onOptionChange('applySelectionStatement', applySelectionStatement)">{{'constructionsystem.project.execSelectionStatement' | platformTranslate}}</label>
+					</div>
+					<div style="padding-left: 20px;color: red;">({{ 'constructionsystem.project.execSelectionStatementHint' | platformTranslate }})</div>
+				</div>
+				<div>
+					<label><input type="checkbox" [checked]="applyCalculation" (change)="onOptionChange('applyCalculation', applyCalculation);!applyCalculation?(applyEstimate=false):null;">{{'constructionsystem.project.execCalculation' | platformTranslate}}</label>
+				</div>
+				<div>
+					<label><input type="checkbox" [checked]="applyEstimate" (change)="onOptionChange('applyEstimate', applyEstimate);applyEstimate?(applyCalculation=true):null;">{{'model.viewer.changeModelWz.applyEstimate' | platformTranslate}}</label>
+				</div>
+			</div>
+		</div>
+		<div *ngSwitchCase="'applyLineItemToEstimateSetp'">
+			<h5>{{'constructionsystem.main.applyNote'|platformTranslate}}</h5>
+			<div class="platform-form-group">
+				<div class="radio spaceToUp col-lg-offset-2">
+					<label>
+						<input type="checkbox" [checked]="updateOnApply" (change)="onOptionChange('updateOnApply', updateOnApply);updateOnApply?(overrideOnApply=false):null;">{{'constructionsystem.main.update'|platformTranslate}}
+					</label>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="radio spaceToUp col-lg-offset-2">
+					<label>
+						<input type="checkbox" [checked]="overrideOnApply" (change)="onOptionChange('overrideOnApply', overrideOnApply);overrideOnApply?(updateOnApply=false):null;">{{'constructionsystem.main.overwriteAll'|platformTranslate}}
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

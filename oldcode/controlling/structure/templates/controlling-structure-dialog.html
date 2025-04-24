@@ -1,0 +1,86 @@
+<div data-ng-controller="controllingStructureDialogController" class="modal-wrapper">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body">
+		<div class="platform-form-group platform-lg">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.company' |
+					translate}}:</label>
+				<div class="platform-form-col">
+					<div class="lg-12 md-12" data-ng-model="context.companyId"
+						 data-entity="context"
+						 data-options="lookupConfig.company"
+						 data-basics-lookupdata-lookup-composite>
+					</div>
+				</div>
+			</div>
+
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'cloud.common.entityProject' | translate}}:</label>
+				<div class="platform-form-col">
+					<div class="lg-12 md-12" data-ng-model="context.projectId"
+						 data-entity="context"
+						 data-options="lookupConfig.project"
+						 data-basics-lookupdata-lookup-composite>
+					</div>
+				</div>
+			</div>
+		</div>
+		</br>
+		<div class="input-group form-control">
+			<input type="text" data-ng-model="searchValue" class="form-control"
+				   data-ng-keydown="onSearchInputKeydown($event, searchValue)"/>
+			<span class="input-group-btn" style="margin-left: -1px;">
+			    <button class="btn btn-default input-sm btn-search tlb-icons ico-search"
+						data-ng-click="onSearch(searchValue)" title="search"></button>
+		    </span>
+		</div>
+		<div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+			<div class="form-control flex-align-center" style="border: none;">
+				<div class="input-group-content" data-ng-bind="getPageText()"></div>
+			</div>
+
+			<span class="input-group-btn">
+				<button class="btn btn-default"
+						data-ng-class="{btndeactive:!canPageUp()}"
+						data-ng-disabled="isLoading||!canPageUp()"
+						data-ng-click="pageUp()" style="border: none;"><span class="control-icons ico-previous"></span></button>
+
+				<button class="btn btn-default"
+						data-ng-class="{btndeactive:!canPageDown()}"
+						data-ng-disabled="isLoading||!canPageDown()"
+						data-ng-click="pageDown()" style="border: none;"><span
+						class="control-icons ico-next"></span></button>
+			</span>
+		</div>
+
+		<div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden">
+			<div class="subview-header toolbar" data-platform-collapsable-list data-ng-model="tools">
+				<h2 class="title fix" title="{{'cloud.common.searchResults' | translate}}">
+					{{'cloud.common.searchResults' | translate}}</h2>
+				<div data-platform-menu-list data-list="tools"
+					 data-platform-refresh-on="[tools.version, tools.refreshVersion]"></div>
+			</div>
+			<div class="flex-box flex-column flex-element subview-content relative-container">
+				<div class="lookup-grid flex-basis-auto" data-platform-grid data="grid"></div>
+			</div>
+			<div data-cloud-common-overlay data-loading="isLoading"></div>
+		</div>
+		<div data-ng-show="alerts && alerts.length">
+			<div class="lookup-alert {{::alert.css}}" data-ng-repeat="alert in alerts">
+				<span data-ng-bind="alert.title"></span>: <span data-ng-bind="alert.message"></span>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="!modalOptions.isValid()"
+				data-ng-click="modalOptions.ok()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-disabled="requirement"
+				data-ng-click="modalOptions.cancel()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

@@ -1,0 +1,134 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+			<!--Text Module Id-->
+			<div class="radiolist-container" style="margin-top: 0;">
+				<div class="radio spaceToUp pull-left">
+					<label>
+						<input name="radioGroupA" ng-click="onRadioGroupOptChanged('1', 'editorModeTextModule')" ng-disabled="readonly" ng-model="input.editorModeTextModule"
+						       ng-value="1" type="radio">
+						{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+					</label>
+				</div>
+				<div class="radio spaceToUp pull-left margin-left-ld">
+					<label>
+						<input name="radioGroupA" ng-click="onRadioGroupOptChanged('2', 'editorModeTextModule')" ng-disabled="readonly" ng-model="input.editorModeTextModule"
+						       ng-value="2" type="radio">
+						{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+					</label>
+				</div>
+			</div>
+
+			<div class="platform-form-group" data-ng-show="input.editorModeTextModule === 1">
+			<div class="platform-form-row platform-lg">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.replaceVariable.textModuleId' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div class="control-directive"
+					     data-basics-lookupdata-lookup-composite
+					     data-ng-model="lookupData.textModule.Id"
+					     data-entity="lookupData.textModule"
+					     data-options="lookupOptions.textModuleId"
+					     disabled="codeMirrorOptions.readOnly"
+					     readonly="codeMirrorOptions.readOnly">
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="platform-form-group" data-ng-show="input.editorModeTextModule === 2">
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'basics.workflow.action.customEditor.replaceVariable.textModule' | translate }}</label>
+					<div class="platform-form-col">
+						<div data-ng-model="input.textModuleId" data-options="codeMirrorOptions" data-script-editor-directive></div>
+					</div>
+				</div>
+			</div>
+
+		<!--Language Id-->
+		<div class="radiolist-container" style="margin-top: 10px;">
+			<div class="radio spaceToUp pull-left">
+				<label>
+					<input name="radioGroupB" ng-click="onRadioGroupOptChanged('1', 'editorModeLanguage')" ng-disabled="readonly" ng-model="input.editorModeLanguage"
+					       ng-value="1" type="radio">
+					{{'basics.workflow.modalDialogs.defaultRadio' | translate }}
+				</label>
+			</div>
+			<div class="radio spaceToUp pull-left margin-left-ld">
+				<label>
+					<input name="radioGroupB" ng-click="onRadioGroupOptChanged('2', 'editorModeLanguage')" ng-disabled="readonly" ng-model="input.editorModeLanguage"
+					       ng-value="2" type="radio">
+					{{'basics.workflow.modalDialogs.expertRadio' | translate }}
+				</label>
+			</div>
+		</div>
+
+		<div class="platform-form-group" data-ng-show="input.editorModeLanguage === 1">
+			<div class="platform-form-row platform-lg">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.replaceVariable.language' |
+				translate}}</label>
+				<div class="platform-form-col">
+					<div class="control-directive"
+					     data-basics-lookupdata-simple
+					     data-ng-model="lookupData.language.Id"
+					     data-entity="lookupData.language"
+					     data-options="lookupOptions.languageId"
+					     disabled="codeMirrorOptions.readOnly"
+					     readonly="codeMirrorOptions.readOnly">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-group" data-ng-show="input.editorModeLanguage === 2">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.replaceVariable.languageId' | translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.languageId" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+			<!--Main Entity Query Id-->
+		<div class="platform-form-group" style="margin-top: 10px;">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.replaceVariable.queryItemId' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.queryItemId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+            </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.replaceVariable.result' |
+				translate }}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.result" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

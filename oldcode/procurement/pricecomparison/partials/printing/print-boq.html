@@ -1,0 +1,22 @@
+<section data-ng-controller="procurementPriceComparisonBoQPrintController">
+    <div data-ng-controller="procurementPricecomparisonPrcBoqController">
+        <section class="modal-body">
+            <div class="platform-form-row">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <label class="platform-form-label ng-binding">
+                                {{'procurement.pricecomparison.printing.BoqRange'| translate}}</label>
+                        </h4>
+                    </div>
+                    <div class="flex-box flex-column" style="height: 130px;">
+                        <platform-grid data="gridDatastyle"></platform-grid>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div data-ng-include="'procurement.pricecomparison/partials/boq-summary-item-type.html'"></div>
+</section>

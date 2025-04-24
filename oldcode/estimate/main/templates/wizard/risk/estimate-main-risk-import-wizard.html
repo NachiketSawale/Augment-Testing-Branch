@@ -1,0 +1,26 @@
+<header class="modal-header main-color">
+    <h2 class="modal-title">{{configTitle}}</h2>
+     <button type="button" class="close db" data-dismiss="modal" data-ng-click="close()"
+             aria-hidden="true">
+         <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+     </button>
+ </header>
+ <main class="modal-body flex-box flex-column">
+    <div class="modal-body-template flex-element flex-box flex-column">
+	    <div class="flex-element">
+         <div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+         <div data-platform-form data-form-options="formOptionsReplacementSettings" entity="entity"></div>
+	    </div>
+    </div>
+ </main>
+ <footer class="modal-footer">
+     <button ng-if="modalOptions.isShown('save')" class="btn"
+             data-ng-class="(modalOptions.defaultButton === 'save') ? 'btn-return' : 'btn-default'"
+             data-ng-click="modalOptions.ok('save')"
+             data-ng-disabled="modalOptions.isDisabled('save')">
+         {{modalOptions.saveText}}
+     </button>
+     <button type="button" class="btn btn-default" data-ng-click="execute()" data-ng-disabled="!canExecute()">{{::'basics.common.button.execute' | translate}}</button>
+     <button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+ </footer>
+

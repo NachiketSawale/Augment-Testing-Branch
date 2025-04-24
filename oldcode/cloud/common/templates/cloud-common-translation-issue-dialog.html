@@ -1,0 +1,7 @@
+<div class="flex-element modal-body">
+	<tabset class="tabsWrapper">
+		<tab data-ng-repeat="tab in dialog.modalOptions.value.tabs" heading="{{tab.title}}" active="tab.active" disabled="false" ng-click="modalOptions.onTabSelect(tab)">
+			<div data-ng-include="tab.content"></div>
+		</tab>
+	</tabset>
+</div>

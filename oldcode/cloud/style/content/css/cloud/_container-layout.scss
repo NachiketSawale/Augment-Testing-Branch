@@ -1,0 +1,86 @@
+.shortcut-overlay {
+	flex-direction: column;
+	align-items: normal;
+	justify-content: normal;
+	background-color: transparent;
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		padding: $padding-xlarge-vertical 0 0 $padding-large-horizontal;
+		min-height: calc(#{$header-height} + #{$mainbar-height} + #{$padding-large-horizontal});
+		background-color: $color-primary-fore;
+
+		h2 {
+			margin-bottom: $padding-base-vertical;
+		}
+		label {
+			display: block;
+			line-height: $line-height-size-1;
+		}
+	}
+
+	main {
+		.overlay {
+			background-color: rgba(255, 255, 255, 0.5);
+			border: solid 2px $color-border3;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+
+			&.focus {
+				border: solid 2px $background-color-number-selected;
+
+				.number {
+					background-color: $color-rib;
+					border: 1px solid $color-rib;
+				}
+			}
+
+			.number-wrapper {
+				@extend .vert-hori-center;
+			}
+
+			.letter-wrapper {
+				padding-left: $padding-base-horizontal;
+
+				> div {
+					display: inline;
+				}
+
+				label {
+					padding: $padding-small-horizontal;
+					max-width: 200px;
+					opacity: 0;
+				}
+
+				.letter {
+					@include shortcut-clues(38px, $font-size-1, $font-weight-bold, $color-primary-fore, $color-not-active, $color-not-active, 6px);
+					position: absolute;
+					top: -15px;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		.coverSidebar {
+			@include container-position(0, 0, auto, auto);
+			background-color: $color-primary-fore;
+			width: 50px;
+
+			&.wider {
+				width: calc(50px + $sidebar-width);
+			}
+		}
+	}
+
+	.number {
+		@include shortcut-clues(58px, $font-size-2, $font-weight-bold, $color-primary-fore, $color-not-active, $color-not-active, 8px);
+
+		&.selected-number {
+			background-color: $background-color-number-selected;
+			border: 1px solid $background-color-number-selected;
+		}
+	}
+}

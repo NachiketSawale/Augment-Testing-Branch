@@ -1,0 +1,20 @@
+<div class="modal-wrapper" ng-controller="procurementCommonCreateWicFromContractWizardController">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="currentItem" class="fullheight" data-ng-readonly="false" style="margin-right: 8px;margin-top: -5px;"></div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="customOptions.updateBtnDisabled()" ng-click="customOptions.update()">
+			{{ 'procurement.common.updateBtn' | translate}} <!--Update -->
+		</button>
+		<button type="button" class="btn btn-default" data-ng-disabled="customOptions.okBtnDisabled()" ng-click="customOptions.ok()">
+			{{ 'procurement.common.createBtn' | translate}} <!--Create -->
+		</button>
+		<button type="button" class="btn btn-default" ng-click="modalOptions.cancel()">
+			{{ 'basics.common.cancel' | translate}}<!--Cancel-->
+		</button>
+	</footer>
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

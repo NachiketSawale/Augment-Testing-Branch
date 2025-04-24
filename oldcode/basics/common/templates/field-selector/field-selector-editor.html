@@ -1,0 +1,7 @@
+<div class="input-group lookup-container form-control">
+	<span data-ng-show="colorInfo" class="left-side flex-inline-box color-field {{colorInfo}}"></span>
+	<input data-ng-value="shortDisplayValue" title="{{displayValue}}" readonly="readonly" class="input-group-content" placeholder="{{'basics.common.fieldSelector.editorButtonHint' | translate}}"/>
+	<span class="input-group-btn" data-ng-if="!readonly">
+		<button data-ng-click="clickFn()" class="btn btn-default control-icons ico-menu" title="{{'basics.common.fieldSelector.editorButtonHint' | translate}}">...</button>
+	</span>
+</div>

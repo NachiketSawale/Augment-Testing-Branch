@@ -1,0 +1,96 @@
+[
+  {
+    "id": "resource.project.project.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.main.projectListTitle",
+    "controller": "resourceProjectListController",
+    "uuid": "93a0b617befc42e5bd09df407abb2e17",
+    "permission": "713b7d2a532b43948197621ba89ad67a"
+  },
+  {
+    "id": "resource.project.project.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "project.main.detailContainerTitle",
+    "controller": "resourceProjectDetailController",
+    "uuid": "6859a6fb2e9346e9a4d9f4ec3c212052",
+    "permission": "713b7d2a532b43948197621ba89ad67a"
+  },
+  {
+    "id": "resource.enterprise.planningboard",
+    "template": "app/components/planningboard/templates/platform-planning-board-template.html",
+    "title": "resource.reservation.planningBoard",
+    "controller": "resourceProjectPlanningBoardController",
+    "uuid": "3f8ecb61a9ee42b1af851af3b55fcd4b",
+    "permission": "6540965b6c84450aa1da41fd1c870a47",
+    "subcontainers": [
+      {
+        "uuid": "6bfddd08a3a144d4beb3b431fb765ef6"
+      },
+      {
+        "uuid": "d700a8e02c214ea0af68a45c927ab90c"
+      }
+    ]
+  },
+  {
+    "id": "resource.project.estimate.header",
+    "template": "app/components/base/grid-partial.html",
+    "title": "project.main.estimate",
+    "controller": "resourceProjectEstimateHeaderListController",
+    "uuid": "b4495302ff744586bcfb22ca4184d647",
+    "permission": "ce87d35899f34e809cad2930093d86b5"
+  },
+  {
+    "id": "resource.project.plantcostcode.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.project.plantcostcodeTitle",
+    "controller": "resourceProjectPlantCostCodeListController",
+    "uuid": "f11be052b2c711e9a2a32a2ae2dbcce4",
+    "permission": "ce87d35899f34e809cad2930093d86b5"
+  },
+  {
+    "id": "resource.project.requisitions.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.project.plantcostcoderequisitionListTitle",
+    "controller": "resourceProjectRequisitionsListController",
+    "uuid": "23e53ed2b44b11e9a2a32a2ae2dbcce4",
+    "permission": "f11be052b2c711e9a2a32a2ae2dbcce4"
+  },
+  {
+    "id": "resource.project.projectrequisitions.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.project.projectrequisitionListTitle",
+    "controller": "resourceProjectProjectRequisitionsListController",
+    "uuid": "29928bb3fcde4b659112c8bdba3c9aaa",
+    "permission": "f11be052b2c711e9a2a32a2ae2dbcce4"
+  },
+  {
+    "id": "resource.project.projectexecplanneritem.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.project.projectExecPlannerItemListTitle",
+    "controller": "resourceProjectExecPlannerItemListController",
+    "uuid": "522a94a9206c4d02b714cb628ffc3957"
+  },
+  {
+    "id": "resource.project.projectexecplanneritem.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.project.projectExecPlannerItemDetailTitle",
+    "controller": "resourceProjectExecPlannerItemDetailController",
+    "uuid": "35372760dd5111ef9cd20242ac120002",
+    "permission": "522a94a9206c4d02b714cb628ffc3957"
+  },
+  {
+    "id": "resource.project.requisitiontimeslot.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.project.requisitionTimeslotListTitle",
+    "controller": "resourceProjectRequisitionTimeslotListController",
+    "uuid": "dee017999fd94bfcb1ce73097ac71380"
+  },
+  {
+    "id": "resource.project.requisitiontimeslot.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.project.requisitionTimeslotDetailTitle",
+    "controller": "resourceProjectRequisitionTimeslotDetailController",
+    "uuid": "ae5c829a150e44ba9284ef506bf57bb6",
+    "permission": "dee017999fd94bfcb1ce73097ac71380"
+  }
+]

@@ -1,0 +1,106 @@
+<div data-ng-controller="basicsCreateMeetingController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<div>
+		<section class="modal-body">
+			<div class="platform-form-group">
+				<div data-platform-form-container data-form-container-options="formContainerOptions"
+				     entity="meetingItem" class="fullheight"></div>
+			</div>
+
+			<div id="accordion" class="show">
+				<div class="panel-group">
+					<div class="panel panel-default ng-scope ng-isolate-scope">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="accordion-toggle" ng-click="modalOptions.toggleOpen()">
+									<span class="platform-form-group-header-text ng-binding ng-scope">{{'basics.meeting.meetingTime' | translate}}</span>
+									<span class="platform-form-group-header ng-scope">
+										<div class="toggleImg control-icons ico-up" data-ng-class="modalOptions.showTime ? 'ico-up' : 'ico-down'"></div>
+									</span>
+								</a>
+							</h4>
+						</div>
+						<div class="panel-collapse collapse in" collapse="!modalOptions.showTime">
+							<div class="panel-body">
+								<div class="platform-form-group ng-scope">
+									<div class="platform-form-row form-group">
+										<div class="platform-form-label" style="padding-left: 15px">{{'basics.meeting.startTime'| translate}}<span class="required-cell"></span></div>
+										<div class="platform-form-col" style="width: 30%">
+											<div class="form-control" data-domain-control data-domain="date"
+												readonly="modalOptions.isRecurring"
+												data-ng-model="modalOptions.startDate"></div>
+										</div>
+										<div class="platform-form-col" style="width: 30%; padding-left:15px">
+											<div class="form-control" data-domain-control data-domain="time"
+												readonly="modalOptions.isAllDay || modalOptions.isRecurring"
+											 	data-ng-model="modalOptions.startTime"></div>
+										</div>
+										<div class="platform-form-col"  style="width: 30%; padding-left:25px">
+											<label style="padding-left: 0px; padding-bottom: 5px">
+												<input type="checkbox" style="vertical-align: bottom; margin-left: 0px"
+												       data-ng-model="modalOptions.isAllDay" data-ng-disabled="modalOptions.isRecurring" data-ng-click="modalOptions.onAllDateClick()"/>
+												{{'basics.meeting.allDay'| translate}}
+											</label>
+										</div>
+									</div>
+									<div class="platform-form-row form-group">
+										<div class="platform-form-label" style="padding-left: 15px">{{'basics.meeting.endTime'| translate}}<span class="required-cell"></span></div>
+										<div class="platform-form-col" style="width: 30%">
+											<div class="form-control" data-domain-control data-domain="date"
+												readonly="modalOptions.isRecurring"
+												data-ng-model="modalOptions.endDate"></div>
+										</div>
+										<div class="platform-form-col" style="width: 30%; padding-left:15px">
+											<div class="form-control" data-domain-control data-domain="time"
+												readonly="modalOptions.isAllDay || modalOptions.isRecurring"
+												data-ng-model="modalOptions.endTime"></div>
+										</div>
+										<div class="platform-form-col" style="width: 30%; padding-left:25px">
+											<button type="button" class="btn btn-default"  data-ng-click="modalOptions.recurring()">{{modalOptions.recurringButtonText}}</button>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-group">
+									<div class="platform-form-row">
+										<div class="platform-form-col" style="padding-left: 15px">
+											<div class="invalid-cell invalid-form" data-ng-if="modalOptionsError.rt$hasError()"
+											     data-ng-bind="modalOptionsError.rt$errorText"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="platform-form-group ng-scope" style="padding-top: 10px">
+				<div class="platform-form-row form-group">
+					<label class="platform-form-label">{{'basics.meeting.syncToExt' | translate}}</label>
+					<div class="platform-form-col" style="width: 50%">
+						<div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty">
+							<select class="form-control" data-ng-model="modalOptions.syncMeetingType">
+								<option ng-repeat="opt in modalOptions.syncOption"
+								        value="{{opt.id}}">{{opt.value}}
+							</select>
+						</div>
+					</div>
+					<div class="platform-form-col" style="width: 50%">
+					</div>
+				</div>
+			</div>
+
+			<div data-cloud-common-overlay data-loading="modalOptions.isLoading"></div>
+
+		</section>
+	</div>
+
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="!modalOptions.isValid()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

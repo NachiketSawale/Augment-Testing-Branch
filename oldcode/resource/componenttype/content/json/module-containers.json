@@ -1,0 +1,33 @@
+[
+  {
+    "id": "resource.componenttype.componenttype.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.componenttype.componentTypeListTitle",
+    "controller": "resourceComponentTypeListController",
+    "uuid": "7b66904e63404334a7c1930a1f6ffd82"
+  },
+  {
+    "id": "resource.componenttype.componenttype.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.componenttype.componentTypeDetailTitle",
+    "controller": "resourceComponentTypeDetailController",
+    "uuid": "e7b2aa01dab8439cae84f3f5258d4e23",
+    "permission": "7b66904e63404334a7c1930a1f6ffd82"
+  },
+  {
+    "id": "resource.componenttype.characteristic.container",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "resource.componenttype.characteristics",
+    "uuid": "3d67ffbc921346179407980c0ccb7a91",
+    "controller": "",
+    "sectionId": "37",
+    "mainService": "resourceComponentTypeDataService"
+  },
+  {
+    "id": "resource.componenttype.translate",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "09477b3b7d7a4cb1a2980770f0aa0294"
+  }
+]

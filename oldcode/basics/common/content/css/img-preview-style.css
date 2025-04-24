@@ -1,0 +1,58 @@
+.img-view-dialog {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 888;
+	background: #333;
+}
+
+.img-view-content {
+	display: inline-block;
+	margin: 15px auto;
+	border-radius: 4px;
+	padding: 10px;
+	visibility: visible;
+	-moz-transition: transform .6s, margin .6s;
+	-webkit-transition: transform .6s, margin .6s;
+	-o-transition: transform .6s, margin .6s;
+	transition: transform .6s, margin .6s;
+	-webkit-backface-visibility: hidden;
+	-webkit-animation: flyin .5s;
+	-moz-animation: flyin .5s;
+	animation: flyin .5s;
+}
+
+.loadingImg .dialog-img {
+	opacity: 1;
+}
+
+.img-view-content img {
+	display: block;
+	opacity: 0;
+	-moz-transition: all .6s;
+	-o-transition: all .6s;
+	-webkit-transition: all .6s;
+	transition: all .6s;
+	min-width: 0;
+	max-width: none;
+	min-height: 0;
+	max-height: none;
+	vertical-align: baseline;
+}
+
+.img-view-tool {
+	overflow: hidden;
+	position: fixed;
+	z-index: 9999;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	display: block;
+}
+
+.img-view-title {
+	position: fixed;
+	top: 0px;
+}

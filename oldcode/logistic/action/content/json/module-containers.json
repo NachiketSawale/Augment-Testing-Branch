@@ -1,0 +1,56 @@
+[
+	{
+		"id": "logistic.action.actiontargetlist",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.action.actionTargetListTitle",
+		"controller": "logisticActionTargetListController",
+		"uuid": "5c3ad742e6704c3599bf8099f304a938"
+	},
+	{
+		"id": "logistic.action.actiontargetdetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.action.actionTargetDetailTitle",
+		"controller": "logisticActionTargetDetailController",
+		"uuid": "ef2e6db7ebc64a6ea3c52bb302b4f02d",
+		"permission": "5c3ad742e6704c3599bf8099f304a938"
+	},
+	{
+		"id": "logistic.action.itemtemplates.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.action.actionItemTemplatesListTitle",
+		"controller": "logisticActionItemTemplatesListController",
+		"uuid": "3172c5da049348609d8e54163f09e473"
+	},
+	{
+		"id": "logistic.action.itemtemplates.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.action.actionItemTemplatesDetailTitle",
+		"controller": "logisticActionItemTemplatesDetailController",
+		"uuid": "c31f04d209cb40d9825f68cbfe09daaa",
+		"permission": "3172c5da049348609d8e54163f09e473"
+	},
+	{
+		"id": "logistic.action.itemtypes.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "logistic.action.actionItemTypesListTitle",
+		"controller": "logisticActionItemTypesListController",
+		"uuid": "655124b7bd5447d8805276058df6027d"
+	},
+	{
+		"id": "logistic.action.itemtypes.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "logistic.action.actionItemTypesDetailTitle",
+		"controller": "logisticActionItemTypesDetailController",
+		"uuid": "0ea726bc027d48d9a047f716f5dad752",
+		"permission": "655124b7bd5447d8805276058df6027d"
+	},
+	{
+		"id": "logistic.action.itemtemplatestypes",
+		"template": "app/components/sourcecontainer/source-list.html",
+		"title": "logistic.action.actionItemTemplatesByTypeTitle",
+		"controller": "logisticActionItemTemplatesSourceWindowController",
+		"uuid": "8670a33e975948dba3fb210207c4bc18",
+		"permission": "3172c5da049348609d8e54163f09e473",
+		"filter": [ "actionItemTypeFk" ]
+	}
+]

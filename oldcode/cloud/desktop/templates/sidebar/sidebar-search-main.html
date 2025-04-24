@@ -1,0 +1,33 @@
+﻿<div class="content" data-ng-controller="cloudDesktopSearchController">
+	<div class="toolbar e2e-search-bar">
+		<div class="title" data-ng-bind="searchOptions.title">
+            <!--{{'cloud.desktop.sdMainSearchTitle'| translate}}-->
+			<!--data-ng-bind="{{'cloud.desktop.sdMainSearchTitle'| translate}}"-->
+		</div>
+		<div data-platform-menu-list data-list="searchOptions.toolBarDefs"></div>
+	</div>
+
+	<div class="content-inner">
+		<div class="searchWrapper">
+			<div data-ng-if="searchOptions.searchType==='google'"
+			     data-ng-include="searchOptions.searchGoogleUrl"></div>
+
+			<div data-ng-if="searchOptions.searchType==='form'"
+			     data-ng-include="searchOptions.searchFormUrl"></div>
+
+			<div data-ng-if="searchOptions.enhancedSearchAvailable()"
+			     data-ng-include="searchOptions.searchEnhancedUrl"></div>
+
+
+			<div data-ng-if="searchOptions.searchType==='bulkForm'"
+				 data-ng-include="searchOptions.bulkSearchFormUrl"></div>
+
+			<div data-ng-if="searchOptions.bulkSearchAvailable()"
+				 data-ng-include="searchOptions.searchEnhancedBulkUrl"></div>
+
+			<div data-ng-if="searchOptions.settingsActive===true"
+			     data-ng-include="searchOptions.searchSettingsUrl"
+			     data-ng-class="{'flex-element': searchOptions.cssClass.hintsChk}"></div>
+		</div>
+	</div>
+</div>

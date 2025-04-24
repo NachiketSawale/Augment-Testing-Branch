@@ -1,0 +1,1 @@
+This module contains the tile-based desktop for @@product.

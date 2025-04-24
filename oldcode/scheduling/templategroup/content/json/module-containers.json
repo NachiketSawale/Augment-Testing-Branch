@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.activityTemplateGroupEditGridHeader",
+    "controller": "schedulingTemplateActivityTmplGrpEditListController",
+    "uuid": "59E580ECAB1F42608B3AB858DCBC22B0"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/grid-partial.html",
+    "title": "scheduling.template.activityTmplGrp2CUGrpGridHeader",
+    "controller": "schedulingTemplateActivityTmplGrp2CUGrpListController",
+    "uuid": "038BAA2DC7A94E56900B1C3F21FFC7AF"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.activityTmplGrp2CUGrpDetailHeader",
+    "controller": "schedulingTemplateActivityTmplGrp2CUGrpDetailController",
+    "uuid": "54259D07F8CC42C7AD5B3CD44D39E3E1",
+    "permission": "038BAA2DC7A94E56900B1C3F21FFC7AF"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "scheduling.template.activityTemplateGroupEditDetailHeader",
+    "controller": "schedulingTemplateActivityTmplGrpEditDetailController",
+    "uuid": "9F6BDD0C5B51423CA2BCA64FE103187C",
+    "permission": "59E580ECAB1F42608B3AB858DCBC22B0"
+  },
+  {
+    "id": "5",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "scheduling.template.translationDesc",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "05EF403D694A46E3B23307821779748B"
+  }
+]

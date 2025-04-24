@@ -1,0 +1,30 @@
+{
+  "basics": {
+	"textmodules": {
+	  "tabs":{
+		"main":"Main"
+	  },
+	  "textModules":"Text Modules",
+	  "textModulesDetails":"Text Modules Details",
+	  "textModulesTranslation":"Text Modules Übersetzung",
+	  "htmlText":"Specification",
+	  "plainText":"Plain Text",
+	  "translation":"Translation",
+		"key": "Key",
+		"languageDependent": "Is Language Dependent",
+		"textFormat": "Text Format",
+		"client": "Client",
+		"accessRole": "Access Role",
+		"portalUserGroup": "Portal Group",
+		"textAssembly": "Text Assembly",
+		"textAssemblyGridTitle": "Text Assemblies",
+		"textAssemblyDetailTitle": "Text Assembly Detail",
+		"hyperlinkGridTitle": "Hyperlinks",
+		"hyperlinkDetailTitle": "Hyperlink Detail",
+		"invalidValueErrorMessage": "Prohibited character(s) found. Use only letters, numbers, minus(-) and/or underscore(_).",
+		"error":{
+			"clientErrorNotFoundCompany": "Cannot find companies from patterns: ({{invalids}}) with current text module context."
+		}
+	}
+  }
+}

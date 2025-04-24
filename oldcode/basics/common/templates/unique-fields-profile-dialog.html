@@ -1,0 +1,14 @@
+<div ng-controller="basicsCommonUniqueFieldsProfileDialogController" class="modal-wrapper">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body">
+		<platform-grid data="gridData"></platform-grid>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="save()" data-ng-disabled="!canSave">{{::'basics.common.button.save' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="saveAs()">{{::'basics.common.button.saveAs' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="ok()">{{'basics.common.ok' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="cancel()">{{'basics.common.cancel' | translate}}</button>
+	</footer>
+</div>

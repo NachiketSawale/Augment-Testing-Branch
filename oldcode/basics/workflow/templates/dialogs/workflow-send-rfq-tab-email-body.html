@@ -1,0 +1,41 @@
+<h1>{{'basics.workflow.sendRfQEmailBody.subject' | translate}}</h1>
+<div data-domain="comment" data-domain-control data-model="Context.Subject" placeholder="Enter your subject here"></div>
+
+<h1>{{'basics.workflow.sendRfQEmailBody.coverLetterEMailBody' | translate}}</h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>{{'basics.workflow.sendRfQEmailBody.select' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQEmailBody.templateName' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQEmailBody.description' | translate}}</th>
+		<th>{{'basics.workflow.sendRfQEmailBody.preview' | translate}}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr data-ng-repeat="letter in Context.CoverLetterList">
+		<td><input ng-model="Context.SelectedBodyLetter" type="radio" value="{{letter.Id}}"></td>
+		<td><span data-ng-bind="letter.TemplateName"></span></td>
+		<td><span data-ng-bind="letter.Description"></span></td>
+		<td><i class="block-image control-icons ico-preview"></i></td>
+	</tr>
+	</tbody>
+</table>
+
+<h1>{{'basics.workflow.sendRfQEmailBody.placeholder' | translate}}</h1>
+<!--
+<div>
+	<div class="pull-left">
+		Header-Text
+		<div data-domain-control data-domain="comment" data-model="biddersection.selected" class="size-400-120" placeholder="Enter your text here"></div>
+	</div>
+
+	<div class="pull-left margin-left-ld">
+		Footer-Text
+		<div data-domain-control data-domain="comment" data-model="biddersection.selected" class="size-400-120" placeholder="Enter your text here"></div>
+	</div>
+
+	<div class="pull-left margin-left-ld">
+		Submission Date
+		<div data-domain-control data-domain="description" data-model="biddersection.selected" placeholder="Enter your date here"></div>
+	</div>
+</div>-->

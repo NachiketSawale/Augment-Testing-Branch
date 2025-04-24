@@ -1,0 +1,96 @@
+/*-------------------------------------------------------------------------------
+	 Workflow (_workflow.scss)
+  -------------------------------------------------------------------------------*/
+.workflowDesignerContainer {
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+
+	svg.workflow_designer {
+
+		.groupWrapper.selected {
+			rect, path.workflowItem {
+				fill: $color-selected-fill;
+				stroke: $color-selected-stroke;
+			}
+		}
+
+		.end {
+			rect {
+				fill: #BFDFFD;
+				stroke: #6CB3F9;
+				color: #6CB3F9;
+				stroke-width: 2;
+				cursor: pointer;
+			}
+		}
+
+		.start {
+			rect {
+				fill: #BFDFFD;
+				stroke: #6CB3F9;
+				color: #6CB3F9;
+				stroke-width: 2;
+				cursor: pointer;
+			}
+		}
+
+		.decision {
+			path.workflowItem {
+				fill: #FCE0B0;
+				stroke: #F9B43D;
+				color: #F9B43D;
+				stroke-width: 2;
+				cursor: pointer;
+			}
+		}
+
+		.action {
+			rect {
+				fill: $color-action-rect;
+				stroke: $color-input-border;
+				color: $color-input-border;
+				stroke-width: 2;
+				cursor: pointer;
+			}
+		}
+
+		.transitionGroup {
+			cursor: pointer;
+
+			&.selected rect {
+				fill: $color-selected-stroke;
+				stroke: $color-selected-stroke;
+			}
+
+			rect {
+				fill: #333333;
+				fill-opacity: 1;
+				fill-rule: evenodd;
+				stroke-width: 2;
+				stroke-linejoin: miter;
+				stroke: #FFFFFF;
+				stroke-opacity: 1;
+			}
+
+			text {
+				fill: #fff;
+			}
+		}
+
+		line {
+			stroke: #000;
+			stroke-width: 3;
+		}
+
+		text {
+			font-size: 12px;
+			text-anchor: middle;
+			cursor: pointer;
+		}
+
+
+	}
+}
+
+

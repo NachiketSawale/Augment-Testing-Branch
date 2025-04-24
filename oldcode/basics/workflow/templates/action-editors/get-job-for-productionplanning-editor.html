@@ -1,0 +1,87 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+			<div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+			<div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.orderHeaderId' | translate}} </label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.OrderHeaderId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.estimateHeaderId' | translate}}</label>
+<!--				<label class="platform-form-label">{{'basics.workflow.action.customEditor.ppsHeaderId' | translate}}</label>-->
+				<div class="platform-form-col">
+					<div data-ng-model="model.EstimateHeaderId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.jobTypeId' | translate}} <span class="required-cell"></span></label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.JobTypeId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+
+
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.createPpsHeader' | translate}}</label>
+				<div class="platform-form-col">
+<!--					<div class="input-group date domain-type-dateutc form-control">-->
+<!--						<input data-ng-model="model.DoesCreatePpsHeader" type="checkbox" data-domain="boolean" data-options="codeMirrorOptions"/>-->
+<!--					</div>-->
+<!--					data-change="changeCheckbox()"-->
+					<div  data-domain="boolean" data-domain-control
+					     data-model="model.CreatePpsHeader" data-options="codeMirrorOptions">
+					</div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.siteIdForCreatingPpsHeader' | translate}}<span data-ng-show="ppsHeaderRequired" class="required-cell"></span></label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.SiteId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.clerkIdForCreatingPpsHeader' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="model.ClerkId" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+				<div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+				<div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.outputResult' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.Result" data-options="codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

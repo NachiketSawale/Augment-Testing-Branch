@@ -1,0 +1,46 @@
+<div data-ng-controller="basicsWorkflowDocumentLinkDialog" class="filler">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="radiolist-container ng-pristine ng-untouched ng-valid ng-isolate-scope radio-list ng-not-empty">
+				<div ng-repeat="item in input.typeRadioGroupOpt" class="radio {{item.cssClass}}">
+					<label for="{{item.value}}" class="ng-binding">
+						<input type="radio" id="{{item.value}}" ng-model="input.typeSelectedMode" ng-value="item.value"
+						       name="typeSelectedRadioGroup"
+						       ng-disabled="readonly" class="ng-pristine ng-untouched ng-valid ng-not-empty"
+						       value="item.value">
+						{{item.description}}
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="platform-form-group" data-ng-if="input.typeSelectedMode === 1">
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'basics.workflow.modalDialogs.linkName' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-script-editor-directive data-ng-model="modalOptions.value.displayText"
+				     data-options="input.codeMirrorOptions">
+				</div>
+			</div>
+		</div>
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'basics.workflow.modalDialogs.documentId' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-script-editor-directive data-ng-model="modalOptions.value.documentId"
+				     data-options="input.codeMirrorOptions"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="platform-form-group" data-ng-if="input.typeSelectedMode === 2">
+		<div class="platform-form-row">
+			<div class="platform-form-label">{{'basics.workflow.modalDialogs.documentIdsAndNames' | translate}}</div>
+			<div class="platform-form-col">
+				<div data-script-editor-directive data-ng-model="modalOptions.value.docs"
+				     placeholder=""
+				     data-options="input.codeMirrorOptions">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

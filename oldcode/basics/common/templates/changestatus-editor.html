@@ -1,0 +1,46 @@
+﻿<div id="change-status-editor" style="min-height: 300px;">
+	<div class="change-status-editor-title">
+		<h3>{{title}}</h3>
+	</div>
+	<div>
+		<div class="zoom-img">
+			<a href class="ui-slider-increase control-icons ico-plus block-image" data-ng-click="goUpStatus()">
+			</a>
+		</div>
+		<div id="change-status-detail">
+			<div class="ui-slider-container">
+				<div id="slider-vertical"></div>
+			</div>
+			<ul>
+				<li class="change-status-detail-item" data-ng-repeat=" item in ::allEntities.slice().reverse()" data-ng-if="!options.showAvailableStatusFlg||item.available">
+					<div data-ng-class="{'change-status-detail-item-select': item.Id===options.toStatusId, 'change-status-detail-item-disable': !item.available}"
+					     data-ng-click="onClickStatus(item)" data-ng-dblclick="rowDoubleClick(item)">
+						<div>
+							<i class="change-status-detail-img block-image {{imageSelector.select(item)}}" data-ng-show="options.isColorBackGround=== true ? false:true" data-ng-if="showIcon && (!imageSelector === false)"></i>
+							<svg class="block-image" style="{{item.colorText}}" data-ng-show="options.isColorBackGround=== true ? true:false">
+								<use href="{{item.svgHref}}" class="block-image status-icons {{imageSelector.select(item)}}"></use>
+							</svg>
+
+							<a href data-ng-class="{'change-status-detail-item-default': item.IsDefault===true}">
+								{{::getStatusDescription(item)}}
+							</a>
+
+							<div data-ng-show="item.IsOptionalUpwards===false" class="control-icons ico-sort-asc block-image"></div>
+
+							<div data-ng-show="item.IsOptionalDownwards===false" class="control-icons block-image co-sort-desc"></div>
+						</div>
+						<div class="change-status-detail-item-tick" data-ng-show="item.Id===options.toStatusId">
+							<div class="control-icons ico-tick block-image" style="margin: 5px 7px;"></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="zoom-img zoom-img-out">
+			<a href class="ui-slider-decrease control-icons ico-minus block-image" data-ng-click="goDownStatus()">
+			</a>
+		</div>
+	</div>
+
+
+</div>

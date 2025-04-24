@@ -1,0 +1,6 @@
+/***k-safari css height:100% width overflow-y:auto hack***/
+.k-safari{
+  .ms-sv-search-view,.ts-cart-item-panel,.ticket-system-order-list-div{
+    height:100vh;
+  }
+}

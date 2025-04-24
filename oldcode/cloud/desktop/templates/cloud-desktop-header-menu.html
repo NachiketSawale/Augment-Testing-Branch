@@ -1,0 +1,18 @@
+<div class="ui-header-menu">
+	<button type="button" title="{{'cloud.desktop.header.help'| translate}}" data-ng-click="openFirstHeaderPopup($event)" class="ui-header-help">
+		<svg data-cloud-desktop-svg-image data-sprite="control-icons" data-image="ico-circle-question-regular" data-replace></svg>
+	</button>
+	<button type="button" title="{{'cloud.desktop.header.notifications'| translate}}" data-ng-click="openSecondHeaderPopup($event)" class="ui-header-notification">
+		<svg data-cloud-desktop-svg-image data-sprite="control-icons" data-image="ico-bell-regular" data-replace></svg>
+	</button>
+	<button ng-if="!showCollabInDesktop() && getLengthOfCollaborators() > 0" type="button" title="{{'cloud.desktop.header.collaborators'| translate}}"  data-ng-click="openFourthHeaderPopup($event)" class="ui-header-collabrator" style="border-radius: 50%;background-color: rgb(36 133 235);color: white;">
+		+{{getLengthOfCollaborators()}}
+	</button>
+	<button type="button" title="{{'cloud.desktop.header.profile'| translate}}" data-ng-click="openThirdHeaderPopup($event)" class="btn-label ui-header-profile">
+		<svg data-cloud-desktop-svg-image data-sprite="control-icons" data-image="ico-circle-user-regular" data-replace></svg>
+		<div class="margin-left-ld">
+			<label data-ng-bind="headerInfo.companyName" data-ng-attr-title="" class="ellipsis font-bold text-left"></label>
+			<label data-ng-bind-html="getUserandRoleInfo()" data-ng-attr-title="" class="ellipsis"></label>
+		</div>
+	</button>
+</div>

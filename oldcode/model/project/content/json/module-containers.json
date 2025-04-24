@@ -1,0 +1,79 @@
+[
+	{
+		"id": "model-project-model-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelListContainer",
+		"controller": "modelProjectModelListController",
+		"uuid": "77dd0994f5f544ddaf048c1a5f17c5fe",
+		"permission": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-model-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelDetailContainer",
+		"controller": "modelProjectModelDetailController",
+		"uuid": "ad70980f975343f1a2af096762faec25",
+		"permission": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-model-version-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelVersionDetailContainer",
+		"controller": "modelProjectModelVersionDetailController",
+		"uuid": "a16d5eb0ec314c00871308b03f4a1c39",
+		"permission": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-model-map-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelMapDetailContainer",
+		"controller": "modelProjectModelMapDetailController",
+		"uuid": "5b2eda413a434857848e70df9ba397f9",
+		"permission": "d4d807d4047e439d9ba536d7114e9009"
+	},
+	{
+		"id": "model-project-modelfile-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelFileListContainer",
+		"controller": "modelProjectModelFileListController",
+		"uuid": "903fffcab05b40c3b0025f510e17bcba",
+		"permission": "8b4e238704f84550b00830dec07b25b5"
+	},
+	{
+		"id": "model-project-modelfile-detail",
+		"template": "model.project/partials/wde40.html",
+		"title": "model.project.twoDViewer",
+		"controller": "wde40Controller",
+		"uuid": "8b4e238704f84550b00830dec07b25b5"
+	},
+	{
+		"id": "model-project-model-stakeholder-list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelStakeholderListContainer",
+		"controller": "modelProjectModelStakeholderListController",
+		"uuid": "4a870e66e25044f0985a567df1395500"
+	},
+	{
+		"id": "model-project-model-stakeholder-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelStakeholderDetailContainer",
+		"controller": "modelProjectModelStakeholderDetailController",
+		"uuid": "f254928aff3d427193c35f1596304523",
+		"permission": "4a870e66e25044f0985a567df1395500"
+	},
+	{
+		"id": "model-project-model-clerk-authorization",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.project.modelClerkAuthorizationContainer",
+		"controller": "modelProjectClerkListController",
+		"uuid": "70ce0ba51f5545fdabb81be621cfa2c5"
+	},
+	{
+		"id": "model-project-model-clerk-authorization-detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.project.modelClerkAuthorizationDetailContainer",
+		"controller": "modelProjectClerkDetailController",
+		"uuid": "32942b95e0e441e392a69c73361023cb",
+		"permission": "70ce0ba51f5545fdabb81be621cfa2c5"
+	}
+]

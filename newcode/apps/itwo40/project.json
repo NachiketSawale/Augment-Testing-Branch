@@ -1,0 +1,228 @@
+{
+	"name": "itwo40",
+	"$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+	"projectType": "application",
+	"sourceRoot": "apps/itwo40/src",
+	"prefix": "",
+	"targets": {
+		"build": {
+			"executor": "@angular-devkit/build-angular:browser",
+			"outputs": [
+				"{options.outputPath}"
+			],
+			"options": {
+				"outputPath": "dist/apps/itwo40",
+				"index": "apps/itwo40/src/index.html",
+				"main": "apps/itwo40/src/main.ts",
+				"polyfills": "apps/itwo40/src/polyfills.ts",
+				"tsConfig": "apps/itwo40/tsconfig.app.json",
+				"inlineStyleLanguage": "scss",
+				"assets": [
+					"apps/itwo40/src/favicon.ico",
+					"apps/itwo40/src/assets",
+					{
+						"glob": "**/*",
+						"input": "./libs/ui/styles/assets",
+						"output": "./assets/ui/common",
+						"ignore": [
+							".gitignore"
+						]
+					},
+					{
+						"glob": "**/assets/**",
+						"input": "./libs/modules",
+						"output": "./assets",
+						"ignore": [
+							".gitignore"
+						]
+					},
+					{
+						"glob": "**/i18n/en.json",
+						"input": "./libs/modules",
+						"output": "/assets"
+					},
+					{
+						"glob": "**/*",
+						"input": "./libs/ui/common/assets",
+						"output": "./assets/ui/common",
+						"ignore": [
+							".gitignore"
+						]
+					},
+					{
+						"glob": "**/i18n/en.json",
+						"input": "./libs/ui",
+						"output": "/assets/ui"
+					},
+					{
+						"glob": "**/i18n/en.json",
+						"input": "./libs/platform",
+						"output": "/assets/platform"
+					},
+					{
+						"glob": "**/*",
+						"input": "./node_modules/hoops-communicator/",
+						"output": "./assets/hoops-communicator"
+					},
+					{
+						"glob": "*",
+						"input": "./node_modules/@rib/ige-engine-core/lib",
+						"output": "assets/ige"
+					},
+					{
+						"glob": "*",
+						"input": "./node_modules/@rib/ige-engine-core-nop/lib",
+						"output": "assets/ige/nop"
+					},
+					{
+						"glob": "**/*",
+						"input": "./libs/ui/assets",
+						"output": "./assets",
+						"ignore": [
+							"**/i18n/**",
+							".gitignore"
+						]
+					}
+				],
+				"styles": [
+					"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+					"apps/itwo40/src/assets/css/bootstrap.css",
+					"apps/itwo40/src/assets/css/cloud.css",
+					"libs/ui/grid/src/lib/slickgrid/css/slick.grid.css",
+					"libs/ui/grid/src/lib/slickgrid/css/slick.headerbuttons.css",
+					"libs/ui/grid/src/lib/slickgrid/css/slick.headermenu.css",
+					"libs/ui/grid/src/lib/slickgrid/css/TotalsPlugin.css",
+					"libs/ui/styles/styles.scss",
+					"./node_modules/swagger-ui-dist/swagger-ui.css",
+					"./node_modules/quill/dist/quill.snow.css",
+					"libs/ui/styles/assets/css/quill-table.scss",
+					"libs/ui/styles/assets/css/quill.snow.scss"
+				],
+				"stylePreprocessorOptions": {
+					"includePaths": [
+						"libs/ui/styles",
+						"libs/ui/styles/cloud"
+					]
+				},
+				"scripts": [
+					"node_modules/hoops-communicator/index.js",
+					"node_modules/jquery/dist/jquery.min.js",
+					"node_modules/jquery-ui/dist/jquery-ui.min.js",
+					"node_modules/@popperjs/core/dist/umd/popper.min.js",
+					"node_modules/bootstrap/dist/js/bootstrap.min.js",
+					"libs/ui/grid/src/lib/slickgrid/jquery.event.drop-2.3.0.js",
+					"libs/ui/grid/src/lib/slickgrid/jquery.event.drag-2.3.0.js",
+					"libs/ui/grid/src/lib/slickgrid/slick.core.js",
+					"libs/ui/grid/src/lib/slickgrid/slick.rib.dataview.js",
+					"libs/ui/grid/src/lib/slickgrid/slick.rib.grid.js",
+					"libs/ui/grid/src/lib/slickgrid/extensions/ext.footer.js",
+					"libs/ui/grid/src/lib/slickgrid/extensions/ext.headerfilter.js",
+					"libs/ui/grid/src/lib/slickgrid/extensions/ext.overlays.js",
+					"libs/ui/grid/src/lib/slickgrid/extensions/ext.summaryfooter.js",
+					"libs/ui/grid/src/lib/slickgrid/extensions/slick.equations.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/checkbox-column.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.autocolumnsize.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.autotooltips.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.batchcopymanager.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.cellcopymanager.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.cellexternalcopymanager.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.cellrangedecorator.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.cellrangeselector.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.cellselectionmodel.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.checkboxselectcolumn.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.columngroup.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.copypastemanager.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.groupitemmetadataprovider.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.headerbuttons.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.headermenu.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.rowmovemanager.js",
+					"libs/ui/grid/src/lib/slickgrid/addons/slick.rowselectionmodel.js",
+					"node_modules/swagger-ui-dist/swagger-ui-bundle.js",
+					"node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js"
+				]
+			},
+			"configurations": {
+				"production": {
+					"budgets": [
+						{
+							"type": "initial",
+							"maximumWarning": "10mb",
+							"maximumError": "20mb"
+						},
+						{
+							"type": "anyComponentStyle",
+							"maximumWarning": "2kb",
+							"maximumError": "4kb"
+						}
+					],
+					"fileReplacements": [
+						{
+							"replace": "apps/itwo40/src/environments/environment.ts",
+							"with": "apps/itwo40/src/environments/environment.prod.ts"
+						}
+					],
+					"outputHashing": "all"
+				},
+				"development": {
+					"buildOptimizer": false,
+					"optimization": false,
+					"vendorChunk": true,
+					"extractLicenses": false,
+					"sourceMap": true,
+					"namedChunks": true
+				}
+			},
+			"defaultConfiguration": "development"
+		},
+		"preserve": {
+			"executor": "@rib-4.0/build-executor:schematics-command",
+			"options": {
+				"schematicsCommand": "nx g @rib-4.0/ng-schematics:register-lazy-injection"
+			}
+		},
+		"customServe": {
+			"executor": "@angular-devkit/build-angular:dev-server",
+			"configurations": {
+				"production": {
+					"buildTarget": "itwo40:build:production"
+				},
+				"development": {
+					"buildTarget": "itwo40:build:development"
+				}
+			},
+			"defaultConfiguration": "development"
+		},
+		"serve": {
+			"executor": "@rib-4.0/build-executor:sequential-command",
+			"options": {
+				"0": {
+					"project": "itwo40",
+					"target": "customServe"
+				},
+				"1": {
+					"project": "itwo40",
+					"target": "preserve"
+				}
+			}
+		},
+		"extract-i18n": {
+			"executor": "@angular-devkit/build-angular:extract-i18n",
+			"options": {
+				"buildTarget": "itwo40:build"
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": [
+				"{workspaceRoot}/coverage/apps/itwo40"
+			],
+			"options": {
+				"jestConfig": "apps/itwo40/jest.config.ts"
+			}
+		}
+	},
+	"tags": []
+}

@@ -1,0 +1,24 @@
+<div class="flex-box flex-column flex-element subview-content filler relative-container">
+    <!--search bar-->
+    <div class="flex-box">
+        <basics-shared-material-search-header [scope]="scope" class="flex-box flex-element"></basics-shared-material-search-header>
+    </div>
+
+    <!-- navigation bar -->
+    <div class="ms-sv-category-navigate-row">
+        <basics-shared-material-search-navigator [scope]="scope"></basics-shared-material-search-navigator>
+    </div>
+
+    <!-- Search result view -->
+    <div class="ms-sv-search-view fullheight">
+        <basics-shared-material-search-body [scope]="scope"></basics-shared-material-search-body>
+    </div>
+
+    <!-- Paging bar -->
+    <div class="ms-sv-commodity-pagination">
+        <basics-shared-material-search-footer [scope]="scope"></basics-shared-material-search-footer>
+    </div>
+
+    <!-- Loading -->
+    <ui-common-loading [loading]="scope.loading"></ui-common-loading>
+</div>

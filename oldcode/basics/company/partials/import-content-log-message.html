@@ -1,0 +1,27 @@
+<div style="position: relative;" data-ng-controller="basicsCompanyLogMessageController">
+    <div class="flex-element" style="position: fixed;background:#fff;top:50px;display:inline-block;">
+        <label style="cursor:pointer;">
+            <input style="display:inline-block;vertical-align:middle;margin-bottom:6px;"
+                   type="checkbox" data-ng-model="logLevel.info">
+            Info
+        </label>
+        <label style="cursor:pointer;margin-left:20px;">
+            <input style="display:inline-block;vertical-align:middle;margin-bottom:6px;"
+                   type="checkbox" data-ng-model="logLevel.error">
+            Error
+        </label>
+        <label style="cursor:pointer;margin-left:20px;">
+            <input style="display:inline-block;vertical-align:middle;margin-bottom:6px;"
+                   type="checkbox" data-ng-model="logLevel.warning">
+            Warning
+        </label>
+        <label style="cursor:pointer;margin-left:20px;">
+            <input style="display:inline-block;vertical-align:middle;margin-bottom:6px;"
+                   type="checkbox" data-ng-model="logLevel.debug">
+            Debug
+        </label>
+    </div>
+
+    <div class="flex-element" style="user-select: text;margin-top: 20px;
+    overflow: auto;" data-ng-bind-html="LogMessage"></div>
+</div>

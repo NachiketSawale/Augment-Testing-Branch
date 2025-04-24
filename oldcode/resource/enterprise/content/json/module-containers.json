@@ -1,0 +1,47 @@
+[
+  {
+    "id": "resource.enterprise.dispatcher.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.enterprise.resourceDispatcherListTitle",
+    "controller": "resourceEnterpriseDispatcherListController",
+    "uuid": "b4cb333f09d448ab9a9dde5409bce51b"
+  },
+  {
+    "id": "resource.enterprise.dispatcher.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.enterprise.resourceDispatcherDetailTitle",
+    "controller": "resourceEnterpriseDispatcherDetailController",
+    "uuid": "ba8822186d5f4a8cae3268ccdec8729f",
+    "permission": "b4cb333f09d448ab9a9dde5409bce51b"
+  },
+  {
+    "id": "resource.enterprise.planningboard",
+    "template": "app/components/planningboard/templates/platform-planning-board-template.html",
+    "title": "resource.reservation.planningBoard",
+    "controller": "resourceEnterprisePlanningBoardController",
+    "uuid": "f36034eeab0b465da740bc58f683b40d",
+    "permission": "6540965b6c84450aa1da41fd1c870a47",
+    "subcontainers": [{
+      "uuid": "be2f6945273a4c20aa20125bc5d1a60d"
+    },
+    {
+      "uuid": "f057307eb3ac4ec18a27196bb5093fe1"
+    }]
+  },
+  {
+    "id": "resource.enterprise.reservation.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.enterprise.resourceReservationListTitle",
+    "controller": "resourceEnterpriseReservationListController",
+    "uuid": "2eea8976a98d11eabb370242ac130002"
+  },
+  {
+    "id": "resource.enterprise.reservation.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.enterprise.resourceReservationDetailTitle",
+    "controller": "resourceEnterpriseReservationDetailController",
+    "uuid": "601c700ea98d11eabb370242ac130002",
+    "permission": "2eea8976a98d11eabb370242ac130002"
+  }
+
+]

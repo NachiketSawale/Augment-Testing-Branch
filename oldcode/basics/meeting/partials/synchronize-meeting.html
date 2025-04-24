@@ -1,0 +1,38 @@
+<div data-ng-controller="basicsSynchronizeMeetingController">
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+	<div class="modal-body">
+		<div class="platform-form-group ng-scope" style="padding-top: 10px">
+			<div class="platform-form-row form-group">
+				<label class="platform-form-label">{{'basics.meeting.wizard.selectSyncMeetingType' | translate}}</label>
+				<div class="platform-form-col">
+					<div class="control-directive ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty">
+						<select class="form-control" data-ng-model="modalOptions.syncMeetingType">
+							<option ng-repeat="opt in syncMeetingTypeOptions"
+									value="{{opt.id}}">{{opt.value}}
+						</select>
+					</div>
+				</div>
+				<div class="platform-form-col" style="width: 50%"></div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="modal-footer" style="height: 100px;">
+		<div style="width: 100%;height: 100%">
+			<div style="width: 100%;height: 50%;display: flex;flex-direction: row;justify-content: flex-end;">
+				<button type="button" class="btn btn-default" data-ng-disabled="!options.selectedItem" style="min-width: 90px;" data-ng-click="modalOptions.ok()">
+				{{modalOptions.actionButtonText}}
+				</button>
+				<button type="button" class="btn btn-default" style="min-width: 90px;" data-ng-click="modalOptions.close()">
+				{{modalOptions.closeButtonText}}
+				</button>
+			</div>
+			<div style="width: 100%;height: 50%;padding-top: 5px">
+				<label style="text-overflow: unset; min-width: 375px; line-height: 39px;">
+					{{'basics.meeting.wizard.syncNote' | translate}}
+				</label>
+			</div>
+		</div>
+	</footer>
+</div>

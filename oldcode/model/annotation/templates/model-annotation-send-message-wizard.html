@@ -1,0 +1,134 @@
+<div data-ng-controller="modelAnnotationSendMessageController" class="modal-wrapper">
+	<!--Message-->
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="messageOpen">
+			<div data-accordion-heading>
+				<span class="panel-title">{{'model.annotation.message' | translate }}</span>
+				<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+            </span>
+			</div>
+			<div class="margin-bottom-ld ">{{'model.annotation.configureMsg' | translate }}</div>
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">
+						{{'model.annotation.recipients' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<platform-grid data="gridData"></platform-grid>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">
+						{{'model.annotation.subject' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<input type="text" class="form-control" ng-model="resultData.Subject">
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">
+						{{'model.annotation.message' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<textarea class="form-control" ng-model="resultData.Message"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Add Report-->
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="reportOpen">
+			<div data-accordion-heading>
+				<span class="panel-title">{{'model.annotation.addReport' | translate }}</span>
+				<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="reportOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!reportOpen"></div>
+            </span>
+			</div>
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">
+						{{'model.annotation.reportAnnotation' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<input type="checkbox" data-ng-model="resultData.IsReportAdded" data-ng-checked="resultData.IsReportAdded" ng-click="onCheckReportEvent(resultData.IsReportAdded)" value="resultData.IsReportAdded"/>
+					</div>
+				</div>
+				<div ng-show="!hideReports" class="platform-form-row">
+					<label class="platform-form-label">{{'model.annotation.report' | translate}}</label>
+					<div class="platform-form-col">
+						<div class="lg-4 md-4 report" data-basics-lookup-data-by-custom-data-service data-ng-model="resultData.Report"
+						     data-options="reportLookupOptions"
+						     data-entity=""
+						     data-ng-disabled=""
+						     readonly=""
+						></div>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">
+						{{'model.annotation.reportFileName' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<input type="text" class="form-control" data-ng-model="resultData.ReportFileName" data-ng-disabled="reportFileEnabled">
+					</div>
+				</div>
+				<div ng-hide="!hideFileType" class="platform-form-row">
+					<label class="platform-form-label">{{'model.annotation.reportFileType' | translate}}</label>
+					<div class="platform-form-col">
+						<div class="lg-4 md-4 report-file" data-basics-lookup-data-by-custom-data-service data-ng-model="resultData.ReportFileType"
+						     data-options="reportFileTypeLookupOptions"
+						     data-entity=""
+						     data-ng-disabled=""
+						     readonly=""
+						></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Add BCF-->
+	<div data-accordion data-close-others="false">
+		<div data-accordion-group data-is-open="inputOpen">
+			<div data-accordion-heading>
+				<span class="panel-title">{{'model.annotation.addBcf' | translate }}</span>
+				<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+            </span>
+			</div>
+			<div class="platform-form-group">
+				<div class="platform-form-row">
+					<label class="platform-form-label">
+						{{'model.annotation.bcfAnnotation' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<input type="checkbox" data-ng-model="resultData.IsBCFAdded" data-ng-checked="resultData.IsBCFAdded" ng-click="onCheckEvent(resultData.IsBCFAdded)" value="resultData.IsBCFAdded"/>
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">
+						{{'model.annotation.bcfFileName' | translate }}
+					</label>
+					<div class="platform-form-col">
+						<input type="text" class="form-control" data-ng-model="resultData.BCFFileName" data-ng-disabled="bcfFileEnabled" >
+					</div>
+				</div>
+				<div class="platform-form-row">
+					<label class="platform-form-label">{{'model.annotation.bcfVersion' | translate}}</label>
+					<div class="platform-form-col">
+						<div class="lg-4 md-4 bcf-version" data-basics-lookup-data-by-custom-data-service data-ng-model="resultData.BCFVersion"
+						     data-options="bcfVersionlookupOptions"
+						     data-entity=""
+						     data-ng-disabled="bcfVersionlookupOptions.disabled"
+						     readonly="bcfVersionlookupOptions.readonly"
+						></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

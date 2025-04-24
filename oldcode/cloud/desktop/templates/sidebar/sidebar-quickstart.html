@@ -1,0 +1,30 @@
+﻿<div class="content" data-ng-controller="cloudDesktopQuickStartController">
+	<div class="toolbar">
+		<div class="title" data-ng-bind="sidebarOptions.title"></div>
+	</div>
+
+	<div class="content-inner flex-box flex-column quickstart-items" platform-navigate-list-items list-items-selector="navigationListItemsSelector">
+		<div class="margin-top-ld margin-bottom-ld">
+			<div data-domain-control data-ng-model="searchmodule" id="searchmodule" data-domain="description" data-placeholder="{{'cloud.desktop.sdCmdBarSearch' | translate}}"
+			     data-model-options="{debounce: { default: 500, blur: 0}}" data-autocomplete="off"></div>
+		</div>
+
+		<div data-ng-if="showQuickstartWithTabs" class="flex-element">
+			<div data-ng-if="pageItemsInAccordionUI">
+				<button data-ng-repeat="page in pageItemsInAccordionUI" data-ng-click="redirect(page.id, page.redirect, $event)" class="ellipsis panel-item rw app-small-icons ico-page {{getE2eClass(page)}}">
+					{{page.Description}}
+				</button>
+			</div>
+			<div cloud-desktop-module-tiles-list-accordion data-config="configtile" data-treeitems="allowedModuleItems" data-searchmodule="searchmodule"></div>
+		</div>
+		<ul data-ng-if="!showQuickstartWithTabs" class="scroll-padding flex-element">
+			<li data-ng-repeat="item in allowedModuleItems | filter: quickstartFilter" data-ng-if="!item.disabled">
+				<button data-ng-click="redirect(item.id, item.redirect, $event)" class="ellipsis panel-item rw app-small-icons {{item.cssClass}} {{getE2eClass(item)}}">
+					<img ng-if="item.imgUrl" class="icon" data-ng-class="item.cssClass" ng-src="{{item.imgUrl}}" />
+					{{item.displayName}}
+				</button>
+			</li>
+		</ul>
+		<div cloud-common-overlay data-loading="quickstartIsLoading"></div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+.entity-filter-list {
+	width: 260px;
+}
+
+.entity-filter-list li {
+	margin: 4px 0;
+}
+
+.entity-filter-list li input[type='checkbox'] {
+	margin: 0 8px 0 0;
+}
+
+.entity-filter-list .list-container{
+	max-height: 420px;
+	overflow: auto;
+}

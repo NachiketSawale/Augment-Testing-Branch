@@ -1,0 +1,19 @@
+<ul data-ng-hide="!!bidder.isHide" class="list-group">
+	<li>
+		<div class="checkbox spaceToUp ">
+			<label>
+				<input type="checkbox" data-ng-model="bidder.isActive" name="bidderNameCheckBox"
+				       data-ng-click="activeBidder()" class="e2e-bidder-isActive" />
+				{{bidder.title}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<input type="text" data-ng-model="bidder.bidderName" class="form-control e2e-bidder-bidderName"
+			          data-ng-disabled="!bidder.isActive" />
+			</li>
+		</ul>
+	</li>
+</ul>

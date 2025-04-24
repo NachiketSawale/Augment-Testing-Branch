@@ -1,0 +1,20 @@
+<div *ngIf="data" class="variable-time-panel">
+<!--	<select [(ngModel)]="data.transformation">-->
+<!--		<option value="1">Hour</option>-->
+<!--		<option value="2">Days</option>-->
+<!--		<option value="3">Weeks</option>-->
+<!--		<option value="4">Months</option>-->
+<!--		<option value="5">Year</option>-->
+<!--	</select>-->
+
+	<ui-common-domain-control-host
+		[fieldType]="FieldType.Select"
+		[(ngModel)]="data.transformation"
+		[options]="transformationList"
+	></ui-common-domain-control-host>
+
+	<div class="bounds">
+		<input type="number" class="form-control" [(ngModel)]="data.lowerBound" (change)="onLowerBoundChange()">
+		<input type="number" class="form-control" [(ngModel)]="data.upperBound" style="margin-left: 0">
+	</div>
+</div>

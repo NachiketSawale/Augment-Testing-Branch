@@ -1,0 +1,17 @@
+{
+  "basics": {
+    "taxcode": {
+      "entityTaxCodeTitle": "Tax Code",
+      "entityTaxCodeDetailTitle": "Tax Code Details",
+      "entityTaxCodeMatrixTitle": "Tax Code Matrixs",
+      "entityTaxCodeMatrixDetailTitle": "Tax Code Matrix Details",
+      "vatpercentdominant":"VAT Percent Dominant",
+      "entityMdcTaxCategory":"Tax Category",
+      "entityVatGroup":"Vat Group",
+      "entityBasVatcalculationtype":"VAT Calculation Type",
+      "entityBasVatclause":"VAT Clause",
+      "entityCodeFinance":"Code Finance",
+      "uniqCode": "The Code should be unique"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+<div class="wizard-wrapper wizard-dialog " data-ng-controller="companyCreateBusinessYearsPeriodsController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<p style="font-size: 1.14em; font-weight: 600;">{{::'basics.company.createBusinessYearsPeriods.selectTradingYears' | translate}}</p>
+			</div>
+			<div style="display: flex;">
+				<label style="width:10%;padding-top: 6px;">{{::'basics.company.createBusinessYearsPeriods.startYear' | translate}}</label>
+				<div style="width:21%; padding-right: 14px;">
+					<div class="input-group domain-type-select form-control">
+						<div class="input-group-content ng-pristine ng-valid ng-not-empty ng-valid-platform ng-touched" data-domain="select"
+						     data-ng-model="entity.StartYear" data-platform-select-converter=""
+						     data-platform-select-handler="" tabindex="-1" data-platform-control-validation="" data-enterstop="true"
+						     data-tabstop="true" data-options="yearOptions" data-config="startYearConfig" data-entity="entity">
+						</div>
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-ng-disabled="false">
+								<span class="caret"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<label style="width:10%;padding-top: 6px;">{{::'basics.company.createBusinessYearsPeriods.endYear' | translate}}</label>
+				<div style="width:21%; padding-right: 14px;">
+					<div class="input-group domain-type-select form-control">
+						<div class="input-group-content ng-pristine ng-valid ng-not-empty ng-valid-platform ng-touched" data-domain="select"
+						     data-ng-model="entity.EndYear" data-platform-select-converter=""
+						     data-platform-select-handler="" tabindex="-1" data-platform-control-validation="" data-enterstop="true"
+						     data-tabstop="true" data-options="yearOptions" data-config="endYearConfig" data-entity="entity" data-ng-readonly="!entity.StartYear"><b></b>
+						</div>
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-ng-disabled="!entity.StartYear">
+								<span class="caret"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div style="flex: 4;"></div>
+			</div>
+			<div class="invalid-cell invalid-form ng-binding ng-scope" data-ng-if="yearHasError" style="padding-top: 10px;background-position-y: 10px;">{{yearError}}</div>
+			<br/>
+			<div class="platform-form-row">
+				<p style="font-size: 1.14em; font-weight: 600;">{{::'basics.company.createBusinessYearsPeriods.selectTradingPeriod' | translate}}</p>
+			</div>
+			<div style="display: flex;">
+				<label for="startDate" style="width:10%;padding-top: 6px;">{{::'basics.company.createBusinessYearsPeriods.startDate' | translate}}</label>
+				<div style="width:21%; padding-right: 14px;">
+					<div class="input-group date domain-type-dateutc form-control">
+						<input id="startDate" class="input-group-content datepickerinput" data-domain="dateutc"
+						       data-ng-model="entity.StartDate" data-platform-datetime-converter data-platform-control-validation=""
+						       data-platform-datetime-handler data-platform-select-on-focus type="text" data-config="startDateConfig" data-entity="entity" data-ng-readonly="!entity.StartYear">
+						<span class="input-group-btn">
+							<button class="btn btn-default" data-ng-disabled="!entity.StartYear"><span class="glyphicon-calendar glyphicon"></span></button>
+						</span>
+					</div>
+				</div>
+				<label style="width:10%;padding-top: 6px;">{{::'basics.company.createBusinessYearsPeriods.frequency' | translate}}</label>
+				<div style="width:21%; padding-right: 14px;">
+					<div class="input-group date domain-type-dateutc form-control">
+						<div class="input-group-content ng-pristine ng-valid ng-not-empty ng-valid-platform ng-touched" data-domain="select"
+						     data-ng-model="entity.Frequency" data-platform-select-converter=""
+						     data-platform-select-handler="" tabindex="-1" data-platform-control-validation="" data-enterstop="true"
+						     data-tabstop="true" data-options="frequencyOptions" data-ng-readonly="!entity.StartYear">
+						</div>
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-ng-disabled="!entity.StartYear">
+								<span class="caret"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<label for="daysOfPerPeriods" style="width:16%;padding-top: 6px;">{{::'basics.company.createBusinessYearsPeriods.daysOfPerPeriods' | translate}}</label>
+				<div style="width:15%; padding-right: 14px;">
+					<div class="input-group domain-type-select form-control">
+						<input id="daysOfPerPeriods" type="text" class="input-group-content text-right ng-pristine ng-valid ng-not-empty ng-touched" data-platform-select-on-focus="" data-platform-numeric-converter="" data-ng-model="entity.DaysOfPerPeriods" data-platform-control-validation="" data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 2000, blur: 0} }" data-ng-pattern-restrict="^[+-]?\d*$" data-ng-readonly="entity.Frequency !== 'UserSpecified'" data-enterstop="true" data-tabstop="true" data-domain="integer">
+
+					</div>
+				</div>
+			</div>
+
+			<div class="invalid-cell invalid-form ng-binding ng-scope" data-ng-if="entity.__rt$data.errors.StartDate" style="padding-top: 10px;background-position-y: 10px;">{{dateError}}
+			</div>
+		</div>
+	</section>
+	<div class="modal-footer">
+		<button class="btn btn-default" type="button" data-ng-click="onOk()" data-ng-disabled="disableOk()">
+			{{::'cloud.common.ok' | translate}}
+		</button>
+		<button class="btn btn-default" type="button" data-ng-click="$close(false)">
+			{{::'cloud.common.cancel' | translate}}
+		</button>
+	</div>
+	<div data-cloud-common-overlay data-loading="isLoading"></div>
+</div>

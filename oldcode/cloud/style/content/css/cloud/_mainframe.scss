@@ -1,0 +1,154 @@
+/*-------------------------------------------------------------------------------
+	 Mainframe (_mainframe.scss)
+  -------------------------------------------------------------------------------*/
+#appContainer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#mainContainer {
+	display: flex;
+	flex: 1;
+	position: relative;
+	border-top: solid $border-width-default $color-grey-dark;
+	overflow: hidden;
+	flex-direction: row;
+	z-index: 1;
+}
+
+#mainContent {
+	flex: 1;
+	position: relative;
+	//height: 100%;
+	/* 100% --> untere Teil im grid(scrollbalken sieht man nicht)*/
+}
+
+[data-ui-view] + [data-ui-view] {
+	display: none;
+}
+
+#sidebar-wrapper {
+	display: flex;
+	//background-color: var(--company-color);
+	position: relative;
+}
+
+div[main-view] {
+	display: flex;
+	flex-direction: column;
+	position:absolute;
+	width: 100%;
+}
+
+//maintance message
+@keyframes ticker {
+	0% {
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
+	}
+
+	100% {
+		transform: translate3d(-80vw, 0, 0);
+	}
+}
+
+.maintenance-message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 615px;
+	margin: 0 auto;
+	z-index: 4;
+	display: flex;
+	justify-content: center;
+
+	.maintenance-background {
+		.message-background-left-side {
+			width: 26px;
+			height: 31px;
+			background-image: url('../images/background/countdown-left-grey.png');
+			background-repeat: no-repeat;
+		}
+
+		.message-background-right-side {
+			width: 26px;
+			height: 31px;
+			background-image: url('../images/background/countdown-right-grey.png');
+			background-repeat: no-repeat;
+		}
+
+		.message-background-middle-side {
+			width: 563px;
+			height: 31px;
+			background-image: url('../images/background/countdown-mid-grey.png');
+			background-repeat: repeat-x;
+			background-position: center 0;
+			cursor: pointer;
+
+			.log-off {
+				display: none;
+				align-items: center;
+				height: 90%;
+			}
+
+			&.log-off-container {
+				width: auto;
+				.log-off {
+					display: flex;
+				}
+				.ticker-wrapper {
+					display: none;
+				}
+			}
+		}
+
+		&.red {
+			.message-background-left-side {
+				background-image: url('../images/background/countdown-left-red.png');
+			}
+
+			.message-background-right-side {
+				background-image: url('../images/background/countdown-right-red.png');
+			}
+
+			.message-background-middle-side {
+				background-image: url('../images/background/countdown-mid-red.png');
+			}
+		}
+
+	}
+}
+
+.ticker-wrapper {
+	overflow: hidden;
+	padding-left: 100%;
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	height: 90%;
+
+	.ticker {
+		display: inline-block;
+		white-space: nowrap;
+		padding-right: 100%;
+		box-sizing: content-box;
+
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-name: ticker;
+		animation-duration: 15s;
+
+		&:hover {
+			animation-play-state: paused
+		}
+
+		.ticker-item {
+			display: inline-block;
+			padding: 0 10px;
+			color: #C71900;
+			font-size: 13px;
+		}
+	}
+}

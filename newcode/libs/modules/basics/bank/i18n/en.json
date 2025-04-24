@@ -1,0 +1,18 @@
+{
+  "basics": {
+    "bank": {
+        "tabHeader": "Tab Header",
+	    "BasCountryFk": "Country",
+	    "Sortcode": "Sort Code",
+	    "BankName": "Bank Name",
+	    "Street": "Street",
+	    "City": "City",
+	    "Bic": "BIC",
+	    "Zipcode": "Zipcode",
+	    "detailBankTitle": "Bank Details",
+		"listBankTitle": "Banks",
+		"entityBank": "Bank",
+	    "bankDescription": "The Bank is a financial institution"
+    }
+  }
+}

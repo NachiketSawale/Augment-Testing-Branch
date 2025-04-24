@@ -1,0 +1,52 @@
+//  *-------------------------------------------------------------------------------
+//	 search view - attributes
+//  -------------------------------------------------------------------------------*/
+
+.ms-commodity-attributes-item {
+  border-bottom: 1px solid $ms-background-color;
+  padding: 5px 0;
+}
+
+.ms-commodity-attributes-expend {
+  float: right;
+}
+
+.ms-commodity-attributes-title {
+  @include ms-font-setting($ms-font-size-13, $ms-label-color, $ms-font-weight);
+}
+
+.ms-commodity-attributes-checkbox-label {
+  line-height: 2em;
+  padding-left: 2px;
+}
+
+.ms-sv-container-attributes {
+  @include ms-font-setting($ms-font-size-13, $ms-label-color, normal);
+  span {
+    margin: 10px;
+    width: 150px;
+    display: inline-block;
+  }
+}
+
+
+.ms-sv-attribute-show-hide {
+  float: right;
+}
+
+.ms-sv-container-documents{
+  .ms-sv-commodity-preview-document-title{
+    font-size:13px;
+    color:#0067b1;
+    text-decoration: underline;
+  }
+}
+
+.attribute-icon {
+  float: left;
+}
+
+.attribute-icon input {
+  width: 16px;
+  height: 16px;
+}

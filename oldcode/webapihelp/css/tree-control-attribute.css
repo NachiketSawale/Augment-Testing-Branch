@@ -1,0 +1,68 @@
+[treecontrol] {
+  /* prevent user selection */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #555;
+  text-decoration: none; }
+  [treecontrol] ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none; }
+  [treecontrol] li {
+    position: relative;
+    padding: 0;
+    line-height: 21px; }
+    [treecontrol] li i {
+      cursor: pointer; }
+    [treecontrol] li ul li {
+      padding-left: 12px; }
+    [treecontrol] li .tree-label {
+      cursor: pointer;
+      display: inline; }
+      [treecontrol] li .tree-label span[class*='ico'] {
+        -webkit-background-size: 16px;
+        vertical-align: middle;
+        display: inline-block; }
+  [treecontrol] li.tree-expanded i.tree-leaf-head {
+    display: none; }
+  [treecontrol] li.tree-expanded i.tree-branch-head {
+    display: inline; }
+  [treecontrol] li.tree-collapsed i.tree-leaf-head {
+    display: none; }
+  [treecontrol] li.tree-collapsed i.tree-branch-head {
+    display: inline; }
+  [treecontrol] li.tree-leaf i.tree-branch-head {
+    display: none; }
+  [treecontrol] li.tree-leaf i.tree-leaf-head {
+    display: inline; }
+  [treecontrol].tree-classic li .tree-selected {
+    background-color: #aec3d4;
+    padding: 0 10px 0 0px; }
+  [treecontrol].tree-classic li.tree-expanded i {
+    padding: 1px 6px;
+    margin: 0;
+    margin-right: 6px;
+    background: url(../images/control-icons.svg#ico-tree-expand) no-repeat left;
+    background-size: 16px; }
+  [treecontrol].tree-classic li.tree-expanded li.tree-leaf i {
+    padding: 1px 6px;
+    margin: 0;
+    margin-right: 6px;
+    background: none; }
+  [treecontrol].tree-classic li.tree-expanded li.tree-leaf div {
+    padding-left: 0px; }
+  [treecontrol].tree-classic li.tree-collapsed i {
+    padding: 1px 6px;
+    margin: 0;
+    margin-right: 6px;
+    background: url(../images/control-icons.svg#ico-tree-collapse) no-repeat left;
+    background-size: 16px; }
+  [treecontrol].tree-classic li.tree-collapsed li.tree-leaf div {
+    padding-left: 0px; }
+  [treecontrol].tree-classic li.tree-leaf div {
+    padding-left: 18px; }

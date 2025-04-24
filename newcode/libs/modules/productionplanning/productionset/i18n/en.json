@@ -1,0 +1,25 @@
+{
+	"productionplanning": {
+		"productionset": {
+			"listProductionsetTitle": "Production Set",
+			"detailsProductionsetTitle": "Production Set Details",
+			"logListTitle": "Production Set: Logs",
+			"logPinboardTitle": "Production Set: Logs (Pinboard)",
+			"entityTranslation": "Translation",
+			"entityProductionset": "Productionset",
+			"entityEventTypeFk": "Productionset Type",
+			"productionGroup": "Production",
+			"productionSiteFk": "Production Site",
+			"productionSetParentFk": "Parent Production Set",
+			"isUserEditedValue": "User Edited Value",
+			"changeProductionsetStatusTitle": "Change Production Set Status",
+			"errors": {
+				"uniqCode": "Code should be unique"
+			},
+			"subset": {
+				"listTitle": "Production Subsets",
+				"entityNameTranslationID": "ProductionSubset"
+			}
+		}
+	}
+}

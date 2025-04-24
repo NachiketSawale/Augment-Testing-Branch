@@ -1,0 +1,56 @@
+[
+	{
+		"id": "1",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.textmodules.textAssemblyGridTitle",
+		"controller": "basicsTextModulesListController",
+		"uuid": "d4c817e7940a4a6a86472934b94ed186"
+	},
+	{
+		"id": "2",
+		"template": "cloud.common/partials/languagegridview.html",
+		"title": "basics.textmodules.translation",
+		"controller": "cloudCommonLanguageGridController",
+		"uuid": "57d62536ef764affb0230f12a2e666b9"
+	},
+	{
+		"id": "basics.textmodules.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.textmodules.textAssemblyDetailTitle",
+		"controller": "basicsTextModulesDetailController",
+		"uuid": "97adfe1cf71f460bb7669fa6b8391cd8",
+		"permission": "d4c817e7940a4a6a86472934b94ed186"
+	},
+	{
+		"id": "basics.textmodules.hyperlink.grid",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.textmodules.hyperlinkGridTitle",
+		"controller": "basicsTextModulesHyperlinkListController",
+		"uuid": "5379349e1e6b4c8cb083e06b0ba83057",
+		"permission": "d4c817e7940a4a6a86472934b94ed186"
+	},
+	{
+		"id": "basics.textmodules.hyperlink.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "basics.textmodules.hyperlinkDetailTitle",
+		"controller": "basicsTextModulesHyperlinkDetailController",
+		"uuid": "fabddcc9a40d4390b232a0e6cbecec1f",
+		"permission": "d4c817e7940a4a6a86472934b94ed186"
+	},
+	{
+		"id": "basics.textmodules.specification",
+		"template": "basics.textmodules/partials/basics-textmodules-html-text-view-new.html",
+		"title": "basics.textmodules.htmlText",
+		"controller": "basicsTextModulesSpecificationController",
+		"uuid": "9956e9691f12498faee16f94cce34e86",
+	    "permission": "d4c817e7940a4a6a86472934b94ed186"
+	},
+	{
+	    "id": "basics.textmodules.plaintext",
+	    "template": "basics.textmodules/partials/basics-textmodules-plain-text-view.html",
+	    "title": "basics.textmodules.plainText",
+	    "controller": "basicsTextModulesPlainTextController",
+	    "uuid": "0d25e7c5b52b4d3cb324fdd2686086b4",
+	    "permission": "d4c817e7940a4a6a86472934b94ed186"
+	}
+]

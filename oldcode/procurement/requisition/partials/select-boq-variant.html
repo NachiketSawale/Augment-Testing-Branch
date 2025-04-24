@@ -1,0 +1,38 @@
+<div class="wizard-wrapper wizard-dialog modal-wrapper" data-ng-controller="procurementRequisitionSelectBoqVariantController">
+    <header class="modal-header">
+        <h2 class="modal-title">{{'procurement.requisition.variant.selectBoqVariant' | translate}}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body" style="overflow-y:hidden;">
+	    <div class="platform-form-group">
+		    <div class="platform-form-row platform-lg">
+			    <label class="platform-form-label" style="min-width: 130px;padding-left:0px;">{{'procurement.requisition.variant.selectBoqHeader' | translate}}</label>
+			    <div class="platform-form-col">
+				    <div class="control-directive"
+				         data-basics-lookupdata-lookup-composite
+				         data-ng-model="entity.Id"
+				         data-entity="entity"
+				         data-options="boqHeaderLookupOptions"
+				         data-dirty="true" >  </div>
+			    </div>
+		    </div>
+	    </div>
+	    <div class="platform-form-group">
+		    <div class="platform-form-row">
+				    <label class="platform-form-label">{{'procurement.requisition.variant.selectBoqItem' | translate}}</label>
+		    </div>
+	    </div>
+	    <div class="modal-wrapper grid-wrapper subview-container">
+		    <div class="toolbar">
+			    <div data-platform-menu-list data-list="tools"></div>
+		    </div>
+		    <platform-Grid data="boqItemGridData"></platform-Grid>
+	    </div>
+    </section>
+    <footer class="modal-footer">
+	    <button type="button" class="btn btn-default" data-ng-click="okClicked()">{{::'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close(false)"> {{::'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

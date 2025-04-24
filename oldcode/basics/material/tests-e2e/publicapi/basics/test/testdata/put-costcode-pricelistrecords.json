@@ -1,0 +1,21 @@
+{
+  "costCodePriceRecords": [
+    {
+      "costCode": "3111",
+      "rate": 1.0,
+      "salesPrice": 12232.0,
+      "currency": "CNY",
+      "version": "CodeV02",
+      "priceList": "test"
+    },
+    {
+      "costCode": "3112",
+      "rate": 1.0,
+      "salesPrice": 2212332.0,
+      "currency": "CNY",
+      "version": "cc1234213",
+      "priceList": "test"
+    }
+  ],
+  "companyCode": "901"
+}

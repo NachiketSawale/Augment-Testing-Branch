@@ -1,0 +1,111 @@
+<div data-ng-controller="procurementRequisitionWizardCreateContractNewController">
+
+	<header class="modal-header main-color" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+
+	<section class="modal-body" style="padding: 20px 40px 20px 16px;">
+		<div class="icon-message ng-scope">
+			<div  data-ng-show="error.showCon" class="icon tlb-icons ico-info"></div>
+			<div  ng-bind-html="error.message" data-ng-show="error.show" ></div>
+		</div>
+		<div data-ng-switch="modalOptions.step" class="fullheight">
+			<div data-ng-switch-when="step1">
+				<div class="platform-form-group platform-lg">
+					<h3 class="platform-form-label">{{initOptions.contractorTitle}}</h3>
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{initOptions.businessPartnerText}}</label>
+						<div class="platform-form-col">
+							<div data-cloud-desktop-on-key-enter="$parent.initOptions.onKeyEnter"
+							     data-filter-business-partner-dialog-lookup
+							     data-ng-model="initOptions.dataModels.businessPartner.Id"
+							     data-options="lookupOptions.businessPartner"
+							     data-entity="initOptions.dataModels.businessPartner"
+							     data-config="initOptions.step1BpOwnConfig">
+							</div>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{initOptions.subsidiaryText}}</label>
+						<div class="platform-form-col">
+							<div data-business-partner-main-subsidiary-lookup
+							     data-ng-model="initOptions.dataModels.subsidiary.Id"
+							     data-options="lookupOptions.subsidiary"
+							     data-entity="entity"
+							     data-config="initOptions.step1BpConfig"
+							     data-cloud-desktop-on-key-enter="$parent.initOptions.onKeyEnter">
+							</div>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{initOptions.supplierText}}</label>
+						<div class="platform-form-col">
+							<div class="lg-5 md-5" data-business-partner-main-supplier-lookup
+							     data-ng-model="initOptions.dataModels.supplier.Id"
+							     data-options="lookupOptions.supplier"
+							     data-entity="entity"
+							     data-config="initOptions.step1BpConfig"
+							     data-cloud-desktop-on-key-enter="$parent.initOptions.onKeyEnter">
+							</div>
+							<input class="form-control lg-7 md-7 "
+							       data-ng-model="initOptions.dataModels.supplier.Description" readonly/>
+						</div>
+					</div>
+					<div class="platform-form-row">
+						<label class="platform-form-label">{{initOptions.contactText}}</label>
+						<div class="platform-form-col">
+							<div business-partner-main-contact-dialog
+							     data-ng-model="initOptions.dataModels.contact.Id"
+							     data-options="lookupOptions.contact"
+							     data-entity="entity"
+							     data-config="initOptions.step1BpConfig"
+							     data-cloud-desktop-on-key-enter="$parent.initOptions.onKeyEnter">
+							</div>
+						</div>
+					</div>
+					<div class="platform-form-row" data-ng-show="hasVariants()">
+						<label class="platform-form-label">{{initOptions.isCreateFromVariantsText}}</label>
+						<div class="platform-form-col">
+							<div data-domain="boolean" data-domain-control
+							     data-entity="entity"
+							     data-model="variantOptions.isCreateFromVariants"
+							     data-ng-model="variantOptions.isCreateFromVariants"
+							     data-change="isCreateFromVariantsChanged()">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="platform-form-group platform-lg" data-ng-show="variantOptions.isCreateFromVariants">
+					<div class="platform-form-row">
+						<div class="platform-form-col">
+							<div class="toolbar">
+								<div data-platform-menu-list data-list="tools"></div>
+							</div>
+							<div data-platform-grid data="variantGridData"></div>
+						</div>
+					</div>
+				</div>
+				<!-- note -->
+				<div ng-if="hasContractMessage">
+					<label>{{'procurement.common.wizard.IsContractNote' | translate}}</label>
+				</div>
+				<div ng-if="variantOptions.doesVariantsSelectedHasDuplicateContent">
+					<label style="color: red;">{{'procurement.common.wizard.createContract.hasDuplicateContentInVariantMessage' | translate}}</label>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="modal-footer">
+		<div data-ng-switch="modalOptions.step">
+			<div>
+				<button type="button" class="btn btn-default" data-ng-disabled="!canNext()"
+				        data-ng-click="initOptions.onNext()" style="display:inline-block;">{{initOptions.btnNextText}}
+				</button>
+				<button type="button" class="btn btn-default" data-ng-click="initOptions.onClose()" style="display:inline-block;">
+					{{initOptions.btnCloseText}}
+				</button>
+			</div>
+		</div>
+	</footer>
+
+	<div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

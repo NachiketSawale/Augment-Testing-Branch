@@ -1,0 +1,18 @@
+[
+	{
+		"id": "productionplanning.ppscostcodes.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "productionplanning.ppscostcodes.listViewTitle",
+		"controller": "ppsCostCodesListController",
+		"uuid": "9ecb6ca039d54c4194c1901ad329e6ab",
+		"permission": "9ecb6ca039d54c4194c1901ad329e6ab"
+	},
+	{
+		"id": "productionplanning.ppscostcodes.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "productionplanning.ppscostcodes.detailViewTitle",
+		"controller": "ppsCostCodesDetailController",
+		"uuid": "fad506c0cfc64652b17be82818a14c98",
+		"permission": "9ecb6ca039d54c4194c1901ad329e6ab"
+	}
+]

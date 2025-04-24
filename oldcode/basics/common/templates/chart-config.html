@@ -1,0 +1,313 @@
+<div class="modal-wrapper master-detail-dialog" data-ng-controller="chartConfigController">
+	<div data-platform-kendo-splitter-adjust class="modal-wrapper border-none"
+	     option="{panes: [ { collapsible: true, min: '20%' },{ collapsible: true, size: '80%' }],orientation:'horizontal'}">
+
+		<div class="modal-wrapper" data-platform-dynamic-controller="formController">
+			<div class="pane-l master-list flex-box flex-column flex-element overflow-hidden">
+
+				<div class="flex-element flex-box flex-column overflow-hidden">
+					<ul class="master-list-contents flex-element overflow">
+						<li data-ng-repeat="item in displayedItems">
+							<button class="master-item" data-ng-disabled="isDisabled(item)" data-ng-click="selectItem(item)" data-ng-class="[{selected: item === selectedItem}, item.cssClass]"><span data-ng-bind="item[nameProperty]"></span></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="modal-wrapper">
+			<div class="modal-wrapper pane-r overflow">
+				<div data-cloud-common-overlay data-loading="dataLoading" data-info2=""></div>
+				<table style="width: 100%; height: 100%; border-collapse: collapse">
+					<tr style="height: 100%">
+						<td style="width: 50%; border: 0;vertical-align: top; height: 100%">
+							<!-- dataSeries -->
+							<div ng-if="selectedItem.value==='dataSeries'" class="fullheight fullwidth filler flex-box flex-column subview-container" style="border: 0; height: 365.56px">
+
+								<div class="toolbar">
+									<h3 class="title font-bold"></h3>
+									<div data-platform-menu-list data-list="tools"></div>
+								</div>
+								<platform-Grid data="seriesData"></platform-Grid>
+							</div>
+
+							<!-- dataGroup -->
+							<div ng-if="selectedItem.value==='dataGroup'" class="fullheight fullwidth filler flex-box flex-column subview-container">
+								<platform-Grid data="categoryData"></platform-Grid>
+							</div>
+
+							<!-- chartType -->
+							<div ng-if="selectedItem.value==='chartType'">
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope">
+											<span>&nbsp;{{'basics.common.chartConfig.chartTypeLookupTitle' | translate}}</span>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="margin-bottom:15px">
+										<div class="domain-type-boolean form-control ng-scope">
+											<select ng-model="dataItem.ChartTypeId"   class="form-control" style="border:1px solid #ccc; width: 90%" data-ng-disabled="dataItem.Is3DView || isReadOnly"
+											        ng-options="item.id as item.desc for item in chartTypes" ng-change="dataItemChange('ChartTypeId')">
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row" ng-hide="true">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.Is3DView" data-platform-control-validation="" ng-change="dataItemChange('Is3DView')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isLineChart() || isReadOnly"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.threeD' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.ReverseOrder" data-platform-control-validation=""  ng-change="dataItemChange('ReverseOrder')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isLineChart() || isReadOnly"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.reverseOrder' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.HideZeroValue" data-platform-control-validation="" ng-change="dataItemChange('HideZeroValue')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.hideZeroValue' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.HideZeroValueX" data-platform-control-validation="" ng-change="dataItemChange('HideZeroValueX')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.hideZeroValueX' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.DrillDownForData" data-platform-control-validation="" data-ng-disabled="isLineChart() || isReadOnly"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.drillDownForData' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.FilterBySelectStructure" data-platform-control-validation="" data-ng-disabled="isReadOnly"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.filterBySelectStructure' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<!-- color -->
+							<div ng-if="selectedItem.value==='color'" class="fullheight fullwidth filler flex-box flex-column subview-container" style="border: 0; height: 365.56px">
+								<platform-Grid data="colorData"></platform-Grid>
+							</div>
+
+							<!-- title -->
+							<div ng-if="selectedItem.value==='title'">
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.ShowTitle" data-platform-control-validation=""  ng-change="dataItemChange('ShowYAxis')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly" />
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.showTitle' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope">
+											<span>&nbsp;{{'basics.common.chartConfig.title' | translate}}</span>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="margin-bottom:15px">
+										<div class="domain-type-boolean form-control ng-scope">
+											<input type="text" data-ng-trim="false" class="domain-type-description form-control ng-pristine ng-valid ng-scope ng-empty active ng-touched"
+											       data-platform-select-on-focus="" data-ng-model="dataItem.Title" data-platform-control-validation="" ng-change="dataItemChange('Title')"
+											       data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 2000, blur: 0} }"
+											       data-ng-pattern-restrict="^[\s\S]{0,200}$" data-domain="description"  style="border:1px solid #ccc; width: 90%" data-ng-disabled="isReadOnly" />
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope">
+											<span>&nbsp;{{'basics.common.chartConfig.align' | translate}}</span>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="margin-bottom:15px">
+										<div class="domain-type-boolean form-control ng-scope">
+											<select ng-model="dataItem.TitleAlign"   class="form-control" style="border:1px solid #ccc; width: 90%"  ng-change="dataItemChange('TitleAlign')" data-ng-disabled="isReadOnly"
+											        ng-options="item.id as item.desc for item in alignitems">
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- legendAndData -->
+							<div ng-if="selectedItem.value==='legendAndData'">
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.ShowLegend" data-platform-control-validation=""  ng-change="dataItemChange('ShowLegend')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.showLegend' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope">
+											<span>&nbsp;{{'basics.common.chartConfig.align' | translate}}</span>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="margin-bottom:15px">
+										<div class="domain-type-boolean form-control ng-scope">
+											<select ng-model="dataItem.LegendAlign"   class="form-control" style="border:1px solid #ccc; width: 90%"  ng-change="dataItemChange('LegendAlign')"
+											        ng-options="item.id as item.desc for item in alignitems" data-ng-disabled="isReadOnly">
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.ShowDataLabel" data-platform-control-validation=""  ng-change="dataItemChange('ShowDataLabel')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.showDataLabels' | translate}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- x_Aixs -->
+							<div ng-if="selectedItem.value==='x_Aixs'">
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.ShowXAxis" data-platform-control-validation=""  ng-change="dataItemChange('ShowXAxis')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly"/>
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.showXAxis' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope">
+											<span>&nbsp;{{'basics.common.chartConfig.title' | translate}}</span>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="margin-bottom:15px">
+										<div class="domain-type-boolean form-control ng-scope">
+											<input type="text" data-ng-trim="false" class="domain-type-description form-control ng-pristine ng-valid ng-scope ng-empty active ng-touched"
+											       data-platform-select-on-focus="" data-ng-model="dataItem.XTitle" data-platform-control-validation=""  ng-change="dataItemChange('XTitle')"
+											       data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 2000, blur: 0} }"
+											       data-ng-pattern-restrict="^[\s\S]{0,200}$" data-domain="description"  style="border:1px solid #ccc; width: 90%" data-ng-disabled="isReadOnly" />
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.HideXGridLine" data-platform-control-validation=""  ng-change="dataItemChange('HideXGridLine')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly" />
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.hideGridLine' | translate}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- y_Aixs -->
+							<div ng-if="selectedItem.value==='y_Aixs'">
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.ShowYAxis" data-platform-control-validation=""  ng-change="dataItemChange('ShowYAxis')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly" />
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.showYAxis' | translate}}</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope">
+											<span>&nbsp;{{'basics.common.chartConfig.title' | translate}}</span>
+										</div>
+									</div>
+								</div>
+								<div class="platform-form-row">
+									<div class="platform-form-col" style="margin-bottom:15px">
+										<div class="domain-type-boolean form-control ng-scope">
+											<input type="text" data-ng-trim="false" class="domain-type-description form-control ng-pristine ng-valid ng-scope ng-empty active ng-touched"
+											       data-platform-select-on-focus="" data-ng-model="dataItem.YTitle" data-platform-control-validation=""  ng-change="dataItemChange('YTitle')"
+											       data-ng-model-options="{ updateOn: 'default blur', debounce: { default: 2000, blur: 0} }"
+											       data-ng-pattern-restrict="^[\s\S]{0,200}$" data-domain="description"  style="border:1px solid #ccc; width: 90%" data-ng-disabled="isReadOnly" />
+										</div>
+									</div>
+								</div>
+
+								<div class="platform-form-row">
+									<div class="platform-form-col">
+										<div class="domain-type-boolean form-control ng-scope" style="margin-bottom:1px">
+											<input type="checkbox" data-ng-model="dataItem.HideYGridLine" data-platform-control-validation=""  ng-change="dataItemChange('HideXGridLine')"
+											       data-domain="boolean" class="ng-pristine ng-untouched ng-valid ng-not-empty" style="margin-top:0" data-ng-disabled="isReadOnly" />
+											<span>&nbsp;&nbsp;{{'basics.common.chartConfig.hideGridLine' | translate}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td style="width: 50%; border: 0;vertical-align: top; height: 100%">
+							<div style="height: 358px; overflow-x: hidden; overflow-y: hidden; width: 385px">
+								<basics-common-chart-config-directive
+									chart-data-source="chartDataSource"
+									chart-type="chartType"
+									trigger-update-event="triggerUpdateEvent"
+									chart-uuid="gridId"
+									legend-colors="legendColors"
+									chart-option="chartOption"
+									plugins="plugins"
+								>
+								</basics-common-chart-config-directive>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

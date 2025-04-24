@@ -1,0 +1,28 @@
+<style>
+	.modal-content.ui-resizable .steps { display: none;}
+</style>
+<div class="wizard-wrapper wizard-dialog flex-box flex-column flex-element" data-ng-controller="estimateMainGeneratePrjBoqController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div cloud-common-overlay data-loading="isLoading" data-info2="loadingInfo"></div>
+		<div ng-switch="getCurrentStepNumber()" class="flex-box flex-column flex-element fullheight">
+			<div ng-switch-when="1" class="flex-box flex-column flex-element fullheight">
+				<ng-include src="'estimate.main/templates/wizard/generate-project-boq/estimate-main-generate-prj-boq-page1.html'" class="flex-box flex-column flex-element fullheight"></ng-include>
+			</div>
+			<div ng-switch-when="2" class="flex-box flex-column flex-element fullheight">
+				<ng-include src="'estimate.main/templates/wizard/generate-project-boq/estimate-main-generate-prj-boq-page2.html'" class="flex-box flex-column flex-element fullheight"></ng-include>
+			</div>
+		</div>
+		<div data-platform-wizard-dialog-body class="flex-box flex-column exclude-resize" style="/*height: 70px; min-height: 70px;*/"></div>
+	</section>
+	<footer class="modal-footer" ng-if="getCurrentStepNumber() === 1" >
+		<button type="button" class="btn btn-default" data-ng-click="nextStep()" >{{::'basics.common.button.nextStep' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+	</footer>
+
+	<footer class="modal-footer" ng-if="getCurrentStepNumber() !== 1" >
+		<button type="button" class="btn btn-default" data-ng-click="previousStep()" >{{::'basics.common.button.previousStep' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="execute()"  data-ng-disabled="!canExecute()">{{::'basics.common.button.execute' | translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.cancel' | translate}}</button>
+	</footer>
+</div>

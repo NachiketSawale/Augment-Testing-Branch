@@ -1,0 +1,8 @@
+<div>
+	<input data-platform-click-event name="fileInput" type="file" ngf-select="uploadJSONFile($file)"
+	       class="hide" accept=".json" ngf-max-size="4MB">
+
+	<div data-cloud-common-overlay data-info2="info2" file="file" data-loading="viewContentLoading"></div>
+</div>
+
+<platform-Grid data="gridData" data-platform-dragdrop-component="ddTarget"></platform-Grid>

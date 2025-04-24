@@ -1,0 +1,52 @@
+<div data-ng-controller="procurementRfqBusinessPartnerWizardMainController" class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div data-platform-alert data-error="error"></div>
+
+        <h2>{{::modalOptions.body.title}} </h2>
+
+        <div data-ng-if="step=='findBidder'">
+            <div class="platform-lg">
+                <div data-find-bidder-wizard data-find-bidder-setting="findBidderSetting"></div>
+            </div>
+        </div>
+
+
+        <div data-ng-if="step=='selectBidder'">
+            <div class="flex-box flex-column subview-container" style="height: 200px;" data-ng-controller="procurementRfqBusinessPartnerController">
+                <platform-Grid data="gridData"></platform-Grid>
+            </div>
+
+            <h3 class="margin-top-ld">{{modalOptions.body.contactGridTitle}}</h3>
+
+            <div class="flex-box flex-column subview-container" style="height: 200px;" data-ng-controller="procurementRfqBusinessPartnerContractController">
+                <platform-Grid data="gridData"></platform-Grid>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <div data-ng-switch="step">
+            <div data-ng-switch-when="findBidder">
+                <button type="button" class="btn btn-default" data-ng-click="modalOptions.next()" data-ng-disabled="btnNextStatus">
+                    {{modalOptions.footer.nextBtnText}}
+                </button>
+                <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+                    {{modalOptions.footer.closeBtnText}}
+                </button>
+            </div>
+            <div data-ng-switch-when="selectBidder">
+                <button type="button" class="btn btn-default" data-ng-click="modalOptions.onBack()">
+                    {{modalOptions.footer.prevBtnText}}
+                </button>
+                <button type="button" class="btn btn-default" data-ng-click="modalOptions.onOK()">
+                    {{modalOptions.footer.okBtnText}}
+                </button>
+                <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+                    {{modalOptions.footer.closeBtnText}}
+                </button>
+            </div>
+        </div>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.loading.dialogLoading"
+         data-info="companyOptions.loading.loadingInfo"></div>
+</div>

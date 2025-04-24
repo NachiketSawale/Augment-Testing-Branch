@@ -1,0 +1,32 @@
+<div data-ng-controller="basicsCommonGridSelectionDialogController">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)" aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{modalTitle | translate }} </h2>
+	</header>
+	<section class="modal-body">
+		<!-- <div class="flex-box flex-column" style="height: 350px;">
+			  <platform-grid data="gridData"></platform-grid>
+		 </div>-->
+		<div data-platform-alert data-error="error"></div>
+		<div class="modal-body flex-box">
+			<div class="icon-message">
+				<div class="icon tlb-icons {{ modalOptions.iconClass }}"></div>
+				<div class="message" data-ng-bind-html="modalOptions.bodyText">
+				</div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div data-platform-grid class="subview-container" data-data="gridData"></div>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<div>
+			<button data-ng-disabled="modalOptions.OKBtnRequirement" type="button" class="btn btn-default" data-ng-click="onOK()"> {{modalOptions.OKBtnText | translate}}</button>
+			<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{modalOptions.cancelBtnText | translate}}</button>
+		</div>
+	</footer>
+</div>

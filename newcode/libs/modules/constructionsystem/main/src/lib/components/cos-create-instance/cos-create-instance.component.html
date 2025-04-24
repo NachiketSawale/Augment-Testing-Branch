@@ -1,0 +1,42 @@
+
+        <section class="modal-body">
+            <div class="platform-form-group">
+                <div class="platform-form-row">
+                    <div class="checkbox spaceToUp">
+                        <label>
+                            <input type="radio" name="createinstance"  value="createBySelectionStatement" [(ngModel)]="createInstanceOption.createType" [disabled]='createInstanceOption.disableCreateBySelectionStatement'/>
+                            {{'constructionsystem.main.createInstanceWizard.createBySelectionStatement' | platformTranslate}}
+                        </label>
+
+                        <div class="checkbox spaceToUp" style="margin-left:30px;">
+                            <label>
+                                <input [disabled]='createInstanceOption.createType !== CosCreateInstanceType.CreateByBindingObjects'  type="checkbox"  [(ngModel)]="createInstanceOption.onlyCreateHaveAssignObject">{{'constructionsystem.main.createInstanceWizard.onlyCreateHaveAssignObject' | platformTranslate}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox spaceToUp">
+                        <label>
+                            <input type="radio" name="createinstance" value="createByBindingObjects"
+                                   [(ngModel)]="createInstanceOption.createType">{{'constructionsystem.main.createInstanceWizard.createByBindingObjects' | platformTranslate}}
+                        </label>
+                    </div>
+                </div>
+                <div class="platform-form-row"></div>
+                <div class="platform-form-row">
+                    <div class="checkbox spaceToUp">
+                        <label>
+                            <input type="checkbox" name="evaluateAndCalculate"
+                                   [(ngModel)]="createInstanceOption.evaluateAndCalculate">{{'constructionsystem.main.createInstanceWizard.evaluateAndCalculate' | platformTranslate}}
+                        </label>
+                    </div>
+                    <div class="checkbox spaceToUp" style="margin-left:30px;">
+                        <label>
+                            <input type="checkbox"  [(ngModel)]="createInstanceOption.applyEstimateResultAutomatically"
+                                   [disabled]="!createInstanceOption.evaluateAndCalculate">
+                            {{'constructionsystem.main.createInstanceWizard.applyEstimateResultAutomatically' | platformTranslate}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <div cloud-common-overlay data-info2="loadingText" data-loading="isLoading"></div>

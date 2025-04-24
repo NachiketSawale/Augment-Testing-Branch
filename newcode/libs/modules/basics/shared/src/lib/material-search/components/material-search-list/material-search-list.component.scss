@@ -1,0 +1,21 @@
+.ms-sv-container-title {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+}
+
+.ms-sv-container-title > span {
+  font-size: 16px;
+  color: #0067b1;
+  font-weight: normal;
+}
+
+.ms-sv-commodity-result-pane {
+  height: 100%;
+  margin: 8px auto 0;
+  overflow: hidden;
+  overflow-y: hidden;
+  padding-bottom: 100px;
+  -webkit-transform: translate3d(0,-8px,0) scale(1);
+  transform-origin: left top;
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+.subgroup {
+	margin-left: 20px;
+	overflow: hidden;
+
+	li {
+		margin-top: 5px;
+
+		ul {
+			list-style: none;
+			padding-left: 20px;
+
+			li:first-child {
+				margin-top: 5px;
+			}
+		}
+	}
+}

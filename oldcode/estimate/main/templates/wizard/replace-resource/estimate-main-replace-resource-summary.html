@@ -1,0 +1,27 @@
+<div data-ng-controller="estimateMainReplaceResourceSummaryController" class="modal-wrapper overflow-hidden">
+    <header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body">
+        <div class="panel-body">
+            <div class="platform-form-group-header-text" style="font-weight: bold;">
+                {{ executionresult }}
+            </div>
+            <div class="platform-form-group" style="padding-left: 30px;">
+                <div class="platform-form-row form-group">
+                    <div class="platform-form-col">
+                        <div data-ng-bind-html="trustAsHtml(summary)"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-group-header-text" style="font-weight: bold;" data-ng-show="isWarnMessageShow">
+                <div data-ng-bind-html="trustAsHtml(warnMessage)"></div>
+            </div>
+            <div class="platform-form-group-header-text" style="font-weight: bold;" data-ng-show="isErrorMessageShow">
+                <div data-ng-bind-html="trustAsHtml(errorMessage)"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="close()"> {{::'basics.common.button.ok' | translate}}</button>
+    </footer>
+</div>
+

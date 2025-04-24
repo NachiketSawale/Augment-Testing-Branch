@@ -1,0 +1,32 @@
+﻿{
+	"cloud": {
+		"uitesting": {
+			"listUITestingTitle": "Test Slickgrid",
+			"uiTestingTitle": "User Test Module",
+			"entityBoolean": "Boolean",
+			"entityCode": "Code",
+			"entityInteger": "Integer",
+			"entityQuantity": "Quantity",
+			"entityFactor": "Factor",
+			"entityExchangerate": "Exchange Rate",
+			"entityPercentage": "Percentage",
+			"entityDescription": "Description",
+			"entityComment": "Comment",
+			"entityRemark": "Remark",
+			"entityDate": "Date",
+			"entityDatetime": "DateTime",
+			"entityMoney": "Money",
+			"entityTime": "Time",
+			"entitySelect": "Select",
+			"entityInputselect": "Input Select",
+			"entityImageselect": "Image Select",
+			"entityLookup": "Lookup",
+			"entityLookupDialog": "Lookup with popup dialog",
+			"entityColor": "Color",
+			"entityUrl": "Url",
+			"entityEmail": "Email",
+			"entityImage": "Image",
+			"entityPhone": "Phone"
+		}
+	}
+}

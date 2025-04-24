@@ -1,0 +1,20 @@
+{
+	"project": {
+		"material": {
+		  "prjEstimatePrice":"Kalkulationspreis(Projekt)",
+		  "prjRetailPrice":"Verkaufspreis(Projekt)",
+		  "prjListPrice":"Listenpreis(Projekt)",
+		  "prjCharges":"Gebühren(Projekt)",
+		  "prjDiscount":"Nachlass(Projekt)",
+		  "prjPriceUnit":"Preiseinheit(Projekt)",
+		  "prjPriceExtra":"Preis Extra(Projekt)",
+		  "prjCost":"Kosten(Projekt)",
+		  "prjFactorPriceUnit":"Faktor Preiseinheit(Projekt)",
+		  "prjBasUomPriceUnitFk":"ME Preiseinheit(Projekt)",
+		  "prjPrcPriceConditionFk":"Beschaffung Preiskonditionen(Projekt)",
+		  "prjMdcMaterialDiscountGroupFk":"Material Nachlass Gruppe(Projekt)",
+		  "prjMdcTaxCodeFk":"Steuerschlüssel(Projekt)",
+		  "prjComment":"Kommentar(Projekt)"
+		}
+	}
+}

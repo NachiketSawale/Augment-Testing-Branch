@@ -1,0 +1,13 @@
+[
+	{
+		"combo": "ctrl+d",
+		"description": "basics.material.lookup.createCopy",
+		"callbackId": "createCopy",
+		"allowIn": [
+			"INPUT",
+			"SELECT",
+			"TEXTAREA"
+		],
+		"tooltip": "Ctrl+D"
+	}
+]

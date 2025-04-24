@@ -1,0 +1,34 @@
+$size: 24px;
+$space-size: 4px;
+$input-height: 28px;
+
+.multiple-container {
+	padding-left: $space-size;
+
+	.search-box {
+		outline: none;
+		width: auto;
+		height: $input-height;
+		line-height: $input-height;
+		padding-left: $space-size;
+	}
+
+	.multiple-item {
+		display: inline-block;
+		line-height: $size;
+		background-color: #eee;
+		margin-top: $space-size;
+		margin-right: $space-size;
+	}
+
+	.multiple-label {
+		line-height: $size;
+		padding-left: $space-size;
+	}
+
+	.btn {
+		width: $size;
+		height: $size;
+		background-size: 12px;
+	}
+}

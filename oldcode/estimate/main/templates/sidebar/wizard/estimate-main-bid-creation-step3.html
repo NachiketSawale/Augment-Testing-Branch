@@ -1,0 +1,58 @@
+
+<ul data-ng-hide="isUpdateModeFor()">
+	<li>
+		<input type="radio" name="projectChanges"
+			   id="sales_bid_create_update_wizard_3"
+			   value="1"
+			   data-ng-model="entity.ProjectChangeGenerateMode">
+		<label for="sales_bid_create_update_wizard_3" style="vertical-align: 3px;">
+			{{'estimate.main.bidCreationWizard.oneBidForAll' | translate}}
+		</label>
+	</li>
+	<li>
+		<input type="checkbox" name="assignChangeToEachBid" style="margin-left: 20px" data-ng-disabled="entity.ProjectChangeGenerateMode != '1'"
+		       data-domain="boolean"
+		       data-ng-model="entity.AssignChangeToBidHeader">
+		<label for="sales_bid_create_update_wizard_4" style="vertical-align: 3px;">
+			{{'estimate.main.bidCreationWizard.assignChangeToBidHeader' | translate}}
+		</label>
+	</li>
+	<li>
+		<input type="radio" name="projectChanges"
+			   id="sales_bid_create_update_wizard_4"
+			   value="2"
+			   data-ng-model="entity.ProjectChangeGenerateMode">
+		<label for="sales_bid_create_update_wizard_4" style="vertical-align: 3px;">
+			{{'estimate.main.bidCreationWizard.separateForEachChange' | translate}}
+		</label>
+	</li>
+	<li>
+		<input type="checkbox" name="assignChangeToEachBid" style="margin-left: 20px" data-ng-disabled="entity.ProjectChangeGenerateMode != '2'"
+			   id="sales_bid_create_update_wizard_5"
+			   data-domain="boolean"
+			   data-ng-model="entity.AssignChangeToEachBid">
+		<label for="sales_bid_create_update_wizard_4" style="vertical-align: 3px;">
+			{{'estimate.main.bidCreationWizard.assignChangeToEachBid' | translate}}
+		</label>
+	</li>
+</ul>
+
+<div class="radio spaceToUp">
+	<label>
+		<!--input type="radio" ng-model="entity.ProjectChangeMode" ng-click="adjustProjectChangeMode('Status')" ng-model="radioValue" value="Status"-->
+		{{'estimate.main.bidCreationWizardStatus' | translate}}
+	</label>
+</div>
+<div class="flex-element flex-box flex-column margin-top-ld margin-bottom-ld" style="height: 170px;">
+	<platform-Grid data="statusGridData"></platform-Grid>
+</div>
+<div class="radio spaceToUp">
+	<label>
+		<!--input type="radio" ng-model="entity.ProjectChangeMode" ng-click="adjustProjectChangeMode('Detail')" ng-model="radioValue" value="Detail"-->
+		{{'estimate.main.bidCreationWizardChanges' | translate}}
+	</label>
+</div>
+<div class="flex-element flex-box flex-column margin-top-ld" style="height: 170px;">
+	<platform-Grid data="changeOrderGridData"></platform-Grid>
+	<div data-platform-alert data-error="sameBoq2MultiLineItemWithDifferentChange"></div>
+</div>

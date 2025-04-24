@@ -1,0 +1,70 @@
+<div data-ng-controller="qtoBoqCopysourceDialogController" class="platform-form-group platform-lg ng-scope">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalOptions.headerText}} </h2>
+    </header>
+    <section class="modal-body">
+        <div class="platform-form-row">
+            <label class="platform-form-label">{{'boq.main.copyFrom' | translate}}</label>
+            <div class="platform-form-col">
+                <div class="form-control" data-domain-control data-domain="select"
+                     data-model="boqType.current" data-options="boqTypeOptions" data-change="boqTypeChanged(boqType.current)"
+                     data-readonly="boqType.readonly">
+                </div>
+            </div>
+        </div>
+
+       <!-- <div class="platform-form-row" data-ng-if="!isWicBoQ()">
+            <label class="platform-form-label">{{'boq.main.projectList' | translate}}</label>
+            <div class="platform-form-col">
+                <div class="lg-4 md-4" data-boq-main-project-lookup-dialog data-ng-model="selectedItem" data-config="config.selectConfig" readonly></div>
+                <input class="form-control lg-8 md-8" data-ng-model="selectedProject.ProjectName" readonly />
+            </div>
+        </div>-->
+
+        <div class="platform-form-row" data-ng-if="isWicBoQ()">
+            <label class="platform-form-label">{{'boq.main.wicGroup' | translate}}</label>
+            <div class="platform-form-col">
+                <div class="lg-4 md-4" data-estimate-main-est-wic-group-lookup data-ng-model="selectedWicGroup.Id"
+                     data-options="wicGroupLookupOptions"
+                     data-entity="wicGroupEntity"></div>
+                <input class="form-control lg-8 md-8" data-ng-model="selectedWicGroup.DescriptionInfo.Translated" readonly />
+            </div>
+        </div>
+
+       <!-- <div class="platform-form-row">
+            <label class="platform-form-label">{{'boq.main.PrcStructureFk' | translate}}</label>
+            <div class="platform-form-col">
+                <div class="lg-4 md-4" data-basics-procurementstructure-structure-dialog data-ng-model="selectedPrcStructure.Id"
+                     data-options="prcStructureLookupOptions"
+                     data-entity="prcStructureEntity"></div>
+                <input class="form-control lg-8 md-8" data-ng-model="selectedPrcStructure.DescriptionInfo.Translated" readonly />
+            </div>
+        </div>-->
+
+        <div class="platform-form-row" data-ng-controller="boqMainHeaderLookupController">
+            <label class="platform-form-label">{{'boq.main.boqHeaderSel' | translate}}</label>
+            <div class="platform-form-col">
+                <div class="lg-4 md-4" data-basics-lookup-data-by-custom-data-service data-ng-model="selectedBoqHeader.Id"
+                     data-options="lookupOptions"
+                     data-entity="entity"></div>
+                <input class="form-control lg-8 md-8" data-ng-model="selectedBoqHeader.Description" readonly />
+            </div>
+        </div>
+
+        <div class="modal-wrapper fullheight subview-container">
+            <div data-platform-grid data-data="gridData"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()" data-ng-disabled="isOkDisabled">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

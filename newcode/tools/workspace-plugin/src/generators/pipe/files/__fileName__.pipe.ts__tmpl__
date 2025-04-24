@@ -1,0 +1,15 @@
+/*
+ * Copyright(c) RIB Software GmbH
+ */
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: '<%=fileName%>'
+})
+export class <%= className %>Pipe implements PipeTransform {
+
+  transform(value: unknown, ...args: unknown[]): unknown {
+    return null;
+  }
+
+}

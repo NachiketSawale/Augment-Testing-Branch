@@ -1,0 +1,8 @@
+<div class="lookup-grid-container" *ngIf="formConfig.rows.length > 0">
+	<div class="subview-header toolbar">
+		<h2 class="title fix ng-binding">{{criteriaTitle | platformTranslate}}</h2>
+	</div>
+	<div class="fullheight">
+		<ui-common-form [formConfig]="formConfig" [entity]="formEntity" [entityRuntimeData]="entityRuntimeData"></ui-common-form>
+	</div>
+</div>

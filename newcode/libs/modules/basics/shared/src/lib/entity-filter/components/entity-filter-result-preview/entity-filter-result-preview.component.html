@@ -1,0 +1,13 @@
+<div class="entity-filter-result-preview fullheight flex-box flex-column">
+	<div class="toolbar">
+		<span class="title flex">{{'basics.shared.preview' | platformTranslate}}</span>
+	</div>
+	<div class="entity-filter-result-preview-content overflow flex-grow-1">
+		<ng-container *ngIf="hasHeaderComponent">
+			<ng-container *ngComponentOutlet="previewOption.headerComponent!; injector: headerInjector"></ng-container>
+		</ng-container>
+		<div id="entity-filter-result-preview-form">
+			<ui-common-form [formConfig]="formConfig" [entity]="previewItem"></ui-common-form>
+		</div>
+	</div>
+</div>

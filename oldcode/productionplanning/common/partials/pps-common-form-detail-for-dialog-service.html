@@ -1,0 +1,25 @@
+<div data-ng-controller="ppsCommonStatusChangeReasonsFormController">
+    <div class="alert alert-warning" data-ng-if="showWarning">
+        <button type="button" class="close sm plain" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{ warning }}
+    </div>
+	<div class="fullheight">
+		<div class="fullheight" style="overflow-y: auto">
+			<div dir-paginate="currentItem in dialog.modalOptions.value | itemsPerPage: 1">
+				<div data-platform-form-container
+				     data-form-container-options="currentItem.formContainerOptions"
+				     entity="currentItem"
+				     class="fullheight"></div>
+			</div>
+		</div>
+	</div>
+<!--    <div data-platform-form-container data-form-container-options="formContainerOptions"-->
+<!--         data-entity="dialog.modalOptions.value" class="flex-element flex-basis-auto"></div>-->
+<!--    <div cloud-common-overlay data-loading="modalOptions.isLoading"></div>-->
+
+	<div class="text-center">
+		<dir-pagination-controls auto-hide="false" boundary-links="true" template-url="productionplanning.common/partials/dirPagination-rib-pps-common-custom.tpl.html"></dir-pagination-controls>
+	</div>
+</div>

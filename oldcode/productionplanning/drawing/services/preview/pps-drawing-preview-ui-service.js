@@ -1,0 +1,500 @@
+/**
+ * Created by lav on 7/17/2019.
+ */
+
+(function (angular) {
+	'use strict';
+
+	var moduleName = 'productionplanning.drawing';
+
+	angular.module(moduleName).service('ppsDrawingPreviewUIService', UIService);
+
+	UIService.$inject = [
+		'platformModalService',
+		'basicsLookupdataPopupService',
+		'$translate',
+		'$injector',
+		'ppsDrawingPreviewDialogService',
+		'$http',
+		'platformSchemaService',
+		'productionplanningDrawingTranslationService',
+		'platformLayoutHelperService',
+		'platformUIConfigInitService',
+		'modifiedState',
+		'previewResultType'];
+
+	function UIService(platformModalService,
+					   basicsLookupdataPopupService,
+					   $translate,
+					   $injector,
+					   ppsDrawingPreviewDialogService,
+					   $http,
+					   platformSchemaService,
+					   drawingTranslationService,
+					   platformLayoutHelperService,
+					   platformUIConfigInitService,
+					   modifiedState,
+					   previewResultType) {
+
+		var componentUIService = $injector.get('productionplanningDrawingComponentUIStandardService').getService({
+			getServiceName: function () {
+				return '0f452834f2e84002a40jgb7y9kd418ik';
+			}
+		});
+
+		const stateColumnConfig = {
+			field: 'state',
+			id: 'state',
+			name: '',
+			formatter: function (row, cell, value, columnDef, dataContext) {
+				var formattedValue = '';
+				switch (dataContext.PreviewInfo.ModifiedState) {
+					case modifiedState.add:
+						formattedValue += '<div title="' + translate('productionplanning.drawing.added') + '">' +
+							getIcon('status-icons ico-status04') + '</div>';
+						break;
+					case modifiedState.delete:
+						formattedValue += '<div title="' + translate('productionplanning.drawing.deleted') + '">' +
+							getIcon('status-icons ico-status03') + '</div>';
+						break;
+					case modifiedState.modify:
+						var title = translate('productionplanning.drawing.modified') + ':';
+						_.forEach(dataContext.PreviewInfo.ModifiedInfo, function (info) {
+							title += '&#10';
+							title += info;
+						});
+						formattedValue += '<div title="' + title + '">' +
+							getIcon('status-icons ico-status06') + '</div>';
+						break;
+				}
+				return formattedValue;
+			},
+			pinned: true,
+			sortable: true,
+			width: 30
+		};
+
+		var componentGridId = '0f452834f2e84002a40jgb7y9kd418ik';
+
+		var componentPreviewConfig = {
+			load: true,
+			title: 'productionplanning.drawing.previewComponent',
+			gridId: componentGridId,
+			UIStandardService: componentUIService,
+			getList: function (entity) {
+				return filter(entity, 'News', function (n) {
+					return n.PreviewInfo.ErrorMessages.length === 0;
+				});
+			},
+			hideTools: true,
+			readonly: true
+		};
+
+		var componentExistedConfig = {
+			load: true,
+			title: 'productionplanning.drawing.existedComponent',
+			gridId: componentGridId,
+			UIStandardService: componentUIService,
+			getList: function (entity) {
+				return filter(entity, 'Olds');
+			},
+			hideTools: true,
+			readonly: true
+		};
+
+		var componentDiffConfig = {
+			load: true,
+			title: 'productionplanning.drawing.differentComponent',
+			gridId: componentGridId,
+			UIStandardService: componentUIService,
+			getList: function (entity) {
+				return filter(entity, 'Diffs', function (n, dc) {
+					return dc.Type === previewResultType.article && n.PreviewInfo.ModifiedState > modifiedState.none;
+				});
+			},
+			hideTools: true,
+			readonly: true,
+			additionalColumns: [
+				stateColumnConfig,
+			]
+		};
+
+		var productTemplateDiffConfig = {
+			load: true,
+			title: 'productionplanning.drawing.differentProductDescription',
+			gridId: '12352834f2e84002a40jgb7y9kd418ik',
+			UIStandardService: $injector.get('productionplanningProducttemplateProductDescriptionUIStandardService'),
+			getList: function (entity) {
+				return filter(entity, 'Diffs', function (n, dc) {
+					return dc.Type === previewResultType.element && n.PreviewInfo.ModifiedState > modifiedState.none;
+				});
+			},
+			hideTools: true,
+			readonly: true,
+			additionalColumns: [
+				stateColumnConfig,
+			]
+		};
+
+		function filter(dataContext, propertyName, filterFn) {
+			var result;
+			if (filterFn) {
+				result = _.filter(dataContext[propertyName], function (n) {
+					return filterFn(n, dataContext);
+				});
+			} else {
+				result = dataContext[propertyName];
+			}
+			result = result || [];
+			_.forEach(dataContext.ChildItems, function (child) {
+				result = result.concat(filter(child, propertyName, filterFn));
+			});
+			return result;
+		}
+
+		function processRuleObject(dataContext, fieldName) {
+			var selected = ppsDrawingPreviewDialogService.getSelected();
+			var formattedValue = '';
+			if (selected[fieldName].indexOf(dataContext.Id) > -1) {
+				if (fieldName === 'RuleSetIds') {//check whether has error messages
+					if (Array.isArray(selected.InvalidRuleSetIds) && selected.InvalidRuleSetIds.indexOf(dataContext.Id) > -1) {
+						dataContext.UDHasConflict = true;
+						formattedValue += getIcon('control-icons ico-grid-validation', 'productionplanning.drawing.autoGeneratedIssue');
+					} else {
+						dataContext.UDIsMatch = true;
+						formattedValue += getIcon('control-icons ico-grid-ok');
+					}
+				} else if (fieldName === 'ResultIds') {//check whether has error messages
+					var issues = _.find(selected.News, function (n) {
+						return n.EngAccRulesetResultFk === dataContext.Id && n.PreviewInfo.ErrorMessages.length;
+					});
+					if (issues) {
+						var errorMessages = _.forEach(issues.PreviewInfo.ErrorMessages, function (error) {
+							formattedValue += error;
+							formattedValue += '&#10';
+						});
+						formattedValue += getIcon('control-icons ico-grid-validation', errorMessages);
+					} else {
+						formattedValue += getIcon('control-icons ico-grid-ok');
+					}
+				} else {
+					formattedValue += getIcon('control-icons ico-grid-ok');
+				}
+			}
+			return formattedValue;
+		}
+
+		// function processRuleResult(ruleObject) {
+		// 	var formattedValue = '';
+		// 	var selected = ppsDrawingPreviewDialogService.getSelected();
+		// 	var issues = _.find(selected.News, function (n) {
+		// 		return n.EngAccRulesetResultFk === ruleObject.Id && n.PreviewInfo.ErrorMessages.length;
+		// 	});
+		// 	if (issues) {
+		// 		var errorMessages = _.forEach(issues.PreviewInfo.ErrorMessages, function (error) {
+		// 			formattedValue += error;
+		// 			formattedValue += '&#10';
+		// 		});
+		// 		formattedValue += getIcon('control-icons ico-grid-validation', errorMessages);
+		// 	} else if (selected.ResultIds.indexOf(ruleObject.Id) > -1) {
+		// 		formattedValue += getIcon('control-icons ico-grid-ok');
+		// 	}
+		// 	return formattedValue;
+		// }
+
+		function generateAdditionalColumns(fieldName) {
+			var isMatchColumn = {
+				field: 'IsMatch',
+				id: 'ismatch',
+				name: '',
+				formatter: function (row, cell, value, columnDef, dataContext) {
+					return processRuleObject(dataContext, fieldName);
+				},
+				pinned: true,
+				sortable: true,
+				width: 30
+			};
+			return [isMatchColumn];
+		}
+
+		function getPreviewListView() {
+			return {
+				state: '987e74842aefc9d896d1f5db1d613409',
+				columns: [
+					{
+						id: 'type',
+						field: 'Type',
+						name$tr$: 'productionplanning.drawing.type',
+						formatter: 'description',
+						width: 70,
+						sortable: true
+					},
+					{
+						id: 'isMatch',
+						field: 'IsMatch',
+						name$tr$: 'productionplanning.drawing.matched',
+						width: 100,
+						sortable: true,
+						formatter: function (row, cell, value, columnDef, dataContext) {
+							var formattedValue = '';
+							if (dataContext.Type === previewResultType.article) {
+								formattedValue += '<div title="';
+								if (dataContext.RuleSetIds.length > 0) {
+									formattedValue += translate('productionplanning.drawing.matchedRuleSet') + ':' + '&#10';
+									formattedValue += '--' + translate('productionplanning.drawing.total') + ': ' + dataContext.RuleSetIds.length + '&#10';
+									if (Array.isArray(dataContext.InvalidRuleSetIds) && dataContext.InvalidRuleSetIds.length > 0) {
+										formattedValue += '--' + translate('productionplanning.drawing.conflict') + ': ' + dataContext.InvalidRuleSetIds.length + '&#10';
+									}
+									formattedValue += '&#10';
+									formattedValue += translate('productionplanning.drawing.matchedRuleSetResult') + ':' + '&#10';
+									formattedValue += '--' + translate('productionplanning.drawing.total') + ': ' + dataContext.ResultIds.length + '&#10';
+									var issueResultLength = filter(dataContext, 'News', function (n) {
+										return n.PreviewInfo.ErrorMessages.length > 0;
+									}).length;
+									if (issueResultLength > 0) {
+										formattedValue += '--' + translate('productionplanning.drawing.conflict') + ': ' + issueResultLength;
+									}
+								} else {
+									formattedValue += translate('productionplanning.drawing.noMatchingRule');
+								}
+								formattedValue += '"><span class="pane-r">' + openButton(columnDef, dataContext, {gridId: '923e74842aefc9d89441f5db1d613433', width: 1000, height: 500}, 'productionplanningAccountingRuleManagementController', 'pps-accounting-rule-management.html') + '</span>';
+								if (dataContext.RuleSetIds.length > 0) {
+
+									if (!dataContext.IsMatch) {
+										formattedValue += getIcon('control-icons ico-instance-evaluate-failed', 'productionplanning.drawing.hasConflict');
+									} else {
+										formattedValue += getIcon('control-icons ico-grid-ok', 'productionplanning.drawing.matched');
+									}
+								} else {
+									formattedValue += getIcon('control-icons ico-grid-validation', 'productionplanning.drawing.noMatchingRule');
+								}
+								formattedValue += '</div>';
+							} else {
+								if (dataContext.NumOfNotMatchRule === 0) {
+									return getIcon('control-icons ico-applied');
+								} else {
+									return getIcon('control-icons ico-apply-failed') +
+										'<span class="pane-r" style="color:red;">' + dataContext.NumOfNotMatchRule + ' ' + translate('productionplanning.drawing.conflict') + '</span>';
+								}
+							}
+							return formattedValue;
+						}
+					},
+					{
+						id: 'numberOfRuleSets',
+						field: 'NumberOfRuleSets',
+						name$tr$: 'productionplanning.drawing.matchedRuleSetNum',
+						width: 70,
+						sortable: true,
+						formatter: 'integer'
+					},
+					{
+						id: 'preview',
+						field: 'NumOfAvaNews',
+						name$tr$: 'productionplanning.drawing.previewComponent',
+						width: 70,
+						sortable: true,
+						formatter: function (row, cell, value, columnDef, dataContext, plainText) {
+							if (plainText) {
+								return dataContext.NumOfAvaNews.toString();
+							}
+
+							var formattedValue = '<div>';
+							formattedValue += openButton(columnDef, dataContext, componentPreviewConfig, 'productionplanningAccountingRuleCommonChildController', 'pps-accounting-grid.html');
+							formattedValue += '<span class="pane-r">' + dataContext.NumOfAvaNews + '</span>';
+							formattedValue += '</div>';
+							return formattedValue;
+						}
+					},
+					{
+						id: 'existed',
+						field: 'NumOfOlds',
+						name$tr$: 'productionplanning.drawing.existedComponent',
+						width: 70,
+						sortable: true,
+						formatter: function (row, cell, value, columnDef, dataContext, plainText) {
+							if (plainText) {
+								return dataContext.NumOfOlds.toString();
+							}
+
+							var formattedValue = '';
+							formattedValue += openButton(columnDef, dataContext, componentExistedConfig, 'productionplanningAccountingRuleCommonChildController', 'pps-accounting-grid.html');
+
+							formattedValue += '<span class="pane-r">' + dataContext.NumOfOlds + '</span>';
+							return formattedValue;
+						}
+					},
+					{
+						id: 'differentComp',
+						field: 'NumOfDiffs',
+						name$tr$: componentDiffConfig.title,
+						width: 150,
+						sortable: true,
+						formatter: function (row, cell, value, columnDef, dataContext) {
+							var formattedValue = '';
+							formattedValue += '<div title="@title">';
+							var aCount = getDiffCount(dataContext, previewResultType.article, modifiedState.add);
+							var dCount = getDiffCount(dataContext, previewResultType.article, modifiedState.delete);
+							var mCount = getDiffCount(dataContext, previewResultType.article, modifiedState.modify);
+							if (aCount > 0 || dCount > 0 || mCount > 0) {
+								formattedValue += openButton(columnDef, dataContext, componentDiffConfig, 'productionplanningAccountingRuleCommonChildController', 'pps-accounting-grid.html');
+								formattedValue += getIcon('status-icons ico-status04') + aCount + ' ';
+								formattedValue += getIcon('status-icons ico-status03') + dCount + ' ';
+								formattedValue += getIcon('status-icons ico-status06') + mCount + ' ';
+							}
+
+							var title = translate('productionplanning.drawing.drawingComponent.entity') + ':' + '&#10' +
+								'--' + translate('productionplanning.drawing.added') + ': ' + aCount + '&#10' +
+								'--' + translate('productionplanning.drawing.deleted') + ': ' + dCount + '&#10' +
+								'--' + translate('productionplanning.drawing.modified') + ': ' + mCount;
+							formattedValue = formattedValue.replace('@title', title);
+							formattedValue += '</div>';
+							return formattedValue;
+						}
+					},
+					{
+						id: 'differentPT',
+						field: 'NumOfDiffs',
+						name$tr$: productTemplateDiffConfig.title,
+						width: 140,
+						sortable: true,
+						formatter: function (row, cell, value, columnDef, dataContext) {
+							var formattedValue = '';
+							formattedValue += '<div title="@title">';
+
+							var mCount = getDiffCount(dataContext, previewResultType.element, modifiedState.modify);
+							if (mCount > 0) {
+								formattedValue += openButton(columnDef, dataContext, productTemplateDiffConfig, 'productionplanningAccountingRuleCommonChildController', 'pps-accounting-grid.html');
+								formattedValue += getIcon('status-icons ico-status06') + mCount + ' ';
+							}
+
+							var title = translate('productionplanning.producttemplate.entityProductDescription') + ':' + '&#10' +
+								'--' + translate('productionplanning.drawing.modified') + ': ' + mCount + '&#10';
+							formattedValue = formattedValue.replace('@title', title);
+							formattedValue += '</div>';
+							return formattedValue;
+						}
+					},
+				]
+			};
+		}
+
+		function getDiffCount(dataContext, type, state) {
+			return filter(dataContext, 'Diffs', function (n, dc) {
+				return dc.Type === type && n.PreviewInfo.ModifiedState === state;
+			}).length;
+		}
+
+		function getIcon(iconUrl, titleStr) {
+			return '<i class="pane-r block-image ' + iconUrl + (titleStr ? '" title="' + translate(titleStr) : '') + '"></i>';
+		}
+
+		function translate(str) {
+			return $translate.instant(str);
+		}
+
+		function showDialog(selected,callbackFn) {
+			$http.get(globals.webApiBaseUrl + 'productionplanning/drawing/getpreviewconfig?drawingId=' + selected.Id).then(function (config) {
+				if (config && config.data) {
+					var dynamicColumns = [];
+					var schemaOptions = [];
+					_.forEach(config.data.SchemaOptions, function (schemaOption) {
+						schemaOptions.push({
+							typeName: schemaOption.TypeName,
+							moduleSubModule: schemaOption.ModuleSubModule
+						});
+					});
+					platformSchemaService.getSchemas(schemaOptions).then(function () {
+						_.forEach(schemaOptions, function (schemaOption) {
+							var uiService = {};
+							var atts = [];
+							_.forEach(Object.keys(platformSchemaService.getSchemaFromCache(schemaOption).properties), function (property) {
+								atts.push(property.toLowerCase());
+							});
+							platformUIConfigInitService.createUIConfigurationService({
+								service: uiService,
+								layout: platformLayoutHelperService.getMultipleGroupsBaseLayoutWithoutHistory('1.0.0', config.data.Fid,
+									atts),
+								dtoSchemeId: schemaOption,
+								translator: drawingTranslationService
+							});
+							dynamicColumns = dynamicColumns.concat(uiService.getStandardConfigForListView().columns);
+						});
+						_.forEach(dynamicColumns, function (column) {
+							column.editor = null;
+							column.width = 70;
+						});
+						return platformModalService.showDialog({
+							width: '80%',
+							height: '80%',
+							headerText: translate('productionplanning.drawing.checking') + ' - [' + selected.Code + ']',
+							templateUrl: globals.appBaseUrl + moduleName + '/templates/pps-drawing-preview-dialog.html',
+							backdrop: false,
+							resizeable: true,
+							parameters: {
+								gridId: config.data.Fid,
+								dynamicColumns: dynamicColumns
+							}
+						}).then(function (){
+							if(_.isFunction(callbackFn)){
+								callbackFn();
+							}
+						},function(eventName){
+							if(eventName === 'escape key press' && _.isFunction(callbackFn)){
+								callbackFn();
+							}
+						});
+					});
+				}
+			});
+		}
+
+		var popupToggle = basicsLookupdataPopupService.getToggleHelper();
+
+		function openButton(column, entity, config, controller, template) {
+			var classId = _.uniqueId('navigator_');
+			var btn = '<button class="block-image tlb-icons ico-menu ' + classId + '" style="position: relative; margin-right: 3px"></button>';
+			handleClick(classId, function (e) {
+				var popupOptions = {
+					id: template,
+					uuid: config.gridId,//use the template as key to save ui size
+					templateUrl: globals.appBaseUrl + '/productionplanning.accounting/templates/' + template,
+					showLastSize: true,
+					width: config.width || 600,
+					height: config.height || 200,
+					focusedElement: angular.element(e.target.parentElement),
+					relatedTarget: angular.element(e.target),
+					controller: controller,
+					resolve: {
+						$options: function () {
+							return config;
+						}
+					},
+					zIndex: 1055
+				};
+				ppsDrawingPreviewDialogService.setSelected(entity);
+				// toggle popup
+				popupToggle.toggle(popupOptions);
+			});
+			return btn;
+		}
+
+		function handleClick(classId, func) {
+			var timeoutId = setTimeout(function () {
+				$('.' + classId).click(function (e) {
+					e.stopPropagation();
+					func(e);
+				});
+				clearTimeout(timeoutId);
+			}, 0);
+		}
+
+		return {
+			getPreviewListView: getPreviewListView,
+			showDialog: showDialog,
+			generateAdditionalColumns: generateAdditionalColumns,
+			processRuleObject: processRuleObject
+		};
+	}
+
+})(angular);

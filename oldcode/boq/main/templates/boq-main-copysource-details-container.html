@@ -1,0 +1,23 @@
+<div class="flex-box flex-column flex-element filler">
+	<div data-platform-kendo-splitter-adjust class="split-container flex-element flex-box flex-column" style="flex-direction:row;" option="{panes:[{size:'50%'},{size:'50%'}],orientation:'vertical'}">
+		<div class="flex-element flex-box flex-column">
+			<div class="flex-element flex-box flex-column" ng-show="isWicBoq" data-ng-controller="boqMainCopySourceAssemblyController">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+			<div class="flex-element flex-box flex-column" ng-show="isProjectBoq" data-ng-controller="boqMainCopySourceEstimateController">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+		</div>
+		<div class="flex-element flex-box flex-column">
+			<h3 class="title fix" style="margin:5px">{{'boq.main.sourceBoqDetailResources' | translate}}</h3>
+			<div class="flex-element flex-box flex-column" ng-show="isWicBoq" data-ng-controller="boqMainCopySourceAssemblyResourceController">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+			<div class="flex-element flex-box flex-column" ng-show="isProjectBoq" data-ng-controller="boqMainCopySourceEstimateResourceController">
+				<platform-Grid data="gridData"></platform-Grid>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-basics-common-white-board data-show="showInfoOverlay" data-info="overlayInfo"></div>
+<div cloud-common-overlay data-loading="isLoading"></div>

@@ -1,0 +1,56 @@
+﻿{
+	"CompanyCode": "GUANGDONG2017001",
+	"BoqPositions": [
+		{
+			"WicCatalogCode": "广东项目清单",
+			"RootReference": "03",
+			"ParentReference": "030101",
+			"Reference": "030101001",
+			"Assemblies": [
+				{
+					"AssemblyCatalogCode": "000250",
+					"AssemblyCode": "C1-1-1",
+					"WorkContentInfo": {
+						"Description": "work1",
+						"OtherLanguages": [
+							{
+								"Description": "中文_工作1",
+								"Culture": "ch"
+							},
+							{
+								"Description": "de_assembly work1",
+								"Culture": "de"
+							}
+						]
+					}
+				},
+				{
+					"AssemblyCatalogCode": "000250",
+					"AssemblyCode": "C1-1-2",
+					"WorkContentInfo": {
+						"Description": "work2"
+					}
+				},
+				{
+					"AssemblyCatalogCode": "000250",
+					"AssemblyCode": "C1-1-3"
+				}
+			]
+		},
+		{
+			"WicCatalogCode": "广东项目清单",
+			"RootReference": "03",
+			"ParentReference": "030101",
+			"Reference": "030101002",
+			"Assemblies": [
+				{
+					"AssemblyCatalogCode": "000250",
+					"AssemblyCode": "C1-1-2",
+					"WorkContentInfo": {
+						"Description": "work2"
+					}
+				}
+			]
+		}
+	]
+}

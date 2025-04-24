@@ -1,0 +1,15 @@
+<div class="filler modal-wrapper">
+	<div class="platform-form-group">
+		<ui-common-grid [configuration]="gridConfig" class="flex-element"></ui-common-grid>
+	</div>
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="platform-form-col">
+				<label class="ms-checkbox-multi-select">
+					<input type="checkbox" [(ngModel)]="isShowInCurrentTab">
+					{{ 'basics.common.document.isThisTab' | platformTranslate }}
+				</label>
+			</div>
+		</div>
+	</div>
+</div>

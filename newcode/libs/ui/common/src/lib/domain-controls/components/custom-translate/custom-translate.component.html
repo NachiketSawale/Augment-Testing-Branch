@@ -1,0 +1,7 @@
+<div class="input-group domain-type-customtranslate form-control">
+	<input (change)="onTranslationChanged()" type="text" [(ngModel)]="value" class="input-group-content" [readonly]="controlContext.readonly" placeholder="" />
+	<div class="input-group-btn">
+		<button (click)="clearLanguage()" [disabled]="!value || controlContext.readonly" class="btn btn-default ico-input-delete2 control-icons border-radius"></button>
+		<button (click)="openDialog()" (keyup)="onKeyUp($event)" (keydown)="onKeyDown($event)" [disabled]="controlContext.readonly" class="btn btn-default ico-translation control-icons border-radius"></button>
+	</div>
+</div>

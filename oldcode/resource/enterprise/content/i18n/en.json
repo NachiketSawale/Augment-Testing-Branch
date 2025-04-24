@@ -1,0 +1,13 @@
+{
+  "resource": {
+    "enterprise": {
+      "resourceDispatcherListTitle": "Dispatcher Groups",
+      "resourceDispatcherDetailTitle": "Dispatcher Group Details",
+      "dispatcherEntity": "Dispatcher Group",
+      "resourceReservationListTitle": "Reservations",
+      "resourceReservationDetailTitle": "Reservation Details",
+		 "validOnCheckBox": "Use Resource valid on Due Date",
+		 "validOnDueDate": "Due Date"
+    }
+  }
+}

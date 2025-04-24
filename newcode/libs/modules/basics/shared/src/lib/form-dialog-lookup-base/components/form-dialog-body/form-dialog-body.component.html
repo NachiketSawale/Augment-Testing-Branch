@@ -1,0 +1,21 @@
+<div class="flex-element flex-box flex-column">
+	<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogOptions.sectionTop}"></ng-container>
+	<div class="flex-element flex-box flex-row">
+		<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogOptions.sectionLeft}"></ng-container>
+		<div class="flex-element flex-box flex-column ">
+			<div class="flex-element flex-box flex-column">
+				<!--TODO: [entityRuntimeData]="formDataOptions.runtime"-->
+				<ui-common-form [formConfig]="formConfig" [entity]="entity" [entityRuntimeData]="entityRuntimeData"></ui-common-form>
+			</div>
+		</div>
+		<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogOptions.sectionRight}"></ng-container>
+	</div>
+	<ng-container *ngTemplateOutlet="customSection; context:{$implicit:dialogOptions.sectionBottom}"></ng-container>
+</div>
+<ng-template #customSection let-section>
+	<ng-container *ngIf="section">
+		<div class="flex-element flex-box flex-column form-dialog-body-section-container" [class]="{'hidden': !section.visible}">
+			<ng-container *ngComponentOutlet="section.component; injector: injector"></ng-container>
+		</div>
+	</ng-container>
+</ng-template>

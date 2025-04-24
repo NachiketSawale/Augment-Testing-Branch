@@ -1,0 +1,120 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.assemblies.containers.assemblyStructure",
+    "controller": "estimateAssembliesAssemblyStructureTreeController",
+    "uuid": "179D44D751834DABB06EF4BA1F425D3C"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.assemblies.containers.assemblies",
+    "controller": "estimateAssembliesAssembliesListController",
+    "uuid": "234BB8C70FD9411299832DCCE38ED118"
+  },
+  {
+    "id": "estimate.assemblies.containers.assemblies.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "estimate.assemblies.containers.assembliesDetail",
+    "controller": "estimateAssembliesAssembliesDetailController",
+    "uuid": "b5c6ff9eab304beba4335d30700773da",
+    "permission": "234BB8C70FD9411299832DCCE38ED118"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.assemblies.containers.assemblyResources",
+    "controller": "estimateAssembliesAssemblyResourcesTreeController",
+    "uuid": "A32CE3F29BD446E097BC818F71B1263D"
+  },
+  {
+    "id": "estimate.assemblies.containers.assemblyResources.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "estimate.assemblies.containers.assemblyResourcesDetail",
+    "controller": "estimateAssembliesAssemblyResourcesDetailController",
+    "uuid": "8eb36f285d154864bba7da0574973c94",
+    "permission": "A32CE3F29BD446E097BC818F71B1263D"
+  },
+  {
+    "id": "4",
+    "template": "cloud.common/partials/languagegridview.html",
+    "title": "estimate.assemblies.containers.translation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "45249F7155B24ADFB8EB809F54131172"
+  },
+  {
+    "id": "estimate.main.CostGroup",
+    "template": "estimate.assemblies/templates/cost-group/cost-group-container.html",
+    "title": "estimate.main.costGroupContainer",
+    "uuid": "A523B5ADFA3341E9AD997D91A107289F",
+    "controller": ""
+  },
+  {
+    "id": "10",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.assemblies.containers.controllingGroupAssignments",
+    "controller": "estimateAssembliesCtrlGroupListController",
+    "uuid": "588BE3EE73E94971A1C7A0BC7867C6BD"
+  },
+  {
+    "id": "est-assemblies-config-total-container",
+    "template": "estimate.main/templates/estimate-main-config-total.html",
+    "title": "estimate.main.totalContainer",
+    "controller": "estimateAssembliesConfigTotalController",
+    "uuid": "0DC8F53C3E9343C388C466AC1D2884A5"
+  },
+  {
+    "id": "12",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.assemblies.containers.wicItem",
+    "controller": "estimateAssembliesWicItemListController",
+    "uuid": "4DCC2EC321AF4a6297FED83EEACF9F38"
+  },
+  {
+    "id": "13",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.assemblies.containers.rules",
+    "controller": "estimateAssembliesRuleListController",
+    "uuid": "22860B73D4464E6ABDF7FC9F7216A397"
+  },
+  {
+    "id": "estimate.assemblies.characteristic1",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle",
+    "uuid": "3ad1fb03bfb14342bac0401d73019dab",
+    "controller": "",
+    "sectionId": 29,
+    "pKey1Field": "EstHeaderFk",
+    "mainService": "estimateAssembliesService"
+  },
+  {
+    "id": "estimate.assemblies.characteristic2",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "cloud.common.ContainerCharacteristicDefaultTitle2",
+    "uuid": "b7c8b98ac24c4565b296492ca9407ad6",
+    "controller": "",
+    "sectionId": 30,
+    "pKey1Field": "EstHeaderFk",
+    "mainService": "estimateAssembliesService"
+  },
+  {
+    "id": "estimate.assembly.resource-characteristics",
+    "template": "basics.characteristic/templates/basics-characteristic-generic-container.html",
+    "title": "estimate.assemblies.resourceCharacteristics",
+    "uuid": "72ee39b4c7b74ceaa533a0f340780d70",
+    "controller": "",
+    "sectionId": 45,
+    "pKey1Field": "EstHeaderFk",
+    "pKey2Field": "EstLineItemFk",
+    "mainService": "estimateAssembliesResourceService",
+    "permission": "9201bfe4297c4eb9bdf2bbca7d798148"
+  },
+  {
+    "id": "estimate.assemblies.reference",
+    "template": "app/components/base/grid-partial.html",
+    "title": "estimate.assemblies.reference",
+    "controller": "estimateAssembliesReferencesController",
+    "uuid": "d0cd8c0b6d68486d9e8a137f2fb33687"
+  }
+]

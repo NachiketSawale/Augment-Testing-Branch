@@ -1,0 +1,54 @@
+[
+  {
+    "id": "resource.catalog.catalog.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.catalog.catalogListTitle",
+    "controller": "resourceCatalogListController",
+    "uuid": "d6267b2141db4c6f831d20c3f95f48f9"
+  },
+  {
+    "id": "resource.catalog.catalog.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.catalog.catalogDetailTitle",
+    "controller": "resourceCatalogDetailController",
+    "uuid": "d5983c44f2e243e4971ba9c82a73f0b0",
+    "permission": "d6267b2141db4c6f831d20c3f95f48f9"
+  },
+  {
+    "id": "resource.catalog.record.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.catalog.recordListTitle",
+    "controller": "resourceCatalogRecordListController",
+    "uuid": "bae34453f83744d3a6f7e53b7851e657"
+  },
+  {
+    "id": "resource.catalog.record.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.catalog.recordDetailTitle",
+    "controller": "resourceCatalogRecordDetailController",
+    "uuid": "b6d25f959003460cbf03529c91ad5894",
+    "permission": "bae34453f83744d3a6f7e53b7851e657"
+  },
+  {
+    "id": "resource.catalog.priceindex.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.catalog.priceIndexListTitle",
+    "controller": "resourceCatalogPriceIndexListController",
+    "uuid": "99a21ea527b44736892593accc5e6b6f"
+  },
+  {
+    "id": "resource.catalog.priceindex.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.catalog.priceIndexDetailTitle",
+    "controller": "resourceCatalogPriceIndexDetailController",
+    "uuid": "85f0ed0cc8b3488297e3b411b17e5a5b",
+    "permission": "99a21ea527b44736892593accc5e6b6f"
+  },
+  {
+    "id": "resource.catalog.translation",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "c3471218f5694e6f89273acee90547be"
+  }
+]

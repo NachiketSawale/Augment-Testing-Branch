@@ -1,0 +1,17 @@
+{
+	"project": {
+		"location": {
+			"location": "Location",
+			"detailContainerTitle": "Location Details",
+			"listContainerTitle": "Locations",
+			"taskBarDeleteLoc": "Delete Location",
+			"taskBarNewLoc": "New Location",
+			"entityIsShownInChart": "Is shown in chart",
+			"taskBarNewSubLoc": "New Sub-Location",
+			"downgradeLocation":"Indent Location",
+		 	"upgradeLocation":"Outdent Location",
+			"locQuantity":"Quantity Factor",
+			"externalCode": "External Code"
+		}
+	}
+}

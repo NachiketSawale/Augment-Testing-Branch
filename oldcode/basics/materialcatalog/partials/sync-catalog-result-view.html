@@ -1,0 +1,30 @@
+<div data-ng-controller="basicsMaterialcatalogSyncCatalogResultController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+    </header>
+    <div>
+        <section class="modal-body">
+            <div class="panel-heading" style="background-color: #f5f5f5">
+                <h4 class="panel-title">
+                    <span class="platform-form-group-header-text ng-binding ng-scope">{{modalOptions.bodyText}}</span>
+                </h4>
+            </div>
+            <div style="margin-top: 30px">
+                <div class="searchresultpad flex-element flex-box flex-column">
+                    <div class="flex-element flex-box flex-column gridframe relative-container subview-container">
+                        <platform-Grid data="gridResultData"></platform-Grid>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+            {{modalOptions.actionButtonText}}
+        </button>
+    </footer>
+</div>

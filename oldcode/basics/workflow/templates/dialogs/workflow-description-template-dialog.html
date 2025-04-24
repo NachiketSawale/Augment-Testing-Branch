@@ -1,0 +1,13 @@
+<main class="modal-body flex-box flex-column ng-scope" data-ng-class="{'margin-large': dialog.modalOptions.bodyMarginLarge }">
+
+	<div class="flex-element flex-box ng-scope" data-ng-controller="platformInputDialogController">
+
+		<input class="form-control ng-pristine ng-valid ng-empty ng-valid-maxlength active ng-touched"
+		       data-platform-select-on-focus="" autofocus="" type="text" id="inputText"
+		       data-ng-change="dialog.onInputChange()" maxlength="" data-ng-model="dialog.modalOptions.value.text"
+		       name="inputText" placeholder="{{::'basics.workflow.template.errorDialog.templateDescription.body' | translate}}" style="width: 580px;">
+	</div>
+	<div style="margin-top: 10px">
+		<span ng-if="dialog.modalOptions.errorText" style="color: red;" data-ng-bind="dialog.modalOptions.errorText"></span>
+	</div>
+</main>

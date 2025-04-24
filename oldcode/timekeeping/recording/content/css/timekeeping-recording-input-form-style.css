@@ -1,0 +1,32 @@
+.tk-sheet .btn {
+	min-width: 28px; }
+
+.tk-sheet .btn[class*="-icons"] {
+	background-repeat: no-repeat;
+	background-position: center; }
+
+.tk-add-row {
+	margin-top: 10px; }
+
+.tk-btn-submit {
+	margin-top: 20px; }
+
+.tk-sheet-row + .tk-sheet-row {
+	margin-top: 10px; }
+
+.tk-sheet-row {
+	margin-left: -10px; }
+.tk-sheet-row * {
+	display: flex; }
+.tk-sheet-row .tk-text {
+	align-items: center; }
+.tk-sheet-row .form-control {
+	margin-right: 10px;
+	margin-left: 10px; }
+.tk-sheet-row .domain-type-select {
+	min-width: 100px; }
+.tk-sheet-row .tk-btn-minus {
+	margin-left: 10px; }
+
+.tk-sheet-row .form-control * {
+	display: inline-block; }

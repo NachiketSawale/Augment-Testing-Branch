@@ -1,0 +1,11 @@
+﻿{
+	"logistic": {
+		"common": {
+			"cardEntity": "Card",
+			"cardTemplateEntity": "Card Template",
+			"cardActivityEntity": "Activity",
+			"cardRecordEntity": "Record",
+			"costCodeRate": "Rate"
+		}
+	}
+}

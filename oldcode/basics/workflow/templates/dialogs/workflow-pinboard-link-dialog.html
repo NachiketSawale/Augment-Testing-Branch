@@ -1,0 +1,41 @@
+<div class="filler ng-scope" data-ng-controller="basicsWorkflowPinboardLinkDialog">
+	<div class="platform-form-group">
+		<div class="platform-form-row">
+			<div class="radiolist-container" data-ng-model="input.editorMode" data-on-selection-changed="onRadioGroupOptChanged(value)"
+			     data-options="input.radioGroupOpt" data-radiolistctrl>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-show="input.editorMode === 1">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.groupString' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.workflowGroupString"
+					     data-options="input.codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-show="input.editorMode === 2">
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.workflow' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-domain="select" data-domain-control
+					     data-model="input.workflowValue" data-options="selectOptions"></div>
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.mainEntityId' | translate}}</div>
+				<div class="platform-form-col">
+					<div data-ng-model="input.workflowScriptValue"
+					     data-options="input.codeMirrorOptions" data-script-editor-directive></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

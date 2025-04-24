@@ -1,0 +1,28 @@
+{
+  "estimate": {
+    "parameter": {
+      "prjParamContainer":"Project Parameter",
+      "defaultValue":"Default Value",
+      "valueDetail":"Value Detail",
+      "params":"Parameters",
+      "assignedStructure" : "Assigned Structure",
+      "isLookup":"Is Lookup",
+      "estRuleParamValueFk":"Item Value",
+      "valueType":"value Type",
+      "value" :"Value",
+      "valueDetail" :"Default Value Detail",
+      "description":"Description",
+      "errorCode":"The parameter code only support letters,numeric digits or symbol '_'. It should start with letter or symbol '_'.",
+      "prjEstRule" : "Project Rule",
+      "source": "Source",
+      "projectParam" : "Project",
+      "globalParam" : "Global",
+      "ruleParameter" : "Esimate Rule",
+      "parameterHint": "Manage assigned parameters",
+      "deleteParamHint": "Delete Parameters",
+      "addParamHint": "Add Parameter",
+      "refreshParam": "Refresh to get the latest parameters",
+      "clearParam": "Clear the parameters"
+    }
+  }
+}

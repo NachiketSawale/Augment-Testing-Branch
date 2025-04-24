@@ -1,0 +1,58 @@
+<div class="flex-element" data-ng-controller="cloudTranslationImportPreviewDialogController">
+    <div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+    <div data-ng-hide="loading">
+        <h3>{{stepInfo}}</h3>
+        <h5>Status Summary</h5>
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <div class="platform-form-label">{{labelInserted}}</div>
+                <div class="platform-form-col">
+                    <input type="text" class="form-control" readonly="readonly" ng-model="statusSummary.inserted">
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <div class="platform-form-label">{{labelUpdated}}</div>
+                <div class="platform-form-col">
+                    <input type="text" class="form-control" readonly="readonly" ng-model="statusSummary.updated">
+                </div>
+            </div>
+            <!--            <div class="platform-form-row">-->
+            <!--                <div class="platform-form-label">{{labelDeleted}}</div>-->
+            <!--                <div class="platform-form-col">-->
+            <!--                    <input type="text" class="form-control" readonly="readonly" ng-model="statusSummary.deleted">-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <div class="platform-form-row">
+                <div class="platform-form-label">{{labelUnchanged}}</div>
+                <div class="platform-form-col">
+                    <input type="text" class="form-control" readonly="readonly" ng-model="statusSummary.unchanged">
+                </div>
+            </div>
+        </div>
+        <h5 style="margin-top: 5px;">{{gridTitle}}</h5>
+        <div class="flex-box flex-column subview-container grid-wrapper">
+            <platform-Grid data-data="gridData"></platform-Grid>
+        </div>
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <div class="platform-form-label">{{dialog.modalOptions.value.resetChangedTitle}}</div>
+                <div class="platform-form-col">
+                    <input type="checkbox" data-ng-model="dialog.modalOptions.value.resetChanged" disabled="disabled">
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-info" style="padding: 5px;">{{validationImportDoneMessage}}</div>
+
+        <div class="platform-form-group alert-warning" data-ng-if="resourceChanged" style="padding: 5px;">
+            <div class="platform-form-row">
+                <div class="platform-form-label">{{dialog.modalOptions.value.resourceVerifyConsentLabel}}</div>
+                <div class="platform-form-col">
+                    <input type="checkbox" data-ng-model="dialog.modalOptions.value.resourceVerifyConsent">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

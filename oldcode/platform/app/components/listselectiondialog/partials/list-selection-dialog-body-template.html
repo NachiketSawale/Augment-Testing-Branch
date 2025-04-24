@@ -1,0 +1,21 @@
+<div class="flex-element flex-box flex-column">
+	<div class="toolbar">
+		<h3 class="title font-bold" data-ng-bind="dialog.modalOptions.dataItem.cfg.availableTitle"></h3>
+	</div>
+	<div class="flex-element flex-box flex-column content-border-container " id="availableList"></div>
+</div>
+<div class="middle-container vert-hori-center flex-column">
+	<button class="btn btn-default control-icons ico-ar1-right1" data-ng-click="addItems(false)" data-ng-disabled="!isAvailableItemSelected()"></button>
+	<button class="btn btn-default control-icons ico-ar1-right2" data-ng-click="addItems(true)"></button>
+	<button class="btn btn-default control-icons ico-ar1-left1" data-ng-click="removeItems(false)" data-ng-disabled="!isSelectedItemSelected()"></button>
+	<button class="btn btn-default control-icons ico-ar1-left2" data-ng-click="removeItems(true)"></button>
+</div>
+<div class="left-container flex-box flex-column">
+	<div class="flex-element flex-box flex-column">
+		<div class="toolbar">
+			<h3 class="title font-bold" data-ng-bind="dialog.modalOptions.dataItem.cfg.selectedTitle"></h3>
+			<div data-platform-menu-list data-list="selectedItemsTools"></div>
+		</div>
+		<div class="flex-element flex-box flex-column content-border-container" id="selectedList"></div>
+	</div>
+</div>

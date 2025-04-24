@@ -1,0 +1,41 @@
+[
+  {
+    "id": "timekeeping.timeallocation.header.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.timeallocation.timeallocationHeaderListTitle",
+    "controller": "timekeepingTimeallocationHeaderListController",
+    "uuid": "ff09ff1314074aaf909b3e86c2d07c8c"
+  },
+  {
+    "id": "timekeeping.timeallocation.header.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.timeallocation.timeallocationHeaderDetailTitle",
+    "controller": "timekeepingTimeallocationHeaderDetailController",
+    "uuid": "6ee25aa6370247a3bf908a58eeaa5e1d",
+    "permission": "ff09ff1314074aaf909b3e86c2d07c8c"
+  },
+  {
+    "id": "timekeeping.timeallocation.item.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "timekeeping.timeallocation.timeallocationItemListTitle",
+    "controller": "timekeepingTimeallocationItemListController",
+    "uuid": "a3b5c55c64f74de89c84f8265b8cef42"
+  },
+  {
+    "id": "timekeeping.timeallocation.item.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "timekeeping.timeallocation.timeallocationItemDetailTitle",
+    "controller": "timekeepingTimeallocationItemDetailController",
+    "uuid": "d9ef33f2b9c04d63b5218ce7aa7236d2",
+    "permission": "a3b5c55c64f74de89c84f8265b8cef42"
+  },
+  {
+    "id": 1,
+    "template": "app/components/base/grid-partial.html",
+    "title": "cloud.common.ContainerUserformDefaultTitle",
+    "controller": "basicsUserFormFormDataController",
+    "uuid": "d6f5c9791d1742d78ebf307ab4b26f42",
+    "rubricId": 107,
+    "mainService": "timekeepingTimeallocationHeaderDataService"
+  }
+]

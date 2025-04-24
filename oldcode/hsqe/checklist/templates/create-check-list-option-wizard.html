@@ -1,0 +1,29 @@
+<div class="modal-wrapper">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section class="modal-body">
+		<div style="padding-left:8px;"><i class="block-image control-icons ico-grid-stop" style="width:30px;height:30px;background-size: 25px;"></i>{{'hsqe.CheckList.wizard.createCheckList.createNewCheckListForActivityTip' | translate}}</div>
+		<div style="padding-top:10px;padding-left:5px;">{{'hsqe.CheckList.wizard.createCheckList.createNewCheckListForActivityTip2' | translate}}</div>
+		<div  class="platform-form-group" style="padding-left:55px;">
+			<div class="platform-form-row">
+				<input type="radio" name="newCheckList" value="1" ng-model="modalOptions.value.createCheckListFlg" ng-checked="modalOptions.value.createCheckListFlg==1"/>
+				<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'hsqe.CheckList.wizard.createCheckList.createNewCheckListForNewActivityOnly' | translate}}</label>
+
+			</div>
+			<div class="platform-form-row">
+				<input type="radio" name="newCheckList" value="2" ng-model="modalOptions.value.createCheckListFlg"
+						 ng-checked="modalOptions.value.createCheckListFlg==2"/>
+				<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'hsqe.CheckList.wizard.createCheckList.createNewCheckListForAllActivities' | translate}}
+				</label>
+			</div>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"
+				  data-ng-disabled="(modalOptions.value.fromCheckListTemplate==2&&!modalOptions.value.projectFk)||(modalOptions.value.fromCheckListTemplate==1&&!modalOptions.hasCheckListTemplate)"> {{'cloud.common.ok' |
+			translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' |
+			translate}}
+		</button>
+	</footer>
+</div>

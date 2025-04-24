@@ -1,0 +1,15 @@
+<div class="flex-box flex-column">
+	<div data-ng-if="formContainerOptions.formOptions" class="lookup-grid-container overflow-hidden">
+		<div data-ng-if="formContainerOptions.title" class="subview-header toolbar">
+			<h2 class="title fix" title="{{formContainerOptions.title | translate}}">{{formContainerOptions.title | translate}}</h2>
+		</div>
+		<div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden">
+			<div data-platform-form-container data-form-container-options="formContainerOptions" data-entity="formData" class="flex-element flex-basis-auto" style="max-height: 200px;"></div>
+		</div>
+	</div>
+	<div class="subview-header toolbar flex-box flex-row">
+<!--		<h3 class="font-bold title fix">' + title + '</h3>-->
+		<div data-platform-menu-list data-list="tools"></div>
+		</div>
+	<div data-platform-grid class="subview-container" data-data="gridData" style="height: 600px;"></div>
+	</div>

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.salestaxcode.entitySalesTaxCodeTitle",
+    "controller": "basicsSalesTaxCodeListController",
+    "uuid": "750cee99c27c4285a40bad1c68ad86bb"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.salestaxcode.entitySalesTaxCodeDetailTitle",
+    "controller": "basicsSalesTaxCodeDetailController",
+    "uuid": "6557E5F68DA64A00A34D0E83E925672D",
+    "permission": "750cee99c27c4285a40bad1c68ad86bb"
+  },
+  {
+    "id": "3",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.salestaxcode.entitySalesTaxMatrixTitle",
+    "controller": "basicsSalesTaxMatrixListController",
+    "uuid": "43677903f8fc4f9bba7f8d066261fb5b"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "basics.salestaxcode.entitySalesTaxMatrixDetailTitle",
+    "controller": "basicsSalesTaxMatrixDetailController",
+    "uuid": "017CC52186354B86962717649BDF7791",
+    "permission": "43677903f8fc4f9bba7f8d066261fb5b"
+  },
+  {
+    "id": "5",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "AE242A42D7544B62B07256CD01BD33E3"
+  }
+]

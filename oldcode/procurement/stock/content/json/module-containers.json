@@ -1,0 +1,101 @@
+[
+  {
+    "id": "prc.stock.header.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.stock.title.header",
+    "controller": "procurementStockHeaderGridController",
+    "uuid": "10119ef5d56d4591ba1f44a8b3c279b4"
+  },
+  {
+    "id": "prc.stock.header.form",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.stock.title.headerDetail",
+    "controller": "ProcurementStockHeaderDetailController",
+    "uuid": "27a6fd3705d84c6bb245b7a9ae80ffd8",
+    "permission": "10119ef5d56d4591ba1f44a8b3c279b4"
+  },
+  {
+    "id": "prc.stock.stocktotal.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.stock.title.stocktotal",
+    "controller": "procurementStockStockTotalGridController",
+    "uuid": "18c130e2310242069db7e14c90f7469b"
+  },
+  {
+    "id": "prc.stock.stocktotal.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.stock.title.stocktotalDetail",
+    "controller": "procurementStockStockTotalDetailController",
+    "uuid": "ded559386d1c4db6a5773e626b3b2762",
+    "permission": "18c130e2310242069db7e14c90f7469b"
+  },
+  {
+    "id": "prc.stock.transaction",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.stock.title.transaction",
+    "controller": "stockTransactionController",
+    "uuid": "6c64f212eaa54bd6b7738ccb80094cdb"
+  },
+  {
+    "id": "prc.stock.transaction.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "procurement.stock.title.transactionDetail",
+    "controller": "procurementStockTransactionDetailController",
+    "uuid": "1dc90569450f47e5b10ecd0ce7cf4ca4",
+    "permission": "6c64f212eaa54bd6b7738ccb80094cdb"
+  },
+  {
+    "id": "prc.stock.reconciliation2.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.stock.title.headerReconciliation",
+    "controller": "procurementStockReconciliation2GridController",
+    "uuid": "ca2124f6e99e494591df3b5892a0a30a"
+  },
+  {
+    "id": "prc.stock.stocktotal.reconciliation2.grid",
+    "template": "app/components/base/grid-partial.html",
+    "title": "procurement.stock.title.stocktotalReconciliation",
+    "controller": "procurementStockStockTotalReconciliation2GridController",
+    "uuid": "0780abf4d0174c8cb9827ebd6907ac83"
+  },
+	{
+		"id": "prc.stock.downtime.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "project.stock.downtimeListContainerTitle",
+		"controller": "projectStockDownTimeListController",
+		"uuid": "115362380bc84b4b91f3678efe6866e4",
+		"dataService": "procurementStock2ProjectStockDownTimeDataService"
+	},
+	{
+		"id": "prc.stock.downtime.detail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "project.stock.downtimeDetailContainerTitle",
+		"controller": "projectStockDownTimeDetailController",
+		"uuid": "d278002b334a48729aab5d7e1cdac64e",
+		"permission": "115362380bc84b4b91f3678efe6866e4",
+		"dataService": "procurementStock2ProjectStockDownTimeDataService"
+	},
+	{
+		"id": "prc.stock.accrual",
+		"template": "app/components/base/grid-partial.html",
+		"title": "procurement.stock.accrualGridContainerTitle",
+		"controller": "procurementStockAccrualGridController",
+		"uuid": "06eaf2abd89c474b9309c355710b29a8"
+	},
+	{
+		"id": "prc.stock.accrual.Form",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "procurement.stock.accrualDetailContainerTitle",
+		"controller": "procurementStockAccrualDetailController",
+		"uuid": "9bc222b6b2c041d49a201f842f3f2815",
+		"permission": "06eaf2abd89c474b9309c355710b29a8"
+	},
+  {
+    "id": "prc.stock.itemInfo",
+    "template": "procurement.stock/partials/stock-iteminfo-grid-partial.html",
+    "title": "procurement.stock.itemInfoContainerTitle",
+    "controller": "procurementStockItemInfoGridController",
+    "uuid": "dad7237be98841deb372c1572a39188f",
+    "permission": "06eaf2abd89c474b9309c355710b29a8"
+  }
+]

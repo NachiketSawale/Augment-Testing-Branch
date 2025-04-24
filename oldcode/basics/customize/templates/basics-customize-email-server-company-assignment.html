@@ -1,0 +1,35 @@
+<div class="flex-element" data-ng-controller="basicsCustomizeEmailServer2CompanyAssignmentDialogController">
+    <div data-cloud-common-overlay data-loading="isLoading" data-info2="loadingMessage"></div>
+    <div data-platform-kendo-splitter-adjust class="modal-wrapper border-none"
+         option="{panes: [ { collapsible: true, size: '60%' },{ collapsible: true, size: '40%' }],orientation:'horizontal'}">
+
+        <div class="flex-box">
+            <div class="pane-l master-list flex-box flex-column flex-element overflow-hidden">
+                <div class="toolbar">
+                    <h3 class="title font-bold">{{'basics.customize.emailServer.viewHeader.companyStructure' | translate}}</h3>
+                    <div data-platform-menu-list data-list="tools"></div>
+                </div>
+
+                <div class="flex-element flex-box flex-column overflow-hidden">
+                    <platform-grid data="gridData"></platform-grid>
+                </div>
+
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="modal-wrapper pane-r overflow">
+
+                <div data-platform-form data-form-options="formOptions"  data-entity="currentItem"></div>
+                <div class="modal-footer" style="padding-right: 0px; padding-left: 0px;">
+                    <button class="btn btn-default"
+                            data-ng-click="saveClicked()"
+                            data-ng-disabled="isBtnDisabled()" title="{{ buttonTexts.saveBtnTooltip }}"
+                    >
+                        {{ buttonTexts.saveBtnCaption }}
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

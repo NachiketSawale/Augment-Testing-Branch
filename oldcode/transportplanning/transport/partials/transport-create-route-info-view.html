@@ -1,0 +1,12 @@
+<div ng-controller="transportplanningTransportCreateRouteInfoViewController">
+    <section ng-cloak class="modal-body">
+        <div style="margin-left: -10px; height: 300px" data-platform-form data-form-options="formOptions" data-entity="formOptions.entity"></div>
+        <tabset class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex" style="padding: 0px; height: 300px">
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" ng-click="onTabSelect(tab)">
+                <div data-ng-class="{false:'hidden'}[tab.active]" transportplanning-transport-goods-tab setting="tab" ng-if="tab.initialized"></div>
+            </tab>
+        </tabset>
+        <div cloud-common-overlay data-loading="isBusy"></div>
+    </section>
+
+</div>

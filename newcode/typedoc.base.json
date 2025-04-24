@@ -1,0 +1,56 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"includeVersion": true,
+	"replaceText": {
+		"inCodeCommentText": true,
+		"inCodeCommentTags": true,
+		"inIncludedFiles": true,
+		"replacements": [
+			{
+				"pattern": "@@(wiki(\\d+))",
+				"flags": "gi",
+				"replace": "[WIKI$2](https://apps-int.itwo40.eu/wiki/itwo40/wiki/$2/)"
+			},
+			{
+				"pattern": "@@(apilink\\:([A-Za-z0-9\\-_\\:\\./]+))",
+				"flags": "gi",
+				"replace": "[RFD-$2](https://devcenter.itwo40.eu/apilink/$2)"
+			},
+			{
+				"pattern": "@@(ado(\\d+))",
+				"flags": "gi",
+				"replace": "[ADO $2](https://dev.azure.com/ribdev/itwo40/_workitems/edit/$2/)"
+			},
+			{
+				"pattern": "@@((?:dev|DEV)-?(\\d+))",
+				"flags": "gi",
+				"replace": "[DEV-$2](https://rib-40.atlassian.net/browse/DEV-$2)"
+			},
+			{
+				"pattern": "@@((?:rfd|RFD)-?(\\d+))",
+				"flags": "gi",
+				"replace": "[RFD-$2](https://rib-enterprise-devops.atlassian.net/browse/RFD-$2)"
+			},
+			{
+				"pattern": "@@product",
+				"flags": "gi",
+				"replace": "RIB 4.0"
+			},
+			{
+				"pattern": "@@company",
+				"flags": "gi",
+				"replace": "RIB Software GmbH"
+			},
+			{
+				"pattern": "@@devcenter",
+				"flags": "gi",
+				"replace": "[RIB 4.0 Dev-Center](https://devcenter.itwo40.eu/)"
+			},
+			{
+				"pattern": "@@(rfc(\\d+))",
+				"flags": "gi",
+				"replace": "[RFC$2](https://datatracker.ietf.org/doc/html/$2)"
+			}
+		]
+	}
+}

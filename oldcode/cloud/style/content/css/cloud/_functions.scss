@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+//	 Functions (_functions.scss) - common functions to use in cloud.scss
+//  -------------------------------------------------------------------------------
+
+// Color contrast - Returns one of the two colors that has the best contrast to the given $color
+// Only used in scss variables. Can't be used for Custom Properties.
+@function color-contrast($color) {
+	$r: red($color);
+	$g: green($color);
+	$b: blue($color);
+
+	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+	@if ($yiq >= $color-contrasted-threshold) {
+		@return var(--text-color-dark);
+	} @else {
+		@return var(--text-color-light);
+	}
+}

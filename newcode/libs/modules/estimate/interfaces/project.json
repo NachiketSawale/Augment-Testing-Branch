@@ -1,0 +1,19 @@
+{
+	"name": "modules-estimate-interfaces",
+	"$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/modules/estimate/interfaces/src",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/modules/estimate/interfaces/jest.config.ts"
+			}
+		}
+	},
+	"tags": []
+}

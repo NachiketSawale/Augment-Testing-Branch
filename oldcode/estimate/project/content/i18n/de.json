@@ -1,0 +1,28 @@
+{
+  "estimate": {
+	"project": {
+	  "estimate":"Kalkulation",
+      "goToEstimate": "Öffne Kalkulation",
+      "typeDialogText" : "Kalkulation Typ Konfiguration",
+      "estBudgetDialogText":"Budget",
+      "actualEstType":"Tatsächlicher Kalkulationstyp",
+      "newEstType":"Neuer Kalkulationstyp",
+      "copyBudget":"Budget Kopieren",
+      "updateBudget":"Controlling Struktur Budget aktualisieren",
+      "lgmJobFk" : "Auftrag",
+      "isControlling":"Controlling",
+      "currency1Fk": "Ausländische Wahrung 1",
+      "currency2Fk": "Ausländische Wahrung 2",
+		"updateEstimate": "Kalkulation aktualisieren",
+      "costExchangeRate1" : "Kosten in Ausländische Wahrung 1",
+      "costExchangeRate2" : "Kosten in Ausländische Wahrung 2",
+      "copyCostTotalToBudget":"Gesamtkosten zu Budget übertragen",
+		"itemAssignment":"Paketpositionszuordnung",
+		"updateEstimate": "Kalkulation aktualisieren",
+		"copyBaseCost": "Kopiere Kosten zu Basiskosten",
+		"calculateRuleParam": "Kalkuliere Regel/Parameter",
+		"setFixUnitPrice": "Festen Einheitspreis festlegen",
+		"deleteItemAssignment": "Löscht Positionszuordnungen der Quell-Kalkulation"
+	}
+  }
+}

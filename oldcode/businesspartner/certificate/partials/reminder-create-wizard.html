@@ -1,0 +1,24 @@
+<div data-ng-controller="BusinessPartnerCertificateReminderCreateController">
+	<header class="modal-header main-color">
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+		</button>
+		<h2 class="modal-title">{{modalOptions.headerText}}</h2>
+	</header>
+	<div>
+		<section class="modal-body">
+			<div style="height: 100%;width:100%">
+				<div data-platform-form-container data-form-container-options="formContainerOptions"
+				     entity="currentItem" class="fullheight"></div>
+			</div>
+		</section>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+			{{modalOptions.actionButtonText}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.close()">
+			{{modalOptions.closeButtonText}}
+		</button>
+	</footer>
+</div>

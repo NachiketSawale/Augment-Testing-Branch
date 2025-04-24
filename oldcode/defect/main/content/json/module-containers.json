@@ -1,0 +1,233 @@
+[
+  {
+	"id": "defect.main.header.grid",
+	"template": "app/components/base/grid-partial.html",
+	"title": "defect.main.defectGridTitle",
+	"controller": "defectMainHeaderGridController",
+	"uuid": "01a52cc968494eacace7669fb996bc72"
+  },
+  {
+	"id": "defect.main.header.form",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "defect.main.defectDetailTitle",
+	"controller": "defectMainHeaderDetailController",
+	"uuid": "5c9d46ff418144718f6eab49825cb86e",
+	"permission": "01a52cc968494eacace7669fb996bc72"
+  },
+  {
+	"id": "defect.main.header.formFormData",
+	"template": "app/components/base/grid-partial.html",
+	"title": "defect.main.formData",
+	"controller": "basicsUserFormFormDataController",
+	"uuid": "dae0941f05bd41f0a4cd2f0e6f280380",
+	"rubricId": 73,
+	"mainService": "defectMainHeaderDataService",
+	"statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+  },
+  {
+	"id": "defect.document.main",
+	"template": "defect.main/partials/defect-document-view.html",
+	"title": "defect.main.documentGridTitle",
+	"controller": "defectDocumentListController",
+	"uuid": "cf8fbeb95cf24fcf98730a4817241201"
+  },
+  {
+	"id": "defect.document.detail",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "defect.main.documentDetailTitle",
+	"controller": "defectDocumentDetailController",
+	"uuid": "5B5B35364B3D419BA34E78F664B4234F"
+  },
+  {
+	"id": "defect.common.main",
+	"template": "basics.common/partials/comment-view.html",
+	"title": "defect.main.commentContainerTitle",
+	"controller": "basicsCommonCommentController",
+	"uuid": "E3C36EAC59C64402AF2FB2A7762BDD7B",
+	"commentQualifier": "defect.main.comment",
+	"parentService": "defectMainHeaderDataService",
+	"commentEntity": "DefectPrivateCommentToSave"
+  },
+  {
+	"include": "model.viewer/content/json/viewer-containers.json"
+  },
+  {
+	"id": "defect.main.dfmHeaderText",
+	"template": "defect.main/partials/header-text-view-new.html",
+	"title": "defect.main.headerText.dfmHeaderTextContainerTitle",
+	"controller": "defectMainHeaderTextController",
+	"uuid": "aef394158e3649ad9dd149859d18d708",
+	"RubricId": 73,
+	"mainService": "defectMainHeaderDataService"
+  },
+  {
+	"id": "defect.main.dfmHeaderPlainText",
+	"template": "defect.main/partials/common-header-plaintext-html-container.html",
+	"title": "defect.main.headerText.dfmHeaderPlainTextContainerTitle",
+	"controller": "defectMainHeaderTextController",
+	"uuid": "91588bf46f4e4b42a44eaee80c1fbc83",
+	"RubricId": 73,
+	"mainService": "defectMainHeaderDataService"
+  },
+  {
+	"id": "defect.main.section",
+	"template": "app/components/base/grid-partial.html",
+	"title": "defect.main.section",
+	"controller": "defectSectionController",
+	"uuid": "ed8caaa4757a4e618e6b1fcef27941f9"
+  },
+  {
+	"id": "defect.main.question",
+	"template": "app/components/base/grid-partial.html",
+	"title": "defect.main.question",
+	"controller": "defectQuestionController",
+	"uuid": "b3270c0dfde64bd28fcc46692b0af582"
+  },
+  {
+	"id": "defect.main.photo",
+	"template": "basics.common/partials/photo-view.html",
+	"title": "defect.main.photoContainerTitle",
+	"controller": "defecdtMainPhotoController",
+	"uuid": "C81D6B2B37D44EA1A328A9CA245B6A1C"
+  },
+  {
+	"id": "platform.generic.structure",
+	"template": "app/components/grid/generic-structure/generic-container.html",
+	"title": "defect.main.defectGroupingContainer",
+	"uuid": "5571f5f2c9234713a705b8e63163d08e",
+	"controller": "platformGenericStructureController",
+	"mainService": "defectMainHeaderDataService",
+	"configurationService": "defectMainStandardConfigurationService",
+	"enableCaching": "true"
+  },
+  {
+	"id": "defect.main.clerk.authorization.list",
+	"template": "app/components/base/grid-partial.html",
+	"title": "basics.clerk.listClerkAuthTitle",
+	"controller": "basicsCommonClerkListController",
+	"clerkQualifier": "defect.main.clerk",
+	"uuid": "913B56330DAD4388BBAB12C54A5095BE",
+	"parentService": "defectMainHeaderDataService",
+	"extendService": "defectClerkExtendService"
+  },
+  {
+	"id": "defect.main.clerk.authorization.detail",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "basics.clerk.detailClerkAuthTitle",
+	"controller": "basicsCommonClerkFormController",
+	"uuid": "A7B3399B76BD47CAA1982394C7A6681D",
+	"permission": "913B56330DAD4388BBAB12C54A5095BE",
+	"clerkQualifier": "defect.main.clerk",
+	"parentService": "defectMainHeaderDataService",
+	"extendService": "defectClerkExtendService"
+  },
+  {
+	"id": "defect-main-powerbi-list-container",
+	"template": "app/components/base/grid-partial.html",
+	"title": "defect.main.powerBIElements",
+	"controller": "defectMainPowerBiListController",
+	"uuid": "1013a209ba7144f18d8d93e5b533ad30",
+	"permission": "01a52cc968494eacace7669fb996bc72"
+  },
+  {
+	"id": "defect-main-powerbi-view-container",
+	"template": "mtwo.controltower/templates/mtwo-controltower-visualization-view.html",
+	"title": "defect.main.powerbiView",
+	"controller": "defectMainPowerbiViewController",
+	"uuid": "1013a209ba7144f18d8d93e5b533ad40",
+	"permission": "01a52cc968494eacace7669fb996bc72"
+  },
+  {
+	"id": "model.wdeviewer.ige",
+	"template": "model.wdeviewer/partials/ige-partial.html",
+	"title": "model.wdeviewer.title",
+	"controller": "modelWdeViewerIgeController",
+	"uuid": "51f22c5e7a52fefdae444d0be02e4468",
+	"permission": "7b1f2a36a94245ecb03dd964e79d2254",
+	"dimensionService": "defectMainIgeDimensionService"
+  },
+  {
+		"id": "defect.main.checklistformdata",
+		"template": "app/components/base/grid-partial.html",
+		"title": "defect.main.checklistFormData",
+		"controller": "defectChecklistFormDataController",
+		"uuid": "35b2d8affe714402aece9063c41738b0",
+		"permission": "35b2d8affe714402aece9063c41738b0"
+	},
+	{
+		"id": "model.annotation.annotationObjectLinkList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.annotationObjectLinkListTitle",
+		"controller": "modelAnnotationObjectLinkListController",
+		"uuid": "26110cbc14374f7895d1d7934efd0a63",
+		"depAnnoDataServiceName": "defectMainModelAnnoObjectLinkDataService"
+	},
+	{
+		"id": "model.annotation.annotationObjectLinkDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.annotationObjectLinkDetailTitle",
+		"controller": "modelAnnotationObjectLinkDetailController",
+		"uuid": "de29ed7ffa5d415fb38138f7eda5922e",
+		"permission": "26110cbc14374f7895d1d7934efd0a63",
+		"depAnnoDataServiceName": "defectMainModelAnnoObjectLinkDataService"
+	},
+	{
+		"id": "model.annotation.cameraList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.cameraListTitle",
+		"controller": "modelAnnotationCameraListController",
+		"uuid": "1278a2ca11f947bb8e02eab65e815a7d",
+		"depAnnoDataServiceName": "defectMainModelAnnoCameraDataService"
+	},
+	{
+		"id": "model.annotation.cameraDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.cameraDetailTitle",
+		"controller": "modelAnnotationCameraDetailController",
+		"uuid": "dfb06f32f92744358eee5d8b88496786",
+		"permission": "1278a2ca11f947bb8e02eab65e815a7d",
+		"depAnnoDataServiceName": "defectMainModelAnnoCameraDataService"
+	},
+	{
+		"id": "model.annotation.markerList",
+		"template": "app/components/base/grid-partial.html",
+		"title": "model.annotation.markerListTitle",
+		"controller": "modelAnnotationMarkerListController",
+		"uuid": "cf264c9dbb51466cb147e1a7f7f5d888",
+		"depAnnoDataServiceName": "defectMainModelAnnoMarkerDataService"
+	},
+	{
+		"id": "model.annotation.markerDetail",
+		"template": "app/components/base/form-detail-partial.html",
+		"title": "model.annotation.markerDetailTitle",
+		"controller": "modelAnnotationMarkerDetailController",
+		"uuid": "b162c7c601ce4c6da794e49140ace8a7",
+		"permission": "cf264c9dbb51466cb147e1a7f7f5d888",
+		"depAnnoDataServiceName": "defectMainModelAnnoMarkerDataService"
+	},
+	{
+		"id": "defect.meeting.list",
+		"template": "app/components/base/grid-partial.html",
+		"title": "basics.meeting.entityMeetingTitle",
+		"controller": "defectMeetingListController",
+		"uuid": "6f89ce4b413fd47b29e0ec49a0ab6785"
+	},
+	{
+		"id": "businesspartner.main.activities",
+		"template": "businesspartner.main/partials/activity-view.html",
+		"title": "businesspartner.main.activitiesContainerTitle",
+		"dataService": "defectActivityDataService",
+		"controller": "businesspartnerMainActivityListController",
+		"uuid": "1378051d9f7344a996a30ac4ddeecf59",
+		"permission": "C87F45D900E640768A08D471BD476B2C"
+	},
+	{
+	"id": "businesspartner.main.activityDetail",
+	"template": "app/components/base/form-detail-partial.html",
+	"title": "businesspartner.main.activityFormContainerTitle",
+	"dataService": "defectActivityDataService",
+	"controller": "businesspartnerMainActivityFormController",
+	"uuid": "1378051d9f7344a996a30ac4ddeecf60",
+	"permission": "C87F45D900E640768A08D471BD476B2C"
+	}
+]

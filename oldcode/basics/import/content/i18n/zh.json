@@ -1,0 +1,58 @@
+{
+  "basics": {
+    "import": {
+      "entityProfileName": "配置文件名",
+      "headerPreviewresult": "预览结果",
+      "entityImportFormat": "导入格式",
+      "headerFieldmappings": "数据映射",
+      "entityUserProfile": "用户配置文件",
+      "entityMappingName": "源字段",
+      "entityDestinationField": "目标字段",
+      "header": {
+        "saveImportDefinition": "保存导入定义"
+      },
+      "entityDefaultValue": "默认值",
+      "entityNewValue": "新值",
+      "fieldNewValue": "新建",
+      "rowNum": "行数",
+      "headerFileSelection": "导入文件",
+      "entityIsImportPriceAfterTax": "导入税后价格",
+      "headerEditimport": "编辑导入",
+      "fieldOldValue": "旧值",
+      "entityExcelSheetName": "工作表名",
+      "entityLanguage2Id": "替代语言",
+      "entitySelected": "已选",
+      "headerDoubletFindMethods": "选择唯一性验证字段：",
+      "entityImportResult": "结果",
+      "entityDoubletFindMethods": "通过比较识别对比",
+      "button": {
+        "mappingProposal": "映射支持。"
+      },
+      "status": "状态",
+      "message": {
+        "importSuccessful": "导入成功",
+        "importFailed": "导入失败，明细见状态栏！",
+        "noMainEntitySelected": "请先选择一个相关联的主实例！"
+      },
+      "entityExcelProfile": "Excel配置",
+      "importResult": "结果描述",
+      "headerImportsettings": "导入设置",
+      "entityFile2Import": "导入的文件",
+      "selectExcelFile": "请选择excel文件",
+		 "Code": "编码",
+		 "Description" : "描述",
+		 "Uom" : "导入单位",
+		 "BasUom" : "研制单位",
+		 "Reference2": "国标编码",
+		 "OutlineSpecification": "纲要详述",
+		 "UoM": "单位",
+		 "Quantity": "数量",
+		 "UnitRate": "工程量清单单价",
+		 "FinalPrice": "工程量清单总价",
+		 "MergeSame": "合并相同资源编码",
+		 "MergeAll": "全部生成为新资源编码",
+		 "MergeOption": "合并选项",
+		 "Resource": "资源"
+    }
+  }
+}

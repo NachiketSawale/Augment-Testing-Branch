@@ -1,0 +1,11 @@
+<div *ngIf="isSearchNoResult" class="material-filter-search-no-result">
+	<span class="no-result-title">{{'basics.material.lookup.noResultTitle' | platformTranslate}}</span>
+	<br>
+	<span class="no-result-sub-title">{{'basics.material.lookup.noResultSubTitle' | platformTranslate}}</span>
+</div>
+<ui-common-grid
+	[items]="items"
+	[configuration]="gridConfig"
+	(doubleClick)="onDoubleClick($event)"
+	(selectionChanged)="onSelectionChanged($event)">
+</ui-common-grid>

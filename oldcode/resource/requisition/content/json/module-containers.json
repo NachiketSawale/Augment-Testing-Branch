@@ -1,0 +1,100 @@
+[
+  {
+    "id": "resource.requisition.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.requisition.requisitionListTitle",
+    "controller": "resourceRequisitionListController",
+    "uuid": "291a21ca7ab94d549d2d0c541ec09f5d"
+  },
+  {
+    "id": "resource.requisition.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.requisition.requisitionDetailTitle",
+    "controller": "resourceRequisitionDetailController",
+    "uuid": "44398421b57043bc906469bf7b9991eb",
+    "permission": "291a21ca7ab94d549d2d0c541ec09f5d"
+  },
+  {
+    "id": "resource.requisition.requiredSkill.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.requisition.requiredSkillListTitle",
+    "controller": "resourceRequisitionRequiredSkillListController",
+    "uuid": "21d18723fae447ef9f1e00f4c323e61a"
+  },
+  {
+    "id": "resource.requisition.requiredSkill.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.requisition.requiredSkillDetailTitle",
+    "controller": "resourceRequisitionRequiredSkillDetailController",
+    "uuid": "1667e74599424c6db3ab8f8b8454808a",
+    "permission": "21d18723fae447ef9f1e00f4c323e61a"
+  },
+  {
+    "id": "resource.requisition.document.list",
+    "template": "basics.common/partials/header-zip-checkbox-documents-view.html",
+    "title": "resource.requisition.requisitionDocumentListTitle",
+    "controller": "resourceRequisitionDocumentListController",
+    "uuid": "90b997b3f0c64f97ac4cecd53f961086"
+  },
+  {
+    "id": "resource.requisition.document.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.requisition.requisitionDocumentDetailTitle",
+    "controller": "resourceRequisitionDocumentDetailController",
+    "uuid": "abe36123a4874eb3bc6c2c26da5ac374",
+    "permission": "90b997b3f0c64f97ac4cecd53f961086"
+  },
+  {
+    "id": "resource.requisition.item.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.requisition.requisitionItemListTitle",
+    "controller": "resourceRequisitionItemListController",
+    "uuid": "2236d94d1c8f4cdd8f9ab9150492ccdb"
+  },
+  {
+    "id": "resource.requisition.item.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.requisition.requisitionItemDetailTitle",
+    "controller": "resourceRequisitionItemDetailController",
+    "uuid": "a0db7de7ef924b25bebfabae05c68fe1",
+    "permission": "2236d94d1c8f4cdd8f9ab9150492ccdb"
+  },
+  {
+    "id": "resource.requisition.stock.detail",
+    "template": "app/components/base/form-detail-partial.html",
+    "title": "resource.requisition.stockDetailTitle",
+    "controller": "resourceRequisitionStockDetailController",
+    "uuid": "22babd8bf191404ab940bb9d5b29b5f9",
+    "permission": "df4eaad0581d44e1a18fde037c1c835d"
+  },
+  {
+    "id": "resource.requisition.stock.list",
+    "template": "app/components/base/grid-partial.html",
+    "title": "resource.requisition.stockListTitle",
+    "controller": "resourceRequisitionStockListController",
+    "uuid": "df4eaad0581d44e1a18fde037c1c835d"
+  },
+  {
+    "id": "platform.generic.structure",
+    "template": "app/components/grid/generic-structure/generic-container.html",
+    "title": "resource.requisition.structureContainerTitle",
+    "uuid": "4bbc1d9b5ec0451e9c504d1de2fb5da0",
+    "controller": "platformGenericStructureController",
+    "mainService": "resourceRequisitionDataService",
+    "enableCaching": "true",
+    "configurationService": "resourceRequisitionStructureConfigService",
+    "permission": "291a21ca7ab94d549d2d0c541ec09f5d"
+  },
+  {
+  "id": "resource.requisition.formFormData",
+  "template": "app/components/base/grid-partial.html",
+  "title": "cloud.common.ContainerUserformDefaultTitle",
+  "controller": "basicsUserFormFormDataController",
+  "uuid": "019c2f3d6b924cfda4a9fe1709ffcb3c",
+  "rubricId": 98,
+  "mainService": "resourceRequisitionDataService",
+  "statusWizardGuid": "756badc830b74fdcbf6b6ddc3f92f7bd"
+
+}
+
+]

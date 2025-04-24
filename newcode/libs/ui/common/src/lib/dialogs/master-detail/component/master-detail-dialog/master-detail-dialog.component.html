@@ -1,0 +1,41 @@
+<div class="modal-wrapper master-detail-dialog">
+	<as-split direction="horizontal">
+		<as-split-area [size]="25">
+			<div class="master-list flex-box flex-column flex-element overflow" style="height: 450px">
+				<div class="toolbar">
+					<ui-common-menu-list [menu]="tools" [context]="context"></ui-common-menu-list>
+				</div>
+
+				<input type="text"
+					placeholder="{{ searchSettings.searchPlaceholder | platformTranslate }}" 
+					*ngIf="searchSettings.isSearchActive" 
+					[(ngModel)]="searchSettings.searchTerm" 
+					class="form-control" 
+					(input)="onSearch()" 
+				/>
+
+				<div class="flex-element flex-box flex-column overflow-hidden">
+					<ul class="master-list-contents flex-element overflow">
+						<li *ngFor="let item of displayedItems">
+							<button class="master-item" 
+								[disabled]="isDisabled(item)" 
+								(click)="onSelect(item)" 
+								[ngClass]="{ selected: item === selectedItem, title: !!item.cssClass }">
+								<span>{{ getEntityTitle(item) | platformTranslate }}</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</as-split-area>
+		<as-split-area [size]="75" class="overflow">
+			<div style="width: 100%; height: 450px">
+				<ui-common-form 
+					[formConfig]="formConfig" 
+					[entity]="entity"
+					(valueChanged)="onValueChanged($event)"> 
+				</ui-common-form>
+			</div>
+		</as-split-area>
+	</as-split>
+</div>

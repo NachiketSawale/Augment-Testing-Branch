@@ -1,0 +1,92 @@
+﻿{
+	"services": {
+		"schedulerui": {
+			"jobListContainerTitle": "Job List",
+			"childJobListContainerTitle": "Child Job List",
+			"taskTypeName":"Task name",
+			"jobDetailContainerTitle": "Job Detail",
+			"childJobDetailContainerTitle": "Child Job Detail",
+			"jobEntity": "Job",
+			"columns": {
+				"id": "Id",
+				"jobFk": "Parent",
+				"name": "Name",
+				"description": "Description",
+				"log": "Log",
+				"jobstate": "Job State",
+				"starttime": "Start Time",
+				"executionstarttime": "Execution Start Time",
+				"executionendtime": "Execution End Time",
+				"parameter": "Parameter",
+				"priority": "Priority",
+				"repeatunit": "Repeat Unit",
+				"repeatcount": "Repeat Count",
+				"tasktype": "Task Type",
+				"logginglevel": "Logging Level",
+				"runinusercontext": "Run in User Context",
+				"keepduration": "Keep Duration",
+				"keepcount": "Keep Count",
+				"executionmachine": "Execution Machine",
+				"machinename": "Target Group"
+			},
+			"errorMessages": {
+				"greaterZero": "Value must be greater than 0 !"
+			},
+			"stateValues": {
+				"waiting": "Waiting",
+				"starting": "Starting",
+				"running": "Running",
+				"stopped": "Stopped",
+				"finished": "Finished",
+				"repetitive": "Repetitive",
+				"stopping": "Stopping",
+				"historized": "Historized",
+				"aborted": "Aborted"
+			},
+			"parameterList":{
+				"name":"Name",
+				"description":"Description",
+				"type":"Type",
+				"value":"Value",
+				"descriptionKey":"Description Key",
+				"required":"Required",
+				"readOnly":"Read Only"
+			},
+			"priority":{
+				"highest":"Highest",
+				"high":"High",
+				"normal":"Normal",
+				"low":"Low",
+				"lowest":"Lowest"
+			},
+			"logLevel":{
+				"all":"All",
+				"off":"Off",
+				"error":"Error",
+				"warning":"Warning",
+				"info":"Info",
+				"debug":"Debug"
+			},
+			"frequency":{
+				"none":"None",
+				"minute":"Every Minute",
+				"hourly":"Hourly",
+				"daily":"Daily",
+				"weekly":"Weekly",
+				"monthly":"Monthly"
+			},
+			"errorMessage": {
+				"keepDuration": "Must be greater or equal to 0",
+				"keepCount" : "Must be greater or equal to 0",
+				"greaterZero": "Value must be greater than 0 !",
+				"repetitiveError": "For Repetitive jobs, the repeat unit must me other than None"
+			},
+			"toMainContainer": "View in Main Container",
+			"stopJob": "Stop Job",
+			"copyFromJob": "Copy from Job",
+			"showLogFileTitle":"Scheduler Log",
+			"deleteConfirmTitle": "Confirm",
+			"deleteConfirm": "Are you sure that you want to delete the selected jobs?"
+		}
+	}
+}

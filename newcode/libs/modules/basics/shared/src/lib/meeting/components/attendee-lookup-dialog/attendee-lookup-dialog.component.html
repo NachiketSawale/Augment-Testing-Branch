@@ -1,0 +1,53 @@
+
+<div class="platform-form-group" style="padding-left: 10px">
+    <div class="platform-form-row">
+        <button *ngIf='attendeeLookupOption.isLookupClerk' type="button" class="btn btn-default" [disabled]="!attendeeLookupOption.clerkFromContext" (click)="copyFromContext()">
+            {{'basics.meeting.copyFromContext'| platformTranslate}}
+        </button>
+        <button *ngIf='!attendeeLookupOption.isLookupClerk' type="button" class="btn btn-default" [disabled]="!attendeeLookupOption.contactFromContext" (click)="copyFromContext()">
+            {{'basics.meeting.copyFromContext'| platformTranslate}}
+        </button>
+     </div>
+    <div class="platform-form-row" style="padding-top: 3px" *ngIf="!attendeeLookupOption.isLookupClerk">
+        <div class="platform-form-label" style=" vertical-align: middle;min-width: 165px;width:10%">{{'basics.meeting.contactFromBp'}}</div>
+<!--        <ui-common-lookup-input [dataService]="businessPartnerLookupService"-->
+<!--                                [(value)]="selectedBp"></ui-common-lookup-input>-->
+    </div>
+</div>
+<div class="platform-form-group" style="padding-top: 10px; padding-left: 10px">
+    <div class="platform-form-row">
+        <div class="input-group form-control">
+            <input #input type="text" [(ngModel)]="userInput" class="form-control" (keydown)="handleUserInput($event)" />
+            <span class="input-group-btn" style="margin-left: -1px;">
+               <button class="btn btn-default input-sm btn-search tlb-icons ico-search" (click)="search(userInput,false,true)" title="search"></button>
+            </span>
+        </div>
+        <div *ngIf="this.page.enabled && !attendeeLookupOption.isLookupClerk">
+            <div class="input-group recordInfoText" style="border:1px solid #ccc;border-top: none;">
+                <div class="form-control flex-align-center" style="border: none;">
+                    <div class="input-group-content"  *ngIf='this.page.totalCount >0' [innerText]="this.page.getPageInfo()"></div>
+                </div>
+                <span class="input-group-btn">
+            <button class="btn btn-default" [disabled]="!this.page.canPrev()" (click)="loadPreviousPage()" style="border: none;">
+                <span class="control-icons ico-previous"></span>
+            </button>
+            <button class="btn btn-default" [disabled]="!this.page.canNext()" (click)="loadNextPage()" style="border: none;">
+                <span class="control-icons ico-next"></span>
+            </button>
+        </span>
+            </div>
+        </div>
+        <div class="lookup-grid-container flex-element flex-box flex-column overflow-hidden attendee-lookup-grid-container" style="width: 600px;">
+            <div class="subview-header toolbar">
+                <h2 class="title fix" title="{{'cloud.common.searchResults' | platformTranslate}}">{{'cloud.common.searchResults' | platformTranslate}}</h2>
+                <div *ngIf="tools && !attendeeLookupOption.isLookupClerk" style="display: flex; justify-content:flex-start" class>
+                    <ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+                </div>
+            </div>
+            <div class="flex-box flex-column flex-element subview-content relative-container overflow-hidden" [ngClass]="'cid_' + gridConfig.uuid">
+                <ui-common-grid [configuration]="gridConfig" (selectionChanged)="handleSelectionChanged($event) " (cellChanged)="onCellChanged($event)"></ui-common-grid>
+                <ui-common-loading [loading]="isLoading"></ui-common-loading>
+            </div>
+        </div>
+    </div>
+</div>

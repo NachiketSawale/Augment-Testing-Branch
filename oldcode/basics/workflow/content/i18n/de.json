@@ -1,0 +1,520 @@
+{
+	"basics": {
+		"workflow": {
+			"moduleName": "Workflow Designer",
+			"tabHeader": "Header",
+			"task": {
+				"list": {
+					"header": "Aufgaben",
+					"grouping": {
+						"noGrouping": "Keine Gruppierung",
+						"clerk": "Sachbearbeiter",
+						"prio": "Priorität",
+						"lifeTime": "Lebensdauer",
+						"entity": "Datenobjekt",
+						"template": "Workflow Vorlage",
+						"endDate": "End Datum",
+						"noEndDate": "Kein End Datum",
+						"ended": "beendet",
+						"MyTasks": "Meine Aufgaben",
+						"userDefined1": "Benutzerdefiniert 1",
+						"userDefined2": "Benutzerdefiniert 2",
+						"userDefined3": "Benutzerdefiniert 3",
+						"userDefined4": "Benutzerdefiniert 4",
+						"userDefined5": "Benutzerdefiniert 5"
+					},
+					"sorting": {
+						"noSorting": "Standard Sortierung",
+						"startAsc": "Startdatum aufsteigend",
+						"startDesc": "Startdatum absteigend",
+						"prioAsc": "Priorität aufsteigend",
+						"prioDesc": "Priorität absteigend",
+						"endTimeDesc": "Enddatum absteigend",
+						"endTimeAsc": "Enddatum aufsteigend",
+						"userDefined1Desc": "Benutzerdefiniert 1 absteigend",
+						"userDefined1Asc": "Benutzerdefiniert 1 aufsteigend",
+						"userDefined2Desc": "Benutzerdefiniert 2 absteigend",
+						"userDefined2Asc": "Benutzerdefiniert 2 aufsteigend",
+						"userDefined3Desc": "Benutzerdefiniert 3 absteigend",
+						"userDefined3Asc": "Benutzerdefiniert 3 aufsteigend",
+						"userDefined4Desc": "Benutzerdefiniert 4 absteigend",
+						"userDefined4Asc": "Benutzerdefiniert 4 aufsteigend",
+						"userDefined5Desc": "Benutzerdefiniert 5 absteigend",
+						"userDefined5Asc": "Benutzerdefiniert 5 absteigend"
+					}
+				},
+				"detail": {
+					"group": {
+						"history": "Verlauf",
+						"comment": "Kommentare",
+						"detail": "Aufgabendetails",
+						"document": "Dokumente"
+					},
+					"noGroupHeader": "Alle",
+					"headerText": {
+						"group-running": "Gruppenaufgabe",
+						"user-running": "Benutzeraufgabe",
+						"group-edit": "In Bearbeitung",
+						"group-locked": "In Bearbeitung von ",
+						"user-done": "Erledigt",
+						"group-done": "Erledigt von "
+					},
+					"headerButtons": {
+						"group-running": "Bearbeiten",
+						"group-edit": "Abbrechen",
+						"group-locked": "Übernehmen"
+					}
+				}
+			},
+			"actionForm": {
+				"title": "Action",
+				"groups": {
+					"actionDetail": "Aktion Detail"
+				}
+			},
+			"designer": {
+				"containerHeader": "Designer",
+				"start": "Start",
+				"end": "Ende",
+				"decision": "Entscheidung",
+				"object": "Objekt Aktion",
+				"script": "Script Aktion",
+				"userTask": "Anwender Aufgabe",
+				"externalFn": "Externe Funktion",
+				"message": "Nachricht versenden",
+				"userForm": "Anwender Eingabe",
+				"workflow": "Workflow Aktion"
+			},
+			"template": {
+				"containerHeader": "Workflow Vorlagen",
+				"description": "Beschreibung",
+				"comment": "Kommentar",
+				"errorDialog": {
+					"version": {
+						"header": "Fehler in Workflow Version",
+						"text": "Die folgenden Fehler wurden in dem Workflow gefunden:"
+					},
+					"readOnly": {
+						"header": "Selected version is readonly!",
+						"text": "The selected version is readonly and can not be saved. Changes on other versions will be saved."
+					}
+				},
+				"kind": "Art",
+				"lifeTime": "Lebensdauer",
+				"type": {
+					"description": "Typ",
+					"1": "Workflow",
+					"2": "Escalation Workflow"
+				},
+				"entity": "Objekt",
+				"owner": "Eigentümer",
+				"keyUser": "Nutzer",
+				"startWorkflow": "Workflow starten",
+				"version": {
+					"containerHeader": "Workflow Vorlagen Versionen",
+					"toolbar": {
+						"changeStatus": "Status ändern",
+						"copyVersion": "Version kopieren",
+						"validate": "Workflow validieren"
+					}
+				},
+				"context": {
+					"containerHeader": "Vorlagen Kontext"
+				}
+			},
+			"subscribedEvents": {
+				"containerHeader": "Abonierte Ereignisse"
+			},
+			"action": {
+				"detail": {
+					"actionType": "Aktion Art",
+					"description": "Beschreibung",
+					"comment": "Kommentar",
+					"code": "Code",
+					"actionTypeId": "Aktion Art",
+					"actionId": "Aktion",
+					"parameter": "Parameter",
+					"userId": "Sachbearbeiter Id",
+					"action": "Aktion",
+					"lifeTime": "Lebensdauer",
+					"result": "Ergebnis",
+					"priority": "Priorität",
+					"endTime": "Enddatum"
+				},
+				"containerHeader": "Workflow Aktion Detail",
+				"input": {
+					"containerHeader": "Eingangsparameter"
+				},
+				"output": {
+					"containerHeader": "Ausgabeparameter"
+				},
+				"customEditor": {
+					"portal": {
+						"contactId": "ContactId",
+						"portalAccessGroupId": "Portal Access Group Id",
+						"portalInvitationId": "Portal Invitation Id",
+						"portalBaseUrl": "Portal Base Url",
+						"eMailSubject": "EMail Subject",
+						"eMailBody": "EMail Body",
+						"eMailRecipients": "EMail Recipients",
+						"resultCode": "Result Code",
+						"resultMessage": "Result Message",
+						"confirmed": "Confirmed",
+						"userEntity": "User.Ext.Provider.Entity",
+						"portalAccessGroupList": "Portal Access Group List",
+						"recipient": "Receiver",
+						"invitationUrl": "Invitation Url",
+						"reInvitationUrl": "Re-Invitation Url",
+						"urlValidUntil": "Url Valid Until"
+					},
+					"warningMessage": "Warning Message",
+					"language": "Language",
+					"emailCount": "Email Count",
+					"sender": "Sender",
+					"transactionHeaderId": "Transaction Header Id",
+					"isPopUp": "IsPopUp",
+					"accessToken": "Zugriffstoken",
+					"accessTokenType": "ZugriffstokenTyp",
+					"action": "Aktion",
+					"isReadOnly": "Die selektierte Workflow Vorlage is read-only. Der Editor wurde ausgeblendet.",
+					"containerHeader": "Aktion Parameter",
+					"formula": "Formel",
+					"message": "Nachricht",
+					"entityName": "Entity",
+					"entityId": "Entity Id",
+					"id": "Id",
+					"property": "Eigenschaft",
+					"statusName": "Objekt Name",
+					"objectId": "Objekt Id",
+					"newStatus": "New Status",
+					"newStatusId": "New Status Id",
+					"oldStatus": "Old Status",
+					"oldStatusId": "Old Status Id",
+					"projectId": "Project Id",
+					"remark": "Remark",
+					"webApiURL": "WebApi URL",
+					"outputClientGet": "Data",
+					"params": "Parameter",
+					"headers": "Headers",
+					"data": "Data",
+					"bp": "Business Partner",
+					"company": "Company",
+					"bpId": "Business Partner Id",
+					"companyId": "Company Id",
+					"outputUpdateFinanceCode": "Result Code",
+					"outputUpdateFinance": "Result Message",
+					"sectionId": "SectionId",
+					"code": "Code",
+					"invoiceId": "!InvoiceId",
+					"outputResult": "!Result",
+					"mail": {
+						"from": "From",
+						"receivers": "Receivers",
+						"cc": "CC",
+						"bcc": "BCC",
+						"subject": "Subject",
+						"body": "Body",
+						"attachements": "Attachements",
+						"replyToList": "Reply To List",
+						"isHtml": "HTML",
+						"saveMail": "Mail speichern"
+					},
+					"report": "Report",
+					"exportType": "Export Type",
+					"fileName": "Dateiname",
+					"characteristic": "Characteristic",
+					"url": "Url",
+					"content": "Content",
+					"sql": "SQL",
+					"columns": "Columns",
+					"workflow": "Workflow",
+					"storedProcedureName": "Stored Procedure Name",
+					"userform": "Form",
+					"userformId": "Form Id",
+					"userformData": "Form Data",
+					"context": "Context",
+					"description": "Description",
+					"outputUserform": "Form Data Id",
+					"messageBox": "Message Box",
+					"docId": "Doc Id",
+					"docRef": "Dokumenten Referenz",
+					"projectDocu": {
+						"project": "Project Id",
+						"bp": "Business Partner Id",
+						"certificate": "Certificate Id",
+						"structure": "Structure Id",
+						"materialCatalog": "MaterialCatalog Id",
+						"package": "Package Id",
+						"rfq": "RFQ Id",
+						"qtn": "QTN Id",
+						"con": "CON Id",
+						"pes": "PES Id",
+						"inv": "INV Id",
+						"schedule": "Schedule Id",
+						"activity": "Activity Id",
+						"est": "EST Id",
+						"req": "REQ Id",
+						"output": "Document List"
+					},
+					"project": "Project",
+					"template": "Templatename",
+					"costcode": "Update Cost Code",
+					"commodity": "Update Commodity",
+					"succeeded": "Succeeded",
+					"errorMessage": "Error Message",
+					"ProjectId": "Project",
+					"Templates": "Templates",
+					"outputCharacteristic": "Characteristic",
+					"sqlActionOutput": "Output",
+					"outputSaveObject": "Entity Property",
+					"outputReport": "Doc Id",
+					"outputChangeStatus": "New Status",
+					"outputClientPost": "Response",
+					"outputTextDocu": "Text",
+					"outputServergetAction": "Output",
+					"outputStored": "Output",
+					"clerkRole": "Clerk Role",
+					"clerkRoleId": "Clerk Role Id",
+					"clerk": "Clerk",
+					"projectClerk": "Project Clerk",
+					"structure": "Structure",
+					"structureId": "Structure Id",
+					"status": "Status",
+					"category": "Document Category",
+					"docType": "Document Typ",
+					"docTypeId": "Document Typ Id",
+					"prjDocType": "Project Document Typ",
+					"prjDocTypeId": "Project Document Typ Id",
+					"certificate": "Certificate",
+					"certificateId": "Certificate Id",
+					"materialCatalog": "Material Catalog",
+					"materialCatalogId": "Material Catalog Id",
+					"materialCatalogCodes": "Material Catalog Codes",
+					"updatedMaterialCatalogIds": "Updated Material Catalog Ids",
+					"package": "Package",
+					"packageId": "Package Id",
+					"rfq": "RFQ",
+					"rfqId": "RFQ Id",
+					"qtn": "Quote",
+					"qtnId": "Quote Id",
+					"con": "Contract",
+					"conId": "Contract Id",
+					"pes": "PES",
+					"pesId": "PES Id",
+					"inv": "Invoice",
+					"invId": "Invoice Id",
+					"schedule": "Schedule",
+					"scheduleId": "Schedule Id",
+					"activity": "Activity",
+					"activityId": "Activity Id",
+					"est": "Estimate",
+					"estId": "Estimate Id",
+					"req": "REQ",
+					"reqId": "REQ Id",
+					"infoRequest": "Info Request",
+					"infoRequestId": "Info Request Id",
+					"controlUnit": "Controlling Unit",
+					"controlUnitId": "Controlling Unit Id",
+					"location": "Location",
+					"locationId": "Location Id",
+					"barCode": "Bar Code",
+					"comment": "Comment",
+					"revision": "Revision",
+					"contract": "!Contract",
+					"contractId": "!Contract Id",
+					"commentBox": "Kommentar Feld"
+				}
+			},
+			"sidebar": {
+				"startWorkflow": "Workflow für ausgewählten Datensatz starten",
+				"startWorkflowForEveryEntity": "Workflow für alle Datensätze starten",
+				"startWorkflowForEverySelectedEntity": "Ein Workflow für alle selektierten Datensätze starten",
+				"description": "Beschreibung",
+				"status": "Status",
+				"error": "Fehler",
+				"history": "Verlauf",
+				"sorting": {
+					"description": {
+						"asc": "Description (Asc)",
+						"desc": "Description (Desc)"
+					}
+				},
+				"grouping": {
+				}
+			},
+			"workflowAction": {
+				"entity": "Workflow Aktion",
+				"errors": {
+					"actionIdMissing": "Es wurde keine Aktion definiert.",
+					"actionNotExist": "Die Aktion ist nicht vorhanden.",
+					"actionTypeWrong": "Die Aktionsart war falsch. Dieser wurde automatisch angepasst. Bitte speichern Sie den Workflow.",
+					"obsoleteWarning": "Die Aktion ist obsolet. Der Support für diese Aktion läuft aus."
+				}
+			},
+			"modalDialogs": {
+				"wizardLinkHeader": "Wizard Link Editor",
+				"workflowLinkHeader": "Workflow Link Editor",
+				"documentLinkHeader": "Dokument Link Editor",
+				"selectContentHeader": "Auswahlfeld Data Editor",
+				"wizard": "Wizard",
+				"linkName": "Anzeigename",
+				"reportLinkHeader": "Report Link Editor",
+				"module": "Modul",
+				"report": "Report",
+				"textInputHeader": "Text Eingabe",
+				"defaulttext": "Standard Text",
+				"type": "Art",
+				"comboboxContentHeader": "Combobox Data Editor",
+				"defaultRadio": "Standard-Modus",
+				"expertRadio": "Experten-Modus",
+				"selectItems": "Auswahlfeld Einträge",
+				"labelEditorHeader": "Label Editor",
+				"tableEditorHeader": "Table Editor",
+				"tableData": "Table Data",
+				"labelText": "Label Text",
+				"labelFormat": "Label Formatierung",
+				"url": "Adresse",
+				"wwwLinkHeader": "Link Editor",
+				"reportParameter": "Report Parameter",
+				"documentId": "Dokumenten ID"
+			},
+			"debug": {
+				"containerHeader": "Debug",
+				"dialog": {
+					"header": "Workflow Debug",
+					"context": "Kontext",
+					"action": "Aktion"
+				}
+			},
+			"toolbar": {
+				"editOptions": "Optionen Bearbeiten",
+				"insertNumberElements": "Zahlenfelder",
+				"insertTextElements": "Textfelder",
+				"insertSelectElements": "Auswahlfelder",
+				"insertDesignElements": "Design Elemente",
+				"insertLinkElements": "Verknüpfungen"
+			},
+			"controls": {
+				"table": "!Table",
+				"space": "Abstand",
+				"divider": "Trennlinie",
+				"label": "Label",
+				"linkToProject": "Verknüpfung zum Projekt",
+				"linkToDocument": "Verknüpfung zum Dokument",
+				"linkToEntity": "Verknüpfung zur Entität",
+				"linkToWizard": "Verknüpfung zum Wizard",
+				"linkToReport": "Verknüpfung zum Report",
+				"linkToUrl": "Verknüpfung zur Webseite",
+				"linkToWorkflow": "Verknüpfung zum Workflow",
+				"defaults": {
+					"openWorkflow": "Workflow Starten",
+					"openReport": "Report Öffnen",
+					"openDocument": "Dokument Öffnen",
+					"openUrl": "Open Adress",
+					"openEntity": "Open Entity"
+				}
+			},
+			"escalate": "Eskalieren",
+			"start": {
+				"idDialog": {
+					"header": "Start Workflow",
+					"body": "Bitte geben sie die Id des aufrufenden Objektes an."
+				}
+			},
+			"version": {
+				"download": "Download Version",
+				"upload": "Import Version",
+				"createByVersion": "Create new Template by Version",
+				"errorDialog": {
+					"concurrency": {
+						"header": "Fehler beim Speichern",
+						"text": "Die Version wurde bereits von einem anderen Anwender geändert. Ihre Änderungen wurden in eine neue Version übertragen. Bitte prüfen Sie die Daten und speichern erneut."
+					}
+				}
+			},
+			"wizard": {
+				"header": "Workflow Assistent",
+				"text": "Status des aktuellen Workflows:",
+				"statusText": {
+					"1": "Der Workflow wird ausgeführt.",
+					"2": "Der Workflow wurde korrekt beendet.",
+					"3": "Der Workflow ist eskaliert.",
+					"4": "Der Workflow wartet auf eine Benutzereingabe.",
+					"5": "Der Workflow ist fehlgeschlagen.",
+					"missingTemplate": "Es wurde keine TemplateId als Parameter für den Wizard definiert.",
+					"workflowFailed": "fehlgeschlagen"
+				}
+			},
+			"entity": {
+				"lookup": {
+					"title": "Entität zuweisen"
+				}
+			},
+			"sendrfqdialog": {
+				"header": "Anfrage versenden",
+				"currentConfiguartion": "Aktuelle Konfiguration",
+				"selectedBidders": "Ausgewählte Bieter",
+				"coverLetter": "E-Mail Body",
+				"dataFormat": "Datenformat",
+				"Reports": "Berichte",
+				"mandatoryReports": "Notwendige Berichte",
+				"additionalSelectedReports": "Zusätzlich ausgewählte Berichte:",
+				"documents": "Dokumente",
+				"projectDocuments": "Projektdokumente:",
+				"reQDocuments": "Anforderungsdokumente:",
+				"rfQDocuments": "Anfragedokumente:"
+			},
+			"sendRfQBidderSelection": {
+				"bidderSelection": "Bieterauswahl",
+				"select": "Auswahl",
+				"companyName": "Firmenname",
+				"status": "Status",
+				"contact": "Kontakt Auswahl",
+				"contactFirstName": "Kontakt Vorname",
+				"contactLastName": "Kontakt Nachname",
+				"contactEMail": "Kontakt E-Mail",
+				"cCSelect": "CC Auswahl",
+				"cCCompanyEMail": "CC Firmen E-Mail"
+			},
+			"sendRfQDataformat": {
+				"select": "Auswahl",
+				"dataFormat": "Datenformat"
+			},
+			"sendRfQDocuments": {
+				"projectDocuments": "Projektdokumente",
+				"rEQDocuments": "Anforderungsdokumente",
+				"rfQDocuments": "Anfragedokumente",
+				"select": "Auswahl",
+				"type": "Typ",
+				"documentType": "Dokumententyp",
+				"documentCategory": "Dokumentenkategorie",
+				"status": "Status",
+				"description": "Beschreibung",
+				"date": "Datum",
+				"originFileName": "Dateiname",
+				"preview": "Vorschau"
+			},
+			"sendRfQEmailBody": {
+				"subject": "Betreff",
+				"coverLetterEMailBody": "E-Mail Body",
+				"placeholder": "Platzhalter",
+				"select": "Auswahl",
+				"templateName": "Vorlagenname",
+				"description": "Beschreibung",
+				"preview": "Vorschau"
+			},
+			"sendRfQReports": {
+				"mandatoryReports": "Notwendige Berichte",
+				"reportSelection": "Berichtsauswahl"
+			},
+			"sendRfQTransmission": {
+				"transmissionProtocol": "Sendebericht",
+				"bidder": "Bieter",
+				"status": "Status"
+			}
+		},
+		"importWizard": {
+			"importBtn": "Importieren"
+		}
+	}
+}

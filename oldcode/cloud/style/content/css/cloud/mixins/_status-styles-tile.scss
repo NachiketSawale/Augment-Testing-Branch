@@ -1,0 +1,15 @@
+@mixin status-styles-tile($baseColor: $color-hover ) {
+	$style-colors: getColorList($baseColor);
+
+	button[class*='#{"" + $baseColor}'].tile:not(:disabled) {
+		// hover
+		&:hover {
+			outline: 3px solid nth($style-colors, 1);
+		}
+
+		// clicked
+		&:active {
+			background-color: nth($style-colors, 6);
+		}
+	}
+}

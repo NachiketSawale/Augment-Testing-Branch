@@ -1,0 +1,13 @@
+{
+	"boq": {
+		"project": {
+			"boq":"BoQ",
+			"goToBoq": "Open BoQ",
+			"confirmDeleteTitle": "Delete BoQ",
+			"confirmDeleteBoqHeader": "Do you want to delete the selected BoQ(s)?",
+			"boqProjectClerkListTitle": "BoQ Clerk (Authorization)",
+			"clerkRoleFk": "Role",
+			"clerkFk": "Clerk"
+		}
+	}
+}

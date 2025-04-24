@@ -1,0 +1,19 @@
+<!-- TODO: Alarm overlay implementation -->
+
+<ng-container [ngSwitch]="type">
+	<!-- TODO: In future if display types are added seperate components can be created for each type to display -->
+	
+	<div *ngSwitchCase="DisplayType.Html" class="longtext selectable">
+		<p [innerHTML]="text"></p>
+	</div>
+
+	<div *ngSwitchCase="DisplayType.Code" class="longtext selectable filler">
+		<div class="flex-box flex-element filler">
+			<!-- TODO: Script editor implementation -->
+		</div>
+	</div>
+
+	<div *ngSwitchCase="DisplayType.Plain" class="longtext selectable">
+		<p [innerText]="text"></p>
+	</div>
+</ng-container>

@@ -1,0 +1,31 @@
+<div data-ng-controller="productDescriptionDocumentFileHandlerController">
+    <header class="modal-header main-color">
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+                 class="block-image"></svg>
+        </button>
+        <h2 class="modal-title">{{'productionplanning.engineering.wizard.importProductDescriptionTitle' | translate}}</h2>
+    </header>
+    <section class="modal-body material-lookup-modal-body">
+        <div class="overflow-hidden">
+            <div class="container-fluid ribalert alert alert-dismissable alert-danger" data-ng-class="alertclass"
+                 data-ng-show="error.show">
+                <div class="row rib-alert-col1">
+                    <div ng-bind-html="error.message"></div>
+                </div>
+            </div>
+            <div style="margin-left: -10px" data-platform-form data-form-options="formOptions"
+                 data-entity="fileUploadEntity"></div>
+            <div data-basics-common-upload-progress-bar data-options="progressBarOptions"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="onOK()">
+            {{'cloud.common.ok' | translate}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()">
+            {{'cloud.common.cancel' | translate}}
+        </button>
+    </footer>
+</div>

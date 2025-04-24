@@ -1,0 +1,64 @@
+<ul class="list-group">
+	<li>
+		<div class="checkbox spaceToUp">
+			<label>
+				<input type="checkbox" name="locationsCheckBox" data-ng-model="location.isActive"
+				       data-ng-click="activeLocation()" class="e2e-location-isActive"
+				       ng-disabled="location.isDisabled"/>
+
+				{{::location.title}}
+			</label>
+		</div>
+	</li>
+	<li>
+		<ul class="subgroup">
+			<li>
+				<div class="radio spaceToUp">
+					<label>
+						<input type="radio" name="locationRadio" value="distance"
+						       data-ng-checked="location.distance.isActive"
+						       data-ng-click="activeDistance()" class="e2e-location-distance"
+						       data-ng-disabled="!location.isActive"/>
+
+						{{::location.distance.title}}
+					</label>
+				</div>
+				<ul>
+					<li>
+						<select class="form-control e2e-distance-selectedItem"
+						        data-ng-disabled="!location.distance.isActive || !location.isActive"
+						        data-ng-model="location.distance.selectedItem"
+						        data-ng-options="m.DescriptionInfo.Translated for m in location.distance.items"
+						        data-ng-change="changeDistance(location.distance.selectedItem)">
+						</select>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="radio spaceToUp">
+					<label>
+						<input type="radio" name="locationRadio" value="regional" class="e2e-location-regional"
+						       data-ng-click="activeRegional()" data-ng-checked="location.regional.isActive"
+						       data-ng-disabled="!location.isActive"/>
+
+						{{::location.regional.title}}
+					</label>
+				</div>
+				<ul>
+					<li>
+						<!--data-basics-country-lookup-->
+						<div basics-lookupdata-country-combobox
+						     data-ng-model="location.regional.selectedItemFk"
+						     class="lg-6 md-6"
+						     data-config="location.codeLookupConfig"
+						     data-options="lookupOptions"></div>
+
+						<input type="text" class="form-control lg-6 md-6"
+						       data-ng-disabled="!location.regional.isActive || !location.isActive"
+						       data-ng-model="location.regional.addressElement"/>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>

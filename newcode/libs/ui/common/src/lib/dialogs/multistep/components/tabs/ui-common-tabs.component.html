@@ -1,0 +1,12 @@
+<div id="scroll-tabs-wrapper">
+	<ul id="scroll-tabs-list" class="scroll_tabs_container">
+		<div class="scroll_tab_left_button" (click)="scrollToLeft()" style="position: absolute; left: 0; top: 0; width: 26px; cursor: pointer;" [ngStyle]="btnCss('left')"></div>
+		<cdk-virtual-scroll-viewport #scrollViewport orientation="horizontal" itemSize="150" class="scroll_tab_inner"
+		                             style="margin: 0; white-space: nowrap; text-overflow: clip; overflow: hidden; font-size: 0; position: absolute; top: 0; left: 26px; right: 26px;">
+			<li *ngFor="let item of items;let i=index;" (click)="selectItem(i)" (mouseover)="itemMouseOver(i,true)"
+			    (mouseleave)="itemMouseOver(i,false)" [ngClass]="{'tab_selected':selectedIndex===i,'scroll_tab_over':mouseOverItem===i}" style="max-width: 150px;display: inline-block;zoom: 1;user-select: none;">{{ item | platformTranslate }}
+			</li>
+		</cdk-virtual-scroll-viewport>
+		<div class="scroll_tab_right_button" (click)="scrollToRight()" style="position: absolute; right: 0; top: 0; width: 26px; cursor: pointer;" [ngStyle]="btnCss('right')"></div>
+	</ul>
+</div>

@@ -1,0 +1,44 @@
+﻿<div data-ng-switch="{{!config}}">
+	<div data-ng-switch-when="true" class="input-group lookup-container" data-ng-style="getInputGroupStyle()" data-ng-class="getInputGroupCssClass()">
+		<span class="lookup-img-box" data-ng-show="!getImageHtml() === false" data-ng-bind-html="getImageHtml()"></span>
+		<span class="value-input modal-open {{ options.imageCls }}" data-ng-style="getInputStyle()" data-ng-model-options="{ updateOn: 'default' }"></span>
+		<span class="input-group-btn" data-ng-hide="options.readOnly || options.rt$readonly()">
+			<button class="btn btn-default control-icons ico-down" data-ng-click="togglePopup($event)" data-ng-show="options.showPopup"></button>
+			<button class="btn btn-default input-sm control-icons ico-indicator-search" data-ng-click="searchValue()" data-ng-show="options.hideSeachButton"></button>
+			<button class="btn btn-default control-icons ico-input-delete" data-ng-click="clearValue()" data-ng-show="options.showClearButton"></button>
+			<button class="btn btn-default control-icons ico-input-lookup" data-ng-click="editValue()" data-ng-show="!options.hideEditButton"></button>
+			<button class="btn btn-default" data-ng-repeat="button in buttons" data-ng-readonly="!button.canExecute()" data-ng-click="button.execute()">
+				<!-- info an china weiter geben. Müssen an js css anstatt img-tag anpassen  -->
+				<img data-ng-src="{{ button.img }}"/>
+			</button>
+		</span>
+		<span class="input-group-btn">
+			<button class="btn btn-default input-sm" data-ng-repeat="button in buttons2" data-ng-readonly="!button.canExecute()" data-ng-click="button.execute()">
+				<!-- info an china weiter geben. Müssen an js css anstatt img-tag anpassen  -->
+					<img data-ng-src="{{ button.img }}"/>
+			</button>
+		</span>
+	</div>
+	<div data-ng-switch-when="false" class="input-group lookup-container form-control" data-ng-style="getInputGroupStyle()" data-ng-class="getInputGroupCssClass()">
+		<span class="lookup-img-box" data-ng-show="!getImageHtml()" data-ng-bind-html="getImageHtml()"></span>
+		<span class="value-input modal-open input-sm {{ options.imageCls }}" data-ng-style="getInputStyle()" data-ng-model-options="{ updateOn: 'default' }"></span>
+		<span class="input-group-btn" data-ng-hide="options.readOnly || options.rt$readonly()">
+			<button class="btn btn-default input-sm control-icons ico-down" data-ng-click="togglePopup($event)" data-ng-show="options.showPopup"></button>
+			<button class="btn btn-default input-sm control-icons ico-indicator-search" data-ng-click="searchValue()" data-ng-show="options.hideSeachButton"></button>
+			<button class="btn btn-default input-sm control-icons ico-input-delete" data-ng-click="clearValue()" data-ng-show="options.showClearButton"></button>
+			<button class="btn btn-default input-sm control-icons ico-input-lookup" data-ng-click="editValue()" data-ng-show="!options.hideEditButton"></button>
+			<button class="btn btn-default input-sm" data-ng-repeat="button in buttons" data-ng-readonly="!button.canExecute()" data-ng-click="button.execute()">
+				<!-- info an china weiter geben. Müssen an js css anstatt img-tag anpassen  -->
+					<img data-ng-src="{{ button.img }}"/>
+			</button>
+		</span>
+		<span class="input-group-btn">
+			<button class="btn btn-default input-sm" data-ng-repeat="button in buttons2" data-ng-readonly="!button.canExecute()" data-ng-click="button.execute()">
+				<!-- info an china weiter geben. Müssen an js css anstatt img-tag anpassen  -->
+					<img data-ng-src="{{ button.img }}"/>
+			</button>
+		</span>
+	</div>
+</div>
+
+

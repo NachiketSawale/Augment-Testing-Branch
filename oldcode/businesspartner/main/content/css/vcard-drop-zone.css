@@ -1,0 +1,9 @@
+.vcard-can-drop-indicator {
+	background-color: lightgreen;
+	opacity: 1;
+}
+
+.vcard-deny-drop-indicator {
+	background-color: lightcoral;
+	opacity: .5;
+}

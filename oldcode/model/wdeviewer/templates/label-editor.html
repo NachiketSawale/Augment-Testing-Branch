@@ -1,0 +1,34 @@
+<style type="text/css">
+	.sign-content {
+		border: 1px solid #ddd;
+		top: 5px;
+		left: 5px;
+		bottom: 5px;
+		max-height: 80px;
+		min-height: 30px;
+		width: 184px;
+		overflow: auto;
+	}
+
+	.sign-content .ico-close {
+		padding-left: 15px;
+		background-position: 3px;
+		background-size: 10px;
+	}
+
+	.input-group .input-textValue {
+		width: 132px;
+	}
+</style>
+
+<div class="input-group">
+	<input type="text" data-ng-model="textValue" data-ng-focus="focus(config)" data-ng-keydown="onkeydownEnter($event,this.textValue)" class="input-group-content input-textValue"/>
+	<span class="input-group-btn">
+		<button class="btn btn-default control-icons ico-close" data-ng-click="onclearValue()"></button>
+		<div class="btn btn-default control-icons ico-menu" data-ng-click="onPopupSection($event)">...</div>
+	</span>
+</div>
+<div class="sign-content">
+	<button class="btn btn-default control-icons ico-close" data-ng-repeat="item in labelContents" data-ng-bind="item.value" data-ng-click="onItemDelete(item)" title="{{ item.title }}"></button>
+</div>
+<textarea data-ng-show="false" data-ng-model="entity" data-ng-config="config"></textarea>

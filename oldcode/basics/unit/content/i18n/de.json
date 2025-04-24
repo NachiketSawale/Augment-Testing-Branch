@@ -1,0 +1,28 @@
+﻿{
+	"basics": {
+		"unit": {
+			"entityBasicData":"Grunddaten",
+			"entityDescription":"Beschreibung",
+			"entityRoundingPrecision":"Rundungsgenauigkeit",
+			"entitySynonym":"Synonyme",
+		  	"entityUomType": "Typ",
+
+			"entityUnit":"Maßeinheit",
+			"entityUnitDetails": "Maßeinheiten Details",
+			"entityUnitSynonymDetails": "Synonyme Details",
+
+
+		  	"entityUnitTitle":"Maßeinheiten",
+			"synonymsHeader":"Synonyme",
+			"entityQuantity": "Menge",
+			"entityRemark":"Bemerkung",
+
+			"entityTranslation":"Übersetzung",
+			"entityAttention":"Achtung"
+
+
+
+
+		}
+	}
+}

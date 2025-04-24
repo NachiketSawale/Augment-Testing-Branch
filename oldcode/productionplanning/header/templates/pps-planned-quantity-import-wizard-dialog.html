@@ -1,0 +1,23 @@
+<div >
+	<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<section ng-cloak class="modal-body">
+		<div class="fullwidth container-fluid ribalert alert alert-dismissable alert-danger" data-ng-class="alertclass"
+		     data-ng-show="error.show">
+			<div class="row rib-alert-col1" style="word-break: break-all">
+				<div ng-bind-html="error.message"></div>
+			</div>
+		</div>
+		<div style="margin-left: -10px" data-platform-form data-form-options="formOptions"
+		     class="flex-element flex-basis-auto"
+		     data-entity="entity"></div>
+		<div cloud-common-overlay data-loading="isBusy" data-info2="progressInfo"></div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-disabled="isOKDisabled()" data-ng-click="handleOK()">
+			{{'cloud.common.ok' | translate}}
+		</button>
+		<button type="button" class="btn btn-default" data-ng-disabled="requirement" data-ng-click="$close(false)">
+			{{'cloud.common.cancel' | translate}}
+		</button>
+	</footer>
+</div>

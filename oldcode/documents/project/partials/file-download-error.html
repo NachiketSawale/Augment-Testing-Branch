@@ -1,0 +1,16 @@
+<div data-ng-controller="documentsProjectDownloadErrorController" class="flex-element flex-box flex-column fullheight">
+	<header class="modal-header main-color"
+	        data-ng-include="'modaldialog/modaldialog-header-template.html'">
+	</header>
+	<section class="modal-body flex-element fullheight">
+		<label class="margin-full-md">
+			{{ 'documents.project.downloadDialogMsg' | translate }}
+		</label>
+		<div class="flex-box flex-column fullheight">
+			<platform-Grid data="gridData"></platform-Grid>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="onOK()">{{::'cloud.common.ok' | translate}}</button>
+	</footer>
+</div>

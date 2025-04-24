@@ -1,0 +1,52 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label
+					class="platform-form-label">{{'basics.workflow.action.customEditor.filterChain.inFilterChain' | translate}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.filterChain" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="filler" data-basics-common-rule-editor data-hierarchy="true"
+		     data-rule-definition="input.expression" data-rule-editor-manager="ruleEditorManager" read-only="codeMirrorOption.readonly"></div>
+	</div>
+</div>
+
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="outputOpen">
+		<div data-accordion-heading>
+			<span
+				class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+			<span class="platform-form-group-header">
+                <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+            </span>
+		</div>
+
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<label
+					class="platform-form-label">{{'basics.workflow.action.customEditor.filterChain.outFilterChain' | translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="output.filterChain" data-options="codeMirrorOptions"
+					     data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

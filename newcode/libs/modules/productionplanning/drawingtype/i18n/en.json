@@ -1,0 +1,15 @@
+﻿{
+	"productionplanning": {
+		"drawingtype": {
+			"listTitle": "Drawing Types",
+			"detailTitle": "Drawing Type Details",
+			"entityDrawingType": "Drawing Type",
+			"skill": {
+				"listTitle": "Drawing Type: Required Skills",
+				"detailTitle": "Drawing Type: Required Skill Details",
+				"entityDrawingTypeSkill": "Required Skill",
+				"resSkillFk": "Skill"
+			}
+		}
+	}
+}

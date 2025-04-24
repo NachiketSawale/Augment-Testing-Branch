@@ -1,0 +1,69 @@
+<section class="modal-body" data-ng-controller="basicsWorkflowImportWizardController">
+	<div class="flex-element two-side-row-1 fullheight">
+		<div class="left margin-full-md overflow" ui-tabs-button-trigger-directive>
+			<h1>Zip Import/ Update Wizard</h1>
+			<ul class="list-group margin-top-xld">
+				<!--Entity-->
+				<li class="list-group-item">
+					<h2>
+						<a data-toggle="tab" href="#templatesSelection">Selection</a>
+						<span class="badge badge-rib-color margin-left-md"
+						      data-ng-bind="info.selectedBidder.length"></span>
+					</h2>
+				</li>
+
+				<li class="list-group-item" data-ng-if="item.Selected" data-ng-repeat="item in templateList">
+					<span data-ng-bind="item.Description"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="right margin-full-md overflow">
+			<div class="tabsWrapper tabsWrapper-without-border tabsWrapper-tabContent-none-flex">
+
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#templatesSelection">Templates</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="templatesSelection">
+						<section>
+							<h1>Templates</h1>
+							<div>
+								<div data-domain="remark" data-domain-control data-model="source"></div>
+							</div>
+							<div>
+								<button class="tlb-icons ico-upload ng-scope" data-ng-click="upload()"
+								        style="height: 32px; width: 32px" type="button"></button>
+								<button class="tlb-icons ico-rec-new ng-scope" data-ng-click="add()"
+								        style="height: 32px; width: 32px" type="button"></button>
+							</div>
+							<table class="table">
+								<thead>
+								<tr>
+									<th>Select</th>
+									<th>Description</th>
+									<th>Filename</th>
+									<th>Update</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr data-ng-repeat="item in templateList">
+									<td>
+										<div data-domain="boolean" data-domain-control data-model="item.Selected"></div>
+									</td>
+									<td>{{item.Description}}</td>
+									<td>{{item.FileName}}</td>
+									<td>
+										<div data-basics-workflow-combo-box data-ng-model="item.DestinationId"></div>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-cloud-common-overlay data-config="{backdrop: false}" data-loading="waitSpinner"></div>
+</section>

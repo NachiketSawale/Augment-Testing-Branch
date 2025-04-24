@@ -1,0 +1,31 @@
+<div class="modal-wrapper" data-ng-controller="cloudTranslationExportModuleDialogController">
+	<div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+	<div data-platform-kendo-splitter-adjust class="modal-wrapper border-none master-detail-dialog" option="{panes: [ { collapsible: true, size: '45%' },{ collapsible: true, size: '55%' }],orientation:'horizontal'}">
+		<div id="ui-layout-east" class="modal-wrapper master-list">
+			<div class="toolbar">
+				<h3 class="title font-bold">{{words.moduleSelectionHeader}}</h3>
+				<div data-platform-menu-list data-list="toolsAvailableModules"></div>
+			</div>
+
+			<div class="subview-container modal-wrapper filler">
+				<ul class="master-list-contents flex-element overflow">
+					<li data-ng-repeat="item in selectedModules">
+						<button class="master-item" data-ng-click="selectItem(item)" data-ng-class="[{selected: item === selectedItem}, item.cssClass]"><span data-ng-bind="item[nameProperty]"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="ui-layout-west" class="modal-wrapper">
+			<div class="toolbar">
+				<h3 class="title font-bold">{{words.exportedValueHeader}}</h3>
+				<div data-platform-menu-list data-list="toolsSelectedModules"></div>
+			</div>
+
+			<div class="subview-container modal-wrapper filler">
+				<div data-ng-model="moduleExportStr"
+				     data-options="jsonEditorOptions" data-script-editor-directive class="fullheight"></div>
+			</div>
+		</div>
+	</div>
+</div>

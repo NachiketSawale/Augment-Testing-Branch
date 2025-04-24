@@ -1,0 +1,37 @@
+{
+	"CompanyCode": "GUANGDONG2017001",
+	"AssemblyRule": [
+		{
+			"AssemblyCatalogCode": "000540",
+			"AssemblyCode": "000540.000010",
+			"RuleCode": "TEST001",
+			"CommentText": "c1",
+			"EvaluationSequence": "1.Sequence",
+			"IsExecution": true
+		},
+		{
+			"AssemblyCatalogCode": "000540",
+			"AssemblyCode": "000540.000020",
+			"RuleCode": "TEST002",
+			"CommentText": "c2",
+			"EvaluationSequence": "2.Sequence",
+			"IsExecution": false
+		},
+		{
+			"AssemblyCatalogCode": "000770",
+			"AssemblyCode": "000770.000010",
+			"RuleCode": "TEST001",
+			"CommentText": "c3",
+			"EvaluationSequence": "1.Sequence",
+			"IsExecution": true
+		},
+		{
+			"AssemblyCatalogCode": "000770",
+			"AssemblyCode": "000770.000020",
+			"RuleCode": "TEST002",
+			"CommentText": "c4",
+			"EvaluationSequence": "2.Sequence",
+			"IsExecution": false
+		}
+	]
+}

@@ -1,0 +1,16 @@
+<section class="flex-box flex-column flex-element subview-content">
+    <div data-platform-kendo-splitter-adjust class="fullheight"   data-on-resize="resizeContent">
+        <div class="fullheight">
+            <div data-model-viewer-hoops-simple data-viewer="viewer"   data-config="viewerConfig" class="flex-box flex-column flex-element fullheight"></div>
+            <div style="position: absolute; left: 0; right: auto; bottom: auto; top: 0; background-color: transparent" class="fullheight fullwidth text-center">
+                <svg data-model-map-alignment-overlay ng-mousedown="StartCameraRotate()" data-set-link="viewerOverlayLink=link" style="background-color: transparent" class="fullheight fullwidth"></svg>
+            </div>
+        </div>
+        <div class="fullheight">
+            <div data-model-map-graphic-display data-map-graphic="mapGraphic" class="fullheight" data-set-link="displayLink=link"></div>
+            <div style="position: absolute; left: 0; right: auto; bottom: auto; top: 0; background-color: transparent" class="fullheight fullwidth text-center">
+                <svg data-model-map-alignment-overlay data-set-link="graphicOverlayLink=link" style="background-color: transparent" class="fullheight fullwidth"></svg>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+<div class="flex-element flex-box">
+	<div class="grid-container-wrapper">
+		<div *ngIf="tools" class="toolbar">
+			<ui-common-menu-list [menu]="tools"></ui-common-menu-list>
+		</div>
+		<div class="grid-content-wrapper">
+			<!-- todo-Any: update it after data-platform-alert ready -->
+			<!--<div data-platform-alert data-error="error"></div>-->
+			<div class="filler flex-box flex-column flex-element subview-container" [ngClass]="'cid_' + config.uuid">
+				<ui-common-grid [configuration]="config"
+				                (selectionChanged)="onSelectionChanged($event)"></ui-common-grid>
+			</div>
+		</div>
+	</div>
+	<!-- Loading -->
+	<ui-common-loading [loading]="isLoading"></ui-common-loading>
+</div>

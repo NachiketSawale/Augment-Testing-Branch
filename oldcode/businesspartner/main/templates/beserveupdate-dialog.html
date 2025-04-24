@@ -1,0 +1,18 @@
+<header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+<section class="modal-body">
+	<div class="searchresultpad flex-element flex-box flex-column">
+		<div class="flex-element flex-box flex-column gridframe subview-container">
+			<platform-Grid data="gridData"></platform-Grid>
+			<div cloud-common-overlay data-loading="crefoOption.loading" data-info2="crefoOption.syncrunning"></div>
+			<div data-basics-common-white-board data-show="crefoOption.noresult" class="" data-info="crefoOption.idle"></div>
+		</div>
+
+		<div class="subtitlepad margin-top-ld message-wrapper alert-info">{{::'businesspartner.main.crefoupdatedlg.paymenthint' | translate }}{{crefoOption.recordCount()}}</div>
+	</div>
+</section>
+
+<footer class="modal-footer">
+	<button type="button" class="btn btn-default" data-ng-disabled="!crefoOption.canApply()" data-ng-click="crefoOption.onOk()" translate="businesspartner.main.crefoupdatedlg.syncbutton"></button>
+	<button type="button" class="btn btn-default" data-ng-click="crefoOption.onCancel()" translate="cloud.common.cancel">"</button>
+</footer>
+

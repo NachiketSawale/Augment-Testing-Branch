@@ -1,0 +1,51 @@
+<div class="entity-filter-search-bar">
+	<div class="search-text-box">
+		<h3 class="search-text">{{ 'basics.material.lookup.search' | platformTranslate }}</h3>
+		<i #searchInfo class="cursor-pointer search-info-btn"
+		   (mouseenter)="openSearchInfoPopup()"
+		   (mouseleave)="closeSearchInfoPopup()">
+			<svg class="block-image">
+				<use href="cloud.style/content/images/tlb-icons.svg#ico-info2"></use>
+			</svg>
+		</i>
+	</div>
+
+	<div class="input-group form-control">
+		<input type="text"
+		       autofocus
+		       class="input-group-content"
+		       [(ngModel)]="scope.input.UserInput"
+		       (keydown.enter)="scope.executeFilter()">
+		<span class="input-group-btn">
+		    <button class="btn btn-default tlb-icons ico-search" (click)="scope.executeFilter()"></button>
+
+		    <button #btnSearchFields *ngIf="scope.showSearchFields" class="btn btn-default btn-fulltext" (click)="openSearchFieldsSettings()">
+		      <span class="btn-fulltext-text" [title]="scope.getSelectedSearchFieldsLabel()">{{ scope.getSelectedSearchFieldsLabel() }}</span>
+		      <span class="btn-fulltext-ico control-icons ico-down"></span>
+		    </button>
+	  </span>
+	</div>
+
+	<button #btnShow class="entity-filter" (click)="showSavedFilters()">
+		<span class="filter-btn btn control-icons ico-skype-favorites-filled"></span>
+		<span class="filter-text">{{ scope.currentProfile.FilterName || ('basics.material.lookup.filter.saved' | platformTranslate) }}</span>
+		<span class="filter-btn btn control-icons ico-down"></span>
+	</button>
+
+	<basics-shared-entity-filter-item *ngFor="let def of scope.currentFilterDefs" [definition]="def" [scope]="scope" (remove)="scope.removeFilter(def)"></basics-shared-entity-filter-item>
+
+	<button #btnAdd class="entity-filter" (click)="addFilter()">
+		<span class="filter-text">{{ 'basics.material.lookup.filter.add' | platformTranslate }}</span>
+		<span class="btn filter-btn control-icons ico-input-add"></span>
+	</button>
+
+	<button #btnAddAttr class="entity-filter add-attribute-filter" (click)="addAttributeFilter()" *ngIf="scope.attributeExtension && scope.currentFilterDefs.length>0">
+		<span class="filter-text">{{ 'basics.material.lookup.filter.addAttribute' | platformTranslate }}</span>
+		<span class="btn filter-btn control-icons ico-input-add"></span>
+	</button>
+
+	<span *ngIf="scope.currentFilterDefs.length > 0">
+    <button class="btn" (click)="scope.clearFilters()">{{ 'basics.material.lookup.filter.remove' | platformTranslate }}</button>
+    <button #btnSaveFilter class="btn" (click)="saveFilters()">{{ 'basics.material.lookup.filter.save' | platformTranslate }}</button>
+  </span>
+</div>

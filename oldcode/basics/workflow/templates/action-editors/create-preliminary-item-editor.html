@@ -1,0 +1,101 @@
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="inputOpen">
+        <div data-accordion-heading>
+			<span
+                    class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+            <span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+        </div>
+
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.ppsHeader' | translate}}</label>
+                <div class="platform-form-col">
+                    <input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+                           data-ng-model="input.PpsHeader" type="text">
+                </div>
+            </div>
+
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.earliestStart' | translate}}</label>
+                <div class="platform-form-col">
+                    <div class="input-group date domain-type-dateutc form-control">
+                        <input class="formEmailInput input-group-content datepickerinput" data-domain="dateutc"
+                               data-ng-model="input.StartDate" data-options="codeMirrorOptions" data-platform-datetime-converter
+                               data-platform-datetime-handler data-platform-select-on-focus disabled
+                               type="text">
+                        <span class="input-group-btn"><button class="btn btn-default"><span
+                                class="glyphicon-calendar glyphicon"></span></button></span>
+                    </div>
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.latestEnd' | translate}}</label>
+                <div class="platform-form-col">
+                    <div class="input-group date domain-type-dateutc form-control">
+                        <input class="formEmailInput input-group-content datepickerinput" data-domain="dateutc"
+                               data-ng-model="input.EndDate" data-options="codeMirrorOptions" data-platform-datetime-converter
+                               data-platform-datetime-handler data-platform-select-on-focus disabled
+                               type="text">
+                        <span class="input-group-btn"><button class="btn btn-default"><span
+                                class="glyphicon-calendar glyphicon"></span></button></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.duration' | translate }}</label>
+                <div class="platform-form-col">
+                    <input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+                           data-ng-model="input.Duration" type="text">
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.threshold' | translate }}</label>
+                <div class="platform-form-col">
+                    <input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+                           data-ng-model="input.Threshold" type="text">
+                </div>
+            </div>
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.customEditor.probability' | translate }}</label>
+                <div class="platform-form-col">
+                    <input class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-valid-platform ng-touched"
+                           data-ng-model="input.Probability" type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-group">
+            <div data-change="changeCheckbox()" data-domain="boolean" data-domain-control
+                 data-model="input.IsPopUp"
+                 data-options="isPopUpOptions"
+                 readonly="codeMultiMirrorOptions.readOnly"></div>
+        </div>
+
+    </div>
+</div>
+<div data-accordion data-close-others="false">
+    <div data-accordion-group data-is-open="outputOpen">
+        <div data-accordion-heading>
+			<span
+                    class="platform-form-group-header-text">{{'basics.workflow.action.output.containerHeader' | translate}}</span>
+            <span class="platform-form-group-header">
+                  <div class="toggleImg control-icons ico-up" data-ng-show="outputOpen"></div>
+                  <div class="toggleImg control-icons ico-down" data-ng-show="!outputOpen"></div>
+              </span>
+        </div>
+        <div class="platform-form-group">
+            <div class="platform-form-row">
+                <label class="platform-form-label">{{'basics.workflow.action.detail.result' | translate }}</label>
+                <div class="platform-form-col">
+                    <div data-ng-model="output.Result" data-options="codeMirrorOptions"
+                         data-script-editor-directive></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

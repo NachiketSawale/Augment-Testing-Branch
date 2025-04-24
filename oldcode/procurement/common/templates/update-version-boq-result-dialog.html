@@ -1,0 +1,62 @@
+<div data-ng-controller="procurementCommonUpdateVersionBoqResultController">
+	<header class="modal-header" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+	<div class="modal-body">
+		<h3 data-ng-bind="modalOptions.titleMessage"></h3>
+		<div class="platform-form-group" style="border: #dcdcdc 1px solid;padding-left: 100px; margin-top: 10px;">
+			<div class="platform-form-row">
+				<div class="col-xs-2" style="width: 80px;">
+					Requisition
+				</div>
+				<div class="col-xs-2">
+					{{modalOptions.requisition}}
+				</div>
+				<div class="col-xs-2" style="width: 80px; margin-left: 100px;">
+					Contract
+				</div>
+				<div class="col-xs-2">
+					{{modalOptions.contract}}
+				</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="col-xs-2" style="width: 80px;">
+					Quotation
+				</div>
+				<div class="col-xs-2">
+					{{modalOptions.quotation}}
+				</div>
+				<div class="col-xs-2" style="width: 80px;margin-left: 100px;">
+					PES
+				</div>
+				<div class="col-xs-2">
+					{{modalOptions.pes}}
+				</div>
+			</div>
+		</div>
+		<div class="panel-group">
+			<div class="panel panel-default ng-scope ng-isolate-scope">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" ng-click="modalOptions.toggleOpen()">
+							<span class="platform-form-group-header-text ng-binding ng-scope"></span>
+							<span class="platform-form-group-header ng-scope">
+									<div class="toggleImg control-icons ico-up" data-ng-class="modalOptions.showCodes ? 'ico-up' : 'ico-down'"></div>
+	                     </span>
+						</a>
+					</h4>
+				</div>
+				<div class="panel-collapse collapse in" collapse="!modalOptions.showCodes">
+					<div class="panel-body">
+						<div class="platform-form-group" style="border: #dcdcdc 1px solid;padding-left: 20px; min-height: 160px;">
+							{{modalOptions.successEntityCodes}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="modal-footer">
+		<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">
+			{{modalOptions.okBtnText}}
+		</button>
+	</footer>
+</div>

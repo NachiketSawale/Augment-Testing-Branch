@@ -1,0 +1,14 @@
+#material-filter-result-view {
+	height: calc(100% - 42px);
+
+	.material-filter-result-view-pane {
+		border-color: #DCDCDC;
+	}
+
+	#material-filter-result-view-left {
+
+		.toolbar:first-child {
+			background-color: white;
+		}
+	}
+}

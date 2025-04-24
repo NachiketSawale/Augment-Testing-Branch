@@ -1,0 +1,29 @@
+<div data-ng-controller="contractValidateAndUpdateItemQuantityController" class="modal-wrapper">
+    <header class="modal-header main-color" data-ng-include="'modaldialog/modaldialog-header-template.html'"></header>
+
+    <div class="modal-body">
+        <div>{{'procurement.common.wizard.selectOptionToValidate' | translate}}</div>
+        <div class="platform-form-group offset-1">
+            <div class="platform-form-col">
+                <div class="radio spaceToUp" data-ng-repeat="item in Options">
+                    <label>
+                        <input type="radio" name="validateScope" value="item.value" data-ng-click="setChecked(item.value)" data-ng-checked="item.isChecked">
+                        {{item.text}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="modal-footer">
+        <!--<button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()">-->
+            <!--{{modalOptions.actionButtonText}}-->
+        <!--</button>-->
+        <button type="button" class="btn btn-default" data-ng-click="validateAndUpdateItemQuantity()">
+            {{modalOptions.actionButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{modalOptions.closeButtonText}}
+        </button>
+    </footer>
+</div>

@@ -1,0 +1,17 @@
+<div class="flex-box flex-column">
+	<div class="toolbar" style="justify-content: flex-end;">
+		<button type="button" class="tlb-icons ico-filter-off" title="{{ 'model.wdeviewer.filter.showAllLayers' | translate }}" data-ng-click="turnOff()"></button>
+		<button type="button" class="tlb-icons ico-filtering" title="{{ 'model.wdeviewer.filter.invertFilter' | translate }}" data-ng-click="toggleAll()"></button>
+	</div>
+
+	<div class="flex-element" style="overflow: auto;">
+		<ul>
+			<li style="padding: 5px 18px;" data-ng-repeat="layer in layers">
+				<label>
+					<input type="checkbox" data-ng-model="layer.checked" data-ng-change="toggleItem(layer)" style="vertical-align: middle;margin-top: -4px;">
+					{{ layer.name }}
+				</label>
+			</li>
+		</ul>
+	</div>
+</div>

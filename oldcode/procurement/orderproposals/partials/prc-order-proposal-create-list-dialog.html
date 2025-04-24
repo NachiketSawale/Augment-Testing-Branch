@@ -1,0 +1,19 @@
+<div data-ng-controller="procurementOrderproposalCreateNewController">
+    <header class="modal-header">
+        <h2 class="modal-title">{{'procurement.stock.wizard.createOrderProposal.caption' | translate}}</h2>
+        <button class="db close" data-dismiss="modal" data-ng-click="$parent.$close()" aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+    <section class="modal-body">
+        <div class="modal-wrapper subview-container">
+            <div class="toolbar"><div data-platform-menu-list data-list="tools"></div></div>
+            <div data-platform-grid data-data="gridData"></div>
+        </div>
+    </section>
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="onRefresh()" data-ng-disabled="isLoading">{{'basics.common.button.refresh' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="okCreate()" data-ng-disabled='okBtnDisabled()'>{{'basics.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="$parent.$close()"> {{'basics.common.cancel' | translate}}</button>
+    </footer>
+</div>

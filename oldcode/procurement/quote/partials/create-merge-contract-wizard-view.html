@@ -1,0 +1,58 @@
+<div data-ng-controller="procurementQuoteCreateChangeContractWizardsController">
+    <header class="modal-header main-color">
+        <h2 class="modal-title">{{modalOptions.headerText}}</h2>
+        <button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+                aria-hidden="true">
+            <svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close" class="block-image"></svg>
+        </button>
+    </header>
+
+    <section class="modal-body" ng-if="!created">
+        <div class="platform-form-row">
+            <div class="platform-form-col" style="font-weight: bold;">
+                <span> {{modalOptions.note}}</span>
+            </div>
+            <div class="platform-form-col">
+                <span style="display: block"> {{modalOptions.note1}}</span>
+                <span style="display: block"> {{modalOptions.note2}}</span>
+            </div>
+        </div>
+
+        <div class="platform-form-row" style = "margin-top: 5px;">
+            <div class="panel-group">
+                <div class="panel panel-default ">
+                    <div class="subview-container">
+                        <platform-Grid data="gridData" style="height: 200px;"></platform-Grid>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-form-row">
+            <div style="font-weight: bold;text-align: right;padding: 10px 2px 0px;">
+                <span> {{modalOptions.netTotal}}</span>
+                <span ng-binding>{{netTotal() | number:2}}{{currency}}</span>
+            </div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div class="icon-message">
+            <div class="icon tlb-icons ico-info"></div>
+            <div class="message" ng-if="created">{{createdText}}</div>
+	        <div class="message" ng-if="!created && modalOptions.hasContractItem">{{'procurement.common.wizard.IsContractNote' | translate}}</div>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button" class="btn btn-default" data-ng-click="onOK()" ng-if="!created">
+            {{modalOptions.OKButtonText}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="goToContract()" data-ng-disabled="!created" data-ng-if="created">
+            {{'procurement.common.GoToContract' | translate }}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()">
+            {{modalOptions.CancelButtonText}}
+        </button>
+    </footer>
+    <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+</div>

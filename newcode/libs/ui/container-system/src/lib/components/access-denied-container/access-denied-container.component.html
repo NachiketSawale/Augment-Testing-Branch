@@ -1,0 +1,14 @@
+<div class="flex-element flex-column flex-box">
+	<div class="flex-element flex-box" style="margin: 24px; justify-content: center">
+		<button class="block-image control-icons" style="background-size: 24px; height: 24px; width: 24px" [ngClass]="lockIcon()"></button>
+		<button class="block-image control-icons panel-toggle-img" style="cursor: pointer" [ngClass]="toggleIcon()" (click)="toggle()"></button>
+		<br /><br />
+	</div>
+	<div *ngIf="toggleState" class="h2 text-center">
+		{{ 'platform.containerContentNotShown' | platformTranslate }} <br /><br />
+		{{ 'platform.containerContentNotShownPermission' | platformTranslate }}
+		<br /><br />
+		{{ permissionInfo }}
+	</div>
+</div>
+

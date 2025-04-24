@@ -1,0 +1,24 @@
+<script type="text/ng-template" id="price-comparison-item-evaluation-popup.html">
+    <div ng-controller="procurementPriceComparisonOtherQuoteItemDialogController">
+        <header class="modal-header main-color"
+                data-ng-include="'modaldialog/modaldialog-header-template.html'">
+        </header>
+
+        <section>
+            <div class="toolbar">
+                <div data-platform-menu-list data-list="modalOptions.tools" data-platform-collapsable-list data-ng-model="modalOptions.tools"></div>
+            </div>
+        </section>
+        <section class="modal-body">
+            <div class="flex-element flex-box flex-column"><!--subview-container-->
+                <platform-Grid data="gridData"></platform-Grid>
+                <div cloud-common-overlay data-loading="modalOptions.dialogLoading" data-info="modalOptions.loadingInfo"></div>
+            </div>
+        </section>
+
+        <footer class="modal-footer">
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.ok()"> {{'cloud.common.ok' | translate}}</button>
+            <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}</button>
+        </footer>
+    </div>
+</script>

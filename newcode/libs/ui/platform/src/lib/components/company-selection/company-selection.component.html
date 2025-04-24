@@ -1,0 +1,82 @@
+<!--ui-common-popup-container required for ui-common-lookup-input popup -->
+<ui-common-popup-container></ui-common-popup-container>
+
+<ng-container>
+	<div class="center-form login-sso">
+
+		<div class="company-dialog">
+			<div id="companyForm" class="modal-dialog primary">
+				<div class="modal-content relative-container">
+
+					<header class="modal-header">
+						<div class="app-icons ico-rib-logo-text productLogo"></div>
+					</header>
+
+					<main class="modal-body">
+						<div class="top-description">
+							<div class="message selectable">You're successful logged in and now you must select the Company. For continuing iTWO4.0 application.</div>
+						</div>
+						<div style=";width: 50%">
+							<mat-label class="mat-label">Please select your UI Language</mat-label>
+							<ui-common-lookup-input *ngIf="uiLanguagesDataService" [(value)]="selectedUiLanguage" [dataService]="uiLanguagesDataService"></ui-common-lookup-input>
+						</div>
+						<div style=";width: 50%">
+							<mat-label class="mat-label">Please select your Data Language</mat-label>
+							<ui-common-lookup-input *ngIf="dataLanguagesDataService" [(value)]="selectedDataLanguage" [dataService]="dataLanguagesDataService"></ui-common-lookup-input>
+						</div>
+
+						<!--	<mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>-->
+
+						<div class="info-bar">
+							<span class="info">Select one of the available Companies</span>
+							<div class="button-row">
+								<button class="btn btn-default tlb-icons ico-tree-expand-all" mat-raised-button color="primary" (click)="onExpandAll()" title="Expand All"></button>
+								<button class="btn btn-default tlb-icons ico-tree-collapse-all" mat-raised-button color="primary" (click)="onCollapseAll()" title="CollapseAll"></button>
+							</div>
+						</div>
+
+
+						<div id="tree-frame-complete" class="tree-frame-complete">
+
+							<div id="tree-frame" class="tree-frame">
+								<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+									<!-- standard tree item => leave -->
+									<mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+										<div (click)="onSelected($event,node)" style="display: inline-flex">
+											<button [class.mat-button-selected]="isSelected(node)" (dblclick)="onDoubleClick($event,node)" style="padding:0 2px;display: inline-flex">
+												<span [className]="getIconClassFlatNode(node)" style="margin: 1px 0px " [class.mat-button-selected]="isSelected(node)"></span>
+												{{node.item}}
+											</button>
+										</div>
+									</mat-tree-node>
+
+									<!-- expandable tree item, if having children -->
+									<mat-tree-node *matTreeNodeDef="let node; when: hasChild || isRootNode" matTreeNodePadding>
+										<button [attr.aria-label]="'Toggle ' + node.item" style="padding:0 2px; display: inline-flex"
+										        (click)="onSelected($event,node)" [class.mat-button-selected]="isSelected(node)"
+										        (dblclick)="onDoubleClick($event,node)">
+											<span matTreeNodeToggle [className]="getExpanderClass(node)" style="margin: 1px 2px"></span>
+											<span [className]="getIconClassFlatNode(node)" style="margin:1px 0 " [class.mat-button-selected]="isSelected(node)"></span>
+											{{node.item}}
+										</button>
+
+									</mat-tree-node>
+								</mat-tree>
+							</div>
+						</div>
+
+						<div style=";width: 50%; min-height: 65px">
+							<mat-label class="mat-label more-space">Please select your Role</mat-label>
+							<ui-common-lookup-input *ngIf="roleDataService" [(value)]="selectedRole" [dataService]="roleDataService"></ui-common-lookup-input>
+						</div>
+					</main>
+					<footer class="modal-footer">
+						<mat-card-actions>
+							<button class="btn btn-primary" [disabled]="!canTakeCompany()" mat-raised-button color="primary" (click)="onTakeCompany()">Continue</button>
+						</mat-card-actions>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-container>

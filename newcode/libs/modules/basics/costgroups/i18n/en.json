@@ -1,0 +1,40 @@
+{
+  "basics": {
+	"costgroups": {
+		"referenceQuantityCode": "Reference Quantity",
+		"noleadquantity":  "No Lead Quantity",
+		"leadquantitycalc": "Calculate Lead Quantity",
+		"islive": "Active",
+		"moduleName": "Cost Group{{p_0}}",
+		"containers": {
+		},
+		"codeUniqueError": "Code should be unique.",
+		"bkpImport": "Import BKP",
+		"bkpType": "Type",
+		"bkpVersion": "Version",
+		"costGroupName": "Cost Group",
+		"code": "Code",
+		"crbSorting": "CRB Sorting",
+		"listCostGroupTitle": "Cost Group",
+		"costGroupCatalogCode": "Cost Group Catalog Code",
+		"costGroupCatalogDesc": "Cost Group Catalog Description",
+		"costgroupcatalog": "Cost Group Catalog",
+		"detailCostGroupTitle": "Cost Group Details",
+		"listCostGroupCatalogTitle": "Cost Group Catalog",
+		"detailCostGroupCatalogTitle": "Cost Group Catalog Details",
+		"uniqCode": "The Code should be unique",
+		"enterpriseCostGroup": "Enterprise Cost Group",
+		"projectCostGroup": "Project Cost Group",
+		"filteringByCostGroup": "filtering by Cost Group",
+		"filterCostGroupContainerTitle": "Cost Group",
+		"ai": {
+			"original": "Original",
+			"suggested": "Suggested"
+		},
+		"enableDone": "Cost Group {{code}} has been enabled successfully. Please save the record to make this changes permanent.",
+		"disableDone": "Cost Group {{code}} has been disabled successfully. Please save the record to make this changes permanent.",
+		"alreadyDisabled": "Cost Group {{code}} is already disabled.",
+		"alreadyEnabled": "Cost Group {{code}} is already enabled."
+	}
+  }
+}

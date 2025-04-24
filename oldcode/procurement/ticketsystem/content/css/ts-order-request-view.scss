@@ -1,0 +1,120 @@
+.ticket-system-order-list-div{
+//  margin-bottom: 30px;
+  overflow-y: auto;
+}
+.ticket-system-order-request-pane {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticket-system-order-list-cell {
+  border: 1px solid $ts-border-color;
+  margin: 8px;
+  width: auto;
+  overflow: hidden;
+}
+
+.ticket-system-order-list-header {
+  height: 30px;
+  background-color: $ts-title-background-color;
+  padding: 0px 10px;
+  line-height: 30px;
+  > span {
+    @include ts-font-setting($ts-font-size-16, $ts-label-color, $ts-font-weight);
+  }
+}
+
+.ticket-system-order-list-attribute {
+  padding: 0px 10px;
+}
+
+.ticket-system-order-list-attribute-clerk {
+  margin-top: 5px;
+}
+
+.ticket-system-order-list-attribute-status {
+  //  margin-top: 10px;
+}
+
+.ticket-system-order-list-remark {
+  padding: 0px 10px;
+  margin-top: 15px;
+  word-wrap: break-word;
+}
+
+.ticket-system-order-list-details {
+  background: #F5F5F5;
+  border: 1px solid $ts-border-color;
+  border-right: none;
+  border-left: none;
+  padding: 10px 15px;
+  height: auto;
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  //  box-shadow: inset 3px 3px 1px $ts-border-color;
+
+}
+
+.ticket-system-order-list-detail {
+  padding: 5px;
+  margin: 0px;
+  max-width: 500px !important;
+
+}
+
+.ticket-system-order-list-detail-inner {
+  background: #FFFFFF;
+  padding: 5px;
+  margin: 0px;
+  height: 80px;
+}
+
+.ticket-system-order-list-detail-inner-img {
+  float: left;
+  height: 100%;
+  margin-right: 5px;
+  > img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.ticket-system-order-list-detail-inner-description {
+  width: 80%;
+  float: left;
+  overflow: hidden;
+  > p {
+    @include ts-font-setting;
+    padding: 0px;
+    margin: 0px;
+    height: 20px;
+    width: 100%;
+    display: inline-block;
+  }
+  > p:first-child {
+    @include ts-font-13-bold;
+  }
+}
+
+.ticket-system-order-list-showbtn {
+  padding: 5px 10px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  > a:first-child {
+    width: 30px;
+    height: 30px;
+    background-color: $ts-btn-background-color;
+    border-radius: 5px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+}
+
+.ticket-system-order-list-pagination-container {
+  margin: 0px 5px;
+  float: right;
+  text-align: right;
+}

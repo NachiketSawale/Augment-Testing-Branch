@@ -1,0 +1,26 @@
+.datavis .modelChangeSetPropKeySummary .segment .only1, .datavis .modelChangeSetPropKeySummary .segment .only2 {
+    opacity: 0.3;
+    fill: #666;
+    pointer-events: none;
+}
+.datavis .modelChangeSetPropKeySummary .segment.group1 .changed {
+    fill: #66c2a5;
+}
+.datavis .modelChangeSetPropKeySummary .segment.group2 .changed {
+    fill: #fc8d62;
+}
+.datavis .modelChangeSetPropKeySummary .segment.group3 .changed {
+    fill: #8da0cb;
+}
+.datavis .modelChangeSetPropKeySummary .segment.group4 .changed {
+    fill: #e78ac3;
+}
+.datavis .modelChangeSetPropKeySummary .segment .hovered {
+    fill: #f4e57e !important;
+}
+.datavis .modelChangeSetPropKeySummary .box text.headline {
+    font-weight: bold;
+}
+.datavis .modelChangeSetPropKeySummary .box text.line.hidden {
+    display: none;
+}

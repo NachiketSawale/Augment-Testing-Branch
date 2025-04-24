@@ -1,0 +1,43 @@
+<div class="input-group lookup-container form-control ng-scope" style="height: initial;">
+	<div class="flex-box flex-element overflow-hidden" style="outline: none;" tabindex="-1">
+		<div class="flex-element multiple-container">
+		    <span class="multiple-item" data-ng-repeat="current in selectedItems track by $index">
+		        <span class="multiple-label" data-ng-bind="getLabel(current)"></span>
+		        <button class="btn control-icons ico-input-delete" data-ng-click="deleteItem(current)"
+		                data-ng-hide="settings.readOnly || settings.disableInput || ngReadonly"></button>
+		    </span>
+			<input type="text" class="border-none search-box"/>
+		</div>
+		<span class="input-group-btn">
+             <button class="btn btn-default input-sm" data-ng-click="chooseFile()" style="height: 100%">
+                 <img data-ng-src="cloud.style/content/images/tlb-icons.svg#ico-upload"
+                      src="cloud.style/content/images/tlb-icons.svg#ico-upload">
+             </button>
+		</span>
+	</div>
+</div>
+
+<style type="text/css">
+	.multiple-container {
+		padding-left: 4px;
+	}
+
+	.multiple-item {
+		display: inline-block;
+		line-height: 20px;
+		padding: 0 4px;
+		float: left;
+	}
+
+	.multiple-label {
+		text-decoration-line: underline;
+	}
+
+	.search-box {
+		outline: none;
+		line-height: 28px;
+		min-width: 18px;
+		max-height: 25px;
+		padding-left: 4px;
+	}
+</style>

@@ -1,0 +1,11 @@
+<div class="input-group form-control" ngf-multiple="false">
+
+    <input type="text" class="input-group-content" ng-model="ngModel" readonly="readonly">
+    <span class="input-group-btn">
+        <button class="btn btn-default control-icons ico-input-lookup" name="fileInput" ngf-pattern="" ngf-model-invalid="errFile"
+                ngf-select="uploadFiles($file, $invalidFiles)" accept={{filter}} ng-disabled="!canUpload()">
+        </button>
+    </span>
+
+    <div data-cloud-common-overlay data-info2="info2" file="file" data-loading="viewContentLoading" data-css-class="css"></div>
+</div>

@@ -1,0 +1,62 @@
+﻿{
+  "controlling": {
+    "projectcontrols": {
+      "moduleDisplayName": "Project Controls",
+      "containerTitleProjects": "Projects",
+      "containerTitleControllingVersion": "Controlling Versions",
+      "groupingContainer": "Project Controls Dashboard",
+      "bisPaBoqFk": "BoQ Item",
+      "bisPaActivityFk": "Activity Item",
+      "period": "Period",
+      "chart1ContainerTitle": "Chart 1",
+      "chart2ContainerTitle": "Chart 2",
+      "ControllingActualListController": "Controlling Actuals",
+      "code": "Code",
+      "noConfigData": "No chart config data can be found",
+      "LineItemsListController": "Line Item",
+      "ControllingPesListController": "Procurement PES",
+      "ControllingPrcContractController": "Procurement Contract",
+      "ControllingCostCodes": "Controlling Cost Codes",
+      "goBack": "Back",
+      "resetdata": "Reset Data",
+      "value": "Value",
+      "controllingUnit": "Controlling Unit",
+      "activity": "Activity",
+      "costCode": "Cost Code",
+      "controllingUnitCostCode": "Controlling Cost Code",
+      "package": "Procurement Package",
+      "procurementoverview": "Procurement Overview",
+      "boQ": "BoQ",
+      "costGroup1": "Cost Group 1",
+      "costGroup2": "Cost Group 2",
+      "costGroup3": "Cost Group 3",
+      "costGroup4": "Cost Group 4",
+      "showBPName": "Show BusinessPartner Name",
+      "showPackgeDesc": "Show Package Description",
+      "reportPeriod": "Report Period",
+      "version": "Version",
+      "packageContainer": {
+        "prcValue": "Prc Value",
+        "prcbudget": "Prc Budget",
+        "reqvalue": "Req Value",
+        "convalueoverall": "Con Value Overall",
+        "convalueapproved": "Con Value Approved",
+        "convalueorde": "Con Value Orde",
+        "convaluemain": "Con Value Main",
+        "convaluecoapproved": "Con Value Co Approved",
+        "convalueconapproved": "Con Value Co Not Approved",
+        "pesvalueoverall": "Pes Value Overall",
+        "pesvalueaccepted": "Pes Value Accepted",
+        "invvalueoverall": "Inv Value Overall",
+        "invvalueposted": "Inv Value Posted",
+        "businessPartnerName": "Business Partner Name"
+      },
+		 "versionComparison": {
+			 "title": "Version Comparison Overview",
+			 "controllingVersionA": "Version A",
+			 "controllingVersionB": "Version B",
+			 "configHeader": "Version Comparison Configuration"
+		 }
+    }
+  }
+}

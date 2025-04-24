@@ -1,0 +1,20 @@
+<div data-ng-controller="procurementPriceComparisonPrintFontFormatController">
+    <header class="modal-header main-color" data-ng-include="options.headerTemplateUrl"></header>
+    <section class="modal-body">
+        <div style="height: 300px;border:solid 1px #ccc;">
+            <wysiwyg textarea-id="itemTextHtmlEditor" textarea-class=""
+                     textarea-name="textareaQuestion"
+                     textarea-height="60%"
+                     action="onPropertyChanged(currentItem)"
+                     textarea-required ng-model="modalOptions.value"
+                     enable-bootstrap-title="true"
+                     data-ng-click="commitEdit()">
+            </wysiwyg>
+        </div>
+    </section>
+
+    <footer class="modal-footer">
+        <button type="button"  class="btn btn-default" data-ng-click="onOK()"> {{'cloud.common.ok' | translate}}</button>
+        <button type="button" class="btn btn-default" data-ng-click="modalOptions.cancel()"> {{'cloud.common.cancel' | translate}}</button>
+    </footer>
+</div>

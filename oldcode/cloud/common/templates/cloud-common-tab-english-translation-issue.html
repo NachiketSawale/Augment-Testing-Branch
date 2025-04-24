@@ -1,0 +1,30 @@
+<div data-ng-controller="cloudCommonEnglishTranslationIssueController">
+	<div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+	<div data-ng-if="hasIssue" style="height: 100%;">
+
+		<div data-ng-if="!resolutionDone" style="display: flex;flex-direction: column;height: 100%;">
+			<h3>{{issueTitle}}</h3>
+			<div class="issue-description">{{issueDescription}}</div>
+			<div class="field-values" style="margin-top: 1rem;">
+				<platform-grid data-data="gridData" style="height: 100px;"></platform-grid>
+			</div>
+			<div class="issue-options">
+				<!--			<div data-ng-repeat="opt in activeIssue.Options">-->
+				<!--				<div>-->
+				<!--					<input type="radio" name="actionOption" ng-value="opt.GUID" ng-model="selectedOptionGuid">-->
+				<!--					{{opt}}-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<input id="keepTranslation" type="checkbox" ng-model="dialog.modalOptions.value.keepTranslation">
+				<label for="keepTranslation">{{keepTranslationDescription}}</label>
+			</div>
+			<div style="margin-top: auto; text-align: right;"><button class="btn btn-default" data-ng-click="performCleanup()">{{buttonTextRemoveTranslation}}</button></div>
+		</div>
+
+		<div data-ng-if="resolutionDone">
+			{{feedbackMessage}}
+		</div>
+
+
+	</div>
+</div>

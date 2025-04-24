@@ -1,0 +1,123 @@
+﻿{
+  "businesspartner": {
+    "certificate": {
+      "actualCertificateListContainerTitle": "Current Certificates",
+      "amount": "Amount",
+      "businessPartner": "Business Partner",
+      "certificateDetailTitle": "Certificate Detail",
+      "certificateListTitle": "Certificates",
+      "certificateReminderListTitle": "Reminders",
+      "characteristicTitle": "Characteristics",
+      "code": "Code",
+      "company": "Company",
+      "contractCode": "Contract Code",
+      "contractDescription": "Contract Description",
+      "currency": "Currency",
+      "date": "Date",
+      "document": "Document",
+      "issuerBP": "Issuer Business Partner",
+      "project": "Project No.",
+      "reference": "Reference",
+      "referenceDate": "Reference Date",
+      "report": {
+        "label": {
+          "batchId": "Batch No.",
+          "fromDate": "From Date",
+          "toDate": "To Date"
+        },
+        "title": {
+          "certificate": "Certificate"
+        },
+        "item": {
+          "reportBondForecast": "Report Bond Forecast",
+          "reportReminderLetter": "Report Reminder Letter"
+        }
+      },
+      "requiredDate": "Required Date",
+      "status": "Status",
+      "tabMain": "Main",
+      "type": "Type",
+      "validFrom": "Valid From",
+      "validTo": "Valid To",
+      "wizard": {
+        "certificateWizard": {
+          "caption": "Create Requests",
+          "CertificateStatus": "Status",
+          "headerText": "Create Requests",
+          "CertificatesGroup": "Certificate Info.",
+          "wizardCaption": "Create Certificate Wizard"
+        },
+        "dialogEntity": {
+          "bpName1": "Business Partner Name",
+          "email": "E-Mail",
+          "fax": "Fax",
+          "isSended": "Sent"
+        },
+        "emailSubject": {
+          "reminderLetter": "Reminder Letter"
+        },
+        "item": {
+          "changeStatus": "Change Status",
+          "sendEmail": "Send Email",
+          "sendFax": "Send Fax"
+        },
+        "dialogTitle": {
+          "collectEmail": "Collect Emails",
+          "collectFax": "Collect Faxes",
+          "emailRecipients": "Recipients",
+          "emailSettings": "Screening Conditions"
+        },
+        "title": {
+          "send": "Send Wizard",
+          "status": "Status Wizard"
+        }
+      },
+      "costreimbursable": "Cost Reimbursable",
+      "orderHeader": "Sales Contract",
+      "actualCertificateDetailContainerTitle": "Actual Certificate Detail",
+      "certificate": "Business Partner Certificate",
+      "certificateReminderDetailTitle": "Reminder Detail",
+      "dischargeDate": "Discharged Date",
+      "error": {
+        "faxFormatterError": "The fax formatter should be '+'/'00' + country code + area code + fax number. For example: +8620 12345678 or 008620 12345678.",
+        "validEmptyDate": "\"{{p_0}}\" or \"{{p_1}}\" cannot be empty",
+        "validFromToDate": "\"{{p_0}}\" cannot be later than \"{{p_1}}\"."
+      },
+      "expirationDate": "Expiration Date",
+      "information": {
+        "noReceivers": "No receivers were found",
+        "noSender": "No E-mail sender of the selected company was found"
+      },
+      "issuer": "Issuer",
+      "reminder": {
+        "item": {
+          "createReminder": "Create Reminder"
+        },
+        "label": {
+          "batch": "Batch",
+          "batchDate": "Batch Date",
+          "useEmail": "Use E-Mail",
+          "useTelefax": "Use Telefax"
+        },
+        "title": {
+          "reminder": "Reminder"
+        }
+      },
+      "validatedDate": "Validated Date",
+      "guaranteecost": "Guarantee Cost",
+      "guaranteecostpercent": "Guarantee Cost Percentage",
+      "islimited": "Is Limited",
+      "reclaimdate1": "Reclaim Date1",
+      "reclaimdate2": "Reclaim Date2",
+      "reclaimdate3": "Reclaim Date3",
+      "businessPartnerRequire": "Business Partner can not be null!",
+      "costreimburseddate": "Cost Reimbursed Date",
+      "pinboard": {
+        "certificateCommentTitle": "Pin Board"
+      },
+      "orderHeaderDescription": "Sales Contract Description",
+      "entitySubsidiaryFk": "Subsidiary",
+      "entitySubsidiaryAddress": "Address"
+    }
+  }
+}

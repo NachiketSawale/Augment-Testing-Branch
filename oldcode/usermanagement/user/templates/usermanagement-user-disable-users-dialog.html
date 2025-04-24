@@ -1,0 +1,28 @@
+<div class="flex-element" data-ng-controller="usermanagementUserDisableUserDialogController">
+	<div data-cloud-common-overlay data-loading="loading" data-info2="loadingMessage"></div>
+	<div>
+		<div class="platform-form-group">
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'usermanagement.user.disableUserDialog.labelUserCount' | translate}}</div>
+				<div class="platform-form-col" style="padding-top: 6px;">{{userCount}}</div>
+			</div>
+			<div class="platform-form-row">
+				<div class="platform-form-label">{{'usermanagement.user.disableUserDialog.newState' | translate}}</div>
+				<div class="platform-form-col">
+					<div>
+						<input type="radio" name="userState" value="1" ng-model="selectedState" ng-checked="false" data-ng-click="setSelectedState(1)" data-ng-disabled="showResultInfo()"/>
+						<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'usermanagement.user.disableUserDialog.enable' | translate}}</label>
+					</div>
+					<div>
+						<input type="radio" name="userState" value="2" ng-model="selectedState" ng-checked="true" data-ng-click="setSelectedState(2)" data-ng-disabled="showResultInfo()"/>
+						<label style="vertical-align: top;margin-top:4px;margin-left:4px;">{{'usermanagement.user.disableUserDialog.disable' | translate}}</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-ng-if="showResultInfo()">
+		<div class="alert-info" style="padding: 5px;">{{resultInfo}}</div>
+	</div>
+
+</div>

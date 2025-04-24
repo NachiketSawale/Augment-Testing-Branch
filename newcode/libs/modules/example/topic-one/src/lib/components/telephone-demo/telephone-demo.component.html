@@ -1,0 +1,63 @@
+<!--<fieldset>-->
+<!--	<legend>Used as HTML tag</legend>-->
+<!--	<div class="flex-box flex-column flex-element subview-content relative-container">-->
+<!--		<div class="platform-form-container">-->
+<!--			<form class="platform-form">-->
+<!--				<div class="panel-group">-->
+<!--					<div class="panel panel-default ng-scope ng-isolate-scope">-->
+<!--						<div class="panel-heading">-->
+<!--							<h4 class="panel-title">-->
+<!--								<a class="accordion-toggle">-->
+<!--									<span class="platform-form-group-header-text">Communication</span>-->
+<!--									<span class="platform-form-group-header">-->
+<!--                           <div class="toggleImg control-icons ico-up"></div>-->
+<!--                        </span>-->
+<!--								</a>-->
+<!--							</h4>-->
+<!--						</div>-->
+<!--						<div class="panel-collapse in">-->
+<!--							<div class="panel-body">-->
+<!--								<div class="platform-form-group">-->
+<!--									<div class="platform-form-row form-group ">-->
+<!--										<label class="platform-form-label">Business Partner Name</label>-->
+<!--										<div class="platform-form-col">-->
+<!--											<div class="control-directive">-->
+<!--												<input name="Name" type="text" class="domain-type-description form-control" [(ngModel)]="businessPartner.Name">-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="platform-form-row form-group ">-->
+<!--										<label class="platform-form-label">Match Code</label>-->
+<!--										<div class="platform-form-col">-->
+<!--											<div class="control-directive">-->
+<!--												<input name="MatchCode" type="text" class="domain-type-description form-control" [(ngModel)]="businessPartner.MatchCode">-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="platform-form-row form-group ">-->
+<!--										<label class="platform-form-label">Telephone</label>-->
+<!--										<div class="platform-form-col">-->
+<!--											<div class="control-directive">-->
+<!--												<basics-common-telephone-dialog [(value)]="businessPartner.Telephone" [entity]="businessPartner" [options]="options"></basics-common-telephone-dialog>-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</form>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</fieldset>-->
+
+<fieldset>
+	<legend>Integrated in form</legend>
+	<div>
+		<ui-common-form [formConfig]="formConfig" [entity]="businessPartner"></ui-common-form>
+	</div>
+</fieldset>
+
+<br>
+<pre>{{businessPartner | json}}</pre>

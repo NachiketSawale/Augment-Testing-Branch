@@ -1,0 +1,40 @@
+﻿{
+  "basics": {
+    "workflowAdministration": {
+      "moduleName":"流程管理",
+      "context":
+      {
+        "containerHeader": "Instance Context"
+      },
+      "instance":{
+        "containerHeader": "流程实例",
+        "template": "模板",
+        "templateVersion": "!Template Version",
+        "escalate": "!Escalate",
+        "kill": "!Kill",
+        "status": {
+          "none": "!None",
+          "running" : "!Running",
+          "finished": "!Finished",
+          "escalate": "!Escalate",
+          "waiting":"!Waiting",
+          "failed": "!Failed",
+          "killed": "!Killed"
+        },
+        "moduleName":"!Module Name",
+        "clerk": "!Clerk",
+        "company": "!Company",
+        "project": "!Project",
+        "entity": "!Entity",
+        "endTime": "!End Time",
+        "startTime":"!Start Time"
+      },
+      "action":{
+        "containerHeader": "行为实例",
+        "context": {
+          "containerHeader": "Action Instance Context"
+        }
+      }
+    }
+  }
+}

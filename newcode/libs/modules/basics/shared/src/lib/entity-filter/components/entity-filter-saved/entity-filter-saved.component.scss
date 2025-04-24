@@ -1,0 +1,39 @@
+// Variables
+$color-primary: #3789cc;
+$padding-small: 6px;
+$margin-top: 10px;
+$height-small: 20px;
+$btn-size: 20px;
+$font-weight-bold: bold;
+$cursor-pointer: pointer;
+
+// Mixins
+@mixin btn-style($color) {
+	color: $color;
+}
+
+@mixin header-style($font-weight, $cursor, $margin-top, $height) {
+	font-weight: $font-weight;
+	cursor: $cursor;
+	margin-top: $margin-top;
+	height: $height;
+}
+
+// Styles
+.entity-filter-saved-filters {
+	padding: $padding-small;
+
+	.btn {
+		@include btn-style($color-primary);
+	}
+
+	.filter-header {
+		@include header-style($font-weight-bold, $cursor-pointer, $margin-top, $height-small);
+	}
+
+	.filter-btn {
+		float: right;
+		width: $btn-size;
+		height: $btn-size;
+	}
+}

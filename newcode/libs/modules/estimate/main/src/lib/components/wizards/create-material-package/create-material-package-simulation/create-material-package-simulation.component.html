@@ -1,0 +1,69 @@
+<div id="ui-layout-west" class="flex-box flex-column">
+	<as-split direction="horizontal">
+		<as-split-area [size]="65">
+			<div class="flex-box flex-column flex-element subview-content">
+				<ui-common-grid [configuration]="simulationConfiguration" [items]="optionItem.simulationItems">
+				</ui-common-grid>
+				<div class="generateItemOption">
+					<fieldset class="mergeOption">
+						<legend>
+							<div class="checkbox">
+								<ui-common-domain-control-host [(value)]="optionItem.isGenerateItem" [fieldType]="FieldType.Boolean"></ui-common-domain-control-host>
+								<label class="platform-form-label">
+									{{ 'estimate.main.createMaterialPackageWizard.generateItemFlg'| platformTranslate }}
+								</label>
+							</div>
+						</legend>
+						<div class="platform-form-group">
+							<div class="col-sm-12">
+								<span class="aggregateOption checkbox">
+								 <ui-common-domain-control-host [(value)]="optionItem.isAggregateProfile" [fieldType]="FieldType.Boolean" [readOnly]="!optionItem.isGenerateItem"></ui-common-domain-control-host>
+								 <label class="platform-form-label">
+									{{ 'estimate.main.createMaterialPackageWizard.aggregateProfileItemFlg'| platformTranslate }}
+								 </label>
+								</span>
+								<label class="platform-form-label">/{{ 'estimate.main.createMaterialPackageWizard.aggregateProfileItem'| platformTranslate }}</label>
+								<span class="platform-form-col profileLookupCls" *ngIf="optionItem.isGenerateItem&&optionItem.isAggregateProfile">
+									<basics-shared-unique-fields-profile-lookup [uniqueFieldOption]="uniqueFieldOption" [value]="optionItem.uniqueFields"></basics-shared-unique-fields-profile-lookup>
+								</span>
+							</div>
+						</div>
+
+						<div class="platform-form-group">
+							<div class="col-sm-6 checkbox spaceToUp">
+								<ui-common-domain-control-host [(value)]="optionItem.isGenerateCostCode" [fieldType]="FieldType.Boolean" [readOnly]="!optionItem.isGenerateItem"></ui-common-domain-control-host>
+								<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.generateCostCodeFlg'| platformTranslate }}</label>
+							</div>
+							<div class="col-sm-6 checkbox spaceToUp">
+								<ui-common-domain-control-host [(value)]="optionItem.isFreeQuantity" [fieldType]="FieldType.Boolean" [readOnly]="!optionItem.isGenerateItem"></ui-common-domain-control-host>
+								<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.setFreeQuantityFlg'| platformTranslate }}</label>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="newOption">
+						<legend>{{ 'estimate.main.createMaterialPackageWizard.newPackageOption'| platformTranslate }}</legend>
+						<ul>
+							<li class="platform-form-group checkbox spaceToUp">
+								<ui-common-domain-control-host [(value)]="optionItem.isOnePackage" [fieldType]="FieldType.Boolean" [readOnly]="!hasNewItem" (valueChange)="onOnePackageChange()"></ui-common-domain-control-host>
+								<label class="platform-form-label">{{ 'estimate.main.createMaterialPackageWizard.onePackageAll'| platformTranslate }}</label>
+							</li>
+							<li class="platform-form-group checkbox spaceToUp">
+								<ui-common-domain-control-host [(value)]="optionItem.isSeparateMaterialCatalog" [fieldType]="FieldType.Boolean" [readOnly]="disableMaterialCatalog"
+								                               (valueChange)="onSeparateMaterialCatalogChange()"></ui-common-domain-control-host>
+								<label>
+									{{ 'estimate.main.createMaterialPackageWizard.separatePackageForEachMaterialCatalog'| platformTranslate }}
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+				</div>
+			</div>
+		</as-split-area>
+		<as-split-area [size]="35">
+			<div class="flex-box flex-column flex-element subview-content">
+				<ui-common-form [entity]="newPackageOption" [formConfig]="formConfiguration" (valueChanged)="valueChanged($event)"></ui-common-form>
+			</div>
+		</as-split-area>
+	</as-split>
+</div>

@@ -1,0 +1,58 @@
+<div data-accordion data-close-others="false">
+	<div data-accordion-group data-is-open="inputOpen">
+		<div data-accordion-heading>
+			<span
+					class="platform-form-group-header-text">{{'basics.workflow.action.input.containerHeader' | translate}}</span>
+
+			<span class="platform-form-group-header">
+            <div class="toggleImg control-icons ico-up" data-ng-show="inputOpen"></div>
+            <div class="toggleImg control-icons ico-down" data-ng-show="!inputOpen"></div>
+			</span>
+		</div>
+		<div class="platform-form-group">
+			<div data-platform-label-select data-label="displayType"  data-isrequired
+				 data-model="input.displayType" data-options="displayTypeOptions" ></div>
+			<div class="platform-form-row">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.chatbot.content' |
+					translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.content" data-options="codeMirrorOptions"
+						 data-script-editor-directive></div>
+				</div>
+			</div>
+			<div data-ng-if="input.displayType == 'card'" data-platform-label-select data-label="cardStyle"
+				 data-model="input.cardStyle" data-options="cardStyleOptions"></div>
+			<div class="platform-form-row" data-ng-if="input.displayType == 'card'" >
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.chatbot.cardCaptain' |
+					translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.cardCaptain" data-options="codeMirrorOptions"
+						 data-script-editor-directive></div>
+				</div>
+			</div>
+
+			<div data-platform-label-select data-label="isNavigate"
+				 data-model="input.isNavigate" data-options="isNavigationOptions" data-ng-if="input.displayType == 'card'"></div>
+
+			<div class="platform-form-row" data-ng-if="input.displayType == 'card' && input.isNavigate">
+				<div class="platform-form-label">{{'basics.workflow.action.customEditor.chatbot.module' | translate }}</div>
+				<div class="platform-form-col">
+					<div data-mtwo-chatbot-module-list-combobox
+						 disabled="codeMirrorOptions.readOnly" ng-model="input.module"></div>
+				</div>
+			</div>
+			<div class="platform-form-row" data-ng-if="input.displayType == 'card' && input.isNavigate">
+				<label class="platform-form-label">{{'basics.workflow.action.customEditor.chatbot.navigateField' |
+					translate
+					}}</label>
+				<div class="platform-form-col">
+					<div data-ng-model="input.navigateField" data-options="codeMirrorOptions"
+						 data-script-editor-directive></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

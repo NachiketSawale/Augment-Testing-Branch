@@ -1,0 +1,36 @@
+{
+  "!name": "filterscript",
+  "string": {
+    "!type": "class",
+    "startWith": {
+      "!type": "fn(source: string, startString: string) -> bool",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.startWith"
+    },
+    "endWith": {
+      "!type": "fn(source: string, endString: string) -> bool",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.endWith"
+    },
+    "contains": {
+      "!type": "fn(source: string, containsString: string) -> bool",
+      "!url": "",
+      "!doc": "constructionsystem.common.methodDescription.contains"
+    }
+  },
+  "StartWith": {
+    "!type": "fn(source: string, startString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.startWith"
+  },
+  "EndWith": {
+    "!type": "fn(source: string, endString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.endWith"
+  },
+  "Contains": {
+    "!type": "fn(source: string, containsString: string) -> bool",
+    "!url": "",
+    "!doc": "constructionsystem.common.methodDescription.contains"
+  }
+}

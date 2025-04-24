@@ -1,0 +1,31 @@
+.model-viewer-graphical-overlay .measurements .measurement .point-marker {
+	stroke: blue;
+}
+.model-viewer-graphical-overlay .measurements-preview .point .point-marker {
+	stroke: red;
+}
+.model-viewer-graphical-overlay .measurements-preview .live-point .point-marker {
+	stroke: lightgreen;
+}
+.model-viewer-graphical-overlay .measurements .measurement .lines {
+	stroke: #649eff;
+	stroke-width: 3;
+	stroke-dasharray: 7;
+	fill: none;
+}
+
+.model-viewer-graphical-overlay .measurements .measurement .measured {
+	stroke: #649eff;
+	stroke-width: 3;
+	stroke-dasharray: 7;
+	fill: #DBF3FA;
+	opacity: 0.5;
+}
+
+.model-viewer-graphical-overlay .measurements .measurement text {
+	fill: red;
+	font-size: 17px;
+}
+.model-viewer-graphical-overlay .measurements .measurement.hidden {
+	display: none;
+}

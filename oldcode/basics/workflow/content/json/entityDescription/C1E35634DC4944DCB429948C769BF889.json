@@ -1,0 +1,33 @@
+{
+	"Entity": {
+		"Id": 100,
+		"PesStatusFk": 3,
+		"CompanyFk": 479,
+		"ProjectFk": 1627,
+		"PackageFk": 15,
+		"ClerkPrcFk": 2732,
+		"ClerkReqFk": 2741,
+		"CurrencyFk": 1,
+		"Code": "2015-06-00323",
+		"Description": "2015-06-23",
+		"DocumentDate": "2015-05-31T00:00:00",
+		"SearchPattern": "2015-06-003232015-06-23GZ0003Science CityIndustrial Complex4862194894Csg Chemnitzer Stahl",
+		"DateDelivered": "2015-05-31T00:00:00",
+		"DateDeliveredFrom": null,
+		"ConHeaderFk": 624,
+		"ControllingUnitFk": 834,
+		"BusinessPartnerFk": 804,
+		"SubsidiaryFk": 4008,
+		"SupplierFk": 191,
+		"Remark": null,
+		"UserDefined1": null,
+		"UserDefined2": null,
+		"UserDefined3": null,
+		"UserDefined4": null,
+		"UserDefined5": null,
+		"PrcConfigurationFk": 104,
+		"PrcStructureFk": null,
+		"PesValue": 0,
+		"PesVat": 0
+	}
+}

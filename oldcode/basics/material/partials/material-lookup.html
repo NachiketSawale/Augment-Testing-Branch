@@ -1,0 +1,30 @@
+<div data-ng-controller="basicsMaterialLookupController" class="modal-wrapper fullheight">
+    <header class="modal-header" data-ng-include="'dialog/modaldialog-header-template.html'"></header>
+    <section class="modal-body material-lookup-modal-body">
+        <div data-basics-material-search-view data-options="searchViewOptions"
+             class="modal-wrapper filler"></div>
+    </section>
+    <footer class="modal-footer">
+        <div class="custom-group">
+
+            <label class="ms-checkbox-multi-select" data-ng-show="filterOnlyMainContract">
+                <input type="checkbox" data-ng-model="enableOnlyMainContract">
+                {{ 'procurement.common.filterOnlyMainContract' | translate }}
+            </label>
+        </div>
+        <button type="button" class="btn btn-default" data-ng-click="onRefresh(true)">
+            {{::htmlTranslate.refreshBtn}}
+        </button>
+        <button type="button" ng-if="canShowSimilarItem" class="btn btn-default"  data-ng-click="onSimilarItem()" data-ng-disabled="DisableSimilarButton()" data-ng-show="!searchViewOptions.isPreview">
+            {{::htmlTranslate.createSimilarItem}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="onOK()">
+            {{::htmlTranslate.okBtn}}
+        </button>
+        <button type="button" class="btn btn-default" data-ng-click="onCancel()">
+            {{::htmlTranslate.cancelBtn}}
+        </button>
+    </footer>
+	<div cloud-common-overlay data-loading="dialogLoading"
+	     data-info2="loadingInfo"></div>
+</div>

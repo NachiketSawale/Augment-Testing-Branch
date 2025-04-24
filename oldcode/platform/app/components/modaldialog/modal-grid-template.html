@@ -1,0 +1,32 @@
+<div data-ng-controller="platformModalGridController" class="flex-element flex-box flex-column fullheight">
+	<header class="modal-header main-color">
+		<h2 class="modal-title">{{modalTitle | translate }} </h2>
+		<button type="button" class="close db" data-dismiss="modal" data-ng-click="$parent.$close(false)"
+			aria-hidden="true">
+			<svg data-cloud-desktop-svg-image data-sprite="control-wh-icons" data-image="ico-close"
+				class="block-image"></svg>
+		</button>
+	</header>
+	<section class="modal-body">
+		<div data-ng-if="showToolbar" class="toolbar">
+			<div data-platform-menu-list data-list="tools"></div>
+		</div>
+		<div class="flex-box flex-column flex-element overflow-hidden">
+			<platform-grid data="gridData"></platform-grid>
+		</div>
+	</section>
+	<footer class="modal-footer">
+		<div class="custom-btn-group">
+			<button type="button" class="btn btn-default" ng-if="customBtn1" data-ng-click="customBtn1.action()">
+				{{customBtn1.label}}
+			</button>
+			<button type="button" class="btn btn-default" ng-if="customBtn2" data-ng-click="customBtn2.action()">
+				{{customBtn2.label}}
+			</button>
+		</div>
+		<button type="button" class="btn btn-default" data-ng-disabled="disableOK()" data-ng-click="onOK()"> {{'cloud.common.ok' |
+			translate}}</button>
+		<button type="button" class="btn btn-default" data-ng-click="onCancel()"> {{'cloud.common.cancel' |
+			translate}}</button>
+	</footer>
+</div>

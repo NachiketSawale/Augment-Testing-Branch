@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.customize.entityTypeListTitle",
+    "controller": "basicsCustomizeTypeListController",
+    "uuid": "F5E884C670DF4F938E51787E7CC40BF7"
+  },
+  {
+    "id": "2",
+    "template": "app/components/base/grid-partial.html",
+    "title": "basics.customize.entityInstanceListTitle",
+    "controller": "basicsCustomizeInstanceListController",
+    "uuid": "3A51BF834B8649069172D23EC1BA35E2"
+  },
+  {
+    "id": "3",
+    "template": "cloud.common/partials/languagegridView.html",
+    "title": "cloud.common.entityTranslation",
+    "controller": "cloudCommonLanguageGridController",
+    "uuid": "F79018066C4847A6B38EE99A6085DC9E"
+  },
+  {
+    "id": "4",
+    "template": "app/components/base/form-text-partial.html",
+    "title": "basics.customize.entityTypeDocumentation",
+    "controller": "basicsCustomizeRemarkController",
+    "uuid": "DED0795B58B04EE58C1443D38D40FA2B",
+    "permission": "ded0795b58b04ee58c1443d38d40fa2b"
+  }
+]

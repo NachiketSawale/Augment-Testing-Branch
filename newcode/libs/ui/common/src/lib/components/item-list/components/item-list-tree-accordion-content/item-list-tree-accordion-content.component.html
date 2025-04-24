@@ -1,0 +1,10 @@
+<div *ngFor="let tab of childs.items">
+  <button
+    *ngIf="tab.Isvisible"
+    class="rw rw-content"
+    ngClass="{'active': tab.active}"
+    (click)="tabFn(treeitem.id, tab.Id, $event)"
+  >
+    {{ tab.Description }}
+  </button>
+</div>
